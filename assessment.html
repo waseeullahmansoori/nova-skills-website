@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Take Nova Skills AI Career Assessment to discover your ideal tech career path, get a personalised learning roadmap, and calculate your career match score." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI Career Advisor & Assessment — Nova Skills" />
+  <meta property="og:description" content="Personalised career matching and skill roadmaps powered by Nova Skills." />
+  <meta property="og:image" content="branding%20content/Primary Logo.png" />
+
+  <link rel="canonical" href="https://novaskills.in/assessment.html" />
+  <link rel="icon" type="image/svg+xml" href="branding%20content/icon%202.svg" />
+
+  <title>AI Career Advisor & Skill Assessment — Nova Skills</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Injected Header -->
+  <div id="ns-header"></div>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <div class="page-hero-breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <span>AI Career Advisor</span>
+        </div>
+        <span class="page-hero-tag">🤖 AI CAREER DIAGNOSTIC (2026)</span>
+        <h1 class="page-hero-title">Find Your Ideal <span class="gradient-text-light">Career Path</span></h1>
+        <p class="page-hero-subtitle">
+          Answer 5 quick questions to calculate your career match score, receive a personalized learning roadmap, and get expert recommendation tailored to your goals.
+        </p>
+      </div>
+    </section>
+
+    <!-- ASSESSMENT CONTAINER -->
+    <section class="container" style="padding: var(--section-py) 0;">
+      <div class="assessment-card-wrapper" id="assessment-container">
+
+        <!-- STEPPER HEADER -->
+        <div class="assessment-wizard-header" id="wizard-header">
+          <div class="wizard-step-info">
+            <span class="wizard-step-badge" id="wizard-step-badge">STEP 1 OF 5</span>
+            <span class="wizard-step-title" id="wizard-step-title">Career Goal</span>
+          </div>
+          <div class="wizard-progress-track">
+            <div class="wizard-progress-bar" id="wizard-progress-bar" style="width: 20%;"></div>
+          </div>
+        </div>
+
+        <!-- QUESTION WIZARD CARDS -->
+        <div class="assessment-wizard-body" id="wizard-body">
+
+          <!-- QUESTION 1 -->
+          <div class="question-card active" data-question="1">
+            <h2 class="question-title">What is your primary career goal?</h2>
+            <p class="question-subtitle">Select the outcome that best aligns with your ambition.</p>
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="q1" value="job" checked />
+                <div class="option-content">
+                  <span class="option-icon">🎯</span>
+                  <div>
+                    <div class="option-label">Land a High-Paying Corporate Job</div>
+                    <div class="option-desc">Get placed in top companies with structured salary growth.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q1" value="switch" />
+                <div class="option-content">
+                  <span class="option-icon">🔄</span>
+                  <div>
+                    <div class="option-label">Switch to a Modern Tech Niche</div>
+                    <div class="option-desc">Transition from a non-tech/traditional background smoothly.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q1" value="freelance" />
+                <div class="option-content">
+                  <span class="option-icon">💼</span>
+                  <div>
+                    <div class="option-label">Freelance & Work From Home</div>
+                    <div class="option-desc">Acquire high-value clients remotely across India & worldwide.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q1" value="business" />
+                <div class="option-content">
+                  <span class="option-icon">🚀</span>
+                  <div>
+                    <div class="option-label">Grow My Own Business / Agency</div>
+                    <div class="option-desc">Scale marketing, sales, and operations for your startup.</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- QUESTION 2 -->
+          <div class="question-card" data-question="2">
+            <h2 class="question-title">Which domain interests you most?</h2>
+            <p class="question-subtitle">Choose the field you feel naturally curious about.</p>
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="q2" value="digital-marketing" checked />
+                <div class="option-content">
+                  <span class="option-icon">📊</span>
+                  <div>
+                    <div class="option-label">Digital Marketing & Performance Growth</div>
+                    <div class="option-desc">SEO, Meta Ads, Google Ads, Analytics, Content Strategy.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q2" value="ai" />
+                <div class="option-content">
+                  <span class="option-icon">🤖</span>
+                  <div>
+                    <div class="option-label">Artificial Intelligence & Automation</div>
+                    <div class="option-desc">Prompt Engineering, ChatGPT, Midjourney, AI Workflows.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q2" value="design" />
+                <div class="option-content">
+                  <span class="option-icon">🎨</span>
+                  <div>
+                    <div class="option-label">UI/UX & Graphic Design</div>
+                    <div class="option-desc">Figma, Photoshop, Illustrator, Web Design, Branding.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q2" value="programming" />
+                <div class="option-content">
+                  <span class="option-icon">💻</span>
+                  <div>
+                    <div class="option-label">Full-Stack & Web Coding</div>
+                    <div class="option-desc">HTML, CSS, JavaScript, React, Python, Backend APIs.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q2" value="video" />
+                <div class="option-content">
+                  <span class="option-icon">🎬</span>
+                  <div>
+                    <div class="option-label">Video Editing & Motion Graphics</div>
+                    <div class="option-desc">Premiere Pro, After Effects, DaVinci Resolve, Reels.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q2" value="nocode" />
+                <div class="option-content">
+                  <span class="option-icon">🌐</span>
+                  <div>
+                    <div class="option-label">No-Code Web & E-Commerce</div>
+                    <div class="option-desc">WordPress, Shopify, Webflow, Framer, Store setup.</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- QUESTION 3 -->
+          <div class="question-card" data-question="3">
+            <h2 class="question-title">What is your current experience level?</h2>
+            <p class="question-subtitle">We tailor the curriculum pace to your background.</p>
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="q3" value="Beginner" checked />
+                <div class="option-content">
+                  <span class="option-icon">🌱</span>
+                  <div>
+                    <div class="option-label">Absolute Beginner</div>
+                    <div class="option-desc">No prior experience. I want step-by-step guidance from scratch.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q3" value="Intermediate" />
+                <div class="option-content">
+                  <span class="option-icon">⚡</span>
+                  <div>
+                    <div class="option-label">Some Exposure / Self-Taught</div>
+                    <div class="option-desc">I know basic tools/concepts but need structured industry projects.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q3" value="Advanced" />
+                <div class="option-content">
+                  <span class="option-icon">🔥</span>
+                  <div>
+                    <div class="option-label">Working Professional</div>
+                    <div class="option-desc">Looking to upskill, master AI tools, or command higher pay.</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- QUESTION 4 -->
+          <div class="question-card" data-question="4">
+            <h2 class="question-title">How much time can you commit weekly?</h2>
+            <p class="question-subtitle">Ensures realistic completion timelines for live classes and projects.</p>
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="q4" value="5-10" checked />
+                <div class="option-content">
+                  <span class="option-icon">⏱️</span>
+                  <div>
+                    <div class="option-label">5 – 10 Hours / Week</div>
+                    <div class="option-desc">Part-time / Weekend learning while working or studying.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q4" value="10-20" />
+                <div class="option-content">
+                  <span class="option-icon">🚀</span>
+                  <div>
+                    <div class="option-label">10 – 20 Hours / Week</div>
+                    <div class="option-desc">Regular pace for steady skill acquisition & weekly projects.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q4" value="fulltime" />
+                <div class="option-content">
+                  <span class="option-icon">⚡</span>
+                  <div>
+                    <div class="option-label">Full-Time Intensive (20+ Hours)</div>
+                    <div class="option-desc">Fast-track career transformation to land a job ASAP.</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- QUESTION 5 -->
+          <div class="question-card" data-question="5">
+            <h2 class="question-title">What is your preferred learning mode?</h2>
+            <p class="question-subtitle">All modes include live interactive sessions and placement support.</p>
+            <div class="options-grid">
+              <label class="option-card">
+                <input type="radio" name="q5" value="Hybrid" checked />
+                <div class="option-content">
+                  <span class="option-icon">🏫</span>
+                  <div>
+                    <div class="option-label">Hybrid (Online + Physical Campus)</div>
+                    <div class="option-desc">Best of both worlds with in-person mentoring and lab access.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q5" value="Online" />
+                <div class="option-content">
+                  <span class="option-icon">💻</span>
+                  <div>
+                    <div class="option-label">Online Live Interactive</div>
+                    <div class="option-desc">Learn live from anywhere in India with recordings & 1-on-1 doubt clearing.</div>
+                  </div>
+                </div>
+              </label>
+
+              <label class="option-card">
+                <input type="radio" name="q5" value="Offline" />
+                <div class="option-content">
+                  <span class="option-icon">📍</span>
+                  <div>
+                    <div class="option-label">Classroom Only</div>
+                    <div class="option-desc">Dedicated campus training with daily practical lab sessions.</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- WIZARD FOOTER CONTROLS -->
+        <div class="assessment-wizard-footer" id="wizard-footer">
+          <button type="button" class="btn btn-outline" id="prev-btn" disabled>← Previous</button>
+          <button type="button" class="btn btn-primary" id="next-btn">Next Question →</button>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- SUCCESS & DASHBOARD REVEAL CONTAINER (Hidden by default)    -->
+        <!-- ============================================================ -->
+        <div class="assessment-results-container" id="results-container" hidden>
+
+          <!-- STAGE 1: LOADING ANIMATION (0-100% SVG RING + STATUS BAR) -->
+          <div class="assessment-loading-stage" id="loading-stage">
+            <div class="loading-ring-wrap">
+              <svg class="loading-svg-ring" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                <circle class="ring-progress" id="loading-ring-bar" cx="60" cy="60" r="52" stroke-dasharray="326.72" stroke-dashoffset="326.72"></circle>
+              </svg>
+              <div class="loading-percentage" id="loading-pct-text">0%</div>
+            </div>
+
+            <!-- STATUS BAR SEQUENTIAL STEPS -->
+            <div class="status-bar-sequence" id="status-bar-sequence">
+              <div class="status-step-pill" id="status-step-1"><span>○</span> <span>Assessment Completed</span></div>
+              <div class="status-step-pill" id="status-step-2"><span>○</span> <span>Recommendation Generated</span></div>
+              <div class="status-step-pill" id="status-step-3"><span>○</span> <span>Learning Path Ready</span></div>
+              <div class="status-step-pill" id="status-step-4"><span>○</span> <span>Career Guidance Available</span></div>
+            </div>
+          </div>
+
+          <!-- STAGE 2 & 3: SUCCESS CHECKMARK & GREETING -->
+          <div class="assessment-success-header" id="success-header" hidden>
+            <div class="success-checkmark-wrap">
+              <svg class="success-checkmark-svg" viewBox="0 0 52 52">
+                <circle class="checkmark-circle" cx="26" cy="26" r="23" fill="none" stroke="#75d766" stroke-width="3" />
+                <path class="checkmark-check" fill="none" stroke="#75d766" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M14 27l7 7 16-16" />
+              </svg>
+            </div>
+            <span class="success-meta-tag">CAREER ASSESSMENT COMPLETE</span>
+            <h2 class="success-title">Great Choice!</h2>
+            <p class="success-subtitle">
+              Your personalised learning roadmap is now ready based on your goals, availability, and learning preferences.
+            </p>
+          </div>
+
+          <!-- STAGE 4: CAREER SNAPSHOT DASHBOARD -->
+          <div class="career-snapshot-dashboard" id="career-dashboard" hidden>
+
+            <!-- 1. SUMMARY CARDS GRID -->
+            <div class="snapshot-summary-grid" id="snapshot-summary-grid">
+              <div class="summary-card">
+                <span class="summary-icon">🎯</span>
+                <div class="summary-label">Target Goal</div>
+                <div class="summary-val" id="summary-goal">Corporate Job</div>
+              </div>
+              <div class="summary-card">
+                <span class="summary-icon">🔮</span>
+                <div class="summary-label">Chosen Domain</div>
+                <div class="summary-val" id="summary-domain">Digital Marketing</div>
+              </div>
+              <div class="summary-card">
+                <span class="summary-icon">📶</span>
+                <div class="summary-label">Skill Level</div>
+                <div class="summary-val" id="summary-level">Beginner</div>
+              </div>
+              <div class="summary-card">
+                <span class="summary-icon">⏱️</span>
+                <div class="summary-label">Commitment</div>
+                <div class="summary-val" id="summary-time">5-10 Hours/Wk</div>
+              </div>
+            </div>
+
+            <!-- 2. CAREER MATCH SCORE & RECOMMENDED COURSE GRID -->
+            <div class="snapshot-match-grid">
+
+              <!-- CAREER MATCH SCORE CARD -->
+              <div class="match-score-card">
+                <span class="match-badge">AI MATCH RATING</span>
+                <div class="score-ring-container">
+                  <svg class="score-svg-ring" viewBox="0 0 140 140">
+                    <circle class="score-ring-bg" cx="70" cy="70" r="58"></circle>
+                    <circle class="score-ring-val" id="score-ring-bar" cx="70" cy="70" r="58" stroke-dasharray="364.42" stroke-dashoffset="364.42"></circle>
+                  </svg>
+                  <div class="score-number-display">
+                    <span class="score-num" id="score-num-text">0</span><span class="score-percent">%</span>
+                  </div>
+                </div>
+                <div class="match-verdict" id="match-verdict-text">★ Excellent Match</div>
+                <p class="match-desc">High demand profile with strong industry placement outlook in India.</p>
+              </div>
+
+              <!-- RECOMMENDED COURSE SPOTLIGHT -->
+              <div class="recommended-course-spotlight" id="recommended-course-card">
+                <!-- Populated dynamically by JS -->
+              </div>
+
+            </div>
+
+            <!-- 3. LEARNING ROADMAP -->
+            <div class="snapshot-roadmap-section">
+              <div class="section-header" style="text-align:left; margin-bottom:24px;">
+                <span class="section-tag">CUSTOM LEARNING PATHWAY</span>
+                <h3 class="section-title">Your 4-Phase <span class="gradient-text">Mastery Roadmap</span></h3>
+              </div>
+
+              <div class="roadmap-phases-grid">
+                <div class="roadmap-phase-card">
+                  <div class="phase-badge">PHASE 1 (WEEKS 1–4)</div>
+                  <h4>Fundamentals & Tool Mastery</h4>
+                  <p>Master core principles, industry software, environment setup, and basic live workflows.</p>
+                  <span class="phase-outcome">✓ Outcome: Tool Proficiency Certificate</span>
+                </div>
+
+                <div class="roadmap-phase-card">
+                  <div class="phase-badge">PHASE 2 (WEEKS 5–8)</div>
+                  <h4>Advanced Strategy & AI Automation</h4>
+                  <p>Implement performance campaigns, automated workflows, and complex industry strategies.</p>
+                  <span class="phase-outcome">✓ Outcome: 2 Live Client Campaigns</span>
+                </div>
+
+                <div class="roadmap-phase-card">
+                  <div class="phase-badge">PHASE 3 (WEEKS 9–12)</div>
+                  <h4>Real-World Capstone Project</h4>
+                  <p>Build and deploy an end-to-end production ready project presented to industry mentors.</p>
+                  <span class="phase-outcome">✓ Outcome: Portfolio Capstone</span>
+                </div>
+
+                <div class="roadmap-phase-card">
+                  <div class="phase-badge">PHASE 4 (WEEKS 13+)</div>
+                  <h4>Placement & Career Acceleration</h4>
+                  <p>1-on-1 mock interviews, ATS resume review, LinkedIn optimization & company referrals.</p>
+                  <span class="phase-outcome">✓ Outcome: Guaranteed Interviews</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. CONFIDENCE & ADVISORY MESSAGE -->
+            <div class="confidence-message-box">
+              <span class="confidence-icon">💡</span>
+              <p>
+                <strong>Academic Confidence Guarantee:</strong> Our recommendation is based on your learning preferences, availability and career objectives. You can discuss this recommendation with our academic counsellors before enrolling.
+              </p>
+            </div>
+
+            <!-- 5. NEXT STEP TIMELINE -->
+            <div class="next-step-timeline-section">
+              <h4 class="timeline-title">Your Journey Timeline</h4>
+              <div class="timeline-steps-track">
+                <div class="t-step active">
+                  <span class="t-dot">1</span>
+                  <div class="t-label">Today</div>
+                  <div class="t-sub">Free Career Counselling</div>
+                </div>
+                <div class="t-connector"></div>
+                <div class="t-step">
+                  <span class="t-dot">2</span>
+                  <div class="t-label">Step 2</div>
+                  <div class="t-sub">Choose Learning Mode</div>
+                </div>
+                <div class="t-connector"></div>
+                <div class="t-step">
+                  <span class="t-dot">3</span>
+                  <div class="t-label">Step 3</div>
+                  <div class="t-sub">Start First Live Class</div>
+                </div>
+                <div class="t-connector"></div>
+                <div class="t-step">
+                  <span class="t-dot">4</span>
+                  <div class="t-label">Step 4</div>
+                  <div class="t-sub">Build Practical Projects</div>
+                </div>
+                <div class="t-connector"></div>
+                <div class="t-step">
+                  <span class="t-dot">5</span>
+                  <div class="t-label">Step 5</div>
+                  <div class="t-sub">Complete Certification</div>
+                </div>
+                <div class="t-connector"></div>
+                <div class="t-step">
+                  <span class="t-dot">6</span>
+                  <div class="t-label">Step 6</div>
+                  <div class="t-sub">Placement Assistance</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. PREMIUM CTA PANEL -->
+            <div class="snapshot-cta-panel">
+              <div class="cta-panel-content">
+                <h2>Your Career Journey Starts Here</h2>
+                <p>Take the next step with expert guidance from our academic counsellors and receive personalised advice before choosing your course.</p>
+                <div class="cta-actions-group">
+                  <button class="btn btn-primary btn-lg" onclick="openConsultationPopup()">Book Free Career Counselling →</button>
+                  <button class="btn btn-outline btn-lg" onclick="window.print()" type="button">📥 Download Career Report</button>
+                  <a href="tel:+91XXXXXXXXXX" class="btn btn-secondary btn-lg">📞 Call an Academic Advisor</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7. SOCIAL TRUST STRIP -->
+            <div class="social-trust-strip">
+              <div class="trust-pill"><span>★★★★★</span> <span>Trusted Across India</span></div>
+              <div class="trust-pill"><span>🎓</span> <span>5,000+ Students Trained</span></div>
+              <div class="trust-pill"><span>💼</span> <span>95% Placement Rate</span></div>
+              <div class="trust-pill"><span>🎥</span> <span>100% Live Interactive Batches</span></div>
+              <div class="trust-pill"><span>🚫</span> <span>No Pre-Recorded Content</span></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Injected Footer -->
+  <div id="ns-footer"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="data.js"></script>
+  <script src="components.js"></script>
+  <script src="assessment.js"></script>
+</body>
+</html>

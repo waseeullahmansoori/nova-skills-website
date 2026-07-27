@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nova Skills Blog — Career guides, salary insights, skill tutorials, AI trends, digital marketing strategies, and tech industry updates in India." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blog — Nova Skills Education Institute" />
+  <meta property="og:description" content="Career guides, AI trends, skill tutorials, and tech industry insights." />
+  <meta property="og:image" content="branding%20content/Primary Logo.png" />
+
+  <link rel="canonical" href="https://novaskills.in/blog.html" />
+  <link rel="icon" type="image/svg+xml" href="branding%20content/icon%202.svg" />
+
+  <title>Blog & Career Insights — Nova Skills</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Injected Header -->
+  <div id="ns-header"></div>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <div class="page-hero-breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <span>Blog</span>
+        </div>
+        <span class="page-hero-tag">CAREER GUIDES • INDUSTRY INSIGHTS</span>
+        <h1 class="page-hero-title">Nova Skills <span class="gradient-text-light">Blog</span></h1>
+        <p class="page-hero-subtitle">
+          Expert articles on high-paying tech careers, AI trends, digital marketing strategies, design guides, and freelancing tips.
+        </p>
+      </div>
+    </section>
+
+    <!-- BLOG CONTENT LAYOUT -->
+    <section class="container blog-page-layout">
+
+      <!-- MAIN ARTICLES COLUMN -->
+      <div class="blog-main">
+
+        <!-- FEATURED ARTICLE -->
+        <div id="blog-featured-slot">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- SECTION HEADER -->
+        <div class="blog-section-header">
+          <div class="blog-section-label">
+            <span>🔥</span>
+            <span id="blog-grid-heading">Latest Articles</span>
+          </div>
+        </div>
+
+        <!-- BLOG CARDS GRID -->
+        <div class="blog-grid" id="blog-cards-grid">
+          <!-- Populated by JS -->
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="blog-sidebar">
+
+        <!-- Search Widget -->
+        <div class="blog-sidebar-widget">
+          <div class="widget-header">Search Articles</div>
+          <div class="widget-body">
+            <div class="blog-search-wrap">
+              <span class="blog-search-icon">🔍</span>
+              <input type="text" class="blog-search-input" id="blog-search-input" placeholder="Search keywords..." />
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories Widget -->
+        <div class="blog-sidebar-widget">
+          <div class="widget-header">Categories</div>
+          <div class="widget-body">
+            <div class="blog-categories" id="blog-categories-list">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Popular Tags Widget -->
+        <div class="blog-sidebar-widget">
+          <div class="widget-header">Popular Tags</div>
+          <div class="widget-body">
+            <div class="blog-tags" id="blog-tags-list">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter Subscription Widget -->
+        <div class="blog-sidebar-widget" style="background:var(--grad-hero); color:white;">
+          <div class="widget-header" style="color:white; border-bottom-color:rgba(255,255,255,0.1);">
+            📬 Career Newsletter
+          </div>
+          <div class="widget-body">
+            <p style="font-size:0.875rem; color:rgba(255,255,255,0.75); margin-bottom:16px; line-height:1.6;">
+              Get weekly career guides, salary reports, and free learning resources delivered to your inbox.
+            </p>
+            <form class="newsletter-widget-form" id="sidebar-newsletter-form">
+              <input type="email" placeholder="Your email address" required style="background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.2); color:white;" />
+              <button type="submit" class="btn btn-primary" style="width:100%;">Subscribe Free →</button>
+            </form>
+          </div>
+        </div>
+
+      </aside>
+
+    </section>
+  </main>
+
+  <!-- Injected Footer -->
+  <div id="ns-footer"></div>
+
+  <!-- JavaScript -->
+  <script src="data.js"></script>
+  <script src="components.js"></script>
+  <script src="blog.js"></script>
+</body>
+</html>
