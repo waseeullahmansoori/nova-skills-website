@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nova-skills-website",
+
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  }
+}
