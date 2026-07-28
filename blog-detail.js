@@ -27,6 +27,9 @@ function populateArticle(post) {
   const pageTitle = document.getElementById('page-title');
   if (pageTitle) pageTitle.textContent = `${post.title} — Nova Skills Blog`;
 
+  const canonicalEl = document.getElementById('page-canonical') || document.querySelector('link[rel="canonical"]');
+  if (canonicalEl) canonicalEl.setAttribute('href', `https://novaskills.in/blog-detail.html?id=${post.slug || post.id}`);
+
   const metaDesc = document.getElementById('meta-desc');
   if (metaDesc) metaDesc.content = post.excerpt;
   const ogTitle = document.getElementById('og-title');

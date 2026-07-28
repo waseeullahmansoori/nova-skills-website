@@ -26,6 +26,9 @@ function populateCourseDetail(course) {
   const pageTitle = document.getElementById('page-title');
   if (pageTitle) pageTitle.textContent = `${course.name} — Nova Skills`;
 
+  const canonicalEl = document.getElementById('page-canonical') || document.querySelector('link[rel="canonical"]');
+  if (canonicalEl) canonicalEl.setAttribute('href', `https://novaskills.in/course-detail.html?id=${course.id}`);
+
   const ogTitle = document.getElementById('og-title');
   if (ogTitle) ogTitle.content = course.name;
   const ogDesc = document.getElementById('og-desc');
