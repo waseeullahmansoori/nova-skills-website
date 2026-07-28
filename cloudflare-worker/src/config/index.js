@@ -1,5 +1,5 @@
 /**
- * Nova Skills AI Gateway & Enterprise Platform Configuration Module
+ * Nova Skills Gateway & Enterprise Platform Configuration Module
  */
 
 export function getConfig(env) {
@@ -20,8 +20,9 @@ export function getConfig(env) {
     metaAccessToken: env.META_ACCESS_TOKEN || '',
     metaWebhookVerifyToken: env.META_WEBHOOK_VERIFY_TOKEN || 'novaskills_webhook_secret',
 
-    // Supabase Enterprise Database Settings
+    // Supabase Enterprise Database Secrets
     supabaseUrl: env.SUPABASE_URL || '',
+    supabaseAnonKey: env.SUPABASE_ANON_KEY || '',
     supabaseServiceRoleKey: env.SUPABASE_SERVICE_ROLE_KEY || ''
   };
 }

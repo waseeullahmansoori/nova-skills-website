@@ -1,15 +1,18 @@
 {
   "name": "novaskills-ai-gateway",
   "version": "1.0.0",
-  "description": "Nova Skills AI Gateway Cloudflare Worker for OpenAI GPT-5.5 Integration",
+  "description": "Nova Skills Cloudflare Worker Gateway with Supabase Integration",
   "main": "src/index.js",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"
   },
-  "keywords": ["cloudflare-worker", "ai-gateway", "openai", "gpt-5.5", "nova-skills"],
+  "keywords": ["cloudflare-worker", "ai-gateway", "supabase", "openai", "nova-skills"],
   "author": "Nova Skills Team",
   "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  },
   "devDependencies": {
     "wrangler": "^3.0.0"
   }
