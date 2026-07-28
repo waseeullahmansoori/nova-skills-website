@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" id="meta-desc" content="Read expert insights and practical guides on tech careers, digital marketing, AI, design, and freelancing on Nova Skills." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" id="og-title" content="Blog Article — Nova Skills" />
+  <meta property="og:description" id="og-desc" content="Read expert insights and practical guides on Nova Skills Blog." />
+  <meta property="og:image" content="branding%20content/Primary Logo.png" />
+
+  <link rel="canonical" href="https://novaskills.in/blog-detail.html" />
+  <link rel="icon" type="image/svg+xml" href="branding%20content/icon%202.svg" />
+
+  <title id="page-title">Article — Nova Skills Blog</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Injected Header -->
+  <div id="ns-header"></div>
+
+  <main>
+    <section class="container blog-detail-layout">
+
+      <!-- MAIN ARTICLE COLUMN -->
+      <article class="article-main" id="article-main">
+
+        <!-- Breadcrumb -->
+        <div class="page-hero-breadcrumb" style="color:var(--text-muted); margin-bottom:16px;">
+          <a href="index.html" style="color:var(--text-muted);">Home</a>
+          <span style="color:var(--text-light);">/</span>
+          <a href="blog.html" style="color:var(--text-muted);">Blog</a>
+          <span style="color:var(--text-light);">/</span>
+          <span id="breadcrumb-article-title" style="color:var(--navy); font-weight:600;">Article</span>
+        </div>
+
+        <!-- Article Header -->
+        <header class="article-header">
+          <div class="blog-card-category" id="article-category">Category</div>
+          <h1 class="article-title" id="article-title">Loading Article...</h1>
+
+          <div class="blog-card-meta">
+            <div class="blog-author-avatar" id="article-author-avatar">AK</div>
+            <div>
+              <div class="blog-author-name" id="article-author-name">Author Name</div>
+              <div style="font-size:0.75rem; color:var(--text-muted);" id="article-author-role">Author Role</div>
+            </div>
+            <span class="blog-meta-dot">•</span>
+            <span class="blog-date" id="article-date">July 2026</span>
+            <span class="blog-meta-dot">•</span>
+            <span class="blog-read-time" id="article-read-time">5 min read</span>
+          </div>
+        </header>
+
+        <!-- Hero Graphic -->
+        <div class="blog-hero-image" id="article-hero-graphic" style="background:var(--grad-hero); color:white;">
+          <span style="font-size:5rem; filter:drop-shadow(0 12px 24px rgba(0,0,0,0.3));">🚀</span>
+        </div>
+
+        <!-- Social Share Bar -->
+        <div class="social-share-bar">
+          <span class="social-share-label">Share Article:</span>
+          <a href="#" class="share-btn share-btn-twitter" onclick="shareTwitter(event)">
+            <span>🐤 Twitter / X</span>
+          </a>
+          <a href="#" class="share-btn share-btn-linkedin" onclick="shareLinkedIn(event)">
+            <span>💼 LinkedIn</span>
+          </a>
+          <a href="#" class="share-btn share-btn-whatsapp" onclick="shareWhatsApp(event)">
+            <span>💬 WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Article Body Content -->
+        <div class="article-body" id="article-body">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Author Box -->
+        <div class="author-box" id="author-box">
+          <div class="author-avatar-lg" id="author-avatar-lg">SP</div>
+          <div class="author-info">
+            <h4 id="author-name-full">Sanya Puri</h4>
+            <div class="author-role" id="author-role-full">Lead AI Trainer at Nova Skills</div>
+            <p class="author-bio" id="author-bio-full">
+              Tech educator and career coach passionate about empowering individuals with high-demand practical skills and AI automation techniques.
+            </p>
+          </div>
+        </div>
+
+        <!-- Newsletter CTA -->
+        <div class="newsletter-cta-section" style="margin-top:48px;">
+          <h2>Enjoyed This Article?</h2>
+          <p>Get our latest career strategies, salary reports and skill guides sent directly to your email once a week.</p>
+          <form class="newsletter-form-inline" id="article-newsletter-form">
+            <input type="email" placeholder="Enter your email address" required />
+            <button type="submit" class="btn">Subscribe Free →</button>
+          </form>
+        </div>
+
+        <!-- Comments Placeholder -->
+        <section class="comments-section">
+          <h3>Leave a Comment</h3>
+          <form class="comment-form" id="comment-form">
+            <div class="comment-form-grid">
+              <input type="text" placeholder="Your Name *" required />
+              <input type="email" placeholder="Your Email Address *" required />
+            </div>
+            <textarea placeholder="Write your comment or question here..." required></textarea>
+            <button type="submit" class="btn btn-primary">Submit Comment →</button>
+          </form>
+        </section>
+
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="blog-detail-sidebar">
+
+        <!-- Table of Contents Widget -->
+        <div class="toc-widget">
+          <div class="widget-header">Table of Contents</div>
+          <div class="toc-list" id="toc-list">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Consultation Banner -->
+        <div class="blog-sidebar-widget" style="background:var(--grad-hero); color:white; text-align:center;">
+          <div class="widget-body" style="padding:28px 20px;">
+            <div style="font-size:2.5rem; margin-bottom:12px;">🎓</div>
+            <h4 style="font-size:1.125rem; font-weight:800; color:white; margin-bottom:8px;">Ready to Upgrade Your Skills?</h4>
+            <p style="font-size:0.875rem; color:rgba(255,255,255,0.75); line-height:1.6; margin-bottom:20px;">
+              Get job-ready with Nova Skills' 12 Academies. 100% practical training + placement support.
+            </p>
+            <button class="btn btn-primary" onclick="openConsultationPopup()" style="width:100%;">Free Counselling →</button>
+          </div>
+        </div>
+
+      </aside>
+
+    </section>
+
+    <!-- RELATED ARTICLES -->
+    <section class="container" style="padding-bottom:var(--section-py);">
+      <div class="section-header" style="text-align:left; margin-bottom:32px;">
+        <span class="section-tag">MORE FROM OUR BLOG</span>
+        <h2 class="section-title">Related <span class="gradient-text">Articles</span></h2>
+      </div>
+
+      <div class="related-grid" id="related-articles-grid">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Injected Footer -->
+  <div id="ns-footer"></div>
+
+  <!-- JavaScript -->
+  <script src="data.js"></script>
+  <script src="components.js"></script>
+  <script src="blog-detail.js"></script>
+</body>
+</html>

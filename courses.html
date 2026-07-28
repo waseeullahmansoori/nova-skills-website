@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore 100+ job-oriented courses across 12 Academies at Nova Skills — Digital Marketing, AI, Design, Programming, Video Editing, 3D, No-Code, and more. Filter by level, price, mode, and placement support." />
+  <meta name="keywords" content="Nova Skills courses, digital marketing course, AI course, coding course, graphic design course, video editing course, placement guarantee courses" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="All Courses — Nova Skills Education Institute" />
+  <meta property="og:description" content="12 Academies, 100+ practical courses with placement support. Find your ideal program." />
+  <meta property="og:image" content="branding%20content/Primary Logo.png" />
+
+  <link rel="canonical" href="https://novaskills.in/courses.html" />
+  <link rel="icon" type="image/svg+xml" href="branding%20content/icon%202.svg" />
+
+  <title>All Courses — Nova Skills | 12 Academies, 100+ Programs</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Injected Header -->
+  <div id="ns-header"></div>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <div class="page-hero-breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <span>Courses</span>
+        </div>
+        <span class="page-hero-tag">12 ACADEMIES • 100+ PROGRAMS</span>
+        <h1 class="page-hero-title">Explore All <span class="gradient-text-light">Industry Courses</span></h1>
+        <p class="page-hero-subtitle">
+          Master high-demand practical skills with expert live training, real client projects, 1-on-1 mentorship, and placement support.
+        </p>
+      </div>
+    </section>
+
+    <!-- COURSES CATALOGUE LAYOUT -->
+    <section class="container courses-page-layout">
+
+      <!-- DESKTOP FILTERS SIDEBAR -->
+      <aside class="filters-sidebar" id="filters-sidebar">
+        <div class="filters-header">
+          <h3>Filters</h3>
+          <button class="filters-clear" id="clear-all-filters" type="button">Reset All</button>
+        </div>
+        <div class="filters-body">
+
+          <!-- Search Filter -->
+          <div class="filter-group">
+            <h4>Search</h4>
+            <div class="filter-search">
+              <span class="filter-search-icon">🔍</span>
+              <input type="text" id="filter-search-input" placeholder="Search course or tool..." />
+            </div>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Academy Category Filter -->
+          <div class="filter-group">
+            <h4>Academy Category</h4>
+            <div class="filter-options" id="filter-academy-options">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Mode Filter -->
+          <div class="filter-group">
+            <h4>Mode</h4>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" name="mode" value="Hybrid" /> Hybrid (Online + Classroom)</label>
+              <label class="filter-option"><input type="checkbox" name="mode" value="Online" /> Online Live</label>
+              <label class="filter-option"><input type="checkbox" name="mode" value="Offline" /> Classroom</label>
+            </div>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Skill Level Filter -->
+          <div class="filter-group">
+            <h4>Skill Level</h4>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" name="level" value="Beginner" /> Beginner</label>
+              <label class="filter-option"><input type="checkbox" name="level" value="Intermediate" /> Intermediate</label>
+              <label class="filter-option"><input type="checkbox" name="level" value="Advanced" /> Advanced</label>
+            </div>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Duration Filter -->
+          <div class="filter-group">
+            <h4>Duration</h4>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" name="duration" value="2" /> Up to 2 Months</label>
+              <label class="filter-option"><input type="checkbox" name="duration" value="3" /> 3 Months</label>
+              <label class="filter-option"><input type="checkbox" name="duration" value="6" /> 6 Months</label>
+            </div>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Price Range Filter -->
+          <div class="filter-group">
+            <h4>Max Price</h4>
+            <input type="range" id="filter-price-range" min="9999" max="50000" step="5000" value="50000" />
+            <div class="price-range-display">
+              <span>₹9,999</span>
+              <span id="price-max-display">₹50,000</span>
+            </div>
+          </div>
+
+          <div class="filter-divider"></div>
+
+          <!-- Guarantees Filter -->
+          <div class="filter-group">
+            <h4>Features & Guarantees</h4>
+            <div class="filter-options">
+              <label class="filter-option"><input type="checkbox" id="filter-placement" /> Placement Support</label>
+              <label class="filter-option"><input type="checkbox" id="filter-certificate" checked /> ISO Certificate</label>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- MAIN COURSES AREA -->
+      <div class="courses-main">
+
+        <!-- Active filter chips -->
+        <div class="active-filters" id="active-filters-bar" hidden></div>
+
+        <!-- Toolbar: count, mobile toggle, sort, view toggle -->
+        <div class="courses-toolbar">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <button class="mobile-filter-toggle" id="open-mobile-filters" type="button">
+              <span>⚡ Filters</span>
+              <span class="filter-count-badge" id="filter-count-badge" hidden>0</span>
+            </button>
+            <div class="courses-count">Showing <strong id="courses-showing-count">0</strong> programs</div>
+          </div>
+
+          <div class="courses-sort">
+            <label for="sort-select">Sort By:</label>
+            <select id="sort-select">
+              <option value="popular">Most Popular</option>
+              <option value="latest">Latest</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Courses Cards Grid -->
+        <div class="courses-grid-page" id="courses-grid-page">
+          <!-- Dynamically populated by JS -->
+        </div>
+
+        <!-- No results container -->
+        <div class="no-results" id="no-results" hidden>
+          <div class="no-results-icon">🔍</div>
+          <h3>No Courses Found</h3>
+          <p>Try clearing your filters or searching for different keywords.</p>
+          <button class="btn btn-primary" style="margin-top:16px;" onclick="resetAllFilters()">Reset Filters</button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- NEWSLETTER CTA -->
+    <section class="container">
+      <div class="newsletter-cta-section">
+        <h2>Not Sure Which Course to Choose?</h2>
+        <p>Talk to our expert career counsellors for a free 1-on-1 career mapping session.</p>
+        <button class="btn btn-cta" onclick="openConsultationPopup()">Book Free Counselling Session →</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Mobile Filter Drawer -->
+  <div class="filters-drawer-backdrop" id="drawer-backdrop"></div>
+  <div class="filters-drawer" id="mobile-drawer">
+    <div class="filters-drawer-header">
+      <h3>Filter Courses</h3>
+      <button class="filters-drawer-close" id="close-mobile-filters">✕</button>
+    </div>
+    <div id="mobile-filters-slot" style="padding: 20px 24px;"></div>
+  </div>
+
+  <!-- Injected Footer -->
+  <div id="ns-footer"></div>
+
+  <!-- JavaScript -->
+  <script src="data.js"></script>
+  <script src="components.js"></script>
+  <script src="courses.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Page Not Found — Nova Skills Education Institute." />
+  <link rel="icon" type="image/svg+xml" href="branding%20content/icon%202.svg" />
+  <title>404 — Page Not Found | Nova Skills</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Injected Standardized Header Component -->
+  <div id="ns-header"></div>
+
+  <main>
+    <!-- 404 ERROR SECTION -->
+    <section class="error-section">
+      <div class="container">
+        <div class="error-card">
+          
+          <!-- Background Glow Elements -->
+          <div class="error-glow" aria-hidden="true"></div>
+
+          <!-- Hero 404 Badge & Number -->
+          <span class="error-badge">ERROR 404</span>
+          <h1 class="error-code"><span class="gradient-text-light">404</span></h1>
+          <h2 class="error-title">Oops! Page Not Found</h2>
+          <p class="error-desc">
+            The page you are looking for might have been moved, renamed, or is temporarily unavailable. Let’s get you back on track!
+          </p>
+
+          <!-- Search Box -->
+          <div class="error-search-box">
+            <input type="text" id="error-search-input" placeholder="Search for courses (e.g., Python, Digital Marketing)..." />
+            <button type="button" class="btn btn-primary" onclick="handleErrorSearch()">Search</button>
+          </div>
+
+          <!-- Quick Navigation Links -->
+          <div class="error-actions">
+            <a href="index.html" class="btn btn-primary btn-lg">🏠 Back to Homepage</a>
+            <a href="courses.html" class="btn btn-outline btn-lg">📚 Explore All Courses</a>
+            <a href="assessment.html" class="btn btn-secondary btn-lg">🤖 AI Career Advisor</a>
+          </div>
+
+          <!-- Quick Popular Categories -->
+          <div class="error-popular-links">
+            <span class="popular-label">Popular Destinations:</span>
+            <a href="placements.html">Placements</a>
+            <span class="dot">•</span>
+            <a href="success-stories.html">Success Stories</a>
+            <span class="dot">•</span>
+            <a href="blog.html">Blog</a>
+            <span class="dot">•</span>
+            <a href="index.html#counselling">Contact Support</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Injected Footer -->
+  <div id="ns-footer"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="data.js"></script>
+  <script src="components.js"></script>
+  <script>
+    function handleErrorSearch() {
+      const q = document.getElementById('error-search-input').value.trim();
+      if (q) {
+        window.location.href = `courses.html?search=${encodeURIComponent(q)}`;
+      }
+    }
+
+    document.getElementById('error-search-input')?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') handleErrorSearch();
+    });
+  </script>
+</body>
+</html>
