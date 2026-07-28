@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Nova Skills Enterprise Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0b132b;
+      color: #f0f4f8;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+    }
+    .admin-sidebar {
+      width: 260px;
+      background: #011731;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 1rem;
+    }
+    .sidebar-brand {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0599a8;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .sidebar-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-grow: 1;
+    }
+    .sidebar-item {
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #94a3b8;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .sidebar-item:hover, .sidebar-item.active {
+      background: rgba(5, 153, 168, 0.15);
+      color: #38bdf8;
+      font-weight: 600;
+    }
+    .admin-main {
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+    }
+    .stat-card h4 {
+      margin: 0 0 0.5rem 0;
+      color: #94a3b8;
+      font-size: 0.875rem;
+    }
+    .stat-card .value {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #38bdf8;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .data-table th, .data-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .data-table th {
+      background: rgba(255, 255, 255, 0.05);
+      color: #94a3b8;
+    }
+    .search-input {
+      width: 100%;
+      max-width: 300px;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.2);
+      color: white;
+      margin-bottom: 1rem;
+    }
+    .btn-admin {
+      background: #0599a8;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn-admin:hover {
+      background: #028491;
+    }
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+    .modal-content {
+      background: #011731;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 450px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Admin Sidebar -->
+  <aside class="admin-sidebar">
+    <div class="sidebar-brand">⚡ NovaSkills Admin</div>
+    <ul class="sidebar-menu">
+      <li class="sidebar-item active" onclick="switchSection('dashboard')">📊 Dashboard</li>
+      <li class="sidebar-item" onclick="switchSection('students')">👨‍🎓 Students</li>
+      <li class="sidebar-item" onclick="switchSection('courses')">📚 Courses</li>
+      <li class="sidebar-item" onclick="switchSection('enrollments')">🎓 Enrollments</li>
+      <li class="sidebar-item" onclick="switchSection('settings')">⚙️ Settings</li>
+    </ul>
+    <button class="btn-admin" style="background:#ef4444;" onclick="logoutAdmin()">Logout</button>
+  </aside>
+
+  <!-- Admin Main Panel -->
+  <main class="admin-main">
+    <header class="admin-header">
+      <div>
+        <h2 id="section-title">Admin Executive Overview</h2>
+        <p style="color:#94a3b8;margin:0;">Institute Management & Operational Control</p>
+      </div>
+      <button class="btn-admin" onclick="openAddModal()">+ Add New</button>
+    </header>
+
+    <!-- KPI Summary Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h4>TOTAL STUDENTS</h4>
+        <div class="value" id="kpi-students">142</div>
+      </div>
+      <div class="stat-card">
+        <h4>ACTIVE COURSES</h4>
+        <div class="value" id="kpi-courses">8</div>
+      </div>
+      <div class="stat-card">
+        <h4>TOTAL ENROLLMENTS</h4>
+        <div class="value" id="kpi-enrollments">168</div>
+      </div>
+      <div class="stat-card">
+        <h4>RECENT ADMISSIONS (THIS MONTH)</h4>
+        <div class="value" id="kpi-admissions">24</div>
+      </div>
+    </div>
+
+    <!-- Dynamic Section Container -->
+    <div id="section-content">
+      <input type="text" class="search-input" id="searchBox" placeholder="Search by name, code, email, mobile..." onkeyup="filterTable()">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Student Code</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Populated by admin.js -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
