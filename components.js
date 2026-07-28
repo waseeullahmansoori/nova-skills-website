@@ -1381,7 +1381,7 @@ function handleNavAuthClick(e) {
 window.handleNavAuthClick = handleNavAuthClick;
 
 /* ─────────────────────────────────────────────
-   GLOBAL COURSE ENROLLMENT MODAL SYSTEM
+   GLOBAL COURSE ENROLLMENT MODAL SYSTEM (REDESIGNED)
 ───────────────────────────────────────────── */
 function injectEnrollmentModalHTML() {
   if (document.getElementById('course-enrollment-modal')) return;
@@ -1397,85 +1397,146 @@ function injectEnrollmentModalHTML() {
   modal.innerHTML = `
     <div class="enroll-modal-dialog">
       <button type="button" class="enroll-modal-close" id="enroll-modal-close" aria-label="Close modal">✕</button>
+      
+      <!-- Header -->
       <div class="enroll-modal-header">
         <span class="enroll-modal-badge">🎓 OFFICIAL COURSE ENROLLMENT</span>
-        <h2 id="enroll-modal-title" class="enroll-modal-title">Enroll for <span id="enroll-course-title-span" class="gradient-text">Selected Course</span></h2>
-        <p class="enroll-modal-subtitle">Reserve your seat for the upcoming batch with 100% practical training and placement support.</p>
+        <h2 id="enroll-modal-title" class="enroll-modal-title">Enroll in <span id="enroll-course-title-span" class="gradient-text">Selected Course</span></h2>
+        <p class="enroll-modal-subtitle">Complete this quick form and our admission team will contact you within a few hours to guide you through the admission process.</p>
       </div>
-      <form id="course-enrollment-form" class="enroll-form" novalidate>
-        <div class="enroll-form-grid">
-          <div class="form-group full-width">
-            <label class="form-label">Selected Course (Auto-Populated)</label>
-            <input type="text" id="enroll-course-display" class="form-input readonly" readonly />
-          </div>
-          <div class="form-group half-width">
-            <label class="form-label">Academy Name</label>
-            <input type="text" id="enroll-academy-display" class="form-input readonly" readonly />
-          </div>
-          <div class="form-group half-width">
-            <label class="form-label">Learning Mode *</label>
-            <select id="enroll-mode" class="form-input" required>
-              <option value="Hybrid (Online & Offline)">Hybrid (Online & Offline)</option>
-              <option value="Online Live Interactive">Online Live Interactive</option>
-              <option value="Offline Classroom (Dehradun)">Offline Classroom (Dehradun)</option>
-            </select>
-          </div>
-          <div class="form-group half-width">
-            <label class="form-label">Full Name *</label>
-            <input type="text" id="enroll-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
-          </div>
-          <div class="form-group half-width">
-            <label class="form-label">Mobile Number *</label>
-            <input type="tel" id="enroll-phone" class="form-input" placeholder="10-digit mobile number" required />
-          </div>
-          <div class="form-group half-width">
-            <label class="form-label">Email Address *</label>
-            <input type="email" id="enroll-email" class="form-input" placeholder="e.g. rahul@gmail.com" required />
-          </div>
-          <div class="form-group half-width">
-            <label class="form-label">City *</label>
-            <input type="text" id="enroll-city" class="form-input" placeholder="e.g. Dehradun / Delhi" required />
-          </div>
-          <div class="form-group half-width">
-            <label class="form-label">Highest Qualification</label>
-            <select id="enroll-qualification" class="form-input">
-              <option value="Undergraduate">Undergraduate / College Student</option>
-              <option value="Graduate">Graduate (B.Tech / BCA / BBA / B.Com)</option>
-              <option value="Post Graduate">Post Graduate</option>
-              <option value="Working Professional">Working Professional</option>
-              <option value="12th / School Student">12th / School Student</option>
-            </select>
-          </div>
-          <div class="form-group half-width">
-            <label class="form-label">Preferred Batch Timing</label>
-            <select id="enroll-batch" class="form-input">
-              <option value="Morning Batch (9 AM - 12 PM)">Morning Batch (9 AM - 12 PM)</option>
-              <option value="Afternoon Batch (1 PM - 4 PM)">Afternoon Batch (1 PM - 4 PM)</option>
-              <option value="Evening Batch (5 PM - 8 PM)">Evening Batch (5 PM - 8 PM)</option>
-              <option value="Weekend Batch (Sat & Sun)">Weekend Batch (Sat & Sun)</option>
-            </select>
-          </div>
-          <div class="form-group full-width">
-            <label class="form-label">Additional Message / Questions (Optional)</label>
-            <textarea id="enroll-message" class="form-input" rows="2" placeholder="Any specific batch queries or questions..."></textarea>
-          </div>
+
+      <!-- Selected Course Summary Card -->
+      <div class="selected-course-card" id="selected-course-card">
+        <div class="selected-course-tag">SELECTED COURSE</div>
+        <div class="selected-course-header">
+          <h3 id="card-course-name" class="selected-course-name">AI Digital Marketing Professional</h3>
+          <span id="card-academy-name" class="selected-course-academy">Digital Marketing Academy</span>
         </div>
-        <div id="enroll-form-error" class="enroll-error-msg" hidden></div>
-        <div id="enroll-form-success" class="enroll-success-msg" hidden></div>
-        <div class="enroll-modal-actions">
-          <button type="button" class="btn btn-outline" id="enroll-modal-cancel">Cancel</button>
-          <button type="submit" class="btn btn-primary" id="enroll-submit-btn">
-            <span id="enroll-btn-text">Submit Enrollment Enquiry →</span>
-          </button>
+        <div class="selected-course-meta">
+          <div class="meta-item"><span class="meta-icon">⏱️</span> <span id="card-duration">3 Months</span></div>
+          <div class="meta-item"><span class="meta-icon">💻</span> <span id="card-mode">Hybrid (Online & Offline)</span></div>
+          <div class="meta-item"><span class="meta-icon">🏷️</span> Starting <span id="card-fee" class="card-fee-highlight">₹24,999</span></div>
         </div>
-      </form>
+      </div>
+
+      <!-- Main Enrollment Form Container -->
+      <div id="enroll-form-container">
+        <form id="course-enrollment-form" class="enroll-form" novalidate>
+          
+          <input type="hidden" id="enroll-course-display" name="courseName" />
+          <input type="hidden" id="enroll-academy-display" name="academyName" />
+          <input type="hidden" id="enroll-category-display" name="category" />
+          <input type="hidden" id="enroll-duration-display" name="duration" />
+          <input type="hidden" id="enroll-fee-display" name="fee" />
+
+          <div class="enroll-form-grid">
+            <div class="form-group half-width">
+              <label class="form-label" for="enroll-name">Full Name *</label>
+              <input type="text" id="enroll-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+            </div>
+            
+            <div class="form-group half-width">
+              <label class="form-label" for="enroll-phone">Mobile Number *</label>
+              <input type="tel" id="enroll-phone" class="form-input" placeholder="10-digit mobile number" maxlength="10" required />
+            </div>
+
+            <div class="form-group half-width">
+              <label class="form-label" for="enroll-email">Email Address *</label>
+              <input type="email" id="enroll-email" class="form-input" placeholder="e.g. rahul@gmail.com" required />
+            </div>
+
+            <div class="form-group half-width">
+              <label class="form-label" for="enroll-city">City *</label>
+              <input type="text" id="enroll-city" class="form-input" placeholder="e.g. Dehradun / Delhi" required />
+            </div>
+
+            <div class="form-group half-width">
+              <label class="form-label" for="enroll-qualification">Highest Qualification</label>
+              <select id="enroll-qualification" class="form-input">
+                <option value="Graduate">Graduate (B.Tech / BCA / BBA / B.Com)</option>
+                <option value="Undergraduate">Undergraduate / College Student</option>
+                <option value="Post Graduate">Post Graduate</option>
+                <option value="Working Professional">Working Professional</option>
+                <option value="12th / School Student">12th / School Student</option>
+              </select>
+            </div>
+
+            <div class="form-group half-width">
+              <label class="form-label" for="enroll-mode">Preferred Learning Mode</label>
+              <select id="enroll-mode" class="form-input">
+                <option value="Hybrid (Online & Offline)">Hybrid (Online & Offline)</option>
+                <option value="Online Live Interactive">Online Live Interactive</option>
+                <option value="Offline Classroom (Dehradun)">Offline Classroom (Dehradun)</option>
+              </select>
+            </div>
+
+            <div class="form-group half-width">
+              <label class="form-label" for="enroll-batch">Preferred Batch</label>
+              <select id="enroll-batch" class="form-input">
+                <option value="Morning Batch (9 AM - 12 PM)">Morning Batch (9 AM - 12 PM)</option>
+                <option value="Afternoon Batch (1 PM - 4 PM)">Afternoon Batch (1 PM - 4 PM)</option>
+                <option value="Evening Batch (5 PM - 8 PM)">Evening Batch (5 PM - 8 PM)</option>
+                <option value="Weekend Batch (Sat & Sun)">Weekend Batch (Sat & Sun)</option>
+              </select>
+            </div>
+
+            <div class="form-group half-width">
+              <label class="form-label" for="enroll-start-date">Preferred Start Date</label>
+              <select id="enroll-start-date" class="form-input">
+                <option value="Upcoming Batch (Immediate)">Upcoming Batch (Immediate)</option>
+                <option value="Next Week Batch">Next Week Batch</option>
+                <option value="Next Month Batch">Next Month Batch</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="enroll-message">Additional Message (Optional)</label>
+              <textarea id="enroll-message" class="form-input" rows="2" placeholder="Any specific batch queries or questions..."></textarea>
+            </div>
+          </div>
+
+          <div id="enroll-form-error" class="enroll-error-msg" hidden></div>
+
+          <div class="enroll-modal-actions">
+            <button type="button" class="btn btn-outline" id="enroll-modal-cancel">Cancel</button>
+            <button type="submit" class="btn btn-primary btn-submit-enroll" id="enroll-submit-btn">
+              <span id="enroll-btn-text">Secure My Seat 🔒</span>
+            </button>
+          </div>
+
+          <!-- Trust Indicator Bar -->
+          <div class="enroll-trust-bar">
+            <span>✅ 100% Secure Enquiry</span>
+            <span class="dot">•</span>
+            <span>✅ No Registration Fee</span>
+            <span class="dot">•</span>
+            <span>✅ Admission Counsellor Will Contact You</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success View Container (Hidden initially) -->
+      <div id="enroll-success-container" class="enroll-success-view" hidden>
+        <div class="success-icon-badge">🎉</div>
+        <h3 class="success-title">Thank You, <span id="success-user-name">Student</span>!</h3>
+        <p class="success-desc">
+          Your enrollment enquiry for <strong id="success-course-name">Selected Course</strong> has been submitted successfully. Our admission team will contact you at <strong id="success-user-phone">your phone number</strong> shortly to assist with your enrollment.
+        </p>
+        <div class="success-actions">
+          <button type="button" class="btn btn-primary" id="success-return-btn">Return to Website</button>
+          <a href="courses.html" class="btn btn-outline">Browse More Courses →</a>
+        </div>
+      </div>
+
     </div>
   `;
   document.body.appendChild(modal);
 
-  // Bind close handlers
+  // Bind close & return handlers
   document.getElementById('enroll-modal-close')?.addEventListener('click', closeEnrollmentModal);
   document.getElementById('enroll-modal-cancel')?.addEventListener('click', closeEnrollmentModal);
+  document.getElementById('success-return-btn')?.addEventListener('click', closeEnrollmentModal);
+
   modal.addEventListener('click', (e) => {
     if (e.target === modal) closeEnrollmentModal();
   });
@@ -1490,22 +1551,60 @@ function injectEnrollmentModalHTML() {
   document.getElementById('course-enrollment-form')?.addEventListener('submit', handleEnrollmentSubmit);
 }
 
+const COURSE_CATALOG_METADATA = {
+  'AI Digital Marketing Professional': { academy: 'Digital Marketing Academy', duration: '3 Months', fee: '₹24,999', category: 'digital-marketing' },
+  'AI Mastery Program': { academy: 'AI Academy', duration: '6 Months', fee: '₹39,999', category: 'ai' },
+  'Full Stack Programming Foundation': { academy: 'Programming Academy', duration: '6 Months', fee: '₹44,999', category: 'programming' },
+  'Creative Design Mastery': { academy: 'Design Academy', duration: '6 Months', fee: '₹39,999', category: 'design' },
+  'Motion Graphics Mastery': { academy: 'Video & Motion Academy', duration: '6 Months', fee: '₹39,999', category: 'video' },
+  'AI Digital Marketing Mastery': { academy: 'Digital Marketing Academy', duration: '6 Months', fee: '₹44,999', category: 'digital-marketing' }
+};
+
 function openEnrollmentModal(courseName, academyName) {
   injectEnrollmentModalHTML();
 
   const modal = document.getElementById('course-enrollment-modal');
   const titleSpan = document.getElementById('enroll-course-title-span');
+  const cardCourseName = document.getElementById('card-course-name');
+  const cardAcademyName = document.getElementById('card-academy-name');
+  const cardDuration = document.getElementById('card-duration');
+  const cardFee = document.getElementById('card-fee');
+  
   const courseInput = document.getElementById('enroll-course-display');
   const academyInput = document.getElementById('enroll-academy-display');
+  const categoryInput = document.getElementById('enroll-category-display');
+  const durationInput = document.getElementById('enroll-duration-display');
+  const feeInput = document.getElementById('enroll-fee-display');
+  
   const errDiv = document.getElementById('enroll-form-error');
-  const successDiv = document.getElementById('enroll-form-success');
+  const formContainer = document.getElementById('enroll-form-container');
+  const successContainer = document.getElementById('enroll-success-container');
 
-  if (titleSpan) titleSpan.textContent = courseName || 'Selected Course';
-  if (courseInput) courseInput.value = courseName || 'Selected Course';
-  if (academyInput) academyInput.value = academyName || 'Nova Skills Academy';
+  const meta = COURSE_CATALOG_METADATA[courseName] || {
+    academy: academyName || 'Nova Skills Academy',
+    duration: '3 to 6 Months',
+    fee: '₹24,999',
+    category: 'general'
+  };
+
+  const finalCourse = courseName || 'Selected Course';
+  const finalAcademy = academyName || meta.academy;
+
+  if (titleSpan) titleSpan.textContent = finalCourse;
+  if (cardCourseName) cardCourseName.textContent = finalCourse;
+  if (cardAcademyName) cardAcademyName.textContent = finalAcademy;
+  if (cardDuration) cardDuration.textContent = meta.duration;
+  if (cardFee) cardFee.textContent = meta.fee;
+
+  if (courseInput) courseInput.value = finalCourse;
+  if (academyInput) academyInput.value = finalAcademy;
+  if (categoryInput) categoryInput.value = meta.category;
+  if (durationInput) durationInput.value = meta.duration;
+  if (feeInput) feeInput.value = meta.fee;
 
   if (errDiv) errDiv.setAttribute('hidden', '');
-  if (successDiv) successDiv.setAttribute('hidden', '');
+  if (formContainer) formContainer.removeAttribute('hidden');
+  if (successContainer) successContainer.setAttribute('hidden', '');
 
   if (modal) {
     modal.hidden = false;
@@ -1532,19 +1631,25 @@ async function handleEnrollmentSubmit(e) {
   e.preventDefault();
 
   const errDiv = document.getElementById('enroll-form-error');
-  const successDiv = document.getElementById('enroll-form-success');
+  const formContainer = document.getElementById('enroll-form-container');
+  const successContainer = document.getElementById('enroll-success-container');
   const submitBtn = document.getElementById('enroll-submit-btn');
   const btnText = document.getElementById('enroll-btn-text');
 
   const courseName = document.getElementById('enroll-course-display')?.value || '';
   const academyName = document.getElementById('enroll-academy-display')?.value || '';
-  const mode = document.getElementById('enroll-mode')?.value || '';
+  const category = document.getElementById('enroll-category-display')?.value || '';
+  const duration = document.getElementById('enroll-duration-display')?.value || '';
+  const fee = document.getElementById('enroll-fee-display')?.value || '';
+
   const name = document.getElementById('enroll-name')?.value.trim() || '';
   const phone = document.getElementById('enroll-phone')?.value.trim() || '';
   const email = document.getElementById('enroll-email')?.value.trim() || '';
   const city = document.getElementById('enroll-city')?.value.trim() || '';
   const qualification = document.getElementById('enroll-qualification')?.value || '';
+  const mode = document.getElementById('enroll-mode')?.value || '';
   const batch = document.getElementById('enroll-batch')?.value || '';
+  const startDate = document.getElementById('enroll-start-date')?.value || '';
   const message = document.getElementById('enroll-message')?.value.trim() || '';
 
   if (errDiv) errDiv.setAttribute('hidden', '');
@@ -1567,16 +1672,34 @@ async function handleEnrollmentSubmit(e) {
     return;
   }
 
+  // Device detection
+  const width = window.innerWidth;
+  const deviceType = width <= 768 ? 'Mobile' : width <= 1024 ? 'Tablet' : 'Desktop';
+
   // Loading state
   if (submitBtn) submitBtn.disabled = true;
-  if (btnText) btnText.textContent = 'Submitting Enquiry...';
+  if (btnText) btnText.textContent = 'Submitting...';
 
   const leadData = {
     action: 'Student Enrollment Enquiry',
-    name, phone, email, city, qualification,
-    courseName, academyName, mode, batch, message,
     timestamp: new Date().toISOString(),
-    page: window.location.pathname
+    name,
+    phone,
+    email,
+    city,
+    qualification,
+    mode,
+    batch,
+    startDate,
+    message,
+    courseName,
+    academyName,
+    category,
+    duration,
+    fee,
+    sourcePage: window.location.pathname,
+    referrer: document.referrer || 'Direct',
+    device: deviceType
   };
 
   try {
@@ -1589,30 +1712,27 @@ async function handleEnrollmentSubmit(e) {
       body: JSON.stringify(leadData)
     }).catch(() => {});
 
-    // 2. Store in local CRM state for demo & admin view
+    // 2. Store in local CRM queue for instant validation
     const existing = JSON.parse(localStorage.getItem('novaskills_enquiries') || '[]');
     existing.unshift(leadData);
     localStorage.setItem('novaskills_enquiries', JSON.stringify(existing));
 
-    // 3. Show Success Message
-    if (successDiv) {
-      successDiv.innerHTML = `🎉 <strong>Thank you, ${name}!</strong><br>Your enrollment enquiry for <strong>${courseName}</strong> has been successfully received. Our academic team will call you at <strong>${phone}</strong> shortly.`;
-      successDiv.removeAttribute('hidden');
-    }
+    // 3. Show Success View State
+    document.getElementById('success-user-name').textContent = name;
+    document.getElementById('success-course-name').textContent = courseName;
+    document.getElementById('success-user-phone').textContent = phone;
 
-    if (btnText) btnText.textContent = '✔ Submitted';
+    if (formContainer) formContainer.setAttribute('hidden', '');
+    if (successContainer) successContainer.removeAttribute('hidden');
 
-    setTimeout(() => {
-      closeEnrollmentModal();
-      if (submitBtn) submitBtn.disabled = false;
-      if (btnText) btnText.textContent = 'Submit Enrollment Enquiry →';
-      document.getElementById('course-enrollment-form')?.reset();
-    }, 3500);
+    if (submitBtn) submitBtn.disabled = false;
+    if (btnText) btnText.textContent = 'Secure My Seat 🔒';
+    document.getElementById('course-enrollment-form')?.reset();
 
   } catch (err) {
-    showEnrollError('An unexpected error occurred. Please try calling support.');
+    showEnrollError('An error occurred submitting your enquiry. Please check your internet connection and retry.');
     if (submitBtn) submitBtn.disabled = false;
-    if (btnText) btnText.textContent = 'Submit Enrollment Enquiry →';
+    if (btnText) btnText.textContent = 'Secure My Seat 🔒';
   }
 }
 
