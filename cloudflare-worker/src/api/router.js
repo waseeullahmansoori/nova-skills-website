@@ -1,10 +1,12 @@
 /**
  * REST API Endpoints Router Module
- * Handles general AI Gateway routes and AI Counsellor Engine routes
+ * Dispatches requests for AI Gateway, AI Counsellor Engine, and AI Student Assistant.
  */
 
 import { processAIRequest } from '../services/aiService.js';
 import { processCounsellorAnalysis } from '../services/counsellorEngine.js';
+import { processStudentChat } from '../services/studentAssistant.js';
+import { sendLeadToCRM } from '../services/leadCaptureService.js';
 import { createJsonResponse, createErrorResponse } from '../utils/response.js';
 
 export async function handleApiRoute(request, path, config, reqOrigin) {
@@ -15,10 +17,44 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     return createErrorResponse('Invalid JSON payload in request body.', 400, reqOrigin, config.allowedOrigins);
   }
 
-  const { message, messages, userMessage, customInstruction, context, leadData } = body;
+  const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, course, city } = body;
 
   switch (path) {
-    // 1. General Gateway AI Endpoints
+    // 1. AI Student Assistant Endpoints
+    case '/api/ai/student-chat':
+    case '/api/ai/course-advisor':
+    case '/api/ai/admission-faq': {
+      const userText = message || userMessage || (messages && messages[messages.length - 1]?.content) || '';
+      if (!userText && (!messages || messages.length === 0)) {
+        return createErrorResponse('Field "message" or "messages" is required.', 400, reqOrigin, config.allowedOrigins);
+      }
+      const result = await processStudentChat({
+        endpoint: path,
+        userMessage: userText,
+        messages: messages,
+        config: config,
+        reqOrigin: reqOrigin
+      });
+      return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/ai/create-lead': {
+      if (!name || (!mobile && !email)) {
+        return createErrorResponse('Name and at least Mobile or Email are required to create a lead.', 400, reqOrigin, config.allowedOrigins);
+      }
+      const crmPayload = {
+        name: name,
+        mobile: mobile || '',
+        email: email || '',
+        course: course || 'General Enquiry',
+        city: city || 'AI Student Chat',
+        message: message || 'Direct Lead Capture via AI Student Assistant'
+      };
+      const crmResult = await sendLeadToCRM(crmPayload);
+      return createJsonResponse(crmResult, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    // 2. General Gateway AI Endpoints
     case '/api/ai/chat': {
       const userText = message || userMessage || (messages && messages[messages.length - 1]?.content) || '';
       if (!userText && (!messages || messages.length === 0)) {
@@ -100,7 +136,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 2. AI Counsellor Engine Endpoints
+    // 3. AI Counsellor Engine Endpoints
     case '/api/ai/lead-analysis':
     case '/api/ai/recommendation':
     case '/api/ai/counsellor-summary':
