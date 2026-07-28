@@ -4839,6 +4839,143 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
   }
 }
 
+@media (max-width: 768px) {
+  .ai-advisor-section {
+    padding: 40px 0 60px !important;
+    overflow: hidden !important;
+  }
+
+  .ai-advisor-card {
+    grid-template-columns: 1fr !important;
+    padding: 28px 16px !important;
+    text-align: center !important;
+    gap: 24px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    border-radius: var(--radius-xl, 16px) !important;
+  }
+
+  .ai-advisor-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ai-advisor-badge {
+    font-size: 0.75rem !important;
+    padding: 4px 10px !important;
+    margin-bottom: 12px !important;
+    white-space: normal !important;
+  }
+
+  .ai-advisor-title {
+    font-size: 1.45rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 12px !important;
+    word-break: break-word !important;
+  }
+
+  .ai-advisor-desc {
+    font-size: 0.875rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .ai-advisor-highlights {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .ai-highlight-pill {
+    font-size: 0.775rem !important;
+    padding: 6px 12px !important;
+  }
+
+  .ai-advisor-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .ai-advisor-actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding: 14px 20px !important;
+    font-size: 0.925rem !important;
+  }
+
+  /* High Contrast "Talk to Human Counsellor" Button Fix */
+  .ai-advisor-actions .btn-outline {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1.5px solid rgba(56, 189, 248, 0.6) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    transition: all 0.25s ease !important;
+  }
+
+  .ai-advisor-actions .btn-outline:hover,
+  .ai-advisor-actions .btn-outline:active {
+    background: rgba(56, 189, 248, 0.25) !important;
+    border-color: #38bdf8 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+  }
+
+  /* AI Preview Box Responsive Fix */
+  .ai-advisor-preview {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ai-preview-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px 14px !important;
+    box-sizing: border-box !important;
+  }
+
+  .ai-score-num {
+    font-size: 2.25rem !important;
+  }
+
+  .ai-score-text {
+    font-size: 0.8rem !important;
+  }
+
+  .ai-rec-title {
+    font-size: 0.875rem !important;
+    word-break: break-word !important;
+  }
+
+  .ai-rec-meta {
+    font-size: 0.725rem !important;
+    line-height: 1.4 !important;
+    word-break: break-word !important;
+  }
+
+  .ai-preview-steps {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+
+  .ai-step-dot {
+    font-size: 0.7rem !important;
+    padding: 4px 8px !important;
+  }
+}
+
 /* ============================================================
    HEADER NAVIGATION IMPROVEMENTS
    ============================================================ */
