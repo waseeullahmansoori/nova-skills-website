@@ -1,6 +1,6 @@
 /**
  * REST API Endpoints Router Module
- * Dispatches requests for Settings Center (GET/PUT /api/settings), AI Gateway, Lead Gateway, Auth MVP, Admin RBAC, Meta Communication, SXP, and Supabase Database.
+ * Dispatches requests for Audit Logs (GET /api/admin/activity), Settings Center, AI Gateway, Lead Gateway, Auth MVP, Admin RBAC, Meta Communication, SXP, and Supabase Database.
  */
 
 import { processAIRequest } from '../services/aiService.js';
@@ -15,7 +15,7 @@ import { loginUser } from '../auth/loginService.js';
 import { logoutUser } from '../auth/logoutService.js';
 import { requestPasswordReset } from '../auth/passwordResetService.js';
 import { protectRoute } from '../auth/authMiddleware.js';
-import { getSecurityLogs } from '../services/auditLogger.js';
+import { getAuditLogs, logAuditEvent } from '../services/auditLogger.js';
 import { sendCommunication } from '../communication/communicationService.js';
 import { compileCommunicationTemplate, TEMPLATES } from '../communication/templateManager.js';
 import { getMessageStatus, updateMessageStatus, getConversationHistory } from '../communication/conversationStore.js';
@@ -31,7 +31,17 @@ import { createJsonResponse, createErrorResponse } from '../utils/response.js';
 export async function handleApiRoute(request, path, config, reqOrigin) {
   const url = new URL(request.url);
 
-  // 1. Settings Center Endpoints (GET /api/settings & PUT /api/settings)
+  // 1. Audit Logs Activity Endpoint (GET /api/admin/activity)
+  if (path === '/api/admin/activity') {
+    const auth = await protectRoute(request, 'Admin', env, config);
+    if (!auth.authorized) {
+      return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins, 'FORBIDDEN');
+    }
+    const logs = await getAuditLogs(env, config);
+    return createJsonResponse({ success: true, logs: logs }, 200, reqOrigin, config.allowedOrigins);
+  }
+
+  // 2. Settings Center Endpoints (GET /api/settings & PUT /api/settings)
   if (path === '/api/settings') {
     if (request.method === 'GET') {
       const settings = await getPlatformSettings(env, config);
@@ -45,17 +55,26 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       let body = {};
       try { body = await request.json(); } catch (e) {}
       const updateResult = await updatePlatformSettings(body, env, config);
+      
+      await logAuditEvent({
+        action: 'Settings Updated',
+        entityType: 'Settings',
+        description: 'Updated platform configuration settings',
+        ipAddress: request.headers.get('CF-Connecting-IP') || '127.0.0.1',
+        userAgent: request.headers.get('User-Agent') || 'Unknown'
+      }, env, config);
+
       return createJsonResponse(updateResult, 200, reqOrigin, config.allowedOrigins);
     }
   }
 
-  // 2. Supabase Connection Health Endpoint (GET /api/health/supabase)
+  // 3. Supabase Connection Health Endpoint (GET /api/health/supabase)
   if (path === '/api/health/supabase' && request.method === 'GET') {
     const healthResult = await testSupabaseConnection(env, config);
     return createJsonResponse(healthResult, healthResult.success ? 200 : 503, reqOrigin, config.allowedOrigins);
   }
 
-  // 3. OpenAI GPT-5.5 Health GET Endpoint (GET /api/ai/health)
+  // 4. OpenAI GPT-5.5 Health GET Endpoint (GET /api/ai/health)
   if ((path === '/api/ai/health' || path === '/api/health' || path === '/health') && request.method === 'GET') {
     return createJsonResponse({
       success: true,
@@ -92,13 +111,22 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
   const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, password, role, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount, crmData, query, recipient, templateKey, dataMap, mediaUrl, messageId, status, studentId } = body;
 
   switch (path) {
-    // 4. Supabase Auth MVP Endpoints
+    // 5. Supabase Auth MVP Endpoints
     case '/api/auth/login': {
       if (!email || !password) {
         return createErrorResponse('Email and password are required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       try {
         const loginResult = await loginUser(email, password, env, config);
+        await logAuditEvent({
+          userId: loginResult.user?.id,
+          userRole: loginResult.user?.role || 'Admin',
+          action: 'Login',
+          entityType: 'Auth',
+          description: `User ${email} logged in successfully`,
+          ipAddress: request.headers.get('CF-Connecting-IP') || '127.0.0.1',
+          userAgent: request.headers.get('User-Agent') || 'Unknown'
+        }, env, config);
         return createJsonResponse(loginResult, 200, reqOrigin, config.allowedOrigins);
       } catch (err) {
         return createErrorResponse(err.message, 401, reqOrigin, config.allowedOrigins, 'INVALID_CREDENTIALS');
@@ -109,6 +137,13 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       const authHeader = request.headers.get('Authorization') || '';
       const token = authHeader.replace(/^Bearer\s+/i, '').trim();
       const logoutResult = await logoutUser(token, env, config);
+      await logAuditEvent({
+        action: 'Logout',
+        entityType: 'Auth',
+        description: 'User logged out',
+        ipAddress: request.headers.get('CF-Connecting-IP') || '127.0.0.1',
+        userAgent: request.headers.get('User-Agent') || 'Unknown'
+      }, env, config);
       return createJsonResponse(logoutResult, 200, reqOrigin, config.allowedOrigins);
     }
 
@@ -132,7 +167,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse({ success: true, profile: auth.user }, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 5. OpenAI GPT-5.5 Chat MVP (POST /api/ai/chat)
+    // 6. OpenAI GPT-5.5 Chat MVP (POST /api/ai/chat)
     case '/api/ai/chat': {
       const userText = (message || userMessage || (messages && messages[messages.length - 1]?.content) || '').trim();
       
@@ -165,7 +200,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       }
     }
 
-    // 6. Lead Gateway MVP (POST /api/lead)
+    // 7. Lead Gateway MVP (POST /api/lead)
     case '/api/lead': {
       if (!name || (!mobile && !email) || !course) {
         return createErrorResponse('Name, course, and at least Mobile or Email are required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
@@ -177,7 +212,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createErrorResponse(crmResult.message || 'CRM Forwarding Failed', 500, reqOrigin, config.allowedOrigins, crmResult.errorCode || 'CRM_ERROR');
     }
 
-    // 7. Supabase Enterprise Database Endpoints
+    // 8. Supabase Enterprise Database Endpoints
     case '/api/supabase/sync': {
       const syncResult = await syncLeadToSupabase(body, env, config);
       return createJsonResponse(syncResult, 200, reqOrigin, config.allowedOrigins);
@@ -189,6 +224,13 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
         return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
       }
       const createResult = await createStudentInSupabase(body, env, config);
+      await logAuditEvent({
+        action: 'Student Created',
+        entityType: 'Student',
+        description: `Created student profile for ${body.name || body.email}`,
+        ipAddress: request.headers.get('CF-Connecting-IP') || '127.0.0.1',
+        userAgent: request.headers.get('User-Agent') || 'Unknown'
+      }, env, config);
       return createJsonResponse(createResult, 200, reqOrigin, config.allowedOrigins);
     }
 
@@ -197,7 +239,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(admissionResult, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 8. Student Experience Platform (SXP) Endpoints
+    // 9. Student Experience Platform (SXP) Endpoints
     case '/api/student/dashboard':
     case '/api/student/courses':
     case '/api/student/assignments':
@@ -220,7 +262,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 9. Meta WhatsApp & Enterprise Communication Endpoints
+    // 10. Meta WhatsApp & Enterprise Communication Endpoints
     case '/api/communication/send': {
       if (!recipient) {
         return createErrorResponse('Field "recipient" (mobile number) is required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
@@ -288,7 +330,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse({ success: true, status: 'Webhook received' }, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 10. Admin & RBAC Endpoints
+    // 11. Admin & RBAC Endpoints
     case '/api/admin/users': {
       const auth = await protectRoute(request, 'Admin', env, config);
       if (!auth.authorized) {
@@ -310,10 +352,11 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       if (!auth.authorized) {
         return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins, 'FORBIDDEN');
       }
-      return createJsonResponse({ success: true, logs: getSecurityLogs(100) }, 200, reqOrigin, config.allowedOrigins);
+      const logs = await getAuditLogs(env, config);
+      return createJsonResponse({ success: true, logs: logs }, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 11. AI Operations Center Endpoints
+    // 12. AI Operations Center Endpoints
     case '/api/ai/dashboard':
     case '/api/ai/daily-brief':
     case '/api/ai/weekly-report':
@@ -343,7 +386,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 12. AI Content Studio Endpoints
+    // 13. AI Content Studio Endpoints
     case '/api/ai/content':
     case '/api/ai/blog':
     case '/api/ai/social':
@@ -367,7 +410,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 13. AI Student Assistant Endpoints
+    // 14. AI Student Assistant Endpoints
     case '/api/ai/student-chat':
     case '/api/ai/course-advisor':
     case '/api/ai/admission-faq': {
@@ -401,7 +444,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(crmResult, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 14. Additional AI Endpoints
+    // 15. Additional AI Endpoints
     case '/api/ai/admission': {
       const userText = message || userMessage || '';
       if (!userText) {
@@ -466,7 +509,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 15. AI Counsellor Engine Endpoints
+    // 16. AI Counsellor Engine Endpoints
     case '/api/ai/lead-analysis':
     case '/api/ai/recommendation':
     case '/api/ai/counsellor-summary':

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Activity Log — Nova Skills Enterprise Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0b132b;
+      color: #f0f4f8;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+    }
+    .activity-sidebar {
+      width: 260px;
+      background: #011731;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 1rem;
+    }
+    .sidebar-brand {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0599a8;
+      margin-bottom: 2rem;
+    }
+    .activity-main {
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+    .filter-bar {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-input {
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.2);
+      color: white;
+      font-size: 0.9rem;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .data-table th, .data-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .data-table th {
+      background: rgba(255, 255, 255, 0.05);
+      color: #94a3b8;
+    }
+    .action-badge {
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: rgba(5, 153, 168, 0.2);
+      color: #38bdf8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="activity-sidebar">
+    <div class="sidebar-brand">📜 Activity & Audit Logs</div>
+    <p style="font-size:0.875rem;color:#94a3b8;">Nova Skills Platform Audit</p>
+  </aside>
+
+  <!-- Main -->
+  <main class="activity-main">
+    <h2>System Activity & Audit Trail</h2>
+    <p style="color:#94a3b8;margin-bottom:1.5rem;">Automated security and administrative activity log</p>
+
+    <!-- Filters -->
+    <div class="filter-bar">
+      <input type="text" class="filter-input" id="filterUser" placeholder="Filter by User / Role..." onkeyup="applyAuditFilters()">
+      <input type="text" class="filter-input" id="filterModule" placeholder="Filter by Module / Entity..." onkeyup="applyAuditFilters()">
+      <input type="text" class="filter-input" id="filterAction" placeholder="Filter by Action..." onkeyup="applyAuditFilters()">
+    </div>
+
+    <!-- Table -->
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Date & Time</th>
+          <th>User</th>
+          <th>Action</th>
+          <th>Module</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody id="activityTableBody">
+        <!-- Populated by admin-activity.js -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="admin-activity.js"></script>
+</body>
+</html>
