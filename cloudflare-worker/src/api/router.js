@@ -1,8 +1,10 @@
 /**
  * REST API Endpoints Router Module
+ * Handles general AI Gateway routes and AI Counsellor Engine routes
  */
 
 import { processAIRequest } from '../services/aiService.js';
+import { processCounsellorAnalysis } from '../services/counsellorEngine.js';
 import { createJsonResponse, createErrorResponse } from '../utils/response.js';
 
 export async function handleApiRoute(request, path, config, reqOrigin) {
@@ -13,9 +15,10 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     return createErrorResponse('Invalid JSON payload in request body.', 400, reqOrigin, config.allowedOrigins);
   }
 
-  const { message, messages, userMessage, customInstruction, context } = body;
+  const { message, messages, userMessage, customInstruction, context, leadData } = body;
 
   switch (path) {
+    // 1. General Gateway AI Endpoints
     case '/api/ai/chat': {
       const userText = message || userMessage || (messages && messages[messages.length - 1]?.content) || '';
       if (!userText && (!messages || messages.length === 0)) {
@@ -97,7 +100,25 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
+    // 2. AI Counsellor Engine Endpoints
+    case '/api/ai/lead-analysis':
+    case '/api/ai/recommendation':
+    case '/api/ai/counsellor-summary':
+    case '/api/ai/followup-plan': {
+      const targetLeadData = leadData || body;
+      if (!targetLeadData || (!targetLeadData.course && !targetLeadData.message && !targetLeadData.name && !targetLeadData.mobile)) {
+        return createErrorResponse('Valid lead details (course, message, or leadData object) are required.', 400, reqOrigin, config.allowedOrigins);
+      }
+      const result = await processCounsellorAnalysis({
+        endpoint: path,
+        leadData: targetLeadData,
+        customInstruction: customInstruction,
+        config: config
+      });
+      return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
+    }
+
     default:
-      return createErrorResponse(`Endpoint ${path} not found.`, 440, reqOrigin, config.allowedOrigins);
+      return createErrorResponse(`Endpoint ${path} not found.`, 404, reqOrigin, config.allowedOrigins);
   }
 }
