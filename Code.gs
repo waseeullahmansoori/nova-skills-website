@@ -1,14 +1,18 @@
 /**
  * ============================================================
- * NOVA SKILLS — Lead Management System (Backend V2)
+ * NOVA SKILLS — Lead Management System (Backend V2 Enterprise Security)
  * Production Google Apps Script Web App
  * ============================================================
  * 
- * Instructions:
- * 1. Open your Google Sheet linked to the Web App (or Apps Script Editor).
- * 2. Paste this complete script into Code.gs.
- * 3. Deploy as Web App (Execute as: Me, Access: Anyone).
- * 4. Keep existing Web App URL unchanged.
+ * Features:
+ * - Enterprise Security & Spam Protection
+ * - Honeypot Field Detection ('website')
+ * - 5-Minute Rate Limiting per Mobile / Email
+ * - Strict Server-Side Data Validation
+ * - Domain Origin & Bot User-Agent Protection
+ * - Security Exception & Rejection Logging
+ * - Automated Lead ID (NS000001) & Duplicate Detection
+ * - WhatsApp Business API Ready Settings
  */
 
 'use strict';
@@ -66,7 +70,7 @@ function doPost(e) {
   try {
     lock.waitLock(10000);
   } catch (lockErr) {
-    logError('doPost', 'Script lock timeout', lockErr.stack, '');
+    logSecurityError(null, 'Script lock timeout', '', '', '', lockErr.stack || '');
     return createJsonResponse(false, null, 'Error', 'Server busy. Please try again.');
   }
 
@@ -78,7 +82,6 @@ function doPost(e) {
       try {
         payload = JSON.parse(e.postData.contents);
       } catch (jsonErr) {
-        // Fallback for form-encoded parameter data
         payload = e.parameter || {};
       }
     } else if (e && e.parameter) {
@@ -90,10 +93,57 @@ function doPost(e) {
       throw new Error('Spreadsheet could not be accessed.');
     }
 
-    // Ensure all required sheets and structures exist
+    // Ensure all required sheets, columns, and settings exist
     setupEnvironment(ss);
 
-    // Extract & sanitize lead fields
+    const settingsSheet = ss.getSheetByName(SHEETS.SETTINGS);
+    const settings = getSettingsMap(settingsSheet);
+
+    // Extract request context headers / payload
+    const publicIP = (payload['public IP'] || payload.publicIP || payload.ip || '').trim();
+    const origin = (payload.origin || payload.referrer || (e && e.parameter ? e.parameter.origin : '') || '').trim();
+    const userAgent = (payload.userAgent || payload.browser || '').trim();
+
+    // ----------------------------------------------------
+    // 1. HONEYPOT SPAM PROTECTION ('website' field)
+    // ----------------------------------------------------
+    const spamProtectionEnabled = settings['Spam Protection Enabled'] !== 'false';
+    const honeypotValue = (payload.website || '').trim();
+
+    if (spamProtectionEnabled && honeypotValue !== '') {
+      logSecurityError(ss, 'Spam detected.', publicIP, origin, userAgent, 'Honeypot website field filled: ' + honeypotValue);
+      return createJsonResponse(false, null, 'Spam', 'Spam detected.');
+    }
+
+    // ----------------------------------------------------
+    // 2. BOT USER-AGENT CHECK
+    // ----------------------------------------------------
+    const botDetectionEnabled = settings['Bot Detection Enabled'] !== 'false';
+    if (botDetectionEnabled && isBotUserAgent(userAgent)) {
+      logSecurityError(ss, 'Bot detected.', publicIP, origin, userAgent, 'Blocked bot user-agent');
+      return createJsonResponse(false, null, 'BotBlocked', 'Access denied.');
+    }
+
+    // ----------------------------------------------------
+    // 3. ORIGIN VALIDATION
+    // ----------------------------------------------------
+    const originValidationEnabled = String(settings['Origin Validation Enabled']).toLowerCase() === 'true';
+    const allowedDomains = settings['Allowed Domains'] || 'https://novaskills.in,https://www.novaskills.in';
+
+    if (originValidationEnabled && !isValidOrigin(origin, allowedDomains)) {
+      logSecurityError(ss, 'Unauthorized origin.', publicIP, origin, userAgent, 'Origin not allowed');
+      return createJsonResponse(false, null, 'UnauthorizedOrigin', 'Unauthorized origin.');
+    }
+
+    // ----------------------------------------------------
+    // 4. SERVER-SIDE FIELD VALIDATION
+    // ----------------------------------------------------
+    const validationResult = validatePayloadFields(payload);
+    if (!validationResult.valid) {
+      logSecurityError(ss, 'Validation failed.', publicIP, origin, userAgent, validationResult.error);
+      return createJsonResponse(false, null, 'ValidationError', validationResult.error);
+    }
+
     const name = (payload.name || payload.fullName || '').trim();
     const mobile = (payload.mobile || payload.phone || '').trim();
     const email = (payload.email || '').trim().toLowerCase();
@@ -107,7 +157,6 @@ function doPost(e) {
     const utmCampaign = (payload.utmCampaign || payload.utm_campaign || '').trim();
     const utmContent = (payload.utmContent || payload.utm_content || '').trim();
     const utmTerm = (payload.utmTerm || payload.utm_term || '').trim();
-    const publicIP = (payload['public IP'] || payload.publicIP || payload.ip || '').trim();
     const browser = (payload.browser || '').trim();
     const device = (payload.device || '').trim();
     const os = (payload.os || '').trim();
@@ -117,14 +166,24 @@ function doPost(e) {
 
     const leadsSheet = ss.getSheetByName(SHEETS.LEADS);
 
-    // Perform Duplicate Detection (Mobile OR Email)
+    // ----------------------------------------------------
+    // 5. RATE LIMITING (5-minute window per Mobile/Email)
+    // ----------------------------------------------------
+    const rateLimitMinutes = parseInt(settings['Rate Limit Minutes'], 10) || 5;
+    if (isRateLimited(leadsSheet, mobile, email, rateLimitMinutes)) {
+      logSecurityError(ss, 'Rate limit exceeded.', publicIP, origin, userAgent, 'Submission within ' + rateLimitMinutes + ' min window');
+      return createJsonResponse(false, null, 'RateLimited', 'Please wait before submitting again.');
+    }
+
+    // ----------------------------------------------------
+    // 6. DUPLICATE DETECTION & LEAD CREATION
+    // ----------------------------------------------------
     const isDuplicate = checkDuplicate(leadsSheet, mobile, email);
     const leadStatus = isDuplicate ? 'Duplicate' : 'New';
 
-    // Auto-generate sequential Lead ID (e.g. NS000001)
+    // Auto-generate Lead ID (NS000001)
     const leadId = generateLeadId(ss);
 
-    // Prepare row matching LEADS_COLUMNS order
     const timestamp = new Date();
     const rowData = [
       leadId,
@@ -150,12 +209,11 @@ function doPost(e) {
       screenResolution,
       timezone,
       whatsAppNumber,
-      '', // Counsellor (blank for assignment)
+      '', // Counsellor
       '', // Remarks
       ''  // Follow-up Date
     ];
 
-    // Append lead row to Leads Sheet
     leadsSheet.appendRow(rowData);
 
     const endTime = new Date().getTime();
@@ -167,7 +225,7 @@ function doPost(e) {
     return createJsonResponse(true, leadId, leadStatus, 'Enquiry submitted successfully');
 
   } catch (err) {
-    logError('doPost', err.message || String(err), err.stack || '', JSON.stringify(payload));
+    logSecurityError(getSpreadsheet(), 'Unhandled Exception', '', '', '', (err.message || String(err)) + '\n' + (err.stack || ''));
     return createJsonResponse(false, null, 'Error', 'An error occurred while saving enquiry.');
   } finally {
     lock.releaseLock();
@@ -178,29 +236,128 @@ function doPost(e) {
  * Web App GET Handler (Status check)
  */
 function doGet(e) {
-  return createJsonResponse(true, null, 'Active', 'Nova Skills Lead Management API v2.0 is running.');
+  return createJsonResponse(true, null, 'Active', 'Nova Skills Lead Management API v2.0 Enterprise Security is running.');
 }
 
 /**
- * Gets Active Spreadsheet or opens by ID fallback
+ * Server-Side Field Validation Rules
  */
-function getSpreadsheet() {
-  try {
-    const active = SpreadsheetApp.getActiveSpreadsheet();
-    if (active) return active;
-  } catch (e) {}
+function validatePayloadFields(payload) {
+  const name = (payload.name || payload.fullName || '').trim();
+  const mobile = (payload.mobile || payload.phone || '').trim().replace(/\D/g, '');
+  const email = (payload.email || '').trim().toLowerCase();
+  const course = (payload.course || payload.interest || '').trim();
+  const message = (payload.message || payload.comment || '').trim();
 
-  if (SPREADSHEET_ID) {
-    return SpreadsheetApp.openById(SPREADSHEET_ID);
+  // Name: Min 2, Max 100
+  if (!name || name.length < 2 || name.length > 100) {
+    return { valid: false, error: 'Name must be between 2 and 100 characters.' };
   }
-  return null;
+
+  // Mobile: Exactly 10 digits
+  if (!mobile || mobile.length !== 10) {
+    return { valid: false, error: 'Please enter a valid 10-digit mobile number.' };
+  }
+
+  // Email: Valid format if provided
+  if (email && email.length > 0) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return { valid: false, error: 'Please enter a valid email address.' };
+    }
+  }
+
+  // Course: Required
+  if (!course) {
+    return { valid: false, error: 'Course selection is required.' };
+  }
+
+  // Message: Maximum 1000 characters
+  if (message && message.length > 1000) {
+    return { valid: false, error: 'Message cannot exceed 1000 characters.' };
+  }
+
+  return { valid: true };
 }
 
 /**
- * Environment Setup: Auto-creates required sheets & column headers
+ * Bot User Agent Detection
+ */
+function isBotUserAgent(userAgent) {
+  if (!userAgent) return false;
+  const ua = String(userAgent).toLowerCase();
+  const botPatterns = ['curl', 'wget', 'python', 'scrapy', 'postman', 'headlesschrome', 'phantomjs', 'axios/'];
+  return botPatterns.some(pattern => ua.includes(pattern));
+}
+
+/**
+ * Origin Validation Check
+ */
+function isValidOrigin(originStr, allowedDomainsStr) {
+  if (!originStr) return true; // Allow if origin header is omitted by browser
+  if (!allowedDomainsStr) return true;
+
+  const origin = originStr.toLowerCase();
+  const domains = allowedDomainsStr.split(',').map(d => d.trim().toLowerCase());
+  return domains.some(domain => domain && origin.includes(domain));
+}
+
+/**
+ * Rate Limiting Check (5-minute sliding window)
+ */
+function isRateLimited(leadsSheet, mobile, email, rateLimitMinutes) {
+  const lastRow = leadsSheet.getLastRow();
+  if (lastRow <= 1) return false;
+
+  const headers = leadsSheet.getRange(1, 1, 1, leadsSheet.getLastColumn()).getValues()[0];
+  const timeIdx = headers.indexOf('Timestamp');
+  const mobileIdx = headers.indexOf('Mobile');
+  const emailIdx = headers.indexOf('Email');
+
+  if (timeIdx === -1) return false;
+
+  const data = leadsSheet.getRange(2, 1, lastRow - 1, headers.length).getValues();
+  const nowMs = new Date().getTime();
+  const windowMs = (rateLimitMinutes || 5) * 60 * 1000;
+
+  const cleanMobile = mobile ? mobile.replace(/\D/g, '') : '';
+  const cleanEmail = email ? email.trim().toLowerCase() : '';
+
+  for (let i = data.length - 1; i >= 0; i--) {
+    const row = data[i];
+    const rowDate = new Date(row[timeIdx]);
+    const rowMs = rowDate.getTime();
+
+    if (isNaN(rowMs)) continue;
+
+    // Check if row is older than time window
+    if (nowMs - rowMs > windowMs) {
+      break;
+    }
+
+    if (cleanMobile && mobileIdx !== -1) {
+      const rowMobile = String(row[mobileIdx] || '').replace(/\D/g, '');
+      if (rowMobile && rowMobile === cleanMobile) {
+        return true;
+      }
+    }
+
+    if (cleanEmail && emailIdx !== -1) {
+      const rowEmail = String(row[emailIdx] || '').trim().toLowerCase();
+      if (rowEmail && rowEmail === cleanEmail) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
+
+/**
+ * Environment Setup: Auto-creates required sheets, headers, & default settings
  */
 function setupEnvironment(ss) {
-  // 1. Leads Sheet Setup
+  // 1. Leads Sheet
   let leadsSheet = ss.getSheetByName(SHEETS.LEADS);
   if (!leadsSheet) {
     leadsSheet = ss.insertSheet(SHEETS.LEADS);
@@ -210,7 +367,7 @@ function setupEnvironment(ss) {
     ensureHeaders(leadsSheet, LEADS_COLUMNS);
   }
 
-  // 2. Logs Sheet Setup
+  // 2. Logs Sheet
   let logsSheet = ss.getSheetByName(SHEETS.LOGS);
   if (!logsSheet) {
     logsSheet = ss.insertSheet(SHEETS.LOGS);
@@ -218,15 +375,17 @@ function setupEnvironment(ss) {
     styleHeaderRow(logsSheet);
   }
 
-  // 3. Errors Sheet Setup
+  // 3. Errors Sheet
   let errorsSheet = ss.getSheetByName(SHEETS.ERRORS);
   if (!errorsSheet) {
     errorsSheet = ss.insertSheet(SHEETS.ERRORS);
-    errorsSheet.appendRow(['Timestamp', 'Error Message', 'Function', 'Stack', 'Payload']);
+    errorsSheet.appendRow(['Timestamp', 'Reason', 'IP', 'Origin', 'User Agent', 'Details']);
     styleHeaderRow(errorsSheet);
+  } else {
+    ensureHeaders(errorsSheet, ['Timestamp', 'Reason', 'IP', 'Origin', 'User Agent', 'Details']);
   }
 
-  // 4. Dashboard Sheet Setup
+  // 4. Dashboard Sheet
   let dashboardSheet = ss.getSheetByName(SHEETS.DASHBOARD);
   if (!dashboardSheet) {
     dashboardSheet = ss.insertSheet(SHEETS.DASHBOARD);
@@ -237,7 +396,7 @@ function setupEnvironment(ss) {
     styleHeaderRow(dashboardSheet);
   }
 
-  // 5. Settings Sheet Setup (WhatsApp Architecture Preparation)
+  // 5. Settings Sheet (Enterprise Config)
   let settingsSheet = ss.getSheetByName(SHEETS.SETTINGS);
   if (!settingsSheet) {
     settingsSheet = ss.insertSheet(SHEETS.SETTINGS);
@@ -245,9 +404,13 @@ function setupEnvironment(ss) {
     styleHeaderRow(settingsSheet);
   }
 
-  // Ensure default Settings keys exist
   const defaultSettings = [
     { key: 'Last Lead ID Number', value: 0, desc: 'Last numeric ID counter for Lead ID generation' },
+    { key: 'Rate Limit Minutes', value: 5, desc: 'Minutes window to block repeated submissions by same Mobile/Email' },
+    { key: 'Spam Protection Enabled', value: 'true', desc: 'Enable/Disable Honeypot spam rejection' },
+    { key: 'Origin Validation Enabled', value: 'false', desc: 'Enable/Disable strict domain origin checking' },
+    { key: 'Allowed Domains', value: 'https://novaskills.in,https://www.novaskills.in', desc: 'Comma separated list of allowed domain origins' },
+    { key: 'Bot Detection Enabled', value: 'true', desc: 'Enable/Disable bot User-Agent blocking' },
     { key: 'WhatsApp Enabled', value: 'false', desc: 'Enable/Disable automatic WhatsApp notification' },
     { key: 'WhatsApp Number', value: '', desc: 'Business WhatsApp phone number' },
     { key: 'WhatsApp API Mode', value: '', desc: 'API Provider mode (e.g. Meta Cloud API)' },
@@ -257,7 +420,6 @@ function setupEnvironment(ss) {
   ];
 
   const existingSettings = getSettingsMap(settingsSheet);
-
   defaultSettings.forEach(setting => {
     if (!(setting.key in existingSettings)) {
       settingsSheet.appendRow([setting.key, setting.value, setting.desc]);
@@ -265,34 +427,25 @@ function setupEnvironment(ss) {
   });
 }
 
-/**
- * Ensures header row contains all required columns without duplicating existing ones
- */
 function ensureHeaders(sheet, requiredColumns) {
   if (sheet.getLastRow() === 0) {
     sheet.appendRow(requiredColumns);
     styleHeaderRow(sheet);
     return;
   }
-
   const existingHeaders = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0] || [];
   const missingColumns = [];
-
   requiredColumns.forEach(col => {
     if (!existingHeaders.includes(col)) {
       missingColumns.push(col);
     }
   });
-
   if (missingColumns.length > 0) {
     const nextCol = sheet.getLastColumn() + 1;
     sheet.getRange(1, nextCol, 1, missingColumns.length).setValues([missingColumns]);
   }
 }
 
-/**
- * Header Row Styling Helper
- */
 function styleHeaderRow(sheet) {
   try {
     const headerRange = sheet.getRange(1, 1, 1, sheet.getLastColumn());
@@ -304,12 +457,9 @@ function styleHeaderRow(sheet) {
   } catch (e) {}
 }
 
-/**
- * Duplicate Detection: Checks Mobile or Email
- */
 function checkDuplicate(leadsSheet, mobile, email) {
   const lastRow = leadsSheet.getLastRow();
-  if (lastRow <= 1) return false; // Only headers present
+  if (lastRow <= 1) return false;
 
   const headers = leadsSheet.getRange(1, 1, 1, leadsSheet.getLastColumn()).getValues()[0];
   const mobileColIdx = headers.indexOf('Mobile');
@@ -343,9 +493,6 @@ function checkDuplicate(leadsSheet, mobile, email) {
   return false;
 }
 
-/**
- * Lead ID Generator: Sequential NS000001 format
- */
 function generateLeadId(ss) {
   const settingsSheet = ss.getSheetByName(SHEETS.SETTINGS);
   let lastNum = 0;
@@ -360,7 +507,6 @@ function generateLeadId(ss) {
     }
   }
 
-  // If lastNum is 0, check max existing lead ID in Leads sheet
   if (lastNum === 0) {
     const leadsSheet = ss.getSheetByName(SHEETS.LEADS);
     if (leadsSheet && leadsSheet.getLastRow() > 1) {
@@ -378,15 +524,10 @@ function generateLeadId(ss) {
   const nextNum = lastNum + 1;
   const newLeadId = 'NS' + String(nextNum).padStart(6, '0');
 
-  // Update Settings Sheet
   updateSettingValue(settingsSheet, 'Last Lead ID Number', nextNum);
-
   return newLeadId;
 }
 
-/**
- * Settings Reader Helper
- */
 function getSettingsMap(settingsSheet) {
   const settingsMap = {};
   if (!settingsSheet || settingsSheet.getLastRow() <= 1) return settingsMap;
@@ -401,9 +542,6 @@ function getSettingsMap(settingsSheet) {
   return settingsMap;
 }
 
-/**
- * Updates a setting key-value pair in Settings sheet
- */
 function updateSettingValue(settingsSheet, key, value) {
   if (!settingsSheet) return;
   const lastRow = settingsSheet.getLastRow();
@@ -420,13 +558,21 @@ function updateSettingValue(settingsSheet, key, value) {
     }
   }
 
-  // Key not found, append
   settingsSheet.appendRow([key, value, 'Auto-generated setting']);
 }
 
-/**
- * Log successful submission to Logs sheet
- */
+function getSpreadsheet() {
+  try {
+    const active = SpreadsheetApp.getActiveSpreadsheet();
+    if (active) return active;
+  } catch (e) {}
+
+  if (SPREADSHEET_ID) {
+    return SpreadsheetApp.openById(SPREADSHEET_ID);
+  }
+  return null;
+}
+
 function logSubmission(ss, leadId, status, executionTimeMs) {
   try {
     const logsSheet = ss.getSheetByName(SHEETS.LOGS);
@@ -442,34 +588,29 @@ function logSubmission(ss, leadId, status, executionTimeMs) {
   } catch (e) {}
 }
 
-/**
- * Log exception to Errors sheet
- */
-function logError(funcName, errorMsg, stack, payloadStr) {
+function logSecurityError(ssInstance, reason, ip, origin, userAgent, details) {
   try {
-    const ss = getSpreadsheet();
+    const ss = ssInstance || getSpreadsheet();
     if (ss) {
       let errorsSheet = ss.getSheetByName(SHEETS.ERRORS);
       if (!errorsSheet) {
         errorsSheet = ss.insertSheet(SHEETS.ERRORS);
-        errorsSheet.appendRow(['Timestamp', 'Error Message', 'Function', 'Stack', 'Payload']);
+        errorsSheet.appendRow(['Timestamp', 'Reason', 'IP', 'Origin', 'User Agent', 'Details']);
       }
       errorsSheet.appendRow([
         new Date(),
-        errorMsg,
-        funcName,
-        stack,
-        payloadStr
+        reason || 'Error',
+        ip || '',
+        origin || '',
+        userAgent || '',
+        details || ''
       ]);
     }
   } catch (e) {
-    console.error('Failed to log error to Errors sheet:', e);
+    console.error('Failed to log security error:', e);
   }
 }
 
-/**
- * Standardized JSON Output Helper
- */
 function createJsonResponse(success, leadId, status, message) {
   const response = {
     success: success,

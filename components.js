@@ -246,6 +246,18 @@ async function submitNovaForm({
 
   if (form.dataset.submitting === 'true' || submitBtn.disabled) return false;
 
+  // Ensure honeypot field exists in form
+  if (!form.querySelector('input[name="website"]')) {
+    const hpInput = document.createElement('input');
+    hpInput.type = 'text';
+    hpInput.name = 'website';
+    hpInput.tabIndex = -1;
+    hpInput.autocomplete = 'off';
+    hpInput.setAttribute('aria-hidden', 'true');
+    hpInput.style.cssText = 'display:none !important; opacity:0; position:absolute; left:-9999px; width:0; height:0; z-index:-1;';
+    form.appendChild(hpInput);
+  }
+
   form.dataset.submitting = 'true';
   submitBtn.disabled = true;
 
@@ -256,6 +268,8 @@ async function submitNovaForm({
     const publicIP = await fetchPublicIP();
     const utm = getUTMParams();
 
+    const honeypotValue = (form.querySelector('input[name="website"]')?.value || data.website || '').trim();
+
     const payload = {
       name: data.name || '',
       mobile: data.mobile || '',
@@ -263,6 +277,7 @@ async function submitNovaForm({
       course: data.course || '',
       city: data.city || '',
       message: data.message || '',
+      website: honeypotValue,
 
       pageUrl: window.location.href,
       referrer: document.referrer || '',
@@ -291,38 +306,48 @@ async function submitNovaForm({
     });
 
     let isSuccess = res.ok;
+    let responseMsg = '';
+
     try {
       const json = await res.json();
-      if (json && json.success === false) isSuccess = false;
-    } catch (e) {
-      // GAS fetch response redirect handled automatically
-    }
-
-    if (isSuccess) {
-      // 1. Reset form
-      form.reset();
-
-      // 2. Restore button text and enable button again
-      submitBtn.innerHTML = originalHtml;
-      submitBtn.disabled = false;
-      delete form.dataset.submitting;
-
-      // 3. Show success notification
-      showToastNotification({
-        title: '✅ Consultation Booked Successfully!',
-        message: 'Thank you for contacting Nova Skills.\n\nOur career counsellor will call you within 2 hours.\n\nPlease keep your phone available.',
-        type: 'success'
-      });
-
-      // 4. Trigger callback (e.g., close popup after 1.5 seconds)
-      if (onSuccessCallback) {
-        onSuccessCallback();
+      if (json) {
+        if (json.success === false) {
+          isSuccess = false;
+          responseMsg = json.message || '';
+        } else if (json.message) {
+          responseMsg = json.message;
+        }
       }
-
-      return true;
-    } else {
-      throw new Error('Server returned unsuccessful status');
+    } catch (e) {
+      // Response redirect handled automatically
     }
+
+    if (!isSuccess) {
+      throw new Error(responseMsg || 'Submission failed');
+    }
+
+    // 1. Reset form
+    form.reset();
+
+    // 2. Restore button text and enable button again
+    submitBtn.innerHTML = originalHtml;
+    submitBtn.disabled = false;
+    delete form.dataset.submitting;
+
+    // 3. Show success notification
+    showToastNotification({
+      title: '✅ Consultation Booked Successfully!',
+      message: 'Thank you for contacting Nova Skills.\n\nOur career counsellor will call you within 2 hours.\n\nPlease keep your phone available.',
+      type: 'success'
+    });
+
+    // 4. Trigger callback
+    if (onSuccessCallback) {
+      onSuccessCallback();
+    }
+
+    return true;
+
   } catch (err) {
     console.error('Submission error:', err);
 
@@ -331,10 +356,14 @@ async function submitNovaForm({
     submitBtn.disabled = false;
     delete form.dataset.submitting;
 
-    // Show red error toast
+    // Show red error toast with server error message if available
+    const errorMsg = err.message && err.message !== 'Submission failed'
+      ? err.message
+      : 'Something went wrong. Please try again.';
+
     showToastNotification({
-      title: 'Submission Failed',
-      message: 'Something went wrong. Please try again.',
+      title: err.message && err.message.includes('Spam') ? 'Spam Detected' : 'Submission Failed',
+      message: errorMsg,
       type: 'error'
     });
 
