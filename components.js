@@ -634,7 +634,7 @@ function buildFooterHTML() {
           <div class="footer-links-group">
             <!-- Academies Column -->
             <div class="footer-col">
-              <h4 class="footer-heading">Academies</h4>
+              <h4 class="footer-heading">Our Academies</h4>
               <ul class="footer-links">
                 <li><a href="courses.html?academy=digital-marketing">📊 Digital Marketing</a></li>
                 <li><a href="courses.html?academy=ai">🤖 AI Academy</a></li>
@@ -685,7 +685,7 @@ function buildFooterHTML() {
                 <span class="contact-icon">📍</span>
                 <div>
                   <div class="contact-label">Address</div>
-                  <p>Nova Skills Institute<br />Siddharth Nagar<br />Uttar Pradesh - 272153</p>
+                  <p>Nova Skills Institute<br />Siddharth Nagar, Uttar Pradesh</p>
                 </div>
               </div>
             </div>
