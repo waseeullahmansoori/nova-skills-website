@@ -1,6 +1,6 @@
 /**
  * REST API Endpoints Router Module
- * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, AI Content Studio, and AI Operations Center.
+ * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, AI Content Studio, AI Operations Center, Auth & Admin RBAC.
  */
 
 import { processAIRequest } from '../services/aiService.js';
@@ -9,20 +9,85 @@ import { processStudentChat } from '../services/studentAssistant.js';
 import { sendLeadToCRM } from '../services/leadCaptureService.js';
 import { processContentGeneration } from '../services/contentStudioService.js';
 import { processOperationsReport } from '../services/operationsCenterService.js';
+import { authenticateUser, authorizeRequest, getAllUsers, getRolePermissionsMatrix } from '../services/authService.js';
+import { invalidateSession } from '../services/sessionManager.js';
+import { getSecurityLogs, logSecurityEvent } from '../services/auditLogger.js';
+import { PERMISSIONS } from '../security/rbacMatrix.js';
 import { createJsonResponse, createErrorResponse } from '../utils/response.js';
 
 export async function handleApiRoute(request, path, config, reqOrigin) {
   let body = {};
-  try {
-    body = await request.json();
-  } catch (e) {
-    return createErrorResponse('Invalid JSON payload in request body.', 400, reqOrigin, config.allowedOrigins);
+  if (request.method === 'POST' || request.method === 'PUT') {
+    try {
+      body = await request.json();
+    } catch (e) {
+      return createErrorResponse('Invalid JSON payload in request body.', 400, reqOrigin, config.allowedOrigins);
+    }
   }
 
-  const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount, crmData, query } = body;
+  const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, password, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount, crmData, query } = body;
 
   switch (path) {
-    // 1. AI Operations Center Endpoints
+    // 1. Enterprise Auth Endpoints
+    case '/api/auth/login': {
+      if (!email || !password) {
+        return createErrorResponse('Email and password are required.', 400, reqOrigin, config.allowedOrigins);
+      }
+      try {
+        const authResult = await authenticateUser(email, password, request);
+        return createJsonResponse({
+          success: true,
+          message: 'Login successful.',
+          user: authResult.user,
+          token: authResult.sessionToken,
+          expiresAt: authResult.expiresAt
+        }, 200, reqOrigin, config.allowedOrigins);
+      } catch (err) {
+        return createErrorResponse(err.message, 401, reqOrigin, config.allowedOrigins);
+      }
+    }
+
+    case '/api/auth/logout': {
+      const authHeader = request.headers.get('Authorization') || '';
+      const token = authHeader.replace(/^Bearer\s+/i, '').trim();
+      if (token) invalidateSession(token);
+      return createJsonResponse({ success: true, message: 'Logged out successfully.' }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/auth/me': {
+      const auth = authorizeRequest(request);
+      if (!auth.authorized) {
+        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins);
+      }
+      return createJsonResponse({ success: true, user: auth.session }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    // 2. Admin & RBAC Endpoints (Protected by Permissions)
+    case '/api/admin/users': {
+      const auth = authorizeRequest(request, PERMISSIONS.MANAGE_USERS);
+      if (!auth.authorized) {
+        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins);
+      }
+      return createJsonResponse({ success: true, users: getAllUsers() }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/admin/roles': {
+      const auth = authorizeRequest(request, PERMISSIONS.MANAGE_ROLES);
+      if (!auth.authorized) {
+        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins);
+      }
+      return createJsonResponse({ success: true, matrix: getRolePermissionsMatrix() }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/admin/security-logs': {
+      const auth = authorizeRequest(request, PERMISSIONS.MANAGE_USERS);
+      if (!auth.authorized) {
+        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins);
+      }
+      return createJsonResponse({ success: true, logs: getSecurityLogs(100) }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    // 3. AI Operations Center Endpoints
     case '/api/ai/dashboard':
     case '/api/ai/daily-brief':
     case '/api/ai/weekly-report':
@@ -52,7 +117,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 2. AI Content Studio Endpoints
+    // 4. AI Content Studio Endpoints
     case '/api/ai/content':
     case '/api/ai/blog':
     case '/api/ai/social':
@@ -76,7 +141,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 3. AI Student Assistant Endpoints
+    // 5. AI Student Assistant Endpoints
     case '/api/ai/student-chat':
     case '/api/ai/course-advisor':
     case '/api/ai/admission-faq': {
@@ -110,7 +175,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(crmResult, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 4. General Gateway AI Endpoints
+    // 6. General Gateway AI Endpoints
     case '/api/ai/chat': {
       const userText = message || userMessage || (messages && messages[messages.length - 1]?.content) || '';
       if (!userText && (!messages || messages.length === 0)) {
@@ -192,7 +257,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 5. AI Counsellor Engine Endpoints
+    // 7. AI Counsellor Engine Endpoints
     case '/api/ai/lead-analysis':
     case '/api/ai/recommendation':
     case '/api/ai/counsellor-summary':
