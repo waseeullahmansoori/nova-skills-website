@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Center — Nova Skills Enterprise Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0b132b;
+      color: #f0f4f8;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      display: flex;
+      min-height: 100vh;
+    }
+    .settings-sidebar {
+      width: 260px;
+      background: #011731;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 1rem;
+    }
+    .sidebar-brand {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0599a8;
+      margin-bottom: 2rem;
+    }
+    .settings-main {
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+    .tab-bar {
+      display: flex;
+      gap: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 2rem;
+    }
+    .tab-item {
+      padding: 0.75rem 1.25rem;
+      cursor: pointer;
+      color: #94a3b8;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+    .tab-item:hover, .tab-item.active {
+      color: #38bdf8;
+      border-bottom-color: #0599a8;
+      font-weight: 600;
+    }
+    .settings-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 650px;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      color: #94a3b8;
+      font-size: 0.875rem;
+      margin-bottom: 0.4rem;
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.2);
+      color: white;
+      font-size: 0.95rem;
+    }
+    .btn-settings {
+      background: #0599a8;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn-settings:hover {
+      background: #028491;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="settings-sidebar">
+    <div class="sidebar-brand">⚙️ Settings Center</div>
+    <p style="font-size:0.875rem;color:#94a3b8;">Nova Skills Platform Config</p>
+  </aside>
+
+  <!-- Main -->
+  <main class="settings-main">
+    <h2>Platform Settings & Configuration</h2>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item active" onclick="switchTab('institute')">🏛️ Institute</div>
+      <div class="tab-item" onclick="switchTab('branding')">🎨 Branding</div>
+      <div class="tab-item" onclick="switchTab('ai')">🤖 AI Config</div>
+      <div class="tab-item" onclick="switchTab('contact')">📞 Contact</div>
+      <div class="tab-item" onclick="switchTab('security')">🔒 Security</div>
+    </div>
+
+    <!-- Settings Card -->
+    <div class="settings-card" id="tabContent">
+      <!-- Dynamically rendered by admin-settings.js -->
+    </div>
+  </main>
+
+  <script src="admin-settings.js"></script>
+</body>
+</html>
