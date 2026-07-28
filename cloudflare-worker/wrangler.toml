@@ -1,0 +1,12 @@
+name = "novaskills-ai-gateway"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[vars]
+ENVIRONMENT = "production"
+DEFAULT_MODEL = "gpt-5.5"
+ALLOWED_ORIGINS = "https://novaskills.in,https://www.novaskills.in"
+RATE_LIMIT_PER_MINUTE = "30"
+
+# Note: Set OPENAI_API_KEY using:
+# wrangler secret put OPENAI_API_KEY
