@@ -397,10 +397,6 @@ function buildNavLinksHTML(page) {
   const aiHref = (page === 'home') ? '#ai-advisor' : 'index.html#ai-advisor';
 
   return `
-    <li class="mobile-cta-item">
-      <button class="btn btn-primary btn-block nav-mobile-btn" onclick="openConsultationPopup()">🚀 Free Counselling</button>
-    </li>
-
     <!-- 1. HOME -->
     <li><a href="index.html" class="${activeClass('home')}">Home</a></li>
 
@@ -590,7 +586,6 @@ function buildHeaderHTML(page) {
         <a href="login.html" onclick="handleNavAuthClick(event);" class="nav-phone" id="nav-auth-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Login / Sign Up
         </a>
-        <button class="btn btn-primary" id="nav-cta" onclick="openConsultationPopup()">Free Counselling</button>
       </div>
 
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
