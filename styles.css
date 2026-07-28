@@ -2915,11 +2915,42 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .placement-stats-row {
-    border-radius: var(--radius-lg);
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
   }
 
   .placement-stat {
-    flex: 0 0 100%;
+    flex: none !important;
+    width: 100% !important;
+    background: var(--bg-white) !important;
+    border: 1px solid rgba(5, 153, 168, 0.1) !important;
+    border-radius: var(--radius-xl) !important;
+    padding: 24px 12px !important;
+    box-shadow: var(--shadow-card) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    height: 100% !important;
+  }
+
+  .placement-stat-num {
+    font-size: 1.85rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 6px !important;
+    white-space: nowrap !important;
+  }
+
+  .placement-stat-label {
+    font-size: 0.8125rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
   }
 
   .section-cta-center {
