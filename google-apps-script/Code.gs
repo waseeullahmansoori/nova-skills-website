@@ -1,18 +1,19 @@
 /**
  * ============================================================
- * NOVA SKILLS — Lead Management System (Backend V2 Enterprise Security)
- * Production Google Apps Script Web App
+ * NOVA SKILLS — Lead Management System & CRM (Backend V2.5)
+ * Production Google Apps Script Web App & CRM Engine
  * ============================================================
  * 
- * Features:
- * - Enterprise Security & Spam Protection
- * - Honeypot Field Detection ('website')
- * - 5-Minute Rate Limiting per Mobile / Email
- * - Strict Server-Side Data Validation
- * - Domain Origin & Bot User-Agent Protection
- * - Security Exception & Rejection Logging
- * - Automated Lead ID (NS000001) & Duplicate Detection
- * - WhatsApp Business API Ready Settings
+ * CRM Features:
+ * - Full Lead Status Pipeline (New, Attempted Contact, Contacted, Demo Scheduled, Follow-up, Interested, Admission Confirmed, Enrolled, Lost)
+ * - Lead Priority (High, Medium, Low)
+ * - Assigned Counsellor Tracking
+ * - Follow-up Tracking (Last Contact Date, Next Follow-up Date, Follow-up Counter)
+ * - Unlimited Formatted Remarks (YYYY-MM-DD HH:mm - Note)
+ * - Automated Real-time Dashboard (Lead Pipeline, Course & Source Analytics)
+ * - Configurable CRM Settings (Institute Name, Emails, Working Hours, Counsellor Defaults)
+ * - Enterprise Security (Honeypot, 5-Min Rate Limiting, Server Validation, Bot Blocking, Error Logging)
+ * - 100% Backward Compatible with Website Frontend
  */
 
 'use strict';
@@ -29,11 +30,12 @@ const SHEETS = {
   SETTINGS: 'Settings'
 };
 
-// Required Columns for Leads Sheet
+// Required Columns for Leads CRM Sheet
 const LEADS_COLUMNS = [
   'Lead ID',
   'Timestamp',
   'Status',
+  'Priority',
   'Name',
   'Mobile',
   'Email',
@@ -54,9 +56,11 @@ const LEADS_COLUMNS = [
   'Screen Resolution',
   'Timezone',
   'WhatsApp Number',
-  'Counsellor',
-  'Remarks',
-  'Follow-up Date'
+  'Assigned Counsellor',
+  'Last Contact Date',
+  'Next Follow-up Date',
+  'Number of Follow-ups',
+  'Remarks'
 ];
 
 /**
@@ -66,7 +70,7 @@ function doPost(e) {
   const startTime = new Date().getTime();
   const lock = LockService.getScriptLock();
   
-  // Acquire lock up to 10 seconds to prevent race conditions & duplicate Lead IDs
+  // Acquire script lock (10s max) to ensure atomic Lead ID generation & sheet writes
   try {
     lock.waitLock(10000);
   } catch (lockErr) {
@@ -93,20 +97,18 @@ function doPost(e) {
       throw new Error('Spreadsheet could not be accessed.');
     }
 
-    // Ensure all required sheets, columns, and settings exist
+    // Ensure all required sheets, columns, formulas, and settings exist
     setupEnvironment(ss);
 
     const settingsSheet = ss.getSheetByName(SHEETS.SETTINGS);
     const settings = getSettingsMap(settingsSheet);
 
-    // Extract request context headers / payload
+    // Context metadata
     const publicIP = (payload['public IP'] || payload.publicIP || payload.ip || '').trim();
     const origin = (payload.origin || payload.referrer || (e && e.parameter ? e.parameter.origin : '') || '').trim();
     const userAgent = (payload.userAgent || payload.browser || '').trim();
 
-    // ----------------------------------------------------
     // 1. HONEYPOT SPAM PROTECTION ('website' field)
-    // ----------------------------------------------------
     const spamProtectionEnabled = settings['Spam Protection Enabled'] !== 'false';
     const honeypotValue = (payload.website || '').trim();
 
@@ -115,18 +117,14 @@ function doPost(e) {
       return createJsonResponse(false, null, 'Spam', 'Spam detected.');
     }
 
-    // ----------------------------------------------------
     // 2. BOT USER-AGENT CHECK
-    // ----------------------------------------------------
     const botDetectionEnabled = settings['Bot Detection Enabled'] !== 'false';
     if (botDetectionEnabled && isBotUserAgent(userAgent)) {
       logSecurityError(ss, 'Bot detected.', publicIP, origin, userAgent, 'Blocked bot user-agent');
       return createJsonResponse(false, null, 'BotBlocked', 'Access denied.');
     }
 
-    // ----------------------------------------------------
     // 3. ORIGIN VALIDATION
-    // ----------------------------------------------------
     const originValidationEnabled = String(settings['Origin Validation Enabled']).toLowerCase() === 'true';
     const allowedDomains = settings['Allowed Domains'] || 'https://novaskills.in,https://www.novaskills.in';
 
@@ -135,9 +133,7 @@ function doPost(e) {
       return createJsonResponse(false, null, 'UnauthorizedOrigin', 'Unauthorized origin.');
     }
 
-    // ----------------------------------------------------
     // 4. SERVER-SIDE FIELD VALIDATION
-    // ----------------------------------------------------
     const validationResult = validatePayloadFields(payload);
     if (!validationResult.valid) {
       logSecurityError(ss, 'Validation failed.', publicIP, origin, userAgent, validationResult.error);
@@ -166,29 +162,36 @@ function doPost(e) {
 
     const leadsSheet = ss.getSheetByName(SHEETS.LEADS);
 
-    // ----------------------------------------------------
     // 5. RATE LIMITING (5-minute window per Mobile/Email)
-    // ----------------------------------------------------
     const rateLimitMinutes = parseInt(settings['Rate Limit Minutes'], 10) || 5;
     if (isRateLimited(leadsSheet, mobile, email, rateLimitMinutes)) {
       logSecurityError(ss, 'Rate limit exceeded.', publicIP, origin, userAgent, 'Submission within ' + rateLimitMinutes + ' min window');
       return createJsonResponse(false, null, 'RateLimited', 'Please wait before submitting again.');
     }
 
-    // ----------------------------------------------------
-    // 6. DUPLICATE DETECTION & LEAD CREATION
-    // ----------------------------------------------------
+    // 6. DUPLICATE DETECTION & LEAD STATUS
     const isDuplicate = checkDuplicate(leadsSheet, mobile, email);
     const leadStatus = isDuplicate ? 'Duplicate' : 'New';
+    const leadPriority = payload.priority || 'Medium';
 
-    // Auto-generate Lead ID (NS000001)
+    // Auto-generate Lead ID (e.g. NS000001)
     const leadId = generateLeadId(ss);
 
+    // Assign default counsellor if specified
+    const defaultCounsellor = settings['Default Counsellor'] && settings['Default Counsellor'] !== 'Unassigned' 
+      ? settings['Default Counsellor'] 
+      : '';
+
     const timestamp = new Date();
+    
+    // Initial Remark format: YYYY-MM-DD HH:mm - Remark
+    const initialRemark = message ? `${formatDateFormatted(timestamp)} - ${message}` : `${formatDateFormatted(timestamp)} - Initial Web Form Enquiry`;
+
     const rowData = [
       leadId,
       timestamp,
       leadStatus,
+      leadPriority,
       name,
       mobile,
       email,
@@ -209,9 +212,11 @@ function doPost(e) {
       screenResolution,
       timezone,
       whatsAppNumber,
-      '', // Counsellor
-      '', // Remarks
-      ''  // Follow-up Date
+      defaultCounsellor, // Assigned Counsellor
+      '',                // Last Contact Date
+      '',                // Next Follow-up Date
+      0,                 // Number of Follow-ups
+      initialRemark      // Remarks
     ];
 
     leadsSheet.appendRow(rowData);
@@ -233,10 +238,10 @@ function doPost(e) {
 }
 
 /**
- * Web App GET Handler (Status check)
+ * Web App GET Handler (Status & CRM Health Check)
  */
 function doGet(e) {
-  return createJsonResponse(true, null, 'Active', 'Nova Skills Lead Management API v2.0 Enterprise Security is running.');
+  return createJsonResponse(true, null, 'Active', 'Nova Skills Lead Management System & CRM v2.5 is running.');
 }
 
 /**
@@ -294,7 +299,7 @@ function isBotUserAgent(userAgent) {
  * Origin Validation Check
  */
 function isValidOrigin(originStr, allowedDomainsStr) {
-  if (!originStr) return true; // Allow if origin header is omitted by browser
+  if (!originStr) return true;
   if (!allowedDomainsStr) return true;
 
   const origin = originStr.toLowerCase();
@@ -330,7 +335,6 @@ function isRateLimited(leadsSheet, mobile, email, rateLimitMinutes) {
 
     if (isNaN(rowMs)) continue;
 
-    // Check if row is older than time window
     if (nowMs - rowMs > windowMs) {
       break;
     }
@@ -354,7 +358,7 @@ function isRateLimited(leadsSheet, mobile, email, rateLimitMinutes) {
 }
 
 /**
- * Environment Setup: Auto-creates required sheets, headers, & default settings
+ * Environment Setup: Auto-creates required sheets, headers, formulas & settings
  */
 function setupEnvironment(ss) {
   // 1. Leads Sheet
@@ -366,6 +370,9 @@ function setupEnvironment(ss) {
   } else {
     ensureHeaders(leadsSheet, LEADS_COLUMNS);
   }
+
+  // Add Data Validation dropdowns for Status & Priority if possible
+  addLeadDataValidations(leadsSheet);
 
   // 2. Logs Sheet
   let logsSheet = ss.getSheetByName(SHEETS.LOGS);
@@ -385,18 +392,112 @@ function setupEnvironment(ss) {
     ensureHeaders(errorsSheet, ['Timestamp', 'Reason', 'IP', 'Origin', 'User Agent', 'Details']);
   }
 
-  // 4. Dashboard Sheet
+  // 4. Dashboard Sheet (Comprehensive CRM Metrics & Analytics)
+  setupDashboardSheet(ss);
+
+  // 5. Settings Sheet (Institute & CRM Config)
+  setupSettingsSheet(ss);
+}
+
+/**
+ * Setup Dashboard Sheet with Metrics, Course & Source Analytics
+ */
+function setupDashboardSheet(ss) {
   let dashboardSheet = ss.getSheetByName(SHEETS.DASHBOARD);
   if (!dashboardSheet) {
     dashboardSheet = ss.insertSheet(SHEETS.DASHBOARD);
-    dashboardSheet.appendRow(['Metric', 'Value', 'Last Updated']);
-    dashboardSheet.appendRow(['Total Leads', '=COUNTA(Leads!A2:A)', '=NOW()']);
-    dashboardSheet.appendRow(['New Leads', '=COUNTIF(Leads!C2:C, "New")', '=NOW()']);
-    dashboardSheet.appendRow(['Duplicate Leads', '=COUNTIF(Leads!C2:C, "Duplicate")', '=NOW()']);
-    styleHeaderRow(dashboardSheet);
   }
 
-  // 5. Settings Sheet (Enterprise Config)
+  // Re-build Dashboard structure safely
+  dashboardSheet.clear();
+
+  // Title Banner
+  dashboardSheet.getRange(1, 1, 1, 4).merge()
+    .setValue('📊 NOVA SKILLS CRM — EXECUTIVE DASHBOARD')
+    .setBackground('#011731')
+    .setFontColor('#FFFFFF')
+    .setFontWeight('bold')
+    .setFontSize(14)
+    .setHorizontalAlignment('center');
+
+  // Section 1: Lead Pipeline Overview
+  dashboardSheet.getRange(3, 1, 1, 3).merge()
+    .setValue('📌 LEAD PIPELINE METRICS')
+    .setBackground('#0599a8')
+    .setFontColor('#FFFFFF')
+    .setFontWeight('bold');
+
+  const pipelineRows = [
+    ['Metric Name', 'Formula / Value', 'Last Updated'],
+    ['Total Leads', '=COUNTA(Leads!A2:A)', '=NOW()'],
+    ['Today\'s Leads', '=COUNTIF(Leads!B2:B, ">=" & TODAY())', '=NOW()'],
+    ['This Week', '=COUNTIFS(Leads!B2:B, ">=" & (TODAY()-WEEKDAY(TODAY(),2)+1), Leads!B2:B, "<=" & (TODAY()+7-WEEKDAY(TODAY(),2)))', '=NOW()'],
+    ['This Month', '=COUNTIFS(Leads!B2:B, ">=" & DATE(YEAR(TODAY()), MONTH(TODAY()), 1))', '=NOW()'],
+    ['New Leads', '=COUNTIF(Leads!C2:C, "New")', '=NOW()'],
+    ['Duplicate Leads', '=COUNTIF(Leads!C2:C, "Duplicate")', '=NOW()'],
+    ['Attempted / Contacted', '=COUNTIF(Leads!C2:C, "Contacted") + COUNTIF(Leads!C2:C, "Attempted Contact")', '=NOW()'],
+    ['Interested / Demo', '=COUNTIF(Leads!C2:C, "Interested") + COUNTIF(Leads!C2:C, "Demo Scheduled")', '=NOW()'],
+    ['Admissions / Enrolled', '=COUNTIF(Leads!C2:C, "Admission Confirmed") + COUNTIF(Leads!C2:C, "Enrolled")', '=NOW()'],
+    ['Lost Leads', '=COUNTIF(Leads!C2:C, "Lost")', '=NOW()']
+  ];
+
+  dashboardSheet.getRange(4, 1, pipelineRows.length, 3).setValues(pipelineRows);
+  dashboardSheet.getRange(4, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
+
+  // Section 2: Course Analytics
+  dashboardSheet.getRange(16, 1, 1, 3).merge()
+    .setValue('🎓 COURSE ANALYTICS')
+    .setBackground('#0599a8')
+    .setFontColor('#FFFFFF')
+    .setFontWeight('bold');
+
+  const courseRows = [
+    ['Academy Niche', 'Total Enquiries', 'Share %'],
+    ['Digital Marketing', '=COUNTIF(Leads!H2:H, "*Digital Marketing*")', '=IF(B18>0, B18/B5, 0)'],
+    ['Graphic Design', '=COUNTIF(Leads!H2:H, "*Design*")', '=IF(B19>0, B19/B5, 0)'],
+    ['Video Editing', '=COUNTIF(Leads!H2:H, "*Video*")', '=IF(B20>0, B20/B5, 0)'],
+    ['Motion Graphics', '=COUNTIF(Leads!H2:H, "*Motion*")', '=IF(B21>0, B21/B5, 0)'],
+    ['Python', '=COUNTIF(Leads!H2:H, "*Python*")', '=IF(B22>0, B22/B5, 0)'],
+    ['Web Development', '=COUNTIF(Leads!H2:H, "*Web*") + COUNTIF(Leads!H2:H, "*Coding*")', '=IF(B23>0, B23/B5, 0)'],
+    ['AI & Automation', '=COUNTIF(Leads!H2:H, "*AI*")', '=IF(B24>0, B24/B5, 0)']
+  ];
+
+  dashboardSheet.getRange(17, 1, courseRows.length, 3).setValues(courseRows);
+  dashboardSheet.getRange(17, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
+  dashboardSheet.getRange(18, 3, 7, 1).setNumberFormat('0.0%');
+
+  // Section 3: Source Analytics
+  dashboardSheet.getRange(26, 1, 1, 3).merge()
+    .setValue('🌐 TRAFFIC & SOURCE ANALYTICS')
+    .setBackground('#0599a8')
+    .setFontColor('#FFFFFF')
+    .setFontWeight('bold');
+
+  const sourceRows = [
+    ['Traffic Source', 'Lead Count', 'Conversion Share'],
+    ['Organic Search', '=COUNTIFS(Leads!M2:M, "", Leads!L2:L, "*google*") + COUNTIFS(Leads!M2:M, "", Leads!L2:L, "*bing*")', '=IF(B28>0, B28/B5, 0)'],
+    ['Google Ads', '=COUNTIF(Leads!M2:M, "*google*")', '=IF(B29>0, B29/B5, 0)'],
+    ['Facebook Ads', '=COUNTIF(Leads!M2:M, "*facebook*") + COUNTIF(Leads!M2:M, "*fb*")', '=IF(B30>0, B30/B5, 0)'],
+    ['Instagram Ads', '=COUNTIF(Leads!M2:M, "*instagram*") + COUNTIF(Leads!M2:M, "*ig*")', '=IF(B31>0, B31/B5, 0)'],
+    ['WhatsApp', '=COUNTIF(Leads!M2:M, "*whatsapp*")', '=IF(B32>0, B32/B5, 0)'],
+    ['Direct Traffic', '=COUNTIFS(Leads!M2:M, "", Leads!L2:L, "")', '=IF(B33>0, B33/B5, 0)'],
+    ['Referral', '=COUNTIF(Leads!M2:M, "*referral*")', '=IF(B34>0, B34/B5, 0)']
+  ];
+
+  dashboardSheet.getRange(27, 1, sourceRows.length, 3).setValues(sourceRows);
+  dashboardSheet.getRange(27, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
+  dashboardSheet.getRange(28, 3, 7, 1).setNumberFormat('0.0%');
+
+  // Auto-fit columns
+  try {
+    dashboardSheet.autoResizeColumns(1, 3);
+  } catch (e) {}
+}
+
+/**
+ * Setup Settings Sheet with CRM & Security Defaults
+ */
+function setupSettingsSheet(ss) {
   let settingsSheet = ss.getSheetByName(SHEETS.SETTINGS);
   if (!settingsSheet) {
     settingsSheet = ss.insertSheet(SHEETS.SETTINGS);
@@ -405,14 +506,22 @@ function setupEnvironment(ss) {
   }
 
   const defaultSettings = [
+    { key: 'Institute Name', value: 'Nova Skills', desc: 'Official Institute Name for communications' },
+    { key: 'Admin Email', value: 'admin@novaskills.in', desc: 'Primary administrator notification email' },
+    { key: 'Support Email', value: 'hello@novaskills.in', desc: 'Student support email' },
+    { key: 'WhatsApp Number', value: '+91 XXXXX XXXXX', desc: 'Institute WhatsApp business number' },
+    { key: 'Default Counsellor', value: 'Unassigned', desc: 'Default assigned counsellor for incoming leads' },
+    { key: 'Working Hours', value: 'Mon–Sat: 9:00 AM – 7:00 PM', desc: 'Institute operational hours' },
+    { key: 'Business Days', value: 'Mon,Tue,Wed,Thu,Fri,Sat', desc: 'Active business days' },
+
     { key: 'Last Lead ID Number', value: 0, desc: 'Last numeric ID counter for Lead ID generation' },
     { key: 'Rate Limit Minutes', value: 5, desc: 'Minutes window to block repeated submissions by same Mobile/Email' },
     { key: 'Spam Protection Enabled', value: 'true', desc: 'Enable/Disable Honeypot spam rejection' },
     { key: 'Origin Validation Enabled', value: 'false', desc: 'Enable/Disable strict domain origin checking' },
     { key: 'Allowed Domains', value: 'https://novaskills.in,https://www.novaskills.in', desc: 'Comma separated list of allowed domain origins' },
     { key: 'Bot Detection Enabled', value: 'true', desc: 'Enable/Disable bot User-Agent blocking' },
+
     { key: 'WhatsApp Enabled', value: 'false', desc: 'Enable/Disable automatic WhatsApp notification' },
-    { key: 'WhatsApp Number', value: '', desc: 'Business WhatsApp phone number' },
     { key: 'WhatsApp API Mode', value: '', desc: 'API Provider mode (e.g. Meta Cloud API)' },
     { key: 'Meta Access Token', value: '', desc: 'Meta Business API Permanent Access Token' },
     { key: 'Phone Number ID', value: '', desc: 'Meta Business Phone Number ID' },
@@ -425,6 +534,42 @@ function setupEnvironment(ss) {
       settingsSheet.appendRow([setting.key, setting.value, setting.desc]);
     }
   });
+}
+
+/**
+ * Data Validation Dropdowns for Leads Sheet (Status & Priority)
+ */
+function addLeadDataValidations(leadsSheet) {
+  try {
+    const headers = leadsSheet.getRange(1, 1, 1, leadsSheet.getLastColumn()).getValues()[0];
+    const statusColIdx = headers.indexOf('Status') + 1;
+    const priorityColIdx = headers.indexOf('Priority') + 1;
+
+    if (statusColIdx > 0) {
+      const statusRule = SpreadsheetApp.newDataValidation()
+        .requireValueInList([
+          'New',
+          'Attempted Contact',
+          'Contacted',
+          'Demo Scheduled',
+          'Follow-up',
+          'Interested',
+          'Admission Confirmed',
+          'Enrolled',
+          'Lost',
+          'Duplicate'
+        ], true)
+        .build();
+      leadsSheet.getRange(2, statusColIdx, 500, 1).setDataValidation(statusRule);
+    }
+
+    if (priorityColIdx > 0) {
+      const priorityRule = SpreadsheetApp.newDataValidation()
+        .requireValueInList(['High', 'Medium', 'Low'], true)
+        .build();
+      leadsSheet.getRange(2, priorityColIdx, 500, 1).setDataValidation(priorityRule);
+    }
+  } catch (e) {}
 }
 
 function ensureHeaders(sheet, requiredColumns) {
@@ -608,6 +753,20 @@ function logSecurityError(ssInstance, reason, ip, origin, userAgent, details) {
     }
   } catch (e) {
     console.error('Failed to log security error:', e);
+  }
+}
+
+function formatDateFormatted(dateObj) {
+  try {
+    const date = dateObj || new Date();
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    const dd = String(date.getDate()).padStart(2, '0');
+    const hh = String(date.getHours()).padStart(2, '0');
+    const min = String(date.getMinutes()).padStart(2, '0');
+    return `${yyyy}-${mm}-${dd} ${hh}:${min}`;
+  } catch (e) {
+    return String(dateObj);
   }
 }
 
