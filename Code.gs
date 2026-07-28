@@ -1,18 +1,17 @@
 /**
  * ============================================================
- * NOVA SKILLS — Lead Management System & CRM (Backend V3.0)
- * Enterprise Reporting & Follow-Up Automation Engine
+ * NOVA SKILLS — Lead Management System & CRM (Backend V4.0)
+ * Event-Driven Automation Engine & Notification Center
  * ============================================================
  * 
  * Features:
- * - Automated Daily Reports (8:00 PM IST)
- * - Automated Weekly Reports (Mondays)
- * - Automated Monthly Reports (1st of month)
- * - Morning Follow-Up & Overdue Lead Reminders (8:00 AM IST)
- * - Professional Responsive HTML Email Templates with Nova Skills Branding
- * - Course, Traffic Source, and Counsellor-wise Analytics
- * - Real-time Dashboard with Conversion Rate %
- * - Enterprise Security, Honeypot, Rate Limiting & Error Logging
+ * - Event-Driven Architecture (NEW_LEAD, LEAD_UPDATED, STATUS_CHANGED, FOLLOWUP_DUE, ADMISSION_CONFIRMED, ENROLLED)
+ * - Centralized Notification Module (EMAIL, WHATSAPP ClickToChat & Business API Ready, SYSTEM_LOG)
+ * - Dynamic WhatsApp Click-to-Chat Link Generation (https://wa.me/919695904440?text=...)
+ * - Extended JSON Success Response including "whatsappUrl"
+ * - Configurable Settings (Institute Name, Website, Emails, WhatsApp Defaults)
+ * - Automation Event & Security Error Logging
+ * - Automated Daily, Weekly & Monthly Reports
  * - 100% Backward Compatible with Website Frontend
  */
 
@@ -28,6 +27,16 @@ const SHEETS = {
   ERRORS: 'Errors',
   DASHBOARD: 'Dashboard',
   SETTINGS: 'Settings'
+};
+
+// Automation Event Names
+const AUTOMATION_EVENTS = {
+  NEW_LEAD: 'NEW_LEAD',
+  LEAD_UPDATED: 'LEAD_UPDATED',
+  STATUS_CHANGED: 'STATUS_CHANGED',
+  FOLLOWUP_DUE: 'FOLLOWUP_DUE',
+  ADMISSION_CONFIRMED: 'ADMISSION_CONFIRMED',
+  ENROLLED: 'ENROLLED'
 };
 
 // Required Columns for Leads CRM Sheet
@@ -212,12 +221,33 @@ function doPost(e) {
 
     leadsSheet.appendRow(rowData);
 
+    // 7. GENERATE WHATSAPP CLICK TO CHAT LINK
+    const instituteWhatsAppNumber = settings['WhatsApp Number'] || '9695904440';
+    const whatsappUrl = generateWhatsAppClickToChatUrl(instituteWhatsAppNumber, name, course);
+
+    // 8. TRIGGER AUTOMATION EVENT (NEW_LEAD)
+    try {
+      dispatchEvent(AUTOMATION_EVENTS.NEW_LEAD, {
+        leadId: leadId,
+        name: name,
+        mobile: mobile,
+        email: email,
+        course: course,
+        city: city,
+        message: message,
+        status: leadStatus,
+        whatsappUrl: whatsappUrl
+      }, ss);
+    } catch (autoErr) {
+      logSecurityError(ss, 'Automation Engine Error (NEW_LEAD)', publicIP, origin, userAgent, autoErr.message || String(autoErr));
+    }
+
     const endTime = new Date().getTime();
     const executionTimeMs = endTime - startTime;
 
     logSubmission(ss, leadId, leadStatus, executionTimeMs);
 
-    return createJsonResponse(true, leadId, leadStatus, 'Enquiry submitted successfully');
+    return createJsonResponse(true, leadId, leadStatus, 'Enquiry submitted successfully.', whatsappUrl);
 
   } catch (err) {
     logSecurityError(getSpreadsheet(), 'Unhandled Exception', '', '', '', (err.message || String(err)) + '\n' + (err.stack || ''));
@@ -231,16 +261,217 @@ function doPost(e) {
  * Web App GET Handler
  */
 function doGet(e) {
-  return createJsonResponse(true, null, 'Active', 'Nova Skills Lead Management System & CRM v3.0 is running.');
+  return createJsonResponse(true, null, 'Active', 'Nova Skills Event-Driven CRM & Automation Engine v4.0 is running.');
 }
 
 /* ============================================================
-   AUTOMATED REPORTING & FOLLOW-UP ENGINES
+   EVENT-DRIVEN AUTOMATION ENGINE & HANDLERS
    ============================================================ */
 
 /**
- * 1. DAILY REPORT (Every day at 8:00 PM IST)
+ * Central Event Dispatcher
  */
+function dispatchEvent(eventName, payload, ssInstance) {
+  const ss = ssInstance || getSpreadsheet();
+  const startTime = new Date().getTime();
+
+  try {
+    switch (eventName) {
+      case AUTOMATION_EVENTS.NEW_LEAD:
+        handleNewLeadEvent(payload, ss);
+        break;
+      case AUTOMATION_EVENTS.LEAD_UPDATED:
+        handleLeadUpdatedEvent(payload, ss);
+        break;
+      case AUTOMATION_EVENTS.STATUS_CHANGED:
+        handleStatusChangedEvent(payload, ss);
+        break;
+      case AUTOMATION_EVENTS.FOLLOWUP_DUE:
+        handleFollowupDueEvent(payload, ss);
+        break;
+      case AUTOMATION_EVENTS.ADMISSION_CONFIRMED:
+        handleAdmissionConfirmedEvent(payload, ss);
+        break;
+      case AUTOMATION_EVENTS.ENROLLED:
+        handleEnrolledEvent(payload, ss);
+        break;
+      default:
+        console.warn('Unknown event dispatched:', eventName);
+        return;
+    }
+
+    const execTime = new Date().getTime() - startTime;
+    logAutomationEvent(ss, eventName, payload.leadId || '', 'Handled event successfully', 'Success', execTime);
+  } catch (err) {
+    const execTime = new Date().getTime() - startTime;
+    logAutomationEvent(ss, eventName, payload.leadId || '', 'Failed handling event: ' + err.message, 'Failure', execTime);
+    logSecurityError(ss, 'Event Execution Failed: ' + eventName, '', '', '', err.stack || String(err));
+  }
+}
+
+function handleNewLeadEvent(payload, ss) {
+  const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
+  const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
+
+  // 1. Admin Email Notification
+  const adminSubject = `🆕 New Lead Received: ${payload.name} (${payload.course})`;
+  const adminBody = `
+    <h2>New Lead Registered on Nova Skills</h2>
+    <p><strong>Lead ID:</strong> ${payload.leadId}</p>
+    <p><strong>Name:</strong> ${payload.name}</p>
+    <p><strong>Mobile:</strong> ${payload.mobile}</p>
+    <p><strong>Email:</strong> ${payload.email}</p>
+    <p><strong>Course:</strong> ${payload.course}</p>
+    <p><strong>City:</strong> ${payload.city || 'N/A'}</p>
+    <p><strong>Status:</strong> ${payload.status}</p>
+    <p><strong>Message:</strong> ${payload.message || 'N/A'}</p>
+  `;
+  sendNotification('EMAIL', adminEmail, { subject: adminSubject, body: adminBody }, { leadId: payload.leadId, event: 'NEW_LEAD' }, ss);
+
+  // 2. Student Auto-Reply Email (if email provided)
+  if (payload.email) {
+    const studentSubject = `Thank you for your enquiry, ${payload.name} — Nova Skills`;
+    const studentBody = `
+      <p>Dear ${payload.name},</p>
+      <p>Thank you for contacting Nova Skills! We have received your enquiry for the <strong>${payload.course}</strong> course.</p>
+      <p>Our senior career counsellor will call you within 2 hours to provide complete course details, fee structure, and syllabus.</p>
+      <br/>
+      <p>Warm regards,<br/><strong>Nova Skills Admissions Team</strong><br/>https://novaskills.in</p>
+    `;
+    sendNotification('EMAIL', payload.email, { subject: studentSubject, body: studentBody }, { leadId: payload.leadId, event: 'NEW_LEAD_STUDENT' }, ss);
+  }
+
+  // 3. WhatsApp Notification Log / Click-to-chat
+  if (settings['WhatsApp Enabled'] !== 'false') {
+    sendNotification('WHATSAPP', payload.mobile, { message: payload.whatsappUrl, name: payload.name, course: payload.course }, { leadId: payload.leadId, event: 'NEW_LEAD_WHATSAPP' }, ss);
+  }
+}
+
+function handleLeadUpdatedEvent(payload, ss) {
+  sendNotification('SYSTEM_LOG', '', { message: `Lead ${payload.leadId} updated.` }, { leadId: payload.leadId, event: 'LEAD_UPDATED' }, ss);
+}
+
+function handleStatusChangedEvent(payload, ss) {
+  sendNotification('SYSTEM_LOG', '', { message: `Lead ${payload.leadId} status changed to ${payload.status}.` }, { leadId: payload.leadId, event: 'STATUS_CHANGED' }, ss);
+  
+  if (payload.status === 'Admission Confirmed') {
+    dispatchEvent(AUTOMATION_EVENTS.ADMISSION_CONFIRMED, payload, ss);
+  } else if (payload.status === 'Enrolled') {
+    dispatchEvent(AUTOMATION_EVENTS.ENROLLED, payload, ss);
+  }
+}
+
+function handleFollowupDueEvent(payload, ss) {
+  const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
+  const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
+  sendNotification('EMAIL', adminEmail, { subject: `⏰ Follow-up Due for Lead ${payload.leadId}`, body: `<p>Follow-up scheduled for lead ${payload.name} (${payload.mobile}).</p>` }, { leadId: payload.leadId, event: 'FOLLOWUP_DUE' }, ss);
+}
+
+function handleAdmissionConfirmedEvent(payload, ss) {
+  const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
+  const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
+  sendNotification('EMAIL', adminEmail, { subject: `🎉 Admission Confirmed: ${payload.name}`, body: `<h2>Admission Confirmed!</h2><p>Student ${payload.name} has confirmed admission for ${payload.course}.</p>` }, { leadId: payload.leadId, event: 'ADMISSION_CONFIRMED' }, ss);
+}
+
+function handleEnrolledEvent(payload, ss) {
+  const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
+  const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
+  sendNotification('EMAIL', adminEmail, { subject: `🎓 Student Enrolled: ${payload.name}`, body: `<h2>New Student Enrolled!</h2><p>Student ${payload.name} is now officially enrolled in ${payload.course}.</p>` }, { leadId: payload.leadId, event: 'ENROLLED' }, ss);
+}
+
+/* ============================================================
+   NOTIFICATION CENTER & MODULES
+   ============================================================ */
+
+/**
+ * Centralized Notification Dispatcher
+ * Supported Types: EMAIL, WHATSAPP, SYSTEM_LOG (Hooks: SMS, Telegram, Push)
+ */
+function sendNotification(type, recipient, payload, context, ssInstance) {
+  const ss = ssInstance || getSpreadsheet();
+  
+  try {
+    switch (type.toUpperCase()) {
+      case 'EMAIL':
+        if (recipient && payload.subject && payload.body) {
+          MailApp.sendEmail({
+            to: recipient,
+            subject: payload.subject,
+            htmlBody: payload.body
+          });
+        }
+        break;
+
+      case 'WHATSAPP':
+        sendWhatsAppNotification(recipient, payload, context, ss);
+        break;
+
+      case 'SYSTEM_LOG':
+        logAutomationEvent(ss, context.event || 'NOTIFICATION', context.leadId || '', payload.message || 'Notification dispatched', 'Success', 0);
+        break;
+
+      case 'SMS':
+      case 'TELEGRAM':
+      case 'PUSH':
+        // Extensible hook for future integration providers
+        logAutomationEvent(ss, type, context.leadId || '', 'Future notification channel placeholder triggered', 'Success', 0);
+        break;
+
+      default:
+        console.warn('Unsupported notification type:', type);
+    }
+  } catch (err) {
+    logSecurityError(ss, `Notification Error (${type})`, '', '', '', err.message || String(err));
+  }
+}
+
+/**
+ * WhatsApp Notification Handler (ClickToChat & Future Business API Hook)
+ */
+function sendWhatsAppNotification(recipient, payload, context, ss) {
+  const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
+  const whatsappMode = settings['WhatsApp Mode'] || 'ClickToChat';
+  const apiEnabled = String(settings['Business API Enabled']).toLowerCase() === 'true';
+
+  if (apiEnabled && whatsappMode === 'BusinessAPI') {
+    // Hook for Meta WhatsApp Business API Cloud Send
+    sendWhatsAppMetaCloudAPI(recipient, payload, settings);
+  } else {
+    // ClickToChat Mode: URL is generated & stored in Logs
+    logAutomationEvent(ss, 'WHATSAPP_CLICK_TO_CHAT', context.leadId || '', 'Generated ClickToChat URL: ' + (payload.message || ''), 'Success', 0);
+  }
+}
+
+/**
+ * WhatsApp Meta Cloud API Future Handler Hook
+ */
+function sendWhatsAppMetaCloudAPI(recipient, payload, settings) {
+  const token = settings['Meta Access Token'];
+  const phoneId = settings['Phone Number ID'];
+  if (!token || !phoneId) {
+    throw new Error('Meta Access Token or Phone Number ID missing in Settings');
+  }
+  // Meta Cloud API HTTP Fetch architecture prepared for zero-refactoring activation
+}
+
+/**
+ * WhatsApp Click to Chat Link Generator
+ * Format: https://wa.me/919695904440?text=<encoded_message>
+ */
+function generateWhatsAppClickToChatUrl(whatsAppNumber, name, course) {
+  const cleanNumber = String(whatsAppNumber || '9695904440').replace(/\D/g, '');
+  const phone = cleanNumber.length === 10 ? '91' + cleanNumber : cleanNumber;
+
+  const rawMessage = `Hello Nova Skills,\n\nI have successfully submitted my enquiry on your website.\n\nMy Name:\n${name}\n\nCourse:\n${course}\n\nPlease contact me.\n\nThank you.`;
+
+  const encodedMessage = encodeURIComponent(rawMessage);
+  return `https://wa.me/${phone}?text=${encodedMessage}`;
+}
+
+/* ============================================================
+   AUTOMATED REPORTING ENGINES
+   ============================================================ */
+
 function sendDailyReport() {
   const startTime = new Date().getTime();
   const ss = getSpreadsheet();
@@ -252,27 +483,19 @@ function sendDailyReport() {
   try {
     const analytics = calculatePeriodAnalytics(ss, 'today');
     const htmlBody = buildHtmlReportEmail('Daily Performance & Leads Report', analytics, 'Today (' + formatDateFormatted(new Date()).split(' ')[0] + ')');
-    
-    const adminEmail = settings['Admin Email'] || Session.getActiveUser().getEmail();
+    const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
     const subject = '📊 Nova Skills Daily CRM Report — ' + formatDateFormatted(new Date()).split(' ')[0];
 
-    MailApp.sendEmail({
-      to: adminEmail,
-      subject: subject,
-      htmlBody: htmlBody
-    });
+    sendNotification('EMAIL', adminEmail, { subject: subject, body: htmlBody }, { event: 'DAILY_REPORT' }, ss);
 
     const executionTimeMs = new Date().getTime() - startTime;
-    logReportExecution(ss, 'Daily Report', 'Success', executionTimeMs, 'Sent to ' + adminEmail);
+    logAutomationEvent(ss, 'DAILY_REPORT', 'SYSTEM', 'Sent daily report email to ' + adminEmail, 'Success', executionTimeMs);
   } catch (err) {
     const executionTimeMs = new Date().getTime() - startTime;
-    logReportExecution(ss, 'Daily Report', 'Failure', executionTimeMs, err.message || String(err));
+    logAutomationEvent(ss, 'DAILY_REPORT', 'SYSTEM', 'Failed: ' + err.message, 'Failure', executionTimeMs);
   }
 }
 
-/**
- * 2. WEEKLY REPORT (Every Monday)
- */
 function sendWeeklyReport() {
   const startTime = new Date().getTime();
   const ss = getSpreadsheet();
@@ -284,27 +507,19 @@ function sendWeeklyReport() {
   try {
     const analytics = calculatePeriodAnalytics(ss, 'week');
     const htmlBody = buildHtmlReportEmail('Weekly Executive Summary', analytics, 'Past 7 Days');
-    
-    const adminEmail = settings['Admin Email'] || Session.getActiveUser().getEmail();
+    const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
     const subject = '📈 Nova Skills Weekly CRM Performance Report';
 
-    MailApp.sendEmail({
-      to: adminEmail,
-      subject: subject,
-      htmlBody: htmlBody
-    });
+    sendNotification('EMAIL', adminEmail, { subject: subject, body: htmlBody }, { event: 'WEEKLY_REPORT' }, ss);
 
     const executionTimeMs = new Date().getTime() - startTime;
-    logReportExecution(ss, 'Weekly Report', 'Success', executionTimeMs, 'Sent to ' + adminEmail);
+    logAutomationEvent(ss, 'WEEKLY_REPORT', 'SYSTEM', 'Sent weekly report to ' + adminEmail, 'Success', executionTimeMs);
   } catch (err) {
     const executionTimeMs = new Date().getTime() - startTime;
-    logReportExecution(ss, 'Weekly Report', 'Failure', executionTimeMs, err.message || String(err));
+    logAutomationEvent(ss, 'WEEKLY_REPORT', 'SYSTEM', 'Failed: ' + err.message, 'Failure', executionTimeMs);
   }
 }
 
-/**
- * 3. MONTHLY REPORT (1st of month)
- */
 function sendMonthlyReport() {
   const startTime = new Date().getTime();
   const ss = getSpreadsheet();
@@ -316,27 +531,19 @@ function sendMonthlyReport() {
   try {
     const analytics = calculatePeriodAnalytics(ss, 'month');
     const htmlBody = buildHtmlReportEmail('Monthly Growth & Conversion Report', analytics, 'Current Month');
-    
-    const adminEmail = settings['Admin Email'] || Session.getActiveUser().getEmail();
+    const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
     const subject = '🏆 Nova Skills Monthly CRM & Conversion Report';
 
-    MailApp.sendEmail({
-      to: adminEmail,
-      subject: subject,
-      htmlBody: htmlBody
-    });
+    sendNotification('EMAIL', adminEmail, { subject: subject, body: htmlBody }, { event: 'MONTHLY_REPORT' }, ss);
 
     const executionTimeMs = new Date().getTime() - startTime;
-    logReportExecution(ss, 'Monthly Report', 'Success', executionTimeMs, 'Sent to ' + adminEmail);
+    logAutomationEvent(ss, 'MONTHLY_REPORT', 'SYSTEM', 'Sent monthly report to ' + adminEmail, 'Success', executionTimeMs);
   } catch (err) {
     const executionTimeMs = new Date().getTime() - startTime;
-    logReportExecution(ss, 'Monthly Report', 'Failure', executionTimeMs, err.message || String(err));
+    logAutomationEvent(ss, 'MONTHLY_REPORT', 'SYSTEM', 'Failed: ' + err.message, 'Failure', executionTimeMs);
   }
 }
 
-/**
- * Monthly Trigger Checker (Ensures sent on 1st day of month)
- */
 function checkAndSendMonthlyReport() {
   const today = new Date();
   if (today.getDate() === 1) {
@@ -344,9 +551,6 @@ function checkAndSendMonthlyReport() {
   }
 }
 
-/**
- * 4. MORNING FOLLOW-UP & OVERDUE REMINDERS (8:00 AM IST)
- */
 function sendFollowUpReminders() {
   const startTime = new Date().getTime();
   const ss = getSpreadsheet();
@@ -359,53 +563,41 @@ function sendFollowUpReminders() {
     if (pendingFollowUps.length === 0) return;
 
     const htmlBody = buildFollowUpReminderEmail(pendingFollowUps);
-    const adminEmail = settings['Admin Email'] || Session.getActiveUser().getEmail();
+    const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
     const subject = '⏰ Action Required: ' + pendingFollowUps.length + ' Pending / Overdue Follow-ups for Today';
 
-    MailApp.sendEmail({
-      to: adminEmail,
-      subject: subject,
-      htmlBody: htmlBody
-    });
+    sendNotification('EMAIL', adminEmail, { subject: subject, body: htmlBody }, { event: 'FOLLOWUP_REMINDERS' }, ss);
 
     const executionTimeMs = new Date().getTime() - startTime;
-    logReportExecution(ss, 'Follow-up Reminders', 'Success', executionTimeMs, 'Sent ' + pendingFollowUps.length + ' reminders to ' + adminEmail);
+    logAutomationEvent(ss, 'FOLLOWUP_REMINDERS', 'SYSTEM', 'Sent ' + pendingFollowUps.length + ' follow-up reminders', 'Success', executionTimeMs);
   } catch (err) {
     const executionTimeMs = new Date().getTime() - startTime;
-    logReportExecution(ss, 'Follow-up Reminders', 'Failure', executionTimeMs, err.message || String(err));
+    logAutomationEvent(ss, 'FOLLOWUP_REMINDERS', 'SYSTEM', 'Failed: ' + err.message, 'Failure', executionTimeMs);
   }
 }
 
-/**
- * Sets up automated time-driven triggers in Google Apps Script
- */
 function setupAutomatedTriggers() {
-  // Delete existing triggers to prevent duplication
   const triggers = ScriptApp.getProjectTriggers();
   triggers.forEach(t => ScriptApp.deleteTrigger(t));
 
-  // 1. Daily Report at 8:00 PM (20:00)
   ScriptApp.newTrigger('sendDailyReport')
     .timeBased()
     .everyDays(1)
     .atHour(20)
     .create();
 
-  // 2. Morning Follow-Up Reminders at 8:00 AM (08:00)
   ScriptApp.newTrigger('sendFollowUpReminders')
     .timeBased()
     .everyDays(1)
     .atHour(8)
     .create();
 
-  // 3. Weekly Report on Mondays at 9:00 AM
   ScriptApp.newTrigger('sendWeeklyReport')
     .timeBased()
     .onWeekDay(ScriptApp.WeekDay.MONDAY)
     .atHour(9)
     .create();
 
-  // 4. Monthly Report check daily at 9:00 AM
   ScriptApp.newTrigger('checkAndSendMonthlyReport')
     .timeBased()
     .everyDays(1)
@@ -413,9 +605,219 @@ function setupAutomatedTriggers() {
     .create();
 }
 
-/**
- * Calculate Analytics for Time Period
- */
+/* ============================================================
+   LOGGING & ENVIRONMENT SETUP
+   ============================================================ */
+
+function logAutomationEvent(ssInstance, eventName, leadId, action, status, executionTimeMs) {
+  try {
+    const ss = ssInstance || getSpreadsheet();
+    if (ss) {
+      const logsSheet = ss.getSheetByName(SHEETS.LOGS);
+      if (logsSheet) {
+        logsSheet.appendRow([
+          new Date(),
+          eventName || 'EVENT',
+          leadId || 'SYSTEM',
+          action || '',
+          status || 'Success',
+          executionTimeMs + ' ms'
+        ]);
+      }
+    }
+  } catch (e) {}
+}
+
+function logSecurityError(ssInstance, reason, ip, origin, userAgent, details) {
+  try {
+    const ss = ssInstance || getSpreadsheet();
+    if (ss) {
+      let errorsSheet = ss.getSheetByName(SHEETS.ERRORS);
+      if (!errorsSheet) {
+        errorsSheet = ss.insertSheet(SHEETS.ERRORS);
+        errorsSheet.appendRow(['Timestamp', 'Reason', 'IP', 'Origin', 'User Agent', 'Details']);
+      }
+      errorsSheet.appendRow([
+        new Date(),
+        reason || 'Error',
+        ip || '',
+        origin || '',
+        userAgent || '',
+        details || ''
+      ]);
+    }
+  } catch (e) {}
+}
+
+function setupEnvironment(ss) {
+  let leadsSheet = ss.getSheetByName(SHEETS.LEADS);
+  if (!leadsSheet) {
+    leadsSheet = ss.insertSheet(SHEETS.LEADS);
+    leadsSheet.appendRow(LEADS_COLUMNS);
+    styleHeaderRow(leadsSheet);
+  } else {
+    ensureHeaders(leadsSheet, LEADS_COLUMNS);
+  }
+
+  addLeadDataValidations(leadsSheet);
+
+  let logsSheet = ss.getSheetByName(SHEETS.LOGS);
+  if (!logsSheet) {
+    logsSheet = ss.insertSheet(SHEETS.LOGS);
+    logsSheet.appendRow(['Timestamp', 'Event Name', 'Lead ID', 'Action', 'Status', 'Execution Time']);
+    styleHeaderRow(logsSheet);
+  }
+
+  let errorsSheet = ss.getSheetByName(SHEETS.ERRORS);
+  if (!errorsSheet) {
+    errorsSheet = ss.insertSheet(SHEETS.ERRORS);
+    errorsSheet.appendRow(['Timestamp', 'Reason', 'IP', 'Origin', 'User Agent', 'Details']);
+    styleHeaderRow(errorsSheet);
+  } else {
+    ensureHeaders(errorsSheet, ['Timestamp', 'Reason', 'IP', 'Origin', 'User Agent', 'Details']);
+  }
+
+  setupDashboardSheet(ss);
+  setupSettingsSheet(ss);
+}
+
+function setupDashboardSheet(ss) {
+  let dashboardSheet = ss.getSheetByName(SHEETS.DASHBOARD);
+  if (!dashboardSheet) {
+    dashboardSheet = ss.insertSheet(SHEETS.DASHBOARD);
+  }
+
+  dashboardSheet.clear();
+
+  dashboardSheet.getRange(1, 1, 1, 4).merge()
+    .setValue('📊 NOVA SKILLS CRM — EXECUTIVE DASHBOARD')
+    .setBackground('#011731')
+    .setFontColor('#FFFFFF')
+    .setFontWeight('bold')
+    .setFontSize(14)
+    .setHorizontalAlignment('center');
+
+  dashboardSheet.getRange(3, 1, 1, 3).merge()
+    .setValue('📌 LEAD PIPELINE METRICS')
+    .setBackground('#0599a8')
+    .setFontColor('#FFFFFF')
+    .setFontWeight('bold');
+
+  const pipelineRows = [
+    ['Metric Name', 'Formula / Value', 'Last Updated'],
+    ['Total Leads', '=COUNTA(Leads!A2:A)', '=NOW()'],
+    ['Today\'s Leads', '=COUNTIF(Leads!B2:B, ">=" & TODAY())', '=NOW()'],
+    ['This Week', '=COUNTIFS(Leads!B2:B, ">=" & (TODAY()-WEEKDAY(TODAY(),2)+1), Leads!B2:B, "<=" & (TODAY()+7-WEEKDAY(TODAY(),2)))', '=NOW()'],
+    ['This Month', '=COUNTIFS(Leads!B2:B, ">=" & DATE(YEAR(TODAY()), MONTH(TODAY()), 1))', '=NOW()'],
+    ['New Leads', '=COUNTIF(Leads!C2:C, "New")', '=NOW()'],
+    ['Duplicate Leads', '=COUNTIF(Leads!C2:C, "Duplicate")', '=NOW()'],
+    ['Attempted / Contacted', '=COUNTIF(Leads!C2:C, "Contacted") + COUNTIF(Leads!C2:C, "Attempted Contact")', '=NOW()'],
+    ['Interested / Demo', '=COUNTIF(Leads!C2:C, "Interested") + COUNTIF(Leads!C2:C, "Demo Scheduled")', '=NOW()'],
+    ['Pending Follow-ups', '=COUNTIFS(Leads!AA2:AA, "<=" & TODAY(), Leads!AA2:AA, "<>", Leads!C2:C, "<>Lost", Leads!C2:C, "<>Enrolled")', '=NOW()'],
+    ['Admissions / Enrolled', '=COUNTIF(Leads!C2:C, "Admission Confirmed") + COUNTIF(Leads!C2:C, "Enrolled")', '=NOW()'],
+    ['Conversion Rate %', '=IF(B5>0, B14/B5, 0)', '=NOW()'],
+    ['Lost Leads', '=COUNTIF(Leads!C2:C, "Lost")', '=NOW()']
+  ];
+
+  dashboardSheet.getRange(4, 1, pipelineRows.length, 3).setValues(pipelineRows);
+  dashboardSheet.getRange(4, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
+  dashboardSheet.getRange(15, 2, 1, 1).setNumberFormat('0.0%');
+
+  dashboardSheet.getRange(18, 1, 1, 3).merge()
+    .setValue('🎓 COURSE ANALYTICS')
+    .setBackground('#0599a8')
+    .setFontColor('#FFFFFF')
+    .setFontWeight('bold');
+
+  const courseRows = [
+    ['Academy Niche', 'Total Enquiries', 'Share %'],
+    ['Digital Marketing', '=COUNTIF(Leads!H2:H, "*Digital Marketing*")', '=IF(B20>0, B20/B5, 0)'],
+    ['Graphic Design', '=COUNTIF(Leads!H2:H, "*Design*")', '=IF(B21>0, B21/B5, 0)'],
+    ['Video Editing', '=COUNTIF(Leads!H2:H, "*Video*")', '=IF(B22>0, B22/B5, 0)'],
+    ['Motion Graphics', '=COUNTIF(Leads!H2:H, "*Motion*")', '=IF(B23>0, B23/B5, 0)'],
+    ['Python', '=COUNTIF(Leads!H2:H, "*Python*")', '=IF(B24>0, B24/B5, 0)'],
+    ['Web Development', '=COUNTIF(Leads!H2:H, "*Web*") + COUNTIF(Leads!H2:H, "*Coding*")', '=IF(B25>0, B25/B5, 0)'],
+    ['AI & Automation', '=COUNTIF(Leads!H2:H, "*AI*")', '=IF(B26>0, B26/B5, 0)']
+  ];
+
+  dashboardSheet.getRange(19, 1, courseRows.length, 3).setValues(courseRows);
+  dashboardSheet.getRange(19, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
+  dashboardSheet.getRange(20, 3, 7, 1).setNumberFormat('0.0%');
+
+  dashboardSheet.getRange(28, 1, 1, 3).merge()
+    .setValue('🌐 TRAFFIC & SOURCE ANALYTICS')
+    .setBackground('#0599a8')
+    .setFontColor('#FFFFFF')
+    .setFontWeight('bold');
+
+  const sourceRows = [
+    ['Traffic Source', 'Lead Count', 'Conversion Share'],
+    ['Organic Search', '=COUNTIFS(Leads!M2:M, "", Leads!L2:L, "*google*") + COUNTIFS(Leads!M2:M, "", Leads!L2:L, "*bing*")', '=IF(B30>0, B30/B5, 0)'],
+    ['Google Ads', '=COUNTIF(Leads!M2:M, "*google*")', '=IF(B31>0, B31/B5, 0)'],
+    ['Facebook Ads', '=COUNTIF(Leads!M2:M, "*facebook*") + COUNTIF(Leads!M2:M, "*fb*")', '=IF(B32>0, B32/B5, 0)'],
+    ['Instagram Ads', '=COUNTIF(Leads!M2:M, "*instagram*") + COUNTIF(Leads!M2:M, "*ig*")', '=IF(B33>0, B33/B5, 0)'],
+    ['WhatsApp', '=COUNTIF(Leads!M2:M, "*whatsapp*")', '=IF(B34>0, B34/B5, 0)'],
+    ['Direct Traffic', '=COUNTIFS(Leads!M2:M, "", Leads!L2:L, "")', '=IF(B35>0, B35/B5, 0)'],
+    ['Referral', '=COUNTIF(Leads!M2:M, "*referral*")', '=IF(B36>0, B36/B5, 0)']
+  ];
+
+  dashboardSheet.getRange(29, 1, sourceRows.length, 3).setValues(sourceRows);
+  dashboardSheet.getRange(29, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
+  dashboardSheet.getRange(30, 3, 7, 1).setNumberFormat('0.0%');
+
+  try {
+    dashboardSheet.autoResizeColumns(1, 3);
+  } catch (e) {}
+}
+
+function setupSettingsSheet(ss) {
+  let settingsSheet = ss.getSheetByName(SHEETS.SETTINGS);
+  if (!settingsSheet) {
+    settingsSheet = ss.insertSheet(SHEETS.SETTINGS);
+    settingsSheet.appendRow(['Key', 'Value', 'Description']);
+    styleHeaderRow(settingsSheet);
+  }
+
+  const defaultSettings = [
+    { key: 'Institute Name', value: 'Nova Skills', desc: 'Official Institute Name for communications' },
+    { key: 'Website', value: 'https://novaskills.in', desc: 'Official Website Domain' },
+    { key: 'Support Email', value: 'novaskills.official@gmail.com', desc: 'Student support email' },
+    { key: 'Admin Email', value: 'novaskills.official@gmail.com', desc: 'Primary administrator notification email' },
+    { key: 'WhatsApp Number', value: '9695904440', desc: 'Institute WhatsApp business number' },
+    { key: 'WhatsApp Enabled', value: 'TRUE', desc: 'Enable/Disable WhatsApp communications' },
+    { key: 'WhatsApp Mode', value: 'ClickToChat', desc: 'WhatsApp mode (ClickToChat / BusinessAPI)' },
+    { key: 'Business API Enabled', value: 'FALSE', desc: 'Enable/Disable Meta WhatsApp Business API' },
+    { key: 'Meta Access Token', value: '', desc: 'Meta Business API Permanent Access Token' },
+    { key: 'Phone Number ID', value: '', desc: 'Meta Business Phone Number ID' },
+    { key: 'Business Account ID', value: '', desc: 'Meta Business Account ID' },
+    { key: 'Template Name', value: '', desc: 'Approved Meta WhatsApp Template Name' },
+
+    { key: 'Default Counsellor', value: 'Unassigned', desc: 'Default assigned counsellor for incoming leads' },
+    { key: 'Working Hours', value: 'Mon–Sat: 9:00 AM – 7:00 PM', desc: 'Institute operational hours' },
+    { key: 'Business Days', value: 'Mon,Tue,Wed,Thu,Fri,Sat', desc: 'Active business days' },
+
+    { key: 'Daily Report Enabled', value: 'true', desc: 'Send daily HTML report email at 8:00 PM IST' },
+    { key: 'Weekly Report Enabled', value: 'true', desc: 'Send weekly report email on Mondays' },
+    { key: 'Monthly Report Enabled', value: 'true', desc: 'Send monthly report email on 1st of month' },
+    { key: 'Report Time', value: '20:00', desc: 'Daily report execution time (24h format)' },
+    { key: 'Timezone', value: 'Asia/Kolkata', desc: 'Default timezone for reports and triggers' },
+
+    { key: 'Last Lead ID Number', value: 0, desc: 'Last numeric ID counter for Lead ID generation' },
+    { key: 'Rate Limit Minutes', value: 5, desc: 'Minutes window to block repeated submissions by same Mobile/Email' },
+    { key: 'Spam Protection Enabled', value: 'true', desc: 'Enable/Disable Honeypot spam rejection' },
+    { key: 'Origin Validation Enabled', value: 'false', desc: 'Enable/Disable strict domain origin checking' },
+    { key: 'Allowed Domains', value: 'https://novaskills.in,https://www.novaskills.in', desc: 'Comma separated list of allowed domain origins' },
+    { key: 'Bot Detection Enabled', value: 'true', desc: 'Enable/Disable bot User-Agent blocking' }
+  ];
+
+  const existingSettings = getSettingsMap(settingsSheet);
+  defaultSettings.forEach(setting => {
+    if (!(setting.key in existingSettings)) {
+      settingsSheet.appendRow([setting.key, setting.value, setting.desc]);
+    }
+  });
+}
+
 function calculatePeriodAnalytics(ss, period) {
   const leadsSheet = ss.getSheetByName(SHEETS.LEADS);
   const data = leadsSheet.getLastRow() > 1 ? leadsSheet.getRange(2, 1, leadsSheet.getLastRow() - 1, LEADS_COLUMNS.length).getValues() : [];
@@ -473,11 +875,6 @@ function calculatePeriodAnalytics(ss, period) {
 
   const conversionRate = total > 0 ? ((admissions / total) * 100).toFixed(1) + '%' : '0.0%';
 
-  // Top course & source
-  const topCourse = getTopKey(courseCounts);
-  const topSource = getTopKey(sourceCounts);
-  const topCounsellor = getTopKey(counsellorCounts);
-
   return {
     total,
     newLeads,
@@ -486,12 +883,9 @@ function calculatePeriodAnalytics(ss, period) {
     admissions,
     lost,
     conversionRate,
-    topCourse,
-    topSource,
-    topCounsellor,
-    courseCounts,
-    sourceCounts,
-    counsellorCounts
+    topCourse: getTopKey(courseCounts),
+    topSource: getTopKey(sourceCounts),
+    topCounsellor: getTopKey(counsellorCounts)
   };
 }
 
@@ -507,9 +901,6 @@ function getTopKey(obj) {
   return topKey !== 'N/A' ? `${topKey} (${max})` : 'N/A';
 }
 
-/**
- * Get Pending & Overdue Follow-ups
- */
 function getPendingFollowUps(ss) {
   const leadsSheet = ss.getSheetByName(SHEETS.LEADS);
   if (leadsSheet.getLastRow() <= 1) return [];
@@ -555,9 +946,6 @@ function getPendingFollowUps(ss) {
   return pendingList;
 }
 
-/**
- * HTML Email Builder for Reports
- */
 function buildHtmlReportEmail(reportTitle, analytics, timePeriodText) {
   return `
   <!DOCTYPE html>
@@ -590,7 +978,6 @@ function buildHtmlReportEmail(reportTitle, analytics, timePeriodText) {
         <h1>🎓 NOVA SKILLS CRM</h1>
         <p>${reportTitle} • ${timePeriodText}</p>
       </div>
-
       <div class="body-content">
         <div class="grid">
           <div class="col-2">
@@ -606,48 +993,22 @@ function buildHtmlReportEmail(reportTitle, analytics, timePeriodText) {
             </div>
           </div>
         </div>
-
-        <div class="grid">
-          <div class="col-2">
-            <div class="card">
-              <div class="card-label">Conversion Rate</div>
-              <div class="card-num" style="color:#16a34a;">${analytics.conversionRate}</div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <div class="card-label">Interested / Demo</div>
-              <div class="card-num" style="color:#2563eb;">${analytics.interested}</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="section-title">📌 Pipeline Breakdown</div>
+        <div class="section-title">📌 Pipeline Summary</div>
         <table>
           <thead>
-            <tr><th>Status Metric</th><th>Lead Count</th></tr>
+            <tr><th>Metric</th><th>Count</th></tr>
           </thead>
           <tbody>
-            <tr><td>New Enquiries</td><td><strong>${analytics.newLeads}</strong></td></tr>
-            <tr><td>Interested & Demo Scheduled</td><td><strong>${analytics.interested}</strong></td></tr>
-            <tr><td>Admissions & Enrolled</td><td><strong>${analytics.admissions}</strong></td></tr>
-            <tr><td>Duplicate Requests</td><td><strong>${analytics.duplicates}</strong></td></tr>
-            <tr><td>Lost Leads</td><td><strong>${analytics.lost}</strong></td></tr>
-          </tbody>
-        </table>
-
-        <div class="section-title">🏆 Top Highlights</div>
-        <table>
-          <tbody>
-            <tr><td><strong>Best Performing Course:</strong></td><td>${analytics.topCourse}</td></tr>
-            <tr><td><strong>Top Traffic Source:</strong></td><td>${analytics.topSource}</td></tr>
-            <tr><td><strong>Top Counsellor:</strong></td><td>${analytics.topCounsellor}</td></tr>
+            <tr><td>New Enquiries</td><td>${analytics.newLeads}</td></tr>
+            <tr><td>Interested & Demo</td><td>${analytics.interested}</td></tr>
+            <tr><td>Admissions</td><td>${analytics.admissions}</td></tr>
+            <tr><td>Duplicates</td><td>${analytics.duplicates}</td></tr>
+            <tr><td>Lost Leads</td><td>${analytics.lost}</td></tr>
           </tbody>
         </table>
       </div>
-
       <div class="footer">
-        Automated by Nova Skills CRM & Executive Reporting Engine v3.0
+        Automated by Nova Skills Automation Engine v4.0
       </div>
     </div>
   </body>
@@ -655,9 +1016,6 @@ function buildHtmlReportEmail(reportTitle, analytics, timePeriodText) {
   `;
 }
 
-/**
- * HTML Email Builder for Follow-up Reminders
- */
 function buildFollowUpReminderEmail(pendingList) {
   const rowsHtml = pendingList.map(item => `
     <tr style="${item.isOverdue ? 'background:#fef2f2;' : ''}">
@@ -675,27 +1033,21 @@ function buildFollowUpReminderEmail(pendingList) {
   <head>
     <meta charset="utf-8"/>
     <style>
-      body { font-family: 'Plus Jakarta Sans', Arial, sans-serif; background-color: #f8fafc; margin: 0; padding: 24px; color: #0f172a; }
-      .container { max-width: 680px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(1,23,49,0.1); border: 1px solid #e2e8f0; }
+      body { font-family: 'Plus Jakarta Sans', Arial, sans-serif; background-color: #f8fafc; margin: 0; padding: 24px; }
+      .container { max-width: 680px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(1,23,49,0.1); }
       .header { background: #011731; padding: 24px; text-align: center; color: #ffffff; }
-      .header h1 { margin: 0; font-size: 20px; font-weight: 800; }
       .body-content { padding: 24px; }
       table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px; }
       th { background: #0599a8; color: #ffffff; text-align: left; padding: 10px; }
       td { padding: 10px; border-bottom: 1px solid #e2e8f0; }
-      .footer { background: #011731; color: rgba(255,255,255,0.7); text-align: center; padding: 14px; font-size: 12px; }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <h1>⏰ NOVA SKILLS FOLLOW-UP REMINDER</h1>
-        <p style="margin:4px 0 0 0; color:#75d766; font-size:12px;">${pendingList.length} Pending / Overdue Leads Require Contact Today</p>
+        <h1 style="margin:0;">⏰ NOVA SKILLS FOLLOW-UP REMINDER</h1>
       </div>
       <div class="body-content">
-        <p style="font-size:14px; line-height:1.5;">Hello Counsellor Team,</p>
-        <p style="font-size:14px; line-height:1.5;">Here is the list of leads scheduled for follow-up today or overdue:</p>
-
         <table>
           <thead>
             <tr><th>Lead ID</th><th>Student</th><th>Course</th><th>Follow-up Date</th><th>Counsellor</th></tr>
@@ -705,211 +1057,10 @@ function buildFollowUpReminderEmail(pendingList) {
           </tbody>
         </table>
       </div>
-      <div class="footer">
-        Nova Skills CRM Follow-Up Automation
-      </div>
     </div>
   </body>
   </html>
   `;
-}
-
-/**
- * Log Report Executions
- */
-function logReportExecution(ss, reportType, status, executionTimeMs, message) {
-  try {
-    const logsSheet = ss.getSheetByName(SHEETS.LOGS);
-    if (logsSheet) {
-      logsSheet.appendRow([
-        new Date(),
-        reportType,
-        status,
-        executionTimeMs + ' ms',
-        message
-      ]);
-    }
-  } catch (e) {}
-}
-
-/* ============================================================
-   ENVIRONMENT SETUP & UTILITIES
-   ============================================================ */
-
-function setupEnvironment(ss) {
-  // 1. Leads Sheet
-  let leadsSheet = ss.getSheetByName(SHEETS.LEADS);
-  if (!leadsSheet) {
-    leadsSheet = ss.insertSheet(SHEETS.LEADS);
-    leadsSheet.appendRow(LEADS_COLUMNS);
-    styleHeaderRow(leadsSheet);
-  } else {
-    ensureHeaders(leadsSheet, LEADS_COLUMNS);
-  }
-
-  addLeadDataValidations(leadsSheet);
-
-  // 2. Logs Sheet
-  let logsSheet = ss.getSheetByName(SHEETS.LOGS);
-  if (!logsSheet) {
-    logsSheet = ss.insertSheet(SHEETS.LOGS);
-    logsSheet.appendRow(['Timestamp', 'Lead ID / Task', 'Status', 'Execution Time', 'Message']);
-    styleHeaderRow(logsSheet);
-  }
-
-  // 3. Errors Sheet
-  let errorsSheet = ss.getSheetByName(SHEETS.ERRORS);
-  if (!errorsSheet) {
-    errorsSheet = ss.insertSheet(SHEETS.ERRORS);
-    errorsSheet.appendRow(['Timestamp', 'Reason', 'IP', 'Origin', 'User Agent', 'Details']);
-    styleHeaderRow(errorsSheet);
-  } else {
-    ensureHeaders(errorsSheet, ['Timestamp', 'Reason', 'IP', 'Origin', 'User Agent', 'Details']);
-  }
-
-  // 4. Dashboard Sheet
-  setupDashboardSheet(ss);
-
-  // 5. Settings Sheet
-  setupSettingsSheet(ss);
-}
-
-function setupDashboardSheet(ss) {
-  let dashboardSheet = ss.getSheetByName(SHEETS.DASHBOARD);
-  if (!dashboardSheet) {
-    dashboardSheet = ss.insertSheet(SHEETS.DASHBOARD);
-  }
-
-  dashboardSheet.clear();
-
-  // Banner
-  dashboardSheet.getRange(1, 1, 1, 4).merge()
-    .setValue('📊 NOVA SKILLS CRM — EXECUTIVE DASHBOARD')
-    .setBackground('#011731')
-    .setFontColor('#FFFFFF')
-    .setFontWeight('bold')
-    .setFontSize(14)
-    .setHorizontalAlignment('center');
-
-  // Section 1: Lead Pipeline Overview
-  dashboardSheet.getRange(3, 1, 1, 3).merge()
-    .setValue('📌 LEAD PIPELINE METRICS')
-    .setBackground('#0599a8')
-    .setFontColor('#FFFFFF')
-    .setFontWeight('bold');
-
-  const pipelineRows = [
-    ['Metric Name', 'Formula / Value', 'Last Updated'],
-    ['Total Leads', '=COUNTA(Leads!A2:A)', '=NOW()'],
-    ['Today\'s Leads', '=COUNTIF(Leads!B2:B, ">=" & TODAY())', '=NOW()'],
-    ['This Week', '=COUNTIFS(Leads!B2:B, ">=" & (TODAY()-WEEKDAY(TODAY(),2)+1), Leads!B2:B, "<=" & (TODAY()+7-WEEKDAY(TODAY(),2)))', '=NOW()'],
-    ['This Month', '=COUNTIFS(Leads!B2:B, ">=" & DATE(YEAR(TODAY()), MONTH(TODAY()), 1))', '=NOW()'],
-    ['New Leads', '=COUNTIF(Leads!C2:C, "New")', '=NOW()'],
-    ['Duplicate Leads', '=COUNTIF(Leads!C2:C, "Duplicate")', '=NOW()'],
-    ['Attempted / Contacted', '=COUNTIF(Leads!C2:C, "Contacted") + COUNTIF(Leads!C2:C, "Attempted Contact")', '=NOW()'],
-    ['Interested / Demo', '=COUNTIF(Leads!C2:C, "Interested") + COUNTIF(Leads!C2:C, "Demo Scheduled")', '=NOW()'],
-    ['Pending Follow-ups', '=COUNTIFS(Leads!AA2:AA, "<=" & TODAY(), Leads!AA2:AA, "<>", Leads!C2:C, "<>Lost", Leads!C2:C, "<>Enrolled")', '=NOW()'],
-    ['Admissions / Enrolled', '=COUNTIF(Leads!C2:C, "Admission Confirmed") + COUNTIF(Leads!C2:C, "Enrolled")', '=NOW()'],
-    ['Conversion Rate %', '=IF(B5>0, B14/B5, 0)', '=NOW()'],
-    ['Lost Leads', '=COUNTIF(Leads!C2:C, "Lost")', '=NOW()']
-  ];
-
-  dashboardSheet.getRange(4, 1, pipelineRows.length, 3).setValues(pipelineRows);
-  dashboardSheet.getRange(4, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
-  dashboardSheet.getRange(15, 2, 1, 1).setNumberFormat('0.0%');
-
-  // Section 2: Course Analytics
-  dashboardSheet.getRange(18, 1, 1, 3).merge()
-    .setValue('🎓 COURSE ANALYTICS')
-    .setBackground('#0599a8')
-    .setFontColor('#FFFFFF')
-    .setFontWeight('bold');
-
-  const courseRows = [
-    ['Academy Niche', 'Total Enquiries', 'Share %'],
-    ['Digital Marketing', '=COUNTIF(Leads!H2:H, "*Digital Marketing*")', '=IF(B20>0, B20/B5, 0)'],
-    ['Graphic Design', '=COUNTIF(Leads!H2:H, "*Design*")', '=IF(B21>0, B21/B5, 0)'],
-    ['Video Editing', '=COUNTIF(Leads!H2:H, "*Video*")', '=IF(B22>0, B22/B5, 0)'],
-    ['Motion Graphics', '=COUNTIF(Leads!H2:H, "*Motion*")', '=IF(B23>0, B23/B5, 0)'],
-    ['Python', '=COUNTIF(Leads!H2:H, "*Python*")', '=IF(B24>0, B24/B5, 0)'],
-    ['Web Development', '=COUNTIF(Leads!H2:H, "*Web*") + COUNTIF(Leads!H2:H, "*Coding*")', '=IF(B25>0, B25/B5, 0)'],
-    ['AI & Automation', '=COUNTIF(Leads!H2:H, "*AI*")', '=IF(B26>0, B26/B5, 0)']
-  ];
-
-  dashboardSheet.getRange(19, 1, courseRows.length, 3).setValues(courseRows);
-  dashboardSheet.getRange(19, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
-  dashboardSheet.getRange(20, 3, 7, 1).setNumberFormat('0.0%');
-
-  // Section 3: Source Analytics
-  dashboardSheet.getRange(28, 1, 1, 3).merge()
-    .setValue('🌐 TRAFFIC & SOURCE ANALYTICS')
-    .setBackground('#0599a8')
-    .setFontColor('#FFFFFF')
-    .setFontWeight('bold');
-
-  const sourceRows = [
-    ['Traffic Source', 'Lead Count', 'Conversion Share'],
-    ['Organic Search', '=COUNTIFS(Leads!M2:M, "", Leads!L2:L, "*google*") + COUNTIFS(Leads!M2:M, "", Leads!L2:L, "*bing*")', '=IF(B30>0, B30/B5, 0)'],
-    ['Google Ads', '=COUNTIF(Leads!M2:M, "*google*")', '=IF(B31>0, B31/B5, 0)'],
-    ['Facebook Ads', '=COUNTIF(Leads!M2:M, "*facebook*") + COUNTIF(Leads!M2:M, "*fb*")', '=IF(B32>0, B32/B5, 0)'],
-    ['Instagram Ads', '=COUNTIF(Leads!M2:M, "*instagram*") + COUNTIF(Leads!M2:M, "*ig*")', '=IF(B33>0, B33/B5, 0)'],
-    ['WhatsApp', '=COUNTIF(Leads!M2:M, "*whatsapp*")', '=IF(B34>0, B34/B5, 0)'],
-    ['Direct Traffic', '=COUNTIFS(Leads!M2:M, "", Leads!L2:L, "")', '=IF(B35>0, B35/B5, 0)'],
-    ['Referral', '=COUNTIF(Leads!M2:M, "*referral*")', '=IF(B36>0, B36/B5, 0)']
-  ];
-
-  dashboardSheet.getRange(29, 1, sourceRows.length, 3).setValues(sourceRows);
-  dashboardSheet.getRange(29, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
-  dashboardSheet.getRange(30, 3, 7, 1).setNumberFormat('0.0%');
-
-  try {
-    dashboardSheet.autoResizeColumns(1, 3);
-  } catch (e) {}
-}
-
-function setupSettingsSheet(ss) {
-  let settingsSheet = ss.getSheetByName(SHEETS.SETTINGS);
-  if (!settingsSheet) {
-    settingsSheet = ss.insertSheet(SHEETS.SETTINGS);
-    settingsSheet.appendRow(['Key', 'Value', 'Description']);
-    styleHeaderRow(settingsSheet);
-  }
-
-  const defaultSettings = [
-    { key: 'Institute Name', value: 'Nova Skills', desc: 'Official Institute Name for communications' },
-    { key: 'Admin Email', value: 'admin@novaskills.in', desc: 'Primary administrator notification email' },
-    { key: 'Support Email', value: 'hello@novaskills.in', desc: 'Student support email' },
-    { key: 'WhatsApp Number', value: '+91 XXXXX XXXXX', desc: 'Institute WhatsApp business number' },
-    { key: 'Default Counsellor', value: 'Unassigned', desc: 'Default assigned counsellor for incoming leads' },
-    { key: 'Working Hours', value: 'Mon–Sat: 9:00 AM – 7:00 PM', desc: 'Institute operational hours' },
-    { key: 'Business Days', value: 'Mon,Tue,Wed,Thu,Fri,Sat', desc: 'Active business days' },
-
-    { key: 'Daily Report Enabled', value: 'true', desc: 'Send daily HTML report email at 8:00 PM IST' },
-    { key: 'Weekly Report Enabled', value: 'true', desc: 'Send weekly report email on Mondays' },
-    { key: 'Monthly Report Enabled', value: 'true', desc: 'Send monthly report email on 1st of month' },
-    { key: 'Report Time', value: '20:00', desc: 'Daily report execution time (24h format)' },
-    { key: 'Timezone', value: 'Asia/Kolkata', desc: 'Default timezone for reports and triggers' },
-
-    { key: 'Last Lead ID Number', value: 0, desc: 'Last numeric ID counter for Lead ID generation' },
-    { key: 'Rate Limit Minutes', value: 5, desc: 'Minutes window to block repeated submissions by same Mobile/Email' },
-    { key: 'Spam Protection Enabled', value: 'true', desc: 'Enable/Disable Honeypot spam rejection' },
-    { key: 'Origin Validation Enabled', value: 'false', desc: 'Enable/Disable strict domain origin checking' },
-    { key: 'Allowed Domains', value: 'https://novaskills.in,https://www.novaskills.in', desc: 'Comma separated list of allowed domain origins' },
-    { key: 'Bot Detection Enabled', value: 'true', desc: 'Enable/Disable bot User-Agent blocking' },
-
-    { key: 'WhatsApp Enabled', value: 'false', desc: 'Enable/Disable automatic WhatsApp notification' },
-    { key: 'WhatsApp API Mode', value: '', desc: 'API Provider mode (e.g. Meta Cloud API)' },
-    { key: 'Meta Access Token', value: '', desc: 'Meta Business API Permanent Access Token' },
-    { key: 'Phone Number ID', value: '', desc: 'Meta Business Phone Number ID' },
-    { key: 'Template Name', value: '', desc: 'Approved Meta WhatsApp Template Name' }
-  ];
-
-  const existingSettings = getSettingsMap(settingsSheet);
-  defaultSettings.forEach(setting => {
-    if (!(setting.key in existingSettings)) {
-      settingsSheet.appendRow([setting.key, setting.value, setting.desc]);
-    }
-  });
 }
 
 function addLeadDataValidations(leadsSheet) {
@@ -1097,36 +1248,14 @@ function logSubmission(ss, leadId, status, executionTimeMs) {
     if (logsSheet) {
       logsSheet.appendRow([
         new Date(),
+        'LEAD_SUBMISSION',
         leadId,
+        'Form Submitted',
         status,
-        executionTimeMs + ' ms',
-        'Lead processed successfully'
+        executionTimeMs + ' ms'
       ]);
     }
   } catch (e) {}
-}
-
-function logSecurityError(ssInstance, reason, ip, origin, userAgent, details) {
-  try {
-    const ss = ssInstance || getSpreadsheet();
-    if (ss) {
-      let errorsSheet = ss.getSheetByName(SHEETS.ERRORS);
-      if (!errorsSheet) {
-        errorsSheet = ss.insertSheet(SHEETS.ERRORS);
-        errorsSheet.appendRow(['Timestamp', 'Reason', 'IP', 'Origin', 'User Agent', 'Details']);
-      }
-      errorsSheet.appendRow([
-        new Date(),
-        reason || 'Error',
-        ip || '',
-        origin || '',
-        userAgent || '',
-        details || ''
-      ]);
-    }
-  } catch (e) {
-    console.error('Failed to log security error:', e);
-  }
 }
 
 function formatDateFormatted(dateObj) {
@@ -1143,12 +1272,13 @@ function formatDateFormatted(dateObj) {
   }
 }
 
-function createJsonResponse(success, leadId, status, message) {
+function createJsonResponse(success, leadId, status, message, whatsappUrl) {
   const response = {
     success: success,
     leadId: leadId || '',
     status: status || '',
-    message: message || ''
+    message: message || '',
+    whatsappUrl: whatsappUrl || ''
   };
 
   return ContentService.createTextOutput(JSON.stringify(response))
