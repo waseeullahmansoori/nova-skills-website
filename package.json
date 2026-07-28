@@ -1,0 +1,18 @@
+{
+  "name": "nova-skills-website",
+  "version": "1.0.0",
+  "description": "Nova Skills Education Institute Official Website",
+  "main": "main.js",
+  "scripts": {
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "build": "node scripts/generate-sitemap.js"
+  },
+  "keywords": [
+    "education",
+    "skills",
+    "sitemap",
+    "seo"
+  ],
+  "author": "Nova Skills Development Team",
+  "license": "ISC"
+}
