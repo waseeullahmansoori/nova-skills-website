@@ -4,11 +4,11 @@
 
 let activeTab = 'institute';
 let settingsData = {
-  institute: { name: 'Nova Skills Academy', tagline: 'Empowering Tech Leaders', address: '123 Skill Hub', city: 'Lucknow', state: 'UP', country: 'India', website: 'https://novaskills.in', supportEmail: 'support@novaskills.in', supportPhone: '+91 98765 43210', whatsappNumber: '+91 98765 43210' },
+  institute: { name: 'Nova Skills Institute', tagline: 'Empowering Tech Leaders', address: 'Nova Skills Institute, Siddharth Nagar', city: 'Siddharth Nagar', state: 'Uttar Pradesh', country: 'India', website: 'https://novaskills.in', supportEmail: 'novaskills.official@gmail.com', supportPhone: '+91 9695904440', whatsappNumber: '+91 9695904440' },
   branding: { logoUrl: 'https://novaskills.in/assets/logo.png', faviconUrl: 'https://novaskills.in/favicon.ico', primaryColor: '#0599a8', secondaryColor: '#011731' },
   social: { facebook: 'https://facebook.com/novaskills', instagram: 'https://instagram.com/novaskills', linkedin: 'https://linkedin.com/company/novaskills', youtube: 'https://youtube.com/@novaskills', twitter: 'https://x.com/novaskills' },
   ai: { systemPrompt: 'You are Nova Skills AI Advisor.', welcomeMessage: 'Hello! I am your Nova Skills AI Advisor.', aiEnabled: true },
-  contact: { admissionEmail: 'admissions@novaskills.in', admissionPhone: '+91 98765 43211', officeTiming: 'Mon – Sat: 9 AM – 7 PM' },
+  contact: { admissionEmail: 'novaskills.official@gmail.com', admissionPhone: '+91 9695904440', officeTiming: 'Mon – Sat: 9 AM – 7 PM' },
   security: { sessionTimeoutMinutes: 1440, maintenanceMode: false }
 };
 

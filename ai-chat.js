@@ -40,12 +40,12 @@ async function sendMessage() {
     if (data.success && data.response) {
       appendMessage(data.response, 'assistant');
     } else {
-      appendMessage(data.message || 'Sorry, I am currently unable to process your request. Please contact our admissions team at admissions@novaskills.in.', 'assistant');
+      appendMessage(data.message || 'Sorry, I am currently unable to process your request. Please contact our admissions team at novaskills.official@gmail.com or call +91 9695904440.', 'assistant');
     }
 
   } catch (err) {
     loadingEl.style.display = 'none';
-    appendMessage('Network error connecting to Nova Skills AI Gateway. Please try again or call admissions.', 'assistant');
+    appendMessage('Network error connecting to Nova Skills AI Gateway. Please try again or call admissions at +91 9695904440.', 'assistant');
   }
 }
 
