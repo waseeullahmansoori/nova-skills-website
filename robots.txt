@@ -1,0 +1,26 @@
+# ============================================================
+# Nova Skills Official Robots Exclusion Protocol File
+# Website: https://novaskills.in
+# Compliant with Googlebot, Bingbot & Search Console Standards
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# Protected Admin & Private User Portals
+Disallow: /admin.html
+Disallow: /admin-activity.html
+Disallow: /admin-settings.html
+Disallow: /login.html
+Disallow: /student.html
+
+# Internal Code & Build System Directories
+Disallow: /scripts/
+Disallow: /cloudflare-worker/
+Disallow: /database/
+Disallow: /google-apps-script/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Official Sitemap Location
+Sitemap: https://novaskills.in/sitemap.xml
