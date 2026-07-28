@@ -1,6 +1,6 @@
 /**
  * REST API Endpoints Router Module
- * Dispatches requests for AI Gateway, Lead Gateway, Supabase Connection Health (GET /api/health/supabase), Auth, Admin RBAC, Meta Communication, SXP, and Supabase Database.
+ * Dispatches requests for AI Gateway, Lead Gateway, Supabase Connection Health (GET /api/health/supabase), Auth MVP, Admin RBAC, Meta Communication, SXP, and Supabase Database.
  */
 
 import { processAIRequest } from '../services/aiService.js';
@@ -10,10 +10,12 @@ import { sendLeadToCRM } from '../services/leadCaptureService.js';
 import { forwardLeadToAppsScript } from '../services/leadService.js';
 import { processContentGeneration } from '../services/contentStudioService.js';
 import { processOperationsReport } from '../services/operationsCenterService.js';
-import { authenticateUser, authorizeRequest, getAllUsers, getRolePermissionsMatrix } from '../services/authService.js';
-import { registerSupabaseUser, loginSupabaseUser, resetSupabasePassword } from '../services/supabaseAuthService.js';
-import { invalidateSession } from '../services/sessionManager.js';
-import { getSecurityLogs, logSecurityEvent } from '../services/auditLogger.js';
+import { getRolePermissionsMatrix } from '../services/authService.js';
+import { loginUser } from '../auth/loginService.js';
+import { logoutUser } from '../auth/logoutService.js';
+import { requestPasswordReset } from '../auth/passwordResetService.js';
+import { protectRoute } from '../auth/authMiddleware.js';
+import { getSecurityLogs } from '../services/auditLogger.js';
 import { sendCommunication } from '../communication/communicationService.js';
 import { compileCommunicationTemplate, TEMPLATES } from '../communication/templateManager.js';
 import { getMessageStatus, updateMessageStatus, getConversationHistory } from '../communication/conversationStore.js';
@@ -77,7 +79,47 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
   const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, password, role, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount, crmData, query, recipient, templateKey, dataMap, mediaUrl, messageId, status, studentId } = body;
 
   switch (path) {
-    // 3. OpenAI GPT-5.5 Chat MVP (POST /api/ai/chat)
+    // 3. Supabase Auth MVP Endpoints
+    case '/api/auth/login': {
+      if (!email || !password) {
+        return createErrorResponse('Email and password are required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
+      }
+      try {
+        const loginResult = await loginUser(email, password, env, config);
+        return createJsonResponse(loginResult, 200, reqOrigin, config.allowedOrigins);
+      } catch (err) {
+        return createErrorResponse(err.message, 401, reqOrigin, config.allowedOrigins, 'INVALID_CREDENTIALS');
+      }
+    }
+
+    case '/api/auth/logout': {
+      const authHeader = request.headers.get('Authorization') || '';
+      const token = authHeader.replace(/^Bearer\s+/i, '').trim();
+      const logoutResult = await logoutUser(token, env, config);
+      return createJsonResponse(logoutResult, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/auth/reset-password': {
+      if (!email) {
+        return createErrorResponse('Field "email" is required for password reset.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
+      }
+      try {
+        const resetResult = await requestPasswordReset(email, env, config);
+        return createJsonResponse(resetResult, 200, reqOrigin, config.allowedOrigins);
+      } catch (err) {
+        return createErrorResponse(err.message, 500, reqOrigin, config.allowedOrigins, 'RESET_FAILED');
+      }
+    }
+
+    case '/api/auth/profile': {
+      const auth = await protectRoute(request, null, env, config);
+      if (!auth.authorized) {
+        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins, 'UNAUTHORIZED');
+      }
+      return createJsonResponse({ success: true, profile: auth.user }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    // 4. OpenAI GPT-5.5 Chat MVP (POST /api/ai/chat)
     case '/api/ai/chat': {
       const userText = (message || userMessage || (messages && messages[messages.length - 1]?.content) || '').trim();
       
@@ -110,7 +152,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       }
     }
 
-    // 4. Lead Gateway MVP (POST /api/lead)
+    // 5. Lead Gateway MVP (POST /api/lead)
     case '/api/lead': {
       if (!name || (!mobile && !email) || !course) {
         return createErrorResponse('Name, course, and at least Mobile or Email are required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
@@ -120,64 +162,6 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
         return createJsonResponse(crmResult, 200, reqOrigin, config.allowedOrigins);
       }
       return createErrorResponse(crmResult.message || 'CRM Forwarding Failed', 500, reqOrigin, config.allowedOrigins, crmResult.errorCode || 'CRM_ERROR');
-    }
-
-    // 5. Enterprise Supabase Auth Endpoints
-    case '/api/auth/register': {
-      if (!email || !password || !name) {
-        return createErrorResponse('Name, email, and password are required for user registration.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
-      }
-      try {
-        const result = await registerSupabaseUser({ email, password, name, role, mobile }, env, config, request);
-        return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
-      } catch (err) {
-        return createErrorResponse(err.message, 400, reqOrigin, config.allowedOrigins, 'AUTH_ERROR');
-      }
-    }
-
-    case '/api/auth/login': {
-      if (!email || !password) {
-        return createErrorResponse('Email and password are required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
-      }
-      try {
-        const authResult = await loginSupabaseUser(email, password, env, config, request);
-        return createJsonResponse(authResult, 200, reqOrigin, config.allowedOrigins);
-      } catch (err) {
-        try {
-          const localAuth = await authenticateUser(email, password, request);
-          return createJsonResponse({
-            success: true,
-            user: localAuth.user,
-            token: localAuth.sessionToken,
-            expiresAt: localAuth.expiresAt
-          }, 200, reqOrigin, config.allowedOrigins);
-        } catch (localErr) {
-          return createErrorResponse(localErr.message, 401, reqOrigin, config.allowedOrigins, 'AUTH_FAILED');
-        }
-      }
-    }
-
-    case '/api/auth/logout': {
-      const authHeader = request.headers.get('Authorization') || '';
-      const token = authHeader.replace(/^Bearer\s+/i, '').trim();
-      if (token) invalidateSession(token);
-      return createJsonResponse({ success: true, message: 'Logged out successfully.' }, 200, reqOrigin, config.allowedOrigins);
-    }
-
-    case '/api/auth/reset-password': {
-      if (!email) {
-        return createErrorResponse('Field "email" is required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
-      }
-      const resetResult = await resetSupabasePassword(email, env, config, request);
-      return createJsonResponse(resetResult, 200, reqOrigin, config.allowedOrigins);
-    }
-
-    case '/api/auth/profile': {
-      const auth = authorizeRequest(request);
-      if (!auth.authorized) {
-        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins, 'UNAUTHORIZED');
-      }
-      return createJsonResponse({ success: true, profile: auth.session }, 200, reqOrigin, config.allowedOrigins);
     }
 
     // 6. Supabase Enterprise Database Endpoints
@@ -293,15 +277,15 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
 
     // 9. Admin & RBAC Endpoints
     case '/api/admin/users': {
-      const auth = authorizeRequest(request, PERMISSIONS.MANAGE_USERS);
+      const auth = await protectRoute(request, 'Admin', env, config);
       if (!auth.authorized) {
         return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins, 'FORBIDDEN');
       }
-      return createJsonResponse({ success: true, users: getAllUsers() }, 200, reqOrigin, config.allowedOrigins);
+      return createJsonResponse({ success: true, users: [] }, 200, reqOrigin, config.allowedOrigins);
     }
 
     case '/api/admin/roles': {
-      const auth = authorizeRequest(request, PERMISSIONS.MANAGE_ROLES);
+      const auth = await protectRoute(request, 'Admin', env, config);
       if (!auth.authorized) {
         return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins, 'FORBIDDEN');
       }
@@ -309,7 +293,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     }
 
     case '/api/admin/security-logs': {
-      const auth = authorizeRequest(request, PERMISSIONS.MANAGE_USERS);
+      const auth = await protectRoute(request, 'Admin', env, config);
       if (!auth.authorized) {
         return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins, 'FORBIDDEN');
       }
