@@ -587,7 +587,9 @@ function buildHeaderHTML(page) {
       </ul>
 
       <div class="nav-actions">
-        <a href="tel:+91XXXXXXXXXX" class="nav-phone">📞 Call Now</a>
+        <a href="login.html" onclick="handleNavAuthClick(event);" class="nav-phone" id="nav-auth-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Login / Sign Up
+        </a>
         <button class="btn btn-primary" id="nav-cta" onclick="openConsultationPopup()">Free Counselling</button>
       </div>
 
@@ -1349,6 +1351,28 @@ function initFAQAccordion(containerSelector = '.faq-grid') {
 /* ─────────────────────────────────────────────
    BOOT: inject then init
 ───────────────────────────────────────────── */
+/* ─────────────────────────────────────────────
+   GLOBAL AUTH NAV CLICK HANDLER
+───────────────────────────────────────────── */
+function handleNavAuthClick(e) {
+  if (e) e.preventDefault();
+  const userStr = localStorage.getItem('novaskills_user');
+  if (userStr) {
+    try {
+      const user = JSON.parse(userStr);
+      if (user && user.role === 'Admin') {
+        window.location.href = 'admin.html';
+        return;
+      } else {
+        window.location.href = 'student.html';
+        return;
+      }
+    } catch (err) {}
+  }
+  window.location.href = 'login.html';
+}
+window.handleNavAuthClick = handleNavAuthClick;
+
 document.addEventListener('DOMContentLoaded', () => {
   injectComponents();
   // Wait one frame so injected DOM is painted
