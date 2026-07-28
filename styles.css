@@ -2758,7 +2758,45 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .stats-section .stat-card {
+    padding: 24px 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .stats-section .stat-icon {
+    width: 44px !important;
+    height: 44px !important;
+    margin: 0 auto 12px !important;
+  }
+
+  .stats-section .stat-icon svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .stats-section .stat-number {
+    font-size: 1.65rem !important;
+    white-space: nowrap !important;
+  }
+
+  .stats-section .stat-label {
+    font-size: 0.85rem !important;
+    white-space: nowrap !important;
+  }
+
+  .stats-section .stat-desc {
+    font-size: 0.75rem !important;
+    margin-top: 4px !important;
   }
 
   .academies-grid {
@@ -2890,10 +2928,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 480px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-
   .academies-grid {
     grid-template-columns: 1fr;
   }
