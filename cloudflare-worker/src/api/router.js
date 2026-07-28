@@ -1,6 +1,6 @@
 /**
  * REST API Endpoints Router Module
- * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, AI Content Studio, AI Operations Center, Auth, Admin RBAC, Meta Communication Platform, and Student Experience Platform (SXP).
+ * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, AI Content Studio, AI Operations Center, Auth, Admin RBAC, Meta Communication, SXP, and Supabase Database.
  */
 
 import { processAIRequest } from '../services/aiService.js';
@@ -17,6 +17,8 @@ import { compileCommunicationTemplate, TEMPLATES } from '../communication/templa
 import { getMessageStatus, updateMessageStatus, getConversationHistory } from '../communication/conversationStore.js';
 import { getStudentDashboardData } from '../services/studentDashboardService.js';
 import { processStudentLearningQuery } from '../services/aiLearningService.js';
+import { fetchStudentsFromSupabase, createStudentInSupabase, createAdmissionInSupabase } from '../services/supabaseService.js';
+import { syncLeadToSupabase } from '../services/migrationService.js';
 import { PERMISSIONS } from '../security/rbacMatrix.js';
 import { createJsonResponse, createErrorResponse } from '../utils/response.js';
 
@@ -37,6 +39,17 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     return new Response('Forbidden', { status: 403 });
   }
 
+  // Supabase Health GET
+  if (path === '/api/supabase/health' && request.method === 'GET') {
+    const isConfigured = Boolean(config.supabaseUrl && config.supabaseServiceRoleKey);
+    return createJsonResponse({
+      success: true,
+      service: 'Nova Skills Supabase Integration',
+      status: isConfigured ? 'Connected' : 'Simulated (Set Secrets)',
+      supabaseUrl: config.supabaseUrl || 'Not Configured'
+    }, 200, reqOrigin, config.allowedOrigins);
+  }
+
   let body = {};
   if (request.method === 'POST' || request.method === 'PUT') {
     try {
@@ -49,7 +62,27 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
   const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, password, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount, crmData, query, recipient, templateKey, dataMap, mediaUrl, messageId, status, studentId } = body;
 
   switch (path) {
-    // 1. Student Experience Platform (SXP) Endpoints
+    // 1. Supabase Enterprise Database Endpoints
+    case '/api/supabase/sync': {
+      const syncResult = await syncLeadToSupabase(body, env, config);
+      return createJsonResponse(syncResult, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/supabase/students': {
+      if (request.method === 'GET') {
+        const result = await fetchStudentsFromSupabase(env, config);
+        return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
+      }
+      const createResult = await createStudentInSupabase(body, env, config);
+      return createJsonResponse(createResult, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/supabase/admissions': {
+      const admissionResult = await createAdmissionInSupabase(body, env, config);
+      return createJsonResponse(admissionResult, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    // 2. Student Experience Platform (SXP) Endpoints
     case '/api/student/dashboard':
     case '/api/student/courses':
     case '/api/student/assignments':
@@ -72,7 +105,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 2. Meta WhatsApp & Enterprise Communication Endpoints
+    // 3. Meta WhatsApp & Enterprise Communication Endpoints
     case '/api/communication/send': {
       if (!recipient) {
         return createErrorResponse('Field "recipient" (mobile number) is required.', 400, reqOrigin, config.allowedOrigins);
@@ -140,7 +173,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse({ success: true, status: 'Webhook received' }, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 3. Enterprise Auth Endpoints
+    // 4. Enterprise Auth Endpoints
     case '/api/auth/login': {
       if (!email || !password) {
         return createErrorResponse('Email and password are required.', 400, reqOrigin, config.allowedOrigins);
@@ -174,7 +207,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse({ success: true, user: auth.session }, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 4. Admin & RBAC Endpoints
+    // 5. Admin & RBAC Endpoints
     case '/api/admin/users': {
       const auth = authorizeRequest(request, PERMISSIONS.MANAGE_USERS);
       if (!auth.authorized) {
@@ -199,7 +232,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse({ success: true, logs: getSecurityLogs(100) }, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 5. AI Operations Center Endpoints
+    // 6. AI Operations Center Endpoints
     case '/api/ai/dashboard':
     case '/api/ai/daily-brief':
     case '/api/ai/weekly-report':
@@ -229,7 +262,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 6. AI Content Studio Endpoints
+    // 7. AI Content Studio Endpoints
     case '/api/ai/content':
     case '/api/ai/blog':
     case '/api/ai/social':
@@ -253,7 +286,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 7. AI Student Assistant Endpoints
+    // 8. AI Student Assistant Endpoints
     case '/api/ai/student-chat':
     case '/api/ai/course-advisor':
     case '/api/ai/admission-faq': {
@@ -287,7 +320,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(crmResult, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 8. General Gateway AI Endpoints
+    // 9. General Gateway AI Endpoints
     case '/api/ai/chat': {
       const userText = message || userMessage || (messages && messages[messages.length - 1]?.content) || '';
       if (!userText && (!messages || messages.length === 0)) {
@@ -369,7 +402,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 9. AI Counsellor Engine Endpoints
+    // 10. AI Counsellor Engine Endpoints
     case '/api/ai/lead-analysis':
     case '/api/ai/recommendation':
     case '/api/ai/counsellor-summary':
