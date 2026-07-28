@@ -1252,9 +1252,13 @@ function initConsultationPopup() {
     });
   });
 
-  // Auto-show after 5 seconds if idle & not interrupted
-  if (shouldShowPopup() && sessionStorage.getItem('consultation_popup_dismissed') !== 'true') {
+  // Auto-show automatically after 5 seconds (once per session)
+  const sessionShown = sessionStorage.getItem('ns_popup_shown_session');
+  if (!sessionShown) {
     setTimeout(() => {
+      // Mark as shown for the current session so it pops up only once per session
+      sessionStorage.setItem('ns_popup_shown_session', 'true');
+      
       const enrollModal = document.getElementById('course-enrollment-modal');
       const isEnrollOpen = enrollModal && !enrollModal.hidden && enrollModal.classList.contains('open');
       
