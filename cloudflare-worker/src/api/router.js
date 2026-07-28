@@ -1,12 +1,13 @@
 /**
  * REST API Endpoints Router Module
- * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, AI Content Studio, AI Operations Center, Supabase Auth & Identity, Admin RBAC, Meta Communication, SXP, and Supabase Database.
+ * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, AI Content Studio, AI Operations Center, Supabase Auth & Identity, Admin RBAC, Meta Communication, SXP, Supabase Database, and Lead Gateway (POST /api/lead).
  */
 
 import { processAIRequest } from '../services/aiService.js';
 import { processCounsellorAnalysis } from '../services/counsellorEngine.js';
 import { processStudentChat } from '../services/studentAssistant.js';
 import { sendLeadToCRM } from '../services/leadCaptureService.js';
+import { forwardLeadToAppsScript } from '../services/leadService.js';
 import { processContentGeneration } from '../services/contentStudioService.js';
 import { processOperationsReport } from '../services/operationsCenterService.js';
 import { authenticateUser, authorizeRequest, getAllUsers, getRolePermissionsMatrix } from '../services/authService.js';
@@ -40,6 +41,16 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     return new Response('Forbidden', { status: 403 });
   }
 
+  // Health GET Check
+  if (path === '/api/health' || path === '/health') {
+    return createJsonResponse({
+      success: true,
+      service: 'Nova Skills Cloudflare Worker Gateway MVP',
+      status: 'Healthy',
+      timestamp: new Date().toISOString()
+    }, 200, reqOrigin, config.allowedOrigins);
+  }
+
   // Supabase Health GET
   if (path === '/api/supabase/health' && request.method === 'GET') {
     const isConfigured = Boolean(config.supabaseUrl && config.supabaseServiceRoleKey);
@@ -56,35 +67,46 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     try {
       body = await request.json();
     } catch (e) {
-      return createErrorResponse('Invalid JSON payload in request body.', 400, reqOrigin, config.allowedOrigins);
+      return createErrorResponse('Invalid JSON payload in request body.', 400, reqOrigin, config.allowedOrigins, 'INVALID_JSON');
     }
   }
 
   const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, password, role, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount, crmData, query, recipient, templateKey, dataMap, mediaUrl, messageId, status, studentId } = body;
 
   switch (path) {
-    // 1. Enterprise Supabase Auth Endpoints
+    // 1. Lead Gateway MVP (POST /api/lead)
+    case '/api/lead': {
+      if (!name || (!mobile && !email) || !course) {
+        return createErrorResponse('Name, course, and at least Mobile or Email are required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
+      }
+      const crmResult = await forwardLeadToAppsScript(body);
+      if (crmResult.success) {
+        return createJsonResponse(crmResult, 200, reqOrigin, config.allowedOrigins);
+      }
+      return createErrorResponse(crmResult.message || 'CRM Forwarding Failed', 500, reqOrigin, config.allowedOrigins, crmResult.errorCode || 'CRM_ERROR');
+    }
+
+    // 2. Enterprise Supabase Auth Endpoints
     case '/api/auth/register': {
       if (!email || !password || !name) {
-        return createErrorResponse('Name, email, and password are required for user registration.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Name, email, and password are required for user registration.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       try {
         const result = await registerSupabaseUser({ email, password, name, role, mobile }, env, config, request);
         return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
       } catch (err) {
-        return createErrorResponse(err.message, 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse(err.message, 400, reqOrigin, config.allowedOrigins, 'AUTH_ERROR');
       }
     }
 
     case '/api/auth/login': {
       if (!email || !password) {
-        return createErrorResponse('Email and password are required.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Email and password are required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       try {
         const authResult = await loginSupabaseUser(email, password, env, config, request);
         return createJsonResponse(authResult, 200, reqOrigin, config.allowedOrigins);
       } catch (err) {
-        // Fallback to local user DB if Supabase Auth credentials fail or not set
         try {
           const localAuth = await authenticateUser(email, password, request);
           return createJsonResponse({
@@ -94,7 +116,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
             expiresAt: localAuth.expiresAt
           }, 200, reqOrigin, config.allowedOrigins);
         } catch (localErr) {
-          return createErrorResponse(localErr.message, 401, reqOrigin, config.allowedOrigins);
+          return createErrorResponse(localErr.message, 401, reqOrigin, config.allowedOrigins, 'AUTH_FAILED');
         }
       }
     }
@@ -108,7 +130,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
 
     case '/api/auth/reset-password': {
       if (!email) {
-        return createErrorResponse('Field "email" is required.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "email" is required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const resetResult = await resetSupabasePassword(email, env, config, request);
       return createJsonResponse(resetResult, 200, reqOrigin, config.allowedOrigins);
@@ -117,12 +139,12 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     case '/api/auth/profile': {
       const auth = authorizeRequest(request);
       if (!auth.authorized) {
-        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins);
+        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins, 'UNAUTHORIZED');
       }
       return createJsonResponse({ success: true, profile: auth.session }, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 2. Supabase Enterprise Database Endpoints
+    // 3. Supabase Enterprise Database Endpoints
     case '/api/supabase/sync': {
       const syncResult = await syncLeadToSupabase(body, env, config);
       return createJsonResponse(syncResult, 200, reqOrigin, config.allowedOrigins);
@@ -142,7 +164,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(admissionResult, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 3. Student Experience Platform (SXP) Endpoints
+    // 4. Student Experience Platform (SXP) Endpoints
     case '/api/student/dashboard':
     case '/api/student/courses':
     case '/api/student/assignments':
@@ -165,10 +187,10 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 4. Meta WhatsApp & Enterprise Communication Endpoints
+    // 5. Meta WhatsApp & Enterprise Communication Endpoints
     case '/api/communication/send': {
       if (!recipient) {
-        return createErrorResponse('Field "recipient" (mobile number) is required.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "recipient" (mobile number) is required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       try {
         const result = await sendCommunication({
@@ -182,7 +204,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
         });
         return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
       } catch (err) {
-        return createErrorResponse(err.message, 500, reqOrigin, config.allowedOrigins);
+        return createErrorResponse(err.message, 500, reqOrigin, config.allowedOrigins, 'COMM_ERROR');
       }
     }
 
@@ -196,11 +218,11 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
 
     case '/api/communication/status': {
       if (!messageId) {
-        return createErrorResponse('Field "messageId" is required.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "messageId" is required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const log = getMessageStatus(messageId);
       if (!log) {
-        return createErrorResponse(`Message ID ${messageId} not found.`, 404, reqOrigin, config.allowedOrigins);
+        return createErrorResponse(`Message ID ${messageId} not found.`, 404, reqOrigin, config.allowedOrigins, 'NOT_FOUND');
       }
       return createJsonResponse({ success: true, log: log }, 200, reqOrigin, config.allowedOrigins);
     }
@@ -208,7 +230,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     case '/api/communication/history': {
       const targetPhone = recipient || mobile;
       if (!targetPhone) {
-        return createErrorResponse('Field "recipient" or "mobile" is required.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "recipient" or "mobile" is required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const history = getConversationHistory(targetPhone);
       return createJsonResponse({ success: true, recipient: targetPhone, history: history }, 200, reqOrigin, config.allowedOrigins);
@@ -216,7 +238,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
 
     case '/api/communication/retry': {
       if (!messageId) {
-        return createErrorResponse('Field "messageId" is required for retry.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "messageId" is required for retry.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const updated = updateMessageStatus(messageId, 'Retrying');
       return createJsonResponse({ success: true, messageId: messageId, status: 'Retrying', log: updated }, 200, reqOrigin, config.allowedOrigins);
@@ -233,11 +255,11 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse({ success: true, status: 'Webhook received' }, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 5. Admin & RBAC Endpoints
+    // 6. Admin & RBAC Endpoints
     case '/api/admin/users': {
       const auth = authorizeRequest(request, PERMISSIONS.MANAGE_USERS);
       if (!auth.authorized) {
-        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins);
+        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins, 'FORBIDDEN');
       }
       return createJsonResponse({ success: true, users: getAllUsers() }, 200, reqOrigin, config.allowedOrigins);
     }
@@ -245,7 +267,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     case '/api/admin/roles': {
       const auth = authorizeRequest(request, PERMISSIONS.MANAGE_ROLES);
       if (!auth.authorized) {
-        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins);
+        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins, 'FORBIDDEN');
       }
       return createJsonResponse({ success: true, matrix: getRolePermissionsMatrix() }, 200, reqOrigin, config.allowedOrigins);
     }
@@ -253,12 +275,12 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     case '/api/admin/security-logs': {
       const auth = authorizeRequest(request, PERMISSIONS.MANAGE_USERS);
       if (!auth.authorized) {
-        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins);
+        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins, 'FORBIDDEN');
       }
       return createJsonResponse({ success: true, logs: getSecurityLogs(100) }, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 6. AI Operations Center Endpoints
+    // 7. AI Operations Center Endpoints
     case '/api/ai/dashboard':
     case '/api/ai/daily-brief':
     case '/api/ai/weekly-report':
@@ -276,7 +298,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     case '/api/ai/business-query': {
       const queryText = query || message || userMessage || '';
       if (!queryText) {
-        return createErrorResponse('Field "query" or "message" is required for business analysis.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "query" or "message" is required for business analysis.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const result = await processOperationsReport({
         endpoint: '/api/ai/business-query',
@@ -288,7 +310,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 7. AI Content Studio Endpoints
+    // 8. AI Content Studio Endpoints
     case '/api/ai/content':
     case '/api/ai/blog':
     case '/api/ai/social':
@@ -312,13 +334,13 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 8. AI Student Assistant Endpoints
+    // 9. AI Student Assistant Endpoints
     case '/api/ai/student-chat':
     case '/api/ai/course-advisor':
     case '/api/ai/admission-faq': {
       const userText = message || userMessage || (messages && messages[messages.length - 1]?.content) || '';
       if (!userText && (!messages || messages.length === 0)) {
-        return createErrorResponse('Field "message" or "messages" is required.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "message" or "messages" is required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const result = await processStudentChat({
         endpoint: path,
@@ -332,7 +354,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
 
     case '/api/ai/create-lead': {
       if (!name || (!mobile && !email)) {
-        return createErrorResponse('Name and at least Mobile or Email are required to create a lead.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Name and at least Mobile or Email are required to create a lead.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const crmPayload = {
         name: name,
@@ -346,11 +368,11 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(crmResult, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 9. General Gateway AI Endpoints
+    // 10. General Gateway AI Endpoints
     case '/api/ai/chat': {
       const userText = message || userMessage || (messages && messages[messages.length - 1]?.content) || '';
       if (!userText && (!messages || messages.length === 0)) {
-        return createErrorResponse('Field "message" or "messages" is required.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "message" or "messages" is required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const result = await processAIRequest({
         endpoint: '/api/ai/chat',
@@ -367,7 +389,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     case '/api/ai/admission': {
       const userText = message || userMessage || '';
       if (!userText) {
-        return createErrorResponse('Field "message" is required for admission assistance.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "message" is required for admission assistance.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const result = await processAIRequest({
         endpoint: '/api/ai/admission',
@@ -383,7 +405,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     case '/api/ai/course-recommendation': {
       const userText = message || userMessage || context || '';
       if (!userText) {
-        return createErrorResponse('Field "message" or "context" (user background/goal) is required.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "message" or "context" (user background/goal) is required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const result = await processAIRequest({
         endpoint: '/api/ai/course-recommendation',
@@ -399,7 +421,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     case '/api/ai/followup': {
       const userText = message || userMessage || context || '';
       if (!userText) {
-        return createErrorResponse('Field "context" or "message" with student enquiry details is required.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "context" or "message" with student enquiry details is required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const result = await processAIRequest({
         endpoint: '/api/ai/followup',
@@ -415,7 +437,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     case '/api/ai/summarize': {
       const userText = message || userMessage || context || '';
       if (!userText) {
-        return createErrorResponse('Field "message" or "context" to summarize is required.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Field "message" or "context" to summarize is required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const result = await processAIRequest({
         endpoint: '/api/ai/summarize',
@@ -428,14 +450,14 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 10. AI Counsellor Engine Endpoints
+    // 11. AI Counsellor Engine Endpoints
     case '/api/ai/lead-analysis':
     case '/api/ai/recommendation':
     case '/api/ai/counsellor-summary':
     case '/api/ai/followup-plan': {
       const targetLeadData = leadData || body;
       if (!targetLeadData || (!targetLeadData.course && !targetLeadData.message && !targetLeadData.name && !targetLeadData.mobile)) {
-        return createErrorResponse('Valid lead details (course, message, or leadData object) are required.', 400, reqOrigin, config.allowedOrigins);
+        return createErrorResponse('Valid lead details (course, message, or leadData object) are required.', 400, reqOrigin, config.allowedOrigins, 'VALIDATION_ERROR');
       }
       const result = await processCounsellorAnalysis({
         endpoint: path,
@@ -447,6 +469,6 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     }
 
     default:
-      return createErrorResponse(`Endpoint ${path} not found.`, 404, reqOrigin, config.allowedOrigins);
+      return createErrorResponse(`Endpoint ${path} not found.`, 404, reqOrigin, config.allowedOrigins, 'NOT_FOUND');
   }
 }
