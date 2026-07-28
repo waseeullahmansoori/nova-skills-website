@@ -630,34 +630,37 @@ function buildFooterHTML() {
             </div>
           </div>
 
-          <!-- Academies Column -->
-          <div class="footer-col">
-            <h4 class="footer-heading">Academies</h4>
-            <ul class="footer-links">
-              <li><a href="courses.html?academy=digital-marketing">📊 Digital Marketing</a></li>
-              <li><a href="courses.html?academy=ai">🤖 AI Academy</a></li>
-              <li><a href="courses.html?academy=design">🎨 Design Academy</a></li>
-              <li><a href="courses.html?academy=video">🎬 Video & Motion</a></li>
-              <li><a href="courses.html?academy=programming">💻 Programming</a></li>
-              <li><a href="courses.html?academy=nocode">🌐 No-Code Web</a></li>
-              <li><a href="courses.html?academy=3d">🏗️ 3D Academy</a></li>
-              <li><a href="courses.html?academy=kids">👨‍💻 Kids Tech</a></li>
-            </ul>
-          </div>
+          <!-- Links Group (Side by side on Mobile) -->
+          <div class="footer-links-group">
+            <!-- Academies Column -->
+            <div class="footer-col">
+              <h4 class="footer-heading">Academies</h4>
+              <ul class="footer-links">
+                <li><a href="courses.html?academy=digital-marketing">📊 Digital Marketing</a></li>
+                <li><a href="courses.html?academy=ai">🤖 AI Academy</a></li>
+                <li><a href="courses.html?academy=design">🎨 Design Academy</a></li>
+                <li><a href="courses.html?academy=video">🎬 Video & Motion</a></li>
+                <li><a href="courses.html?academy=programming">💻 Programming</a></li>
+                <li><a href="courses.html?academy=nocode">🌐 No-Code Web</a></li>
+                <li><a href="courses.html?academy=3d">🏗️ 3D Academy</a></li>
+                <li><a href="courses.html?academy=kids">👨‍💻 Kids Tech</a></li>
+              </ul>
+            </div>
 
-          <!-- Quick Links Column -->
-          <div class="footer-col">
-            <h4 class="footer-heading">Quick Links</h4>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="courses.html">All Courses</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="index.html#placements">Placements</a></li>
-              <li><a href="index.html#mentors">Our Mentors</a></li>
-              <li><a href="index.html#testimonials">Success Stories</a></li>
-              <li><a href="index.html#faq">FAQ</a></li>
-              <li><a href="index.html#counselling">Contact Us</a></li>
-            </ul>
+            <!-- Quick Links Column -->
+            <div class="footer-col">
+              <h4 class="footer-heading">Quick Links</h4>
+              <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">All Courses</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#placements">Placements</a></li>
+                <li><a href="index.html#mentors">Our Mentors</a></li>
+                <li><a href="index.html#testimonials">Success Stories</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="index.html#counselling">Contact Us</a></li>
+              </ul>
+            </div>
           </div>
 
           <!-- Contact Column -->

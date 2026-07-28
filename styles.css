@@ -2407,6 +2407,10 @@ h1, h2, h3, h4, h5, h6 {
   gap: 48px;
 }
 
+.footer-links-group {
+  display: contents;
+}
+
 .footer-logo {
   height: 48px;
   width: auto;
@@ -2951,8 +2955,94 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+
+  .footer-links-group {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .footer-links-group .footer-col {
+    width: 100% !important;
+  }
+
+  .footer-links-group .footer-links {
+    gap: 10px !important;
+  }
+
+  .footer-links-group .footer-links a {
+    font-size: 0.8125rem !important;
+    line-height: 1.4 !important;
+    word-break: break-word !important;
+  }
+
+  /* Contact Us Modern Information Blocks */
+  .footer-contact {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin-top: 12px !important;
+  }
+
+  .contact-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+    padding: 12px 10px !important;
+    box-sizing: border-box !important;
+    height: 100% !important;
+    transition: all 0.25s ease !important;
+  }
+
+  .contact-item:hover {
+    background: rgba(5, 153, 168, 0.1) !important;
+    border-color: rgba(5, 153, 168, 0.3) !important;
+  }
+
+  .contact-icon {
+    font-size: 1.1rem !important;
+    background: rgba(5, 153, 168, 0.15) !important;
+    border: 1px solid rgba(5, 153, 168, 0.25) !important;
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .contact-label {
+    font-size: 0.6875rem !important;
+    font-weight: 700 !important;
+    color: rgba(255, 255, 255, 0.45) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    margin-bottom: 2px !important;
+  }
+
+  .contact-item a,
+  .contact-item p {
+    font-size: 0.8125rem !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    line-height: 1.35 !important;
+    word-break: break-word !important;
+    margin: 0 !important;
+  }
+
+  .contact-item a:hover {
+    color: var(--teal-light, #38bdf8) !important;
   }
 
   .footer-bottom-grid {
