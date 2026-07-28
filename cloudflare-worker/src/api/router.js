@@ -1,6 +1,6 @@
 /**
  * REST API Endpoints Router Module
- * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, AI Content Studio, AI Operations Center, Auth, Admin RBAC, Meta Communication, SXP, and Supabase Database.
+ * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, AI Content Studio, AI Operations Center, Supabase Auth & Identity, Admin RBAC, Meta Communication, SXP, and Supabase Database.
  */
 
 import { processAIRequest } from '../services/aiService.js';
@@ -10,6 +10,7 @@ import { sendLeadToCRM } from '../services/leadCaptureService.js';
 import { processContentGeneration } from '../services/contentStudioService.js';
 import { processOperationsReport } from '../services/operationsCenterService.js';
 import { authenticateUser, authorizeRequest, getAllUsers, getRolePermissionsMatrix } from '../services/authService.js';
+import { registerSupabaseUser, loginSupabaseUser, resetSupabasePassword } from '../services/supabaseAuthService.js';
 import { invalidateSession } from '../services/sessionManager.js';
 import { getSecurityLogs, logSecurityEvent } from '../services/auditLogger.js';
 import { sendCommunication } from '../communication/communicationService.js';
@@ -59,10 +60,69 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     }
   }
 
-  const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, password, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount, crmData, query, recipient, templateKey, dataMap, mediaUrl, messageId, status, studentId } = body;
+  const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, password, role, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount, crmData, query, recipient, templateKey, dataMap, mediaUrl, messageId, status, studentId } = body;
 
   switch (path) {
-    // 1. Supabase Enterprise Database Endpoints
+    // 1. Enterprise Supabase Auth Endpoints
+    case '/api/auth/register': {
+      if (!email || !password || !name) {
+        return createErrorResponse('Name, email, and password are required for user registration.', 400, reqOrigin, config.allowedOrigins);
+      }
+      try {
+        const result = await registerSupabaseUser({ email, password, name, role, mobile }, env, config, request);
+        return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
+      } catch (err) {
+        return createErrorResponse(err.message, 400, reqOrigin, config.allowedOrigins);
+      }
+    }
+
+    case '/api/auth/login': {
+      if (!email || !password) {
+        return createErrorResponse('Email and password are required.', 400, reqOrigin, config.allowedOrigins);
+      }
+      try {
+        const authResult = await loginSupabaseUser(email, password, env, config, request);
+        return createJsonResponse(authResult, 200, reqOrigin, config.allowedOrigins);
+      } catch (err) {
+        // Fallback to local user DB if Supabase Auth credentials fail or not set
+        try {
+          const localAuth = await authenticateUser(email, password, request);
+          return createJsonResponse({
+            success: true,
+            user: localAuth.user,
+            token: localAuth.sessionToken,
+            expiresAt: localAuth.expiresAt
+          }, 200, reqOrigin, config.allowedOrigins);
+        } catch (localErr) {
+          return createErrorResponse(localErr.message, 401, reqOrigin, config.allowedOrigins);
+        }
+      }
+    }
+
+    case '/api/auth/logout': {
+      const authHeader = request.headers.get('Authorization') || '';
+      const token = authHeader.replace(/^Bearer\s+/i, '').trim();
+      if (token) invalidateSession(token);
+      return createJsonResponse({ success: true, message: 'Logged out successfully.' }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/auth/reset-password': {
+      if (!email) {
+        return createErrorResponse('Field "email" is required.', 400, reqOrigin, config.allowedOrigins);
+      }
+      const resetResult = await resetSupabasePassword(email, env, config, request);
+      return createJsonResponse(resetResult, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/auth/profile': {
+      const auth = authorizeRequest(request);
+      if (!auth.authorized) {
+        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins);
+      }
+      return createJsonResponse({ success: true, profile: auth.session }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    // 2. Supabase Enterprise Database Endpoints
     case '/api/supabase/sync': {
       const syncResult = await syncLeadToSupabase(body, env, config);
       return createJsonResponse(syncResult, 200, reqOrigin, config.allowedOrigins);
@@ -82,7 +142,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(admissionResult, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 2. Student Experience Platform (SXP) Endpoints
+    // 3. Student Experience Platform (SXP) Endpoints
     case '/api/student/dashboard':
     case '/api/student/courses':
     case '/api/student/assignments':
@@ -105,7 +165,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 3. Meta WhatsApp & Enterprise Communication Endpoints
+    // 4. Meta WhatsApp & Enterprise Communication Endpoints
     case '/api/communication/send': {
       if (!recipient) {
         return createErrorResponse('Field "recipient" (mobile number) is required.', 400, reqOrigin, config.allowedOrigins);
@@ -171,40 +231,6 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
         }
       }
       return createJsonResponse({ success: true, status: 'Webhook received' }, 200, reqOrigin, config.allowedOrigins);
-    }
-
-    // 4. Enterprise Auth Endpoints
-    case '/api/auth/login': {
-      if (!email || !password) {
-        return createErrorResponse('Email and password are required.', 400, reqOrigin, config.allowedOrigins);
-      }
-      try {
-        const authResult = await authenticateUser(email, password, request);
-        return createJsonResponse({
-          success: true,
-          message: 'Login successful.',
-          user: authResult.user,
-          token: authResult.sessionToken,
-          expiresAt: authResult.expiresAt
-        }, 200, reqOrigin, config.allowedOrigins);
-      } catch (err) {
-        return createErrorResponse(err.message, 401, reqOrigin, config.allowedOrigins);
-      }
-    }
-
-    case '/api/auth/logout': {
-      const authHeader = request.headers.get('Authorization') || '';
-      const token = authHeader.replace(/^Bearer\s+/i, '').trim();
-      if (token) invalidateSession(token);
-      return createJsonResponse({ success: true, message: 'Logged out successfully.' }, 200, reqOrigin, config.allowedOrigins);
-    }
-
-    case '/api/auth/me': {
-      const auth = authorizeRequest(request);
-      if (!auth.authorized) {
-        return createErrorResponse(auth.error, auth.status, reqOrigin, config.allowedOrigins);
-      }
-      return createJsonResponse({ success: true, user: auth.session }, 200, reqOrigin, config.allowedOrigins);
     }
 
     // 5. Admin & RBAC Endpoints
