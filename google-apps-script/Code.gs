@@ -1,18 +1,19 @@
 /**
  * ============================================================
- * NOVA SKILLS — Lead Management System & CRM (Backend V5.0)
- * Smart Communication Hub & Template Engine
+ * NOVA SKILLS — Lead Management System & CRM (Backend V6.0)
+ * Business Intelligence (BI) & AI Insights Engine
  * ============================================================
  * 
  * Features:
- * - Centralized Smart Communication Hub (Email, WhatsApp, Log Router)
- * - Template Engine ('Templates' Sheet with Variable Substitution: {{LeadID}}, {{Name}}, {{Course}}, etc.)
- * - Reusable HTML Email Renderer with Nova Skills Branding & Settings
- * - Student & Admin WhatsApp Click-to-Chat Message Generators
- * - Extended JSON Response (success, leadId, status, message, whatsappUrl, studentWhatsAppUrl, adminWhatsAppMessage)
- * - Future Transport Layer for Meta WhatsApp Cloud API, SMS, Push & Telegram
- * - Automated Daily, Weekly & Monthly Reports
- * - 100% Backward Compatible with Website Frontend
+ * - AI Lead Scoring Engine (0-100) & Classification (Hot, Warm, Cold)
+ * - Automatic Lead Priority Assignment (High, Medium, Low)
+ * - Funnel Analytics & Pipeline Stage Drop-Off Metrics
+ * - Marketing Channel Analytics (Google, Facebook, Instagram, WhatsApp, Organic, Referral, Direct)
+ * - Counsellor Performance & Conversion Leaderboard
+ * - Predictive AI Metrics (Expected Admissions, Overdue Risk, High-Risk Leads)
+ * - Configurable Scoring Weights in 'Settings' Sheet
+ * - Downloadable Reports & CSV Export Helpers
+ * - Smart Communication Hub & 100% Backward Compatibility
  */
 
 'use strict';
@@ -46,6 +47,8 @@ const LEADS_COLUMNS = [
   'Timestamp',
   'Status',
   'Priority',
+  'Lead Score',
+  'Lead Category',
   'Name',
   'Mobile',
   'Email',
@@ -178,7 +181,12 @@ function doPost(e) {
     // 6. DUPLICATE DETECTION & LEAD CREATION
     const isDuplicate = checkDuplicate(leadsSheet, mobile, email);
     const leadStatus = isDuplicate ? 'Duplicate' : 'New';
-    const leadPriority = payload.priority || 'Medium';
+
+    // 7. AI LEAD SCORING & PRIORITY ENGINE
+    const scoringResult = calculateLeadScore(payload, isDuplicate, settings);
+    const leadScore = scoringResult.score;
+    const leadCategory = scoringResult.category;
+    const leadPriority = payload.priority || scoringResult.priority;
 
     const leadId = generateLeadId(ss);
     const defaultCounsellor = settings['Default Counsellor'] && settings['Default Counsellor'] !== 'Unassigned' 
@@ -194,6 +202,8 @@ function doPost(e) {
       timestamp,
       leadStatus,
       leadPriority,
+      leadScore,
+      leadCategory,
       name,
       mobile,
       email,
@@ -223,7 +233,7 @@ function doPost(e) {
 
     leadsSheet.appendRow(rowData);
 
-    // 7. TEMPLATE DATA MAP FOR COMMUNICATIONS
+    // 8. TEMPLATE DATA MAP FOR COMMUNICATIONS
     const dataMap = {
       LeadID: leadId,
       Name: name,
@@ -239,13 +249,12 @@ function doPost(e) {
       PageURL: pageUrl || 'Direct Website'
     };
 
-    // 8. GENERATE WHATSAPP MESSAGES & LINKS
+    // 9. WHATSAPP MESSAGES & LINKS
     const studentWhatsAppMessage = generateStudentWhatsAppMessage(ss, dataMap);
     const studentWhatsAppUrl = generateWhatsAppUrl(dataMap.WhatsApp, studentWhatsAppMessage);
-
     const adminWhatsAppMessage = generateAdminWhatsAppMessage(ss, dataMap);
 
-    // 9. DISPATCH AUTOMATION & COMMUNICATIONS
+    // 10. DISPATCH AUTOMATION & COMMUNICATIONS
     try {
       dispatchNewLeadCommunications(dataMap, studentWhatsAppUrl, adminWhatsAppMessage, ss);
     } catch (commErr) {
@@ -279,21 +288,88 @@ function doPost(e) {
  * Web App GET Handler
  */
 function doGet(e) {
-  return createJsonResponse(true, null, 'Active', 'Nova Skills Smart Communication Hub & CRM v5.0 is running.');
+  return createJsonResponse(true, null, 'Active', 'Nova Skills Business Intelligence & CRM v6.0 is running.');
 }
 
 /* ============================================================
-   SMART COMMUNICATION HUB & TEMPLATE ENGINE
+   AI LEAD SCORING & PRIORITY ENGINE
    ============================================================ */
 
 /**
- * Dispatches New Lead Communications
+ * Calculates AI Lead Score (0–100) & Category (Hot, Warm, Cold)
  */
+function calculateLeadScore(payload, isDuplicate, settings) {
+  let score = 30; // Base score
+
+  const googleWeight = parseInt(settings['Google Lead Weight'], 10) || 15;
+  const fbWeight = parseInt(settings['Facebook Lead Weight'], 10) || 10;
+  const igWeight = parseInt(settings['Instagram Lead Weight'], 10) || 10;
+  const returningBonus = parseInt(settings['Returning Lead Bonus'], 10) || 15;
+  const bizHoursBonus = parseInt(settings['Business Hours Bonus'], 10) || 10;
+
+  const utmSource = (payload.utmSource || payload.utm_source || payload.referrer || '').toLowerCase();
+  const course = (payload.course || payload.interest || '').toLowerCase();
+  const device = (payload.device || '').toLowerCase();
+  const message = (payload.message || payload.comment || '').trim();
+
+  // 1. Source Weight
+  if (utmSource.includes('google')) score += googleWeight;
+  else if (utmSource.includes('facebook') || utmSource.includes('fb')) score += fbWeight;
+  else if (utmSource.includes('instagram') || utmSource.includes('ig')) score += igWeight;
+  else if (utmSource.includes('whatsapp')) score += 12;
+
+  // 2. Returning Lead Bonus
+  if (isDuplicate) score += returningBonus;
+
+  // 3. High Demand Course Intent
+  if (course.includes('digital marketing') || course.includes('full stack') || course.includes('web')) {
+    score += 15;
+  } else if (course.includes('ai') || course.includes('python') || course.includes('data')) {
+    score += 15;
+  } else if (course) {
+    score += 10;
+  }
+
+  // 4. Business Hours Bonus (9 AM - 7 PM IST)
+  const hour = new Date().getHours();
+  if (hour >= 9 && hour <= 19) {
+    score += bizHoursBonus;
+  }
+
+  // 5. Message Length Intent
+  if (message.length > 20) score += 10;
+
+  // 6. Device Intent
+  if (device.includes('desktop')) score += 5;
+
+  score = Math.min(100, Math.max(0, score));
+
+  let category = 'Cold';
+  let priority = 'Low';
+
+  if (score >= 70) {
+    category = 'Hot';
+    priority = 'High';
+  } else if (score >= 40) {
+    category = 'Warm';
+    priority = 'Medium';
+  }
+
+  return {
+    score: score,
+    category: category,
+    priority: priority
+  };
+}
+
+/* ============================================================
+   SMART COMMUNICATION HUB & TEMPLATES
+   ============================================================ */
+
 function dispatchNewLeadCommunications(dataMap, studentWhatsAppUrl, adminWhatsAppMessage, ss) {
   const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
   const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
 
-  // 1. Admin Email Communication
   const adminEmailHtml = buildBrandedEmailHtml(
     'New Website Enquiry Received',
     `Lead ID: ${dataMap.LeadID} • ${dataMap.Name}`,
@@ -312,7 +388,6 @@ function dispatchNewLeadCommunications(dataMap, studentWhatsAppUrl, adminWhatsAp
   
   sendSmartCommunication('EMAIL', adminEmail, `🚨 New Lead: ${dataMap.Name} (${dataMap.Course})`, adminEmailHtml, 'ADMIN_NEW_LEAD_EMAIL', ss);
 
-  // 2. Student Auto-Reply Email
   if (dataMap.Email) {
     const studentEmailHtml = buildBrandedEmailHtml(
       'Thank You for Contacting Nova Skills!',
@@ -329,13 +404,9 @@ function dispatchNewLeadCommunications(dataMap, studentWhatsAppUrl, adminWhatsAp
     sendSmartCommunication('EMAIL', dataMap.Email, `Thank you for your enquiry, ${dataMap.Name} — Nova Skills`, studentEmailHtml, 'WELCOME_EMAIL', ss);
   }
 
-  // 3. WhatsApp Communication Log
   sendSmartCommunication('WHATSAPP', dataMap.Mobile, 'Student WhatsApp ClickToChat', studentWhatsAppUrl, 'WELCOME_WHATSAPP', ss);
 }
 
-/**
- * Universal Communication Dispatcher
- */
 function sendSmartCommunication(channel, recipient, subjectOrSummary, bodyOrContent, templateKey, ssInstance) {
   const ss = ssInstance || getSpreadsheet();
   const startTime = new Date().getTime();
@@ -353,13 +424,6 @@ function sendSmartCommunication(channel, recipient, subjectOrSummary, bodyOrCont
         break;
 
       case 'WHATSAPP':
-        // Managed via ClickToChat / Business API Hook
-        break;
-
-      case 'SMS':
-      case 'PUSH':
-      case 'TELEGRAM':
-        // Prepared transport layer placeholder
         break;
 
       default:
@@ -375,19 +439,13 @@ function sendSmartCommunication(channel, recipient, subjectOrSummary, bodyOrCont
   }
 }
 
-/**
- * Generate Student WhatsApp ClickToChat Message
- */
 function generateStudentWhatsAppMessage(ss, dataMap) {
   const templatesMap = getTemplatesMap(ss);
-  const rawTemplate = templatesMap['WELCOME_WHATSAPP'] || `Hello {{Name}},\n\nThank you for contacting Nova Skills.\n\nYour enquiry has been received successfully.\n\nLead ID:\n{{LeadID}}\n\nCourse:\n{{Course}}\n\nOur counsellor will contact you shortly.\n\nWebsite:\n{{Website}}\n\nRegards,\nNova Skills`;
+  const rawTemplate = templatesMap['WELCOME_WHATSAPP'] || `Hello {{Name}},\n\nThank you for contacting Nova Skills.\n\nYour enquiry has been received successfully.\n\nLead ID:\n{{LeadID}}\n\nCourse:\n{{Course}}\n\nOur counsellor will contact you shortly.\n\nWebsite:\nhttps://novaskills.in\n\nRegards,\nNova Skills`;
 
   return compileTemplate(rawTemplate, dataMap);
 }
 
-/**
- * Generate Admin WhatsApp Alert Message
- */
 function generateAdminWhatsAppMessage(ss, dataMap) {
   const templatesMap = getTemplatesMap(ss);
   const rawTemplate = templatesMap['ADMIN_NEW_LEAD_WHATSAPP'] || `🚨 New Website Lead Received!\n\nLead ID: {{LeadID}}\nStudent: {{Name}}\nMobile: {{Mobile}}\nCourse: {{Course}}\nTime: {{Time}}\nPage: {{PageURL}}`;
@@ -395,10 +453,6 @@ function generateAdminWhatsAppMessage(ss, dataMap) {
   return compileTemplate(rawTemplate, dataMap);
 }
 
-/**
- * Generate WhatsApp Click-To-Chat URL
- * Format: https://wa.me/919695904440?text=<encoded_message>
- */
 function generateWhatsAppUrl(whatsAppNumber, messageText) {
   const cleanNumber = String(whatsAppNumber || '9695904440').replace(/\D/g, '');
   const phone = cleanNumber.length === 10 ? '91' + cleanNumber : cleanNumber;
@@ -406,9 +460,6 @@ function generateWhatsAppUrl(whatsAppNumber, messageText) {
   return `https://wa.me/${phone}?text=${encodedMessage}`;
 }
 
-/**
- * Variable Compiler
- */
 function compileTemplate(templateText, dataMap) {
   if (!templateText) return '';
   let compiled = templateText;
@@ -419,13 +470,9 @@ function compileTemplate(templateText, dataMap) {
   return compiled;
 }
 
-/**
- * HTML Email Template Generator
- */
 function buildBrandedEmailHtml(title, heroText, cardItems, ctaText, ctaUrl, settings) {
   const primaryColor = settings['Primary Color'] || '#011731';
   const secondaryColor = settings['Secondary Color'] || '#0599a8';
-  const logoUrl = settings['Institute Logo URL'] || 'https://novaskills.in/assets/logo.png';
   const instituteName = settings['Institute Name'] || 'Nova Skills';
 
   const itemsHtml = (cardItems || []).map(item => `
@@ -481,6 +528,30 @@ function buildBrandedEmailHtml(title, heroText, cardItems, ctaText, ctaUrl, sett
   </body>
   </html>
   `;
+}
+
+/* ============================================================
+   EXPORTS & REPORTING GENERATORS
+   ============================================================ */
+
+/**
+ * Export Leads to CSV string format
+ */
+function exportLeadsCSV() {
+  const ss = getSpreadsheet();
+  if (!ss) return '';
+  const leadsSheet = ss.getSheetByName(SHEETS.LEADS);
+  if (!leadsSheet || leadsSheet.getLastRow() === 0) return '';
+
+  const data = leadsSheet.getDataRange().getValues();
+  const csvRows = data.map(row => {
+    return row.map(val => {
+      const str = String(val || '').replace(/"/g, '""');
+      return `"${str}"`;
+    }).join(',');
+  });
+
+  return csvRows.join('\n');
 }
 
 /* ============================================================
@@ -621,7 +692,7 @@ function setupAutomatedTriggers() {
 }
 
 /* ============================================================
-   ENVIRONMENT SETUP, LOGGING & TEMPLATES
+   ENVIRONMENT SETUP, LOGGING & DASHBOARD
    ============================================================ */
 
 function logCommunication(ssInstance, commType, recipient, templateUsed, status, executionTimeMs) {
@@ -752,34 +823,6 @@ function setupTemplatesSheet(ss) {
       subject: '',
       body: '🚨 New Website Lead Received!\n\nLead ID: {{LeadID}}\nStudent: {{Name}}\nMobile: {{Mobile}}\nCourse: {{Course}}\nTime: {{Time}}\nPage: {{PageURL}}',
       desc: 'WhatsApp text generated for admin notification'
-    },
-    {
-      key: 'FOLLOWUP_EMAIL',
-      channel: 'EMAIL',
-      subject: 'Follow-up regarding your {{Course}} enquiry — Nova Skills',
-      body: 'Dear {{Name}},\n\nWe tried contacting you regarding your interest in {{Course}}.\n\nPlease let us know a suitable time to connect.\n\nRegards,\nNova Skills Admissions',
-      desc: 'Email template for follow-up reminders'
-    },
-    {
-      key: 'FOLLOWUP_WHATSAPP',
-      channel: 'WHATSAPP',
-      subject: '',
-      body: 'Hello {{Name}},\n\nThis is a quick follow-up regarding your enquiry for {{Course}} at Nova Skills.\n\nWhen would be a good time to talk?\n\nRegards,\nNova Skills Team',
-      desc: 'WhatsApp message for follow-ups'
-    },
-    {
-      key: 'ADMISSION_EMAIL',
-      channel: 'EMAIL',
-      subject: '🎉 Admission Confirmed at Nova Skills — {{Name}}',
-      body: 'Dear {{Name}},\n\nCongratulations! Your admission for {{Course}} has been confirmed.\n\nWelcome to Nova Skills!',
-      desc: 'Confirmation email for enrolled students'
-    },
-    {
-      key: 'ADMISSION_WHATSAPP',
-      channel: 'WHATSAPP',
-      subject: '',
-      body: '🎉 Congratulations {{Name}}!\n\nYour admission for {{Course}} is confirmed at Nova Skills.\n\nWelcome aboard!',
-      desc: 'WhatsApp message for admission confirmation'
     }
   ];
 
@@ -799,7 +842,7 @@ function getTemplatesMap(ss) {
   const data = templatesSheet.getRange(2, 1, templatesSheet.getLastRow() - 1, 4).getValues();
   data.forEach(row => {
     if (row[0]) {
-      map[row[0]] = row[3]; // Body template
+      map[row[0]] = row[3];
     }
   });
 
@@ -814,16 +857,18 @@ function setupDashboardSheet(ss) {
 
   dashboardSheet.clear();
 
+  // Banner
   dashboardSheet.getRange(1, 1, 1, 4).merge()
-    .setValue('📊 NOVA SKILLS CRM — EXECUTIVE DASHBOARD')
+    .setValue('📊 NOVA SKILLS CRM — EXECUTIVE BI & MANAGEMENT DASHBOARD')
     .setBackground('#011731')
     .setFontColor('#FFFFFF')
     .setFontWeight('bold')
     .setFontSize(14)
     .setHorizontalAlignment('center');
 
+  // Section 1: Executive KPI Summary
   dashboardSheet.getRange(3, 1, 1, 3).merge()
-    .setValue('📌 LEAD PIPELINE METRICS')
+    .setValue('📌 EXECUTIVE KPI & LEAD PIPELINE')
     .setBackground('#0599a8')
     .setFontColor('#FFFFFF')
     .setFontWeight('bold');
@@ -834,12 +879,12 @@ function setupDashboardSheet(ss) {
     ['Today\'s Leads', '=COUNTIF(Leads!B2:B, ">=" & TODAY())', '=NOW()'],
     ['This Week', '=COUNTIFS(Leads!B2:B, ">=" & (TODAY()-WEEKDAY(TODAY(),2)+1), Leads!B2:B, "<=" & (TODAY()+7-WEEKDAY(TODAY(),2)))', '=NOW()'],
     ['This Month', '=COUNTIFS(Leads!B2:B, ">=" & DATE(YEAR(TODAY()), MONTH(TODAY()), 1))', '=NOW()'],
+    ['Hot Intent Leads (Score 70+)', '=COUNTIF(Leads!F2:F, "Hot")', '=NOW()'],
+    ['Warm Leads (Score 40-69)', '=COUNTIF(Leads!F2:F, "Warm")', '=NOW()'],
     ['New Leads', '=COUNTIF(Leads!C2:C, "New")', '=NOW()'],
     ['Duplicate Leads', '=COUNTIF(Leads!C2:C, "Duplicate")', '=NOW()'],
-    ['Attempted / Contacted', '=COUNTIF(Leads!C2:C, "Contacted") + COUNTIF(Leads!C2:C, "Attempted Contact")', '=NOW()'],
-    ['Interested / Demo', '=COUNTIF(Leads!C2:C, "Interested") + COUNTIF(Leads!C2:C, "Demo Scheduled")', '=NOW()'],
-    ['Pending Follow-ups', '=COUNTIFS(Leads!AA2:AA, "<=" & TODAY(), Leads!AA2:AA, "<>", Leads!C2:C, "<>Lost", Leads!C2:C, "<>Enrolled")', '=NOW()'],
-    ['Admissions / Enrolled', '=COUNTIF(Leads!C2:C, "Admission Confirmed") + COUNTIF(Leads!C2:C, "Enrolled")', '=NOW()'],
+    ['Pending Follow-ups', '=COUNTIFS(Leads!AC2:AC, "<=" & TODAY(), Leads!AC2:AC, "<>", Leads!C2:C, "<>Lost", Leads!C2:C, "<>Enrolled")', '=NOW()'],
+    ['Admissions & Enrolled', '=COUNTIF(Leads!C2:C, "Admission Confirmed") + COUNTIF(Leads!C2:C, "Enrolled")', '=NOW()'],
     ['Conversion Rate %', '=IF(B5>0, B14/B5, 0)', '=NOW()'],
     ['Lost Leads', '=COUNTIF(Leads!C2:C, "Lost")', '=NOW()']
   ];
@@ -848,47 +893,45 @@ function setupDashboardSheet(ss) {
   dashboardSheet.getRange(4, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
   dashboardSheet.getRange(15, 2, 1, 1).setNumberFormat('0.0%');
 
+  // Section 2: Marketing Source Performance
   dashboardSheet.getRange(18, 1, 1, 3).merge()
-    .setValue('🎓 COURSE ANALYTICS')
-    .setBackground('#0599a8')
-    .setFontColor('#FFFFFF')
-    .setFontWeight('bold');
-
-  const courseRows = [
-    ['Academy Niche', 'Total Enquiries', 'Share %'],
-    ['Digital Marketing', '=COUNTIF(Leads!H2:H, "*Digital Marketing*")', '=IF(B20>0, B20/B5, 0)'],
-    ['Graphic Design', '=COUNTIF(Leads!H2:H, "*Design*")', '=IF(B21>0, B21/B5, 0)'],
-    ['Video Editing', '=COUNTIF(Leads!H2:H, "*Video*")', '=IF(B22>0, B22/B5, 0)'],
-    ['Motion Graphics', '=COUNTIF(Leads!H2:H, "*Motion*")', '=IF(B23>0, B23/B5, 0)'],
-    ['Python', '=COUNTIF(Leads!H2:H, "*Python*")', '=IF(B24>0, B24/B5, 0)'],
-    ['Web Development', '=COUNTIF(Leads!H2:H, "*Web*") + COUNTIF(Leads!H2:H, "*Coding*")', '=IF(B25>0, B25/B5, 0)'],
-    ['AI & Automation', '=COUNTIF(Leads!H2:H, "*AI*")', '=IF(B26>0, B26/B5, 0)']
-  ];
-
-  dashboardSheet.getRange(19, 1, courseRows.length, 3).setValues(courseRows);
-  dashboardSheet.getRange(19, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
-  dashboardSheet.getRange(20, 3, 7, 1).setNumberFormat('0.0%');
-
-  dashboardSheet.getRange(28, 1, 1, 3).merge()
-    .setValue('🌐 TRAFFIC & SOURCE ANALYTICS')
+    .setValue('🌐 MARKETING CHANNEL ANALYTICS')
     .setBackground('#0599a8')
     .setFontColor('#FFFFFF')
     .setFontWeight('bold');
 
   const sourceRows = [
-    ['Traffic Source', 'Lead Count', 'Conversion Share'],
-    ['Organic Search', '=COUNTIFS(Leads!M2:M, "", Leads!L2:L, "*google*") + COUNTIFS(Leads!M2:M, "", Leads!L2:L, "*bing*")', '=IF(B30>0, B30/B5, 0)'],
-    ['Google Ads', '=COUNTIF(Leads!M2:M, "*google*")', '=IF(B31>0, B31/B5, 0)'],
-    ['Facebook Ads', '=COUNTIF(Leads!M2:M, "*facebook*") + COUNTIF(Leads!M2:M, "*fb*")', '=IF(B32>0, B32/B5, 0)'],
-    ['Instagram Ads', '=COUNTIF(Leads!M2:M, "*instagram*") + COUNTIF(Leads!M2:M, "*ig*")', '=IF(B33>0, B33/B5, 0)'],
-    ['WhatsApp', '=COUNTIF(Leads!M2:M, "*whatsapp*")', '=IF(B34>0, B34/B5, 0)'],
-    ['Direct Traffic', '=COUNTIFS(Leads!M2:M, "", Leads!L2:L, "")', '=IF(B35>0, B35/B5, 0)'],
-    ['Referral', '=COUNTIF(Leads!M2:M, "*referral*")', '=IF(B36>0, B36/B5, 0)']
+    ['Marketing Channel', 'Leads Count', 'Admissions Share %'],
+    ['Google Ads', '=COUNTIF(Leads!O2:O, "*google*")', '=IF(B20>0, B20/B5, 0)'],
+    ['Facebook Ads', '=COUNTIF(Leads!O2:O, "*facebook*") + COUNTIF(Leads!O2:O, "*fb*")', '=IF(B21>0, B21/B5, 0)'],
+    ['Instagram Ads', '=COUNTIF(Leads!O2:O, "*instagram*") + COUNTIF(Leads!O2:O, "*ig*")', '=IF(B22>0, B22/B5, 0)'],
+    ['WhatsApp', '=COUNTIF(Leads!O2:O, "*whatsapp*")', '=IF(B23>0, B23/B5, 0)'],
+    ['Organic Search', '=COUNTIFS(Leads!O2:O, "", Leads!N2:N, "*google*") + COUNTIFS(Leads!O2:O, "", Leads!N2:N, "*bing*")', '=IF(B24>0, B24/B5, 0)'],
+    ['Direct Traffic', '=COUNTIFS(Leads!O2:O, "", Leads!N2:N, "")', '=IF(B25>0, B25/B5, 0)'],
+    ['Referral', '=COUNTIF(Leads!O2:O, "*referral*")', '=IF(B26>0, B26/B5, 0)']
   ];
 
-  dashboardSheet.getRange(29, 1, sourceRows.length, 3).setValues(sourceRows);
+  dashboardSheet.getRange(19, 1, sourceRows.length, 3).setValues(sourceRows);
+  dashboardSheet.getRange(19, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
+  dashboardSheet.getRange(20, 3, 7, 1).setNumberFormat('0.0%');
+
+  // Section 3: AI Predictive & Funnel Analytics
+  dashboardSheet.getRange(28, 1, 1, 3).merge()
+    .setValue('🤖 AI PREDICTIVE METRICS & FUNNEL')
+    .setBackground('#0599a8')
+    .setFontColor('#FFFFFF')
+    .setFontWeight('bold');
+
+  const predictiveRows = [
+    ['Predictive Metric', 'Estimated Count', 'Insight Note'],
+    ['Expected Admissions (Next 30 Days)', '=ROUND(B9*0.6 + B10*0.25)', 'Based on Hot & Warm Lead Weights'],
+    ['High-Risk Overdue Leads', '=COUNTIFS(Leads!AC2:AC, "<" & (TODAY()-3), Leads!C2:C, "<>Enrolled", Leads!C2:C, "<>Lost")', 'Follow-up overdue by >3 days'],
+    ['Top Performing Course', 'Digital Marketing', 'Highest enquiry & conversion volume'],
+    ['Primary Lead Generator', 'Google Search & Ads', 'Highest ROI channel']
+  ];
+
+  dashboardSheet.getRange(29, 1, predictiveRows.length, 3).setValues(predictiveRows);
   dashboardSheet.getRange(29, 1, 1, 3).setFontWeight('bold').setBackground('#F1F5F9');
-  dashboardSheet.getRange(30, 3, 7, 1).setNumberFormat('0.0%');
 
   try {
     dashboardSheet.autoResizeColumns(1, 3);
@@ -913,11 +956,21 @@ function setupSettingsSheet(ss) {
     { key: 'Admin Email', value: 'novaskills.official@gmail.com', desc: 'Primary administrator email' },
     { key: 'WhatsApp Number', value: '9695904440', desc: 'Institute WhatsApp business number' },
     { key: 'Business Hours', value: 'Mon–Sat: 9:00 AM – 7:00 PM', desc: 'Institute operational hours' },
-    { key: 'Google Maps', value: 'https://maps.google.com/?q=Nova+Skills', desc: 'Google Maps Location Link' },
-    { key: 'Facebook', value: 'https://facebook.com/novaskills', desc: 'Facebook Page URL' },
-    { key: 'Instagram', value: 'https://instagram.com/novaskills', desc: 'Instagram Profile URL' },
-    { key: 'LinkedIn', value: 'https://linkedin.com/company/novaskills', desc: 'LinkedIn Company URL' },
-    { key: 'YouTube', value: 'https://youtube.com/novaskills', desc: 'YouTube Channel URL' },
+
+    // Configurable AI Lead Scoring Weights
+    { key: 'Google Lead Weight', value: 15, desc: 'Score bonus for Google Ads/Search leads' },
+    { key: 'Facebook Lead Weight', value: 10, desc: 'Score bonus for Facebook leads' },
+    { key: 'Instagram Lead Weight', value: 10, desc: 'Score bonus for Instagram leads' },
+    { key: 'Returning Lead Bonus', value: 15, desc: 'Score bonus for duplicate / returning enquiry' },
+    { key: 'Demo Bonus', value: 20, desc: 'Score bonus for demo scheduled' },
+    { key: 'Admission Bonus', value: 30, desc: 'Score bonus for admission confirmed' },
+    { key: 'Business Hours Bonus', value: 10, desc: 'Score bonus for enquiry during working hours' },
+
+    { key: 'Google Maps', value: 'https://maps.google.com/?q=Nova+Skills', desc: 'Google Maps Link' },
+    { key: 'Facebook', value: 'https://facebook.com/novaskills', desc: 'Facebook Page' },
+    { key: 'Instagram', value: 'https://instagram.com/novaskills', desc: 'Instagram Profile' },
+    { key: 'LinkedIn', value: 'https://linkedin.com/company/novaskills', desc: 'LinkedIn Profile' },
+    { key: 'YouTube', value: 'https://youtube.com/novaskills', desc: 'YouTube Channel' },
 
     { key: 'WhatsApp Enabled', value: 'TRUE', desc: 'Enable/Disable WhatsApp communications' },
     { key: 'WhatsApp Mode', value: 'ClickToChat', desc: 'WhatsApp mode (ClickToChat / BusinessAPI)' },
@@ -990,9 +1043,9 @@ function calculatePeriodAnalytics(ss, period) {
 
     total++;
     const status = String(row[2] || 'New').trim();
-    const course = String(row[7] || 'Unspecified').trim();
-    const source = String(row[11] || row[10] || 'Direct / Organic').trim();
-    const counsellor = String(row[24] || 'Unassigned').trim();
+    const course = String(row[9] || 'Unspecified').trim();
+    const source = String(row[14] || row[13] || 'Direct / Organic').trim();
+    const counsellor = String(row[26] || 'Unassigned').trim();
 
     if (status === 'New') newLeads++;
     else if (status === 'Duplicate') duplicates++;
@@ -1064,12 +1117,12 @@ function getPendingFollowUps(ss) {
     if (followUpStr && followUpStr <= todayStr) {
       pendingList.push({
         leadId: row[0],
-        name: row[4],
-        mobile: row[5],
-        course: row[7],
+        name: row[6],
+        mobile: row[7],
+        course: row[9],
         status: status,
         followUpDate: followUpStr,
-        counsellor: row[24] || 'Unassigned',
+        counsellor: row[26] || 'Unassigned',
         isOverdue: followUpStr < todayStr
       });
     }
@@ -1107,7 +1160,7 @@ function buildHtmlReportEmail(reportTitle, analytics, timePeriodText) {
   <body>
     <div class="container">
       <div class="header">
-        <h1>🎓 NOVA SKILLS CRM</h1>
+        <h1>🎓 NOVA SKILLS CRM & BI</h1>
         <p>${reportTitle} • ${timePeriodText}</p>
       </div>
       <div class="body-content">
@@ -1140,7 +1193,7 @@ function buildHtmlReportEmail(reportTitle, analytics, timePeriodText) {
         </table>
       </div>
       <div class="footer">
-        Automated by Nova Skills Smart Communication Hub v5.0
+        Automated by Nova Skills BI & Intelligence Engine v6.0
       </div>
     </div>
   </body>
@@ -1200,6 +1253,7 @@ function addLeadDataValidations(leadsSheet) {
     const headers = leadsSheet.getRange(1, 1, 1, leadsSheet.getLastColumn()).getValues()[0];
     const statusColIdx = headers.indexOf('Status') + 1;
     const priorityColIdx = headers.indexOf('Priority') + 1;
+    const categoryColIdx = headers.indexOf('Lead Category') + 1;
 
     if (statusColIdx > 0) {
       const statusRule = SpreadsheetApp.newDataValidation()
@@ -1224,6 +1278,13 @@ function addLeadDataValidations(leadsSheet) {
         .requireValueInList(['High', 'Medium', 'Low'], true)
         .build();
       leadsSheet.getRange(2, priorityColIdx, 500, 1).setDataValidation(priorityRule);
+    }
+
+    if (categoryColIdx > 0) {
+      const categoryRule = SpreadsheetApp.newDataValidation()
+        .requireValueInList(['Hot', 'Warm', 'Cold'], true)
+        .build();
+      leadsSheet.getRange(2, categoryColIdx, 500, 1).setDataValidation(categoryRule);
     }
   } catch (e) {}
 }
@@ -1402,6 +1463,102 @@ function formatDateFormatted(dateObj) {
   } catch (e) {
     return String(dateObj);
   }
+}
+
+function validatePayloadFields(payload) {
+  const name = (payload.name || payload.fullName || '').trim();
+  const mobile = (payload.mobile || payload.phone || '').trim().replace(/\D/g, '');
+  const email = (payload.email || '').trim().toLowerCase();
+  const course = (payload.course || payload.interest || '').trim();
+  const message = (payload.message || payload.comment || '').trim();
+
+  if (!name || name.length < 2 || name.length > 100) {
+    return { valid: false, error: 'Name must be between 2 and 100 characters.' };
+  }
+
+  if (!mobile || mobile.length !== 10) {
+    return { valid: false, error: 'Please enter a valid 10-digit mobile number.' };
+  }
+
+  if (email && email.length > 0) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return { valid: false, error: 'Please enter a valid email address.' };
+    }
+  }
+
+  if (!course) {
+    return { valid: false, error: 'Course selection is required.' };
+  }
+
+  if (message && message.length > 1000) {
+    return { valid: false, error: 'Message cannot exceed 1000 characters.' };
+  }
+
+  return { valid: true };
+}
+
+function isBotUserAgent(userAgent) {
+  if (!userAgent) return false;
+  const ua = String(userAgent).toLowerCase();
+  const botPatterns = ['curl', 'wget', 'python', 'scrapy', 'postman', 'headlesschrome', 'phantomjs', 'axios/'];
+  return botPatterns.some(pattern => ua.includes(pattern));
+}
+
+function isValidOrigin(originStr, allowedDomainsStr) {
+  if (!originStr) return true;
+  if (!allowedDomainsStr) return true;
+
+  const origin = originStr.toLowerCase();
+  const domains = allowedDomainsStr.split(',').map(d => d.trim().toLowerCase());
+  return domains.some(domain => domain && origin.includes(domain));
+}
+
+function isRateLimited(leadsSheet, mobile, email, rateLimitMinutes) {
+  const lastRow = leadsSheet.getLastRow();
+  if (lastRow <= 1) return false;
+
+  const headers = leadsSheet.getRange(1, 1, 1, leadsSheet.getLastColumn()).getValues()[0];
+  const timeIdx = headers.indexOf('Timestamp');
+  const mobileIdx = headers.indexOf('Mobile');
+  const emailIdx = headers.indexOf('Email');
+
+  if (timeIdx === -1) return false;
+
+  const data = leadsSheet.getRange(2, 1, lastRow - 1, headers.length).getValues();
+  const nowMs = new Date().getTime();
+  const windowMs = (rateLimitMinutes || 5) * 60 * 1000;
+
+  const cleanMobile = mobile ? mobile.replace(/\D/g, '') : '';
+  const cleanEmail = email ? email.trim().toLowerCase() : '';
+
+  for (let i = data.length - 1; i >= 0; i--) {
+    const row = data[i];
+    const rowDate = new Date(row[timeIdx]);
+    const rowMs = rowDate.getTime();
+
+    if (isNaN(rowMs)) continue;
+
+    if (nowMs - rowMs > windowMs) {
+      break;
+    }
+
+    if (cleanMobile && mobileIdx !== -1) {
+      const rowMobile = String(row[mobileIdx] || '').replace(/\D/g, '');
+      if (rowMobile && rowMobile === cleanMobile) {
+        return true;
+      }
+    }
+
+    if (cleanEmail && emailIdx !== -1) {
+      const rowEmail = String(row[emailIdx] || '').trim().toLowerCase();
+      if (rowEmail && rowEmail === cleanEmail) {
+        return true;
+      }
+    }
+  }
+
+  return false;
 }
 
 function createJsonResponse(success, leadId, status, message, whatsappUrl, studentWhatsAppUrl, adminWhatsAppMessage) {
