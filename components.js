@@ -882,6 +882,15 @@ function injectComponents() {
 
   // Scroll progress bar
   document.body.insertAdjacentHTML('afterbegin', buildScrollProgressHTML());
+
+  // Inject Nova AI Floating Assistant Widget
+  if (!document.getElementById('nova-ai-widget-script')) {
+    const aiScript = document.createElement('script');
+    aiScript.id = 'nova-ai-widget-script';
+    aiScript.src = 'nova-ai-widget.js?v=1.0';
+    aiScript.defer = true;
+    document.body.appendChild(aiScript);
+  }
 }
 
 /* ─────────────────────────────────────────────
