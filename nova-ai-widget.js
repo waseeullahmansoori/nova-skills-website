@@ -325,19 +325,25 @@
       /* Mobile responsiveness */
       @media (max-width: 768px) {
         .nova-ai-float-btn {
-          bottom: 80px;
-          right: 20px;
-          padding: 10px 16px;
-          font-size: 0.875rem;
+          bottom: 84px !important;
+          right: 16px !important;
+          padding: 10px 16px !important;
+          font-size: 0.85rem !important;
+          display: flex !important;
+          z-index: 999999 !important;
+          box-shadow: 0 8px 24px rgba(5, 153, 168, 0.5) !important;
         }
         .nova-ai-panel {
-          bottom: 0;
-          right: 0;
-          width: 100vw;
-          height: 100vh;
-          max-width: 100vw;
-          max-height: 100vh;
-          border-radius: 0;
+          top: 0 !important;
+          bottom: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          width: 100vw !important;
+          height: 100vh !important;
+          max-width: 100vw !important;
+          max-height: 100vh !important;
+          border-radius: 0 !important;
+          z-index: 9999999 !important;
         }
       }
     `;
