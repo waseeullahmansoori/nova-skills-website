@@ -1,16 +1,16 @@
 /**
  * ============================================================
- * NOVA SKILLS — Lead Management System & CRM (Backend V4.0)
- * Event-Driven Automation Engine & Notification Center
+ * NOVA SKILLS — Lead Management System & CRM (Backend V5.0)
+ * Smart Communication Hub & Template Engine
  * ============================================================
  * 
  * Features:
- * - Event-Driven Architecture (NEW_LEAD, LEAD_UPDATED, STATUS_CHANGED, FOLLOWUP_DUE, ADMISSION_CONFIRMED, ENROLLED)
- * - Centralized Notification Module (EMAIL, WHATSAPP ClickToChat & Business API Ready, SYSTEM_LOG)
- * - Dynamic WhatsApp Click-to-Chat Link Generation (https://wa.me/919695904440?text=...)
- * - Extended JSON Success Response including "whatsappUrl"
- * - Configurable Settings (Institute Name, Website, Emails, WhatsApp Defaults)
- * - Automation Event & Security Error Logging
+ * - Centralized Smart Communication Hub (Email, WhatsApp, Log Router)
+ * - Template Engine ('Templates' Sheet with Variable Substitution: {{LeadID}}, {{Name}}, {{Course}}, etc.)
+ * - Reusable HTML Email Renderer with Nova Skills Branding & Settings
+ * - Student & Admin WhatsApp Click-to-Chat Message Generators
+ * - Extended JSON Response (success, leadId, status, message, whatsappUrl, studentWhatsAppUrl, adminWhatsAppMessage)
+ * - Future Transport Layer for Meta WhatsApp Cloud API, SMS, Push & Telegram
  * - Automated Daily, Weekly & Monthly Reports
  * - 100% Backward Compatible with Website Frontend
  */
@@ -26,7 +26,8 @@ const SHEETS = {
   LOGS: 'Logs',
   ERRORS: 'Errors',
   DASHBOARD: 'Dashboard',
-  SETTINGS: 'Settings'
+  SETTINGS: 'Settings',
+  TEMPLATES: 'Templates'
 };
 
 // Automation Event Names
@@ -167,7 +168,7 @@ function doPost(e) {
 
     const leadsSheet = ss.getSheetByName(SHEETS.LEADS);
 
-    // 5. RATE LIMITING (5-min window)
+    // 5. RATE LIMITING
     const rateLimitMinutes = parseInt(settings['Rate Limit Minutes'], 10) || 5;
     if (isRateLimited(leadsSheet, mobile, email, rateLimitMinutes)) {
       logSecurityError(ss, 'Rate limit exceeded.', publicIP, origin, userAgent, 'Submission within ' + rateLimitMinutes + ' min window');
@@ -185,7 +186,8 @@ function doPost(e) {
       : '';
 
     const timestamp = new Date();
-    const initialRemark = message ? `${formatDateFormatted(timestamp)} - ${message}` : `${formatDateFormatted(timestamp)} - Initial Web Form Enquiry`;
+    const formattedTime = formatDateFormatted(timestamp);
+    const initialRemark = message ? `${formattedTime} - ${message}` : `${formattedTime} - Initial Web Form Enquiry`;
 
     const rowData = [
       leadId,
@@ -221,25 +223,33 @@ function doPost(e) {
 
     leadsSheet.appendRow(rowData);
 
-    // 7. GENERATE WHATSAPP CLICK TO CHAT LINK
-    const instituteWhatsAppNumber = settings['WhatsApp Number'] || '9695904440';
-    const whatsappUrl = generateWhatsAppClickToChatUrl(instituteWhatsAppNumber, name, course);
+    // 7. TEMPLATE DATA MAP FOR COMMUNICATIONS
+    const dataMap = {
+      LeadID: leadId,
+      Name: name,
+      Mobile: mobile,
+      Email: email,
+      Course: course,
+      City: city || 'N/A',
+      Message: message || 'N/A',
+      Counsellor: defaultCounsellor || 'Assigned Counsellor',
+      Website: settings['Website'] || 'https://novaskills.in',
+      WhatsApp: settings['WhatsApp Number'] || '9695904440',
+      Time: formattedTime,
+      PageURL: pageUrl || 'Direct Website'
+    };
 
-    // 8. TRIGGER AUTOMATION EVENT (NEW_LEAD)
+    // 8. GENERATE WHATSAPP MESSAGES & LINKS
+    const studentWhatsAppMessage = generateStudentWhatsAppMessage(ss, dataMap);
+    const studentWhatsAppUrl = generateWhatsAppUrl(dataMap.WhatsApp, studentWhatsAppMessage);
+
+    const adminWhatsAppMessage = generateAdminWhatsAppMessage(ss, dataMap);
+
+    // 9. DISPATCH AUTOMATION & COMMUNICATIONS
     try {
-      dispatchEvent(AUTOMATION_EVENTS.NEW_LEAD, {
-        leadId: leadId,
-        name: name,
-        mobile: mobile,
-        email: email,
-        course: course,
-        city: city,
-        message: message,
-        status: leadStatus,
-        whatsappUrl: whatsappUrl
-      }, ss);
-    } catch (autoErr) {
-      logSecurityError(ss, 'Automation Engine Error (NEW_LEAD)', publicIP, origin, userAgent, autoErr.message || String(autoErr));
+      dispatchNewLeadCommunications(dataMap, studentWhatsAppUrl, adminWhatsAppMessage, ss);
+    } catch (commErr) {
+      logSecurityError(ss, 'Communication Engine Non-Blocking Error', publicIP, origin, userAgent, commErr.message || String(commErr));
     }
 
     const endTime = new Date().getTime();
@@ -247,7 +257,15 @@ function doPost(e) {
 
     logSubmission(ss, leadId, leadStatus, executionTimeMs);
 
-    return createJsonResponse(true, leadId, leadStatus, 'Enquiry submitted successfully.', whatsappUrl);
+    return createJsonResponse(
+      true,
+      leadId,
+      leadStatus,
+      'Enquiry submitted successfully.',
+      studentWhatsAppUrl,
+      studentWhatsAppUrl,
+      adminWhatsAppMessage
+    );
 
   } catch (err) {
     logSecurityError(getSpreadsheet(), 'Unhandled Exception', '', '', '', (err.message || String(err)) + '\n' + (err.stack || ''));
@@ -261,215 +279,212 @@ function doPost(e) {
  * Web App GET Handler
  */
 function doGet(e) {
-  return createJsonResponse(true, null, 'Active', 'Nova Skills Event-Driven CRM & Automation Engine v4.0 is running.');
+  return createJsonResponse(true, null, 'Active', 'Nova Skills Smart Communication Hub & CRM v5.0 is running.');
 }
 
 /* ============================================================
-   EVENT-DRIVEN AUTOMATION ENGINE & HANDLERS
+   SMART COMMUNICATION HUB & TEMPLATE ENGINE
    ============================================================ */
 
 /**
- * Central Event Dispatcher
+ * Dispatches New Lead Communications
  */
-function dispatchEvent(eventName, payload, ssInstance) {
+function dispatchNewLeadCommunications(dataMap, studentWhatsAppUrl, adminWhatsAppMessage, ss) {
+  const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
+  const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
+
+  // 1. Admin Email Communication
+  const adminEmailHtml = buildBrandedEmailHtml(
+    'New Website Enquiry Received',
+    `Lead ID: ${dataMap.LeadID} • ${dataMap.Name}`,
+    [
+      { label: 'Student Name', val: dataMap.Name },
+      { label: 'Mobile Number', val: dataMap.Mobile },
+      { label: 'Email Address', val: dataMap.Email || 'N/A' },
+      { label: 'Course Selected', val: dataMap.Course },
+      { label: 'City', val: dataMap.City },
+      { label: 'Message', val: dataMap.Message }
+    ],
+    'View Lead in CRM',
+    dataMap.Website,
+    settings
+  );
+  
+  sendSmartCommunication('EMAIL', adminEmail, `🚨 New Lead: ${dataMap.Name} (${dataMap.Course})`, adminEmailHtml, 'ADMIN_NEW_LEAD_EMAIL', ss);
+
+  // 2. Student Auto-Reply Email
+  if (dataMap.Email) {
+    const studentEmailHtml = buildBrandedEmailHtml(
+      'Thank You for Contacting Nova Skills!',
+      `Dear ${dataMap.Name}, your enquiry for ${dataMap.Course} has been received.`,
+      [
+        { label: 'Your Lead ID', val: dataMap.LeadID },
+        { label: 'Interested Course', val: dataMap.Course },
+        { label: 'Assigned Counsellor', val: dataMap.Counsellor }
+      ],
+      'Explore All Courses',
+      `${dataMap.Website}/courses.html`,
+      settings
+    );
+    sendSmartCommunication('EMAIL', dataMap.Email, `Thank you for your enquiry, ${dataMap.Name} — Nova Skills`, studentEmailHtml, 'WELCOME_EMAIL', ss);
+  }
+
+  // 3. WhatsApp Communication Log
+  sendSmartCommunication('WHATSAPP', dataMap.Mobile, 'Student WhatsApp ClickToChat', studentWhatsAppUrl, 'WELCOME_WHATSAPP', ss);
+}
+
+/**
+ * Universal Communication Dispatcher
+ */
+function sendSmartCommunication(channel, recipient, subjectOrSummary, bodyOrContent, templateKey, ssInstance) {
   const ss = ssInstance || getSpreadsheet();
   const startTime = new Date().getTime();
 
   try {
-    switch (eventName) {
-      case AUTOMATION_EVENTS.NEW_LEAD:
-        handleNewLeadEvent(payload, ss);
-        break;
-      case AUTOMATION_EVENTS.LEAD_UPDATED:
-        handleLeadUpdatedEvent(payload, ss);
-        break;
-      case AUTOMATION_EVENTS.STATUS_CHANGED:
-        handleStatusChangedEvent(payload, ss);
-        break;
-      case AUTOMATION_EVENTS.FOLLOWUP_DUE:
-        handleFollowupDueEvent(payload, ss);
-        break;
-      case AUTOMATION_EVENTS.ADMISSION_CONFIRMED:
-        handleAdmissionConfirmedEvent(payload, ss);
-        break;
-      case AUTOMATION_EVENTS.ENROLLED:
-        handleEnrolledEvent(payload, ss);
-        break;
-      default:
-        console.warn('Unknown event dispatched:', eventName);
-        return;
-    }
-
-    const execTime = new Date().getTime() - startTime;
-    logAutomationEvent(ss, eventName, payload.leadId || '', 'Handled event successfully', 'Success', execTime);
-  } catch (err) {
-    const execTime = new Date().getTime() - startTime;
-    logAutomationEvent(ss, eventName, payload.leadId || '', 'Failed handling event: ' + err.message, 'Failure', execTime);
-    logSecurityError(ss, 'Event Execution Failed: ' + eventName, '', '', '', err.stack || String(err));
-  }
-}
-
-function handleNewLeadEvent(payload, ss) {
-  const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
-  const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
-
-  // 1. Admin Email Notification
-  const adminSubject = `🆕 New Lead Received: ${payload.name} (${payload.course})`;
-  const adminBody = `
-    <h2>New Lead Registered on Nova Skills</h2>
-    <p><strong>Lead ID:</strong> ${payload.leadId}</p>
-    <p><strong>Name:</strong> ${payload.name}</p>
-    <p><strong>Mobile:</strong> ${payload.mobile}</p>
-    <p><strong>Email:</strong> ${payload.email}</p>
-    <p><strong>Course:</strong> ${payload.course}</p>
-    <p><strong>City:</strong> ${payload.city || 'N/A'}</p>
-    <p><strong>Status:</strong> ${payload.status}</p>
-    <p><strong>Message:</strong> ${payload.message || 'N/A'}</p>
-  `;
-  sendNotification('EMAIL', adminEmail, { subject: adminSubject, body: adminBody }, { leadId: payload.leadId, event: 'NEW_LEAD' }, ss);
-
-  // 2. Student Auto-Reply Email (if email provided)
-  if (payload.email) {
-    const studentSubject = `Thank you for your enquiry, ${payload.name} — Nova Skills`;
-    const studentBody = `
-      <p>Dear ${payload.name},</p>
-      <p>Thank you for contacting Nova Skills! We have received your enquiry for the <strong>${payload.course}</strong> course.</p>
-      <p>Our senior career counsellor will call you within 2 hours to provide complete course details, fee structure, and syllabus.</p>
-      <br/>
-      <p>Warm regards,<br/><strong>Nova Skills Admissions Team</strong><br/>https://novaskills.in</p>
-    `;
-    sendNotification('EMAIL', payload.email, { subject: studentSubject, body: studentBody }, { leadId: payload.leadId, event: 'NEW_LEAD_STUDENT' }, ss);
-  }
-
-  // 3. WhatsApp Notification Log / Click-to-chat
-  if (settings['WhatsApp Enabled'] !== 'false') {
-    sendNotification('WHATSAPP', payload.mobile, { message: payload.whatsappUrl, name: payload.name, course: payload.course }, { leadId: payload.leadId, event: 'NEW_LEAD_WHATSAPP' }, ss);
-  }
-}
-
-function handleLeadUpdatedEvent(payload, ss) {
-  sendNotification('SYSTEM_LOG', '', { message: `Lead ${payload.leadId} updated.` }, { leadId: payload.leadId, event: 'LEAD_UPDATED' }, ss);
-}
-
-function handleStatusChangedEvent(payload, ss) {
-  sendNotification('SYSTEM_LOG', '', { message: `Lead ${payload.leadId} status changed to ${payload.status}.` }, { leadId: payload.leadId, event: 'STATUS_CHANGED' }, ss);
-  
-  if (payload.status === 'Admission Confirmed') {
-    dispatchEvent(AUTOMATION_EVENTS.ADMISSION_CONFIRMED, payload, ss);
-  } else if (payload.status === 'Enrolled') {
-    dispatchEvent(AUTOMATION_EVENTS.ENROLLED, payload, ss);
-  }
-}
-
-function handleFollowupDueEvent(payload, ss) {
-  const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
-  const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
-  sendNotification('EMAIL', adminEmail, { subject: `⏰ Follow-up Due for Lead ${payload.leadId}`, body: `<p>Follow-up scheduled for lead ${payload.name} (${payload.mobile}).</p>` }, { leadId: payload.leadId, event: 'FOLLOWUP_DUE' }, ss);
-}
-
-function handleAdmissionConfirmedEvent(payload, ss) {
-  const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
-  const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
-  sendNotification('EMAIL', adminEmail, { subject: `🎉 Admission Confirmed: ${payload.name}`, body: `<h2>Admission Confirmed!</h2><p>Student ${payload.name} has confirmed admission for ${payload.course}.</p>` }, { leadId: payload.leadId, event: 'ADMISSION_CONFIRMED' }, ss);
-}
-
-function handleEnrolledEvent(payload, ss) {
-  const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
-  const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
-  sendNotification('EMAIL', adminEmail, { subject: `🎓 Student Enrolled: ${payload.name}`, body: `<h2>New Student Enrolled!</h2><p>Student ${payload.name} is now officially enrolled in ${payload.course}.</p>` }, { leadId: payload.leadId, event: 'ENROLLED' }, ss);
-}
-
-/* ============================================================
-   NOTIFICATION CENTER & MODULES
-   ============================================================ */
-
-/**
- * Centralized Notification Dispatcher
- * Supported Types: EMAIL, WHATSAPP, SYSTEM_LOG (Hooks: SMS, Telegram, Push)
- */
-function sendNotification(type, recipient, payload, context, ssInstance) {
-  const ss = ssInstance || getSpreadsheet();
-  
-  try {
-    switch (type.toUpperCase()) {
+    switch (channel.toUpperCase()) {
       case 'EMAIL':
-        if (recipient && payload.subject && payload.body) {
+        if (recipient && subjectOrSummary && bodyOrContent) {
           MailApp.sendEmail({
             to: recipient,
-            subject: payload.subject,
-            htmlBody: payload.body
+            subject: subjectOrSummary,
+            htmlBody: bodyOrContent
           });
         }
         break;
 
       case 'WHATSAPP':
-        sendWhatsAppNotification(recipient, payload, context, ss);
-        break;
-
-      case 'SYSTEM_LOG':
-        logAutomationEvent(ss, context.event || 'NOTIFICATION', context.leadId || '', payload.message || 'Notification dispatched', 'Success', 0);
+        // Managed via ClickToChat / Business API Hook
         break;
 
       case 'SMS':
-      case 'TELEGRAM':
       case 'PUSH':
-        // Extensible hook for future integration providers
-        logAutomationEvent(ss, type, context.leadId || '', 'Future notification channel placeholder triggered', 'Success', 0);
+      case 'TELEGRAM':
+        // Prepared transport layer placeholder
         break;
 
       default:
-        console.warn('Unsupported notification type:', type);
+        console.warn('Unknown communication channel:', channel);
     }
+
+    const execTime = new Date().getTime() - startTime;
+    logCommunication(ss, channel, recipient || 'SYSTEM', templateKey || 'DIRECT', 'Success', execTime);
   } catch (err) {
-    logSecurityError(ss, `Notification Error (${type})`, '', '', '', err.message || String(err));
+    const execTime = new Date().getTime() - startTime;
+    logCommunication(ss, channel, recipient || 'SYSTEM', templateKey || 'DIRECT', 'Failure: ' + err.message, execTime);
+    logSecurityError(ss, `Communication Failure (${channel})`, '', '', '', err.message || String(err));
   }
 }
 
 /**
- * WhatsApp Notification Handler (ClickToChat & Future Business API Hook)
+ * Generate Student WhatsApp ClickToChat Message
  */
-function sendWhatsAppNotification(recipient, payload, context, ss) {
-  const settings = getSettingsMap(ss.getSheetByName(SHEETS.SETTINGS));
-  const whatsappMode = settings['WhatsApp Mode'] || 'ClickToChat';
-  const apiEnabled = String(settings['Business API Enabled']).toLowerCase() === 'true';
+function generateStudentWhatsAppMessage(ss, dataMap) {
+  const templatesMap = getTemplatesMap(ss);
+  const rawTemplate = templatesMap['WELCOME_WHATSAPP'] || `Hello {{Name}},\n\nThank you for contacting Nova Skills.\n\nYour enquiry has been received successfully.\n\nLead ID:\n{{LeadID}}\n\nCourse:\n{{Course}}\n\nOur counsellor will contact you shortly.\n\nWebsite:\n{{Website}}\n\nRegards,\nNova Skills`;
 
-  if (apiEnabled && whatsappMode === 'BusinessAPI') {
-    // Hook for Meta WhatsApp Business API Cloud Send
-    sendWhatsAppMetaCloudAPI(recipient, payload, settings);
-  } else {
-    // ClickToChat Mode: URL is generated & stored in Logs
-    logAutomationEvent(ss, 'WHATSAPP_CLICK_TO_CHAT', context.leadId || '', 'Generated ClickToChat URL: ' + (payload.message || ''), 'Success', 0);
-  }
+  return compileTemplate(rawTemplate, dataMap);
 }
 
 /**
- * WhatsApp Meta Cloud API Future Handler Hook
+ * Generate Admin WhatsApp Alert Message
  */
-function sendWhatsAppMetaCloudAPI(recipient, payload, settings) {
-  const token = settings['Meta Access Token'];
-  const phoneId = settings['Phone Number ID'];
-  if (!token || !phoneId) {
-    throw new Error('Meta Access Token or Phone Number ID missing in Settings');
-  }
-  // Meta Cloud API HTTP Fetch architecture prepared for zero-refactoring activation
+function generateAdminWhatsAppMessage(ss, dataMap) {
+  const templatesMap = getTemplatesMap(ss);
+  const rawTemplate = templatesMap['ADMIN_NEW_LEAD_WHATSAPP'] || `🚨 New Website Lead Received!\n\nLead ID: {{LeadID}}\nStudent: {{Name}}\nMobile: {{Mobile}}\nCourse: {{Course}}\nTime: {{Time}}\nPage: {{PageURL}}`;
+
+  return compileTemplate(rawTemplate, dataMap);
 }
 
 /**
- * WhatsApp Click to Chat Link Generator
+ * Generate WhatsApp Click-To-Chat URL
  * Format: https://wa.me/919695904440?text=<encoded_message>
  */
-function generateWhatsAppClickToChatUrl(whatsAppNumber, name, course) {
+function generateWhatsAppUrl(whatsAppNumber, messageText) {
   const cleanNumber = String(whatsAppNumber || '9695904440').replace(/\D/g, '');
   const phone = cleanNumber.length === 10 ? '91' + cleanNumber : cleanNumber;
-
-  const rawMessage = `Hello Nova Skills,\n\nI have successfully submitted my enquiry on your website.\n\nMy Name:\n${name}\n\nCourse:\n${course}\n\nPlease contact me.\n\nThank you.`;
-
-  const encodedMessage = encodeURIComponent(rawMessage);
+  const encodedMessage = encodeURIComponent(messageText);
   return `https://wa.me/${phone}?text=${encodedMessage}`;
 }
 
+/**
+ * Variable Compiler
+ */
+function compileTemplate(templateText, dataMap) {
+  if (!templateText) return '';
+  let compiled = templateText;
+  for (const key in dataMap) {
+    const regex = new RegExp(`\\{\\{${key}\\}\\}`, 'g');
+    compiled = compiled.replace(regex, dataMap[key] || '');
+  }
+  return compiled;
+}
+
+/**
+ * HTML Email Template Generator
+ */
+function buildBrandedEmailHtml(title, heroText, cardItems, ctaText, ctaUrl, settings) {
+  const primaryColor = settings['Primary Color'] || '#011731';
+  const secondaryColor = settings['Secondary Color'] || '#0599a8';
+  const logoUrl = settings['Institute Logo URL'] || 'https://novaskills.in/assets/logo.png';
+  const instituteName = settings['Institute Name'] || 'Nova Skills';
+
+  const itemsHtml = (cardItems || []).map(item => `
+    <tr>
+      <td style="padding:10px 14px; font-weight:600; color:${primaryColor}; border-bottom:1px solid #e2e8f0; width:35%;">${item.label}:</td>
+      <td style="padding:10px 14px; color:#334155; border-bottom:1px solid #e2e8f0;">${item.val}</td>
+    </tr>
+  `).join('');
+
+  return `
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8"/>
+    <style>
+      body { font-family: 'Plus Jakarta Sans', Arial, sans-serif; background-color: #f8fafc; margin: 0; padding: 24px; color: #0f172a; }
+      .container { max-width: 620px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(1,23,49,0.1); border: 1px solid #e2e8f0; }
+      .header { background: ${primaryColor}; padding: 28px 24px; text-align: center; color: #ffffff; }
+      .header h1 { margin: 0; font-size: 22px; font-weight: 800; }
+      .hero { padding: 24px; text-align: center; background: #f1f5f9; border-bottom: 2px solid ${secondaryColor}; }
+      .hero p { margin: 0; font-size: 15px; font-weight: 600; color: ${primaryColor}; }
+      .body-content { padding: 24px; }
+      table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 14px; }
+      .cta-wrap { text-align: center; margin: 24px 0 12px 0; }
+      .cta-btn { display: inline-block; background: ${secondaryColor}; color: #ffffff; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 14px; }
+      .footer { background: ${primaryColor}; color: rgba(255,255,255,0.7); text-align: center; padding: 16px; font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🎓 ${instituteName}</h1>
+      </div>
+      <div class="hero">
+        <p>${heroText}</p>
+      </div>
+      <div class="body-content">
+        <table>
+          <tbody>
+            ${itemsHtml}
+          </tbody>
+        </table>
+        ${ctaText && ctaUrl ? `
+          <div class="cta-wrap">
+            <a href="${ctaUrl}" class="cta-btn">${ctaText}</a>
+          </div>
+        ` : ''}
+      </div>
+      <div class="footer">
+        © ${new Date().getFullYear()} ${instituteName}. All rights reserved.
+      </div>
+    </div>
+  </body>
+  </html>
+  `;
+}
+
 /* ============================================================
-   AUTOMATED REPORTING ENGINES
+   AUTOMATED REPORTS & TRIGGERS
    ============================================================ */
 
 function sendDailyReport() {
@@ -486,7 +501,7 @@ function sendDailyReport() {
     const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
     const subject = '📊 Nova Skills Daily CRM Report — ' + formatDateFormatted(new Date()).split(' ')[0];
 
-    sendNotification('EMAIL', adminEmail, { subject: subject, body: htmlBody }, { event: 'DAILY_REPORT' }, ss);
+    sendSmartCommunication('EMAIL', adminEmail, subject, htmlBody, 'DAILY_REPORT', ss);
 
     const executionTimeMs = new Date().getTime() - startTime;
     logAutomationEvent(ss, 'DAILY_REPORT', 'SYSTEM', 'Sent daily report email to ' + adminEmail, 'Success', executionTimeMs);
@@ -510,7 +525,7 @@ function sendWeeklyReport() {
     const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
     const subject = '📈 Nova Skills Weekly CRM Performance Report';
 
-    sendNotification('EMAIL', adminEmail, { subject: subject, body: htmlBody }, { event: 'WEEKLY_REPORT' }, ss);
+    sendSmartCommunication('EMAIL', adminEmail, subject, htmlBody, 'WEEKLY_REPORT', ss);
 
     const executionTimeMs = new Date().getTime() - startTime;
     logAutomationEvent(ss, 'WEEKLY_REPORT', 'SYSTEM', 'Sent weekly report to ' + adminEmail, 'Success', executionTimeMs);
@@ -534,7 +549,7 @@ function sendMonthlyReport() {
     const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
     const subject = '🏆 Nova Skills Monthly CRM & Conversion Report';
 
-    sendNotification('EMAIL', adminEmail, { subject: subject, body: htmlBody }, { event: 'MONTHLY_REPORT' }, ss);
+    sendSmartCommunication('EMAIL', adminEmail, subject, htmlBody, 'MONTHLY_REPORT', ss);
 
     const executionTimeMs = new Date().getTime() - startTime;
     logAutomationEvent(ss, 'MONTHLY_REPORT', 'SYSTEM', 'Sent monthly report to ' + adminEmail, 'Success', executionTimeMs);
@@ -566,7 +581,7 @@ function sendFollowUpReminders() {
     const adminEmail = settings['Admin Email'] || 'novaskills.official@gmail.com';
     const subject = '⏰ Action Required: ' + pendingFollowUps.length + ' Pending / Overdue Follow-ups for Today';
 
-    sendNotification('EMAIL', adminEmail, { subject: subject, body: htmlBody }, { event: 'FOLLOWUP_REMINDERS' }, ss);
+    sendSmartCommunication('EMAIL', adminEmail, subject, htmlBody, 'FOLLOWUP_REMINDERS', ss);
 
     const executionTimeMs = new Date().getTime() - startTime;
     logAutomationEvent(ss, 'FOLLOWUP_REMINDERS', 'SYSTEM', 'Sent ' + pendingFollowUps.length + ' follow-up reminders', 'Success', executionTimeMs);
@@ -606,8 +621,27 @@ function setupAutomatedTriggers() {
 }
 
 /* ============================================================
-   LOGGING & ENVIRONMENT SETUP
+   ENVIRONMENT SETUP, LOGGING & TEMPLATES
    ============================================================ */
+
+function logCommunication(ssInstance, commType, recipient, templateUsed, status, executionTimeMs) {
+  try {
+    const ss = ssInstance || getSpreadsheet();
+    if (ss) {
+      const logsSheet = ss.getSheetByName(SHEETS.LOGS);
+      if (logsSheet) {
+        logsSheet.appendRow([
+          new Date(),
+          commType || 'COMMUNICATION',
+          recipient || 'N/A',
+          `Template: ${templateUsed}`,
+          status || 'Success',
+          executionTimeMs + ' ms'
+        ]);
+      }
+    }
+  } catch (e) {}
+}
 
 function logAutomationEvent(ssInstance, eventName, leadId, action, status, executionTimeMs) {
   try {
@@ -664,7 +698,7 @@ function setupEnvironment(ss) {
   let logsSheet = ss.getSheetByName(SHEETS.LOGS);
   if (!logsSheet) {
     logsSheet = ss.insertSheet(SHEETS.LOGS);
-    logsSheet.appendRow(['Timestamp', 'Event Name', 'Lead ID', 'Action', 'Status', 'Execution Time']);
+    logsSheet.appendRow(['Timestamp', 'Communication / Event', 'Recipient / Lead ID', 'Action / Template', 'Status', 'Execution Time']);
     styleHeaderRow(logsSheet);
   }
 
@@ -679,6 +713,97 @@ function setupEnvironment(ss) {
 
   setupDashboardSheet(ss);
   setupSettingsSheet(ss);
+  setupTemplatesSheet(ss);
+}
+
+function setupTemplatesSheet(ss) {
+  let templatesSheet = ss.getSheetByName(SHEETS.TEMPLATES);
+  if (!templatesSheet) {
+    templatesSheet = ss.insertSheet(SHEETS.TEMPLATES);
+    templatesSheet.appendRow(['Template Key', 'Channel', 'Subject', 'Body Template', 'Description']);
+    styleHeaderRow(templatesSheet);
+  }
+
+  const defaultTemplates = [
+    {
+      key: 'WELCOME_EMAIL',
+      channel: 'EMAIL',
+      subject: 'Thank you for contacting Nova Skills, {{Name}}!',
+      body: 'Dear {{Name}},\n\nThank you for reaching out to Nova Skills! We have received your enquiry for {{Course}}.\n\nOur career counsellor will call you shortly.\n\nLead ID: {{LeadID}}\nWebsite: {{Website}}',
+      desc: 'Auto-reply email sent to new student leads'
+    },
+    {
+      key: 'WELCOME_WHATSAPP',
+      channel: 'WHATSAPP',
+      subject: '',
+      body: 'Hello {{Name}},\n\nThank you for contacting Nova Skills.\n\nYour enquiry has been received successfully.\n\nLead ID:\n{{LeadID}}\n\nCourse:\n{{Course}}\n\nOur counsellor will contact you shortly.\n\nWebsite:\nhttps://novaskills.in\n\nRegards,\nNova Skills',
+      desc: 'Default WhatsApp message for student leads'
+    },
+    {
+      key: 'ADMIN_NEW_LEAD_EMAIL',
+      channel: 'EMAIL',
+      subject: '🚨 New Lead Received: {{Name}} ({{Course}})',
+      body: 'New website lead registered.\nLead ID: {{LeadID}}\nName: {{Name}}\nMobile: {{Mobile}}\nCourse: {{Course}}',
+      desc: 'Notification email sent to admin on new lead'
+    },
+    {
+      key: 'ADMIN_NEW_LEAD_WHATSAPP',
+      channel: 'WHATSAPP',
+      subject: '',
+      body: '🚨 New Website Lead Received!\n\nLead ID: {{LeadID}}\nStudent: {{Name}}\nMobile: {{Mobile}}\nCourse: {{Course}}\nTime: {{Time}}\nPage: {{PageURL}}',
+      desc: 'WhatsApp text generated for admin notification'
+    },
+    {
+      key: 'FOLLOWUP_EMAIL',
+      channel: 'EMAIL',
+      subject: 'Follow-up regarding your {{Course}} enquiry — Nova Skills',
+      body: 'Dear {{Name}},\n\nWe tried contacting you regarding your interest in {{Course}}.\n\nPlease let us know a suitable time to connect.\n\nRegards,\nNova Skills Admissions',
+      desc: 'Email template for follow-up reminders'
+    },
+    {
+      key: 'FOLLOWUP_WHATSAPP',
+      channel: 'WHATSAPP',
+      subject: '',
+      body: 'Hello {{Name}},\n\nThis is a quick follow-up regarding your enquiry for {{Course}} at Nova Skills.\n\nWhen would be a good time to talk?\n\nRegards,\nNova Skills Team',
+      desc: 'WhatsApp message for follow-ups'
+    },
+    {
+      key: 'ADMISSION_EMAIL',
+      channel: 'EMAIL',
+      subject: '🎉 Admission Confirmed at Nova Skills — {{Name}}',
+      body: 'Dear {{Name}},\n\nCongratulations! Your admission for {{Course}} has been confirmed.\n\nWelcome to Nova Skills!',
+      desc: 'Confirmation email for enrolled students'
+    },
+    {
+      key: 'ADMISSION_WHATSAPP',
+      channel: 'WHATSAPP',
+      subject: '',
+      body: '🎉 Congratulations {{Name}}!\n\nYour admission for {{Course}} is confirmed at Nova Skills.\n\nWelcome aboard!',
+      desc: 'WhatsApp message for admission confirmation'
+    }
+  ];
+
+  const existingMap = getTemplatesMap(ss);
+  defaultTemplates.forEach(tpl => {
+    if (!(tpl.key in existingMap)) {
+      templatesSheet.appendRow([tpl.key, tpl.channel, tpl.subject, tpl.body, tpl.desc]);
+    }
+  });
+}
+
+function getTemplatesMap(ss) {
+  const templatesSheet = ss.getSheetByName(SHEETS.TEMPLATES);
+  const map = {};
+  if (!templatesSheet || templatesSheet.getLastRow() <= 1) return map;
+
+  const data = templatesSheet.getRange(2, 1, templatesSheet.getLastRow() - 1, 4).getValues();
+  data.forEach(row => {
+    if (row[0]) {
+      map[row[0]] = row[3]; // Body template
+    }
+  });
+
+  return map;
 }
 
 function setupDashboardSheet(ss) {
@@ -779,11 +904,21 @@ function setupSettingsSheet(ss) {
   }
 
   const defaultSettings = [
-    { key: 'Institute Name', value: 'Nova Skills', desc: 'Official Institute Name for communications' },
+    { key: 'Institute Name', value: 'Nova Skills', desc: 'Official Institute Name' },
     { key: 'Website', value: 'https://novaskills.in', desc: 'Official Website Domain' },
+    { key: 'Institute Logo URL', value: 'https://novaskills.in/assets/logo.png', desc: 'Official Logo Image URL' },
+    { key: 'Primary Color', value: '#011731', desc: 'Primary Brand Color (Navy)' },
+    { key: 'Secondary Color', value: '#0599a8', desc: 'Secondary Brand Color (Teal)' },
     { key: 'Support Email', value: 'novaskills.official@gmail.com', desc: 'Student support email' },
-    { key: 'Admin Email', value: 'novaskills.official@gmail.com', desc: 'Primary administrator notification email' },
+    { key: 'Admin Email', value: 'novaskills.official@gmail.com', desc: 'Primary administrator email' },
     { key: 'WhatsApp Number', value: '9695904440', desc: 'Institute WhatsApp business number' },
+    { key: 'Business Hours', value: 'Mon–Sat: 9:00 AM – 7:00 PM', desc: 'Institute operational hours' },
+    { key: 'Google Maps', value: 'https://maps.google.com/?q=Nova+Skills', desc: 'Google Maps Location Link' },
+    { key: 'Facebook', value: 'https://facebook.com/novaskills', desc: 'Facebook Page URL' },
+    { key: 'Instagram', value: 'https://instagram.com/novaskills', desc: 'Instagram Profile URL' },
+    { key: 'LinkedIn', value: 'https://linkedin.com/company/novaskills', desc: 'LinkedIn Company URL' },
+    { key: 'YouTube', value: 'https://youtube.com/novaskills', desc: 'YouTube Channel URL' },
+
     { key: 'WhatsApp Enabled', value: 'TRUE', desc: 'Enable/Disable WhatsApp communications' },
     { key: 'WhatsApp Mode', value: 'ClickToChat', desc: 'WhatsApp mode (ClickToChat / BusinessAPI)' },
     { key: 'Business API Enabled', value: 'FALSE', desc: 'Enable/Disable Meta WhatsApp Business API' },
@@ -792,22 +927,19 @@ function setupSettingsSheet(ss) {
     { key: 'Business Account ID', value: '', desc: 'Meta Business Account ID' },
     { key: 'Template Name', value: '', desc: 'Approved Meta WhatsApp Template Name' },
 
-    { key: 'Default Counsellor', value: 'Unassigned', desc: 'Default assigned counsellor for incoming leads' },
-    { key: 'Working Hours', value: 'Mon–Sat: 9:00 AM – 7:00 PM', desc: 'Institute operational hours' },
-    { key: 'Business Days', value: 'Mon,Tue,Wed,Thu,Fri,Sat', desc: 'Active business days' },
-
+    { key: 'Default Counsellor', value: 'Unassigned', desc: 'Default assigned counsellor' },
     { key: 'Daily Report Enabled', value: 'true', desc: 'Send daily HTML report email at 8:00 PM IST' },
     { key: 'Weekly Report Enabled', value: 'true', desc: 'Send weekly report email on Mondays' },
     { key: 'Monthly Report Enabled', value: 'true', desc: 'Send monthly report email on 1st of month' },
-    { key: 'Report Time', value: '20:00', desc: 'Daily report execution time (24h format)' },
-    { key: 'Timezone', value: 'Asia/Kolkata', desc: 'Default timezone for reports and triggers' },
+    { key: 'Report Time', value: '20:00', desc: 'Daily report execution time' },
+    { key: 'Timezone', value: 'Asia/Kolkata', desc: 'Default timezone' },
 
-    { key: 'Last Lead ID Number', value: 0, desc: 'Last numeric ID counter for Lead ID generation' },
-    { key: 'Rate Limit Minutes', value: 5, desc: 'Minutes window to block repeated submissions by same Mobile/Email' },
+    { key: 'Last Lead ID Number', value: 0, desc: 'Last numeric ID counter' },
+    { key: 'Rate Limit Minutes', value: 5, desc: 'Rate limiting window' },
     { key: 'Spam Protection Enabled', value: 'true', desc: 'Enable/Disable Honeypot spam rejection' },
     { key: 'Origin Validation Enabled', value: 'false', desc: 'Enable/Disable strict domain origin checking' },
-    { key: 'Allowed Domains', value: 'https://novaskills.in,https://www.novaskills.in', desc: 'Comma separated list of allowed domain origins' },
-    { key: 'Bot Detection Enabled', value: 'true', desc: 'Enable/Disable bot User-Agent blocking' }
+    { key: 'Allowed Domains', value: 'https://novaskills.in,https://www.novaskills.in', desc: 'Allowed origins' },
+    { key: 'Bot Detection Enabled', value: 'true', desc: 'Enable/Disable bot blocking' }
   ];
 
   const existingSettings = getSettingsMap(settingsSheet);
@@ -1008,7 +1140,7 @@ function buildHtmlReportEmail(reportTitle, analytics, timePeriodText) {
         </table>
       </div>
       <div class="footer">
-        Automated by Nova Skills Automation Engine v4.0
+        Automated by Nova Skills Smart Communication Hub v5.0
       </div>
     </div>
   </body>
@@ -1272,13 +1404,15 @@ function formatDateFormatted(dateObj) {
   }
 }
 
-function createJsonResponse(success, leadId, status, message, whatsappUrl) {
+function createJsonResponse(success, leadId, status, message, whatsappUrl, studentWhatsAppUrl, adminWhatsAppMessage) {
   const response = {
     success: success,
     leadId: leadId || '',
     status: status || '',
     message: message || '',
-    whatsappUrl: whatsappUrl || ''
+    whatsappUrl: whatsappUrl || studentWhatsAppUrl || '',
+    studentWhatsAppUrl: studentWhatsAppUrl || whatsappUrl || '',
+    adminWhatsAppMessage: adminWhatsAppMessage || ''
   };
 
   return ContentService.createTextOutput(JSON.stringify(response))
