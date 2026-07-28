@@ -1,12 +1,13 @@
 /**
  * REST API Endpoints Router Module
- * Dispatches requests for AI Gateway, AI Counsellor Engine, and AI Student Assistant.
+ * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, and AI Content Studio.
  */
 
 import { processAIRequest } from '../services/aiService.js';
 import { processCounsellorAnalysis } from '../services/counsellorEngine.js';
 import { processStudentChat } from '../services/studentAssistant.js';
 import { sendLeadToCRM } from '../services/leadCaptureService.js';
+import { processContentGeneration } from '../services/contentStudioService.js';
 import { createJsonResponse, createErrorResponse } from '../utils/response.js';
 
 export async function handleApiRoute(request, path, config, reqOrigin) {
@@ -17,10 +18,34 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     return createErrorResponse('Invalid JSON payload in request body.', 400, reqOrigin, config.allowedOrigins);
   }
 
-  const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, course, city } = body;
+  const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount } = body;
 
   switch (path) {
-    // 1. AI Student Assistant Endpoints
+    // 1. AI Content Studio Endpoints
+    case '/api/ai/content':
+    case '/api/ai/blog':
+    case '/api/ai/social':
+    case '/api/ai/email':
+    case '/api/ai/whatsapp':
+    case '/api/ai/ads': {
+      const targetTopic = topic || message || userMessage || 'Nova Skills Courses & Admissions';
+      const targetCategory = contentType || path.replace('/api/ai/', '');
+      
+      const result = await processContentGeneration({
+        endpoint: path,
+        contentType: targetCategory,
+        topic: targetTopic,
+        platform: platform || targetCategory,
+        language: language || 'English',
+        tone: tone || 'Professional',
+        focusKeyword: focusKeyword || '',
+        wordCount: wordCount || 300,
+        config: config
+      });
+      return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    // 2. AI Student Assistant Endpoints
     case '/api/ai/student-chat':
     case '/api/ai/course-advisor':
     case '/api/ai/admission-faq': {
@@ -54,7 +79,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(crmResult, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 2. General Gateway AI Endpoints
+    // 3. General Gateway AI Endpoints
     case '/api/ai/chat': {
       const userText = message || userMessage || (messages && messages[messages.length - 1]?.content) || '';
       if (!userText && (!messages || messages.length === 0)) {
@@ -136,7 +161,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 3. AI Counsellor Engine Endpoints
+    // 4. AI Counsellor Engine Endpoints
     case '/api/ai/lead-analysis':
     case '/api/ai/recommendation':
     case '/api/ai/counsellor-summary':
