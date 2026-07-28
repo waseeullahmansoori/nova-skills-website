@@ -1,6 +1,6 @@
 /**
  * REST API Endpoints Router Module
- * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, and AI Content Studio.
+ * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, AI Content Studio, and AI Operations Center.
  */
 
 import { processAIRequest } from '../services/aiService.js';
@@ -8,6 +8,7 @@ import { processCounsellorAnalysis } from '../services/counsellorEngine.js';
 import { processStudentChat } from '../services/studentAssistant.js';
 import { sendLeadToCRM } from '../services/leadCaptureService.js';
 import { processContentGeneration } from '../services/contentStudioService.js';
+import { processOperationsReport } from '../services/operationsCenterService.js';
 import { createJsonResponse, createErrorResponse } from '../utils/response.js';
 
 export async function handleApiRoute(request, path, config, reqOrigin) {
@@ -18,10 +19,40 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     return createErrorResponse('Invalid JSON payload in request body.', 400, reqOrigin, config.allowedOrigins);
   }
 
-  const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount } = body;
+  const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount, crmData, query } = body;
 
   switch (path) {
-    // 1. AI Content Studio Endpoints
+    // 1. AI Operations Center Endpoints
+    case '/api/ai/dashboard':
+    case '/api/ai/daily-brief':
+    case '/api/ai/weekly-report':
+    case '/api/ai/monthly-report': {
+      const reportName = path.replace('/api/ai/', '').replace('-', ' ').toUpperCase();
+      const result = await processOperationsReport({
+        endpoint: path,
+        reportType: reportName,
+        crmData: crmData || body,
+        config: config
+      });
+      return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/ai/business-query': {
+      const queryText = query || message || userMessage || '';
+      if (!queryText) {
+        return createErrorResponse('Field "query" or "message" is required for business analysis.', 400, reqOrigin, config.allowedOrigins);
+      }
+      const result = await processOperationsReport({
+        endpoint: '/api/ai/business-query',
+        reportType: 'Management Q&A Analysis',
+        crmData: crmData || {},
+        queryText: queryText,
+        config: config
+      });
+      return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    // 2. AI Content Studio Endpoints
     case '/api/ai/content':
     case '/api/ai/blog':
     case '/api/ai/social':
@@ -45,7 +76,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 2. AI Student Assistant Endpoints
+    // 3. AI Student Assistant Endpoints
     case '/api/ai/student-chat':
     case '/api/ai/course-advisor':
     case '/api/ai/admission-faq': {
@@ -79,7 +110,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(crmResult, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 3. General Gateway AI Endpoints
+    // 4. General Gateway AI Endpoints
     case '/api/ai/chat': {
       const userText = message || userMessage || (messages && messages[messages.length - 1]?.content) || '';
       if (!userText && (!messages || messages.length === 0)) {
@@ -161,7 +192,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 4. AI Counsellor Engine Endpoints
+    // 5. AI Counsellor Engine Endpoints
     case '/api/ai/lead-analysis':
     case '/api/ai/recommendation':
     case '/api/ai/counsellor-summary':
