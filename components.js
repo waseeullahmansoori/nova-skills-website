@@ -1377,8 +1377,253 @@ function handleNavAuthClick(e) {
 }
 window.handleNavAuthClick = handleNavAuthClick;
 
+/* ─────────────────────────────────────────────
+   GLOBAL COURSE ENROLLMENT MODAL SYSTEM
+───────────────────────────────────────────── */
+function injectEnrollmentModalHTML() {
+  if (document.getElementById('course-enrollment-modal')) return;
+
+  const modal = document.createElement('div');
+  modal.id = 'course-enrollment-modal';
+  modal.className = 'enroll-modal-backdrop';
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-labelledby', 'enroll-modal-title');
+  modal.hidden = true;
+
+  modal.innerHTML = `
+    <div class="enroll-modal-dialog">
+      <button type="button" class="enroll-modal-close" id="enroll-modal-close" aria-label="Close modal">✕</button>
+      <div class="enroll-modal-header">
+        <span class="enroll-modal-badge">🎓 OFFICIAL COURSE ENROLLMENT</span>
+        <h2 id="enroll-modal-title" class="enroll-modal-title">Enroll for <span id="enroll-course-title-span" class="gradient-text">Selected Course</span></h2>
+        <p class="enroll-modal-subtitle">Reserve your seat for the upcoming batch with 100% practical training and placement support.</p>
+      </div>
+      <form id="course-enrollment-form" class="enroll-form" novalidate>
+        <div class="enroll-form-grid">
+          <div class="form-group full-width">
+            <label class="form-label">Selected Course (Auto-Populated)</label>
+            <input type="text" id="enroll-course-display" class="form-input readonly" readonly />
+          </div>
+          <div class="form-group half-width">
+            <label class="form-label">Academy Name</label>
+            <input type="text" id="enroll-academy-display" class="form-input readonly" readonly />
+          </div>
+          <div class="form-group half-width">
+            <label class="form-label">Learning Mode *</label>
+            <select id="enroll-mode" class="form-input" required>
+              <option value="Hybrid (Online & Offline)">Hybrid (Online & Offline)</option>
+              <option value="Online Live Interactive">Online Live Interactive</option>
+              <option value="Offline Classroom (Dehradun)">Offline Classroom (Dehradun)</option>
+            </select>
+          </div>
+          <div class="form-group half-width">
+            <label class="form-label">Full Name *</label>
+            <input type="text" id="enroll-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+          </div>
+          <div class="form-group half-width">
+            <label class="form-label">Mobile Number *</label>
+            <input type="tel" id="enroll-phone" class="form-input" placeholder="10-digit mobile number" required />
+          </div>
+          <div class="form-group half-width">
+            <label class="form-label">Email Address *</label>
+            <input type="email" id="enroll-email" class="form-input" placeholder="e.g. rahul@gmail.com" required />
+          </div>
+          <div class="form-group half-width">
+            <label class="form-label">City *</label>
+            <input type="text" id="enroll-city" class="form-input" placeholder="e.g. Dehradun / Delhi" required />
+          </div>
+          <div class="form-group half-width">
+            <label class="form-label">Highest Qualification</label>
+            <select id="enroll-qualification" class="form-input">
+              <option value="Undergraduate">Undergraduate / College Student</option>
+              <option value="Graduate">Graduate (B.Tech / BCA / BBA / B.Com)</option>
+              <option value="Post Graduate">Post Graduate</option>
+              <option value="Working Professional">Working Professional</option>
+              <option value="12th / School Student">12th / School Student</option>
+            </select>
+          </div>
+          <div class="form-group half-width">
+            <label class="form-label">Preferred Batch Timing</label>
+            <select id="enroll-batch" class="form-input">
+              <option value="Morning Batch (9 AM - 12 PM)">Morning Batch (9 AM - 12 PM)</option>
+              <option value="Afternoon Batch (1 PM - 4 PM)">Afternoon Batch (1 PM - 4 PM)</option>
+              <option value="Evening Batch (5 PM - 8 PM)">Evening Batch (5 PM - 8 PM)</option>
+              <option value="Weekend Batch (Sat & Sun)">Weekend Batch (Sat & Sun)</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label">Additional Message / Questions (Optional)</label>
+            <textarea id="enroll-message" class="form-input" rows="2" placeholder="Any specific batch queries or questions..."></textarea>
+          </div>
+        </div>
+        <div id="enroll-form-error" class="enroll-error-msg" hidden></div>
+        <div id="enroll-form-success" class="enroll-success-msg" hidden></div>
+        <div class="enroll-modal-actions">
+          <button type="button" class="btn btn-outline" id="enroll-modal-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="enroll-submit-btn">
+            <span id="enroll-btn-text">Submit Enrollment Enquiry →</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  // Bind close handlers
+  document.getElementById('enroll-modal-close')?.addEventListener('click', closeEnrollmentModal);
+  document.getElementById('enroll-modal-cancel')?.addEventListener('click', closeEnrollmentModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeEnrollmentModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) {
+      closeEnrollmentModal();
+    }
+  });
+
+  // Bind form submit
+  document.getElementById('course-enrollment-form')?.addEventListener('submit', handleEnrollmentSubmit);
+}
+
+function openEnrollmentModal(courseName, academyName) {
+  injectEnrollmentModalHTML();
+
+  const modal = document.getElementById('course-enrollment-modal');
+  const titleSpan = document.getElementById('enroll-course-title-span');
+  const courseInput = document.getElementById('enroll-course-display');
+  const academyInput = document.getElementById('enroll-academy-display');
+  const errDiv = document.getElementById('enroll-form-error');
+  const successDiv = document.getElementById('enroll-form-success');
+
+  if (titleSpan) titleSpan.textContent = courseName || 'Selected Course';
+  if (courseInput) courseInput.value = courseName || 'Selected Course';
+  if (academyInput) academyInput.value = academyName || 'Nova Skills Academy';
+
+  if (errDiv) errDiv.setAttribute('hidden', '');
+  if (successDiv) successDiv.setAttribute('hidden', '');
+
+  if (modal) {
+    modal.hidden = false;
+    requestAnimationFrame(() => modal.classList.add('open'));
+    document.body.style.overflow = 'hidden';
+    document.getElementById('enroll-name')?.focus();
+  }
+}
+window.openEnrollmentModal = openEnrollmentModal;
+
+function closeEnrollmentModal() {
+  const modal = document.getElementById('course-enrollment-modal');
+  if (modal) {
+    modal.classList.remove('open');
+    setTimeout(() => {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+    }, 300);
+  }
+}
+window.closeEnrollmentModal = closeEnrollmentModal;
+
+async function handleEnrollmentSubmit(e) {
+  e.preventDefault();
+
+  const errDiv = document.getElementById('enroll-form-error');
+  const successDiv = document.getElementById('enroll-form-success');
+  const submitBtn = document.getElementById('enroll-submit-btn');
+  const btnText = document.getElementById('enroll-btn-text');
+
+  const courseName = document.getElementById('enroll-course-display')?.value || '';
+  const academyName = document.getElementById('enroll-academy-display')?.value || '';
+  const mode = document.getElementById('enroll-mode')?.value || '';
+  const name = document.getElementById('enroll-name')?.value.trim() || '';
+  const phone = document.getElementById('enroll-phone')?.value.trim() || '';
+  const email = document.getElementById('enroll-email')?.value.trim() || '';
+  const city = document.getElementById('enroll-city')?.value.trim() || '';
+  const qualification = document.getElementById('enroll-qualification')?.value || '';
+  const batch = document.getElementById('enroll-batch')?.value || '';
+  const message = document.getElementById('enroll-message')?.value.trim() || '';
+
+  if (errDiv) errDiv.setAttribute('hidden', '');
+
+  // Validation
+  if (!name || name.length < 2) {
+    showEnrollError('Please enter your full name.');
+    return;
+  }
+  if (!phone || !/^[6-9]\d{9}$/.test(phone)) {
+    showEnrollError('Please enter a valid 10-digit Indian mobile number.');
+    return;
+  }
+  if (!email || !/\S+@\S+\.\S+/.test(email)) {
+    showEnrollError('Please enter a valid email address.');
+    return;
+  }
+  if (!city) {
+    showEnrollError('Please enter your city.');
+    return;
+  }
+
+  // Loading state
+  if (submitBtn) submitBtn.disabled = true;
+  if (btnText) btnText.textContent = 'Submitting Enquiry...';
+
+  const leadData = {
+    action: 'Student Enrollment Enquiry',
+    name, phone, email, city, qualification,
+    courseName, academyName, mode, batch, message,
+    timestamp: new Date().toISOString(),
+    page: window.location.pathname
+  };
+
+  try {
+    // 1. Submit to Google Apps Script Lead CRM endpoint
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwqZ-8X_U0M9kFq7_P9kR8Q8zQ8z/exec';
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(leadData)
+    }).catch(() => {});
+
+    // 2. Store in local CRM state for demo & admin view
+    const existing = JSON.parse(localStorage.getItem('novaskills_enquiries') || '[]');
+    existing.unshift(leadData);
+    localStorage.setItem('novaskills_enquiries', JSON.stringify(existing));
+
+    // 3. Show Success Message
+    if (successDiv) {
+      successDiv.innerHTML = `🎉 <strong>Thank you, ${name}!</strong><br>Your enrollment enquiry for <strong>${courseName}</strong> has been successfully received. Our academic team will call you at <strong>${phone}</strong> shortly.`;
+      successDiv.removeAttribute('hidden');
+    }
+
+    if (btnText) btnText.textContent = '✔ Submitted';
+
+    setTimeout(() => {
+      closeEnrollmentModal();
+      if (submitBtn) submitBtn.disabled = false;
+      if (btnText) btnText.textContent = 'Submit Enrollment Enquiry →';
+      document.getElementById('course-enrollment-form')?.reset();
+    }, 3500);
+
+  } catch (err) {
+    showEnrollError('An unexpected error occurred. Please try calling support.');
+    if (submitBtn) submitBtn.disabled = false;
+    if (btnText) btnText.textContent = 'Submit Enrollment Enquiry →';
+  }
+}
+
+function showEnrollError(msg) {
+  const errDiv = document.getElementById('enroll-form-error');
+  if (errDiv) {
+    errDiv.textContent = msg;
+    errDiv.removeAttribute('hidden');
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   injectComponents();
+  injectEnrollmentModalHTML();
   // Wait one frame so injected DOM is painted
   requestAnimationFrame(() => {
     initShared();

@@ -101,7 +101,7 @@ function buildCourseCardHTML(course) {
             <span class="price-current">₹${course.price.toLocaleString('en-IN')}</span>
             <span class="price-original">₹${course.originalPrice.toLocaleString('en-IN')}</span>
           </div>
-          <a href="course-detail.html?id=${course.id}" class="btn btn-primary btn-sm">Enroll Now →</a>
+          <button type="button" class="btn btn-primary btn-sm" onclick="openEnrollmentModal('${course.name.replace(/'/g, "\\'")}', '${course.academy.replace(/'/g, "\\'")}')">Enroll Now →</button>
         </div>
       </div>
     </div>
