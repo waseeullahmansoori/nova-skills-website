@@ -1,6 +1,6 @@
 /**
  * REST API Endpoints Router Module
- * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, AI Content Studio, AI Operations Center, Auth & Admin RBAC.
+ * Dispatches requests for AI Gateway, AI Counsellor Engine, AI Student Assistant, AI Content Studio, AI Operations Center, Auth, Admin RBAC, and Meta Communication Platform.
  */
 
 import { processAIRequest } from '../services/aiService.js';
@@ -12,10 +12,29 @@ import { processOperationsReport } from '../services/operationsCenterService.js'
 import { authenticateUser, authorizeRequest, getAllUsers, getRolePermissionsMatrix } from '../services/authService.js';
 import { invalidateSession } from '../services/sessionManager.js';
 import { getSecurityLogs, logSecurityEvent } from '../services/auditLogger.js';
+import { sendCommunication } from '../communication/communicationService.js';
+import { compileCommunicationTemplate, TEMPLATES } from '../communication/templateManager.js';
+import { getMessageStatus, updateMessageStatus, getConversationHistory } from '../communication/conversationStore.js';
 import { PERMISSIONS } from '../security/rbacMatrix.js';
 import { createJsonResponse, createErrorResponse } from '../utils/response.js';
 
 export async function handleApiRoute(request, path, config, reqOrigin) {
+  const url = new URL(request.url);
+
+  // Meta Webhook GET verification
+  if (path === '/api/communication/webhook' && request.method === 'GET') {
+    const mode = url.searchParams.get('hub.mode');
+    const token = url.searchParams.get('hub.verify_token');
+    const challenge = url.searchParams.get('hub.challenge');
+
+    const expectedToken = config.metaWebhookVerifyToken || env?.META_WEBHOOK_VERIFY_TOKEN || 'novaskills_webhook_secret';
+
+    if (mode === 'subscribe' && token === expectedToken) {
+      return new Response(challenge, { status: 200 });
+    }
+    return new Response('Forbidden', { status: 403 });
+  }
+
   let body = {};
   if (request.method === 'POST' || request.method === 'PUT') {
     try {
@@ -25,10 +44,79 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
     }
   }
 
-  const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, password, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount, crmData, query } = body;
+  const { message, messages, userMessage, customInstruction, context, leadData, name, mobile, email, password, course, city, topic, contentType, platform, language, tone, focusKeyword, wordCount, crmData, query, recipient, templateKey, dataMap, mediaUrl, messageId, status } = body;
 
   switch (path) {
-    // 1. Enterprise Auth Endpoints
+    // 1. Meta WhatsApp & Enterprise Communication Endpoints
+    case '/api/communication/send': {
+      if (!recipient) {
+        return createErrorResponse('Field "recipient" (mobile number) is required.', 400, reqOrigin, config.allowedOrigins);
+      }
+      try {
+        const result = await sendCommunication({
+          recipient: recipient,
+          templateKey: templateKey,
+          messageText: message || userMessage,
+          dataMap: dataMap || body,
+          mediaUrl: mediaUrl,
+          languageCode: language || 'en',
+          config: config
+        });
+        return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
+      } catch (err) {
+        return createErrorResponse(err.message, 500, reqOrigin, config.allowedOrigins);
+      }
+    }
+
+    case '/api/communication/template': {
+      if (templateKey) {
+        const compiled = compileCommunicationTemplate(templateKey, dataMap || body);
+        return createJsonResponse({ success: true, templateKey: templateKey, compiled: compiled }, 200, reqOrigin, config.allowedOrigins);
+      }
+      return createJsonResponse({ success: true, availableTemplates: Object.keys(TEMPLATES) }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/communication/status': {
+      if (!messageId) {
+        return createErrorResponse('Field "messageId" is required.', 400, reqOrigin, config.allowedOrigins);
+      }
+      const log = getMessageStatus(messageId);
+      if (!log) {
+        return createErrorResponse(`Message ID ${messageId} not found.`, 404, reqOrigin, config.allowedOrigins);
+      }
+      return createJsonResponse({ success: true, log: log }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/communication/history': {
+      const targetPhone = recipient || mobile;
+      if (!targetPhone) {
+        return createErrorResponse('Field "recipient" or "mobile" is required.', 400, reqOrigin, config.allowedOrigins);
+      }
+      const history = getConversationHistory(targetPhone);
+      return createJsonResponse({ success: true, recipient: targetPhone, history: history }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/communication/retry': {
+      if (!messageId) {
+        return createErrorResponse('Field "messageId" is required for retry.', 400, reqOrigin, config.allowedOrigins);
+      }
+      const updated = updateMessageStatus(messageId, 'Retrying');
+      return createJsonResponse({ success: true, messageId: messageId, status: 'Retrying', log: updated }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    case '/api/communication/webhook': {
+      // Meta Webhook Status Event & Inbound Messages Receiver
+      if (body.entry && body.entry[0] && body.entry[0].changes) {
+        const change = body.entry[0].changes[0].value;
+        if (change.statuses && change.statuses[0]) {
+          const statusEvent = change.statuses[0];
+          updateMessageStatus(statusEvent.id, statusEvent.status);
+        }
+      }
+      return createJsonResponse({ success: true, status: 'Webhook received' }, 200, reqOrigin, config.allowedOrigins);
+    }
+
+    // 2. Enterprise Auth Endpoints
     case '/api/auth/login': {
       if (!email || !password) {
         return createErrorResponse('Email and password are required.', 400, reqOrigin, config.allowedOrigins);
@@ -62,7 +150,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse({ success: true, user: auth.session }, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 2. Admin & RBAC Endpoints (Protected by Permissions)
+    // 3. Admin & RBAC Endpoints
     case '/api/admin/users': {
       const auth = authorizeRequest(request, PERMISSIONS.MANAGE_USERS);
       if (!auth.authorized) {
@@ -87,7 +175,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse({ success: true, logs: getSecurityLogs(100) }, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 3. AI Operations Center Endpoints
+    // 4. AI Operations Center Endpoints
     case '/api/ai/dashboard':
     case '/api/ai/daily-brief':
     case '/api/ai/weekly-report':
@@ -117,7 +205,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 4. AI Content Studio Endpoints
+    // 5. AI Content Studio Endpoints
     case '/api/ai/content':
     case '/api/ai/blog':
     case '/api/ai/social':
@@ -141,7 +229,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 5. AI Student Assistant Endpoints
+    // 6. AI Student Assistant Endpoints
     case '/api/ai/student-chat':
     case '/api/ai/course-advisor':
     case '/api/ai/admission-faq': {
@@ -175,7 +263,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(crmResult, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 6. General Gateway AI Endpoints
+    // 7. General Gateway AI Endpoints
     case '/api/ai/chat': {
       const userText = message || userMessage || (messages && messages[messages.length - 1]?.content) || '';
       if (!userText && (!messages || messages.length === 0)) {
@@ -257,7 +345,7 @@ export async function handleApiRoute(request, path, config, reqOrigin) {
       return createJsonResponse(result, 200, reqOrigin, config.allowedOrigins);
     }
 
-    // 7. AI Counsellor Engine Endpoints
+    // 8. AI Counsellor Engine Endpoints
     case '/api/ai/lead-analysis':
     case '/api/ai/recommendation':
     case '/api/ai/counsellor-summary':
