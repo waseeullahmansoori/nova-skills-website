@@ -671,28 +671,21 @@ function buildFooterHTML() {
                 <span class="contact-icon">📞</span>
                 <div>
                   <div class="contact-label">Call / WhatsApp</div>
-                  <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a>
+                  <a href="tel:+919695904440">+91 9695904440</a>
                 </div>
               </div>
               <div class="contact-item">
                 <span class="contact-icon">📧</span>
                 <div>
-                  <div class="contact-label">Email Us</div>
-                  <a href="mailto:hello@novaskills.in">hello@novaskills.in</a>
+                  <div class="contact-label">Email</div>
+                  <a href="mailto:novaskills.official@gmail.com">novaskills.official@gmail.com</a>
                 </div>
               </div>
               <div class="contact-item">
                 <span class="contact-icon">📍</span>
                 <div>
-                  <div class="contact-label">Visit Us</div>
-                  <p>Nova Skills Institute,<br />India</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <span class="contact-icon">🕐</span>
-                <div>
-                  <div class="contact-label">Working Hours</div>
-                  <p>Mon–Sat: 9:00 AM – 7:00 PM</p>
+                  <div class="contact-label">Address</div>
+                  <p>Nova Skills Institute<br />Siddharth Nagar<br />Uttar Pradesh - 272153</p>
                 </div>
               </div>
             </div>
