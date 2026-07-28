@@ -5612,18 +5612,28 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
   animation: svgGlow 2.8s ease-in-out infinite;
 }
 
+/* Floating Widgets Toggle Class */
+body.modal-open-hide-widgets .nova-ai-float-btn,
+body.modal-open-hide-widgets .nova-ai-panel,
+body.modal-open-hide-widgets .whatsapp-float,
+body.modal-open-hide-widgets #whatsapp-btn {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 /* Enrollment Modal Backdrop */
 .enroll-modal-backdrop {
   position: fixed;
   inset: 0;
   z-index: 999999;
-  background: rgba(1, 23, 49, 0.82);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(1, 23, 49, 0.86);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 24px 16px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.35s ease, visibility 0.35s ease;
@@ -5636,14 +5646,14 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
 
 .enroll-modal-dialog {
   background: #011731;
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.7);
-  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
   width: 100%;
-  max-width: 640px;
+  max-width: 940px;
   max-height: 90vh;
   overflow-y: auto;
-  padding: 32px;
+  padding: 36px;
   position: relative;
   color: white;
   transform: translateY(24px) scale(0.96);
@@ -5655,21 +5665,42 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
   transform: translateY(0) scale(1);
 }
 
+/* Desktop Two-Panel Split Layout */
+.enroll-modal-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.enroll-modal-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.enroll-modal-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Close Button */
 .enroll-modal-close {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  z-index: 10;
   transition: all 0.2s ease;
 }
 
@@ -5679,67 +5710,44 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
   transform: rotate(90deg);
 }
 
+/* Header */
 .enroll-modal-badge {
   display: inline-block;
-  background: rgba(5, 153, 168, 0.2);
+  background: rgba(5, 153, 168, 0.18);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   color: #38bdf8;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   padding: 4px 12px;
   border-radius: 50px;
-  margin-bottom: 8px;
-  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  letter-spacing: 0.06em;
 }
 
 .enroll-modal-title {
-  font-size: 1.6rem;
+  font-size: 1.75rem;
   font-weight: 800;
-  margin-bottom: 6px;
+  line-height: 1.25;
+  margin-bottom: 10px;
   color: white;
+  letter-spacing: -0.02em;
 }
 
 .enroll-modal-subtitle {
-  font-size: 0.9rem;
-  color: #94a3b8;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 24px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-.enroll-form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.form-group.full-width {
-  grid-column: span 2;
-}
-
-.form-group.half-width {
-  grid-column: span 1;
-}
-
-@media (max-width: 640px) {
-  .enroll-form-grid {
-    grid-template-columns: 1fr;
-  }
-  .form-group.half-width {
-    grid-column: span 1;
-  }
-  .enroll-modal-dialog {
-    padding: 24px 16px;
-  }
-}
-
-/* Selected Course Summary Card */
+/* Selected Course Card */
 .selected-course-card {
-  background: linear-gradient(135deg, rgba(5, 153, 168, 0.12), rgba(1, 23, 49, 0.7));
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  border-radius: 14px;
-  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(5, 153, 168, 0.15), rgba(1, 23, 49, 0.8));
+  border: 1.5px solid rgba(56, 189, 248, 0.35);
+  border-radius: 16px;
+  padding: 20px 22px;
   margin-bottom: 24px;
-  position: relative;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
 .selected-course-tag {
@@ -5751,25 +5759,25 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
 }
 
 .selected-course-name {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .selected-course-academy {
-  font-size: 0.8125rem;
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .selected-course-meta {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-top: 12px;
+  gap: 14px;
+  margin-top: 14px;
   padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   flex-wrap: wrap;
 }
 
@@ -5779,11 +5787,54 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  font-weight: 600;
 }
 
 .card-fee-highlight {
   color: #75d766;
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 0.925rem;
+}
+
+/* Trust Badges */
+.enroll-trust-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.trust-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.trust-badge-item .check-icon {
+  color: #75d766;
+  font-weight: 800;
+}
+
+/* Form Controls */
+.enroll-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group.half-width {
+  grid-column: span 1;
 }
 
 .form-label {
@@ -5802,7 +5853,7 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   color: #ffffff;
-  font-size: 0.9375rem;
+  font-size: 0.9rem;
   font-family: inherit;
   outline: none;
   transition: all 0.2s ease;
@@ -5841,47 +5892,62 @@ select.form-input option {
   padding: 10px;
 }
 
+/* Single Primary CTA Action Area (Cancel Removed) */
 .enroll-modal-actions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  margin-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .btn-submit-enroll {
-  flex: 1;
-  height: 50px;
+  width: 100% !important;
+  height: 52px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   text-align: center !important;
-  font-size: 0.95rem !important;
-  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
   background: linear-gradient(135deg, #0599a8 0%, #75d766 100%) !important;
   border: none !important;
   border-radius: 12px !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 16px rgba(5, 153, 168, 0.4) !important;
+  box-shadow: 0 6px 20px rgba(5, 153, 168, 0.45) !important;
   transition: all 0.25s ease !important;
   cursor: pointer;
 }
 
 .btn-submit-enroll:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(5, 153, 168, 0.6) !important;
+  box-shadow: 0 10px 28px rgba(5, 153, 168, 0.65) !important;
 }
 
-#enroll-modal-cancel {
-  height: 50px;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  font-weight: 600;
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .enroll-modal-dialog {
+    max-width: 100%;
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .enroll-modal-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .enroll-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-group.half-width {
+    grid-column: span 1;
+  }
+  .enroll-modal-dialog {
+    padding: 24px 16px;
+  }
+  .enroll-modal-title {
+    font-size: 1.4rem;
+  }
 }
 
 .enroll-trust-bar {
