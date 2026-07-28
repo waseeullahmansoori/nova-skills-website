@@ -1621,6 +1621,102 @@ function showEnrollError(msg) {
   }
 }
 
+/* ─────────────────────────────────────────────
+   MOBILE-ONLY REUSABLE SLIDER SYSTEM (≤768px)
+   For Expert Faculty (.mentors-grid) & Student Stories (.testimonials-grid)
+───────────────────────────────────────────── */
+function createMobileSlider(trackEl) {
+  if (!trackEl || trackEl.dataset.sliderInitialized === 'true') return;
+  const cards = Array.from(trackEl.children);
+  if (cards.length === 0) return;
+
+  trackEl.dataset.sliderInitialized = 'true';
+  trackEl.classList.add('mobile-slider-active');
+
+  // Create Dots Container
+  const dotsNav = document.createElement('div');
+  dotsNav.className = 'mobile-slider-dots';
+  
+  cards.forEach((_, idx) => {
+    const dot = document.createElement('button');
+    dot.className = `mobile-slider-dot ${idx === 0 ? 'active' : ''}`;
+    dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
+    dot.addEventListener('click', () => {
+      const cardWidth = trackEl.getBoundingClientRect().width + 16;
+      trackEl.scrollTo({ left: idx * cardWidth, behavior: 'smooth' });
+    });
+    dotsNav.appendChild(dot);
+  });
+
+  trackEl.parentNode.insertBefore(dotsNav, trackEl.nextSibling);
+
+  // Active Dot Scroll Observer
+  let isUserInteracting = false;
+  let autoplayTimer = null;
+
+  function updateActiveDot() {
+    const scrollPos = trackEl.scrollLeft;
+    const cardWidth = trackEl.getBoundingClientRect().width;
+    const activeIndex = Math.round(scrollPos / (cardWidth || 1));
+    const dots = dotsNav.querySelectorAll('.mobile-slider-dot');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === activeIndex);
+    });
+  }
+
+  trackEl.addEventListener('scroll', updateActiveDot, { passive: true });
+
+  // Autoplay Logic (every 5.5s)
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(() => {
+      if (isUserInteracting || window.innerWidth > 768) return;
+      const cardWidth = trackEl.getBoundingClientRect().width;
+      const activeIndex = Math.round(trackEl.scrollLeft / (cardWidth || 1));
+      let nextIndex = activeIndex + 1;
+      if (nextIndex >= cards.length) nextIndex = 0;
+
+      trackEl.scrollTo({ left: nextIndex * cardWidth, behavior: 'smooth' });
+    }, 5500);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
+  // Pause on user interaction
+  function pauseUserTouch() {
+    isUserInteracting = true;
+    stopAutoplay();
+  }
+
+  function resumeUserTouch() {
+    setTimeout(() => {
+      isUserInteracting = false;
+      startAutoplay();
+    }, 4000);
+  }
+
+  trackEl.addEventListener('touchstart', pauseUserTouch, { passive: true });
+  trackEl.addEventListener('touchend', resumeUserTouch, { passive: true });
+  trackEl.addEventListener('mouseenter', pauseUserTouch);
+  trackEl.addEventListener('mouseleave', resumeUserTouch);
+
+  startAutoplay();
+}
+
+function initAllMobileSliders() {
+  if (window.innerWidth <= 768) {
+    const mentorsGrid = document.querySelector('.mentors-grid');
+    const testimonialsGrid = document.querySelector('.testimonials-grid');
+    if (mentorsGrid) createMobileSlider(mentorsGrid);
+    if (testimonialsGrid) createMobileSlider(testimonialsGrid);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   injectComponents();
   injectEnrollmentModalHTML();
@@ -1629,5 +1725,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initShared();
     initScrollReveal();
     initCounters();
+    initAllMobileSliders();
   });
+});
+
+window.addEventListener('resize', () => {
+  initAllMobileSliders();
 });
