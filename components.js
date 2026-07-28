@@ -1152,21 +1152,31 @@ function shouldShowPopup() {
 function openConsultationPopup() {
   const overlay = document.getElementById('popup-overlay');
   if (!overlay) return;
+  
+  // Hide floating widgets while consultation popup is open
+  document.body.classList.add('modal-open-hide-widgets');
+  
   overlay.removeAttribute('hidden');
   document.body.style.overflow = 'hidden';
   // Trigger CSS animation
   requestAnimationFrame(() => overlay.classList.add('visible'));
+  document.getElementById('popup-name')?.focus();
 }
 
 function closeConsultationPopup() {
   const overlay = document.getElementById('popup-overlay');
   if (!overlay) return;
+  
+  // Restore floating widgets
+  document.body.classList.remove('modal-open-hide-widgets');
+  
   overlay.classList.remove('visible');
   setTimeout(() => {
     overlay.setAttribute('hidden', '');
     document.body.style.overflow = '';
   }, 350);
   localStorage.setItem(POPUP_STORAGE_KEY, String(Date.now()));
+  sessionStorage.setItem('consultation_popup_dismissed', 'true');
 }
 
 // Expose globally so inline onclick works
@@ -1242,9 +1252,21 @@ function initConsultationPopup() {
     });
   });
 
-  // Auto-show after 5 seconds (first visit or after 24h)
-  if (shouldShowPopup()) {
-    setTimeout(openConsultationPopup, 5000);
+  // Auto-show after 5 seconds if idle & not interrupted
+  if (shouldShowPopup() && sessionStorage.getItem('consultation_popup_dismissed') !== 'true') {
+    setTimeout(() => {
+      const enrollModal = document.getElementById('course-enrollment-modal');
+      const isEnrollOpen = enrollModal && !enrollModal.hidden && enrollModal.classList.contains('open');
+      
+      const aiPanel = document.querySelector('.nova-ai-panel');
+      const isAiOpen = aiPanel && aiPanel.classList.contains('open');
+
+      const isUserTyping = document.activeElement && ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName);
+
+      if (!isEnrollOpen && !isAiOpen && !isUserTyping) {
+        openConsultationPopup();
+      }
+    }, 5000);
   }
 }
 
