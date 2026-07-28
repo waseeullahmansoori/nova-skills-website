@@ -1482,7 +1482,7 @@ function injectEnrollmentModalHTML() {
                   <input type="text" id="enroll-city" class="form-input" placeholder="e.g. Dehradun / Delhi" required />
                 </div>
 
-                <div class="form-group half-width">
+                <div class="form-group half-width mobile-hide-field">
                   <label class="form-label" for="enroll-qualification">Highest Qualification</label>
                   <select id="enroll-qualification" class="form-input">
                     <option value="Graduate">Graduate (B.Tech / BCA / BBA / B.Com)</option>
@@ -1493,15 +1493,15 @@ function injectEnrollmentModalHTML() {
                   </select>
                 </div>
 
-                <div class="form-group half-width">
-                  <label class="form-label" for="enroll-mode">Preferred Learning Mode *</label>
-                  <select id="enroll-mode" class="form-input" required>
+                <div class="form-group half-width mobile-hide-field">
+                  <label class="form-label" for="enroll-mode">Preferred Learning Mode</label>
+                  <select id="enroll-mode" class="form-input">
                     <option value="Online – Interactive Live with Trainer">Online – Interactive Live with Trainer</option>
                     <option value="Offline – Classroom Training">Offline – Classroom Training</option>
                   </select>
                 </div>
 
-                <div class="form-group half-width">
+                <div class="form-group half-width mobile-hide-field">
                   <label class="form-label" for="enroll-batch">Preferred Batch</label>
                   <select id="enroll-batch" class="form-input">
                     <option value="Morning">Morning</option>
@@ -1511,7 +1511,7 @@ function injectEnrollmentModalHTML() {
                   </select>
                 </div>
 
-                <div class="form-group half-width">
+                <div class="form-group half-width mobile-hide-field">
                   <label class="form-label" for="enroll-start-date">Preferred Start Date</label>
                   <select id="enroll-start-date" class="form-input">
                     <option value="Upcoming Batch">Upcoming Batch</option>
@@ -1679,10 +1679,10 @@ async function handleEnrollmentSubmit(e) {
   const phone = document.getElementById('enroll-phone')?.value.trim() || '';
   const email = document.getElementById('enroll-email')?.value.trim() || '';
   const city = document.getElementById('enroll-city')?.value.trim() || '';
-  const qualification = document.getElementById('enroll-qualification')?.value || '';
-  const mode = document.getElementById('enroll-mode')?.value || '';
-  const batch = document.getElementById('enroll-batch')?.value || '';
-  const startDate = document.getElementById('enroll-start-date')?.value || '';
+  const qualification = document.getElementById('enroll-qualification')?.value || 'Graduate';
+  const mode = document.getElementById('enroll-mode')?.value || 'Online – Interactive Live with Trainer';
+  const batch = document.getElementById('enroll-batch')?.value || 'Upcoming Batch';
+  const startDate = document.getElementById('enroll-start-date')?.value || 'Immediate';
   const message = document.getElementById('enroll-message')?.value.trim() || '';
 
   if (errDiv) errDiv.setAttribute('hidden', '');
@@ -1702,10 +1702,6 @@ async function handleEnrollmentSubmit(e) {
   }
   if (!city) {
     showEnrollError('Please enter your city.');
-    return;
-  }
-  if (!mode) {
-    showEnrollError('Please select a preferred learning mode.');
     return;
   }
 

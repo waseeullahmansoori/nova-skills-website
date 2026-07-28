@@ -5935,12 +5935,15 @@ select.form-input option {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .enroll-form-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
   .form-group.half-width {
-    grid-column: span 1;
+    grid-column: span 1 !important;
+  }
+  .form-group.mobile-hide-field {
+    display: none !important;
   }
   .enroll-modal-dialog {
     padding: 24px 16px;
