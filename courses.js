@@ -5,9 +5,22 @@
 
 'use strict';
 
-let currentCourses = [...NS_COURSES];
+let currentCourses = [];
+
+function getCoursesData() {
+  if (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES)) return NS_COURSES;
+  if (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) return window.NS_COURSES;
+  return [];
+}
+
+function getAcademiesData() {
+  if (typeof NS_ACADEMIES !== 'undefined' && Array.isArray(NS_ACADEMIES)) return NS_ACADEMIES;
+  if (typeof window !== 'undefined' && Array.isArray(window.NS_ACADEMIES)) return window.NS_ACADEMIES;
+  return [];
+}
 
 document.addEventListener('DOMContentLoaded', () => {
+  currentCourses = [...getCoursesData()];
   initAcademyFilterOptions();
   readUrlParamsAndApply();
   renderCourses();
@@ -19,9 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function initAcademyFilterOptions() {
   const container = document.getElementById('filter-academy-options');
   if (!container) return;
+  const academies = getAcademiesData();
+  const courses = getCoursesData();
 
-  container.innerHTML = NS_ACADEMIES.map(acad => {
-    const count = NS_COURSES.filter(c => c.academyId === acad.id).length;
+  container.innerHTML = academies.map(acad => {
+    const count = courses.filter(c => c.academyId === acad.id).length;
     return `
       <label class="filter-option">
         <input type="checkbox" name="academy" value="${acad.id}" />
@@ -118,7 +133,7 @@ function filterAndSortCourses() {
   const maxPrice = parseInt(document.getElementById('filter-price-range')?.value || '50000', 10);
   const placementOnly = document.getElementById('filter-placement')?.checked || false;
 
-  let result = NS_COURSES.filter(c => {
+  let result = getCoursesData().filter(c => {
     // Search
     if (searchVal) {
       const matchName = c.name.toLowerCase().includes(searchVal);

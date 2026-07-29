@@ -1467,7 +1467,10 @@ function formatDateFormatted(dateObj) {
 
 function validatePayloadFields(payload) {
   const name = (payload.name || payload.fullName || '').trim();
-  const mobile = (payload.mobile || payload.phone || '').trim().replace(/\D/g, '');
+  let mobile = (payload.mobile || payload.phone || '').trim().replace(/\D/g, '');
+  if (mobile.length === 12 && mobile.startsWith('91')) {
+    mobile = mobile.substring(2);
+  }
   const email = (payload.email || '').trim().toLowerCase();
   const course = (payload.course || payload.interest || '').trim();
   const message = (payload.message || payload.comment || '').trim();

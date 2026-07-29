@@ -856,3 +856,9 @@ const NS_BLOG_POSTS = [
     image: null,
   },
 ];
+
+if (typeof window !== 'undefined') {
+  window.NS_COURSES = NS_COURSES;
+  window.NS_ACADEMIES = NS_ACADEMIES;
+  window.NS_BLOG_POSTS = NS_BLOG_POSTS;
+}
