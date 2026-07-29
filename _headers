@@ -1,0 +1,77 @@
+# ============================================================
+# NOVA SKILLS – Cloudflare Pages Security, CDN & Caching Headers
+# 2026 | Enterprise Security, CSP, HSTS, Brotli & Early Hints
+# ============================================================
+
+# 1. Global Security & Caching Headers for HTML Pages
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  X-DNS-Prefetch-Control: on
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), display-capture=()
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Cross-Origin-Resource-Policy: cross-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://challenges.cloudflare.com https://static.cloudflareinsights.com https://connect.facebook.net https://www.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://novaskills.in https://*.google-analytics.com https://*.googletagmanager.com https://img.youtube.com https://maps.gstatic.com https://*.google.com https://connect.facebook.net; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://challenges.cloudflare.com https://cloudflareinsights.com https://connect.facebook.net https://*.clarity.ms; frame-src 'self' https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self' https://novaskills.in; upgrade-insecure-requests;
+  Link: </public/fonts/PlusJakartaSans-700.woff2>; rel=preload; as=font; type=font/woff2; crossorigin, </public/fonts/Inter-400.woff2>; rel=preload; as=font; type=font/woff2; crossorigin
+
+# 2. Excluded Dynamic Confirmation Routes (No-Store for Lead Privacy)
+/thank-you
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+  X-Robots-Tag: noindex, follow
+
+/thank-you/*
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+  X-Robots-Tag: noindex, follow
+
+/lead-success
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+  X-Robots-Tag: noindex, follow
+
+/lead-success/*
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+  X-Robots-Tag: noindex, follow
+
+/api/*
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+
+# 3. Static CSS Bundles (Compressible Text - Brotli/Gzip Enabled)
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/css; charset=utf-8
+
+# 4. Static JavaScript Bundles (Compressible Text - Brotli/Gzip Enabled)
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript; charset=utf-8
+
+# 5. XML Sitemap & Robots.txt (Compressible Text)
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/xml; charset=utf-8
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+
+# 6. Web Manifest (Compressible JSON)
+/site.webmanifest
+  Cache-Control: public, max-age=604800
+  Content-Type: application/manifest+json; charset=utf-8
+
+/manifest.json
+  Cache-Control: public, max-age=604800
+  Content-Type: application/manifest+json; charset=utf-8
+
+# 7. Static Images & Vector SVGs
+/public/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 8. Self-Hosted Fonts (WOFF2 - Pre-Compressed Binary, Do Not Re-Compress)
+/public/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: font/woff2
+  Access-Control-Allow-Origin: *

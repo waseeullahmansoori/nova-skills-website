@@ -22,17 +22,60 @@ function getTargetCourse() {
 
 function populateCourseDetail(course) {
   // Title & Head
-  document.title = `${course.name} — Nova Skills`;
+  const pageTitleText = `${course.name} — Nova Skills`;
+  document.title = pageTitleText;
   const pageTitle = document.getElementById('page-title');
-  if (pageTitle) pageTitle.textContent = `${course.name} — Nova Skills`;
+  if (pageTitle) pageTitle.textContent = pageTitleText;
 
+  const canonicalUrl = `https://novaskills.in/course-detail.html?id=${course.id}`;
   const canonicalEl = document.getElementById('page-canonical') || document.querySelector('link[rel="canonical"]');
-  if (canonicalEl) canonicalEl.setAttribute('href', `https://novaskills.in/course-detail.html?id=${course.id}`);
+  if (canonicalEl) canonicalEl.setAttribute('href', canonicalUrl);
 
-  const ogTitle = document.getElementById('og-title');
-  if (ogTitle) ogTitle.content = course.name;
-  const ogDesc = document.getElementById('og-desc');
-  if (ogDesc) ogDesc.content = course.shortDesc;
+  // Map specific OG / Twitter images for key courses
+  const courseImageMap = {
+    'dm-professional': 'https://novaskills.in/public/images/seo/og-course-dm-professional.png',
+    'dm-mastery': 'https://novaskills.in/public/images/seo/og-course-dm-mastery.png',
+    'ai-mastery': 'https://novaskills.in/public/images/seo/og-course-ai-mastery.png',
+    'full-stack': 'https://novaskills.in/public/images/seo/og-course-full-stack.png',
+    'design-mastery': 'https://novaskills.in/public/images/seo/og-course-design-mastery.png',
+    'motion-graphics': 'https://novaskills.in/public/images/seo/og-course-motion-graphics.png'
+  };
+  const courseImg = courseImageMap[course.id] || 'https://novaskills.in/public/images/seo/og-course-detail.png';
+
+  // Open Graph Updates
+  const ogUrl = document.getElementById('og-url') || document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
+
+  const ogTitle = document.getElementById('og-title') || document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute('content', pageTitleText);
+
+  const ogDesc = document.getElementById('og-desc') || document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute('content', course.shortDesc);
+
+  const ogImg = document.getElementById('og-image') || document.querySelector('meta[property="og:image"]');
+  if (ogImg) ogImg.setAttribute('content', courseImg);
+
+  const ogImgSecure = document.getElementById('og-image-secure') || document.querySelector('meta[property="og:image:secure_url"]');
+  if (ogImgSecure) ogImgSecure.setAttribute('content', courseImg);
+
+  const ogImgAlt = document.getElementById('og-image-alt') || document.querySelector('meta[property="og:image:alt"]');
+  if (ogImgAlt) ogImgAlt.setAttribute('content', `${course.name} — Nova Skills Course`);
+
+  // Twitter (X) Card Updates
+  const twTitle = document.getElementById('tw-title') || document.querySelector('meta[name="twitter:title"]');
+  if (twTitle) twTitle.setAttribute('content', pageTitleText);
+
+  const twDesc = document.getElementById('tw-desc') || document.querySelector('meta[name="twitter:description"]');
+  if (twDesc) twDesc.setAttribute('content', course.shortDesc);
+
+  const twImg = document.getElementById('tw-image') || document.querySelector('meta[name="twitter:image"]');
+  if (twImg) twImg.setAttribute('content', courseImg);
+
+  const twImgAlt = document.getElementById('tw-image-alt') || document.querySelector('meta[name="twitter:image:alt"]');
+  if (twImgAlt) twImgAlt.setAttribute('content', `${course.name} — Nova Skills Course`);
+
+  // Inject Schema.org Course JSON-LD
+  injectCourseSchema(course, courseImg, canonicalUrl);
 
   // Breadcrumb & Header
   const bc = document.getElementById('breadcrumb-course-name');
@@ -175,4 +218,57 @@ function renderRelatedCourses(currentCourse) {
       </div>
     </div>
   `).join('');
+}
+
+function injectCourseSchema(course, courseImg, canonicalUrl) {
+  const existingScript = document.getElementById('ns-dynamic-course-schema');
+  if (existingScript) existingScript.remove();
+
+  const teachesSkills = (course.tools && course.tools.length > 0)
+    ? course.tools
+    : [course.name, course.academy, 'Practical Training', 'Industry Projects'];
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": course.name,
+    "description": course.fullDesc || course.shortDesc,
+    "url": canonicalUrl,
+    "image": courseImg,
+    "courseCode": course.id,
+    "inLanguage": "en",
+    "courseMode": course.mode || "Hybrid",
+    "educationalCredentialAwarded": "Professional Certificate of Completion by Nova Skills",
+    "teaches": teachesSkills,
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Nova Skills Education Institute",
+      "url": "https://novaskills.in/",
+      "logo": "https://novaskills.in/public/images/seo/og-default.png",
+      "sameAs": "https://novaskills.in/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "category": "Paid",
+      "price": course.price,
+      "priceCurrency": "INR",
+      "url": canonicalUrl,
+      "availability": "https://schema.org/InStock"
+    },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": course.mode || "Hybrid",
+      "duration": course.duration || "3 Months",
+      "instructor": {
+        "@type": "Organization",
+        "name": "Nova Skills Faculty & Industry Mentors"
+      }
+    }
+  };
+
+  const script = document.createElement('script');
+  script.id = 'ns-dynamic-course-schema';
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema, null, 2);
+  document.head.appendChild(script);
 }

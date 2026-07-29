@@ -23,19 +23,69 @@ function getTargetPost() {
 
 function populateArticle(post) {
   // Title & Head
-  document.title = `${post.title} — Nova Skills Blog`;
+  const pageTitleText = `${post.title} — Nova Skills Blog`;
+  document.title = pageTitleText;
   const pageTitle = document.getElementById('page-title');
-  if (pageTitle) pageTitle.textContent = `${post.title} — Nova Skills Blog`;
+  if (pageTitle) pageTitle.textContent = pageTitleText;
 
+  const canonicalUrl = `https://novaskills.in/blog-detail.html?id=${post.slug || post.id}`;
   const canonicalEl = document.getElementById('page-canonical') || document.querySelector('link[rel="canonical"]');
-  if (canonicalEl) canonicalEl.setAttribute('href', `https://novaskills.in/blog-detail.html?id=${post.slug || post.id}`);
+  if (canonicalEl) canonicalEl.setAttribute('href', canonicalUrl);
 
   const metaDesc = document.getElementById('meta-desc');
   if (metaDesc) metaDesc.content = post.excerpt;
-  const ogTitle = document.getElementById('og-title');
-  if (ogTitle) ogTitle.content = post.title;
-  const ogDesc = document.getElementById('og-desc');
-  if (ogDesc) ogDesc.content = post.excerpt;
+
+  // Map specific OG / Twitter images for blog posts
+  const blogImageMap = {
+    'ai-jobs-india-2026': 'https://novaskills.in/public/images/seo/og-blog-ai-jobs-india-2026.png',
+    'digital-marketing-salary-india': 'https://novaskills.in/public/images/seo/og-blog-digital-marketing-salary-india.png',
+    'learn-graphic-design-beginner-guide': 'https://novaskills.in/public/images/seo/og-blog-learn-graphic-design-beginner-guide.png',
+    'freelancing-fiverr-india-guide': 'https://novaskills.in/public/images/seo/og-blog-freelancing-fiverr-india-guide.png',
+    'n8n-ai-automation-beginners': 'https://novaskills.in/public/images/seo/og-blog-n8n-ai-automation-beginners.png',
+    'youtube-channel-monetise-2026': 'https://novaskills.in/public/images/seo/og-blog-youtube-channel-monetise-2026.png',
+    'chatgpt-prompts-marketing': 'https://novaskills.in/public/images/seo/og-blog-chatgpt-prompts-marketing.png',
+    'kids-coding-benefits-india': 'https://novaskills.in/public/images/seo/og-blog-kids-coding-benefits-india.png',
+    'python-vs-javascript-2026': 'https://novaskills.in/public/images/seo/og-blog-python-vs-javascript-2026.png'
+  };
+  const blogImg = blogImageMap[post.slug] || 'https://novaskills.in/public/images/seo/og-blog-detail.png';
+
+  // Open Graph Updates
+  const ogUrl = document.getElementById('og-url') || document.querySelector('meta[property="og:url"]');
+  if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
+
+  const ogTitle = document.getElementById('og-title') || document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute('content', pageTitleText);
+
+  const ogDesc = document.getElementById('og-desc') || document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute('content', post.excerpt);
+
+  const ogImg = document.getElementById('og-image') || document.querySelector('meta[property="og:image"]');
+  if (ogImg) ogImg.setAttribute('content', blogImg);
+
+  const ogImgSecure = document.getElementById('og-image-secure') || document.querySelector('meta[property="og:image:secure_url"]');
+  if (ogImgSecure) ogImgSecure.setAttribute('content', blogImg);
+
+  const ogImgAlt = document.getElementById('og-image-alt') || document.querySelector('meta[property="og:image:alt"]');
+  if (ogImgAlt) ogImgAlt.setAttribute('content', post.title);
+
+  const articlePub = document.getElementById('article-published') || document.querySelector('meta[property="article:published_time"]');
+  if (articlePub && post.date) articlePub.setAttribute('content', new Date(post.date).toISOString());
+
+  const articleAuth = document.getElementById('article-author') || document.querySelector('meta[property="article:author"]');
+  if (articleAuth && post.author) articleAuth.setAttribute('content', post.author);
+
+  // Twitter (X) Card Updates
+  const twTitle = document.getElementById('tw-title') || document.querySelector('meta[name="twitter:title"]');
+  if (twTitle) twTitle.setAttribute('content', pageTitleText);
+
+  const twDesc = document.getElementById('tw-desc') || document.querySelector('meta[name="twitter:description"]');
+  if (twDesc) twDesc.setAttribute('content', post.excerpt);
+
+  const twImg = document.getElementById('tw-image') || document.querySelector('meta[name="twitter:image"]');
+  if (twImg) twImg.setAttribute('content', blogImg);
+
+  const twImgAlt = document.getElementById('tw-image-alt') || document.querySelector('meta[name="twitter:image:alt"]');
+  if (twImgAlt) twImgAlt.setAttribute('content', post.title);
 
   // Breadcrumb & Header
   const bcTitle = document.getElementById('breadcrumb-article-title');

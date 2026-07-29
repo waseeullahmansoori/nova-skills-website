@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initAnnouncementBar();
   initFormSubmission();
   initMarquee();
+  initVideoFacades();
+  initDeferredBackgrounds();
 });
 
 // ===== SCROLL PROGRESS BAR =====
@@ -532,6 +534,79 @@ yearEls.forEach(el => {
   el.textContent = new Date().getFullYear();
 });
 
+// ===== CLICK-TO-LOAD YOUTUBE VIDEO FACADE =====
+function initVideoFacades() {
+  const videoContainers = document.querySelectorAll('.youtube-facade, [data-youtube-id]');
+  videoContainers.forEach(container => {
+    const videoId = container.dataset.youtubeId;
+    if (!videoId) return;
+
+    container.style.position = 'relative';
+    container.style.cursor = 'pointer';
+    container.style.overflow = 'hidden';
+    container.setAttribute('role', 'button');
+    container.setAttribute('tabindex', '0');
+    container.setAttribute('aria-label', 'Play video');
+
+    const posterUrl = container.dataset.poster || `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    container.innerHTML = `
+      <img src="${posterUrl}" alt="Video Thumbnail" class="video-facade-poster" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy" decoding="async" />
+      <div class="video-play-btn" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:68px; height:48px; background:rgba(1,23,49,0.85); border-radius:14px; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(0,0,0,0.3); transition:transform 0.2s, background 0.2s;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+    `;
+
+    const loadVideo = () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+      iframe.title = container.dataset.title || 'Nova Skills Course Video Preview';
+      iframe.width = '100%';
+      iframe.height = '100%';
+      iframe.style.border = '0';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      container.innerHTML = '';
+      container.appendChild(iframe);
+    };
+
+    container.addEventListener('click', loadVideo);
+    container.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        loadVideo();
+      }
+    });
+  });
+}
+
+// ===== INTERSECTION OBSERVER DEFERRED BACKGROUND IMAGES =====
+function initDeferredBackgrounds() {
+  const bgElements = document.querySelectorAll('[data-bg-src], .defer-bg');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const bgSrc = el.dataset.bgSrc;
+          if (bgSrc) {
+            el.style.backgroundImage = `url('${bgSrc}')`;
+          }
+          obs.unobserve(el);
+        }
+      });
+    }, { rootMargin: '200px' });
+
+    bgElements.forEach(el => observer.observe(el));
+  } else {
+    bgElements.forEach(el => {
+      if (el.dataset.bgSrc) {
+        el.style.backgroundImage = `url('${el.dataset.bgSrc}')`;
+      }
+    });
+  }
+}
+
 // ===== LOG INIT =====
 console.log('%cNova Skills Website Loaded 🚀', 'color: #0599a8; font-size: 16px; font-weight: bold;');
 console.log('%cLearn • Grow • Achieve', 'color: #75d766; font-size: 12px;');
+

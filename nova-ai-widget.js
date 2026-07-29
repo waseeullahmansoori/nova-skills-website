@@ -582,7 +582,7 @@
     if (typeof window.openConsultationPopup === 'function') {
       window.openConsultationPopup();
     } else {
-      window.location.href = 'index.html#counselling';
+      window.location.href = '/#counselling';
     }
   }
 

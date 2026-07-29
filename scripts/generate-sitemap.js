@@ -53,6 +53,36 @@ function generateSitemap() {
     }
   });
 
+  // Dedicated Legal Policy directory URLs
+  urlEntries.push({
+    loc: `${DOMAIN}/privacy-policy/`,
+    lastmod: today
+  });
+  urlEntries.push({
+    loc: `${DOMAIN}/refund-policy/`,
+    lastmod: today
+  });
+  urlEntries.push({
+    loc: `${DOMAIN}/terms-and-conditions/`,
+    lastmod: today
+  });
+  urlEntries.push({
+    loc: `${DOMAIN}/contact/`,
+    lastmod: today
+  });
+  urlEntries.push({
+    loc: `${DOMAIN}/thank-you/`,
+    lastmod: today
+  });
+  urlEntries.push({
+    loc: `${DOMAIN}/lead-success/`,
+    lastmod: today
+  });
+
+
+
+
+
   // 3. Dynamic Academy Detail URLs
   const academyIds = [
     'digital-marketing',

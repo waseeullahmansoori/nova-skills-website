@@ -384,10 +384,15 @@ function getCurrentPage() {
   if (path.endsWith('success-stories.html') || path.includes('/success-stories')) return 'success-stories';
   if (path.endsWith('assessment.html') || path.includes('/assessment')) return 'assessment';
   if (path.endsWith('blog.html') || path.includes('/blog')) return 'blog';
+  if (path.endsWith('contact.html') || path.includes('/contact')) return 'contact';
+  if (path.includes('/privacy-policy')) return 'privacy-policy';
+  if (path.includes('/refund-policy')) return 'refund-policy';
+  if (path.includes('/terms-and-conditions')) return 'terms-and-conditions';
   if (path.endsWith('course-detail.html')) return 'courses';
   if (path.endsWith('blog-detail.html')) return 'blog';
   return 'home';
 }
+
 
 /* ─────────────────────────────────────────────
    NAV LINKS HTML (Global Standardized Header)
@@ -398,36 +403,36 @@ function buildNavLinksHTML(page) {
 
   return `
     <!-- 1. HOME -->
-    <li><a href="index.html" class="${activeClass('home')}">Home</a></li>
+    <li><a href="/" class="${activeClass('home')}">Home</a></li>
 
     <!-- 2. COURSES (MEGA MENU) -->
     <li class="dropdown mega-dropdown">
-      <a href="courses.html" class="${activeClass('courses')} dropdown-toggle">Courses <span class="chevron">⌄</span></a>
+      <a href="/courses.html" class="${activeClass('courses')} dropdown-toggle">Courses <span class="chevron">⌄</span></a>
       <div class="dropdown-menu mega-menu">
         <div class="mega-menu-grid">
           <div class="mega-col">
-            <a href="courses.html?academy=digital-marketing" class="mega-item">
+            <a href="/courses.html?academy=digital-marketing" class="mega-item">
               <span class="mega-icon">📊</span>
               <div>
                 <div class="mega-title">Digital Marketing</div>
                 <div class="mega-sub">SEO, Google Ads, Meta Ads</div>
               </div>
             </a>
-            <a href="courses.html?academy=ai" class="mega-item">
+            <a href="/courses.html?academy=ai" class="mega-item">
               <span class="mega-icon">🤖</span>
               <div>
                 <div class="mega-title">AI & Automation</div>
                 <div class="mega-sub">Prompt Engg, ChatGPT, Workflows</div>
               </div>
             </a>
-            <a href="courses.html?academy=design" class="mega-item">
+            <a href="/courses.html?academy=design" class="mega-item">
               <span class="mega-icon">🎨</span>
               <div>
                 <div class="mega-title">Graphic Design</div>
                 <div class="mega-sub">Photoshop, Figma, Illustrator</div>
               </div>
             </a>
-            <a href="courses.html?academy=video" class="mega-item">
+            <a href="/courses.html?academy=video" class="mega-item">
               <span class="mega-icon">🎬</span>
               <div>
                 <div class="mega-title">Motion Graphics & Video</div>
@@ -437,28 +442,28 @@ function buildNavLinksHTML(page) {
           </div>
 
           <div class="mega-col">
-            <a href="courses.html?academy=programming" class="mega-item">
+            <a href="/courses.html?academy=programming" class="mega-item">
               <span class="mega-icon">💻</span>
               <div>
                 <div class="mega-title">Web Development</div>
                 <div class="mega-sub">HTML, CSS, React, Full-Stack</div>
               </div>
             </a>
-            <a href="courses.html?academy=programming" class="mega-item">
+            <a href="/courses.html?academy=programming" class="mega-item">
               <span class="mega-icon">🐍</span>
               <div>
                 <div class="mega-title">Python Programming</div>
                 <div class="mega-sub">Data Structures, Backend APIs</div>
               </div>
             </a>
-            <a href="courses.html?academy=programming" class="mega-item">
+            <a href="/courses.html?academy=programming" class="mega-item">
               <span class="mega-icon">📈</span>
               <div>
                 <div class="mega-title">Data Analytics</div>
                 <div class="mega-sub">Excel, PowerBI, SQL</div>
               </div>
             </a>
-            <a href="courses.html?academy=nocode" class="mega-item">
+            <a href="/courses.html?academy=nocode" class="mega-item">
               <span class="mega-icon">🌐</span>
               <div>
                 <div class="mega-title">No-Code E-Commerce</div>
@@ -469,39 +474,38 @@ function buildNavLinksHTML(page) {
         </div>
 
         <div class="mega-menu-footer">
-          <a href="courses.html" class="mega-footer-link">View All 100+ Courses →</a>
+          <a href="/courses.html" class="mega-footer-link">View All 100+ Courses →</a>
         </div>
       </div>
     </li>
 
     <!-- 3. ✨ AI CAREER ADVISOR -->
     <li>
-      <a href="assessment.html" class="nav-link nav-ai-pill ${page === 'assessment' ? 'active' : ''}" id="nav-link-ai">
+      <a href="/assessment.html" class="nav-link nav-ai-pill ${page === 'assessment' ? 'active' : ''}" id="nav-link-ai">
         <span class="ai-sparkle">✨</span> AI Career Advisor
       </a>
     </li>
 
     <!-- 4. PLACEMENTS -->
-    <li><a href="placements.html" class="${activeClass('placements')}">Placements</a></li>
+    <li><a href="/placements.html" class="${activeClass('placements')}">Placements</a></li>
 
     <!-- 5. ABOUT DROPDOWN (MANDATORY ORDER) -->
     <li class="dropdown">
       <a href="#" class="nav-link dropdown-toggle">About <span class="chevron">⌄</span></a>
       <ul class="dropdown-menu">
-        <li><a href="index.html#why-nova">Why Nova Skills</a></li>
-        <li><a href="index.html#why-nova">Our Story</a></li>
-        <li><a href="index.html#mentors">Mentors</a></li>
-        <li><a href="index.html#certifications">Certifications</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="index.html#counselling">Contact</a></li>
+        <li><a href="/#why-nova">Why Nova Skills</a></li>
+        <li><a href="/#why-nova">Our Story</a></li>
+        <li><a href="/#mentors">Mentors</a></li>
+        <li><a href="/#certifications">Certifications</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
         <li class="dropdown-divider"></li>
-        <li><a href="index.html#why-nova">About Nova Skills</a></li>
+        <li><a href="/#why-nova">About Nova Skills</a></li>
       </ul>
     </li>
 
     <!-- 6. CONTACT -->
-    <li><a href="index.html#counselling" class="nav-link">Contact</a></li>
+    <li><a href="/contact/" class="${activeClass('contact')}">Contact</a></li>
   `;
 }
 
@@ -529,7 +533,7 @@ function buildHeaderHTML(page) {
         <!-- Slide 2 -->
         <div class="announcement-slide" data-index="1">
           <span class="announcement-text">💻 <strong>Live Online & Classroom Training</strong> • Choose how you learn. Same curriculum. Same expert trainers.</span>
-          <a href="courses.html" class="announcement-cta">Explore Learning Modes →</a>
+          <a href="/courses.html" class="announcement-cta">Explore Learning Modes →</a>
         </div>
 
         <!-- Slide 3 -->
@@ -541,13 +545,13 @@ function buildHeaderHTML(page) {
         <!-- Slide 4 -->
         <div class="announcement-slide" data-index="3">
           <span class="announcement-text">🏆 <strong>100+ Courses • 5,000+ Students</strong> • Build practical skills that employers actually hire for.</span>
-          <a href="courses.html" class="announcement-cta">Explore Courses →</a>
+          <a href="/courses.html" class="announcement-cta">Explore Courses →</a>
         </div>
 
         <!-- Slide 5 -->
         <div class="announcement-slide" data-index="4">
           <span class="announcement-text">🤖 <strong>Try Our AI Career Advisor</strong> • Get a personalised course recommendation in less than 30 seconds.</span>
-          <a href="assessment.html" class="announcement-cta">Start Assessment →</a>
+          <a href="/assessment.html" class="announcement-cta">Start Assessment →</a>
         </div>
 
       </div>
@@ -573,9 +577,9 @@ function buildHeaderHTML(page) {
   <!-- Sticky Navigation -->
   <header class="header" id="main-header">
     <nav class="navbar container" aria-label="Main navigation">
-      <a href="index.html" class="nav-logo" aria-label="Nova Skills Home">
-        <img src="branding%20content/Horizontal Logo.svg" alt="Nova Skills" class="logo-light" width="200" height="60" />
-        <img src="branding%20content/White Logo.svg" alt="Nova Skills" class="logo-dark" width="200" height="60" />
+      <a href="/" class="nav-logo" aria-label="Nova Skills Home">
+        <img src="/branding%20content/Horizontal%20Logo.svg" alt="Nova Skills" class="logo-light" width="200" height="60" />
+        <img src="/branding%20content/White%20Logo.svg" alt="Nova Skills" class="logo-dark" width="200" height="60" />
       </a>
 
       <ul class="nav-links" id="nav-links" role="menubar">
@@ -583,7 +587,7 @@ function buildHeaderHTML(page) {
       </ul>
 
       <div class="nav-actions">
-        <a href="login.html" onclick="handleNavAuthClick(event);" class="nav-phone" id="nav-auth-btn">
+        <a href="/login.html" onclick="handleNavAuthClick(event);" class="nav-phone" id="nav-auth-btn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Login / Sign Up
         </a>
       </div>
@@ -607,7 +611,7 @@ function buildFooterHTML() {
 
           <!-- Brand Column -->
           <div class="footer-col">
-            <img src="branding%20content/White Logo.svg" alt="Nova Skills" class="footer-logo" width="180" height="52" />
+            <img src="/branding%20content/White%20Logo.svg" alt="Nova Skills" class="footer-logo" width="180" height="52" />
             <p class="footer-desc">India's premier practical skills institute. 12 Academies. 100+ Courses. Real projects, expert mentors, and placement support that works.</p>
             <div class="footer-tagline">
               <span>LEARN</span><span class="dot">•</span>
@@ -636,14 +640,14 @@ function buildFooterHTML() {
             <div class="footer-col">
               <h4 class="footer-heading">Our Academies</h4>
               <ul class="footer-links">
-                <li><a href="courses.html?academy=digital-marketing">📊 Digital Marketing</a></li>
-                <li><a href="courses.html?academy=ai">🤖 AI Academy</a></li>
-                <li><a href="courses.html?academy=design">🎨 Design Academy</a></li>
-                <li><a href="courses.html?academy=video">🎬 Video & Motion</a></li>
-                <li><a href="courses.html?academy=programming">💻 Programming</a></li>
-                <li><a href="courses.html?academy=nocode">🌐 No-Code Web</a></li>
-                <li><a href="courses.html?academy=3d">🏗️ 3D Academy</a></li>
-                <li><a href="courses.html?academy=kids">👨‍💻 Kids Tech</a></li>
+                <li><a href="/courses.html?academy=digital-marketing">📊 Digital Marketing</a></li>
+                <li><a href="/courses.html?academy=ai">🤖 AI Academy</a></li>
+                <li><a href="/courses.html?academy=design">🎨 Design Academy</a></li>
+                <li><a href="/courses.html?academy=video">🎬 Video & Motion</a></li>
+                <li><a href="/courses.html?academy=programming">💻 Programming</a></li>
+                <li><a href="/courses.html?academy=nocode">🌐 No-Code Web</a></li>
+                <li><a href="/courses.html?academy=3d">🏗️ 3D Academy</a></li>
+                <li><a href="/courses.html?academy=kids">👨‍💻 Kids Tech</a></li>
               </ul>
             </div>
 
@@ -651,14 +655,14 @@ function buildFooterHTML() {
             <div class="footer-col">
               <h4 class="footer-heading">Quick Links</h4>
               <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">All Courses</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="index.html#placements">Placements</a></li>
-                <li><a href="index.html#mentors">Our Mentors</a></li>
-                <li><a href="index.html#testimonials">Success Stories</a></li>
-                <li><a href="index.html#faq">FAQ</a></li>
-                <li><a href="index.html#counselling">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/courses.html">All Courses</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/#placements">Placements</a></li>
+                <li><a href="/#mentors">Our Mentors</a></li>
+                <li><a href="/#testimonials">Success Stories</a></li>
+                <li><a href="/#faq">FAQ</a></li>
+                <li><a href="/contact/">Contact Us</a></li>
               </ul>
             </div>
           </div>
@@ -684,8 +688,11 @@ function buildFooterHTML() {
               <div class="contact-item">
                 <span class="contact-icon">📍</span>
                 <div>
-                  <div class="contact-label">Address</div>
+                  <div class="contact-label">Campus Location</div>
                   <p>Nova Skills Institute<br />Siddharth Nagar, Uttar Pradesh</p>
+                  <a href="https://maps.app.goo.gl/tgHGkJ2NXf1ckZwS8" target="_blank" rel="noopener noreferrer" style="color: #0599a8; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; text-decoration: none;">
+                    📍 View on Google Maps ↗
+                  </a>
                 </div>
               </div>
             </div>
@@ -701,9 +708,9 @@ function buildFooterHTML() {
         <div class="footer-bottom-grid">
           <p>© <span class="year-auto"></span> Nova Skills. All rights reserved.</p>
           <div class="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Refund Policy</a>
+            <a href="/privacy-policy/">Privacy Policy</a>
+            <a href="/terms-and-conditions/">Terms & Conditions</a>
+            <a href="/refund-policy/">Refund Policy</a>
           </div>
           <p class="footer-made">Made with ❤️ in India</p>
         </div>
@@ -742,7 +749,7 @@ function buildPopupHTML() {
       <!-- LEFT PANEL -->
       <div class="popup-left">
         <div class="popup-logo">
-          <img src="branding%20content/White Logo.svg" alt="Nova Skills" width="160" height="48" />
+          <img src="/branding%20content/White%20Logo.svg" alt="Nova Skills" width="160" height="48" />
         </div>
         <div class="popup-left-content">
           <div class="popup-badge">🎓 Free Session Worth ₹2,999</div>
@@ -841,7 +848,7 @@ function buildPopupHTML() {
           <h3>You're All Set!</h3>
           <p>Our counsellor will call you at the number provided within <strong>2 hours</strong>. Keep your phone handy!</p>
           <p class="popup-success-sub">Meanwhile, explore our courses →</p>
-          <a href="courses.html" class="btn btn-primary" style="margin-top: 16px;">Explore Courses</a>
+          <a href="/courses.html" class="btn btn-primary" style="margin-top: 16px;">Explore Courses</a>
         </div>
       </div>
 
@@ -879,13 +886,28 @@ function injectComponents() {
   // Scroll progress bar
   document.body.insertAdjacentHTML('afterbegin', buildScrollProgressHTML());
 
-  // Inject Nova AI Floating Assistant Widget
+  // Inject Nova AI Floating Assistant Widget (Lazy Loaded on User Interaction or Idle)
   if (!document.getElementById('nova-ai-widget-script')) {
-    const aiScript = document.createElement('script');
-    aiScript.id = 'nova-ai-widget-script';
-    aiScript.src = 'nova-ai-widget.js?v=1.0';
-    aiScript.defer = true;
-    document.body.appendChild(aiScript);
+    const loadAiWidget = () => {
+      if (document.getElementById('nova-ai-widget-script')) return;
+      const aiScript = document.createElement('script');
+      aiScript.id = 'nova-ai-widget-script';
+      aiScript.src = '/js/nova-ai-widget.min.js';
+      aiScript.defer = true;
+      document.body.appendChild(aiScript);
+      window.removeEventListener('scroll', loadAiWidget);
+      window.removeEventListener('mousemove', loadAiWidget);
+      window.removeEventListener('touchstart', loadAiWidget);
+    };
+
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => setTimeout(loadAiWidget, 3500));
+    } else {
+      setTimeout(loadAiWidget, 3500);
+    }
+    window.addEventListener('scroll', loadAiWidget, { passive: true });
+    window.addEventListener('mousemove', loadAiWidget, { passive: true });
+    window.addEventListener('touchstart', loadAiWidget, { passive: true });
   }
 }
 
@@ -1545,8 +1567,8 @@ function injectEnrollmentModalHTML() {
               Your course enrollment enquiry has been successfully submitted.<br />Our admission counsellor will contact you shortly.
             </p>
             <div class="success-actions">
-              <a href="courses.html" class="btn btn-primary btn-lg">Browse More Courses</a>
-              <a href="index.html" class="btn btn-outline btn-lg" id="success-home-btn">Back to Home</a>
+              <a href="/courses.html" class="btn btn-primary btn-lg">Browse More Courses</a>
+              <a href="/" class="btn btn-outline btn-lg" id="success-home-btn">Back to Home</a>
             </div>
           </div>
 
@@ -1663,11 +1685,11 @@ window.closeEnrollmentModal = closeEnrollmentModal;
 async function handleEnrollmentSubmit(e) {
   e.preventDefault();
 
+  const form = document.getElementById('course-enrollment-form');
   const errDiv = document.getElementById('enroll-form-error');
   const formContainer = document.getElementById('enroll-form-container');
   const successContainer = document.getElementById('enroll-success-container');
   const submitBtn = document.getElementById('enroll-submit-btn');
-  const btnText = document.getElementById('enroll-btn-text');
 
   const courseName = document.getElementById('enroll-course-display')?.value || '';
   const academyName = document.getElementById('enroll-academy-display')?.value || '';
@@ -1683,7 +1705,7 @@ async function handleEnrollmentSubmit(e) {
   const mode = document.getElementById('enroll-mode')?.value || 'Online – Interactive Live with Trainer';
   const batch = document.getElementById('enroll-batch')?.value || 'Upcoming Batch';
   const startDate = document.getElementById('enroll-start-date')?.value || 'Immediate';
-  const message = document.getElementById('enroll-message')?.value.trim() || '';
+  const userMessage = document.getElementById('enroll-message')?.value.trim() || '';
 
   if (errDiv) errDiv.setAttribute('hidden', '');
 
@@ -1705,74 +1727,65 @@ async function handleEnrollmentSubmit(e) {
     return;
   }
 
-  // Device detection
-  const width = window.innerWidth;
-  const deviceType = width <= 768 ? 'Mobile' : width <= 1024 ? 'Tablet' : 'Desktop';
+  const fullMessageDetails = [
+    `Qualification: ${qualification}`,
+    `Preferred Mode: ${mode}`,
+    `Preferred Batch: ${batch}`,
+    `Start Date: ${startDate}`,
+    fee ? `Course Fee: ${fee}` : '',
+    duration ? `Duration: ${duration}` : '',
+    userMessage ? `User Note: ${userMessage}` : ''
+  ].filter(Boolean).join(' | ');
 
-  // Loading state
-  if (submitBtn) submitBtn.disabled = true;
-  if (btnText) btnText.textContent = 'Securing Your Seat... 🔒';
+  const courseTitleFull = courseName 
+    ? `${courseName}${academyName ? ' (' + academyName + ')' : ''}` 
+    : 'Course Enrollment';
 
-  const leadData = {
-    action: 'Student Enrollment Enquiry',
-    timestamp: new Date().toISOString(),
-    name,
-    phone,
-    email,
-    city,
-    qualification,
-    mode,
-    batch,
-    startDate,
-    message,
-    courseName,
-    academyName,
-    category,
-    duration,
-    fee,
-    sourcePage: window.location.pathname,
-    landingUrl: window.location.href,
-    referrer: document.referrer || 'Direct',
-    device: deviceType,
-    browser: navigator.userAgent,
-    submissionType: 'Course Enrollment'
-  };
+  const success = await submitNovaForm({
+    form,
+    submitBtn,
+    loadingText: 'Securing Your Seat... 🔒',
+    data: {
+      name,
+      mobile: phone,
+      phone,
+      email,
+      course: courseTitleFull,
+      city,
+      message: fullMessageDetails
+    },
+    onSuccessCallback: () => {
+      // Store in local CRM queue as well
+      const leadData = {
+        action: 'Student Enrollment Enquiry',
+        timestamp: new Date().toISOString(),
+        name,
+        phone,
+        email,
+        city,
+        qualification,
+        mode,
+        batch,
+        startDate,
+        message: fullMessageDetails,
+        courseName,
+        academyName,
+        category,
+        duration,
+        fee
+      };
+      const existing = JSON.parse(localStorage.getItem('novaskills_enquiries') || '[]');
+      existing.unshift(leadData);
+      localStorage.setItem('novaskills_enquiries', JSON.stringify(existing));
 
-  try {
-    // 1. Submit to Google Apps Script Lead CRM endpoint using standard fetch
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwqZ-8X_U0M9kFq7_P9kR8Q8zQ8z/exec';
-    
-    fetch(SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(leadData)
-    }).catch(() => {});
+      // Show Success View inside enrollment modal
+      if (formContainer) formContainer.setAttribute('hidden', '');
+      if (successContainer) successContainer.removeAttribute('hidden');
+    }
+  });
 
-    // 2. Also send form data payload as URLSearchParams fallback for Apps Script compatibility
-    const params = new URLSearchParams(leadData);
-    fetch(SCRIPT_URL + '?' + params.toString(), {
-      method: 'GET',
-      mode: 'no-cors'
-    }).catch(() => {});
-
-    // 3. Store in local CRM queue for instant validation
-    const existing = JSON.parse(localStorage.getItem('novaskills_enquiries') || '[]');
-    existing.unshift(leadData);
-    localStorage.setItem('novaskills_enquiries', JSON.stringify(existing));
-
-    // 4. Show Success View State
-    if (formContainer) formContainer.setAttribute('hidden', '');
-    if (successContainer) successContainer.removeAttribute('hidden');
-
-    if (submitBtn) submitBtn.disabled = false;
-    if (btnText) btnText.textContent = 'Secure My Seat 🔒';
-    document.getElementById('course-enrollment-form')?.reset();
-
-  } catch (err) {
-    showEnrollError('An error occurred submitting your enquiry. Please check your internet connection and retry.');
-    if (submitBtn) submitBtn.disabled = false;
-    if (btnText) btnText.textContent = 'Secure My Seat 🔒';
+  if (!success) {
+    showEnrollError('An error occurred submitting your enquiry to Google Sheets. Please try again.');
   }
 }
 

@@ -294,17 +294,32 @@ function injectSEOMetadata(academy, courses) {
   const ogTitleEl = document.getElementById('og-title');
   const ogDescEl = document.getElementById('og-desc');
   const ogUrlEl = document.getElementById('og-url');
+  const ogImgEl = document.getElementById('og-image');
+  const ogImgAltEl = document.getElementById('og-image-alt');
+  const twTitleEl = document.getElementById('tw-title');
+  const twDescEl = document.getElementById('tw-desc');
+  const twImgEl = document.getElementById('tw-image');
+  const twImgAltEl = document.getElementById('tw-image-alt');
 
   const titleText = `${academy.name} — Nova Skills Institute`;
-  const descText = `Master ${academy.name} with 100% practical projects, live expert mentorship, and placement guarantee at Nova Skills.`;
+  const descText = `Master ${academy.name} with 100% practical projects, live expert mentorship, and placement support at Nova Skills.`;
   const canonicalUrl = `https://novaskills.in/academy-detail.html?academy=${academy.id}`;
+  const academyImg = 'https://novaskills.in/public/images/seo/og-academies.png';
 
+  document.title = titleText;
   if (titleEl) titleEl.textContent = titleText;
   if (metaDescEl) metaDescEl.setAttribute('content', descText);
   if (canonicalEl) canonicalEl.setAttribute('href', canonicalUrl);
   if (ogTitleEl) ogTitleEl.setAttribute('content', titleText);
   if (ogDescEl) ogDescEl.setAttribute('content', descText);
   if (ogUrlEl) ogUrlEl.setAttribute('content', canonicalUrl);
+  if (ogImgEl) ogImgEl.setAttribute('content', academyImg);
+  if (ogImgAltEl) ogImgAltEl.setAttribute('content', titleText);
+
+  if (twTitleEl) twTitleEl.setAttribute('content', titleText);
+  if (twDescEl) twDescEl.setAttribute('content', descText);
+  if (twImgEl) twImgEl.setAttribute('content', academyImg);
+  if (twImgAltEl) twImgAltEl.setAttribute('content', titleText);
 
   // Inject EducationalOccupationalProgram JSON-LD Schema
   const schemaScript = document.createElement('script');
