@@ -5654,6 +5654,26 @@ const NS_BLOG_POSTS = [
     "featured": false,
     "trending": false,
     "image": null
+  },
+  {
+    "id": 10,
+    "slug": "ui-ux-design-roadmap",
+    "title": "UI/UX Design Roadmap 2026: From Zero to Hired in 6 Months",
+    "excerpt": "Step-by-step learning path to master Figma, wireframing, design systems and portfolio building for a lucrative career in UI/UX design.",
+    "category": "Design",
+    "author": "Priya Mehta",
+    "authorRole": "Lead UI/UX Mentor",
+    "readTime": 10,
+    "date": "2026-06-01",
+    "tags": [
+      "UI/UX",
+      "Figma",
+      "Design",
+      "Roadmap"
+    ],
+    "featured": false,
+    "trending": true,
+    "image": null
   }
 ];
 
