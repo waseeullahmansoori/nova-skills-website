@@ -53,6 +53,26 @@ export async function handleAuthRoute(request, env) {
     });
   }
 
+  // 2b. POST /api/admin/login
+  if (method === 'POST' && (pathname === '/api/admin/login' || pathname === '/api/auth/admin/login')) {
+    let body;
+    try { body = await request.json(); } catch(e) {
+      return createErrorResponse('Invalid JSON body payload', HTTP_STATUS.BAD_REQUEST);
+    }
+
+    const res = await AuthService.loginAdmin(body, env);
+    if (!res.success) {
+      return createErrorResponse(res.error, res.status || HTTP_STATUS.UNAUTHORIZED);
+    }
+
+    return createSuccessResponse({
+      token: res.token,
+      expiresAt: res.expiresAt,
+      user: res.user,
+      message: res.message
+    });
+  }
+
   // 3. POST /api/auth/logout
   if (method === 'POST' && pathname === '/api/auth/logout') {
     const authHeader = request.headers.get('Authorization') || request.headers.get('authorization');

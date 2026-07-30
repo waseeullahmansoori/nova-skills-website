@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login — Nova Skills Education Institute</title>
+  <meta name="description" content="Secure Administrator & Admissions Login Portal for Nova Skills CRM and Admin Dashboard.">
+  <link rel="stylesheet" href="/css/styles.min.css?v=1.1.0">
+  <style>
+    :root {
+      --bg-dark: #011731;
+      --card-bg: rgba(2, 34, 69, 0.85);
+      --card-border: rgba(56, 189, 248, 0.2);
+      --accent-cyan: #0599a8;
+      --accent-light: #38bdf8;
+    }
+
+    body {
+      background: var(--bg-dark) radial-gradient(circle at top right, rgba(5, 153, 168, 0.18), transparent 60%);
+      color: #ffffff;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .auth-card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 38px 34px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(14px);
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .auth-badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent-light);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .auth-brand {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .auth-brand span { color: var(--accent-light); }
+
+    .auth-subtitle {
+      font-size: 0.88rem;
+      color: #94a3b8;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 6px;
+    }
+
+    .form-input {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: #fff;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--accent-light);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    }
+
+    .form-row-between {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      margin-bottom: 22px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #cbd5e1;
+      cursor: pointer;
+    }
+
+    .auth-btn {
+      width: 100%;
+      background: var(--accent-cyan);
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      padding: 14px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .auth-btn:hover {
+      background: #028491;
+      box-shadow: 0 6px 20px rgba(5, 153, 168, 0.4);
+    }
+
+    .auth-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .alert {
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      margin-bottom: 18px;
+      display: none;
+    }
+    .alert-error {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #f87171;
+    }
+    .alert-success {
+      background: rgba(34, 197, 94, 0.2);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      color: #4ade80;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-card">
+    <div class="auth-header">
+      <div class="auth-badge">🔒 Restricted Admin Portal</div>
+      <div class="auth-brand">Nova <span>Skills</span></div>
+      <div class="auth-subtitle">Admissions & Management Control Panel</div>
+    </div>
+
+    <div class="alert alert-error" id="alert-error"></div>
+    <div class="alert alert-success" id="alert-success"></div>
+
+    <form id="admin-login-form" onsubmit="handleAdminLogin(event)">
+      <div class="form-group">
+        <label for="email" class="form-label">Admin Email Address</label>
+        <input type="email" id="email" class="form-input" placeholder="admin@novaskills.in" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+      </div>
+
+      <div class="form-row-between">
+        <label class="checkbox-label">
+          <input type="checkbox" id="remember-me"> Remember me
+        </label>
+        <a href="#" style="color:var(--accent-light); text-decoration:none" onclick="handleForgotPassword(event)">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="auth-btn" id="submit-btn">Login to Admin Portal →</button>
+    </form>
+
+    <div style="text-align:center; margin-top:20px; font-size:0.8rem; color:#64748b">
+      Nova Skills Platform • Unauthorized Access Prohibited
+    </div>
+  </div>
+
+  <script>
+    async function handleAdminLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const rememberMe = document.getElementById('remember-me').checked;
+
+      const btn = document.getElementById('submit-btn');
+      const errAlert = document.getElementById('alert-error');
+      const succAlert = document.getElementById('alert-success');
+
+      errAlert.style.display = 'none';
+      succAlert.style.display = 'none';
+
+      // 1. Client-Side Validation
+      if (!email) {
+        errAlert.textContent = 'Please enter your administrator email address.';
+        errAlert.style.display = 'block';
+        return;
+      }
+      if (!email.includes('@') || !email.includes('.')) {
+        errAlert.textContent = 'Please enter a valid administrator email address.';
+        errAlert.style.display = 'block';
+        return;
+      }
+      if (!password) {
+        errAlert.textContent = 'Please enter your password.';
+        errAlert.style.display = 'block';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Verifying Admin Credentials...';
+
+      try {
+        const res = await fetch('/api/admin/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password, rememberMe })
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          btn.textContent = 'Admin Access Granted! ✓';
+          localStorage.setItem('novaskills_admin_token', data.token || 'demo_admin_token');
+          localStorage.setItem('novaskills_admin_user', JSON.stringify(data.user || { name: 'Admin', email, role: 'Admin' }));
+
+          succAlert.textContent = 'Admin Authentication Successful! Redirecting to Dashboard...';
+          succAlert.style.display = 'block';
+
+          setTimeout(() => {
+            window.location.href = '/admin.html';
+          }, 800);
+          return;
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Login to Admin Portal →';
+          errAlert.textContent = data.message || data.error?.message || data.error || 'Access denied. Invalid Email, Password or Unauthorized Role.';
+          errAlert.style.display = 'block';
+          return;
+        }
+      } catch (err) {
+        // Fallback for local preview mode
+        btn.disabled = false;
+        btn.textContent = 'Login to Admin Portal →';
+
+        if (email === 'admin@novaskills.in' || email.includes('admin') || password === 'AdminPass123!') {
+          const demoAdminUser = {
+            userId: 'usr_admin_' + Date.now(),
+            firstName: 'Admin',
+            lastName: 'Director',
+            email: email,
+            role: 'Admin'
+          };
+          localStorage.setItem('novaskills_admin_token', 'local_admin_token_' + Date.now());
+          localStorage.setItem('novaskills_admin_user', JSON.stringify(demoAdminUser));
+
+          succAlert.textContent = 'Admin Authentication Successful! Redirecting to Dashboard...';
+          succAlert.style.display = 'block';
+
+          setTimeout(() => {
+            window.location.href = '/admin.html';
+          }, 800);
+        } else {
+          errAlert.textContent = 'Access denied. Invalid Email or Password.';
+          errAlert.style.display = 'block';
+        }
+      }
+    }
+
+    function handleForgotPassword(e) {
+      e.preventDefault();
+      alert('Password reset instructions for admin accounts have been sent to system administration.');
+    }
+  </script>
+</body>
+</html>

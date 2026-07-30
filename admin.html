@@ -6,6 +6,25 @@
   <title>Nova Skills — AI Admissions & Lead CRM Dashboard</title>
   <meta name="description" content="Nova Skills Enterprise AI Career Advisor Admissions Dashboard & Communication Automation Hub.">
   <link rel="stylesheet" href="/css/styles.min.css?v=1.1.0">
+  <script>
+    (function protectAdminRoute() {
+      const token = localStorage.getItem('novaskills_admin_token') || localStorage.getItem('novaskills_token');
+      const userRaw = localStorage.getItem('novaskills_admin_user') || localStorage.getItem('novaskills_user');
+      let user = null;
+      try { user = userRaw ? JSON.parse(userRaw) : null; } catch(e) {}
+
+      if (!token || !user) {
+        window.location.href = '/admin/login/';
+        return;
+      }
+
+      const role = String(user.role || '').toLowerCase();
+      if (role !== 'admin' && role !== 'superadmin' && role !== 'super_admin' && role !== 'counsellor') {
+        window.location.href = '/admin/login/';
+        return;
+      }
+    })();
+  </script>
   <style>
     :root {
       --bg-dark: #011731;
@@ -176,6 +195,7 @@
         <div class="admin-nav-item" onclick="switchTab('leads', this)">👥 Leads</div>
         <div class="admin-nav-item" onclick="switchTab('certificates', this)">📜 Certificates</div>
         <div class="admin-nav-item" onclick="switchTab('automation', this)">⚡ Automation & Logs</div>
+        <div class="admin-nav-item" onclick="handleAdminLogout()" style="margin-top:auto; color:#f87171">🚪 Admin Logout</div>
       </nav>
     </aside>
 
@@ -255,6 +275,12 @@
       const target = document.getElementById('view-' + tabId);
       if (target) target.classList.add('active');
       if (navEl) navEl.classList.add('active');
+    }
+
+    function handleAdminLogout() {
+      localStorage.removeItem('novaskills_admin_token');
+      localStorage.removeItem('novaskills_admin_user');
+      window.location.href = '/admin/login/';
     }
 
     async function testAutomationTrigger() {

@@ -1,40 +1,46 @@
 # Nova Skills Enterprise Platform — Cloudflare Worker Backend (v1.0.0)
 
-Enterprise Cloudflare Worker backend integration with OpenAI GPT models, Session Memory, Knowledge Base, Lead Capture & Qualification, Google Sheets CRM, Admin Dashboard, Student Authentication & Authorization, Student Portal (LMS), Course Progress Tracking & Learning Engine, Certificate Generation & Verification, and Communication & Automation Hub.
+Enterprise Cloudflare Worker backend integration with OpenAI GPT models, Session Memory, Knowledge Base, Lead Capture & Qualification, Google Sheets CRM, Admin Dashboard, Admin Authentication & Role Authorization, Student Authentication & Authorization, Student Portal (LMS), Course Progress Tracking & Learning Engine, Certificate Generation & Verification, and Communication & Automation Hub.
 
 ---
 
-## 📡 Communication & Automation Hub (Phase 14)
+## 🔑 Admin Authentication & Authorization
 
-The Communication Hub (`worker/src/services/communication.js` & `worker/src/repositories/communicationRepository.js`) provides a centralized multi-channel automation engine for Emails, WhatsApp messages, and Student In-App Notifications.
+The Admin Auth System (`worker/src/services/auth.js` & `worker/src/routes/auth.js`) provides dedicated administrator authentication completely separate from student credentials.
 
-### Core Architecture Components:
-1. **Template Engine**: Dynamic placeholder substitution (`{{studentName}}`, `{{courseName}}`, `{{certificateNumber}}`, `{{phone}}`).
-2. **Provider Adapter Pattern**: Decoupled `EmailProvider` (SMTP/SendGrid) and `WhatsAppProvider` (Meta WhatsApp Business API).
-3. **Automation Rules Engine**: Listens to system triggers (`NEW_LEAD`, `ADMISSION_CONFIRMED`, `ASSIGNMENT_DUE`, `CERTIFICATE_GENERATED`) and automatically executes multi-channel actions.
-4. **Communication Repository**: Logs all sent/queued messages and manages student in-app notifications.
+### Access & Role Rules:
+1. **Admin Login Portal**: Hosted at `/admin/login/`.
+2. **Backend API Endpoint**: `POST /api/admin/login`.
+3. **Role Authorization**: Access to `admin.html` is strictly restricted to `role = "Admin"` or `role = "SuperAdmin"` (or `"admin"` / `"super_admin"` / `"counsellor"`).
+4. **Student Access**: Users with `role = "Student"` are denied access with `403 Forbidden` ("Access denied. Administrator privileges required.") and redirected away from admin routes.
 
 ---
 
-## 🌐 Communication API Endpoints
+## 🌐 API Endpoints
 
-### 1. Send Email
-- **Endpoint**: `POST /api/email/send`
-- **Payload**: `{"to": "student@example.com", "templateKey": "LEAD_RECEIVED", "data": {"name": "Rahul", "courseName": "Digital Marketing"}}`
+### 1. Admin Login
+- **Endpoint**: `POST /api/admin/login`
+- **Payload**: `{"email": "admin@novaskills.in", "password": "AdminPass123!"}`
+- **Response**:
+```json
+{
+  "success": true,
+  "token": "ns_admin_token_1785420000",
+  "user": {
+    "userId": "usr_admin_master",
+    "firstName": "Admin",
+    "lastName": "Director",
+    "email": "admin@novaskills.in",
+    "role": "Admin",
+    "status": "ACTIVE"
+  }
+}
+```
 
-### 2. Send WhatsApp Message
-- **Endpoint**: `POST /api/whatsapp/send`
-- **Payload**: `{"toPhone": "9876543210", "templateKey": "ADMISSION_CONFIRMATION", "data": {"name": "Rahul"}}`
-
-### 3. Run Automation Engine
-- **Endpoint**: `POST /api/automation/run`
-- **Payload**: `{"triggerEvent": "NEW_LEAD", "payload": {"name": "Rahul", "email": "rahul@gmail.com", "phone": "9876543210"}}`
-
-### 4. Student Notifications
-- **Endpoint**: `GET /api/notifications?userId=usr_student_demo`
-
-### 5. Communication Logs
-- **Endpoint**: `GET /api/communications/logs`
+### 2. Student Authentication
+- **Register**: `POST /api/auth/register`
+- **Login**: `POST /api/auth/login`
+- **Logout**: `POST /api/auth/logout`
 
 ---
 

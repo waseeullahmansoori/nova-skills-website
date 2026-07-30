@@ -38,7 +38,7 @@ export default {
         response = await handleHealthRoute(request, env);
       } else if (request.method === 'POST' && (pathname === '/api/chat' || pathname === '/api/ai/chat')) {
         response = await handleChatRoute(request, env);
-      } else if (pathname.startsWith('/api/auth')) {
+      } else if (pathname.startsWith('/api/auth') || pathname.startsWith('/api/admin')) {
         response = await handleAuthRoute(request, env);
       } else if (pathname.startsWith('/api/progress')) {
         response = await handleProgressRoute(request, env);
