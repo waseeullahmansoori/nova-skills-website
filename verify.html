@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Verification — Nova Skills Education Institute</title>
+  <meta name="description" content="Verify the authenticity of official Nova Skills diplomas, course completion certificates, and credentials.">
+  <link rel="stylesheet" href="/css/styles.min.css?v=1.1.0">
+  <style>
+    :root {
+      --bg-dark: #011731;
+      --panel-bg: rgba(2, 34, 69, 0.75);
+      --panel-border: rgba(255, 255, 255, 0.12);
+      --accent-cyan: #0599a8;
+      --accent-light: #38bdf8;
+      --gold: #f59e0b;
+    }
+
+    body {
+      background: var(--bg-dark) radial-gradient(circle at top right, rgba(5, 153, 168, 0.15), transparent 60%);
+      color: #ffffff;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .verify-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .verify-brand {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .verify-brand span { color: var(--accent-light); }
+
+    .verify-box {
+      width: 100%;
+      max-width: 680px;
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(12px);
+    }
+
+    .search-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .search-input {
+      flex-grow: 1;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--panel-border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      color: #fff;
+      font-size: 1rem;
+    }
+    .search-input:focus { outline: none; border-color: var(--accent-light); }
+
+    .verify-btn {
+      background: var(--accent-cyan);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 14px 24px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    .verify-btn:hover { background: #028491; }
+
+    /* Result Card */
+    .result-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      margin-bottom: 24px;
+    }
+    .badge-valid { background: rgba(34, 197, 94, 0.2); border: 1px solid rgba(34, 197, 94, 0.4); color: #4ade80; }
+    .badge-invalid { background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; }
+
+    /* Printable Certificate Frame */
+    .cert-frame {
+      background: #ffffff;
+      color: #0f172a;
+      border: 12px double #0599a8;
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+    }
+
+    .cert-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #011731;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .cert-sub {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 24px;
+    }
+
+    .cert-student {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0599a8;
+      border-bottom: 2px solid #0599a8;
+      display: inline-block;
+      padding: 0 20px 4px;
+      margin-bottom: 16px;
+    }
+
+    .cert-course {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 24px;
+    }
+
+    .cert-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 36px;
+      font-size: 0.82rem;
+      color: #475569;
+      text-align: left;
+    }
+
+    .seal-badge {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.7rem;
+      text-align: center;
+      border: 3px solid #fff;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="verify-header">
+    <div class="verify-brand">Nova <span>Skills</span></div>
+    <div style="color:var(--text-muted); margin-top:4px">Official Credential Verification Portal</div>
+  </div>
+
+  <div class="verify-box">
+    <div class="search-row">
+      <input type="text" class="search-input" id="cert-code-input" placeholder="Enter Certificate Number (e.g. NS-DM-2026-000124)">
+      <button type="button" class="verify-btn" onclick="verifyCertificate()">Verify →</button>
+    </div>
+
+    <div id="verify-result-container">
+      <!-- Dynamic verification result output -->
+    </div>
+  </div>
+
+  <script>
+    async function verifyCertificate() {
+      const code = document.getElementById('cert-code-input').value.trim();
+      const container = document.getElementById('verify-result-container');
+      if (!code) {
+        alert('Please enter a valid certificate number.');
+        return;
+      }
+
+      container.innerHTML = '<div style="text-align:center; padding:20px; color:var(--text-muted)">Verifying credential authenticity...</div>';
+
+      try {
+        const res = await fetch(`/api/verify/${code}`);
+        const data = await res.json();
+
+        if (data.isValid && data.certificate) {
+          const c = data.certificate;
+          container.innerHTML = `
+            <div style="text-align:center">
+              <div class="result-badge badge-valid">✓ OFFICIAL VERIFIED CERTIFICATE</div>
+            </div>
+
+            <div class="cert-frame">
+              <div class="cert-title">Certificate of Completion</div>
+              <div class="cert-sub">This is to officially certify that</div>
+              <div class="cert-student">${c.studentName}</div>
+              <div class="cert-sub">has successfully completed the enterprise training program for</div>
+              <div class="cert-course">${c.courseName}</div>
+
+              <div class="cert-footer">
+                <div>
+                  <p style="margin:2px 0"><strong>Certificate ID:</strong> ${c.certificateNumber}</p>
+                  <p style="margin:2px 0"><strong>Issue Date:</strong> ${c.issueDate}</p>
+                  <p style="margin:2px 0"><strong>Grade Achieved:</strong> ${c.grade} (${c.percentage}%)</p>
+                </div>
+                <div class="seal-badge">OFFICIAL<br>SEAL</div>
+                <div style="text-align:right">
+                  <p style="margin:2px 0; border-bottom:1px solid #cbd5e1; padding-bottom:2px"><em>${c.trainerName}</em></p>
+                  <p style="margin:2px 0">Lead Industry Instructor</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align:center; margin-top:20px">
+              <button type="button" class="verify-btn" onclick="window.print()">🖨️ Print Verified Copy</button>
+            </div>
+          `;
+        } else {
+          container.innerHTML = `
+            <div style="text-align:center">
+              <div class="result-badge badge-invalid">✕ INVALID OR REVOKED CERTIFICATE</div>
+              <p style="color:#f87171; margin-top:12px">${data.message || 'No active certificate record matches this number.'}</p>
+            </div>
+          `;
+        }
+      } catch (err) {
+        container.innerHTML = '<div style="text-align:center; color:#f87171; padding:20px">Verification server connection error.</div>';
+      }
+    }
+
+    // Auto-verify if code query parameter exists in URL
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get('code') || urlParams.get('number');
+      if (code) {
+        document.getElementById('cert-code-input').value = code;
+        verifyCertificate();
+      } else {
+        document.getElementById('cert-code-input').value = 'NS-DM-2026-000124';
+        verifyCertificate();
+      }
+    });
+  </script>
+</body>
+</html>

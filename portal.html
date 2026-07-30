@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal — Nova Skills Learning Experience Platform</title>
+  <meta name="description" content="Nova Skills Student Portal LMS platform for online courses, AI mentor, learning roadmap, notifications, and certificates.">
+  <link rel="stylesheet" href="/css/styles.min.css?v=1.1.0">
+  <style>
+    :root {
+      --bg-dark: #011731;
+      --panel-bg: rgba(2, 34, 69, 0.7);
+      --panel-border: rgba(255, 255, 255, 0.1);
+      --accent-cyan: #0599a8;
+      --accent-light: #38bdf8;
+      --text-white: #ffffff;
+      --text-muted: #94a3b8;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+    }
+
+    .portal-layout {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .portal-sidebar {
+      width: 260px;
+      background: rgba(1, 23, 49, 0.95);
+      border-right: 1px solid var(--panel-border);
+      display: flex;
+      flex-direction: column;
+      shrink: 0;
+    }
+
+    .portal-sidebar-header {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--panel-border);
+    }
+
+    .portal-logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .portal-logo span { color: var(--accent-light); }
+
+    .portal-nav {
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+
+    .portal-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .portal-nav-item:hover, .portal-nav-item.active {
+      background: rgba(5, 153, 168, 0.2);
+      color: var(--text-white);
+      border-left: 3px solid var(--accent-light);
+    }
+
+    .portal-main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: radial-gradient(circle at top right, rgba(5, 153, 168, 0.12), transparent 60%);
+    }
+
+    .portal-topbar {
+      height: 64px;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--panel-border);
+      background: rgba(1, 23, 49, 0.6);
+      backdrop-filter: blur(12px);
+    }
+
+    .portal-page-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .notif-badge-pill {
+      background: #ef4444;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-left: auto;
+    }
+
+    .portal-content {
+      padding: 28px;
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+
+    .portal-view {
+      display: none;
+    }
+    .portal-view.active {
+      display: block;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    .notif-card {
+      background: rgba(2, 34, 69, 0.7);
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .notif-card.unread {
+      border-left: 4px solid var(--accent-light);
+      background: rgba(5, 153, 168, 0.15);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="portal-layout">
+    <aside class="portal-sidebar">
+      <div class="portal-sidebar-header">
+        <div class="portal-logo">Nova <span>LMS</span></div>
+      </div>
+      <nav class="portal-nav">
+        <div class="portal-nav-item active" onclick="switchView('dashboard', this)">📊 Dashboard</div>
+        <div class="portal-nav-item" onclick="switchView('notifications', this)">🔔 Notifications <span class="notif-badge-pill" id="nav-notif-count">2</span></div>
+        <div class="portal-nav-item" onclick="switchView('curriculum', this)">📚 Course Curriculum</div>
+        <div class="portal-nav-item" onclick="switchView('certificates', this)">📜 My Certificates</div>
+        <div class="portal-nav-item" onclick="handleLogout()">🚪 Logout</div>
+      </nav>
+    </aside>
+
+    <main class="portal-main">
+      <header class="portal-topbar">
+        <div class="portal-page-title" id="page-title">Student Learning Dashboard</div>
+        <div><strong>Rahul Sharma</strong></div>
+      </header>
+
+      <div class="portal-content">
+        <!-- 1. DASHBOARD VIEW -->
+        <section id="view-dashboard" class="portal-view active">
+          <h2>👋 Welcome back, Rahul!</h2>
+          <p>You have 2 unread notifications in your Notification Center.</p>
+        </section>
+
+        <!-- 2. NOTIFICATION CENTER VIEW -->
+        <section id="view-notifications" class="portal-view">
+          <h3>🔔 Student Notification Center</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem">Real-time alerts for course updates, assignments, and certificate releases.</p>
+
+          <div id="notifications-list" style="margin-top:20px">
+            <div class="notif-card unread">
+              <div>
+                <strong>📖 Module 3 Performance Marketing Released</strong>
+                <p style="margin:4px 0 0; color:var(--text-muted); font-size:0.86rem">Google Ads Module 3 is now available in your portal curriculum.</p>
+              </div>
+              <button type="button" style="background:none; border:none; color:var(--accent-light); cursor:pointer; font-weight:700" onclick="this.parentElement.classList.remove('unread')">Mark as Read</button>
+            </div>
+
+            <div class="notif-card unread">
+              <div>
+                <strong>⏰ Assignment Due Aug 05</strong>
+                <p style="margin:4px 0 0; color:var(--text-muted); font-size:0.86rem">Google Ads Search Campaign Strategy assignment is due in 6 days.</p>
+              </div>
+              <button type="button" style="background:none; border:none; color:var(--accent-light); cursor:pointer; font-weight:700" onclick="this.parentElement.classList.remove('unread')">Mark as Read</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- OTHER VIEWS PLACEHOLDERS -->
+        <section id="view-curriculum" class="portal-view"><h3>📚 Course Curriculum</h3></section>
+        <section id="view-certificates" class="portal-view"><h3>📜 My Certificates</h3></section>
+      </div>
+    </main>
+  </div>
+
+  <script type="module">
+    import { CommunicationService } from '/js/communicationService.js';
+
+    window.switchView = function(viewId, navEl) {
+      document.querySelectorAll('.portal-view').forEach(v => v.classList.remove('active'));
+      document.querySelectorAll('.portal-nav-item').forEach(i => i.classList.remove('active'));
+
+      const target = document.getElementById('view-' + viewId);
+      if (target) target.classList.add('active');
+      if (navEl) navEl.classList.add('active');
+    };
+
+    window.handleLogout = function() {
+      localStorage.removeItem('novaskills_token');
+      localStorage.removeItem('novaskills_user');
+      window.location.href = '/login.html';
+    };
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const data = await CommunicationService.getNotifications();
+      if (data && data.unreadCount !== undefined) {
+        document.getElementById('nav-notif-count').textContent = data.unreadCount;
+      }
+    });
+  </script>
+</body>
+</html>

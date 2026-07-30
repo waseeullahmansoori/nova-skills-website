@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Login — Nova Skills Education Institute</title>
-  <meta name="description" content="Secure Student Login portal for Nova Skills AI Career Advisor and admissions platform.">
+  <title>Student Registration — Nova Skills Education Institute</title>
+  <meta name="description" content="Create a new student account for Nova Skills courses, AI Career Advisor, and admissions.">
   <link rel="stylesheet" href="/css/styles.min.css?v=1.1.0">
   <style>
     :root {
@@ -24,12 +24,12 @@
       align-items: center;
       justify-content: center;
       margin: 0;
-      padding: 20px;
+      padding: 30px 20px;
     }
 
     .auth-card {
       width: 100%;
-      max-width: 420px;
+      max-width: 480px;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 20px;
@@ -40,7 +40,7 @@
 
     .auth-header {
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .auth-brand {
@@ -56,8 +56,14 @@
       color: #94a3b8;
     }
 
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
     .form-group {
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .form-label {
@@ -73,9 +79,9 @@
       background: rgba(0, 0, 0, 0.35);
       border: 1px solid var(--card-border);
       border-radius: 10px;
-      padding: 12px 14px;
+      padding: 11px 14px;
       color: #fff;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       box-sizing: border-box;
       transition: border-color 0.2s;
     }
@@ -86,20 +92,20 @@
       box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
     }
 
-    .form-row-between {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.82rem;
-      margin-bottom: 22px;
+    .password-hint {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      margin-top: 4px;
     }
 
     .checkbox-label {
       display: flex;
-      align-items: center;
-      gap: 6px;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.82rem;
       color: #cbd5e1;
       cursor: pointer;
+      margin-bottom: 20px;
     }
 
     .auth-btn {
@@ -163,44 +169,67 @@
   <div class="auth-card">
     <div class="auth-header">
       <div class="auth-brand">Nova <span>Skills</span></div>
-      <div class="auth-subtitle">Student & Admissions Login Portal</div>
+      <div class="auth-subtitle">Create your Student Account</div>
     </div>
 
     <div class="alert alert-error" id="alert-error"></div>
     <div class="alert alert-success" id="alert-success"></div>
 
-    <form id="login-form" onsubmit="handleLogin(event)">
+    <form id="register-form" onsubmit="handleRegister(event)">
+      <div class="form-row-2">
+        <div class="form-group">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" id="firstName" class="form-input" placeholder="Rahul" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" id="lastName" class="form-input" placeholder="Sharma" required>
+        </div>
+      </div>
+
       <div class="form-group">
         <label for="email" class="form-label">Email Address</label>
-        <input type="email" id="email" class="form-input" placeholder="student@example.com" required>
+        <input type="email" id="email" class="form-input" placeholder="rahul@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="form-label">Mobile Number</label>
+        <input type="tel" id="phone" class="form-input" placeholder="9876543210" required>
       </div>
 
       <div class="form-group">
         <label for="password" class="form-label">Password</label>
         <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+        <div class="password-hint">Min 8 characters (Must include uppercase, lowercase & number)</div>
       </div>
 
-      <div class="form-row-between">
-        <label class="checkbox-label">
-          <input type="checkbox" id="remember-me"> Remember me
-        </label>
-        <a href="#" class="auth-link" onclick="handleForgotPassword(event)">Forgot Password?</a>
+      <div class="form-group">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" id="confirmPassword" class="form-input" placeholder="••••••••" required>
       </div>
 
-      <button type="submit" class="auth-btn" id="submit-btn">Login to Account →</button>
+      <label class="checkbox-label">
+        <input type="checkbox" id="terms" required>
+        <span>I agree to the <a href="/terms-and-conditions/" class="auth-link" target="_blank">Terms & Conditions</a> and <a href="/privacy-policy/" class="auth-link" target="_blank">Privacy Policy</a></span>
+      </label>
+
+      <button type="submit" class="auth-btn" id="submit-btn">Create Student Account →</button>
     </form>
 
     <div class="auth-footer">
-      Don't have an account? <a href="/register.html" class="auth-link">Register Now</a>
+      Already have an account? <a href="/login.html" class="auth-link">Log In</a>
     </div>
   </div>
 
   <script>
-    async function handleLogin(e) {
+    async function handleRegister(e) {
       e.preventDefault();
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
       const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
       const password = document.getElementById('password').value;
-      const rememberMe = document.getElementById('remember-me').checked;
+      const confirmPassword = document.getElementById('confirmPassword').value;
 
       const btn = document.getElementById('submit-btn');
       const errAlert = document.getElementById('alert-error');
@@ -208,54 +237,52 @@
 
       errAlert.style.display = 'none';
       succAlert.style.display = 'none';
+
+      if (password !== confirmPassword) {
+        errAlert.textContent = 'Passwords do not match. Please re-enter your password.';
+        errAlert.style.display = 'block';
+        return;
+      }
+
       btn.disabled = true;
-      btn.textContent = 'Authenticating...';
+      btn.textContent = 'Creating Account...';
 
       try {
-        const res = await fetch('/api/auth/login', {
+        const res = await fetch('/api/auth/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, password, rememberMe })
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            email,
+            phone,
+            password,
+            role: 'Student'
+          })
         });
 
         const data = await res.json();
         btn.disabled = false;
-        btn.textContent = 'Login to Account →';
+        btn.textContent = 'Create Student Account →';
 
         if (res.ok && data.success) {
-          localStorage.setItem('novaskills_token', data.token);
-          localStorage.setItem('novaskills_user', JSON.stringify(data.user));
-
-          succAlert.textContent = 'Login successful! Redirecting...';
+          succAlert.textContent = 'Account created successfully! Redirecting to login...';
           succAlert.style.display = 'block';
+          document.getElementById('register-form').reset();
 
           setTimeout(() => {
-            if (data.user.role === 'Admin' || data.user.role === 'SuperAdmin' || data.user.role === 'Counsellor') {
-              window.location.href = '/admin.html';
-            } else {
-              window.location.href = '/courses.html';
-            }
-          }, 1000);
+            window.location.href = '/login.html';
+          }, 1500);
         } else {
-          errAlert.textContent = data.error?.message || data.error || 'Invalid login credentials.';
+          errAlert.textContent = data.error?.message || data.error || 'Failed to register account.';
           errAlert.style.display = 'block';
         }
       } catch (err) {
         btn.disabled = false;
-        btn.textContent = 'Login to Account →';
+        btn.textContent = 'Create Student Account →';
         errAlert.textContent = 'Connection error. Please try again.';
         errAlert.style.display = 'block';
       }
-    }
-
-    function handleForgotPassword(e) {
-      e.preventDefault();
-      const email = document.getElementById('email').value.trim();
-      if (!email) {
-        alert('Please enter your email address above to reset your password.');
-        return;
-      }
-      alert(`Password reset instructions have been sent to ${email}`);
     }
   </script>
 </body>

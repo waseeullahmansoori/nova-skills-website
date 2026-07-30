@@ -1,0 +1,23 @@
+{
+  "name": "novaskills-ai-worker",
+  "version": "1.0.0",
+  "description": "Nova Skills AI Career Advisor — Enterprise Cloudflare Worker Backend",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "keywords": [
+    "cloudflare-worker",
+    "ai-career-advisor",
+    "nova-skills",
+    "openai-gpt"
+  ],
+  "author": "Nova Skills Development Team",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "wrangler": "^3.10.0"
+  }
+}

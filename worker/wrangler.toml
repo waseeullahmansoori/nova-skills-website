@@ -1,0 +1,23 @@
+name = "novaskills-ai-worker"
+main = "src/index.js"
+compatibility_date = "2026-07-30"
+
+# Routes configuration
+# routes = [
+#   { pattern = "novaskills.in/api/*", zone_name = "novaskills.in" }
+# ]
+
+[vars]
+ENVIRONMENT = "production"
+API_VERSION = "1.0.0"
+MAX_REQUEST_LENGTH = "500"
+
+# Future Secret Bindings (Do NOT commit secret values):
+# OPENAI_API_KEY = "set-via-wrangler-secret"
+# GOOGLE_SHEETS_WEBHOOK_URL = "set-via-wrangler-secret"
+# WHATSAPP_API_TOKEN = "set-via-wrangler-secret"
+
+# Future KV Storage & D1 Bindings:
+# [[kv_namespaces]]
+# binding = "AI_SESSIONS"
+# id = "<YOUR_KV_NAMESPACE_ID>"

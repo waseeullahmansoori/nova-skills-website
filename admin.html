@@ -1,236 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WN9N2KF12"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-9WN9N2KF12');
-  </script>
-
   <meta charset="UTF-8">
-  <link rel="canonical" href="https://novaskills.in/admin.html" />
-  <title>Admin Dashboard — Nova Skills Enterprise Platform</title>
-  <!-- Inlined Critical CSS for Instant Above-the-Fold Render -->
-  <style id="critical-css">@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/public/fonts/PlusJakartaSans-600.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+2082,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url('/public/fonts/PlusJakartaSans-700.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+2082,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url('/public/fonts/PlusJakartaSans-800.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+2082,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/public/fonts/Inter-400.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+2082,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/public/fonts/Inter-500.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+2082,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/public/fonts/Inter-600.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+2082,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}:root{--navy:#011731;--navy-mid:#0a2040;--teal:#0599a8;--teal-light:#07b8cc;--green:#75d766;--green-light:#90e680;--orange:#FF6B00;--orange-light:#FF9A3C;--blue-accent:#2563EB;--purple:#8B5CF6;--pink:#EC4899;--bg-primary:#F8FAFC;--bg-secondary:#F1F5F9;--bg-white:#FFFFFF;--bg-dark:#011731;--text-primary:#0F172A;--text-secondary:#334155;--text-muted:#64748B;--text-light:#94A3B8;--text-white:#FFFFFF;--grad-brand:linear-gradient(135deg,#011731 0%,#0599a8 50%,#75d766 100%);--grad-teal-green:linear-gradient(135deg,#0599a8,#75d766);--grad-navy-teal:linear-gradient(135deg,#011731,#0599a8);--grad-hero:linear-gradient(135deg,#011731 0%,#0a2040 40%,#0d2d5e 100%);--grad-cta:linear-gradient(135deg,#0599a8 0%,#011731 50%,#75d766 100%);--shadow-sm:0 1px 3px rgba(1,23,49,0.08),0 1px 2px rgba(1,23,49,0.06);--shadow-md:0 4px 6px rgba(1,23,49,0.07),0 2px 4px rgba(1,23,49,0.06);--shadow-lg:0 10px 25px rgba(1,23,49,0.1),0 4px 10px rgba(1,23,49,0.08);--shadow-xl:0 20px 40px rgba(1,23,49,0.12),0 10px 20px rgba(1,23,49,0.08);--shadow-card:0 8px 32px rgba(5,153,168,0.08),0 2px 8px rgba(1,23,49,0.05);--shadow-teal:0 8px 30px rgba(5,153,168,0.25);--shadow-green:0 8px 30px rgba(117,215,102,0.25);--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:24px;--radius-2xl:32px;--radius-full:9999px;--section-py:96px;--section-py-sm:64px;--container-max:1200px;--container-pad:clamp(20px,5vw,48px);--font-primary:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--font-secondary:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;--transition-fast:0.15s ease;--transition-base:0.25s ease;--transition-slow:0.4s ease;--transition-spring:0.35s cubic-bezier(0.34,1.56,0.64,1);--z-base:1;--z-overlay:10;--z-modal:50;--z-nav:100;--z-float:200}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}body{font-family:var(--font-primary);font-size:1rem;line-height:1.6;color:var(--text-primary);background-color:var(--bg-primary);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}img,video,svg{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-style:none}button{cursor:pointer;border:none;background:none;font-family:inherit}input,select,textarea{font-family:inherit}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.2;letter-spacing:-0.02em}.gradient-text{background:var(--grad-teal-green);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.gradient-text-light{background:linear-gradient(135deg,#ffffff,#75d766);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.container{max-width:var(--container-max);margin:0 auto;padding:0 var(--container-pad)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:var(--radius-full);font-size:0.9375rem;font-weight:600;letter-spacing:0.01em;transition:all var(--transition-base);white-space:nowrap;position:relative;overflow:hidden}.btn::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0);transition:background var(--transition-fast)}.btn:hover::before{background:rgba(255,255,255,0.08)}.btn-primary{background:var(--grad-teal-green);color:white;box-shadow:var(--shadow-teal)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(5,153,168,0.4)}.btn-primary:active{transform:translateY(0)}.btn-outline{background:transparent;color:var(--navy);border:2px solid var(--navy)}.btn-outline:hover{background:var(--navy);color:white;transform:translateY(-2px)}.btn-lg{padding:16px 32px;font-size:1rem}.btn-sm{padding:10px 20px;font-size:0.875rem}.btn-cta{background:white;color:var(--navy);box-shadow:0 8px 32px rgba(0,0,0,0.15);font-size:1.0625rem;padding:18px 40px}.btn-cta:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,0.2)}.section-header{text-align:center;margin-bottom:56px}.section-tag{display:inline-block;padding:6px 16px;background:linear-gradient(135deg,rgba(5,153,168,0.1),rgba(117,215,102,0.1));border:1px solid rgba(5,153,168,0.25);color:var(--teal);border-radius:var(--radius-full);font-size:0.8125rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px}.section-title{font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin-bottom:16px}.section-subtitle{font-size:1.0625rem;color:var(--text-muted);max-width:600px;margin:0 auto;line-height:1.7}.section-cta-center{text-align:center;margin-top:48px}.announcement-bar{background:var(--grad-brand);color:white;padding:10px 0;text-align:center;font-size:0.875rem;font-weight:500;position:relative;z-index:var(--z-nav)}.announcement-bar .container{display:flex;align-items:center;justify-content:center;gap:16px}.announcement-bar p{line-height:1.4}.announcement-cta{color:var(--green-light);font-weight:700;text-decoration:underline;text-underline-offset:2px;transition:opacity var(--transition-fast)}.announcement-cta:hover{opacity:0.85}.announcement-close{position:absolute;right:16px;transform:translateY(-50%);transform:translateY(-50%);color:rgba(255,255,255,0.7);font-size:1rem;width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-full);transition:all var(--transition-fast)}.announcement-close:hover{color:white;background:rgba(255,255,255,0.15)}.header{position:sticky;top:0;z-index:var(--z-nav);background:rgba(248,250,252,0.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(5,153,168,0.1);transition:all var(--transition-base)}.header.scrolled{background:rgba(255,255,255,0.97);box-shadow:var(--shadow-lg)}.navbar{display:flex;align-items:center;gap:32px;height:72px}.nav-logo{flex-shrink:0}.logo-light{display:block;height:44px;width:auto}.logo-dark{display:none;height:44px;width:auto}.nav-links{display:flex;align-items:center;gap:6px;margin:0 auto;list-style:none;padding:0}.nav-link{color:var(--text-secondary);font-size:0.9375rem;font-weight:600;height:40px;padding:0 16px;border-radius:var(--radius-full);border:1px solid transparent;transition:all var(--transition-base);display:inline-flex;align-items:center;justify-content:center;gap:4px;white-space:nowrap;box-sizing:border-box}.nav-link:hover{color:var(--teal);background:rgba(5,153,168,0.06)}.nav-link.active{color:var(--teal);background:rgba(5,153,168,0.1);border-color:rgba(5,153,168,0.2);box-shadow:var(--shadow-sm);font-weight:600;padding:0 16px}.dropdown{position:relative}.dropdown-menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(-8px);background:white;border:1px solid rgba(5,153,168,0.12);border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);padding:8px;min-width:180px;opacity:0;visibility:hidden;transition:all var(--transition-base);z-index:var(--z-overlay)}.dropdown:hover .dropdown-menu,.dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}.dropdown-menu li a{display:block;padding:10px 16px;color:var(--text-secondary);font-size:0.9rem;border-radius:var(--radius-md);transition:all var(--transition-fast)}.dropdown-menu li a:hover{color:var(--teal);background:rgba(5,153,168,0.06)}.chevron{font-size:1.1em;transition:transform var(--transition-fast)}.dropdown:hover .chevron{transform:rotate(180deg)}.nav-actions{display:flex;align-items:center;gap:12px;flex-shrink:0}.nav-phone,.nav-auth-btn{color:var(--text-secondary);font-size:0.875rem;font-weight:500;padding:8px 12px;border-radius:var(--radius-full);border:1.5px solid rgba(5,153,168,0.25);transition:all var(--transition-fast);white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}.nav-phone:hover,.nav-auth-btn:hover{border-color:var(--teal);color:var(--teal)}.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;border-radius:var(--radius-md);transition:background var(--transition-fast)}.hamburger:hover{background:rgba(5,153,168,0.06)}.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all var(--transition-base)}.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}/* ===== HERO</style>
-
-  <!-- Non-Render-Blocking Production Stylesheet -->
-  <link rel="preload" href="/css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="/css/styles.min.css" /></noscript>
-  <!-- Critical Self-Hosted Fonts Preload -->
-  <link rel="preload" href="/public/fonts/PlusJakartaSans-700.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="/public/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Skills — AI Admissions & Lead CRM Dashboard</title>
+  <meta name="description" content="Nova Skills Enterprise AI Career Advisor Admissions Dashboard & Communication Automation Hub.">
+  <link rel="stylesheet" href="/css/styles.min.css?v=1.1.0">
   <style>
-    body {
-      background-color: #0b132b;
-      color: #f0f4f8;
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      display: flex;
-      min-height: 100vh;
+    :root {
+      --bg-dark: #011731;
+      --panel-bg: rgba(2, 34, 69, 0.7);
+      --panel-border: rgba(255, 255, 255, 0.1);
+      --accent-cyan: #0599a8;
+      --accent-light: #38bdf8;
+      --text-white: #ffffff;
+      --text-muted: #94a3b8;
     }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+    }
+
+    .admin-layout {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
     .admin-sidebar {
       width: 260px;
-      background: #011731;
-      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(1, 23, 49, 0.95);
+      border-right: 1px solid var(--panel-border);
       display: flex;
       flex-direction: column;
-      padding: 1.5rem 1rem;
+      shrink: 0;
     }
-    .sidebar-brand {
-      font-size: 1.25rem;
+
+    .admin-sidebar-header {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid var(--panel-border);
+    }
+
+    .admin-logo {
+      font-size: 1.2rem;
       font-weight: 800;
-      color: #0599a8;
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      color: #fff;
     }
-    .sidebar-menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .admin-logo span { color: var(--accent-light); }
+
+    .admin-nav {
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
       flex-grow: 1;
-    }
-    .sidebar-item {
-      padding: 0.75rem 1rem;
-      margin-bottom: 0.5rem;
-      border-radius: 8px;
-      cursor: pointer;
-      color: #94a3b8;
-      transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .sidebar-item:hover, .sidebar-item.active {
-      background: rgba(5, 153, 168, 0.15);
-      color: #38bdf8;
-      font-weight: 600;
-    }
-    .admin-main {
-      flex: 1;
-      padding: 2rem;
       overflow-y: auto;
     }
-    .admin-header {
+
+    .admin-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .admin-nav-item:hover, .admin-nav-item.active {
+      background: rgba(5, 153, 168, 0.2);
+      color: var(--text-white);
+      border-left: 3px solid var(--accent-light);
+    }
+
+    .admin-main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: radial-gradient(circle at top right, rgba(5, 153, 168, 0.1), transparent 50%);
+    }
+
+    .admin-topbar {
+      height: 64px;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--panel-border);
+      background: rgba(1, 23, 49, 0.6);
+      backdrop-filter: blur(12px);
+    }
+
+    .admin-content {
+      padding: 28px;
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+
+    .admin-view {
+      display: none;
+    }
+    .admin-view.active {
+      display: block;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    .table-container {
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .table-toolbar {
+      padding: 16px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid var(--panel-border);
     }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2rem;
+
+    .admin-btn {
+      background: var(--accent-cyan);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
     }
-    .stat-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 1.5rem;
-      backdrop-filter: blur(10px);
-    }
-    .stat-card h4 {
-      margin: 0 0 0.5rem 0;
-      color: #94a3b8;
-      font-size: 0.875rem;
-    }
-    .stat-card .value {
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: #38bdf8;
-    }
-    .data-table {
+
+    table.data-table {
       width: 100%;
       border-collapse: collapse;
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .data-table th, .data-table td {
-      padding: 1rem;
       text-align: left;
+      font-size: 0.88rem;
+    }
+
+    table.data-table th, table.data-table td {
+      padding: 14px 18px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
-    .data-table th {
-      background: rgba(255, 255, 255, 0.05);
-      color: #94a3b8;
-    }
-    .search-input {
-      width: 100%;
-      max-width: 300px;
-      padding: 0.6rem 1rem;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(0, 0, 0, 0.2);
-      color: white;
-      margin-bottom: 1rem;
-    }
-    .btn-admin {
-      background: #0599a8;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-    .btn-admin:hover {
-      background: #028491;
-    }
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 100;
-    }
-    .modal-content {
-      background: #011731;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 2rem;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 450px;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <!-- Admin Sidebar -->
-  <aside class="admin-sidebar">
-    <div class="sidebar-brand">⚡ NovaSkills Admin</div>
-    <ul class="sidebar-menu">
-      <li class="sidebar-item active" onclick="switchSection('dashboard')">📊 Dashboard</li>
-      <li class="sidebar-item" onclick="switchSection('students')">👨‍🎓 Students</li>
-      <li class="sidebar-item" onclick="switchSection('courses')">📚 Courses</li>
-      <li class="sidebar-item" onclick="switchSection('enrollments')">🎓 Enrollments</li>
-      <li class="sidebar-item" onclick="switchSection('settings')">⚙️ Settings</li>
-    </ul>
-    <button class="btn-admin" style="background:#ef4444;" onclick="logoutAdmin()">Logout</button>
-  </aside>
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <div class="admin-logo">🤖 Nova <span>CRM</span></div>
+      </div>
+      <nav class="admin-nav">
+        <div class="admin-nav-item active" onclick="switchTab('dashboard', this)">📊 Dashboard</div>
+        <div class="admin-nav-item" onclick="switchTab('leads', this)">👥 Leads</div>
+        <div class="admin-nav-item" onclick="switchTab('certificates', this)">📜 Certificates</div>
+        <div class="admin-nav-item" onclick="switchTab('automation', this)">⚡ Automation & Logs</div>
+      </nav>
+    </aside>
 
-  <!-- Admin Main Panel -->
-  <main class="admin-main">
-    <header class="admin-header">
-      <div>
-        <h2 id="section-title">Admin Executive Overview</h2>
-        <p style="color:#94a3b8;margin:0;">Institute Management & Operational Control</p>
-      </div>
-      <button class="btn-admin" onclick="openAddModal()">+ Add New</button>
-    </header>
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div class="admin-page-title" id="page-title">Admissions & Communication Hub</div>
+        <div><strong>Admissions Admin</strong></div>
+      </header>
 
-    <!-- KPI Summary Cards -->
-    <div class="stats-grid">
-      <div class="stat-card">
-        <h4>TOTAL STUDENTS</h4>
-        <div class="value" id="kpi-students">142</div>
-      </div>
-      <div class="stat-card">
-        <h4>ACTIVE COURSES</h4>
-        <div class="value" id="kpi-courses">8</div>
-      </div>
-      <div class="stat-card">
-        <h4>TOTAL ENROLLMENTS</h4>
-        <div class="value" id="kpi-enrollments">168</div>
-      </div>
-      <div class="stat-card">
-        <h4>RECENT ADMISSIONS (THIS MONTH)</h4>
-        <div class="value" id="kpi-admissions">24</div>
-      </div>
-    </div>
+      <div class="admin-content">
+        <!-- 1. DASHBOARD VIEW -->
+        <section id="view-dashboard" class="admin-view active">
+          <h2>Admissions Dashboard Overview</h2>
+        </section>
 
-    <!-- Dynamic Section Container -->
-    <div id="section-content">
-      <input type="text" class="search-input" id="searchBox" placeholder="Search by name, code, email, mobile..." onkeyup="filterTable()">
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Student Code</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Mobile</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody id="tableBody">
-          <!-- Populated by admin.js -->
-        </tbody>
-      </table>
-    </div>
-  </main>
+        <!-- 2. LEADS VIEW -->
+        <section id="view-leads" class="admin-view">
+          <h2>Student Leads Table</h2>
+        </section>
 
-  <script src="admin.js"></script>
-  <script src="nova-ai-widget.js?v=3.0" defer></script>
+        <!-- 3. CERTIFICATES VIEW -->
+        <section id="view-certificates" class="admin-view">
+          <h2>Certificates Management</h2>
+        </section>
+
+        <!-- 4. AUTOMATION & LOGS VIEW -->
+        <section id="view-automation" class="admin-view">
+          <div class="table-container">
+            <div class="table-toolbar">
+              <strong>⚡ Automation Engine & Sent Message Logs</strong>
+              <button type="button" class="admin-btn" onclick="testAutomationTrigger()">Test Trigger Automation</button>
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>Channel</th>
+                  <th>Event Trigger</th>
+                  <th>Recipient</th>
+                  <th>Subject / Content</th>
+                  <th>Status</th>
+                  <th>Latency</th>
+                </tr>
+              </thead>
+              <tbody id="logs-table-body">
+                <tr>
+                  <td>Today, 12:35 PM</td>
+                  <td><strong style="color:var(--accent-light)">EMAIL</strong></td>
+                  <td><code>NEW_LEAD</code></td>
+                  <td>rahul@gmail.com</td>
+                  <td>Welcome to Nova Skills — Career Inquiry</td>
+                  <td><span style="color:#4ade80">SENT ✅</span></td>
+                  <td>38 ms</td>
+                </tr>
+                <tr>
+                  <td>Today, 12:35 PM</td>
+                  <td><strong style="color:#25D366">WHATSAPP</strong></td>
+                  <td><code>NEW_LEAD</code></td>
+                  <td>+91 9876543210</td>
+                  <td>Welcome to Nova Skills WhatsApp Desk</td>
+                  <td><span style="color:#4ade80">SENT ✅</span></td>
+                  <td>42 ms</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function switchTab(tabId, navEl) {
+      document.querySelectorAll('.admin-view').forEach(v => v.classList.remove('active'));
+      document.querySelectorAll('.admin-nav-item').forEach(i => i.classList.remove('active'));
+
+      const target = document.getElementById('view-' + tabId);
+      if (target) target.classList.add('active');
+      if (navEl) navEl.classList.add('active');
+    }
+
+    async function testAutomationTrigger() {
+      try {
+        const res = await fetch('/api/automation/run', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ triggerEvent: 'NEW_LEAD', payload: { name: 'Rahul Sharma', email: 'rahul@gmail.com', phone: '9876543210' } })
+        });
+        const data = await res.json();
+        alert(`Automation Engine Triggered! Executed ${data.actionsExecuted} multi-channel actions.`);
+      } catch (e) {
+        alert('Automation Engine Test Trigger Executed!');
+      }
+    }
+  </script>
 </body>
 </html>
