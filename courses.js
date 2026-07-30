@@ -21,6 +21,7 @@ function getAcademiesData() {
 
 document.addEventListener('DOMContentLoaded', () => {
   currentCourses = [...getCoursesData()];
+  console.log("Total courses loaded:", currentCourses.length);
   initAcademyFilterOptions();
   readUrlParamsAndApply();
   renderCourses();
@@ -65,11 +66,15 @@ function readUrlParamsAndApply() {
 
 /* Render Course Cards */
 function renderCourses() {
+  console.log("renderCourses() called");
   const grid = document.getElementById('courses-grid-page');
   const countEl = document.getElementById('courses-showing-count');
   const noResults = document.getElementById('no-results');
 
+  console.log("Render container exists:", !!grid);
+
   const filtered = filterAndSortCourses();
+  console.log("Filtered courses count:", filtered.length);
 
   if (countEl) countEl.textContent = filtered.length;
 
@@ -82,6 +87,7 @@ function renderCourses() {
   if (noResults) noResults.setAttribute('hidden', '');
 
   if (grid) {
+    console.log("Rendering cards count:", filtered.length);
     grid.innerHTML = filtered.map(c => buildCourseCardHTML(c)).join('');
   }
 
