@@ -5496,7 +5496,7 @@ const NS_BLOG_POSTS = [
       "Jobs",
       "India"
     ],
-    "featured": true,
+    "featured": false,
     "trending": true,
     "image": null
   },
