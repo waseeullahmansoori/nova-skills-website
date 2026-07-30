@@ -7,6 +7,7 @@
 'use strict';
 
 let currentBlogCategory = 'all';
+let currentBlogTag = '';
 let currentBlogPage = 1;
 const BLOG_POSTS_PER_PAGE = 9;
 
@@ -20,18 +21,60 @@ function getBlogPosts() {
   return [];
 }
 
-function getPageFromUrl() {
+function readUrlParams() {
   try {
     const params = new URLSearchParams(window.location.search);
-    const p = parseInt(params.get('page'), 10);
-    return (p && !isNaN(p) && p > 0) ? p : 1;
+    const pageParam = parseInt(params.get('page'), 10);
+    currentBlogPage = (pageParam && !isNaN(pageParam) && pageParam > 0) ? pageParam : 1;
+    currentBlogCategory = params.get('category') || 'all';
+    currentBlogTag = params.get('tag') || '';
+    const searchParam = params.get('search') || '';
+
+    const searchInput = document.getElementById('blog-search-input');
+    if (searchInput && searchParam) {
+      searchInput.value = searchParam;
+    }
   } catch (e) {
-    return 1;
+    currentBlogPage = 1;
+    currentBlogCategory = 'all';
+    currentBlogTag = '';
   }
 }
 
+function updateUrlParams() {
+  try {
+    const url = new URL(window.location);
+    if (currentBlogPage > 1) {
+      url.searchParams.set('page', currentBlogPage);
+    } else {
+      url.searchParams.delete('page');
+    }
+
+    if (currentBlogCategory && currentBlogCategory !== 'all') {
+      url.searchParams.set('category', currentBlogCategory);
+    } else {
+      url.searchParams.delete('category');
+    }
+
+    if (currentBlogTag) {
+      url.searchParams.set('tag', currentBlogTag);
+    } else {
+      url.searchParams.delete('tag');
+    }
+
+    const searchVal = document.getElementById('blog-search-input')?.value.trim() || '';
+    if (searchVal) {
+      url.searchParams.set('search', searchVal);
+    } else {
+      url.searchParams.delete('search');
+    }
+
+    window.history.pushState({}, '', url);
+  } catch (e) {}
+}
+
 function initBlog() {
-  currentBlogPage = getPageFromUrl();
+  readUrlParams();
   const posts = getBlogPosts();
   if (posts.length === 0) {
     setTimeout(initBlog, 100);
@@ -51,8 +94,10 @@ if (document.readyState === 'loading') {
 }
 
 window.addEventListener('popstate', () => {
-  currentBlogPage = getPageFromUrl();
+  readUrlParams();
   renderBlogGrid();
+  renderBlogCategories();
+  renderBlogTags();
 });
 
 function renderFeaturedPost() {
@@ -61,10 +106,13 @@ function renderFeaturedPost() {
   if (!container || posts.length === 0) return;
 
   const featured = posts.find(p => p.featured) || posts[0];
-
   const featuredUrl = featured.url || `blog-detail.html?id=${featured.slug}`;
+  const featuredAlt = featured.slug === 'waseeullah-mansoori' 
+    ? 'Waseeullah Mansoori - Founder of Nova Skills' 
+    : featured.title;
+
   const featuredImg = featured.image 
-    ? `<img src="${featured.image}" alt="${featured.title}" style="width:100%; height:100%; object-fit:cover; border-radius:16px;" />` 
+    ? `<img src="${featured.image}" alt="${featuredAlt}" style="width:100%; height:100%; object-fit:cover; border-radius:16px;" loading="eager" />` 
     : `<span style="font-size:4rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.3));">💡</span>`;
 
   container.innerHTML = `
@@ -110,10 +158,20 @@ function renderBlogGrid() {
     return dateB - dateA;
   });
 
-  // 2. Filter posts
+  // 2. Filter posts by category, tag & search
   const filtered = sortedPosts.filter(p => {
-    if (p.featured && !searchVal && currentBlogCategory === 'all') return false; // Exclude featured from main grid when showing all
-    if (currentBlogCategory !== 'all' && p.category.toLowerCase() !== currentBlogCategory.toLowerCase()) return false;
+    // Category Filter
+    if (currentBlogCategory !== 'all' && p.category.toLowerCase() !== currentBlogCategory.toLowerCase()) {
+      return false;
+    }
+
+    // Tag Filter
+    if (currentBlogTag) {
+      const hasTag = p.tags ? p.tags.some(t => t.toLowerCase() === currentBlogTag.toLowerCase()) : false;
+      if (!hasTag) return false;
+    }
+
+    // Search Query (Title, Excerpt, Content, Category, Tags)
     if (searchVal) {
       const matchTitle = p.title.toLowerCase().includes(searchVal);
       const matchExcerpt = p.excerpt.toLowerCase().includes(searchVal);
@@ -121,6 +179,7 @@ function renderBlogGrid() {
       const matchTags = p.tags ? p.tags.some(t => t.toLowerCase().includes(searchVal)) : false;
       if (!matchTitle && !matchExcerpt && !matchCategory && !matchTags) return false;
     }
+
     return true;
   });
 
@@ -131,26 +190,45 @@ function renderBlogGrid() {
     currentBlogPage = totalPages;
   }
 
+  // Update Section Heading
+  const heading = document.getElementById('blog-grid-heading');
+  if (heading) {
+    if (currentBlogTag) {
+      heading.textContent = `Tag: #${currentBlogTag} (${totalPosts})`;
+    } else if (currentBlogCategory !== 'all') {
+      heading.textContent = `${currentBlogCategory} Articles (${totalPosts})`;
+    } else if (searchVal) {
+      heading.textContent = `Search Results for "${searchVal}" (${totalPosts})`;
+    } else {
+      heading.textContent = 'Latest Articles';
+    }
+  }
+
   if (totalPosts === 0) {
     container.innerHTML = `
       <div style="grid-column:1/-1; text-align:center; padding:60px 20px; color:var(--text-muted);">
         <div style="font-size:3rem; margin-bottom:12px;">📝</div>
         <h3>No Articles Found</h3>
-        <p>Try searching for a different keyword or topic.</p>
+        <p>No posts match your active search or filter criteria.</p>
+        <button type="button" class="btn btn-outline" style="margin-top:16px;" onclick="clearAllBlogFilters()">Clear All Filters ✕</button>
       </div>
     `;
     renderBlogPagination(0, 0);
     return;
   }
 
-  // 3. Slice 9 posts per page
+  // 3. Slice exactly 9 posts per page
   const startIndex = (currentBlogPage - 1) * BLOG_POSTS_PER_PAGE;
   const pagePosts = filtered.slice(startIndex, startIndex + BLOG_POSTS_PER_PAGE);
 
   container.innerHTML = pagePosts.map(p => {
     const postUrl = p.url || `blog-detail.html?id=${p.slug}`;
+    const imageAlt = p.slug === 'waseeullah-mansoori' 
+      ? 'Waseeullah Mansoori - Founder of Nova Skills' 
+      : p.title;
+
     const thumbContent = p.image 
-      ? `<img src="${p.image}" alt="${p.title}" style="width:100%; height:100%; object-fit:cover;" />` 
+      ? `<img src="${p.image}" alt="${imageAlt}" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />` 
       : `<span style="font-size:3rem;">${getCategoryEmoji(p.category)}</span>`;
 
     return `
@@ -231,17 +309,9 @@ function renderBlogPagination(totalPosts, totalPages) {
 
 function changeBlogPage(page) {
   currentBlogPage = page;
-
-  // Update browser URL query parameter without page reload
-  try {
-    const url = new URL(window.location);
-    url.searchParams.set('page', page);
-    window.history.pushState({}, '', url);
-  } catch (e) {}
-
+  updateUrlParams();
   renderBlogGrid();
 
-  // Smooth scroll to top of blog section
   const sectionHeader = document.querySelector('.blog-section-header') || document.getElementById('blog-cards-grid');
   if (sectionHeader) {
     sectionHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -257,10 +327,10 @@ function renderBlogCategories() {
 
   const categories = ['all', ...new Set(posts.map(p => p.category))];
 
-  container.innerHTML = categories.map(cat => {
+  let html = categories.map(cat => {
     const count = cat === 'all' ? posts.length : posts.filter(p => p.category === cat).length;
     const label = cat === 'all' ? 'All Categories' : cat;
-    const isActive = currentBlogCategory === cat ? 'active' : '';
+    const isActive = (currentBlogCategory === cat && !currentBlogTag) ? 'active' : '';
     return `
       <button class="blog-category-link ${isActive}" onclick="filterBlogCategory('${cat}')" type="button">
         <span>${label}</span>
@@ -268,22 +338,26 @@ function renderBlogCategories() {
       </button>
     `;
   }).join('');
+
+  if (currentBlogCategory !== 'all' || currentBlogTag || document.getElementById('blog-search-input')?.value.trim()) {
+    html += `
+      <button type="button" class="btn btn-sm btn-outline" style="width:100%; margin-top:12px; font-size:0.8rem;" onclick="clearAllBlogFilters()">
+        Clear All Filters ✕
+      </button>
+    `;
+  }
+
+  container.innerHTML = html;
 }
 
 function filterBlogCategory(cat) {
   currentBlogCategory = cat;
+  currentBlogTag = '';
   currentBlogPage = 1;
-
-  try {
-    const url = new URL(window.location);
-    url.searchParams.set('page', 1);
-    window.history.pushState({}, '', url);
-  } catch(e) {}
-
-  const heading = document.getElementById('blog-grid-heading');
-  if (heading) heading.textContent = cat === 'all' ? 'Latest Articles' : `${cat} Articles`;
+  updateUrlParams();
 
   renderBlogCategories();
+  renderBlogTags();
   renderBlogGrid();
 }
 
@@ -296,27 +370,66 @@ function renderBlogTags() {
 
   const allTags = [...new Set(posts.flatMap(p => p.tags || []))];
 
-  container.innerHTML = allTags.map(tag => `
-    <button class="blog-tag" onclick="searchBlogTag('${tag}')" type="button"># ${tag}</button>
-  `).join('');
+  container.innerHTML = allTags.map(tag => {
+    const isActive = currentBlogTag.toLowerCase() === tag.toLowerCase() ? 'active' : '';
+    return `
+      <button class="blog-tag ${isActive}" onclick="searchBlogTag('${tag}')" type="button"># ${tag}</button>
+    `;
+  }).join('');
 }
 
 function searchBlogTag(tag) {
-  const searchInput = document.getElementById('blog-search-input');
-  if (searchInput) {
-    searchInput.value = tag;
-    currentBlogPage = 1;
-    renderBlogGrid();
+  if (currentBlogTag.toLowerCase() === tag.toLowerCase()) {
+    currentBlogTag = '';
+  } else {
+    currentBlogTag = tag;
   }
+  currentBlogCategory = 'all';
+  currentBlogPage = 1;
+  updateUrlParams();
+
+  renderBlogTags();
+  renderBlogCategories();
+  renderBlogGrid();
 }
 
 window.searchBlogTag = searchBlogTag;
 
+function clearAllBlogFilters() {
+  currentBlogCategory = 'all';
+  currentBlogTag = '';
+  currentBlogPage = 1;
+
+  const searchInput = document.getElementById('blog-search-input');
+  if (searchInput) searchInput.value = '';
+
+  updateUrlParams();
+  renderBlogCategories();
+  renderBlogTags();
+  renderBlogGrid();
+}
+
+window.clearAllBlogFilters = clearAllBlogFilters;
+
 function bindBlogEvents() {
-  document.getElementById('blog-search-input')?.addEventListener('input', () => {
-    currentBlogPage = 1;
-    renderBlogGrid();
-  });
+  const searchInput = document.getElementById('blog-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      currentBlogPage = 1;
+      updateUrlParams();
+      renderBlogGrid();
+      renderBlogCategories();
+    });
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        currentBlogPage = 1;
+        updateUrlParams();
+        renderBlogGrid();
+      }
+    });
+  }
 
   const sidebarNewsForm = document.getElementById('sidebar-newsletter-form');
   sidebarNewsForm?.addEventListener('submit', async (e) => {

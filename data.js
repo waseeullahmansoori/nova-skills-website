@@ -5478,7 +5478,7 @@ const NS_BLOG_POSTS = [
     ],
     "featured": true,
     "trending": true,
-    "image": "/public/images/seo/waseeullah-mansoori.png"
+    "image": "/images/seo/waseeullah-mansoori.png"
   },
   {
     "id": 1,
