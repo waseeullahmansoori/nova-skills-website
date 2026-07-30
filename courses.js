@@ -7,6 +7,16 @@
 
 let currentCourses = [];
 
+function normalizeProgramLevel(level) {
+  if (!level) return '';
+  const str = String(level).trim().toLowerCase();
+  if (str.includes('career')) return 'Career Program';
+  if (str.includes('pro')) return 'Professional Program';
+  if (str.includes('cert')) return 'Certification Course';
+  return level;
+}
+window.normalizeProgramLevel = normalizeProgramLevel;
+
 function getCoursesData() {
   if (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES)) return NS_COURSES;
   if (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) return window.NS_COURSES;
@@ -65,9 +75,9 @@ function readUrlParamsAndApply() {
     if (searchInput) searchInput.value = search;
   }
   if (levelParam) {
-    const norm = typeof normalizeProgramLevel === 'function' ? normalizeProgramLevel(levelParam) : levelParam;
+    const norm = normalizeProgramLevel(levelParam);
     document.querySelectorAll('input[name="programLevel"]').forEach(cb => {
-      const cbNorm = typeof normalizeProgramLevel === 'function' ? normalizeProgramLevel(cb.value) : cb.value;
+      const cbNorm = normalizeProgramLevel(cb.value);
       if (cbNorm === norm) cb.checked = true;
     });
   }
@@ -79,15 +89,11 @@ function readUrlParamsAndApply() {
 
 /* Render Course Cards */
 function renderCourses() {
-  console.log("renderCourses() called");
   const grid = document.getElementById('courses-grid-page');
   const countEl = document.getElementById('courses-showing-count');
   const noResults = document.getElementById('no-results');
 
-  console.log("Render container exists:", !!grid);
-
   const filtered = filterAndSortCourses();
-  console.log("Filtered courses count:", filtered.length);
 
   if (countEl) countEl.textContent = filtered.length;
 
@@ -100,7 +106,6 @@ function renderCourses() {
   if (noResults) noResults.setAttribute('hidden', '');
 
   if (grid) {
-    console.log("Rendering cards count:", filtered.length);
     grid.innerHTML = filtered.map(c => buildCourseCardHTML(c)).join('');
   }
 
@@ -146,9 +151,7 @@ function buildCourseCardHTML(course) {
 function filterAndSortCourses() {
   const searchVal = document.getElementById('filter-search-input')?.value.toLowerCase().trim() || '';
   const selectedAcademies = Array.from(document.querySelectorAll('input[name="academy"]:checked')).map(cb => cb.value);
-  const selectedProgramLevels = Array.from(document.querySelectorAll('input[name="programLevel"]:checked')).map(cb => {
-    return typeof normalizeProgramLevel === 'function' ? normalizeProgramLevel(cb.value) : cb.value;
-  });
+  const selectedProgramLevels = Array.from(document.querySelectorAll('input[name="programLevel"]:checked')).map(cb => normalizeProgramLevel(cb.value));
   const selectedModes = Array.from(document.querySelectorAll('input[name="mode"]:checked')).map(cb => cb.value);
   const selectedLevels = Array.from(document.querySelectorAll('input[name="level"]:checked')).map(cb => cb.value);
   const selectedDurations = Array.from(document.querySelectorAll('input[name="duration"]:checked')).map(cb => cb.value);
@@ -156,7 +159,7 @@ function filterAndSortCourses() {
   const placementOnly = document.getElementById('filter-placement')?.checked || false;
 
   let result = getCoursesData().filter(c => {
-    const normalizedCourseProgLevel = typeof normalizeProgramLevel === 'function' ? normalizeProgramLevel(c.programLevel) : c.programLevel;
+    const courseLevelNorm = normalizeProgramLevel(c.programLevel);
 
     // Search across name, shortDesc, fullDesc, academy, tools, programLevel, curriculum titles
     if (searchVal) {
@@ -171,8 +174,15 @@ function filterAndSortCourses() {
     // Academy filter
     if (selectedAcademies.length > 0 && !selectedAcademies.includes(c.academyId)) return false;
 
-    // Program Level filter
-    if (selectedProgramLevels.length > 0 && !selectedProgramLevels.includes(normalizedCourseProgLevel)) return false;
+    // Program Level filter (ultra-robust matching)
+    if (selectedProgramLevels.length > 0) {
+      const matchLevel = selectedProgramLevels.some(selectedNorm => {
+        return selectedNorm === courseLevelNorm ||
+               (c.programLevel && c.programLevel.toLowerCase().includes(selectedNorm.toLowerCase())) ||
+               (selectedNorm && selectedNorm.toLowerCase().includes((c.programLevel || '').toLowerCase()));
+      });
+      if (!matchLevel) return false;
+    }
 
     // Mode filter
     if (selectedModes.length > 0 && !selectedModes.includes(c.mode)) return false;
@@ -224,6 +234,11 @@ function bindFilterEvents() {
 
   document.querySelectorAll('#filters-sidebar input, #mobile-filters-slot input').forEach(input => {
     input.addEventListener('change', () => {
+      if (input.name && input.value) {
+        document.querySelectorAll(`input[name="${input.name}"][value="${input.value}"]`).forEach(other => {
+          other.checked = input.checked;
+        });
+      }
       if (input.id === 'filter-price-range') {
         const display = document.getElementById('price-max-display');
         if (display) display.textContent = `₹${parseInt(input.value,10).toLocaleString('en-IN')}`;
