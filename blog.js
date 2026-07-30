@@ -1,7 +1,7 @@
 /* ============================================================
-   NOVA SKILLS — Blog Page Logic & Dynamic Pagination
-   Handles: Rendering blog posts, pagination (9 per page), featured article,
-            category filters, keyword search, tag filters, newsletter form
+   NOVA SKILLS — Blog Page Logic & Dynamic Pagination (Production Ready)
+   Handles: 8 posts per page pagination, real-time search, dynamic categories,
+            frequency-sorted tags, Top 5 latest posts sidebar, URL state sync
    ============================================================ */
 
 'use strict';
@@ -9,7 +9,7 @@
 let currentBlogCategory = 'all';
 let currentBlogTag = '';
 let currentBlogPage = 1;
-const BLOG_POSTS_PER_PAGE = 9;
+const BLOG_POSTS_PER_PAGE = 8;
 
 function getBlogPosts() {
   if (typeof window !== 'undefined' && window.NS_BLOG_POSTS && Array.isArray(window.NS_BLOG_POSTS)) {
@@ -84,6 +84,7 @@ function initBlog() {
   renderBlogGrid();
   renderBlogCategories();
   renderBlogTags();
+  renderLatestPosts();
   bindBlogEvents();
 }
 
@@ -98,6 +99,7 @@ window.addEventListener('popstate', () => {
   renderBlogGrid();
   renderBlogCategories();
   renderBlogTags();
+  renderLatestPosts();
 });
 
 function renderFeaturedPost() {
@@ -107,12 +109,13 @@ function renderFeaturedPost() {
 
   const featured = posts.find(p => p.featured) || posts[0];
   const featuredUrl = featured.url || `blog-detail.html?id=${featured.slug}`;
+  const featuredImgPath = featured.featuredImage || featured.image || '/images/seo/waseeullah-mansoori.png';
   const featuredAlt = featured.slug === 'waseeullah-mansoori' 
     ? 'Waseeullah Mansoori - Founder of Nova Skills' 
     : featured.title;
 
-  const featuredImg = featured.image 
-    ? `<img src="${featured.image}" alt="${featuredAlt}" style="width:100%; height:100%; object-fit:cover; border-radius:16px;" loading="eager" />` 
+  const featuredImg = featuredImgPath 
+    ? `<img src="${featuredImgPath}" alt="${featuredAlt}" style="width:100%; height:100%; object-fit:cover; border-radius:16px;" loading="eager" />` 
     : `<span style="font-size:4rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.3));">💡</span>`;
 
   container.innerHTML = `
@@ -131,10 +134,10 @@ function renderFeaturedPost() {
           <div class="blog-author-avatar">${getInitials(featured.author)}</div>
           <div>
             <div class="blog-author-name">${featured.author}</div>
-            <div style="font-size:0.75rem; color:var(--text-muted);">${featured.authorRole}</div>
+            <div style="font-size:0.75rem; color:var(--text-muted);">${featured.authorRole || 'Author'}</div>
           </div>
           <span class="blog-meta-dot">•</span>
-          <span class="blog-read-time">⏱️ ${featured.readTime} min read</span>
+          <span class="blog-read-time">⏱️ ${featured.readingTime || featured.readTime || 8} min read</span>
         </div>
         <div>
           <a href="${featuredUrl}" class="blog-read-more">Read Full Article →</a>
@@ -153,12 +156,12 @@ function renderBlogGrid() {
 
   // 1. Sort latest published blogs first (Date descending)
   const sortedPosts = [...posts].sort((a, b) => {
-    const dateA = new Date(a.date || '2026-01-01');
-    const dateB = new Date(b.date || '2026-01-01');
+    const dateA = new Date(a.publishDate || a.date || '2026-01-01');
+    const dateB = new Date(b.publishDate || b.date || '2026-01-01');
     return dateB - dateA;
   });
 
-  // 2. Filter posts by category, tag & search
+  // 2. Filter posts across Title, Excerpt, Content, Category, Tags, Author
   const filtered = sortedPosts.filter(p => {
     // Category Filter
     if (currentBlogCategory !== 'all' && p.category.toLowerCase() !== currentBlogCategory.toLowerCase()) {
@@ -171,13 +174,18 @@ function renderBlogGrid() {
       if (!hasTag) return false;
     }
 
-    // Search Query (Title, Excerpt, Content, Category, Tags)
+    // Multi-field Search Query
     if (searchVal) {
-      const matchTitle = p.title.toLowerCase().includes(searchVal);
-      const matchExcerpt = p.excerpt.toLowerCase().includes(searchVal);
-      const matchCategory = p.category.toLowerCase().includes(searchVal);
+      const matchTitle = p.title ? p.title.toLowerCase().includes(searchVal) : false;
+      const matchExcerpt = p.excerpt ? p.excerpt.toLowerCase().includes(searchVal) : false;
+      const matchContent = p.content ? p.content.toLowerCase().includes(searchVal) : false;
+      const matchCategory = p.category ? p.category.toLowerCase().includes(searchVal) : false;
+      const matchAuthor = p.author ? p.author.toLowerCase().includes(searchVal) : false;
       const matchTags = p.tags ? p.tags.some(t => t.toLowerCase().includes(searchVal)) : false;
-      if (!matchTitle && !matchExcerpt && !matchCategory && !matchTags) return false;
+
+      if (!matchTitle && !matchExcerpt && !matchContent && !matchCategory && !matchAuthor && !matchTags) {
+        return false;
+      }
     }
 
     return true;
@@ -208,27 +216,28 @@ function renderBlogGrid() {
     container.innerHTML = `
       <div style="grid-column:1/-1; text-align:center; padding:60px 20px; color:var(--text-muted);">
         <div style="font-size:3rem; margin-bottom:12px;">📝</div>
-        <h3>No Articles Found</h3>
-        <p>No posts match your active search or filter criteria.</p>
-        <button type="button" class="btn btn-outline" style="margin-top:16px;" onclick="clearAllBlogFilters()">Clear All Filters ✕</button>
+        <h3 style="font-size:1.4rem; color:var(--navy); margin-bottom:8px;">No articles found.</h3>
+        <p style="font-size:0.95rem; margin-bottom:20px;">No articles match your active search term or filter criteria.</p>
+        <button type="button" class="btn btn-outline" onclick="clearAllBlogFilters()">Clear All Filters ✕</button>
       </div>
     `;
     renderBlogPagination(0, 0);
     return;
   }
 
-  // 3. Slice exactly 9 posts per page
+  // 3. Slice exactly 8 posts per page
   const startIndex = (currentBlogPage - 1) * BLOG_POSTS_PER_PAGE;
   const pagePosts = filtered.slice(startIndex, startIndex + BLOG_POSTS_PER_PAGE);
 
   container.innerHTML = pagePosts.map(p => {
     const postUrl = p.url || `blog-detail.html?id=${p.slug}`;
+    const imgPath = p.featuredImage || p.image;
     const imageAlt = p.slug === 'waseeullah-mansoori' 
       ? 'Waseeullah Mansoori - Founder of Nova Skills' 
       : p.title;
 
-    const thumbContent = p.image 
-      ? `<img src="${p.image}" alt="${imageAlt}" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />` 
+    const thumbContent = imgPath 
+      ? `<img src="${imgPath}" alt="${imageAlt}" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />` 
       : `<span style="font-size:3rem;">${getCategoryEmoji(p.category)}</span>`;
 
     return `
@@ -245,7 +254,7 @@ function renderBlogGrid() {
             <div class="blog-author-avatar">${getInitials(p.author)}</div>
             <span class="blog-author-name">${p.author}</span>
             <span class="blog-meta-dot">•</span>
-            <span class="blog-read-time">${p.readTime} min</span>
+            <span class="blog-read-time">${p.readingTime || p.readTime || 8} min</span>
           </div>
           <a href="${postUrl}" class="blog-read-more">Read Article →</a>
         </div>
@@ -253,7 +262,7 @@ function renderBlogGrid() {
     `;
   }).join('');
 
-  // 4. Render Pagination Controls
+  // 4. Render Pagination Controls (8 posts/page)
   renderBlogPagination(totalPosts, totalPages);
 }
 
@@ -293,6 +302,18 @@ function renderBlogPagination(totalPosts, totalPages) {
     `;
   }
 
+  // Last Page Button (if > 2 pages)
+  if (totalPages > 2 && currentBlogPage < totalPages) {
+    html += `
+      <button type="button" 
+              class="pagination-btn" 
+              onclick="changeBlogPage(${totalPages})" 
+              aria-label="Last Page (${totalPages})">
+        Last ⟫
+      </button>
+    `;
+  }
+
   // Next → Button
   const isNextDisabled = currentBlogPage >= totalPages;
   html += `
@@ -325,16 +346,23 @@ function renderBlogCategories() {
   const posts = getBlogPosts();
   if (!container || posts.length === 0) return;
 
-  const categories = ['all', ...new Set(posts.map(p => p.category))];
+  // Extract all categories dynamically and count posts per category
+  const counts = {};
+  posts.forEach(p => {
+    const cat = p.category || 'General';
+    counts[cat] = (counts[cat] || 0) + 1;
+  });
+
+  const categories = ['all', ...Object.keys(counts).sort()];
 
   let html = categories.map(cat => {
-    const count = cat === 'all' ? posts.length : posts.filter(p => p.category === cat).length;
+    const count = cat === 'all' ? posts.length : counts[cat];
     const label = cat === 'all' ? 'All Categories' : cat;
-    const isActive = (currentBlogCategory === cat && !currentBlogTag) ? 'active' : '';
+    const isActive = (currentBlogCategory.toLowerCase() === cat.toLowerCase() && !currentBlogTag) ? 'active' : '';
     return `
       <button class="blog-category-link ${isActive}" onclick="filterBlogCategory('${cat}')" type="button">
         <span>${label}</span>
-        <span class="cat-count">${count}</span>
+        <span class="cat-count">(${count})</span>
       </button>
     `;
   }).join('');
@@ -368,12 +396,24 @@ function renderBlogTags() {
   const posts = getBlogPosts();
   if (!container || posts.length === 0) return;
 
-  const allTags = [...new Set(posts.flatMap(p => p.tags || []))];
+  // Extract all tags and count frequency
+  const tagCounts = {};
+  posts.forEach(p => {
+    if (p.tags && Array.isArray(p.tags)) {
+      p.tags.forEach(t => {
+        const cleanTag = t.trim();
+        tagCounts[cleanTag] = (tagCounts[cleanTag] || 0) + 1;
+      });
+    }
+  });
 
-  container.innerHTML = allTags.map(tag => {
+  // Sort tags by frequency descending
+  const sortedTags = Object.keys(tagCounts).sort((a, b) => tagCounts[b] - tagCounts[a]);
+
+  container.innerHTML = sortedTags.map(tag => {
     const isActive = currentBlogTag.toLowerCase() === tag.toLowerCase() ? 'active' : '';
     return `
-      <button class="blog-tag ${isActive}" onclick="searchBlogTag('${tag}')" type="button"># ${tag}</button>
+      <button class="blog-tag ${isActive}" onclick="searchBlogTag('${tag}')" type="button">#${tag}</button>
     `;
   }).join('');
 }
@@ -394,6 +434,52 @@ function searchBlogTag(tag) {
 }
 
 window.searchBlogTag = searchBlogTag;
+
+function renderLatestPosts() {
+  const container = document.getElementById('blog-latest-posts-list');
+  const posts = getBlogPosts();
+  if (!container || posts.length === 0) return;
+
+  // Top 5 latest articles sorted by date descending
+  const latest5 = [...posts].sort((a, b) => {
+    const dateA = new Date(a.publishDate || a.date || '2026-01-01');
+    const dateB = new Date(b.publishDate || b.date || '2026-01-01');
+    return dateB - dateA;
+  }).slice(0, 5);
+
+  container.innerHTML = latest5.map(p => {
+    const postUrl = p.url || `blog-detail.html?id=${p.slug}`;
+    const imgPath = p.featuredImage || p.image;
+    const formattedDate = formatDate(p.publishDate || p.date);
+    const thumbHtml = imgPath 
+      ? `<img src="${imgPath}" alt="${p.title}" style="width:48px; height:48px; object-fit:cover; border-radius:8px; flex-shrink:0;" loading="lazy" />` 
+      : `<div style="width:48px; height:48px; border-radius:8px; background:var(--grad-navy-teal); color:white; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">${getCategoryEmoji(p.category)}</div>`;
+
+    return `
+      <div class="latest-post-item" style="display:flex; gap:12px; align-items:center; margin-bottom:14px;">
+        ${thumbHtml}
+        <div style="flex:1; min-width:0;">
+          <a href="${postUrl}" style="font-size:0.85rem; font-weight:700; color:var(--navy); line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">
+            ${p.title}
+          </a>
+          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:3px;">
+            <span>📅 ${formattedDate}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function formatDate(dateStr) {
+  if (!dateStr) return 'July 2026';
+  try {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  } catch (e) {
+    return dateStr;
+  }
+}
 
 function clearAllBlogFilters() {
   currentBlogCategory = 'all';
@@ -461,13 +547,20 @@ function getInitials(name) {
 function getCategoryEmoji(cat) {
   const map = {
     'Career Advice': '🎯',
+    'Career Guidance': '🎯',
     'Digital Marketing': '📊',
     'Design': '🎨',
+    'Graphic Design': '🎨',
     'Freelancing': '💼',
     'AI & Technology': '🤖',
+    'AI & Automation': '🤖',
     'Content Creation': '🎥',
+    'Motion Graphics': '🎥',
+    'Video Editing': '🎬',
     'Kids Education': '👨‍💻',
+    'Student Success': '🎓',
     'Programming': '💻',
+    'Web Development': '💻',
     'Founder Story': '🚀'
   };
   return map[cat] || '💡';
@@ -476,13 +569,18 @@ function getCategoryEmoji(cat) {
 function getCategoryGradient(cat) {
   const map = {
     'Career Advice': 'linear-gradient(135deg, #011731, #0599a8)',
+    'Career Guidance': 'linear-gradient(135deg, #011731, #0599a8)',
     'Digital Marketing': 'linear-gradient(135deg, #FF6B00, #FF9A3C)',
     'Design': 'linear-gradient(135deg, #EC4899, #8B5CF6)',
+    'Graphic Design': 'linear-gradient(135deg, #EC4899, #8B5CF6)',
     'Freelancing': 'linear-gradient(135deg, #0599a8, #75d766)',
     'AI & Technology': 'linear-gradient(135deg, #2563EB, #0599a8)',
+    'AI & Automation': 'linear-gradient(135deg, #2563EB, #0599a8)',
     'Content Creation': 'linear-gradient(135deg, #8B5CF6, #EC4899)',
+    'Motion Graphics': 'linear-gradient(135deg, #8B5CF6, #EC4899)',
     'Kids Education': 'linear-gradient(135deg, #75d766, #0599a8)',
     'Programming': 'linear-gradient(135deg, #011731, #2563EB)',
+    'Web Development': 'linear-gradient(135deg, #011731, #2563EB)',
     'Founder Story': 'linear-gradient(135deg, #011731, #0599a8)'
   };
   return map[cat] || 'linear-gradient(135deg, #011731, #0599a8)';
