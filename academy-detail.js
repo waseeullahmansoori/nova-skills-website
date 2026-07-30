@@ -52,7 +52,7 @@ function formatAcademyName(slug) {
     'creator': 'Creator Academy',
     'office': 'Office Productivity Academy',
     'communication': 'Communication Academy',
-    'career': 'Career Academy'
+    'career': 'Career & Freelancing Academy'
   };
   return map[slug] || (slug.charAt(0).toUpperCase() + slug.slice(1) + ' Academy');
 }
@@ -93,7 +93,6 @@ function getSmartRelatedAcademyIds(currentId) {
   };
 
   const related = smartMap[currentId] || ['ai', 'digital-marketing', 'design', 'programming'];
-  // Ensure current ID is never in recommendations
   return related.filter(id => id !== currentId).slice(0, 4);
 }
 
@@ -107,37 +106,36 @@ function renderAcademyHero(academy, courses) {
   if (breadcrumbEl) breadcrumbEl.textContent = academy.name;
 
   const descMap = {
-    'digital-marketing': 'Master SEO, Google Ads, Meta Ads, Performance Marketing, Social Media & AI-powered marketing automation with 100% practical training.',
-    'ai': 'ChatGPT, Prompt Engineering, LLM Fine-Tuning, AI Automation with n8n, AI Agents & cutting-edge AI tools for modern careers.',
-    'design': 'Photoshop, Illustrator, Figma, UI/UX Design, Typography, Branding and complete Graphic & Product Design mastery.',
-    'programming': 'Python, Full Stack Development, JavaScript, Web Development, Databases and complete software engineering foundations.',
-    'video': 'Premiere Pro, After Effects, Motion Graphics, Color Grading, Cinematography & DaVinci Resolve video production.',
-    '3d': '3ds Max, Blender, Cinema 4D, V-Ray, Architectural Visualisation & 3D Motion Graphics.',
-    'nocode': 'WordPress, Shopify, Webflow, Framer, E-Commerce & Building Web Applications without writing code.',
-    'kids': 'Scratch, Python for Kids, Robotics, AI Basics & future-ready STEM tech skills for young learners.',
-    'creator': 'YouTube Growth, Instagram Reels, Podcasting, Personal Branding & Monetising Content Creation.',
-    'office': 'Advanced Excel, Power BI, Google Sheets, Automation & Productivity Tools for modern professionals.',
-    'communication': 'Spoken English, Business Communication, Public Speaking, Soft Skills & Interview Preparation.',
-    'career': 'Resume Building, LinkedIn Profiling, Interview Coaching, Portfolio Design & Placement Strategy.'
+    'digital-marketing': 'Master SEO, GEO, Google Ads, Meta Ads, Performance Marketing, Social Media & AI-powered marketing automation with 100% practical training.',
+    'ai': 'ChatGPT, Prompt Engineering, AI Agents, n8n Automation & cutting-edge AI productivity tools for modern careers.',
+    'design': 'Photoshop, Illustrator, Figma, UI/UX Design, Canva, Midjourney and complete Graphic & Brand Design mastery.',
+    'programming': 'Python, Full Stack Development, React, Node.js, REST APIs, Databases and modern software engineering foundations.',
+    'video': 'Premiere Pro, After Effects, Motion Graphics, DaVinci Resolve, Reels Editing & Generative AI video tools.',
+    '3d': '3ds Max, Blender, Cinema 4D, V-Ray, Architectural Visualisation & Unreal Engine basics.',
+    'nocode': 'WordPress, WooCommerce, Shopify, Elementor, Webflow, Framer & E-Commerce website building without writing code.',
+    'kids': 'Scratch, Python for Kids, Robotics, AI Basics & Web Design STEM skills for young learners.',
+    'creator': 'YouTube Growth, Short Video Strategy, Podcasting, Personal Branding & Monetising Content Creation.',
+    'office': 'Advanced Excel, Word, PowerPoint, Google Workspace, Notion, ClickUp, Copilot & Tally with GST.',
+    'communication': 'Spoken English, Business Communication, Presentation Skills, Public Speaking & Personality Development.',
+    'career': 'Freelancing Mastery, Resume Building, LinkedIn Optimisation, Proposals & Agency Building.'
   };
 
   if (descEl) {
     descEl.textContent = descMap[academy.id] || `Comprehensive hands-on training and career growth in ${academy.name}.`;
   }
 
-  // Pills calculation
   const courseCount = courses.length || 6;
   const startingPrice = courses.length > 0 
     ? Math.min(...courses.map(c => c.price)) 
-    : 4999;
+    : 3999;
 
   if (pillsEl) {
     pillsEl.innerHTML = `
-      <span class="stats-pill">📚 ${courseCount}+ Practical Courses</span>
+      <span class="stats-pill">📚 ${courseCount}+ Programs & Courses</span>
       <span class="stats-pill">🏷️ Starting From ₹${startingPrice.toLocaleString('en-IN')}</span>
-      <span class="stats-pill">🌐 Online & Offline Modes</span>
+      <span class="stats-pill">🌐 Online & Hybrid Modes</span>
       <span class="stats-pill">⭐ 4.8 / 5 Rating (500+ Reviews)</span>
-      <span class="stats-pill">💼 100% Placement Support</span>
+      <span class="stats-pill">💼 Placement & Career Support</span>
     `;
   }
 }
@@ -149,10 +147,9 @@ function renderAcademyOverview(academy, courses) {
 
   if (overviewTitle) overviewTitle.textContent = academy.name;
   if (overviewDesc) {
-    overviewDesc.textContent = `At ${academy.name}, our curriculum is updated every quarter to match 2026 industry standards. You learn by building real projects, managing live budgets, and creating a professional portfolio that impresses recruiters.`;
+    overviewDesc.textContent = `At ${academy.name}, our curriculum is updated every quarter to match modern industry standards. Learn through structured Career Programs (6–12 months), Professional Programs (3–6 months), and focused Certification Courses (1–2 months) with real projects.`;
   }
 
-  // Extract all unique tools from academy courses
   let allTools = [];
   courses.forEach(c => {
     if (c.tools && Array.isArray(c.tools)) {
@@ -160,25 +157,7 @@ function renderAcademyOverview(academy, courses) {
     }
   });
 
-  if (allTools.length === 0) {
-    const defaultTools = {
-      'digital-marketing': ['Google Ads', 'Meta Ads', 'SEMrush', 'GA4', 'ChatGPT', 'Canva', 'HubSpot'],
-      'ai': ['ChatGPT', 'Claude 3.5', 'Midjourney', 'n8n', 'Python', 'LangChain', 'OpenAI API'],
-      'design': ['Adobe Photoshop', 'Illustrator', 'Figma', 'InDesign', 'Canva', 'UI/UX'],
-      'programming': ['Python', 'HTML5', 'CSS3', 'JavaScript', 'React', 'Node.js', 'SQL', 'Git'],
-      'video': ['Adobe Premiere Pro', 'After Effects', 'DaVinci Resolve', 'Audition', 'Photoshop'],
-      '3d': ['3ds Max', 'Blender', 'V-Ray', 'Cinema 4D', 'Substance Painter'],
-      'nocode': ['WordPress', 'Shopify', 'Webflow', 'Framer', 'Elementor', 'Zapier'],
-      'kids': ['Scratch', 'Python', 'MIT App Inventor', 'Robotics Basics', 'AI Fun'],
-      'creator': ['YouTube Studio', 'OBS Studio', 'CapCut', 'Canva Pro', 'Descript'],
-      'office': ['MS Excel', 'Power BI', 'Google Sheets', 'PowerPoint', 'VBA'],
-      'communication': ['Spoken English', 'Business Pitching', 'Presentation Skills', 'Grammar'],
-      'career': ['LinkedIn', 'Canva Resume', 'Portfolio Builder', 'Mock Interviews']
-    };
-    allTools = defaultTools[academy.id] || ['Industry Standard Tools', 'AI Assistants', 'Live Platforms'];
-  }
-
-  const uniqueTools = [...new Set(allTools)].slice(0, 10);
+  const uniqueTools = [...new Set(allTools)].slice(0, 12);
 
   if (toolsList) {
     toolsList.innerHTML = uniqueTools.map(tool => `<span class="tool-badge">🔧 ${tool}</span>`).join('');
@@ -203,17 +182,17 @@ function renderAcademyCourses(courses, academy) {
   }
 
   container.innerHTML = courses.map(course => `
-    <div class="course-card" style="background:white; border-radius:16px; border:1px solid #e2e8f0; padding:24px; display:flex; flex-direction:column; justify-between; box-shadow:0 4px 20px rgba(0,0,0,0.04); transition:transform 0.3s ease;">
+    <div class="course-card" style="background:white; border-radius:16px; border:1px solid #e2e8f0; padding:24px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 4px 20px rgba(0,0,0,0.04); transition:transform 0.3s ease;">
       <div>
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-          <span style="background:rgba(5, 153, 168, 0.1); color:#0599a8; padding:4px 10px; border-radius:50px; font-weight:600; font-size:0.8rem;">${course.level || 'All Levels'}</span>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:6px;">
+          <span style="background:rgba(5, 153, 168, 0.1); color:#0599a8; padding:4px 10px; border-radius:50px; font-weight:600; font-size:0.8rem;">${course.programLevel || 'Certification Course'}</span>
           <span style="color:#eab308; font-weight:700; font-size:0.9rem;">⭐ ${course.rating || 4.8} (${course.reviews || 120})</span>
         </div>
         <h3 style="font-size:1.2rem; font-weight:700; color:#011731; margin-bottom:8px;">${course.name}</h3>
         <p style="color:#64748b; font-size:0.9rem; line-height:1.5; margin-bottom:16px;">${course.shortDesc}</p>
       </div>
 
-      <div style="border-top:1px solid #f1f5f9; pt:16px; margin-top:auto;">
+      <div style="border-top:1px solid #f1f5f9; padding-top:16px; margin-top:auto;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
           <div>
             <span style="font-size:0.8rem; color:#94a3b8;">Course Fee</span>
@@ -221,7 +200,7 @@ function renderAcademyCourses(courses, academy) {
           </div>
           <span style="font-size:0.85rem; color:#475569; background:#f1f5f9; padding:4px 10px; border-radius:6px; font-weight:500;">⏱️ ${course.duration}</span>
         </div>
-        <a href="course-detail.html?id=${course.slug}" class="btn btn-outline" style="width:100%; text-align:center; font-weight:600; display:block;">View Course Details →</a>
+        <a href="course-detail.html?id=${course.id}" class="btn btn-outline" style="width:100%; text-align:center; font-weight:600; display:block;">View Program Details →</a>
       </div>
     </div>
   `).join('');

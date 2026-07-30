@@ -127,35 +127,46 @@ function buildCourseCardHTML(course) {
 function filterAndSortCourses() {
   const searchVal = document.getElementById('filter-search-input')?.value.toLowerCase().trim() || '';
   const selectedAcademies = Array.from(document.querySelectorAll('input[name="academy"]:checked')).map(cb => cb.value);
+  const selectedProgramLevels = Array.from(document.querySelectorAll('input[name="programLevel"]:checked')).map(cb => cb.value);
   const selectedModes = Array.from(document.querySelectorAll('input[name="mode"]:checked')).map(cb => cb.value);
   const selectedLevels = Array.from(document.querySelectorAll('input[name="level"]:checked')).map(cb => cb.value);
-  const selectedDurations = Array.from(document.querySelectorAll('input[name="duration"]:checked')).map(cb => parseInt(cb.value,10));
-  const maxPrice = parseInt(document.getElementById('filter-price-range')?.value || '50000', 10);
+  const selectedDurations = Array.from(document.querySelectorAll('input[name="duration"]:checked')).map(cb => cb.value);
+  const maxPrice = parseInt(document.getElementById('filter-price-range')?.value || '90000', 10);
   const placementOnly = document.getElementById('filter-placement')?.checked || false;
 
   let result = getCoursesData().filter(c => {
-    // Search
+    // Search across name, shortDesc, fullDesc, academy, tools, programLevel, curriculum titles
     if (searchVal) {
       const matchName = c.name.toLowerCase().includes(searchVal);
-      const matchDesc = c.shortDesc.toLowerCase().includes(searchVal);
-      const matchAcademy = c.academy.toLowerCase().includes(searchVal);
-      const matchTools = c.tools.some(t => t.toLowerCase().includes(searchVal));
-      if (!matchName && !matchDesc && !matchAcademy && !matchTools) return false;
+      const matchDesc = (c.shortDesc || '').toLowerCase().includes(searchVal) || (c.fullDesc || '').toLowerCase().includes(searchVal);
+      const matchAcademy = (c.academy || '').toLowerCase().includes(searchVal);
+      const matchLevel = (c.programLevel || '').toLowerCase().includes(searchVal);
+      const matchTools = (c.tools || []).some(t => t.toLowerCase().includes(searchVal));
+      const matchCurriculum = (c.curriculum || []).some(m => (m.title || '').toLowerCase().includes(searchVal));
+      if (!matchName && !matchDesc && !matchAcademy && !matchLevel && !matchTools && !matchCurriculum) return false;
     }
-    // Academy
+    // Academy filter
     if (selectedAcademies.length > 0 && !selectedAcademies.includes(c.academyId)) return false;
-    // Mode
+    // Program Level filter
+    if (selectedProgramLevels.length > 0 && !selectedProgramLevels.includes(c.programLevel)) return false;
+    // Mode filter
     if (selectedModes.length > 0 && !selectedModes.includes(c.mode)) return false;
-    // Level
+    // Skill Level filter
     if (selectedLevels.length > 0 && !selectedLevels.includes(c.level)) return false;
-    // Duration
+    // Duration filter
     if (selectedDurations.length > 0) {
-      const dur = Math.round(c.durationMonths);
-      if (!selectedDurations.includes(dur)) return false;
+      const dur = Math.round(c.durationMonths || 3);
+      const matchDur = selectedDurations.some(val => {
+        if (val === '1-2' || val === '2') return dur <= 2;
+        if (val === '3-6' || val === '3') return dur >= 3 && dur <= 6;
+        if (val === '6-12' || val === '6') return dur >= 6;
+        return parseInt(val, 10) === dur;
+      });
+      if (!matchDur) return false;
     }
-    // Price
+    // Price filter
     if (c.price > maxPrice) return false;
-    // Placement
+    // Placement support filter
     if (placementOnly && !c.placementSupport) return false;
 
     return true;
@@ -205,9 +216,9 @@ function resetAllFilters() {
 
   const priceRange = document.getElementById('filter-price-range');
   if (priceRange) {
-    priceRange.value = 50000;
+    priceRange.value = 90000;
     const display = document.getElementById('price-max-display');
-    if (display) display.textContent = '₹50,000';
+    if (display) display.textContent = '₹90,000';
   }
 
   renderCourses();

@@ -826,8 +826,8 @@ function buildPopupHTML() {
                 <option value="creator">Creator Academy</option>
                 <option value="kids">Kids Tech Academy</option>
                 <option value="communication">Communication Academy</option>
-                <option value="office">Office Productivity</option>
-                <option value="career">Career Academy</option>
+                <option value="office">Office Productivity Academy</option>
+                <option value="career">Career & Freelancing Academy</option>
                 <option value="other">Not sure yet</option>
               </select>
             </div>

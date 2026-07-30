@@ -106,15 +106,18 @@ function generateSitemap() {
     });
   });
 
-  // 4. Dynamic Featured Course URLs
-  const courseIds = [
-    'dm-professional',
-    'dm-mastery',
-    'ai-mastery',
-    'full-stack',
-    'design-mastery',
-    'motion-graphics'
-  ];
+  // 4. Dynamic Course URLs (All Restructured Courses)
+  let courseIds = [];
+  try {
+    const { NS_COURSES } = require('../data.js');
+    courseIds = NS_COURSES.map(c => c.id);
+  } catch (err) {
+    courseIds = [
+      'dm-professional', 'dm-mastery', 'ai-mastery', 'fullstack-foundation',
+      'creative-design', 'motion-mastery', 'archviz-mastery', 'ecommerce-mastery',
+      'youtube-mastery', 'biz-productivity', 'business-english', 'freelancing-mastery'
+    ];
+  }
   const coursePageDate = getFormattedDate(path.join(ROOT_DIR, 'course-detail.html'));
   courseIds.forEach((cId) => {
     urlEntries.push({

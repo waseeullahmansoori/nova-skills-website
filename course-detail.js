@@ -196,16 +196,46 @@ function renderRelatedCourses(currentCourse) {
   const container = document.getElementById('related-courses-grid');
   if (!container) return;
 
-  const related = NS_COURSES
-    .filter(c => c.id !== currentCourse.id && c.academyId === currentCourse.academyId)
-    .concat(NS_COURSES.filter(c => c.id !== currentCourse.id && c.academyId !== currentCourse.academyId))
-    .slice(0, 3);
+  const sameAcademyCourses = NS_COURSES.filter(c => c.id !== currentCourse.id && c.academyId === currentCourse.academyId);
+  const otherAcademyCourses = NS_COURSES.filter(c => c.id !== currentCourse.id && c.academyId !== currentCourse.academyId);
 
-  container.innerHTML = related.map(c => `
+  // 1. Same Level Course in Same Academy
+  const sameLevel = sameAcademyCourses.filter(c => c.programLevel === currentCourse.programLevel);
+
+  // 2. Advanced Program (Career or Professional Program in same academy)
+  const advancedProgram = sameAcademyCourses.filter(c => c.programLevel === 'Career Program' || c.programLevel === 'Professional Program');
+
+  // 3. Related Certifications (Certification Courses in same academy)
+  const relatedCertifications = sameAcademyCourses.filter(c => c.programLevel === 'Certification Course');
+
+  // Combine recommendations prioritizing: Same Level -> Advanced Program -> Related Certifications -> Same Academy -> Other Academies
+  const recommendationPool = []
+    .concat(sameLevel)
+    .concat(advancedProgram)
+    .concat(relatedCertifications)
+    .concat(sameAcademyCourses)
+    .concat(otherAcademyCourses);
+
+  // Filter out duplicates & current course
+  const uniqueRelated = [];
+  const seenIds = new Set([currentCourse.id]);
+
+  for (const c of recommendationPool) {
+    if (!seenIds.has(c.id)) {
+      seenIds.add(c.id);
+      uniqueRelated.push(c);
+    }
+    if (uniqueRelated.length >= 3) break;
+  }
+
+  container.innerHTML = uniqueRelated.map(c => `
     <div class="course-card">
       <div class="course-thumbnail" style="height:150px;">
         <div class="course-thumb-bg" style="background:${c.color}">
           <span style="font-size:2.5rem;">${c.icon}</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge" style="background:rgba(1, 23, 49, 0.85); color:#ffffff; font-size:0.75rem; padding:3px 8px; border-radius:4px; font-weight:600;">${c.programLevel || c.level}</span>
         </div>
       </div>
       <div class="course-body">

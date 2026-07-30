@@ -149,7 +149,7 @@ const vm = require('vm');
 const dataJsCode = fs.readFileSync(path.join(__dirname, '..', 'data.js'), 'utf8');
 vm.runInThisContext(dataJsCode);
 
-assert(Array.isArray(NS_COURSES) && NS_COURSES.length === 28, `Detected ${NS_COURSES.length} courses in NS_COURSES`);
+assert(Array.isArray(NS_COURSES) && NS_COURSES.length >= 100, `Detected ${NS_COURSES.length} courses in NS_COURSES`);
 
 // Check Course schema non-placement on non-course static pages
 const nonCoursePages = ['index.html', 'blog.html', 'placements.html', 'success-stories.html', 'assessment.html', '404.html'];
