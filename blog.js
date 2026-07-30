@@ -10,6 +10,16 @@ let currentBlogCategory = 'all';
 let currentBlogPage = 1;
 const BLOG_POSTS_PER_PAGE = 9;
 
+function getBlogPosts() {
+  if (typeof window !== 'undefined' && window.NS_BLOG_POSTS && Array.isArray(window.NS_BLOG_POSTS)) {
+    return window.NS_BLOG_POSTS;
+  }
+  if (typeof NS_BLOG_POSTS !== 'undefined' && Array.isArray(NS_BLOG_POSTS)) {
+    return NS_BLOG_POSTS;
+  }
+  return [];
+}
+
 function getPageFromUrl() {
   try {
     const params = new URLSearchParams(window.location.search);
@@ -20,28 +30,42 @@ function getPageFromUrl() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initBlog() {
   currentBlogPage = getPageFromUrl();
+  const posts = getBlogPosts();
+  if (posts.length === 0) {
+    setTimeout(initBlog, 100);
+    return;
+  }
   renderFeaturedPost();
   renderBlogGrid();
   renderBlogCategories();
   renderBlogTags();
   bindBlogEvents();
+}
 
-  window.addEventListener('popstate', () => {
-    currentBlogPage = getPageFromUrl();
-    renderBlogGrid();
-  });
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initBlog);
+} else {
+  initBlog();
+}
+
+window.addEventListener('popstate', () => {
+  currentBlogPage = getPageFromUrl();
+  renderBlogGrid();
 });
 
 function renderFeaturedPost() {
   const container = document.getElementById('blog-featured-slot');
-  if (!container || !window.NS_BLOG_POSTS) return;
+  const posts = getBlogPosts();
+  if (!container || posts.length === 0) return;
 
-  const featured = NS_BLOG_POSTS.find(p => p.featured) || NS_BLOG_POSTS[0];
+  const featured = posts.find(p => p.featured) || posts[0];
 
   const featuredUrl = featured.url || `blog-detail.html?id=${featured.slug}`;
-  const featuredImg = featured.image ? `<img src="${featured.image}" alt="${featured.title}" style="width:100%; height:100%; object-fit:cover; border-radius:16px;" />` : `<span style="font-size:4rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.3));">💡</span>`;
+  const featuredImg = featured.image 
+    ? `<img src="${featured.image}" alt="${featured.title}" style="width:100%; height:100%; object-fit:cover; border-radius:16px;" />` 
+    : `<span style="font-size:4rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.3));">💡</span>`;
 
   container.innerHTML = `
     <article class="blog-featured">
@@ -74,12 +98,13 @@ function renderFeaturedPost() {
 
 function renderBlogGrid() {
   const container = document.getElementById('blog-cards-grid');
-  if (!container || !window.NS_BLOG_POSTS) return;
+  const posts = getBlogPosts();
+  if (!container || posts.length === 0) return;
 
   const searchVal = document.getElementById('blog-search-input')?.value.toLowerCase().trim() || '';
 
   // 1. Sort latest published blogs first (Date descending)
-  const sortedPosts = [...NS_BLOG_POSTS].sort((a, b) => {
+  const sortedPosts = [...posts].sort((a, b) => {
     const dateA = new Date(a.date || '2026-01-01');
     const dateB = new Date(b.date || '2026-01-01');
     return dateB - dateA;
@@ -124,7 +149,9 @@ function renderBlogGrid() {
 
   container.innerHTML = pagePosts.map(p => {
     const postUrl = p.url || `blog-detail.html?id=${p.slug}`;
-    const thumbContent = p.image ? `<img src="${p.image}" alt="${p.title}" style="width:100%; height:100%; object-fit:cover;" />` : `<span style="font-size:3rem;">${getCategoryEmoji(p.category)}</span>`;
+    const thumbContent = p.image 
+      ? `<img src="${p.image}" alt="${p.title}" style="width:100%; height:100%; object-fit:cover;" />` 
+      : `<span style="font-size:3rem;">${getCategoryEmoji(p.category)}</span>`;
 
     return `
       <article class="blog-card">
@@ -225,12 +252,13 @@ window.changeBlogPage = changeBlogPage;
 
 function renderBlogCategories() {
   const container = document.getElementById('blog-categories-list');
-  if (!container || !window.NS_BLOG_POSTS) return;
+  const posts = getBlogPosts();
+  if (!container || posts.length === 0) return;
 
-  const categories = ['all', ...new Set(NS_BLOG_POSTS.map(p => p.category))];
+  const categories = ['all', ...new Set(posts.map(p => p.category))];
 
   container.innerHTML = categories.map(cat => {
-    const count = cat === 'all' ? NS_BLOG_POSTS.length : NS_BLOG_POSTS.filter(p => p.category === cat).length;
+    const count = cat === 'all' ? posts.length : posts.filter(p => p.category === cat).length;
     const label = cat === 'all' ? 'All Categories' : cat;
     const isActive = currentBlogCategory === cat ? 'active' : '';
     return `
@@ -263,9 +291,10 @@ window.filterBlogCategory = filterBlogCategory;
 
 function renderBlogTags() {
   const container = document.getElementById('blog-tags-list');
-  if (!container || !window.NS_BLOG_POSTS) return;
+  const posts = getBlogPosts();
+  if (!container || posts.length === 0) return;
 
-  const allTags = [...new Set(NS_BLOG_POSTS.flatMap(p => p.tags || []))];
+  const allTags = [...new Set(posts.flatMap(p => p.tags || []))];
 
   container.innerHTML = allTags.map(tag => `
     <button class="blog-tag" onclick="searchBlogTag('${tag}')" type="button"># ${tag}</button>
