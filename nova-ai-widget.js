@@ -904,8 +904,8 @@
       <!-- Footer & Input Area -->
       <div class="nova-ai-footer">
         <div class="nova-ai-input-wrap">
-          <textarea id="nova-ai-textarea" class="nova-ai-textarea" rows="1" maxlength="500" placeholder="Ask anything about courses, admissions, placements or careers..." oninput="NovaAIWidget.handleInput(this)" onkeydown="NovaAIWidget.handleKeyDown(event)"></textarea>
-          <button type="button" class="nova-ai-send-btn" onclick="NovaAIWidget.sendMessage()">
+          <textarea id="nova-ai-textarea" class="nova-ai-textarea" rows="1" maxlength="500" placeholder="Ask anything about courses, admissions, placements or careers..."></textarea>
+          <button type="button" class="nova-ai-send-btn" id="nova-ai-send-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
             Send
           </button>
@@ -917,6 +917,29 @@
       </div>
     `;
     document.body.appendChild(panel);
+
+    // Direct event listener binding for fail-safe Enter key & Send button click handling
+    const txtArea = panel.querySelector('#nova-ai-textarea');
+    const sendBtn = panel.querySelector('#nova-ai-send-btn');
+
+    if (txtArea) {
+      txtArea.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+      txtArea.addEventListener('input', function () {
+        handleInput(this);
+      });
+    }
+
+    if (sendBtn) {
+      sendBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        sendMessage();
+      });
+    }
 
     loadHistory();
   }
@@ -1311,6 +1334,22 @@
     } catch (e) {}
   }
 
+  window.NovaAIWidget = {
+    togglePanel,
+    openPanel,
+    closePanel,
+    sendAction,
+    sendMessage,
+    startNewChat,
+    getSessionId,
+    handleInput,
+    handleKeyDown,
+    triggerCTA,
+    renderAssessmentCTACardHTML,
+    renderRecommendationCardHTML,
+    renderProfileCompletionCardHTML
+  };
+
   function init() {
     injectWidgetStyles();
     injectWidgetHTML();
@@ -1327,21 +1366,5 @@
   } else {
     init();
   }
-
-  window.NovaAIWidget = {
-    togglePanel,
-    openPanel,
-    closePanel,
-    sendAction,
-    sendMessage,
-    startNewChat,
-    getSessionId,
-    handleInput,
-    handleKeyDown,
-    triggerCTA,
-    renderAssessmentCTACardHTML,
-    renderRecommendationCardHTML,
-    renderProfileCompletionCardHTML
-  };
 
 })();
