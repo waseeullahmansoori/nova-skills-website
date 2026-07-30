@@ -85,14 +85,14 @@ const NS_COURSES = [
     "slug": "ai-digital-marketing-professional",
     "academy": "Digital Marketing Academy",
     "academyId": "digital-marketing",
-    "programLevel": "Career Program",
-    "icon": "\ud83d\udcca",
+    "programLevel": "Professional Program",
+    "icon": "📊",
     "color": "linear-gradient(135deg, #FF6B00, #FF9A3C)",
     "name": "AI Digital Marketing Professional",
     "shortDesc": "Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
-    "fullDesc": "A comprehensive 6-month career program covering every aspect of modern digital marketing \u2014 from SEO and Google Ads to Meta Ads, AI marketing automation and performance analytics.",
-    "duration": "6 Months",
-    "durationMonths": 6,
+    "fullDesc": "A comprehensive 4-month professional program covering every aspect of modern digital marketing — from SEO and Google Ads to Meta Ads, AI marketing automation and performance analytics.",
+    "duration": "4 Months",
+    "durationMonths": 4,
     "mode": "Hybrid",
     "level": "Beginner",
     "price": 17499,
@@ -1346,6 +1346,65 @@ const NS_COURSES = [
         "module": "Module 3",
         "title": "AI Design Tools (Midjourney & Firefly)",
         "lessons": 8
+      }
+    ],
+    "tags": [
+      "popular",
+      "placement"
+    ],
+    "featured": false
+  },
+  {
+    "id": "uiux-design-pro",
+    "slug": "ui-ux-design-professional",
+    "academy": "Design Academy",
+    "academyId": "design",
+    "programLevel": "Professional Program",
+    "icon": "🎨",
+    "color": "linear-gradient(135deg, #8B5CF6, #EC4899)",
+    "name": "UI/UX Design Professional",
+    "shortDesc": "In-depth 3-month professional program in Figma UI/UX design, wireframing, interactive prototyping, user research, and Design Systems.",
+    "fullDesc": "A complete 3-month professional program for aspiring UI/UX designers. Master Figma, user research, wireframing, visual design systems, usability testing, and interactive prototyping to build job-ready portfolios.",
+    "duration": "3 Months",
+    "durationMonths": 3,
+    "mode": "Hybrid",
+    "level": "Intermediate",
+    "price": 14999,
+    "originalPrice": 39999,
+    "rating": 4.8,
+    "reviews": 115,
+    "students": 430,
+    "liveProjects": 8,
+    "certificate": true,
+    "placementSupport": true,
+    "tools": [
+      "Figma",
+      "Adobe XD",
+      "FigJam",
+      "Prototyping",
+      "Wireframing",
+      "Design Systems"
+    ],
+    "curriculum": [
+      {
+        "module": "Module 1",
+        "title": "UX Research & User Personas",
+        "lessons": 10
+      },
+      {
+        "module": "Module 2",
+        "title": "Wireframing & Information Architecture",
+        "lessons": 12
+      },
+      {
+        "module": "Module 3",
+        "title": "Figma Visual Design & Auto Layout",
+        "lessons": 14
+      },
+      {
+        "module": "Module 4",
+        "title": "Interactive Prototyping & Design Systems",
+        "lessons": 12
       }
     ],
     "tags": [
@@ -5302,10 +5361,100 @@ const NS_ACADEMIES = [
   {
     "id": "office",
     "name": "Office Productivity Academy",
-    "icon": "\ud83d\udccb",
+    "icon": "📋",
     "color": "linear-gradient(135deg,#0599a8,#2563EB)"
   }
 ];
+
+/* Program Levels Architecture Specification (V1.1 Foundation) */
+const NS_PROGRAM_LEVELS = [
+  {
+    "id": "career",
+    "name": "Career Program",
+    "label": "Career Programs",
+    "durationRange": "6–12 Months",
+    "description": "Comprehensive 6–12 month career transformation programs with live client projects and 100% placement support."
+  },
+  {
+    "id": "professional",
+    "name": "Professional Program",
+    "label": "Professional Programs",
+    "durationRange": "3–6 Months",
+    "description": "In-depth 3–6 month skill mastery programs designed for career acceleration and industry readiness."
+  },
+  {
+    "id": "certification",
+    "name": "Certification Course",
+    "label": "Certification Courses",
+    "durationRange": "1–2 Months",
+    "description": "Focused 1–2 month specialized certification courses for rapid skill acquisition and tool mastery."
+  }
+];
+
+/**
+ * Normalizes program level string to canonical names:
+ * 'Career Program' | 'Professional Program' | 'Certification Course'
+ */
+function normalizeProgramLevel(level) {
+  if (!level) return '';
+  const str = String(level).trim().toLowerCase();
+  if (str.includes('career')) return 'Career Program';
+  if (str.includes('professional')) return 'Professional Program';
+  if (str.includes('cert')) return 'Certification Course';
+  return level;
+}
+
+/**
+ * Get courses filtered by Academy ID and optional Program Level
+ */
+function getCoursesByAcademyAndLevel(academyId, programLevel) {
+  const courses = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES)) ? NS_COURSES : [];
+  return courses.filter(c => {
+    const matchAcademy = !academyId || c.academyId === academyId;
+    const matchLevel = !programLevel || normalizeProgramLevel(c.programLevel) === normalizeProgramLevel(programLevel);
+    return matchAcademy && matchLevel;
+  });
+}
+
+/**
+ * Build scalable Academy -> Program Level -> Courses hierarchy object
+ */
+function getAcademyHierarchy() {
+  const academies = (typeof NS_ACADEMIES !== 'undefined' && Array.isArray(NS_ACADEMIES)) ? NS_ACADEMIES : [];
+  const courses = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES)) ? NS_COURSES : [];
+  const hierarchy = {};
+
+  academies.forEach(acad => {
+    hierarchy[acad.id] = {
+      academy: acad,
+      levels: {
+        'Career Program': courses.filter(c => c.academyId === acad.id && normalizeProgramLevel(c.programLevel) === 'Career Program'),
+        'Professional Program': courses.filter(c => c.academyId === acad.id && normalizeProgramLevel(c.programLevel) === 'Professional Program'),
+        'Certification Course': courses.filter(c => c.academyId === acad.id && normalizeProgramLevel(c.programLevel) === 'Certification Course')
+      }
+    };
+  });
+
+  return hierarchy;
+}
+
+/* Data Model Alias Normalization for Backward & Forward Compatibility */
+if (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES)) {
+  NS_COURSES.forEach(c => {
+    if (!c.title) c.title = c.name;
+    if (!c.description) c.description = c.shortDesc || c.fullDesc;
+    if (c.projects === undefined) c.projects = c.liveProjects || 0;
+    if (!c.category) c.category = c.academy;
+  });
+}
+
+// Global exports attachment
+if (typeof window !== 'undefined') {
+  window.NS_PROGRAM_LEVELS = NS_PROGRAM_LEVELS;
+  window.normalizeProgramLevel = normalizeProgramLevel;
+  window.getCoursesByAcademyAndLevel = getCoursesByAcademyAndLevel;
+  window.getAcademyHierarchy = getAcademyHierarchy;
+}
 
 /* Blog posts data */
 const NS_BLOG_POSTS = [

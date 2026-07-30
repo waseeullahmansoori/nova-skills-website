@@ -199,29 +199,56 @@ function renderRelatedCourses(currentCourse) {
   const sameAcademyCourses = NS_COURSES.filter(c => c.id !== currentCourse.id && c.academyId === currentCourse.academyId);
   const otherAcademyCourses = NS_COURSES.filter(c => c.id !== currentCourse.id && c.academyId !== currentCourse.academyId);
 
-  // 1. Same Level Course in Same Academy
-  const sameLevel = sameAcademyCourses.filter(c => c.programLevel === currentCourse.programLevel);
+  const getNormLevel = (c) => typeof normalizeProgramLevel === 'function' ? normalizeProgramLevel(c.programLevel) : c.programLevel;
+  const currentNormLevel = getNormLevel(currentCourse);
 
-  // 2. Advanced Program (Career or Professional Program in same academy)
-  const advancedProgram = sameAcademyCourses.filter(c => c.programLevel === 'Career Program' || c.programLevel === 'Professional Program');
+  let recommendationPool = [];
 
-  // 3. Related Certifications (Certification Courses in same academy)
-  const relatedCertifications = sameAcademyCourses.filter(c => c.programLevel === 'Certification Course');
+  if (currentNormLevel === 'Career Program') {
+    // 1. Related Professional Programs from same academy
+    const profProgs = sameAcademyCourses.filter(c => getNormLevel(c) === 'Professional Program');
+    // 2. Related Certification Courses from same academy
+    const certCourses = sameAcademyCourses.filter(c => getNormLevel(c) === 'Certification Course');
 
-  // Combine recommendations prioritizing: Same Level -> Advanced Program -> Related Certifications -> Same Academy -> Other Academies
-  const recommendationPool = []
-    .concat(sameLevel)
-    .concat(advancedProgram)
-    .concat(relatedCertifications)
-    .concat(sameAcademyCourses)
-    .concat(otherAcademyCourses);
+    recommendationPool = recommendationPool
+      .concat(profProgs)
+      .concat(certCourses)
+      .concat(sameAcademyCourses)
+      .concat(otherAcademyCourses);
+  } else if (currentNormLevel === 'Professional Program') {
+    // 1. Parent Career Program from same academy
+    const parentCareer = sameAcademyCourses.filter(c => getNormLevel(c) === 'Career Program');
+    // 2. Related Certification Courses from same academy
+    const certCourses = sameAcademyCourses.filter(c => getNormLevel(c) === 'Certification Course');
+    // 3. Other Professional Programs from same academy
+    const sameLevelProgs = sameAcademyCourses.filter(c => getNormLevel(c) === 'Professional Program');
+
+    recommendationPool = recommendationPool
+      .concat(parentCareer)
+      .concat(certCourses)
+      .concat(sameLevelProgs)
+      .concat(sameAcademyCourses)
+      .concat(otherAcademyCourses);
+  } else {
+    // Certification Course or other
+    const careerProg = sameAcademyCourses.find(c => getNormLevel(c) === 'Career Program');
+    const profProg = sameAcademyCourses.find(c => getNormLevel(c) === 'Professional Program');
+    const certCourse = sameAcademyCourses.find(c => getNormLevel(c) === 'Certification Course');
+
+    recommendationPool = recommendationPool
+      .concat(careerProg ? [careerProg] : [])
+      .concat(profProg ? [profProg] : [])
+      .concat(certCourse ? [certCourse] : [])
+      .concat(sameAcademyCourses)
+      .concat(otherAcademyCourses);
+  }
 
   // Filter out duplicates & current course
   const uniqueRelated = [];
   const seenIds = new Set([currentCourse.id]);
 
   for (const c of recommendationPool) {
-    if (!seenIds.has(c.id)) {
+    if (c && !seenIds.has(c.id)) {
       seenIds.add(c.id);
       uniqueRelated.push(c);
     }

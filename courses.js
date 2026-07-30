@@ -48,11 +48,13 @@ function initAcademyFilterOptions() {
   }).join('');
 }
 
-/* Parse URL query params (e.g. ?academy=ai or ?search=digital) */
+/* Parse URL query params (e.g. ?academy=ai or ?search=digital or ?programLevel=Career Program) */
 function readUrlParamsAndApply() {
   const params = new URLSearchParams(window.location.search);
   const academy = params.get('academy');
   const search = params.get('search');
+  const levelParam = params.get('programLevel') || params.get('program_level') || params.get('level');
+  const duration = params.get('duration');
 
   if (academy) {
     const cb = document.querySelector(`input[name="academy"][value="${academy}"]`);
@@ -61,6 +63,17 @@ function readUrlParamsAndApply() {
   if (search) {
     const searchInput = document.getElementById('filter-search-input');
     if (searchInput) searchInput.value = search;
+  }
+  if (levelParam) {
+    const norm = typeof normalizeProgramLevel === 'function' ? normalizeProgramLevel(levelParam) : levelParam;
+    document.querySelectorAll('input[name="programLevel"]').forEach(cb => {
+      const cbNorm = typeof normalizeProgramLevel === 'function' ? normalizeProgramLevel(cb.value) : cb.value;
+      if (cbNorm === norm) cb.checked = true;
+    });
+  }
+  if (duration) {
+    const durCb = document.querySelector(`input[name="duration"][value="${duration}"]`);
+    if (durCb) durCb.checked = true;
   }
 }
 
@@ -133,7 +146,9 @@ function buildCourseCardHTML(course) {
 function filterAndSortCourses() {
   const searchVal = document.getElementById('filter-search-input')?.value.toLowerCase().trim() || '';
   const selectedAcademies = Array.from(document.querySelectorAll('input[name="academy"]:checked')).map(cb => cb.value);
-  const selectedProgramLevels = Array.from(document.querySelectorAll('input[name="programLevel"]:checked')).map(cb => cb.value);
+  const selectedProgramLevels = Array.from(document.querySelectorAll('input[name="programLevel"]:checked')).map(cb => {
+    return typeof normalizeProgramLevel === 'function' ? normalizeProgramLevel(cb.value) : cb.value;
+  });
   const selectedModes = Array.from(document.querySelectorAll('input[name="mode"]:checked')).map(cb => cb.value);
   const selectedLevels = Array.from(document.querySelectorAll('input[name="level"]:checked')).map(cb => cb.value);
   const selectedDurations = Array.from(document.querySelectorAll('input[name="duration"]:checked')).map(cb => cb.value);
@@ -141,6 +156,8 @@ function filterAndSortCourses() {
   const placementOnly = document.getElementById('filter-placement')?.checked || false;
 
   let result = getCoursesData().filter(c => {
+    const normalizedCourseProgLevel = typeof normalizeProgramLevel === 'function' ? normalizeProgramLevel(c.programLevel) : c.programLevel;
+
     // Search across name, shortDesc, fullDesc, academy, tools, programLevel, curriculum titles
     if (searchVal) {
       const matchName = c.name.toLowerCase().includes(searchVal);
@@ -153,12 +170,16 @@ function filterAndSortCourses() {
     }
     // Academy filter
     if (selectedAcademies.length > 0 && !selectedAcademies.includes(c.academyId)) return false;
+
     // Program Level filter
-    if (selectedProgramLevels.length > 0 && !selectedProgramLevels.includes(c.programLevel)) return false;
+    if (selectedProgramLevels.length > 0 && !selectedProgramLevels.includes(normalizedCourseProgLevel)) return false;
+
     // Mode filter
     if (selectedModes.length > 0 && !selectedModes.includes(c.mode)) return false;
+
     // Skill Level filter
     if (selectedLevels.length > 0 && !selectedLevels.includes(c.level)) return false;
+
     // Duration filter
     if (selectedDurations.length > 0) {
       const dur = Math.round(c.durationMonths || 3);
@@ -201,7 +222,7 @@ function bindFilterEvents() {
   document.getElementById('filter-search-input')?.addEventListener('input', renderCourses);
   document.getElementById('sort-select')?.addEventListener('change', renderCourses);
 
-  document.querySelectorAll('#filters-sidebar input').forEach(input => {
+  document.querySelectorAll('#filters-sidebar input, #mobile-filters-slot input').forEach(input => {
     input.addEventListener('change', () => {
       if (input.id === 'filter-price-range') {
         const display = document.getElementById('price-max-display');
@@ -218,7 +239,7 @@ function resetAllFilters() {
   const search = document.getElementById('filter-search-input');
   if (search) search.value = '';
 
-  document.querySelectorAll('#filters-sidebar input[type="checkbox"]').forEach(cb => cb.checked = false);
+  document.querySelectorAll('#filters-sidebar input[type="checkbox"], #mobile-filters-slot input[type="checkbox"]').forEach(cb => cb.checked = false);
 
   const priceRange = document.getElementById('filter-price-range');
   if (priceRange) {
@@ -241,17 +262,27 @@ function updateActiveFilterChips() {
   const searchVal = document.getElementById('filter-search-input')?.value.trim();
   if (searchVal) chips.push({ label: `"${searchVal}"`, clear: () => { document.getElementById('filter-search-input').value = ''; renderCourses(); } });
 
-  document.querySelectorAll('input[name="academy"]:checked').forEach(cb => {
-    const name = cb.closest('label').querySelector('span').textContent;
-    chips.push({ label: name, clear: () => { cb.checked = false; renderCourses(); } });
+  document.querySelectorAll('#filters-sidebar input[name="academy"]:checked').forEach(cb => {
+    const name = cb.closest('label').querySelector('span')?.textContent || cb.value;
+    chips.push({ label: name, clear: () => { uncheckAllWithNameAndValue('academy', cb.value); renderCourses(); } });
   });
 
-  document.querySelectorAll('input[name="mode"]:checked').forEach(cb => {
-    chips.push({ label: cb.value, clear: () => { cb.checked = false; renderCourses(); } });
+  document.querySelectorAll('#filters-sidebar input[name="programLevel"]:checked').forEach(cb => {
+    const labelText = cb.closest('label')?.textContent.trim() || cb.value;
+    chips.push({ label: labelText, clear: () => { uncheckAllWithNameAndValue('programLevel', cb.value); renderCourses(); } });
   });
 
-  document.querySelectorAll('input[name="level"]:checked').forEach(cb => {
-    chips.push({ label: cb.value, clear: () => { cb.checked = false; renderCourses(); } });
+  document.querySelectorAll('#filters-sidebar input[name="mode"]:checked').forEach(cb => {
+    chips.push({ label: cb.value, clear: () => { uncheckAllWithNameAndValue('mode', cb.value); renderCourses(); } });
+  });
+
+  document.querySelectorAll('#filters-sidebar input[name="level"]:checked').forEach(cb => {
+    chips.push({ label: cb.value, clear: () => { uncheckAllWithNameAndValue('level', cb.value); renderCourses(); } });
+  });
+
+  document.querySelectorAll('#filters-sidebar input[name="duration"]:checked').forEach(cb => {
+    const labelText = cb.closest('label')?.textContent.trim() || cb.value;
+    chips.push({ label: labelText, clear: () => { uncheckAllWithNameAndValue('duration', cb.value); renderCourses(); } });
   });
 
   if (chips.length === 0) {
@@ -280,6 +311,12 @@ function updateActiveFilterChips() {
   }
 }
 
+function uncheckAllWithNameAndValue(name, val) {
+  document.querySelectorAll(`input[name="${name}"][value="${val}"]`).forEach(cb => {
+    cb.checked = false;
+  });
+}
+
 window.removeChip = (index) => {
   if (window._activeChips && window._activeChips[index]) {
     window._activeChips[index].clear();
@@ -301,9 +338,16 @@ function initMobileFilters() {
     const sidebarBody = document.querySelector('.filters-body');
     if (sidebarBody && slot && slot.children.length === 0) {
       slot.appendChild(sidebarBody.cloneNode(true));
-      // Rebind events inside mobile drawer
+      // Sync events inside mobile drawer
       slot.querySelectorAll('input').forEach(inp => {
-        inp.addEventListener('change', renderCourses);
+        inp.addEventListener('change', () => {
+          // Sync desktop sidebar checkbox state
+          if (inp.name && inp.value) {
+            const sidebarInp = document.querySelector(`#filters-sidebar input[name="${inp.name}"][value="${inp.value}"]`);
+            if (sidebarInp) sidebarInp.checked = inp.checked;
+          }
+          renderCourses();
+        });
       });
     }
     backdrop?.classList.add('open');
