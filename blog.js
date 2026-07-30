@@ -112,7 +112,7 @@ function renderFeaturedPost() {
   const featuredImgPath = featured.featuredImage || featured.image || '/images/seo/waseeullah-mansoori.png';
   const featuredAlt = featured.slug === 'waseeullah-mansoori' 
     ? 'Waseeullah Mansoori - Founder of Nova Skills' 
-    : featured.title;
+    : (featured.title || 'Featured Article');
 
   const featuredImg = featuredImgPath 
     ? `<img src="${featuredImgPath}" alt="${featuredAlt}" style="width:100%; height:100%; object-fit:cover; border-radius:16px;" loading="eager" />` 
@@ -127,13 +127,13 @@ function renderFeaturedPost() {
         </div>
       </div>
       <div class="blog-featured-body">
-        <div class="blog-card-category">${featured.category}</div>
-        <h2 class="blog-card-title"><a href="${featuredUrl}">${featured.title}</a></h2>
-        <p class="blog-card-excerpt">${featured.excerpt}</p>
+        <div class="blog-card-category">${featured.category || 'Featured'}</div>
+        <h2 class="blog-card-title"><a href="${featuredUrl}">${featured.title || ''}</a></h2>
+        <p class="blog-card-excerpt">${featured.excerpt || ''}</p>
         <div class="blog-card-meta">
           <div class="blog-author-avatar">${getInitials(featured.author)}</div>
           <div>
-            <div class="blog-author-name">${featured.author}</div>
+            <div class="blog-author-name">${featured.author || 'Nova Skills'}</div>
             <div style="font-size:0.75rem; color:var(--text-muted);">${featured.authorRole || 'Author'}</div>
           </div>
           <span class="blog-meta-dot">•</span>
@@ -163,8 +163,13 @@ function renderBlogGrid() {
 
   // 2. Filter posts across Title, Excerpt, Content, Category, Tags, Author
   const filtered = sortedPosts.filter(p => {
+    // Exclude featured article from main grid when showing all categories and no search/tag query
+    if (p.featured && currentBlogCategory === 'all' && !searchVal && !currentBlogTag) {
+      return false;
+    }
+
     // Category Filter
-    if (currentBlogCategory !== 'all' && p.category.toLowerCase() !== currentBlogCategory.toLowerCase()) {
+    if (currentBlogCategory !== 'all' && (p.category || '').toLowerCase() !== currentBlogCategory.toLowerCase()) {
       return false;
     }
 
@@ -197,6 +202,9 @@ function renderBlogGrid() {
   if (currentBlogPage > totalPages) {
     currentBlogPage = totalPages;
   }
+  if (currentBlogPage < 1) {
+    currentBlogPage = 1;
+  }
 
   // Update Section Heading
   const heading = document.getElementById('blog-grid-heading');
@@ -227,14 +235,17 @@ function renderBlogGrid() {
 
   // 3. Slice exactly 8 posts per page
   const startIndex = (currentBlogPage - 1) * BLOG_POSTS_PER_PAGE;
-  const pagePosts = filtered.slice(startIndex, startIndex + BLOG_POSTS_PER_PAGE);
+  const endIndex = startIndex + BLOG_POSTS_PER_PAGE;
+  const pagePosts = filtered.slice(startIndex, endIndex);
 
   container.innerHTML = pagePosts.map(p => {
     const postUrl = p.url || `blog-detail.html?id=${p.slug}`;
     const imgPath = p.featuredImage || p.image;
     const imageAlt = p.slug === 'waseeullah-mansoori' 
       ? 'Waseeullah Mansoori - Founder of Nova Skills' 
-      : p.title;
+      : (p.title || 'Article');
+
+    const excerptText = p.excerpt ? (p.excerpt.length > 110 ? p.excerpt.substring(0, 110) + '...' : p.excerpt) : '';
 
     const thumbContent = imgPath 
       ? `<img src="${imgPath}" alt="${imageAlt}" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />` 
@@ -247,12 +258,12 @@ function renderBlogGrid() {
           ${thumbContent}
         </div>
         <div class="blog-card-body">
-          <div class="blog-card-category">${p.category}</div>
-          <h3 class="blog-card-title"><a href="${postUrl}">${p.title}</a></h3>
-          <p class="blog-card-excerpt">${p.excerpt.substring(0, 110)}...</p>
+          <div class="blog-card-category">${p.category || 'General'}</div>
+          <h3 class="blog-card-title"><a href="${postUrl}">${p.title || ''}</a></h3>
+          <p class="blog-card-excerpt">${excerptText}</p>
           <div class="blog-card-meta">
             <div class="blog-author-avatar">${getInitials(p.author)}</div>
-            <span class="blog-author-name">${p.author}</span>
+            <span class="blog-author-name">${p.author || 'Nova Skills'}</span>
             <span class="blog-meta-dot">•</span>
             <span class="blog-read-time">${p.readingTime || p.readTime || 8} min</span>
           </div>
@@ -302,18 +313,6 @@ function renderBlogPagination(totalPosts, totalPages) {
     `;
   }
 
-  // Last Page Button (if > 2 pages)
-  if (totalPages > 2 && currentBlogPage < totalPages) {
-    html += `
-      <button type="button" 
-              class="pagination-btn" 
-              onclick="changeBlogPage(${totalPages})" 
-              aria-label="Last Page (${totalPages})">
-        Last ⟫
-      </button>
-    `;
-  }
-
   // Next → Button
   const isNextDisabled = currentBlogPage >= totalPages;
   html += `
@@ -346,7 +345,6 @@ function renderBlogCategories() {
   const posts = getBlogPosts();
   if (!container || posts.length === 0) return;
 
-  // Extract all categories dynamically and count posts per category
   const counts = {};
   posts.forEach(p => {
     const cat = p.category || 'General';
@@ -396,7 +394,6 @@ function renderBlogTags() {
   const posts = getBlogPosts();
   if (!container || posts.length === 0) return;
 
-  // Extract all tags and count frequency
   const tagCounts = {};
   posts.forEach(p => {
     if (p.tags && Array.isArray(p.tags)) {
@@ -407,7 +404,6 @@ function renderBlogTags() {
     }
   });
 
-  // Sort tags by frequency descending
   const sortedTags = Object.keys(tagCounts).sort((a, b) => tagCounts[b] - tagCounts[a]);
 
   container.innerHTML = sortedTags.map(tag => {
@@ -440,7 +436,6 @@ function renderLatestPosts() {
   const posts = getBlogPosts();
   if (!container || posts.length === 0) return;
 
-  // Top 5 latest articles sorted by date descending
   const latest5 = [...posts].sort((a, b) => {
     const dateA = new Date(a.publishDate || a.date || '2026-01-01');
     const dateB = new Date(b.publishDate || b.date || '2026-01-01');
@@ -452,7 +447,7 @@ function renderLatestPosts() {
     const imgPath = p.featuredImage || p.image;
     const formattedDate = formatDate(p.publishDate || p.date);
     const thumbHtml = imgPath 
-      ? `<img src="${imgPath}" alt="${p.title}" style="width:48px; height:48px; object-fit:cover; border-radius:8px; flex-shrink:0;" loading="lazy" />` 
+      ? `<img src="${imgPath}" alt="${p.title || ''}" style="width:48px; height:48px; object-fit:cover; border-radius:8px; flex-shrink:0;" loading="lazy" />` 
       : `<div style="width:48px; height:48px; border-radius:8px; background:var(--grad-navy-teal); color:white; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">${getCategoryEmoji(p.category)}</div>`;
 
     return `
@@ -460,7 +455,7 @@ function renderLatestPosts() {
         ${thumbHtml}
         <div style="flex:1; min-width:0;">
           <a href="${postUrl}" style="font-size:0.85rem; font-weight:700; color:var(--navy); line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">
-            ${p.title}
+            ${p.title || ''}
           </a>
           <div style="font-size:0.75rem; color:var(--text-muted); margin-top:3px;">
             <span>📅 ${formattedDate}</span>
