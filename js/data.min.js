@@ -5459,6 +5459,28 @@ if (typeof window !== 'undefined') {
 /* Blog posts data */
 const NS_BLOG_POSTS = [
   {
+    "id": "waseeullah-mansoori",
+    "slug": "waseeullah-mansoori",
+    "url": "/blog/waseeullah-mansoori/",
+    "title": "From Creative Designer to AI Educator: Meet Waseeullah Mansoori",
+    "excerpt": "Discover Waseeullah Mansoori's 11+ year journey from multimedia designer & marketer to founding Nova Skills — empowering careers with practical AI & tech skills.",
+    "category": "Founder Story",
+    "author": "Waseeullah Mansoori",
+    "authorRole": "Founder, Nova Skills",
+    "readTime": 15,
+    "date": "2026-07-30",
+    "tags": [
+      "Founder Story",
+      "Career Journey",
+      "AI Education",
+      "Nova Skills",
+      "Multimedia"
+    ],
+    "featured": true,
+    "trending": true,
+    "image": "/public/images/seo/waseeullah-mansoori.png"
+  },
+  {
     "id": 1,
     "slug": "ai-jobs-india-2026",
     "title": "Top 15 AI Jobs in India 2026: Salaries, Skills & How to Get Hired",
