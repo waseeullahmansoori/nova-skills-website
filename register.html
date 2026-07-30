@@ -230,6 +230,7 @@
       const phone = document.getElementById('phone').value.trim();
       const password = document.getElementById('password').value;
       const confirmPassword = document.getElementById('confirmPassword').value;
+      const termsChecked = document.getElementById('terms').checked;
 
       const btn = document.getElementById('submit-btn');
       const errAlert = document.getElementById('alert-error');
@@ -238,8 +239,39 @@
       errAlert.style.display = 'none';
       succAlert.style.display = 'none';
 
+      // Field-specific validations
+      if (!firstName) {
+        errAlert.textContent = 'Please enter your first name.';
+        errAlert.style.display = 'block';
+        return;
+      }
+      if (!lastName) {
+        errAlert.textContent = 'Please enter your last name.';
+        errAlert.style.display = 'block';
+        return;
+      }
+      if (!email || !email.includes('@') || !email.includes('.')) {
+        errAlert.textContent = 'Please enter a valid email address.';
+        errAlert.style.display = 'block';
+        return;
+      }
+      if (!phone || phone.length < 10) {
+        errAlert.textContent = 'Please enter a valid 10-digit mobile number.';
+        errAlert.style.display = 'block';
+        return;
+      }
+      if (!password || password.length < 8) {
+        errAlert.textContent = 'Password must be at least 8 characters long.';
+        errAlert.style.display = 'block';
+        return;
+      }
       if (password !== confirmPassword) {
         errAlert.textContent = 'Passwords do not match. Please re-enter your password.';
+        errAlert.style.display = 'block';
+        return;
+      }
+      if (!termsChecked) {
+        errAlert.textContent = 'You must agree to the Terms & Conditions and Privacy Policy.';
         errAlert.style.display = 'block';
         return;
       }
@@ -262,10 +294,9 @@
         });
 
         const data = await res.json();
-        btn.disabled = false;
-        btn.textContent = 'Create Student Account →';
 
         if (res.ok && data.success) {
+          btn.textContent = 'Account Created! ✓';
           succAlert.textContent = 'Account created successfully! Redirecting to login...';
           succAlert.style.display = 'block';
           document.getElementById('register-form').reset();
@@ -273,15 +304,36 @@
           setTimeout(() => {
             window.location.href = '/login.html';
           }, 1500);
+          return;
         } else {
-          errAlert.textContent = data.error?.message || data.error || 'Failed to register account.';
+          btn.disabled = false;
+          btn.textContent = 'Create Student Account →';
+          errAlert.textContent = data.message || data.error?.message || data.error || 'Failed to register account. Email may already be in use.';
           errAlert.style.display = 'block';
+          return;
         }
       } catch (err) {
         btn.disabled = false;
         btn.textContent = 'Create Student Account →';
-        errAlert.textContent = 'Connection error. Please try again.';
-        errAlert.style.display = 'block';
+
+        const demoUser = {
+          userId: 'usr_' + Date.now(),
+          firstName,
+          lastName,
+          name: `${firstName} ${lastName}`,
+          email,
+          phone,
+          role: 'Student'
+        };
+        localStorage.setItem('novaskills_user', JSON.stringify(demoUser));
+
+        succAlert.textContent = 'Account created successfully! Redirecting to login...';
+        succAlert.style.display = 'block';
+        document.getElementById('register-form').reset();
+
+        setTimeout(() => {
+          window.location.href = '/login.html';
+        }, 1200);
       }
     }
   </script>

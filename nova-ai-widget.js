@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  const WORKER_AI_ENDPOINT = '/api/ai/chat';
+  const WORKER_AI_ENDPOINT = '/api/chat';
   const STORAGE_KEY_HISTORY = 'novaskills_ai_history';
   const STORAGE_KEY_USER = 'novaskills_user';
 
@@ -162,16 +162,18 @@
         right: 0;
         bottom: 0;
         background: rgba(1, 15, 30, 0.65);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
         z-index: 999990;
         opacity: 0;
         pointer-events: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .nova-ai-overlay.open {
         opacity: 1;
         pointer-events: auto;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
       }
 
       /* Premium Slide-in Panel (Right Drawer) */
@@ -992,45 +994,73 @@
   }
 
   /* ─────────────────────────────────────────────
-     PANEL CONTROL & EVENTS
+     PANEL CONTROL & EVENTS (MODAL LIFECYCLE)
   ───────────────────────────────────────────── */
-  function togglePanel() {
-    isPanelOpen = !isPanelOpen;
+  function openPanel() {
+    isPanelOpen = true;
     const panel = document.getElementById('nova-ai-panel');
     const overlay = document.getElementById('nova-ai-overlay');
 
-    if (panel) {
-      panel.classList.toggle('open', isPanelOpen);
-      overlay?.classList.toggle('open', isPanelOpen);
+    if (panel) panel.classList.add('open');
+    if (overlay) overlay.classList.add('open');
 
-      if (isPanelOpen) {
-        document.body.style.overflow = 'hidden';
-        trackEvent('ai_widget_opened');
-        setTimeout(() => document.getElementById('nova-ai-textarea')?.focus(), 300);
-      } else {
-        document.body.style.overflow = '';
-        trackEvent('ai_widget_closed');
-      }
+    document.body.style.overflow = 'hidden';
+    document.body.classList.add('nova-ai-active', 'modal-open');
+    document.documentElement.classList.add('nova-ai-active', 'modal-open');
+
+    trackEvent('ai_widget_opened');
+    setTimeout(() => document.getElementById('nova-ai-textarea')?.focus(), 300);
+  }
+
+  function closePanel() {
+    isPanelOpen = false;
+    const panel = document.getElementById('nova-ai-panel');
+    const overlay = document.getElementById('nova-ai-overlay');
+
+    if (panel) panel.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+
+    // Restore body scrolling & clean active modal classes
+    document.body.style.overflow = '';
+    document.body.classList.remove('nova-ai-active', 'modal-open', 'no-scroll');
+    document.documentElement.classList.remove('nova-ai-active', 'modal-open', 'no-scroll');
+
+    trackEvent('ai_widget_closed');
+  }
+
+  function togglePanel() {
+    if (isPanelOpen) {
+      closePanel();
+    } else {
+      openPanel();
     }
   }
 
   function sendAction(title) {
     trackEvent('action_card_clicked', { title });
 
-    if (title === 'Book Counselling') {
-      triggerCTA('counselling');
+    if (title === 'Career Assessment') {
+      if (window.location.pathname.includes('/assessment.html')) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        window.location.href = '/assessment.html';
+      }
       return;
     }
-    if (title === 'Career Assessment') {
-      window.location.href = '/assessment.html';
+
+    if (title === 'Talk to AI') {
+      const textarea = document.getElementById('nova-ai-textarea');
+      if (textarea) {
+        textarea.focus();
+      }
       return;
     }
 
     const prompts = {
-      'Find Best Course': 'Which course is best suited for my career goals?',
-      'Talk to AI': 'Hi Nova! Tell me how you can assist me with courses and careers.',
-      'Fees & Admissions': 'What are the course fees, EMI options, and admission steps?',
-      'Placement Support': 'Tell me about Nova Skills placement support, hiring partners, and salary records.'
+      'Find Best Course': 'Help me find the best course.',
+      'Fees & Admissions': 'Tell me about course fees and admission process.',
+      'Book Counselling': 'I want to book a free counselling session.',
+      'Placement Support': 'Tell me about placement support.'
     };
 
     const promptText = prompts[title] || title;
@@ -1086,26 +1116,48 @@
     trackEvent('new_chat_started', { sessionId: newSid });
   }
 
+  function scrollToBottom() {
+    const bodyEl = document.getElementById('nova-ai-body');
+    if (bodyEl) {
+      bodyEl.scrollTop = bodyEl.scrollHeight;
+      setTimeout(() => { bodyEl.scrollTop = bodyEl.scrollHeight; }, 50);
+    }
+  }
+
   /* ─────────────────────────────────────────────
      MESSAGE SENDING & FALLBACK
   ───────────────────────────────────────────── */
   async function sendMessage() {
     if (isGenerating) return;
     const textarea = document.getElementById('nova-ai-textarea');
+    const sendBtn = document.getElementById('nova-ai-send-btn') || document.querySelector('.nova-ai-send-btn');
     if (!textarea) return;
 
     const userText = textarea.value.trim();
     if (!userText) return;
 
+    // Clear textbox & reset height
     textarea.value = '';
     handleInput(textarea);
 
+    // Disable Send button & set state
+    isGenerating = true;
+    if (sendBtn) {
+      sendBtn.disabled = true;
+      sendBtn.style.opacity = '0.6';
+      sendBtn.style.cursor = 'not-allowed';
+    }
+
+    // Append user message & scroll
     appendMessage(userText, 'user');
     saveHistory();
     trackEvent('user_ai_query', { query: userText });
 
+    // Show typing animation
     showTypingIndicator();
-    isGenerating = true;
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 15000);
 
     try {
       const res = await fetch(WORKER_AI_ENDPOINT, {
@@ -1114,18 +1166,26 @@
         body: JSON.stringify({
           message: userText,
           sessionId: getSessionId()
-        })
+        }),
+        signal: controller.signal
       });
 
+      clearTimeout(timeoutId);
       removeTypingIndicator();
-      isGenerating = false;
 
       if (res.ok) {
-        const data = await res.json();
-        if (data.sessionId) {
+        let data;
+        try {
+          data = await res.json();
+        } catch (e) {
+          data = null;
+        }
+
+        if (data && data.sessionId) {
           sessionStorage.setItem('novaskills_session_id', data.sessionId);
         }
-        if (data.success && data.response) {
+
+        if (data && data.success && data.response) {
           appendMessage(data.response, 'assistant');
         } else {
           fallbackResponse(userText);
@@ -1134,9 +1194,16 @@
         fallbackResponse(userText);
       }
     } catch (err) {
+      clearTimeout(timeoutId);
       removeTypingIndicator();
-      isGenerating = false;
       fallbackResponse(userText);
+    } finally {
+      isGenerating = false;
+      if (sendBtn) {
+        sendBtn.disabled = false;
+        sendBtn.style.opacity = '1';
+        sendBtn.style.cursor = 'pointer';
+      }
     }
 
     saveHistory();
@@ -1187,7 +1254,7 @@
     msgEl.appendChild(timeEl);
 
     bodyEl.appendChild(msgEl);
-    bodyEl.scrollTop = bodyEl.scrollHeight;
+    scrollToBottom();
 
     chatHistory.push({ role, text, timestamp });
   }
@@ -1208,7 +1275,7 @@
       </div>
     `;
     bodyEl.appendChild(typingEl);
-    bodyEl.scrollTop = bodyEl.scrollHeight;
+    scrollToBottom();
   }
 
   function removeTypingIndicator() {
@@ -1263,6 +1330,8 @@
 
   window.NovaAIWidget = {
     togglePanel,
+    openPanel,
+    closePanel,
     sendAction,
     sendMessage,
     startNewChat,
