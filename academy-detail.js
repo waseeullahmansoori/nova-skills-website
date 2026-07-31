@@ -1,6 +1,16 @@
 /* ============================================================
-   NOVA SKILLS – Phase A4 SEO, Navigation & Schema Engine
+   NOVA SKILLS – Academy Landing Engine (2026 Premium Edition)
    ============================================================ */
+
+let initRetryCount = 0;
+
+const ALIAS_MAP = {
+  'nocode': 'no-code-web',
+  'video': 'video-motion',
+  'office': 'office-productivity',
+  'career': 'career-freelancing',
+  'kids': 'kids-tech'
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   initAcademyPage();
@@ -45,7 +55,7 @@ function toggleFaq(btn) {
   allContents.forEach(c => c.style.display = 'none');
   allIcons.forEach(i => i.textContent = '+');
 
-  if (!isOpen) {
+  if (!isOpen && content) {
     content.style.display = 'block';
     if (icon) icon.textContent = '−';
   }
@@ -60,6 +70,49 @@ function openCurriculumNotice(academyName) {
   }
 }
 window.openCurriculumNotice = openCurriculumNotice;
+
+function filterExplorerCourses(targetLevel, btnElement) {
+  const tabs = document.querySelectorAll('.explorer-tab-btn');
+  tabs.forEach(t => {
+    t.style.background = '#f1f5f9';
+    t.style.color = '#334155';
+    t.style.borderColor = '#e2e8f0';
+  });
+
+  if (btnElement) {
+    btnElement.style.background = '#011731';
+    btnElement.style.color = '#ffffff';
+    btnElement.style.borderColor = '#011731';
+  }
+
+  const cards = document.querySelectorAll('.explorer-course-item');
+  cards.forEach(card => {
+    const cardLevel = card.getAttribute('data-level') || '';
+    if (targetLevel === 'all' || cardLevel === targetLevel) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+window.filterExplorerCourses = filterExplorerCourses;
+
+function searchExplorerCourses(query) {
+  const searchTerm = (query || '').toLowerCase().trim();
+  const cards = document.querySelectorAll('.explorer-course-item');
+  
+  cards.forEach(card => {
+    const title = (card.getAttribute('data-title') || '').toLowerCase();
+    const desc = (card.getAttribute('data-desc') || '').toLowerCase();
+    
+    if (!searchTerm || title.includes(searchTerm) || desc.includes(searchTerm)) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+window.searchExplorerCourses = searchExplorerCourses;
 
 function getSmartRelatedAcademies(currentSlug) {
   const smartMap = {
@@ -79,24 +132,28 @@ function getSmartRelatedAcademies(currentSlug) {
 
   const targetSlugs = smartMap[currentSlug] || ['ai', 'digital-marketing', 'design', 'programming'];
   
-  if (typeof NS_ACADEMIES === 'undefined' || !Array.isArray(NS_ACADEMIES)) return [];
+  let academiesList = (typeof NS_ACADEMIES !== 'undefined' && Array.isArray(NS_ACADEMIES))
+    ? NS_ACADEMIES
+    : ((typeof window !== 'undefined' && Array.isArray(window.NS_ACADEMIES)) ? window.NS_ACADEMIES : []);
+
+  if (!academiesList || academiesList.length === 0) return [];
   
   return targetSlugs
-    .map(slug => NS_ACADEMIES.find(a => a.slug === slug || a.id === slug))
+    .map(slug => academiesList.find(a => a.slug === slug || a.id === slug))
     .filter(Boolean)
     .slice(0, 4);
 }
 
-function injectAcademySEOAndSchema(academy, totalCoursesCount) {
+function injectAcademySEOAndSchema(academy, landingData, totalCoursesCount) {
   const canonicalUrl = `https://novaskills.in/academies/${academy.slug}/`;
   const pageTitle = `${academy.name} — Nova Skills Education Institute`;
   const metaDesc = `Master ${academy.name} with 100% practical training, live client projects, ISO certification & placement support at Nova Skills Institute.`;
   const ogImage = `https://novaskills.in/public/images/seo/og-academies.png`;
 
-  // 1. Title
+  // 1. Page Title
   document.title = pageTitle;
 
-  // 2. Helpers for Meta & Links
+  // 2. Helpers for Meta & Link Tags
   const setMetaTag = (selector, attr, attrVal, content) => {
     let el = document.querySelector(selector);
     if (!el) {
@@ -122,7 +179,7 @@ function injectAcademySEOAndSchema(academy, totalCoursesCount) {
   setMetaTag('meta[name="robots"]', 'name', 'robots', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   setLinkTag('canonical', canonicalUrl);
 
-  // Open Graph
+  // Open Graph Meta
   setMetaTag('meta[property="og:type"]', 'property', 'og:type', 'website');
   setMetaTag('meta[property="og:title"]', 'property', 'og:title', pageTitle);
   setMetaTag('meta[property="og:description"]', 'property', 'og:description', metaDesc);
@@ -130,7 +187,7 @@ function injectAcademySEOAndSchema(academy, totalCoursesCount) {
   setMetaTag('meta[property="og:image"]', 'property', 'og:image', ogImage);
   setMetaTag('meta[property="og:site_name"]', 'property', 'og:site_name', 'Nova Skills');
 
-  // Twitter
+  // Twitter Meta
   setMetaTag('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary_large_image');
   setMetaTag('meta[name="twitter:title"]', 'name', 'twitter:title', pageTitle);
   setMetaTag('meta[name="twitter:description"]', 'name', 'twitter:description', metaDesc);
@@ -144,6 +201,19 @@ function injectAcademySEOAndSchema(academy, totalCoursesCount) {
     schemaScript.type = 'application/ld+json';
     document.head.appendChild(schemaScript);
   }
+
+  const faqs = landingData.faqs || [];
+  const faqSchema = faqs.length > 0 ? {
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": f.a
+      }
+    }))
+  } : null;
 
   const schemaData = {
     "@context": "https://schema.org",
@@ -193,12 +263,12 @@ function injectAcademySEOAndSchema(academy, totalCoursesCount) {
         "provider": {
           "@type": "EducationalOrganization",
           "name": "Nova Skills Education Institute",
-          "url": "https://novaskills.in",
-          "sameAs": "https://novaskills.in/"
+          "url": "https://novaskills.in"
         },
         "educationalProgramMode": "Hybrid",
         "numberOfCredits": totalCoursesCount
-      }
+      },
+      ...(faqSchema ? [faqSchema] : [])
     ]
   };
 
@@ -250,7 +320,7 @@ function initAcademyPage() {
   renderAcademyLandingPage(academy);
 }
 
-function buildCourseCardHTML(course) {
+function buildCourseCardHTML(course, extraClass = '') {
   const safeName = (course.name || '').replace(/'/g, "\\'");
   const safeAcademy = (course.academy || '').replace(/'/g, "\\'");
   const origPrice = course.originalPrice ? `₹${course.originalPrice.toLocaleString('en-IN')}` : '';
@@ -258,16 +328,17 @@ function buildCourseCardHTML(course) {
   const liveProj = course.liveProjects || 2;
   const rating = course.rating || 4.8;
   const reviews = course.reviews || 120;
+  const normLevel = normalizeProgramLevel(course.programLevel || course.level);
 
   return `
-    <div class="course-card" data-category="${course.academyId}">
+    <div class="course-card ${extraClass}" data-category="${course.academyId}" data-level="${normLevel}" data-title="${(course.name || '').replace(/"/g, '&quot;')}" data-desc="${(course.shortDesc || '').replace(/"/g, '&quot;')}">
       ${isFeatured ? '<span class="course-hot-tag">🔥 Popular</span>' : ''}
       <div class="course-thumbnail">
         <div class="course-thumb-bg" style="background:${course.color || 'linear-gradient(135deg, #0599a8, #011731)'}">
           <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">${course.icon || '🎓'}</span>
         </div>
         <div class="course-badge-overlay">
-          <span class="course-level-badge">${course.level || 'All Levels'}</span>
+          <span class="course-level-badge">${normLevel || course.level || 'All Levels'}</span>
         </div>
         <div class="course-duration-badge">⏱️ ${course.duration || 'Flexible'}</div>
       </div>
@@ -277,7 +348,7 @@ function buildCourseCardHTML(course) {
         <p class="course-desc">${course.shortDesc || course.description || ''}</p>
         <div class="course-features">
           <span class="feature-item">💻 ${liveProj}+ Live Projects</span>
-          <span class="feature-item">📜 Certificate</span>
+          <span class="feature-item">📜 ISO Certificate</span>
           ${course.placementSupport ? '<span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>' : ''}
           <span class="feature-item">⭐ ${rating} (${reviews})</span>
         </div>
@@ -297,7 +368,7 @@ function buildCourseCardHTML(course) {
 }
 
 function renderAcademyLandingPage(academy) {
-  // 1. Retrieve Courses & Grouping
+  // 1. Retrieve Courses & Filter for Academy
   const allCourses = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES)) ? NS_COURSES : [];
   const academyCourses = allCourses.filter(c => 
     c.academyId === academy.id || 
@@ -324,29 +395,34 @@ function renderAcademyLandingPage(academy) {
     }
   }
 
-  // Inject SEO Meta & JSON-LD Schema (Phase A4 Tasks 1, 2, 6, 7)
-  injectAcademySEOAndSchema(academy, totalCourses);
+  // Retrieve Landing Data
+  const landingData = (typeof NS_ACADEMY_LANDING_DATA !== 'undefined')
+    ? (NS_ACADEMY_LANDING_DATA[academy.slug] || NS_ACADEMY_LANDING_DATA[academy.id] || {})
+    : {};
 
-  // 2. Breadcrumb Setup (Phase A4 Task 2)
+  // Inject SEO Meta & JSON-LD Schema
+  injectAcademySEOAndSchema(academy, landingData, totalCourses);
+
+  // Update Breadcrumb
   const breadcrumbSelected = document.getElementById('breadcrumb-selected-academy');
   if (breadcrumbSelected) {
     breadcrumbSelected.textContent = academy.name;
     breadcrumbSelected.setAttribute('href', `/academies/${academy.slug}/`);
   }
 
-  // Retrieve Landing Data
-  const landingData = (typeof NS_ACADEMY_LANDING_DATA !== 'undefined')
-    ? (NS_ACADEMY_LANDING_DATA[academy.slug] || NS_ACADEMY_LANDING_DATA[academy.id] || {})
-    : {};
-
-  // 3. Hero Section Enhancement
+  // ----------------------------------------------------
+  // 1. Hero Section Setup
+  // ----------------------------------------------------
   const iconEl = document.getElementById('academy-icon-display');
   const nameEl = document.getElementById('academy-name-display');
   const descEl = document.getElementById('academy-desc-display');
 
   if (iconEl) iconEl.textContent = academy.icon || '🎓';
   if (nameEl) nameEl.textContent = academy.name;
-  if (descEl) descEl.textContent = academy.description;
+  if (descEl) {
+    const headline = landingData.headline ? `<strong style="display:block; font-size:1.25rem; color:#75d766; margin-bottom:8px;">${landingData.headline}</strong>` : '';
+    descEl.innerHTML = `${headline}${academy.description}`;
+  }
 
   const statsContainer = document.getElementById('academy-stats-pills');
   if (statsContainer) {
@@ -354,12 +430,11 @@ function renderAcademyLandingPage(academy) {
       <span class="stats-pill">💼 Career Programs: ${careerCourses.length}</span>
       <span class="stats-pill">⚡ Professional Programs: ${proCourses.length}</span>
       <span class="stats-pill">📜 Certification Courses: ${certCourses.length}</span>
-      <span class="stats-pill">⏱️ Learning Duration: ${learningDuration}</span>
       <span class="stats-pill">📚 Total Courses: ${totalCourses}</span>
+      <span class="stats-pill">⏱️ Learning Duration: ${learningDuration}</span>
     `;
   }
 
-  // Setup Hero Buttons
   const enrollBtn = document.getElementById('btn-enroll-now');
   const consultationBtn = document.getElementById('btn-free-consultation');
 
@@ -375,16 +450,144 @@ function renderAcademyLandingPage(academy) {
     };
   }
 
-  // 4. Render All Page Sections
   const mainContainer = document.getElementById('academy-sections-container');
   if (!mainContainer) return;
 
   let html = '';
 
-  // Program & Course Cards
+  // ----------------------------------------------------
+  // 2. Academy Overview
+  // ----------------------------------------------------
+  const overview = landingData.overview || {
+    intro: `${academy.name} provides end-to-end practical skills training to launch and scale high-growth careers in modern industry.`,
+    benefits: ["100% Practical Training on Real Projects", "Live Mentor Guidance & Code Reviews", "ISO-Recognized Industry Certification", "Dedicated Placement & Freelance Support"],
+    outcomes: ["Build verifiable portfolio projects", "Gain mastery in modern industry software tools", "Qualify for high-paying job opportunities", "Launch freelance or agency business paths"]
+  };
+
+  const skillsList = landingData.skills || [
+    "Practical Tool Skills", "Industry Best Practices", "AI-Powered Workflows", "Portfolio Building",
+    "Client Project Delivery", "Technical Problem Solving", "Career Strategy", "Professional Certification"
+  ];
+
+  const toolsList = landingData.tools || [
+    { "name": "Industry Software", "icon": "🛠️" },
+    { "name": "AI Productivity Tools", "icon": "🤖" },
+    { "name": "Cloud & Analytics Platforms", "icon": "☁️" },
+    { "name": "Collaboration Tools", "icon": "⚡" }
+  ];
+
+  html += `
+    <section class="section-academy-overview" style="padding: 72px 0; background: #ffffff; border-bottom: 1px solid #e2e8f0;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 48px;">
+          <span class="section-tag" style="background: rgba(1, 23, 49, 0.08); color: #011731;">ACADEMY OVERVIEW & OUTCOMES</span>
+          <h2 class="section-title">Master ${academy.name}</h2>
+          <p class="section-subtitle" style="max-width: 760px; margin: 0 auto; color: #475569; font-size: 1.05rem;">
+            ${overview.intro}
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px;">
+          <!-- Industry Benefits -->
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 32px; border-radius: 18px;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+              <span style="font-size:1.8rem; background:rgba(5,153,168,0.1); width:48px; height:48px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; color:#0599a8;">🏆</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #011731; margin: 0;">Industry Benefits</h3>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+              ${(overview.benefits || []).map(b => `<li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#0599a8; font-weight:800;">✓</span> <span>${b}</span></li>`).join('')}
+            </ul>
+          </div>
+
+          <!-- Career Outcomes -->
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 32px; border-radius: 18px;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+              <span style="font-size:1.8rem; background:rgba(117,215,102,0.15); width:48px; height:48px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; color:#2e7d32;">🎯</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #011731; margin: 0;">Career Outcomes</h3>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+              ${(overview.outcomes || []).map(o => `<li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#75d766; font-weight:800;">🎯</span> <span>${o}</span></li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+
+  // ----------------------------------------------------
+  // 3. Career Roadmap
+  // ----------------------------------------------------
+  html += `
+    <section class="section-career-roadmap" style="padding: 80px 0; background: #011731; color: white;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 56px;">
+          <span class="section-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">STRUCTURED LEARNING JOURNEY</span>
+          <h2 class="section-title" style="color: white;">Visual Career Roadmap</h2>
+          <p class="section-subtitle" style="color: #94a3b8; max-width: 680px; margin: 0 auto;">
+            Step-by-step career progression from tool fundamentals to high-paying employment & client retainers.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; align-items: stretch;">
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🌱</div>
+            <span style="font-size: 0.75rem; background: rgba(56,189,248,0.2); color: #38bdf8; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 1</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Beginner</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Tool Orientation & Basics</p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🏛️</div>
+            <span style="font-size: 0.75rem; background: rgba(5,153,168,0.2); color: #0599a8; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 2</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Foundation</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Core Concepts & Practical Drills</p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">💻</div>
+            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.2); color: #60a5fa; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 3</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Projects</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Real Client Case Studies</p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">💼</div>
+            <span style="font-size: 0.75rem; background: rgba(139,92,246,0.2); color: #c084fc; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 4</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Internship</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Agency & Live Lab Training</p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">📜</div>
+            <span style="font-size: 0.75rem; background: rgba(234,179,8,0.2); color: #facc15; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 5</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Certification</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">ISO Recognized Verification</p>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🎯</div>
+            <span style="font-size: 0.75rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 6</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Placement</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Job Referrals & Freelance</p>
+          </div>
+
+          <div style="background: linear-gradient(135deg, rgba(5,153,168,0.3), rgba(117,215,102,0.3)); border: 1px solid #75d766; padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🚀</div>
+            <span style="font-size: 0.75rem; background: #75d766; color: #011731; padding: 2px 8px; border-radius: 50px; font-weight: 800; display: inline-block; margin-bottom: 8px;">GOAL</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Advanced Career</h4>
+            <p style="font-size: 0.8rem; color: #e2e8f0; margin: 0;">Senior Lead & Agency Scale</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+
+  // ----------------------------------------------------
+  // 4. Programs Offered
+  // ----------------------------------------------------
   if (careerCourses.length > 0) {
     html += `
-      <section class="section-career-programs" style="padding: 64px 0; background: white; border-bottom: 1px solid #e2e8f0;">
+      <section class="section-career-programs" style="padding: 72px 0; background: white; border-bottom: 1px solid #e2e8f0;">
         <div class="container">
           <div class="section-header" style="text-align: left; margin-bottom: 36px;">
             <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
@@ -407,7 +610,7 @@ function renderAcademyLandingPage(academy) {
 
   if (proCourses.length > 0) {
     html += `
-      <section class="section-pro-programs" style="padding: 64px 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+      <section class="section-pro-programs" style="padding: 72px 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
         <div class="container">
           <div class="section-header" style="text-align: left; margin-bottom: 36px;">
             <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
@@ -430,7 +633,7 @@ function renderAcademyLandingPage(academy) {
 
   if (certCourses.length > 0) {
     html += `
-      <section class="section-cert-courses" style="padding: 64px 0; background: white; border-bottom: 1px solid #e2e8f0;">
+      <section class="section-cert-courses" style="padding: 72px 0; background: white; border-bottom: 1px solid #e2e8f0;">
         <div class="container">
           <div class="section-header" style="text-align: left; margin-bottom: 36px;">
             <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
@@ -451,80 +654,55 @@ function renderAcademyLandingPage(academy) {
     `;
   }
 
-  // Visual Career Roadmap
+  // ----------------------------------------------------
+  // 5. Course Explorer (Interactive Tabbed Filter Grid)
+  // ----------------------------------------------------
   html += `
-    <section class="section-career-roadmap" style="padding: 80px 0; background: #011731; color: white;">
+    <section class="section-course-explorer" style="padding: 80px 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
       <div class="container">
-        <div class="section-header" style="text-align: center; margin-bottom: 48px;">
-          <span class="section-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">CAREER PATHWAY & PROGRESSION</span>
-          <h2 class="section-title" style="color: white;">Structured Learning Roadmap</h2>
-          <p class="section-subtitle" style="color: #94a3b8; max-width: 680px; margin: 0 auto;">
-            Step-by-step career acceleration from fundamental tool skills to high-paying client contracts & employment.
-          </p>
+        <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">DYNAMIC COURSE EXPLORER</span>
+          <h2 class="section-title">Explore All ${academy.name} Offerings</h2>
+          <p class="section-subtitle">Filter programs by duration and career depth to find your ideal learning track.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
-          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); padding: 28px 24px; border-radius: 16px;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
-              <span style="background: #0599a8; color: white; padding: 4px 12px; border-radius: 50px; font-weight: 700; font-size: 0.8rem;">STEP 1</span>
-              <span style="color: #38bdf8; font-weight: 600; font-size: 0.85rem;">1–2 Months</span>
-            </div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px;">Certification Courses</h3>
-            <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5;">Master core software tools, foundational concepts, and practical assignments.</p>
+        <!-- Filter Controls & Search -->
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin-bottom: 32px; background: white; padding: 16px 20px; border-radius: 16px; border: 1px solid #e2e8f0;">
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <button type="button" class="explorer-tab-btn" onclick="filterExplorerCourses('all', this)" style="background: #011731; color: white; border: 1px solid #011731; padding: 8px 18px; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 0.9rem;">All (${totalCourses})</button>
+            <button type="button" class="explorer-tab-btn" onclick="filterExplorerCourses('Career Program', this)" style="background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; padding: 8px 18px; border-radius: 50px; font-weight: 600; cursor: pointer; font-size: 0.9rem;">Career Programs (${careerCourses.length})</button>
+            <button type="button" class="explorer-tab-btn" onclick="filterExplorerCourses('Professional Program', this)" style="background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; padding: 8px 18px; border-radius: 50px; font-weight: 600; cursor: pointer; font-size: 0.9rem;">Professional Programs (${proCourses.length})</button>
+            <button type="button" class="explorer-tab-btn" onclick="filterExplorerCourses('Certification Course', this)" style="background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; padding: 8px 18px; border-radius: 50px; font-weight: 600; cursor: pointer; font-size: 0.9rem;">Certification Courses (${certCourses.length})</button>
           </div>
+          <div style="flex: 1; max-width: 300px; min-width: 200px;">
+            <input type="text" placeholder="🔍 Search courses..." onkeyup="searchExplorerCourses(this.value)" style="width: 100%; padding: 10px 16px; border-radius: 50px; border: 1px solid #cbd5e1; font-size: 0.9rem; outline: none;">
+          </div>
+        </div>
 
-          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); padding: 28px 24px; border-radius: 16px;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
-              <span style="background: #2563EB; color: white; padding: 4px 12px; border-radius: 50px; font-weight: 700; font-size: 0.8rem;">STEP 2</span>
-              <span style="color: #38bdf8; font-weight: 600; font-size: 0.85rem;">3–6 Months</span>
-            </div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px;">Professional Programs</h3>
-            <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5;">Deep-dive skill specialization, live client briefs, and advanced workflows.</p>
-          </div>
-
-          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); padding: 28px 24px; border-radius: 16px;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
-              <span style="background: #8B5CF6; color: white; padding: 4px 12px; border-radius: 50px; font-weight: 700; font-size: 0.8rem;">STEP 3</span>
-              <span style="color: #38bdf8; font-weight: 600; font-size: 0.85rem;">6–12 Months</span>
-            </div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px;">Career Programs</h3>
-            <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5;">Complete career transformation, agency training, and placement support.</p>
-          </div>
-
-          <div style="background: linear-gradient(135deg, rgba(5,153,168,0.2), rgba(117,215,102,0.2)); border: 1px solid #75d766; padding: 28px 24px; border-radius: 16px;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
-              <span style="background: #75d766; color: #011731; padding: 4px 12px; border-radius: 50px; font-weight: 800; font-size: 0.8rem;">GOAL</span>
-              <span style="color: #75d766; font-weight: 700; font-size: 0.85rem;">Career Launch</span>
-            </div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; color: white;">Career Opportunities</h3>
-            <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.5;">Full-time job placement, freelance retainers, or agency business launch.</p>
-          </div>
+        <div id="explorer-courses-grid" class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+          ${academyCourses.map(c => buildCourseCardHTML(c, 'explorer-course-item')).join('')}
         </div>
       </div>
     </section>
   `;
 
-  // Tools You Will Learn
-  const toolsList = landingData.tools || [
-    { "name": "Industry Software", "icon": "🛠️" },
-    { "name": "AI Automation Tools", "icon": "🤖" },
-    { "name": "Cloud Platforms", "icon": "☁️" },
-    { "name": "Analytics Tools", "icon": "📊" }
-  ];
-
+  // ----------------------------------------------------
+  // 6. Tools You'll Master
+  // ----------------------------------------------------
   html += `
     <section class="section-tools" style="padding: 80px 0; background: white; border-bottom: 1px solid #e2e8f0;">
       <div class="container">
         <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-          <span class="section-tag">PRACTICAL TECH STACK</span>
-          <h2 class="section-title">Tools & Technologies Covered</h2>
-          <p class="section-subtitle">Master 100% hands-on fluency in software and AI platforms used by industry experts.</p>
+          <span class="section-tag">HANDS-ON SOFTWARE FLUENCY</span>
+          <h2 class="section-title">Tools & Software You'll Master</h2>
+          <p class="section-subtitle">Get 100% practical fluency in industry-standard software tools and modern AI platforms.</p>
         </div>
 
-        <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; max-width: 900px; margin: 0 auto;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; max-width: 1000px; margin: 0 auto;">
           ${toolsList.map(t => `
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 20px; border-radius: 12px; font-weight: 600; font-size: 0.95rem; color: #011731; display: inline-flex; align-items: center; gap: 8px;">
-              <span>${t.icon}</span> <span>${t.name}</span>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px 20px; border-radius: 14px; font-weight: 600; font-size: 0.95rem; color: #011731; display: flex; align-items: center; gap: 12px;">
+              <span style="font-size: 1.6rem; width: 40px; height: 40px; border-radius: 10px; background: white; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0,0,0,0.04);">${t.icon || '🛠️'}</span>
+              <span>${t.name}</span>
             </div>
           `).join('')}
         </div>
@@ -532,11 +710,75 @@ function renderAcademyLandingPage(academy) {
     </section>
   `;
 
-  // Career Opportunities
+  // ----------------------------------------------------
+  // 7. Skills You'll Gain
+  // ----------------------------------------------------
+  html += `
+    <section class="section-skills" style="padding: 80px 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">VERIFIED COMPETENCIES</span>
+          <h2 class="section-title">Skills You'll Gain</h2>
+          <p class="section-subtitle">Acquire high-demand technical and strategic capabilities validated by industry projects.</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 900px; margin: 0 auto;">
+          ${skillsList.map(s => `
+            <div style="background: white; border: 1px solid #cbd5e1; padding: 10px 18px; border-radius: 50px; font-weight: 600; font-size: 0.92rem; color: #011731; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+              <span style="color: #0599a8; font-weight: 800;">✓</span> <span>${s}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+  `;
+
+  // ----------------------------------------------------
+  // 8. Real Projects
+  // ----------------------------------------------------
+  const portfolioList = landingData.portfolio || [
+    { "title": "Practical Lab Project 1", "student": "Nova Skills Student", "desc": "Executed real-world lab project under senior mentor review.", "tools": ["Practical Labs"] },
+    { "title": "Client Case Study Project 2", "student": "Nova Skills Student", "desc": "Solved real business problem using modern industry tools.", "tools": ["Case Study"] },
+    { "title": "Capstone Portfolio Project 3", "student": "Nova Skills Student", "desc": "Built complete end-to-end portfolio project for career placement.", "tools": ["Capstone"] }
+  ];
+
+  html += `
+    <section class="section-portfolio" style="padding: 80px 0; background: white; border-bottom: 1px solid #e2e8f0;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 48px;">
+          <span class="section-tag">STUDENT SHOWCASE</span>
+          <h2 class="section-title">Real Projects Students Build</h2>
+          <p class="section-subtitle">Explore verified portfolio work samples created during guided practical lab sessions.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+          ${portfolioList.map(p => `
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 28px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span style="font-size: 0.8rem; background: rgba(5,153,168,0.1); color: #0599a8; padding: 4px 10px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 12px;">📁 Portfolio Case Study</span>
+                <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">${p.title}</h3>
+                <p style="color: #64748b; font-size: 0.88rem; line-height: 1.5; margin-bottom: 16px;">${p.desc}</p>
+              </div>
+              <div style="border-top: 1px solid #e2e8f0; padding-top: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
+                <span style="font-size: 0.82rem; color: #64748b; font-weight: 600;">👨‍🎓 ${p.student}</span>
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                  ${(p.tools || []).map(tool => `<span style="background: #e2e8f0; color: #334155; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${tool}</span>`).join('')}
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+  `;
+
+  // ----------------------------------------------------
+  // 9. Career Opportunities
+  // ----------------------------------------------------
   const opps = landingData.careerOpps || {
-    jobRoles: ["Domain Specialist", "Team Lead", "Consultant"],
+    jobRoles: ["Domain Specialist", "Team Lead", "Senior Practitioner", "Consultant"],
     freelancing: ["Global Remote Services", "Monthly Retainer Contracts"],
-    business: ["Start Your Agency / Business"],
+    business: ["Start Your Agency / Business Studio"],
     salaryRange: "₹4.0 LPA – ₹12.0 LPA",
     demand: "🔥 High Market Demand"
   };
@@ -545,15 +787,15 @@ function renderAcademyLandingPage(academy) {
     <section class="section-career-opps" style="padding: 80px 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
       <div class="container">
         <div class="section-header" style="text-align: center; margin-bottom: 48px;">
-          <span class="section-tag">CAREER & INDUSTRY OUTLOOK</span>
-          <h2 class="section-title">Career Opportunities & Market Demand</h2>
-          <p class="section-subtitle">Explore job roles, freelancing potential, and business avenues available after graduation.</p>
+          <span class="section-tag">CAREER PATHWAYS</span>
+          <h2 class="section-title">Career Opportunities & Market Outlook</h2>
+          <p class="section-subtitle">Discover diverse avenues across corporate employment, international freelancing, and agency launch.</p>
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
           <div style="background: white; border: 1px solid #e2e8f0; padding: 28px; border-radius: 16px;">
             <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(5,153,168,0.1); color: #0599a8; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 16px;">💼</div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 14px;">High-Paying Job Roles</h3>
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 14px;">Full-Time Job Roles</h3>
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem; color: #475569;">
               ${(opps.jobRoles || []).map(r => `<li style="display:flex; gap:8px; align-items:center;"><span>✅</span> <span>${r}</span></li>`).join('')}
             </ul>
@@ -561,7 +803,7 @@ function renderAcademyLandingPage(academy) {
 
           <div style="background: white; border: 1px solid #e2e8f0; padding: 28px; border-radius: 16px;">
             <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(37,99,235,0.1); color: #2563EB; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 16px;">🌐</div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 14px;">Freelance Opportunities</h3>
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 14px;">Freelance & Remote</h3>
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem; color: #475569;">
               ${(opps.freelancing || []).map(f => `<li style="display:flex; gap:8px; align-items:center;"><span>⚡</span> <span>${f}</span></li>`).join('')}
             </ul>
@@ -569,7 +811,7 @@ function renderAcademyLandingPage(academy) {
 
           <div style="background: white; border: 1px solid #e2e8f0; padding: 28px; border-radius: 16px;">
             <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(139,92,246,0.1); color: #8B5CF6; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 16px;">🚀</div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 14px;">Business & Agency Paths</h3>
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 14px;">Agency & Business</h3>
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem; color: #475569;">
               ${(opps.business || []).map(b => `<li style="display:flex; gap:8px; align-items:center;"><span>🎯</span> <span>${b}</span></li>`).join('')}
             </ul>
@@ -577,9 +819,9 @@ function renderAcademyLandingPage(academy) {
 
           <div style="background: linear-gradient(135deg, #011731, #0a2040); color: white; border: 1px solid rgba(255,255,255,0.1); padding: 28px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
-              <span style="background: rgba(117,215,102,0.2); color: #75d766; padding: 4px 10px; border-radius: 6px; font-weight: 700; font-size: 0.8rem; display: inline-block; margin-bottom: 12px;">SALARY BENCHMARK</span>
-              <div style="font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 16px;">${opps.salaryRange || '₹4.0 – ₹12.0 LPA'}</div>
-              <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin-bottom: 16px;">Approximate salary potential based on experience and portfolio standard.</p>
+              <span style="background: rgba(117,215,102,0.2); color: #75d766; padding: 4px 10px; border-radius: 6px; font-weight: 700; font-size: 0.8rem; display: inline-block; margin-bottom: 12px;">INDUSTRY SALARY BENCHMARK</span>
+              <div style="font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 12px;">${opps.salaryRange || '₹4.0 – ₹12.0 LPA'}</div>
+              <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.5; margin-bottom: 16px;">Expected starting to senior salary spectrum based on verified skills.</p>
             </div>
             <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; font-weight: 700; color: #38bdf8; font-size: 0.9rem;">
               ${opps.demand || '🔥 High Industry Demand'}
@@ -590,9 +832,153 @@ function renderAcademyLandingPage(academy) {
     </section>
   `;
 
-  // Why Choose Nova Skills
+  // ----------------------------------------------------
+  // 10. Salary Insights
+  // ----------------------------------------------------
+  const salaryData = landingData.salaryInsights || {
+    entry: "₹3.5 – ₹5.0 LPA",
+    mid: "₹6.0 – ₹9.5 LPA",
+    senior: "₹10.0 – ₹18.0+ LPA",
+    freelancing: "₹40k – ₹1.5L / month",
+    entrepreneurship: "₹2.0L – ₹8.0L+ / month"
+  };
+
   html += `
-    <section class="section-why-choose" style="padding: 80px 0; background: white; border-bottom: 1px solid #e2e8f0;">
+    <section class="section-salary-insights" style="padding: 80px 0; background: white; border-bottom: 1px solid #e2e8f0;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 48px;">
+          <span class="section-tag">FINANCIAL PROGRESSION</span>
+          <h2 class="section-title">Salary Insights & Earning Progression</h2>
+          <p class="section-subtitle">Track your career earnings trajectory from entry-level role to senior practitioner and business owner.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px; text-align: center;">
+            <span style="font-size: 0.8rem; background: rgba(5,153,168,0.1); color: #0599a8; padding: 4px 10px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 12px;">0–2 YEARS</span>
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Entry Level</h4>
+            <div style="font-size: 1.35rem; font-weight: 800; color: #0599a8;">${salaryData.entry}</div>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px; text-align: center;">
+            <span style="font-size: 0.8rem; background: rgba(37,99,235,0.1); color: #2563EB; padding: 4px 10px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 12px;">2–5 YEARS</span>
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Mid Level</h4>
+            <div style="font-size: 1.35rem; font-weight: 800; color: #2563EB;">${salaryData.mid}</div>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px; text-align: center;">
+            <span style="font-size: 0.8rem; background: rgba(139,92,246,0.1); color: #8B5CF6; padding: 4px 10px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 12px;">5+ YEARS</span>
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Senior Level</h4>
+            <div style="font-size: 1.35rem; font-weight: 800; color: #8B5CF6;">${salaryData.senior}</div>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px; text-align: center;">
+            <span style="font-size: 0.8rem; background: rgba(234,179,8,0.15); color: #ca8a04; padding: 4px 10px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 12px;">RETAINERS</span>
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Freelancing</h4>
+            <div style="font-size: 1.35rem; font-weight: 800; color: #ca8a04;">${salaryData.freelancing}</div>
+          </div>
+
+          <div style="background: linear-gradient(135deg, rgba(1,23,49,0.05), rgba(117,215,102,0.15)); border: 1px solid #75d766; padding: 24px; border-radius: 16px; text-align: center;">
+            <span style="font-size: 0.8rem; background: #75d766; color: #011731; padding: 4px 10px; border-radius: 50px; font-weight: 800; display: inline-block; margin-bottom: 12px;">AGENCY / BIZ</span>
+            <h4 style="font-size: 1.05rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Entrepreneurship</h4>
+            <div style="font-size: 1.35rem; font-weight: 800; color: #2e7d32;">${salaryData.entrepreneurship}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+
+  // ----------------------------------------------------
+  // 11. Hiring Industries
+  // ----------------------------------------------------
+  const industriesList = landingData.hiringIndustries || [
+    "Digital & IT Agencies", "E-Commerce Enterprises", "Corporate Consultancies",
+    "SaaS & Tech Startups", "Global Remote Client Networks"
+  ];
+
+  html += `
+    <section class="section-hiring-industries" style="padding: 80px 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">EMPLOYER NETWORK</span>
+          <h2 class="section-title">Industries Hiring ${academy.name} Graduates</h2>
+          <p class="section-subtitle">Connect with top hiring sectors actively recruiting trained talent from Nova Skills.</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; max-width: 960px; margin: 0 auto;">
+          ${industriesList.map(ind => `
+            <div style="background: white; border: 1px solid #e2e8f0; padding: 14px 22px; border-radius: 14px; font-weight: 700; font-size: 0.95rem; color: #011731; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+              <span style="color: #0599a8; font-size: 1.2rem;">🏢</span> <span>${ind}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+  `;
+
+  // ----------------------------------------------------
+  // 12. Student Learning Journey Timeline
+  // ----------------------------------------------------
+  html += `
+    <section class="section-learning-journey" style="padding: 80px 0; background: white; border-bottom: 1px solid #e2e8f0;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 56px;">
+          <span class="section-tag">END-TO-END METHODOLOGY</span>
+          <h2 class="section-title">Student Learning Journey</h2>
+          <p class="section-subtitle">Our proven 7-stage learning framework ensuring 100% skill mastery and job readiness.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 14px; text-align: center;">
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px 12px; border-radius: 14px;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: #011731; color: white; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; margin-bottom: 10px;">1</div>
+            <h4 style="font-size: 0.9rem; font-weight: 700; color: #011731; margin: 0 0 4px;">Admission</h4>
+            <p style="font-size: 0.78rem; color: #64748b; margin: 0;">Roadmap Alignment</p>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px 12px; border-radius: 14px;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: #0599a8; color: white; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; margin-bottom: 10px;">2</div>
+            <h4 style="font-size: 0.9rem; font-weight: 700; color: #011731; margin: 0 0 4px;">Training</h4>
+            <p style="font-size: 0.78rem; color: #64748b; margin: 0;">Live Tool Masterclass</p>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px 12px; border-radius: 14px;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: #2563EB; color: white; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; margin-bottom: 10px;">3</div>
+            <h4 style="font-size: 0.9rem; font-weight: 700; color: #011731; margin: 0 0 4px;">Assignments</h4>
+            <p style="font-size: 0.78rem; color: #64748b; margin: 0;">Practical Lab Drills</p>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px 12px; border-radius: 14px;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: #8B5CF6; color: white; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; margin-bottom: 10px;">4</div>
+            <h4 style="font-size: 0.9rem; font-weight: 700; color: #011731; margin: 0 0 4px;">Projects</h4>
+            <p style="font-size: 0.78rem; color: #64748b; margin: 0;">Live Client Briefs</p>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px 12px; border-radius: 14px;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: #ca8a04; color: white; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; margin-bottom: 10px;">5</div>
+            <h4 style="font-size: 0.9rem; font-weight: 700; color: #011731; margin: 0 0 4px;">Internship</h4>
+            <p style="font-size: 0.78rem; color: #64748b; margin: 0;">Agency Simulation</p>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px 12px; border-radius: 14px;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: #059669; color: white; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; margin-bottom: 10px;">6</div>
+            <h4 style="font-size: 0.9rem; font-weight: 700; color: #011731; margin: 0 0 4px;">Certification</h4>
+            <p style="font-size: 0.78rem; color: #64748b; margin: 0;">ISO Verification</p>
+          </div>
+
+          <div style="background: rgba(117,215,102,0.2); border: 1px solid #75d766; padding: 20px 12px; border-radius: 14px;">
+            <div style="width: 36px; height: 36px; border-radius: 50%; background: #75d766; color: #011731; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; margin-bottom: 10px;">7</div>
+            <h4 style="font-size: 0.9rem; font-weight: 800; color: #011731; margin: 0 0 4px;">Placement</h4>
+            <p style="font-size: 0.78rem; color: #1e293b; margin: 0; font-weight: 600;">Job Launch</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+
+  // ----------------------------------------------------
+  // 13. Why Nova Skills
+  // ----------------------------------------------------
+  html += `
+    <section class="section-why-choose" style="padding: 80px 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
       <div class="container">
         <div class="section-header" style="text-align: center; margin-bottom: 48px;">
           <span class="section-tag">THE NOVA SKILLS ADVANTAGE</span>
@@ -600,38 +986,50 @@ function renderAcademyLandingPage(academy) {
           <p class="section-subtitle">We bridge the gap between classroom theory and real-world industry demands.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+          <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
             <div style="font-size: 2rem; margin-bottom: 12px;">🚀</div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">100% Practical Training</h3>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">100% Practical Focus</h3>
             <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">Learn by executing live projects and real client briefs rather than memorizing slides.</p>
           </div>
 
-          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
-            <div style="font-size: 2rem; margin-bottom: 12px;">👨‍🏫</div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Senior Industry Mentors</h3>
-            <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">Learn directly from senior practitioners with 8+ years of hands-on industry experience.</p>
-          </div>
-
-          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
+          <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
             <div style="font-size: 2rem; margin-bottom: 12px;">🤖</div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">AI-Integrated Learning</h3>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">AI Integrated Learning</h3>
             <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">Master generative AI productivity workflows to complete client projects 5x faster.</p>
           </div>
 
-          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
-            <div style="font-size: 2rem; margin-bottom: 12px;">📜</div>
-            <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Recognized Certification</h3>
-            <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">Earn ISO-recognized certificates to validate your skills on LinkedIn and resumes.</p>
+          <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
+            <div style="font-size: 2rem; margin-bottom: 12px;">💻</div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Live Projects</h3>
+            <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">Work on actual live advertising budgets and verified business case studies.</p>
           </div>
 
-          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
+          <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
+            <div style="font-size: 2rem; margin-bottom: 12px;">👨‍🏫</div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Industry Mentors</h3>
+            <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">Learn directly from senior practitioners with 8+ years of hands-on industry experience.</p>
+          </div>
+
+          <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
             <div style="font-size: 2rem; margin-bottom: 12px;">💼</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Placement Assistance</h3>
             <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">1-on-1 resume reviews, mock technical interviews, and access to 150+ hiring partners.</p>
           </div>
 
-          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
+          <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
+            <div style="font-size: 2rem; margin-bottom: 12px;">🎯</div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Interview Preparation</h3>
+            <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">Rigorous mock technical interviews, domain Q&A prep, and confidence coaching.</p>
+          </div>
+
+          <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
+            <div style="font-size: 2rem; margin-bottom: 12px;">🧭</div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Career Guidance</h3>
+            <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">Personalized 1-on-1 mentorship to align your learning path with your dream role.</p>
+          </div>
+
+          <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
             <div style="font-size: 2rem; margin-bottom: 12px;">📁</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Portfolio Building</h3>
             <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">Graduate with a verified GitHub / Behance / Case Study portfolio ready for recruiters.</p>
@@ -641,44 +1039,9 @@ function renderAcademyLandingPage(academy) {
     </section>
   `;
 
-  // Student Portfolio
-  const portfolioList = landingData.portfolio || [
-    { "title": "Practical Lab Project 1", "student": "Nova Skills Student", "desc": "Executed real-world lab project under senior mentor review.", "tools": ["Practical Labs"] },
-    { "title": "Client Case Study Project 2", "student": "Nova Skills Student", "desc": "Solved real business problem using modern industry tools.", "tools": ["Case Study"] },
-    { "title": "Capstone Portfolio Project 3", "student": "Nova Skills Student", "desc": "Built complete end-to-end portfolio project for career placement.", "tools": ["Capstone"] }
-  ];
-
-  html += `
-    <section class="section-portfolio" style="padding: 80px 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
-      <div class="container">
-        <div class="section-header" style="text-align: center; margin-bottom: 48px;">
-          <span class="section-tag">STUDENT SHOWCASE</span>
-          <h2 class="section-title">Real Projects Built by Our Students</h2>
-          <p class="section-subtitle">Explore actual work samples and case studies created during lab sessions.</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-          ${portfolioList.map(p => `
-            <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <span style="font-size: 0.8rem; background: rgba(5,153,168,0.1); color: #0599a8; padding: 4px 10px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 12px;">📁 Case Study</span>
-                <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">${p.title}</h3>
-                <p style="color: #64748b; font-size: 0.88rem; line-height: 1.5; margin-bottom: 16px;">${p.desc}</p>
-              </div>
-              <div style="border-top: 1px solid #f1f5f9; padding-top: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
-                <span style="font-size: 0.82rem; color: #94a3b8; font-weight: 600;">👨‍🎓 ${p.student}</span>
-                <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-                  ${(p.tools || []).map(tool => `<span style="background: #f1f5f9; color: #334155; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${tool}</span>`).join('')}
-                </div>
-              </div>
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    </section>
-  `;
-
-  // Academy FAQs
+  // ----------------------------------------------------
+  // 14. Frequently Asked Questions
+  // ----------------------------------------------------
   const faqsList = landingData.faqs || [
     { "q": `What are the eligibility criteria for ${academy.name}?`, "a": "Anyone with a passion for learning can join. We start from foundational concepts and build up to advanced professional levels." },
     { "q": "Do you provide placement assistance?", "a": "Yes! Our Career and Professional Programs include 100% placement support, resume reviews, mock interviews, and hiring partner access." },
@@ -692,7 +1055,7 @@ function renderAcademyLandingPage(academy) {
         <div class="section-header" style="text-align: center; margin-bottom: 40px;">
           <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
           <h2 class="section-title">Got Questions? We Have Answers</h2>
-          <p class="section-subtitle">Find key details about admissions, practical training, and placement support.</p>
+          <p class="section-subtitle">Find key details about admissions, practical training, and placement support for ${academy.name}.</p>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 14px;">
@@ -712,7 +1075,9 @@ function renderAcademyLandingPage(academy) {
     </section>
   `;
 
-  // Related Academies (Phase A4 Task 4)
+  // ----------------------------------------------------
+  // 15. Related Skill Academies
+  // ----------------------------------------------------
   const relatedAcademies = getSmartRelatedAcademies(academy.slug);
   if (relatedAcademies.length > 0) {
     html += `
@@ -744,7 +1109,9 @@ function renderAcademyLandingPage(academy) {
     `;
   }
 
-  // Strong Call-To-Action (Phase A3 Section 8 + Phase A4 Tasks 3, 5 Internal Links)
+  // ----------------------------------------------------
+  // 16. Final Call To Action
+  // ----------------------------------------------------
   const waMsg = encodeURIComponent(`Hi Nova Skills, I want to know more about admission & fees for ${academy.name}.`);
 
   html += `
@@ -757,11 +1124,11 @@ function renderAcademyLandingPage(academy) {
         </p>
 
         <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; margin-bottom: 24px;">
-          <button type="button" class="btn btn-primary btn-lg" style="background: #75d766; color: #011731; font-weight: 800;" onclick="openEnrollmentModal('', '${academy.name.replace(/'/g, "\\'")}')">Enroll Now →</button>
-          <button type="button" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);" onclick="openConsultationPopup()">Book Free Consultation</button>
+          <button type="button" class="btn btn-primary btn-lg" style="background: #75d766; color: #011731; font-weight: 800;" onclick="openEnrollmentModal('', '${(academy.name || '').replace(/'/g, "\\'")}')">Enroll Now →</button>
+          <button type="button" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);" onclick="openConsultationPopup()">Free Career Counselling</button>
           <a href="tel:+919695904440" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);">📞 Call Now</a>
           <a href="https://wa.me/919695904440?text=${waMsg}" target="_blank" rel="noopener" class="btn btn-outline btn-lg" style="color: #75d766; border-color: #75d766;">💬 WhatsApp Us</a>
-          <button type="button" class="btn btn-outline btn-lg" style="color: #38bdf8; border-color: #38bdf8;" onclick="openCurriculumNotice('${academy.name.replace(/'/g, "\\'")}')">📥 Download Curriculum</button>
+          <button type="button" class="btn btn-outline btn-lg" style="color: #38bdf8; border-color: #38bdf8;" onclick="openCurriculumNotice('${(academy.name || '').replace(/'/g, "\\'")}')">📥 Download Curriculum</button>
         </div>
 
         <div style="display: flex; gap: 20px; justify-content: center; font-size: 0.92rem; opacity: 0.9; flex-wrap: wrap;">
