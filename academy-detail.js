@@ -208,11 +208,26 @@ function injectAcademySEOAndSchema(academy, totalCoursesCount) {
 function initAcademyPage() {
   const slug = getAcademySlug();
 
+  let academiesList = (typeof NS_ACADEMIES !== 'undefined' && Array.isArray(NS_ACADEMIES))
+    ? NS_ACADEMIES
+    : ((typeof window !== 'undefined' && Array.isArray(window.NS_ACADEMIES)) ? window.NS_ACADEMIES : null);
+
+  if (!academiesList && initRetryCount < 30) {
+    initRetryCount++;
+    setTimeout(initAcademyPage, 50);
+    return;
+  }
+
   let academy = null;
-  if (slug && typeof NS_ACADEMIES !== 'undefined' && Array.isArray(NS_ACADEMIES)) {
-    academy = NS_ACADEMIES.find(a => 
-      (a.slug && a.slug === slug) || 
-      (a.id && a.id === slug)
+  if (slug && academiesList && academiesList.length > 0) {
+    const targetSlug = ALIAS_MAP[slug] || slug;
+    academy = academiesList.find(a => 
+      (a.slug && a.slug.toLowerCase() === targetSlug) || 
+      (a.id && a.id.toLowerCase() === targetSlug) ||
+      (a.slug && a.slug.toLowerCase() === slug) || 
+      (a.id && a.id.toLowerCase() === slug) ||
+      (a.slug && a.slug.toLowerCase().replace(/-/g, '') === slug.replace(/-/g, '')) ||
+      (a.id && a.id.toLowerCase().replace(/-/g, '') === slug.replace(/-/g, ''))
     );
   }
 
