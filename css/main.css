@@ -1198,17 +1198,49 @@ h1, h2, h3, h4, h5, h6 {
 
 .academy-link {
   font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--teal);
+  font-weight: 700;
+  color: var(--navy);
+  background: var(--green);
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  transition: all var(--transition-fast);
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(117, 215, 102, 0.25);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 16px;
 }
 
-.academy-link:hover {
+.academy-link:hover,
+.academy-link:focus {
+  background: #64c855;
   color: var(--navy);
-  gap: 8px;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(117, 215, 102, 0.4);
+  gap: 12px;
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.academy-link:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(117, 215, 102, 0.3);
+}
+
+.academy-link .arrow-icon {
+  display: inline-block;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.academy-link:hover .arrow-icon,
+.academy-link:focus .arrow-icon {
+  transform: translateX(4px);
 }
 
 /* ===== COURSES SECTION ===== */
