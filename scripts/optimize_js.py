@@ -30,7 +30,7 @@ def simple_js_minify(js_code):
     return js_code.strip()
 
 def process_js_files():
-    files = ['data.js', 'components.js', 'main.js', 'nova-ai-widget.js']
+    files = ['data.js', 'components.js', 'main.js', 'nova-ai-widget.js', 'blog.js', 'blog-detail.js']
     stats = []
 
     for f_name in files:

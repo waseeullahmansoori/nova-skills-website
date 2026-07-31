@@ -1,15 +1,17 @@
 /* ============================================================
-   NOVA SKILLS — Blog Page Logic & Dynamic Pagination (Production Ready)
-   Handles: 8 posts per page pagination, real-time search, dynamic categories,
-            frequency-sorted tags, Top 5 latest posts sidebar, URL state sync
+   NOVA SKILLS — Blog Page Functional Engine
+   Handles: 9 posts per page, category filter, tag filter,
+   search filter, multi-filter combination, pagination, URL state sync,
+   browser history popstate, clear filters, and dynamic rendering.
    ============================================================ */
 
 'use strict';
 
 let currentBlogCategory = 'all';
 let currentBlogTag = '';
+let currentBlogSearch = '';
 let currentBlogPage = 1;
-const BLOG_POSTS_PER_PAGE = 8;
+const BLOG_POSTS_PER_PAGE = 9;
 
 function getBlogPosts() {
   if (typeof window !== 'undefined' && window.NS_BLOG_POSTS && Array.isArray(window.NS_BLOG_POSTS)) {
@@ -28,16 +30,17 @@ function readUrlParams() {
     currentBlogPage = (pageParam && !isNaN(pageParam) && pageParam > 0) ? pageParam : 1;
     currentBlogCategory = params.get('category') || 'all';
     currentBlogTag = params.get('tag') || '';
-    const searchParam = params.get('search') || '';
+    currentBlogSearch = params.get('search') || '';
 
     const searchInput = document.getElementById('blog-search-input');
-    if (searchInput && searchParam) {
-      searchInput.value = searchParam;
+    if (searchInput) {
+      searchInput.value = currentBlogSearch;
     }
   } catch (e) {
     currentBlogPage = 1;
     currentBlogCategory = 'all';
     currentBlogTag = '';
+    currentBlogSearch = '';
   }
 }
 
@@ -62,7 +65,8 @@ function updateUrlParams() {
       url.searchParams.delete('tag');
     }
 
-    const searchVal = document.getElementById('blog-search-input')?.value.trim() || '';
+    const searchInput = document.getElementById('blog-search-input');
+    const searchVal = searchInput ? searchInput.value.trim() : currentBlogSearch;
     if (searchVal) {
       url.searchParams.set('search', searchVal);
     } else {
@@ -152,7 +156,8 @@ function renderBlogGrid() {
   const posts = getBlogPosts();
   if (!container || posts.length === 0) return;
 
-  const searchVal = document.getElementById('blog-search-input')?.value.toLowerCase().trim() || '';
+  const searchInput = document.getElementById('blog-search-input');
+  const searchVal = (searchInput ? searchInput.value : currentBlogSearch).toLowerCase().trim();
 
   // 1. Sort latest published blogs first (Date descending)
   const sortedPosts = [...posts].sort((a, b) => {
@@ -161,25 +166,32 @@ function renderBlogGrid() {
     return dateB - dateA;
   });
 
-  // 2. Filter posts across Title, Excerpt, Content, Category, Tags, Author
+  // 2. Filter posts across Category, Tag, and Search
   const filtered = sortedPosts.filter(p => {
-    // Exclude featured article from main grid when showing all categories and no search/tag query
-    if (p.featured && currentBlogCategory === 'all' && !searchVal && !currentBlogTag) {
+    // Exclude featured article from main grid ONLY when showing all categories, page 1, no tag, no search query
+    if (p.featured && currentBlogCategory === 'all' && !currentBlogTag && !searchVal && currentBlogPage === 1) {
       return false;
     }
 
     // Category Filter
-    if (currentBlogCategory !== 'all' && (p.category || '').toLowerCase() !== currentBlogCategory.toLowerCase()) {
-      return false;
+    if (currentBlogCategory && currentBlogCategory.toLowerCase() !== 'all') {
+      const pCat = (p.category || '').toLowerCase().trim();
+      const targetCat = currentBlogCategory.toLowerCase().trim();
+      if (pCat !== targetCat) {
+        return false;
+      }
     }
 
     // Tag Filter
     if (currentBlogTag) {
-      const hasTag = p.tags ? p.tags.some(t => t.toLowerCase() === currentBlogTag.toLowerCase()) : false;
-      if (!hasTag) return false;
+      const targetTag = currentBlogTag.toLowerCase().trim();
+      const hasTag = p.tags && Array.isArray(p.tags) && p.tags.some(t => t.toLowerCase().trim() === targetTag);
+      if (!hasTag) {
+        return false;
+      }
     }
 
-    // Multi-field Search Query
+    // Search Query
     if (searchVal) {
       const matchTitle = p.title ? p.title.toLowerCase().includes(searchVal) : false;
       const matchExcerpt = p.excerpt ? p.excerpt.toLowerCase().includes(searchVal) : false;
@@ -209,31 +221,39 @@ function renderBlogGrid() {
   // Update Section Heading
   const heading = document.getElementById('blog-grid-heading');
   if (heading) {
+    const filtersLabel = [];
+    if (currentBlogCategory && currentBlogCategory !== 'all') {
+      filtersLabel.push(`Category: ${currentBlogCategory}`);
+    }
     if (currentBlogTag) {
-      heading.textContent = `Tag: #${currentBlogTag} (${totalPosts})`;
-    } else if (currentBlogCategory !== 'all') {
-      heading.textContent = `${currentBlogCategory} Articles (${totalPosts})`;
-    } else if (searchVal) {
-      heading.textContent = `Search Results for "${searchVal}" (${totalPosts})`;
+      filtersLabel.push(`Tag: #${currentBlogTag}`);
+    }
+    if (searchVal) {
+      filtersLabel.push(`Search: "${searchVal}"`);
+    }
+
+    if (filtersLabel.length > 0) {
+      heading.textContent = `${filtersLabel.join(' • ')} (${totalPosts})`;
     } else {
       heading.textContent = 'Latest Articles';
     }
   }
 
+  // No Results View
   if (totalPosts === 0) {
     container.innerHTML = `
       <div style="grid-column:1/-1; text-align:center; padding:60px 20px; color:var(--text-muted);">
-        <div style="font-size:3rem; margin-bottom:12px;">📝</div>
-        <h3 style="font-size:1.4rem; color:var(--navy); margin-bottom:8px;">No articles found.</h3>
-        <p style="font-size:0.95rem; margin-bottom:20px;">No articles match your active search term or filter criteria.</p>
-        <button type="button" class="btn btn-outline" onclick="clearAllBlogFilters()">Clear All Filters ✕</button>
+        <div style="font-size:3.5rem; margin-bottom:12px;">📝</div>
+        <h3 style="font-size:1.5rem; font-weight:800; color:var(--navy); margin-bottom:8px;">No articles found.</h3>
+        <p style="font-size:0.95rem; color:#64748b; margin-bottom:24px;">No articles match your active search term or filter criteria.</p>
+        <button type="button" class="btn btn-primary" onclick="clearAllBlogFilters()" style="background:#0599a8; color:white; font-weight:700;">Clear Filters ✕</button>
       </div>
     `;
     renderBlogPagination(0, 0);
     return;
   }
 
-  // 3. Slice exactly 8 posts per page
+  // Slice posts for current page (9 per page)
   const startIndex = (currentBlogPage - 1) * BLOG_POSTS_PER_PAGE;
   const endIndex = startIndex + BLOG_POSTS_PER_PAGE;
   const pagePosts = filtered.slice(startIndex, endIndex);
@@ -273,7 +293,6 @@ function renderBlogGrid() {
     `;
   }).join('');
 
-  // 4. Render Pagination Controls (8 posts/page)
   renderBlogPagination(totalPosts, totalPages);
 }
 
@@ -288,7 +307,7 @@ function renderBlogPagination(totalPosts, totalPages) {
 
   let html = '';
 
-  // ← Previous Button
+  // Previous Button
   const isPrevDisabled = currentBlogPage <= 1;
   html += `
     <button type="button" 
@@ -313,7 +332,7 @@ function renderBlogPagination(totalPosts, totalPages) {
     `;
   }
 
-  // Next → Button
+  // Next Button
   const isNextDisabled = currentBlogPage >= totalPages;
   html += `
     <button type="button" 
@@ -337,7 +356,6 @@ function changeBlogPage(page) {
     sectionHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
-
 window.changeBlogPage = changeBlogPage;
 
 function renderBlogCategories() {
@@ -356,16 +374,16 @@ function renderBlogCategories() {
   let html = categories.map(cat => {
     const count = cat === 'all' ? posts.length : counts[cat];
     const label = cat === 'all' ? 'All Categories' : cat;
-    const isActive = (currentBlogCategory.toLowerCase() === cat.toLowerCase() && !currentBlogTag) ? 'active' : '';
+    const isActive = (currentBlogCategory.toLowerCase() === cat.toLowerCase()) ? 'active' : '';
     return `
-      <button class="blog-category-link ${isActive}" onclick="filterBlogCategory('${cat}')" type="button">
+      <button class="blog-category-link ${isActive}" onclick="filterBlogCategory('${cat.replace(/'/g, "\\'")}')" type="button">
         <span>${label}</span>
         <span class="cat-count">(${count})</span>
       </button>
     `;
   }).join('');
 
-  if (currentBlogCategory !== 'all' || currentBlogTag || document.getElementById('blog-search-input')?.value.trim()) {
+  if (currentBlogCategory !== 'all' || currentBlogTag || (document.getElementById('blog-search-input')?.value.trim())) {
     html += `
       <button type="button" class="btn btn-sm btn-outline" style="width:100%; margin-top:12px; font-size:0.8rem;" onclick="clearAllBlogFilters()">
         Clear All Filters ✕
@@ -377,16 +395,17 @@ function renderBlogCategories() {
 }
 
 function filterBlogCategory(cat) {
-  currentBlogCategory = cat;
-  currentBlogTag = '';
+  if (cat.toLowerCase() === 'all') {
+    currentBlogCategory = 'all';
+  } else {
+    currentBlogCategory = cat;
+  }
   currentBlogPage = 1;
   updateUrlParams();
 
   renderBlogCategories();
-  renderBlogTags();
   renderBlogGrid();
 }
-
 window.filterBlogCategory = filterBlogCategory;
 
 function renderBlogTags() {
@@ -409,7 +428,7 @@ function renderBlogTags() {
   container.innerHTML = sortedTags.map(tag => {
     const isActive = currentBlogTag.toLowerCase() === tag.toLowerCase() ? 'active' : '';
     return `
-      <button class="blog-tag ${isActive}" onclick="searchBlogTag('${tag}')" type="button">#${tag}</button>
+      <button class="blog-tag ${isActive}" onclick="searchBlogTag('${tag.replace(/'/g, "\\'")}')" type="button">#${tag}</button>
     `;
   }).join('');
 }
@@ -420,15 +439,12 @@ function searchBlogTag(tag) {
   } else {
     currentBlogTag = tag;
   }
-  currentBlogCategory = 'all';
   currentBlogPage = 1;
   updateUrlParams();
 
   renderBlogTags();
-  renderBlogCategories();
   renderBlogGrid();
 }
-
 window.searchBlogTag = searchBlogTag;
 
 function renderLatestPosts() {
@@ -479,6 +495,7 @@ function formatDate(dateStr) {
 function clearAllBlogFilters() {
   currentBlogCategory = 'all';
   currentBlogTag = '';
+  currentBlogSearch = '';
   currentBlogPage = 1;
 
   const searchInput = document.getElementById('blog-search-input');
@@ -489,22 +506,22 @@ function clearAllBlogFilters() {
   renderBlogTags();
   renderBlogGrid();
 }
-
 window.clearAllBlogFilters = clearAllBlogFilters;
 
 function bindBlogEvents() {
   const searchInput = document.getElementById('blog-search-input');
   if (searchInput) {
     searchInput.addEventListener('input', () => {
+      currentBlogSearch = searchInput.value.trim();
       currentBlogPage = 1;
       updateUrlParams();
       renderBlogGrid();
-      renderBlogCategories();
     });
 
     searchInput.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
+        currentBlogSearch = searchInput.value.trim();
         currentBlogPage = 1;
         updateUrlParams();
         renderBlogGrid();
