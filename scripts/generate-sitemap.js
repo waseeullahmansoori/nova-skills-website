@@ -83,26 +83,26 @@ function generateSitemap() {
 
 
 
-  // 3. Dynamic Academy Detail URLs
-  const academyIds = [
+  // 3. Clean Academy Directory URLs (Phase A4)
+  const academySlugs = [
     'digital-marketing',
     'ai',
-    'kids',
     'design',
-    'video',
-    '3d',
-    'nocode',
     'programming',
-    'creator',
-    'office',
+    'no-code-web',
+    'video-motion',
+    '3d',
+    'career-freelancing',
     'communication',
-    'career'
+    'kids-tech',
+    'creator',
+    'office-productivity'
   ];
-  const academyPageDate = getFormattedDate(path.join(ROOT_DIR, 'academy-detail.html'));
-  academyIds.forEach((acad) => {
+  academySlugs.forEach((slug) => {
+    const acadPath = path.join(ROOT_DIR, 'academies', slug, 'index.html');
     urlEntries.push({
-      loc: `${DOMAIN}/academy-detail.html?academy=${acad}`,
-      lastmod: academyPageDate
+      loc: `${DOMAIN}/academies/${slug}/`,
+      lastmod: getFormattedDate(acadPath)
     });
   });
 

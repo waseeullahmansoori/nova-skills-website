@@ -5294,77 +5294,465 @@ const NS_COURSES = [
 const NS_ACADEMIES = [
   {
     "id": "digital-marketing",
+    "slug": "digital-marketing",
     "name": "Digital Marketing Academy",
-    "icon": "\ud83d\udcca",
-    "color": "linear-gradient(135deg,#FF6B00,#FF9A3C)"
+    "icon": "📊",
+    "color": "linear-gradient(135deg,#FF6B00,#FF9A3C)",
+    "description": "Master SEO, Google Ads, Meta Ads, Social Media, Content & AI-powered marketing strategies with 100% practical training."
   },
   {
     "id": "ai",
+    "slug": "ai",
     "name": "AI Academy",
-    "icon": "\ud83e\udd16",
-    "color": "linear-gradient(135deg,#0599a8,#75d766)"
+    "icon": "🤖",
+    "color": "linear-gradient(135deg,#0599a8,#75d766)",
+    "description": "ChatGPT, Prompt Engineering, AI Automation, AI Agents & cutting-edge AI productivity tools for modern careers."
   },
   {
     "id": "design",
+    "slug": "design",
     "name": "Design Academy",
-    "icon": "\ud83c\udfa8",
-    "color": "linear-gradient(135deg,#8B5CF6,#EC4899)"
+    "icon": "🎨",
+    "color": "linear-gradient(135deg,#8B5CF6,#EC4899)",
+    "description": "Photoshop, Illustrator, Figma, UI/UX Design, Canva, Midjourney and complete Graphic & Brand Design mastery."
   },
   {
     "id": "programming",
+    "slug": "programming",
     "name": "Programming Academy",
-    "icon": "\ud83d\udcbb",
-    "color": "linear-gradient(135deg,#2563EB,#0599a8)"
+    "icon": "💻",
+    "color": "linear-gradient(135deg,#2563EB,#0599a8)",
+    "description": "Python, Full Stack Development, React, Node.js, REST APIs, Databases and modern software engineering foundations."
   },
   {
     "id": "nocode",
+    "slug": "no-code-web",
     "name": "No-Code Web Academy",
-    "icon": "\ud83c\udf10",
-    "color": "linear-gradient(135deg,#F59E0B,#EF4444)"
+    "icon": "🌐",
+    "color": "linear-gradient(135deg,#F59E0B,#EF4444)",
+    "description": "WordPress, WooCommerce, Shopify, Elementor, Webflow, Framer & E-Commerce website building without writing code."
   },
   {
     "id": "video",
+    "slug": "video-motion",
     "name": "Video & Motion Academy",
-    "icon": "\ud83c\udfac",
-    "color": "linear-gradient(135deg,#EF4444,#F97316)"
+    "icon": "🎬",
+    "color": "linear-gradient(135deg,#EF4444,#F97316)",
+    "description": "Premiere Pro, After Effects, Motion Graphics, DaVinci Resolve, Reels Editing & Generative AI video tools."
   },
   {
     "id": "3d",
+    "slug": "3d",
     "name": "3D Academy",
-    "icon": "\ud83c\udfd7\ufe0f",
-    "color": "linear-gradient(135deg,#10B981,#059669)"
+    "icon": "🏗️",
+    "color": "linear-gradient(135deg,#10B981,#059669)",
+    "description": "3ds Max, Blender, Cinema 4D, V-Ray, Architectural Visualisation & Unreal Engine basics."
   },
   {
     "id": "career",
+    "slug": "career-freelancing",
     "name": "Career & Freelancing Academy",
-    "icon": "\ud83d\udcbc",
-    "color": "linear-gradient(135deg,#011731,#0599a8)"
+    "icon": "💼",
+    "color": "linear-gradient(135deg,#011731,#0599a8)",
+    "description": "Freelancing Mastery, Resume Building, LinkedIn Optimisation, Proposals & Agency Building."
   },
   {
     "id": "communication",
+    "slug": "communication",
     "name": "Communication Academy",
-    "icon": "\ud83d\udcac",
-    "color": "linear-gradient(135deg,#75d766,#0599a8)"
+    "icon": "💬",
+    "color": "linear-gradient(135deg,#75d766,#0599a8)",
+    "description": "Spoken English, Business Communication, Presentation Skills, Public Speaking & Personality Development."
   },
   {
     "id": "kids",
+    "slug": "kids-tech",
     "name": "Kids Tech Academy",
-    "icon": "\ud83d\udc68\u200d\ud83d\udcbb",
-    "color": "linear-gradient(135deg,#EC4899,#8B5CF6)"
+    "icon": "👨‍💻",
+    "color": "linear-gradient(135deg,#EC4899,#8B5CF6)",
+    "description": "Scratch, Python for Kids, Robotics, AI Basics & Web Design STEM skills for young learners."
   },
   {
     "id": "creator",
+    "slug": "creator",
     "name": "Creator Academy",
-    "icon": "\ud83c\udfa5",
-    "color": "linear-gradient(135deg,#FF6B00,#EC4899)"
+    "icon": "🎥",
+    "color": "linear-gradient(135deg,#FF6B00,#EC4899)",
+    "description": "YouTube Growth, Short Video Strategy, Podcasting, Personal Branding & Monetising Content Creation."
   },
   {
     "id": "office",
+    "slug": "office-productivity",
     "name": "Office Productivity Academy",
     "icon": "📋",
-    "color": "linear-gradient(135deg,#0599a8,#2563EB)"
+    "color": "linear-gradient(135deg,#0599a8,#2563EB)",
+    "description": "Advanced Excel, Word, PowerPoint, Google Workspace, Notion, ClickUp, Copilot & Tally with GST."
   }
 ];
+
+/* Academy Specific Landing Page Content Data (Phase A3) */
+const NS_ACADEMY_LANDING_DATA = {
+  "digital-marketing": {
+    "tools": [
+      { "name": "Google Ads", "icon": "🎯" },
+      { "name": "Google Analytics 4 (GA4)", "icon": "📊" },
+      { "name": "Meta Ads Manager", "icon": "📲" },
+      { "name": "Google Search Console", "icon": "🔍" },
+      { "name": "ChatGPT & Gemini AI", "icon": "🤖" },
+      { "name": "Semrush & Ahrefs", "icon": "📈" },
+      { "name": "Canva & Figma", "icon": "🎨" },
+      { "name": "Mailchimp & Brevo", "icon": "✉️" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["Digital Marketing Manager", "SEO / GEO Specialist", "Performance Marketer", "Social Media Manager", "Content Strategist"],
+      "freelancing": ["Paid Ads Campaign Management", "Local SEO Optimization", "Social Media Content Management", "Email Marketing Automation"],
+      "business": ["Start a Performance Marketing Agency", "E-Commerce Media Buying Business", "Affiliate Marketing Network"],
+      "salaryRange": "₹4.2 LPA – ₹12.5 LPA",
+      "demand": "🔥 Very High Demand (35% Annual Growth)"
+    },
+    "portfolio": [
+      { "title": "Local E-Commerce Scaling Campaign", "student": "Rohan Verma (Batch '25)", "desc": "Scaled a D2C fashion brand from 0 to 500+ orders/month using Meta & Google Performance Max Ads.", "tools": ["Meta Ads", "GA4", "Shopify"] },
+      { "title": "Healthcare Brand SEO Audit & Growth", "student": "Ananya Sharma (Batch '25)", "desc": "Boosted organic traffic by 340% in 90 days for a regional clinic network.", "tools": ["Google Search Console", "Semrush", "Local SEO"] },
+      { "title": "B2B SaaS Lead Generation System", "student": "Priya Nair (Batch '26)", "desc": "Generated 180+ qualified B2B leads with automated LinkedIn & Email campaigns.", "tools": ["LinkedIn Ads", "ChatGPT", "HubSpot"] }
+    ],
+    "faqs": [
+      { "q": "Who is eligible for the Digital Marketing Academy?", "a": "Students, working professionals, business owners, and career switchers can all join. No prior coding or marketing experience is required." },
+      { "q": "Do you offer practical client projects?", "a": "Yes! Every student works on live advertising budgets and real client projects under senior mentor guidance." },
+      { "q": "What placement support is provided?", "a": "Our career program includes 100% placement support, resume reviews, mock interviews, and access to 150+ hiring partners." },
+      { "q": "Can I work as a freelancer after completing this course?", "a": "Absolutely. We include a dedicated freelancing module covering client onboarding, proposal writing, and pricing strategies." }
+    ]
+  },
+  "ai": {
+    "tools": [
+      { "name": "ChatGPT & GPT-4o", "icon": "🤖" },
+      { "name": "Claude 3.5 Sonnet", "icon": "💡" },
+      { "name": "n8n Automation", "icon": "⚡" },
+      { "name": "Midjourney & DALL-E", "icon": "🎨" },
+      { "name": "Python for AI", "icon": "🐍" },
+      { "name": "Hugging Face", "icon": "🤗" },
+      { "name": "Cursor & Copilot", "icon": "💻" },
+      { "name": "Zapier & Make", "icon": "🔗" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["AI Automation Specialist", "Prompt Engineer", "AI Workflow Consultant", "Generative AI Developer", "AI Ops Specialist"],
+      "freelancing": ["Custom n8n Workflow Automation", "AI Chatbot Integration", "Corporate AI Training Sessions", "AI Content Pipeline Setup"],
+      "business": ["AI Automation Agency (AAA)", "Custom AI SaaS Product Studio", "Enterprise AI Implementation Firm"],
+      "salaryRange": "₹6.0 LPA – ₹18.0 LPA",
+      "demand": "🚀 Exponential Growth (Top Hiring Sector 2026)"
+    },
+    "portfolio": [
+      { "title": "Automated Customer Support n8n Bot", "student": "Vikas Gupta (Batch '25)", "desc": "Built an autonomous AI support agent handling 80% of customer tickets automatically.", "tools": ["n8n", "Claude 3.5", "Telegram API"] },
+      { "title": "AI Image & Ad Copy Generation Pipeline", "student": "Sneh Lata (Batch '26)", "desc": "Designed a 1-click marketing content generator for e-commerce stores.", "tools": ["Midjourney", "GPT-4o", "Make.com"] },
+      { "title": "Corporate Knowledge Base RAG Assistant", "student": "Aditya Singh (Batch '26)", "desc": "Created a private document AI chat system for internal company policy lookup.", "tools": ["Python", "LangChain", "Vector DB"] }
+    ],
+    "faqs": [
+      { "q": "Do I need a computer science background for the AI Academy?", "a": "No coding background is required for our AI Productivity & Automation programs. Basic computer literacy is sufficient." },
+      { "q": "Will I learn how to build AI workflows?", "a": "Yes! You will build no-code and low-code AI automations using n8n, Make, and API integrations." },
+      { "q": "How does AI skill boost my career salary?", "a": "Professionals with verified AI workflow skills command 40–60% higher salaries in modern job markets." },
+      { "q": "Are software licenses included during training?", "a": "Yes, access to required AI tool platforms and APIs is provided during guided practical lab sessions." }
+    ]
+  },
+  "design": {
+    "tools": [
+      { "name": "Adobe Photoshop", "icon": "🖼️" },
+      { "name": "Adobe Illustrator", "icon": "✒️" },
+      { "name": "Figma", "icon": "🎨" },
+      { "name": "Canva Pro", "icon": "✨" },
+      { "name": "Midjourney AI", "icon": "🤖" },
+      { "name": "Adobe InDesign", "icon": "📚" },
+      { "name": "Spline 3D", "icon": "🔮" },
+      { "name": "Procreate", "icon": "🖌️" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["UI/UX Designer", "Senior Graphic Designer", "Brand Identity Designer", "Product Designer", "Visual Designer"],
+      "freelancing": ["Brand Identity Package Design", "Figma UI/UX Prototypes", "Social Media Content Design", "Packaging Design"],
+      "business": ["Creative Design Agency", "UI/UX Product Design Studio", "Digital Assets Marketplace"],
+      "salaryRange": "₹4.0 LPA – ₹14.0 LPA",
+      "demand": "🔥 High Demand across Tech & Agencies"
+    },
+    "portfolio": [
+      { "title": "FinTech Mobile App UI/UX Redesign", "student": "Aarav Patel (Batch '25)", "desc": "Redesigned a mobile banking app in Figma with interactive prototype and design system.", "tools": ["Figma", "UI/UX", "User Research"] },
+      { "title": "Artisanal Coffee Brand Identity System", "student": "Meera Joshi (Batch '25)", "desc": "Created logo mark, packaging design, and brand guideline book for a gourmet coffee brand.", "tools": ["Illustrator", "Photoshop", "Branding"] },
+      { "title": "3D Interactive Landing Page Concepts", "student": "Kabir Das (Batch '26)", "desc": "Built 3D web illustrations and interactive UI components.", "tools": ["Spline 3D", "Figma", "Photoshop"] }
+    ],
+    "faqs": [
+      { "q": "Do I need drawing skills to join Design Academy?", "a": "No drawing or artistic experience is needed. Design is a structured skill that we teach step-by-step." },
+      { "q": "What portfolio projects will I create?", "a": "You will build a professional Behance/Dribbble portfolio featuring brand identity, UI/UX app designs, and social assets." },
+      { "q": "Is UI/UX design included in this academy?", "a": "Yes! UI/UX design with Figma, user research, wireframing, and interactive prototyping are core modules." },
+      { "q": "Will I learn AI design tools like Midjourney?", "a": "Yes, AI design generation and prompt crafting are integrated to supercharge your design speed." }
+    ]
+  },
+  "programming": {
+    "tools": [
+      { "name": "VS Code", "icon": "💻" },
+      { "name": "Python", "icon": "🐍" },
+      { "name": "JavaScript & ES6+", "icon": "🟨" },
+      { "name": "React.js", "icon": "⚛️" },
+      { "name": "Node.js & Express", "icon": "🟩" },
+      { "name": "SQL & PostgreSQL", "icon": "🗄️" },
+      { "name": "Git & GitHub", "icon": "🐙" },
+      { "name": "REST APIs", "icon": "🌐" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["Full Stack Developer", "Frontend React Developer", "Backend Python Engineer", "Software Engineer", "Web Developer"],
+      "freelancing": ["Custom Web Application Development", "API Development & Integration", "Database Design & Optimization"],
+      "business": ["SaaS Product Studio", "Web Development Agency", "Tech Consulting Firm"],
+      "salaryRange": "₹5.0 LPA – ₹16.0 LPA",
+      "demand": "⚡ Consistently High Global Demand"
+    },
+    "portfolio": [
+      { "title": "Full Stack E-Commerce Web App", "student": "Siddharth Mehta (Batch '25)", "desc": "Built a full stack MERN online store with cart, payment gateway, and admin portal.", "tools": ["React", "Node.js", "MongoDB"] },
+      { "title": "AI Task Management SaaS Platform", "student": "Nisha Roy (Batch '26)", "desc": "Created a real-time team task management app with automated AI task prioritization.", "tools": ["Python", "React", "PostgreSQL"] },
+      { "title": "REST API Microservices Architecture", "student": "Karan Malhotra (Batch '26)", "desc": "Architected secure JWT-authenticated backend APIs handling 10k+ requests.", "tools": ["Node.js", "Express", "Docker"] }
+    ],
+    "faqs": [
+      { "q": "Can beginners without prior coding experience learn programming?", "a": "Yes! Our curriculum starts from absolute logic building and covers foundational computer science before building real apps." },
+      { "q": "What stack will I master?", "a": "You will master Python, Full Stack Web Development (React, Node.js), Databases (SQL/NoSQL), and Version Control." },
+      { "q": "Are live coding projects included?", "a": "Yes, 100% hands-on. You will build 5+ real-world web applications and host them live on GitHub/Vercel." },
+      { "q": "How does placement support work for developers?", "a": "We conduct DSA mock interviews, GitHub profile reviews, coding assessments, and direct hiring partner referrals." }
+    ]
+  },
+  "no-code-web": {
+    "tools": [
+      { "name": "WordPress", "icon": "🌐" },
+      { "name": "WooCommerce", "icon": "🛒" },
+      { "name": "Shopify", "icon": "🛍️" },
+      { "name": "Elementor Pro", "icon": "🎨" },
+      { "name": "Webflow", "icon": "💧" },
+      { "name": "Framer", "icon": "📐" },
+      { "name": "Stripe & Razorpay", "icon": "💳" },
+      { "name": "Zapier Automations", "icon": "⚡" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["No-Code Web Developer", "Shopify Store Specialist", "WordPress Engineer", "Webflow Developer", "E-Commerce Manager"],
+      "freelancing": ["Client Website Building (₹25k–₹80k per site)", "Shopify Store Setup & Optimization", "Speed & Security Maintenance"],
+      "business": ["No-Code Web Agency", "Drop-Shipping E-Commerce Brand", "Website Maintenance Subscription Service"],
+      "salaryRange": "₹4.0 LPA – ₹10.0 LPA",
+      "demand": "🔥 Explosive Freelance & Agency Demand"
+    },
+    "portfolio": [
+      { "title": "Luxury Jewelry E-Commerce Store", "student": "Tanya Saxena (Batch '25)", "desc": "Designed a high-converting Shopify store with custom payment gateway and subscription flow.", "tools": ["Shopify", "Liquid", "Klaviyo"] },
+      { "title": "Corporate Real Estate Portal", "student": "Manish Gupta (Batch '25)", "desc": "Built a custom WordPress real estate listing portal with filter search and CRM lead capture.", "tools": ["WordPress", "Elementor Pro", "ACF"] },
+      { "title": "SaaS Product Animated Landing Page", "student": "Riya Sensarma (Batch '26)", "desc": "Created a modern Webflow landing page with responsive interactions and CMS integration.", "tools": ["Webflow", "Framer", "Zapier"] }
+    ],
+    "faqs": [
+      { "q": "Can I build professional websites without writing code?", "a": "Yes! Modern tools like WordPress, Webflow, and Shopify power over 60% of web platforms globally without requiring coding." },
+      { "q": "How fast can I start earning as a freelancer?", "a": "Most students complete their first client website project within 2–3 months of training." },
+      { "q": "Do I need to buy domain and hosting during the course?", "a": "Nova Skills provides sandbox server environments for all lab assignments during your training." },
+      { "q": "Will I learn e-commerce and payment integration?", "a": "Yes, full e-commerce setups with Razorpay, Stripe, inventory sync, and order management are covered." }
+    ]
+  },
+  "video-motion": {
+    "tools": [
+      { "name": "Adobe Premiere Pro", "icon": "🎬" },
+      { "name": "Adobe After Effects", "icon": "✨" },
+      { "name": "DaVinci Resolve", "icon": "🎨" },
+      { "name": "CapCut Pro", "icon": "📱" },
+      { "name": "Adobe Audition", "icon": "🎙️" },
+      { "name": "Runway AI & Luma", "icon": "🤖" },
+      { "name": "Photoshop for Editors", "icon": "🖼️" },
+      { "name": "Blender 3D Motion", "icon": "🏗️" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["Video Editor", "Motion Graphics Artist", "Colorist", "Short-Form Reel Specialist", "Post-Production Supervisor"],
+      "freelancing": ["YouTube Channel Video Editing", "Corporate Promo Videos", "Instagram/TikTok Reels Package", "VFX & Motion Graphics"],
+      "business": ["Video Production House", "Social Media Content Agency", "Post-Production Studio"],
+      "salaryRange": "₹4.5 LPA – ₹12.0 LPA",
+      "demand": "🚀 Massive Demand driven by Reels & YouTube"
+    },
+    "portfolio": [
+      { "title": "Tech Brand Commercial Promo", "student": "Rahul Trivedi (Batch '25)", "desc": "Edited a 60-second high-energy product teaser with custom After Effects kinetic typography.", "tools": ["Premiere Pro", "After Effects"] },
+      { "title": "Short-Form Viral Reels Editing Campaign", "student": "Simran Kaur (Batch '26)", "desc": "Edited 20 Instagram reels generating over 2.5M cumulative views for a fitness creator.", "tools": ["CapCut Pro", "Premiere Pro", "AI Captions"] },
+      { "title": "Documentary Color Grading & Sound Mix", "student": "Amitav Ray (Batch '26)", "desc": "Performed cinematic color grading and audio mastering for a travel documentary.", "tools": ["DaVinci Resolve", "Audition"] }
+    ],
+    "faqs": [
+      { "q": "What computer specifications do I need for video editing?", "a": "A laptop with minimum 8GB/16GB RAM and dedicated GPU is recommended. We also have high-spec editing labs on campus." },
+      { "q": "Will I learn motion graphics and VFX?", "a": "Yes! Adobe After Effects for motion graphics, logo animation, kinetic typography, and green screen keying is included." },
+      { "q": "Does this cover short-form Reels & Shorts editing?", "a": "Yes, short-form storytelling, fast-paced retention editing, and viral sound design are major modules." },
+      { "q": "Can I get remote freelance clients?", "a": "Video editing is one of the top remote freelance skills globally. We teach you how to acquire international clients." }
+    ]
+  },
+  "3d": {
+    "tools": [
+      { "name": "Autodesk 3ds Max", "icon": "🏗️" },
+      { "name": "Blender 3D", "icon": "🔶" },
+      { "name": "V-Ray & Corona", "icon": "💡" },
+      { "name": "Twinmotion", "icon": "🌿" },
+      { "name": "Cinema 4D", "icon": "🌀" },
+      { "name": "Unreal Engine 5", "icon": "🎮" },
+      { "name": "Substance Painter", "icon": "🖌️" },
+      { "name": "AutoCAD", "icon": "📐" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["3D Visualizer", "Architectural Renderer", "3D Modeler", "Interior Render Specialist", "Unreal Engine Environment Artist"],
+      "freelancing": ["3D Architectural Renders (₹15k–₹60k per project)", "Product 3D Renders", "Walkthrough Animations"],
+      "business": ["3D Visualization Studio", "Architectural Design Consultancy", "AR/VR Asset Creation Agency"],
+      "salaryRange": "₹5.0 LPA – ₹14.0 LPA",
+      "demand": "🔥 High Demand in Real Estate & Game Design"
+    },
+    "portfolio": [
+      { "title": "Modern Villa Exterior Architectural Render", "student": "Vikramaditya (Batch '25)", "desc": "Created photorealistic exterior renders with lighting and landscaping.", "tools": ["3ds Max", "V-Ray", "Photoshop"] },
+      { "title": "Luxury Apartment Interior Walkthrough", "student": "Pooja Reddy (Batch '25)", "desc": "Produced an interactive 4K video walkthrough for an interior design firm.", "tools": ["Twinmotion", "Blender"] },
+      { "title": "Game-Ready 3D Hard Surface Assets", "student": "Sujay Sen (Batch '26)", "desc": "Modeled and textured optimized 3D assets for a real-time game environment.", "tools": ["Blender", "Substance Painter", "UE5"] }
+    ],
+    "faqs": [
+      { "q": "Do I need an Architecture degree to join 3D Academy?", "a": "No architectural degree is required. Anyone interested in 3D modeling, renders, or visualization can learn." },
+      { "q": "Which software is best for architectural rendering?", "a": "We teach 3ds Max + V-Ray as industry standards, alongside Blender and Twinmotion for fast real-time rendering." },
+      { "q": "Will I create 3D walkthrough videos?", "a": "Yes! Architectural walkthroughs, camera path animations, and lighting setups are core practical projects." },
+      { "q": "What career paths are available?", "a": "Architectural visualization firms, real estate developers, interior studios, and gaming companies hire 3D artists." }
+    ]
+  },
+  "career-freelancing": {
+    "tools": [
+      { "name": "Fiverr & Upwork", "icon": "💼" },
+      { "name": "LinkedIn Sales Navigator", "icon": "🔗" },
+      { "name": "Resume & CV Builder", "icon": "📄" },
+      { "name": "Notion & ClickUp", "icon": "📋" },
+      { "name": "ChatGPT for Proposals", "icon": "🤖" },
+      { "name": "PayPal & Stripe", "icon": "💳" },
+      { "name": "Loom Video Pitching", "icon": "📹" },
+      { "name": "Canva Portfolio", "icon": "🎨" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["Full-Time Freelancer", "Remote Client Account Manager", "Business Development Representative", "Career Strategist"],
+      "freelancing": ["Global Freelance Services ($20–$75/hr)", "Cold Email & Client Acquisition Setup", "Profile Optimization Service"],
+      "business": ["Solo Agency / Micro-Agency", "Freelance Staffing Firm", "Remote Services Consultancy"],
+      "salaryRange": "₹4.0 LPA – ₹15.0 LPA ($1,000–$4,000/mo)",
+      "demand": "🚀 Rapid Growth in Remote Global Work"
+    },
+    "portfolio": [
+      { "title": "Upwork Top-Rated Freelancer Profile", "student": "Ankit Tripathi (Batch '25)", "desc": "Achieved Top Rated status on Upwork earning $2,500+ within 4 months of graduation.", "tools": ["Upwork", "Loom", "Proposal Script"] },
+      { "title": "Cold Email Outreach Campaign for US Clients", "student": "Srishti Malhotra (Batch '26)", "desc": "Closed 3 international monthly retainer clients using personalized email pitches.", "tools": ["LinkedIn", "Instantly.ai", "ChatGPT"] },
+      { "title": "Personal Brand & LinkedIn Growth System", "student": "Gaurav Dave (Batch '26)", "desc": "Grew LinkedIn followers to 12k and generated 40+ inbound client inquiries.", "tools": ["LinkedIn", "Notion", "Canva"] }
+    ],
+    "faqs": [
+      { "q": "Can I earn in USD/Foreign currencies from India?", "a": "Yes! We teach international client acquisition on Upwork, Fiverr, and LinkedIn with direct foreign currency payouts." },
+      { "q": "How does resume building and interview prep work?", "a": "We craft personalized ATS-friendly resumes, optimize your LinkedIn profile, and conduct 1-on-1 mock interviews." },
+      { "q": "Is freelancing suitable as a side income?", "a": "Yes, many students start freelancing part-time while keeping their current job or studies." },
+      { "q": "What if I get stuck while handling a real client?", "a": "Our mentors provide live client consultation support and proposal guidance even after course completion." }
+    ]
+  },
+  "communication": {
+    "tools": [
+      { "name": "Public Speaking Labs", "icon": "🎤" },
+      { "name": "Business English", "icon": "🗣️" },
+      { "name": "Corporate Slide Decks", "icon": "📊" },
+      { "name": "Email Writing & Etiquette", "icon": "✉️" },
+      { "name": "Mock Interview Rooms", "icon": "🤝" },
+      { "name": "Voice & Accent Tuning", "icon": "🎧" },
+      { "name": "Negotiation Tactics", "icon": "💡" },
+      { "name": "Personality Development", "icon": "⭐" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["Corporate Communications Executive", "Client Relations Specialist", "Business Development Executive", "Soft Skills Trainer"],
+      "freelancing": ["Spoken English Coaching", "Corporate Communication Training", "Content & Speech Writing"],
+      "business": ["Soft Skills Training Institute", "Corporate Placement Readiness Consultancy"],
+      "salaryRange": "₹3.6 LPA – ₹9.0 LPA",
+      "demand": "⚡ Mandatory Foundation for All Corporate Careers"
+    },
+    "portfolio": [
+      { "title": "Corporate Keynote Presentation", "student": "Divya Prakash (Batch '25)", "desc": "Delivered a 15-minute business presentation to industry panel with high confidence score.", "tools": ["PowerPoint", "Public Speaking"] },
+      { "title": "Executive Mock Interview Clearance", "student": "Mohit Rana (Batch '25)", "desc": "Successfully cleared 4 rounds of corporate interviews for an MNC role.", "tools": ["Interview Prep", "Body Language"] },
+      { "title": "Business Communication Email Playbook", "student": "Sneha Rastogi (Batch '26)", "desc": "Authored a 50-template professional email & negotiation guide for young professionals.", "tools": ["Business English", "Writing"] }
+    ],
+    "faqs": [
+      { "q": "I am hesitant to speak English in public. Can I improve?", "a": "Yes! Our friendly, supportive environment starts from comfortable group activities to build natural confidence." },
+      { "q": "Are classes focused on grammar or spoken practice?", "a": "80% of class time is spent on active speaking, roleplay, presentations, and mock interview practice." },
+      { "q": "Will this help me clear job interviews?", "a": "Definitely. Interview preparation, body language, domain Q&A, and salary negotiation are core modules." },
+      { "q": "Do you provide recorded feedback for presentations?", "a": "Yes, students receive video-recorded presentation analysis with personalized mentor feedback." }
+    ]
+  },
+  "kids-tech": {
+    "tools": [
+      { "name": "Scratch 3.0", "icon": "🧩" },
+      { "name": "Python for Kids", "icon": "🐍" },
+      { "name": "MIT App Inventor", "icon": "📱" },
+      { "name": "Tinkercad 3D Design", "icon": "🏗️" },
+      { "name": "Robotics & Micro:bit", "icon": "🤖" },
+      { "name": "Canva for Kids", "icon": "🎨" },
+      { "name": "HTML/CSS Basics", "icon": "🌐" },
+      { "name": "AI Basics for Kids", "icon": "✨" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["Young Tech Innovator", "STEM Competition Champion", "School Coding Club Lead"],
+      "freelancing": ["Building Fun Web Projects & Games"],
+      "business": ["Developing Creative Apps & STEM Portfolios for Future Admissions"],
+      "salaryRange": "Future-Ready STEM Foundation (Ages 8–16)",
+      "demand": "🌟 High Priority STEM Skill in Global Education"
+    },
+    "portfolio": [
+      { "title": "Interactive Scratch Space Shooter Game", "student": "Aarush V. (Age 11)", "desc": "Created a multi-level 2D arcade game with score tracking and sound effects.", "tools": ["Scratch 3.0", "Game Logic"] },
+      { "title": "Kids Smart Weather Station Project", "student": "Ananya K. (Age 13)", "desc": "Programmed a Micro:bit sensor to read room temperature and display alerts.", "tools": ["Python", "Micro:bit", "Sensors"] },
+      { "title": "Mobile Math Quiz App", "student": "Kabir M. (Age 12)", "desc": "Designed an Android smartphone app for practicing math problems.", "tools": ["MIT App Inventor", "UI Basics"] }
+    ],
+    "faqs": [
+      { "q": "What age group is Kids Tech Academy designed for?", "a": "Our curriculum is specially tailored for children aged 8 to 16 with age-appropriate fun modules." },
+      { "q": "Does coding improve logical thinking in children?", "a": "Yes! Coding enhances problem-solving, mathematical thinking, creativity, and structured logic." },
+      { "q": "Are classes safe and kid-friendly?", "a": "All sessions are conducted by certified child STEM educators in small, interactive, monitored batches." },
+      { "q": "Will my child create real projects?", "a": "Yes, children build their own games, mobile apps, and 3D designs to showcase in their STEM portfolio." }
+    ]
+  },
+  "creator": {
+    "tools": [
+      { "name": "YouTube Studio & Analytics", "icon": "▶️" },
+      { "name": "OBS Studio", "icon": "📹" },
+      { "name": "Canva & Photoshop", "icon": "🎨" },
+      { "name": "Premiere Pro / CapCut", "icon": "🎬" },
+      { "name": "Audacity & Podcast Tools", "icon": "🎙️" },
+      { "name": "TubeBuddy & VidIQ", "icon": "📈" },
+      { "name": "Notion Content Calendar", "icon": "🗓️" },
+      { "name": "AI Script Assistants", "icon": "🤖" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["Full-Time Content Creator", "YouTube Channel Manager", "Podcast Producer", "Creator Economy Strategist", "Influencer Lead"],
+      "freelancing": ["YouTube Channel Optimization & SEO", "Thumbnail Design Service", "Video Script Writing"],
+      "business": ["Personal Brand Monetization", "Digital Product Store", "Creator Media Company"],
+      "salaryRange": "₹4.0 LPA – ₹20.0+ LPA (Monetization & AdSense)",
+      "demand": "🚀 Explosive Growth in Creator Economy"
+    },
+    "portfolio": [
+      { "title": "50k Subscribers Tech YouTube Channel Growth", "student": "Rohan Deshmukh (Batch '25)", "desc": "Grew a niche tech review channel from 0 to 50k subscribers in 8 months.", "tools": ["YouTube SEO", "VidIQ", "Premiere Pro"] },
+      { "title": "Top 10 Business Podcast Production", "student": "Kavya Menon (Batch '26)", "desc": "Produced and launched a 12-episode Spotify podcast with 40k+ downloads.", "tools": ["Audacity", "Descript", "Anchor"] },
+      { "title": "Viral Short-Form Content System", "student": "Sahil Sheikh (Batch '26)", "desc": "Generated 5M+ views across Instagram & YouTube Shorts using AI script hooks.", "tools": ["CapCut", "ChatGPT", "Thumbnail Design"] }
+    ],
+    "faqs": [
+      { "q": "Can I monetize my YouTube channel or social media?", "a": "Yes! We teach monetization through AdSense, brand sponsorships, affiliate marketing, and digital products." },
+      { "q": "Do I need camera confidence before joining?", "a": "We start with script writing and audio techniques, then guide you step-by-step to camera confidence." },
+      { "q": "Will I learn how to design eye-catching thumbnails?", "a": "Yes! High CTR thumbnail design using Canva and Photoshop is a dedicated practical module." },
+      { "q": "Is faceless channel creation covered?", "a": "Yes, we cover both personal brand channels and faceless AI-powered YouTube channels." }
+    ]
+  },
+  "office-productivity": {
+    "tools": [
+      { "name": "Advanced Microsoft Excel", "icon": "📊" },
+      { "name": "Microsoft Word Pro", "icon": "📄" },
+      { "name": "PowerPoint & Pitch Decks", "icon": "🖥️" },
+      { "name": "Google Workspace", "icon": "🌐" },
+      { "name": "Microsoft Copilot", "icon": "🤖" },
+      { "name": "Tally Prime & GST", "icon": "📋" },
+      { "name": "Notion & ClickUp", "icon": "✅" },
+      { "name": "Power BI Basics", "icon": "📈" }
+    ],
+    "careerOpps": {
+      "jobRoles": ["Office Administrator", "Executive Assistant", "Data Analyst Assistant", "Accountant with GST", "MIS Executive"],
+      "freelancing": ["Virtual Assistant Services", "Advanced Excel Financial Dashboard Creation", "Tally & GST Bookkeeping"],
+      "business": ["Accounting & Bookkeeping Services", "Virtual Assistance Agency"],
+      "salaryRange": "₹3.5 LPA – ₹8.5 LPA",
+      "demand": "⚡ Essential Requirement in Every Enterprise"
+    },
+    "portfolio": [
+      { "title": "Automated Financial Excel Dashboard", "student": "Deepak Yadav (Batch '25)", "desc": "Created dynamic Excel dashboards with Pivot Tables, VLOOKUP/XLOOKUP, and macros.", "tools": ["Advanced Excel", "Macros"] },
+      { "title": "Corporate GST & Inventory Tally Setup", "student": "Meenakshi Sundaram (Batch '25)", "desc": "Configured complete Tally Prime GST invoicing, stock inventory, and GSTR-3B filings.", "tools": ["Tally Prime", "GST Portal"] },
+      { "title": "AI-Powered Executive Copilot Workflow", "student": "Harish Rawat (Batch '26)", "desc": "Automated email summaries, meeting minutes, and presentation generation.", "tools": ["Copilot", "Google Workspace"] }
+    ],
+    "faqs": [
+      { "q": "What level of Excel will I learn in this academy?", "a": "You will master Advanced Excel: Formulas, VLOOKUP, XLOOKUP, INDEX/MATCH, Pivot Tables, Charts, and Macros." },
+      { "q": "Is Tally Prime with GST included?", "a": "Yes, complete practical Tally accounting, ledger posting, GST invoicing, and GSTR returns are covered." },
+      { "q": "How does Copilot AI improve office work speed?", "a": "Microsoft Copilot automates email drafting, data summary, and PowerPoint generation by 3x to 5x." },
+      { "q": "Will I get a certificate upon completion?", "a": "Yes! You will earn a recognized certification to validate your office productivity and computer skills." }
+    ]
+  }
+};
 
 /* Program Levels Architecture Specification (V1.1 Foundation) */
 const NS_PROGRAM_LEVELS = [
@@ -5451,6 +5839,7 @@ if (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES)) {
 // Global exports attachment
 if (typeof window !== 'undefined') {
   window.NS_PROGRAM_LEVELS = NS_PROGRAM_LEVELS;
+  window.NS_ACADEMY_LANDING_DATA = NS_ACADEMY_LANDING_DATA;
   window.normalizeProgramLevel = normalizeProgramLevel;
   window.getCoursesByAcademyAndLevel = getCoursesByAcademyAndLevel;
   window.getAcademyHierarchy = getAcademyHierarchy;

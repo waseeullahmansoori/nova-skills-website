@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const slug = params.get('academy') || params.get('id');
+      if (slug) {
+        const map = {
+          'nocode': 'no-code-web',
+          'video': 'video-motion',
+          'career': 'career-freelancing',
+          'kids': 'kids-tech',
+          'office': 'office-productivity'
+        };
+        const cleanSlug = map[slug] || slug;
+        window.location.replace('/academies/' + cleanSlug + '/');
+      }
+    })();
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WN9N2KF12"></script>
   <script>
