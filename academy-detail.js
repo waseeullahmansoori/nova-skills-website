@@ -289,10 +289,25 @@ function renderAcademyLandingPage(academy) {
     c.academyId === academy.slug
   );
 
-  const careerCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel) === 'Career Program');
-  const proCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel) === 'Professional Program');
-  const certCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel) === 'Certification Course');
+  const careerCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Career Program');
+  const proCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Professional Program');
+  const certCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Certification Course');
   const totalCourses = academyCourses.length;
+
+  const durationMonthsArr = academyCourses
+    .map(c => c.durationMonths || parseInt(c.duration, 10))
+    .filter(n => !isNaN(n) && n > 0);
+
+  let learningDuration = '1–12 Months';
+  if (durationMonthsArr.length > 0) {
+    const minM = Math.min(...durationMonthsArr);
+    const maxM = Math.max(...durationMonthsArr);
+    if (minM === maxM) {
+      learningDuration = `${minM} Month${minM > 1 ? 's' : ''}`;
+    } else {
+      learningDuration = `${minM}–${maxM} Months`;
+    }
+  }
 
   // Inject SEO Meta & JSON-LD Schema (Phase A4 Tasks 1, 2, 6, 7)
   injectAcademySEOAndSchema(academy, totalCourses);
@@ -324,7 +339,7 @@ function renderAcademyLandingPage(academy) {
       <span class="stats-pill">💼 Career Programs: ${careerCourses.length}</span>
       <span class="stats-pill">⚡ Professional Programs: ${proCourses.length}</span>
       <span class="stats-pill">📜 Certification Courses: ${certCourses.length}</span>
-      <span class="stats-pill">⏱️ Total Learning Duration: 1–12 Months</span>
+      <span class="stats-pill">⏱️ Learning Duration: ${learningDuration}</span>
       <span class="stats-pill">📚 Total Courses: ${totalCourses}</span>
     `;
   }
@@ -695,16 +710,19 @@ function renderAcademyLandingPage(academy) {
           </div>
 
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
-            ${relatedAcademies.map(rel => `
-              <div style="background: white; border: 1px solid #e2e8f0; padding: 28px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                  <div style="font-size: 2.8rem; margin-bottom: 12px;">${rel.icon || '🎓'}</div>
-                  <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 8px;">${rel.name}</h3>
-                  <p style="color: #64748b; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">${rel.description}</p>
+            ${relatedAcademies.map(rel => {
+              const relSlug = rel.slug || rel.id;
+              return `
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 28px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <div style="font-size: 2.8rem; margin-bottom: 12px;">${rel.icon || '🎓'}</div>
+                    <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 8px;">${rel.name}</h3>
+                    <p style="color: #64748b; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">${rel.description}</p>
+                  </div>
+                  <a href="/academies/${relSlug}/" class="btn btn-outline btn-sm" style="text-align: center; justify-content: center;">Explore Academy →</a>
                 </div>
-                <a href="/academies/${rel.slug}/" class="btn btn-outline btn-sm" style="text-align: center; justify-content: center;">Explore Academy →</a>
-              </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
         </div>
       </section>

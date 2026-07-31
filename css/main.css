@@ -1200,9 +1200,9 @@ h1, h2, h3, h4, h5, h6 {
 .academy-link {
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--navy);
-  background: var(--green);
-  padding: 10px 18px;
+  color: white;
+  background: var(--grad-teal-green);
+  padding: 12px 20px;
   border-radius: var(--radius-md);
   display: inline-flex;
   align-items: center;
@@ -1213,21 +1213,21 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   cursor: pointer;
   border: none;
-  box-shadow: 0 2px 6px rgba(117, 215, 102, 0.25);
+  box-shadow: var(--shadow-teal);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 16px;
   position: relative;
   z-index: 2;
+  pointer-events: auto;
 }
 
 .academy-link:hover,
 .academy-link:focus {
-  background: #64c855;
-  color: var(--navy);
+  color: white;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(117, 215, 102, 0.4);
+  box-shadow: 0 12px 35px rgba(5, 153, 168, 0.4);
   gap: 12px;
-  outline: 2px solid var(--navy);
+  outline: 2px solid var(--teal);
   outline-offset: 2px;
 }
 
