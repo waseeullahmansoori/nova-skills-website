@@ -10,7 +10,7 @@ const DOMAIN = 'https://novaskills.in';
 const ROOT_DIR = path.resolve(__dirname, '..');
 const SITEMAP_PATH = path.join(ROOT_DIR, 'sitemap.xml');
 
-// Excluded HTML routes (non-indexable, private, or error pages)
+// Excluded HTML routes (non-indexable, templates, private, or error pages)
 const EXCLUDED_FILES = new Set([
   '404.html',
   'admin.html',
@@ -18,7 +18,12 @@ const EXCLUDED_FILES = new Set([
   'admin-settings.html',
   'login.html',
   'student.html',
-  'ai-chat.html'
+  'ai-chat.html',
+  'course-detail.html',
+  'academy-detail.html',
+  'blog-detail.html',
+  'portal.html',
+  'register.html'
 ]);
 
 function getFormattedDate(filePath) {
@@ -53,7 +58,7 @@ function generateSitemap() {
     }
   });
 
-  // Dedicated Legal Policy directory URLs
+  // Dedicated Legal Policy directory URLs (Only indexable canonical directories)
   urlEntries.push({
     loc: `${DOMAIN}/privacy-policy/`,
     lastmod: today
@@ -70,20 +75,13 @@ function generateSitemap() {
     loc: `${DOMAIN}/contact/`,
     lastmod: today
   });
+
+  // 3. Clean Academy Directory URLs
   urlEntries.push({
-    loc: `${DOMAIN}/thank-you/`,
+    loc: `${DOMAIN}/academies/`,
     lastmod: today
   });
-  urlEntries.push({
-    loc: `${DOMAIN}/lead-success/`,
-    lastmod: today
-  });
 
-
-
-
-
-  // 3. Clean Academy Directory URLs (Phase A4)
   const academySlugs = [
     'digital-marketing',
     'ai',
