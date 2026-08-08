@@ -225,7 +225,7 @@ class CareerSnapshot {
           <span class="spotlight-tag">⭐ TOP AI RECOMMENDATION</span>
           <div class="spotlight-academy">${c.icon} ${c.academy}</div>
         </div>
-        <h3 class="spotlight-title"><a href="course-detail.html?id=${c.id}">${c.name}</a></h3>
+        <h3 class="spotlight-title"><a href="/course-detail.html?id=${c.id}">${c.name}</a></h3>
         <p class="spotlight-desc">${c.shortDesc}</p>
 
         <div class="spotlight-features">
@@ -246,7 +246,7 @@ class CareerSnapshot {
             <span class="spot-orig">₹${c.originalPrice.toLocaleString('en-IN')}</span>
           </div>
           <div style="display:flex; gap:8px;">
-            <a href="course-detail.html?id=${c.id}" class="btn btn-outline btn-sm">Full Syllabus</a>
+            <a href="/course-detail.html?id=${c.id}" class="btn btn-outline btn-sm">Full Syllabus</a>
             <button onclick="openConsultationPopup()" class="btn btn-primary btn-sm">Enroll Now →</button>
           </div>
         </div>

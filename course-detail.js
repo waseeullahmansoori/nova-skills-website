@@ -31,16 +31,24 @@ function populateCourseDetail(course) {
   const canonicalEl = document.getElementById('page-canonical') || document.querySelector('link[rel="canonical"]');
   if (canonicalEl) canonicalEl.setAttribute('href', canonicalUrl);
 
+  // Override default noindex — this course page is valid and indexable
+  const robotsMeta = document.getElementById('page-robots') || document.querySelector('meta[name="robots"]');
+  if (robotsMeta) robotsMeta.setAttribute('content', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
+
+  // Update meta description with course-specific content
+  const metaDesc = document.getElementById('page-meta-desc') || document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', course.shortDesc || course.fullDesc);
+
   // Map specific OG / Twitter images for key courses
   const courseImageMap = {
-    'dm-professional': 'https://novaskills.in/public/images/seo/og-course-dm-professional.png',
-    'dm-mastery': 'https://novaskills.in/public/images/seo/og-course-dm-mastery.png',
-    'ai-mastery': 'https://novaskills.in/public/images/seo/og-course-ai-mastery.png',
-    'full-stack': 'https://novaskills.in/public/images/seo/og-course-full-stack.png',
-    'design-mastery': 'https://novaskills.in/public/images/seo/og-course-design-mastery.png',
-    'motion-graphics': 'https://novaskills.in/public/images/seo/og-course-motion-graphics.png'
+    'dm-professional': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'dm-mastery': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'ai-mastery': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'full-stack': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'design-mastery': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'motion-graphics': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026'
   };
-  const courseImg = courseImageMap[course.id] || 'https://novaskills.in/public/images/seo/og-course-detail.png';
+  const courseImg = courseImageMap[course.id] || 'https://novaskills.in/public/images/seo/og-banner.png?v=2026';
 
   // Open Graph Updates
   const ogUrl = document.getElementById('og-url') || document.querySelector('meta[property="og:url"]');
@@ -267,10 +275,10 @@ function renderRelatedCourses(currentCourse) {
       </div>
       <div class="course-body">
         <div class="course-academy-tag">${c.icon} ${c.academy}</div>
-        <h3 class="course-title" style="font-size:1rem;"><a href="course-detail.html?id=${c.id}">${c.name}</a></h3>
+        <h3 class="course-title" style="font-size:1rem;"><a href="/course-detail.html?id=${c.id}">${c.name}</a></h3>
         <div class="course-footer">
           <span class="price-current" style="font-size:1.125rem;">₹${c.price.toLocaleString('en-IN')}</span>
-          <a href="course-detail.html?id=${c.id}" class="btn btn-outline btn-sm">View Program</a>
+          <a href="/course-detail.html?id=${c.id}" class="btn btn-outline btn-sm">View Program</a>
         </div>
       </div>
     </div>
@@ -301,7 +309,7 @@ function injectCourseSchema(course, courseImg, canonicalUrl) {
       "@type": "EducationalOrganization",
       "name": "Nova Skills Education Institute",
       "url": "https://novaskills.in/",
-      "logo": "https://novaskills.in/public/images/seo/og-default.png",
+      "logo": "https://novaskills.in/public/images/seo/og-banner.png?v=2026",
       "sameAs": "https://novaskills.in/"
     },
     "offers": {

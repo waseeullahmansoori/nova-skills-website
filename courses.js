@@ -127,7 +127,7 @@ function buildCourseCardHTML(course) {
       </div>
       <div class="course-body">
         <div class="course-academy-tag">${course.icon} ${course.academy}</div>
-        <h3 class="course-title"><a href="course-detail.html?id=${course.id}">${course.name}</a></h3>
+        <h3 class="course-title"><a href="/course-detail.html?id=${course.id}">${course.name}</a></h3>
         <p class="course-desc">${course.shortDesc}</p>
         <div class="course-features">
           <span class="feature-item">💻 ${course.liveProjects} Projects</span>

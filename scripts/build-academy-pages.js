@@ -18,7 +18,7 @@ NS_ACADEMIES.forEach(acad => {
   const canonicalUrl = `https://novaskills.in/academies/${slug}/`;
   const pageTitle = `${acad.name} — Nova Skills Education Institute`;
   const metaDesc = `Master ${acad.name} with 100% practical training, live client projects, ISO certification & placement support at Nova Skills Institute.`;
-  const ogImage = `https://novaskills.in/public/images/seo/og-academies.png`;
+  const ogImage = `https://novaskills.in/public/images/seo/og-banner.png?v=2026`;
 
   const htmlContent = `<!DOCTYPE html>
 <html lang="en">

@@ -13,7 +13,9 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore comprehensive course details, syllabus modules, practical tools, live projects, certification info, and mentor profiles at Nova Skills Institute." />
+  <meta name="description" id="page-meta-desc" content="Explore comprehensive course details, syllabus modules, practical tools, live projects, certification info, and mentor profiles at Nova Skills Institute." />
+  <!-- Default noindex: overridden by course-detail.js when a valid course is found -->
+  <meta name="robots" id="page-robots" content="noindex, follow" />
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:type" content="website" />
@@ -21,8 +23,8 @@
   <meta property="og:url" id="og-url" content="https://novaskills.in/course-detail.html" />
   <meta property="og:title" id="og-title" content="Course Details — Nova Skills Education Institute" />
   <meta property="og:description" id="og-desc" content="Job-oriented practical skill program with live projects and placement support." />
-  <meta property="og:image" id="og-image" content="https://novaskills.in/public/images/seo/og-course-detail.png" />
-  <meta property="og:image:secure_url" id="og-image-secure" content="https://novaskills.in/public/images/seo/og-course-detail.png" />
+  <meta property="og:image" id="og-image" content="https://novaskills.in/public/images/seo/og-banner.png?v=2026" />
+  <meta property="og:image:secure_url" id="og-image-secure" content="https://novaskills.in/public/images/seo/og-banner.png?v=2026" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -35,11 +37,12 @@
   <meta name="twitter:creator" content="@novaskills_in" />
   <meta name="twitter:title" id="tw-title" content="Course Details — Nova Skills Education Institute" />
   <meta name="twitter:description" id="tw-desc" content="Job-oriented practical skill program with live projects and placement support." />
-  <meta name="twitter:image" id="tw-image" content="https://novaskills.in/public/images/seo/og-course-detail.png" />
+  <meta name="twitter:image" id="tw-image" content="https://novaskills.in/public/images/seo/og-banner.png?v=2026" />
   <meta name="twitter:image:alt" id="tw-image-alt" content="Course Details — Nova Skills Education Institute" />
 
   <!-- Canonical Link -->
-  <link rel="canonical" id="page-canonical" href="https://novaskills.in/course-detail.html" />
+  <!-- Static fallback canonical — course-detail.js sets correct per-course canonical at runtime -->
+  <link rel="canonical" id="page-canonical" href="https://novaskills.in/courses.html" />
   <link rel="icon" type="image/svg+xml" href="/branding%20content/icon%202.svg" />
 
   <title id="page-title">Course Details — Nova Skills</title>

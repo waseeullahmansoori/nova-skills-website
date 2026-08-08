@@ -1,8 +1,10 @@
 # ============================================================
 # NOVA SKILLS – Cloudflare Pages 301 Redirect Rules
 # Clean Directory URLs Standard
+# Last Updated: 2026-08-08
 # ============================================================
 
+# ── Directory index.html clean-up ────────────────────────────
 /contact/index.html /contact/ 301
 /privacy-policy/index.html /privacy-policy/ 301
 /refund-policy/index.html /refund-policy/ 301
@@ -12,13 +14,104 @@
 /admin/login/index.html /admin/login/ 301
 /blog/waseeullah-mansoori/index.html /blog/waseeullah-mansoori/ 301
 
-# Academy Short ID Aliases
-/academies/nocode/ /academies/no-code-web/ 301
-/academies/video/ /academies/video-motion/ 301
-/academies/career/ /academies/career-freelancing/ 301
-/academies/kids/ /academies/kids-tech/ 301
-/academies/office/ /academies/office-productivity/ 301
+# ── Legacy Academy Query-Param URLs → Canonical Slug URLs ────
+# /academy-detail.html?academy={slug} → /academies/{slug}/
+/academy-detail.html?academy=digital-marketing  /academies/digital-marketing/  301
+/academy-detail.html?academy=ai                 /academies/ai/                 301
+/academy-detail.html?academy=design             /academies/design/             301
+/academy-detail.html?academy=programming        /academies/programming/        301
+/academy-detail.html?academy=no-code-web        /academies/no-code-web/        301
+/academy-detail.html?academy=nocode             /academies/no-code-web/        301
+/academy-detail.html?academy=video-motion       /academies/video-motion/       301
+/academy-detail.html?academy=video              /academies/video-motion/       301
+/academy-detail.html?academy=3d                 /academies/3d/                 301
+/academy-detail.html?academy=career-freelancing /academies/career-freelancing/ 301
+/academy-detail.html?academy=career             /academies/career-freelancing/ 301
+/academy-detail.html?academy=communication      /academies/communication/      301
+/academy-detail.html?academy=kids-tech          /academies/kids-tech/          301
+/academy-detail.html?academy=kids               /academies/kids-tech/          301
+/academy-detail.html?academy=creator            /academies/creator/            301
+/academy-detail.html?academy=office-productivity /academies/office-productivity/ 301
+/academy-detail.html?academy=office             /academies/office-productivity/ 301
 
-# Academy Clean Directory SPA Rewrite
-/academies/* /academies/index.html 200
+# ── Academy Short ID Aliases → Canonical Slug URLs ───────────
+/academies/nocode/  /academies/no-code-web/        301
+/academies/video/   /academies/video-motion/        301
+/academies/career/  /academies/career-freelancing/  301
+/academies/kids/    /academies/kids-tech/           301
+/academies/office/  /academies/office-productivity/ 301
 
+# ── Course-Detail: /course-detail (no .html) → canonical ─────
+# Preserves query string automatically in Cloudflare Pages
+/course-detail  /course-detail.html  301
+
+# ── Course Slug-to-ID Redirects ──────────────────────────────
+# Where course slug ≠ course id: slug-based URLs → id-based canonical
+# Digital Marketing Academy
+/course-detail.html?id=ai-digital-marketing-master          /course-detail.html?id=dm-mastery             301
+/course-detail.html?id=ai-digital-marketing-professional    /course-detail.html?id=dm-professional        301
+/course-detail.html?id=performance-marketing-professional   /course-detail.html?id=perf-marketing-pro     301
+/course-detail.html?id=digital-marketing-professional       /course-detail.html?id=digital-marketing-pro  301
+/course-detail.html?id=meta-ads-facebook-instagram          /course-detail.html?id=meta-ads               301
+/course-detail.html?id=seo-geo-ai-search-optimisation       /course-detail.html?id=seo-geo                301
+
+# AI Academy
+/course-detail.html?id=ai-mastery-program                   /course-detail.html?id=ai-mastery             301
+/course-detail.html?id=ai-productivity-professional         /course-detail.html?id=ai-productivity        301
+/course-detail.html?id=ai-for-business-professional         /course-detail.html?id=ai-for-business-pro    301
+/course-detail.html?id=claude-for-productivity              /course-detail.html?id=claude-productivity    301
+
+# Design Academy
+/course-detail.html?id=creative-design-master               /course-detail.html?id=creative-design        301
+/course-detail.html?id=graphic-design-professional          /course-detail.html?id=graphic-design-pro     301
+/course-detail.html?id=ui-ux-design-professional            /course-detail.html?id=uiux-design-pro        301
+/course-detail.html?id=canva-professional                   /course-detail.html?id=canva-pro              301
+
+# Programming Academy
+/course-detail.html?id=full-stack-programming-foundation    /course-detail.html?id=fullstack-foundation   301
+/course-detail.html?id=python-developer-professional        /course-detail.html?id=python-developer       301
+/course-detail.html?id=ai-web-development-professional      /course-detail.html?id=ai-web-dev-pro         301
+/course-detail.html?id=javascript                           /course-detail.html?id=javascript-cert        301
+/course-detail.html?id=react-javascript                     /course-detail.html?id=react-cert             301
+
+# No-Code Web Academy
+/course-detail.html?id=ecommerce-website-mastery            /course-detail.html?id=ecommerce-mastery      301
+/course-detail.html?id=nocode-website-professional          /course-detail.html?id=nocode-web-pro         301
+
+# Video & Motion Academy
+/course-detail.html?id=motion-graphics-master               /course-detail.html?id=motion-mastery         301
+/course-detail.html?id=professional-video-editing           /course-detail.html?id=video-pro              301
+/course-detail.html?id=ai-video-editing-professional        /course-detail.html?id=ai-video-pro           301
+
+# 3D Academy
+/course-detail.html?id=architectural-visualisation-master   /course-detail.html?id=archviz-mastery        301
+/course-detail.html?id=3d-visualisation-professional        /course-detail.html?id=3d-viz-pro             301
+
+# Career & Freelancing Academy
+/course-detail.html?id=career-launch-program                /course-detail.html?id=career-launch          301
+/course-detail.html?id=business-english-personality-development /course-detail.html?id=business-english  301
+
+# Communication Academy
+/course-detail.html?id=professional-spoken-english          /course-detail.html?id=spoken-english-pro     301
+/course-detail.html?id=spoken-english                       /course-detail.html?id=spoken-english-cert    301
+
+# Kids Tech Academy
+/course-detail.html?id=future-tech-kids-mastery             /course-detail.html?id=kids-mastery           301
+/course-detail.html?id=young-coders-program                 /course-detail.html?id=young-coders           301
+
+# Creator Academy
+/course-detail.html?id=youtube-growth-mastery               /course-detail.html?id=youtube-mastery        301
+/course-detail.html?id=content-creator-professional         /course-detail.html?id=content-creator-pro    301
+
+# Office Productivity Academy
+/course-detail.html?id=business-productivity-mastery        /course-detail.html?id=biz-productivity       301
+/course-detail.html?id=office-productivity-professional     /course-detail.html?id=office-pro             301
+
+# ── Legacy broken IDs referenced in old links ─────────────────
+# Fixes thank-you/index.html broken course ID links
+/course-detail.html?id=full-stack                           /course-detail.html?id=fullstack-foundation   301
+/course-detail.html?id=design-mastery                       /course-detail.html?id=creative-design        301
+
+# ── Academy Clean Directory SPA Rewrite ──────────────────────
+# Must remain LAST — serves academies/index.html for unknown slugs
+/academies/*  /academies/index.html  200

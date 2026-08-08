@@ -37,17 +37,17 @@ function populateArticle(post) {
 
   // Map specific OG / Twitter images for blog posts
   const blogImageMap = {
-    'ai-jobs-india-2026': 'https://novaskills.in/public/images/seo/og-blog-ai-jobs-india-2026.png',
-    'digital-marketing-salary-india': 'https://novaskills.in/public/images/seo/og-blog-digital-marketing-salary-india.png',
-    'learn-graphic-design-beginner-guide': 'https://novaskills.in/public/images/seo/og-blog-learn-graphic-design-beginner-guide.png',
-    'freelancing-fiverr-india-guide': 'https://novaskills.in/public/images/seo/og-blog-freelancing-fiverr-india-guide.png',
-    'n8n-ai-automation-beginners': 'https://novaskills.in/public/images/seo/og-blog-n8n-ai-automation-beginners.png',
-    'youtube-channel-monetise-2026': 'https://novaskills.in/public/images/seo/og-blog-youtube-channel-monetise-2026.png',
-    'chatgpt-prompts-marketing': 'https://novaskills.in/public/images/seo/og-blog-chatgpt-prompts-marketing.png',
-    'kids-coding-benefits-india': 'https://novaskills.in/public/images/seo/og-blog-kids-coding-benefits-india.png',
-    'python-vs-javascript-2026': 'https://novaskills.in/public/images/seo/og-blog-python-vs-javascript-2026.png'
+    'ai-jobs-india-2026': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'digital-marketing-salary-india': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'learn-graphic-design-beginner-guide': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'freelancing-fiverr-india-guide': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'n8n-ai-automation-beginners': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'youtube-channel-monetise-2026': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'chatgpt-prompts-marketing': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'kids-coding-benefits-india': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
+    'python-vs-javascript-2026': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026'
   };
-  const blogImg = blogImageMap[post.slug] || 'https://novaskills.in/public/images/seo/og-blog-detail.png';
+  const blogImg = blogImageMap[post.slug] || 'https://novaskills.in/public/images/seo/og-banner.png?v=2026';
 
   // Open Graph Updates
   const ogUrl = document.getElementById('og-url') || document.querySelector('meta[property="og:url"]');

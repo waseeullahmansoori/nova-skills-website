@@ -148,7 +148,7 @@ function injectAcademySEOAndSchema(academy, landingData, totalCoursesCount) {
   const canonicalUrl = `https://novaskills.in/academies/${academy.slug}/`;
   const pageTitle = `${academy.name} — Nova Skills Education Institute`;
   const metaDesc = `Master ${academy.name} with 100% practical training, live client projects, ISO certification & placement support at Nova Skills Institute.`;
-  const ogImage = `https://novaskills.in/public/images/seo/og-academies.png`;
+  const ogImage = `https://novaskills.in/public/images/seo/og-banner.png?v=2026`;
 
   // 1. Page Title
   document.title = pageTitle;
