@@ -404,20 +404,18 @@ function renderBlogGrid() {
   renderBlogPagination(totalPosts, totalPages);
 }
 
-/* Renders Page 1, Page 2, etc. based on 8 posts per page */
+/* Renders Page 1, Page 2, etc. based on 8 posts per page (always displays pagination bar) */
 function renderBlogPagination(totalPosts, totalPages) {
   const container = document.getElementById('blog-pagination');
   if (!container) return;
 
-  if (totalPages <= 1) {
-    container.innerHTML = '';
-    return;
-  }
+  const pages = Math.max(1, totalPages || 1);
+  const isPrevDisabled = currentBlogPage <= 1;
+  const isNextDisabled = currentBlogPage >= pages;
 
   let html = '';
 
   // Previous Button
-  const isPrevDisabled = currentBlogPage <= 1;
   html += `
     <button type="button" 
             class="pagination-btn ${isPrevDisabled ? 'disabled' : ''}" 
@@ -429,7 +427,7 @@ function renderBlogPagination(totalPosts, totalPages) {
   `;
 
   // Numbered Page Buttons
-  for (let i = 1; i <= totalPages; i++) {
+  for (let i = 1; i <= pages; i++) {
     const isActive = i === currentBlogPage;
     html += `
       <button type="button" 
@@ -444,7 +442,6 @@ function renderBlogPagination(totalPosts, totalPages) {
   }
 
   // Next Button
-  const isNextDisabled = currentBlogPage >= totalPages;
   html += `
     <button type="button" 
             class="pagination-btn ${isNextDisabled ? 'disabled' : ''}" 
