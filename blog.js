@@ -1,8 +1,10 @@
 /* ============================================================
    NOVA SKILLS — Blog Page Functional Engine
-   Handles: 9 posts per page, category filter, tag filter,
+   Handles: 8 posts per page, category filter, tag filter,
    search filter, multi-filter combination, pagination, URL state sync,
    browser history popstate, clear filters, and dynamic rendering.
+   Architecture: Single canonical published blog collection derived
+   dynamically with reverse chronological date sorting.
    ============================================================ */
 
 'use strict';
@@ -11,7 +13,7 @@ let currentBlogCategory = 'all';
 let currentBlogTag = '';
 let currentBlogSearch = '';
 let currentBlogPage = 1;
-const BLOG_POSTS_PER_PAGE = 9;
+const BLOG_POSTS_PER_PAGE = 8;
 
 function escapeHtml(str) {
   if (!str) return '';
@@ -23,7 +25,8 @@ function escapeHtml(str) {
     .replace(/'/g, '&#039;');
 }
 
-function getBlogPosts() {
+/* 1. Retrieve raw posts from data.js */
+function getRawBlogPosts() {
   if (typeof window !== 'undefined' && window.NS_BLOG_POSTS && Array.isArray(window.NS_BLOG_POSTS)) {
     return window.NS_BLOG_POSTS;
   }
@@ -31,6 +34,104 @@ function getBlogPosts() {
     return NS_BLOG_POSTS;
   }
   return [];
+}
+
+/* 2. Canonical Single Source of Truth: published non-demo posts sorted by publishedAt DESC */
+function getPublishedBlogPosts() {
+  const raw = getRawBlogPosts();
+  if (!raw || !Array.isArray(raw)) return [];
+
+  // Filter ONLY published, non-demo posts
+  const publishedOnly = raw.filter(p => {
+    if (!p) return false;
+    // Check status: if explicit status is set, must be 'published'
+    if (p.status && p.status.toLowerCase() !== 'published') return false;
+    // Check demo and published flags
+    if (p.isDemo === true || p.published === false || p.draft === true) return false;
+    return true;
+  });
+
+  // Deduplicate by slug / id (safeguard against accidental duplicate entries)
+  const seenKeys = new Set();
+  const deduped = [];
+  for (const post of publishedOnly) {
+    const key = (post.slug || post.id || '').toString();
+    if (key && !seenKeys.has(key)) {
+      seenKeys.add(key);
+      deduped.push(post);
+    }
+  }
+
+  // Sort strictly by machine-readable publishedAt / publishDate / date DESCENDING
+  deduped.sort((a, b) => {
+    const timeA = new Date(a.publishedAt || a.publishDate || a.date || '2026-01-01').getTime() || 0;
+    const timeB = new Date(b.publishedAt || b.publishDate || b.date || '2026-01-01').getTime() || 0;
+    return timeB - timeA;
+  });
+
+  return deduped;
+}
+
+/* 3. Extract the active featured post */
+function getFeaturedPost(publishedPosts) {
+  if (!publishedPosts || publishedPosts.length === 0) return null;
+  // Look for explicitly marked isFeatured: true or featured: true
+  const featured = publishedPosts.find(p => p.isFeatured === true || p.featured === true);
+  return featured || publishedPosts[0];
+}
+
+/* 4. Derive grid posts: apply filters and exclude featured post when on initial view */
+function getGridPosts(publishedPosts, featuredPost) {
+  if (!publishedPosts || publishedPosts.length === 0) return [];
+
+  const searchInput = document.getElementById('blog-search-input');
+  const searchVal = (searchInput ? searchInput.value : currentBlogSearch).toLowerCase().trim();
+
+  return publishedPosts.filter(p => {
+    // Exclude featured article from main grid ONLY when showing all categories, without active tag or search
+    if (featuredPost && (p.slug === featuredPost.slug || p.id === featuredPost.id)) {
+      if (currentBlogCategory === 'all' && !currentBlogTag && !searchVal) {
+        return false;
+      }
+    }
+
+    // Category Filter
+    if (currentBlogCategory && currentBlogCategory.toLowerCase() !== 'all') {
+      const pCat = (p.category || '').toLowerCase().trim();
+      const targetCat = currentBlogCategory.toLowerCase().trim();
+      if (pCat !== targetCat) {
+        return false;
+      }
+    }
+
+    // Tag Filter
+    if (currentBlogTag) {
+      const targetTag = currentBlogTag.toLowerCase().trim().replace(/^#/, '');
+      const hasTag = p.tags && Array.isArray(p.tags) && p.tags.some(t => {
+        const cleanT = t.toLowerCase().trim().replace(/^#/, '');
+        return cleanT === targetTag;
+      });
+      if (!hasTag) {
+        return false;
+      }
+    }
+
+    // Search Query across title, excerpt, content, category, author, and tags
+    if (searchVal) {
+      const matchTitle = p.title ? p.title.toLowerCase().includes(searchVal) : false;
+      const matchExcerpt = p.excerpt ? p.excerpt.toLowerCase().includes(searchVal) : false;
+      const matchContent = p.content ? p.content.toLowerCase().includes(searchVal) : false;
+      const matchCategory = p.category ? p.category.toLowerCase().includes(searchVal) : false;
+      const matchAuthor = p.author ? p.author.toLowerCase().includes(searchVal) : false;
+      const matchTags = p.tags && Array.isArray(p.tags) ? p.tags.some(t => t.toLowerCase().includes(searchVal)) : false;
+
+      if (!matchTitle && !matchExcerpt && !matchContent && !matchCategory && !matchAuthor && !matchTags) {
+        return false;
+      }
+    }
+
+    return true;
+  });
 }
 
 function readUrlParams() {
@@ -147,12 +248,23 @@ function clearAllBlogFilters() {
 }
 window.clearAllBlogFilters = clearAllBlogFilters;
 
+/* Renders the top Hero Featured Article */
 function renderFeaturedPost() {
   const container = document.getElementById('blog-featured-slot');
-  const posts = getBlogPosts();
-  if (!container || posts.length === 0) return;
+  if (!container) return;
 
-  const featured = posts.find(p => p.featured) || posts[0];
+  const published = getPublishedBlogPosts();
+  if (published.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+
+  const featured = getFeaturedPost(published);
+  if (!featured) {
+    container.innerHTML = '';
+    return;
+  }
+
   const featuredUrl = featured.url || `blog-detail.html?id=${featured.slug}`;
   const featuredImgPath = featured.featuredImage || featured.image || '/images/seo/waseeullah-mansoori.png';
   const featuredAlt = featured.slug === 'waseeullah-mansoori' 
@@ -160,7 +272,7 @@ function renderFeaturedPost() {
     : (featured.title || 'Featured Article');
 
   const featuredImg = featuredImgPath 
-    ? `<img src="${featuredImgPath}" alt="${featuredAlt}" style="width:100%; height:100%; object-fit:cover; border-radius:16px;" loading="eager" />` 
+    ? `<img src="${featuredImgPath}" alt="${escapeHtml(featuredAlt)}" style="width:100%; height:100%; object-fit:cover; border-radius:16px;" loading="eager" />` 
     : `<span style="font-size:4rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.3));">💡</span>`;
 
   container.innerHTML = `
@@ -182,7 +294,7 @@ function renderFeaturedPost() {
             <div style="font-size:0.75rem; color:var(--text-muted);">${escapeHtml(featured.authorRole || 'Author')}</div>
           </div>
           <span class="blog-meta-dot">•</span>
-          <span class="blog-read-time">⏱️ ${featured.readingTime || featured.readTime || 8} min read</span>
+          <span class="blog-read-time">⏱️ ${featured.readingTime || featured.readTime || 10} min read</span>
         </div>
         <div>
           <a href="${featuredUrl}" class="blog-read-more">Read Full Article →</a>
@@ -192,65 +304,17 @@ function renderFeaturedPost() {
   `;
 }
 
+/* Renders the Latest Articles Grid with 8 posts per page */
 function renderBlogGrid() {
   const container = document.getElementById('blog-cards-grid');
-  const posts = getBlogPosts();
-  if (!container || posts.length === 0) return;
+  if (!container) return;
+
+  const published = getPublishedBlogPosts();
+  const featured = getFeaturedPost(published);
+  const filtered = getGridPosts(published, featured);
 
   const searchInput = document.getElementById('blog-search-input');
-  const searchVal = (searchInput ? searchInput.value : currentBlogSearch).toLowerCase().trim();
-
-  // 1. Sort latest published blogs first (Date descending)
-  const sortedPosts = [...posts].sort((a, b) => {
-    const dateA = new Date(a.publishDate || a.date || '2026-01-01');
-    const dateB = new Date(b.publishDate || b.date || '2026-01-01');
-    return dateB - dateA;
-  });
-
-  // 2. Filter posts across Category, Tag, and Search
-  const filtered = sortedPosts.filter(p => {
-    // Exclude featured article from main grid ONLY when showing all categories, page 1, no tag, no search query
-    if (p.featured && currentBlogCategory === 'all' && !currentBlogTag && !searchVal && currentBlogPage === 1) {
-      return false;
-    }
-
-    // Category Filter
-    if (currentBlogCategory && currentBlogCategory.toLowerCase() !== 'all') {
-      const pCat = (p.category || '').toLowerCase().trim();
-      const targetCat = currentBlogCategory.toLowerCase().trim();
-      if (pCat !== targetCat) {
-        return false;
-      }
-    }
-
-    // Tag Filter
-    if (currentBlogTag) {
-      const targetTag = currentBlogTag.toLowerCase().trim().replace(/^#/, '');
-      const hasTag = p.tags && Array.isArray(p.tags) && p.tags.some(t => {
-        const cleanT = t.toLowerCase().trim().replace(/^#/, '');
-        return cleanT === targetTag;
-      });
-      if (!hasTag) {
-        return false;
-      }
-    }
-
-    // Search Query
-    if (searchVal) {
-      const matchTitle = p.title ? p.title.toLowerCase().includes(searchVal) : false;
-      const matchExcerpt = p.excerpt ? p.excerpt.toLowerCase().includes(searchVal) : false;
-      const matchContent = p.content ? p.content.toLowerCase().includes(searchVal) : false;
-      const matchCategory = p.category ? p.category.toLowerCase().includes(searchVal) : false;
-      const matchAuthor = p.author ? p.author.toLowerCase().includes(searchVal) : false;
-      const matchTags = p.tags ? p.tags.some(t => t.toLowerCase().includes(searchVal)) : false;
-
-      if (!matchTitle && !matchExcerpt && !matchContent && !matchCategory && !matchAuthor && !matchTags) {
-        return false;
-      }
-    }
-
-    return true;
-  });
+  const searchVal = (searchInput ? searchInput.value : currentBlogSearch).trim();
 
   const totalPosts = filtered.length;
   const totalPages = Math.ceil(totalPosts / BLOG_POSTS_PER_PAGE) || 1;
@@ -289,7 +353,7 @@ function renderBlogGrid() {
       <div style="grid-column:1/-1; text-align:center; padding:60px 20px; color:var(--text-muted);">
         <div style="font-size:3.5rem; margin-bottom:12px;">📝</div>
         <h3 style="font-size:1.5rem; font-weight:800; color:var(--navy); margin-bottom:8px;">No articles found.</h3>
-        <p style="font-size:0.95rem; color:#64748b; margin-bottom:24px;">No articles match your active search term or filter criteria.</p>
+        <p style="font-size:0.95rem; color:#64748b; margin-bottom:24px;">No published articles match your active search term or filter criteria.</p>
         <button type="button" class="btn btn-primary" onclick="clearAllBlogFilters()" style="background:#0599a8; color:white; font-weight:700;">Clear Filters ✕</button>
       </div>
     `;
@@ -297,7 +361,7 @@ function renderBlogGrid() {
     return;
   }
 
-  // Slice posts for current page (9 per page)
+  // Slice posts for current page (8 per page)
   const startIndex = (currentBlogPage - 1) * BLOG_POSTS_PER_PAGE;
   const endIndex = startIndex + BLOG_POSTS_PER_PAGE;
   const pagePosts = filtered.slice(startIndex, endIndex);
@@ -309,7 +373,7 @@ function renderBlogGrid() {
       ? 'Waseeullah Mansoori - Founder of Nova Skills' 
       : (p.title || 'Article');
 
-    const excerptText = p.excerpt ? (p.excerpt.length > 110 ? p.excerpt.substring(0, 110) + '...' : p.excerpt) : '';
+    const excerptText = p.excerpt ? (p.excerpt.length > 120 ? p.excerpt.substring(0, 120) + '...' : p.excerpt) : '';
 
     const thumbContent = imgPath 
       ? `<img src="${imgPath}" alt="${escapeHtml(imageAlt)}" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />` 
@@ -340,6 +404,7 @@ function renderBlogGrid() {
   renderBlogPagination(totalPosts, totalPages);
 }
 
+/* Renders Page 1, Page 2, etc. based on 8 posts per page */
 function renderBlogPagination(totalPosts, totalPages) {
   const container = document.getElementById('blog-pagination');
   if (!container) return;
@@ -393,13 +458,19 @@ function renderBlogPagination(totalPosts, totalPages) {
   container.innerHTML = html;
 }
 
+/* Renders Categories dynamically from published posts only */
 function renderBlogCategories() {
   const container = document.getElementById('blog-categories-list');
-  const posts = getBlogPosts();
-  if (!container || posts.length === 0) return;
+  if (!container) return;
+
+  const published = getPublishedBlogPosts();
+  if (published.length === 0) {
+    container.innerHTML = '<div style="font-size:0.85rem; color:var(--text-muted);">No categories available.</div>';
+    return;
+  }
 
   const counts = {};
-  posts.forEach(p => {
+  published.forEach(p => {
     const cat = p.category || 'General';
     counts[cat] = (counts[cat] || 0) + 1;
   });
@@ -407,7 +478,7 @@ function renderBlogCategories() {
   const categories = ['all', ...Object.keys(counts).sort()];
 
   let html = categories.map(cat => {
-    const count = cat === 'all' ? posts.length : counts[cat];
+    const count = cat === 'all' ? published.length : counts[cat];
     const label = cat === 'all' ? 'All Categories' : cat;
     const isActive = (currentBlogCategory.toLowerCase().trim() === cat.toLowerCase().trim()) ? 'active' : '';
     return `
@@ -418,7 +489,8 @@ function renderBlogCategories() {
     `;
   }).join('');
 
-  if (currentBlogCategory !== 'all' || currentBlogTag || (document.getElementById('blog-search-input')?.value.trim())) {
+  const searchInput = document.getElementById('blog-search-input');
+  if (currentBlogCategory !== 'all' || currentBlogTag || (searchInput && searchInput.value.trim())) {
     html += `
       <button type="button" class="btn btn-sm btn-outline" style="width:100%; margin-top:12px; font-size:0.8rem;" onclick="clearAllBlogFilters(); return false;">
         Clear All Filters ✕
@@ -429,13 +501,19 @@ function renderBlogCategories() {
   container.innerHTML = html;
 }
 
+/* Renders Tags dynamically from published posts only */
 function renderBlogTags() {
   const container = document.getElementById('blog-tags-list');
-  const posts = getBlogPosts();
-  if (!container || posts.length === 0) return;
+  if (!container) return;
+
+  const published = getPublishedBlogPosts();
+  if (published.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
 
   const tagCounts = {};
-  posts.forEach(p => {
+  published.forEach(p => {
     if (p.tags && Array.isArray(p.tags)) {
       p.tags.forEach(t => {
         const cleanTag = t.trim();
@@ -454,21 +532,26 @@ function renderBlogTags() {
   }).join('');
 }
 
+/* Renders Sidebar Latest Posts from published collection (excluding featured article) */
 function renderLatestPosts() {
   const container = document.getElementById('blog-latest-posts-list');
-  const posts = getBlogPosts();
-  if (!container || posts.length === 0) return;
+  if (!container) return;
 
-  const latest5 = [...posts].sort((a, b) => {
-    const dateA = new Date(a.publishDate || a.date || '2026-01-01');
-    const dateB = new Date(b.publishDate || b.date || '2026-01-01');
-    return dateB - dateA;
-  }).slice(0, 5);
+  const published = getPublishedBlogPosts();
+  if (published.length === 0) {
+    container.innerHTML = '<div style="font-size:0.85rem; color:var(--text-muted);">No posts available.</div>';
+    return;
+  }
 
-  container.innerHTML = latest5.map(p => {
+  const featured = getFeaturedPost(published);
+  // Exclude featured article from sidebar latest posts if other published posts exist
+  const nonFeatured = published.filter(p => !featured || (p.slug !== featured.slug && p.id !== featured.id));
+  const latestList = (nonFeatured.length > 0 ? nonFeatured : published).slice(0, 5);
+
+  container.innerHTML = latestList.map(p => {
     const postUrl = p.url || `blog-detail.html?id=${p.slug}`;
     const imgPath = p.featuredImage || p.image;
-    const formattedDate = formatDate(p.publishDate || p.date);
+    const formattedDate = formatDate(p.publishedAt || p.publishDate || p.date);
     const thumbHtml = imgPath 
       ? `<img src="${imgPath}" alt="${escapeHtml(p.title || '')}" style="width:48px; height:48px; object-fit:cover; border-radius:8px; flex-shrink:0;" loading="lazy" />` 
       : `<div style="width:48px; height:48px; border-radius:8px; background:var(--grad-navy-teal); color:white; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0;">${getCategoryEmoji(p.category)}</div>`;
@@ -490,7 +573,7 @@ function renderLatestPosts() {
 }
 
 function formatDate(dateStr) {
-  if (!dateStr) return 'July 2026';
+  if (!dateStr) return 'Aug 2026';
   try {
     const d = new Date(dateStr);
     return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -585,8 +668,8 @@ function bindBlogEvents() {
 
 function initBlog() {
   readUrlParams();
-  const posts = getBlogPosts();
-  if (posts.length === 0) {
+  const posts = getPublishedBlogPosts();
+  if (posts.length === 0 && getRawBlogPosts().length === 0) {
     setTimeout(initBlog, 100);
     return;
   }

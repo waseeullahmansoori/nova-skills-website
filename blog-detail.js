@@ -203,22 +203,47 @@ function renderRelatedArticles(currentPost) {
   const container = document.getElementById('related-articles-grid');
   if (!container) return;
 
-  const related = NS_BLOG_POSTS
-    .filter(p => p.id !== currentPost.id)
-    .slice(0, 3);
+  const raw = (typeof window !== 'undefined' && window.NS_BLOG_POSTS) || (typeof NS_BLOG_POSTS !== 'undefined' ? NS_BLOG_POSTS : []);
+  const publishedOnly = raw.filter(p => {
+    if (!p) return false;
+    if (p.status && p.status.toLowerCase() !== 'published') return false;
+    if (p.isDemo === true || p.published === false || p.draft === true) return false;
+    if (p.id === currentPost.id || p.slug === currentPost.slug) return false;
+    return true;
+  });
 
-  container.innerHTML = related.map(p => `
-    <article class="blog-card">
-      <div class="blog-card-thumb" style="background:${getCategoryGradient(p.category)}; color:white; height:150px;">
-        <span style="font-size:2.5rem;">${getCategoryEmoji(p.category)}</span>
-      </div>
-      <div class="blog-card-body">
-        <div class="blog-card-category">${p.category}</div>
-        <h3 class="blog-card-title" style="font-size:1rem;"><a href="blog-detail.html?id=${p.slug}">${p.title}</a></h3>
-        <a href="blog-detail.html?id=${p.slug}" class="blog-read-more">Read Article →</a>
-      </div>
-    </article>
-  `).join('');
+  publishedOnly.sort((a, b) => {
+    const timeA = new Date(a.publishedAt || a.publishDate || a.date || '2026-01-01').getTime() || 0;
+    const timeB = new Date(b.publishedAt || b.publishDate || b.date || '2026-01-01').getTime() || 0;
+    return timeB - timeA;
+  });
+
+  const related = publishedOnly.slice(0, 3);
+  if (related.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+
+  container.innerHTML = related.map(p => {
+    const postUrl = p.url || `blog-detail.html?id=${p.slug}`;
+    const imgPath = p.featuredImage || p.image;
+    const thumbContent = imgPath 
+      ? `<img src="${imgPath}" alt="${p.title || ''}" style="width:100%; height:100%; object-fit:cover;" loading="lazy" />` 
+      : `<span style="font-size:2.5rem;">${getCategoryEmoji(p.category)}</span>`;
+
+    return `
+      <article class="blog-card">
+        <div class="blog-card-thumb" style="background:${getCategoryGradient(p.category)}; color:white; height:150px; overflow:hidden;">
+          ${thumbContent}
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-category">${p.category}</div>
+          <h3 class="blog-card-title" style="font-size:1rem;"><a href="${postUrl}">${p.title}</a></h3>
+          <a href="${postUrl}" class="blog-read-more">Read Article →</a>
+        </div>
+      </article>
+    `;
+  }).join('');
 }
 
 function bindCommentForm() {
