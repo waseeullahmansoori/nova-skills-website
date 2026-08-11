@@ -75,6 +75,14 @@ function generateSitemap() {
     loc: `${DOMAIN}/contact/`,
     lastmod: today
   });
+  urlEntries.push({
+    loc: `${DOMAIN}/blog/waseeullah-mansoori/`,
+    lastmod: today
+  });
+  urlEntries.push({
+    loc: `${DOMAIN}/blog/ai-seo-geo-digital-marketing-2026/`,
+    lastmod: today
+  });
 
   // 3. Clean Academy Directory URLs
   urlEntries.push({

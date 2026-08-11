@@ -8,6 +8,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const post = getTargetPost();
   if (post) {
+    if (post.url && post.url.startsWith('/blog/')) {
+      window.location.replace(post.url);
+      return;
+    }
     populateArticle(post);
     buildTableOfContents();
     renderRelatedArticles(post);
@@ -37,6 +41,8 @@ function populateArticle(post) {
 
   // Map specific OG / Twitter images for blog posts
   const blogImageMap = {
+    'ai-seo-geo-digital-marketing-2026': 'https://novaskills.in/images/seo/ai-seo-geo-digital-marketing-2026.jpg',
+    'waseeullah-mansoori': 'https://novaskills.in/images/seo/waseeullah-mansoori.png',
     'ai-jobs-india-2026': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
     'digital-marketing-salary-india': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
     'learn-graphic-design-beginner-guide': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
@@ -47,7 +53,7 @@ function populateArticle(post) {
     'kids-coding-benefits-india': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026',
     'python-vs-javascript-2026': 'https://novaskills.in/public/images/seo/og-banner.png?v=2026'
   };
-  const blogImg = blogImageMap[post.slug] || 'https://novaskills.in/public/images/seo/og-banner.png?v=2026';
+  const blogImg = post.featuredImage || blogImageMap[post.slug] || 'https://novaskills.in/public/images/seo/og-banner.png?v=2026';
 
   // Open Graph Updates
   const ogUrl = document.getElementById('og-url') || document.querySelector('meta[property="og:url"]');

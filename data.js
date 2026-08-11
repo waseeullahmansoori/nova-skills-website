@@ -6028,6 +6028,38 @@ if (typeof window !== 'undefined') {
 /* Blog posts data */
 const NS_BLOG_POSTS = [
   {
+    "id": "ai-seo-geo-digital-marketing-2026",
+    "slug": "ai-seo-geo-digital-marketing-2026",
+    "url": "/blog/ai-seo-geo-digital-marketing-2026/",
+    "title": "SEO Is Dead? Not Exactly: How AI Search, GEO & AI Agents Are Changing Digital Marketing in 2026",
+    "excerpt": "SEO is not dead, but it's fundamentally evolving. Discover how AI search, Generative Engine Optimization (GEO), and autonomous AI browser agents are transforming digital marketing in 2026.",
+    "content": "SEO Is Dead AI Search GEO Generative Engine Optimization AI Agents digital marketing 2026 Google AI Overviews query fan-out topical authority Waseeullah Mansoori Nova Skills search evolution.",
+    "category": "Digital Marketing",
+    "author": "Waseeullah Mansoori",
+    "authorRole": "Founder & Digital Marketing Specialist, Nova Skills",
+    "featuredImage": "/images/seo/ai-seo-geo-digital-marketing-2026.jpg",
+    "image": "/images/seo/ai-seo-geo-digital-marketing-2026.jpg",
+    "publishDate": "2026-08-11",
+    "date": "2026-08-11",
+    "readingTime": 10,
+    "readTime": 10,
+    "tags": [
+      "SEO",
+      "GEO",
+      "AI Search",
+      "AI Agents",
+      "Digital Marketing",
+      "Google AI Mode",
+      "Career Guidance",
+      "NovaSkills"
+    ],
+    "featured": false,
+    "trending": true,
+    "seoTitle": "SEO Is Dead? Not Exactly: How AI Search, GEO & AI Agents Change Digital Marketing 2026",
+    "metaDescription": "SEO is not dead, but it's fundamentally evolving. Discover how AI search, Generative Engine Optimization (GEO), and AI agents are transforming digital marketing in 2026.",
+    "ogImage": "https://novaskills.in/images/seo/ai-seo-geo-digital-marketing-2026.jpg"
+  },
+  {
     "id": "waseeullah-mansoori",
     "slug": "waseeullah-mansoori",
     "url": "/blog/waseeullah-mansoori/",
