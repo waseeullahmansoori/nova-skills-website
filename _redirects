@@ -21,10 +21,6 @@
 /academies/kids/    /academies/kids-tech/           301
 /academies/office/  /academies/office-productivity/ 301
 
-# ── Extensionless URL Redirects ──────────────────────────────
-# Preserves query string automatically in Cloudflare Pages
-/course-detail  /course-detail.html  301
-
 # ── Academy Clean Directory SPA Rewrite ──────────────────────
 # Must remain LAST — serves academies/index.html for unknown slugs
 /academies/*  /academies/index.html  200
