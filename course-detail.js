@@ -152,6 +152,19 @@ function populateCourseDetail(course) {
     discount.textContent = `${pct}% OFF`;
   }
 
+  // Calculate dynamic EMI with 18% GST based on selling price and duration
+  const durationMonths = (typeof course.durationMonths === 'number' && course.durationMonths > 0)
+    ? course.durationMonths
+    : (parseInt(course.duration, 10) || 1);
+  const gstAmount = course.price * 0.18;
+  const totalWithGST = course.price + gstAmount;
+  const monthlyInstallment = Math.round(totalWithGST / durationMonths);
+
+  const emiEl = document.getElementById('detail-emi') || document.querySelector('.enroll-emi');
+  if (emiEl) {
+    emiEl.innerHTML = `💳 Easy No-Cost EMI starting at <strong>₹${monthlyInstallment.toLocaleString('en-IN')}/month</strong> · 18% GST included`;
+  }
+
   // Mobile sticky price
   const mobPrice = document.getElementById('mobile-price');
   if (mobPrice) mobPrice.textContent = `₹${course.price.toLocaleString('en-IN')}`;
