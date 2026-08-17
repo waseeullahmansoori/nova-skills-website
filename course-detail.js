@@ -14,10 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+const COURSE_ALIASES = {
+  'dm-master': 'dm-mastery',
+  'full-stack': 'fullstack-foundation',
+  'design-mastery': 'creative-design',
+  'video-editing': 'video-pro',
+  'digital-marketing': 'dm-mastery'
+};
+
 function getTargetCourse() {
   const params = new URLSearchParams(window.location.search);
-  const id = params.get('id') || 'ai-mastery'; // Fallback default
-  return NS_COURSES.find(c => c.id === id || c.slug === id) || NS_COURSES[0];
+  const rawId = (params.get('id') || params.get('course') || '').trim();
+  const id = COURSE_ALIASES[rawId] || rawId || 'dm-mastery';
+  return NS_COURSES.find(c => c.id === id || c.slug === id) ||
+         NS_COURSES.find(c => c.id === rawId || c.slug === rawId) ||
+         NS_COURSES.find(c => c.id === 'dm-mastery') ||
+         NS_COURSES[0];
 }
 
 function populateCourseDetail(course) {
