@@ -1,6 +1,6 @@
 /**
- * Nova Skills Enterprise Platform — AI Career Advisor Slide-in Panel
- * Version: 3.0.0 (Phase 1 UI Refinement)
+ * Nova Skills Enterprise Platform — AI Career Advisor & Admissions Agent
+ * Version: 4.0.0 (Full Counselling + Sales Engine)
  * Pure JavaScript & Glassmorphism Slide-in Drawer UI Widget
  */
 
@@ -9,23 +9,625 @@
 
   const WORKER_AI_ENDPOINT = '/api/chat';
   const STORAGE_KEY_HISTORY = 'novaskills_ai_history';
+  const STORAGE_KEY_MEMORY = 'novaskills_ai_memory';
   const STORAGE_KEY_USER = 'novaskills_user';
 
   let chatHistory = [];
   let isPanelOpen = false;
   let isGenerating = false;
 
-  // Knowledge base responses for instant local fallback
-  const KNOWLEDGE_RESPONSES = {
-    'digital marketing': "Our **Digital Marketing Master Program** (3 Months) covers SEO, Google Ads, Meta Ads (Facebook & Instagram), Content Strategy, Email Marketing, and Web Analytics. Includes 100% practical projects, ISO & Meta Certifications, and dedicated placement assistance!",
-    'graphic design': "Our **Graphic Design Professional Course** (3 Months) teaches Adobe Photoshop, Illustrator, Figma, and Canva. You'll build a live creative portfolio for branding, social media graphics, and UI design.",
-    'website development': "Our **Full-Stack Web Development Course** (6 Months) covers HTML5, CSS3, JavaScript, React.js, Node.js, and Supabase database integration. Learn to build real-world web apps with hands-on projects and placement support!",
-    'video editing': "Our **Motion Graphics & Video Editing Course** (3 Months) covers Premiere Pro, After Effects, and AI video creation tools. Perfect for content creators and YouTube editors.",
-    'fees': "Course fees at Nova Skills start from ₹15,000 to ₹45,000 depending on the program. We offer **Flexible No-Cost EMI options** and merit-based scholarships! Would you like to view fees or book counselling?",
-    'placement': "Nova Skills offers **100% Dedicated Placement Support**! We have hiring partnerships with 150+ top companies. Services include resume building, mock interviews, LinkedIn optimization, and guaranteed job interview opportunities.",
-    'admission': "The admission process is very simple:\n1. Choose your desired course.\n2. Attend a **Free 1-on-1 Career Counselling Session**.\n3. Complete registration and select your preferred morning/evening batch.",
-    'batch': "We offer flexible learning modes:\n• **Morning Batches**: 9:00 AM – 11:00 AM & 11:30 AM – 1:30 PM\n• **Evening Batches**: 4:00 PM – 6:00 PM & 6:30 PM – 8:30 PM\n• **Weekend Batches**: Available for working professionals."
+  // Multi-Turn Conversational Session Memory
+  let sessionMemory = {
+    name: null,
+    qualification: null,
+    userType: null, // 'student' | 'working_professional' | 'fresher' | 'business_owner'
+    careerGoal: null, // 'job' | 'freelancing' | 'business' | 'skill_upgrade'
+    targetField: null, // 'digital-marketing' | 'ai' | 'design' | 'programming' | 'nocode' | 'video' | '3d' | 'career' | 'communication' | 'kids' | 'creator' | 'office'
+    subInterest: null,
+    dailyTime: null,
+    preferredMode: null, // 'Online' | 'Classroom' | 'Hybrid'
+    budget: null,
+    lastDiscussedCourse: null,
+    lastDiscussedAcademy: null,
+    pendingQuestion: null // 'discovery_3q' | 'ai_subgoal' | 'marketing_path' | 'budget_filter' | null
   };
+
+  /* ─────────────────────────────────────────────
+     VERIFIED NOVA SKILLS COURSE CATALOGUE
+  ───────────────────────────────────────────── */
+  const FALLBACK_ACADEMIES = [
+    { id: 'digital-marketing', name: 'Digital Marketing Academy', slug: 'digital-marketing', icon: '📊' },
+    { id: 'ai', name: 'AI Academy', slug: 'ai', icon: '🤖' },
+    { id: 'design', name: 'Design Academy', slug: 'design', icon: '🎨' },
+    { id: 'programming', name: 'Programming Academy', slug: 'programming', icon: '💻' },
+    { id: 'nocode', name: 'No-Code Web Academy', slug: 'no-code-web', icon: '🌐' },
+    { id: 'video', name: 'Video & Motion Academy', slug: 'video-motion', icon: '🎬' },
+    { id: '3d', name: '3D Academy', slug: '3d', icon: '🏗️' },
+    { id: 'career', name: 'Career & Freelancing Academy', slug: 'career-freelancing', icon: '💼' },
+    { id: 'communication', name: 'Communication Academy', slug: 'communication', icon: '💬' },
+    { id: 'kids', name: 'Kids Tech Academy', slug: 'kids-tech', icon: '👨‍💻' },
+    { id: 'creator', name: 'Creator Academy', slug: 'creator', icon: '🎥' },
+    { id: 'office', name: 'Office Productivity Academy', slug: 'office-productivity', icon: '📋' }
+  ];
+
+  const FALLBACK_COURSES = [
+    {
+      id: 'dm-mastery',
+      slug: 'ai-digital-marketing-master',
+      name: 'AI Digital Marketing Master',
+      academy: 'Digital Marketing Academy',
+      academyId: 'digital-marketing',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 31499,
+      originalPrice: 89999,
+      rating: 4.9,
+      reviews: 198,
+      liveProjects: 20,
+      mode: 'Hybrid',
+      level: 'Advanced',
+      placementSupport: true,
+      salary: '₹4.5 – ₹9 LPA',
+      shortDesc: 'Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.',
+      tools: ['Google Ads', 'Meta Ads', 'SEMrush', 'GA4', 'n8n', 'ChatGPT', 'Claude']
+    },
+    {
+      id: 'dm-professional',
+      slug: 'ai-digital-marketing-professional',
+      name: 'AI Digital Marketing Professional',
+      academy: 'Digital Marketing Academy',
+      academyId: 'digital-marketing',
+      programLevel: 'Professional Program',
+      duration: '4 Months',
+      durationMonths: 4,
+      price: 17499,
+      originalPrice: 49999,
+      rating: 4.8,
+      reviews: 312,
+      liveProjects: 10,
+      mode: 'Hybrid',
+      level: 'Beginner',
+      placementSupport: true,
+      salary: '₹3.5 – ₹6.5 LPA',
+      shortDesc: 'Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.',
+      tools: ['Google Ads', 'Meta Ads', 'SEMrush', 'GA4', 'ChatGPT', 'Canva']
+    },
+    {
+      id: 'ai-mastery',
+      slug: 'ai-mastery',
+      name: 'AI Mastery Program',
+      academy: 'AI Academy',
+      academyId: 'ai',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 27999,
+      originalPrice: 79999,
+      rating: 4.9,
+      reviews: 245,
+      liveProjects: 15,
+      mode: 'Hybrid',
+      level: 'Advanced',
+      placementSupport: true,
+      salary: '₹5.5 – ₹12 LPA',
+      shortDesc: 'Flagship career program in modern Artificial Intelligence, Agents, n8n Automation and LLM deployment.',
+      tools: ['ChatGPT', 'Claude', 'Gemini', 'n8n', 'LangChain', 'Python', 'OpenAI API']
+    },
+    {
+      id: 'ai-productivity',
+      slug: 'ai-productivity',
+      name: 'AI Productivity Professional',
+      academy: 'AI Academy',
+      academyId: 'ai',
+      programLevel: 'Professional Program',
+      duration: '3 Months',
+      durationMonths: 3,
+      price: 13999,
+      originalPrice: 39999,
+      rating: 4.8,
+      reviews: 180,
+      liveProjects: 8,
+      mode: 'Online',
+      level: 'Beginner',
+      placementSupport: true,
+      salary: '₹4.0 – ₹7.5 LPA',
+      shortDesc: 'Supercharge productivity, automation, research and creative workflows using top AI tools.',
+      tools: ['ChatGPT Plus', 'Claude 3.5', 'Midjourney', 'Zapier', 'Notion AI', 'Copilot']
+    },
+    {
+      id: 'ai-for-business-pro',
+      slug: 'ai-for-business-pro',
+      name: 'AI for Business Professional',
+      academy: 'AI Academy',
+      academyId: 'ai',
+      programLevel: 'Professional Program',
+      duration: '3 Months',
+      durationMonths: 3,
+      price: 14999,
+      originalPrice: 42999,
+      rating: 4.8,
+      reviews: 110,
+      liveProjects: 8,
+      mode: 'Online',
+      level: 'Intermediate',
+      placementSupport: true,
+      salary: '₹5.0 – ₹9 LPA',
+      shortDesc: 'Implement AI solutions for enterprise efficiency, customer service, marketing and data analytics.',
+      tools: ['ChatGPT Enterprise', 'Make.com', 'Custom GPTs', 'Claude', 'Power BI']
+    },
+    {
+      id: 'prompt-engineering',
+      slug: 'prompt-engineering',
+      name: 'Prompt Engineering',
+      academy: 'AI Academy',
+      academyId: 'ai',
+      programLevel: 'Certification Course',
+      duration: '1 Month',
+      durationMonths: 1,
+      price: 4999,
+      originalPrice: 14999,
+      rating: 4.9,
+      reviews: 420,
+      liveProjects: 5,
+      mode: 'Online',
+      level: 'Beginner',
+      placementSupport: false,
+      salary: 'Skill Upgrade',
+      shortDesc: 'Master advanced prompting frameworks for ChatGPT, Claude, Gemini & generative models.',
+      tools: ['ChatGPT', 'Claude', 'Midjourney']
+    },
+    {
+      id: 'creative-design',
+      slug: 'creative-design',
+      name: 'Creative Design Master',
+      academy: 'Design Academy',
+      academyId: 'design',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 24999,
+      originalPrice: 69999,
+      rating: 4.9,
+      reviews: 175,
+      liveProjects: 18,
+      mode: 'Hybrid',
+      level: 'Advanced',
+      placementSupport: true,
+      salary: '₹4.0 – ₹8.5 LPA',
+      shortDesc: 'Complete 6-month visual & brand design master program with live agency portfolio.',
+      tools: ['Adobe Photoshop', 'Illustrator', 'Figma', 'Canva Pro', 'After Effects']
+    },
+    {
+      id: 'graphic-design-pro',
+      slug: 'graphic-design-pro',
+      name: 'Graphic Design Professional',
+      academy: 'Design Academy',
+      academyId: 'design',
+      programLevel: 'Professional Program',
+      duration: '3 Months',
+      durationMonths: 3,
+      price: 13999,
+      originalPrice: 39999,
+      rating: 4.8,
+      reviews: 290,
+      liveProjects: 10,
+      mode: 'Hybrid',
+      level: 'Beginner',
+      placementSupport: true,
+      salary: '₹3.2 – ₹6.0 LPA',
+      shortDesc: 'Master branding, advertising visuals, social media creatives, typography and composition.',
+      tools: ['Photoshop', 'Illustrator', 'Canva', 'Figma']
+    },
+    {
+      id: 'uiux-design-pro',
+      slug: 'uiux-design-pro',
+      name: 'UI/UX Design Professional',
+      academy: 'Design Academy',
+      academyId: 'design',
+      programLevel: 'Professional Program',
+      duration: '3 Months',
+      durationMonths: 3,
+      price: 14999,
+      originalPrice: 44999,
+      rating: 4.9,
+      reviews: 160,
+      liveProjects: 8,
+      mode: 'Hybrid',
+      level: 'Intermediate',
+      placementSupport: true,
+      salary: '₹4.5 – ₹9.0 LPA',
+      shortDesc: 'Wireframing, prototyping, user research, design systems & Figma app interfaces.',
+      tools: ['Figma', 'Miro', 'Adobe XD', 'FigJam']
+    },
+    {
+      id: 'fullstack-foundation',
+      slug: 'fullstack-foundation',
+      name: 'Full Stack Programming Foundation',
+      academy: 'Programming Academy',
+      academyId: 'programming',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 29999,
+      originalPrice: 84999,
+      rating: 4.9,
+      reviews: 210,
+      liveProjects: 20,
+      mode: 'Hybrid',
+      level: 'Advanced',
+      placementSupport: true,
+      salary: '₹4.5 – ₹10 LPA',
+      shortDesc: 'End-to-end full stack development: HTML/CSS, JavaScript, React, Node.js, REST APIs and SQL.',
+      tools: ['JavaScript', 'React.js', 'Node.js', 'Express', 'SQL', 'Git', 'Vercel']
+    },
+    {
+      id: 'python-developer',
+      slug: 'python-developer',
+      name: 'Python Developer Professional',
+      academy: 'Programming Academy',
+      academyId: 'programming',
+      programLevel: 'Professional Program',
+      duration: '3 Months',
+      durationMonths: 3,
+      price: 14999,
+      originalPrice: 42999,
+      rating: 4.8,
+      reviews: 140,
+      liveProjects: 8,
+      mode: 'Online',
+      level: 'Beginner',
+      placementSupport: true,
+      salary: '₹4.0 – ₹8.0 LPA',
+      shortDesc: 'Core Python, OOPs, Data Structures, Automation scripts and Backend API development.',
+      tools: ['Python 3', 'Django/FastAPI', 'SQLite', 'Git']
+    },
+    {
+      id: 'ecommerce-mastery',
+      slug: 'ecommerce-mastery',
+      name: 'E-Commerce Website Mastery',
+      academy: 'No-Code Web Academy',
+      academyId: 'nocode',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 22999,
+      originalPrice: 64999,
+      rating: 4.8,
+      reviews: 130,
+      liveProjects: 14,
+      mode: 'Hybrid',
+      level: 'Beginner',
+      placementSupport: true,
+      salary: '₹3.8 – ₹7.5 LPA',
+      shortDesc: 'Build high-converting online stores using Shopify, WooCommerce, WordPress and payment gateways without code.',
+      tools: ['Shopify', 'WordPress', 'WooCommerce', 'Elementor', 'Stripe', 'Razorpay']
+    },
+    {
+      id: 'motion-mastery',
+      slug: 'motion-mastery',
+      name: 'Motion Graphics Master',
+      academy: 'Video & Motion Academy',
+      academyId: 'video',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 26999,
+      originalPrice: 74999,
+      rating: 4.9,
+      reviews: 115,
+      liveProjects: 16,
+      mode: 'Hybrid',
+      level: 'Advanced',
+      placementSupport: true,
+      salary: '₹4.0 – ₹8.5 LPA',
+      shortDesc: 'Advanced 2D/3D motion design, Premiere Pro, After Effects, VFX compositing and generative AI video.',
+      tools: ['Premiere Pro', 'After Effects', 'Cinema 4D Lite', 'DaVinci Resolve', 'Midjourney Video']
+    },
+    {
+      id: 'video-pro',
+      slug: 'video-pro',
+      name: 'Professional Video Editing',
+      academy: 'Video & Motion Academy',
+      academyId: 'video',
+      programLevel: 'Professional Program',
+      duration: '3 Months',
+      durationMonths: 3,
+      price: 13999,
+      originalPrice: 39999,
+      rating: 4.8,
+      reviews: 230,
+      liveProjects: 10,
+      mode: 'Hybrid',
+      level: 'Beginner',
+      placementSupport: true,
+      salary: '₹3.5 – ₹6.5 LPA',
+      shortDesc: 'Storyboarding, cinematic cuts, color grading, sound design and viral YouTube/Reels editing.',
+      tools: ['Adobe Premiere Pro', 'CapCut Pro', 'DaVinci Resolve', 'Photoshop']
+    },
+    {
+      id: 'archviz-mastery',
+      slug: 'archviz-mastery',
+      name: 'Architectural Visualisation Master',
+      academy: '3D Academy',
+      academyId: '3d',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 28999,
+      originalPrice: 79999,
+      rating: 4.9,
+      reviews: 85,
+      liveProjects: 12,
+      mode: 'Classroom',
+      level: 'Advanced',
+      placementSupport: true,
+      salary: '₹4.5 – ₹9.5 LPA',
+      shortDesc: 'Photorealistic architectural rendering, interior/exterior 3D modeling, lighting and walkthroughs.',
+      tools: ['3ds Max', 'V-Ray', 'Blender', 'Corona Renderer', 'Unreal Engine']
+    },
+    {
+      id: 'freelancing-mastery',
+      slug: 'freelancing-mastery',
+      name: 'Freelancing Mastery Program',
+      academy: 'Career & Freelancing Academy',
+      academyId: 'career',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 18999,
+      originalPrice: 54999,
+      rating: 4.9,
+      reviews: 310,
+      liveProjects: 12,
+      mode: 'Hybrid',
+      level: 'All Levels',
+      placementSupport: true,
+      salary: '₹50k – ₹2 Lakhs/mo Freelance',
+      shortDesc: 'End-to-end blueprint to launch a 6-figure global freelancing business on Upwork, Fiverr & LinkedIn.',
+      tools: ['Upwork', 'Fiverr', 'LinkedIn Sales Navigator', 'Stripe', 'PayPal', 'Notion CRM']
+    },
+    {
+      id: 'career-launch',
+      slug: 'career-launch',
+      name: 'Career Launch Program',
+      academy: 'Career & Freelancing Academy',
+      academyId: 'career',
+      programLevel: 'Professional Program',
+      duration: '3 Months',
+      durationMonths: 3,
+      price: 9099,
+      originalPrice: 24999,
+      rating: 4.8,
+      reviews: 145,
+      liveProjects: 6,
+      mode: 'Online',
+      level: 'Beginner',
+      placementSupport: true,
+      salary: 'Placement Ready',
+      shortDesc: 'Resume crafting, ATS optimization, LinkedIn personal branding, mock interviews and job search mastery.',
+      tools: ['LinkedIn', 'Canva', 'ChatGPT for Resume', 'Job Portals']
+    },
+    {
+      id: 'business-english',
+      slug: 'business-english',
+      name: 'Business English & Personality Development',
+      academy: 'Communication Academy',
+      academyId: 'communication',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 14999,
+      originalPrice: 39999,
+      rating: 4.9,
+      reviews: 190,
+      liveProjects: 10,
+      mode: 'Live Online',
+      level: 'All Levels',
+      placementSupport: true,
+      salary: 'Corporate Ready',
+      shortDesc: 'Master fluent spoken English, executive business presentations, public speaking and corporate etiquette.',
+      tools: ['Live Speech Labs', 'Presentation Deck Tools', 'Vocabulary Trainers']
+    },
+    {
+      id: 'spoken-english-pro',
+      slug: 'spoken-english-pro',
+      name: 'Professional Spoken English',
+      academy: 'Communication Academy',
+      academyId: 'communication',
+      programLevel: 'Professional Program',
+      duration: '3 Months',
+      durationMonths: 3,
+      price: 8999,
+      originalPrice: 24999,
+      rating: 4.8,
+      reviews: 280,
+      liveProjects: 6,
+      mode: 'Live Online',
+      level: 'Beginner',
+      placementSupport: false,
+      salary: 'Confidence Upgrade',
+      shortDesc: 'Daily conversation practice, accent neutralization, grammar clarity and hesitation removal.',
+      tools: ['Interactive Speaking Sessions']
+    },
+    {
+      id: 'kids-mastery',
+      slug: 'kids-mastery',
+      name: 'Future Tech Kids Mastery',
+      academy: 'Kids Tech Academy',
+      academyId: 'kids',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 19999,
+      originalPrice: 59999,
+      rating: 4.9,
+      reviews: 95,
+      liveProjects: 14,
+      mode: 'Live Online',
+      level: 'Ages 8–16',
+      placementSupport: false,
+      salary: 'STEM & Tech Foundation',
+      shortDesc: 'Hands-on coding, Scratch game creation, Python for kids, robotics logic and AI foundations.',
+      tools: ['Scratch 3.0', 'Python IDLE', 'Robotics Simulator', 'Tinkercad']
+    },
+    {
+      id: 'young-coders',
+      slug: 'young-coders',
+      name: 'Young Coders Program',
+      academy: 'Kids Tech Academy',
+      academyId: 'kids',
+      programLevel: 'Professional Program',
+      duration: '3 Months',
+      durationMonths: 3,
+      price: 11999,
+      originalPrice: 34999,
+      rating: 4.8,
+      reviews: 70,
+      liveProjects: 8,
+      mode: 'Live Online',
+      level: 'Ages 8–14',
+      placementSupport: false,
+      salary: 'Logic & Creativity',
+      shortDesc: 'Fun block coding, interactive stories, basic web creation and puzzle solving for young students.',
+      tools: ['Scratch', 'Blockly', 'HTML Basics']
+    },
+    {
+      id: 'youtube-mastery',
+      slug: 'youtube-mastery',
+      name: 'YouTube Growth Mastery',
+      academy: 'Creator Academy',
+      academyId: 'creator',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 19999,
+      originalPrice: 59999,
+      rating: 4.9,
+      reviews: 120,
+      liveProjects: 12,
+      mode: 'Hybrid',
+      level: 'Beginner to Pro',
+      placementSupport: true,
+      salary: 'Creator Monetization',
+      shortDesc: 'Channel setup, scripting, viral hooks, YouTube SEO, thumbnail design, and brand sponsorship monetization.',
+      tools: ['YouTube Studio', 'VidIQ', 'TubeBuddy', 'Premiere Pro', 'Photoshop']
+    },
+    {
+      id: 'biz-productivity',
+      slug: 'biz-productivity',
+      name: 'Business Productivity Mastery',
+      academy: 'Office Productivity Academy',
+      academyId: 'office',
+      programLevel: 'Career Program',
+      duration: '6 Months',
+      durationMonths: 6,
+      price: 16999,
+      originalPrice: 49999,
+      rating: 4.8,
+      reviews: 140,
+      liveProjects: 12,
+      mode: 'Hybrid',
+      level: 'All Levels',
+      placementSupport: true,
+      salary: '₹3.5 – ₹6.5 LPA',
+      shortDesc: 'Advanced Excel, Word, PowerPoint, Google Workspace, Notion, Copilot and Tally with GST.',
+      tools: ['Microsoft Excel (Advanced)', 'Notion', 'Microsoft Copilot', 'Tally Prime', 'Google Sheets']
+    },
+    {
+      id: 'office-pro',
+      slug: 'office-pro',
+      name: 'Office Productivity Professional',
+      academy: 'Office Productivity Academy',
+      academyId: 'office',
+      programLevel: 'Professional Program',
+      duration: '3 Months',
+      durationMonths: 3,
+      price: 9999,
+      originalPrice: 29999,
+      rating: 4.7,
+      reviews: 210,
+      liveProjects: 8,
+      mode: 'Hybrid',
+      level: 'Beginner',
+      placementSupport: true,
+      salary: '₹2.8 – ₹5.0 LPA',
+      shortDesc: 'Excel formulas, VLOOKUP/XLOOKUP, Pivot Tables, PowerPoint pitch decks and business documentation.',
+      tools: ['MS Excel', 'MS Word', 'MS PowerPoint', 'Google Docs']
+    },
+    {
+      id: 'tally-gst',
+      slug: 'tally-gst',
+      name: 'Tally with GST',
+      academy: 'Office Productivity Academy',
+      academyId: 'office',
+      programLevel: 'Certification Course',
+      duration: '2 Months',
+      durationMonths: 2,
+      price: 5999,
+      originalPrice: 17999,
+      rating: 4.8,
+      reviews: 340,
+      liveProjects: 6,
+      mode: 'Hybrid',
+      level: 'Beginner',
+      placementSupport: true,
+      salary: '₹2.5 – ₹4.5 LPA',
+      shortDesc: 'Accounting fundamentals, GST filing, inventory management, e-way bills and taxation in Tally Prime.',
+      tools: ['Tally Prime', 'Excel Accounting']
+    }
+  ];
+
+  function getAllCourses() {
+    if (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) && window.NS_COURSES.length > 0) {
+      return window.NS_COURSES;
+    }
+    return FALLBACK_COURSES;
+  }
+
+  function getAllAcademies() {
+    if (typeof window !== 'undefined' && Array.isArray(window.NS_ACADEMIES) && window.NS_ACADEMIES.length > 0) {
+      return window.NS_ACADEMIES;
+    }
+    return FALLBACK_ACADEMIES;
+  }
+
+  function findCourse(queryStr) {
+    if (!queryStr) return null;
+    const lower = queryStr.toLowerCase().trim();
+    const courses = getAllCourses();
+
+    // 1. Exact ID or slug match
+    let matched = courses.find(c => (c.id && c.id.toLowerCase() === lower) || (c.slug && c.slug.toLowerCase() === lower));
+    if (matched) return matched;
+
+    // 2. Exact name match
+    matched = courses.find(c => c.name && c.name.toLowerCase() === lower);
+    if (matched) return matched;
+
+    // 3. Substring matching in name or slug
+    matched = courses.find(c => {
+      const nameL = (c.name || '').toLowerCase();
+      const slugL = (c.slug || '').toLowerCase();
+      return nameL.includes(lower) || lower.includes(nameL) || slugL.includes(lower);
+    });
+    if (matched) return matched;
+
+    return null;
+  }
+
+  function formatFee(amount) {
+    if (typeof amount === 'number') {
+      return `₹${amount.toLocaleString('en-IN')}`;
+    }
+    return amount || '₹14,999';
+  }
+
+  function calculateEMI(priceNum, months = 6) {
+    if (!priceNum || isNaN(priceNum)) return '₹2,499';
+    const emi = Math.round(priceNum / (months || 6));
+    return `₹${emi.toLocaleString('en-IN')}`;
+  }
 
   function trackEvent(eventName, payload = {}) {
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
@@ -46,8 +648,23 @@
     }
   }
 
+  function loadSavedMemory() {
+    try {
+      const m = sessionStorage.getItem(STORAGE_KEY_MEMORY);
+      if (m) {
+        sessionMemory = { ...sessionMemory, ...JSON.parse(m) };
+      }
+    } catch (e) {}
+  }
+
+  function saveMemory() {
+    try {
+      sessionStorage.setItem(STORAGE_KEY_MEMORY, JSON.stringify(sessionMemory));
+    } catch (e) {}
+  }
+
   /* ─────────────────────────────────────────────
-     LIGHTWEIGHT MARKDOWN PARSER
+     LIGHTWEIGHT MARKDOWN PARSER (WITH TABLES)
   ───────────────────────────────────────────── */
   function parseMarkdown(text) {
     if (!text) return '';
@@ -71,24 +688,58 @@
     // Links: [text](url)
     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="nova-ai-link">$1</a>');
 
-    // Bullet points & numbered lists
+    // Parse Markdown Tables
     const lines = html.split('\n');
+    let inTable = false;
+    let tableHtml = [];
+    let resultLines = [];
     let inList = false;
     let listType = 'ul';
-    let resultLines = [];
 
-    for (let line of lines) {
-      const trimmed = line.trim();
-      if (trimmed.startsWith('•') || trimmed.startsWith('-') || (trimmed.startsWith('*') && !trimmed.endsWith('*'))) {
-        const content = trimmed.replace(/^[•\-\*]\s*/, '');
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+
+      // Check for Table Row: | col1 | col2 |
+      if (line.startsWith('|') && line.endsWith('|')) {
+        if (inList) {
+          resultLines.push(`</${listType}>`);
+          inList = false;
+        }
+
+        // Table separator row: | :--- | :--- |
+        if (/^\|(?:\s*:?-+:?\s*\|)+$/.test(line)) {
+          continue; // skip delimiter row
+        }
+
+        if (!inTable) {
+          inTable = true;
+          tableHtml.push('<table class="nova-ai-table">');
+          // Treat first row as thead
+          const cells = line.split('|').slice(1, -1);
+          tableHtml.push('<thead><tr>' + cells.map(c => `<th>${c.trim()}</th>`).join('') + '</tr></thead><tbody>');
+        } else {
+          const cells = line.split('|').slice(1, -1);
+          tableHtml.push('<tr>' + cells.map(c => `<td>${c.trim()}</td>`).join('') + '</tr>');
+        }
+        continue;
+      } else if (inTable) {
+        tableHtml.push('</tbody></table>');
+        resultLines.push(tableHtml.join(''));
+        tableHtml = [];
+        inTable = false;
+      }
+
+      // Bullet points & numbered lists
+      if (line.startsWith('•') || line.startsWith('-') || (line.startsWith('*') && !line.endsWith('*'))) {
+        const content = line.replace(/^[•\-\*]\s*/, '');
         if (!inList) {
           resultLines.push('<ul class="nova-ai-list">');
           inList = true;
           listType = 'ul';
         }
         resultLines.push(`<li>${content}</li>`);
-      } else if (/^\d+\.\s+/.test(trimmed)) {
-        const content = trimmed.replace(/^\d+\.\s+/, '');
+      } else if (/^\d+\.\s+/.test(line)) {
+        const content = line.replace(/^\d+\.\s+/, '');
         if (!inList) {
           resultLines.push('<ol class="nova-ai-list">');
           inList = true;
@@ -103,12 +754,535 @@
         resultLines.push(line);
       }
     }
-    if (inList) resultLines.push(`</${listType}>`);
+
+    if (inTable) {
+      tableHtml.push('</tbody></table>');
+      resultLines.push(tableHtml.join(''));
+    }
+    if (inList) {
+      resultLines.push(`</${listType}>`);
+    }
 
     html = resultLines.join('\n');
     html = html.replace(/\n/g, '<br/>');
 
     return html;
+  }
+
+  /* ─────────────────────────────────────────────
+     ENTITY & MEMORY EXTRACTION
+  ───────────────────────────────────────────── */
+  function updateSessionMemory(userText) {
+    if (!userText || typeof userText !== 'string') return;
+    const lower = userText.toLowerCase();
+
+    // 1. Name extraction
+    const nameMatch = userText.match(/(?:my name is|mera naam|i am|naam hai|this is)\s+([a-zA-Z]{2,20})/i);
+    if (nameMatch && nameMatch[1]) {
+      const candidate = nameMatch[1].trim();
+      const blacklist = ['interested', 'looking', 'student', 'fresher', 'graduate', 'here', 'ready', 'confused'];
+      if (!blacklist.includes(candidate.toLowerCase())) {
+        sessionMemory.name = candidate.charAt(0).toUpperCase() + candidate.slice(1);
+      }
+    }
+
+    // 2. Qualification & Background
+    if (/10th|matric/i.test(lower)) sessionMemory.qualification = '10th Pass';
+    else if (/12th|intermediate|inter|hsc|senior secondary/i.test(lower)) sessionMemory.qualification = '12th Pass';
+    else if (/graduate|b\.?com|bca|bba|b\.?sc|ba|graduation/i.test(lower)) sessionMemory.qualification = 'Graduate';
+    else if (/b\.?tech|engineering|b\.?e\b|mca|btech|m\.?tech/i.test(lower)) sessionMemory.qualification = 'B.Tech / Technical Graduate';
+    else if (/post\s*graduate|mba|m\.?sc|m\.?com|masters/i.test(lower)) sessionMemory.qualification = 'Post Graduate';
+
+    // 3. User Type
+    if (/working professional|job kar|working in|employed|doing job|it professional/i.test(lower)) {
+      sessionMemory.userType = 'working_professional';
+    } else if (/student|college|school/i.test(lower) && !/working/i.test(lower)) {
+      sessionMemory.userType = 'student';
+    } else if (/fresher|passed out|jobless|looking for job|beginner|shuruat|zero knowledge/i.test(lower)) {
+      sessionMemory.userType = 'fresher';
+    } else if (/business|startup|shop|agency owner|entrepreneur/i.test(lower)) {
+      sessionMemory.userType = 'business_owner';
+    }
+
+    // 4. Career Goal
+    if (/freelanc|fiverr|upwork|client|remote work|ghar baithe/i.test(lower)) {
+      sessionMemory.careerGoal = 'freelancing';
+    } else if (/job|placement|salary|career switch|hiring|company|naukri/i.test(lower) && !/freelanc/i.test(lower)) {
+      sessionMemory.careerGoal = 'job';
+    } else if (/business|agency|scale|startup|dhandha/i.test(lower)) {
+      sessionMemory.careerGoal = 'business';
+    } else if (/skill|upgrade|seekhna|productivity|learn/i.test(lower) && !sessionMemory.careerGoal) {
+      sessionMemory.careerGoal = 'skill_upgrade';
+    }
+
+    // 5. Target Academy / Field
+    if (/digital marketing|seo|geo|google ads|meta ads|smm|social media marketing/i.test(lower)) {
+      sessionMemory.targetField = 'digital-marketing';
+    } else if (/\bai\b|artificial intelligence|prompt engineering|agents|chatgpt|claude|n8n|automation/i.test(lower)) {
+      sessionMemory.targetField = 'ai';
+    } else if (/graphic design|designing|photoshop|illustrator|figma|ui\s*\/?\s*ux|canva/i.test(lower)) {
+      sessionMemory.targetField = 'design';
+    } else if (/coding|programming|full\s*stack|python|web development|javascript|react|developer/i.test(lower)) {
+      sessionMemory.targetField = 'programming';
+    } else if (/video editing|reels editing|premiere pro|after effects|motion graphics|davinci/i.test(lower)) {
+      sessionMemory.targetField = 'video';
+    } else if (/freelancing|career launch|proposal|fiverr|upwork/i.test(lower)) {
+      sessionMemory.targetField = 'career';
+    } else if (/kid|child|bachon|young coder|scratch/i.test(lower)) {
+      sessionMemory.targetField = 'kids';
+    } else if (/3d|blender|3ds max|vray|architectural visual/i.test(lower)) {
+      sessionMemory.targetField = '3d';
+    } else if (/no\s*code|shopify|wordpress|elementor|webflow/i.test(lower)) {
+      sessionMemory.targetField = 'nocode';
+    } else if (/english|spoken english|communication|public speaking/i.test(lower)) {
+      sessionMemory.targetField = 'communication';
+    } else if (/youtube|content creator|podcast|thumbnail/i.test(lower)) {
+      sessionMemory.targetField = 'creator';
+    } else if (/excel|tally|gst|powerpoint|office productivity/i.test(lower)) {
+      sessionMemory.targetField = 'office';
+    }
+
+    // 6. Time Availability
+    if (/1\s*(?:to|–|-)?\s*2\s*(?:hours|ghante|hr)/i.test(lower)) sessionMemory.dailyTime = '1–2 Hours Daily';
+    else if (/2\s*(?:to|–|-)?\s*3\s*(?:hours|ghante|hr)/i.test(lower) || /2\s*(?:hours|ghante)/i.test(lower)) sessionMemory.dailyTime = '2–3 Hours Daily';
+    else if (/3\s*(?:to|–|-)?\s*4\s*(?:hours|ghante|hr)/i.test(lower)) sessionMemory.dailyTime = '3–4 Hours Daily';
+    else if (/full\s*time|pure din|pura din/i.test(lower)) sessionMemory.dailyTime = 'Full Time';
+
+    // 7. Preferred Mode
+    if (/online|ghar se|live class/i.test(lower)) sessionMemory.preferredMode = 'Live Online';
+    else if (/offline|classroom|centre|campus|center/i.test(lower)) sessionMemory.preferredMode = 'Classroom';
+    else if (/hybrid/i.test(lower)) sessionMemory.preferredMode = 'Hybrid';
+
+    // 8. Budget
+    const budgetMatch = lower.match(/(?:budget|fees?|paise?)\s*(?:of|is|hai|around)?\s*(?:₹|rs\.?|inr)?\s*(\d{1,2})k\b/) ||
+                        lower.match(/(?:₹|rs\.?|inr)\s*(\d{3,6})/) ||
+                        lower.match(/(\d{3,6})\s*(?:ka budget|budget|rupees|rs)/);
+    if (budgetMatch && budgetMatch[1]) {
+      let bVal = parseInt(budgetMatch[1], 10);
+      if (budgetMatch[0].includes('k')) bVal *= 1000;
+      sessionMemory.budget = bVal;
+    }
+
+    saveMemory();
+  }
+
+  /* ─────────────────────────────────────────────
+     INTENT DETECTION SYSTEM
+  ───────────────────────────────────────────── */
+  function detectIntent(userText) {
+    const lower = userText.toLowerCase().trim();
+
+    // 1. Human Escalation Intent
+    if (/(human|counsellor|counselor|agent|insaan|call me|phone number|contact number|number do|direct baat|telephonic|call chahiye|baat karni hai)/i.test(lower) && !/course|curriculum|module/i.test(lower)) {
+      return 'HUMAN_ESCALATION';
+    }
+
+    // 2. Course Comparison Intent
+    if (/(difference|vs|versus|compare|comparison|bich me farak|antar|me difference|se behtar|dono me se)/i.test(lower)) {
+      return 'COURSE_COMPARISON';
+    }
+
+    // 3. Budget Queries
+    if (/(budget|sasta course|kitne tak ka|afford|paise kam hain|₹5000|₹10000|5000 budget|10000 budget|5k|10k)/i.test(lower) && !/(placement|placement support)/i.test(lower)) {
+      return 'BUDGET_QUERY';
+    }
+
+    // 4. Pending Discovery Answer (User answering 3 questions)
+    if (sessionMemory.pendingQuestion === 'discovery_3q') {
+      if (/student|working|job|freelanc|business|ghante|hours|graduate|fresher|12th|1\.|2\.|3\./i.test(lower)) {
+        return 'ANSWER_TO_PENDING';
+      }
+    }
+
+    // 5. Greeting Intent
+    if (/^(hello|hi|hey|hii|heyy|namaste|good\s*morning|good\s*afternoon|good\s*evening|halo|hola|salam)\b/i.test(lower) && lower.split(/\s+/).length <= 3) {
+      return 'GREETING';
+    }
+
+    // 6. Fees & Payment / EMI Intent
+    if (/(fees?|fee structure|price|kitne paise|cost|charges|emi|installment|kist|discount|scholarship|gst|payment mode)/i.test(lower)) {
+      return 'FEES_PAYMENT';
+    }
+
+    // 7. Placement & Jobs Intent
+    if (/(placement|job milegi|job support|job assistance|hiring partner|interview|package|salary|lpa|guarantee|placement support|job chahiye|naukri)/i.test(lower)) {
+      return 'PLACEMENT';
+    }
+
+    // 8. Freelancing & Global Clients Intent
+    if (/(freelanc|fiverr|upwork|client kaise|global client|ghar baithe earning|dollar earning|work from home)/i.test(lower)) {
+      return 'FREELANCING';
+    }
+
+    // 9. Learning Mode & Batches Intent
+    if (/(online|offline|classroom|timing|batch|live class|schedule|weekend batch|morning batch|evening batch|center kahan)/i.test(lower)) {
+      return 'LEARNING_MODE';
+    }
+
+    // 10. Admission & Enrollment Intent
+    if (/(admission|enroll|enrolment|join|apply|process|how to take admission|counselling book|seat book|registration)/i.test(lower)) {
+      return 'ADMISSION';
+    }
+
+    // 11. Specific Field Discovery (High Priority)
+    if (/(digital marketing|ai\b|artificial intelligence|graphic design|coding|programming|video editing|motion graphics|3d|kids|child|bachon|excel|tally|shopify|wordpress|english)/i.test(lower)) {
+      return 'COURSE_DISCOVERY_FIELD';
+    }
+
+    // 12. Academy Discovery Intent (General)
+    if (/(academy|academies|all courses|kaun kaun se course|course list|what courses do you have)/i.test(lower)) {
+      return 'ACADEMY_DISCOVERY';
+    }
+
+    // 13. General Educational Definitions ("Digital Marketing kya hota hai?")
+    if (/(kya hota hai|kya hai|what is|meaning of|explain|kaise kaam karta hai)\b/i.test(lower)) {
+      return 'GENERAL_DEFINITION';
+    }
+
+    // 14. Specific Course Information Query ("AI Digital Marketing Master kya hai?", "course me kya sikhayenge?")
+    if (/(master|professional|program|course|curriculum|syllabus|projects|tools|duration|kitne months)\b/i.test(lower) && /(sikhayenge|syllabus|curriculum|module|kya hai|detail|overview|content)/i.test(lower)) {
+      return 'COURSE_INFO';
+    }
+
+    // 15. Career Guidance / Scope Intent ("after digital marketing", "career scope", "beginner", "which course has best scope")
+    if (/(career|scope|future|demand|roadmap|growth|high paying|best field|beginner|zero knowledge|start career)/i.test(lower)) {
+      return 'CAREER_GUIDANCE';
+    }
+
+    // 16. Services / Business Offerings Intent
+    if (/(b2b|corporate training|agency services|client work|business ke liye website|service provide)/i.test(lower)) {
+      return 'SERVICES';
+    }
+
+    // 17. Vague Course Discovery ("mujhe kaunsa course karna chahiye?", "best course for me", "confused")
+    if (/(kaunsa course|which course|suggest|recommend|confused|samajh nahi aa raha|best for me|start kahan se)/i.test(lower)) {
+      return 'COURSE_DISCOVERY_VAGUE';
+    }
+
+    return 'GENERAL_COUNSELLING';
+  }
+
+  /* ─────────────────────────────────────────────
+     CONVERSATIONAL COUNSELLING & SALES ENGINE
+  ───────────────────────────────────────────── */
+  function generateAdvisorResponse(userText) {
+    const intent = detectIntent(userText);
+    const lower = userText.toLowerCase();
+
+    // 1. GREETING INTENT
+    if (intent === 'GREETING') {
+      const nameGreeting = sessionMemory.name ? `, ${sessionMemory.name}` : '';
+      return {
+        text: `Hello${nameGreeting}! 👋 Main **Nova Skills** ka official AI Career Advisor hoon.\n\nAap mujhse course selection, career roadmaps, freelancing, fees, curriculum, batch timings ya admissions ke baare me pooch sakte hain.\n\nAap abhi kis field me interest rakhte hain?\n• **AI & Automation** 🤖\n• **Digital Marketing & Growth** 📊\n• **Graphic & UI/UX Design** 🎨\n• **Full-Stack Programming & Python** 💻\n• **Video Editing & Motion Graphics** 🎬\n• **Freelancing & Global Clients** 💼`,
+        recommendedCourse: null
+      };
+    }
+
+    // 2. HUMAN ESCALATION INTENT
+    if (intent === 'HUMAN_ESCALATION') {
+      return {
+        text: `Bilkul! Main aapko hamari Senior Academic Counselling Team se directly connect kar deta hoon:\n\n📞 **Official Admissions Helpline**: [+91 9695904440](tel:+919695904440)\n💬 **WhatsApp Direct Chat**: [+91 9695904440](https://wa.me/919695904440?text=Hi%20Nova%20Skills,%20I%20want%20to%20talk%20to%20an%20academic%20counsellor)\n✉️ **Admissions Email**: novaskills.official@gmail.com\n\nAap neeche button par click karke direct **Free 1-on-1 Career Counselling Session** bhi schedule kar sakte hain — hamare expert counsellor aapko 15 minutes ke andar call back karenge!`,
+        recommendedCourse: null
+      };
+    }
+
+    // 3. COURSE COMPARISON INTENT
+    if (intent === 'COURSE_COMPARISON') {
+      // Comparison: AI Mastery vs AI Productivity
+      if (/ai/i.test(lower) && (/mastery/i.test(lower) || /productivity/i.test(lower) || /difference/i.test(lower))) {
+        const c1 = findCourse('ai-mastery') || FALLBACK_COURSES[2];
+        const c2 = findCourse('ai-productivity') || FALLBACK_COURSES[3];
+        sessionMemory.lastDiscussedCourse = c1;
+
+        return {
+          text: `Nova Skills ke dono flagship AI programs ka direct comparison:\n\n| Feature | **AI Mastery Program** | **AI Productivity Professional** |\n| :--- | :--- | :--- |\n| **Program Level** | Career Program (Comprehensive) | Professional Program (Fast-Track) |\n| **Duration** | **6 Months** | **3 Months** |\n| **Core Focus** | AI Models, AI Agents, n8n Automation, APIs, End-to-End Career | ChatGPT, Claude, Prompting, Daily Office & Work Automation |\n| **Live Projects** | **15+ Live AI Projects** | **8+ Practical Workflows** |\n| **Placement Support** | **100% Dedicated Placement Support** | Career & Freelance Guidance |\n| **Fee** | **${formatFee(c1.price)}** (No-Cost EMI: ${calculateEMI(c1.price)}/mo) | **${formatFee(c2.price)}** (No-Cost EMI: ${calculateEMI(c2.price, 3)}/mo) |\n| **Best Suited For** | High-growth tech jobs, AI engineers & specialists | Working professionals, marketers, founders wanting 10x speed |\n\n💡 **Counsellor Verdict**: Agar aap complete career switch ya dedicated AI specialist banna chahte hain toh **AI Mastery Program** best hai. Agar aap apne current work me AI se superfast hona chahte hain toh **AI Productivity Professional** ideal hai.`,
+          recommendedCourse: c1
+        };
+      }
+
+      // Comparison: Digital Marketing Master vs Professional
+      if (/digital marketing/i.test(lower) || /dm/i.test(lower) || /marketing/i.test(lower)) {
+        const c1 = findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0];
+        const c2 = findCourse('ai-digital-marketing-professional') || FALLBACK_COURSES[1];
+        sessionMemory.lastDiscussedCourse = c1;
+
+        return {
+          text: `Nova Skills Digital Marketing programs ka comparison:\n\n| Feature | **AI Digital Marketing Master** | **AI Digital Marketing Professional** |\n| :--- | :--- | :--- |\n| **Level** | Career Program (Flagship) | Professional Program |\n| **Duration** | **6 Months** | **4 Months** |\n| **Scope** | SEO + GEO, Google Ads, Meta Ads, Funnels, n8n AI Automation & Agency Scaling | SEO, Google Ads, Meta Ads, SMM & Content Marketing |\n| **Projects** | **20 Live Projects** on real budgets | **10 Practical Projects** |\n| **Placement Support** | **100% Dedicated Placement Support** | Dedicated Placement Support |\n| **Fee** | **${formatFee(c1.price)}** (No-Cost EMI: ${calculateEMI(c1.price)}/mo) | **${formatFee(c2.price)}** (No-Cost EMI: ${calculateEMI(c2.price, 4)}/mo) |\n\n💡 **Counsellor Verdict**: Complete agency-grade skills aur high-package career ke liye **AI Digital Marketing Master (6 Months)** best choice hai!`,
+          recommendedCourse: c1
+        };
+      }
+
+      // General fallback comparison
+      return {
+        text: `Nova Skills me **Career Programs (6 Months)** comprehensive 100% placement support aur 15–20 live projects ke saath aate hain, jabki **Professional Programs (3–4 Months)** fast-track practical skills aur portfolio development ke liye hote hain.\n\nAap kin do specific courses ko compare karna chahte hain? Main unka duration, projects, tools aur fees ka side-by-side comparison bata deta hoon!`,
+        recommendedCourse: null
+      };
+    }
+
+    // 4. VAGUE COURSE DISCOVERY ("mujhe kaunsa course karna chahiye?")
+    if (intent === 'COURSE_DISCOVERY_VAGUE') {
+      sessionMemory.pendingQuestion = 'discovery_3q';
+      saveMemory();
+
+      return {
+        text: `Bilkul! Main aapki profile aur career goals ke hisaab se **Nova Skills ka exact matching program** shortlist kar deta hoon.\n\nBas 3 quick baatein bata dijiye:\n1. **Aap student hain ya working professional?** (ya fresher / graduate)\n2. **Aapka main goal kya hai?** (Job, Freelancing, Business, ya Skill Upgrade?)\n3. **Roz approx kitna time de sakte hain?**\n\nAapke answers aate hi main aapke liye best course aur ROI roadmap share karunga!`,
+        recommendedCourse: null
+      };
+    }
+
+    // 5. ANSWER TO PENDING DISCOVERY QUESTIONS / MULTI-TURN RESOLUTION
+    if (intent === 'ANSWER_TO_PENDING' || (sessionMemory.qualification && sessionMemory.careerGoal && !sessionMemory.lastDiscussedCourse)) {
+      sessionMemory.pendingQuestion = null;
+      saveMemory();
+
+      // Case A: Graduate + Freelancing
+      if (sessionMemory.careerGoal === 'freelancing' || /freelanc/i.test(lower)) {
+        const c = findCourse('freelancing-mastery') || FALLBACK_COURSES[15];
+        sessionMemory.lastDiscussedCourse = c;
+        return {
+          text: `Awesome! Graduate / Career seeker hone ke saath **Freelancing** target karna bahut rewarding decision hai.\n\n⭐ **Recommended for You: ${c.name}**\n\n**Why it matches your profile:**\n• **Zero to 6-Figure Freelance Blueprint**: Upwork, Fiverr, LinkedIn outreach & direct international client closing.\n• **High-Income Skills**: Digital Marketing, Content, Automation aur Design client workflows.\n• **Live Client Acquisition**: Proposal writing, rate negotiation & global payment setup (Stripe/PayPal).\n\n• **Duration:** ${c.duration}\n• **Live Projects:** ${c.liveProjects} Client Projects\n• **Fee:** ${formatFee(c.price)} *(No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n• **Mode:** ${c.mode}\n\nKya aap iska detailed curriculum dekhna chahenge ya 1-on-1 free counselling book karein?`,
+          recommendedCourse: c
+        };
+      }
+
+      // Case B: Job seeker + Digital Marketing / Tech
+      if (sessionMemory.careerGoal === 'job' || /job|placement/i.test(lower)) {
+        const c = (sessionMemory.targetField === 'ai') ? (findCourse('ai-mastery') || FALLBACK_COURSES[2]) :
+                  (sessionMemory.targetField === 'programming') ? (findCourse('fullstack-foundation') || FALLBACK_COURSES[9]) :
+                  (sessionMemory.targetField === 'design') ? (findCourse('creative-design') || FALLBACK_COURSES[6]) :
+                  (findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0]);
+        sessionMemory.lastDiscussedCourse = c;
+
+        return {
+          text: `Perfect! Job aur placement ke liye Nova Skills ke **Career Programs (6 Months)** 100% placement assistance aur real company live projects ke saath designed hain.\n\n⭐ **Recommended for You: ${c.name}**\n\n**Why it matches your profile:**\n• **100% Dedicated Placement Support**: 150+ hiring partner companies me direct interview opportunities.\n• **Practical Proof of Work**: ${c.liveProjects} Live Projects portfolio jo recruiters ko impress karta hai.\n• **Structured Mentorship**: Resume review, ATS optimization aur 1-on-1 mock interviews.\n\n• **Duration:** ${c.duration}\n• **Fee:** ${formatFee(c.price)} *(Flexible 0% No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n• **Mode:** ${c.mode}\n\nKya aap iska phase-wise curriculum dekhna chahte hain?`,
+          recommendedCourse: c
+        };
+      }
+    }
+
+    // 6. BUDGET QUERY INTENT
+    if (intent === 'BUDGET_QUERY') {
+      const budget = sessionMemory.budget;
+
+      if (budget && budget <= 6000) {
+        return {
+          text: `Agar aapka one-time budget **₹${budget.toLocaleString('en-IN')}** hai, Nova Skills me high-impact 1-month **Certification Courses (₹3,999 – ₹4,999)** available hain:\n\n• **Prompt Engineering** (₹4,999 • 1 Month)\n• **Canva Professional / Graphic Design** (₹4,999 • 1 Month)\n• **HTML & CSS Web Fundamentals** (₹4,999 • 1 Month)\n• **Fiverr / Upwork Success** (₹3,999 • 1 Month)\n• **Advanced Excel & Office Productivity** (₹3,999 • 1 Month)\n• **Tally with GST** (₹5,999 • 2 Months)\n\n💡 **Smart Counsellor Advice**: Agar aap hamare 6-Month Career Programs (jaise *AI Digital Marketing Master* ya *AI Mastery*) karna chahte hain, toh aap unhe **0% Interest No-Cost EMI (approx ₹2,499 – ₹4,999/month)** me easily afford kar sakte hain!`,
+          recommendedCourse: null
+        };
+      }
+
+      if (budget && budget <= 15000) {
+        const c1 = findCourse('career-launch') || FALLBACK_COURSES[16];
+        const c2 = findCourse('office-pro') || FALLBACK_COURSES[23];
+        const c3 = findCourse('spoken-english-pro') || FALLBACK_COURSES[18];
+
+        return {
+          text: `**₹${budget.toLocaleString('en-IN')}** ke budget me Nova Skills ke best professional programs:\n\n• **${c1.name}** (${c1.duration} • **${formatFee(c1.price)}**)\n• **${c2.name}** (${c2.duration} • **${formatFee(c2.price)}**)\n• **${c3.name}** (${c3.duration} • **${formatFee(c3.price)}**)\n• **AI Productivity Professional** (3 Months • **₹13,999**)\n• **Graphic Design Professional** (3 Months • **₹13,999**)\n\nAur agar aap 6-Month Career Programs join karna chahein toh **₹2,499 – ₹4,500/month** ke easy EMI options bhi available hain!`,
+          recommendedCourse: c1
+        };
+      }
+
+      return {
+        text: `Nova Skills ke fee plans har student aur professional ke budget ke mutabik designed hain:\n\n• **Certification Courses**: ₹3,999 – ₹6,999 (1–2 Months)\n• **Professional Programs**: ₹9,999 – ₹17,499 (3–4 Months)\n• **Career Programs**: ₹18,999 – ₹31,499 (6 Months with 100% Placement)\n• **0% Interest No-Cost EMI**: Starting at just **₹1,499 – ₹2,499/month**.\n\nAap apna specific budget bata dijiye, main best possible options shortlist kar dunga!`,
+        recommendedCourse: null
+      };
+    }
+
+    // 7. FIELD SPECIFIC DISCOVERY
+    if (intent === 'COURSE_DISCOVERY_FIELD') {
+      // AI Academy
+      if (sessionMemory.targetField === 'ai') {
+        const cMastery = findCourse('ai-mastery') || FALLBACK_COURSES[2];
+        sessionMemory.lastDiscussedCourse = cMastery;
+        return {
+          text: `Bilkul! AI me aapka goal kya hai?\n\n• **AI Tools + Workplace Productivity** (ChatGPT, Claude, Gemini, Copilot)\n• **AI Automation & Workflows** (n8n, Make, CRM Automation)\n• **AI Agents & LLM Development** (Building autonomous agents & API integrations)\n• **AI for Business & Founders** (Marketing, sales & operations automation)\n• **AI-based Career / Full-Time Job**\n\n⭐ **Flagship Recommendation: ${cMastery.name}**\n\nAgar aap career-level end-to-end training chahte hain, Nova Skills ka **AI Mastery Program (6 Months, ${formatFee(cMastery.price)})** sabse comprehensive option hai. Aur fast-track productivity ke liye **AI Productivity Professional (3 Months, ₹13,999)** available hai.\n\nAap inme se kis direction me focus karna chahte hain?`,
+          recommendedCourse: cMastery
+        };
+      }
+
+      // Digital Marketing
+      if (sessionMemory.targetField === 'digital-marketing') {
+        const cDM = findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0];
+        sessionMemory.lastDiscussedCourse = cDM;
+        return {
+          text: `Great choice! Digital Marketing aaj ke time ka sabse high-demand career skill hai. Nova Skills me training live ad budgets aur 100% practical tools par hoti hai.\n\n⭐ **Recommended: ${cDM.name}**\n\n**Why it matches:**\n• **Complete Industry Coverage**: SEO, Generative Engine Optimisation (GEO), Google Search/Shopping Ads, Meta Ads (FB & Insta) aur Performance Marketing.\n• **AI Marketing Automation**: ChatGPT, Claude, Gemini & n8n workflows for 10x marketing output.\n• **100% Dedicated Placement Support**: 20 Live Projects, ISO certificate, aur 150+ hiring partners.\n\n• **Duration:** 6 Months *(Fast-track option: AI Digital Marketing Professional • 4 Months, ₹17,499)*\n• **Fee:** ${formatFee(cDM.price)} *(No-Cost EMI: ${calculateEMI(cDM.price)}/mo)*\n• **Mode:** Hybrid / Live Online\n\nKya aap iska phase-wise syllabus dekhna chahenge ya batch timings pata karein?`,
+          recommendedCourse: cDM
+        };
+      }
+
+      // Graphic & UI/UX Design
+      if (sessionMemory.targetField === 'design') {
+        const cDesign = findCourse('creative-design') || FALLBACK_COURSES[6];
+        sessionMemory.lastDiscussedCourse = cDesign;
+        return {
+          text: `Design ek aisa creative field hai jisme freelance aur agency dono me bohot scope hai!\n\n⭐ **Recommended: ${cDesign.name}**\n\n**What you will master:**\n• Adobe Photoshop, Illustrator, Figma, Canva Pro aur Midjourney AI.\n• Brand Identity, Advertising Creatives, Social Media Posters, Packaging aur UI/UX Wireframing.\n• 18 Live Client Projects + High-converting Behance/Dribbble Portfolio.\n\n• **Duration:** 6 Months *(Fast-track option: Graphic Design Professional • 3 Months, ₹13,999)*\n• **Fee:** ${formatFee(cDesign.price)} *(No-Cost EMI: ${calculateEMI(cDesign.price)}/mo)*\n• **Placement:** 100% Dedicated Placement Support\n\nKya aap creative design me job chahte hain ya freelancing?`,
+          recommendedCourse: cDesign
+        };
+      }
+
+      // Programming & Web Development
+      if (sessionMemory.targetField === 'programming') {
+        const cProg = findCourse('fullstack-foundation') || FALLBACK_COURSES[9];
+        sessionMemory.lastDiscussedCourse = cProg;
+        return {
+          text: `Software Development aur Full-Stack me high packages aur global tech hiring demand hamesha rehti hai!\n\n⭐ **Recommended: ${cProg.name}**\n\n**What you will master:**\n• HTML5, CSS3, Modern JavaScript (ES6+), React.js, Node.js, Express, SQL/NoSQL Databases, REST APIs aur Git/GitHub.\n• 20 Live Real-World Projects (E-commerce app, SaaS portal, Live Chat, etc.).\n• 100% Dedicated Placement Support with technical mock interviews.\n\n• **Duration:** 6 Months *(Fast-track: Python Developer Professional • 3 Months, ₹14,999)*\n• **Fee:** ${formatFee(cProg.price)} *(No-Cost EMI: ${calculateEMI(cProg.price)}/mo)*\n\nKya aap zero coding background se start kar rahe hain ya basic knowledge hai?`,
+          recommendedCourse: cProg
+        };
+      }
+
+      // Video & Motion
+      if (sessionMemory.targetField === 'video') {
+        const cVid = findCourse('motion-mastery') || FALLBACK_COURSES[12];
+        sessionMemory.lastDiscussedCourse = cVid;
+        return {
+          text: `Content creation aur advertising ke boom ke chalte video editors aur motion designers ki bhari demand hai!\n\n⭐ **Recommended: ${cVid.name}**\n\n• **Tools**: Premiere Pro, After Effects, DaVinci Resolve, Cinema 4D Lite & AI Video Tools.\n• **Projects**: 16 Live Projects (Reels editing, TV commercials, kinetic typography, 3D titles, color grading).\n• **Duration:** 6 Months *(Fast-track: Professional Video Editing • 3 Months, ₹13,999)*\n• **Fee:** ${formatFee(cVid.price)} *(No-Cost EMI: ${calculateEMI(cVid.price)}/mo)*\n\nKya aap iska live practical syllabus dekhna chahte hain?`,
+          recommendedCourse: cVid
+        };
+      }
+
+      // Kids Tech
+      if (sessionMemory.targetField === 'kids') {
+        const cKids = findCourse('kids-mastery') || FALLBACK_COURSES[20];
+        sessionMemory.lastDiscussedCourse = cKids;
+        return {
+          text: `Nova Skills ki dedicated **Kids Tech Academy** young learners (ages 8–16) ke liye STEM & future tech skills sikhata hai!\n\n⭐ **Recommended: ${cKids.name}**\n\n• **Curriculum**: Scratch visual coding, Python for Kids, Robotics logic, AI basics aur game design.\n• **Benefits**: Creative problem solving, mathematical thinking aur screen time ko productive skill me badalna.\n• **Duration:** 6 Months *(Fast-track: Young Coders Program • 3 Months, ₹11,999)*\n• **Fee:** ${formatFee(cKids.price)} *(No-Cost EMI available)*\n\nBachhe ki age aur current class kya hai?`,
+          recommendedCourse: cKids
+        };
+      }
+
+      // 3D Visualisation
+      if (sessionMemory.targetField === '3d') {
+        const c3D = findCourse('archviz-mastery') || FALLBACK_COURSES[14];
+        sessionMemory.lastDiscussedCourse = c3D;
+        return {
+          text: `3D Animation aur Architectural Visualisation me real estate aur gaming industry me top packages milte hain!\n\n⭐ **Recommended: ${c3D.name}**\n\n• **Tools**: 3ds Max, Blender, V-Ray, Corona Renderer & Unreal Engine.\n• **Projects**: 12 Photorealistic interior/exterior walk-through projects.\n• **Duration:** 6 Months | **Fee:** ${formatFee(c3D.price)} *(No-Cost EMI: ${calculateEMI(c3D.price)}/mo)*\n\nKya aap architecture, interior ya gaming 3D me interested hain?`,
+          recommendedCourse: c3D
+        };
+      }
+
+      // No-Code Web & E-Commerce
+      if (sessionMemory.targetField === 'nocode') {
+        const cNC = findCourse('ecommerce-mastery') || FALLBACK_COURSES[11];
+        sessionMemory.lastDiscussedCourse = cNC;
+        return {
+          text: `Bina code likhe professional websites aur e-commerce stores banana aaj ki sabse profitable freelancing skill hai!\n\n⭐ **Recommended: ${cNC.name}**\n\n• **Tools**: Shopify, WordPress, WooCommerce, Elementor, Webflow & Stripe.\n• **Projects**: 14 Live E-commerce and corporate client stores.\n• **Duration:** 6 Months *(Fast-track: No-Code Website Professional • 3 Months, ₹12,999)*\n• **Fee:** ${formatFee(cNC.price)} *(No-Cost EMI: ${calculateEMI(cNC.price)}/mo)*\n\nKya aap freelancing clients ke liye websites banana chahte hain ya apne business ke liye?`,
+          recommendedCourse: cNC
+        };
+      }
+    }
+
+    // 8. SPECIFIC COURSE INFO QUERY ("AI Digital Marketing Master kya hai?")
+    if (intent === 'COURSE_INFO') {
+      const detectedCourse = findCourse(userText) || sessionMemory.lastDiscussedCourse || FALLBACK_COURSES[0];
+      sessionMemory.lastDiscussedCourse = detectedCourse;
+
+      const toolsList = (detectedCourse.tools && detectedCourse.tools.length > 0) ? detectedCourse.tools.join(', ') : 'Industry Standard Tools';
+
+      return {
+        text: `**${detectedCourse.name}** (${detectedCourse.programLevel || 'Career Program'})\n\n${detectedCourse.fullDesc || detectedCourse.shortDesc || 'Comprehensive industry-aligned training with real live projects and dedicated mentorship.'}\n\n📋 **Program Highlights:**\n• **Duration**: ${detectedCourse.duration || '6 Months'}\n• **Level**: ${detectedCourse.level || 'Beginner to Advanced'}\n• **Live Projects**: ${detectedCourse.liveProjects || 10} Hands-on Capstone Projects\n• **Tools Covered**: ${toolsList}\n• **Learning Mode**: ${detectedCourse.mode || 'Hybrid / Live Online'}\n• **Placement Support**: ${detectedCourse.placementSupport ? '✅ 100% Dedicated Placement Assistance' : 'Skill Upgrade & Freelance Guidance'}\n• **Certification**: ISO 9001:2015 Accredited Certificate + Industry Badges\n• **Fee**: ${formatFee(detectedCourse.price)} *(Flexible No-Cost EMI: ${calculateEMI(detectedCourse.price)}/mo)*\n\nKya aap iska detailed phase-wise curriculum download karna chahte hain ya counselling call book karein?`,
+        recommendedCourse: detectedCourse
+      };
+    }
+
+    // 9. FEES & PAYMENT INTENT
+    if (intent === 'FEES_PAYMENT') {
+      if (sessionMemory.lastDiscussedCourse) {
+        const c = sessionMemory.lastDiscussedCourse;
+        return {
+          text: `**${c.name}** ki fee structure:\n\n• **Program Fee**: ${formatFee(c.price)} *(Original: ₹${(c.originalPrice || c.price * 2.5).toLocaleString('en-IN')})*\n• **0% Interest No-Cost EMI**: **${calculateEMI(c.price)} / month** (6 Months)\n• **Fast-Track EMI (3 Months)**: **${calculateEMI(c.price, 3)} / month**\n• **Scholarship / Discount**: Early-bird merit discounts available on upfront enrollment.\n• **GST**: Transparent pricing, no hidden charges.\n\nKya aap EMI schedule calculate karwana chahte hain ya admission process janna chahte hain?`,
+          recommendedCourse: c
+        };
+      }
+
+      return {
+        text: `Nova Skills me course fees transparent aur flexible EMI options ke saath structured hain:\n\n• **Certification Courses (1–2 Months)**: **₹3,999 – ₹6,999**\n• **Professional Programs (3–4 Months)**: **₹9,999 – ₹17,499**\n• **Career Programs (6 Months)**: **₹18,999 – ₹31,499** *(100% Placement Included)*\n\n💳 **Payment & EMI Benefits:**\n• **0% Interest No-Cost EMI** available on all major bank cards (3, 6, 9 & 12 months).\n• Simple installment plans available.\n• Special merit scholarships for students.\n\nAap kis specific course ki exact fee aur monthly installment dekhna chahte hain?`,
+        recommendedCourse: null
+      };
+    }
+
+    // 10. PLACEMENT & JOBS INTENT
+    if (intent === 'PLACEMENT') {
+      return {
+        text: `Haan, bilkul! Nova Skills apne sabhi **Career Programs aur Professional Programs** me **100% Dedicated Placement Support** offer karta hai:\n\n🏢 **150+ Hiring Partner Network**: Digital agencies, tech startups, MNCs aur e-commerce brands me direct job interviews.\n💼 **Dedicated Placement Cell**: Exclusive vacancy alerts, campus drives aur interview scheduling.\n🛠️ **Live Client Portfolio**: Aap 10–20 real-world projects banate hain jo recruiters ke saamne aapka hands-on experience prove karte hain.\n📄 **ATS Resume & LinkedIn Optimization**: Industry experts aapka resume aur LinkedIn profile optimize karte hain.\n🎤 **1-on-1 Mock Interviews**: Technical aur HR rounds ki comprehensive preparation.\n\nAverage starting package ₹4.5 LPA se ₹9.5 LPA tak rehta hai role aur skill ke according.\n\nKya aap placement-guaranteed programs ka curriculum dekhna chahte hain?`,
+        recommendedCourse: findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0]
+      };
+    }
+
+    // 11. FREELANCING INTENT
+    if (intent === 'FREELANCING') {
+      const c = findCourse('freelancing-mastery') || FALLBACK_COURSES[15];
+      sessionMemory.lastDiscussedCourse = c;
+
+      return {
+        text: `Freelancing start karne ke liye 3 main pillars hote hain:\n1. **High-Demand Practical Skill** (AI Automation, Digital Marketing, Graphic Design, Web Development)\n2. **Live Proof-of-Work Portfolio** (Real client case studies)\n3. **Client Acquisition Strategy** (Fiverr Gig ranking, Upwork proposals, LinkedIn outreach & international contract closing)\n\n⭐ **Recommended Program: ${c.name}**\n\nNova Skills ke is 6-month program me hum international freelancing zero se sikhate hain — profile setup, high-converting proposal templates, rate negotiation aur direct client contracts.\n\n• **Duration:** 6 Months | **Fee:** ${formatFee(c.price)} *(No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n\nKya aap freelancing kisi specific skill me shuru karna chahte hain?`,
+        recommendedCourse: c
+      };
+    }
+
+    // 12. LEARNING MODE & BATCHES INTENT
+    if (intent === 'LEARNING_MODE') {
+      return {
+        text: `Nova Skills me aap apne schedule ke mutabik flexible learning mode select kar sakte hain:\n\n• 🌐 **Live Online Classes**: Interactive live sessions with senior mentors, screen sharing, real-time doubt clearing aur lifetime recording access on LMS.\n• 🏫 **Classroom Training**: Modern lab infrastructure, direct 1-on-1 mentor guidance on campus.\n• 🔄 **Hybrid Learning**: Online flexibility + on-campus mentorship and doubt sessions.\n\n⏰ **Flexible Batch Slots:**\n• **Morning Batches**: 9:00 AM – 11:00 AM & 11:30 AM – 1:30 PM\n• **Evening Batches**: 4:00 PM – 6:00 PM & 6:30 PM – 8:30 PM\n• **Weekend Batches**: Special Saturday & Sunday slots designed for college students & working professionals.\n\nAap Online seekhna pasand karenge ya Offline Classroom?`,
+        recommendedCourse: null
+      };
+    }
+
+    // 13. ADMISSION & ENROLLMENT INTENT
+    if (intent === 'ADMISSION') {
+      return {
+        text: `Nova Skills me admission process simple, fast aur transparent hai:\n\n1. **Step 1: Free Career Counselling** — Senior counsellor ke saath apna goal, course aur batch timing finalize karein.\n2. **Step 2: Batch & Mode Selection** — Morning/Evening/Weekend slot aur Online ya Classroom mode choose karein.\n3. **Step 3: Registration & Enrollment** — One-time payment ya 0% Interest No-Cost EMI ke through seat confirm karein.\n4. **Step 4: Instant LMS Access** — Student portal credentials, study materials aur live class links turant mil jate hain.\n\nAap neeche diye gaye button se direct **Apply Now** kar sakte hain ya **Free 1-on-1 Counselling Call** book kar sakte hain!`,
+        recommendedCourse: sessionMemory.lastDiscussedCourse || null
+      };
+    }
+
+    // 14. ACADEMY DISCOVERY INTENT
+    if (intent === 'ACADEMY_DISCOVERY') {
+      return {
+        text: `Nova Skills me total **12 Specialized Academies** hain jo practical, high-income skills cover karti hain:\n\n1. 📊 **Digital Marketing Academy** (SEO, GEO, Ads, Performance, AI Automation)\n2. 🤖 **AI Academy** (ChatGPT, Claude, Prompting, AI Agents, n8n)\n3. 🎨 **Design Academy** (Photoshop, Illustrator, Figma, UI/UX)\n4. 💻 **Programming Academy** (Full-Stack Web Dev, Python, React, APIs)\n5. 🌐 **No-Code Web Academy** (Shopify, WordPress, WooCommerce, Webflow)\n6. 🎬 **Video & Motion Academy** (Premiere Pro, After Effects, Reels, DaVinci)\n7. 🏗️ **3D Academy** (Blender, 3ds Max, V-Ray, Unreal Engine)\n8. 💼 **Career & Freelancing Academy** (Fiverr, Upwork, Agency Building, Resumes)\n9. 💬 **Communication Academy** (Spoken English, Business Communication)\n10. 👨‍💻 **Kids Tech Academy** (Scratch, Python for Kids, Robotics, AI)\n11. 🎥 **Creator Academy** (YouTube Growth, Short Videos, Personal Branding)\n12. 📋 **Office Productivity Academy** (Advanced Excel, Notion, Copilot, Tally GST)\n\nAap kis Academy ke courses ki details dekhna chahenge?`,
+        recommendedCourse: null
+      };
+    }
+
+    // 15. GENERAL DEFINITION INTENT ("Digital Marketing kya hota hai?")
+    if (intent === 'GENERAL_DEFINITION') {
+      if (/digital marketing/i.test(lower)) {
+        const c = findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0];
+        return {
+          text: `**Digital Marketing** internet aur digital platforms (Google, Facebook, Instagram, YouTube, Email) ke through products aur services ko promote karne aur sales generate karne ka modern tareeka hai.\n\nIske main components:\n• **SEO & GEO**: Google aur AI search engines me bina ads ke top rank karna.\n• **Paid Advertising**: Google Search/Shopping Ads aur Meta Ads se instant targeted customers lana.\n• **Content & Social Media**: Brand building aur audience engagement.\n• **AI Automation**: ChatGPT, Claude aur n8n se marketing workflows ko 10x fast banana.\n\nNova Skills me hum ise dummy theory ke bajaye **live ad budgets aur real business projects** par 100% practical sikhate hain.\n\n⭐ **Flagship Program: ${c.name} (6 Months)**\nKya aap iska syllabus dekhna chahte hain?`,
+          recommendedCourse: c
+        };
+      }
+
+      if (/ai|artificial intelligence/i.test(lower)) {
+        const c = findCourse('ai-mastery') || FALLBACK_COURSES[2];
+        return {
+          text: `**Artificial Intelligence (AI)** aisi technology hai jo machines ko human intelligence ki tarah analyze karne, content create karne, decisions lene aur tasks automate karne ki capability deti hai.\n\nAaj AI ka practical use prompt engineering, automated workflows (n8n), AI agents aur workplace productivity tools me sabse zyada ho raha hai.\n\nNova Skills ka **${c.name}** aapko AI tools se lekar autonomous AI agents build karne tak 100% practical sikhata hai.\n\nKya aap AI seekhne ke options explore karna chahte hain?`,
+          recommendedCourse: c
+        };
+      }
+    }
+
+    // 16. CAREER GUIDANCE & SCOPE INTENT
+    if (intent === 'CAREER_GUIDANCE') {
+      return {
+        text: `Aaj ke market me top 4 highest-paying aur future-proof skill tracks:\n\n1. 🤖 **AI & Automation Specialist**: AI agents, workflow automation aur LLM deployment (₹5.5 – ₹12 LPA)\n2. 📊 **AI Digital Marketing & Performance Lead**: Paid ad scaling, SEO & GEO (₹4.5 – ₹9 LPA)\n3. 💻 **Full-Stack Developer**: Modern web applications, React, Node.js & APIs (₹4.5 – ₹10 LPA)\n4. 🎨 **UI/UX & Creative Brand Designer**: High-converting app interfaces & branding (₹4.0 – ₹8.5 LPA)\n\nNova Skills ke sabhi **Career Programs** me live client projects, portfolio development aur **100% Dedicated Placement Support** included hai.\n\nAapko creative side (Design/Marketing) zyada suit karti hai ya analytical/tech (AI/Coding)?`,
+        recommendedCourse: findCourse('ai-mastery') || FALLBACK_COURSES[2]
+      };
+    }
+
+    // 17. SERVICES / B2B OFFERINGS INTENT
+    if (intent === 'SERVICES') {
+      return {
+        text: `Nova Skills education ke saath-saath corporate aur business growth solutions bhi offer karta hai:\n\n• 🚀 **Corporate Upskilling**: Companies aur teams ke liye customized AI, Advanced Excel aur Digital Marketing corporate workshops.\n• 🌐 **Digital & Web Solutions**: High-converting business websites, Shopify stores aur performance marketing strategy.\n• 🎯 **Talent Hiring & Placement Partnership**: Verified skilled students aur interns hire karne ke liye enterprise recruitment partnerships.\n\nBusiness aur corporate requirements ke liye aap hamari enterprise team se directly connect kar sakte hain: **+91 9695904440** ya novaskills.official@gmail.com.`,
+        recommendedCourse: null
+      };
+    }
+
+    // 18. GENERAL COUNSELLING / FALLBACK
+    return {
+      text: `Main Nova Skills ka official AI Career Advisor hoon. Main aapko aapki qualification aur career goal ke hisaab se sabse best course, fees, duration aur placement support guide kar sakta hoon.\n\nAap mujhse kisi specific course ka syllabus, No-Cost EMI options, batch timings ya free counselling booking ke baare me pooch sakte hain.\n\nAap kis topic par aage baat karna chahenge?`,
+      recommendedCourse: null
+    };
   }
 
   /* ─────────────────────────────────────────────
@@ -380,7 +1554,6 @@
         flex-direction: column;
         gap: 4px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-
         width: 100%;
         box-sizing: border-box;
       }
@@ -409,7 +1582,7 @@
 
       /* Message Bubbles */
       .nova-ai-message {
-        max-width: 88%;
+        max-width: 90%;
         padding: 14px 16px;
         border-radius: 16px;
         font-size: 0.9rem;
@@ -469,6 +1642,32 @@
       .nova-ai-link {
         color: #38bdf8;
         text-decoration: underline;
+        font-weight: 600;
+      }
+
+      /* Markdown Tables Inside Message */
+      .nova-ai-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 12px 0;
+        font-size: 0.78rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      .nova-ai-table th, .nova-ai-table td {
+        padding: 8px 10px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .nova-ai-table th {
+        background: rgba(5, 153, 168, 0.3);
+        color: #38bdf8;
+        font-weight: 700;
+      }
+      .nova-ai-table tr:last-child td {
+        border-bottom: none;
       }
 
       /* Reusable Component: Thinking Typing Indicator */
@@ -498,45 +1697,12 @@
       .nova-ai-typing-dots span:nth-child(1) { animation-delay: -0.32s; }
       .nova-ai-typing-dots span:nth-child(2) { animation-delay: -0.16s; }
 
-      /* Reusable Component: Assessment CTA Card */
-      .nova-ai-assessment-card {
-        background: linear-gradient(135deg, rgba(5, 153, 168, 0.15), rgba(1, 23, 49, 0.4));
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        border-radius: 14px;
-        padding: 16px;
-        margin-top: 10px;
-      }
-      .nova-ai-assessment-badge {
-        font-size: 0.72rem;
-        font-weight: 700;
-        color: #38bdf8;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 4px;
-      }
-      .nova-ai-assessment-title {
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: #ffffff;
-        margin: 0 0 4px 0;
-      }
-      .nova-ai-assessment-desc {
-        font-size: 0.82rem;
-        color: #cbd5e1;
-        margin: 0 0 12px 0;
-      }
-      .nova-ai-assessment-actions {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-      }
-
       /* Reusable Component: Recommendation Card */
       .nova-ai-recommendation-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(56, 189, 248, 0.3);
+        background: linear-gradient(135deg, rgba(5, 153, 168, 0.12), rgba(1, 23, 49, 0.45));
+        border: 1px solid rgba(56, 189, 248, 0.35);
         border-radius: 14px;
-        padding: 16px;
+        padding: 14px 16px;
         margin-top: 10px;
         display: flex;
         flex-direction: column;
@@ -551,16 +1717,18 @@
         font-size: 0.72rem;
         font-weight: 700;
         color: #38bdf8;
-        background: rgba(56, 189, 248, 0.1);
+        background: rgba(56, 189, 248, 0.15);
         padding: 3px 8px;
         border-radius: 4px;
+        letter-spacing: 0.3px;
       }
       .nova-ai-rec-rating {
         font-size: 0.78rem;
         color: #fbbf24;
+        font-weight: 600;
       }
       .nova-ai-rec-title {
-        font-size: 1rem;
+        font-size: 0.98rem;
         font-weight: 700;
         color: #ffffff;
         margin: 0;
@@ -571,8 +1739,8 @@
         gap: 6px;
         font-size: 0.78rem;
         color: #cbd5e1;
-        background: rgba(0, 0, 0, 0.2);
-        padding: 10px;
+        background: rgba(0, 0, 0, 0.25);
+        padding: 8px 10px;
         border-radius: 8px;
       }
       .nova-ai-rec-salary {
@@ -587,7 +1755,7 @@
       }
       .nova-ai-rec-btn {
         flex: 1;
-        min-width: 90px;
+        min-width: 80px;
         text-align: center;
         padding: 8px 10px;
         border-radius: 8px;
@@ -605,51 +1773,10 @@
       .nova-ai-rec-btn.outline { background: transparent; color: #cbd5e1; border: 1px solid rgba(255, 255, 255, 0.2); }
       .nova-ai-rec-btn.outline:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
 
-      /* Reusable Component: Profile Completion Card */
-      .nova-ai-profile-card {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        padding: 14px;
-        margin-bottom: 12px;
-      }
-      .nova-ai-profile-header {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.82rem;
-        font-weight: 700;
-        color: #ffffff;
-        margin-bottom: 6px;
-      }
-      .nova-ai-profile-percent {
-        color: #38bdf8;
-      }
-      .nova-ai-profile-progress-track {
-        height: 6px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 4px;
-        overflow: hidden;
-        margin-bottom: 10px;
-      }
-      .nova-ai-profile-progress-bar {
-        height: 100%;
-        background: linear-gradient(90deg, #0599a8, #38bdf8);
-        border-radius: 4px;
-        transition: width 0.3s ease;
-      }
-      .nova-ai-profile-checklist {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        font-size: 0.74rem;
-      }
-      .profile-check-item.done { color: #4ade80; }
-      .profile-check-item.pending { color: #94a3b8; }
-
       /* Panel Input Footer */
       .nova-ai-footer {
         padding: 14px 18px;
-        background: rgba(1, 23, 49, 0.9);
+        background: rgba(1, 23, 49, 0.95);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         display: flex;
         flex-direction: column;
@@ -713,6 +1840,39 @@
         padding: 0 2px;
       }
 
+      /* Reusable Component: Assessment CTA Card */
+      .nova-ai-assessment-card {
+        background: linear-gradient(135deg, rgba(5, 153, 168, 0.15), rgba(1, 23, 49, 0.4));
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        border-radius: 14px;
+        padding: 14px 16px;
+        margin-top: 10px;
+      }
+      .nova-ai-assessment-badge {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: #38bdf8;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 4px;
+      }
+      .nova-ai-assessment-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0 0 4px 0;
+      }
+      .nova-ai-assessment-desc {
+        font-size: 0.82rem;
+        color: #cbd5e1;
+        margin: 0 0 10px 0;
+      }
+      .nova-ai-assessment-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
       /* Buttons Shared */
       .nova-ai-btn {
         display: inline-block;
@@ -725,21 +1885,10 @@
         transition: all 0.2s ease;
         border: none;
       }
-      .nova-ai-btn-primary {
-        background: #0599a8;
-        color: #ffffff;
-      }
-      .nova-ai-btn-primary:hover {
-        background: #028491;
-      }
-      .nova-ai-btn-secondary {
-        background: rgba(255, 255, 255, 0.1);
-        color: #cbd5e1;
-      }
-      .nova-ai-btn-secondary:hover {
-        background: rgba(255, 255, 255, 0.2);
-        color: #fff;
-      }
+      .nova-ai-btn-primary { background: #0599a8; color: #ffffff; }
+      .nova-ai-btn-primary:hover { background: #028491; }
+      .nova-ai-btn-secondary { background: rgba(255, 255, 255, 0.1); color: #cbd5e1; }
+      .nova-ai-btn-secondary:hover { background: rgba(255, 255, 255, 0.2); color: #fff; }
 
       @keyframes novaFloatPulse {
         0%, 100% { transform: translateY(0); }
@@ -756,9 +1905,7 @@
 
       /* Tablet & Mobile Responsiveness */
       @media (max-width: 1024px) {
-        .nova-ai-panel {
-          width: 420px;
-        }
+        .nova-ai-panel { width: 420px; }
       }
       @media (max-width: 768px) {
         .nova-ai-float-btn {
@@ -774,9 +1921,7 @@
           height: 100vh !important;
           border-left: none !important;
         }
-        .nova-ai-action-grid {
-          grid-template-columns: 1fr;
-        }
+        .nova-ai-action-grid { grid-template-columns: 1fr; }
       }
     `;
     document.head.appendChild(style);
@@ -812,7 +1957,7 @@
     panel.setAttribute('aria-labelledby', 'nova-ai-title');
 
     const user = getUserProfile();
-    const userName = user ? user.name || '' : '';
+    const userName = user ? user.name || '' : (sessionMemory.name || '');
     const welcomeHeading = userName ? `👋 Welcome, ${userName}!` : `👋 Welcome to Nova Skills`;
 
     panel.innerHTML = `
@@ -826,7 +1971,7 @@
           <div>
             <div class="nova-ai-header-title" id="nova-ai-title">Nova AI Career Advisor</div>
             <div class="nova-ai-header-status">
-              <span class="dot">🟢</span> Online • Usually replies instantly
+              <span class="dot">🟢</span> Online • Official Admissions Agent
             </div>
           </div>
         </div>
@@ -840,60 +1985,57 @@
       <!-- Chat Body -->
       <div class="nova-ai-body" id="nova-ai-body">
         
-        <!-- Profile Completion Component (hidden by default) -->
-        ${renderProfileCompletionCardHTML(40)}
-
         <!-- Welcome Screen Card -->
         <div class="nova-ai-welcome-card" id="nova-ai-welcome-screen">
           <div class="nova-ai-welcome-title">${welcomeHeading}</div>
-          <div class="nova-ai-welcome-subtitle">I'm Nova AI Career Advisor.</div>
+          <div class="nova-ai-welcome-subtitle">Official Nova Skills AI Career & Admissions Advisor</div>
 
           <div class="nova-ai-welcome-help-title">I can help you with:</div>
           <ul class="nova-ai-check-list">
-            <li><span class="check-icon">✓</span> Choosing the right course</li>
-            <li><span class="check-icon">✓</span> Career roadmap</li>
-            <li><span class="check-icon">✓</span> Placement guidance</li>
-            <li><span class="check-icon">✓</span> Career switch</li>
-            <li><span class="check-icon">✓</span> Fees & Admissions</li>
+            <li><span class="check-icon">✓</span> Course recommendation for your goals</li>
+            <li><span class="check-icon">✓</span> Fees, No-Cost EMI & Scholarship details</li>
+            <li><span class="check-icon">✓</span> 100% Dedicated Placement Support</li>
+            <li><span class="check-icon">✓</span> Freelancing roadmap (Fiverr & Upwork)</li>
+            <li><span class="check-icon">✓</span> Live Online & Classroom batch schedules</li>
           </ul>
 
-          <div class="nova-ai-section-heading">What would you like to do today?</div>
+          <div class="nova-ai-section-heading">How can I assist you today?</div>
           <div class="nova-ai-action-grid">
             
             <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('Find Best Course')">
               <span class="nova-ai-action-card-icon">🎯</span>
               <span class="nova-ai-action-card-title">Find Best Course</span>
-              <span class="nova-ai-action-card-desc">Quick course match for your goals</span>
+              <span class="nova-ai-action-card-desc">Personalized course match for career</span>
             </button>
 
-            <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('Career Assessment')">
-              <span class="nova-ai-action-card-icon">🧠</span>
-              <span class="nova-ai-action-card-title">Career Assessment</span>
-              <span class="nova-ai-action-card-desc">Take a 2-min test for ideal path</span>
+            <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('AI Academy Courses')">
+              <span class="nova-ai-action-card-icon">🤖</span>
+              <span class="nova-ai-action-card-title">AI Academy</span>
+              <span class="nova-ai-action-card-desc">AI Mastery, Agents & n8n Automation</span>
             </button>
 
-            <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('Talk to AI')">
-              <span class="nova-ai-action-card-icon">💬</span>
-              <span class="nova-ai-action-card-title">Talk to AI</span>
-              <span class="nova-ai-action-card-desc">Ask questions on courses & skills</span>
+            <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('Digital Marketing')">
+              <span class="nova-ai-action-card-icon">📊</span>
+              <span class="nova-ai-action-card-title">Digital Marketing</span>
+              <span class="nova-ai-action-card-desc">SEO, Ads & Marketing Automation</span>
             </button>
 
-            <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('Fees & Admissions')">
+            <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('Fees & EMI')">
               <span class="nova-ai-action-card-icon">💰</span>
-              <span class="nova-ai-action-card-title">Fees & Admissions</span>
-              <span class="nova-ai-action-card-desc">Explore fees, discounts & EMI</span>
-            </button>
-
-            <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('Book Counselling')">
-              <span class="nova-ai-action-card-icon">📞</span>
-              <span class="nova-ai-action-card-title">Book Counselling</span>
-              <span class="nova-ai-action-card-desc">Connect with an expert 1-on-1</span>
+              <span class="nova-ai-action-card-title">Fees & EMI</span>
+              <span class="nova-ai-action-card-desc">0% Interest EMI & Fee Structure</span>
             </button>
 
             <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('Placement Support')">
               <span class="nova-ai-action-card-icon">🎓</span>
               <span class="nova-ai-action-card-title">Placement Support</span>
-              <span class="nova-ai-action-card-desc">View hiring partners & salary records</span>
+              <span class="nova-ai-action-card-desc">150+ Hiring Partners & Salary Records</span>
+            </button>
+
+            <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('Book Counselling')">
+              <span class="nova-ai-action-card-icon">📞</span>
+              <span class="nova-ai-action-card-title">Book Counselling</span>
+              <span class="nova-ai-action-card-desc">Talk to Senior Career Counsellor</span>
             </button>
 
           </div>
@@ -904,21 +2046,20 @@
       <!-- Footer & Input Area -->
       <div class="nova-ai-footer">
         <div class="nova-ai-input-wrap">
-          <textarea id="nova-ai-textarea" class="nova-ai-textarea" rows="1" maxlength="500" placeholder="Ask anything about courses, admissions, placements or careers..."></textarea>
+          <textarea id="nova-ai-textarea" class="nova-ai-textarea" rows="1" maxlength="500" placeholder="Ask anything about courses, fees, EMI, placements or admissions..."></textarea>
           <button type="button" class="nova-ai-send-btn" id="nova-ai-send-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
             Send
           </button>
         </div>
         <div class="nova-ai-input-info">
-          <span>🔒 100% Confidential • Instant AI Career Help</span>
+          <span>🔒 100% Confidential • Official Nova Skills AI Advisor</span>
           <span id="nova-ai-char-counter">0/500</span>
         </div>
       </div>
     `;
     document.body.appendChild(panel);
 
-    // Direct event listener binding for fail-safe Enter key & Send button click handling
     const txtArea = panel.querySelector('#nova-ai-textarea');
     const sendBtn = panel.querySelector('#nova-ai-send-btn');
 
@@ -941,60 +2082,44 @@
       });
     }
 
+    loadSavedMemory();
     loadHistory();
   }
 
   /* ─────────────────────────────────────────────
      REUSABLE COMPONENT BUILDERS
   ───────────────────────────────────────────── */
-  function renderProfileCompletionCardHTML(percent = 40) {
-    return `
-      <div class="nova-ai-profile-card" id="nova-ai-profile-widget" style="display: none;">
-        <div class="nova-ai-profile-header">
-          <span>Profile Completion</span>
-          <span class="nova-ai-profile-percent">${percent}%</span>
-        </div>
-        <div class="nova-ai-profile-progress-track">
-          <div class="nova-ai-profile-progress-bar" style="width: ${percent}%;"></div>
-        </div>
-        <div class="nova-ai-profile-checklist">
-          <span class="profile-check-item done">✔ Name</span>
-          <span class="profile-check-item done">✔ Qualification</span>
-          <span class="profile-check-item pending">○ Experience</span>
-          <span class="profile-check-item pending">○ Goal</span>
-          <span class="profile-check-item pending">○ Budget</span>
-        </div>
-      </div>
-    `;
-  }
-
   function renderAssessmentCTACardHTML() {
     return `
       <div class="nova-ai-assessment-card">
-        <div class="nova-ai-assessment-badge">🧠 Recommended Step</div>
-        <h4 class="nova-ai-assessment-title">Need personalised guidance?</h4>
-        <p class="nova-ai-assessment-desc">Take our Career Assessment. It only takes 2–3 minutes.</p>
+        <div class="nova-ai-assessment-badge">🧠 Free Career Assessment</div>
+        <h4 class="nova-ai-assessment-title">Confused about your ideal skill path?</h4>
+        <p class="nova-ai-assessment-desc">Take our 2-minute Career Assessment to match your strengths with high-paying skills.</p>
         <div class="nova-ai-assessment-actions">
           <a href="/assessment.html" class="nova-ai-btn nova-ai-btn-primary">Start Career Assessment →</a>
-          <button type="button" class="nova-ai-btn nova-ai-btn-secondary" onclick="this.closest('.nova-ai-assessment-card').remove()">Continue Chat</button>
         </div>
       </div>
     `;
   }
 
   function renderRecommendationCardHTML(courseData = {}) {
-    const title = courseData.title || 'AI Digital Marketing Professional';
+    if (!courseData || !courseData.name) return '';
+
+    const title = courseData.name;
     const rating = courseData.rating || '4.9';
-    const reviews = courseData.reviews || '312';
-    const duration = courseData.duration || '3 Months';
-    const projects = courseData.projects || '10 Projects';
-    const fee = courseData.fee || '₹24,999';
-    const salary = courseData.salary || '₹4.5 - ₹8 LPA';
+    const reviews = courseData.reviews || '250+';
+    const duration = courseData.duration || '6 Months';
+    const projects = courseData.liveProjects ? `${courseData.liveProjects} Live Projects` : (courseData.projects || '10+ Projects');
+    const feeStr = formatFee(courseData.price);
+    const emiStr = calculateEMI(courseData.price, courseData.durationMonths || 6);
+    const salary = courseData.salary || '₹4.5 – ₹9.0 LPA';
+    const placementBadge = courseData.placementSupport ? '100% Dedicated Placement' : 'Career Mentorship';
+    const courseUrl = courseData.slug ? `/course-detail.html?id=${courseData.slug}` : (courseData.id ? `/course-detail.html?id=${courseData.id}` : '/courses.html');
 
     return `
       <div class="nova-ai-recommendation-card">
         <div class="nova-ai-rec-header">
-          <span class="nova-ai-rec-tag">★ Recommended Course</span>
+          <span class="nova-ai-rec-tag">★ Recommended for You</span>
           <span class="nova-ai-rec-rating">★★★★★ ${rating} (${reviews})</span>
         </div>
         <h4 class="nova-ai-rec-title">${title}</h4>
@@ -1002,13 +2127,13 @@
         <div class="nova-ai-rec-specs-grid">
           <div class="nova-ai-rec-spec">⏱️ <strong>Duration:</strong> ${duration}</div>
           <div class="nova-ai-rec-spec">💻 <strong>Projects:</strong> ${projects}</div>
-          <div class="nova-ai-rec-spec">💼 <strong>Internship:</strong> Guaranteed</div>
-          <div class="nova-ai-rec-spec">🎓 <strong>Placement:</strong> 100% Support</div>
-          <div class="nova-ai-rec-spec nova-ai-rec-salary">💰 <strong>Salary Bracket:</strong> ${salary}</div>
+          <div class="nova-ai-rec-spec">💰 <strong>Fee:</strong> ${feeStr} <span style="font-size:0.7rem;color:#38bdf8;">(${emiStr}/mo EMI)</span></div>
+          <div class="nova-ai-rec-spec">🎓 <strong>Placement:</strong> ${placementBadge}</div>
+          <div class="nova-ai-rec-spec nova-ai-rec-salary">💼 <strong>Career Outcome:</strong> ${salary}</div>
         </div>
 
         <div class="nova-ai-rec-actions">
-          <a href="/courses.html" class="nova-ai-rec-btn secondary">View Curriculum</a>
+          <a href="${courseUrl}" class="nova-ai-rec-btn secondary">View Curriculum</a>
           <button type="button" class="nova-ai-rec-btn primary" onclick="NovaAIWidget.triggerCTA('enroll')">Apply Now</button>
           <button type="button" class="nova-ai-rec-btn outline" onclick="NovaAIWidget.triggerCTA('counselling')">Book Counselling</button>
         </div>
@@ -1017,7 +2142,7 @@
   }
 
   /* ─────────────────────────────────────────────
-     PANEL CONTROL & EVENTS (MODAL LIFECYCLE)
+     PANEL CONTROL & EVENTS
   ───────────────────────────────────────────── */
   function openPanel() {
     isPanelOpen = true;
@@ -1043,7 +2168,6 @@
     if (panel) panel.classList.remove('open');
     if (overlay) overlay.classList.remove('open');
 
-    // Restore body scrolling & clean active modal classes
     document.body.style.overflow = '';
     document.body.classList.remove('nova-ai-active', 'modal-open', 'no-scroll');
     document.documentElement.classList.remove('nova-ai-active', 'modal-open', 'no-scroll');
@@ -1071,19 +2195,13 @@
       return;
     }
 
-    if (title === 'Talk to AI') {
-      const textarea = document.getElementById('nova-ai-textarea');
-      if (textarea) {
-        textarea.focus();
-      }
-      return;
-    }
-
     const prompts = {
-      'Find Best Course': 'Help me find the best course.',
-      'Fees & Admissions': 'Tell me about course fees and admission process.',
-      'Book Counselling': 'I want to book a free counselling session.',
-      'Placement Support': 'Tell me about placement support.'
+      'Find Best Course': 'mujhe kaunsa course karna chahiye?',
+      'AI Academy Courses': 'AI Academy ke courses batao',
+      'Digital Marketing': 'Digital Marketing course ki details aur fees batao',
+      'Fees & EMI': 'Fees kitni hai aur EMI options kya hain?',
+      'Placement Support': 'Nova Skills me placement support aur salary bracket kya hai?',
+      'Book Counselling': 'Mujhe academic counsellor se baat karni hai'
     };
 
     const promptText = prompts[title] || title;
@@ -1106,13 +2224,6 @@
     }
   }
 
-  function handleKeyDown(e) {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      sendMessage();
-    }
-  }
-
   function getSessionId() {
     let sid = sessionStorage.getItem('novaskills_session_id');
     if (!sid) {
@@ -1125,15 +2236,32 @@
   function startNewChat() {
     const newSid = `nova_session_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
     sessionStorage.setItem('novaskills_session_id', newSid);
-    try { sessionStorage.removeItem(STORAGE_KEY_HISTORY); } catch(e) {}
+    try {
+      localStorage.removeItem(STORAGE_KEY_HISTORY);
+      sessionStorage.removeItem(STORAGE_KEY_MEMORY);
+    } catch(e) {}
 
     chatHistory = [];
+    sessionMemory = {
+      name: null,
+      qualification: null,
+      userType: null,
+      careerGoal: null,
+      targetField: null,
+      subInterest: null,
+      dailyTime: null,
+      preferredMode: null,
+      budget: null,
+      lastDiscussedCourse: null,
+      lastDiscussedAcademy: null,
+      pendingQuestion: null
+    };
+
     const bodyEl = document.getElementById('nova-ai-body');
     const welcomeScreen = document.getElementById('nova-ai-welcome-screen');
     if (bodyEl) {
-      // Clear messages
       bodyEl.querySelectorAll('.nova-ai-message, .nova-ai-recommendation-card, .nova-ai-assessment-card').forEach(el => el.remove());
-      if (welcomeScreen) welcomeScreen.removeAttribute('hidden');
+      if (welcomeScreen) welcomeScreen.style.display = 'block';
     }
 
     trackEvent('new_chat_started', { sessionId: newSid });
@@ -1148,7 +2276,7 @@
   }
 
   /* ─────────────────────────────────────────────
-     MESSAGE SENDING & FALLBACK
+     MESSAGE SENDING & INTELLIGENT DISPATCH
   ───────────────────────────────────────────── */
   async function sendMessage() {
     if (isGenerating) return;
@@ -1171,16 +2299,25 @@
       sendBtn.style.cursor = 'not-allowed';
     }
 
-    // Append user message & scroll
+    // Hide welcome card on first message
+    const welcomeScreen = document.getElementById('nova-ai-welcome-screen');
+    if (welcomeScreen) welcomeScreen.style.display = 'none';
+
+    // 1. Update session memory with entities from user message
+    updateSessionMemory(userText);
+
+    // 2. Append user message & track
     appendMessage(userText, 'user');
     saveHistory();
     trackEvent('user_ai_query', { query: userText });
 
-    // Show typing animation
+    // 3. Show typing animation
     showTypingIndicator();
 
+    // 4. Try Backend Worker API with timeout, fallback to local counselling engine
+    let answered = false;
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 15000);
+    const timeoutId = setTimeout(() => controller.abort(), 6000);
 
     try {
       const res = await fetch(WORKER_AI_ENDPOINT, {
@@ -1188,7 +2325,8 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: userText,
-          sessionId: getSessionId()
+          sessionId: getSessionId(),
+          memory: sessionMemory
         }),
         signal: controller.signal
       });
@@ -1198,59 +2336,58 @@
 
       if (res.ok) {
         let data;
-        try {
-          data = await res.json();
-        } catch (e) {
-          data = null;
-        }
+        try { data = await res.json(); } catch (e) { data = null; }
 
         if (data && data.sessionId) {
           sessionStorage.setItem('novaskills_session_id', data.sessionId);
         }
 
-        if (data && data.success && data.response) {
-          appendMessage(data.response, 'assistant');
-        } else {
-          fallbackResponse(userText);
+        // Validate backend response is meaningful and not a generic placeholder
+        if (data && data.success && data.response &&
+            !data.response.includes('Backend ready for GPT') &&
+            !data.response.includes('I am currently unable to process') &&
+            !data.response.includes('brief connection delay')) {
+          
+          let recCourse = null;
+          if (data.recommendations && data.recommendations.length > 0) {
+            recCourse = findCourse(data.recommendations[0].name);
+          } else {
+            recCourse = sessionMemory.lastDiscussedCourse;
+          }
+          appendMessage(data.response, 'assistant', recCourse);
+          answered = true;
         }
-      } else {
-        fallbackResponse(userText);
       }
     } catch (err) {
       clearTimeout(timeoutId);
       removeTypingIndicator();
-      fallbackResponse(userText);
-    } finally {
-      isGenerating = false;
-      if (sendBtn) {
-        sendBtn.disabled = false;
-        sendBtn.style.opacity = '1';
-        sendBtn.style.cursor = 'pointer';
-      }
+    }
+
+    // 5. If not answered via backend, execute client-side intelligence engine
+    if (!answered) {
+      removeTypingIndicator();
+      const localResult = generateAdvisorResponse(userText);
+      appendMessage(localResult.text, 'assistant', localResult.recommendedCourse);
+    }
+
+    isGenerating = false;
+    if (sendBtn) {
+      sendBtn.disabled = false;
+      sendBtn.style.opacity = '1';
+      sendBtn.style.cursor = 'pointer';
     }
 
     saveHistory();
   }
 
-  function fallbackResponse(queryText) {
-    const lower = queryText.toLowerCase();
-    let reply = "I'm here to help! Let me connect you with our academic counselling team for personalized guidance and course details.";
-    let matched = false;
-
-    for (const [key, text] of Object.entries(KNOWLEDGE_RESPONSES)) {
-      if (lower.includes(key)) {
-        reply = text;
-        matched = true;
-        break;
-      }
-    }
-
-    appendMessage(reply, 'assistant', true, matched);
-  }
-
-  function appendMessage(text, role, showCTAs = false, isMatched = false) {
+  function appendMessage(text, role, recommendedCourse = null) {
     const bodyEl = document.getElementById('nova-ai-body');
     if (!bodyEl) return;
+
+    const welcomeScreen = document.getElementById('nova-ai-welcome-screen');
+    if (welcomeScreen && chatHistory.length > 0) {
+      welcomeScreen.style.display = 'none';
+    }
 
     const msgEl = document.createElement('div');
     msgEl.className = `nova-ai-message ${role}`;
@@ -1260,15 +2397,9 @@
     let html = parseMarkdown(text);
     msgEl.innerHTML = html;
 
-    if (role === 'assistant') {
-      // Append Assessment CTA if query mentions guidance or assessment
-      if (text.includes('course') || text.includes('guidance') || showCTAs) {
-        if (Math.random() > 0.4) {
-          msgEl.insertAdjacentHTML('beforeend', renderAssessmentCTACardHTML());
-        } else {
-          msgEl.insertAdjacentHTML('beforeend', renderRecommendationCardHTML());
-        }
-      }
+    // Attach verified recommendation card if a specific course was recommended
+    if (role === 'assistant' && recommendedCourse) {
+      msgEl.insertAdjacentHTML('beforeend', renderRecommendationCardHTML(recommendedCourse));
     }
 
     const timeEl = document.createElement('div');
@@ -1279,7 +2410,7 @@
     bodyEl.appendChild(msgEl);
     scrollToBottom();
 
-    chatHistory.push({ role, text, timestamp });
+    chatHistory.push({ role, text, timestamp, recommendedCourse: recommendedCourse ? recommendedCourse.id : null });
   }
 
   /* ─────────────────────────────────────────────
@@ -1326,8 +2457,12 @@
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
+          const welcomeScreen = document.getElementById('nova-ai-welcome-screen');
+          if (welcomeScreen) welcomeScreen.style.display = 'none';
+          
           parsed.forEach(item => {
-            appendMessage(item.text, item.role);
+            const courseObj = item.recommendedCourse ? findCourse(item.recommendedCourse) : null;
+            appendMessage(item.text, item.role, courseObj);
           });
         }
       }
@@ -1343,11 +2478,13 @@
     startNewChat,
     getSessionId,
     handleInput,
-    handleKeyDown,
     triggerCTA,
     renderAssessmentCTACardHTML,
     renderRecommendationCardHTML,
-    renderProfileCompletionCardHTML
+    generateAdvisorResponse,
+    detectIntent,
+    updateSessionMemory,
+    getSessionMemory: () => sessionMemory
   };
 
   function init() {
@@ -1368,3 +2505,4 @@
   }
 
 })();
+
