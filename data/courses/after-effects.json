@@ -1,516 +1,362 @@
 {
   "course_id": "after-effects",
-  "course_name": "After Effects",
+  "course_name": "After Effects Specialization",
   "academy": "Video & Motion Academy",
-  "academy_id": "video",
+  "academy_id": "video-motion",
   "course_type": "SPECIALIZATION",
-  "course_role": "Core Skill",
-  "level": "BEGINNER+",
-  "duration": "1-2 Months",
-  "learning_hours": 80,
+  "course_role": "Upskill/Specialization",
+  "level": "Intermediate",
+  "duration": "3 Months",
+  "learning_hours": "120 hrs",
   "future_review_status": "EVOLVING",
   "target_audience": {
     "best_for": [
-      "Aspiring 2D Motion Graphics Artist seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
+      "Video editors wanting to add motion graphics to their repertoire",
+      "Graphic designers transitioning to motion",
+      "Content creators needing dynamic VFX and titles"
     ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in Basic Photoshop or video editing experience should complete the prerequisite foundation before enrolling.",
     "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+      "Those who only want to cut live-action footage"
+    ],
+    "who_should_take_foundation_first": "Individuals with no Adobe ecosystem experience should take Photoshop/Illustrator or Premiere Pro first."
   },
   "prerequisites": {
-    "required": "Basic Photoshop or video editing experience",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic understanding of layers and design principles.",
+    "recommended": "Prior experience with Adobe Photoshop or Illustrator.",
     "system_requirements": {
-      "hardware": "Modern multi-core CPU (Intel i7/Ryzen 7), 16GB+ RAM (32GB recommended), dedicated GPU (RTX 3060+ with 8GB VRAM)",
-      "software_accounts": "Adobe Premiere Pro, DaVinci Resolve Studio, Adobe After Effects, CapCut Desktop (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "Multi-core processor, 32GB RAM recommended (16GB minimum), Dedicated GPU.",
+      "software_accounts": "Adobe After Effects, Illustrator, Premiere Pro."
+    },
+    "not_required": "Prior animation experience."
   },
   "overview": {
-    "positioning": "Indispensable commercial motion graphics tool.",
-    "short_description": "Create motion graphics, kinetic typography, lower thirds, and visual effects in After Effects.",
+    "positioning": "A deep dive into the industry-standard software for motion graphics and visual effects.",
+    "short_description": "Master keyframing, compositing, kinetic typography, and motion tracking in Adobe After Effects.",
     "key_facts": {
-      "level": "BEGINNER+",
-      "duration": "1-2 Months",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "PORTFOLIO",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-TRANSFORMING",
-      "career_focus": "2D Motion Graphics Artist, VFX Compositor"
+      "level": "Intermediate",
+      "duration": "3 Months",
+      "format": "Project-based Labs",
+      "estimated_learning_hours": "120 hrs",
+      "project_count": "4 Major Projects",
+      "capstone": "Dynamic Explainer Video",
+      "ai_integration": "Roto Brush and Content-Aware Fill",
+      "career_focus": "Motion Graphics Animator, VFX Artist"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end After Effects projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Animate logos and typography professionally",
+      "Use the graph editor for smooth, organic motion",
+      "Composite green screen footage and track motion",
+      "Build vector explainer videos"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how After Effects is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI tools have automated routine syntax and repetitive tasks, shifting the professional premium toward systems architecture, strategic context, and quality assurance.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Static graphics are dying. Every major social platform prioritizes video and animated content.",
+    "ai_impact": "AI tools in AE (like Roto Brush 2) eliminate tedious masking, letting animators focus purely on motion and design.",
+    "business_demand": "High demand for 'preditors' (producer-editors) who can both cut video and create custom motion graphics.",
+    "career_opportunity": "Adding After Effects to your skill set significantly increases your hourly rate and employability."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing Adobe Premiere Pro, DaVinci Resolve Studio, Adobe After Effects.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "ANIMATE: Master keyframes, easing, and the graph editor.",
+    "DESIGN: Create kinetic typography and shape layer animations.",
+    "COMPOSITE: Use track mattes, masks, and blending modes.",
+    "TRACK: Perform 2D motion tracking and screen replacements."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "The Basics",
+        "focus": "Interface, compositions, and basic keyframing."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Motion Design",
+        "focus": "Shape layers, typography, and easing."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
+        "stage": "VFX & Compositing",
+        "focus": "Masking, tracking, and green screen."
       },
       {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
+        "stage": "Integration",
+        "focus": "Combining assets into a final explainer video."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "Adobe Premiere Pro",
-        "purpose": "Primary industry standard software for After Effects execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "DaVinci Resolve Studio",
-        "purpose": "Primary industry standard software for After Effects execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
         "tool": "Adobe After Effects",
-        "purpose": "Primary industry standard software for After Effects execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "CapCut Desktop",
-        "purpose": "Primary industry standard software for After Effects execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "purpose": "2D Animation and Compositing.",
+        "what_student_learns": "Keyframing, masking, tracking, typography.",
+        "what_student_builds": "Logo animations, UI animations, explainer videos."
       }
     ],
     "supporting_tools": [
       {
-        "tool": "Audition",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "tool": "Adobe Illustrator",
+        "purpose": "Vector asset preparation."
       },
       {
-        "tool": "Photoshop",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Canva",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Envato",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "tool": "Adobe Premiere Pro",
+        "purpose": "Final audio sync and rendering."
       }
     ],
-    "emerging_tools": [
-      {
-        "tool": "Runway Gen-3",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Pika Labs",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "ElevenLabs Voice AI",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Luma Dream Machine",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Topaz Video AI",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Legacy offline firewire capture workflows",
-      "Outdated DVD/CD export presets",
-      "Slow manual rotoscoping"
-    ]
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver After Effects in 2026/27:",
+    "overview": "The standard motion design workflow.",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "Design/Prep",
+        "desc": "Preparing vector layers in Illustrator."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Import & Setup",
+        "desc": "Importing as a composition and organizing the timeline."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
+        "name": "Animation",
+        "desc": "Setting keyframes and adjusting the graph editor."
       },
       {
         "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Render",
+        "desc": "Exporting via Media Encoder."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "Adobe Premiere Pro, DaVinci Resolve Studio, Adobe After Effects",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "Adobe Premiere Pro, DaVinci Resolve Studio, Runway Gen-3",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Tech / Startups",
+      "business_problem": "Explaining an app interface dynamically.",
+      "approach": "UI Animation.",
+      "toolset": "Illustrator + After Effects",
+      "output": "15-second UI showcase."
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-TRANSFORMING",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "AI-Assisted Workflow",
+    "ai_can_assist_with": "Isolating subjects (Roto Brush), removing objects (Content-Aware Fill).",
+    "ai_can_automate": "Basic tracking data.",
+    "ai_cannot_replace": "The 12 principles of animation and visual rhythm.",
+    "human_expertise_required": "Graph editor adjustments and design aesthetics.",
+    "validation_protocol": "Checking masks frame-by-frame for jitter.",
+    "responsible_use": "Standard VFX practices."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Always use easing (F9) on keyframes.",
+    "Pre-compose complex layer stacks to keep the timeline clean.",
+    "Label and color-code your layers."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Linear keyframes.",
+      "why_it_happens": "Not knowing how to use the graph editor.",
+      "professional_approach": "Always adjust speed graphs for organic motion."
     }
   ],
   "career_paths": {
-    "entry_roles": "2D Motion Graphics Artist",
-    "mid_roles": " VFX Compositor",
-    "specialist_roles": "Title Animator",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": [
+      "Junior Motion Graphics Animator"
+    ],
+    "mid_roles": [
+      "Motion Designer"
+    ],
+    "specialist_roles": [],
+    "freelance_roles": [
+      "Freelance Animator"
+    ],
+    "employer_expectations": "Smooth, professional animations without 'robotic' motion.",
+    "what_student_demonstrates": "A short showreel of varied AE projects."
   },
   "freelance_applications": {
     "services_offered": [
-      "End-to-end After Effects project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
+      "Logo Animation",
+      "Lower Thirds Packages",
+      "Explainer Videos"
     ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "client_workflow": "Storyboard -> Animatic -> Final Animation",
+    "portfolio_requirements": "A Vimeo portfolio with 3-5 high-quality examples."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "A custom logo animation",
+    "A kinetic typography sequence",
+    "A screen-replacement VFX shot",
+    "A 30-second explainer video"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "A 30-second explainer video with sound design."
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Project evaluation",
+    "criteria": "Smoothness of motion (easing), design composition, and technical execution."
   },
   "certification": {
-    "title": "Certified Specialist in After Effects",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Nova Certificate in After Effects",
+    "criteria": "Completion of all module projects.",
+    "verification": "Digital badge."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Complex 3D character rigging or Cinema 4D integration (covered in Motion Graphics Master).",
   "next_learning_path": {
-    "recommended_next": "Advance to motion-mastery to specialize further.",
-    "related_programs": "For broader career mastery, compare with motion-graphics-essentials."
+    "recommended_next": "Motion Graphics Master",
+    "related_programs": "Professional Video Editing"
   },
   "faq": [
     {
-      "question": "What prior experience do I need for After Effects?",
-      "answer": "You should satisfy the prerequisite: Basic Photoshop or video editing experience before beginning this program."
-    },
-    {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
-    },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "Is After Effects hard to learn?",
+      "answer": "It has a steep learning curve due to the interface, but focusing on core concepts like keyframing and masking makes it manageable."
     }
   ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_title": "AE Foundations & The Graph Editor",
+      "module_purpose": "Understand the AE interface and master the art of smooth animation.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional After Effects.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Compositions and layers",
+        "Transform properties (Anchor Point, Position, Scale, Rotation, Opacity)",
+        "Keyframe interpolation",
+        "The Speed Graph Editor"
       ],
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "After Effects Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Interface & Transform Properties",
+          "what_is_taught": "Navigating the UI and animating basic properties.",
+          "why_it_matters": "The absolute foundation of all motion graphics.",
+          "what_learner_does": "Animates a basic bouncing ball.",
+          "expected_outcome": "Understanding of the timeline and keyframes."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "After Effects Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Mastering the Graph Editor",
+          "what_is_taught": "Using the speed graph to create ease-in, ease-out, and custom velocity curves.",
+          "why_it_matters": "Separates amateur, robotic motion from professional, organic motion.",
+          "what_learner_does": "Refines the bouncing ball and animates UI elements with custom easing.",
+          "expected_outcome": "Smooth, professional animations."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "After Effects Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Masks, Mattes, and Pre-Comps",
+          "what_is_taught": "Using alpha track mattes for text reveals and pre-composing layers.",
+          "why_it_matters": "Essential for clean transitions and organizing complex timelines.",
+          "what_learner_does": "Creates a professional lower-third graphic.",
+          "expected_outcome": "A broadcast-ready text reveal."
         }
       ],
       "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Graph Editor",
+        "Track Mattes",
+        "Pre-Comps"
       ],
       "tools": [
-        "Adobe Premiere Pro",
-        "DaVinci Resolve Studio",
-        "Adobe After Effects"
+        "After Effects"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Animate a multi-layered logo reveal.",
+      "assignment": "Deliverable: 5-second logo animation.",
+      "business_application": "Brand intro videos.",
+      "expected_outcome": "Solid grasp of 2D animation fundamentals."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_title": "Shape Layers & Kinetic Typography",
+      "module_purpose": "Build dynamic, vector-based animations for explainer videos and ads.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional After Effects.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Shape layer modifiers (Trim Paths)",
+        "Text Animators",
+        "Parenting and Null Objects"
       ],
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "After Effects Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Shape Layer Modifiers",
+          "what_is_taught": "Using Trim Paths, Repeater, and Wiggle Paths.",
+          "why_it_matters": "Allows for complex vector animations without manual keyframing.",
+          "what_learner_does": "Animates bursting lines and abstract shapes.",
+          "expected_outcome": "A dynamic vector background."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "After Effects Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Kinetic Typography",
+          "what_is_taught": "Using text animators and range selectors to automate text motion.",
+          "why_it_matters": "Crucial for social media ads and lyric videos.",
+          "what_learner_does": "Animates a 10-second kinetic typography quote.",
+          "expected_outcome": "A punchy text animation."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "After Effects Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Parenting and Basic Expressions",
+          "what_is_taught": "Using null objects to control multiple layers and the wiggle expression.",
+          "why_it_matters": "Saves hours of animation time.",
+          "what_learner_does": "Rigs a simple mechanical arm or camera move.",
+          "expected_outcome": "An automated, controllable animation setup."
         }
       ],
       "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Trim Paths",
+        "Text Animators",
+        "Parenting"
       ],
       "tools": [
-        "Adobe Premiere Pro",
-        "DaVinci Resolve Studio",
-        "Adobe After Effects"
+        "After Effects"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Build a kinetic typography scene synced to an audio clip.",
+      "assignment": "Deliverable: 10-second kinetic typography quote.",
+      "business_application": "Social media video ads.",
+      "expected_outcome": "Ability to create engaging text and vector motion."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_title": "VFX, Tracking & Capstone",
+      "module_purpose": "Integrate graphics into live-action footage and complete the final project.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional After Effects.",
-        "Troubleshoot common failure points and optimize output quality."
+        "2D Motion Tracking",
+        "Screen Replacements",
+        "Roto Brush 2",
+        "Project rendering"
       ],
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "After Effects Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Motion Tracking and Mocha AE",
+          "what_is_taught": "Point tracking and planar tracking with Mocha for screen replacements.",
+          "why_it_matters": "Allows graphics to lock seamlessly into moving footage.",
+          "what_learner_does": "Replaces the screen of a moving smartphone with custom UI.",
+          "expected_outcome": "A flawless screen replacement."
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "After Effects Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Rotoscoping with AI Tools",
+          "what_is_taught": "Using Roto Brush to isolate subjects from their backgrounds.",
+          "why_it_matters": "Allows placing text or graphics *behind* moving people in video.",
+          "what_learner_does": "Places large kinetic text behind a walking subject.",
+          "expected_outcome": "A dynamic VFX shot."
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "After Effects Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Capstone Explainer Video",
+          "what_is_taught": "Bringing together shape layers, text, and tracking into a final project.",
+          "why_it_matters": "Proves end-to-end competency in After Effects.",
+          "what_learner_does": "Builds, refines, and exports a 30-second explainer video.",
+          "expected_outcome": "A portfolio-ready motion graphics piece."
         }
       ],
       "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Motion Tracking",
+        "Mocha AE",
+        "Roto Brush"
       ],
       "tools": [
-        "Adobe Premiere Pro",
-        "DaVinci Resolve Studio",
-        "Adobe After Effects"
+        "After Effects",
+        "Mocha AE"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
-    },
-    {
-      "module_number": "Module 04",
-      "module_title": "Phase 4: Advanced Scenarios, Security & Performance Optimization",
-      "module_purpose": "Overcome edge cases, benchmark KPIs, and audit production deliverables.",
-      "what_you_will_learn": [
-        "Master stage 4 technical requirements and parameters.",
-        "Implement standard operating procedures for professional After Effects.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
-      "lessons": [
-        {
-          "lesson_number": "4.1",
-          "lesson_title": "After Effects Practical Workshop 4.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.2",
-          "lesson_title": "After Effects Practical Workshop 4.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.3",
-          "lesson_title": "After Effects Practical Workshop 4.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
-      ],
-      "key_concepts": [
-        "Workflow step 4",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Adobe Premiere Pro",
-        "DaVinci Resolve Studio",
-        "Adobe After Effects"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 4 commercial brief.",
-      "assignment": "Deliverable 4: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Complete a screen replacement and rotoscope shot, then finalize the capstone.",
+      "assignment": "Deliverable: 30-second explainer video.",
+      "business_application": "Commercial VFX and explainer production.",
+      "expected_outcome": "A fully finished, industry-ready project."
     }
   ]
 }

@@ -2,655 +2,489 @@
   "course_id": "kids-mastery",
   "course_name": "Future Tech Kids Mastery",
   "academy": "Kids Tech Academy",
-  "academy_id": "kids",
+  "academy_id": "kids-tech-academy",
   "course_type": "MASTER",
-  "course_role": "Career/Monetization",
-  "level": "BEGINNER",
+  "course_role": "Young Tech Explorer",
+  "level": "Beginner",
   "duration": "6 Months",
-  "learning_hours": 240,
-  "future_review_status": "STABLE",
+  "learning_hours": 180,
+  "future_review_status": "Scheduled for 2027",
   "target_audience": {
-    "best_for": [
-      "Aspiring Young STEAM Innovator seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in Age 8-16, curiosity should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+    "best_for": ["Kids aged 8-14 interested in technology", "Creative kids who want to make their own games", "Young learners curious about how computers work"],
+    "not_for": ["Professional software developers", "Adults looking for career transitions"],
+    "who_should_take_foundation_first": "Absolute beginners can start here, no foundation needed."
   },
   "prerequisites": {
-    "required": "Age 8-16, curiosity",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic ability to read, write, and use a mouse/keyboard.",
+    "recommended": "A curious mind and love for puzzles.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau), Blockly (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "A computer or laptop with internet access (Windows, Mac, or Chromebook).",
+      "software_accounts": "Modern web browser, free accounts on Scratch and Tinkercad."
+    },
+    "not_required": "Prior coding experience."
   },
   "overview": {
-    "positioning": "Flagship STEAM program for youth.",
-    "short_description": "Scratch Block Coding, Python for Kids, AI Basics, Web Design & Game Development.",
+    "positioning": "A comprehensive introductory journey into the world of technology for kids.",
+    "short_description": "Learn to code, design, and create with Future Tech Kids Mastery! Explore block coding, build your first websites, create 3D models, and discover the magic of AI.",
     "key_facts": {
-      "level": "BEGINNER",
+      "level": "Beginner",
       "duration": "6 Months",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "240 Hours",
-      "project_count": "MULTIPLE PROJECTS + CAPSTONE",
-      "capstone": "Mandatory Enterprise Capstone",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Young STEAM Innovator, Future Engineer"
+      "format": "Interactive Online/Hybrid",
+      "estimated_learning_hours": 180,
+      "project_count": 15,
+      "capstone": "Build a Complete Interactive Game or Website Showcase",
+      "ai_integration": "High - Uses AI as a learning companion",
+      "career_focus": "Foundation for Future Tech Skills"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Future Tech Kids Mastery projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Create interactive stories and games in Scratch",
+      "Draw amazing digital art using Python Turtle",
+      "Build simple, colorful web pages with HTML and CSS",
+      "Design awesome 3D models for printing or virtual worlds",
+      "Use AI tools safely to brainstorm and create"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Future Tech Kids Mastery is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Digital literacy is becoming as fundamental as reading and writing.",
+    "ai_impact": "AI is changing how we create; early exposure demystifies technology.",
+    "business_demand": "Future careers will require strong problem-solving and technical skills.",
+    "career_opportunity": "Early exposure builds confidence for advanced STEM learning."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau).",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "CODE: Develop interactive games and animations using visual blocks.",
+    "DRAW: Program digital shapes and patterns using Python.",
+    "BUILD: Construct simple web pages with text, images, and colors.",
+    "DESIGN: Create 3D objects and characters in virtual space.",
+    "EXPLORE: Interact safely with AI to generate ideas and art."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "Visual Coding",
+        "focus": "Learning logic through Scratch blocks."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Text Coding",
+        "focus": "Transitioning to typing code with Python Turtle."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
+        "stage": "Web Creation",
+        "focus": "Building pages with HTML and CSS."
       },
       {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      },
-      {
-        "stage": "Stage 6: Major Capstone & Defense",
-        "focus": "End-to-end enterprise solution delivery and oral jury presentation."
+        "stage": "3D & AI Exploration",
+        "focus": "Designing in 3D and using AI tools creatively."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "MIT Scratch",
-        "purpose": "Primary industry standard software for Future Tech Kids Mastery execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Scratch",
+        "purpose": "Visual block-based programming",
+        "what_student_learns": "Logic, loops, variables, and events",
+        "what_student_builds": "Interactive games and stories"
       },
       {
-        "tool": "Python (IDLE / Replit)",
-        "purpose": "Primary industry standard software for Future Tech Kids Mastery execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Python (Turtle)",
+        "purpose": "Introduction to text-based coding",
+        "what_student_learns": "Syntax, coordinates, and algorithmic drawing",
+        "what_student_builds": "Digital geometric art and shapes"
       },
       {
-        "tool": "Roblox Studio (Luau)",
-        "purpose": "Primary industry standard software for Future Tech Kids Mastery execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "HTML/CSS",
+        "purpose": "Web design basics",
+        "what_student_learns": "Document structure and styling",
+        "what_student_builds": "A personal profile web page"
       },
       {
-        "tool": "Blockly",
-        "purpose": "Primary industry standard software for Future Tech Kids Mastery execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Tinkercad",
+        "purpose": "3D Modeling",
+        "what_student_learns": "Spatial reasoning and geometry",
+        "what_student_builds": "3D printable toys and keychains"
       }
     ],
     "supporting_tools": [
       {
-        "tool": "Canva for Kids",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tinkercad",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "MakeCode",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "tool": "Canva",
+        "purpose": "Creating graphics and presentations"
       }
     ],
     "emerging_tools": [
       {
-        "tool": "Child-safe AI Exploratories",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Teachable Machine",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Micro:bit Simulators",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
+        "tool": "ChatGPT for Kids (Supervised)",
+        "purpose": "Brainstorming and learning AI concepts safely"
       }
     ],
-    "tools_to_review": [
-      "Complex adult command-line tools with no visual feedback",
-      "Passive video watching tutorials"
-    ]
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Future Tech Kids Mastery in 2026/27:",
+    "overview": "The standard process of turning a fun idea into a working digital project.",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "Imagine",
+        "desc": "Brainstorming ideas and sketching out what to build."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Plan",
+        "desc": "Breaking down the idea into smaller, manageable steps."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
+        "name": "Create",
+        "desc": "Coding, designing, or building the project."
       },
       {
         "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Test & Share",
+        "desc": "Finding bugs, fixing them, and showing the project to friends and family."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau)",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "MIT Scratch, Python (IDLE / Replit), Child-safe AI Exploratories",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Education",
+      "business_problem": "Making learning fun",
+      "approach": "Gamification and interactive storytelling",
+      "toolset": "Scratch",
+      "output": "Educational games"
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "Learning Assistant",
+    "ai_can_assist_with": "Explaining bugs in simple terms, generating story ideas for games.",
+    "ai_can_automate": "Generating placeholder images or text.",
+    "ai_cannot_replace": "The student's creativity and logical problem-solving.",
+    "human_expertise_required": "Adult supervision is required for safe AI use.",
+    "validation_protocol": "Students review AI suggestions to see if they make sense.",
+    "responsible_use": "Learning not to copy-paste, but to use AI for inspiration."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Always plan your game on paper before coding.",
+    "Test your code often so bugs don't pile up.",
+    "Ask for help when you get stuck, but try to find the answer first.",
+    "Save your work frequently."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
+      "mistake": "Writing too much code without testing.",
+      "why_it_happens": "Excitement to see the final result.",
+      "professional_approach": "Code a little, test a little. It makes finding errors much easier."
     },
     {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Forgetting to close HTML tags.",
+      "why_it_happens": "Typing fast and overlooking details.",
+      "professional_approach": "Always write the opening and closing tags together before putting content inside."
     }
   ],
   "career_paths": {
-    "entry_roles": "Young STEAM Innovator",
-    "mid_roles": " Future Engineer",
-    "specialist_roles": "Indie Game Creator",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["Junior Coder (Hobbyist)", "Tech Enthusiast"],
+    "mid_roles": ["Student Tech Leader", "Coding Club Member"],
+    "specialist_roles": ["Future Software Engineer", "Future Game Designer"],
+    "freelance_roles": ["N/A"],
+    "employer_expectations": "Curiosity, willingness to learn, and basic problem-solving.",
+    "what_student_demonstrates": "Ability to complete digital projects from idea to final product."
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end Future Tech Kids Mastery project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["N/A for kids"],
+    "client_workflow": "N/A",
+    "portfolio_requirements": "A fun online gallery of Scratch games and 3D designs to share with family."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration.",
-    "Enterprise Capstone Project: Comprehensive full-scale system defended before mentors."
+    "A maze game in Scratch",
+    "A digital spirograph using Python Turtle",
+    "A personal hobby website in HTML",
+    "A 3D modeled keychain in Tinkercad"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "A portfolio of 5+ digital projects",
+    "A final presentation video explaining their favorite creation"
   ],
   "assessment": {
-    "model": "Continuous Lab Validation (30%) + Portfolio Projects (40%) + Capstone Defense (30%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Project-based evaluation",
+    "criteria": "Creativity, logic application, code functionality, and presentation skills."
   },
   "certification": {
-    "title": "Master Graduate in Future Tech Kids Mastery",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Future Tech Master Certificate",
+    "criteria": "Complete all core projects and present the final showcase.",
+    "verification": "Digital badge and printable certificate."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Advanced software engineering, server management, complex mathematics.",
   "next_learning_path": {
-    "recommended_next": "Advance to None to specialize further.",
-    "related_programs": "For broader career mastery, compare with Subsumes scratch, python, AI for kids."
+    "recommended_next": "Young Coders Program or Python for Kids",
+    "related_programs": ["Web Design for Kids", "Robotics Basics"]
   },
   "faq": [
     {
-      "question": "What prior experience do I need for Future Tech Kids Mastery?",
-      "answer": "You should satisfy the prerequisite: Age 8-16, curiosity before beginning this program."
+      "question": "Does my child need prior coding experience?",
+      "answer": "Not at all! This course starts from the absolute basics using fun, visual blocks."
     },
     {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
+      "question": "Is the AI tool safe for my child to use?",
+      "answer": "Yes, we use supervised, kid-friendly AI interfaces and teach safe, responsible interaction."
     },
     {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "What kind of computer is needed?",
+      "answer": "Any standard laptop or computer (Windows, Mac, or Chromebook) with a modern web browser and internet connection will work perfectly."
     }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_number": 1,
+      "module_title": "Visual Coding Adventures with Scratch",
+      "module_purpose": "Introduce programming logic through intuitive, drag-and-drop blocks.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Future Tech Kids Mastery.",
-        "Troubleshoot common failure points and optimize output quality."
+        "How to make characters move and speak",
+        "Using loops to repeat actions",
+        "Making decisions with if/then blocks",
+        "Creating a scoring system with variables"
       ],
       "lessons": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Meet Your Sprite: Movement & Animation",
+          "what_is_taught": "Basic sequencing and event triggers (Green Flag).",
+          "why_it_matters": "It’s the foundation of making things happen on a computer.",
+          "what_learner_does": "Makes a cat walk across the screen and meow.",
+          "expected_outcome": "A simple interactive animation."
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Looping Around: Repeating Actions",
+          "what_is_taught": "Forever and repeat loops.",
+          "why_it_matters": "Saves time by not having to snap the same blocks over and over.",
+          "what_learner_does": "Creates a dance party animation with repeating moves.",
+          "expected_outcome": "A continuous, looping animation."
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Making Choices: Conditionals",
+          "what_is_taught": "If-then-else statements and sensing blocks.",
+          "why_it_matters": "Allows games to react to player inputs or collisions.",
+          "what_learner_does": "Builds a simple game where a character avoids falling objects.",
+          "expected_outcome": "A playable mini-game."
         },
         {
-          "lesson_number": "1.4",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 1.4: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 4 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 4,
+          "lesson_title": "Keeping Score: Variables",
+          "what_is_taught": "Creating and changing variables.",
+          "why_it_matters": "Essential for tracking game progress and scores.",
+          "what_learner_does": "Adds a points system and a timer to the mini-game.",
+          "expected_outcome": "A complete, scorable Scratch game."
         }
       ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Sequencing", "Loops", "Conditionals", "Variables"],
+      "tools": ["Scratch"],
+      "hands_on_practice": "Build a custom interactive story or game from scratch.",
+      "assignment": "Submit the link to a completed Scratch game with at least one variable and one loop.",
+      "business_application": "Understanding game mechanics and user interaction.",
+      "expected_outcome": "Comfortable with basic programming logic using visual blocks."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_number": 2,
+      "module_title": "Drawing with Code: Python Turtle",
+      "module_purpose": "Transition from visual blocks to typing real code by drawing shapes.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Future Tech Kids Mastery.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Typing Python commands",
+        "Understanding coordinates and angles",
+        "Using loops in Python",
+        "Creating digital art"
       ],
       "lessons": [
         {
-          "lesson_number": "2.1",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Hello Python: Moving the Turtle",
+          "what_is_taught": "Basic syntax, forward/backward commands.",
+          "why_it_matters": "Introduces text-based syntax in a highly visual way.",
+          "what_learner_does": "Writes code to make the turtle draw a square.",
+          "expected_outcome": "A basic Python script that draws a shape."
         },
         {
-          "lesson_number": "2.2",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Colors and Pen Sizes",
+          "what_is_taught": "Changing attributes of the turtle.",
+          "why_it_matters": "Shows how code controls visual styling.",
+          "what_learner_does": "Draws a colorful, thick-lined star.",
+          "expected_outcome": "A colorful digital drawing."
         },
         {
-          "lesson_number": "2.3",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Python Loops for Art",
+          "what_is_taught": "For loops in Python.",
+          "why_it_matters": "Demonstrates the power of iteration in text coding.",
+          "what_learner_does": "Uses a loop to draw a complex spiral pattern.",
+          "expected_outcome": "A geometric spiral generated by code."
         },
         {
-          "lesson_number": "2.4",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 2.4: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 4 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 4,
+          "lesson_title": "Turtle Race Game",
+          "what_is_taught": "Random module and coordinate positioning.",
+          "why_it_matters": "Introduces unpredictability and basic game mechanics in Python.",
+          "what_learner_does": "Codes a race between different colored turtles.",
+          "expected_outcome": "A fun, automated race simulation."
         }
       ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Syntax", "Coordinates", "Iteration", "Randomness"],
+      "tools": ["Python (Turtle)"],
+      "hands_on_practice": "Create a unique piece of digital art using loops and colors.",
+      "assignment": "Submit a Python script that draws a recognizable object (like a house or car).",
+      "business_application": "Algorithmic thinking and basic scripting.",
+      "expected_outcome": "Ability to write simple Python scripts independently."
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_number": 3,
+      "module_title": "Building Your First Website",
+      "module_purpose": "Learn the basics of how web pages are built using HTML and CSS.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Future Tech Kids Mastery.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Structuring a page with HTML tags",
+        "Adding images and links",
+        "Styling with CSS colors and fonts",
+        "Publishing a simple page"
       ],
       "lessons": [
         {
-          "lesson_number": "3.1",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "The Skeleton: HTML Basics",
+          "what_is_taught": "Headings, paragraphs, and lists.",
+          "why_it_matters": "Every website in the world uses these fundamental building blocks.",
+          "what_learner_does": "Writes an HTML page about their favorite hobby.",
+          "expected_outcome": "A structured, text-only web page."
         },
         {
-          "lesson_number": "3.2",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Adding Pictures and Links",
+          "what_is_taught": "Img and Anchor tags.",
+          "why_it_matters": "Makes the web interactive and visually interesting.",
+          "what_learner_does": "Adds photos and links to other sites on their hobby page.",
+          "expected_outcome": "A multimedia HTML page."
         },
         {
-          "lesson_number": "3.3",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "The Paintbrush: CSS Basics",
+          "what_is_taught": "Selectors, colors, and fonts.",
+          "why_it_matters": "Turns a boring document into a beautiful design.",
+          "what_learner_does": "Styles their hobby page with their favorite colors and fonts.",
+          "expected_outcome": "A styled web page."
         },
         {
-          "lesson_number": "3.4",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 3.4: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 4 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 4,
+          "lesson_title": "Designing a Portfolio Layout",
+          "what_is_taught": "Basic layout techniques (margins, padding).",
+          "why_it_matters": "Helps organize content neatly on the screen.",
+          "what_learner_does": "Creates a mini-portfolio to showcase their Scratch and Turtle projects.",
+          "expected_outcome": "A complete, personal web page layout."
         }
       ],
-      "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Tags", "Attributes", "Styling", "Layout"],
+      "tools": ["HTML/CSS"],
+      "hands_on_practice": "Build a multi-section web page dedicated to a favorite topic.",
+      "assignment": "Submit the HTML/CSS code for a fully styled personal web page.",
+      "business_application": "Foundations of frontend web development.",
+      "expected_outcome": "Ability to create and style simple web pages."
     },
     {
-      "module_number": "Module 04",
-      "module_title": "Phase 4: Advanced Scenarios, Security & Performance Optimization",
-      "module_purpose": "Overcome edge cases, benchmark KPIs, and audit production deliverables.",
+      "module_number": 4,
+      "module_title": "3D Design and AI Magic",
+      "module_purpose": "Explore spatial design and the creative potential of AI tools.",
       "what_you_will_learn": [
-        "Master stage 4 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Future Tech Kids Mastery.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Navigating 3D space",
+        "Combining shapes to make complex models",
+        "Using AI for brainstorming ideas safely",
+        "Creating AI-assisted stories"
       ],
       "lessons": [
         {
-          "lesson_number": "4.1",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 4.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Welcome to the 3D World",
+          "what_is_taught": "Moving, rotating, and scaling shapes in Tinkercad.",
+          "why_it_matters": "Develops spatial reasoning for engineering and design.",
+          "what_learner_does": "Builds a simple 3D house.",
+          "expected_outcome": "Familiarity with 3D workspace controls."
         },
         {
-          "lesson_number": "4.2",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 4.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Designing for the Real World",
+          "what_is_taught": "Grouping shapes and creating holes.",
+          "why_it_matters": "Essential techniques for creating custom, printable objects.",
+          "what_learner_does": "Designs a custom name tag or keychain.",
+          "expected_outcome": "A complete 3D model ready for printing."
         },
         {
-          "lesson_number": "4.3",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 4.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Talking to AI Safely",
+          "what_is_taught": "How to ask good questions (prompts) to an AI.",
+          "why_it_matters": "Prompt engineering is a key skill for the future.",
+          "what_learner_does": "Uses a kid-safe AI to generate ideas for a new game.",
+          "expected_outcome": "A brainstormed document of ideas."
         },
         {
-          "lesson_number": "4.4",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 4.4: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 4 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 4,
+          "lesson_title": "AI Storytelling",
+          "what_is_taught": "Collaborating with AI to write a narrative.",
+          "why_it_matters": "Shows how technology can boost, not replace, human creativity.",
+          "what_learner_does": "Writes an interactive story where AI helps create the plot twists.",
+          "expected_outcome": "A co-authored creative story."
         }
       ],
-      "key_concepts": [
-        "Workflow step 4",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 4 commercial brief.",
-      "assignment": "Deliverable 4: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["3D Modeling", "Spatial Reasoning", "Prompting", "AI Collaboration"],
+      "tools": ["Tinkercad", "ChatGPT for Kids"],
+      "hands_on_practice": "Design a 3D character and use AI to write its backstory.",
+      "assignment": "Submit a screenshot of the 3D model and the AI-assisted story.",
+      "business_application": "Product design and creative writing.",
+      "expected_outcome": "Basic competence in 3D modeling and safe AI prompting."
     },
     {
-      "module_number": "Module 05",
-      "module_title": "Phase 5: Commercial Portfolio Projects & Client Simulation",
-      "module_purpose": "Build independent, unguided deliverables matching high-ticket client briefs.",
+      "module_number": 5,
+      "module_title": "Capstone: The Master Creator Showcase",
+      "module_purpose": "Combine all learned skills to build one large, impressive final project.",
       "what_you_will_learn": [
-        "Master stage 5 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Future Tech Kids Mastery.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Project planning and management",
+        "Debugging complex issues",
+        "Presenting work confidently",
+        "Reflecting on the learning journey"
       ],
       "lessons": [
         {
-          "lesson_number": "5.1",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 5.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 5 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Planning Your Masterpiece",
+          "what_is_taught": "Storyboarding and wireframing.",
+          "why_it_matters": "Big projects need a solid plan to succeed.",
+          "what_learner_does": "Sketches out their final project (game, website, or 3D world).",
+          "expected_outcome": "A detailed project blueprint."
         },
         {
-          "lesson_number": "5.2",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 5.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 5 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Building and Coding",
+          "what_is_taught": "Independent problem solving.",
+          "why_it_matters": "Develops resilience and self-reliance.",
+          "what_learner_does": "Spends the session actively building their project.",
+          "expected_outcome": "A working prototype of the project."
         },
         {
-          "lesson_number": "5.3",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 5.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 5 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Testing and Polishing",
+          "what_is_taught": "Peer review and debugging.",
+          "why_it_matters": "Feedback improves the final product significantly.",
+          "what_learner_does": "Has a classmate or parent test the project, then fixes bugs.",
+          "expected_outcome": "A polished, bug-free final project."
         },
         {
-          "lesson_number": "5.4",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 5.4: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 5 step 4 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 4,
+          "lesson_title": "The Showcase Presentation",
+          "what_is_taught": "Public speaking and demonstration skills.",
+          "why_it_matters": "Being able to explain your work is as important as building it.",
+          "what_learner_does": "Records a short video or gives a live demo of their creation.",
+          "expected_outcome": "A final presentation celebrating their achievements."
         }
       ],
-      "key_concepts": [
-        "Workflow step 5",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 5 commercial brief.",
-      "assignment": "Deliverable 5: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
-    },
-    {
-      "module_number": "Module 06",
-      "module_title": "Phase 6: Enterprise Capstone Project & Defense",
-      "module_purpose": "Deliver and present an end-to-end full-scale commercial capstone solution.",
-      "what_you_will_learn": [
-        "Master stage 6 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Future Tech Kids Mastery.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
-      "lessons": [
-        {
-          "lesson_number": "6.1",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 6.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 6 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "6.2",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 6.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 6 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "6.3",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 6.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 6 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "6.4",
-          "lesson_title": "Future Tech Kids Mastery Practical Workshop 6.4: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 6 step 4 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
-      ],
-      "key_concepts": [
-        "Workflow step 6",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 6 commercial brief.",
-      "assignment": "Deliverable 6: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Project Management", "Debugging", "Presentation", "Reflection"],
+      "tools": ["Scratch", "Python", "HTML/CSS", "Tinkercad"],
+      "hands_on_practice": "Build the final capstone project.",
+      "assignment": "Submit the final project files and presentation video.",
+      "business_application": "Product launch and demonstration.",
+      "expected_outcome": "A comprehensive portfolio piece demonstrating all course skills."
     }
   ]
 }

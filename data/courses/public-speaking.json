@@ -4,500 +4,375 @@
   "academy": "Communication Academy",
   "academy_id": "communication",
   "course_type": "SPECIALIZATION",
-  "course_role": "Advanced Skill",
-  "level": "INTERMEDIATE",
-  "duration": "1 Month",
-  "learning_hours": 80,
-  "future_review_status": "STABLE",
+  "course_role": "Speaker",
+  "level": "Intermediate to Advanced",
+  "duration": "2 Months",
+  "learning_hours": 60,
+  "future_review_status": "Ready",
   "target_audience": {
     "best_for": [
-      "Aspiring Keynote Speaker seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
+      "Leaders, managers, and executives",
+      "Aspiring keynoters and trainers",
+      "Anyone who experiences stage fright"
     ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in presentation-skills should complete the prerequisite foundation before enrolling.",
     "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+      "Those looking strictly for slide design (see Presentation Skills)",
+      "Beginners struggling with basic English fluency"
+    ],
+    "who_should_take_foundation_first": "Individuals who need grammar or basic fluency training."
   },
   "prerequisites": {
-    "required": "presentation-skills",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Comfortable holding a basic conversation in English.",
+    "recommended": "Willingness to speak on camera and receive critique.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "Zoom/Teams, Grammarly / LanguageTool, ChatGPT / Claude for Communication Modeling, Loom (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "Webcam, microphone",
+      "software_accounts": "Zoom, Loom, Otter.ai"
+    },
+    "not_required": "Prior stage experience."
   },
   "overview": {
-    "positioning": "High prestige executive speaking specialization.",
-    "short_description": "Overcome stage fright, command attention, and speak with impact on stage or video.",
+    "positioning": "Conquer stage fright and command any room with powerful public speaking skills.",
+    "short_description": "An intensive specialization focused purely on the art of speaking to groups. Learn to manage anxiety, engage crowds, speak extemporaneously, and handle Q&A sessions.",
     "key_facts": {
-      "level": "INTERMEDIATE",
-      "duration": "1 Month",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "PORTFOLIO",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Keynote Speaker, Conference Presenter, Executive Spokesperson"
+      "level": "Intermediate to Advanced",
+      "duration": "2 Months",
+      "format": "Live Online & Video Submission",
+      "estimated_learning_hours": 60,
+      "project_count": 4,
+      "capstone": "10-Minute Keynote Speech",
+      "ai_integration": "Low",
+      "career_focus": "Leadership & Influence"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Public Speaking projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Manage speaking anxiety and channel nervous energy.",
+      "Deliver speeches without relying heavily on notes.",
+      "Engage and interact with live audiences.",
+      "Think on your feet during Q&A and impromptu speaking."
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Public Speaking is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "As automation increases, human skills like persuasion, motivation, and leadership speaking are highly valued.",
+    "ai_impact": "AI cannot replicate the charisma, empathy, and energy of a live speaker.",
+    "business_demand": "Companies need spokespeople who can represent their brand confidently.",
+    "career_opportunity": "Public speaking is consistently ranked as a top skill for executive promotion."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing Zoom/Teams, Grammarly / LanguageTool, ChatGPT / Claude for Communication Modeling.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "COMMAND: The stage (physical or virtual) with executive presence.",
+    "DELIVER: Speeches clearly, passionately, and persuasively.",
+    "OVERCOME: Stage fright and performance anxiety.",
+    "IMPROVISE: Responses to unexpected questions or situations."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "Mindset & Anxiety",
+        "focus": "Overcoming fear."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Vocal & Physical Delivery",
+        "focus": "Using your body and voice."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
+        "stage": "Impromptu Speaking",
+        "focus": "Thinking on your feet."
       },
       {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
+        "stage": "The Keynote",
+        "focus": "Delivering a prepared, impactful speech."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "Zoom/Teams",
-        "purpose": "Primary industry standard software for Public Speaking execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Grammarly / LanguageTool",
-        "purpose": "Primary industry standard software for Public Speaking execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "ChatGPT / Claude for Communication Modeling",
-        "purpose": "Primary industry standard software for Public Speaking execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Zoom",
+        "purpose": "Live speaking practice",
+        "what_student_learns": "Speaking to a live virtual audience.",
+        "what_student_builds": "Live feedback experience."
       },
       {
         "tool": "Loom",
-        "purpose": "Primary industry standard software for Public Speaking execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "purpose": "Recording speeches for critique",
+        "what_student_learns": "Self-evaluation of body language.",
+        "what_student_builds": "Video portfolio."
       }
     ],
     "supporting_tools": [
       {
-        "tool": "Google Docs",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "PowerPoint / Canva for Pitch Visuals",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Otter.ai / Fireflies",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "tool": "Otter.ai",
+        "purpose": "Analyzing speech pace and filler words"
       }
     ],
-    "emerging_tools": [
-      {
-        "tool": "Yoodli AI Speech Coach",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Claude Executive Writing Assistants",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "AI Realtime Pronunciation Feedback",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Rote memorization grammar drill sheets",
-      "Accent neutralization drills with no business context"
-    ]
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Public Speaking in 2026/27:",
+    "overview": "The process of preparing and delivering a speech.",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "Preparation",
+        "desc": "Knowing the material deeply."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Mental Conditioning",
+        "desc": "Managing nerves before taking the stage."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
+        "name": "Performance",
+        "desc": "Delivering the speech with energy."
       },
       {
         "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Interaction",
+        "desc": "Handling audience reactions and questions."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "Zoom/Teams, Grammarly / LanguageTool, ChatGPT / Claude for Communication Modeling",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "Zoom/Teams, Grammarly / LanguageTool, Yoodli AI Speech Coach",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Leadership",
+      "business_problem": "Leaders failing to inspire teams during all-hands meetings.",
+      "approach": "Training in vocal modulation and persuasive storytelling.",
+      "toolset": "Zoom",
+      "output": "Motivated, aligned teams."
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "Human-Centric Performer",
+    "ai_can_assist_with": "Tracking filler words (um, ah) via transcripts.",
+    "ai_can_automate": "N/A",
+    "ai_cannot_replace": "Charisma, emotion, and audience connection.",
+    "human_expertise_required": "Reading the audience's mood and adjusting delivery.",
+    "validation_protocol": "N/A",
+    "responsible_use": "Use AI to analyze performance, not script every word."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Practice out loud, standing up.",
+    "Embrace the pause instead of using filler words.",
+    "Focus on serving the audience, not on your own performance."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Memorizing a speech word-for-word.",
+      "why_it_happens": "Fear of forgetting content.",
+      "professional_approach": "Memorize concepts and structure, allowing the exact words to flow naturally."
     }
   ],
   "career_paths": {
-    "entry_roles": "Keynote Speaker",
-    "mid_roles": " Conference Presenter",
-    "specialist_roles": "Corporate Trainer",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["PR Coordinator"],
+    "mid_roles": ["Communications Manager", "Trainer"],
+    "specialist_roles": ["Keynote Speaker", "Executive"],
+    "freelance_roles": ["Motivational Speaker"],
+    "employer_expectations": "Can represent the company publicly with poise and authority.",
+    "what_student_demonstrates": "Video recordings of various speech types."
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end Public Speaking project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["Event speaking", "Webinar hosting"],
+    "client_workflow": "Briefing -> Preparation -> Delivery",
+    "portfolio_requirements": "Speaker reel (video highlights of speeches)."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "An impromptu speaking video.",
+    "A 10-minute polished keynote speech recording."
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "Public Speaking Video Portfolio"
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Peer and instructor critique of video submissions and live deliveries.",
+    "criteria": "Confidence, clarity, engagement, and handling of pressure."
   },
   "certification": {
-    "title": "Certified Specialist in Public Speaking",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Specialist in Public Speaking",
+    "criteria": "Successful delivery of the final keynote and passing impromptu exercises.",
+    "verification": "Certificate ID."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Graphic design for slides.",
   "next_learning_path": {
-    "recommended_next": "Advance to None to specialize further.",
-    "related_programs": "Explore complementary specializations in this academy."
+    "recommended_next": "Leadership & Management courses",
+    "related_programs": "Business English"
   },
   "faq": [
     {
-      "question": "What prior experience do I need for Public Speaking?",
-      "answer": "You should satisfy the prerequisite: presentation-skills before beginning this program."
+      "question": "I have terrible stage fright. Will this help?",
+      "answer": "Yes, module 1 is entirely dedicated to psychological and physical techniques for managing speaking anxiety."
     },
     {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
-    },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "Do I need an audience to practice?",
+      "answer": "You will practice live with your peers via Zoom to simulate a real audience."
     }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_number": 1,
+      "module_title": "Conquering Stage Fright",
+      "module_purpose": "Understand and manage the physical and mental symptoms of anxiety.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Public Speaking.",
-        "Troubleshoot common failure points and optimize output quality."
+        "The psychology of fear.",
+        "Breathing and grounding techniques.",
+        "Reframing nervousness as excitement."
       ],
       "lessons": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "Public Speaking Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Understanding Speaking Anxiety",
+          "what_is_taught": "Why we fear speaking and how adrenaline affects the body.",
+          "why_it_matters": "Understanding the biology helps demystify the fear.",
+          "what_learner_does": "Journaling exercise on personal speaking fears.",
+          "expected_outcome": "Self-awareness of anxiety triggers."
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "Public Speaking Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Physical Grounding Techniques",
+          "what_is_taught": "Diaphragmatic breathing, posture, and muscle relaxation.",
+          "why_it_matters": "Calms the nervous system before and during a speech.",
+          "what_learner_does": "Practice breathing exercises before a short recording.",
+          "expected_outcome": "Tools to reduce physical symptoms of stress."
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "Public Speaking Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Mental Reframing",
+          "what_is_taught": "Shifting focus from 'performing' to 'sharing value'.",
+          "why_it_matters": "Takes the pressure off being perfect.",
+          "what_learner_does": "Deliver a 1-minute low-stakes speech on a passionate topic.",
+          "expected_outcome": "Increased comfort speaking out loud."
         }
       ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Zoom/Teams",
-        "Grammarly / LanguageTool",
-        "ChatGPT / Claude for Communication Modeling"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Adrenaline Management", "Diaphragmatic Breathing", "Reframing"],
+      "tools": ["Loom"],
+      "hands_on_practice": "Short, low-pressure video recordings.",
+      "assignment": "Submit a 2-minute video on 'Why I want to improve my speaking', focusing on relaxed breathing.",
+      "business_application": "Staying calm during high-stakes presentations.",
+      "expected_outcome": "Reduced anxiety and better emotional control."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_number": 2,
+      "module_title": "Vocal and Physical Command",
+      "module_purpose": "Use your voice and body to command attention.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Public Speaking.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Eliminating filler words.",
+        "Vocal projection and pausing.",
+        "Stage movement and gestures."
       ],
       "lessons": [
         {
-          "lesson_number": "2.1",
-          "lesson_title": "Public Speaking Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "The Power of the Pause",
+          "what_is_taught": "Replacing 'um' and 'uh' with silence.",
+          "why_it_matters": "Silence projects confidence; filler words project uncertainty.",
+          "what_learner_does": "Record a speech, analyze with Otter.ai for fillers, and re-record.",
+          "expected_outcome": "Cleaner speech delivery."
         },
         {
-          "lesson_number": "2.2",
-          "lesson_title": "Public Speaking Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Vocal Variety",
+          "what_is_taught": "Adjusting volume, pitch, and speed to maintain interest.",
+          "why_it_matters": "Monotone delivery is the fastest way to lose an audience.",
+          "what_learner_does": "Read a text using extreme variations in voice, then find a natural balance.",
+          "expected_outcome": "Dynamic vocal range."
         },
         {
-          "lesson_number": "2.3",
-          "lesson_title": "Public Speaking Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Gestures and Movement",
+          "what_is_taught": "Purposeful hand gestures and 'anchoring' on stage (or in frame).",
+          "why_it_matters": "Random movement distracts; purposeful movement emphasizes.",
+          "what_learner_does": "Deliver a speech focusing solely on coordinated hand gestures.",
+          "expected_outcome": "Controlled and effective body language."
         }
       ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Zoom/Teams",
-        "Grammarly / LanguageTool",
-        "ChatGPT / Claude for Communication Modeling"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Pausing", "Vocal Variety", "Anchoring"],
+      "tools": ["Otter.ai", "Loom"],
+      "hands_on_practice": "Vocal drills and transcript analysis.",
+      "assignment": "Submit a 3-minute video demonstrating vocal variety and purposeful pausing.",
+      "business_application": "Holding attention in long meetings or conferences.",
+      "expected_outcome": "A strong, engaging speaking presence."
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_number": 3,
+      "module_title": "Impromptu Speaking & Q&A",
+      "module_purpose": "Learn to think on your feet and handle unexpected situations.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Public Speaking.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Frameworks for impromptu answers.",
+        "Handling difficult questions.",
+        "Buying time elegantly."
       ],
       "lessons": [
         {
-          "lesson_number": "3.1",
-          "lesson_title": "Public Speaking Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Impromptu Frameworks",
+          "what_is_taught": "PREP (Point, Reason, Example, Point) for quick structuring.",
+          "why_it_matters": "Prevents rambling when put on the spot.",
+          "what_learner_does": "Answer random prompt questions using PREP.",
+          "expected_outcome": "Structured spontaneous speaking."
         },
         {
-          "lesson_number": "3.2",
-          "lesson_title": "Public Speaking Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Handling the Q&A",
+          "what_is_taught": "Repeating questions, bridging, and dealing with hostile questions.",
+          "why_it_matters": "Q&A can make or break a speaker's credibility.",
+          "what_learner_does": "Live Q&A simulation with peers.",
+          "expected_outcome": "Grace under pressure."
         },
         {
-          "lesson_number": "3.3",
-          "lesson_title": "Public Speaking Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Buying Time & Recovering",
+          "what_is_taught": "What to do when you lose your train of thought.",
+          "why_it_matters": "Mistakes happen; recovery is what matters.",
+          "what_learner_does": "Practice recovery phrases ('Let me take a step back...').",
+          "expected_outcome": "Resilience during speaking."
         }
       ],
-      "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Zoom/Teams",
-        "Grammarly / LanguageTool",
-        "ChatGPT / Claude for Communication Modeling"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["PREP Framework", "Bridging", "Recovery Techniques"],
+      "tools": ["Zoom"],
+      "hands_on_practice": "Live impromptu drills.",
+      "assignment": "Participate in a live impromptu speaking session graded by the instructor.",
+      "business_application": "Excelling in media interviews, panels, and unscripted meetings.",
+      "expected_outcome": "Confidence in unscripted environments."
     },
     {
-      "module_number": "Module 04",
-      "module_title": "Phase 4: Advanced Scenarios, Security & Performance Optimization",
-      "module_purpose": "Overcome edge cases, benchmark KPIs, and audit production deliverables.",
+      "module_number": 4,
+      "module_title": "The Keynote Delivery",
+      "module_purpose": "Prepare and deliver a polished, extended presentation.",
       "what_you_will_learn": [
-        "Master stage 4 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Public Speaking.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Speech preparation techniques.",
+        "Connecting with the audience.",
+        "Final delivery."
       ],
       "lessons": [
         {
-          "lesson_number": "4.1",
-          "lesson_title": "Public Speaking Practical Workshop 4.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Preparation Without Memorization",
+          "what_is_taught": "Using mind maps and bullet points instead of full scripts.",
+          "why_it_matters": "Creates a conversational, authentic delivery.",
+          "what_learner_does": "Create a speech outline using only 10 keywords.",
+          "expected_outcome": "Ability to speak from concepts, not scripts."
         },
         {
-          "lesson_number": "4.2",
-          "lesson_title": "Public Speaking Practical Workshop 4.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Audience Interaction",
+          "what_is_taught": "Asking rhetorical questions, eye contact scanning, and reading the room.",
+          "why_it_matters": "Makes the audience feel involved.",
+          "what_learner_does": "Incorporate 3 interaction techniques into their final speech draft.",
+          "expected_outcome": "Engaging delivery style."
         },
         {
-          "lesson_number": "4.3",
-          "lesson_title": "Public Speaking Practical Workshop 4.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "The Final Performance",
+          "what_is_taught": "Bringing together mindset, vocal variety, body language, and structure.",
+          "why_it_matters": "The culmination of the specialization.",
+          "what_learner_does": "Deliver the final 10-minute keynote.",
+          "expected_outcome": "A complete, professional speech delivery."
         }
       ],
-      "key_concepts": [
-        "Workflow step 4",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Zoom/Teams",
-        "Grammarly / LanguageTool",
-        "ChatGPT / Claude for Communication Modeling"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 4 commercial brief.",
-      "assignment": "Deliverable 4: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Extemporaneous Speaking", "Audience Connection"],
+      "tools": ["Zoom", "Loom"],
+      "hands_on_practice": "Rehearsing and refining the final speech.",
+      "assignment": "Deliver a 10-minute keynote speech (live on Zoom or recorded via Loom).",
+      "business_application": "Delivering major presentations, town halls, or conference talks.",
+      "expected_outcome": "Mastery of public speaking."
     }
   ]
 }

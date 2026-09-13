@@ -2,512 +2,226 @@
   "course_id": "microsoft-copilot",
   "course_name": "Microsoft Copilot",
   "academy": "Office Productivity Academy",
-  "academy_id": "office",
+  "academy_id": "office-productivity-academy",
   "course_type": "SPECIALIZATION",
-  "course_role": "Specialization",
-  "level": "BEGINNER+",
-  "duration": "1 Month",
-  "learning_hours": 80,
-  "future_review_status": "STABLE",
+  "course_role": "AI Productivity Specialist",
+  "level": "Intermediate",
+  "duration": "2 Months",
+  "learning_hours": "60 hrs",
+  "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": [
-      "Aspiring Enterprise AI Productivity Specialist seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in Basic Excel/Word proficiency should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+    "best_for": ["Office Workers", "Managers", "Content Creators"],
+    "not_for": ["AI Researchers", "Software Developers"],
+    "who_should_take_foundation_first": "Individuals not familiar with standard Microsoft 365 apps"
   },
   "prerequisites": {
-    "required": "Basic Excel/Word proficiency",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Proficiency in Word, Excel, and PowerPoint",
+    "recommended": "Basic understanding of generative AI concepts",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot, Notion (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "Modern PC or Mac",
+      "software_accounts": "Microsoft 365 Subscription with Copilot license"
+    },
+    "not_required": "Coding skills"
   },
   "overview": {
-    "positioning": "Surging 2026/27 corporate B2B training demand.",
-    "short_description": "Integrate AI inside Word, Excel, PowerPoint, and Outlook to draft documents and analyze data instantly.",
+    "positioning": "Supercharge your daily productivity by mastering AI integration across the Microsoft 365 suite.",
+    "short_description": "Learn to effectively prompt and utilize Microsoft Copilot in Excel, Word, PowerPoint, and Teams to automate tasks and boost creativity.",
     "key_facts": {
-      "level": "BEGINNER+",
-      "duration": "1 Month",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "PRACTICAL",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Enterprise AI Productivity Specialist"
+      "level": "Intermediate",
+      "duration": "2 Months",
+      "format": "Online",
+      "estimated_learning_hours": "60 hrs",
+      "project_count": 4,
+      "capstone": "Yes",
+      "ai_integration": "Yes",
+      "career_focus": "Productivity Specialist"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Microsoft Copilot projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Draft, summarize, and edit complex documents in Word using AI",
+      "Generate formulas, analyze trends, and visualize data in Excel with plain English",
+      "Instantly create professional presentations in PowerPoint from prompts or documents",
+      "Craft effective AI prompts tailored for business contexts"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Microsoft Copilot is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "AI is moving from standalone chat interfaces directly into daily work applications.",
+    "ai_impact": "Copilot reduces hours of manual drafting and data formatting to minutes.",
+    "business_demand": "Companies are investing heavily in Copilot licenses and need staff who can actually use them efficiently.",
+    "career_opportunity": "Early adopters of AI productivity tools hold a massive competitive advantage."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "PROMPT: Craft highly effective instructions for AI assistants",
+    "GENERATE: Professional content and presentations instantly",
+    "ANALYZE: Data and extract insights using conversational AI",
+    "AUTOMATE: Routine communication and meeting summarization"
   ],
   "learning_journey": {
     "stages": [
-      {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
-      },
-      {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
-      },
-      {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      }
+      { "stage": "Prompt Engineering", "focus": "Learning how to talk to AI" },
+      { "stage": "Content Creation", "focus": "Copilot in Word and PowerPoint" },
+      { "stage": "Data Analysis", "focus": "Copilot in Excel" },
+      { "stage": "Collaboration", "focus": "Copilot in Teams and Outlook" }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
-      {
-        "tool": "Microsoft Excel (with Python & Power Query)",
-        "purpose": "Primary industry standard software for Microsoft Copilot execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Power BI",
-        "purpose": "Primary industry standard software for Microsoft Copilot execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Microsoft 365 Copilot",
-        "purpose": "Primary industry standard software for Microsoft Copilot execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Notion",
-        "purpose": "Primary industry standard software for Microsoft Copilot execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Google Workspace",
-        "purpose": "Primary industry standard software for Microsoft Copilot execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      }
+      { "tool": "Copilot in Word", "purpose": "Document drafting and summarization", "what_student_learns": "AI writing assistance", "what_student_builds": "Reports and Proposals" },
+      { "tool": "Copilot in Excel", "purpose": "Data analysis and formula generation", "what_student_learns": "Conversational data analysis", "what_student_builds": "Data Insights Dashboards" },
+      { "tool": "Copilot in PowerPoint", "purpose": "Presentation design", "what_student_learns": "Automated slide generation", "what_student_builds": "Pitch Decks" }
     ],
     "supporting_tools": [
-      {
-        "tool": "ClickUp",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Slack",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tally with GST",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tableau",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
+      { "tool": "Copilot in Teams/Outlook", "purpose": "Communication management" }
     ],
-    "emerging_tools": [
-      {
-        "tool": "Microsoft Fabric",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Notion AI Database Automations",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Make.com for Office Workflows",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Standalone basic MS Word formatting without Copilot",
-      "Manual copy-paste Excel data consolidation"
-    ]
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Microsoft Copilot in 2026/27:",
+    "overview": "AI-Augmented Office Workflow",
     "stages": [
-      {
-        "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
-      },
-      {
-        "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
-      },
-      {
-        "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
-      },
-      {
-        "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
-      }
+      { "step": 1, "name": "Ideation", "desc": "Drafting initial concepts in Word via Copilot" },
+      { "step": 2, "name": "Analysis", "desc": "Querying data in Excel to support ideas" },
+      { "step": 3, "name": "Presentation", "desc": "Converting Word docs to PowerPoint slides automatically" },
+      { "step": 4, "name": "Communication", "desc": "Summarizing meetings and drafting emails" }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft Fabric",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "General Management",
+      "business_problem": "Too much time spent on drafting routine reports and emails",
+      "approach": "Use Copilot to generate first drafts and summarize long email threads",
+      "toolset": "Copilot in Word & Outlook",
+      "output": "Increased time for strategic thinking"
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "AI-Driven",
+    "ai_can_assist_with": "Drafting, analyzing, formatting, summarizing",
+    "ai_can_automate": "Slide creation from text, meeting notes",
+    "ai_cannot_replace": "Fact-checking, finalizing business strategy, nuanced communication",
+    "human_expertise_required": "High (for reviewing AI output)",
+    "validation_protocol": "Strict review of AI-generated data and text for hallucinations",
+    "responsible_use": "Understanding data security boundaries within Microsoft 365"
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Always review and edit AI-generated content before sharing",
+    "Provide context and clear constraints in prompts",
+    "Use Copilot to overcome blank page syndrome, not to finalize work"
   ],
   "common_mistakes": [
-    {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
-    }
+    { "mistake": "Accepting Excel Copilot insights without checking the math", "why_it_happens": "Over-trusting the AI", "professional_approach": "Verify formulas generated by Copilot against raw data" }
   ],
   "career_paths": {
-    "entry_roles": "Enterprise AI Productivity Specialist",
-    "mid_roles": "Specialist Lead",
-    "specialist_roles": "Operations Analyst",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["Administrative Assistant", "Content Coordinator"],
+    "mid_roles": ["Productivity Specialist", "Operations Manager"],
+    "specialist_roles": ["AI Transformation Lead"],
+    "freelance_roles": ["AI Workflow Consultant"],
+    "employer_expectations": "Significantly higher output and efficiency",
+    "what_student_demonstrates": "Ability to execute tasks 3x faster using AI tools"
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end Microsoft Copilot project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["Rapid Content Creation", "Data Analysis", "Presentation Design"],
+    "client_workflow": "Receive brief -> Generate drafts via AI -> Human refinement -> Final delivery",
+    "portfolio_requirements": "Examples of AI prompts and the resulting refined output"
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "A comprehensive Business Proposal generated via AI",
+    "A Data Insights Report extracted conversationally",
+    "A Corporate Presentation converted from a document"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "A portfolio of AI-augmented business documents and the prompts used to create them"
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Prompt evaluation and output review",
+    "criteria": "Quality of prompts, accuracy of AI refinement, and final document professionality"
   },
   "certification": {
-    "title": "Certified Specialist in Microsoft Copilot",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Certified Microsoft Copilot Specialist",
+    "criteria": "Successful completion of all AI-generation assignments",
+    "verification": "Digital Certificate"
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Building custom Copilot plugins or Azure OpenAI development",
   "next_learning_path": {
-    "recommended_next": "Advance to biz-productivity to specialize further.",
-    "related_programs": "Explore complementary specializations in this academy."
+    "recommended_next": "AI Workflow Automation (Zapier/Make)",
+    "related_programs": "Prompt Engineering Mastery"
   },
   "faq": [
-    {
-      "question": "What prior experience do I need for Microsoft Copilot?",
-      "answer": "You should satisfy the prerequisite: Basic Excel/Word proficiency before beginning this program."
-    },
-    {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
-    },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
-    }
+    { "question": "Do I need a special license for this course?", "answer": "Yes, you need access to a Microsoft 365 account with a Copilot license." },
+    { "question": "Is this just ChatGPT in Word?", "answer": "Copilot has access to your Microsoft Graph (emails, files, chats), making it much more context-aware for business than standard ChatGPT." },
+    { "question": "Will AI take my job?", "answer": "AI won't take your job, but someone using AI might. This course ensures you are the one using AI." }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
-      "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Microsoft Copilot.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
+      "module_number": 1,
+      "module_title": "Prompt Engineering & Copilot in Word",
+      "module_purpose": "Master text generation and document drafting",
+      "what_you_will_learn": ["Effective Prompting", "Drafting Documents", "Summarization"],
       "lessons": [
-        {
-          "lesson_number": "1.1",
-          "lesson_title": "Microsoft Copilot Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "1.2",
-          "lesson_title": "Microsoft Copilot Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "1.3",
-          "lesson_title": "Microsoft Copilot Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
+        { "lesson_number": 1, "lesson_title": "The Art of the Prompt", "what_is_taught": "Context, constraints, and tone in prompting", "why_it_matters": "Good inputs yield good outputs", "what_learner_does": "Practices crafting specific business prompts", "expected_outcome": "Strong prompt engineering skills" },
+        { "lesson_number": 2, "lesson_title": "Drafting with Copilot in Word", "what_is_taught": "Generating reports, proposals, and letters", "why_it_matters": "Eliminates blank page syndrome", "what_learner_does": "Drafts a 5-page business proposal using prompts", "expected_outcome": "Rapid document creation" },
+        { "lesson_number": 3, "lesson_title": "Refining and Editing", "what_is_taught": "Rewriting, changing tone, and expanding text", "why_it_matters": "AI first drafts need refinement", "what_learner_does": "Edits AI text to match corporate tone", "expected_outcome": "AI text editing skills" },
+        { "lesson_number": 4, "lesson_title": "Summarization and Extraction", "what_is_taught": "Chatting with your document", "why_it_matters": "Saves time reading long reports", "what_learner_does": "Extracts key action items from a 50-page PDF", "expected_outcome": "Rapid information processing" }
       ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI",
-        "Microsoft 365 Copilot"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Prompting", "Iteration", "Contextual Grounding"],
+      "tools": ["Copilot in Word"],
+      "hands_on_practice": "Drafting and refining multiple document types",
+      "assignment": "Complete AI-Assisted Business Proposal",
+      "business_application": "Rapid documentation and report writing",
+      "expected_outcome": "Proficient AI writer"
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
-      "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Microsoft Copilot.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
+      "module_number": 2,
+      "module_title": "Data Analysis with Copilot in Excel",
+      "module_purpose": "Analyze data using conversational AI",
+      "what_you_will_learn": ["Formula Generation", "Data Insights", "Formatting"],
       "lessons": [
-        {
-          "lesson_number": "2.1",
-          "lesson_title": "Microsoft Copilot Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "2.2",
-          "lesson_title": "Microsoft Copilot Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "2.3",
-          "lesson_title": "Microsoft Copilot Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
+        { "lesson_number": 1, "lesson_title": "Conversational Data Analysis", "what_is_taught": "Asking questions about data", "why_it_matters": "Lowers the barrier to data analytics", "what_learner_does": "Queries a sales dataset for trends", "expected_outcome": "Can extract insights conversationally" },
+        { "lesson_number": 2, "lesson_title": "AI Formula Generation", "what_is_taught": "Using Copilot to write complex formulas", "why_it_matters": "Saves time remembering syntax", "what_learner_does": "Generates complex nested formulas via prompts", "expected_outcome": "AI-assisted formula creation" },
+        { "lesson_number": 3, "lesson_title": "Automated Visualizations", "what_is_taught": "Generating charts and graphs with AI", "why_it_matters": "Speeds up reporting", "what_learner_does": "Creates a visual summary dashboard via AI commands", "expected_outcome": "Rapid data visualization" },
+        { "lesson_number": 4, "lesson_title": "Data Cleaning & Formatting", "what_is_taught": "Using AI to highlight trends and format tables", "why_it_matters": "Improves data readability", "what_learner_does": "Cleans and formats a raw dataset", "expected_outcome": "AI-assisted data prep" }
       ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI",
-        "Microsoft 365 Copilot"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Conversational Analytics", "Verification"],
+      "tools": ["Copilot in Excel"],
+      "hands_on_practice": "Analyzing and visualizing multiple datasets",
+      "assignment": "AI-Generated Data Insights Report",
+      "business_application": "Quick data analysis for decision making",
+      "expected_outcome": "AI-augmented Data Analyst"
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
-      "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Microsoft Copilot.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
+      "module_number": 3,
+      "module_title": "Presentations with Copilot in PowerPoint",
+      "module_purpose": "Automate the design and creation of slide decks",
+      "what_you_will_learn": ["Slide Generation", "Doc-to-Deck Conversion", "Design Assistance"],
       "lessons": [
-        {
-          "lesson_number": "3.1",
-          "lesson_title": "Microsoft Copilot Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "3.2",
-          "lesson_title": "Microsoft Copilot Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "3.3",
-          "lesson_title": "Microsoft Copilot Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
+        { "lesson_number": 1, "lesson_title": "Generating Presentations from Prompts", "what_is_taught": "Creating full decks from a single instruction", "why_it_matters": "Drastically reduces presentation setup time", "what_learner_does": "Generates a 10-slide pitch deck", "expected_outcome": "Rapid deck creation" },
+        { "lesson_number": 2, "lesson_title": "Document to Deck Conversion", "what_is_taught": "Turning Word documents into PowerPoint slides", "why_it_matters": "Ensures consistency between reports and presentations", "what_learner_does": "Converts the Module 1 proposal into a presentation", "expected_outcome": "Cross-app AI integration" },
+        { "lesson_number": 3, "lesson_title": "Slide Editing and Design", "what_is_taught": "Using Copilot to add images, format text, and structure layouts", "why_it_matters": "Improves visual quality automatically", "what_learner_does": "Refines and restructures AI-generated slides", "expected_outcome": "AI design assistance" },
+        { "lesson_number": 4, "lesson_title": "Speaker Notes and Summaries", "what_is_taught": "Generating speaker notes automatically", "why_it_matters": "Prepares the presenter for delivery", "what_learner_does": "Generates comprehensive speaker notes for the deck", "expected_outcome": "Complete presentation readiness" }
       ],
-      "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI",
-        "Microsoft 365 Copilot"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Visual Storytelling", "Automation", "Cross-application workflow"],
+      "tools": ["Copilot in PowerPoint"],
+      "hands_on_practice": "Creating and refining presentations",
+      "assignment": "Executive Pitch Deck and Presentation",
+      "business_application": "Corporate presentations and pitching",
+      "expected_outcome": "AI Presentation Specialist"
     },
     {
-      "module_number": "Module 04",
-      "module_title": "Phase 4: Advanced Scenarios, Security & Performance Optimization",
-      "module_purpose": "Overcome edge cases, benchmark KPIs, and audit production deliverables.",
-      "what_you_will_learn": [
-        "Master stage 4 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Microsoft Copilot.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
+      "module_number": 4,
+      "module_title": "Collaboration with Copilot in Teams & Outlook",
+      "module_purpose": "Manage communications and meetings efficiently",
+      "what_you_will_learn": ["Email Management", "Meeting Summarization", "Action Item Extraction"],
       "lessons": [
-        {
-          "lesson_number": "4.1",
-          "lesson_title": "Microsoft Copilot Practical Workshop 4.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.2",
-          "lesson_title": "Microsoft Copilot Practical Workshop 4.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.3",
-          "lesson_title": "Microsoft Copilot Practical Workshop 4.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
+        { "lesson_number": 1, "lesson_title": "Email Triage in Outlook", "what_is_taught": "Summarizing threads and drafting replies", "why_it_matters": "Saves hours of inbox management", "what_learner_does": "Drafts professional responses to complex scenarios", "expected_outcome": "Efficient email management" },
+        { "lesson_number": 2, "lesson_title": "Meeting Intelligence in Teams", "what_is_taught": "Real-time summaries and asking questions during meetings", "why_it_matters": "Keeps you engaged without taking manual notes", "what_learner_does": "Extracts summaries from simulated meeting transcripts", "expected_outcome": "Advanced meeting management" },
+        { "lesson_number": 3, "lesson_title": "Action Items and Follow-ups", "what_is_taught": "Automating task creation from chats and meetings", "why_it_matters": "Ensures accountability", "what_learner_does": "Generates a follow-up email with assigned tasks", "expected_outcome": "Automated task tracking" },
+        { "lesson_number": 4, "lesson_title": "The Integrated AI Workflow", "what_is_taught": "Using Copilot across all apps seamlessly", "why_it_matters": "Maximizes overall productivity", "what_learner_does": "Completes a multi-app business scenario capstone", "expected_outcome": "Mastery of the Copilot ecosystem" }
       ],
-      "key_concepts": [
-        "Workflow step 4",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI",
-        "Microsoft 365 Copilot"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 4 commercial brief.",
-      "assignment": "Deliverable 4: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Communication Efficiency", "Knowledge Retrieval"],
+      "tools": ["Copilot in Teams", "Copilot in Outlook"],
+      "hands_on_practice": "Managing simulated communications and meetings",
+      "assignment": "Final Capstone: Integrated AI Office Workflow",
+      "business_application": "Daily corporate communication and collaboration",
+      "expected_outcome": "Fully AI-Augmented Professional"
     }
   ]
 }

@@ -1,419 +1,201 @@
 {
-  "course_id": "resume-building",
-  "course_name": "Resume Building",
-  "academy": "Career & Freelancing Academy",
-  "academy_id": "career",
-  "course_type": "MODULE",
-  "course_role": "Supporting Skill",
-  "level": "BEGINNER",
-  "duration": "1 Week",
-  "learning_hours": 20,
-  "future_review_status": "STABLE",
-  "target_audience": {
-    "best_for": [
-      "Aspiring Job Applicant seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in None should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
-  },
-  "prerequisites": {
-    "required": "None",
-    "recommended": "Familiarity with modern web browsers and professional digital tools",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
-    "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "LinkedIn, Upwork, Fiverr, Notion (student/free tiers sufficient for coursework)"
-    }
-  },
-  "overview": {
-    "positioning": "Embed as mandatory outcome module in all career programs.",
-    "short_description": "Build high-scoring ATS-friendly resumes and cover letters using proven frameworks.",
-    "key_facts": {
-      "level": "BEGINNER",
-      "duration": "1 Week",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "20 Hours",
-      "project_count": "EXERCISE",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Job Applicant"
+    "course_id": "resume-building",
+    "course_name": "Resume Building",
+    "academy": "Career & Freelancing Academy",
+    "academy_id": "career-freelancing-academy",
+    "course_type": "MODULE",
+    "course_role": "Job Seeker",
+    "level": "Beginner",
+    "duration": "1 Month",
+    "learning_hours": 20,
+    "future_review_status": "Up to date",
+    "target_audience": {
+        "best_for": ["Active job seekers", "Recent graduates", "Professionals updating their profiles"],
+        "not_for": ["Freelancers seeking clients (should take Proposal Writing instead)"],
+        "who_should_take_foundation_first": "None, this is a foundational skill."
     },
-    "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Resume Building projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
-    ]
-  },
-  "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Resume Building is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
-  },
-  "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing LinkedIn, Upwork, Fiverr.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
-  ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
-      },
-      {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
-      },
-      {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      }
-    ]
-  },
-  "hands_on_tech": {
-    "core_tools": [
-      {
-        "tool": "LinkedIn",
-        "purpose": "Primary industry standard software for Resume Building execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Upwork",
-        "purpose": "Primary industry standard software for Resume Building execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Fiverr",
-        "purpose": "Primary industry standard software for Resume Building execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Notion",
-        "purpose": "Primary industry standard software for Resume Building execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "ChatGPT / Claude for Proposals",
-        "purpose": "Primary industry standard software for Resume Building execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Loom",
-        "purpose": "Primary industry standard software for Resume Building execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      }
-    ],
-    "supporting_tools": [
-      {
-        "tool": "Stripe / Wise",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Calendly",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Canva",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Bonsai / PandaDoc",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Clay.com for B2B prospecting",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Apollo.io",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "AI Contract Summarizers",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Generic generic mass-email templates",
-      "Copy-paste Upwork cover letters"
-    ]
-  },
-  "industry_workflow": {
-    "overview": "How leading practitioners deliver Resume Building in 2026/27:",
-    "stages": [
-      {
-        "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
-      },
-      {
-        "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
-      },
-      {
-        "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
-      },
-      {
-        "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
-      }
-    ]
-  },
-  "business_use_cases": [
-    {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "LinkedIn, Upwork, Fiverr",
-      "output": "High-converting production asset with verified conversion analytics."
+    "prerequisites": {
+        "required": "A basic work history or educational background.",
+        "recommended": "None.",
+        "system_requirements": {
+            "hardware": "A computer with reliable internet access.",
+            "software_accounts": "Google Docs, Canva."
+        },
+        "not_required": "Prior design experience."
     },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "LinkedIn, Upwork, Clay.com for B2B prospecting",
-      "output": "End-to-end client delivery system with automated reporting."
-    }
-  ],
-  "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
-  },
-  "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
-  ],
-  "common_mistakes": [
-    {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
+    "overview": {
+        "positioning": "Master the technical and narrative elements of creating an ATS-optimized, high-converting resume.",
+        "short_description": "Learn to craft resumes that pass automated scanners and compel recruiters to call.",
+        "key_facts": {
+            "level": "Beginner",
+            "duration": "1 Month",
+            "format": "Online",
+            "estimated_learning_hours": 20,
+            "project_count": 1,
+            "capstone": false,
+            "ai_integration": "Medium",
+            "career_focus": "Application Materials"
+        },
+        "what_you_will_be_able_to_do": [
+            "Design clean, ATS-compliant resume formats.",
+            "Write high-impact, quantified achievement bullet points.",
+            "Tailor resumes rapidly for specific job descriptions.",
+            "Structure effective cover letters."
+        ]
     },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
-    }
-  ],
-  "career_paths": {
-    "entry_roles": "Job Applicant",
-    "mid_roles": "Specialist Lead",
-    "specialist_roles": "None",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
-  },
-  "freelance_applications": {
-    "services_offered": [
-      "End-to-end Resume Building project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
+    "why_now": {
+        "industry_shift": "The vast majority of large employers now use ATS, making formatting and keyword optimization mandatory.",
+        "ai_impact": "AI screening tools ruthlessly filter out poorly formatted or unoptimized resumes.",
+        "business_demand": "Recruiters spend an average of 7 seconds on a resume; immediate impact is critical.",
+        "career_opportunity": "A strong resume significantly increases interview rates and potential starting salary."
+    },
+    "learning_outcomes": [
+        "FORMAT a resume to pass Applicant Tracking Systems flawlessly.",
+        "WRITE compelling bullet points using the Action-Context-Result framework.",
+        "OPTIMIZE content by integrating keywords from target job descriptions.",
+        "CREATE specialized resumes for career transitions or gaps."
     ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
-  },
-  "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
-  ],
-  "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
-  ],
-  "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
-  },
-  "certification": {
-    "title": "Certified Specialist in Resume Building",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
-  },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
-  "next_learning_path": {
-    "recommended_next": "Advance to interview-preparation to specialize further.",
-    "related_programs": "For broader career mastery, compare with career-launch."
-  },
-  "faq": [
-    {
-      "question": "What prior experience do I need for Resume Building?",
-      "answer": "You should satisfy the prerequisite: None before beginning this program."
+    "learning_journey": {
+        "stages": [
+            {"stage": "Structure", "focus": "Formatting and ATS compliance."},
+            {"stage": "Content", "focus": "Writing impactful bullets and summaries."},
+            {"stage": "Optimization", "focus": "Tailoring for specific roles."}
+        ]
     },
-    {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
+    "hands_on_tech": {
+        "core_tools": [
+            {"tool": "Google Docs", "purpose": "Document creation", "what_student_learns": "Using styles and clean formatting.", "what_student_builds": "Master resume template."},
+            {"tool": "ATS Scanners", "purpose": "Validation", "what_student_learns": "Testing keyword match rates.", "what_student_builds": "Optimized document output."}
+        ],
+        "supporting_tools": [
+            {"tool": "Canva", "purpose": "Creative resumes (for specific industries)"}
+        ],
+        "emerging_tools": [
+            {"tool": "AI Resume Builders", "purpose": "Generating bullet variations."}
+        ],
+        "tools_to_review": ["Jobscan"]
     },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
-    }
-  ],
-  "modules": [
-    {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
-      "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Resume Building.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
-      "lessons": [
+    "industry_workflow": {
+        "overview": "The resume creation and submission process.",
+        "stages": [
+            {"step": 1, "name": "Audit", "desc": "Compiling all past experience and metrics."},
+            {"step": 2, "name": "Formatting", "desc": "Applying an ATS-friendly layout."},
+            {"step": 3, "name": "Drafting", "desc": "Writing impact-focused bullet points."},
+            {"step": 4, "name": "Tailoring", "desc": "Adjusting keywords for a specific application."}
+        ]
+    },
+    "business_use_cases": [
+        {"sector": "Personal Branding", "business_problem": "Low interview callback rates.", "approach": "Restructuring the resume for ATS compliance and impact.", "toolset": "Google Docs, ATS Scanners", "output": "Higher application conversion rates."}
+    ],
+    "ai_integration": {
+        "role_classification": "AI as a drafting assistant.",
+        "ai_can_assist_with": "Suggesting strong action verbs, rewording bullets for conciseness.",
+        "ai_can_automate": "Keyword matching analysis.",
+        "ai_cannot_replace": "The authenticity of the achievements and the strategic narrative.",
+        "human_expertise_required": "Selecting which experiences to highlight for a specific role.",
+        "validation_protocol": "Ensuring all AI-generated metrics are factually accurate.",
+        "responsible_use": "Never fabricating experience or metrics using AI."
+    },
+    "best_practices": [
+        "Avoid multi-column layouts, tables, and graphics for standard applications.",
+        "Start every bullet point with a strong action verb.",
+        "Quantify results whenever possible (%, $, time saved).",
+        "Keep the resume to one page for early/mid-career professionals."
+    ],
+    "common_mistakes": [
+        {"mistake": "Listing job duties instead of achievements.", "why_it_happens": "Copying and pasting from old job descriptions.", "professional_approach": "Focusing on what was accomplished, not just what was assigned."}
+    ],
+    "career_paths": {
+        "entry_roles": ["N/A - Skill applies to all roles"],
+        "mid_roles": ["N/A"],
+        "specialist_roles": ["N/A"],
+        "freelance_roles": ["Resume Writer (Service Offering)"],
+        "employer_expectations": "Clear, error-free, and relevant professional documentation.",
+        "what_student_demonstrates": "A market-ready professional resume."
+    },
+    "freelance_applications": {
+        "services_offered": ["Resume writing", "Profile optimization"],
+        "client_workflow": "Intake questionnaire -> Draft -> Client Review -> Final Polish",
+        "portfolio_requirements": "Before-and-after resume transformations."
+    },
+    "what_you_will_build": [
+        "A master ATS-friendly resume.",
+        "A tailored version of the resume for a specific job.",
+        "A standard cover letter template."
+    ],
+    "final_deliverables": [
+        "A completed, optimized resume ready for applications."
+    ],
+    "assessment": {
+        "model": "Document review.",
+        "criteria": "Formatting cleanliness, impact of bullet points, and ATS match score."
+    },
+    "certification": {
+        "title": "N/A",
+        "criteria": "N/A",
+        "verification": "N/A"
+    },
+    "not_covered": "Interview techniques.",
+    "next_learning_path": {
+        "recommended_next": "LinkedIn Optimisation",
+        "related_programs": "Interview Preparation"
+    },
+    "faq": [
+        {"question": "Should my resume be one or two pages?", "answer": "Generally, one page for less than 10 years of experience, two pages for extensive, relevant experience."},
+        {"question": "Do I need a visually designed resume?", "answer": "Unless you are in a highly creative field (e.g., Graphic Design), a clean, text-based ATS resume is vastly superior for online applications."},
+        {"question": "How do I handle employment gaps?", "answer": "We cover strategies for formatting and phrasing to address gaps professionally."}
+    ],
+    "modules": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "Resume Building Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+            "module_number": 1,
+            "module_title": "Formatting & ATS Compliance",
+            "module_purpose": "Ensure your resume can be read by automated systems.",
+            "what_you_will_learn": ["ATS functionality.", "Appropriate layouts and fonts.", "Structuring sections correctly."],
+            "lessons": [
+                {"lesson_number": 1, "lesson_title": "Understanding the ATS", "what_is_taught": "How tracking systems parse data.", "why_it_matters": "Complex formatting gets scrambled, causing automatic rejection.", "what_learner_does": "Reviews examples of parsed vs. unparsed resumes.", "expected_outcome": "Understanding of ATS rules."},
+                {"lesson_number": 2, "lesson_title": "The Master Template", "what_is_taught": "Setting up a clean, single-column layout.", "why_it_matters": "Provides a robust foundation for all applications.", "what_learner_does": "Builds the shell of their resume in Google Docs.", "expected_outcome": "A formatted blank template."},
+                {"lesson_number": 3, "lesson_title": "Contact Info & Summaries", "what_is_taught": "Crafting the header and professional summary.", "why_it_matters": "The first thing recruiters see.", "what_learner_does": "Writes a targeted 3-line summary.", "expected_outcome": "Completed header and summary."}
+            ],
+            "key_concepts": ["ATS Parsing", "Single-column Layout", "Professional Summary"],
+            "tools": ["Google Docs"],
+            "hands_on_practice": "Create the structural foundation of the resume.",
+            "assignment": "Submit the formatted template shell.",
+            "business_application": "Ensuring technical compliance in applications.",
+            "expected_outcome": "A technically sound resume structure."
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "Resume Building Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+            "module_number": 2,
+            "module_title": "High-Impact Content Creation",
+            "module_purpose": "Write bullet points that prove your value.",
+            "what_you_will_learn": ["The Action-Context-Result framework.", "Quantifying soft skills.", "Selecting the right action verbs."],
+            "lessons": [
+                {"lesson_number": 1, "lesson_title": "Action Verbs & Impact", "what_is_taught": "Replacing weak verbs (e.g., 'helped', 'responsible for') with strong ones.", "why_it_matters": "Changes the tone from passive to active.", "what_learner_does": "Audits old resume bullets for weak verbs.", "expected_outcome": "A list of upgraded action verbs."},
+                {"lesson_number": 2, "lesson_title": "The XYZ Formula", "what_is_taught": "Accomplished [X] as measured by [Y], by doing [Z].", "why_it_matters": "Provides concrete proof of competence.", "what_learner_does": "Rewrites 5 experience bullets using the formula.", "expected_outcome": "High-impact bullet points."},
+                {"lesson_number": 3, "lesson_title": "Education & Skills Sections", "what_is_taught": "Formatting degrees, certifications, and technical skills.", "why_it_matters": "Crucial for keyword matching.", "what_learner_does": "Populates the skills and education sections.", "expected_outcome": "Completed secondary sections."}
+            ],
+            "key_concepts": ["XYZ Formula", "Action Verbs", "Quantification"],
+            "tools": ["Google Docs"],
+            "hands_on_practice": "Complete the first draft of the experience section.",
+            "assignment": "Submit the draft for review.",
+            "business_application": "Communicating professional value effectively.",
+            "expected_outcome": "A fully drafted master resume."
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "Resume Building Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+            "module_number": 3,
+            "module_title": "Tailoring & Cover Letters",
+            "module_purpose": "Customize your assets for specific opportunities.",
+            "what_you_will_learn": ["Keyword optimization.", "Rapid tailoring techniques.", "Cover letter structure."],
+            "lessons": [
+                {"lesson_number": 1, "lesson_title": "Keyword Matching", "what_is_taught": "Extracting keywords from job descriptions.", "why_it_matters": "Increases ATS match score.", "what_learner_does": "Analyzes a target job description.", "expected_outcome": "A list of target keywords."},
+                {"lesson_number": 2, "lesson_title": "Rapid Tailoring", "what_is_taught": "Adjusting the master resume efficiently for a specific application.", "why_it_matters": "Saves time while maintaining high quality.", "what_learner_does": "Creates a tailored version of the resume.", "expected_outcome": "A job-specific resume."},
+                {"lesson_number": 3, "lesson_title": "Modern Cover Letters", "what_is_taught": "Writing concise, impactful cover letters.", "why_it_matters": "Provides narrative context to the resume.", "what_learner_does": "Drafts a cover letter template.", "expected_outcome": "A reusable cover letter framework."}
+            ],
+            "key_concepts": ["Keyword Extraction", "Tailoring", "Narrative Context"],
+            "tools": ["ATS Scanners (e.g., Jobscan)"],
+            "hands_on_practice": "Run the tailored resume through an ATS scanner.",
+            "assignment": "Submit the tailored resume, job description, and cover letter.",
+            "business_application": "Deploying targeted applications rapidly.",
+            "expected_outcome": "A finalized, highly competitive application package."
         }
-      ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "LinkedIn",
-        "Upwork",
-        "Fiverr"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
-    },
-    {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
-      "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Resume Building.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
-      "lessons": [
-        {
-          "lesson_number": "2.1",
-          "lesson_title": "Resume Building Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "2.2",
-          "lesson_title": "Resume Building Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "2.3",
-          "lesson_title": "Resume Building Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
-      ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "LinkedIn",
-        "Upwork",
-        "Fiverr"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
-    }
-  ]
+    ]
 }

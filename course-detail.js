@@ -486,7 +486,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
           </div>
           <p class="why-now-text">${escapeHTML(data.why_now.industry_shift || '')}</p>
           <div style="font-size:0.9rem; color:var(--teal); font-weight:600; margin-top:4px;">
-            Market Reality: Real-world toolchains and generative workflows have reshaped standard domain roles.
+            ${escapeHTML(data.why_now.ai_impact || data.why_now.business_demand || 'Industry toolchains and modern workflows drive high career demand.')}
           </div>
         </div>
       `;
@@ -499,7 +499,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   const audienceContainer = document.getElementById('audience-container');
   if (audienceContainer && data.target_audience) {
     const bestFor = data.target_audience.best_for || [];
-    const notFor = data.target_audience.who_is_this_not_for || [];
+    const notFor = data.target_audience.not_for || data.target_audience.who_is_this_not_for || [];
     audienceContainer.innerHTML = `
       <div class="audience-grid">
         <div class="audience-card best-for">
@@ -589,7 +589,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
     currContainer.innerHTML = data.modules.map((mod, idx) => `
       <div class="curriculum-module ${idx === 0 ? 'open' : ''}">
         <div class="curriculum-module-header" role="button" tabindex="0" aria-expanded="${idx === 0}">
-          <span class="module-label">Module ${mod.module_number || idx + 1}</span>
+          <span class="module-label">${String(mod.module_number || 'Module ' + (idx + 1)).replace(/^Module\s*/i, 'Module ')}</span>
           <span class="module-title">${escapeHTML(mod.module_title || 'Module Overview')}</span>
           <span class="module-lessons-count">${mod.lessons ? mod.lessons.length : 4} Lessons</span>
           <span class="module-chevron">⌄</span>
@@ -744,7 +744,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
               <span class="project-tag-badge">${isCapstone ? 'Enterprise Capstone Project' : `Production Project ${bIdx + 1}`}</span>
               <div class="project-card-title">${escapeHTML(b)}</div>
               <p class="project-card-desc">
-                Built from scratch to professional standards, verified through peer critique and mentor code/design review.
+                ${escapeHTML(data.modules?.[bIdx]?.assignment || data.modules?.[bIdx]?.hands_on_practice || 'Built to professional standards, verified through peer critique and mentor review.')}
               </p>
               <div class="project-deliverable-badge">
                 <span>📁</span> Deliverable: ${escapeHTML(deliverables[bIdx] || 'Production ready asset in student portfolio')}
@@ -861,10 +861,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   if (faqGrid && data.faq && Array.isArray(data.faq) && data.faq.length > 0) {
     const builds = data.what_you_will_build || [];
     faqGrid.innerHTML = data.faq.map((item, fIdx) => {
-      let answer = item.answer;
-      if (fIdx === 1 && builds.length > 0) {
-        answer = `You will build production-grade projects: ${builds.slice(0, 2).join(' and ')}, resulting in portfolio-ready case studies rather than trivial homework exercises.`;
-      }
+      let answer = item.answer || (builds.length > 0 ? `You will build production-grade projects: ${builds.slice(0, 2).join(' and ')}, resulting in portfolio-ready case studies.` : '');
       return `
         <div class="faq-item">
           <button class="faq-question" aria-expanded="${fIdx === 0 ? 'true' : 'false'}">

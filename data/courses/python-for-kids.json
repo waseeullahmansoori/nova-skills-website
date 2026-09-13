@@ -2,502 +2,346 @@
   "course_id": "python-for-kids",
   "course_name": "Python for Kids",
   "academy": "Kids Tech Academy",
-  "academy_id": "kids",
+  "academy_id": "kids-tech-academy",
   "course_type": "SPECIALIZATION",
-  "course_role": "Core Skill",
-  "level": "BEGINNER+",
-  "duration": "1-2 Months",
-  "learning_hours": 80,
-  "future_review_status": "STABLE",
+  "course_role": "Python Programmer",
+  "level": "Beginner to Intermediate",
+  "duration": "2 Months",
+  "learning_hours": 60,
+  "future_review_status": "Scheduled for 2027",
   "target_audience": {
-    "best_for": [
-      "Aspiring Junior Python Programmer seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in scratch-programming OR age 11+ should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+    "best_for": ["Kids aged 10-15 ready for typed code", "Math and logic enthusiasts", "Students wanting to learn a 'real' programming language"],
+    "not_for": ["Absolute beginners under age 9"],
+    "who_should_take_foundation_first": "Graduates of Scratch Programming will find this transition natural."
   },
   "prerequisites": {
-    "required": "scratch-programming OR age 11+",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic typing skills and familiarity with saving files.",
+    "recommended": "Prior experience with block coding.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau), Blockly (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "A computer (Windows, Mac, or Chromebook).",
+      "software_accounts": "Web browser (for Replit) or local installation of Mu Editor."
+    },
+    "not_required": "Prior Python experience."
   },
   "overview": {
-    "positioning": "First real text-based programming language for kids.",
-    "short_description": "Introduce kids to text-based Python programming with Turtle graphics and fun exercises.",
+    "positioning": "A fun, accessible introduction to one of the world's most popular programming languages.",
+    "short_description": "Learn to write real code with Python! Create digital art with Turtle graphics, build fun text-based games, and learn the logic behind professional software.",
     "key_facts": {
-      "level": "BEGINNER+",
-      "duration": "1-2 Months",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "PRACTICAL",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Junior Python Programmer"
+      "level": "Beginner to Intermediate",
+      "duration": "2 Months",
+      "format": "Interactive Online/Hybrid",
+      "estimated_learning_hours": 60,
+      "project_count": 10,
+      "capstone": "A Custom Python Arcade or Quiz Game",
+      "ai_integration": "Low - Focuses on syntax and logic",
+      "career_focus": "Software Engineering Basics"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Python for Kids projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Write and run Python scripts",
+      "Create colorful geometric art using Turtle graphics",
+      "Build interactive quiz programs and number guessing games",
+      "Understand variables, loops, and functions"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Python for Kids is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Python is the leading language for AI and data, making it highly relevant.",
+    "ai_impact": "Understanding Python is the first step toward understanding AI.",
+    "business_demand": "Python skills are universally sought after in tech.",
+    "career_opportunity": "Gives students a massive head start in computer science."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau).",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "TYPE: Write clean, syntactically correct Python code.",
+    "DRAW: Program visual graphics using the Turtle library.",
+    "LOGIC: Implement conditionals and loops to solve problems.",
+    "CREATE: Build interactive text-based applications."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "The Basics",
+        "focus": "Learning syntax, variables, and printing."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Visual Python",
+        "focus": "Using Turtle to make code visual and fun."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
+        "stage": "Game Logic",
+        "focus": "Using loops and functions to build games."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "MIT Scratch",
-        "purpose": "Primary industry standard software for Python for Kids execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Python",
+        "purpose": "Core programming language",
+        "what_student_learns": "Syntax, data types, and logic structures",
+        "what_student_builds": "Scripts and mini-games"
       },
       {
-        "tool": "Python (IDLE / Replit)",
-        "purpose": "Primary industry standard software for Python for Kids execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Turtle Graphics",
+        "purpose": "Visual output library",
+        "what_student_learns": "Coordinate geometry and algorithmic drawing",
+        "what_student_builds": "Digital art and simple animations"
       },
       {
-        "tool": "Roblox Studio (Luau)",
-        "purpose": "Primary industry standard software for Python for Kids execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Blockly",
-        "purpose": "Primary industry standard software for Python for Kids execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Mu Editor / Replit",
+        "purpose": "Code editor",
+        "what_student_learns": "Writing, running, and debugging code",
+        "what_student_builds": "Saved Python projects"
       }
     ],
-    "supporting_tools": [
-      {
-        "tool": "Canva for Kids",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tinkercad",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "MakeCode",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Child-safe AI Exploratories",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Teachable Machine",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Micro:bit Simulators",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Complex adult command-line tools with no visual feedback",
-      "Passive video watching tutorials"
-    ]
+    "supporting_tools": [],
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Python for Kids in 2026/27:",
+    "overview": "The standard scripting workflow.",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "Scripting",
+        "desc": "Writing the code."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Testing",
+        "desc": "Running the code to see the output."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
-      },
-      {
-        "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Debugging",
+        "desc": "Fixing syntax errors or typos."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau)",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "MIT Scratch, Python (IDLE / Replit), Child-safe AI Exploratories",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Software",
+      "business_problem": "Automation and Logic",
+      "approach": "Writing Python scripts",
+      "toolset": "Python",
+      "output": "Functional programs"
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "Not Central",
+    "ai_can_assist_with": "Explaining error messages.",
+    "ai_can_automate": "N/A",
+    "ai_cannot_replace": "Learning the syntax manually.",
+    "human_expertise_required": "Instructors to help with indentation errors.",
+    "validation_protocol": "N/A",
+    "responsible_use": "N/A"
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Watch your indentation! Python relies on spaces to group code.",
+    "Use comments (#) to explain what your code does.",
+    "Don't forget the colon (:) at the end of if statements and loops."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
+      "mistake": "IndentationError.",
+      "why_it_happens": "Mixing spaces and tabs, or forgetting to indent after a colon.",
+      "professional_approach": "Always use the Tab key uniformly and check alignment."
     },
     {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "SyntaxError: invalid syntax.",
+      "why_it_happens": "Usually a missing parenthesis or quotation mark.",
+      "professional_approach": "Check the line above the error to ensure all brackets are closed."
     }
   ],
   "career_paths": {
-    "entry_roles": "Junior Python Programmer",
-    "mid_roles": "Specialist Lead",
-    "specialist_roles": "Robotics Aspirant",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["Student Programmer"],
+    "mid_roles": ["N/A"],
+    "specialist_roles": ["N/A"],
+    "freelance_roles": ["N/A"],
+    "employer_expectations": "Basic understanding of scripting.",
+    "what_student_demonstrates": "Working Python scripts."
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end Python for Kids project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["N/A"],
+    "client_workflow": "N/A",
+    "portfolio_requirements": "A Replit portfolio of working code."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "A mad-libs story generator",
+    "A geometric spirograph using Turtle",
+    "A number guessing game",
+    "A multiple-choice quiz program"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "A functional, interactive Python game or art project."
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Code functionality",
+    "criteria": "Code runs without syntax errors and achieves the desired output."
   },
   "certification": {
-    "title": "Certified Specialist in Python for Kids",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Python for Kids Certificate",
+    "criteria": "Complete all core projects.",
+    "verification": "Digital certificate."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Object-oriented programming, external APIs, databases.",
   "next_learning_path": {
-    "recommended_next": "Advance to ai-for-kids to specialize further.",
-    "related_programs": "Explore complementary specializations in this academy."
+    "recommended_next": "AI for Kids",
+    "related_programs": ["Web Design for Kids"]
   },
   "faq": [
     {
-      "question": "What prior experience do I need for Python for Kids?",
-      "answer": "You should satisfy the prerequisite: scratch-programming OR age 11+ before beginning this program."
+      "question": "Do I need to install Python?",
+      "answer": "We recommend using a web-based editor like Replit so no installation is needed, but we also show how to install Mu Editor if you prefer."
     },
     {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
-    },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "Is this real Python?",
+      "answer": "Yes! It is the exact same Python language used by professionals at Google and NASA, just taught in a fun, kid-friendly way."
     }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_number": 1,
+      "module_title": "Hello, Python!",
+      "module_purpose": "Get comfortable writing basic text-based code and understanding data types.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Python for Kids.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Using the print() statement",
+        "Variables (strings and integers)",
+        "Getting user input",
+        "Basic arithmetic"
       ],
       "lessons": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "Python for Kids Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "First Words in Code",
+          "what_is_taught": "The print() function and strings.",
+          "why_it_matters": "The fundamental way programs communicate with users.",
+          "what_learner_does": "Prints messages and creates ASCII art using text.",
+          "expected_outcome": "A script that outputs formatted text."
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "Python for Kids Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Boxes of Data: Variables",
+          "what_is_taught": "Assigning values to variables.",
+          "why_it_matters": "How computers remember information.",
+          "what_learner_does": "Creates variables for a character profile (name, age, hobby).",
+          "expected_outcome": "A script that prints variable data."
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "Python for Kids Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Talking to the Computer",
+          "what_is_taught": "The input() function.",
+          "why_it_matters": "Makes programs interactive.",
+          "what_learner_does": "Builds a Mad Libs word game.",
+          "expected_outcome": "An interactive text script."
         }
       ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Strings", "Variables", "Input/Output"],
+      "tools": ["Python"],
+      "hands_on_practice": "Write an interactive script that calculates the user's age in days.",
+      "assignment": "Submit the Mad Libs project.",
+      "business_application": "Basic data processing.",
+      "expected_outcome": "Comfortable with basic Python syntax."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_number": 2,
+      "module_title": "Drawing with Turtles",
+      "module_purpose": "Use the Turtle library to make programming highly visual and explore loops.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Python for Kids.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Importing libraries",
+        "Turtle commands (forward, right, left)",
+        "Changing colors and pen sizes",
+        "Using for loops to draw shapes"
       ],
       "lessons": [
         {
-          "lesson_number": "2.1",
-          "lesson_title": "Python for Kids Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Meet the Turtle",
+          "what_is_taught": "Import turtle, basic movement.",
+          "why_it_matters": "Introduces libraries and visual output.",
+          "what_learner_does": "Draws a simple square and triangle.",
+          "expected_outcome": "Basic geometric drawings."
         },
         {
-          "lesson_number": "2.2",
-          "lesson_title": "Python for Kids Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Colorful Code",
+          "what_is_taught": "Colors, pencolor, fillcolor.",
+          "why_it_matters": "Adds creativity to code.",
+          "what_learner_does": "Draws a colorful house.",
+          "expected_outcome": "A multi-colored digital drawing."
         },
         {
-          "lesson_number": "2.3",
-          "lesson_title": "Python for Kids Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Looping Shapes",
+          "what_is_taught": "For loops.",
+          "why_it_matters": "Saves time typing repetitive commands.",
+          "what_learner_does": "Uses loops to draw complex stars and circles.",
+          "expected_outcome": "Efficiently coded geometric art."
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "The Spirograph Project",
+          "what_is_taught": "Nested loops and slight angle changes.",
+          "why_it_matters": "Shows the power of mathematical coding.",
+          "what_learner_does": "Generates a beautiful, complex spirograph pattern.",
+          "expected_outcome": "Advanced digital art piece."
         }
       ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Libraries", "Coordinates", "For Loops", "Angles"],
+      "tools": ["Python (Turtle)"],
+      "hands_on_practice": "Design a custom piece of Turtle art.",
+      "assignment": "Submit the Turtle Spirograph code.",
+      "business_application": "Graphics programming basics.",
+      "expected_outcome": "Ability to use libraries and loops for visual output."
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_number": 3,
+      "module_title": "Game Logic and Functions",
+      "module_purpose": "Learn conditionals and functions to build interactive games.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Python for Kids.",
-        "Troubleshoot common failure points and optimize output quality."
+        "If/Else statements",
+        "While loops",
+        "Defining custom functions",
+        "The random module"
       ],
       "lessons": [
         {
-          "lesson_number": "3.1",
-          "lesson_title": "Python for Kids Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Making Decisions",
+          "what_is_taught": "If, elif, else.",
+          "why_it_matters": "Programs need to make choices based on data.",
+          "what_learner_does": "Builds a password checker.",
+          "expected_outcome": "A script with conditional logic."
         },
         {
-          "lesson_number": "3.2",
-          "lesson_title": "Python for Kids Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "The Number Guessing Game",
+          "what_is_taught": "While loops and random.randint().",
+          "why_it_matters": "Introduces game loops and unpredictability.",
+          "what_learner_does": "Codes a game where the user guesses a secret number.",
+          "expected_outcome": "A fully functional text game."
         },
         {
-          "lesson_number": "3.3",
-          "lesson_title": "Python for Kids Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Creating Your Own Commands",
+          "what_is_taught": "Defining functions (def).",
+          "why_it_matters": "Organizes code and makes it reusable.",
+          "what_learner_does": "Builds a trivia quiz using functions for each question.",
+          "expected_outcome": "Modular, organized code."
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "Final Game Project",
+          "what_is_taught": "Combining all concepts.",
+          "why_it_matters": "Proves mastery of the material.",
+          "what_learner_does": "Builds a custom text-adventure or advanced Turtle game.",
+          "expected_outcome": "A complete, original Python project."
         }
       ],
-      "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
-    },
-    {
-      "module_number": "Module 04",
-      "module_title": "Phase 4: Advanced Scenarios, Security & Performance Optimization",
-      "module_purpose": "Overcome edge cases, benchmark KPIs, and audit production deliverables.",
-      "what_you_will_learn": [
-        "Master stage 4 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Python for Kids.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
-      "lessons": [
-        {
-          "lesson_number": "4.1",
-          "lesson_title": "Python for Kids Practical Workshop 4.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.2",
-          "lesson_title": "Python for Kids Practical Workshop 4.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.3",
-          "lesson_title": "Python for Kids Practical Workshop 4.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
-      ],
-      "key_concepts": [
-        "Workflow step 4",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 4 commercial brief.",
-      "assignment": "Deliverable 4: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Conditionals", "While Loops", "Functions", "Randomness"],
+      "tools": ["Python"],
+      "hands_on_practice": "Build the final Python project.",
+      "assignment": "Submit the final project code.",
+      "business_application": "Application logic and modular coding.",
+      "expected_outcome": "Ability to build complex scripts using logic and functions."
     }
   ]
 }

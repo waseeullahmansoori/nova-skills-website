@@ -2,462 +2,224 @@
   "course_id": "microsoft-excel",
   "course_name": "Microsoft Excel",
   "academy": "Office Productivity Academy",
-  "academy_id": "office",
+  "academy_id": "office-productivity-academy",
   "course_type": "REPOSITION",
-  "course_role": "Core Skill",
-  "level": "BEGINNER",
-  "duration": "1-2 Months",
-  "learning_hours": 60,
-  "future_review_status": "STABLE",
+  "course_role": "Data Analyst",
+  "level": "Intermediate",
+  "duration": "2 Months",
+  "learning_hours": "80 hrs",
+  "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": [
-      "Aspiring MIS Executive seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in None should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+    "best_for": ["Data Analysts", "Financial Analysts", "Operations Professionals"],
+    "not_for": ["Complete computer novices"],
+    "who_should_take_foundation_first": "Those who have never used a spreadsheet before"
   },
   "prerequisites": {
-    "required": "None",
-    "recommended": "Familiarity with modern web browsers and professional digital tools",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic understanding of spreadsheets (rows, columns, simple math)",
+    "recommended": "Experience with basic data entry",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot, Notion (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "PC or Mac with at least 4GB RAM",
+      "software_accounts": "Microsoft Excel (Microsoft 365 preferred)"
+    },
+    "not_required": "VBA programming knowledge"
   },
   "overview": {
-    "positioning": "High-value data modeling course.",
-    "short_description": "Master VLOOKUP, XLOOKUP, Pivot Tables, Power Query, and dynamic dashboard creation.",
+    "positioning": "Elevate your data skills from basic entry to advanced analysis and dashboarding.",
+    "short_description": "Master advanced formulas, Power Query, Power Pivot, and dashboard creation in Microsoft Excel.",
     "key_facts": {
-      "level": "BEGINNER",
-      "duration": "1-2 Months",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "60 Hours",
-      "project_count": "PORTFOLIO",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-TRANSFORMING",
-      "career_focus": "MIS Executive, Data Analyst, Financial Analyst"
+      "level": "Intermediate",
+      "duration": "2 Months",
+      "format": "Online",
+      "estimated_learning_hours": "80 hrs",
+      "project_count": 4,
+      "capstone": "Yes",
+      "ai_integration": "No",
+      "career_focus": "Data Analyst"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Microsoft Excel projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Write complex formulas including VLOOKUP, INDEX-MATCH, and SUMIFS",
+      "Clean and transform data automatically using Power Query",
+      "Analyze massive datasets using Power Pivot and Data Models",
+      "Build interactive, professional business dashboards"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Microsoft Excel is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI tools have automated routine syntax and repetitive tasks, shifting the professional premium toward systems architecture, strategic context, and quality assurance.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Data-driven decision making is now expected at all levels of business.",
+    "ai_impact": "While AI can help, core understanding of data structures in Excel remains essential.",
+    "business_demand": "High demand for professionals who can quickly analyze and visualize data.",
+    "career_opportunity": "Crucial skill for analysts, managers, and finance professionals."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "MASTER: Advanced Excel formulas and logical functions",
+    "AUTOMATE: Data cleaning processes with Power Query",
+    "MODEL: Relational data using Power Pivot",
+    "VISUALIZE: Business metrics through interactive dashboards"
   ],
   "learning_journey": {
     "stages": [
-      {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
-      },
-      {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
-      },
-      {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      }
+      { "stage": "Formulas", "focus": "Mastering data manipulation functions" },
+      { "stage": "Analysis", "focus": "Pivot tables and data validation" },
+      { "stage": "Power Tools", "focus": "Power Query and Power Pivot" },
+      { "stage": "Dashboarding", "focus": "Bringing it all together visually" }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
-      {
-        "tool": "Microsoft Excel (with Python & Power Query)",
-        "purpose": "Primary industry standard software for Microsoft Excel execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Power BI",
-        "purpose": "Primary industry standard software for Microsoft Excel execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Microsoft 365 Copilot",
-        "purpose": "Primary industry standard software for Microsoft Excel execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Notion",
-        "purpose": "Primary industry standard software for Microsoft Excel execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Google Workspace",
-        "purpose": "Primary industry standard software for Microsoft Excel execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      }
+      { "tool": "Microsoft Excel", "purpose": "Data analysis and reporting", "what_student_learns": "Formulas, Pivot Tables, Charts", "what_student_builds": "Dashboards" },
+      { "tool": "Power Query", "purpose": "Data transformation", "what_student_learns": "Automated data cleaning", "what_student_builds": "Data pipelines" },
+      { "tool": "Power Pivot", "purpose": "Data modeling", "what_student_learns": "DAX basics and relational models", "what_student_builds": "Complex data models" }
     ],
-    "supporting_tools": [
-      {
-        "tool": "ClickUp",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Slack",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tally with GST",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tableau",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Microsoft Fabric",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Notion AI Database Automations",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Make.com for Office Workflows",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Standalone basic MS Word formatting without Copilot",
-      "Manual copy-paste Excel data consolidation"
-    ]
+    "supporting_tools": [],
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Microsoft Excel in 2026/27:",
+    "overview": "Data Analysis Workflow in Excel",
     "stages": [
-      {
-        "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
-      },
-      {
-        "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
-      },
-      {
-        "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
-      },
-      {
-        "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
-      }
+      { "step": 1, "name": "Import", "desc": "Connecting to data sources with Power Query" },
+      { "step": 2, "name": "Clean", "desc": "Transforming data types and handling errors" },
+      { "step": 3, "name": "Model", "desc": "Building relationships in Power Pivot" },
+      { "step": 4, "name": "Visualize", "desc": "Creating Pivot Charts and Dashboards" }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft Fabric",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Finance & Sales",
+      "business_problem": "Manual monthly reporting takes too long",
+      "approach": "Automate data fetch with Power Query and report with Pivot Tables",
+      "toolset": "Excel, Power Query",
+      "output": "Automated Monthly Sales Dashboard"
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-TRANSFORMING",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "Traditional",
+    "ai_can_assist_with": "Formula generation via external tools",
+    "ai_can_automate": "None natively without Copilot",
+    "ai_cannot_replace": "Understanding data context and business logic",
+    "human_expertise_required": "High",
+    "validation_protocol": "Checking formula results against known data",
+    "responsible_use": "N/A"
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Never hardcode values in formulas; use references",
+    "Use Excel Tables for dynamic ranges",
+    "Document complex Power Query steps"
   ],
   "common_mistakes": [
-    {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
-    }
+    { "mistake": "Using VLOOKUP for everything", "why_it_happens": "Lack of awareness of newer/better functions", "professional_approach": "Use INDEX-MATCH or XLOOKUP for flexibility and performance" }
   ],
   "career_paths": {
-    "entry_roles": "MIS Executive",
-    "mid_roles": " Data Analyst",
-    "specialist_roles": "Business Operations Associate",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["Data Entry Specialist", "Reporting Assistant"],
+    "mid_roles": ["Data Analyst", "Financial Analyst"],
+    "specialist_roles": ["BI Developer (Excel Focus)"],
+    "freelance_roles": ["Excel Consultant", "Dashboard Designer"],
+    "employer_expectations": "Ability to handle large datasets without crashing Excel",
+    "what_student_demonstrates": "A portfolio of automated reports and dashboards"
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end Microsoft Excel project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["Data Cleaning", "Dashboard Creation", "Process Automation"],
+    "client_workflow": "Receive raw data -> Clean -> Build Report -> Handover",
+    "portfolio_requirements": "Sample dashboards (anonymized data)"
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "Dynamic Sales Dashboard",
+    "Automated Financial Report",
+    "Inventory Management Tracker"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "Comprehensive Interactive Business Dashboard powered by Power Query and Data Models"
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Practical problem-solving tests",
+    "criteria": "Formula accuracy, dashboard interactivity, and best practices"
   },
   "certification": {
-    "title": "Certified Specialist in Microsoft Excel",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Certified Excel Specialist",
+    "criteria": "Pass all practical assignments",
+    "verification": "Digital Certificate"
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Advanced VBA Programming, Python integration",
   "next_learning_path": {
-    "recommended_next": "Advance to biz-productivity to specialize further.",
-    "related_programs": "For broader career mastery, compare with biz-productivity."
+    "recommended_next": "Microsoft Power BI",
+    "related_programs": "Data Science with Python"
   },
   "faq": [
-    {
-      "question": "What prior experience do I need for Microsoft Excel?",
-      "answer": "You should satisfy the prerequisite: None before beginning this program."
-    },
-    {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
-    },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
-    }
+    { "question": "Do I need to know VBA?", "answer": "No, we focus on modern tools like Power Query which replace much of the need for VBA." },
+    { "question": "Is this for Mac or PC?", "answer": "The course is taught on PC. Mac users can follow along but Power Pivot is not available on Mac." },
+    { "question": "Will we cover XLOOKUP?", "answer": "Yes, we cover VLOOKUP, INDEX-MATCH, and the modern XLOOKUP." }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
-      "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Microsoft Excel.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
+      "module_number": 1,
+      "module_title": "Advanced Formulas & Functions",
+      "module_purpose": "Master complex data manipulation",
+      "what_you_will_learn": ["Lookup Functions", "Logical Functions", "Text Functions"],
       "lessons": [
-        {
-          "lesson_number": "1.1",
-          "lesson_title": "Microsoft Excel Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "1.2",
-          "lesson_title": "Microsoft Excel Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "1.3",
-          "lesson_title": "Microsoft Excel Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
+        { "lesson_number": 1, "lesson_title": "Mastering Lookups", "what_is_taught": "VLOOKUP, HLOOKUP, INDEX-MATCH, XLOOKUP", "why_it_matters": "Essential for combining data", "what_learner_does": "Builds a dynamic pricing engine", "expected_outcome": "Can retrieve data across tables reliably" },
+        { "lesson_number": 2, "lesson_title": "Logical and Math Functions", "what_is_taught": "IF, IFS, SUMIFS, COUNTIFS", "why_it_matters": "Allows conditional analysis", "what_learner_does": "Creates a conditional bonus calculator", "expected_outcome": "Can perform complex conditional calculations" },
+        { "lesson_number": 3, "lesson_title": "Text & Date Functions", "what_is_taught": "LEFT, RIGHT, MID, TEXT, EOMONTH", "why_it_matters": "Crucial for data cleaning before analysis", "what_learner_does": "Cleans a raw employee roster", "expected_outcome": "Can manipulate string and date data" },
+        { "lesson_number": 4, "lesson_title": "Data Validation & Conditional Formatting", "what_is_taught": "Drop-downs, data rules, and visual formatting", "why_it_matters": "Prevents errors and highlights trends", "what_learner_does": "Builds an error-proof data entry form", "expected_outcome": "Can create robust data entry templates" }
       ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI",
-        "Microsoft 365 Copilot"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Dynamic arrays", "Absolute vs Relative references"],
+      "tools": ["Microsoft Excel"],
+      "hands_on_practice": "Formula drills and practical scenarios",
+      "assignment": "Dynamic Pricing and Commission Model",
+      "business_application": "Automating HR and Sales calculations",
+      "expected_outcome": "Advanced Formula Proficiency"
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
-      "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Microsoft Excel.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
+      "module_number": 2,
+      "module_title": "Data Analysis with Pivot Tables",
+      "module_purpose": "Summarize and analyze large datasets quickly",
+      "what_you_will_learn": ["Pivot Tables", "Pivot Charts", "Slicers"],
       "lessons": [
-        {
-          "lesson_number": "2.1",
-          "lesson_title": "Microsoft Excel Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "2.2",
-          "lesson_title": "Microsoft Excel Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "2.3",
-          "lesson_title": "Microsoft Excel Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
+        { "lesson_number": 1, "lesson_title": "Pivot Table Fundamentals", "what_is_taught": "Creating and structuring Pivot Tables", "why_it_matters": "Fastest way to summarize data", "what_learner_does": "Analyzes a 10,000-row sales dataset", "expected_outcome": "Can build basic Pivot Tables" },
+        { "lesson_number": 2, "lesson_title": "Advanced Pivot Features", "what_is_taught": "Calculated fields, grouping, and custom sorting", "why_it_matters": "Extracts deeper insights", "what_learner_does": "Creates custom metrics within a Pivot Table", "expected_outcome": "Advanced Pivot Table manipulation" },
+        { "lesson_number": 3, "lesson_title": "Visualizing with Pivot Charts", "what_is_taught": "Linking charts to Pivot data", "why_it_matters": "Makes data digestible", "what_learner_does": "Builds dynamic charts", "expected_outcome": "Can create interactive visualizations" },
+        { "lesson_number": 4, "lesson_title": "Interactive Controls", "what_is_taught": "Slicers and Timelines", "why_it_matters": "Enables user interaction", "what_learner_does": "Connects slicers to multiple Pivot Tables", "expected_outcome": "Can build interactive report interfaces" }
       ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI",
-        "Microsoft 365 Copilot"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Data summarization", "Interactivity"],
+      "tools": ["Microsoft Excel"],
+      "hands_on_practice": "Analyzing various datasets",
+      "assignment": "Interactive Sales Summary Report",
+      "business_application": "Monthly performance reporting",
+      "expected_outcome": "Pivot Table Mastery"
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
-      "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Microsoft Excel.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
+      "module_number": 3,
+      "module_title": "Modern Data Prep with Power Query",
+      "module_purpose": "Automate data cleaning and loading",
+      "what_you_will_learn": ["Connecting to data", "Transformations", "Merging queries"],
       "lessons": [
-        {
-          "lesson_number": "3.1",
-          "lesson_title": "Microsoft Excel Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "3.2",
-          "lesson_title": "Microsoft Excel Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "3.3",
-          "lesson_title": "Microsoft Excel Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
+        { "lesson_number": 1, "lesson_title": "Introduction to Power Query", "what_is_taught": "The Power Query interface and basic imports", "why_it_matters": "Replaces manual copy-pasting", "what_learner_does": "Imports data from CSV and Web sources", "expected_outcome": "Can connect to external data" },
+        { "lesson_number": 2, "lesson_title": "Data Transformation Techniques", "what_is_taught": "Pivoting, unpivoting, splitting columns, handling nulls", "why_it_matters": "Essential for reshaping messy data", "what_learner_does": "Cleans a poorly formatted financial report", "expected_outcome": "Can clean and reshape data" },
+        { "lesson_number": 3, "lesson_title": "Merging and Appending Data", "what_is_taught": "Combining multiple tables/files", "why_it_matters": "Consolidates data for analysis", "what_learner_does": "Combines 12 months of sales files automatically", "expected_outcome": "Automated data consolidation" },
+        { "lesson_number": 4, "lesson_title": "Power Query Best Practices", "what_is_taught": "Query optimization and folder imports", "why_it_matters": "Ensures robust automated processes", "what_learner_does": "Sets up a dynamic folder import system", "expected_outcome": "Robust automated data pipelines" }
       ],
-      "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
+      "key_concepts": ["ETL (Extract, Transform, Load)", "M Code basics"],
+      "tools": ["Power Query"],
+      "hands_on_practice": "Cleaning messy real-world datasets",
+      "assignment": "Automated Data Cleaning Pipeline",
+      "business_application": "Automating monthly reporting prep",
+      "expected_outcome": "Proficiency in Power Query"
+    },
+    {
+      "module_number": 4,
+      "module_title": "Data Modeling & Dashboards",
+      "module_purpose": "Build professional, interactive business dashboards",
+      "what_you_will_learn": ["Power Pivot", "Data Models", "Dashboard Design"],
+      "lessons": [
+        { "lesson_number": 1, "lesson_title": "Introduction to Data Models & Power Pivot", "what_is_taught": "Relational databases in Excel", "why_it_matters": "Bypasses the 1-million row limit and VLOOKUP constraints", "what_learner_does": "Builds a relationship between Sales and Products tables", "expected_outcome": "Can build a basic Data Model" },
+        { "lesson_number": 2, "lesson_title": "Introduction to DAX", "what_is_taught": "Basic DAX measures (CALCULATE, RELATED)", "why_it_matters": "More powerful than standard Excel formulas", "what_learner_does": "Creates custom DAX measures for profit margin", "expected_outcome": "Basic understanding of DAX" },
+        { "lesson_number": 3, "lesson_title": "Dashboard Design Principles", "what_is_taught": "Layout, color theory, and UX for dashboards", "why_it_matters": "Ensures dashboards are usable and professional", "what_learner_does": "Wireframes a dashboard layout", "expected_outcome": "Understanding of dashboard UX" },
+        { "lesson_number": 4, "lesson_title": "Building the Final Dashboard", "what_is_taught": "Integrating Power Query, Data Models, and Pivot Charts", "why_it_matters": "The culmination of all Excel skills", "what_learner_does": "Builds the final capstone dashboard", "expected_outcome": "Professional Dashboard Creation" }
       ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI",
-        "Microsoft 365 Copilot"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Relational Data", "DAX", "Visual Design"],
+      "tools": ["Power Pivot", "Excel"],
+      "hands_on_practice": "Building the final capstone project",
+      "assignment": "Executive Business Dashboard",
+      "business_application": "Executive reporting and KPI tracking",
+      "expected_outcome": "Advanced Excel Dashboarding Skills"
     }
   ]
 }

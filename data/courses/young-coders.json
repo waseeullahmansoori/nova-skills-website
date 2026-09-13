@@ -2,534 +2,426 @@
   "course_id": "young-coders",
   "course_name": "Young Coders Program",
   "academy": "Kids Tech Academy",
-  "academy_id": "kids",
+  "academy_id": "kids-tech-academy",
   "course_type": "PROFESSIONAL",
-  "course_role": "Professional Skill",
-  "level": "BEGINNER",
-  "duration": "3 Months",
+  "course_role": "Junior Programmer",
+  "level": "Beginner",
+  "duration": "4 Months",
   "learning_hours": 120,
-  "future_review_status": "STABLE",
+  "future_review_status": "Scheduled for 2027",
   "target_audience": {
-    "best_for": [
-      "Aspiring Junior Coder seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in Age 8-14 should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+    "best_for": ["Kids aged 10-15 who love logical thinking", "Students who want to move beyond block coding", "Aspiring young software developers"],
+    "not_for": ["Very young kids (under 8) who cannot read well", "Adult professionals"],
+    "who_should_take_foundation_first": "Beginners can start here, but completing Scratch Programming first is helpful."
   },
   "prerequisites": {
-    "required": "Age 8-14",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic computer skills, typing ability.",
+    "recommended": "Familiarity with visual block coding (like Scratch).",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau), Blockly (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "A computer (Windows or Mac) with at least 4GB RAM.",
+      "software_accounts": "VS Code, web browser."
+    },
+    "not_required": "Prior text-based coding experience."
   },
   "overview": {
-    "positioning": "Core 3-month coding program for kids.",
-    "short_description": "3-month coding program teaching children Python, logic building, and game creation.",
+    "positioning": "A bridge from visual coding to professional text-based programming for kids.",
+    "short_description": "Level up your coding skills! Transition from Scratch to real-world languages like Python and HTML/CSS using professional tools like VS Code.",
     "key_facts": {
-      "level": "BEGINNER",
-      "duration": "3 Months",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "120 Hours",
-      "project_count": "PORTFOLIO",
-      "capstone": "Recommended Domain Capstone",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Junior Coder"
+      "level": "Beginner",
+      "duration": "4 Months",
+      "format": "Interactive Online/Hybrid",
+      "estimated_learning_hours": 120,
+      "project_count": 12,
+      "capstone": "A Multi-Page Website or Python Text Adventure Game",
+      "ai_integration": "Low - Focuses on core logic",
+      "career_focus": "Software Development Foundations"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Young Coders Program projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Translate block logic into text-based Python code",
+      "Write functional Python scripts with variables and loops",
+      "Design and code a multi-page HTML/CSS website",
+      "Use VS Code just like professional programmers do"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Young Coders Program is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Coding is becoming a universal language.",
+    "ai_impact": "Understanding code helps kids understand how AI systems are built.",
+    "business_demand": "Analytical and computational thinking are highly valued skills.",
+    "career_opportunity": "Sets a strong foundation for high school computer science."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau).",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "TRANSITION: Move confidently from Scratch blocks to Python text.",
+    "PROGRAM: Write Python scripts that solve math puzzles or play games.",
+    "BUILD: Construct web pages using raw HTML and CSS code.",
+    "OPERATE: Navigate and use an industry-standard IDE (VS Code)."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "Logic Review",
+        "focus": "Solidifying concepts in Scratch."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Python Basics",
+        "focus": "Learning Python syntax and structures."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
+        "stage": "Web Development",
+        "focus": "Building websites from scratch using HTML/CSS."
       },
       {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
+        "stage": "Professional Tools",
+        "focus": "Using VS Code to manage projects."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "MIT Scratch",
-        "purpose": "Primary industry standard software for Young Coders Program execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Python",
+        "purpose": "General-purpose text coding",
+        "what_student_learns": "Syntax, data types, loops, and functions",
+        "what_student_builds": "Text adventure games and calculators"
       },
       {
-        "tool": "Python (IDLE / Replit)",
-        "purpose": "Primary industry standard software for Young Coders Program execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "HTML/CSS",
+        "purpose": "Web structure and styling",
+        "what_student_learns": "DOM structure, tags, and stylesheets",
+        "what_student_builds": "A multi-page informational website"
       },
       {
-        "tool": "Roblox Studio (Luau)",
-        "purpose": "Primary industry standard software for Young Coders Program execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "VS Code",
+        "purpose": "Code editing and project management",
+        "what_student_learns": "File management, syntax highlighting, and debugging",
+        "what_student_builds": "Organized code projects"
       },
       {
-        "tool": "Blockly",
-        "purpose": "Primary industry standard software for Young Coders Program execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Scratch",
+        "purpose": "Algorithm visualization",
+        "what_student_learns": "Complex logic before translating to text",
+        "what_student_builds": "Prototype logic flows"
       }
     ],
-    "supporting_tools": [
-      {
-        "tool": "Canva for Kids",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tinkercad",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "MakeCode",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Child-safe AI Exploratories",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Teachable Machine",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Micro:bit Simulators",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Complex adult command-line tools with no visual feedback",
-      "Passive video watching tutorials"
-    ]
+    "supporting_tools": [],
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Young Coders Program in 2026/27:",
+    "overview": "The software development lifecycle adapted for young minds.",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "Design",
+        "desc": "Planning what the code should do."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Write",
+        "desc": "Typing the code in VS Code."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
+        "name": "Run",
+        "desc": "Executing the program to see if it works."
       },
       {
         "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Debug",
+        "desc": "Fixing the spelling mistakes and logic errors."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau)",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "MIT Scratch, Python (IDLE / Replit), Child-safe AI Exploratories",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Technology",
+      "business_problem": "Building functional software",
+      "approach": "Writing clean, understandable code",
+      "toolset": "Python, VS Code",
+      "output": "Console applications"
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "Not Central",
+    "ai_can_assist_with": "Explaining complex error messages in VS Code.",
+    "ai_can_automate": "N/A",
+    "ai_cannot_replace": "The student's fundamental understanding of logic.",
+    "human_expertise_required": "Instructors guide students through syntax errors.",
+    "validation_protocol": "N/A",
+    "responsible_use": "Encouraging typing code manually rather than generating it."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Always use descriptive variable names (e.g., 'player_score' instead of 'x').",
+    "Indent your Python code correctly.",
+    "Save files with the correct extensions (.py, .html, .css).",
+    "Read the error messages carefully; they usually tell you exactly what went wrong."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
+      "mistake": "Forgetting colons in Python.",
+      "why_it_happens": "Transitioning from blocks where syntax isn't an issue.",
+      "professional_approach": "Pay close attention to syntax rules and let VS Code formatting guide you."
     },
     {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Mixing up HTML tags and CSS properties.",
+      "why_it_happens": "Learning two languages at once.",
+      "professional_approach": "Keep HTML (structure) and CSS (style) in separate files to avoid confusion."
     }
   ],
   "career_paths": {
-    "entry_roles": "Junior Coder",
-    "mid_roles": "Specialist Lead",
-    "specialist_roles": "Game Creator",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["Junior Developer (Student)"],
+    "mid_roles": ["High School CS Student"],
+    "specialist_roles": ["Software Engineer"],
+    "freelance_roles": ["N/A"],
+    "employer_expectations": "Strong grasp of fundamental programming concepts.",
+    "what_student_demonstrates": "Ability to write text-based code from scratch."
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end Young Coders Program project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["N/A"],
+    "client_workflow": "N/A",
+    "portfolio_requirements": "GitHub repository (optional) or folder of functioning scripts and web pages."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "A Python Rock-Paper-Scissors game",
+    "A Python password generator",
+    "A multi-page website about a favorite topic",
+    "A final customized project combining learned skills"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "A working Python application with user inputs and logic",
+    "A fully styled, multi-page HTML/CSS website"
   ],
   "assessment": {
-    "model": "Practical Module Assignments (40%) + Portfolio Projects (60%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Code reviews and project functionality",
+    "criteria": "Code runs without errors, meets project requirements, uses proper syntax."
   },
   "certification": {
-    "title": "Certified Specialist in Young Coders Program",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Young Coder Professional Certificate",
+    "criteria": "Successfully complete and submit the final Python and Web projects.",
+    "verification": "Digital certificate and badge."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Databases, backend frameworks, object-oriented programming.",
   "next_learning_path": {
-    "recommended_next": "Advance to python-for-kids to specialize further.",
-    "related_programs": "For broader career mastery, compare with scratch-programming, python-for-kids."
+    "recommended_next": "Python for Kids or Web Design for Kids",
+    "related_programs": ["AI for Kids"]
   },
   "faq": [
     {
-      "question": "What prior experience do I need for Young Coders Program?",
-      "answer": "You should satisfy the prerequisite: Age 8-14 before beginning this program."
+      "question": "Is typing required?",
+      "answer": "Yes, this course transitions to text-based coding, so basic typing skills are highly recommended."
     },
     {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
+      "question": "Do we need to install software?",
+      "answer": "Yes, we will guide you through installing Python and VS Code, which are free, professional tools."
     },
     {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "Is this too hard for a 10-year-old?",
+      "answer": "If they have a strong interest in computers and enjoy logical puzzles, they will do great! We break everything down step-by-step."
     }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_number": 1,
+      "module_title": "From Blocks to Text: Introduction to Python",
+      "module_purpose": "Bridge the gap between visual coding and text-based programming.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Young Coders Program.",
-        "Troubleshoot common failure points and optimize output quality."
+        "How Python compares to Scratch",
+        "Using the print() and input() functions",
+        "Understanding variables and data types",
+        "Basic math operations in Python"
       ],
       "lessons": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "Young Coders Program Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Saying Hello to Python",
+          "what_is_taught": "The print function and basic strings.",
+          "why_it_matters": "It's the first step to making the computer talk to you in text.",
+          "what_learner_does": "Writes their first 'Hello World' and prints a custom message.",
+          "expected_outcome": "A script that outputs text to the console."
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "Young Coders Program Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Remembering Things: Variables",
+          "what_is_taught": "Strings, integers, and assigning values.",
+          "why_it_matters": "Variables are the memory of your program.",
+          "what_learner_does": "Creates variables for a character's name, age, and power level.",
+          "expected_outcome": "A script that prints dynamic sentences using variables."
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "Young Coders Program Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Talking Back: User Input",
+          "what_is_taught": "The input() function.",
+          "why_it_matters": "Makes programs interactive.",
+          "what_learner_does": "Builds a 'Mad Libs' style story generator.",
+          "expected_outcome": "An interactive story that changes based on user input."
         },
         {
-          "lesson_number": "1.4",
-          "lesson_title": "Young Coders Program Practical Workshop 1.4: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 4 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 4,
+          "lesson_title": "Computer Math",
+          "what_is_taught": "Basic arithmetic operators (+, -, *, /).",
+          "why_it_matters": "Computers are excellent calculators.",
+          "what_learner_does": "Builds a simple tip calculator.",
+          "expected_outcome": "A functional mathematical script."
         }
       ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Print/Input", "Variables", "Data Types", "Arithmetic"],
+      "tools": ["Python"],
+      "hands_on_practice": "Write a script that asks for user details and performs a calculation.",
+      "assignment": "Submit the Mad Libs generator script.",
+      "business_application": "Basic data input and processing.",
+      "expected_outcome": "Comfortable with basic Python syntax and I/O."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_number": 2,
+      "module_title": "Python Logic: Making Decisions and Looping",
+      "module_purpose": "Teach the program how to make choices and repeat tasks efficiently.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Young Coders Program.",
-        "Troubleshoot common failure points and optimize output quality."
+        "If, elif, and else statements",
+        "Comparison operators",
+        "While loops and For loops",
+        "Building simple text games"
       ],
       "lessons": [
         {
-          "lesson_number": "2.1",
-          "lesson_title": "Young Coders Program Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Making Choices: If/Else",
+          "what_is_taught": "Conditional statements and indentation.",
+          "why_it_matters": "Allows the program to react differently based on conditions.",
+          "what_learner_does": "Creates a password checking program.",
+          "expected_outcome": "A script with basic branching logic."
         },
         {
-          "lesson_number": "2.2",
-          "lesson_title": "Young Coders Program Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "More Choices: Elif and Conditions",
+          "what_is_taught": "Multiple conditions and logical operators (and, or).",
+          "why_it_matters": "Handles complex decision trees.",
+          "what_learner_does": "Builds a grade calculator (A, B, C, etc.).",
+          "expected_outcome": "A script with complex conditional logic."
         },
         {
-          "lesson_number": "2.3",
-          "lesson_title": "Young Coders Program Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Repeating Stuff: While Loops",
+          "what_is_taught": "While loops and avoiding infinite loops.",
+          "why_it_matters": "Keeps a game running until the user quits.",
+          "what_learner_does": "Builds a simple number guessing game.",
+          "expected_outcome": "An interactive loop-based game."
         },
         {
-          "lesson_number": "2.4",
-          "lesson_title": "Young Coders Program Practical Workshop 2.4: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 4 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 4,
+          "lesson_title": "Iterating: For Loops",
+          "what_is_taught": "For loops and the range() function.",
+          "why_it_matters": "Great for counting and repeating a specific number of times.",
+          "what_learner_does": "Creates a countdown timer and a multiplication table generator.",
+          "expected_outcome": "Scripts that use bounded iteration."
         }
       ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Conditionals", "Indentation", "While Loops", "For Loops"],
+      "tools": ["Python"],
+      "hands_on_practice": "Combine loops and conditionals to build a Rock-Paper-Scissors game.",
+      "assignment": "Submit the completed Rock-Paper-Scissors Python script.",
+      "business_application": "Algorithm design and control flow.",
+      "expected_outcome": "Ability to write programs with complex logic and loops."
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_number": 3,
+      "module_title": "Setting Up Shop: VS Code and HTML Basics",
+      "module_purpose": "Introduce professional developer tools and the foundation of web pages.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Young Coders Program.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Navigating VS Code",
+        "Understanding file structures",
+        "Writing standard HTML5",
+        "Structuring a web document"
       ],
       "lessons": [
         {
-          "lesson_number": "3.1",
-          "lesson_title": "Young Coders Program Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Meet VS Code",
+          "what_is_taught": "Installing VS Code, creating folders, and making files.",
+          "why_it_matters": "This is the actual tool professional developers use.",
+          "what_learner_does": "Sets up a project workspace and creates their first .html file.",
+          "expected_outcome": "A working local development environment."
         },
         {
-          "lesson_number": "3.2",
-          "lesson_title": "Young Coders Program Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "The HTML Skeleton",
+          "what_is_taught": "<html>, <head>, <body>, and <title> tags.",
+          "why_it_matters": "Every web page needs this structure to work properly.",
+          "what_learner_does": "Writes a valid HTML5 boilerplate document.",
+          "expected_outcome": "A blank but valid web page."
         },
         {
-          "lesson_number": "3.3",
-          "lesson_title": "Young Coders Program Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Adding Content: Text and Headings",
+          "what_is_taught": "<h1> to <h6>, <p>, and list tags.",
+          "why_it_matters": "Organizes text information clearly.",
+          "what_learner_does": "Builds an informational page about their favorite animal.",
+          "expected_outcome": "A text-heavy, structured web page."
         },
         {
-          "lesson_number": "3.4",
-          "lesson_title": "Young Coders Program Practical Workshop 3.4: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 4 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 4,
+          "lesson_title": "Media and Navigation",
+          "what_is_taught": "<img> and <a> tags.",
+          "why_it_matters": "Connects pages together and adds visual appeal.",
+          "what_learner_does": "Adds photos and links to a second HTML page.",
+          "expected_outcome": "A linked, two-page mini-website."
         }
       ],
-      "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["IDE usage", "HTML tags", "File linking", "Document Structure"],
+      "tools": ["VS Code", "HTML"],
+      "hands_on_practice": "Build a two-page interlinked website with text and images.",
+      "assignment": "Submit the HTML files for the two-page site.",
+      "business_application": "Frontend web architecture.",
+      "expected_outcome": "Comfortable using an IDE and writing raw HTML."
     },
     {
-      "module_number": "Module 04",
-      "module_title": "Phase 4: Advanced Scenarios, Security & Performance Optimization",
-      "module_purpose": "Overcome edge cases, benchmark KPIs, and audit production deliverables.",
+      "module_number": 4,
+      "module_title": "Styling the Web: Introduction to CSS",
+      "module_purpose": "Learn how to make plain HTML websites look professional and colorful.",
       "what_you_will_learn": [
-        "Master stage 4 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Young Coders Program.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Linking CSS to HTML",
+        "CSS syntax and selectors",
+        "Colors, fonts, and borders",
+        "Basic page layout"
       ],
       "lessons": [
         {
-          "lesson_number": "4.1",
-          "lesson_title": "Young Coders Program Practical Workshop 4.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Adding Some Style",
+          "what_is_taught": "Inline, internal, and external CSS.",
+          "why_it_matters": "Separating style from structure makes coding easier.",
+          "what_learner_does": "Creates a style.css file and links it to their HTML.",
+          "expected_outcome": "A successfully linked CSS file."
         },
         {
-          "lesson_number": "4.2",
-          "lesson_title": "Young Coders Program Practical Workshop 4.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Selecting Elements",
+          "what_is_taught": "Element, class, and ID selectors.",
+          "why_it_matters": "Allows you to style specific parts of a page differently.",
+          "what_learner_does": "Styles specific paragraphs and headings using classes.",
+          "expected_outcome": "A page with targeted styling."
         },
         {
-          "lesson_number": "4.3",
-          "lesson_title": "Young Coders Program Practical Workshop 4.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Colors and Typography",
+          "what_is_taught": "Hex codes, RGB, font-family, and text alignment.",
+          "why_it_matters": "Defines the visual theme of the website.",
+          "what_learner_does": "Applies a cohesive color scheme and custom fonts.",
+          "expected_outcome": "A visually appealing web page."
         },
         {
-          "lesson_number": "4.4",
-          "lesson_title": "Young Coders Program Practical Workshop 4.4: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 4 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 4,
+          "lesson_title": "The Box Model Basics",
+          "what_is_taught": "Margin, padding, and borders.",
+          "why_it_matters": "Controls spacing and layout of elements.",
+          "what_learner_does": "Creates styled buttons and spaced-out sections.",
+          "expected_outcome": "A neatly laid out and formatted web page."
         }
       ],
-      "key_concepts": [
-        "Workflow step 4",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 4 commercial brief.",
-      "assignment": "Deliverable 4: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["CSS Syntax", "Selectors", "Typography", "Box Model"],
+      "tools": ["VS Code", "CSS"],
+      "hands_on_practice": "Apply a full CSS stylesheet to the two-page website built in Module 3.",
+      "assignment": "Submit the complete, styled multi-page website project.",
+      "business_application": "Web design and UI styling.",
+      "expected_outcome": "Ability to independently style HTML structures using CSS."
     }
   ]
 }

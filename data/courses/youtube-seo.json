@@ -2,516 +2,300 @@
   "course_id": "youtube-seo",
   "course_name": "YouTube SEO",
   "academy": "Creator Academy",
-  "academy_id": "creator",
+  "academy_id": "creator-academy",
   "course_type": "SPECIALIZATION",
-  "course_role": "Specialization",
-  "level": "BEGINNER+",
-  "duration": "1 Month",
-  "learning_hours": 80,
-  "future_review_status": "FAST-CHANGING",
+  "course_role": "YouTube Growth Specialist",
+  "level": "Intermediate",
+  "duration": "2 Months",
+  "learning_hours": 60,
+  "future_review_status": "Up-to-date",
   "target_audience": {
-    "best_for": [
-      "Aspiring YouTube Channel Manager seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in None should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+    "best_for": ["YouTubers", "Digital Marketers", "Video Editors"],
+    "not_for": ["Blog SEO Specialists", "Beginners with no videos"],
+    "who_should_take_foundation_first": "People who do not know how to upload a video to YouTube."
   },
   "prerequisites": {
-    "required": "None",
-    "recommended": "Familiarity with modern web browsers and professional digital tools",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic understanding of YouTube Studio.",
+    "recommended": "An active YouTube channel with at least 5 videos.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "YouTube Studio, CapCut Desktop, Photoshop, OBS Studio (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "PC/Laptop.",
+      "software_accounts": "TubeBuddy or VidIQ."
+    },
+    "not_required": "Advanced programming or web SEO knowledge."
   },
   "overview": {
-    "positioning": "Consolidate YouTube search across the platform here.",
-    "short_description": "Rank YouTube videos at the top of search results and suggested video recommendations.",
+    "positioning": "Deep dive into the YouTube algorithm and search optimization.",
+    "short_description": "Master YouTube search rankings and recommendation algorithms to drive massive organic traffic to your channel.",
     "key_facts": {
-      "level": "BEGINNER+",
-      "duration": "1 Month",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "PRACTICAL",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-TRANSFORMING",
-      "career_focus": "YouTube Channel Manager, Video SEO Specialist"
+      "level": "Intermediate",
+      "duration": "2 Months",
+      "format": "Analytical / Hands-on",
+      "estimated_learning_hours": 60,
+      "project_count": 3,
+      "capstone": "Audit and re-optimize 5 underperforming videos.",
+      "ai_integration": "Moderate",
+      "career_focus": "YouTube Strategist"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end YouTube SEO projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Perform advanced keyword research for video topics.",
+      "Optimize video metadata (Titles, Descriptions, Tags).",
+      "Analyze CTR and Retention data to boost algorithm placement.",
+      "Implement channel-wide SEO strategies (Playlists, Cards)."
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how YouTube SEO is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI tools have automated routine syntax and repetitive tasks, shifting the professional premium toward systems architecture, strategic context, and quality assurance.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "YouTube is the second largest search engine; search intent drives long-term views.",
+    "ai_impact": "AI tools can suggest tags and titles, but understanding the strategy is critical.",
+    "business_demand": "Brands need their video assets to rank for industry keywords.",
+    "career_opportunity": "Specialized YouTube SEO experts are rare and highly valued."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing YouTube Studio, CapCut Desktop, Photoshop.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "RESEARCH: Find high search volume, low competition keywords.",
+    "OPTIMIZE: Write compelling, SEO-friendly metadata.",
+    "ANALYZE: Interpret YouTube Studio data to hack the algorithm.",
+    "STRATEGIZE: Build playlist structures that increase session time."
   ],
   "learning_journey": {
     "stages": [
-      {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
-      },
-      {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
-      },
-      {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      }
+      { "stage": "Fundamentals", "focus": "Understanding the YouTube Algorithm." },
+      { "stage": "Keyword Research", "focus": "Finding the right topics." },
+      { "stage": "Optimization", "focus": "Applying SEO to videos." }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "YouTube Studio",
-        "purpose": "Primary industry standard software for YouTube SEO execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "CapCut Desktop",
-        "purpose": "Primary industry standard software for YouTube SEO execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Photoshop",
-        "purpose": "Primary industry standard software for YouTube SEO execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "OBS Studio",
-        "purpose": "Primary industry standard software for YouTube SEO execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
         "tool": "TubeBuddy / VidIQ",
-        "purpose": "Primary industry standard software for YouTube SEO execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "purpose": "Keyword research and optimization.",
+        "what_student_learns": "Tag scoring and keyword explorer.",
+        "what_student_builds": "SEO optimized metadata sets."
+      },
+      {
+        "tool": "YouTube Studio Analytics",
+        "purpose": "Data analysis.",
+        "what_student_learns": "Traffic sources and retention graphs.",
+        "what_student_builds": "Data audit reports."
       }
     ],
     "supporting_tools": [
-      {
-        "tool": "ChatGPT / Claude for Scripting",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Descript",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Canva",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Riverside.fm",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
+      { "tool": "Google Trends", "purpose": "Trend validation." }
     ],
-    "emerging_tools": [
-      {
-        "tool": "ThumbnailTest.com for A/B Testing",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "ElevenLabs Multilingual Dubbing",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Opus Clip for AI Repurposing",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Midjourney for Concept Art",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Generic keyword stuffing tags in YouTube descriptions",
-      "Outdated 2018 clickbait tactics that get penalized"
-    ]
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver YouTube SEO in 2026/27:",
+    "overview": "The YouTube SEO workflow.",
     "stages": [
-      {
-        "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
-      },
-      {
-        "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
-      },
-      {
-        "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
-      },
-      {
-        "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
-      }
+      { "step": 1, "name": "Keyword Discovery", "desc": "Finding target search terms." },
+      { "step": 2, "name": "Content Alignment", "desc": "Ensuring the video matches search intent." },
+      { "step": 3, "name": "Metadata Optimization", "desc": "Drafting titles, tags, and descriptions." },
+      { "step": 4, "name": "Performance Review", "desc": "Analyzing post-publish metrics." }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "YouTube Studio, CapCut Desktop, Photoshop",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "YouTube Studio, CapCut Desktop, ThumbnailTest.com for A/B Testing",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "SaaS",
+      "business_problem": "Tutorials not being found by users.",
+      "approach": "Optimize tutorial videos for specific 'How to' queries.",
+      "toolset": "YouTube Studio, TubeBuddy",
+      "output": "Increased organic views on help content."
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-TRANSFORMING",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "AI-Enhanced Analyst",
+    "ai_can_assist_with": "Drafting SEO descriptions.",
+    "ai_can_automate": "Keyword list generation.",
+    "ai_cannot_replace": "Understanding viewer search intent.",
+    "human_expertise_required": "Selecting the most relevant, non-spammy keywords.",
+    "validation_protocol": "Check AI tags against actual TubeBuddy scores.",
+    "responsible_use": "Do not use misleading tags (keyword stuffing)."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Put the target keyword near the beginning of the title.",
+    "Write human-readable descriptions that naturally include keywords.",
+    "Focus on increasing session watch time via playlists."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Using irrelevant viral tags.",
+      "why_it_happens": "Trying to trick the algorithm.",
+      "professional_approach": "Only use highly relevant tags to ensure good retention."
     }
   ],
   "career_paths": {
-    "entry_roles": "YouTube Channel Manager",
-    "mid_roles": " Video SEO Specialist",
-    "specialist_roles": "Growth Consultant",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["YouTube SEO Assistant"],
+    "mid_roles": ["YouTube Strategist"],
+    "specialist_roles": ["Video SEO Consultant"],
+    "freelance_roles": ["Freelance Channel Optimizer"],
+    "employer_expectations": "Ability to rank videos on the first page of YouTube search.",
+    "what_student_demonstrates": "A portfolio of ranked videos with increased traffic."
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end YouTube SEO project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["Channel SEO Audit", "Video Metadata Overhaul"],
+    "client_workflow": "Analyze current search traffic -> Propose keyword targets -> Update metadata.",
+    "portfolio_requirements": "Screenshots showing improved search rankings."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "A comprehensive keyword research matrix.",
+    "Re-optimized metadata for 5 existing videos."
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "A YouTube SEO Strategy Document."
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Practical optimization tasks.",
+    "criteria": "Keyword relevance, search volume targeting, and metadata completeness."
   },
   "certification": {
-    "title": "Certified Specialist in YouTube SEO",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Certified YouTube SEO Specialist",
+    "criteria": "Completion of all modules and the metadata optimization project.",
+    "verification": "Review of the SEO strategy document."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Video editing techniques, camera setups.",
   "next_learning_path": {
-    "recommended_next": "Advance to youtube-mastery to specialize further.",
-    "related_programs": "For broader career mastery, compare with digital-marketing youtube-marketing."
+    "recommended_next": "Thumbnail Design",
+    "related_programs": ["YouTube Mastery"]
   },
   "faq": [
     {
-      "question": "What prior experience do I need for YouTube SEO?",
-      "answer": "You should satisfy the prerequisite: None before beginning this program."
+      "question": "Do tags still matter?",
+      "answer": "While titles and thumbnails are primary, tags still help the algorithm categorize content, especially for new channels."
     },
     {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
+      "question": "Which tool is better, TubeBuddy or VidIQ?",
+      "answer": "Both are excellent. We teach the principles that apply to both."
     },
     {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "How long does it take for SEO to work on YouTube?",
+      "answer": "Search traffic can build slowly over weeks, unlike the recommendation feed which acts quickly."
     }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_number": 1,
+      "module_title": "The YouTube Algorithm & Search Intent",
+      "module_purpose": "Understand how YouTube decides which videos to rank and recommend.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional YouTube SEO.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Search vs. Discovery (Suggested/Browse)",
+        "The role of CTR and AVD (Average View Duration)",
+        "Understanding user search intent"
       ],
       "lessons": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "YouTube SEO Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Decoding the Algorithm",
+          "what_is_taught": "How the recommendation system works.",
+          "why_it_matters": "SEO is only half the battle; human psychology is the rest.",
+          "what_learner_does": "Analyzes algorithmic traffic sources.",
+          "expected_outcome": "Understanding of traffic types."
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "YouTube SEO Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Search Intent on YouTube",
+          "what_is_taught": "Informational vs. Navigational vs. Transactional queries.",
+          "why_it_matters": "Matching intent leads to higher retention.",
+          "what_learner_does": "Categorizes search queries.",
+          "expected_outcome": "Intent mapping skills."
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "YouTube SEO Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "CTR & Watch Time Optimization",
+          "what_is_taught": "Why rankings drop if a video doesn't perform.",
+          "why_it_matters": "SEO gets the impression, CTR/Retention keeps the rank.",
+          "what_learner_does": "Audits current channel metrics.",
+          "expected_outcome": "Baseline performance report."
         }
       ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "YouTube Studio",
-        "CapCut Desktop",
-        "Photoshop"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Search Intent", "Click-Through Rate", "Average View Duration"],
+      "tools": ["YouTube Analytics"],
+      "hands_on_practice": "Analyzing a channel's primary traffic sources.",
+      "assignment": "Submit an audit of traffic sources.",
+      "business_application": "Aligning video content with corporate marketing goals.",
+      "expected_outcome": "A solid foundational knowledge of YouTube mechanics."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_number": 2,
+      "module_title": "Advanced Keyword Research",
+      "module_purpose": "Find the right keywords to target for maximum views.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional YouTube SEO.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Using TubeBuddy/VidIQ keyword explorer",
+        "Finding long-tail keywords",
+        "Analyzing search volume vs. competition"
       ],
       "lessons": [
         {
-          "lesson_number": "2.1",
-          "lesson_title": "YouTube SEO Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Mastering the Keyword Explorer",
+          "what_is_taught": "How to use SEO tools to score keywords.",
+          "why_it_matters": "Avoid targeting terms that are too competitive.",
+          "what_learner_does": "Conducts a keyword search session.",
+          "expected_outcome": "A list of target keywords."
         },
         {
-          "lesson_number": "2.2",
-          "lesson_title": "YouTube SEO Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "The Power of Long-Tail Keywords",
+          "what_is_taught": "Targeting specific, niche phrases.",
+          "why_it_matters": "Easier to rank for and brings highly targeted traffic.",
+          "what_learner_does": "Identifies 10 long-tail keywords.",
+          "expected_outcome": "A long-tail keyword matrix."
         },
         {
-          "lesson_number": "2.3",
-          "lesson_title": "YouTube SEO Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Trend Jacking & Google Trends",
+          "what_is_taught": "Capitalizing on breakout topics.",
+          "why_it_matters": "Drives massive short-term traffic spikes.",
+          "what_learner_does": "Uses Google Trends to find an emerging topic.",
+          "expected_outcome": "A trend-based video concept."
         }
       ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "YouTube Studio",
-        "CapCut Desktop",
-        "Photoshop"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Keyword Scoring", "Long-Tail Keywords", "Trend Jacking"],
+      "tools": ["TubeBuddy/VidIQ", "Google Trends"],
+      "hands_on_practice": "Building a keyword strategy for upcoming videos.",
+      "assignment": "Submit a keyword research matrix with scores.",
+      "business_application": "Finding product-related search terms.",
+      "expected_outcome": "A validated list of target keywords."
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_number": 3,
+      "module_title": "Metadata Optimization in Practice",
+      "module_purpose": "Apply SEO to your videos effectively.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional YouTube SEO.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Writing perfect titles",
+        "Crafting SEO descriptions",
+        "Strategic tagging and chapter markers"
       ],
       "lessons": [
         {
-          "lesson_number": "3.1",
-          "lesson_title": "YouTube SEO Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Title Optimization",
+          "what_is_taught": "Balancing SEO keywords with human curiosity.",
+          "why_it_matters": "The title must rank but also entice a click.",
+          "what_learner_does": "Rewrites 5 video titles.",
+          "expected_outcome": "Optimized titles."
         },
         {
-          "lesson_number": "3.2",
-          "lesson_title": "YouTube SEO Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "The Perfect Description",
+          "what_is_taught": "Using the first 200 characters effectively, plus timestamps.",
+          "why_it_matters": "Provides context to the algorithm and Google Search.",
+          "what_learner_does": "Drafts 2 comprehensive video descriptions.",
+          "expected_outcome": "SEO-rich descriptions."
         },
         {
-          "lesson_number": "3.3",
-          "lesson_title": "YouTube SEO Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Tags, Chapters, and Closed Captions",
+          "what_is_taught": "Maximizing all metadata fields.",
+          "why_it_matters": "Chapters and CCs improve accessibility and searchability.",
+          "what_learner_does": "Adds chapters and optimized tags to a video.",
+          "expected_outcome": "Fully optimized backend metadata."
         }
       ],
-      "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "YouTube Studio",
-        "CapCut Desktop",
-        "Photoshop"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
-    },
-    {
-      "module_number": "Module 04",
-      "module_title": "Phase 4: Advanced Scenarios, Security & Performance Optimization",
-      "module_purpose": "Overcome edge cases, benchmark KPIs, and audit production deliverables.",
-      "what_you_will_learn": [
-        "Master stage 4 technical requirements and parameters.",
-        "Implement standard operating procedures for professional YouTube SEO.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
-      "lessons": [
-        {
-          "lesson_number": "4.1",
-          "lesson_title": "YouTube SEO Practical Workshop 4.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.2",
-          "lesson_title": "YouTube SEO Practical Workshop 4.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.3",
-          "lesson_title": "YouTube SEO Practical Workshop 4.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
-      ],
-      "key_concepts": [
-        "Workflow step 4",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "YouTube Studio",
-        "CapCut Desktop",
-        "Photoshop"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 4 commercial brief.",
-      "assignment": "Deliverable 4: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Title Formulation", "Description SEO", "Video Chapters"],
+      "tools": ["YouTube Studio", "ChatGPT"],
+      "hands_on_practice": "Re-optimizing older videos on a channel.",
+      "assignment": "Submit before/after metadata for 3 videos.",
+      "business_application": "Updating a corporate YouTube archive for better search visibility.",
+      "expected_outcome": "The ability to perfectly optimize any video upload."
     }
   ]
 }

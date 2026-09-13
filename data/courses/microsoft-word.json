@@ -2,347 +2,181 @@
   "course_id": "microsoft-word",
   "course_name": "Microsoft Word",
   "academy": "Office Productivity Academy",
-  "academy_id": "office",
+  "academy_id": "office-productivity-academy",
   "course_type": "RETIRE",
-  "course_role": "Supporting Skill",
-  "level": "BEGINNER",
-  "duration": "1-2 Weeks",
-  "learning_hours": 40,
-  "future_review_status": "STABLE",
+  "course_role": "Document Specialist",
+  "level": "Beginner",
+  "duration": "1 Month",
+  "learning_hours": "40 hrs",
+  "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": [
-      "Aspiring Word Processor seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in None should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+    "best_for": ["Administrative Staff", "Students", "Writers"],
+    "not_for": ["Graphic Designers looking for page layout tools like InDesign"],
+    "who_should_take_foundation_first": "Absolute computer beginners"
   },
   "prerequisites": {
-    "required": "None",
-    "recommended": "Familiarity with modern web browsers and professional digital tools",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic typing skills",
+    "recommended": "Familiarity with saving and organizing files on a PC",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot, Notion (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "Standard PC or Mac",
+      "software_accounts": "Microsoft Word (desktop version preferred)"
+    },
+    "not_required": "Advanced grammar knowledge"
   },
   "overview": {
-    "positioning": "Retire as standalone paid course; embed into Office Productivity.",
-    "short_description": "Create formal business reports, mail merges, automated tables of contents, and document templates.",
+    "positioning": "Stop wrestling with formatting and start creating professional documents effortlessly.",
+    "short_description": "Learn comprehensive document formatting, styles, templates, and mail merge in Microsoft Word.",
     "key_facts": {
-      "level": "BEGINNER",
-      "duration": "1-2 Weeks",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "40 Hours",
-      "project_count": "EXERCISE",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "HIGH COMMODITIZATION RISK",
-      "career_focus": "Word Processor"
+      "level": "Beginner to Intermediate",
+      "duration": "1 Month",
+      "format": "Online",
+      "estimated_learning_hours": "40 hrs",
+      "project_count": 2,
+      "capstone": "Yes",
+      "ai_integration": "No",
+      "career_focus": "Document Specialist"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Microsoft Word projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Format long reports consistently using Styles",
+      "Create reusable corporate letterheads and templates",
+      "Generate automated mass mailings using Mail Merge",
+      "Insert and format tables, graphics, and smart art professionally"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Microsoft Word is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Despite new tools, Word remains the global standard for formal business documentation.",
+    "ai_impact": "AI can draft text, but human operators are still needed to format it into compliant corporate documents.",
+    "business_demand": "Poorly formatted documents look unprofessional; businesses require staff who can produce polished work.",
+    "career_opportunity": "Essential baseline skill for almost every desk job globally."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "FORMAT: Text and paragraphs cleanly without using spacebar alignment",
+    "STRUCTURE: Long documents using Styles and automated Tables of Contents",
+    "AUTOMATE: Bulk document creation via Mail Merge",
+    "DESIGN: Visually appealing reports using tables and graphics"
   ],
   "learning_journey": {
     "stages": [
-      {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
-      },
-      {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
-      },
-      {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      }
+      { "stage": "Basics", "focus": "Typing, selecting, and basic formatting" },
+      { "stage": "Structure", "focus": "Styles, headers, and layouts" },
+      { "stage": "Automation", "focus": "Mail Merge and Templates" }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
-      {
-        "tool": "Microsoft Excel (with Python & Power Query)",
-        "purpose": "Primary industry standard software for Microsoft Word execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Power BI",
-        "purpose": "Primary industry standard software for Microsoft Word execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Microsoft 365 Copilot",
-        "purpose": "Primary industry standard software for Microsoft Word execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Notion",
-        "purpose": "Primary industry standard software for Microsoft Word execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Google Workspace",
-        "purpose": "Primary industry standard software for Microsoft Word execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      }
+      { "tool": "Microsoft Word", "purpose": "Word processing", "what_student_learns": "Complete application usage", "what_student_builds": "Professional Documents" }
     ],
-    "supporting_tools": [
-      {
-        "tool": "ClickUp",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Slack",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tally with GST",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tableau",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Microsoft Fabric",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Notion AI Database Automations",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Make.com for Office Workflows",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Standalone basic MS Word formatting without Copilot",
-      "Manual copy-paste Excel data consolidation"
-    ]
+    "supporting_tools": [],
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Microsoft Word in 2026/27:",
+    "overview": "Document Production Workflow",
     "stages": [
-      {
-        "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
-      },
-      {
-        "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
-      },
-      {
-        "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
-      },
-      {
-        "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
-      }
+      { "step": 1, "name": "Drafting", "desc": "Entering raw text" },
+      { "step": 2, "name": "Structuring", "desc": "Applying Styles for headings and body" },
+      { "step": 3, "name": "Formatting", "desc": "Adjusting margins, headers, and footers" },
+      { "step": 4, "name": "Reviewing", "desc": "Using Track Changes and finalizing" }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft Fabric",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Legal & Corporate",
+      "business_problem": "Inconsistent formatting across company policies",
+      "approach": "Create and enforce a standardized Word Template using locked Styles",
+      "toolset": "Microsoft Word",
+      "output": "Standardized Corporate Policy Document"
     }
   ],
   "ai_integration": {
-    "role_classification": "HIGH COMMODITIZATION RISK",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "Traditional",
+    "ai_can_assist_with": "Grammar checking (Editor)",
+    "ai_can_automate": "None natively without Copilot add-on",
+    "ai_cannot_replace": "Nuanced layout decisions and template creation",
+    "human_expertise_required": "High",
+    "validation_protocol": "Proofreading",
+    "responsible_use": "N/A"
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Always use Styles for formatting, never manual highlights and sizing",
+    "Use Page Breaks, not hitting Enter repeatedly to start a new page",
+    "Turn on 'Show/Hide ¶' to troubleshoot formatting issues"
   ],
   "common_mistakes": [
-    {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
-    }
+    { "mistake": "Using the spacebar to align text", "why_it_happens": "Not understanding Tabs and Tables", "professional_approach": "Use Tabs, Indents, or invisible Tables for perfect alignment" }
   ],
   "career_paths": {
-    "entry_roles": "Word Processor",
-    "mid_roles": "Specialist Lead",
-    "specialist_roles": "None",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["Data Entry Clerk", "Receptionist"],
+    "mid_roles": ["Administrative Assistant", "Document Specialist"],
+    "specialist_roles": ["Technical Writer"],
+    "freelance_roles": ["Transcriptionist", "Proofreader"],
+    "employer_expectations": "Produce error-free, neatly formatted documents quickly",
+    "what_student_demonstrates": "A polished business report with automated elements"
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end Microsoft Word project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["Document Formatting", "Template Creation", "Copy Typing"],
+    "client_workflow": "Receive Draft -> Apply Styles/Formatting -> Return PDF/Word File",
+    "portfolio_requirements": "Before/After examples of formatted documents"
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "A Branded Corporate Letterhead",
+    "A 10-page Business Report with a Table of Contents"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "A comprehensive styled document and a Mail Merge output file"
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Practical formatting task",
+    "criteria": "Correct use of Styles, tabs, and layout tools (no manual spacing)"
   },
   "certification": {
-    "title": "Certified Specialist in Microsoft Word",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Word Processing Specialist",
+    "criteria": "Pass the practical formatting exam",
+    "verification": "Digital Certificate"
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Advanced VBA scripting in Word",
   "next_learning_path": {
-    "recommended_next": "Advance to microsoft-copilot to specialize further.",
-    "related_programs": "For broader career mastery, compare with office-pro, biz-productivity."
+    "recommended_next": "Microsoft Excel",
+    "related_programs": "Office Productivity Professional"
   },
   "faq": [
-    {
-      "question": "What prior experience do I need for Microsoft Word?",
-      "answer": "You should satisfy the prerequisite: None before beginning this program."
-    },
-    {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
-    },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
-    }
+    { "question": "Does this cover Word for Mac?", "answer": "Yes, while the interface differs slightly, the core concepts like Styles and Mail Merge apply to both." }
   ],
-  "transition_treatment": {
-    "action": "RETIRE",
-    "rationale": "Zero standalone market value as a separate paid certification in 2026/27.",
-    "parent_replacement": "office-pro",
-    "content_migration_plan": "Transfer all specialized practical exercises, checklists, and cheat sheets into the parent program as specialized elective modules."
-  },
   "modules": [
     {
-      "module_number": "Transition Overview",
-      "module_title": "Deprecation & Replacement Blueprint",
-      "module_purpose": "Structured transition of Microsoft Word into office-pro.",
-      "what_you_will_learn": [
-        "Core concepts are preserved and integrated into the primary comprehensive track."
-      ],
+      "module_number": 1,
+      "module_title": "Core Formatting & Styles",
+      "module_purpose": "Learn the professional way to format text",
+      "what_you_will_learn": ["Font Formatting", "Paragraph Alignment", "Styles"],
       "lessons": [
-        {
-          "lesson_title": "Strategic Curriculum Migration",
-          "what_is_taught": "Transition pathway into office-pro.",
-          "why_it_matters": "Prevents fragmented learning and guarantees comprehensive industry outcomes.",
-          "what_learner_does": "Enrolls in the designated parent program to receive deeper training.",
-          "expected_outcome": "Unified, high-value professional mastery."
-        }
+        { "lesson_number": 1, "lesson_title": "Basic Navigation and Text Entry", "what_is_taught": "Interface, selecting text, cut/copy/paste", "why_it_matters": "Fundamental operations", "what_learner_does": "Drafts a simple memo", "expected_outcome": "Basic text entry" },
+        { "lesson_number": 2, "lesson_title": "Paragraph Formatting", "what_is_taught": "Alignment, spacing, indents, and tabs", "why_it_matters": "Ensures clean readability", "what_learner_does": "Formats a block of text professionally", "expected_outcome": "Clean paragraph layouts" },
+        { "lesson_number": 3, "lesson_title": "The Power of Styles", "what_is_taught": "Applying and modifying Heading styles", "why_it_matters": "The secret to fast, consistent formatting", "what_learner_does": "Applies styles to a multi-page document", "expected_outcome": "Style proficiency" }
       ],
-      "key_concepts": [
-        "Curriculum consolidation",
-        "Unified learning journey"
+      "key_concepts": ["Consistency", "Efficiency"],
+      "tools": ["Microsoft Word"],
+      "hands_on_practice": "Formatting raw text using Styles",
+      "assignment": "Formatted Business Memo",
+      "business_application": "Internal corporate communications",
+      "expected_outcome": "Solid grasp of core formatting"
+    },
+    {
+      "module_number": 2,
+      "module_title": "Page Layout & Long Documents",
+      "module_purpose": "Manage complex, multi-page reports",
+      "what_you_will_learn": ["Headers/Footers", "Tables of Contents", "Graphics"],
+      "lessons": [
+        { "lesson_number": 1, "lesson_title": "Page Layout and Margins", "what_is_taught": "Page orientation, margins, and columns", "why_it_matters": "Prepares document for printing or PDF", "what_learner_does": "Creates a 2-column newsletter layout", "expected_outcome": "Page setup skills" },
+        { "lesson_number": 2, "lesson_title": "Headers, Footers, and Pagination", "what_is_taught": "Page numbers and repeating headers", "why_it_matters": "Required for long reports", "what_learner_does": "Adds branded headers and page numbers to a report", "expected_outcome": "Pagination proficiency" },
+        { "lesson_number": 3, "lesson_title": "Tables and Graphics", "what_is_taught": "Inserting and formatting tables and images", "why_it_matters": "Breaks up text and presents data clearly", "what_learner_does": "Builds a visually appealing pricing table", "expected_outcome": "Document design skills" },
+        { "lesson_number": 4, "lesson_title": "Long Document Automation", "what_is_taught": "Automated Table of Contents and Cover Pages", "why_it_matters": "Saves hours of manual updating", "what_learner_does": "Generates a dynamic TOC for a 10-page report", "expected_outcome": "Ability to handle long documents" }
       ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI"
-      ],
-      "hands_on_practice": "Integrated within parent program labs.",
-      "assignment": "Refer to parent program assignment suite.",
-      "business_application": "Integrated commercial workflow.",
-      "expected_outcome": "Seamless educational progression."
+      "key_concepts": ["Structure", "Automation", "Visuals"],
+      "tools": ["Microsoft Word"],
+      "hands_on_practice": "Building a comprehensive report",
+      "assignment": "Final Comprehensive Business Report",
+      "business_application": "Creating formal corporate reports and proposals",
+      "expected_outcome": "Advanced Word Proficiency"
     }
   ]
 }

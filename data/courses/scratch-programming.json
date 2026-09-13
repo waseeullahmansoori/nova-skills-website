@@ -2,452 +2,328 @@
   "course_id": "scratch-programming",
   "course_name": "Scratch Programming",
   "academy": "Kids Tech Academy",
-  "academy_id": "kids",
+  "academy_id": "kids-tech-academy",
   "course_type": "MICRO",
-  "course_role": "Foundation",
-  "level": "BEGINNER",
-  "duration": "1 Month",
-  "learning_hours": 40,
-  "future_review_status": "STABLE",
+  "course_role": "Game Creator",
+  "level": "Beginner",
+  "duration": "2 Months",
+  "learning_hours": 60,
+  "future_review_status": "Scheduled for 2027",
   "target_audience": {
-    "best_for": [
-      "Aspiring Young Game Designer seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in Age 7-12 should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+    "best_for": ["Kids aged 8-12 new to coding", "Creative thinkers who want to make games", "Students who enjoy visual learning"],
+    "not_for": ["Older teens looking for text-based coding", "Advanced programmers"],
+    "who_should_take_foundation_first": "This is a foundational course. No prior experience needed."
   },
   "prerequisites": {
-    "required": "Age 7-12",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic mouse control (click and drag).",
+    "recommended": "Imagination and a desire to tell stories.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau), Blockly (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "Any computer or tablet.",
+      "software_accounts": "A modern web browser and a free Scratch account."
+    },
+    "not_required": "Prior coding experience."
   },
   "overview": {
-    "positioning": "Excellent entry door for young beginners.",
-    "short_description": "Learn visual drag-and-drop block coding, animation, and game creation in MIT Scratch.",
+    "positioning": "The perfect first step into the world of programming using fun, visual blocks.",
+    "short_description": "Dive into coding with Scratch! Snap colorful blocks together to build animations, interactive stories, and your very own playable games.",
     "key_facts": {
-      "level": "BEGINNER",
-      "duration": "1 Month",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "40 Hours",
-      "project_count": "PRACTICAL",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Young Game Designer"
+      "level": "Beginner",
+      "duration": "2 Months",
+      "format": "Interactive Online/Hybrid",
+      "estimated_learning_hours": 60,
+      "project_count": 8,
+      "capstone": "Build a Complete Interactive Game",
+      "ai_integration": "None - Focuses purely on coding logic",
+      "career_focus": "Early Tech Literacy"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Scratch Programming projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Create custom sprites (characters) and backgrounds",
+      "Animate characters using code blocks",
+      "Build interactive stories with dialogue",
+      "Design and program playable mini-games"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Scratch Programming is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Early coding education builds essential problem-solving skills.",
+    "ai_impact": "Understanding logic helps kids grasp how digital systems work.",
+    "business_demand": "Analytical thinking is crucial for the future workforce.",
+    "career_opportunity": "Fosters confidence to pursue STEM subjects later."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau).",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "NAVIGATE: Use the MIT Scratch interface with ease.",
+    "ANIMATE: Bring digital characters to life with movement and costumes.",
+    "PROGRAM: Apply loops, events, and conditionals logically.",
+    "CREATE: Design and publish complete interactive projects."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "Animation Basics",
+        "focus": "Learning the interface and making things move."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Game Logic",
+        "focus": "Adding rules, controls, and scoring to projects."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
+        "stage": "Project Creation",
+        "focus": "Designing a final game from scratch."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "MIT Scratch",
-        "purpose": "Primary industry standard software for Scratch Programming execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Scratch 3.0",
+        "purpose": "Visual block programming",
+        "what_student_learns": "Programming logic and event-driven design",
+        "what_student_builds": "Games and animations"
       },
       {
-        "tool": "Python (IDLE / Replit)",
-        "purpose": "Primary industry standard software for Scratch Programming execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Roblox Studio (Luau)",
-        "purpose": "Primary industry standard software for Scratch Programming execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Blockly",
-        "purpose": "Primary industry standard software for Scratch Programming execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "MIT Scratch Editor",
+        "purpose": "Creating custom assets",
+        "what_student_learns": "Digital drawing and sprite modification",
+        "what_student_builds": "Custom characters and backgrounds"
       }
     ],
-    "supporting_tools": [
-      {
-        "tool": "Canva for Kids",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tinkercad",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "MakeCode",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Child-safe AI Exploratories",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Teachable Machine",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Micro:bit Simulators",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Complex adult command-line tools with no visual feedback",
-      "Passive video watching tutorials"
-    ]
+    "supporting_tools": [],
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Scratch Programming in 2026/27:",
+    "overview": "The basic game design process.",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "Storyboarding",
+        "desc": "Deciding what the game will be about."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Asset Creation",
+        "desc": "Picking or drawing sprites and backgrounds."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
-      },
-      {
-        "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Coding",
+        "desc": "Snapping blocks together to make it work."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau)",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "MIT Scratch, Python (IDLE / Replit), Child-safe AI Exploratories",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Education",
+      "business_problem": "Teaching logical sequences",
+      "approach": "Visual block snapping",
+      "toolset": "Scratch",
+      "output": "Interactive educational content"
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "Not Applicable",
+    "ai_can_assist_with": "N/A",
+    "ai_can_automate": "N/A",
+    "ai_cannot_replace": "The student's creativity.",
+    "human_expertise_required": "Teachers review logic flows.",
+    "validation_protocol": "N/A",
+    "responsible_use": "N/A"
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Always start scripts with an Event block (like the Green Flag).",
+    "Test your code frequently to make sure it does what you expect.",
+    "Use comments on your blocks to remember what they do."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
+      "mistake": "Sprites moving off the screen and getting lost.",
+      "why_it_happens": "Not setting a starting position.",
+      "professional_approach": "Always initialize your sprite's position (go to x, y) right under the Green Flag."
     },
     {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Code executes instantly instead of waiting.",
+      "why_it_happens": "Missing 'wait' blocks in a sequence.",
+      "professional_approach": "Use 'wait 1 seconds' blocks between actions to control timing."
     }
   ],
   "career_paths": {
-    "entry_roles": "Young Game Designer",
-    "mid_roles": "Specialist Lead",
-    "specialist_roles": "None",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["Student Game Designer"],
+    "mid_roles": ["N/A"],
+    "specialist_roles": ["N/A"],
+    "freelance_roles": ["N/A"],
+    "employer_expectations": "Basic understanding of cause and effect.",
+    "what_student_demonstrates": "Completed Scratch projects."
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end Scratch Programming project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["N/A"],
+    "client_workflow": "N/A",
+    "portfolio_requirements": "Scratch studio link."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "An animated digital greeting card",
+    "A chase game (e.g., Cat chasing a Mouse)",
+    "A platformer jumping game",
+    "A final capstone project of the student's choice"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "A public Scratch Studio featuring 4-5 completed projects."
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Project completion",
+    "criteria": "Functionality, creativity, and use of required code blocks (loops, conditionals)."
   },
   "certification": {
-    "title": "Certified Specialist in Scratch Programming",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Scratch Programming Certificate",
+    "criteria": "Complete and share the final game project.",
+    "verification": "Digital certificate."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Text-based coding, advanced math algorithms.",
   "next_learning_path": {
-    "recommended_next": "Advance to python-for-kids to specialize further.",
-    "related_programs": "For broader career mastery, compare with young-coders."
+    "recommended_next": "Young Coders Program or Python for Kids",
+    "related_programs": ["Web Design for Kids"]
   },
   "faq": [
     {
-      "question": "What prior experience do I need for Scratch Programming?",
-      "answer": "You should satisfy the prerequisite: Age 7-12 before beginning this program."
+      "question": "Does my child need to download anything?",
+      "answer": "No, Scratch runs entirely in the web browser."
     },
     {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
+      "question": "Can they share their games with friends?",
+      "answer": "Yes! Scratch allows you to share a link to your project so anyone can play it."
     },
     {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "What if they have never coded before?",
+      "answer": "That's perfectly fine. Scratch is designed specifically for absolute beginners."
     }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_number": 1,
+      "module_title": "Getting Started: Animation and Events",
+      "module_purpose": "Familiarize students with the Scratch interface and basic sequencing.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Scratch Programming.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Navigating the Scratch editor",
+        "Adding and modifying sprites and backdrops",
+        "Using Motion and Looks blocks",
+        "Triggering code with Events"
       ],
       "lessons": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "Scratch Programming Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Welcome to Scratch",
+          "what_is_taught": "The layout: Stage, Sprite panel, and Block palette.",
+          "why_it_matters": "Knowing where things are is the first step to creating.",
+          "what_learner_does": "Creates an account and makes a sprite move 10 steps.",
+          "expected_outcome": "Familiarity with the interface."
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "Scratch Programming Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Lights, Camera, Action!",
+          "what_is_taught": "Backdrops and Looks blocks (Say, Think, Costumes).",
+          "why_it_matters": "Adds visual storytelling elements.",
+          "what_learner_does": "Creates a digital greeting card with changing backgrounds and text.",
+          "expected_outcome": "A basic animation sequence."
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "Scratch Programming Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Making it Go: Event Blocks",
+          "what_is_taught": "Green flag, key presses, and sprite clicking.",
+          "why_it_matters": "Allows the user to interact with the program.",
+          "what_learner_does": "Programs a sprite to jump when the spacebar is pressed.",
+          "expected_outcome": "An interactive sprite."
         }
       ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Interface Navigation", "Sequencing", "Events", "Costumes"],
+      "tools": ["Scratch"],
+      "hands_on_practice": "Build a short interactive story featuring two characters talking.",
+      "assignment": "Submit the interactive story project link.",
+      "business_application": "Basic user interaction design.",
+      "expected_outcome": "Ability to create basic interactive animations."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_number": 2,
+      "module_title": "Game Logic: Loops, Conditionals, and Sensors",
+      "module_purpose": "Introduce the core concepts needed to turn animations into games.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Scratch Programming.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Using loops to repeat actions forever",
+        "Implementing If/Then statements",
+        "Using Sensing blocks to detect collisions",
+        "Adding sound effects"
       ],
       "lessons": [
         {
-          "lesson_number": "2.1",
-          "lesson_title": "Scratch Programming Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Never Stop Moving: Loops",
+          "what_is_taught": "Forever and Repeat blocks.",
+          "why_it_matters": "Essential for continuous game mechanics (like moving clouds).",
+          "what_learner_does": "Creates a looping background animation.",
+          "expected_outcome": "A program with continuous loops."
         },
         {
-          "lesson_number": "2.2",
-          "lesson_title": "Scratch Programming Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Rules of the Game: Conditionals",
+          "what_is_taught": "If/Then blocks.",
+          "why_it_matters": "Allows the game to enforce rules (e.g., if you touch lava, you lose).",
+          "what_learner_does": "Programs keyboard controls (arrow keys) to move a character.",
+          "expected_outcome": "A fully controllable character."
         },
         {
-          "lesson_number": "2.3",
-          "lesson_title": "Scratch Programming Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Collision Detection: Sensing",
+          "what_is_taught": "Touching color and touching sprite blocks.",
+          "why_it_matters": "Allows sprites to interact with each other.",
+          "what_learner_does": "Builds a simple maze game where touching the walls sends you back.",
+          "expected_outcome": "A functional maze game."
         }
       ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Loops", "Conditionals", "Sensing", "Collision"],
+      "tools": ["Scratch"],
+      "hands_on_practice": "Create a 'Chase' game where one sprite must catch another.",
+      "assignment": "Submit the Chase game project link.",
+      "business_application": "Algorithm logic and collision detection.",
+      "expected_outcome": "Understanding of how to build basic game rules."
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_number": 3,
+      "module_title": "Advanced Games and Final Project",
+      "module_purpose": "Add advanced features like scoring and complete a final capstone game.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Scratch Programming.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Creating and using Variables for scores",
+        "Broadcasting messages between sprites",
+        "Planning and executing a complex project",
+        "Debugging common Scratch issues"
       ],
       "lessons": [
         {
-          "lesson_number": "3.1",
-          "lesson_title": "Scratch Programming Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Keeping Score",
+          "what_is_taught": "Variables.",
+          "why_it_matters": "Makes games competitive and measurable.",
+          "what_learner_does": "Adds a points system and a countdown timer to their Chase game.",
+          "expected_outcome": "A game with win/loss states based on score."
         },
         {
-          "lesson_number": "3.2",
-          "lesson_title": "Scratch Programming Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Secret Messages: Broadcasting",
+          "what_is_taught": "Broadcast and receive blocks.",
+          "why_it_matters": "Allows multiple sprites to coordinate actions (like changing levels).",
+          "what_learner_does": "Programs a 'Game Over' screen that appears when the timer hits zero.",
+          "expected_outcome": "Coordinated sprite behavior."
         },
         {
-          "lesson_number": "3.3",
-          "lesson_title": "Scratch Programming Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Capstone Creator",
+          "what_is_taught": "Project planning and independent work.",
+          "why_it_matters": "Develops confidence to build original ideas.",
+          "what_learner_does": "Designs and codes an original game from start to finish.",
+          "expected_outcome": "A complete, original Scratch game."
         }
       ],
-      "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Variables", "Broadcasting", "Game Design", "Debugging"],
+      "tools": ["Scratch"],
+      "hands_on_practice": "Build the final capstone game.",
+      "assignment": "Submit the final project link and share it in the class studio.",
+      "business_application": "State management (variables) and event broadcasting.",
+      "expected_outcome": "Ability to independently design and program a full Scratch game."
     }
   ]
 }

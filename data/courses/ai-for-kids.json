@@ -2,502 +2,349 @@
   "course_id": "ai-for-kids",
   "course_name": "AI for Kids",
   "academy": "Kids Tech Academy",
-  "academy_id": "kids",
+  "academy_id": "kids-tech-academy",
   "course_type": "SPECIALIZATION",
-  "course_role": "Specialization",
-  "level": "BEGINNER+",
-  "duration": "1 Month",
-  "learning_hours": 80,
-  "future_review_status": "STABLE",
+  "course_role": "AI Explorer",
+  "level": "Beginner",
+  "duration": "2 Months",
+  "learning_hours": 60,
+  "future_review_status": "Scheduled for 2027",
   "target_audience": {
-    "best_for": [
-      "Aspiring Young AI Explorer seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in scratch-programming OR age 10+ should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+    "best_for": ["Curious kids aged 9-14", "Students interested in the future of technology", "Creative thinkers who like experimenting with new tools"],
+    "not_for": ["Kids looking for deep mathematical programming", "Students without internet access"],
+    "who_should_take_foundation_first": "No prerequisites! Perfect for beginners."
   },
   "prerequisites": {
-    "required": "scratch-programming OR age 10+",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic computer and internet navigation skills.",
+    "recommended": "An open and curious mind.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau), Blockly (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "A computer or tablet with a webcam and microphone.",
+      "software_accounts": "Modern web browser. Parent consent for specific AI tool accounts."
+    },
+    "not_required": "Coding experience."
   },
   "overview": {
-    "positioning": "Cutting-edge modern educational offering for schools.",
-    "short_description": "Discover how artificial intelligence works with fun machine learning models and image recognition.",
+    "positioning": "A fun, safe, and hands-on introduction to Artificial Intelligence and machine learning.",
+    "short_description": "Discover the magic of AI! Teach a computer to recognize your face, play drawing games with neural networks, and learn how to use AI tools safely to spark your creativity.",
     "key_facts": {
-      "level": "BEGINNER+",
-      "duration": "1 Month",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "PRACTICAL",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Young AI Explorer"
+      "level": "Beginner",
+      "duration": "2 Months",
+      "format": "Interactive Online/Hybrid",
+      "estimated_learning_hours": 60,
+      "project_count": 6,
+      "capstone": "Train Your Own Custom AI Model",
+      "ai_integration": "Very High - Core subject matter",
+      "career_focus": "Future Tech Literacy"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end AI for Kids projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Understand what AI is (and isn't)",
+      "Train a computer to recognize images and sounds",
+      "Write creative prompts for AI chatbots and art generators",
+      "Discuss the ethics of AI in a simple, kid-friendly way"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how AI for Kids is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "AI is becoming a part of everyday life and work.",
+    "ai_impact": "Understanding AI early prevents fear and builds mastery.",
+    "business_demand": "AI literacy will be as important as computer literacy.",
+    "career_opportunity": "Fosters early interest in data science and machine learning."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau).",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "UNDERSTAND: Explain basic AI concepts without complex math.",
+    "TRAIN: Use Teachable Machine to create image recognition models.",
+    "PROMPT: Interact effectively with text and image AI generators.",
+    "EVALUATE: Identify ethical and safe uses of AI technology."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "What is AI?",
+        "focus": "Understanding machine learning through play."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Training Machines",
+        "focus": "Building actual models using Teachable Machine."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
+        "stage": "Creative AI",
+        "focus": "Using AI as a partner for writing and art."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "MIT Scratch",
-        "purpose": "Primary industry standard software for AI for Kids execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Teachable Machine",
+        "purpose": "Accessible machine learning",
+        "what_student_learns": "Data collection, training, and testing models",
+        "what_student_builds": "Custom image and sound classifiers"
       },
       {
-        "tool": "Python (IDLE / Replit)",
-        "purpose": "Primary industry standard software for AI for Kids execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "QuickDraw",
+        "purpose": "Neural network demonstration",
+        "what_student_learns": "How AI recognizes patterns",
+        "what_student_builds": "N/A (Interactive gameplay)"
       },
       {
-        "tool": "Roblox Studio (Luau)",
-        "purpose": "Primary industry standard software for AI for Kids execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Blockly",
-        "purpose": "Primary industry standard software for AI for Kids execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Kid-safe Chatbots (e.g., ChatGPT via guided platforms)",
+        "purpose": "Generative text AI",
+        "what_student_learns": "Prompt engineering",
+        "what_student_builds": "Interactive stories"
       }
     ],
-    "supporting_tools": [
-      {
-        "tool": "Canva for Kids",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tinkercad",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "MakeCode",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
+    "supporting_tools": [],
     "emerging_tools": [
       {
-        "tool": "Child-safe AI Exploratories",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Teachable Machine",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Micro:bit Simulators",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
+        "tool": "AI Art Generators (Craiyon/DALL-E Mini)",
+        "purpose": "Generative image AI"
       }
     ],
-    "tools_to_review": [
-      "Complex adult command-line tools with no visual feedback",
-      "Passive video watching tutorials"
-    ]
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver AI for Kids in 2026/27:",
+    "overview": "The simplified machine learning pipeline.",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "Collect Data",
+        "desc": "Taking pictures or recording sounds to teach the AI."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Train",
+        "desc": "Letting the computer analyze the data."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
-      },
-      {
-        "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Test",
+        "desc": "Seeing if the AI learned correctly."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "MIT Scratch, Python (IDLE / Replit), Roblox Studio (Luau)",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "MIT Scratch, Python (IDLE / Replit), Child-safe AI Exploratories",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Technology",
+      "business_problem": "Pattern Recognition",
+      "approach": "Machine Learning models",
+      "toolset": "Teachable Machine",
+      "output": "Classification systems"
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "Core Subject",
+    "ai_can_assist_with": "Demonstrating concepts.",
+    "ai_can_automate": "N/A",
+    "ai_cannot_replace": "The human need to provide good data.",
+    "human_expertise_required": "Teachers ensure safe usage.",
+    "validation_protocol": "Discussing why AI makes mistakes.",
+    "responsible_use": "Central theme of the course (AI ethics)."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Provide lots of diverse data when training an AI.",
+    "Be specific and clear when writing prompts for chatbots.",
+    "Always remember that AI can make mistakes (hallucinations)."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
+      "mistake": "Providing bad data to a model.",
+      "why_it_happens": "Rushing the data collection phase.",
+      "professional_approach": "Ensure lighting is good and backgrounds are varied when training image models."
     },
     {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Treating AI like a human.",
+      "why_it_happens": "AI responses sound very conversational.",
+      "professional_approach": "Remember it's a tool predicting words, not a thinking being."
     }
   ],
   "career_paths": {
-    "entry_roles": "Young AI Explorer",
-    "mid_roles": "Specialist Lead",
-    "specialist_roles": "None",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["Student AI Explorer"],
+    "mid_roles": ["N/A"],
+    "specialist_roles": ["Future Data Scientist", "Future AI Engineer"],
+    "freelance_roles": ["N/A"],
+    "employer_expectations": "Basic understanding of how AI models are trained.",
+    "what_student_demonstrates": "Completed AI models and prompt portfolios."
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end AI for Kids project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["N/A"],
+    "client_workflow": "N/A",
+    "portfolio_requirements": "Links to trained Teachable Machine models."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "A model that detects if you are smiling or frowning",
+    "A rock-paper-scissors AI opponent",
+    "An AI-assisted short story",
+    "A gallery of AI-generated digital art"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "A final project showcasing a custom trained model and a presentation on how it works."
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Project completion and conceptual understanding",
+    "criteria": "Ability to train a working model and explain the basic concept of how it learned."
   },
   "certification": {
-    "title": "Certified Specialist in AI for Kids",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Junior AI Explorer Certificate",
+    "criteria": "Complete the Teachable Machine capstone project.",
+    "verification": "Digital certificate."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Python programming for AI, math behind neural networks.",
   "next_learning_path": {
-    "recommended_next": "Advance to python-for-kids to specialize further.",
-    "related_programs": "Explore complementary specializations in this academy."
+    "recommended_next": "Python for Kids",
+    "related_programs": ["Robotics Basics"]
   },
   "faq": [
     {
-      "question": "What prior experience do I need for AI for Kids?",
-      "answer": "You should satisfy the prerequisite: scratch-programming OR age 10+ before beginning this program."
+      "question": "Is this safe for kids?",
+      "answer": "Absolutely. We use heavily vetted, kid-friendly platforms and emphasize safe, supervised interaction."
     },
     {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
-    },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "Will they learn to code in this class?",
+      "answer": "This class focuses on AI concepts, data training, and prompt engineering rather than typing code."
     }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_number": 1,
+      "module_title": "Discovering AI",
+      "module_purpose": "Demystify AI and show how it recognizes patterns.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional AI for Kids.",
-        "Troubleshoot common failure points and optimize output quality."
+        "What AI is and where it is used",
+        "How computers learn (Machine Learning basics)",
+        "Playing with AI pattern recognition"
       ],
       "lessons": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "AI for Kids Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "What is AI?",
+          "what_is_taught": "Definition of AI, real-world examples (Netflix, Siri).",
+          "why_it_matters": "Builds foundational understanding.",
+          "what_learner_does": "Identifies AI in their daily lives.",
+          "expected_outcome": "Ability to define AI simply."
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "AI for Kids Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "How Computers See: QuickDraw",
+          "what_is_taught": "Pattern recognition and neural networks.",
+          "why_it_matters": "Shows that AI learns from lots of examples.",
+          "what_learner_does": "Plays QuickDraw and analyzes how the AI guesses their drawings.",
+          "expected_outcome": "Understanding of data-driven learning."
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "AI for Kids Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "AI Mistakes (Bias and Errors)",
+          "what_is_taught": "Why AI sometimes gets things wrong.",
+          "why_it_matters": "Teaches critical thinking regarding technology.",
+          "what_learner_does": "Reviews funny or interesting AI mistakes and discusses why they happened.",
+          "expected_outcome": "Critical awareness of AI limitations."
         }
       ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Machine Learning", "Pattern Recognition", "AI Bias"],
+      "tools": ["QuickDraw"],
+      "hands_on_practice": "Play AI-based web games and record how they react.",
+      "assignment": "Submit a short reflection on a time the AI guessed wrong in QuickDraw.",
+      "business_application": "Understanding AI capabilities.",
+      "expected_outcome": "Solid foundational knowledge of what AI is."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_number": 2,
+      "module_title": "Training Your Own AI",
+      "module_purpose": "Hands-on experience creating a machine learning model.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional AI for Kids.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Data collection",
+        "Training a model",
+        "Testing and tweaking a model"
       ],
       "lessons": [
         {
-          "lesson_number": "2.1",
-          "lesson_title": "AI for Kids Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Meet Teachable Machine",
+          "what_is_taught": "The interface of Google Teachable Machine.",
+          "why_it_matters": "It's the most accessible tool for creating real ML models.",
+          "what_learner_does": "Sets up their first project.",
+          "expected_outcome": "Familiarity with the tool."
         },
         {
-          "lesson_number": "2.2",
-          "lesson_title": "AI for Kids Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "The Sorting Hat: Image Classification",
+          "what_is_taught": "Collecting webcam data for different classes.",
+          "why_it_matters": "Teaches how data inputs create outcomes.",
+          "what_learner_does": "Trains a model to distinguish between them holding an apple or a banana.",
+          "expected_outcome": "A working image classification model."
         },
         {
-          "lesson_number": "2.3",
-          "lesson_title": "AI for Kids Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Improving Your Model",
+          "what_is_taught": "The importance of varied data (lighting, angles).",
+          "why_it_matters": "Teaches how to fix bias and improve accuracy.",
+          "what_learner_does": "Retrains their model with more diverse images to make it smarter.",
+          "expected_outcome": "An improved, highly accurate model."
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "Sound and Poses",
+          "what_is_taught": "Training audio and pose models.",
+          "why_it_matters": "Expands understanding of what data can be.",
+          "what_learner_does": "Builds a model that recognizes clapping vs. snapping.",
+          "expected_outcome": "A multi-modal understanding of ML."
         }
       ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Data Collection", "Training", "Classification", "Testing"],
+      "tools": ["Teachable Machine"],
+      "hands_on_practice": "Build a Rock-Paper-Scissors hand-pose recognizer.",
+      "assignment": "Submit the link to a trained Teachable Machine model.",
+      "business_application": "Model training pipelines.",
+      "expected_outcome": "Ability to train and test custom ML models."
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_number": 3,
+      "module_title": "Creating with AI (Generative AI)",
+      "module_purpose": "Explore how AI can generate text and art, focusing on prompt engineering.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional AI for Kids.",
-        "Troubleshoot common failure points and optimize output quality."
+        "What Generative AI is",
+        "Writing effective text prompts",
+        "Creating AI art",
+        "Ethics of AI creation"
       ],
       "lessons": [
         {
-          "lesson_number": "3.1",
-          "lesson_title": "AI for Kids Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Talking to Bots: Prompt Engineering",
+          "what_is_taught": "How to ask an AI for exactly what you want.",
+          "why_it_matters": "A crucial skill for using future tools.",
+          "what_learner_does": "Practices getting a chatbot to write a story in the style of a pirate.",
+          "expected_outcome": "Understanding of prompt modifiers."
         },
         {
-          "lesson_number": "3.2",
-          "lesson_title": "AI for Kids Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "AI Art Gallery",
+          "what_is_taught": "Using text-to-image generators.",
+          "why_it_matters": "Shows the intersection of tech and art.",
+          "what_learner_does": "Generates images of imaginative creatures (e.g., 'a cat riding a skateboard on Mars').",
+          "expected_outcome": "A collection of AI-generated art."
         },
         {
-          "lesson_number": "3.3",
-          "lesson_title": "AI for Kids Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Being Responsible with AI",
+          "what_is_taught": "Plagiarism, deepfakes, and responsible use.",
+          "why_it_matters": "Teaches digital citizenship.",
+          "what_learner_does": "Discusses when it's okay to use AI for homework and when it isn't.",
+          "expected_outcome": "Strong ethical foundation."
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "Final AI Showcase",
+          "what_is_taught": "Presentation skills.",
+          "why_it_matters": "Sharing knowledge cements learning.",
+          "what_learner_does": "Presents their favorite trained model or generated project to the class.",
+          "expected_outcome": "A final presentation."
         }
       ],
-      "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
-    },
-    {
-      "module_number": "Module 04",
-      "module_title": "Phase 4: Advanced Scenarios, Security & Performance Optimization",
-      "module_purpose": "Overcome edge cases, benchmark KPIs, and audit production deliverables.",
-      "what_you_will_learn": [
-        "Master stage 4 technical requirements and parameters.",
-        "Implement standard operating procedures for professional AI for Kids.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
-      "lessons": [
-        {
-          "lesson_number": "4.1",
-          "lesson_title": "AI for Kids Practical Workshop 4.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.2",
-          "lesson_title": "AI for Kids Practical Workshop 4.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.3",
-          "lesson_title": "AI for Kids Practical Workshop 4.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
-      ],
-      "key_concepts": [
-        "Workflow step 4",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "MIT Scratch",
-        "Python (IDLE / Replit)",
-        "Roblox Studio (Luau)"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 4 commercial brief.",
-      "assignment": "Deliverable 4: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Generative AI", "Prompt Engineering", "AI Ethics", "Digital Citizenship"],
+      "tools": ["Kid-safe Chatbots", "AI Art Generators"],
+      "hands_on_practice": "Use AI to co-write a comic book script and generate the character art.",
+      "assignment": "Submit the AI-assisted comic project.",
+      "business_application": "Content generation and prompt engineering.",
+      "expected_outcome": "Ability to use Generative AI creatively and ethically."
     }
   ]
 }

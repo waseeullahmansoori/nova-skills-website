@@ -1,516 +1,375 @@
 {
   "course_id": "davinci-resolve",
-  "course_name": "DaVinci Resolve",
+  "course_name": "DaVinci Resolve Mastery",
   "academy": "Video & Motion Academy",
-  "academy_id": "video",
+  "academy_id": "video-motion",
   "course_type": "SPECIALIZATION",
-  "course_role": "Specialization",
-  "level": "BEGINNER+",
-  "duration": "1-2 Months",
-  "learning_hours": 80,
+  "course_role": "Career/Monetization",
+  "level": "Intermediate to Advanced",
+  "duration": "2 Months",
+  "learning_hours": "80 hrs",
   "future_review_status": "EVOLVING",
   "target_audience": {
     "best_for": [
-      "Aspiring Colorist seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
+      "Colorists wanting to master node-based grading",
+      "Editors looking to switch from Premiere Pro or Final Cut",
+      "Filmmakers wanting an all-in-one post-production solution"
     ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in Basic video editing principles should complete the prerequisite foundation before enrolling.",
     "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+      "Those who only want to edit simple social media reels",
+      "Individuals without a dedicated GPU"
+    ],
+    "who_should_take_foundation_first": "Absolute beginners should take Professional Video Editing first to understand basic timelines."
   },
   "prerequisites": {
-    "required": "Basic video editing principles",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic understanding of video editing concepts and color theory.",
+    "recommended": "Prior experience editing video in any NLE.",
     "system_requirements": {
-      "hardware": "Modern multi-core CPU (Intel i7/Ryzen 7), 16GB+ RAM (32GB recommended), dedicated GPU (RTX 3060+ with 8GB VRAM)",
-      "software_accounts": "Adobe Premiere Pro, DaVinci Resolve Studio, Adobe After Effects, CapCut Desktop (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "Multi-core processor, 16GB RAM minimum (32GB recommended), Dedicated GPU with at least 4GB VRAM.",
+      "software_accounts": "DaVinci Resolve (Free or Studio version)."
+    },
+    "not_required": "Prior node-based compositing experience."
   },
   "overview": {
-    "positioning": "High-value color grading & finishing specialization.",
-    "short_description": "Master hollywood-grade color grading, node-based editing, and Fairlight audio in DaVinci Resolve.",
+    "positioning": "The ultimate guide to the industry's most powerful all-in-one post-production software.",
+    "short_description": "Master editing, cinematic color grading, Fusion VFX, and Fairlight audio mixing entirely within DaVinci Resolve.",
     "key_facts": {
-      "level": "BEGINNER+",
-      "duration": "1-2 Months",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "PORTFOLIO",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-TRANSFORMING",
-      "career_focus": "Colorist, DaVinci Editor"
+      "level": "Intermediate",
+      "duration": "2 Months",
+      "format": "Hands-On Software Labs",
+      "estimated_learning_hours": "80 hrs",
+      "project_count": "3 Major Projects",
+      "capstone": "Cinematic Short Film Finish",
+      "ai_integration": "Resolve Studio Neural Engine features (Magic Mask, Voice Isolation)",
+      "career_focus": "Colorist, Video Editor, Finishing Artist"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end DaVinci Resolve projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Edit fast-paced sequences using the Cut and Edit pages",
+      "Grade RAW and Log footage using node trees and power windows",
+      "Create basic motion graphics and VFX in the Fusion page",
+      "Mix broadcast-compliant audio in the Fairlight page"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how DaVinci Resolve is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI tools have automated routine syntax and repetitive tasks, shifting the professional premium toward systems architecture, strategic context, and quality assurance.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "DaVinci Resolve has taken over the industry, shifting from just a color grading tool to the primary NLE for many studios and YouTubers.",
+    "ai_impact": "Resolve's Neural Engine features (like Magic Mask and Depth Map) allow solo creators to achieve Hollywood-level rotoscoping and grading in seconds.",
+    "business_demand": "High demand for dedicated Colorists and Finishing Artists in commercial and film production.",
+    "career_opportunity": "Node-based grading is a premium skill that commands significantly higher rates than standard editing."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing Adobe Premiere Pro, DaVinci Resolve Studio, Adobe After Effects.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "EDIT: Navigate the Cut and Edit pages for rapid assembly.",
+    "COLOR: Build professional node trees for color correction and cinematic grading.",
+    "COMPOSITE: Use Fusion for node-based VFX, tracking, and titles.",
+    "MIX: Utilize Fairlight for dialogue cleanup and sound design."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "The Edit",
+        "focus": "Media management, the Cut page, and the Edit page."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "The Color",
+        "focus": "Color management, primary correction, and node-based grading."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
+        "stage": "VFX & Audio",
+        "focus": "Fusion node compositing and Fairlight audio mixing."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "Adobe Premiere Pro",
-        "purpose": "Primary industry standard software for DaVinci Resolve execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "DaVinci Resolve (Color Page)",
+        "purpose": "Primary and secondary color grading.",
+        "what_student_learns": "Node trees, qualifiers, curves, power windows, and LUTs.",
+        "what_student_builds": "Cinematic grades on RAW footage."
       },
       {
-        "tool": "DaVinci Resolve Studio",
-        "purpose": "Primary industry standard software for DaVinci Resolve execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Fusion",
+        "purpose": "Node-based visual effects.",
+        "what_student_learns": "Tracking, keying, and 2D/3D compositing.",
+        "what_student_builds": "Screen replacements and animated titles."
       },
       {
-        "tool": "Adobe After Effects",
-        "purpose": "Primary industry standard software for DaVinci Resolve execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "CapCut Desktop",
-        "purpose": "Primary industry standard software for DaVinci Resolve execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Fairlight",
+        "purpose": "Audio post-production.",
+        "what_student_learns": "EQ, compression, dialogue isolation, and mixing.",
+        "what_student_builds": "Broadcast-ready audio mixes."
       }
     ],
-    "supporting_tools": [
-      {
-        "tool": "Audition",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Photoshop",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Canva",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Envato",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
+    "supporting_tools": [],
     "emerging_tools": [
       {
-        "tool": "Runway Gen-3",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Pika Labs",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "ElevenLabs Voice AI",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Luma Dream Machine",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Topaz Video AI",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
+        "tool": "DaVinci Neural Engine",
+        "purpose": "AI Magic Mask and Voice Isolation (Studio version)."
       }
     ],
-    "tools_to_review": [
-      "Legacy offline firewire capture workflows",
-      "Outdated DVD/CD export presets",
-      "Slow manual rotoscoping"
-    ]
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver DaVinci Resolve in 2026/27:",
+    "overview": "The standard DaVinci Resolve finishing pipeline.",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "Media/Conform",
+        "desc": "Importing XMLs from Premiere or assembling footage."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Edit",
+        "desc": "Locking the picture sequence in the Edit page."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
+        "name": "Color",
+        "desc": "Primary balance and secondary stylized grading."
       },
       {
         "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
+        "name": "Fusion & Fairlight",
+        "desc": "VFX polish and final audio mix."
       },
       {
         "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Deliver",
+        "desc": "Exporting master files and web-optimized formats."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "Adobe Premiere Pro, DaVinci Resolve Studio, Adobe After Effects",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "Adobe Premiere Pro, DaVinci Resolve Studio, Runway Gen-3",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Film & Commercial",
+      "business_problem": "Raw footage looks flat and lacks emotional impact.",
+      "approach": "Cinematic Color Grading.",
+      "toolset": "DaVinci Resolve (Color Page)",
+      "output": "High-end commercial with a specific 'look'."
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-TRANSFORMING",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "AI-Assisted Colorist",
+    "ai_can_assist_with": "Isolating subjects for grading (Magic Mask), fixing bad audio (Voice Isolation).",
+    "ai_can_automate": "Color matching shots and upscaling resolution.",
+    "ai_cannot_replace": "The creative intent of the color grade or the storytelling of the edit.",
+    "human_expertise_required": "Understanding color theory and emotional tone.",
+    "validation_protocol": "Checking scopes to ensure broadcast safe colors.",
+    "responsible_use": "Maintaining skin tone accuracy."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Always use a structured node tree (e.g., NR -> Primary -> Secondary -> Look).",
+    "Rely on scopes (Waveform, Vectorscope) rather than just your monitor.",
+    "Use Color Management (RCM or ACES) for accurate starting points."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Grading without neutralizing first.",
+      "why_it_happens": "Rushing to apply a LUT or 'look'.",
+      "professional_approach": "Always balance exposure and white balance in the primary nodes before applying creative grades."
     }
   ],
   "career_paths": {
-    "entry_roles": "Colorist",
-    "mid_roles": " DaVinci Editor",
-    "specialist_roles": "Post-Production Specialist",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": [
+      "Junior Editor",
+      "Colorist Assistant"
+    ],
+    "mid_roles": [
+      "Video Editor",
+      "Freelance Colorist"
+    ],
+    "specialist_roles": [
+      "Senior Colorist",
+      "Finishing Artist"
+    ],
+    "freelance_roles": [
+      "Remote Colorist"
+    ],
+    "employer_expectations": "Deep understanding of nodes, scopes, and color management.",
+    "what_student_demonstrates": "A before/after color grading reel showing various cinematic looks."
   },
   "freelance_applications": {
     "services_offered": [
-      "End-to-end DaVinci Resolve project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
+      "Color Correction & Grading",
+      "Video Finishing Services"
     ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "client_workflow": "Receive XML/Timeline -> Conform -> Grade -> Review -> Render",
+    "portfolio_requirements": "A before-and-after color grading reel."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "A narrative edit sequence",
+    "A cinematic color-graded commercial",
+    "A Fusion-based screen replacement",
+    "A fully mixed audio sequence"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "A comprehensive before/after color grading showreel."
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Project evaluation",
+    "criteria": "Skin tone accuracy, shot matching, node structure efficiency, and narrative flow."
   },
   "certification": {
-    "title": "Certified Specialist in DaVinci Resolve",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Nova Certificate in DaVinci Resolve",
+    "criteria": "Completion of all module projects.",
+    "verification": "Digital badge."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Advanced 3D modeling within Fusion.",
   "next_learning_path": {
-    "recommended_next": "Advance to video-pro to specialize further.",
-    "related_programs": "Explore complementary specializations in this academy."
+    "recommended_next": "Professional Video Editing",
+    "related_programs": "Motion Graphics Master"
   },
   "faq": [
     {
-      "question": "What prior experience do I need for DaVinci Resolve?",
-      "answer": "You should satisfy the prerequisite: Basic video editing principles before beginning this program."
-    },
-    {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
-    },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "Do I need the Studio (Paid) version of Resolve?",
+      "answer": "No, the free version is incredibly powerful and covers 95% of what we teach, though AI features like Magic Mask require Studio."
     }
   ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_title": "Editing and the Resolve Workflow",
+      "module_purpose": "Understand the page-based workflow and master the Cut and Edit pages.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional DaVinci Resolve.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Database and project setup",
+        "The Media and Cut pages",
+        "The Edit page (trimming, inspector, transitions)"
       ],
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "DaVinci Resolve Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Project Setup & Media Management",
+          "what_is_taught": "Databases vs Project files, importing media, and generating proxies.",
+          "why_it_matters": "Resolve manages files differently than Premiere; understanding databases prevents lost work.",
+          "what_learner_does": "Creates a database and organizes footage bins.",
+          "expected_outcome": "An optimized Resolve project."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "DaVinci Resolve Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "The Edit Page",
+          "what_is_taught": "Three-point editing, trimming tools, and the Inspector panel.",
+          "why_it_matters": "The core of non-linear editing in Resolve.",
+          "what_learner_does": "Cuts together a short interview sequence.",
+          "expected_outcome": "A tightened rough cut."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "DaVinci Resolve Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Conforming from Other NLEs",
+          "what_is_taught": "Importing XMLs from Premiere/FCP and relinking media.",
+          "why_it_matters": "Essential for colorists working with external editors.",
+          "what_learner_does": "Conforms an XML timeline and fixes offline clips.",
+          "expected_outcome": "A timeline ready for the Color page."
         }
       ],
       "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Databases",
+        "The Edit Page",
+        "XML Conform"
       ],
       "tools": [
-        "Adobe Premiere Pro",
-        "DaVinci Resolve Studio",
-        "Adobe After Effects"
+        "DaVinci Resolve"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Assemble and trim a narrative sequence.",
+      "assignment": "Deliverable: 1-minute edit sequence.",
+      "business_application": "General video editing.",
+      "expected_outcome": "Comfort navigating Resolve's editing interface."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_title": "Mastering the Color Page",
+      "module_purpose": "Learn the industry-standard node workflow for color correction and grading.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional DaVinci Resolve.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Color Management (RCM & ACES)",
+        "Node structures (Serial, Parallel, Layer)",
+        "Primary correction and shot matching",
+        "Secondary grading (Qualifiers, Power Windows)"
       ],
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "DaVinci Resolve Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Color Management & Scopes",
+          "what_is_taught": "Setting up Resolve Color Management, reading Waveforms and Vectorscopes.",
+          "why_it_matters": "Ensures accurate translation of Log/RAW footage to Rec.709 displays.",
+          "what_learner_does": "Normalizes Log footage using RCM and balances exposure.",
+          "expected_outcome": "Properly exposed, color-accurate footage."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "DaVinci Resolve Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Primary Correction & Shot Matching",
+          "what_is_taught": "Using Lift/Gamma/Gain wheels, curves, and matching clips in a scene.",
+          "why_it_matters": "If shots don't match, the audience is distracted from the story.",
+          "what_learner_does": "Matches three different camera angles to look identical.",
+          "expected_outcome": "A seamless, balanced scene."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "DaVinci Resolve Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Secondary Grading & Power Windows",
+          "what_is_taught": "Isolating skin tones, drawing masks, and tracking.",
+          "why_it_matters": "Allows specific stylized adjustments without affecting the whole image.",
+          "what_learner_does": "Isolates a subject's face, brightens it, and tracks the movement.",
+          "expected_outcome": "A professional, stylized shot with perfect skin tones."
         }
       ],
       "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Color Management",
+        "Node Trees",
+        "Power Windows",
+        "Shot Matching"
       ],
       "tools": [
-        "Adobe Premiere Pro",
-        "DaVinci Resolve Studio",
-        "Adobe After Effects"
+        "DaVinci Resolve (Color Page)"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Color correct and grade a multi-shot sequence.",
+      "assignment": "Deliverable: Before/After color graded sequence.",
+      "business_application": "Freelance color grading.",
+      "expected_outcome": "Ability to execute a professional node-based color grade."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_title": "Fusion, Fairlight, and Delivery",
+      "module_purpose": "Add VFX, mix audio, and deliver the final master file.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional DaVinci Resolve.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Node-based compositing in Fusion",
+        "Audio mixing and EQ in Fairlight",
+        "Deliver page rendering workflows"
       ],
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "DaVinci Resolve Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Intro to Fusion Nodes",
+          "what_is_taught": "Backgrounds, merges, text, and basic tracking in Fusion.",
+          "why_it_matters": "Fusion is incredibly powerful for VFX but requires a different mindset than layer-based After Effects.",
+          "what_learner_does": "Builds an animated 3D title sequence.",
+          "expected_outcome": "A custom motion graphics title."
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "DaVinci Resolve Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Fairlight Audio Mixing",
+          "what_is_taught": "Using the mixer, EQ, compression, and dialogue isolation.",
+          "why_it_matters": "Ensures the video sounds as good as it looks.",
+          "what_learner_does": "Cleans up dialogue and mixes it with music.",
+          "expected_outcome": "Broadcast-ready audio."
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "DaVinci Resolve Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "The Deliver Page & Capstone",
+          "what_is_taught": "Setting up render queues, exporting for web vs broadcast.",
+          "why_it_matters": "The final step to getting your work to the client.",
+          "what_learner_does": "Finishes the capstone project and renders the final file.",
+          "expected_outcome": "A fully finished, graded, and mixed cinematic project."
         }
       ],
       "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Fusion Nodes",
+        "Fairlight Mixer",
+        "Deliver Page"
       ],
       "tools": [
-        "Adobe Premiere Pro",
-        "DaVinci Resolve Studio",
-        "Adobe After Effects"
+        "DaVinci Resolve"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
-    },
-    {
-      "module_number": "Module 04",
-      "module_title": "Phase 4: Advanced Scenarios, Security & Performance Optimization",
-      "module_purpose": "Overcome edge cases, benchmark KPIs, and audit production deliverables.",
-      "what_you_will_learn": [
-        "Master stage 4 technical requirements and parameters.",
-        "Implement standard operating procedures for professional DaVinci Resolve.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
-      "lessons": [
-        {
-          "lesson_number": "4.1",
-          "lesson_title": "DaVinci Resolve Practical Workshop 4.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.2",
-          "lesson_title": "DaVinci Resolve Practical Workshop 4.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "4.3",
-          "lesson_title": "DaVinci Resolve Practical Workshop 4.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
-      ],
-      "key_concepts": [
-        "Workflow step 4",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Adobe Premiere Pro",
-        "DaVinci Resolve Studio",
-        "Adobe After Effects"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 4 commercial brief.",
-      "assignment": "Deliverable 4: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Add VFX and audio mix to the graded capstone project.",
+      "assignment": "Deliverable: Final cinematic short film edit.",
+      "business_application": "Complete video finishing.",
+      "expected_outcome": "Mastery of the entire DaVinci Resolve post-production pipeline."
     }
   ]
 }

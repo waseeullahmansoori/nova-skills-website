@@ -4,520 +4,402 @@
   "academy": "3D Academy",
   "academy_id": "3d",
   "course_type": "SPECIALIZATION",
-  "course_role": "Advanced Skill",
-  "level": "INTERMEDIATE",
-  "duration": "1-2 Months",
+  "course_role": "Career/Monetization",
+  "level": "BEGINNER+",
+  "duration": "2 Months",
   "learning_hours": 80,
   "future_review_status": "STABLE",
   "target_audience": {
     "best_for": [
-      "Aspiring Unreal Engine ArchViz Specialist seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
+      "Aspiring Architectural Visualizers seeking mastery in photorealistic rendering.",
+      "Architects wanting to create high-end presentations.",
+      "3D Artists shifting to real-time ArchViz workflows."
     ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in 3ds-max-cert OR blender-cert should complete the prerequisite foundation before enrolling.",
+    "who_should_take_foundation_first": "Learners without basic spatial awareness or CAD reading skills should complete foundational drafting first.",
     "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
+      "Individuals looking for character animation.",
+      "Students wanting theoretical architecture without 3D production."
     ]
   },
   "prerequisites": {
-    "required": "3ds-max-cert OR blender-cert",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic understanding of architectural plans.",
+    "recommended": "Familiarity with digital art tools.",
+    "not_required": "Advanced mathematics or prior coding experience.",
     "system_requirements": {
-      "hardware": "Modern multi-core CPU (Intel i7/Ryzen 7), 16GB+ RAM (32GB recommended), dedicated GPU (RTX 3060+ with 8GB VRAM)",
-      "software_accounts": "3ds Max, Blender, V-Ray, Unreal Engine 5 (student/free tiers sufficient for coursework)"
+      "hardware": "Modern multi-core CPU, 32GB+ RAM, dedicated GPU (RTX 3070+).",
+      "software_accounts": "3ds Max, V-Ray, Photoshop, Twinmotion, SketchUp."
     }
   },
   "overview": {
-    "positioning": "Leading edge 2026 specialization in 3D architecture.",
-    "short_description": "Learn real-time 3D environments, Lumen global illumination, and Nanite geometry in Unreal Engine 5.",
+    "positioning": "Next-generation real-time 3D environments, virtual production, and interactive architectural experiences using Unreal Engine 5.",
+    "short_description": "Master Unreal Engine 5's core tools including Lumen and Nanite.",
     "key_facts": {
-      "level": "INTERMEDIATE",
-      "duration": "1-2 Months",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
+      "level": "BEGINNER",
+      "duration": "2 Months",
+      "format": "Hands-On",
       "estimated_learning_hours": "80 Hours",
-      "project_count": "PORTFOLIO",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Unreal Engine ArchViz Specialist, Real-Time Environment Artist"
+      "project_count": "4 Projects",
+      "capstone": "Real-time Cinematic Environment",
+      "ai_integration": "NONE",
+      "career_focus": "Environment Artist, Real-time Generalist"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Unreal Engine Basics projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Build expansive outdoor environments using Landscape tools.",
+      "Utilize Nanite for high-poly mesh rendering.",
+      "Light scenes dynamically using Lumen.",
+      "Create basic interactions with Blueprint Visual Scripting."
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Unreal Engine Basics is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Unreal Engine 5 has unified game development, Hollywood virtual production, and interactive architectural walkthroughs on a single real-time engine.",
+    "ai_impact": "Lumen real-time global illumination and Nanite virtualized geometry allow creators to render billions of polygons without baking lightmaps.",
+    "business_demand": "Real estate developers and architecture firms require rapid, photorealistic visual assets for marketing.",
+    "career_opportunity": "Skilled ArchViz artists command premium rates in global freelance markets."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing 3ds Max, Blender, V-Ray.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "MODEL: Construct accurate 3D architectural scenes from 2D plans.",
+    "TEXTURE: Apply physically based rendering (PBR) materials for realism.",
+    "LIGHT: Configure realistic interior and exterior lighting setups.",
+    "RENDER: Optimize render settings for balance between quality and speed.",
+    "ANIMATE: Develop smooth camera paths for real-time walkthroughs."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "Stage 1: Structural Modeling",
+        "focus": "Translating CAD plans into 3D geometry in 3ds Max."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Stage 2: Materiality",
+        "focus": "Creating and applying realistic V-Ray materials."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
+        "stage": "Stage 3: Illumination",
+        "focus": "Mastering HDRI and artificial lighting setups."
       },
       {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
+        "stage": "Stage 4: Post-Production",
+        "focus": "Enhancing raw renders using Photoshop techniques."
       },
       {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
+        "stage": "Stage 5: Real-Time Environments",
+        "focus": "Importing scenes into Twinmotion for interactive walkthroughs."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "3ds Max",
-        "purpose": "Primary industry standard software for Unreal Engine Basics execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Blender",
-        "purpose": "Primary industry standard software for Unreal Engine Basics execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "V-Ray",
-        "purpose": "Primary industry standard software for Unreal Engine Basics execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
         "tool": "Unreal Engine 5",
-        "purpose": "Primary industry standard software for Unreal Engine Basics execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Twinmotion",
-        "purpose": "Primary industry standard software for Unreal Engine Basics execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Photoshop",
-        "purpose": "Primary industry standard software for Unreal Engine Basics execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "purpose": "Real-time engine.",
+        "what_student_learns": "Environment design, lighting, blueprints.",
+        "what_student_builds": "Interactive real-time scenes."
       }
-    ],
-    "supporting_tools": [
-      {
-        "tool": "AutoCAD",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Corona Renderer",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Substance Painter",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Cinema 4D",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Lumen & Nanite Realtime Systems",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Gaussian Splatting in ArchViz",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Krea AI for Upscaling Renders",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Magnific AI",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Outdated CPU-only render engines",
-      "Legacy mental ray workflows"
     ]
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Unreal Engine Basics in 2026/27:",
+    "overview": "Standard ArchViz Production Pipeline:",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "CAD Import & Cleanup",
+        "desc": "Preparing 2D plans for 3D modeling."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Whitebox Modeling",
+        "desc": "Building the primary structure and testing camera angles."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
+        "name": "Material & Texture Application",
+        "desc": "Assigning PBR materials to surfaces."
       },
       {
         "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
+        "name": "Lighting Setup",
+        "desc": "Configuring natural and artificial light sources."
       },
       {
         "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Rendering & Post-Production",
+        "desc": "Generating final images and applying adjustments in Photoshop."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "3ds Max, Blender, V-Ray",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "3ds Max, Blender, Lumen & Nanite Realtime Systems",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Real Estate Marketing",
+      "business_problem": "Selling off-plan properties before construction.",
+      "approach": "Create photorealistic visual assets based on architectural plans.",
+      "toolset": "3ds Max, V-Ray, Photoshop",
+      "output": "High-converting marketing brochures and virtual tours."
     }
   ],
   "ai_integration": {
     "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "ai_can_assist_with": "Denoising renders and generating background elements.",
+    "ai_can_automate": "Texture upscaling and basic sky replacements.",
+    "ai_cannot_replace": "Architectural design intent, lighting mood, and spatial composition.",
+    "human_expertise_required": "Ensuring structural accuracy and realistic material properties.",
+    "validation_protocol": "Verify AI-generated elements against actual project specifications.",
+    "responsible_use": "Avoid misleading representations of physical property boundaries."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Always work to real-world scale (1 unit = 1cm or 1m).",
+    "Keep poly counts optimized for real-time engine compatibility.",
+    "Use render elements (passes) for flexible post-production."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Ignoring real-world material scale and reflectivity.",
+      "why_it_happens": "Rushing the texturing process without reference photos.",
+      "professional_approach": "Always use PBR maps with correct tiling and reflection glossiness."
     }
   ],
   "career_paths": {
-    "entry_roles": "Unreal Engine ArchViz Specialist",
-    "mid_roles": " Real-Time Environment Artist",
-    "specialist_roles": "Virtual Production Assistant",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": "Junior ArchViz Artist",
+    "mid_roles": "Senior 3D Visualizer",
+    "specialist_roles": "Lighting TD, Environment Artist",
+    "freelance_roles": "Freelance Architectural Renderer",
+    "employer_expectations": "Strong portfolio of photorealistic renders and fast turnaround times.",
+    "what_student_demonstrates": "Ability to deliver complete ArchViz projects from CAD to final render."
   },
   "freelance_applications": {
     "services_offered": [
-      "End-to-end Unreal Engine Basics project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
+      "Exterior Renders",
+      "Interior Renders",
+      "Real-time Walkthroughs"
     ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "client_workflow": "Receive CAD -> Whitebox Approval -> Texture/Light Approval -> Final Render Delivery",
+    "portfolio_requirements": "3-5 high-quality projects showing various lighting conditions (day/night)."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "Modern Residential Exterior Render",
+    "Luxury Interior Living Space Render",
+    "Commercial Building Real-Time Walkthrough"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "Set of 4K photorealistic architectural renders.",
+    "Playable real-time architectural walkthrough executable."
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Project-Based Evaluation",
+    "criteria": "Photorealism, modeling accuracy, lighting quality, and material realism."
   },
   "certification": {
-    "title": "Certified Specialist in Unreal Engine Basics",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Certified Architectural Visualizer",
+    "criteria": "Completion of all module projects and capstone presentation.",
+    "verification": "Digital verified certificate."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Structural engineering analysis and MEP (Mechanical, Electrical, Plumbing) design.",
   "next_learning_path": {
-    "recommended_next": "Advance to archviz-mastery to specialize further.",
-    "related_programs": "Explore complementary specializations in this academy."
+    "recommended_next": "Unreal Engine Advanced for ArchViz",
+    "related_programs": "3D Visualisation Professional"
   },
   "faq": [
     {
-      "question": "What prior experience do I need for Unreal Engine Basics?",
-      "answer": "You should satisfy the prerequisite: 3ds-max-cert OR blender-cert before beginning this program."
+      "question": "Do I need to be an architect?",
+      "answer": "No, but you need to learn how to read architectural floor plans."
     },
     {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
+      "question": "Why learn both V-Ray and Twinmotion?",
+      "answer": "V-Ray is industry standard for high-end static renders, while Twinmotion allows rapid real-time interactive presentations."
     },
     {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "Can my laptop run 3ds Max and V-Ray?",
+      "answer": "You need a system with a dedicated GPU (like an RTX 3060 or better) for smooth rendering performance."
     }
   ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_title": "Level Design & Landscape Tools",
+      "module_purpose": "Build the foundation of a virtual world.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Unreal Engine Basics.",
-        "Troubleshoot common failure points and optimize output quality."
+        "UE5 Interface",
+        "Landscape Sculpting",
+        "Foliage System"
       ],
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Unreal Engine 5 UI & Navigation",
+          "what_is_taught": "Content Browser, Viewport, Details panel.",
+          "why_it_matters": "Core navigation.",
+          "what_learner_does": "Creates a new project and navigates.",
+          "expected_outcome": "Familiarity with UE5."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Landscape Sculpting",
+          "what_is_taught": "Creating terrain, sculpting mountains and valleys.",
+          "why_it_matters": "Base for outdoor environments.",
+          "what_learner_does": "Sculpts an island terrain.",
+          "expected_outcome": "3D Terrain."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Landscape Materials & Foliage",
+          "what_is_taught": "Painting textures and scattering trees.",
+          "why_it_matters": "Brings the environment to life.",
+          "what_learner_does": "Paints grass and populates a forest.",
+          "expected_outcome": "Lush outdoor environment."
         }
       ],
       "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Landscape",
+        "Foliage Tool"
       ],
       "tools": [
-        "3ds Max",
-        "Blender",
-        "V-Ray"
+        "Unreal Engine 5"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Build a fully landscaped outdoor level.",
+      "assignment": "Submit project screenshots.",
+      "business_application": "Game environments and virtual production.",
+      "expected_outcome": "Completed terrain."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_title": "Nanite Geometry & Quixel Megascans",
+      "module_purpose": "Utilize film-quality assets in real-time.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Unreal Engine Basics.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Nanite workflow",
+        "Quixel Bridge",
+        "Asset Placement"
       ],
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Introduction to Nanite",
+          "what_is_taught": "Virtual geometry technology.",
+          "why_it_matters": "Allows millions of polygons without performance loss.",
+          "what_learner_does": "Enables Nanite on high-poly meshes.",
+          "expected_outcome": "Optimized high-poly scene."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Using Quixel Megascans",
+          "what_is_taught": "Importing photogrammetry assets via Bridge.",
+          "why_it_matters": "Instant photorealism.",
+          "what_learner_does": "Imports rocks and ruins.",
+          "expected_outcome": "High-quality assets in scene."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Set Dressing",
+          "what_is_taught": "Placing assets to create compelling compositions.",
+          "why_it_matters": "Art direction.",
+          "what_learner_does": "Dresses a ruined temple scene.",
+          "expected_outcome": "Detailed environment."
         }
       ],
       "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Nanite",
+        "Quixel Megascans"
       ],
       "tools": [
-        "3ds Max",
-        "Blender",
-        "V-Ray"
+        "Unreal Engine 5"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Create a high-fidelity ancient ruin environment.",
+      "assignment": "Submit environment screenshots.",
+      "business_application": "Virtual production backgrounds.",
+      "expected_outcome": "Photorealistic scene assembly."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_title": "Lumen Global Illumination & Lighting",
+      "module_purpose": "Master real-time dynamic lighting.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Unreal Engine Basics.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Lumen GI",
+        "Directional Lights",
+        "Post Process Volume"
       ],
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Understanding Lumen",
+          "what_is_taught": "Real-time global illumination and reflections.",
+          "why_it_matters": "No more baking lightmaps.",
+          "what_learner_does": "Configures Lumen in project settings.",
+          "expected_outcome": "Dynamic GI active."
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Lighting the Environment",
+          "what_is_taught": "Directional light, Skylight, SkyAtmosphere.",
+          "why_it_matters": "Creates the mood and time of day.",
+          "what_learner_does": "Lights the temple scene for sunset.",
+          "expected_outcome": "Beautifully lit scene."
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Post Processing",
+          "what_is_taught": "Color grading, bloom, and exposure.",
+          "why_it_matters": "Final cinematic polish.",
+          "what_learner_does": "Tweaks the Post Process Volume.",
+          "expected_outcome": "Cinematic visual quality."
         }
       ],
       "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Lumen",
+        "Post Process Volume"
       ],
       "tools": [
-        "3ds Max",
-        "Blender",
-        "V-Ray"
+        "Unreal Engine 5"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Light and grade the ruined temple.",
+      "assignment": "Submit lit scene renders.",
+      "business_application": "Archviz and game lighting.",
+      "expected_outcome": "Fully lit real-time environment."
     },
     {
       "module_number": "Module 04",
-      "module_title": "Phase 4: Advanced Scenarios, Security & Performance Optimization",
-      "module_purpose": "Overcome edge cases, benchmark KPIs, and audit production deliverables.",
+      "module_title": "Blueprint Visual Scripting & Sequencer",
+      "module_purpose": "Add interactivity and render cinematics.",
       "what_you_will_learn": [
-        "Master stage 4 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Unreal Engine Basics.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Blueprint Basics",
+        "Triggers",
+        "Sequencer Animation"
       ],
       "lessons": [
         {
           "lesson_number": "4.1",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 4.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Intro to Blueprints",
+          "what_is_taught": "Node-based programming.",
+          "why_it_matters": "Logic without writing C++ code.",
+          "what_learner_does": "Creates a simple light toggle blueprint.",
+          "expected_outcome": "Interactive object."
         },
         {
           "lesson_number": "4.2",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 4.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Triggers and Events",
+          "what_is_taught": "Box collisions and overlap events.",
+          "why_it_matters": "Player interaction.",
+          "what_learner_does": "Creates a door that opens when approached.",
+          "expected_outcome": "Interactive environment."
         },
         {
           "lesson_number": "4.3",
-          "lesson_title": "Unreal Engine Basics Practical Workshop 4.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 4 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Cinematics with Sequencer",
+          "what_is_taught": "Camera animation and Movie Render Queue.",
+          "why_it_matters": "Exporting high-quality video.",
+          "what_learner_does": "Animates a cinematic flythrough and exports video.",
+          "expected_outcome": "Final cinematic video."
         }
       ],
       "key_concepts": [
-        "Workflow step 4",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Blueprints",
+        "Sequencer",
+        "Movie Render Queue"
       ],
       "tools": [
-        "3ds Max",
-        "Blender",
-        "V-Ray"
+        "Unreal Engine 5"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 4 commercial brief.",
-      "assignment": "Deliverable 4: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Create a cinematic flythrough of the interactive temple.",
+      "assignment": "Submit MP4 video file.",
+      "business_application": "Cinematics and trailers.",
+      "expected_outcome": "Completed UE5 project."
     }
   ]
 }

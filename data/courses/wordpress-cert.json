@@ -1,468 +1,353 @@
 {
   "course_id": "wordpress-cert",
-  "course_name": "WordPress",
+  "course_name": "WordPress Site Development",
   "academy": "No-Code Web Academy",
   "academy_id": "nocode",
   "course_type": "REPOSITION",
-  "course_role": "Core Skill",
+  "course_role": "Career/Monetization",
   "level": "BEGINNER",
-  "duration": "1 Month",
-  "learning_hours": 60,
+  "duration": "2 Months",
+  "learning_hours": 80,
   "future_review_status": "EVOLVING",
   "target_audience": {
     "best_for": [
-      "Aspiring WordPress Developer seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
+      "Content creators",
+      "Small business owners",
+      "Aspiring web developers"
     ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in None should complete the prerequisite foundation before enrolling.",
+    "who_should_take_foundation_first": "Absolute beginners",
     "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
+      "Advanced PHP developers"
     ]
   },
   "prerequisites": {
-    "required": "None",
-    "recommended": "Familiarity with modern web browsers and professional digital tools",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic internet skills.",
+    "recommended": "Understanding of domains/hosting.",
+    "not_required": "Coding knowledge.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "Webflow, Framer, Shopify, WordPress (student/free tiers sufficient for coursework)"
+      "hardware": "Any PC/Mac",
+      "software_accounts": "LocalWP or basic web host"
     }
   },
   "overview": {
-    "positioning": "Upgrade to modern WordPress 6.x standards.",
-    "short_description": "Master WordPress installation, themes, plugins, security, and site administration.",
+    "positioning": "Master the world's most popular CMS.",
+    "short_description": "Learn to build, secure, and manage WordPress websites from scratch.",
     "key_facts": {
       "level": "BEGINNER",
-      "duration": "1 Month",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "60 Hours",
-      "project_count": "PRACTICAL",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "WordPress Developer, CMS Webmaster"
+      "duration": "2 Months",
+      "format": "Project-based",
+      "estimated_learning_hours": "80 Hours",
+      "project_count": "2 PROJECTS",
+      "capstone": "Complete Business Website",
+      "ai_integration": "AI Content Generation",
+      "career_focus": "WordPress Administrator"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end WordPress projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Install and configure WordPress.",
+      "Manage themes and plugins.",
+      "Optimize for speed and SEO.",
+      "Secure the site against attacks."
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how WordPress is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "WordPress powers over 40% of the web.",
+    "ai_impact": "AI plugins drastically speed up content creation.",
+    "business_demand": "Every small business needs a website.",
+    "career_opportunity": "Huge freelance market for WP maintenance."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing Webflow, Framer, Shopify.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "SETUP: Install WordPress on local and live servers.",
+    "DESIGN: Customize themes visually.",
+    "EXTEND: Use plugins for added functionality.",
+    "SECURE: Implement backups and firewalls."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "Stage 1: Core Setup",
+        "focus": "Installation and dashboard."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Stage 2: Content & Themes",
+        "focus": "Pages, posts, and design."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
+        "stage": "Stage 3: Plugins & Optimization",
+        "focus": "Functionality and speed."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "Webflow",
-        "purpose": "Primary industry standard software for WordPress execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Framer",
-        "purpose": "Primary industry standard software for WordPress execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Shopify",
-        "purpose": "Primary industry standard software for WordPress execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
         "tool": "WordPress",
-        "purpose": "Primary industry standard software for WordPress execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "purpose": "CMS",
+        "what_student_learns": "Admin interface.",
+        "what_student_builds": "Business site."
       },
       {
-        "tool": "Make.com",
-        "purpose": "Primary industry standard software for WordPress execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Elementor",
+        "purpose": "Page Builder",
+        "what_student_learns": "Visual design.",
+        "what_student_builds": "Custom layouts."
+      },
+      {
+        "tool": "Yoast SEO",
+        "purpose": "Search optimization",
+        "what_student_learns": "On-page SEO.",
+        "what_student_builds": "Optimized content."
       }
     ],
-    "supporting_tools": [
-      {
-        "tool": "Figma",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Airtable",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Stripe",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Google Tag Manager",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Relume AI",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "v0.dev",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Cursor for Custom CSS/JS",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Supabase No-Code Connectors",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Heavy bloated WordPress plugins",
-      "cPanel manual database installs",
-      "Non-responsive legacy page builders"
-    ]
+    "supporting_tools": [],
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver WordPress in 2026/27:",
+    "overview": "Standard WP build process.",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "Hosting Setup",
+        "desc": "Server config."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Theme Install",
+        "desc": "Visual foundation."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
+        "name": "Content Loading",
+        "desc": "Adding pages."
       },
       {
         "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Optimization",
+        "desc": "Caching and SEO."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "Webflow, Framer, Shopify",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "Webflow, Framer, Relume AI",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "SME",
+      "business_problem": "No online presence.",
+      "approach": "Build a 5-page WP site.",
+      "toolset": "WordPress",
+      "output": "Lead generation site."
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "AI-SUPPORTED",
+    "ai_can_assist_with": "Drafting blog posts.",
+    "ai_can_automate": "Image alt tags.",
+    "ai_cannot_replace": "Plugin conflict resolution.",
+    "human_expertise_required": "Security auditing.",
+    "validation_protocol": "Check site speed after AI plugin installs.",
+    "responsible_use": "Avoid spam content generation."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Keep everything updated.",
+    "Always have remote backups."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Installing too many plugins.",
+      "why_it_happens": "Shiny object syndrome.",
+      "professional_approach": "Only use essential, vetted plugins."
     }
   ],
   "career_paths": {
-    "entry_roles": "WordPress Developer",
-    "mid_roles": " CMS Webmaster",
-    "specialist_roles": "Freelance Web Designer",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": "WP Content Manager",
+    "mid_roles": "Freelance Web Designer",
+    "specialist_roles": "WP Security Specialist",
+    "freelance_roles": "Maintenance Retainer provider",
+    "employer_expectations": "Fast, secure sites.",
+    "what_student_demonstrates": "Live secure website."
   },
   "freelance_applications": {
     "services_offered": [
-      "End-to-end WordPress project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
+      "Site builds",
+      "Hacked site recovery"
     ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "client_workflow": "Audit -> Build -> Launch",
+    "portfolio_requirements": "2 live sites with GTMetrix reports."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "Personal Blog",
+    "Local Business Website"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "Live website with 90+ Pagespeed score."
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Technical audit of submitted site.",
+    "criteria": "Security headers, caching, responsive design."
   },
   "certification": {
-    "title": "Certified Specialist in WordPress",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "WordPress Site Specialist",
+    "criteria": "Pass final site audit.",
+    "verification": "Digital certificate."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Custom theme PHP development.",
   "next_learning_path": {
-    "recommended_next": "Advance to woocommerce-cert to specialize further.",
-    "related_programs": "For broader career mastery, compare with elementor-cert, woocommerce-cert."
+    "recommended_next": "Elementor Mastery",
+    "related_programs": "WooCommerce"
   },
   "faq": [
     {
-      "question": "What prior experience do I need for WordPress?",
-      "answer": "You should satisfy the prerequisite: None before beginning this program."
+      "question": "Is WordPress free?",
+      "answer": "The software is, but hosting costs money."
     },
     {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
+      "question": "Do I need to code?",
+      "answer": "No, we use visual builders."
     },
     {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "Is it secure?",
+      "answer": "Yes, if you follow our security module."
     }
   ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_title": "Installation and Core Concepts",
+      "module_purpose": "Get WP running securely.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional WordPress.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Hosting, databases, WP dashboard."
       ],
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "WordPress Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Domains & Hosting",
+          "what_is_taught": "DNS and cPanel.",
+          "why_it_matters": "The foundation of the web.",
+          "what_learner_does": "Points a domain to a host.",
+          "expected_outcome": "Live server."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "WordPress Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Installing WordPress",
+          "what_is_taught": "1-click installs vs manual.",
+          "why_it_matters": "Understanding the database connection.",
+          "what_learner_does": "Installs WP.",
+          "expected_outcome": "Fresh WP install."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "WordPress Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "The Dashboard",
+          "what_is_taught": "Settings, permalinks, users.",
+          "why_it_matters": "Correct configuration prevents SEO issues later.",
+          "what_learner_does": "Configures core settings.",
+          "expected_outcome": "Optimized base setup."
         }
       ],
       "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
+        "DNS",
+        "Database",
+        "Permalinks"
       ],
       "tools": [
-        "Webflow",
-        "Framer",
-        "Shopify"
+        "LocalWP",
+        "cPanel"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Setup local and live environments.",
+      "assignment": "Provide live URL of fresh install.",
+      "business_application": "Client site initialization.",
+      "expected_outcome": "Working empty site."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_title": "Content and Themes",
+      "module_purpose": "Make the site look good.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional WordPress.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Theme customization, block editor."
       ],
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "WordPress Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Posts vs Pages",
+          "what_is_taught": "Content hierarchy.",
+          "why_it_matters": "Organizes site architecture.",
+          "what_learner_does": "Creates foundational pages.",
+          "expected_outcome": "Site skeleton."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "WordPress Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "The Block Editor (Gutenberg)",
+          "what_is_taught": "Native page building.",
+          "why_it_matters": "Fastest way to build content.",
+          "what_learner_does": "Builds a blog post layout.",
+          "expected_outcome": "Rich media post."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "WordPress Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Theme Customizer",
+          "what_is_taught": "Colors, fonts, headers.",
+          "why_it_matters": "Global branding.",
+          "what_learner_does": "Applies brand kit.",
+          "expected_outcome": "Branded site."
         }
       ],
       "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Hierarchy",
+        "Blocks",
+        "Branding"
       ],
       "tools": [
-        "Webflow",
-        "Framer",
-        "Shopify"
+        "Gutenberg"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Build a 5-page site.",
+      "assignment": "Submit branded site.",
+      "business_application": "Delivering marketing sites.",
+      "expected_outcome": "Visually complete site."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_title": "Plugins, Security & Optimization",
+      "module_purpose": "Make the site fast and bulletproof.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional WordPress.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Caching, firewalls, backups."
       ],
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "WordPress Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Essential Plugins",
+          "what_is_taught": "Forms, SEO, Analytics.",
+          "why_it_matters": "Extends functionality.",
+          "what_learner_does": "Installs and configures core stack.",
+          "expected_outcome": "Functional forms and tracking."
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "WordPress Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Security & Backups",
+          "what_is_taught": "Wordfence, UpdraftPlus.",
+          "why_it_matters": "Prevents catastrophic data loss.",
+          "what_learner_does": "Sets up automated remote backups.",
+          "expected_outcome": "Secure site."
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "WordPress Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Speed Optimization",
+          "what_is_taught": "Caching, image compression.",
+          "why_it_matters": "Crucial for SEO and UX.",
+          "what_learner_does": "Configures caching plugin.",
+          "expected_outcome": "Sub-2 second load time."
         }
       ],
       "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Caching",
+        "Firewall",
+        "Optimization"
       ],
       "tools": [
-        "Webflow",
-        "Framer",
-        "Shopify"
+        "Wordfence",
+        "WP Rocket",
+        "UpdraftPlus"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Audit and optimize the capstone site.",
+      "assignment": "Deliver GTMetrix report.",
+      "business_application": "Offering maintenance retainers.",
+      "expected_outcome": "Fast, secure production site."
     }
   ]
 }

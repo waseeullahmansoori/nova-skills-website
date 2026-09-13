@@ -4,470 +4,359 @@
   "academy": "3D Academy",
   "academy_id": "3d",
   "course_type": "MICRO",
-  "course_role": "Core Skill",
-  "level": "BEGINNER",
-  "duration": "1-2 Months",
-  "learning_hours": 40,
+  "course_role": "Career/Monetization",
+  "level": "BEGINNER+",
+  "duration": "2 Months",
+  "learning_hours": 80,
   "future_review_status": "STABLE",
   "target_audience": {
     "best_for": [
-      "Aspiring Blender Generalist seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
+      "Aspiring Architectural Visualizers seeking mastery in photorealistic rendering.",
+      "Architects wanting to create high-end presentations.",
+      "3D Artists shifting to real-time ArchViz workflows."
     ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in None should complete the prerequisite foundation before enrolling.",
+    "who_should_take_foundation_first": "Learners without basic spatial awareness or CAD reading skills should complete foundational drafting first.",
     "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
+      "Individuals looking for character animation.",
+      "Students wanting theoretical architecture without 3D production."
     ]
   },
   "prerequisites": {
-    "required": "None",
-    "recommended": "Familiarity with modern web browsers and professional digital tools",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic understanding of architectural plans.",
+    "recommended": "Familiarity with digital art tools.",
+    "not_required": "Advanced mathematics or prior coding experience.",
     "system_requirements": {
-      "hardware": "Modern multi-core CPU (Intel i7/Ryzen 7), 16GB+ RAM (32GB recommended), dedicated GPU (RTX 3060+ with 8GB VRAM)",
-      "software_accounts": "3ds Max, Blender, V-Ray, Unreal Engine 5 (student/free tiers sufficient for coursework)"
+      "hardware": "Modern multi-core CPU, 32GB+ RAM, dedicated GPU (RTX 3070+).",
+      "software_accounts": "3ds Max, V-Ray, Photoshop, Twinmotion, SketchUp."
     }
   },
   "overview": {
-    "positioning": "Very popular open-source 3D tool certification.",
-    "short_description": "Master free open-source 3D modeling, sculpting, Cycles rendering, and animation in Blender.",
+    "positioning": "Hands-on practical certification in open-source 3D modeling, sculpting, procedural texturing, and rendering with Blender.",
+    "short_description": "Learn modeling, materials, and rendering in Blender.",
     "key_facts": {
       "level": "BEGINNER",
-      "duration": "1-2 Months",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "40 Hours",
-      "project_count": "PRACTICAL",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Blender Generalist, 3D Modeler"
+      "duration": "2 Months",
+      "format": "Hands-On",
+      "estimated_learning_hours": "80 Hours",
+      "project_count": "3 Projects",
+      "capstone": "Stylized Environment Render",
+      "ai_integration": "NONE",
+      "career_focus": "3D Generalist"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Blender projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Navigate the Blender interface confidently.",
+      "Model 3D assets using poly modeling and modifiers.",
+      "Create procedural materials and apply UV maps.",
+      "Render scenes using Cycles and EEVEE."
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Blender is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Blender has become an industry powerhouse in game dev, indie film, and design studios due to its zero licensing fees and rapid updates.",
+    "ai_impact": "AI plugins within Blender automate retopology, UV unwrapping, and scene scaffolding, allowing artists to focus on creative execution.",
+    "business_demand": "Real estate developers and architecture firms require rapid, photorealistic visual assets for marketing.",
+    "career_opportunity": "Skilled ArchViz artists command premium rates in global freelance markets."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing 3ds Max, Blender, V-Ray.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "MODEL: Construct accurate 3D architectural scenes from 2D plans.",
+    "TEXTURE: Apply physically based rendering (PBR) materials for realism.",
+    "LIGHT: Configure realistic interior and exterior lighting setups.",
+    "RENDER: Optimize render settings for balance between quality and speed.",
+    "ANIMATE: Develop smooth camera paths for real-time walkthroughs."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "Stage 1: Structural Modeling",
+        "focus": "Translating CAD plans into 3D geometry in 3ds Max."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Stage 2: Materiality",
+        "focus": "Creating and applying realistic V-Ray materials."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
+        "stage": "Stage 3: Illumination",
+        "focus": "Mastering HDRI and artificial lighting setups."
       },
       {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
+        "stage": "Stage 4: Post-Production",
+        "focus": "Enhancing raw renders using Photoshop techniques."
       },
       {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
+        "stage": "Stage 5: Real-Time Environments",
+        "focus": "Importing scenes into Twinmotion for interactive walkthroughs."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "3ds Max",
-        "purpose": "Primary industry standard software for Blender execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
         "tool": "Blender",
-        "purpose": "Primary industry standard software for Blender execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "V-Ray",
-        "purpose": "Primary industry standard software for Blender execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Unreal Engine 5",
-        "purpose": "Primary industry standard software for Blender execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Twinmotion",
-        "purpose": "Primary industry standard software for Blender execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Photoshop",
-        "purpose": "Primary industry standard software for Blender execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "purpose": "All-in-one 3D creation suite.",
+        "what_student_learns": "Modeling, texturing, rendering.",
+        "what_student_builds": "Complete 3D scenes."
       }
     ],
-    "supporting_tools": [
-      {
-        "tool": "AutoCAD",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Corona Renderer",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Substance Painter",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Cinema 4D",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Lumen & Nanite Realtime Systems",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Gaussian Splatting in ArchViz",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Krea AI for Upscaling Renders",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Magnific AI",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Outdated CPU-only render engines",
-      "Legacy mental ray workflows"
-    ]
+    "supporting_tools": [],
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Blender in 2026/27:",
+    "overview": "Standard ArchViz Production Pipeline:",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "CAD Import & Cleanup",
+        "desc": "Preparing 2D plans for 3D modeling."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Whitebox Modeling",
+        "desc": "Building the primary structure and testing camera angles."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
+        "name": "Material & Texture Application",
+        "desc": "Assigning PBR materials to surfaces."
       },
       {
         "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
+        "name": "Lighting Setup",
+        "desc": "Configuring natural and artificial light sources."
       },
       {
         "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Rendering & Post-Production",
+        "desc": "Generating final images and applying adjustments in Photoshop."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "3ds Max, Blender, V-Ray",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "3ds Max, Blender, Lumen & Nanite Realtime Systems",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Real Estate Marketing",
+      "business_problem": "Selling off-plan properties before construction.",
+      "approach": "Create photorealistic visual assets based on architectural plans.",
+      "toolset": "3ds Max, V-Ray, Photoshop",
+      "output": "High-converting marketing brochures and virtual tours."
     }
   ],
   "ai_integration": {
     "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "ai_can_assist_with": "Denoising renders and generating background elements.",
+    "ai_can_automate": "Texture upscaling and basic sky replacements.",
+    "ai_cannot_replace": "Architectural design intent, lighting mood, and spatial composition.",
+    "human_expertise_required": "Ensuring structural accuracy and realistic material properties.",
+    "validation_protocol": "Verify AI-generated elements against actual project specifications.",
+    "responsible_use": "Avoid misleading representations of physical property boundaries."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Always work to real-world scale (1 unit = 1cm or 1m).",
+    "Keep poly counts optimized for real-time engine compatibility.",
+    "Use render elements (passes) for flexible post-production."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Ignoring real-world material scale and reflectivity.",
+      "why_it_happens": "Rushing the texturing process without reference photos.",
+      "professional_approach": "Always use PBR maps with correct tiling and reflection glossiness."
     }
   ],
   "career_paths": {
-    "entry_roles": "Blender Generalist",
-    "mid_roles": " 3D Modeler",
-    "specialist_roles": "Indie Game Artist",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": "Junior ArchViz Artist",
+    "mid_roles": "Senior 3D Visualizer",
+    "specialist_roles": "Lighting TD, Environment Artist",
+    "freelance_roles": "Freelance Architectural Renderer",
+    "employer_expectations": "Strong portfolio of photorealistic renders and fast turnaround times.",
+    "what_student_demonstrates": "Ability to deliver complete ArchViz projects from CAD to final render."
   },
   "freelance_applications": {
     "services_offered": [
-      "End-to-end Blender project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
+      "Exterior Renders",
+      "Interior Renders",
+      "Real-time Walkthroughs"
     ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "client_workflow": "Receive CAD -> Whitebox Approval -> Texture/Light Approval -> Final Render Delivery",
+    "portfolio_requirements": "3-5 high-quality projects showing various lighting conditions (day/night)."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "Modern Residential Exterior Render",
+    "Luxury Interior Living Space Render",
+    "Commercial Building Real-Time Walkthrough"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "Set of 4K photorealistic architectural renders.",
+    "Playable real-time architectural walkthrough executable."
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Project-Based Evaluation",
+    "criteria": "Photorealism, modeling accuracy, lighting quality, and material realism."
   },
   "certification": {
-    "title": "Certified Specialist in Blender",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Certified Architectural Visualizer",
+    "criteria": "Completion of all module projects and capstone presentation.",
+    "verification": "Digital verified certificate."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Structural engineering analysis and MEP (Mechanical, Electrical, Plumbing) design.",
   "next_learning_path": {
-    "recommended_next": "Advance to unreal-engine-basics to specialize further.",
-    "related_programs": "Explore complementary specializations in this academy."
+    "recommended_next": "Unreal Engine Advanced for ArchViz",
+    "related_programs": "3D Visualisation Professional"
   },
   "faq": [
     {
-      "question": "What prior experience do I need for Blender?",
-      "answer": "You should satisfy the prerequisite: None before beginning this program."
+      "question": "Do I need to be an architect?",
+      "answer": "No, but you need to learn how to read architectural floor plans."
     },
     {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
+      "question": "Why learn both V-Ray and Twinmotion?",
+      "answer": "V-Ray is industry standard for high-end static renders, while Twinmotion allows rapid real-time interactive presentations."
     },
     {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "Can my laptop run 3ds Max and V-Ray?",
+      "answer": "You need a system with a dedicated GPU (like an RTX 3060 or better) for smooth rendering performance."
     }
   ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_title": "Mesh Modeling & Modifiers",
+      "module_purpose": "Learn the core tools for creating 3D geometry.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Blender.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Interface navigation",
+        "Edit Mode tools",
+        "Modifier Stack"
       ],
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "Blender Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "UI & Navigation",
+          "what_is_taught": "Viewports, outliner, properties.",
+          "why_it_matters": "Essential for speed.",
+          "what_learner_does": "Customizes the workspace.",
+          "expected_outcome": "Familiarity with UI."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "Blender Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Object & Edit Mode",
+          "what_is_taught": "Transforming objects and editing vertices/edges/faces.",
+          "why_it_matters": "Core modeling workflow.",
+          "what_learner_does": "Models a low-poly prop.",
+          "expected_outcome": "Basic 3D model."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "Blender Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "The Modifier Stack",
+          "what_is_taught": "Array, Mirror, and Subdivision Surface modifiers.",
+          "why_it_matters": "Non-destructive modeling.",
+          "what_learner_does": "Uses modifiers to build complex shapes.",
+          "expected_outcome": "Procedural geometry."
         }
       ],
       "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Edit Mode",
+        "Modifiers"
       ],
       "tools": [
-        "3ds Max",
-        "Blender",
-        "V-Ray"
+        "Blender"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Model a low-poly room.",
+      "assignment": "Submit the Blender model.",
+      "business_application": "Asset creation for games/animation.",
+      "expected_outcome": "Completed 3D model."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_title": "Materials, Shaders & UV Unwrapping",
+      "module_purpose": "Add color and surface properties to models.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Blender.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Shader Editor",
+        "Principled BSDF",
+        "UV Mapping"
       ],
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "Blender Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "The Shader Editor",
+          "what_is_taught": "Node-based material creation.",
+          "why_it_matters": "Industry standard texturing workflow.",
+          "what_learner_does": "Creates basic procedural materials.",
+          "expected_outcome": "Material node setups."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "Blender Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "UV Unwrapping",
+          "what_is_taught": "Marking seams and unwrapping.",
+          "why_it_matters": "Required for image textures.",
+          "what_learner_does": "Unwraps the room props.",
+          "expected_outcome": "Clean UV maps."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "Blender Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Applying Textures",
+          "what_is_taught": "Connecting image textures to BSDF inputs.",
+          "why_it_matters": "Creates photorealistic surfaces.",
+          "what_learner_does": "Textures the room with PBR maps.",
+          "expected_outcome": "Fully textured scene."
         }
       ],
       "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Nodes",
+        "UVs",
+        "PBR"
       ],
       "tools": [
-        "3ds Max",
-        "Blender",
-        "V-Ray"
+        "Blender"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Texture the low-poly room.",
+      "assignment": "Submit textured scene.",
+      "business_application": "Look development.",
+      "expected_outcome": "Textured 3D environment."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
+      "module_title": "Cycles/EEVEE Rendering & Animation",
+      "module_purpose": "Output final images and animations.",
       "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Blender.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Lighting",
+        "Render Engines",
+        "Keyframe Animation"
       ],
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "Blender Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Lighting the Scene",
+          "what_is_taught": "Point, Spot, Area lights and HDRIs.",
+          "why_it_matters": "Sets the mood and visibility.",
+          "what_learner_does": "Lights the room.",
+          "expected_outcome": "Well-lit scene."
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "Blender Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Cycles vs EEVEE",
+          "what_is_taught": "Differences between raytracing and rasterization.",
+          "why_it_matters": "Choosing the right tool for the job.",
+          "what_learner_does": "Configures both render engines.",
+          "expected_outcome": "Optimized render settings."
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "Blender Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_title": "Basic Animation & Output",
+          "what_is_taught": "Keyframing camera movement and rendering sequences.",
+          "why_it_matters": "Creating motion deliverables.",
+          "what_learner_does": "Animates a camera fly-through.",
+          "expected_outcome": "Final rendered video."
         }
       ],
       "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
+        "Cycles",
+        "EEVEE",
+        "Keyframes"
       ],
       "tools": [
-        "3ds Max",
-        "Blender",
-        "V-Ray"
+        "Blender"
       ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "hands_on_practice": "Render a turntable animation of the room.",
+      "assignment": "Submit MP4 animation.",
+      "business_application": "Final content delivery.",
+      "expected_outcome": "Rendered video sequence."
     }
   ]
 }

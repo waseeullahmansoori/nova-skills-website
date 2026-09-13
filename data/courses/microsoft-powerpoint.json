@@ -2,347 +2,182 @@
   "course_id": "microsoft-powerpoint",
   "course_name": "Microsoft PowerPoint",
   "academy": "Office Productivity Academy",
-  "academy_id": "office",
+  "academy_id": "office-productivity-academy",
   "course_type": "RETIRE",
-  "course_role": "Supporting Skill",
-  "level": "BEGINNER",
-  "duration": "1-2 Weeks",
-  "learning_hours": 40,
-  "future_review_status": "STABLE",
+  "course_role": "Presentation Specialist",
+  "level": "Beginner",
+  "duration": "1 Month",
+  "learning_hours": "40 hrs",
+  "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": [
-      "Aspiring Slide Formatter seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in None should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+    "best_for": ["Sales Professionals", "Educators", "Managers"],
+    "not_for": ["Professional Video Editors"],
+    "who_should_take_foundation_first": "Absolute computer beginners"
   },
   "prerequisites": {
-    "required": "None",
-    "recommended": "Familiarity with modern web browsers and professional digital tools",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic computer skills",
+    "recommended": "Understanding of basic design principles (helpful but not required)",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot, Notion (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "Standard PC or Mac",
+      "software_accounts": "Microsoft PowerPoint, Canva (Free tier)"
+    },
+    "not_required": "Graphic design experience"
   },
   "overview": {
-    "positioning": "Retire as standalone course; merge with Presentation Skills & Pitching.",
-    "short_description": "Design executive presentation decks, slide masters, morph transitions, and infographics.",
+    "positioning": "Move beyond 'Death by PowerPoint' and learn to design engaging, high-impact presentations.",
+    "short_description": "Master slide design, animations, slide masters, and visual storytelling in PowerPoint and Canva.",
     "key_facts": {
-      "level": "BEGINNER",
-      "duration": "1-2 Weeks",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "40 Hours",
-      "project_count": "EXERCISE",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "HIGH COMMODITIZATION RISK",
-      "career_focus": "Slide Formatter"
+      "level": "Beginner to Intermediate",
+      "duration": "1 Month",
+      "format": "Online",
+      "estimated_learning_hours": "40 hrs",
+      "project_count": 2,
+      "capstone": "Yes",
+      "ai_integration": "No",
+      "career_focus": "Presentation Specialist"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Microsoft PowerPoint projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Design clean, visually appealing slides without clutter",
+      "Build and manage corporate templates using the Slide Master",
+      "Use animations and transitions purposefully to enhance the message",
+      "Integrate Canva graphics seamlessly into PowerPoint decks"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Microsoft PowerPoint is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Attention spans are shorter; presentations must be highly visual and engaging.",
+    "ai_impact": "AI can generate slide outlines, but compelling visual design still requires human oversight.",
+    "business_demand": "Sales pitches, internal meetings, and training all rely heavily on quality slide decks.",
+    "career_opportunity": "Strong presentation skills elevate your visibility within any organization."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "DESIGN: Visually striking slides that communicate ideas clearly",
+    "TEMPLATE: Corporate branding guidelines using the Slide Master",
+    "ANIMATE: Elements to control the flow of information",
+    "PRESENT: Confidently using Presenter View and delivery tools"
   ],
   "learning_journey": {
     "stages": [
-      {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
-      },
-      {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
-      },
-      {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      }
+      { "stage": "Design Basics", "focus": "Layouts, fonts, and colors" },
+      { "stage": "Slide Master", "focus": "Templates and consistency" },
+      { "stage": "Visuals", "focus": "Graphics, Canva, and Animation" }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
-      {
-        "tool": "Microsoft Excel (with Python & Power Query)",
-        "purpose": "Primary industry standard software for Microsoft PowerPoint execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Power BI",
-        "purpose": "Primary industry standard software for Microsoft PowerPoint execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Microsoft 365 Copilot",
-        "purpose": "Primary industry standard software for Microsoft PowerPoint execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Notion",
-        "purpose": "Primary industry standard software for Microsoft PowerPoint execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Google Workspace",
-        "purpose": "Primary industry standard software for Microsoft PowerPoint execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      }
+      { "tool": "Microsoft PowerPoint", "purpose": "Presentation creation", "what_student_learns": "Complete application usage", "what_student_builds": "Slide Decks" },
+      { "tool": "Canva", "purpose": "Graphic creation", "what_student_learns": "Basic graphic design", "what_student_builds": "Custom slide assets" }
     ],
-    "supporting_tools": [
-      {
-        "tool": "ClickUp",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Slack",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tally with GST",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tableau",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Microsoft Fabric",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Notion AI Database Automations",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Make.com for Office Workflows",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Standalone basic MS Word formatting without Copilot",
-      "Manual copy-paste Excel data consolidation"
-    ]
+    "supporting_tools": [],
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Microsoft PowerPoint in 2026/27:",
+    "overview": "Presentation Design Workflow",
     "stages": [
-      {
-        "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
-      },
-      {
-        "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
-      },
-      {
-        "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
-      },
-      {
-        "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
-      }
+      { "step": 1, "name": "Storyboarding", "desc": "Planning the narrative" },
+      { "step": 2, "name": "Drafting", "desc": "Adding core text to slides" },
+      { "step": 3, "name": "Designing", "desc": "Applying visuals and layouts" },
+      { "step": 4, "name": "Refining", "desc": "Adding animations and practicing delivery" }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft Fabric",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Sales & Marketing",
+      "business_problem": "Boring, text-heavy pitches losing client interest",
+      "approach": "Redesign pitch deck focusing on visuals, icons, and controlled animations",
+      "toolset": "PowerPoint, Canva",
+      "output": "High-conversion Sales Pitch Deck"
     }
   ],
   "ai_integration": {
-    "role_classification": "HIGH COMMODITIZATION RISK",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "Traditional",
+    "ai_can_assist_with": "Design Ideas (native PowerPoint feature)",
+    "ai_can_automate": "Basic slide layouts",
+    "ai_cannot_replace": "The narrative flow and custom branding",
+    "human_expertise_required": "High",
+    "validation_protocol": "Visual review",
+    "responsible_use": "N/A"
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "One idea per slide",
+    "Use high-quality imagery instead of bullet points where possible",
+    "Animations should explain, not just entertain"
   ],
   "common_mistakes": [
-    {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
-    }
+    { "mistake": "Reading from the slides", "why_it_happens": "Putting too much text on the slide instead of the speaker notes", "professional_approach": "Put text in speaker notes; keep slides visual" }
   ],
   "career_paths": {
-    "entry_roles": "Slide Formatter",
-    "mid_roles": "Specialist Lead",
-    "specialist_roles": "None",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["Marketing Assistant", "Sales Support"],
+    "mid_roles": ["Presentation Designer", "Marketing Executive"],
+    "specialist_roles": ["Corporate Communications Manager"],
+    "freelance_roles": ["Freelance Pitch Deck Designer"],
+    "employer_expectations": "Ability to distill complex information into clear visuals",
+    "what_student_demonstrates": "A portfolio of redesigned, high-impact presentation decks"
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end Microsoft PowerPoint project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["Pitch Deck Design", "Template Creation", "Webinar Slide Prep"],
+    "client_workflow": "Receive Outline -> Design Draft -> Client Review -> Final Polish",
+    "portfolio_requirements": "Before/After slide redesigns"
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "A Branded Corporate Template",
+    "A 15-slide Visual Pitch Deck"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "A complete, animated, and visually engaging presentation file"
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Visual design review",
+    "criteria": "Clarity of message, use of white space, appropriate animation, and template integrity"
   },
   "certification": {
-    "title": "Certified Specialist in Microsoft PowerPoint",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Presentation Design Specialist",
+    "criteria": "Pass the final pitch deck design project",
+    "verification": "Digital Certificate"
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Advanced video production within PowerPoint",
   "next_learning_path": {
-    "recommended_next": "Advance to presentation-skills to specialize further.",
-    "related_programs": "For broader career mastery, compare with presentation-skills, office-pro."
+    "recommended_next": "Graphic Design Basics",
+    "related_programs": "Public Speaking"
   },
   "faq": [
-    {
-      "question": "What prior experience do I need for Microsoft PowerPoint?",
-      "answer": "You should satisfy the prerequisite: None before beginning this program."
-    },
-    {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
-    },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
-    }
+    { "question": "I'm not creative, can I still learn this?", "answer": "Yes, we teach formulaic design principles (alignment, contrast) that don't require innate artistic talent." }
   ],
-  "transition_treatment": {
-    "action": "RETIRE",
-    "rationale": "Zero standalone market value as a separate paid certification in 2026/27.",
-    "parent_replacement": "presentation-skills",
-    "content_migration_plan": "Transfer all specialized practical exercises, checklists, and cheat sheets into the parent program as specialized elective modules."
-  },
   "modules": [
     {
-      "module_number": "Transition Overview",
-      "module_title": "Deprecation & Replacement Blueprint",
-      "module_purpose": "Structured transition of Microsoft PowerPoint into presentation-skills.",
-      "what_you_will_learn": [
-        "Core concepts are preserved and integrated into the primary comprehensive track."
-      ],
+      "module_number": 1,
+      "module_title": "Slide Design & Layout",
+      "module_purpose": "Learn the principles of effective visual communication",
+      "what_you_will_learn": ["Layouts", "Typography", "Images"],
       "lessons": [
-        {
-          "lesson_title": "Strategic Curriculum Migration",
-          "what_is_taught": "Transition pathway into presentation-skills.",
-          "why_it_matters": "Prevents fragmented learning and guarantees comprehensive industry outcomes.",
-          "what_learner_does": "Enrolls in the designated parent program to receive deeper training.",
-          "expected_outcome": "Unified, high-value professional mastery."
-        }
+        { "lesson_number": 1, "lesson_title": "The Interface and Basic Layouts", "what_is_taught": "Navigating PowerPoint and using standard layouts", "why_it_matters": "Foundation for building slides", "what_learner_does": "Creates a basic 5-slide outline", "expected_outcome": "Basic software navigation" },
+        { "lesson_number": 2, "lesson_title": "Typography and Colors", "what_is_taught": "Choosing readable fonts and applying theme colors", "why_it_matters": "Crucial for readability and branding", "what_learner_does": "Redesigns a poorly colored slide", "expected_outcome": "Understanding of visual design basics" },
+        { "lesson_number": 3, "lesson_title": "Working with Images and Icons", "what_is_taught": "Inserting, cropping, and aligning visuals", "why_it_matters": "Visuals convey messages faster than text", "what_learner_does": "Replaces a bulleted list with an icon-driven layout", "expected_outcome": "Visual communication skills" }
       ],
-      "key_concepts": [
-        "Curriculum consolidation",
-        "Unified learning journey"
+      "key_concepts": ["White Space", "Contrast", "Alignment"],
+      "tools": ["Microsoft PowerPoint"],
+      "hands_on_practice": "Redesigning 'bad' slides",
+      "assignment": "Visual Intro Deck",
+      "business_application": "Making everyday meetings more engaging",
+      "expected_outcome": "Improved Slide Designer"
+    },
+    {
+      "module_number": 2,
+      "module_title": "Advanced Tools, Templates & Delivery",
+      "module_purpose": "Create professional corporate assets and deliver confidently",
+      "what_you_will_learn": ["Slide Master", "Animations", "Canva Integration"],
+      "lessons": [
+        { "lesson_number": 1, "lesson_title": "Mastering the Slide Master", "what_is_taught": "Creating custom layouts and locking branding", "why_it_matters": "Essential for corporate consistency", "what_learner_does": "Builds a reusable corporate template", "expected_outcome": "Template architecture skills" },
+        { "lesson_number": 2, "lesson_title": "Canva for PowerPoint", "what_is_taught": "Designing complex graphics in Canva and exporting to PPT", "why_it_matters": "Expands design capabilities beyond native PPT tools", "what_learner_does": "Designs a custom cover graphic in Canva", "expected_outcome": "Cross-platform design capability" },
+        { "lesson_number": 3, "lesson_title": "Meaningful Animations & Transitions", "what_is_taught": "Morph transition, entrance/exit effects", "why_it_matters": "Controls audience focus", "what_learner_does": "Animates a complex chart to reveal data step-by-step", "expected_outcome": "Animation proficiency" },
+        { "lesson_number": 4, "lesson_title": "Delivery and Presenter Tools", "what_is_taught": "Presenter View, speaker notes, and exporting to PDF/Video", "why_it_matters": "Prepares the speaker for the actual presentation", "what_learner_does": "Configures a presentation for a dual-monitor setup", "expected_outcome": "Presentation readiness" }
       ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI"
-      ],
-      "hands_on_practice": "Integrated within parent program labs.",
-      "assignment": "Refer to parent program assignment suite.",
-      "business_application": "Integrated commercial workflow.",
-      "expected_outcome": "Seamless educational progression."
+      "key_concepts": ["Consistency", "Pacing", "Delivery"],
+      "tools": ["Microsoft PowerPoint", "Canva"],
+      "hands_on_practice": "Building templates and animating data",
+      "assignment": "Final Animated Pitch Deck",
+      "business_application": "High-stakes sales pitches and executive reporting",
+      "expected_outcome": "Advanced Presentation Specialist"
     }
   ]
 }

@@ -4,450 +4,281 @@
   "academy": "Communication Academy",
   "academy_id": "communication",
   "course_type": "MICRO",
-  "course_role": "Core Skill",
-  "level": "BEGINNER+",
+  "course_role": "Communicator",
+  "level": "Beginner to Intermediate",
   "duration": "1 Month",
   "learning_hours": 40,
-  "future_review_status": "STABLE",
+  "future_review_status": "Ready",
   "target_audience": {
     "best_for": [
-      "Aspiring Corporate Professional seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
+      "New professionals entering the corporate world",
+      "Team members wanting to improve internal communication",
+      "Freelancers communicating with clients"
     ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in spoken-english-pro should complete the prerequisite foundation before enrolling.",
     "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+      "Advanced corporate executives looking for high-level negotiation"
+    ],
+    "who_should_take_foundation_first": "Non-English speakers."
   },
   "prerequisites": {
-    "required": "spoken-english-pro",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic English proficiency.",
+    "recommended": "Familiarity with email.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "Zoom/Teams, Grammarly / LanguageTool, ChatGPT / Claude for Communication Modeling, Loom (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "Computer",
+      "software_accounts": "Gmail, Slack, Google Docs, Notion"
+    },
+    "not_required": "Prior corporate experience."
   },
   "overview": {
-    "positioning": "High utility corporate writing & correspondence course.",
-    "short_description": "Write professional emails, reports, proposals, and lead clear workplace communications.",
+    "positioning": "Learn the essential written and operational communication skills for the modern workplace.",
+    "short_description": "A quick, focused course on writing better emails, using Slack/Teams effectively, and managing daily corporate communication tools.",
     "key_facts": {
-      "level": "BEGINNER+",
+      "level": "Beginner to Intermediate",
       "duration": "1 Month",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "40 Hours",
-      "project_count": "PRACTICAL",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Corporate Professional, Project Manager"
+      "format": "Online",
+      "estimated_learning_hours": 40,
+      "project_count": 2,
+      "capstone": "Corporate Communication Toolkit",
+      "ai_integration": "Medium",
+      "career_focus": "Workplace Efficiency"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Business Communication projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Write concise, clear business emails.",
+      "Communicate professionally on instant messaging platforms like Slack.",
+      "Draft simple business memos and updates in Google Docs/Notion.",
+      "Organize communication workflows."
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Business Communication is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Remote work relies heavily on asynchronous written communication.",
+    "ai_impact": "AI can draft content, but structuring it for human consumption is vital.",
+    "business_demand": "Poor communication causes delays and mistakes in fast-paced environments.",
+    "career_opportunity": "Efficient communicators are seen as reliable and professional."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing Zoom/Teams, Grammarly / LanguageTool, ChatGPT / Claude for Communication Modeling.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "DRAFT: Effective emails that get responses.",
+    "NAVIGATE: Slack/Teams etiquette seamlessly.",
+    "DOCUMENT: Processes and updates clearly.",
+    "ORGANIZE: Information for team consumption."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "Email Mastery",
+        "focus": "Writing clear emails with strong subject lines."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Asynchronous Chat",
+        "focus": "Using Slack/Teams properly."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
+        "stage": "Documentation",
+        "focus": "Writing memos and updates in Notion/Docs."
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "Zoom/Teams",
-        "purpose": "Primary industry standard software for Business Communication execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Gmail",
+        "purpose": "Email communication",
+        "what_student_learns": "Email structure and formatting.",
+        "what_student_builds": "Email templates."
       },
       {
-        "tool": "Grammarly / LanguageTool",
-        "purpose": "Primary industry standard software for Business Communication execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "ChatGPT / Claude for Communication Modeling",
-        "purpose": "Primary industry standard software for Business Communication execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Loom",
-        "purpose": "Primary industry standard software for Business Communication execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
+        "tool": "Slack",
+        "purpose": "Team chat",
+        "what_student_learns": "Channel etiquette and threading.",
+        "what_student_builds": "Communication guidelines."
       }
     ],
     "supporting_tools": [
       {
         "tool": "Google Docs",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "purpose": "Collaborative writing"
       },
       {
-        "tool": "PowerPoint / Canva for Pitch Visuals",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Otter.ai / Fireflies",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "tool": "Notion",
+        "purpose": "Organizing updates"
       }
     ],
-    "emerging_tools": [
-      {
-        "tool": "Yoodli AI Speech Coach",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Claude Executive Writing Assistants",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "AI Realtime Pronunciation Feedback",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Rote memorization grammar drill sheets",
-      "Accent neutralization drills with no business context"
-    ]
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Business Communication in 2026/27:",
+    "overview": "Daily communication operations in a business.",
     "stages": [
       {
         "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
+        "name": "Determine Channel",
+        "desc": "Deciding whether to use email, chat, or a document."
       },
       {
         "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
+        "name": "Draft",
+        "desc": "Writing the message clearly."
       },
       {
         "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
-      },
-      {
-        "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
+        "name": "Review & Send",
+        "desc": "Checking tone before sending."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "Zoom/Teams, Grammarly / LanguageTool, ChatGPT / Claude for Communication Modeling",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "Zoom/Teams, Grammarly / LanguageTool, Yoodli AI Speech Coach",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Tech Startups",
+      "business_problem": "Information lost in messy Slack channels.",
+      "approach": "Implement threading and document summaries.",
+      "toolset": "Slack, Notion",
+      "output": "Organized company knowledge."
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "AI-Assisted Writer",
+    "ai_can_assist_with": "Drafting initial emails, summarizing threads.",
+    "ai_can_automate": "Grammar checking.",
+    "ai_cannot_replace": "Choosing the right medium for sensitive topics.",
+    "human_expertise_required": "Tone adjustment.",
+    "validation_protocol": "Review AI drafts to ensure they don't sound robotic.",
+    "responsible_use": "Use AI for speed, but personalize messages."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "BLUF: Bottom Line Up Front in emails.",
+    "Use threads in Slack to keep channels clean.",
+    "Keep messages actionable."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Sending an email for something that requires a 2-minute chat.",
+      "why_it_happens": "Poor channel selection.",
+      "professional_approach": "Match the medium to the urgency and complexity."
     }
   ],
   "career_paths": {
-    "entry_roles": "Corporate Professional",
-    "mid_roles": " Project Manager",
-    "specialist_roles": "Client Associate",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["Office Administrator", "Coordinator"],
+    "mid_roles": ["Operations Manager"],
+    "specialist_roles": [],
+    "freelance_roles": ["Virtual Assistant"],
+    "employer_expectations": "Can handle daily correspondence efficiently.",
+    "what_student_demonstrates": "A toolkit of communication templates."
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end Business Communication project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["Inbox management", "Internal comms setup"],
+    "client_workflow": "Review tools -> Create guidelines -> Manage comms",
+    "portfolio_requirements": "Sample templates and guidelines."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "A library of 10 essential business email templates.",
+    "A team communication guideline document."
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "Business Communication Toolkit"
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Project submission.",
+    "criteria": "Clarity, tone, and appropriate tool usage."
   },
   "certification": {
-    "title": "Certified Specialist in Business Communication",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Certificate in Business Communication",
+    "criteria": "Submission of the final toolkit.",
+    "verification": "Certificate ID."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Public speaking, complex contract writing.",
   "next_learning_path": {
-    "recommended_next": "Advance to presentation-skills to specialize further.",
-    "related_programs": "For broader career mastery, compare with business-english."
+    "recommended_next": "Business English & Personality Development",
+    "related_programs": "Project Management"
   },
   "faq": [
     {
-      "question": "What prior experience do I need for Business Communication?",
-      "answer": "You should satisfy the prerequisite: spoken-english-pro before beginning this program."
-    },
-    {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
-    },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
+      "question": "Is this course about speaking or writing?",
+      "answer": "This micro-course focuses primarily on written and operational communication (emails, Slack, Docs)."
     }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
+      "module_number": 1,
+      "module_title": "Email Excellence",
+      "module_purpose": "Learn to write emails that are read and acted upon.",
       "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Business Communication.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Structuring emails (BLUF).",
+        "Writing subject lines.",
+        "Managing tone."
       ],
       "lessons": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "Business Communication Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "The Anatomy of a Perfect Email",
+          "what_is_taught": "Subject lines, greetings, body, and sign-offs.",
+          "why_it_matters": "Ensures professionalism.",
+          "what_learner_does": "Format a disorganized email into a proper structure.",
+          "expected_outcome": "Can format emails correctly."
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "Business Communication Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Bottom Line Up Front (BLUF)",
+          "what_is_taught": "Putting the main point or request in the first sentence.",
+          "why_it_matters": "Saves time for busy readers.",
+          "what_learner_does": "Rewrite long emails to feature the BLUF.",
+          "expected_outcome": "Concise, actionable emails."
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "Business Communication Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Tone and Etiquette",
+          "what_is_taught": "Balancing formality with warmth.",
+          "why_it_matters": "Maintains relationships.",
+          "what_learner_does": "Draft emails for sensitive situations (e.g., declining a request).",
+          "expected_outcome": "Appropriate tone control."
         }
       ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Zoom/Teams",
-        "Grammarly / LanguageTool",
-        "ChatGPT / Claude for Communication Modeling"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["BLUF", "Subject Lines", "Tone"],
+      "tools": ["Gmail"],
+      "hands_on_practice": "Drafting various email types.",
+      "assignment": "Create a toolkit of 5 email templates (intro, follow-up, apology, request, update).",
+      "business_application": "Faster email turnaround and better responses.",
+      "expected_outcome": "Email writing proficiency."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
+      "module_number": 2,
+      "module_title": "Modern Tool Etiquette",
+      "module_purpose": "Navigate Slack, Teams, and documentation effectively.",
       "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Business Communication.",
-        "Troubleshoot common failure points and optimize output quality."
+        "Slack/Teams best practices.",
+        "Writing internal updates.",
+        "Choosing the right channel."
       ],
       "lessons": [
         {
-          "lesson_number": "2.1",
-          "lesson_title": "Business Communication Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 1,
+          "lesson_title": "Mastering Slack and Teams",
+          "what_is_taught": "Using threads, mentions (@), and status updates.",
+          "why_it_matters": "Prevents notification fatigue for the team.",
+          "what_learner_does": "Simulate resolving an issue in a chat thread.",
+          "expected_outcome": "Effective asynchronous chat usage."
         },
         {
-          "lesson_number": "2.2",
-          "lesson_title": "Business Communication Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 2,
+          "lesson_title": "Writing Internal Memos and Docs",
+          "what_is_taught": "Drafting clear project updates and meeting notes.",
+          "why_it_matters": "Creates a permanent record of work.",
+          "what_learner_does": "Draft a brief project update in Google Docs.",
+          "expected_outcome": "Clear internal documentation."
         },
         {
-          "lesson_number": "2.3",
-          "lesson_title": "Business Communication Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
+          "lesson_number": 3,
+          "lesson_title": "Channel Selection Strategy",
+          "what_is_taught": "When to use email vs. chat vs. document vs. meeting.",
+          "why_it_matters": "Optimizes workflow efficiency.",
+          "what_learner_does": "Analyze scenarios and select the best communication tool.",
+          "expected_outcome": "Strategic communication planning."
         }
       ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Zoom/Teams",
-        "Grammarly / LanguageTool",
-        "ChatGPT / Claude for Communication Modeling"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
-    },
-    {
-      "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
-      "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Business Communication.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
-      "lessons": [
-        {
-          "lesson_number": "3.1",
-          "lesson_title": "Business Communication Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "3.2",
-          "lesson_title": "Business Communication Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "3.3",
-          "lesson_title": "Business Communication Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
-      ],
-      "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Zoom/Teams",
-        "Grammarly / LanguageTool",
-        "ChatGPT / Claude for Communication Modeling"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Threading", "Asynchronous Comms", "Channel Selection"],
+      "tools": ["Slack", "Google Docs", "Notion"],
+      "hands_on_practice": "Simulating workplace comms scenarios.",
+      "assignment": "Draft a 'Team Communication Guideline' document in Notion.",
+      "business_application": "Smoother team operations.",
+      "expected_outcome": "Mastery of modern corporate communication tools."
     }
   ]
 }

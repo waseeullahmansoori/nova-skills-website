@@ -2,462 +2,225 @@
   "course_id": "tally-gst",
   "course_name": "Tally with GST",
   "academy": "Office Productivity Academy",
-  "academy_id": "office",
+  "academy_id": "office-productivity-academy",
   "course_type": "REPOSITION",
-  "course_role": "Specialization",
-  "level": "BEGINNER",
+  "course_role": "Accounts Executive",
+  "level": "Intermediate",
   "duration": "2 Months",
-  "learning_hours": 60,
-  "future_review_status": "STABLE",
+  "learning_hours": "80 hrs",
+  "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": [
-      "Aspiring Accountant seeking industry-grade capabilities in 2026/27.",
-      "Working practitioners wanting to modernize workflows with contemporary tools and AI augmentation.",
-      "Freelancers and agency operators aiming to deliver high-ticket client outcomes."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in Basic accounting knowledge should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Learners looking for passive theoretical lectures without hands-on project builds.",
-      "Students seeking outdated legacy shortcuts or overnight employment guarantees."
-    ]
+    "best_for": ["Commerce Graduates", "Junior Accountants", "Business Owners"],
+    "not_for": ["Software Engineers", "Creative Designers"],
+    "who_should_take_foundation_first": "Individuals with no basic accounting knowledge"
   },
   "prerequisites": {
-    "required": "Basic accounting knowledge",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic understanding of accounting principles (debits, credits)",
+    "recommended": "Familiarity with business financial documents",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot, Notion (student/free tiers sufficient for coursework)"
-    }
+      "hardware": "Windows PC with at least 4GB RAM",
+      "software_accounts": "Tally Prime (Educational or Licensed version)"
+    },
+    "not_required": "Advanced taxation knowledge"
   },
   "overview": {
-    "positioning": "Essential for Indian SME accounting; modernize with digital GST portal.",
-    "short_description": "Master Tally Prime accounting, GST filing, vouchers, inventory management, and payroll.",
+    "positioning": "The essential practical course for modern accounting and GST compliance using Tally Prime.",
+    "short_description": "Learn comprehensive computerized accounting, inventory management, and GST filing in Tally Prime.",
     "key_facts": {
-      "level": "BEGINNER",
+      "level": "Intermediate",
       "duration": "2 Months",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "60 Hours",
-      "project_count": "PRACTICAL",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Accountant, GST Compliance Executive"
+      "format": "Hybrid",
+      "estimated_learning_hours": "80 hrs",
+      "project_count": 3,
+      "capstone": "Yes",
+      "ai_integration": "No",
+      "career_focus": "Accounts Executive"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end Tally with GST projects using modern 2026/27 production toolchains.",
-      "Solve concrete commercial and business use cases with measurable performance benchmarks.",
-      "Integrate appropriate AI accelerators without compromising creative taste, code integrity, or security.",
-      "Package production-grade portfolio case studies to demonstrate verifiable proof-of-work to clients and employers."
+      "Set up companies and configure ledgers in Tally Prime",
+      "Record complex business transactions and vouchers",
+      "Manage comprehensive inventory systems and stock categories",
+      "Configure GST, generate E-Way bills, and prepare GSTR-1/3B returns"
     ]
   },
   "why_now": {
-    "industry_shift": "The transition toward modern cloud ecosystems, automated workflows, and AI-accelerated execution has completely transformed how Tally with GST is performed in top companies and agencies in 2026/27.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can bridge high-level strategy with rapid modern execution, replacing slow legacy manual processes with streamlined digital delivery.",
-    "career_opportunity": "Professionals mastering modern 2026/27 workflows command substantial advantages in remote global freelancing, specialized agency roles, and tech-enabled corporate teams."
+    "industry_shift": "Complete digitization of accounting and strict GST compliance requirements.",
+    "ai_impact": "Automation in accounting requires professionals to focus on configuration and compliance rather than data entry.",
+    "business_demand": "Every business requires proficient Tally operators for daily accounting and tax compliance.",
+    "career_opportunity": "Immediate employability in finance departments and CA firms."
   },
   "learning_outcomes": [
-    "PLAN: Formulate comprehensive project briefs, technical architectures, and strategic roadmaps.",
-    "BUILD: Construct professional-grade deliverables utilizing Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot.",
-    "EXECUTE: Implement verified industry standard operating procedures from initial discovery to deployment.",
-    "OPTIMIZE: Audit, debug, and refine production outputs against strict quality and performance metrics.",
-    "DELIVER: Present client-ready portfolio case studies with documented business results."
+    "CONFIGURE: Complete company financial architecture in Tally",
+    "RECORD: Accurate daily financial and inventory transactions",
+    "RECONCILE: Bank statements and financial discrepancies",
+    "COMPLY: With end-to-end GST regulations and reporting"
   ],
   "learning_journey": {
     "stages": [
-      {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
-      },
-      {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
-      },
-      {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      }
+      { "stage": "Fundamentals", "focus": "Company setup and basic vouchers" },
+      { "stage": "Inventory", "focus": "Stock management and purchase/sales cycles" },
+      { "stage": "Advanced Accounting", "focus": "Banking, BRS, and Cost Centers" },
+      { "stage": "Taxation", "focus": "GST setup, invoicing, and returns" }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
-      {
-        "tool": "Microsoft Excel (with Python & Power Query)",
-        "purpose": "Primary industry standard software for Tally with GST execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Power BI",
-        "purpose": "Primary industry standard software for Tally with GST execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Microsoft 365 Copilot",
-        "purpose": "Primary industry standard software for Tally with GST execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Notion",
-        "purpose": "Primary industry standard software for Tally with GST execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      },
-      {
-        "tool": "Google Workspace",
-        "purpose": "Primary industry standard software for Tally with GST execution.",
-        "what_student_learns": "Professional interface navigation, shortcuts, advanced parameters, and production workflows.",
-        "what_student_builds": "Core client deliverables and functional production assets."
-      }
+      { "tool": "Tally Prime", "purpose": "Financial accounting and reporting", "what_student_learns": "Complete software operation", "what_student_builds": "Company Books" },
+      { "tool": "GST Portal (Simulated)", "purpose": "Filing returns", "what_student_learns": "GSTR filing process", "what_student_builds": "Tax Returns" }
     ],
     "supporting_tools": [
-      {
-        "tool": "ClickUp",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Slack",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tally with GST",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Tableau",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
+      { "tool": "Microsoft Excel", "purpose": "Exporting and analyzing Tally reports" }
     ],
-    "emerging_tools": [
-      {
-        "tool": "Microsoft Fabric",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Notion AI Database Automations",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Make.com for Office Workflows",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Standalone basic MS Word formatting without Copilot",
-      "Manual copy-paste Excel data consolidation"
-    ]
+    "emerging_tools": [],
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "How leading practitioners deliver Tally with GST in 2026/27:",
+    "overview": "Standard Accounting Workflow",
     "stages": [
-      {
-        "step": 1,
-        "name": "Client Brief & Discovery",
-        "desc": "Deconstruct business requirements, success KPIs, and technical constraints."
-      },
-      {
-        "step": 2,
-        "name": "Research & Benchmarking",
-        "desc": "Competitor audits, audience intent analysis, and asset gathering."
-      },
-      {
-        "step": 3,
-        "name": "Architecture & Planning",
-        "desc": "Structural wireframes, data schemas, or campaign blueprints."
-      },
-      {
-        "step": 4,
-        "name": "AI-Augmented Ideation & Prototyping",
-        "desc": "Rapid exploratory drafts leveraging generative tools for speed."
-      },
-      {
-        "step": 5,
-        "name": "Core Production & Build",
-        "desc": "High-fidelity technical execution using industry standard toolsets."
-      },
-      {
-        "step": 6,
-        "name": "Quality Assurance & Testing",
-        "desc": "Cross-browser testing, code audits, render validation, or tracking verification."
-      },
-      {
-        "step": 7,
-        "name": "Client Delivery & Deployment",
-        "desc": "Production release, server container launch, or final master asset handoff."
-      },
-      {
-        "step": 8,
-        "name": "Measurement & Analytics",
-        "desc": "Tracking conversion rates, user feedback, performance benchmarks, or ROAS."
-      },
-      {
-        "step": 9,
-        "name": "Iterative Optimization",
-        "desc": "Refining bottlenecks based on real-world telemetry and client input."
-      },
-      {
-        "step": 10,
-        "name": "Documentation & Scaling",
-        "desc": "Standard operating procedures and automated maintenance handoff."
-      }
+      { "step": 1, "name": "Voucher Entry", "desc": "Recording daily transactions" },
+      { "step": 2, "name": "Inventory Update", "desc": "Managing stock inwards/outwards" },
+      { "step": 3, "name": "Reconciliation", "desc": "Bank Reconciliation (BRS)" },
+      { "step": 4, "name": "GST Filing", "desc": "Generating and filing monthly GSTR reports" }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Direct-to-Consumer (D2C) & E-Commerce",
-      "business_problem": "High customer acquisition costs and low conversion on landing platforms.",
-      "approach": "Implement modern streamlined funnels, fast visual assets, and precision tracking.",
-      "toolset": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft 365 Copilot",
-      "output": "High-converting production asset with verified conversion analytics."
-    },
-    {
-      "sector": "B2B Services & High-Ticket Agencies",
-      "business_problem": "Manual operational friction and inconsistent lead qualification.",
-      "approach": "Deploy automated workflow pipelines and professional collateral.",
-      "toolset": "Microsoft Excel (with Python & Power Query), Power BI, Microsoft Fabric",
-      "output": "End-to-end client delivery system with automated reporting."
+      "sector": "Retail / Trading",
+      "business_problem": "Inaccurate stock counts and delayed GST filing",
+      "approach": "Implement Tally Prime with integrated inventory and GST billing",
+      "toolset": "Tally Prime",
+      "output": "Real-time stock valuation and automated GST reports"
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "Traditional",
+    "ai_can_assist_with": "None in core Tally Prime currently",
+    "ai_can_automate": "Bank statement imports (via Tally features, not AI)",
+    "ai_cannot_replace": "Accounting judgment and tax compliance review",
+    "human_expertise_required": "High",
+    "validation_protocol": "Auditing financial statements and trial balances",
+    "responsible_use": "Maintaining strict financial data confidentiality"
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Regular data backups",
+    "Accurate grouping of ledgers for correct Balance Sheet representation",
+    "Timely Bank Reconciliation"
   ],
   "common_mistakes": [
-    {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
-    }
+    { "mistake": "Wrong ledger grouping", "why_it_happens": "Lack of core accounting knowledge", "professional_approach": "Always verify group behavior (Asset/Liability/Income/Expense) before creation" }
   ],
   "career_paths": {
-    "entry_roles": "Accountant",
-    "mid_roles": " GST Compliance Executive",
-    "specialist_roles": "Billing Executive",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": ["Data Entry Operator", "Junior Accountant"],
+    "mid_roles": ["Accounts Executive", "Senior Accountant"],
+    "specialist_roles": ["Tax Consultant", "Audit Assistant"],
+    "freelance_roles": ["Freelance Accountant", "GST Practitioner"],
+    "employer_expectations": "Error-free entry, timely tax reporting, and honesty",
+    "what_student_demonstrates": "A complete, finalized set of company books including tax reports"
   },
   "freelance_applications": {
-    "services_offered": [
-      "End-to-end Tally with GST project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "Discovery Call -> Scope Proposal -> 50% Milestone Deposit -> Iterative Drafts via Loom -> Final QA & Sign-Off -> Retainer Pitch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "services_offered": ["Bookkeeping", "GST Filing", "Bank Reconciliation"],
+    "client_workflow": "Receive Bank Statements/Invoices -> Enter in Tally -> Generate Reports -> File GST",
+    "portfolio_requirements": "Demonstrated understanding of accounting principles (tested via interview)"
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+    "A fully configured Trading Company Profile in Tally",
+    "Complete Financial Statements (P&L, Balance Sheet)",
+    "Ready-to-file GSTR-1 and GSTR-3B Reports"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "Finalized Company Data Backup demonstrating 3 months of simulated accounting cycles"
   ],
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "model": "Practical accounting simulation",
+    "criteria": "Accuracy of Trial Balance, correct GST calculation, and proper inventory valuation"
   },
   "certification": {
-    "title": "Certified Specialist in Tally with GST",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Certified Tally & GST Professional",
+    "criteria": "Pass practical exam resolving a simulated month of transactions",
+    "verification": "Digital Certificate"
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "Advanced Corporate Taxation (Income Tax/TDS in depth), Payroll processing",
   "next_learning_path": {
-    "recommended_next": "Advance to microsoft-excel to specialize further.",
-    "related_programs": "Explore complementary specializations in this academy."
+    "recommended_next": "Advanced Taxation or SAP FICO",
+    "related_programs": "Financial Modeling"
   },
   "faq": [
-    {
-      "question": "What prior experience do I need for Tally with GST?",
-      "answer": "You should satisfy the prerequisite: Basic accounting knowledge before beginning this program."
-    },
-    {
-      "question": "What kind of practical projects will I build?",
-      "answer": "You will build production-grade projects modeled on real commercial client briefs, resulting in portfolio-ready case studies rather than trivial homework exercises."
-    },
-    {
-      "question": "How does the certification verification work?",
-      "answer": "Upon passing all project rubrics, you receive a digital certificate containing a unique verifiable QR-code hosted on novaskills.in/verify for employers and LinkedIn."
-    }
+    { "question": "Do I need an accounting background?", "answer": "Basic knowledge of debits and credits is highly recommended to grasp the concepts quickly." },
+    { "question": "Is Tally Prime different from Tally ERP 9?", "answer": "Yes, Tally Prime has a modernized interface and improved navigation, which we cover extensively." },
+    { "question": "Will we learn actual GST portal filing?", "answer": "We simulate the process and show how to generate the JSON files required for the actual portal." }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Phase 1: Professional Foundations & Modern Toolchain Architecture",
-      "module_purpose": "Establish mental models, environment setup, and baseline technical standards.",
-      "what_you_will_learn": [
-        "Master stage 1 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Tally with GST.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
+      "module_number": 1,
+      "module_title": "Tally Fundamentals & Accounting Masters",
+      "module_purpose": "Set up the foundation for computerized accounting",
+      "what_you_will_learn": ["Company Setup", "Ledgers & Groups", "Basic Vouchers"],
       "lessons": [
-        {
-          "lesson_number": "1.1",
-          "lesson_title": "Tally with GST Practical Workshop 1.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "1.2",
-          "lesson_title": "Tally with GST Practical Workshop 1.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "1.3",
-          "lesson_title": "Tally with GST Practical Workshop 1.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 1 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
+        { "lesson_number": 1, "lesson_title": "Introduction to Tally Prime", "what_is_taught": "Navigation, Company Creation, and Features (F11)", "why_it_matters": "Proper setup dictates future reporting accuracy", "what_learner_does": "Creates a new company with specific parameters", "expected_outcome": "Company setup proficiency" },
+        { "lesson_number": 2, "lesson_title": "Accounting Masters", "what_is_taught": "Creating Ledgers and Groups", "why_it_matters": "Forms the chart of accounts", "what_learner_does": "Creates 50+ essential ledgers under correct groups", "expected_outcome": "Accurate ledger grouping" },
+        { "lesson_number": 3, "lesson_title": "Accounting Vouchers", "what_is_taught": "Receipt, Payment, Contra, and Journal Vouchers", "why_it_matters": "Core day-to-day data entry", "what_learner_does": "Records a month of basic financial transactions", "expected_outcome": "Proficient voucher entry" },
+        { "lesson_number": 4, "lesson_title": "Basic Financial Reports", "what_is_taught": "Day Book, Trial Balance, P&L, Balance Sheet", "why_it_matters": "Verifying accuracy of entries", "what_learner_does": "Analyzes the Trial Balance for errors", "expected_outcome": "Ability to read financial statements" }
       ],
-      "key_concepts": [
-        "Workflow step 1",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI",
-        "Microsoft 365 Copilot"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 1 commercial brief.",
-      "assignment": "Deliverable 1: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Chart of Accounts", "Double-entry system", "Reporting"],
+      "tools": ["Tally Prime"],
+      "hands_on_practice": "Setting up a service-based business",
+      "assignment": "Service Business Accounting Cycle",
+      "business_application": "Basic bookkeeping",
+      "expected_outcome": "Can manage accounts for a service business"
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Phase 2: Core Execution & Standard Operating Procedures",
-      "module_purpose": "Execute production-level workflows with speed, accuracy, and precision.",
-      "what_you_will_learn": [
-        "Master stage 2 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Tally with GST.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
+      "module_number": 2,
+      "module_title": "Inventory Management",
+      "module_purpose": "Manage stock and trading operations",
+      "what_you_will_learn": ["Stock Items", "Purchase/Sales Orders", "Godowns"],
       "lessons": [
-        {
-          "lesson_number": "2.1",
-          "lesson_title": "Tally with GST Practical Workshop 2.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "2.2",
-          "lesson_title": "Tally with GST Practical Workshop 2.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "2.3",
-          "lesson_title": "Tally with GST Practical Workshop 2.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 2 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
+        { "lesson_number": 1, "lesson_title": "Inventory Masters", "what_is_taught": "Stock Groups, Categories, Units, and Items", "why_it_matters": "Essential for trading and manufacturing businesses", "what_learner_does": "Creates a complex inventory hierarchy", "expected_outcome": "Structured inventory setup" },
+        { "lesson_number": 2, "lesson_title": "Purchase & Sales Cycle", "what_is_taught": "Purchase/Sales Vouchers, Debit/Credit Notes", "why_it_matters": "Tracks buying and selling of goods", "what_learner_does": "Executes full trading cycles including returns", "expected_outcome": "Proficiency in trading entries" },
+        { "lesson_number": 3, "lesson_title": "Order Processing", "what_is_taught": "Purchase Orders, Sales Orders, Delivery Notes", "why_it_matters": "Tracks pending orders and deliveries", "what_learner_does": "Processes orders through to final invoice", "expected_outcome": "Order management skills" },
+        { "lesson_number": 4, "lesson_title": "Godowns & Batch Management", "what_is_taught": "Multiple godowns, Batch numbers, Expiry dates", "why_it_matters": "Crucial for FMCG and pharma sectors", "what_learner_does": "Transfers stock between godowns", "expected_outcome": "Advanced inventory control" }
       ],
-      "key_concepts": [
-        "Workflow step 2",
-        "Industry standard compliance",
-        "Performance optimization"
-      ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI",
-        "Microsoft 365 Copilot"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 2 commercial brief.",
-      "assignment": "Deliverable 2: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Inventory valuation", "Order lifecycle", "Warehousing"],
+      "tools": ["Tally Prime"],
+      "hands_on_practice": "Managing stock for an electronics retailer",
+      "assignment": "Complete Trading Cycle Simulation",
+      "business_application": "Retail and wholesale inventory management",
+      "expected_outcome": "Capable of managing complex inventory"
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Phase 3: AI-Augmented Workflows & Productivity Acceleration",
-      "module_purpose": "Integrate generative copilots and automation nodes into the primary pipeline.",
-      "what_you_will_learn": [
-        "Master stage 3 technical requirements and parameters.",
-        "Implement standard operating procedures for professional Tally with GST.",
-        "Troubleshoot common failure points and optimize output quality."
-      ],
+      "module_number": 3,
+      "module_title": "Advanced Banking & Features",
+      "module_purpose": "Handle complex financial scenarios and reconciliations",
+      "what_you_will_learn": ["Bank Reconciliation (BRS)", "Cost Centers", "Budgets"],
       "lessons": [
-        {
-          "lesson_number": "3.1",
-          "lesson_title": "Tally with GST Practical Workshop 3.1: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 1 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "3.2",
-          "lesson_title": "Tally with GST Practical Workshop 3.2: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 2 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        },
-        {
-          "lesson_number": "3.3",
-          "lesson_title": "Tally with GST Practical Workshop 3.3: Advanced Techniques",
-          "what_is_taught": "In-depth technical breakdown of module 3 step 3 mechanics.",
-          "why_it_matters": "Critical for producing production-ready deliverables without mentor intervention.",
-          "what_learner_does": "Executes guided hands-on lab on live software and verifies output against rubric.",
-          "expected_outcome": "Validated working artifact submitted to repository or portfolio."
-        }
+        { "lesson_number": 1, "lesson_title": "Banking Features & Cheque Printing", "what_is_taught": "Configuring banks, cheque books, and printing", "why_it_matters": "Automates banking tasks", "what_learner_does": "Configures bank ledgers and cheque printing", "expected_outcome": "Banking automation skills" },
+        { "lesson_number": 2, "lesson_title": "Bank Reconciliation Statement (BRS)", "what_is_taught": "Manual and Auto BRS in Tally", "why_it_matters": "Ensures company books match bank records", "what_learner_does": "Reconciles a month's bank statement", "expected_outcome": "Accurate bank reconciliation" },
+        { "lesson_number": 3, "lesson_title": "Cost Centers & Cost Categories", "what_is_taught": "Tracking expenses by department/project", "why_it_matters": "Enables detailed financial analysis", "what_learner_does": "Allocates expenses to different company branches", "expected_outcome": "Advanced expense tracking" },
+        { "lesson_number": 4, "lesson_title": "Budgets & Scenario Management", "what_is_taught": "Setting budgets and analyzing variances", "why_it_matters": "Helps in financial planning and control", "what_learner_does": "Creates a quarterly budget and reviews variance", "expected_outcome": "Financial planning capabilities" }
       ],
-      "key_concepts": [
-        "Workflow step 3",
-        "Industry standard compliance",
-        "Performance optimization"
+      "key_concepts": ["Reconciliation", "Cost Allocation", "Budgeting"],
+      "tools": ["Tally Prime"],
+      "hands_on_practice": "Reconciling statements and allocating costs",
+      "assignment": "Corporate Banking and Budget Project",
+      "business_application": "Corporate finance management",
+      "expected_outcome": "Advanced financial control skills"
+    },
+    {
+      "module_number": 4,
+      "module_title": "GST Implementation & Returns",
+      "module_purpose": "Master Goods and Services Tax compliance in Tally",
+      "what_you_will_learn": ["GST Setup", "GST Invoicing", "GSTR Returns"],
+      "lessons": [
+        { "lesson_number": 1, "lesson_title": "Understanding & Configuring GST", "what_is_taught": "GST basics, enabling GST in Tally, setting rates", "why_it_matters": "Foundation for legal tax compliance", "what_learner_does": "Configures company-level and item-level GST rates", "expected_outcome": "Accurate GST setup" },
+        { "lesson_number": 2, "lesson_title": "Recording GST Transactions", "what_is_taught": "Intrastate (CGST/SGST) and Interstate (IGST) entries", "why_it_matters": "Correct tax calculation on invoices", "what_learner_does": "Records diverse sales and purchase invoices with GST", "expected_outcome": "Error-free GST billing" },
+        { "lesson_number": 3, "lesson_title": "Advanced GST Scenarios", "what_is_taught": "Reverse Charge Mechanism (RCM), E-Way Bills", "why_it_matters": "Handles complex tax situations", "what_learner_does": "Processes transport entries and generates E-Way bills", "expected_outcome": "Handling complex GST scenarios" },
+        { "lesson_number": 4, "lesson_title": "GSTR Returns & Filing", "what_is_taught": "GSTR-1, GSTR-2, GSTR-3B analysis, error resolution, and JSON export", "why_it_matters": "Final step in compliance", "what_learner_does": "Resolves errors in GSTR reports and exports for filing", "expected_outcome": "Ready to file GST returns" }
       ],
-      "tools": [
-        "Microsoft Excel (with Python & Power Query)",
-        "Power BI",
-        "Microsoft 365 Copilot"
-      ],
-      "hands_on_practice": "Guided lab exercise simulating module 3 commercial brief.",
-      "assignment": "Deliverable 3: Fully completed project milestone submitted for review.",
-      "business_application": "Directly replicates client deliverables in agencies and corporate environments.",
-      "expected_outcome": "Verified milestone artifact added to the student working portfolio."
+      "key_concepts": ["Tax Compliance", "Input Tax Credit", "Statutory Reporting"],
+      "tools": ["Tally Prime", "GST Portal Simulator"],
+      "hands_on_practice": "End-to-end GST cycle from setup to return export",
+      "assignment": "Final Capstone: Complete Company Setup with 3 Months of GST Filing",
+      "business_application": "Ensuring business tax compliance",
+      "expected_outcome": "Expertise in Tally GST Compliance"
     }
   ]
 }
