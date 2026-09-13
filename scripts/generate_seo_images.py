@@ -131,7 +131,7 @@ cards = [
     ("og-blog-chatgpt-prompts-marketing.png", "50+ Best ChatGPT Prompts for Marketers", "Save 20+ hours weekly using high-converting AI prompts for copywriting, SEO & ads.", "AI PROMPTS", "purple"),
     ("og-blog-kids-coding-benefits-india.png", "Why Kids Should Learn Coding & AI Early", "How early STEM & programming education builds logic, creativity & problem-solving.", "KIDS TECH", "blue"),
     ("og-blog-python-vs-javascript-2026.png", "Python vs JavaScript: Which to Learn First?", "Detailed comparison of learning curve, job market demand, and career opportunities.", "PROGRAMMING", "blue"),
-    ("og-placements.png", "95% Placement Rate & Hiring Support", "250+ hiring partners, resume reviews, 1-on-1 mock interviews & placement guidance.", "CAREER PLACEMENTS", "teal"),
+    ("og-placements.png", "Career-Focused Training & Hiring Support", "Industry hiring connections, resume reviews, 1-on-1 mock interviews & placement guidance.", "CAREER PLACEMENTS", "teal"),
     ("og-success-stories.png", "Alumni Success Stories & Testimonials", "See how 5,000+ graduates transformed their careers and landed dream jobs.", "STUDENT REVIEWS", "teal"),
     ("og-assessment.png", "AI Career Advisor & Skill Assessment", "Take our AI-powered assessment to discover your personalized career roadmap.", "AI ADVISOR", "purple"),
     ("og-privacy-policy.png", "Nova Skills Privacy Policy", "Official data protection practices, cookies policy, user rights & privacy information.", "LEGAL & PRIVACY", "teal"),

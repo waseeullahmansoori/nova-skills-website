@@ -5397,7 +5397,7 @@ const NS_ACADEMY_LANDING_DATA = {
     "skills": ["SEO & GEO Optimization", "Google Search & Shopping Ads", "Meta Ads & Performance Max", "Social Media Marketing (SMM)", "Content Strategy & Copywriting", "Google Analytics 4 & Data Tracking", "Email & WhatsApp Automation", "Generative AI Marketing Workflows"],
     "overview": {
       "intro": "The Digital Marketing Academy equips you with end-to-end practical skills to run high-ROI marketing campaigns for top brands, local businesses, and global clients.",
-      "benefits": ["100% Practical Training on Real Live Budgets", "Live Google & Meta Ad Campaign Execution", "ISO-Recognized Industry Certification", "100% Placement & Freelance Mentorship"],
+      "benefits": ["100% Practical Training on Real Live Budgets", "Live Google & Meta Ad Campaign Execution", "ISO-Recognized Industry Certification", "Dedicated Placement Assistance & Freelance Mentorship"],
       "outcomes": ["Master multi-channel digital acquisition strategies", "Build verifiable client campaign portfolios", "Qualify for senior performance marketing job roles", "Launch your own digital marketing agency or freelance business"]
     },
     "tools": [
@@ -5427,13 +5427,13 @@ const NS_ACADEMY_LANDING_DATA = {
     "hiringIndustries": ["Digital Marketing Agencies", "E-Commerce Brands & D2C", "IT & SaaS Enterprise", "Real Estate & EdTech", "Media & Entertainment Companies"],
     "portfolio": [
       { "title": "Local E-Commerce Scaling Campaign", "student": "Rohan Verma (Batch '25)", "desc": "Scaled a D2C fashion brand from 0 to 500+ orders/month using Meta & Google Performance Max Ads.", "tools": ["Meta Ads", "GA4", "Shopify"] },
-      { "title": "Healthcare Brand SEO Audit & Growth", "student": "Ananya Sharma (Batch '25)", "desc": "Boosted organic traffic by 340% in 90 days for a regional clinic network.", "tools": ["Google Search Console", "Semrush", "Local SEO"] },
+      { "title": "Healthcare Brand SEO Audit & Growth", "student": "Ananya Sharma (Batch '25)", "desc": "Executed comprehensive SEO audit and content strategy to boost search rankings for a regional clinic network.", "tools": ["Google Search Console", "Semrush", "Local SEO"] },
       { "title": "B2B SaaS Lead Generation System", "student": "Priya Nair (Batch '26)", "desc": "Generated 180+ qualified B2B leads with automated LinkedIn & Email campaigns.", "tools": ["LinkedIn Ads", "ChatGPT", "HubSpot"] }
     ],
     "faqs": [
       { "q": "Who is eligible for the Digital Marketing Academy?", "a": "Students, working professionals, business owners, and career switchers can all join. No prior coding or marketing experience is required." },
       { "q": "Do you offer practical client projects?", "a": "Yes! Every student works on live advertising budgets and real client projects under senior mentor guidance." },
-      { "q": "What placement support is provided?", "a": "Our career program includes 100% placement support, resume reviews, mock interviews, and access to 150+ hiring partners." },
+      { "q": "What placement support is provided?", "a": "Our career program includes dedicated placement assistance, resume reviews, mock interviews, and access to our industry hiring connections." },
       { "q": "Can I work as a freelancer after completing this course?", "a": "Absolutely. We include a dedicated freelancing module covering client onboarding, proposal writing, and pricing strategies." }
     ]
   },
@@ -5622,7 +5622,7 @@ const NS_ACADEMY_LANDING_DATA = {
     "skills": ["Adobe Premiere Pro Video Editing", "Adobe After Effects Motion Graphics", "DaVinci Resolve Color Grading", "Short-Form Viral Reel Editing", "Generative AI Video (Runway & Luma)", "Kinetic Typography & Lower Thirds", "Audio Editing & Sound Design", "Visual Effects & Green Screen"],
     "overview": {
       "intro": "Master the art of visual storytelling, motion design, and high-retention video editing to produce commercial promos, YouTube videos, and viral reels.",
-      "benefits": ["High-Spec Video Editing Campus Labs", "Commercial Brand Video Projects", "Real Creator Video Workflows", "100% Placement & Freelance Mentorship"],
+      "benefits": ["High-Spec Video Editing Campus Labs", "Commercial Brand Video Projects", "Real Creator Video Workflows", "Dedicated Placement Assistance & Freelance Mentorship"],
       "outcomes": ["Edit high-converting video commercials", "Animate fluid motion graphics and logo reveals", "Master cinematic color correction and audio mix", "Work with top brands, agencies, and creators"]
     },
     "tools": [
@@ -5941,7 +5941,7 @@ const NS_PROGRAM_LEVELS = [
     "name": "Career Program",
     "label": "Career Programs",
     "durationRange": "6–12 Months",
-    "description": "Comprehensive 6–12 month career transformation programs with live client projects and 100% placement support."
+    "description": "Comprehensive 6–12 month career transformation programs with live client projects and dedicated placement assistance."
   },
   {
     "id": "professional",
@@ -6604,12 +6604,207 @@ const NS_BLOG_POSTS = [
   }
 ];
 
+/* ============================================================
+   CANONICAL SINGLE SOURCE OF TRUTH — NovaSkillsData
+   ============================================================ */
+
+// 1. Ensure canonical attributes across all academies
+NS_ACADEMIES.forEach(a => {
+  if (!a.status) a.status = 'active';
+  if (!Object.prototype.hasOwnProperty.call(a, 'courses')) {
+    Object.defineProperty(a, 'courses', {
+      get() {
+        return NS_COURSES.filter(c => c.academyId === a.id && c.status === 'active');
+      },
+      enumerable: true,
+      configurable: true
+    });
+  }
+});
+
+// 2. Ensure canonical attributes across all courses
+NS_COURSES.forEach(c => {
+  if (!c.status) c.status = 'active';
+  if (!c.url) c.url = `/course-detail.html?id=${c.id}`;
+});
+
+const NovaSkillsData = {
+  getAcademies(activeOnly = true) {
+    return NS_ACADEMIES.filter(a => !activeOnly || a.status === 'active');
+  },
+
+  getCourses(academyId = null, activeOnly = true) {
+    let list = NS_COURSES.filter(c => !activeOnly || c.status === 'active');
+    if (academyId) {
+      list = list.filter(c => c.academyId === academyId);
+    }
+    return list;
+  },
+
+  get totalAcademies() {
+    return this.getTotalAcademiesCount();
+  },
+
+  get totalCourses() {
+    return this.getTotalCoursesCount();
+  },
+
+  getTotalAcademiesCount() {
+    return this.getAcademies(true).length;
+  },
+
+  getTotalCoursesCount() {
+    return this.getCourses(null, true).length;
+  },
+
+  getAcademyCourseCount(academyId) {
+    return this.getCourses(academyId, true).length;
+  },
+
+  getAcademyData() {
+    return this.getAcademies(true).map(acad => {
+      const courses = this.getCourses(acad.id, true).map(c => ({
+        id: c.id,
+        name: c.name,
+        slug: c.slug,
+        academyId: c.academyId,
+        status: c.status || 'active',
+        url: c.url || `/course-detail.html?id=${c.id}`,
+        pageUrl: `/courses.html?academy=${acad.slug}#${c.slug}`,
+        price: c.price,
+        duration: c.duration,
+        mode: c.mode,
+        level: c.level
+      }));
+      return {
+        id: acad.id,
+        name: acad.name,
+        slug: acad.slug,
+        icon: acad.icon,
+        description: acad.description,
+        status: acad.status || 'active',
+        courseCount: courses.length,
+        courses: courses
+      };
+    });
+  },
+
+  getFormattedCourseCount(format = 'milestone') {
+    const count = this.getTotalCoursesCount();
+    if (format === 'milestone') {
+      const milestone = Math.floor(count / 10) * 10;
+      return `${milestone}+ Courses`;
+    }
+    return `${count} Courses`;
+  },
+
+  getFormattedAcademyCount() {
+    return `${this.getTotalAcademiesCount()} Academies`;
+  },
+
+  validateDataset() {
+    const courseIds = new Set();
+    const courseSlugs = new Set();
+    const acadIds = new Set(this.getAcademies(false).map(a => a.id));
+    const errors = [];
+
+    this.getCourses(null, false).forEach(c => {
+      if (courseIds.has(c.id)) errors.push(`Duplicate course ID: ${c.id}`);
+      courseIds.add(c.id);
+
+      if (courseSlugs.has(c.slug)) errors.push(`Duplicate course slug: ${c.slug}`);
+      courseSlugs.add(c.slug);
+
+      if (!c.academyId || !acadIds.has(c.academyId)) {
+        errors.push(`Course ${c.id} has invalid or missing academyId: ${c.academyId}`);
+      }
+    });
+
+    this.getAcademies(false).forEach(a => {
+      const count = this.getAcademyCourseCount(a.id);
+      if (count === 0 && a.status === 'active') {
+        errors.push(`Active academy ${a.id} has no courses.`);
+      }
+    });
+
+    return {
+      valid: errors.length === 0,
+      errors,
+      totalAcademies: this.getTotalAcademiesCount(),
+      totalCourses: this.getTotalCoursesCount()
+    };
+  },
+
+  hydrateDOM() {
+    if (typeof document === 'undefined') return;
+
+    const academiesCount = this.getTotalAcademiesCount();
+    const coursesCount = this.getTotalCoursesCount();
+    const coursesMilestone = `${coursesCount}+`;
+
+    // 1. Total Academies placeholders
+    document.querySelectorAll('.canonical-academies-count, [data-canonical="total-academies"]').forEach(el => {
+      el.textContent = academiesCount;
+    });
+
+    // 2. Total Courses exact / plus placeholders
+    document.querySelectorAll('.canonical-courses-count, [data-canonical="total-courses"]').forEach(el => {
+      el.textContent = coursesMilestone;
+    });
+
+    // 3. Total Courses milestone placeholders
+    document.querySelectorAll('.canonical-courses-milestone, [data-canonical="total-courses-milestone"]').forEach(el => {
+      el.textContent = coursesMilestone;
+    });
+
+    // 4. Academy specific badges
+    document.querySelectorAll('[data-academy-course-badge]').forEach(el => {
+      const acadId = el.getAttribute('data-academy-course-badge');
+      if (acadId) {
+        const count = this.getAcademyCourseCount(acadId);
+        el.textContent = `${count} Courses`;
+      }
+    });
+
+    document.querySelectorAll('[data-canonical="academy-courses"]').forEach(el => {
+      const acadId = el.getAttribute('data-academy-id');
+      if (acadId) {
+        const count = this.getAcademyCourseCount(acadId);
+        el.textContent = count;
+      }
+    });
+
+    // 5. Stat cards
+    const acadCard = document.querySelector('.stat-card[data-stat="academies"]') || 
+                     document.querySelector('.stat-card #stat-academies')?.closest('.stat-card');
+    if (acadCard) {
+      acadCard.setAttribute('data-count', academiesCount);
+    }
+    const coursesCard = document.querySelector('.stat-card[data-stat="courses"]') || 
+                        document.querySelector('.stat-card #stat-courses')?.closest('.stat-card');
+    if (coursesCard) {
+      coursesCard.setAttribute('data-count', coursesCount);
+    }
+  }
+};
+
 if (typeof window !== 'undefined') {
   window.NS_COURSES = NS_COURSES;
   window.NS_ACADEMIES = NS_ACADEMIES;
   window.NS_BLOG_POSTS = NS_BLOG_POSTS;
+  window.NovaSkillsData = NovaSkillsData;
+
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => NovaSkillsData.hydrateDOM());
+    } else {
+      NovaSkillsData.hydrateDOM();
+    }
+  }
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { NS_COURSES, NS_ACADEMIES, NS_BLOG_POSTS };
+  module.exports = { NS_COURSES, NS_ACADEMIES, NS_BLOG_POSTS, NovaSkillsData };
 }
+
+

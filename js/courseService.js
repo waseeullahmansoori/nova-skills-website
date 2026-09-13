@@ -12,7 +12,7 @@ export class CourseService {
         category: 'Digital Marketing Academy',
         progress: 60,
         currentModule: 'Module 3: Google Ads & Performance Marketing',
-        trainer: 'Priya Mehta (Ex-Google Marketer)',
+        trainer: 'Priya Mehta (Digital Marketing Trainer)',
         duration: '12 Months',
         thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80',
         nextLesson: 'Lesson 3.4 — Setting up Conversion Value Tracking'

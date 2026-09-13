@@ -1008,13 +1008,13 @@ function renderAcademyLandingPage(academy) {
           <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
             <div style="font-size: 2rem; margin-bottom: 12px;">👨‍🏫</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Industry Mentors</h3>
-            <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">Learn directly from senior practitioners with 8+ years of hands-on industry experience.</p>
+            <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">Learn directly from experienced industry practitioners with hands-on domain experience.</p>
           </div>
 
           <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
             <div style="font-size: 2rem; margin-bottom: 12px;">💼</div>
             <h3 style="font-size: 1.15rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Placement Assistance</h3>
-            <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">1-on-1 resume reviews, mock technical interviews, and access to 150+ hiring partners.</p>
+            <p style="color: #64748b; font-size: 0.9rem; line-height: 1.5;">1-on-1 resume reviews, mock technical interviews, and active hiring connections.</p>
           </div>
 
           <div style="background: white; border: 1px solid #e2e8f0; padding: 24px; border-radius: 16px;">
@@ -1044,7 +1044,7 @@ function renderAcademyLandingPage(academy) {
   // ----------------------------------------------------
   const faqsList = landingData.faqs || [
     { "q": `What are the eligibility criteria for ${academy.name}?`, "a": "Anyone with a passion for learning can join. We start from foundational concepts and build up to advanced professional levels." },
-    { "q": "Do you provide placement assistance?", "a": "Yes! Our Career and Professional Programs include 100% placement support, resume reviews, mock interviews, and hiring partner access." },
+    { "q": "Do you provide placement assistance?", "a": "Yes! Our Career and Professional Programs include dedicated placement assistance, resume reviews, mock interviews, and hiring connections." },
     { "q": "Are classes available in online or hybrid modes?", "a": "Both! You can choose interactive live online sessions or hybrid classroom learning." },
     { "q": "Will I receive a certificate after completing the course?", "a": "Yes, you will earn an official ISO-recognized certificate from Nova Skills Education Institute upon course completion." }
   ];

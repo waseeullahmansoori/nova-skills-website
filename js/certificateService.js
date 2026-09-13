@@ -22,7 +22,7 @@ export class CertificateService {
         issueDate: '2026-07-28',
         grade: 'A+',
         percentage: 95,
-        trainerName: 'Priya Mehta (Ex-Google Marketer)',
+        trainerName: 'Priya Mehta (Digital Marketing Trainer)',
         verificationCode: 'VERIFY-9A88F12',
         verificationUrl: 'https://novaskills.in/verify?code=NS-DM-2026-000124',
         status: 'VALID'

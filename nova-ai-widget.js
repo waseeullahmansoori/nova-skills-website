@@ -995,7 +995,7 @@
         sessionMemory.lastDiscussedCourse = c1;
 
         return {
-          text: `Nova Skills ke dono flagship AI programs ka direct comparison:\n\n| Feature | **AI Mastery Program** | **AI Productivity Professional** |\n| :--- | :--- | :--- |\n| **Program Level** | Career Program (Comprehensive) | Professional Program (Fast-Track) |\n| **Duration** | **6 Months** | **3 Months** |\n| **Core Focus** | AI Models, AI Agents, n8n Automation, APIs, End-to-End Career | ChatGPT, Claude, Prompting, Daily Office & Work Automation |\n| **Live Projects** | **15+ Live AI Projects** | **8+ Practical Workflows** |\n| **Placement Support** | **100% Dedicated Placement Support** | Career & Freelance Guidance |\n| **Fee** | **${formatFee(c1.price)}** (No-Cost EMI: ${calculateEMI(c1.price)}/mo) | **${formatFee(c2.price)}** (No-Cost EMI: ${calculateEMI(c2.price, 3)}/mo) |\n| **Best Suited For** | High-growth tech jobs, AI engineers & specialists | Working professionals, marketers, founders wanting 10x speed |\n\n💡 **Counsellor Verdict**: Agar aap complete career switch ya dedicated AI specialist banna chahte hain toh **AI Mastery Program** best hai. Agar aap apne current work me AI se superfast hona chahte hain toh **AI Productivity Professional** ideal hai.`,
+          text: `Nova Skills ke dono flagship AI programs ka direct comparison:\n\n| Feature | **AI Mastery Program** | **AI Productivity Professional** |\n| :--- | :--- | :--- |\n| **Program Level** | Career Program (Comprehensive) | Professional Program (Fast-Track) |\n| **Duration** | **6 Months** | **3 Months** |\n| **Core Focus** | AI Models, AI Agents, n8n Automation, APIs, End-to-End Career | ChatGPT, Claude, Prompting, Daily Office & Work Automation |\n| **Live Projects** | **15+ Live AI Projects** | **8+ Practical Workflows** |\n| **Placement Support** | **Dedicated Placement Support** | Career & Freelance Guidance |\n| **Fee** | **${formatFee(c1.price)}** (No-Cost EMI: ${calculateEMI(c1.price)}/mo) | **${formatFee(c2.price)}** (No-Cost EMI: ${calculateEMI(c2.price, 3)}/mo) |\n| **Best Suited For** | High-growth tech jobs, AI engineers & specialists | Working professionals, marketers, founders wanting 10x speed |\n\n💡 **Counsellor Verdict**: Agar aap complete career switch ya dedicated AI specialist banna chahte hain toh **AI Mastery Program** best hai. Agar aap apne current work me AI se superfast hona chahte hain toh **AI Productivity Professional** ideal hai.`,
           recommendedCourse: c1
         };
       }
@@ -1007,14 +1007,14 @@
         sessionMemory.lastDiscussedCourse = c1;
 
         return {
-          text: `Nova Skills Digital Marketing programs ka comparison:\n\n| Feature | **AI Digital Marketing Master** | **AI Digital Marketing Professional** |\n| :--- | :--- | :--- |\n| **Level** | Career Program (Flagship) | Professional Program |\n| **Duration** | **6 Months** | **4 Months** |\n| **Scope** | SEO + GEO, Google Ads, Meta Ads, Funnels, n8n AI Automation & Agency Scaling | SEO, Google Ads, Meta Ads, SMM & Content Marketing |\n| **Projects** | **20 Live Projects** on real budgets | **10 Practical Projects** |\n| **Placement Support** | **100% Dedicated Placement Support** | Dedicated Placement Support |\n| **Fee** | **${formatFee(c1.price)}** (No-Cost EMI: ${calculateEMI(c1.price)}/mo) | **${formatFee(c2.price)}** (No-Cost EMI: ${calculateEMI(c2.price, 4)}/mo) |\n\n💡 **Counsellor Verdict**: Complete agency-grade skills aur high-package career ke liye **AI Digital Marketing Master (6 Months)** best choice hai!`,
+          text: `Nova Skills Digital Marketing programs ka comparison:\n\n| Feature | **AI Digital Marketing Master** | **AI Digital Marketing Professional** |\n| :--- | :--- | :--- |\n| **Level** | Career Program (Flagship) | Professional Program |\n| **Duration** | **6 Months** | **4 Months** |\n| **Scope** | SEO + GEO, Google Ads, Meta Ads, Funnels, n8n AI Automation & Agency Scaling | SEO, Google Ads, Meta Ads, SMM & Content Marketing |\n| **Projects** | **20 Live Projects** on real budgets | **10 Practical Projects** |\n| **Placement Support** | **Dedicated Placement Support** | Dedicated Placement Support |\n| **Fee** | **${formatFee(c1.price)}** (No-Cost EMI: ${calculateEMI(c1.price)}/mo) | **${formatFee(c2.price)}** (No-Cost EMI: ${calculateEMI(c2.price, 4)}/mo) |\n\n💡 **Counsellor Verdict**: Complete agency-grade skills aur high-package career ke liye **AI Digital Marketing Master (6 Months)** best choice hai!`,
           recommendedCourse: c1
         };
       }
 
       // General fallback comparison
       return {
-        text: `Nova Skills me **Career Programs (6 Months)** comprehensive 100% placement support aur 15–20 live projects ke saath aate hain, jabki **Professional Programs (3–4 Months)** fast-track practical skills aur portfolio development ke liye hote hain.\n\nAap kin do specific courses ko compare karna chahte hain? Main unka duration, projects, tools aur fees ka side-by-side comparison bata deta hoon!`,
+        text: `Nova Skills me **Career Programs (6 Months)** comprehensive dedicated placement support aur 15–20 live projects ke saath aate hain, jabki **Professional Programs (3–4 Months)** fast-track practical skills aur portfolio development ke liye hote hain.\n\nAap kin do specific courses ko compare karna chahte hain? Main unka duration, projects, tools aur fees ka side-by-side comparison bata deta hoon!`,
         recommendedCourse: null
       };
     }
@@ -1054,7 +1054,7 @@
         sessionMemory.lastDiscussedCourse = c;
 
         return {
-          text: `Perfect! Job aur placement ke liye Nova Skills ke **Career Programs (6 Months)** 100% placement assistance aur real company live projects ke saath designed hain.\n\n⭐ **Recommended for You: ${c.name}**\n\n**Why it matches your profile:**\n• **100% Dedicated Placement Support**: 150+ hiring partner companies me direct interview opportunities.\n• **Practical Proof of Work**: ${c.liveProjects} Live Projects portfolio jo recruiters ko impress karta hai.\n• **Structured Mentorship**: Resume review, ATS optimization aur 1-on-1 mock interviews.\n\n• **Duration:** ${c.duration}\n• **Fee:** ${formatFee(c.price)} *(Flexible 0% No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n• **Mode:** ${c.mode}\n\nKya aap iska phase-wise curriculum dekhna chahte hain?`,
+          text: `Perfect! Job aur placement ke liye Nova Skills ke **Career Programs (6 Months)** placement assistance aur real company live projects ke saath designed hain.\n\n⭐ **Recommended for You: ${c.name}**\n\n**Why it matches your profile:**\n• **Dedicated Placement Support**: Hiring partner network me direct interview opportunities.\n• **Practical Proof of Work**: ${c.liveProjects} Live Projects portfolio jo recruiters ko impress karta hai.\n• **Structured Mentorship**: Resume review, ATS optimization aur 1-on-1 mock interviews.\n\n• **Duration:** ${c.duration}\n• **Fee:** ${formatFee(c.price)} *(Flexible 0% No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n• **Mode:** ${c.mode}\n\nKya aap iska phase-wise curriculum dekhna chahte hain?`,
           recommendedCourse: c
         };
       }
@@ -1083,7 +1083,7 @@
       }
 
       return {
-        text: `Nova Skills ke fee plans har student aur professional ke budget ke mutabik designed hain:\n\n• **Certification Courses**: ₹3,999 – ₹6,999 (1–2 Months)\n• **Professional Programs**: ₹9,999 – ₹17,499 (3–4 Months)\n• **Career Programs**: ₹18,999 – ₹31,499 (6 Months with 100% Placement)\n• **0% Interest No-Cost EMI**: Starting at just **₹1,499 – ₹2,499/month**.\n\nAap apna specific budget bata dijiye, main best possible options shortlist kar dunga!`,
+        text: `Nova Skills ke fee plans har student aur professional ke budget ke mutabik designed hain:\n\n• **Certification Courses**: ₹3,999 – ₹6,999 (1–2 Months)\n• **Professional Programs**: ₹9,999 – ₹17,499 (3–4 Months)\n• **Career Programs**: ₹18,999 – ₹31,499 (6 Months with Placement Assistance)\n• **0% Interest No-Cost EMI**: Starting at just **₹1,499 – ₹2,499/month**.\n\nAap apna specific budget bata dijiye, main best possible options shortlist kar dunga!`,
         recommendedCourse: null
       };
     }
@@ -1105,7 +1105,7 @@
         const cDM = findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0];
         sessionMemory.lastDiscussedCourse = cDM;
         return {
-          text: `Great choice! Digital Marketing aaj ke time ka sabse high-demand career skill hai. Nova Skills me training live ad budgets aur 100% practical tools par hoti hai.\n\n⭐ **Recommended: ${cDM.name}**\n\n**Why it matches:**\n• **Complete Industry Coverage**: SEO, Generative Engine Optimisation (GEO), Google Search/Shopping Ads, Meta Ads (FB & Insta) aur Performance Marketing.\n• **AI Marketing Automation**: ChatGPT, Claude, Gemini & n8n workflows for 10x marketing output.\n• **100% Dedicated Placement Support**: 20 Live Projects, ISO certificate, aur 150+ hiring partners.\n\n• **Duration:** 6 Months *(Fast-track option: AI Digital Marketing Professional • 4 Months, ₹17,499)*\n• **Fee:** ${formatFee(cDM.price)} *(No-Cost EMI: ${calculateEMI(cDM.price)}/mo)*\n• **Mode:** Hybrid / Live Online\n\nKya aap iska phase-wise syllabus dekhna chahenge ya batch timings pata karein?`,
+          text: `Great choice! Digital Marketing aaj ke time ka sabse high-demand career skill hai. Nova Skills me training live ad budgets aur 100% practical tools par hoti hai.\n\n⭐ **Recommended: ${cDM.name}**\n\n**Why it matches:**\n• **Complete Industry Coverage**: SEO, Generative Engine Optimisation (GEO), Google Search/Shopping Ads, Meta Ads (FB & Insta) aur Performance Marketing.\n• **AI Marketing Automation**: ChatGPT, Claude, Gemini & n8n workflows for 10x marketing output.\n• **Dedicated Placement Support**: 20 Live Projects, ISO certificate, aur hiring partner network.\n\n• **Duration:** 6 Months *(Fast-track option: AI Digital Marketing Professional • 4 Months, ₹17,499)*\n• **Fee:** ${formatFee(cDM.price)} *(No-Cost EMI: ${calculateEMI(cDM.price)}/mo)*\n• **Mode:** Hybrid / Live Online\n\nKya aap iska phase-wise syllabus dekhna chahenge ya batch timings pata karein?`,
           recommendedCourse: cDM
         };
       }
@@ -1115,7 +1115,7 @@
         const cDesign = findCourse('creative-design') || FALLBACK_COURSES[6];
         sessionMemory.lastDiscussedCourse = cDesign;
         return {
-          text: `Design ek aisa creative field hai jisme freelance aur agency dono me bohot scope hai!\n\n⭐ **Recommended: ${cDesign.name}**\n\n**What you will master:**\n• Adobe Photoshop, Illustrator, Figma, Canva Pro aur Midjourney AI.\n• Brand Identity, Advertising Creatives, Social Media Posters, Packaging aur UI/UX Wireframing.\n• 18 Live Client Projects + High-converting Behance/Dribbble Portfolio.\n\n• **Duration:** 6 Months *(Fast-track option: Graphic Design Professional • 3 Months, ₹13,999)*\n• **Fee:** ${formatFee(cDesign.price)} *(No-Cost EMI: ${calculateEMI(cDesign.price)}/mo)*\n• **Placement:** 100% Dedicated Placement Support\n\nKya aap creative design me job chahte hain ya freelancing?`,
+          text: `Design ek aisa creative field hai jisme freelance aur agency dono me bohot scope hai!\n\n⭐ **Recommended: ${cDesign.name}**\n\n**What you will master:**\n• Adobe Photoshop, Illustrator, Figma, Canva Pro aur Midjourney AI.\n• Brand Identity, Advertising Creatives, Social Media Posters, Packaging aur UI/UX Wireframing.\n• 18 Live Client Projects + High-converting Behance/Dribbble Portfolio.\n\n• **Duration:** 6 Months *(Fast-track option: Graphic Design Professional • 3 Months, ₹13,999)*\n• **Fee:** ${formatFee(cDesign.price)} *(No-Cost EMI: ${calculateEMI(cDesign.price)}/mo)*\n• **Placement:** Dedicated Placement Support\n\nKya aap creative design me job chahte hain ya freelancing?`,
           recommendedCourse: cDesign
         };
       }
@@ -1125,7 +1125,7 @@
         const cProg = findCourse('fullstack-foundation') || FALLBACK_COURSES[9];
         sessionMemory.lastDiscussedCourse = cProg;
         return {
-          text: `Software Development aur Full-Stack me high packages aur global tech hiring demand hamesha rehti hai!\n\n⭐ **Recommended: ${cProg.name}**\n\n**What you will master:**\n• HTML5, CSS3, Modern JavaScript (ES6+), React.js, Node.js, Express, SQL/NoSQL Databases, REST APIs aur Git/GitHub.\n• 20 Live Real-World Projects (E-commerce app, SaaS portal, Live Chat, etc.).\n• 100% Dedicated Placement Support with technical mock interviews.\n\n• **Duration:** 6 Months *(Fast-track: Python Developer Professional • 3 Months, ₹14,999)*\n• **Fee:** ${formatFee(cProg.price)} *(No-Cost EMI: ${calculateEMI(cProg.price)}/mo)*\n\nKya aap zero coding background se start kar rahe hain ya basic knowledge hai?`,
+          text: `Software Development aur Full-Stack me high packages aur global tech hiring demand hamesha rehti hai!\n\n⭐ **Recommended: ${cProg.name}**\n\n**What you will master:**\n• HTML5, CSS3, Modern JavaScript (ES6+), React.js, Node.js, Express, SQL/NoSQL Databases, REST APIs aur Git/GitHub.\n• 20 Live Real-World Projects (E-commerce app, SaaS portal, Live Chat, etc.).\n• Dedicated Placement Support with technical mock interviews.\n\n• **Duration:** 6 Months *(Fast-track: Python Developer Professional • 3 Months, ₹14,999)*\n• **Fee:** ${formatFee(cProg.price)} *(No-Cost EMI: ${calculateEMI(cProg.price)}/mo)*\n\nKya aap zero coding background se start kar rahe hain ya basic knowledge hai?`,
           recommendedCourse: cProg
         };
       }
@@ -1179,7 +1179,7 @@
       const toolsList = (detectedCourse.tools && detectedCourse.tools.length > 0) ? detectedCourse.tools.join(', ') : 'Industry Standard Tools';
 
       return {
-        text: `**${detectedCourse.name}** (${detectedCourse.programLevel || 'Career Program'})\n\n${detectedCourse.fullDesc || detectedCourse.shortDesc || 'Comprehensive industry-aligned training with real live projects and dedicated mentorship.'}\n\n📋 **Program Highlights:**\n• **Duration**: ${detectedCourse.duration || '6 Months'}\n• **Level**: ${detectedCourse.level || 'Beginner to Advanced'}\n• **Live Projects**: ${detectedCourse.liveProjects || 10} Hands-on Capstone Projects\n• **Tools Covered**: ${toolsList}\n• **Learning Mode**: ${detectedCourse.mode || 'Hybrid / Live Online'}\n• **Placement Support**: ${detectedCourse.placementSupport ? '✅ 100% Dedicated Placement Assistance' : 'Skill Upgrade & Freelance Guidance'}\n• **Certification**: ISO 9001:2015 Accredited Certificate + Industry Badges\n• **Fee**: ${formatFee(detectedCourse.price)} *(Flexible No-Cost EMI: ${calculateEMI(detectedCourse.price)}/mo)*\n\nKya aap iska detailed phase-wise curriculum download karna chahte hain ya counselling call book karein?`,
+        text: `**${detectedCourse.name}** (${detectedCourse.programLevel || 'Career Program'})\n\n${detectedCourse.fullDesc || detectedCourse.shortDesc || 'Comprehensive industry-aligned training with real live projects and dedicated mentorship.'}\n\n📋 **Program Highlights:**\n• **Duration**: ${detectedCourse.duration || '6 Months'}\n• **Level**: ${detectedCourse.level || 'Beginner to Advanced'}\n• **Live Projects**: ${detectedCourse.liveProjects || 10} Hands-on Capstone Projects\n• **Tools Covered**: ${toolsList}\n• **Learning Mode**: ${detectedCourse.mode || 'Hybrid / Live Online'}\n• **Placement Support**: ${detectedCourse.placementSupport ? '✅ Dedicated Placement Assistance' : 'Skill Upgrade & Freelance Guidance'}\n• **Certification**: ISO 9001:2015 Accredited Certificate + Industry Badges\n• **Fee**: ${formatFee(detectedCourse.price)} *(Flexible No-Cost EMI: ${calculateEMI(detectedCourse.price)}/mo)*\n\nKya aap iska detailed phase-wise curriculum download karna chahte hain ya counselling call book karein?`,
         recommendedCourse: detectedCourse
       };
     }
@@ -1195,7 +1195,7 @@
       }
 
       return {
-        text: `Nova Skills me course fees transparent aur flexible EMI options ke saath structured hain:\n\n• **Certification Courses (1–2 Months)**: **₹3,999 – ₹6,999**\n• **Professional Programs (3–4 Months)**: **₹9,999 – ₹17,499**\n• **Career Programs (6 Months)**: **₹18,999 – ₹31,499** *(100% Placement Included)*\n\n💳 **Payment & EMI Benefits:**\n• **0% Interest No-Cost EMI** available on all major bank cards (3, 6, 9 & 12 months).\n• Simple installment plans available.\n• Special merit scholarships for students.\n\nAap kis specific course ki exact fee aur monthly installment dekhna chahte hain?`,
+        text: `Nova Skills me course fees transparent aur flexible EMI options ke saath structured hain:\n\n• **Certification Courses (1–2 Months)**: **₹3,999 – ₹6,999**\n• **Professional Programs (3–4 Months)**: **₹9,999 – ₹17,499**\n• **Career Programs (6 Months)**: **₹18,999 – ₹31,499** *(Dedicated Career Support Included)*\n\n💳 **Payment & EMI Benefits:**\n• **0% Interest No-Cost EMI** available on all major bank cards (3, 6, 9 & 12 months).\n• Simple installment plans available.\n• Special merit scholarships for students.\n\nAap kis specific course ki exact fee aur monthly installment dekhna chahte hain?`,
         recommendedCourse: null
       };
     }
@@ -1203,7 +1203,7 @@
     // 10. PLACEMENT & JOBS INTENT
     if (intent === 'PLACEMENT') {
       return {
-        text: `Haan, bilkul! Nova Skills apne sabhi **Career Programs aur Professional Programs** me **100% Dedicated Placement Support** offer karta hai:\n\n🏢 **150+ Hiring Partner Network**: Digital agencies, tech startups, MNCs aur e-commerce brands me direct job interviews.\n💼 **Dedicated Placement Cell**: Exclusive vacancy alerts, campus drives aur interview scheduling.\n🛠️ **Live Client Portfolio**: Aap 10–20 real-world projects banate hain jo recruiters ke saamne aapka hands-on experience prove karte hain.\n📄 **ATS Resume & LinkedIn Optimization**: Industry experts aapka resume aur LinkedIn profile optimize karte hain.\n🎤 **1-on-1 Mock Interviews**: Technical aur HR rounds ki comprehensive preparation.\n\nAverage starting package ₹4.5 LPA se ₹9.5 LPA tak rehta hai role aur skill ke according.\n\nKya aap placement-guaranteed programs ka curriculum dekhna chahte hain?`,
+        text: `Haan, bilkul! Nova Skills apne sabhi **Career Programs aur Professional Programs** me **Dedicated Placement Support** offer karta hai:\n\n🏢 **Industry Hiring Network**: Digital agencies, tech startups, MNCs aur e-commerce brands me direct job interviews.\n💼 **Dedicated Placement Cell**: Exclusive vacancy alerts, campus drives aur interview scheduling.\n🛠️ **Live Client Portfolio**: Aap 10–20 real-world projects banate hain jo recruiters ke saamne aapka hands-on experience prove karte hain.\n📄 **ATS Resume & LinkedIn Optimization**: Industry experts aapka resume aur LinkedIn profile optimize karte hain.\n🎤 **1-on-1 Mock Interviews**: Technical aur HR rounds ki comprehensive preparation.\n\nPractical skills aur portfolio ke base par career growth opportunities unlock hoti hain.\n\nKya aap career programs ka curriculum dekhna chahte hain?`,
         recommendedCourse: findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0]
       };
     }
@@ -1265,7 +1265,7 @@
     // 16. CAREER GUIDANCE & SCOPE INTENT
     if (intent === 'CAREER_GUIDANCE') {
       return {
-        text: `Aaj ke market me top 4 highest-paying aur future-proof skill tracks:\n\n1. 🤖 **AI & Automation Specialist**: AI agents, workflow automation aur LLM deployment (₹5.5 – ₹12 LPA)\n2. 📊 **AI Digital Marketing & Performance Lead**: Paid ad scaling, SEO & GEO (₹4.5 – ₹9 LPA)\n3. 💻 **Full-Stack Developer**: Modern web applications, React, Node.js & APIs (₹4.5 – ₹10 LPA)\n4. 🎨 **UI/UX & Creative Brand Designer**: High-converting app interfaces & branding (₹4.0 – ₹8.5 LPA)\n\nNova Skills ke sabhi **Career Programs** me live client projects, portfolio development aur **100% Dedicated Placement Support** included hai.\n\nAapko creative side (Design/Marketing) zyada suit karti hai ya analytical/tech (AI/Coding)?`,
+        text: `Aaj ke market me top 4 highest-paying aur future-proof skill tracks:\n\n1. 🤖 **AI & Automation Specialist**: AI agents, workflow automation aur LLM deployment (₹5.5 – ₹12 LPA)\n2. 📊 **AI Digital Marketing & Performance Lead**: Paid ad scaling, SEO & GEO (₹4.5 – ₹9 LPA)\n3. 💻 **Full-Stack Developer**: Modern web applications, React, Node.js & APIs (₹4.5 – ₹10 LPA)\n4. 🎨 **UI/UX & Creative Brand Designer**: High-converting app interfaces & branding (₹4.0 – ₹8.5 LPA)\n\nNova Skills ke sabhi **Career Programs** me live client projects, portfolio development aur **Dedicated Placement Support** included hai.\n\nAapko creative side (Design/Marketing) zyada suit karti hai ya analytical/tech (AI/Coding)?`,
         recommendedCourse: findCourse('ai-mastery') || FALLBACK_COURSES[2]
       };
     }
@@ -1994,7 +1994,7 @@
           <ul class="nova-ai-check-list">
             <li><span class="check-icon">✓</span> Course recommendation for your goals</li>
             <li><span class="check-icon">✓</span> Fees, No-Cost EMI & Scholarship details</li>
-            <li><span class="check-icon">✓</span> 100% Dedicated Placement Support</li>
+            <li><span class="check-icon">✓</span> Dedicated Placement Support</li>
             <li><span class="check-icon">✓</span> Freelancing roadmap (Fiverr & Upwork)</li>
             <li><span class="check-icon">✓</span> Live Online & Classroom batch schedules</li>
           </ul>
@@ -2029,7 +2029,7 @@
             <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('Placement Support')">
               <span class="nova-ai-action-card-icon">🎓</span>
               <span class="nova-ai-action-card-title">Placement Support</span>
-              <span class="nova-ai-action-card-desc">150+ Hiring Partners & Salary Records</span>
+              <span class="nova-ai-action-card-desc">Hiring Partners & Career Support</span>
             </button>
 
             <button type="button" class="nova-ai-action-card" onclick="NovaAIWidget.sendAction('Book Counselling')">

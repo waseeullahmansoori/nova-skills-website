@@ -7,6 +7,7 @@
 
 // ===== DOM READY =====
 document.addEventListener('DOMContentLoaded', () => {
+  initCanonicalCounts();
   initScrollProgress();
   initNavigation();
   initHeroAnimations();
@@ -20,6 +21,44 @@ document.addEventListener('DOMContentLoaded', () => {
   initVideoFacades();
   initDeferredBackgrounds();
 });
+
+// ===== DYNAMIC CANONICAL COUNTS HYDRATION =====
+function initCanonicalCounts() {
+  if (typeof window.NovaSkillsData === 'undefined') return;
+
+  window.NovaSkillsData.hydrateDOM();
+
+  const academiesCount = window.NovaSkillsData.getTotalAcademiesCount();
+  const coursesCount = window.NovaSkillsData.getTotalCoursesCount();
+
+  const academiesCard = document.querySelector('.stat-card #stat-academies')?.closest('.stat-card') || 
+                        document.querySelector('.stat-card[data-count="12"]');
+  if (academiesCard) {
+    academiesCard.setAttribute('data-count', academiesCount);
+  }
+
+  const coursesCard = document.querySelector('.stat-card #stat-courses')?.closest('.stat-card') || 
+                      document.querySelector('.stat-card[data-count="100"]') || 
+                      document.querySelector('.stat-card[data-count="109"]');
+  if (coursesCard) {
+    coursesCard.setAttribute('data-count', coursesCount);
+  }
+
+  // Hydrate academy cards badges
+  document.querySelectorAll('[data-academy-course-badge]').forEach(el => {
+    const acadId = el.getAttribute('data-academy-course-badge');
+    if (acadId) {
+      const count = window.NovaSkillsData.getAcademyCourseCount(acadId);
+      el.textContent = `${count} Courses`;
+    }
+  });
+
+  // Update view all courses button if present
+  const viewAllBtn = document.getElementById('view-all-courses');
+  if (viewAllBtn) {
+    viewAllBtn.textContent = `View All ${coursesCount}+ Courses`;
+  }
+}
 
 // ===== SCROLL PROGRESS BAR =====
 function initScrollProgress() {

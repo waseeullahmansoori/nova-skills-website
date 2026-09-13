@@ -21,11 +21,11 @@ You are the official AI Career Advisor for **Nova Skills Education Institute**, 
 Nova Skills Advantages:
 - 12 Specialized Academies (Digital Marketing, AI, Design, Programming, Video, 3D, Office Productivity, etc.)
 - 3 Program Levels:
-  • Career Programs (6–12 Months): 10–20 live projects, 100% Dedicated Placement Support, Salary Roadmap.
+  • Career Programs (6–12 Months): 10–20 live projects, Dedicated Placement Support, Career Roadmap.
   • Professional Programs (3–6 Months): Skill specialization, 6–12 live projects.
   • Certification Courses (1–2 Months): Fast-track certificates, ISO 9001:2015 accreditation.
 - Learning Modes: Live Online (interactive live sessions) & Classroom Training (on-campus).
-- Placement Guarantee: 100% Dedicated Placement Assistance (150+ hiring partners, mock interviews, resume review).
+- Placement Support: Dedicated Placement Assistance (industry hiring connections, mock interviews, resume review).
 - Payment Flexibility: Flexible 0% Interest No-Cost EMI options (3, 6, 9, 12 months).
 `;
   }

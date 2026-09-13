@@ -479,7 +479,7 @@ function buildNavLinksHTML(page) {
         </div>
 
         <div class="mega-menu-footer">
-          <a href="/courses.html" class="mega-footer-link">View All 100+ Courses →</a>
+          <a href="/courses.html" class="mega-footer-link">View All <span class="canonical-courses-count">109+</span> Courses →</a>
         </div>
       </div>
     </li>
@@ -549,7 +549,7 @@ function buildHeaderHTML(page) {
 
         <!-- Slide 4 -->
         <div class="announcement-slide" data-index="3">
-          <span class="announcement-text">🏆 <strong>100+ Courses • 5,000+ Students</strong> • Build practical skills that employers actually hire for.</span>
+          <span class="announcement-text">🏆 <strong><span class="canonical-courses-count">109+</span> Courses • 5,000+ Students</strong> • Build practical skills that employers actually hire for.</span>
           <a href="/courses.html" class="announcement-cta">Explore Courses →</a>
         </div>
 
@@ -617,7 +617,7 @@ function buildFooterHTML() {
           <!-- Brand Column -->
           <div class="footer-col">
             <img src="/branding%20content/White%20Logo.svg" alt="Nova Skills" class="footer-logo" width="180" height="52" />
-            <p class="footer-desc">India's premier practical skills institute. 12 Academies. 100+ Courses. Real projects, expert mentors, and placement support that works.</p>
+            <p class="footer-desc">India's premier practical skills institute. <span class="canonical-academies-count">12</span> Academies. <span class="canonical-courses-count">109+</span> Courses. Real projects, expert mentors, and placement support that works.</p>
             <div class="footer-tagline">
               <span>LEARN</span><span class="dot">•</span>
               <span>GROW</span><span class="dot">•</span>
@@ -794,7 +794,7 @@ function buildPopupHTML() {
             <div class="popup-quotee-avatar">AK</div>
             <div>
               <div class="popup-quotee-name">Ananya Krishnan</div>
-              <div class="popup-quotee-role">Digital Marketer at Meta India</div>
+              <div class="popup-quotee-role">Digital Marketing Graduate</div>
             </div>
           </div>
         </div>
@@ -946,6 +946,9 @@ function initShared() {
   initConsultationPopup();
   initYearAuto();
   initWhatsAppDelay();
+  if (typeof window !== 'undefined' && window.NovaSkillsData && typeof window.NovaSkillsData.hydrateDOM === 'function') {
+    window.NovaSkillsData.hydrateDOM();
+  }
 }
 
 /* ── Scroll progress ── */

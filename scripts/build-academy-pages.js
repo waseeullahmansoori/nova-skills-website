@@ -219,7 +219,6 @@ NS_ACADEMIES.forEach(acad => {
   console.log(`✅ Generated customized static SEO page: ${slug}/index.html`);
 });
 
-// Update master template academies/index.html
-const masterFile = path.join(rootDir, 'academies', 'index.html');
-fs.copyFileSync(path.join(rootDir, 'academies', 'digital-marketing', 'index.html'), masterFile);
-console.log('✅ Updated master template academies/index.html');
+// Master template academies/index.html is the all-academies directory catalog page.
+// Individual academy pages are written to academies/<slug>/index.html above.
+console.log('✅ All 12 individual academy pages built.');
