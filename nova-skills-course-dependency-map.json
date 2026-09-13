@@ -1,0 +1,1603 @@
+{
+  "learning_paths": [
+    {
+      "id": "digital-marketing",
+      "name": "Digital Marketing & Growth Path",
+      "flow": "Digital Marketing Foundations -> AI Digital Marketing Professional -> Specializations (SEO/GEO, Performance Marketing, Retention) -> AI Digital Marketing Master -> Agency / Freelancing"
+    },
+    {
+      "id": "ai-intelligence",
+      "name": "AI & Machine Intelligence Path",
+      "flow": "Prompt & Context Engineering -> AI Productivity Professional -> Specializations (n8n Automation, Agentic Systems) -> AI Mastery Program"
+    },
+    {
+      "id": "design",
+      "name": "Visual Design & UI/UX Path",
+      "flow": "Design Principles & Vector Tools -> Graphic Design Professional -> Specializations (Figma UI/UX, Brand Identity, Packaging) -> Creative Design Master"
+    },
+    {
+      "id": "programming",
+      "name": "Software Engineering & Web Development Path",
+      "flow": "Programming Logic (HTML/JS/Python) -> React/Node.js Specializations -> AI Web Development -> Full Stack Programming Foundation"
+    },
+    {
+      "id": "nocode",
+      "name": "No-Code & Visual Web Architecture Path",
+      "flow": "Visual Web Foundations -> No-Code Web Professional -> Specializations (Webflow, Framer, Shopify) -> E-Commerce Website Mastery"
+    },
+    {
+      "id": "video",
+      "name": "Video Production & Motion Graphics Path",
+      "flow": "Storytelling & NLE Assembly -> Professional Video Editing -> Specializations (After Effects, DaVinci Color, AI Video) -> Motion Graphics Master"
+    },
+    {
+      "id": "3d-archviz",
+      "name": "3D Design & Architectural Visualization Path",
+      "flow": "3D Spatial Modeling (3ds Max/Blender) -> 3D Visualisation Professional -> Specializations (V-Ray, Twinmotion, Unreal Engine 5) -> Architectural Visualisation Master"
+    },
+    {
+      "id": "career-freelance",
+      "name": "Career Launch & Global Freelancing Path",
+      "flow": "Hard Domain Skill -> Career Launch / Professional Branding -> Platforms (Upwork/Fiverr) -> Freelancing Mastery -> Agency Scaling"
+    },
+    {
+      "id": "office-productivity",
+      "name": "Enterprise Analytics & Digital Workplace Path",
+      "flow": "Modern Workplace Fundamentals -> Office Productivity Professional -> Specializations (Advanced Excel/Python, Notion, Copilot) -> Business Productivity Mastery"
+    },
+    {
+      "id": "communication",
+      "name": "Executive Communication & Leadership Path",
+      "flow": "Spoken Fluency -> Business Communication -> Specializations (Presentation Skills, Public Speaking) -> Business English & Personality Master"
+    },
+    {
+      "id": "kids-tech",
+      "name": "Young Innovators & Kids Tech Path",
+      "flow": "Scratch Coding Foundations -> Young Coders Program -> Specializations (Python for Kids, AI Explorers, Robotics) -> Future Tech Kids Mastery"
+    },
+    {
+      "id": "creator",
+      "name": "Digital Creator & Media Entrepreneurship Path",
+      "flow": "Creative Storytelling & Smartphone Video -> Content Creator Professional -> Specializations (YouTube SEO, Short-Form Viral Strategy, Podcasts) -> YouTube Growth Mastery"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "dm-mastery",
+      "target": "perf-marketing-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of AI Digital Marketing Master."
+    },
+    {
+      "source": "dm-mastery",
+      "target": "dm-professional",
+      "relationship": "sub-track",
+      "reason": "AI Digital Marketing Professional naturally functions as a professional of dm-mastery."
+    },
+    {
+      "source": "dm-professional",
+      "target": "perf-marketing-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of AI Digital Marketing Professional."
+    },
+    {
+      "source": "dm-mastery",
+      "target": "perf-marketing-pro",
+      "relationship": "specialization path",
+      "reason": "Performance Marketing Professional naturally functions as a specialization of dm-mastery."
+    },
+    {
+      "source": "perf-marketing-pro",
+      "target": "agency-building",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Performance Marketing Professional."
+    },
+    {
+      "source": "dm-professional",
+      "target": "digital-marketing-pro",
+      "relationship": "sub-track",
+      "reason": "Digital Marketing Professional naturally functions as a merge of dm-professional."
+    },
+    {
+      "source": "digital-marketing-pro",
+      "target": "dm-professional",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Digital Marketing Professional."
+    },
+    {
+      "source": "perf-marketing-pro",
+      "target": "google-ads",
+      "relationship": "sub-track",
+      "reason": "Google Ads naturally functions as a micro of perf-marketing-pro."
+    },
+    {
+      "source": "google-ads",
+      "target": "meta-ads",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Google Ads."
+    },
+    {
+      "source": "perf-marketing-pro",
+      "target": "meta-ads",
+      "relationship": "sub-track",
+      "reason": "Meta Ads (Facebook & Instagram) naturally functions as a micro of perf-marketing-pro."
+    },
+    {
+      "source": "meta-ads",
+      "target": "google-analytics-ga4",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Meta Ads (Facebook & Instagram)."
+    },
+    {
+      "source": "dm-mastery",
+      "target": "seo-geo",
+      "relationship": "specialization path",
+      "reason": "SEO & GEO naturally functions as a specialization of dm-mastery."
+    },
+    {
+      "source": "seo-geo",
+      "target": "content-marketing",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of SEO & GEO."
+    },
+    {
+      "source": "dm-professional",
+      "target": "social-media-marketing",
+      "relationship": "sub-track",
+      "reason": "Social Media Marketing naturally functions as a micro of dm-professional."
+    },
+    {
+      "source": "social-media-marketing",
+      "target": "meta-ads",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Social Media Marketing."
+    },
+    {
+      "source": "dm-mastery",
+      "target": "content-marketing",
+      "relationship": "sub-track",
+      "reason": "Content Marketing naturally functions as a reposition of dm-mastery."
+    },
+    {
+      "source": "content-marketing",
+      "target": "seo-geo",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Content Marketing."
+    },
+    {
+      "source": "dm-mastery",
+      "target": "email-marketing",
+      "relationship": "sub-track",
+      "reason": "Email Marketing naturally functions as a micro of dm-mastery."
+    },
+    {
+      "source": "email-marketing",
+      "target": "ai-automation-n8n",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Email Marketing."
+    },
+    {
+      "source": "dm-mastery",
+      "target": "google-analytics-ga4",
+      "relationship": "sub-track",
+      "reason": "Google Analytics (GA4) naturally functions as a micro of dm-mastery."
+    },
+    {
+      "source": "google-analytics-ga4",
+      "target": "perf-marketing-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Google Analytics (GA4)."
+    },
+    {
+      "source": "seo-geo",
+      "target": "google-search-console",
+      "relationship": "shared module",
+      "reason": "Google Search Console naturally functions as a module of seo-geo."
+    },
+    {
+      "source": "google-search-console",
+      "target": "seo-geo",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Google Search Console."
+    },
+    {
+      "source": "seo-geo",
+      "target": "local-seo",
+      "relationship": "shared module",
+      "reason": "Local SEO naturally functions as a module of seo-geo."
+    },
+    {
+      "source": "local-seo",
+      "target": "seo-geo",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Local SEO."
+    },
+    {
+      "source": "youtube-mastery",
+      "target": "youtube-marketing",
+      "relationship": "sub-track",
+      "reason": "YouTube Marketing naturally functions as a merge of youtube-mastery."
+    },
+    {
+      "source": "youtube-marketing",
+      "target": "youtube-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of YouTube Marketing."
+    },
+    {
+      "source": "ai-mastery",
+      "target": "ai-agents-fundamentals",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of AI Mastery Program."
+    },
+    {
+      "source": "ai-mastery",
+      "target": "ai-productivity",
+      "relationship": "sub-track",
+      "reason": "AI Productivity Professional naturally functions as a professional of ai-mastery."
+    },
+    {
+      "source": "ai-productivity",
+      "target": "ai-for-business-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of AI Productivity Professional."
+    },
+    {
+      "source": "ai-mastery",
+      "target": "ai-for-business-pro",
+      "relationship": "specialization path",
+      "reason": "AI for Business Professional naturally functions as a specialization of ai-mastery."
+    },
+    {
+      "source": "ai-for-business-pro",
+      "target": "ai-automation-n8n",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of AI for Business Professional."
+    },
+    {
+      "source": "ai-mastery",
+      "target": "prompt-engineering",
+      "relationship": "sub-track",
+      "reason": "Prompt Engineering naturally functions as a reposition of ai-mastery."
+    },
+    {
+      "source": "prompt-engineering",
+      "target": "ai-automation-n8n",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Prompt Engineering."
+    },
+    {
+      "source": "ai-mastery",
+      "target": "ai-automation-n8n",
+      "relationship": "specialization path",
+      "reason": "AI Automation with n8n naturally functions as a specialization of ai-mastery."
+    },
+    {
+      "source": "ai-automation-n8n",
+      "target": "ai-agents-fundamentals",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of AI Automation with n8n."
+    },
+    {
+      "source": "ai-mastery",
+      "target": "ai-agents-fundamentals",
+      "relationship": "specialization path",
+      "reason": "AI Agents Fundamentals naturally functions as a specialization of ai-mastery."
+    },
+    {
+      "source": "ai-agents-fundamentals",
+      "target": "ai-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of AI Agents Fundamentals."
+    },
+    {
+      "source": "ai-productivity",
+      "target": "chatgpt-mastery",
+      "relationship": "sub-track",
+      "reason": "ChatGPT Mastery naturally functions as a reposition of ai-productivity."
+    },
+    {
+      "source": "chatgpt-mastery",
+      "target": "ai-automation-n8n",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of ChatGPT Mastery."
+    },
+    {
+      "source": "chatgpt-mastery",
+      "target": "gemini-mastery",
+      "relationship": "sub-track",
+      "reason": "Gemini Mastery naturally functions as a merge of chatgpt-mastery."
+    },
+    {
+      "source": "gemini-mastery",
+      "target": "chatgpt-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Gemini Mastery."
+    },
+    {
+      "source": "chatgpt-mastery",
+      "target": "claude-productivity",
+      "relationship": "sub-track",
+      "reason": "Claude for Productivity naturally functions as a merge of chatgpt-mastery."
+    },
+    {
+      "source": "claude-productivity",
+      "target": "chatgpt-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Claude for Productivity."
+    },
+    {
+      "source": "ai-productivity",
+      "target": "ai-research-tools",
+      "relationship": "shared module",
+      "reason": "AI Research Tools naturally functions as a module of ai-productivity."
+    },
+    {
+      "source": "ai-research-tools",
+      "target": "ai-productivity",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of AI Research Tools."
+    },
+    {
+      "source": "creative-design",
+      "target": "uiux-design-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Creative Design Master."
+    },
+    {
+      "source": "creative-design",
+      "target": "graphic-design-pro",
+      "relationship": "sub-track",
+      "reason": "Graphic Design Professional naturally functions as a professional of creative-design."
+    },
+    {
+      "source": "graphic-design-pro",
+      "target": "uiux-design-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Graphic Design Professional."
+    },
+    {
+      "source": "creative-design",
+      "target": "uiux-design-pro",
+      "relationship": "specialization path",
+      "reason": "UI/UX Design Professional naturally functions as a specialization of creative-design."
+    },
+    {
+      "source": "uiux-design-pro",
+      "target": "creative-design",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of UI/UX Design Professional."
+    },
+    {
+      "source": "graphic-design-pro",
+      "target": "adobe-photoshop",
+      "relationship": "sub-track",
+      "reason": "Adobe Photoshop naturally functions as a micro of graphic-design-pro."
+    },
+    {
+      "source": "adobe-photoshop",
+      "target": "adobe-illustrator",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Adobe Photoshop."
+    },
+    {
+      "source": "graphic-design-pro",
+      "target": "adobe-illustrator",
+      "relationship": "sub-track",
+      "reason": "Adobe Illustrator naturally functions as a micro of graphic-design-pro."
+    },
+    {
+      "source": "adobe-illustrator",
+      "target": "brand-identity-design",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Adobe Illustrator."
+    },
+    {
+      "source": "dm-professional",
+      "target": "canva-pro",
+      "relationship": "sub-track",
+      "reason": "Canva Professional naturally functions as a reposition of dm-professional."
+    },
+    {
+      "source": "canva-pro",
+      "target": "figma-ui-design",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Canva Professional."
+    },
+    {
+      "source": "uiux-design-pro",
+      "target": "figma-ui-design",
+      "relationship": "sub-track",
+      "reason": "Figma UI Design naturally functions as a micro of uiux-design-pro."
+    },
+    {
+      "source": "figma-ui-design",
+      "target": "uiux-design-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Figma UI Design."
+    },
+    {
+      "source": "graphic-design-pro",
+      "target": "brand-identity-design",
+      "relationship": "specialization path",
+      "reason": "Brand Identity Design naturally functions as a specialization of graphic-design-pro."
+    },
+    {
+      "source": "brand-identity-design",
+      "target": "creative-design",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Brand Identity Design."
+    },
+    {
+      "source": "graphic-design-pro",
+      "target": "packaging-design",
+      "relationship": "specialization path",
+      "reason": "Packaging Design naturally functions as a specialization of graphic-design-pro."
+    },
+    {
+      "source": "packaging-design",
+      "target": "creative-design",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Packaging Design."
+    },
+    {
+      "source": "brand-identity-design",
+      "target": "logo-design",
+      "relationship": "shared module",
+      "reason": "Logo Design naturally functions as a module of brand-identity-design."
+    },
+    {
+      "source": "logo-design",
+      "target": "brand-identity-design",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Logo Design."
+    },
+    {
+      "source": "fullstack-foundation",
+      "target": "ai-web-dev-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Full Stack Programming Foundation."
+    },
+    {
+      "source": "fullstack-foundation",
+      "target": "python-developer",
+      "relationship": "sub-track",
+      "reason": "Python Developer Professional naturally functions as a professional of fullstack-foundation."
+    },
+    {
+      "source": "python-developer",
+      "target": "ai-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Python Developer Professional."
+    },
+    {
+      "source": "fullstack-foundation",
+      "target": "ai-web-dev-pro",
+      "relationship": "specialization path",
+      "reason": "AI Web Development Professional naturally functions as a specialization of fullstack-foundation."
+    },
+    {
+      "source": "ai-web-dev-pro",
+      "target": "ai-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of AI Web Development Professional."
+    },
+    {
+      "source": "fullstack-foundation",
+      "target": "html-css",
+      "relationship": "shared module",
+      "reason": "HTML & CSS naturally functions as a module of fullstack-foundation."
+    },
+    {
+      "source": "html-css",
+      "target": "javascript-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of HTML & CSS."
+    },
+    {
+      "source": "fullstack-foundation",
+      "target": "javascript-cert",
+      "relationship": "sub-track",
+      "reason": "JavaScript naturally functions as a micro of fullstack-foundation."
+    },
+    {
+      "source": "javascript-cert",
+      "target": "react-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of JavaScript."
+    },
+    {
+      "source": "fullstack-foundation",
+      "target": "react-cert",
+      "relationship": "sub-track",
+      "reason": "React naturally functions as a micro of fullstack-foundation."
+    },
+    {
+      "source": "react-cert",
+      "target": "node-js",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of React."
+    },
+    {
+      "source": "fullstack-foundation",
+      "target": "node-js",
+      "relationship": "sub-track",
+      "reason": "Node.js naturally functions as a micro of fullstack-foundation."
+    },
+    {
+      "source": "node-js",
+      "target": "sql-basics",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Node.js."
+    },
+    {
+      "source": "fullstack-foundation",
+      "target": "sql-basics",
+      "relationship": "sub-track",
+      "reason": "SQL Basics naturally functions as a micro of fullstack-foundation."
+    },
+    {
+      "source": "sql-basics",
+      "target": "node-js",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of SQL Basics."
+    },
+    {
+      "source": "fullstack-foundation",
+      "target": "git-github",
+      "relationship": "shared module",
+      "reason": "Git & GitHub naturally functions as a module of fullstack-foundation."
+    },
+    {
+      "source": "git-github",
+      "target": "fullstack-foundation",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Git & GitHub."
+    },
+    {
+      "source": "node-js",
+      "target": "rest-apis",
+      "relationship": "shared module",
+      "reason": "REST APIs naturally functions as a module of node-js."
+    },
+    {
+      "source": "rest-apis",
+      "target": "node-js",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of REST APIs."
+    },
+    {
+      "source": "ecommerce-mastery",
+      "target": "agency-building",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of E-Commerce Website Mastery."
+    },
+    {
+      "source": "ecommerce-mastery",
+      "target": "nocode-web-pro",
+      "relationship": "sub-track",
+      "reason": "No-Code Website Professional naturally functions as a professional of ecommerce-mastery."
+    },
+    {
+      "source": "nocode-web-pro",
+      "target": "framer-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of No-Code Website Professional."
+    },
+    {
+      "source": "nocode-web-pro",
+      "target": "wordpress-cert",
+      "relationship": "sub-track",
+      "reason": "WordPress naturally functions as a reposition of nocode-web-pro."
+    },
+    {
+      "source": "wordpress-cert",
+      "target": "woocommerce-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of WordPress."
+    },
+    {
+      "source": "wordpress-cert",
+      "target": "woocommerce-cert",
+      "relationship": "sub-track",
+      "reason": "WooCommerce naturally functions as a merge of wordpress-cert."
+    },
+    {
+      "source": "woocommerce-cert",
+      "target": "shopify-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of WooCommerce."
+    },
+    {
+      "source": "ecommerce-mastery",
+      "target": "shopify-cert",
+      "relationship": "sub-track",
+      "reason": "Shopify naturally functions as a micro of ecommerce-mastery."
+    },
+    {
+      "source": "shopify-cert",
+      "target": "ecommerce-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Shopify."
+    },
+    {
+      "source": "wordpress-cert",
+      "target": "elementor-cert",
+      "relationship": "sub-track",
+      "reason": "Elementor naturally functions as a merge of wordpress-cert."
+    },
+    {
+      "source": "elementor-cert",
+      "target": "wordpress-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Elementor."
+    },
+    {
+      "source": "nocode-web-pro",
+      "target": "webflow-cert",
+      "relationship": "specialization path",
+      "reason": "Webflow naturally functions as a specialization of nocode-web-pro."
+    },
+    {
+      "source": "webflow-cert",
+      "target": "framer-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Webflow."
+    },
+    {
+      "source": "nocode-web-pro",
+      "target": "framer-cert",
+      "relationship": "specialization path",
+      "reason": "Framer naturally functions as a specialization of nocode-web-pro."
+    },
+    {
+      "source": "framer-cert",
+      "target": "webflow-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Framer."
+    },
+    {
+      "source": "motion-mastery",
+      "target": "freelance-agency-master",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Motion Graphics Master."
+    },
+    {
+      "source": "motion-mastery",
+      "target": "video-pro",
+      "relationship": "sub-track",
+      "reason": "Professional Video Editing naturally functions as a professional of motion-mastery."
+    },
+    {
+      "source": "video-pro",
+      "target": "after-effects",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Professional Video Editing."
+    },
+    {
+      "source": "video-pro",
+      "target": "ai-video-pro",
+      "relationship": "specialization path",
+      "reason": "AI Video Editing Professional naturally functions as a specialization of video-pro."
+    },
+    {
+      "source": "ai-video-pro",
+      "target": "motion-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of AI Video Editing Professional."
+    },
+    {
+      "source": "video-pro",
+      "target": "adobe-premiere-pro",
+      "relationship": "sub-track",
+      "reason": "Adobe Premiere Pro naturally functions as a micro of video-pro."
+    },
+    {
+      "source": "adobe-premiere-pro",
+      "target": "after-effects",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Adobe Premiere Pro."
+    },
+    {
+      "source": "motion-mastery",
+      "target": "after-effects",
+      "relationship": "specialization path",
+      "reason": "After Effects naturally functions as a specialization of motion-mastery."
+    },
+    {
+      "source": "after-effects",
+      "target": "motion-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of After Effects."
+    },
+    {
+      "source": "video-pro",
+      "target": "davinci-resolve",
+      "relationship": "specialization path",
+      "reason": "DaVinci Resolve naturally functions as a specialization of video-pro."
+    },
+    {
+      "source": "davinci-resolve",
+      "target": "video-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of DaVinci Resolve."
+    },
+    {
+      "source": "video-pro",
+      "target": "reels-editing",
+      "relationship": "sub-track",
+      "reason": "Reels Editing naturally functions as a micro of video-pro."
+    },
+    {
+      "source": "reels-editing",
+      "target": "video-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Reels Editing."
+    },
+    {
+      "source": "after-effects",
+      "target": "motion-graphics-essentials",
+      "relationship": "sub-track",
+      "reason": "Motion Graphics Essentials naturally functions as a merge of after-effects."
+    },
+    {
+      "source": "motion-graphics-essentials",
+      "target": "after-effects",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Motion Graphics Essentials."
+    },
+    {
+      "source": "archviz-mastery",
+      "target": "freelance-agency-master",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Architectural Visualisation Master."
+    },
+    {
+      "source": "archviz-mastery",
+      "target": "3d-viz-pro",
+      "relationship": "sub-track",
+      "reason": "3D Visualisation Professional naturally functions as a professional of archviz-mastery."
+    },
+    {
+      "source": "3d-viz-pro",
+      "target": "unreal-engine-basics",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of 3D Visualisation Professional."
+    },
+    {
+      "source": "3d-viz-pro",
+      "target": "blender-cert",
+      "relationship": "sub-track",
+      "reason": "Blender naturally functions as a micro of 3d-viz-pro."
+    },
+    {
+      "source": "blender-cert",
+      "target": "unreal-engine-basics",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Blender."
+    },
+    {
+      "source": "3d-viz-pro",
+      "target": "3ds-max-cert",
+      "relationship": "sub-track",
+      "reason": "3ds Max naturally functions as a micro of 3d-viz-pro."
+    },
+    {
+      "source": "3ds-max-cert",
+      "target": "v-ray-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of 3ds Max."
+    },
+    {
+      "source": "3ds-max-cert",
+      "target": "v-ray-cert",
+      "relationship": "specialization path",
+      "reason": "V-Ray naturally functions as a specialization of 3ds-max-cert."
+    },
+    {
+      "source": "v-ray-cert",
+      "target": "twinmotion-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of V-Ray."
+    },
+    {
+      "source": "archviz-mastery",
+      "target": "twinmotion-cert",
+      "relationship": "specialization path",
+      "reason": "Twinmotion naturally functions as a specialization of archviz-mastery."
+    },
+    {
+      "source": "twinmotion-cert",
+      "target": "unreal-engine-basics",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Twinmotion."
+    },
+    {
+      "source": "motion-mastery",
+      "target": "cinema-4d-cert",
+      "relationship": "sub-track",
+      "reason": "Cinema 4D naturally functions as a reposition of motion-mastery."
+    },
+    {
+      "source": "cinema-4d-cert",
+      "target": "motion-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Cinema 4D."
+    },
+    {
+      "source": "archviz-mastery",
+      "target": "unreal-engine-basics",
+      "relationship": "specialization path",
+      "reason": "Unreal Engine Basics naturally functions as a specialization of archviz-mastery."
+    },
+    {
+      "source": "unreal-engine-basics",
+      "target": "archviz-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Unreal Engine Basics."
+    },
+    {
+      "source": "freelancing-mastery",
+      "target": "agency-building",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Freelancing Mastery."
+    },
+    {
+      "source": "freelancing-mastery",
+      "target": "career-launch",
+      "relationship": "sub-track",
+      "reason": "Career Launch Program naturally functions as a professional of freelancing-mastery."
+    },
+    {
+      "source": "career-launch",
+      "target": "interview-preparation",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Career Launch Program."
+    },
+    {
+      "source": "career-launch",
+      "target": "resume-building",
+      "relationship": "shared module",
+      "reason": "Resume Building naturally functions as a module of career-launch."
+    },
+    {
+      "source": "resume-building",
+      "target": "interview-preparation",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Resume Building."
+    },
+    {
+      "source": "career-launch",
+      "target": "linkedin-optimisation",
+      "relationship": "sub-track",
+      "reason": "LinkedIn Optimisation naturally functions as a micro of career-launch."
+    },
+    {
+      "source": "linkedin-optimisation",
+      "target": "interview-preparation",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of LinkedIn Optimisation."
+    },
+    {
+      "source": "career-launch",
+      "target": "interview-preparation",
+      "relationship": "shared module",
+      "reason": "Interview Preparation naturally functions as a module of career-launch."
+    },
+    {
+      "source": "interview-preparation",
+      "target": "career-launch",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Interview Preparation."
+    },
+    {
+      "source": "freelancing-mastery",
+      "target": "client-communication",
+      "relationship": "shared module",
+      "reason": "Client Communication naturally functions as a module of freelancing-mastery."
+    },
+    {
+      "source": "client-communication",
+      "target": "freelancing-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Client Communication."
+    },
+    {
+      "source": "freelancing-mastery",
+      "target": "proposal-writing",
+      "relationship": "shared module",
+      "reason": "Proposal Writing naturally functions as a module of freelancing-mastery."
+    },
+    {
+      "source": "proposal-writing",
+      "target": "upwork-success",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Proposal Writing."
+    },
+    {
+      "source": "freelancing-mastery",
+      "target": "agency-building",
+      "relationship": "specialization path",
+      "reason": "Agency Building naturally functions as a specialization of freelancing-mastery."
+    },
+    {
+      "source": "agency-building",
+      "target": "None",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Agency Building."
+    },
+    {
+      "source": "freelancing-mastery",
+      "target": "fiverr-success",
+      "relationship": "sub-track",
+      "reason": "Fiverr Success naturally functions as a micro of freelancing-mastery."
+    },
+    {
+      "source": "fiverr-success",
+      "target": "upwork-success",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Fiverr Success."
+    },
+    {
+      "source": "freelancing-mastery",
+      "target": "upwork-success",
+      "relationship": "sub-track",
+      "reason": "Upwork Success naturally functions as a micro of freelancing-mastery."
+    },
+    {
+      "source": "upwork-success",
+      "target": "agency-building",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Upwork Success."
+    },
+    {
+      "source": "business-english",
+      "target": "public-speaking",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Business English & Personality Development."
+    },
+    {
+      "source": "business-english",
+      "target": "spoken-english-pro",
+      "relationship": "sub-track",
+      "reason": "Professional Spoken English naturally functions as a professional of business-english."
+    },
+    {
+      "source": "spoken-english-pro",
+      "target": "business-communication",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Professional Spoken English."
+    },
+    {
+      "source": "spoken-english-pro",
+      "target": "spoken-english-cert",
+      "relationship": "sub-track",
+      "reason": "Spoken English naturally functions as a merge of spoken-english-pro."
+    },
+    {
+      "source": "spoken-english-cert",
+      "target": "spoken-english-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Spoken English."
+    },
+    {
+      "source": "business-english",
+      "target": "business-communication",
+      "relationship": "sub-track",
+      "reason": "Business Communication naturally functions as a micro of business-english."
+    },
+    {
+      "source": "business-communication",
+      "target": "presentation-skills",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Business Communication."
+    },
+    {
+      "source": "business-english",
+      "target": "presentation-skills",
+      "relationship": "sub-track",
+      "reason": "Presentation Skills naturally functions as a micro of business-english."
+    },
+    {
+      "source": "presentation-skills",
+      "target": "public-speaking",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Presentation Skills."
+    },
+    {
+      "source": "business-english",
+      "target": "public-speaking",
+      "relationship": "specialization path",
+      "reason": "Public Speaking naturally functions as a specialization of business-english."
+    },
+    {
+      "source": "public-speaking",
+      "target": "None",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Public Speaking."
+    },
+    {
+      "source": "business-english",
+      "target": "soft-skills",
+      "relationship": "shared module",
+      "reason": "Soft Skills naturally functions as a module of business-english."
+    },
+    {
+      "source": "soft-skills",
+      "target": "business-communication",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Soft Skills."
+    },
+    {
+      "source": "kids-mastery",
+      "target": "None",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Future Tech Kids Mastery."
+    },
+    {
+      "source": "kids-mastery",
+      "target": "young-coders",
+      "relationship": "sub-track",
+      "reason": "Young Coders Program naturally functions as a professional of kids-mastery."
+    },
+    {
+      "source": "young-coders",
+      "target": "python-for-kids",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Young Coders Program."
+    },
+    {
+      "source": "young-coders",
+      "target": "scratch-programming",
+      "relationship": "sub-track",
+      "reason": "Scratch Programming naturally functions as a micro of young-coders."
+    },
+    {
+      "source": "scratch-programming",
+      "target": "python-for-kids",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Scratch Programming."
+    },
+    {
+      "source": "kids-mastery",
+      "target": "python-for-kids",
+      "relationship": "specialization path",
+      "reason": "Python for Kids naturally functions as a specialization of kids-mastery."
+    },
+    {
+      "source": "python-for-kids",
+      "target": "ai-for-kids",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Python for Kids."
+    },
+    {
+      "source": "kids-mastery",
+      "target": "ai-for-kids",
+      "relationship": "specialization path",
+      "reason": "AI for Kids naturally functions as a specialization of kids-mastery."
+    },
+    {
+      "source": "ai-for-kids",
+      "target": "python-for-kids",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of AI for Kids."
+    },
+    {
+      "source": "kids-mastery",
+      "target": "robotics-basics",
+      "relationship": "sub-track",
+      "reason": "Robotics Basics naturally functions as a micro of kids-mastery."
+    },
+    {
+      "source": "robotics-basics",
+      "target": "python-for-kids",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Robotics Basics."
+    },
+    {
+      "source": "young-coders",
+      "target": "web-design-for-kids",
+      "relationship": "shared module",
+      "reason": "Web Design for Kids naturally functions as a module of young-coders."
+    },
+    {
+      "source": "web-design-for-kids",
+      "target": "python-for-kids",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Web Design for Kids."
+    },
+    {
+      "source": "youtube-mastery",
+      "target": "agency-building",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of YouTube Growth Mastery."
+    },
+    {
+      "source": "youtube-mastery",
+      "target": "content-creator-pro",
+      "relationship": "sub-track",
+      "reason": "Content Creator Professional naturally functions as a professional of youtube-mastery."
+    },
+    {
+      "source": "content-creator-pro",
+      "target": "short-video-strategy",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Content Creator Professional."
+    },
+    {
+      "source": "youtube-mastery",
+      "target": "youtube-seo",
+      "relationship": "specialization path",
+      "reason": "YouTube SEO naturally functions as a specialization of youtube-mastery."
+    },
+    {
+      "source": "youtube-seo",
+      "target": "youtube-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of YouTube SEO."
+    },
+    {
+      "source": "youtube-mastery",
+      "target": "thumbnail-design",
+      "relationship": "shared module",
+      "reason": "Thumbnail Design naturally functions as a module of youtube-mastery."
+    },
+    {
+      "source": "thumbnail-design",
+      "target": "youtube-seo",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Thumbnail Design."
+    },
+    {
+      "source": "youtube-mastery",
+      "target": "podcast-production",
+      "relationship": "sub-track",
+      "reason": "Podcast Production naturally functions as a micro of youtube-mastery."
+    },
+    {
+      "source": "podcast-production",
+      "target": "content-creator-pro",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Podcast Production."
+    },
+    {
+      "source": "career-launch",
+      "target": "personal-branding",
+      "relationship": "sub-track",
+      "reason": "Personal Branding naturally functions as a reposition of career-launch."
+    },
+    {
+      "source": "personal-branding",
+      "target": "freelancing-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Personal Branding."
+    },
+    {
+      "source": "content-creator-pro",
+      "target": "short-video-strategy",
+      "relationship": "specialization path",
+      "reason": "Short Video Strategy naturally functions as a specialization of content-creator-pro."
+    },
+    {
+      "source": "short-video-strategy",
+      "target": "youtube-mastery",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Short Video Strategy."
+    },
+    {
+      "source": "biz-productivity",
+      "target": "None",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Business Productivity Mastery."
+    },
+    {
+      "source": "biz-productivity",
+      "target": "office-pro",
+      "relationship": "sub-track",
+      "reason": "Office Productivity Professional naturally functions as a professional of biz-productivity."
+    },
+    {
+      "source": "office-pro",
+      "target": "microsoft-excel",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Office Productivity Professional."
+    },
+    {
+      "source": "biz-productivity",
+      "target": "microsoft-excel",
+      "relationship": "sub-track",
+      "reason": "Microsoft Excel naturally functions as a reposition of biz-productivity."
+    },
+    {
+      "source": "microsoft-excel",
+      "target": "biz-productivity",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Microsoft Excel."
+    },
+    {
+      "source": "office-pro",
+      "target": "microsoft-word",
+      "relationship": "sub-track",
+      "reason": "Microsoft Word naturally functions as a retire of office-pro."
+    },
+    {
+      "source": "microsoft-word",
+      "target": "microsoft-copilot",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Microsoft Word."
+    },
+    {
+      "source": "presentation-skills",
+      "target": "microsoft-powerpoint",
+      "relationship": "sub-track",
+      "reason": "Microsoft PowerPoint naturally functions as a retire of presentation-skills."
+    },
+    {
+      "source": "microsoft-powerpoint",
+      "target": "presentation-skills",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Microsoft PowerPoint."
+    },
+    {
+      "source": "office-pro",
+      "target": "google-workspace",
+      "relationship": "sub-track",
+      "reason": "Google Workspace naturally functions as a micro of office-pro."
+    },
+    {
+      "source": "google-workspace",
+      "target": "microsoft-excel",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Google Workspace."
+    },
+    {
+      "source": "biz-productivity",
+      "target": "notion-cert",
+      "relationship": "specialization path",
+      "reason": "Notion naturally functions as a specialization of biz-productivity."
+    },
+    {
+      "source": "notion-cert",
+      "target": "clickup-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Notion."
+    },
+    {
+      "source": "biz-productivity",
+      "target": "clickup-cert",
+      "relationship": "sub-track",
+      "reason": "ClickUp naturally functions as a micro of biz-productivity."
+    },
+    {
+      "source": "clickup-cert",
+      "target": "notion-cert",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of ClickUp."
+    },
+    {
+      "source": "biz-productivity",
+      "target": "microsoft-copilot",
+      "relationship": "specialization path",
+      "reason": "Microsoft Copilot naturally functions as a specialization of biz-productivity."
+    },
+    {
+      "source": "microsoft-copilot",
+      "target": "biz-productivity",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Microsoft Copilot."
+    },
+    {
+      "source": "tally-gst",
+      "target": "microsoft-excel",
+      "relationship": "recommended next",
+      "reason": "Natural career or skill progression following completion of Tally with GST."
+    }
+  ],
+  "cross_academy_links": [
+    {
+      "source_academy": "digital-marketing",
+      "target_academy": "creator",
+      "reason": "Digital marketers require creator-economy video hooks, short-form packaging, and channel growth strategies."
+    },
+    {
+      "source_academy": "digital-marketing",
+      "target_academy": "ai",
+      "reason": "Modern performance marketers rely heavily on automated workflows (n8n) and generative creative tools."
+    },
+    {
+      "source_academy": "programming",
+      "target_academy": "ai",
+      "reason": "Full-stack software engineers increasingly integrate LLM APIs, vector retrieval, and AI agents into modern applications."
+    },
+    {
+      "source_academy": "design",
+      "target_academy": "creator",
+      "reason": "Creators require professional visual aesthetics, high-converting thumbnail design, and brand identity systems."
+    },
+    {
+      "source_academy": "nocode",
+      "target_academy": "digital-marketing",
+      "reason": "No-code storefronts (Shopify/Framer) require performance ads, conversion rate optimization (CRO), and tracking pipelines."
+    },
+    {
+      "source_academy": "video",
+      "target_academy": "creator",
+      "reason": "YouTubers and social creators depend on professional pacing, color grading, and dynamic reels editing."
+    },
+    {
+      "source_academy": "3d",
+      "target_academy": "design",
+      "reason": "3D rendering requires foundational color theory, lighting balance, and visual layout principles."
+    },
+    {
+      "source_academy": "career",
+      "target_academy": "ALL_ACADEMIES",
+      "reason": "Every technical and creative skill requires client acquisition, proposal writing, and international payment mechanics to monetize."
+    },
+    {
+      "source_academy": "communication",
+      "target_academy": "ALL_ACADEMIES",
+      "reason": "Professional client presentations, stakeholder alignment, and executive interview performance are universally required."
+    }
+  ],
+  "shared_modules": [
+    {
+      "module_id": "shared-ai-prompting",
+      "name": "Universal AI Prompting & Context Engineering",
+      "used_by": [
+        "ai-mastery",
+        "dm-mastery",
+        "fullstack-foundation",
+        "creative-design",
+        "biz-productivity"
+      ],
+      "reason": "Core foundational principles of structuring instructions, system prompts, few-shot examples, and JSON outputs apply across all domains."
+    },
+    {
+      "module_id": "shared-design-principles",
+      "name": "Visual Aesthetics & Design Hierarchy Fundamentals",
+      "used_by": [
+        "creative-design",
+        "graphic-design-pro",
+        "motion-mastery",
+        "nocode-web-pro",
+        "youtube-mastery"
+      ],
+      "reason": "Contrast, whitespace, typographic hierarchy, and color harmony are identical whether designing an ad, website, video frame, or thumbnail."
+    },
+    {
+      "module_id": "shared-analytics-tracking",
+      "name": "Measurement, Funnels & GA4 Analytics",
+      "used_by": [
+        "dm-mastery",
+        "ecommerce-mastery",
+        "youtube-mastery",
+        "biz-productivity"
+      ],
+      "reason": "Conversion events, tracking pixels, attribution funnels, and data interpretation represent shared business mechanics."
+    },
+    {
+      "module_id": "shared-freelance-client-engine",
+      "name": "Client Acquisition, Proposals & Upwork Fundamentals",
+      "used_by": [
+        "freelancing-mastery",
+        "dm-mastery",
+        "fullstack-foundation",
+        "creative-design",
+        "motion-mastery"
+      ],
+      "reason": "Finding high-ticket clients, pricing projects, contract terms, and client communication do not vary by skill."
+    },
+    {
+      "module_id": "shared-career-launch",
+      "name": "Resume Building, ATS Optimization & Mock Interviews",
+      "used_by": [
+        "career-launch",
+        "all-career-programs"
+      ],
+      "reason": "Job hunting, LinkedIn profile setup, and salary negotiation follow identical corporate hiring standards."
+    }
+  ],
+  "specializations": [
+    {
+      "course_id": "perf-marketing-pro",
+      "course_name": "Performance Marketing Professional",
+      "academy": "Digital Marketing Academy",
+      "parent_program": "dm-mastery",
+      "prerequisites": "dm-professional OR google-ads + meta-ads",
+      "target_roles": "Performance Marketing Specialist, Media Buyer, Growth Hacker"
+    },
+    {
+      "course_id": "seo-geo",
+      "course_name": "SEO & GEO",
+      "academy": "Digital Marketing Academy",
+      "parent_program": "dm-mastery",
+      "prerequisites": "Basic website and content concepts",
+      "target_roles": "SEO Specialist, GEO Strategist, Organic Growth Lead"
+    },
+    {
+      "course_id": "ai-for-business-pro",
+      "course_name": "AI for Business Professional",
+      "academy": "AI Academy",
+      "parent_program": "ai-mastery",
+      "prerequisites": "ai-productivity OR general business management",
+      "target_roles": "AI Business Analyst, Digital Transformation Consultant"
+    },
+    {
+      "course_id": "ai-automation-n8n",
+      "course_name": "AI Automation with n8n",
+      "academy": "AI Academy",
+      "parent_program": "ai-mastery",
+      "prerequisites": "prompt-engineering OR basic workflow logic",
+      "target_roles": "AI Automation Specialist, n8n Workflow Consultant"
+    },
+    {
+      "course_id": "ai-agents-fundamentals",
+      "course_name": "AI Agents Fundamentals",
+      "academy": "AI Academy",
+      "parent_program": "ai-mastery",
+      "prerequisites": "ai-automation-n8n OR basic Python",
+      "target_roles": "AI Agent Engineer, Autonomous Systems Developer"
+    },
+    {
+      "course_id": "uiux-design-pro",
+      "course_name": "UI/UX Design Professional",
+      "academy": "Design Academy",
+      "parent_program": "creative-design",
+      "prerequisites": "Basic design principles OR figma-ui-design",
+      "target_roles": "UI/UX Designer, Product Designer, Interaction Designer"
+    },
+    {
+      "course_id": "brand-identity-design",
+      "course_name": "Brand Identity Design",
+      "academy": "Design Academy",
+      "parent_program": "graphic-design-pro",
+      "prerequisites": "adobe-illustrator OR graphic-design-pro",
+      "target_roles": "Brand Identity Designer, Brand Strategist"
+    },
+    {
+      "course_id": "packaging-design",
+      "course_name": "Packaging Design",
+      "academy": "Design Academy",
+      "parent_program": "graphic-design-pro",
+      "prerequisites": "adobe-illustrator + adobe-photoshop",
+      "target_roles": "Packaging Designer, Print Production Specialist"
+    },
+    {
+      "course_id": "ai-web-dev-pro",
+      "course_name": "AI Web Development Professional",
+      "academy": "Programming Academy",
+      "parent_program": "fullstack-foundation",
+      "prerequisites": "fullstack-foundation OR react-cert",
+      "target_roles": "AI Web Developer, Full Stack AI Specialist"
+    },
+    {
+      "course_id": "webflow-cert",
+      "course_name": "Webflow",
+      "academy": "No-Code Web Academy",
+      "parent_program": "nocode-web-pro",
+      "prerequisites": "Basic box model understanding",
+      "target_roles": "Certified Webflow Developer"
+    },
+    {
+      "course_id": "framer-cert",
+      "course_name": "Framer",
+      "academy": "No-Code Web Academy",
+      "parent_program": "nocode-web-pro",
+      "prerequisites": "Basic Figma or design knowledge",
+      "target_roles": "Framer Motion Designer, Startup Landing Page Specialist"
+    },
+    {
+      "course_id": "ai-video-pro",
+      "course_name": "AI Video Editing Professional",
+      "academy": "Video & Motion Academy",
+      "parent_program": "video-pro",
+      "prerequisites": "video-pro OR adobe-premiere-pro",
+      "target_roles": "AI Video Specialist, Generative Video Creator"
+    },
+    {
+      "course_id": "after-effects",
+      "course_name": "After Effects",
+      "academy": "Video & Motion Academy",
+      "parent_program": "motion-mastery",
+      "prerequisites": "Basic Photoshop or video editing experience",
+      "target_roles": "2D Motion Graphics Artist, VFX Compositor"
+    },
+    {
+      "course_id": "davinci-resolve",
+      "course_name": "DaVinci Resolve",
+      "academy": "Video & Motion Academy",
+      "parent_program": "video-pro",
+      "prerequisites": "Basic video editing principles",
+      "target_roles": "Colorist, DaVinci Editor"
+    },
+    {
+      "course_id": "v-ray-cert",
+      "course_name": "V-Ray",
+      "academy": "3D Academy",
+      "parent_program": "3ds-max-cert",
+      "prerequisites": "3ds-max-cert",
+      "target_roles": "Lighting & Rendering Artist"
+    },
+    {
+      "course_id": "twinmotion-cert",
+      "course_name": "Twinmotion",
+      "academy": "3D Academy",
+      "parent_program": "archviz-mastery",
+      "prerequisites": "3ds-max-cert OR blender-cert",
+      "target_roles": "Real-Time Visualization Artist"
+    },
+    {
+      "course_id": "unreal-engine-basics",
+      "course_name": "Unreal Engine Basics",
+      "academy": "3D Academy",
+      "parent_program": "archviz-mastery",
+      "prerequisites": "3ds-max-cert OR blender-cert",
+      "target_roles": "Unreal Engine ArchViz Specialist, Real-Time Environment Artist"
+    },
+    {
+      "course_id": "agency-building",
+      "course_name": "Agency Building",
+      "academy": "Career & Freelancing Academy",
+      "parent_program": "freelancing-mastery",
+      "prerequisites": "freelancing-mastery OR steady client revenue",
+      "target_roles": "Agency Founder, Managing Director"
+    },
+    {
+      "course_id": "public-speaking",
+      "course_name": "Public Speaking",
+      "academy": "Communication Academy",
+      "parent_program": "business-english",
+      "prerequisites": "presentation-skills",
+      "target_roles": "Keynote Speaker, Conference Presenter, Executive Spokesperson"
+    },
+    {
+      "course_id": "python-for-kids",
+      "course_name": "Python for Kids",
+      "academy": "Kids Tech Academy",
+      "parent_program": "kids-mastery",
+      "prerequisites": "scratch-programming OR age 11+",
+      "target_roles": "Junior Python Programmer"
+    },
+    {
+      "course_id": "ai-for-kids",
+      "course_name": "AI for Kids",
+      "academy": "Kids Tech Academy",
+      "parent_program": "kids-mastery",
+      "prerequisites": "scratch-programming OR age 10+",
+      "target_roles": "Young AI Explorer"
+    },
+    {
+      "course_id": "youtube-seo",
+      "course_name": "YouTube SEO",
+      "academy": "Creator Academy",
+      "parent_program": "youtube-mastery",
+      "prerequisites": "None",
+      "target_roles": "YouTube Channel Manager, Video SEO Specialist"
+    },
+    {
+      "course_id": "short-video-strategy",
+      "course_name": "Short Video Strategy",
+      "academy": "Creator Academy",
+      "parent_program": "content-creator-pro",
+      "prerequisites": "reels-editing OR basic smartphone shooting",
+      "target_roles": "Short-Form Content Strategist, Viral Growth Consultant"
+    },
+    {
+      "course_id": "notion-cert",
+      "course_name": "Notion",
+      "academy": "Office Productivity Academy",
+      "parent_program": "biz-productivity",
+      "prerequisites": "None",
+      "target_roles": "Certified Notion Consultant, Workspace Architect"
+    },
+    {
+      "course_id": "microsoft-copilot",
+      "course_name": "Microsoft Copilot",
+      "academy": "Office Productivity Academy",
+      "parent_program": "biz-productivity",
+      "prerequisites": "Basic Excel/Word proficiency",
+      "target_roles": "Enterprise AI Productivity Specialist"
+    }
+  ]
+}

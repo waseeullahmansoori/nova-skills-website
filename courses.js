@@ -31,7 +31,6 @@ function getAcademiesData() {
 
 document.addEventListener('DOMContentLoaded', () => {
   currentCourses = [...getCoursesData()];
-  console.log("Total courses loaded:", currentCourses.length);
   initAcademyFilterOptions();
   readUrlParamsAndApply();
   renderCourses();

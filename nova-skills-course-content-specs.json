@@ -1,0 +1,233 @@
+{
+  "$schema": "https://novaskills.in/schemas/content-architecture-v1.json",
+  "version": "1.0.0",
+  "title": "Nova Skills Scalable Course Content Architecture Specification",
+  "created_at": "2026-09-13",
+  "principles": {
+    "outcome_oriented": "Every learning outcome, project, and module must describe what the student is able to build or deliver, never passive topical exposure.",
+    "practical_first": "Minimum 70% practical execution, portfolio building, and live problem solving across all tracks.",
+    "zero_hype_ai": "AI tools must be integrated only where they demonstrably accelerate or elevate genuine professional workflows."
+  },
+  "student_questions_resolved": [
+    "1. What is this program?",
+    "2. Why should I learn it now?",
+    "3. Who is it for?",
+    "4. What prerequisites are required?",
+    "5. What exactly will I learn?",
+    "6. How is the learning structured?",
+    "7. Which tools/technologies will I use?",
+    "8. What hands-on work will I perform?",
+    "9. What industry workflows will I learn?",
+    "10. What business problems can I solve?",
+    "11. What projects will I build?",
+    "12. What will I have in my portfolio?",
+    "13. What will I be able to do after completion?",
+    "14. Which career roles does this support?",
+    "15. Can I use this skill for freelancing/business?",
+    "16. How will I be assessed?",
+    "17. How is certification earned?",
+    "18. What is NOT covered?",
+    "19. What should I learn next?",
+    "20. How does this course compare with related Nova Skills programs?"
+  ],
+  "templates": {
+    "TEMPLATE_A": {
+      "name": "MICRO / CERTIFICATION & MODULE TEMPLATE",
+      "target_types": [
+        "MICRO",
+        "MODULE",
+        "RETIRE"
+      ],
+      "section_count": 12,
+      "required_sections": [
+        "Program Overview",
+        "Who Is This For?",
+        "Prerequisites",
+        "Learning Outcomes",
+        "Step-by-Step Modules",
+        "Tools / Hands-on Tech",
+        "Practical Assignment",
+        "Final Output",
+        "Assessment",
+        "Certification",
+        "FAQ",
+        "Next Learning Path"
+      ],
+      "deliverable_depth": "Exercise or single practical project artifact."
+    },
+    "TEMPLATE_B": {
+      "name": "PROFESSIONAL STANDALONE & SPECIALIZATION TEMPLATE",
+      "target_types": [
+        "PROFESSIONAL",
+        "SPECIALIZATION",
+        "REPOSITION",
+        "MERGE"
+      ],
+      "section_count": 28,
+      "required_sections": [
+        "Program Overview",
+        "Why Learn This Now?",
+        "Who Is This For?",
+        "Who Is This NOT For?",
+        "Prerequisites & System Requirements",
+        "Skill Level",
+        "Learning Outcomes (Action-Verbs)",
+        "Learning Journey (Progression Stages)",
+        "Step-by-Step Modules",
+        "Lesson-Level Topics",
+        "Hands-on Tech (Core / Supporting / Emerging)",
+        "Industry Workflow",
+        "Business Use Cases & Scenarios",
+        "Practical Assignments",
+        "Portfolio Projects (Level 3-4)",
+        "AI Integration Matrix",
+        "Industry Best Practices",
+        "Common Mistakes & Edge Cases",
+        "Troubleshooting & Quality Assurance",
+        "Career Paths & Target Roles",
+        "Freelance & Client Delivery Applications",
+        "Assessment Model",
+        "Certification & Verification Criteria",
+        "What This Course Does NOT Cover",
+        "Frequently Asked Questions (Course-Specific)",
+        "Course Comparison Matrix",
+        "Related Courses",
+        "Next Learning Path Roadmap"
+      ],
+      "deliverable_depth": "2-3 multi-asset portfolio case studies ready for client or employer presentation."
+    },
+    "TEMPLATE_C": {
+      "name": "MASTER / FLAGSHIP CAREER PROGRAM TEMPLATE",
+      "target_types": [
+        "MASTER"
+      ],
+      "section_count": 40,
+      "description": "Contains all Template B sections with multi-track architectures, enterprise capstone, dual-mentor reviews, and career placement systems.",
+      "additional_sections": [
+        "Program Roadmap & Milestone Architecture",
+        "Multiple Learning Tracks (Foundation -> Core -> Advanced Specialization)",
+        "Integrated Business Client Simulation",
+        "Major Enterprise Capstone Project",
+        "Portfolio Case-Study Defense System",
+        "Career Placement System (ATS Resumes, Mock Technical Interviews, Recruiter Direct-Connect)",
+        "Specialization Pathways & Elective Modules",
+        "Agency & Freelance Client Retainer System",
+        "Comprehensive Skill Matrix (Foundation -> Working -> Professional -> Advanced)",
+        "Tool Proficiency Matrix (Awareness -> Basic -> Working -> Professional -> Expert)",
+        "Live Client Brief Pitch Review"
+      ],
+      "deliverable_depth": "Full production capstone project + multi-asset portfolio + verified proof of work."
+    }
+  },
+  "framework_specifications": {
+    "program_overview": {
+      "fields": [
+        "course_name",
+        "one_line_positioning",
+        "short_explanation",
+        "key_facts",
+        "what_you_will_be_able_to_do"
+      ],
+      "rule": "Never use vague generic claims like \"learn everything about\". Must use action-driven outcomes."
+    },
+    "prerequisites": {
+      "tiers": [
+        "REQUIRED",
+        "RECOMMENDED",
+        "NOT REQUIRED"
+      ],
+      "system_specs": [
+        "software_stack",
+        "hardware_cpu_ram_gpu",
+        "cloud_account_free_tiers"
+      ]
+    },
+    "module_structure": {
+      "fields": [
+        "module_number",
+        "module_title",
+        "module_purpose",
+        "what_you_will_learn",
+        "lessons",
+        "key_concepts",
+        "tools",
+        "hands_on_lab",
+        "assignment",
+        "business_application",
+        "expected_outcome"
+      ]
+    },
+    "lesson_structure": {
+      "stages": [
+        "1. Concept & Theory",
+        "2. Expert Demonstration",
+        "3. Guided Practice",
+        "4. Independent Lab",
+        "5. Real-World Application",
+        "6. Assessment & Check"
+      ]
+    },
+    "industry_workflow": {
+      "stages": [
+        "1. Brief / Requirement",
+        "2. Research & Intent",
+        "3. Architecture & Planning",
+        "4. Core Execution",
+        "5. QA & Verification",
+        "6. Delivery / Deployment",
+        "7. Measurement & Analytics",
+        "8. Optimization & Iteration",
+        "9. Documentation & Handoff",
+        "10. Automation & Scaling"
+      ]
+    },
+    "ai_integration": {
+      "levels": [
+        "NONE",
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CORE"
+      ],
+      "dimensions": [
+        "ai_can_assist_with",
+        "ai_can_automate",
+        "ai_cannot_reliably_replace",
+        "human_expertise_required",
+        "validation_and_qa_protocol",
+        "responsible_and_ethical_use"
+      ]
+    },
+    "portfolio": {
+      "case_study_template": [
+        "Problem Statement",
+        "Commercial / User Context",
+        "Tools & Technologies",
+        "Execution Process",
+        "Final Production Artifact",
+        "Measurable Results / KPIs",
+        "Retrospective & Lessons Learned"
+      ]
+    },
+    "capstone": {
+      "governance": "Mandatory for Template C; Recommended for Template B; Not applicable for Template A."
+    },
+    "skill_matrix": {
+      "levels": [
+        "Foundation (Conceptual)",
+        "Working (Guided Execution)",
+        "Professional (Independent Commercial Delivery)",
+        "Advanced (Architecture & Optimization)"
+      ]
+    },
+    "tool_proficiency_matrix": {
+      "levels": [
+        "Awareness",
+        "Basic Use",
+        "Working Proficiency",
+        "Professional Proficiency",
+        "Advanced Specialist"
+      ]
+    }
+  }
+}
