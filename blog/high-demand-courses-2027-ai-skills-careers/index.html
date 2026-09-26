@@ -98,7 +98,7 @@
       "@type": "WebPage",
       "@id": "https://novaskills.in/blog/high-demand-courses-2027-ai-skills-careers/"
     },
-    "wordCount": 6250,
+    "wordCount": 6439,
     "inLanguage": "en-IN"
   }
   </script>
@@ -205,8 +205,28 @@
   }
   </script>
 
-  <!-- Custom Post Styles -->
+  <!-- Responsive CSS Architecture -->
   <style>
+    :root {
+      --header-height: 110px;
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --header-height: 100px;
+      }
+    }
+
+    /* Universal Box Sizing & Fluid Constraints */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     /* Top Reading Progress Bar */
     #reading-progress {
       position: fixed;
@@ -215,44 +235,79 @@
       height: 4px;
       background: linear-gradient(90deg, #0599a8, #38bdf8, #FF6B00);
       width: 0%;
-      z-index: 1000;
+      z-index: 1001;
       transition: width 0.1s ease-out;
+      pointer-events: none;
     }
 
-    /* Article Hero Section */
+    /* Global Headings Scroll Margin to prevent Sticky Header Overlap */
+    .article-body h2,
+    .article-body h3,
+    .article-body section,
+    .course-card-block,
+    div[id] {
+      scroll-margin-top: calc(var(--header-height) + 24px);
+    }
+
+    /* Container System */
+    .blog-container {
+      width: min(100% - 48px, 1280px);
+      margin-inline: auto;
+      padding: 0;
+    }
+
+    @media (max-width: 768px) {
+      .blog-container {
+        width: min(100% - 32px, 1280px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .blog-container {
+        width: min(100% - 24px, 1280px);
+      }
+    }
+
+    /* Hero Section */
     .article-hero-section {
       background: #011731 radial-gradient(circle at top right, rgba(5, 153, 168, 0.28), transparent 70%);
       color: #ffffff;
-      padding: 52px 0 68px;
+      padding: clamp(36px, 5vw, 60px) 0 clamp(44px, 6vw, 68px);
       position: relative;
       overflow: hidden;
     }
+
     .article-hero-card {
       background: rgba(2, 34, 69, 0.88);
       border: 1px solid rgba(56, 189, 248, 0.25);
       border-radius: 24px;
-      padding: 44px;
+      padding: clamp(24px, 4vw, 44px);
       backdrop-filter: blur(16px);
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
-      gap: 36px;
+      gap: clamp(24px, 4vw, 36px);
       align-items: center;
+      width: 100%;
+      max-width: 100%;
     }
+
     @media (max-width: 992px) {
       .article-hero-card {
         grid-template-columns: 1fr;
-        padding: 28px 20px;
-        gap: 28px;
+        padding: 24px 20px;
+        gap: 24px;
       }
     }
+
     .article-badge-row {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
+
     .badge-pill {
       background: rgba(56, 189, 248, 0.14);
       border: 1px solid rgba(56, 189, 248, 0.35);
@@ -264,148 +319,239 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
+
     .badge-pill-orange {
       background: rgba(255, 107, 0, 0.14);
       border: 1px solid rgba(255, 107, 0, 0.35);
       color: #FF9A3C;
     }
+
     .badge-pill-green {
       background: rgba(117, 215, 102, 0.14);
       border: 1px solid rgba(117, 215, 102, 0.35);
       color: #75d766;
     }
+
     .badge-pill-purple {
       background: rgba(168, 85, 247, 0.14);
       border: 1px solid rgba(168, 85, 247, 0.35);
       color: #c084fc;
     }
+
     .article-hero-title {
-      font-size: clamp(2rem, 3.8vw, 2.9rem);
+      font-size: clamp(1.85rem, 3.6vw, 2.75rem);
       font-weight: 800;
       color: #ffffff;
-      line-height: 1.2;
-      margin-bottom: 16px;
+      line-height: 1.22;
+      margin-bottom: 14px;
       letter-spacing: -0.02em;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
+
     .article-hero-subtitle {
-      font-size: 1.12rem;
+      font-size: clamp(1rem, 1.8vw, 1.1rem);
       color: #cbd5e1;
       line-height: 1.65;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
+      overflow-wrap: break-word;
     }
+
     .article-meta-row {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 14px;
       flex-wrap: wrap;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: #94a3b8;
       border-top: 1px solid rgba(255, 255, 255, 0.12);
-      padding-top: 18px;
+      padding-top: 16px;
     }
+
     .article-meta-row a {
       color: #38bdf8;
       text-decoration: none;
       font-weight: 700;
     }
+
     .article-meta-row a:hover {
       text-decoration: underline;
     }
+
     .article-hero-image-wrapper {
       position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 18px;
     }
+
     .article-hero-image {
       width: 100%;
       height: auto;
-      border-radius: 20px;
+      border-radius: 18px;
       box-shadow: 0 16px 45px rgba(5, 153, 168, 0.35), 0 8px 20px rgba(0, 0, 0, 0.5);
       border: 2px solid rgba(56, 189, 248, 0.35);
       object-fit: cover;
+      aspect-ratio: 16 / 9;
+      display: block;
       transition: transform 0.3s ease;
     }
+
     .article-hero-image:hover {
       transform: scale(1.015);
     }
 
-    /* Layout Split */
+    /* Main Article Container */
     .article-container {
-      padding: 50px 0 90px;
+      padding: clamp(36px, 5vw, 56px) 0 120px;
       background: #f8fafc;
+      overflow: hidden;
     }
-    .article-grid {
+
+    /* Two-Column Responsive Layout */
+    .blog-layout {
       display: grid;
-      grid-template-columns: 280px 1fr 300px;
-      gap: 36px;
+      grid-template-columns: 250px minmax(0, 1fr);
+      gap: 32px;
       align-items: start;
+      width: 100%;
     }
-    @media (max-width: 1200px) {
-      .article-grid {
-        grid-template-columns: 260px 1fr;
-      }
-      .sidebar-column {
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+
+    .blog-sidebar,
+    .blog-main {
+      min-width: 0;
+    }
+
+    .blog-main {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+      .blog-layout {
+        grid-template-columns: 1fr;
         gap: 24px;
       }
-    }
-    @media (max-width: 860px) {
-      .article-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      .toc-column {
-        display: none;
-      }
-      .sidebar-column {
-        grid-template-columns: 1fr;
+      .blog-sidebar {
+        width: 100%;
       }
     }
 
-    /* Table of Contents Sticky */
-    .toc-card {
+    /* Table of Contents - Desktop Sticky */
+    .desktop-toc {
+      display: block;
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 18px;
-      padding: 24px 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      padding: 22px 18px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
       position: sticky;
-      top: 90px;
-      max-height: calc(100vh - 120px);
+      top: calc(var(--header-height) + 24px);
+      max-height: calc(100vh - var(--header-height) - 48px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Table of Contents - Mobile & Tablet Collapsible Accordion */
+    .mobile-toc {
+      display: none;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+      margin-bottom: 24px;
+      transition: all 0.2s ease;
+    }
+
+    .mobile-toc summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #011731;
+    }
+    .mobile-toc summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .toc-toggle-indicator {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #0599a8;
+      background: rgba(5, 153, 168, 0.1);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .mobile-toc[open] {
+      padding-bottom: 20px;
+    }
+    .mobile-toc[open] .toc-toggle-indicator {
+      background: rgba(1, 23, 49, 0.1);
+      color: #011731;
+    }
+
+    .mobile-toc .toc-list {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid #e2e8f0;
+      max-height: 50vh;
       overflow-y: auto;
     }
+
+    @media (max-width: 1024px) {
+      .desktop-toc {
+        display: none;
+      }
+      .mobile-toc {
+        display: block;
+      }
+    }
+
     .toc-title {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 800;
       color: #011731;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       padding-bottom: 10px;
       border-bottom: 2px solid #0599a8;
       display: flex;
       align-items: center;
       gap: 8px;
     }
+
     .toc-list {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 5px;
     }
+
     .toc-list a {
       font-size: 0.82rem;
       color: #475569;
       text-decoration: none;
       line-height: 1.35;
-      padding: 5px 8px;
+      padding: 6px 8px;
       border-radius: 6px;
       transition: all 0.2s ease;
       border-left: 2px solid transparent;
+      overflow-wrap: break-word;
     }
+
     .toc-list a:hover {
       color: #0599a8;
       background: rgba(5, 153, 168, 0.06);
     }
+
     .toc-list a.active {
       color: #0599a8;
       background: rgba(5, 153, 168, 0.1);
@@ -413,92 +559,109 @@
       border-left-color: #0599a8;
     }
 
-    /* Article Body Typography */
+    /* Article Body Typography & Spacing */
     .article-body {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 24px;
-      padding: 44px 48px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.03);
-      font-size: 1.05rem;
-      line-height: 1.85;
+      padding: clamp(20px, 4vw, 44px);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+      font-size: clamp(0.98rem, 1.5vw, 1.05rem);
+      line-height: 1.8;
       color: #334155;
+      overflow: hidden;
     }
-    @media (max-width: 600px) {
-      .article-body {
-        padding: 28px 20px;
-        font-size: 1rem;
-      }
-    }
+
     .article-body h2 {
-      font-size: 1.65rem;
+      font-size: clamp(1.4rem, 2.5vw, 1.7rem);
       font-weight: 800;
       color: #011731;
-      margin: 48px 0 18px;
+      margin: 44px 0 16px;
       letter-spacing: -0.02em;
       line-height: 1.3;
-      padding-top: 14px;
+      padding-top: 10px;
       border-bottom: 2px solid #f1f5f9;
       padding-bottom: 10px;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
+
     .article-body h3 {
-      font-size: 1.3rem;
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
       font-weight: 700;
       color: #011731;
-      margin: 32px 0 14px;
+      margin: 28px 0 12px;
       line-height: 1.4;
+      overflow-wrap: break-word;
     }
+
     .article-body h4 {
-      font-size: 1.1rem;
+      font-size: 1.02rem;
       font-weight: 700;
       color: #0599a8;
-      margin: 24px 0 10px;
+      margin: 22px 0 10px;
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
+
     .article-body p {
       margin-bottom: 20px;
+      max-width: 82ch;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
+
     .article-body ul, .article-body ol {
       margin-bottom: 24px;
-      padding-left: 24px;
+      padding-left: clamp(20px, 3vw, 28px);
+      max-width: 82ch;
     }
+
     .article-body li {
       margin-bottom: 10px;
       line-height: 1.7;
+      overflow-wrap: break-word;
     }
+
     .article-lead {
-      font-size: 1.18rem;
-      line-height: 1.85;
+      font-size: clamp(1.05rem, 2vw, 1.15rem);
+      line-height: 1.8;
       color: #011731;
       font-weight: 500;
       background: linear-gradient(to right, rgba(5, 153, 168, 0.08), rgba(56, 189, 248, 0.02));
       border-left: 4px solid #0599a8;
-      padding: 22px 26px;
+      padding: clamp(18px, 3vw, 24px);
       border-radius: 0 16px 16px 0;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
+      overflow-wrap: break-word;
     }
 
-    /* Course Detail Section Container */
+    /* Course Card Block */
     .course-card-block {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 20px;
-      padding: 32px;
-      margin: 38px 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      padding: clamp(18px, 3.5vw, 32px);
+      margin: 36px 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
       position: relative;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
     }
+
     .course-header-badge {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 16px;
+      gap: 10px;
+      margin-bottom: 14px;
     }
+
     .course-number {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 800;
       color: #0599a8;
       background: rgba(5, 153, 168, 0.1);
@@ -507,49 +670,87 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
+
     .course-title {
-      font-size: 1.45rem;
+      font-size: clamp(1.25rem, 2.2vw, 1.5rem);
       font-weight: 800;
       color: #011731;
       margin: 8px 0 16px;
       line-height: 1.35;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
 
-    /* Custom Responsive Tables */
-    .table-responsive-wrapper {
+    /* Responsive Table Container & Scroll Behavior */
+    .article-table-wrapper {
       width: 100%;
+      max-width: 100%;
       overflow-x: auto;
-      margin: 24px 0 32px;
+      overscroll-behavior-inline: contain;
+      -webkit-overflow-scrolling: touch;
+      margin: 20px 0 28px;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.02);
-      -webkit-overflow-scrolling: touch;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      background: #ffffff;
+      box-sizing: border-box;
     }
+
+    .table-scroll-hint {
+      display: none;
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-bottom: 1px solid #e2e8f0;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      user-select: none;
+    }
+
+    @media (max-width: 900px) {
+      .table-scroll-hint {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+    }
+
     .pro-table {
       width: 100%;
       border-collapse: collapse;
       font-size: 0.92rem;
       text-align: left;
       background: #ffffff;
-      min-width: 680px;
+      min-width: 600px;
     }
+
+    .pro-table.master-table {
+      min-width: 760px;
+    }
+
     .pro-table th {
       background: #011731;
       color: #ffffff;
       font-weight: 700;
-      padding: 14px 16px;
+      padding: 13px 15px;
       border: 1px solid #1e293b;
       white-space: nowrap;
     }
+
     .pro-table td {
-      padding: 12px 16px;
+      padding: 12px 15px;
       border: 1px solid #e2e8f0;
       color: #334155;
       vertical-align: top;
+      line-height: 1.55;
     }
+
     .pro-table tr:nth-child(even) {
       background: #f8fafc;
     }
+
     .pro-table tr:hover {
       background: rgba(5, 153, 168, 0.04);
     }
@@ -560,48 +761,57 @@
       border: 1px solid #99f6e4;
       border-left: 4px solid #0d9488;
       border-radius: 14px;
-      padding: 22px 26px;
-      margin: 28px 0;
+      padding: clamp(16px, 2.5vw, 24px);
+      margin: 24px 0;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-wrap: break-word;
     }
+
     .callout-box.callout-dark {
       background: #011731;
       color: #ffffff;
       border: 1px solid rgba(56, 189, 248, 0.3);
       border-left: 4px solid #38bdf8;
     }
+
     .callout-box.callout-dark strong {
       color: #38bdf8;
     }
+
     .callout-box.callout-orange {
       background: #fff7ed;
       border: 1px solid #fed7aa;
       border-left: 4px solid #f97316;
     }
-    .callout-box.callout-purple {
-      background: #faf5ff;
-      border: 1px solid #e9d5ff;
-      border-left: 4px solid #a855f7;
-    }
 
     /* Project Cards Grid */
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
       gap: 16px;
       margin: 20px 0;
+      width: 100%;
+      box-sizing: border-box;
     }
+
     .project-card {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
       padding: 18px 20px;
       transition: transform 0.2s ease, border-color 0.2s ease;
+      box-sizing: border-box;
+      overflow-wrap: break-word;
     }
+
     .project-card:hover {
       transform: translateY(-2px);
       border-color: #0599a8;
       background: #ffffff;
     }
+
     .project-title {
       font-weight: 800;
       font-size: 0.98rem;
@@ -611,6 +821,7 @@
       align-items: center;
       gap: 8px;
     }
+
     .project-desc {
       font-size: 0.88rem;
       color: #64748b;
@@ -621,17 +832,21 @@
     .roadmap-timeline {
       position: relative;
       margin: 32px 0;
-      padding-left: 32px;
+      padding-left: clamp(20px, 3.5vw, 32px);
       border-left: 3px solid #0599a8;
+      width: 100%;
+      box-sizing: border-box;
     }
+
     .roadmap-item {
       position: relative;
       margin-bottom: 32px;
     }
+
     .roadmap-item::before {
       content: "";
       position: absolute;
-      left: -40px;
+      left: calc(-1 * clamp(20px, 3.5vw, 32px) - 9px);
       top: 4px;
       width: 16px;
       height: 16px;
@@ -640,6 +855,7 @@
       border: 3px solid #ffffff;
       box-shadow: 0 0 0 2px #0599a8;
     }
+
     .roadmap-badge {
       font-size: 0.82rem;
       font-weight: 800;
@@ -648,6 +864,7 @@
       letter-spacing: 0.05em;
       margin-bottom: 6px;
     }
+
     .roadmap-heading {
       font-size: 1.15rem;
       font-weight: 800;
@@ -655,18 +872,16 @@
       margin-bottom: 8px;
     }
 
-    /* Checklist */
+    /* Checklist Grid */
     .checklist-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: 14px;
       margin: 24px 0;
+      width: 100%;
+      box-sizing: border-box;
     }
-    @media (max-width: 640px) {
-      .checklist-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+
     .checklist-item {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
@@ -675,7 +890,10 @@
       position: relative;
       font-size: 0.95rem;
       line-height: 1.5;
+      box-sizing: border-box;
+      overflow-wrap: break-word;
     }
+
     .checklist-item::before {
       content: "✓";
       position: absolute;
@@ -686,7 +904,7 @@
       font-size: 1.1rem;
     }
 
-    /* FAQ Accordion Details */
+    /* FAQ Accordion */
     .faq-item {
       border: 1px solid #e2e8f0;
       border-radius: 14px;
@@ -694,14 +912,18 @@
       overflow: hidden;
       background: #ffffff;
       transition: border-color 0.2s ease;
+      width: 100%;
+      box-sizing: border-box;
     }
+
     .faq-item:hover {
       border-color: #cbd5e1;
     }
+
     .faq-question {
-      padding: 18px 22px;
+      padding: 16px 20px;
       font-weight: 800;
-      font-size: 1.05rem;
+      font-size: clamp(0.98rem, 1.8vw, 1.05rem);
       color: #011731;
       cursor: pointer;
       display: flex;
@@ -709,27 +931,33 @@
       align-items: center;
       background: #f8fafc;
       user-select: none;
+      gap: 12px;
     }
+
     .faq-question::-webkit-details-marker {
       display: none;
     }
+
     .faq-question::after {
       content: "+";
       font-size: 1.4rem;
       color: #0599a8;
       font-weight: 700;
-      transition: transform 0.2s ease;
+      flex-shrink: 0;
     }
+
     details[open] .faq-question::after {
       content: "−";
     }
+
     .faq-answer {
-      padding: 20px 22px;
-      font-size: 0.98rem;
+      padding: 18px 20px;
+      font-size: 0.96rem;
       color: #475569;
-      line-height: 1.8;
+      line-height: 1.75;
       border-top: 1px solid #e2e8f0;
       background: #ffffff;
+      overflow-wrap: break-word;
     }
 
     /* Author & Share Bar */
@@ -737,22 +965,26 @@
       background: linear-gradient(135deg, rgba(1, 23, 49, 0.04), rgba(5, 153, 168, 0.08));
       border: 1.5px solid rgba(5, 153, 168, 0.25);
       border-radius: 18px;
-      padding: 28px;
+      padding: clamp(20px, 3.5vw, 28px);
       display: flex;
-      gap: 22px;
+      gap: 20px;
       align-items: center;
-      margin: 44px 0 28px;
+      margin: 40px 0 28px;
+      width: 100%;
+      box-sizing: border-box;
     }
-    @media (max-width: 600px) {
+
+    @media (max-width: 640px) {
       .author-highlight-box {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
+        padding: 20px 16px;
       }
     }
+
     .author-img-lg {
-      width: 90px;
-      height: 90px;
+      width: 88px;
+      height: 88px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #0599a8;
@@ -762,13 +994,16 @@
     .share-bar {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
-      padding: 20px 0;
+      padding: 18px 0;
       border-top: 1px solid #e2e8f0;
       border-bottom: 1px solid #e2e8f0;
-      margin: 32px 0;
+      margin: 28px 0;
+      width: 100%;
+      box-sizing: border-box;
     }
+
     .share-btn {
       display: inline-flex;
       align-items: center;
@@ -781,48 +1016,17 @@
       color: #ffffff;
       transition: transform 0.2s ease;
     }
+
     .share-btn:hover {
       transform: translateY(-2px);
     }
+
     .share-wa { background: #25D366; }
     .share-li { background: #0077b5; }
     .share-tw { background: #1da1f2; }
     .share-fb { background: #1877f2; }
 
-    /* Sidebars */
-    .sidebar-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 18px;
-      padding: 24px 20px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
-      margin-bottom: 24px;
-    }
-    .sidebar-author-header {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-    .sidebar-avatar {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #0599a8;
-    }
-    .sidebar-skill-tag {
-      display: inline-block;
-      background: #f1f5f9;
-      color: #475569;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 8px;
-      border-radius: 6px;
-      margin: 0 4px 6px 0;
-    }
-
-    /* Course CTAs */
+    /* Course Action Button */
     .btn-course-cta {
       display: inline-flex;
       align-items: center;
@@ -837,42 +1041,95 @@
       transition: background 0.2s ease, transform 0.2s ease;
       margin-top: 14px;
     }
+
     .btn-course-cta:hover {
       background: #047480;
       transform: translateY(-2px);
       color: #ffffff;
     }
 
-    /* Related Articles */
+    /* Related Articles Grid */
     .related-articles-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-top: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap: 18px;
+      margin-top: 20px;
+      width: 100%;
+      box-sizing: border-box;
     }
+
     .related-card {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
       padding: 20px;
       transition: all 0.2s ease;
+      box-sizing: border-box;
     }
+
     .related-card:hover {
       transform: translateY(-3px);
       border-color: #0599a8;
       background: #ffffff;
     }
+
     .related-card h4 {
       font-size: 1.05rem;
       font-weight: 800;
       color: #011731;
       margin: 8px 0 8px;
     }
+
     .related-card a {
       color: #0599a8;
       text-decoration: none;
       font-weight: 700;
       font-size: 0.88rem;
+    }
+
+    /* Floating Widgets Positioning & Non-Interference Overrides */
+    .whatsapp-float {
+      right: max(24px, env(safe-area-inset-right)) !important;
+      bottom: max(24px, env(safe-area-inset-bottom)) !important;
+      width: 56px !important;
+      height: 56px !important;
+      z-index: 9999 !important;
+    }
+
+    .nova-ai-float-btn {
+      right: max(24px, env(safe-area-inset-right)) !important;
+      bottom: max(90px, calc(90px + env(safe-area-inset-bottom))) !important;
+      z-index: 9998 !important;
+    }
+
+    @media (max-width: 768px) {
+      .whatsapp-float {
+        width: 48px !important;
+        height: 48px !important;
+        right: max(16px, env(safe-area-inset-right)) !important;
+        bottom: max(16px, env(safe-area-inset-bottom)) !important;
+      }
+      .whatsapp-float svg {
+        width: 24px !important;
+        height: 24px !important;
+      }
+
+      .nova-ai-float-btn {
+        right: max(16px, env(safe-area-inset-right)) !important;
+        bottom: max(72px, calc(72px + env(safe-area-inset-bottom))) !important;
+        padding: 8px 14px !important;
+        font-size: 0.82rem !important;
+        border-radius: 40px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nova-ai-float-btn {
+        padding: 7px 11px !important;
+        font-size: 0.78rem !important;
+        max-width: 140px !important;
+        white-space: nowrap !important;
+      }
     }
   </style>
 </head>
@@ -886,7 +1143,7 @@
 
   <!-- ARTICLE HERO SECTION -->
   <header class="article-hero-section">
-    <div class="container">
+    <div class="blog-container">
       
       <!-- Breadcrumb -->
       <nav aria-label="Breadcrumb" style="color:#94a3b8; font-size:0.88rem; margin-bottom:20px;">
@@ -940,12 +1197,14 @@
 
   <!-- MAIN ARTICLE CONTAINER -->
   <main class="article-container">
-    <div class="container">
-      <div class="article-grid">
+    <div class="blog-container">
+      <div class="blog-layout">
 
-        <!-- LEFT COLUMN: STICKY TABLE OF CONTENTS -->
-        <aside class="toc-column">
-          <div class="toc-card">
+        <!-- LEFT COLUMN: TABLE OF CONTENTS -->
+        <aside class="blog-sidebar">
+          
+          <!-- Desktop Sticky TOC -->
+          <div class="toc-card desktop-toc">
             <div class="toc-title">
               <span>📋</span> Table of Contents
             </div>
@@ -974,10 +1233,43 @@
               <a href="#founder-perspective">7. Founder’s Perspective</a>
             </nav>
           </div>
+
+          <!-- Mobile / Tablet Collapsible TOC -->
+          <details class="toc-card mobile-toc" id="mobile-toc-details">
+            <summary>
+              <span>📋 Table of Contents</span>
+              <span class="toc-toggle-indicator">▼ Tap to Browse</span>
+            </summary>
+            <nav class="toc-list" id="toc-nav-mobile">
+              <a href="#macro-landscape">1. The 2027 Agentic Economy</a>
+              <a href="#master-comparison">2. Master 15-Course Matrix</a>
+              <a href="#course-1-ai-agents">Course 1: AI Agents &amp; n8n</a>
+              <a href="#course-2-geo-digital-marketing">Course 2: GEO &amp; AI Marketing</a>
+              <a href="#course-3-ai-web-development">Course 3: AI Web Development</a>
+              <a href="#course-4-python-applied-ai">Course 4: Python Engineering</a>
+              <a href="#course-5-uiux-design-systems">Course 5: UI/UX &amp; Human-AI Design</a>
+              <a href="#course-6-nocode-web-ecosystems">Course 6: No-Code Web Architecture</a>
+              <a href="#course-7-ai-video-editing">Course 7: AI Video &amp; Storytelling</a>
+              <a href="#course-8-3d-simulation-unreal">Course 8: 3D Visualization &amp; Unreal</a>
+              <a href="#course-9-performance-marketing">Course 9: Performance Marketing</a>
+              <a href="#course-10-motion-graphics-3d">Course 10: Motion Graphics &amp; 3D</a>
+              <a href="#course-11-ecommerce-automation">Course 11: E-Commerce Architecture</a>
+              <a href="#course-12-office-productivity-copilot">Course 12: Advanced Excel &amp; Copilot</a>
+              <a href="#course-13-creator-economy-youtube">Course 13: Creator Strategy &amp; Video</a>
+              <a href="#course-14-prompt-engineering-llms">Course 14: Prompt Engineering &amp; LLMs</a>
+              <a href="#course-15-freelancing-agency-scaling">Course 15: Freelancing &amp; Agency</a>
+              <a href="#hybrid-skill-stacks">3. 5 High-Leverage Hybrid Stacks</a>
+              <a href="#upskilling-roadmap-90-days">4. 90-Day Upskilling Blueprint</a>
+              <a href="#institute-evaluation-checklist">5. 10-Point Institute Checklist</a>
+              <a href="#frequently-asked-questions">6. Frequently Asked Questions</a>
+              <a href="#founder-perspective">7. Founder’s Perspective</a>
+            </nav>
+          </details>
+
         </aside>
 
-        <!-- CENTER COLUMN: ARTICLE BODY -->
-        <article class="article-body">
+        <!-- RIGHT COLUMN: MAIN ARTICLE BODY -->
+        <article class="blog-main article-body">
 
           <!-- SECTION 1: MACRO LANDSCAPE -->
           <section id="macro-landscape">
@@ -997,6 +1289,21 @@
               <strong>The 2027 Compensation Paradox:</strong> Entry-level roles that rely on simple manual entry or generic template generation have seen flat or declining wages. Conversely, professionals who bridge <strong>domain craftsmanship with AI copilot workflows</strong> command 45% to 90% salary premiums, rapid promotion velocity, and borderless remote contracting opportunities paying in USD, EUR, and AED.
             </div>
 
+            <!-- EXECUTIVE SUMMARY CALLOUT BOX -->
+            <div class="callout-box callout-dark" style="margin: 28px 0 36px; border-left: 4px solid #0599a8;">
+              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                <span style="font-size: 1.3rem;">⚡</span>
+                <h3 style="font-size: 1.12rem; font-weight: 800; color: #38bdf8; margin: 0; text-transform: uppercase; letter-spacing: 0.04em;">Executive Summary: 2027 Key Takeaways</h3>
+              </div>
+              <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.95rem; line-height: 1.8; color: #cbd5e1;">
+                <li>🤖 <strong>Agentic Orchestration:</strong> Multi-step autonomous workflows (n8n, LangChain) replace routine manual tasks.</li>
+                <li>🌐 <strong>Search Evolution (GEO):</strong> Entity optimization for Google AI Overviews and Perplexity replaces 10-blue-link keyword stuffing.</li>
+                <li>💻 <strong>AI Pair Engineering:</strong> Full-stack developers build 5x faster with Claude Code, Cursor, and Next.js.</li>
+                <li>🎨 <strong>Hybrid Design Mastery:</strong> UI/UX + 3D Simulation + Motion graphics commands premium international agency retainers.</li>
+                <li>📈 <strong>Proof of Work Over Degrees:</strong> Verifiable live GitHub code, deployed apps, and client portfolios drive hiring decisions.</li>
+              </ul>
+            </div>
+
             <p>
               To thrive in this competitive reality, students, fresh graduates, working professionals, and career switchers must make intentional educational decisions. Below is the comprehensive, industry-audited evaluation of the <strong>15 Highest-Demand Courses for 2027</strong>, based on curriculum rigor, practical tool integrations, portfolio requirements, and verified employment outcomes.
             </p>
@@ -1009,8 +1316,9 @@
               The table below provides a macro overview of each field, comparing average program duration, entry barrier, core AI ecosystem tools, starting domestic compensation in India (LPA), and global remote freelance hourly rates.
             </p>
 
-            <div class="table-responsive-wrapper">
-              <table class="pro-table">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="15 High-Demand Courses Comparison Matrix">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
+              <table class="pro-table master-table">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -1178,7 +1486,8 @@
             </p>
 
             <h4>The 2027 Core Skillset &amp; Toolchain</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="AI Agents Skillset Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -1251,7 +1560,8 @@
             </p>
 
             <h4>The Modern Search &amp; Marketing Toolchain</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="Digital Marketing & GEO Toolchain Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -1327,7 +1637,8 @@
             </p>
 
             <h4>The 2027 Full-Stack Engineering Stack</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="Full-Stack Engineering Stack Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -1399,7 +1710,8 @@
             </p>
 
             <h4>The Applied Python Stack</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="Python Engineering Stack Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -1471,7 +1783,8 @@
             </p>
 
             <h4>The 2027 Product Design Stack</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="UI/UX Product Design Stack Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -1543,7 +1856,8 @@
             </p>
 
             <h4>The No-Code &amp; Low-Code Ecosystem</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="No-Code Web Architecture Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -1615,7 +1929,8 @@
             </p>
 
             <h4>The 2027 Professional Video Pipeline</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="Professional Video Pipeline Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -1687,7 +2002,8 @@
             </p>
 
             <h4>The 3D Real-Time Production Toolchain</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="3D Real-Time Production Toolchain Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -1744,6 +2060,18 @@
             </a>
           </section>
 
+          <!-- FEATURED COURSE BANNER CALLOUT (MID-ARTICLE) -->
+          <div style="background: linear-gradient(135deg, #011731 0%, #0599a8 100%); color: #ffffff; border-radius: 20px; padding: clamp(24px, 3.5vw, 36px); margin: 38px 0; text-align: center; box-shadow: 0 10px 30px rgba(5, 153, 168, 0.25);">
+            <div style="font-size: 2.2rem; margin-bottom: 8px;">⚡</div>
+            <h3 style="font-size: clamp(1.2rem, 2.4vw, 1.45rem); font-weight: 800; color: #ffffff; margin-bottom: 10px;">Accelerate Your Career with the AI Mastery Program</h3>
+            <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.9); line-height: 1.6; max-width: 680px; margin: 0 auto 20px;">
+              Our comprehensive 6-month flagship covers AI agents, n8n automation, Python engineering, prompt architecture, and live industry capstones with dedicated career coaching.
+            </p>
+            <a href="/course-detail.html?id=ai-mastery" class="btn btn-primary" style="display: inline-block; background: #ffffff; color: #011731; font-weight: 800; padding: 12px 28px; border-radius: 12px; text-decoration: none; transition: transform 0.2s ease;">
+              Explore AI Mastery Syllabus →
+            </a>
+          </div>
+
           <!-- ============================================== -->
           <!-- COURSE 9 -->
           <!-- ============================================== -->
@@ -1759,7 +2087,8 @@
             </p>
 
             <h4>The Modern Performance Stack</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="Performance Marketing Stack Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -1831,7 +2160,8 @@
             </p>
 
             <h4>The Motion Design Stack</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="Motion Design Stack Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -1903,7 +2233,8 @@
             </p>
 
             <h4>The Modern E-Commerce Stack</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="E-Commerce Architecture Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -1975,7 +2306,8 @@
             </p>
 
             <h4>The Business Productivity Stack</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="Business Productivity Stack Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -2047,7 +2379,8 @@
             </p>
 
             <h4>The Creator Engine Stack</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="Creator Engine Stack Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -2119,7 +2452,8 @@
             </p>
 
             <h4>The Advanced Prompt &amp; LLM Stack</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="Advanced Prompt Engineering Stack Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -2191,7 +2525,8 @@
             </p>
 
             <h4>The Business of Freelancing Stack</h4>
-            <div class="table-responsive-wrapper">
+            <div class="article-table-wrapper" tabindex="0" role="region" aria-label="Freelancing & Agency Stack Table">
+              <div class="table-scroll-hint"><span>⇄ Swipe horizontally to view full table</span></div>
               <table class="pro-table">
                 <thead>
                   <tr>
@@ -2394,6 +2729,19 @@
               </div>
             </div>
 
+            <!-- FREE CAREER ADVICE BANNER -->
+            <div style="background: #f0fdfa; border: 1.5px solid #99f6e4; border-radius: 18px; padding: clamp(20px, 3vw, 30px); margin: 32px 0; display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between;">
+              <div style="max-width: 600px;">
+                <h3 style="font-size: 1.2rem; font-weight: 800; color: #011731; margin-bottom: 6px;">Unsure Which 2027 Course Fits Your Background?</h3>
+                <p style="font-size: 0.92rem; color: #475569; margin: 0; line-height: 1.6;">
+                  Speak with senior Nova Skills industry mentors. We evaluate your career goals, technical aptitude, and schedule to build your customized 90-day learning roadmap.
+                </p>
+              </div>
+              <a href="/contact/" style="background: #0599a8; color: #ffffff; font-weight: 800; font-size: 0.92rem; padding: 12px 24px; border-radius: 10px; text-decoration: none; white-space: nowrap; display: inline-block;">
+                Book Free Counselling →
+              </a>
+            </div>
+
             <div class="callout-box">
               <strong>The Nova Skills Commitment:</strong> At Nova Skills Education Institute, every single one of our 109 programs across 11 specialized academies is built strictly to satisfy these 10 criteria. Learn more on our <a href="/about/" style="color:#0599a8; font-weight:700;">About Nova Skills Page</a>.
             </div>
@@ -2502,8 +2850,19 @@
               <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnovaskills.in%2Fblog%2Fhigh-demand-courses-2027-ai-skills-careers%2F" target="_blank" rel="noopener noreferrer" class="share-btn share-fb">Facebook</a>
             </div>
 
+            <!-- BROWSE CATALOGUE CALLOUT -->
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 20px 24px; margin: 32px 0 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px;">
+              <div>
+                <h4 style="font-size: 1.05rem; font-weight: 800; color: #011731; margin: 0 0 4px;">Explore Nova Skills' Complete 109-Course Curriculum</h4>
+                <p style="font-size: 0.88rem; color: #64748b; margin: 0;">Specialized practical programs spanning 11 career academies.</p>
+              </div>
+              <a href="/courses.html" style="font-size: 0.88rem; font-weight: 800; color: #ffffff; background: #011731; padding: 10px 20px; border-radius: 8px; text-decoration: none;">
+                View Course Catalogue →
+              </a>
+            </div>
+
             <!-- RELATED ARTICLES -->
-            <div style="margin-top:40px; padding-top:20px; border-top:1px solid #e2e8f0;">
+            <div style="margin-top:36px; padding-top:20px; border-top:1px solid #e2e8f0;">
               <h3 style="font-size:1.25rem; font-weight:800; color:#011731; margin-bottom:16px;">Recommended Further Reading</h3>
               <div class="related-articles-grid">
                 <div class="related-card">
@@ -2523,86 +2882,6 @@
           </section>
 
         </article>
-
-        <!-- RIGHT COLUMN: SIDEBAR -->
-        <aside class="sidebar-column">
-
-          <!-- AUTHOR CARD -->
-          <div class="sidebar-card">
-            <div class="sidebar-author-header">
-              <img
-                src="/images/waseeullah-mansoori/waseeullah-mansoori-thumb.jpg"
-                alt="Waseeullah Mansoori"
-                class="sidebar-avatar"
-                loading="lazy"
-                onerror="this.src='/public/images/seo/og-banner.png'"
-              />
-              <div>
-                <h4 style="font-size:0.98rem; font-weight:800; color:#011731; margin:0 0 2px;">Waseeullah Mansoori</h4>
-                <p style="font-size:0.78rem; color:#0599a8; margin:0; font-weight:700;">Founder &amp; Instructor</p>
-              </div>
-            </div>
-            <p style="font-size:0.85rem; color:#64748b; line-height:1.6; margin-bottom:12px;">
-              Digital Marketing Strategist, AI Educator, and Founder of Nova Skills. Specializing in practical technical skill building, GEO, and career transformation.
-            </p>
-            <div style="margin-bottom:12px;">
-              <span class="sidebar-skill-tag">Generative AI</span>
-              <span class="sidebar-skill-tag">GEO &amp; SEO</span>
-              <span class="sidebar-skill-tag">Web Dev</span>
-              <span class="sidebar-skill-tag">Media Buying</span>
-            </div>
-            <a href="/blog/waseeullah-mansoori/" style="display:inline-block; font-size:0.82rem; font-weight:700; color:#0599a8; text-decoration:none;">
-              Read Full Founder Profile →
-            </a>
-          </div>
-
-          <!-- FEATURED COURSE BANNER -->
-          <div class="sidebar-card" style="background:linear-gradient(135deg, #011731 0%, #0599a8 100%); color:#ffffff; text-align:center;">
-            <div style="font-size:2.2rem; margin-bottom:10px;">⚡</div>
-            <h3 style="font-size:1.15rem; font-weight:800; color:#ffffff; margin-bottom:8px;">AI Mastery Program</h3>
-            <p style="font-size:0.85rem; color:rgba(255,255,255,0.85); line-height:1.55; margin-bottom:18px;">
-              Comprehensive 6-Month Flagship: AI Agents, Prompt Engineering, n8n Automation, Python Solutions &amp; Live Industry Capstones.
-            </p>
-            <a href="/course-detail.html?id=ai-mastery" class="btn btn-primary" style="width:100%; background:#ffffff; color:#011731; font-weight:700; border:none; border-radius:10px; padding:10px;">
-              Explore AI Mastery →
-            </a>
-          </div>
-
-          <!-- QUICK STATS TAKEAWAYS -->
-          <div class="sidebar-card" style="background:#f8fafc;">
-            <h3 style="font-size:0.95rem; font-weight:800; color:#011731; margin-bottom:12px; text-transform:uppercase; letter-spacing:0.05em;">2027 Key Takeaways</h3>
-            <ul style="list-style:none; padding:0; margin:0; font-size:0.85rem; color:#334155; line-height:1.75;">
-              <li>🤖 <strong>Agentic Workflows:</strong> Multi-step autonomous systems beat one-off prompts.</li>
-              <li>🌐 <strong>GEO Search:</strong> Entity optimization for Google AI Overviews and Perplexity.</li>
-              <li>💻 <strong>AI Pair Dev:</strong> Full-stack devs ship 5x faster with Cursor and Claude.</li>
-              <li>🎨 <strong>Hybrid Design:</strong> UI/UX + 3D + Motion commands top-tier SaaS retainers.</li>
-              <li>📈 <strong>Proof of Work:</strong> Verifiable GitHub and live portfolios outweigh degrees.</li>
-            </ul>
-          </div>
-
-          <!-- FREE CAREER ADVICE CTA -->
-          <div class="sidebar-card" style="text-align:center;">
-            <h3 style="font-size:1.05rem; font-weight:800; color:#011731; margin-bottom:8px;">Need Career Guidance?</h3>
-            <p style="font-size:0.85rem; color:#64748b; margin-bottom:16px;">
-              Speak with our senior industry mentors and map your personalized 2027 technical learning trajectory.
-            </p>
-            <a href="/contact/" class="btn btn-primary" style="width:100%; background:#0599a8; color:#ffffff; font-weight:700; border-radius:10px; padding:10px; text-decoration:none; display:inline-block;">
-              Book Free Counselling →
-            </a>
-          </div>
-
-          <!-- ALL COURSES BROWSER -->
-          <div class="sidebar-card" style="text-align:center; background:#ffffff; border:1px solid #e2e8f0;">
-            <h4 style="font-size:0.95rem; font-weight:800; color:#011731; margin-bottom:8px;">Browse All 109 Courses</h4>
-            <p style="font-size:0.82rem; color:#64748b; margin-bottom:14px;">
-              Explore our full curriculum across 11 specialized academies.
-            </p>
-            <a href="/courses.html" style="font-size:0.85rem; font-weight:700; color:#0599a8; text-decoration:none;">
-              View Course Catalogue →
-            </a>
-          </div>
-
-        </aside>
 
       </div>
     </div>
@@ -2626,13 +2905,13 @@
       const progressEl = document.getElementById('reading-progress');
       if (progressEl) progressEl.style.width = scrolled + '%';
 
-      // 2. TOC Active Highlight
+      // 2. TOC Active Highlight for both Desktop and Mobile TOCs
       const sections = document.querySelectorAll('article section, article div[id]');
-      const navLinks = document.querySelectorAll('#toc-nav a');
+      const navLinks = document.querySelectorAll('#toc-nav a, #toc-nav-mobile a');
 
       let current = '';
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 130;
+        const sectionTop = section.offsetTop - 140;
         if (winScroll >= sectionTop) {
           current = section.getAttribute('id');
         }
@@ -2642,6 +2921,16 @@
         link.classList.remove('active');
         if (link.getAttribute('href') === '#' + current) {
           link.classList.add('active');
+        }
+      });
+    });
+
+    // Auto close mobile TOC when link is clicked
+    document.querySelectorAll('#toc-nav-mobile a').forEach(link => {
+      link.addEventListener('click', () => {
+        const details = document.getElementById('mobile-toc-details');
+        if (details && details.hasAttribute('open')) {
+          details.removeAttribute('open');
         }
       });
     });
