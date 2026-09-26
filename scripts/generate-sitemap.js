@@ -83,6 +83,10 @@ function generateSitemap() {
     loc: `${DOMAIN}/blog/ai-seo-geo-digital-marketing-2026/`,
     lastmod: today
   });
+  urlEntries.push({
+    loc: `${DOMAIN}/blog/high-demand-courses-2027-ai-skills-careers/`,
+    lastmod: today
+  });
 
   // 3. Clean Academy Directory URLs
   urlEntries.push({

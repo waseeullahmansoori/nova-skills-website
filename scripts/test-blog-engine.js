@@ -107,13 +107,13 @@ console.log('--- TEST 1: Open /blog ---');
 }
 
 // TEST 2: Add Future Blog (publishedAt: 2026-08-20)
-console.log('\n--- TEST 2: Future Blog (2026-08-20) Automatic Top Position ---');
+console.log('\n--- TEST 2: Future Blog Automatic Top Position ---');
 {
   const futureBlog = {
     id: 'test-new-blog',
     slug: 'test-new-blog',
     title: 'Test New Blog',
-    publishedAt: '2026-08-20T10:00:00+05:30',
+    publishedAt: '2026-10-01T10:00:00+05:30',
     status: 'published',
     category: 'AI & Technology',
     author: 'AI Expert'
@@ -127,14 +127,14 @@ console.log('\n--- TEST 2: Future Blog (2026-08-20) Automatic Top Position ---')
   console.log('Is test-new-blog at position #1?', grid[0]?.slug === 'test-new-blog' ? 'PASS' : 'FAIL');
 }
 
-// TEST 3: Older Test Blog (publishedAt: 2026-08-01)
+// TEST 3: Older Test Blog (publishedAt: 2026-07-01)
 console.log('\n--- TEST 3: Older Test Blog Moves Down ---');
 {
   const olderBlog = {
     id: 'test-older-blog',
     slug: 'test-older-blog',
     title: 'Test Older Blog',
-    publishedAt: '2026-08-01T10:00:00+05:30',
+    publishedAt: '2026-07-01T10:00:00+05:30',
     status: 'published',
     category: 'AI & Technology',
     author: 'AI Expert'
@@ -146,9 +146,10 @@ console.log('\n--- TEST 3: Older Test Blog Moves Down ---');
 
   console.log('Grid order:');
   grid.forEach((p, i) => console.log('  ' + (i+1) + '. ' + p.slug + ' (' + p.publishedAt + ')'));
-  console.log('Position 1:', grid[0].slug, '(ai-seo-geo)');
-  console.log('Position 2:', grid[1].slug, '(test-older-blog)');
-  console.log('Is sorting correct?', (grid[0].slug === 'ai-seo-geo-digital-marketing-2026' && grid[1].slug === 'test-older-blog') ? 'PASS' : 'FAIL');
+  console.log('Position 1:', grid[0].slug);
+  console.log('Position 2:', grid[1].slug);
+  console.log('Position 3:', grid[2].slug);
+  console.log('Is sorting correct?', (grid[0].slug === 'high-demand-courses-2027-ai-skills-careers' && grid[1].slug === 'ai-seo-geo-digital-marketing-2026' && grid[2].slug === 'test-older-blog') ? 'PASS' : 'FAIL');
 }
 
 // TEST 4: Search for 'AI'
