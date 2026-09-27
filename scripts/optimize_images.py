@@ -40,7 +40,7 @@ def process_hero_image():
     orig_w, orig_h = img.size
     aspect_ratio = orig_h / orig_w
 
-    widths = [1200, 800, 400]
+    widths = [1200, 800, 600, 400]
     processed_count = 0
     total_saved = 0
 
@@ -49,9 +49,9 @@ def process_hero_image():
     full_webp = os.path.join(hero_dir, 'hero-student.webp')
     full_jpg = os.path.join(hero_dir, 'hero-student.jpg')
 
-    img.save(full_avif, 'AVIF', quality=80)
-    img.save(full_webp, 'WEBP', quality=82)
-    img.save(full_jpg, 'JPEG', quality=85, optimize=True)
+    img.save(full_avif, 'AVIF', quality=68)
+    img.save(full_webp, 'WEBP', quality=78, method=6)
+    img.save(full_jpg, 'JPEG', quality=82, optimize=True)
 
     orig_size = os.path.getsize(src_hero)
     avif_size = os.path.getsize(full_avif)
@@ -70,12 +70,12 @@ def process_hero_image():
         webp_p = os.path.join(hero_dir, f'hero-student-{w}.webp')
         jpg_p = os.path.join(hero_dir, f'hero-student-{w}.jpg')
 
-        resized.save(avif_p, 'AVIF', quality=80)
-        resized.save(webp_p, 'WEBP', quality=82)
-        resized.save(jpg_p, 'JPEG', quality=85, optimize=True)
+        resized.save(avif_p, 'AVIF', quality=68)
+        resized.save(webp_p, 'WEBP', quality=78, method=6)
+        resized.save(jpg_p, 'JPEG', quality=82, optimize=True)
         processed_count += 3
 
-    print(f"✅ Generated {processed_count} responsive hero variants (1200w, 800w, 400w) in AVIF, WebP & JPG")
+    print(f"✅ Generated {processed_count} responsive hero variants (1200w, 800w, 600w, 400w) in AVIF, WebP & JPG")
 
 def copy_and_organize_branding():
     branding_dir = os.path.join(BASE_DIR, 'branding content')

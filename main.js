@@ -1,26 +1,26 @@
 /* ============================================================
-   NOVA SKILLS – Main JavaScript
+   NOVA SKILLS – Main & Homepage Interactive Controller
    2026 | Premium Education Institute
    ============================================================ */
 
 'use strict';
 
-// ===== DOM READY =====
-document.addEventListener('DOMContentLoaded', () => {
+// ===== INITIALIZATION =====
+function initInteractiveModules() {
   initCanonicalCounts();
-  initScrollProgress();
-  initNavigation();
-  initHeroAnimations();
-  initCounterAnimations();
   initCourseFilter();
   initFAQ();
-  initScrollAnimations();
-  initAnnouncementBar();
   initFormSubmission();
   initMarquee();
   initVideoFacades();
   initDeferredBackgrounds();
-});
+}
+
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(initInteractiveModules, { timeout: 2500 });
+} else {
+  setTimeout(initInteractiveModules, 300);
+}
 
 // ===== DYNAMIC CANONICAL COUNTS HYDRATION =====
 function initCanonicalCounts() {
@@ -60,171 +60,6 @@ function initCanonicalCounts() {
   }
 }
 
-// ===== SCROLL PROGRESS BAR =====
-function initScrollProgress() {
-  let progressBar = document.getElementById('scroll-progress-bar') || document.querySelector('.scroll-progress');
-  if (!progressBar) {
-    progressBar = document.createElement('div');
-    progressBar.id = 'scroll-progress-bar';
-    progressBar.className = 'scroll-progress';
-    progressBar.setAttribute('aria-hidden', 'true');
-    document.body.prepend(progressBar);
-  }
-
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        const scrollTop = window.scrollY || window.pageYOffset;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        progressBar.style.width = `${progress}%`;
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }, { passive: true });
-}
-
-// ===== NAVIGATION =====
-function initNavigation() {
-  const header = document.getElementById('main-header');
-
-  // Sticky header on scroll (throttled with rAF)
-  if (header && !header.dataset.scrollBound) {
-    header.dataset.scrollBound = 'true';
-    let navTicking = false;
-    window.addEventListener('scroll', () => {
-      if (!navTicking) {
-        window.requestAnimationFrame(() => {
-          if (window.scrollY > 40) {
-            header.classList.add('scrolled');
-          } else {
-            header.classList.remove('scrolled');
-          }
-          navTicking = false;
-        });
-        navTicking = true;
-      }
-    }, { passive: true });
-  }
-
-  // Active nav link on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinksAll = document.querySelectorAll('.nav-link');
-
-  if (sections.length > 0) {
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinksAll.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${entry.target.id}`) {
-              link.classList.add('active');
-            }
-          });
-        }
-      });
-    }, { rootMargin: '-30% 0px -60% 0px' });
-
-    sections.forEach(section => sectionObserver.observe(section));
-  }
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#' || targetId === '') return;
-
-      const target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        const headerHeight = header ? header.offsetHeight : 0;
-        const announcementBar = document.getElementById('announcement-bar');
-        const announcementHeight = announcementBar ? announcementBar.offsetHeight : 0;
-        const offset = headerHeight + announcementHeight + 16;
-
-        window.scrollTo({
-          top: target.offsetTop - offset,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-}
-
-// ===== HERO ANIMATIONS =====
-function initHeroAnimations() {
-  // Respect prefers-reduced-motion
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    return;
-  }
-
-  // CRITICAL LCP OPTIMIZATION:
-  // Never hide .hero-title, .hero-badge, or .hero-subtitle with opacity: 0.
-  // Rendering text immediately allows First Contentful Paint and Largest Contentful Paint to occur without timer delays.
-
-  // Optional subtle hardware-accelerated entrance for secondary floating cards only
-  const floatingCards = document.querySelectorAll('.floating-card');
-  floatingCards.forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(16px)';
-    card.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-
-    setTimeout(() => {
-      card.style.opacity = '1';
-      card.style.transform = 'translateY(0)';
-    }, 250 + (index * 120));
-  });
-}
-
-// ===== COUNTER ANIMATIONS =====
-function initCounterAnimations() {
-  const statCards = document.querySelectorAll('.stat-card[data-count]');
-
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.dataset.animated) {
-        entry.target.dataset.animated = 'true';
-        const target = parseFloat(entry.target.dataset.count);
-        const suffix = entry.target.dataset.suffix || '';
-        const numberEl = entry.target.querySelector('.stat-number');
-
-        if (!numberEl) return;
-
-        animateCounter(numberEl, 0, target, 2000, suffix, target % 1 !== 0 ? 1 : 0);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  statCards.forEach(card => counterObserver.observe(card));
-}
-
-function animateCounter(el, start, end, duration, suffix, decimals) {
-  const startTime = performance.now();
-
-  function update(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = easeOutCubic(progress);
-    const current = start + (end - start) * eased;
-
-    el.textContent = current.toFixed(decimals) + suffix;
-
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    } else {
-      el.textContent = end.toFixed(decimals) + suffix;
-    }
-  }
-
-  requestAnimationFrame(update);
-}
-
-function easeOutCubic(t) {
-  return 1 - Math.pow(1 - t, 3);
-}
-
 // ===== COURSE FILTER =====
 function initCourseFilter() {
   const tabs = document.querySelectorAll('.course-tab');
@@ -232,7 +67,6 @@ function initCourseFilter() {
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      // Update active tab
       tabs.forEach(t => {
         t.classList.remove('active');
         t.setAttribute('aria-selected', 'false');
@@ -242,7 +76,6 @@ function initCourseFilter() {
 
       const filter = tab.dataset.filter;
 
-      // Filter course cards
       courseCards.forEach((card, index) => {
         const category = card.dataset.category;
         const matches = filter === 'all' || category === filter;
@@ -283,7 +116,6 @@ function initFAQ() {
     question.addEventListener('click', () => {
       const isExpanded = question.getAttribute('aria-expanded') === 'true';
 
-      // Close all other FAQs
       faqItems.forEach(otherItem => {
         if (otherItem !== item) {
           const otherQuestion = otherItem.querySelector('.faq-question');
@@ -296,104 +128,19 @@ function initFAQ() {
         }
       });
 
-      // Toggle current FAQ
       if (isExpanded) {
         question.setAttribute('aria-expanded', 'false');
         answer.hidden = true;
       } else {
         question.setAttribute('aria-expanded', 'true');
         answer.hidden = false;
-        // Smooth reveal
         answer.style.animation = 'fadeInUp 0.3s ease forwards';
       }
     });
   });
 }
 
-// ===== SCROLL ANIMATIONS =====
-function initScrollAnimations() {
-  // Add data-animate attribute to elements
-  const animatableElements = [
-    '.stat-card',
-    '.academy-card',
-    '.course-card',
-    '.testimonial-card',
-    '.mentor-card',
-    '.process-step',
-    '.project-card',
-    '.placement-stat',
-    '.why-feature',
-    '.highlight-item',
-    '.journey-step',
-    '.faq-item',
-  ];
-
-  animatableElements.forEach(selector => {
-    document.querySelectorAll(selector).forEach((el, index) => {
-      el.dataset.animate = 'true';
-      el.style.transitionDelay = `${(index % 4) * 0.08}s`;
-    });
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
-  });
-
-  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-
-  // Section headers slide in
-  document.querySelectorAll('.section-header, .why-content, .cert-content').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-
-    const headerObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          headerObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    headerObserver.observe(el);
-  });
-}
-
-// ===== ANNOUNCEMENT BAR =====
-function initAnnouncementBar() {
-  const closeBtn = document.getElementById('close-announcement');
-  const bar = document.getElementById('announcement-bar');
-
-  if (!closeBtn || !bar) return;
-
-  closeBtn.addEventListener('click', () => {
-    bar.style.maxHeight = bar.offsetHeight + 'px';
-    bar.style.transition = 'max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease';
-
-    requestAnimationFrame(() => {
-      bar.style.maxHeight = '0';
-      bar.style.opacity = '0';
-      bar.style.padding = '0';
-      bar.style.overflow = 'hidden';
-    });
-
-    setTimeout(() => {
-      bar.style.display = 'none';
-    }, 300);
-  });
-}
-
-// ===== FORM SUBMISSION =====
+// ===== COUNSELLING FORM SUBMISSION =====
 function initFormSubmission() {
   const form = document.getElementById('counselling-form');
   if (!form) return;
@@ -422,17 +169,19 @@ function initFormSubmission() {
 
     const course = courseEl ? (courseEl.options[courseEl.selectedIndex]?.text || courseEl.value) : '';
 
-    await submitNovaForm({
-      form,
-      submitBtn,
-      loadingText: 'Booking...',
-      data: {
-        name,
-        mobile: phone,
-        email: emailEl ? emailEl.value.trim() : '',
-        course
-      }
-    });
+    if (typeof submitNovaForm === 'function') {
+      await submitNovaForm({
+        form,
+        submitBtn,
+        loadingText: 'Booking...',
+        data: {
+          name,
+          mobile: phone,
+          email: emailEl ? emailEl.value.trim() : '',
+          course
+        }
+      });
+    }
   });
 }
 
@@ -443,7 +192,6 @@ function showFormError(fieldId, message) {
   field.style.borderColor = 'rgba(239, 68, 68, 0.7)';
   field.focus();
 
-  // Remove error after typing
   field.addEventListener('input', () => {
     field.style.borderColor = '';
   }, { once: true });
@@ -464,119 +212,6 @@ function initMarquee() {
     track.style.animationPlayState = 'running';
   });
 }
-
-// ===== ADDITIONAL CSS ANIMATION FOR SPIN =====
-const spinStyle = document.createElement('style');
-spinStyle.textContent = `
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-`;
-document.head.appendChild(spinStyle);
-
-// ===== STATS COUNTER HERO =====
-// Update hero stat counters with animation when in view
-function initHeroStats() {
-  const heroStats = document.querySelectorAll('.hero-stat .stat-num');
-  
-  const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        statsObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  heroStats.forEach(stat => statsObserver.observe(stat));
-}
-
-// ===== KEYBOARD NAVIGATION =====
-document.addEventListener('keydown', (e) => {
-  // ESC key closes mobile menu
-  if (e.key === 'Escape') {
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-
-    if (hamburger && navLinks.classList.contains('open')) {
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      navLinks.classList.remove('open');
-      document.body.style.overflow = '';
-      hamburger.focus();
-    }
-  }
-});
-
-// ===== PERFORMANCE: LAZY LOAD =====
-function initLazyLoad() {
-  if ('IntersectionObserver' in window) {
-    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src || img.src;
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    lazyImages.forEach(img => imageObserver.observe(img));
-  }
-}
-
-initLazyLoad();
-
-// ===== WHATSAPP FLOAT DELAY =====
-setTimeout(() => {
-  const whatsappBtn = document.getElementById('whatsapp-btn');
-  if (whatsappBtn) {
-    whatsappBtn.style.opacity = '0';
-    whatsappBtn.style.transform = 'translateY(20px) scale(0.8)';
-    whatsappBtn.style.transition = 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
-
-    setTimeout(() => {
-      whatsappBtn.style.opacity = '1';
-      whatsappBtn.style.transform = 'translateY(0) scale(1)';
-    }, 100);
-  }
-}, 2000);
-
-// ===== COURSE CARD HOVER EFFECTS =====
-document.querySelectorAll('.course-card').forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    card.style.zIndex = '5';
-  });
-
-  card.addEventListener('mouseleave', () => {
-    card.style.zIndex = '1';
-  });
-});
-
-// ===== TESTIMONIAL CARDS HOVER =====
-document.querySelectorAll('.testimonial-card').forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    const quote = card.querySelector('.testimonial-quote');
-    if (quote) {
-      quote.style.opacity = '0.5';
-      quote.style.transition = 'opacity 0.3s ease';
-    }
-  });
-
-  card.addEventListener('mouseleave', () => {
-    const quote = card.querySelector('.testimonial-quote');
-    if (quote) {
-      quote.style.opacity = '0.25';
-    }
-  });
-});
-
-// ===== DYNAMIC CURRENT YEAR IN FOOTER =====
-const yearEls = document.querySelectorAll('.year-auto');
-yearEls.forEach(el => {
-  el.textContent = new Date().getFullYear();
-});
 
 // ===== CLICK-TO-LOAD YOUTUBE VIDEO FACADE =====
 function initVideoFacades() {
@@ -649,8 +284,3 @@ function initDeferredBackgrounds() {
     });
   }
 }
-
-// ===== LOG INIT =====
-console.log('%cNova Skills Website Loaded 🚀', 'color: #0599a8; font-size: 16px; font-weight: bold;');
-console.log('%cLearn • Grow • Achieve', 'color: #75d766; font-size: 12px;');
-

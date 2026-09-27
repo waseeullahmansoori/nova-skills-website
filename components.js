@@ -892,7 +892,7 @@ function injectComponents() {
 
   // Header slot
   const headerSlot = document.getElementById('ns-header');
-  if (headerSlot) headerSlot.outerHTML = buildHeaderHTML(page);
+  if (headerSlot && !headerSlot.querySelector('.header')) headerSlot.outerHTML = buildHeaderHTML(page);
 
   // Footer slot
   const footerSlot = document.getElementById('ns-footer');
@@ -1323,7 +1323,7 @@ function initConsultationPopup() {
     });
   });
 
-  // Auto-show automatically after 5 seconds (once per session)
+  // Auto-show automatically after 20 seconds of engagement (once per session)
   const sessionShown = sessionStorage.getItem('ns_popup_shown_session');
   if (!sessionShown) {
     setTimeout(() => {
@@ -1341,7 +1341,7 @@ function initConsultationPopup() {
       if (!isEnrollOpen && !isAiOpen && !isUserTyping) {
         openConsultationPopup();
       }
-    }, 5000);
+    }, 20000);
   }
 }
 
@@ -1349,12 +1349,21 @@ function initConsultationPopup() {
    SCROLL REVEAL (reusable)
 ───────────────────────────────────────────── */
 function initScrollReveal(selectors = []) {
+  if (typeof window !== 'undefined' && window.__nsScrollRevealInit) return;
+  window.__nsScrollRevealInit = true;
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
   const allSelectors = [
     '.stat-card', '.academy-card', '.course-card', '.testimonial-card',
     '.mentor-card', '.process-step', '.project-card', '.blog-card',
     '.why-feature', '.journey-step', '.faq-item', '.placement-stat',
     ...selectors,
   ];
+
+  if (!('IntersectionObserver' in window)) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1365,34 +1374,44 @@ function initScrollReveal(selectors = []) {
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-  allSelectors.forEach(sel => {
-    document.querySelectorAll(sel).forEach((el, i) => {
+  const runReveal = () => {
+    const targets = document.querySelectorAll(allSelectors.join(', '));
+    targets.forEach((el, i) => {
       el.dataset.animate = 'true';
-      el.style.transitionDelay = `${(i % 5) * 0.07}s`;
       observer.observe(el);
     });
-  });
 
-  // Section headers
-  document.querySelectorAll('.section-header, [data-reveal]').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(28px)';
-    el.style.transition = 'opacity 0.65s ease, transform 0.65s ease';
+    const headerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          headerObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
 
-    new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      }
-    }, { threshold: 0.15 }).observe(el);
-  });
+    document.querySelectorAll('.section-header, [data-reveal]').forEach(el => {
+      headerObserver.observe(el);
+    });
+  };
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(runReveal);
+  } else {
+    setTimeout(runReveal, 200);
+  }
 }
 
 /* ─────────────────────────────────────────────
    COUNTER ANIMATION (reusable)
 ───────────────────────────────────────────── */
 function initCounters() {
+  if (typeof window !== 'undefined' && window.__nsCountersInit) return;
+  window.__nsCountersInit = true;
+
   const cards = document.querySelectorAll('[data-count]');
+  if (!cards.length || !('IntersectionObserver' in window)) return;
+
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting || entry.target.dataset.animated) return;
@@ -1872,7 +1891,7 @@ function createMobileSlider(trackEl) {
     dot.className = `mobile-slider-dot ${idx === 0 ? 'active' : ''}`;
     dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
     dot.addEventListener('click', () => {
-      const cardWidth = trackEl.getBoundingClientRect().width + 16;
+      const cardWidth = trackEl.clientWidth + 16;
       trackEl.scrollTo({ left: idx * cardWidth, behavior: 'smooth' });
     });
     dotsNav.appendChild(dot);
@@ -1886,8 +1905,8 @@ function createMobileSlider(trackEl) {
 
   function updateActiveDot() {
     const scrollPos = trackEl.scrollLeft;
-    const cardWidth = trackEl.getBoundingClientRect().width;
-    const activeIndex = Math.round(scrollPos / (cardWidth || 1));
+    const cardWidth = trackEl.clientWidth || 1;
+    const activeIndex = Math.round(scrollPos / cardWidth);
     const dots = dotsNav.querySelectorAll('.mobile-slider-dot');
     dots.forEach((dot, i) => {
       dot.classList.toggle('active', i === activeIndex);
@@ -1901,7 +1920,7 @@ function createMobileSlider(trackEl) {
     stopAutoplay();
     autoplayTimer = setInterval(() => {
       if (isUserInteracting || window.innerWidth > 768) return;
-      const cardWidth = trackEl.getBoundingClientRect().width;
+      const cardWidth = trackEl.clientWidth;
       const activeIndex = Math.round(trackEl.scrollLeft / (cardWidth || 1));
       let nextIndex = activeIndex + 1;
       if (nextIndex >= cards.length) nextIndex = 0;
@@ -1940,23 +1959,45 @@ function createMobileSlider(trackEl) {
 
 function initAllMobileSliders() {
   if (window.innerWidth <= 768) {
-    const mentorsGrid = document.querySelector('.mentors-grid');
-    const testimonialsGrid = document.querySelector('.testimonials-grid');
-    if (mentorsGrid) createMobileSlider(mentorsGrid);
-    if (testimonialsGrid) createMobileSlider(testimonialsGrid);
+    const tracks = document.querySelectorAll('.mentors-grid, .testimonials-grid');
+    if ('IntersectionObserver' in window) {
+      const sliderObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            createMobileSlider(entry.target);
+            sliderObserver.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '400px 0px' });
+      tracks.forEach(track => sliderObserver.observe(track));
+    } else {
+      tracks.forEach(track => createMobileSlider(track));
+    }
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   injectComponents();
-  injectEnrollmentModalHTML();
-  // Wait one frame so injected DOM is painted
-  requestAnimationFrame(() => {
+
+  // Defer modal injection to idle time
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => { injectEnrollmentModalHTML(); });
+  } else {
+    setTimeout(injectEnrollmentModalHTML, 1500);
+  }
+
+  const postDomInit = () => {
     initShared();
     initScrollReveal();
     initCounters();
     initAllMobileSliders();
-  });
+  };
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(postDomInit, { timeout: 1500 });
+  } else {
+    requestAnimationFrame(postDomInit);
+  }
 });
 
 window.addEventListener('resize', () => {

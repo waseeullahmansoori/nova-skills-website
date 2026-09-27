@@ -1937,7 +1937,7 @@
     const btn = document.createElement('button');
     btn.id = 'nova-ai-float-btn';
     btn.className = 'nova-ai-float-btn';
-    btn.setAttribute('aria-label', 'Open Nova AI Career Advisor');
+    btn.setAttribute('aria-label', 'Ask Nova AI — Open Career Advisor');
     btn.innerHTML = `<span class="nova-ai-pulse-dot"></span>🤖 Ask Nova AI`;
     btn.onclick = togglePanel;
     document.body.appendChild(btn);

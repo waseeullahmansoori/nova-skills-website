@@ -127,7 +127,7 @@
   --container-pad: clamp(20px, 5vw, 48px);
 
   /* Typography */
-  --font-primary: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-primary: 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-secondary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
 
@@ -483,7 +483,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link.active {
-  color: var(--teal);
+  color: #025c66;
   background: rgba(5, 153, 168, 0.1);
   border-color: rgba(5, 153, 168, 0.2);
   box-shadow: var(--shadow-sm);
@@ -761,6 +761,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-subtitle {
+  font-family: var(--font-secondary);
   font-size: 1.0625rem;
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.7;
@@ -1104,6 +1105,29 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.8125rem;
   color: var(--text-muted);
   line-height: 1.5;
+}
+
+/* ============================================================
+   PERFORMANCE: CONTENT VISIBILITY FOR BELOW-THE-FOLD SECTIONS
+   Skips layout & rendering of offscreen sections on initial load,
+   eliminating long-task layout times on mobile & low-end CPUs.
+   ============================================================ */
+.stats-section,
+.ai-advisor-section,
+.academies-section,
+.courses-section,
+.why-section,
+.journey-section,
+.projects-section,
+.partners-section,
+.placement-process-section,
+.testimonials-section,
+.mentors-section,
+.certifications-section,
+.faq-section,
+.final-cta-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
 }
 
 /* ===== ACADEMIES SECTION ===== */
@@ -2712,7 +2736,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.70);
+  color: rgba(255, 255, 255, 0.85);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
@@ -3233,7 +3257,7 @@ h1, h2, h3, h4, h5, h6 {
   .contact-label {
     font-size: 0.6875rem !important;
     font-weight: 700 !important;
-    color: rgba(255, 255, 255, 0.45) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
     text-transform: uppercase !important;
     letter-spacing: 0.04em !important;
     margin-bottom: 2px !important;
@@ -5516,14 +5540,14 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
 .nav-ai-pill {
   background: rgba(5, 153, 168, 0.08);
   border: 1px solid rgba(5, 153, 168, 0.25) !important;
-  color: var(--teal) !important;
+  color: #036b76 !important;
   font-weight: 700 !important;
   box-shadow: 0 2px 8px rgba(5, 153, 168, 0.12);
 }
 
 .nav-ai-pill:hover, .nav-ai-pill.active {
   background: rgba(5, 153, 168, 0.16) !important;
-  border-color: var(--teal) !important;
+  border-color: #036b76 !important;
   box-shadow: 0 4px 14px rgba(5, 153, 168, 0.2);
 }
 
@@ -6310,24 +6334,43 @@ select.form-input option {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 8px !important;
+    gap: 4px !important;
     margin-top: 20px !important;
   }
 
   .mobile-slider-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(5, 153, 168, 0.3);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    cursor: pointer;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    position: relative !important;
+    -webkit-tap-highlight-color: transparent !important;
   }
 
-  .mobile-slider-dot.active {
-    width: 24px;
-    border-radius: 12px;
-    background: var(--teal, #0599a8);
-    box-shadow: 0 0 10px rgba(5, 153, 168, 0.5);
+  .mobile-slider-dot::before {
+    content: '' !important;
+    display: block !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background: rgba(5, 153, 168, 0.4) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .mobile-slider-dot.active::before {
+    width: 24px !important;
+    height: 8px !important;
+    border-radius: 12px !important;
+    background: var(--teal, #0599a8) !important;
+    box-shadow: 0 0 10px rgba(5, 153, 168, 0.5) !important;
   }
 }
 
