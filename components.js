@@ -44,10 +44,6 @@ async function fetchPublicIP() {
   return nsPublicIPCache || 'Unknown';
 }
 
-if (typeof window !== 'undefined') {
-  window.addEventListener('DOMContentLoaded', () => { fetchPublicIP(); });
-}
-
 function detectBrowser() {
   const ua = navigator.userAgent;
   if (ua.includes('Firefox/')) return 'Firefox';
@@ -496,7 +492,7 @@ function buildNavLinksHTML(page) {
 
     <!-- 5. ABOUT DROPDOWN (MANDATORY ORDER) -->
     <li class="dropdown">
-      <a href="#" class="nav-link dropdown-toggle">About <span class="chevron">⌄</span></a>
+      <a href="/#why-nova" class="nav-link dropdown-toggle">About <span class="chevron">⌄</span></a>
       <ul class="dropdown-menu">
         <li><a href="/#why-nova">Why Nova Skills</a></li>
         <li><a href="/#why-nova">Our Story</a></li>
@@ -587,7 +583,7 @@ function buildHeaderHTML(page) {
         <img src="/branding%20content/White%20Logo.svg" alt="Nova Skills" class="logo-dark" width="200" height="60" />
       </a>
 
-      <ul class="nav-links" id="nav-links" role="menubar">
+      <ul class="nav-links" id="nav-links">
         ${buildNavLinksHTML(page)}
       </ul>
 
@@ -658,7 +654,7 @@ function buildFooterHTML() {
           <div class="footer-links-group">
             <!-- Academies Column -->
             <div class="footer-col">
-              <h4 class="footer-heading">Our Academies</h4>
+              <h3 class="footer-heading">Our Academies</h3>
               <ul class="footer-links">
                 <li><a href="/courses.html?academy=digital-marketing">📊 Digital Marketing</a></li>
                 <li><a href="/courses.html?academy=ai">🤖 AI Academy</a></li>
@@ -673,7 +669,7 @@ function buildFooterHTML() {
 
             <!-- Quick Links Column -->
             <div class="footer-col">
-              <h4 class="footer-heading">Quick Links</h4>
+              <h3 class="footer-heading">Quick Links</h3>
               <ul class="footer-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/courses.html">All Courses</a></li>
@@ -689,7 +685,7 @@ function buildFooterHTML() {
 
           <!-- Contact Column -->
           <div class="footer-col">
-            <h4 class="footer-heading">Contact Us</h4>
+            <h3 class="footer-heading">Contact Us</h3>
             <div class="footer-contact">
               <div class="contact-item">
                 <span class="contact-icon">📞</span>
@@ -902,14 +898,20 @@ function injectComponents() {
   const footerSlot = document.getElementById('ns-footer');
   if (footerSlot) footerSlot.outerHTML = buildFooterHTML();
 
-  // WhatsApp float
-  document.body.insertAdjacentHTML('beforeend', buildWhatsAppHTML());
+  // WhatsApp float (avoid duplicate injection if already statically in DOM)
+  if (!document.getElementById('whatsapp-btn')) {
+    document.body.insertAdjacentHTML('beforeend', buildWhatsAppHTML());
+  }
 
-  // Consultation popup
-  document.body.insertAdjacentHTML('beforeend', buildPopupHTML());
+  // Consultation popup (avoid duplicate injection if already statically in DOM)
+  if (!document.getElementById('popup-overlay')) {
+    document.body.insertAdjacentHTML('beforeend', buildPopupHTML());
+  }
 
-  // Scroll progress bar
-  document.body.insertAdjacentHTML('afterbegin', buildScrollProgressHTML());
+  // Scroll progress bar (avoid duplicate injection if already in DOM)
+  if (!document.getElementById('scroll-progress-bar') && !document.querySelector('.scroll-progress')) {
+    document.body.insertAdjacentHTML('afterbegin', buildScrollProgressHTML());
+  }
 
   // Inject Nova AI Floating Assistant Widget (Lazy Loaded on User Interaction or Idle)
   if (!document.getElementById('nova-ai-widget-script')) {
@@ -926,13 +928,13 @@ function injectComponents() {
     };
 
     if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => setTimeout(loadAiWidget, 3500));
+      requestIdleCallback(() => setTimeout(loadAiWidget, 4000));
     } else {
-      setTimeout(loadAiWidget, 3500);
+      setTimeout(loadAiWidget, 4000);
     }
-    window.addEventListener('scroll', loadAiWidget, { passive: true });
-    window.addEventListener('mousemove', loadAiWidget, { passive: true });
-    window.addEventListener('touchstart', loadAiWidget, { passive: true });
+    window.addEventListener('scroll', loadAiWidget, { passive: true, once: true });
+    window.addEventListener('mousemove', loadAiWidget, { passive: true, once: true });
+    window.addEventListener('touchstart', loadAiWidget, { passive: true, once: true });
   }
 }
 
@@ -953,12 +955,21 @@ function initShared() {
 
 /* ── Scroll progress ── */
 function initScrollProgress() {
-  const bar = document.getElementById('scroll-progress-bar');
-  if (!bar) return;
+  const bar = document.getElementById('scroll-progress-bar') || document.querySelector('.scroll-progress');
+  if (!bar || bar.dataset.scrollBound) return;
+  bar.dataset.scrollBound = 'true';
+
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    const st = window.scrollY;
-    const dh = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.width = dh > 0 ? `${(st / dh) * 100}%` : '0%';
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const st = window.scrollY || window.pageYOffset;
+        const dh = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = dh > 0 ? `${(st / dh) * 100}%` : '0%';
+        ticking = false;
+      });
+      ticking = true;
+    }
   }, { passive: true });
 }
 
@@ -978,10 +989,20 @@ function initNavBehaviour() {
     document.body.appendChild(navOverlay);
   }
 
-  // Sticky scroll
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
-  }, { passive: true });
+  // Sticky scroll (throttled with rAF)
+  if (!header.dataset.scrollBound) {
+    header.dataset.scrollBound = 'true';
+    let navTicking = false;
+    window.addEventListener('scroll', () => {
+      if (!navTicking) {
+        window.requestAnimationFrame(() => {
+          header.classList.toggle('scrolled', (window.scrollY || window.pageYOffset) > 40);
+          navTicking = false;
+        });
+        navTicking = true;
+      }
+    }, { passive: true });
+  }
 
   function openMenu() {
     hamburger.classList.add('open');

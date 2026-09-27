@@ -138,6 +138,14 @@
       text-decoration: none;
       font-weight: 600;
     }
+    button.auth-link {
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: inherit;
+      font-size: inherit;
+      cursor: pointer;
+    }
     .auth-link:hover { text-decoration: underline; }
 
     .alert {
@@ -185,7 +193,7 @@
         <label class="checkbox-label">
           <input type="checkbox" id="remember-me"> Remember me
         </label>
-        <a href="#" class="auth-link" onclick="handleForgotPassword(event)">Forgot Password?</a>
+        <button type="button" class="auth-link" onclick="handleForgotPassword(event)">Forgot Password?</button>
       </div>
 
       <button type="submit" class="auth-btn" id="submit-btn">Login to Account →</button>

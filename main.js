@@ -62,15 +62,27 @@ function initCanonicalCounts() {
 
 // ===== SCROLL PROGRESS BAR =====
 function initScrollProgress() {
-  const progressBar = document.createElement('div');
-  progressBar.className = 'scroll-progress';
-  document.body.prepend(progressBar);
+  let progressBar = document.getElementById('scroll-progress-bar') || document.querySelector('.scroll-progress');
+  if (!progressBar) {
+    progressBar = document.createElement('div');
+    progressBar.id = 'scroll-progress-bar';
+    progressBar.className = 'scroll-progress';
+    progressBar.setAttribute('aria-hidden', 'true');
+    document.body.prepend(progressBar);
+  }
 
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    progressBar.style.width = `${progress}%`;
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = `${progress}%`;
+        ticking = false;
+      });
+      ticking = true;
+    }
   }, { passive: true });
 }
 
@@ -78,13 +90,21 @@ function initScrollProgress() {
 function initNavigation() {
   const header = document.getElementById('main-header');
 
-  // Sticky header on scroll
-  if (header) {
+  // Sticky header on scroll (throttled with rAF)
+  if (header && !header.dataset.scrollBound) {
+    header.dataset.scrollBound = 'true';
+    let navTicking = false;
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
+      if (!navTicking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 40) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+          navTicking = false;
+        });
+        navTicking = true;
       }
     }, { passive: true });
   }
@@ -114,7 +134,7 @@ function initNavigation() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
+      if (targetId === '#' || targetId === '') return;
 
       const target = document.querySelector(targetId);
       if (target) {
@@ -135,41 +155,26 @@ function initNavigation() {
 
 // ===== HERO ANIMATIONS =====
 function initHeroAnimations() {
-  // Staggered entrance animation for hero elements
-  const heroElements = [
-    '.hero-badge',
-    '.hero-title',
-    '.hero-subtitle',
-    '.hero-tagline',
-    '.hero-ctas',
-    '.hero-stats'
-  ];
+  // Respect prefers-reduced-motion
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
 
-  heroElements.forEach((selector, index) => {
-    const el = document.querySelector(selector);
-    if (!el) return;
+  // CRITICAL LCP OPTIMIZATION:
+  // Never hide .hero-title, .hero-badge, or .hero-subtitle with opacity: 0.
+  // Rendering text immediately allows First Contentful Paint and Largest Contentful Paint to occur without timer delays.
 
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-
-    setTimeout(() => {
-      el.style.opacity = '1';
-      el.style.transform = 'translateY(0)';
-    }, 200 + (index * 120));
-  });
-
-  // Floating cards
+  // Optional subtle hardware-accelerated entrance for secondary floating cards only
   const floatingCards = document.querySelectorAll('.floating-card');
   floatingCards.forEach((card, index) => {
     card.style.opacity = '0';
-    card.style.transform = 'translateX(30px)';
-    card.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    card.style.transform = 'translateY(16px)';
+    card.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
 
     setTimeout(() => {
       card.style.opacity = '1';
-      card.style.transform = 'translateX(0)';
-    }, 800 + (index * 200));
+      card.style.transform = 'translateY(0)';
+    }, 250 + (index * 120));
   });
 }
 
