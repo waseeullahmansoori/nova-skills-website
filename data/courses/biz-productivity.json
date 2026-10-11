@@ -1,1501 +1,250 @@
 {
   "course_id": "biz-productivity",
-  "course_name": "Business Operations, Analytics & AI Productivity Mastery",
-  "short_name": "Business Productivity Mastery",
+  "course_name": "Business Productivity Mastery",
   "academy": "Office Productivity Academy",
-  "academy_id": "office",
+  "academy_id": "office-productivity-academy",
   "course_type": "MASTER",
-  "course_role": "Business Operations & Analytics Lead",
-  "level": "BEGINNER TO PROFESSIONAL",
+  "course_role": "Business Operations Manager",
+  "level": "Advanced",
   "duration": "6 Months",
-  "duration_months": 6,
-  "learning_hours": 240,
-  "price": 16999,
-  "original_price": 44999,
-  "discount": "62% OFF",
-  "future_review_status": "STABLE",
-  "eyebrow": "BUSINESS • ANALYTICS • AI • AUTOMATION",
-  "positioning_statement": "From Office User to Business Operations Power User.",
-  "core_positioning_quote": "Not an MS Office Course. A Complete Business Operations & Analytics Program.",
-  "primary_sales_hook": "Turn Business Data, Repetitive Work and Disconnected Tools into Dashboards, Reports, Automated Workflows and Smart Business Systems.",
-  "hero_subtitle": "Master Excel, Power BI, AI Copilots, reporting, project operations and automation to build practical business systems that save time and improve decision-making.",
-  "supporting_line": "Learn business workflows, not just software menus.",
-  "seo_title": "Business Operations, Analytics & AI Productivity Course | Nova Skills",
-  "seo_description": "Master Advanced Excel, Power Query, Power BI, AI productivity, business reporting, project operations and workflow automation with Nova Skills' practical Business Operations & Analytics program.",
-  "outcomes_tag": "SYSTEMS YOU WILL BUILD",
-  "outcomes_title": "What You Will Be <span class=\"gradient-text\">Able to Build</span>",
-  "tracks_tag": "CAREER SPECIALIZATION",
-  "tracks_title": "Choose Your <span class=\"gradient-text\">Business Career Focus</span>",
-  "workflow_tag": "OPERATIONS ARCHITECTURE",
-  "workflow_title": "How Modern <span class=\"gradient-text\">Business Operations Work</span>",
-  "labs_tag": "REAL OFFICE CHALLENGES",
-  "labs_title": "Weekly Real <span class=\"gradient-text\">Office Challenge Labs</span>",
-  "badges": [
-    "6 Months",
-    "Beginner → Professional",
-    "Advanced Excel",
-    "Power BI + DAX",
-    "AI Productivity",
-    "Workflow Automation",
-    "8 Practical Projects",
-    "1 Business Capstone",
-    "Portfolio Based"
-  ],
+  "learning_hours": "200 hrs",
+  "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": [
-      "Commerce, BBA, B.Com, MBA & General Graduates seeking high-demand business skills",
-      "Working Professionals wanting to transition from manual tasks to automated operations",
-      "Office Executives, Administrative Coordinators & Executive Assistants seeking higher pay",
-      "Sales, Marketing & Operations Executives needing automated MIS dashboards",
-      "Junior Business Analysts & Reporting Executives looking to master Power BI & Power Query",
-      "Freelancers & Virtual Assistants looking to offer high-ticket business systems architecture",
-      "Small Business Owners wanting to streamline reporting, SOPs, and project execution"
-    ],
-    "not_for": [
-      "Those looking for a fast-track basic typing or simple 15-day MS Word formatting course",
-      "Software Developers wanting deep backend full-stack programming (see Programming Academy)",
-      "Senior Data Scientists seeking PhD-level machine learning math and neural network research"
-    ],
-    "who_should_take_foundation_first": "Complete beginners to computers can start immediately; foundational modules build digital hygiene from scratch before advancing to analytics."
+    "best_for": ["Operations Managers", "Business Administrators", "Productivity Consultants"],
+    "not_for": ["Software Developers", "Data Scientists"],
+    "who_should_take_foundation_first": "Complete beginners to office software"
   },
   "prerequisites": {
-    "required": "Basic computer literacy (operating Windows or Mac, browser usage, and folder navigation).",
-    "recommended": "Familiarity with basic spreadsheet concepts is helpful but not mandatory; curriculum starts from core business data fundamentals.",
+    "required": "Basic understanding of business operations and office software",
+    "recommended": "Prior experience with Microsoft Office or Google Workspace",
     "system_requirements": {
-      "hardware": "Windows 10/11 or macOS laptop with at least 8GB RAM (16GB recommended for local Power BI & Python modeling).",
-      "software_accounts": "Microsoft Excel (desktop version recommended), Power BI Desktop (free), Google Workspace account, Notion account (free tier), ClickUp account (free tier)."
+      "hardware": "Modern PC or Mac with at least 8GB RAM",
+      "software_accounts": "Microsoft 365, Google Workspace, Notion, ClickUp, Tally"
     },
-    "not_required": "Advanced coding knowledge, prior programming experience, or computer science degree."
+    "not_required": "Programming knowledge"
   },
   "overview": {
-    "positioning": "From Office User to Business Operations Power User.",
-    "short_description": "Stop doing repetitive manual office work. Master Advanced Excel, Power Query ETL, Power BI business intelligence, Microsoft 365 Copilot AI, Notion team operating systems, ClickUp project management, and Power Automate workflows.",
+    "positioning": "The definitive program for mastering modern business operations, data analysis, and workflow automation.",
+    "short_description": "Transform business operations by mastering a comprehensive suite of productivity and management tools.",
     "key_facts": {
-      "level": "Beginner to Professional",
+      "level": "Advanced",
       "duration": "6 Months",
-      "format": "Hybrid (Live Interactive Labs + System Critiques + Asynchronous Workflows)",
-      "estimated_learning_hours": "240 hrs",
-      "project_count": 8,
-      "capstone": "1 Full-Scale Business Operations Command Center",
-      "ai_integration": "Deep Microsoft Copilot, ChatGPT & Gemini Workflow Integration",
-      "career_focus": "Business Operations Executive, MIS Executive, Junior Business Analyst, Operations Coordinator"
+      "format": "Hybrid",
+      "estimated_learning_hours": "200 hrs",
+      "project_count": 6,
+      "capstone": "Yes",
+      "ai_integration": "Yes",
+      "career_focus": "Business Operations Manager"
     },
     "what_you_will_be_able_to_do": [
-      "Build dynamic Excel MIS workbooks with XLOOKUP, dynamic arrays, and interactive PivotCharts",
-      "Automate monthly data imports and transformations using Power Query with zero manual cleanup",
-      "Design enterprise Power BI dashboards with star schemas, calculated columns, and custom DAX measures",
-      "Deploy AI Copilots to generate formulas, summarize lengthy documents, and build data insights safely",
-      "Write executive decision memos, SOP operating manuals, and business proposals using BLUF architecture",
-      "Design board-ready Quarterly Business Review (QBR) presentation decks that communicate data persuasively",
-      "Architect a complete Company Operating System in Notion with relational databases and team wikis",
-      "Configure client project delivery pipelines, sprint tracking, and workload views in ClickUp",
-      "Automate multi-step approval, notification, and data-logging workflows using Microsoft Power Automate",
-      "Maintain double-entry accounting ledgers, voucher entries, and GST compliance reporting in Tally Prime"
+      "Design advanced business workflows using Notion and ClickUp",
+      "Perform complex data analysis using Excel and Google Sheets",
+      "Manage comprehensive financial reporting in Tally",
+      "Create high-impact presentations and reports"
     ]
   },
-  "what_you_will_be_able_to_build": [
-    {
-      "title": "Automated Excel MIS Dashboard",
-      "description": "Multi-tab dynamic management information system tracking revenue, gross margins, regional variance, and operational KPIs using dynamic arrays and interactive slicers."
-    },
-    {
-      "title": "Monthly Power Query Reporting System",
-      "description": "Zero-touch data cleaning pipeline where dropping raw multi-format CSV files into a folder automatically ingests, cleans, merges, and updates monthly reports."
-    },
-    {
-      "title": "Power BI Executive Dashboard",
-      "description": "Enterprise-grade interactive business intelligence report built on star-schema data models, drill-through cards, and custom DAX business measures."
-    },
-    {
-      "title": "AI-Assisted Business Report",
-      "description": "Executive decision document drafted using AI prompt engineering and formatted with standardized corporate typography, tables, and executive summaries."
-    },
-    {
-      "title": "Quarterly Management Presentation",
-      "description": "15-slide executive Quarterly Business Review (QBR) deck built with data storytelling, visual hierarchy, problem-solution narrative, and speaker notes."
-    },
-    {
-      "title": "Company Notion Workspace",
-      "description": "Complete digital business operating system (Company OS) featuring relational databases, SOP document wikis, team meeting hubs, and client CRM trackers."
-    },
-    {
-      "title": "Project Operations Dashboard",
-      "description": "End-to-end client delivery system configured in ClickUp with custom statuses, milestone dependencies, automated handoffs, and resource workload tracking."
-    },
-    {
-      "title": "Automated Approval / Notification Workflow",
-      "description": "End-to-end multi-step Power Automate cloud workflow connecting Form submissions, spreadsheet updates, manager email approvals, and task assignments."
-    },
-    {
-      "title": "Final Business Operations Command Center",
-      "description": "Full-scale enterprise capstone integrating live data ingestion, analytics, executive reporting, Notion knowledge systems, and automated task execution."
-    }
-  ],
   "why_now": {
-    "industry_shift": "Modern businesses are drowning in disconnected spreadsheets, manual copy-pasting, and fragmented apps. Companies desperately need professionals who can connect data, tools, and workflows into reliable business systems.",
-    "ai_impact": "Generative AI and copilots inside Excel, Workspace, and productivity tools make one skilled operations professional capable of doing the work that previously required three people.",
-    "business_demand": "High corporate demand for hybrid operators who understand both business analytics (Excel, Power BI) and modern workflow execution (Notion, ClickUp, Power Automate).",
-    "career_opportunity": "Direct pathway into resilient roles such as MIS Executive, Business Operations Coordinator, and Junior Business Analyst with superior advancement potential."
+    "industry_shift": "Businesses demand integrated, automated workflows over siloed tasks.",
+    "ai_impact": "AI tools in productivity suites are redefining what one person can accomplish.",
+    "business_demand": "High demand for generalists who can architect end-to-end operational systems.",
+    "career_opportunity": "Accelerated path to senior operations and management roles."
   },
-  "specialization_tracks": [
-    {
-      "track_id": "track-a",
-      "name": "Track A: Business Data & Analytics",
-      "target_audience": "Commerce graduates, aspiring data analysts, and reporting professionals targeting analytical roles.",
-      "focus": "Advanced Excel modeling, Power Query ETL, Power BI star schemas, DAX measures, Python in Excel basics, and AI-assisted data diagnostics.",
-      "potential_roles": "MIS Executive, Reporting Executive, Junior Business Analyst, Operations Analyst Support",
-      "key_tools": "Microsoft Excel, Power Query, Power BI, DAX, Python in Excel, Copilot"
-    },
-    {
-      "track_id": "track-b",
-      "name": "Track B: Business Operations",
-      "target_audience": "Generalists, project coordinators, and operational managers who keep business engines running smoothly.",
-      "focus": "Excel operations tracking, Notion digital operating systems, ClickUp project hierarchies, Microsoft Teams/Slack, Google Workspace, and Power Automate workflows.",
-      "potential_roles": "Business Operations Executive, Operations Coordinator, Project Coordinator, Sales Operations Specialist",
-      "key_tools": "Notion, ClickUp, Power Automate, Google Workspace, Excel, Teams"
-    },
-    {
-      "track_id": "track-c",
-      "name": "Track C: Executive & Administrative Productivity",
-      "target_audience": "Executive assistants, office administrators, and coordinators supporting leadership teams.",
-      "focus": "Outlook calendar mastery, executive Word memos, persuasive PowerPoint decks, meeting management, Microsoft 365 Copilot drafting, and administrative tracking.",
-      "potential_roles": "Executive Assistant, Office Operations Executive, Administrative Coordinator, Chief of Staff Support",
-      "key_tools": "Microsoft 365 (Word, PowerPoint, Outlook, Excel), Canva, Copilot, Teams"
-    },
-    {
-      "track_id": "track-d",
-      "name": "Track D: Finance Operations",
-      "target_audience": "Commerce students, accounts assistants, and SME business operators handling bookkeeping and compliance.",
-      "focus": "Advanced Excel financial formulas, Tally Prime company setup, ledger & voucher entries, GST calculation and reconciliation, and management financial reporting.",
-      "potential_roles": "Accounts Support Executive, Finance Operations Assistant, SME Office Accounts Manager",
-      "key_tools": "Tally Prime, GST Portal Workflows, Microsoft Excel, Power BI Concepts"
-    }
-  ],
   "learning_outcomes": [
-    "BUILD: Robust Advanced Excel business workbooks using XLOOKUP, dynamic arrays, logical formulas, and interactive PivotTables.",
-    "AUTOMATE: Repetitive monthly data ingestion and cleanup pipelines using Power Query ETL without writing complex macros.",
-    "DESIGN: Executive-ready Power BI dashboards using star schemas, relational modeling, and business-focused DAX measures.",
-    "LEVERAGE: Microsoft Copilot, ChatGPT, and Gemini for rapid formula debugging, data summaries, and executive drafting.",
-    "STRUCTURE: Professional business documentation including SOP manuals, policy briefs, and client proposals using Word and Docs.",
-    "DELIVER: High-impact management presentation decks using Problem-Insight-Action narrative frameworks and data storytelling.",
-    "COLLABORATE: Flawlessly across modern corporate ecosystems in Microsoft 365 and Google Workspace with proper access controls.",
-    "ARCHITECT: Complete company knowledge wikis, project trackers, and digital Second Brain workspaces using Notion.",
-    "MANAGE: Complex client project deliverables, sprint timelines, dependencies, and resource workloads inside ClickUp.",
-    "CONNECT: Multi-app business automations with Microsoft Power Automate, transforming manual approval requests into zero-touch workflows."
+    "ARCHITECT: End-to-end business workflows combining multiple software tools",
+    "ANALYZE: Complex business data to generate actionable insights",
+    "AUTOMATE: Routine administrative and operational tasks",
+    "MANAGE: Comprehensive project and financial tracking systems"
   ],
   "learning_journey": {
     "stages": [
-      {
-        "stage": "Phase 1: Operational & Spreadsheet Foundation",
-        "focus": "Digital hygiene, workspace architecture, Advanced Excel formulas, and structured business data."
-      },
-      {
-        "stage": "Phase 2: Data Transformation & Business Intelligence",
-        "focus": "Power Query automated ETL, Power BI relational modeling, DAX measures, and Python in Excel."
-      },
-      {
-        "stage": "Phase 3: Executive Reporting & Team Ecosystems",
-        "focus": "Corporate business writing, QBR presentations, Microsoft 365 & Google Workspace collaborative operations."
-      },
-      {
-        "stage": "Phase 4: Work Management & Workflow Automation",
-        "focus": "Notion business OS architecture, ClickUp project operations, and Microsoft Power Automate pipelines."
-      },
-      {
-        "stage": "Phase 5: Modern AI Productivity & Finance Specialization",
-        "focus": "Responsible AI copilot integration, prompt libraries, Tally Prime finance operations, and enterprise capstone."
-      }
+      { "stage": "Foundations", "focus": "Mastering individual tools" },
+      { "stage": "Integration", "focus": "Connecting tools for seamless workflows" },
+      { "stage": "Advanced Operations", "focus": "Complex data analysis and financial tracking" },
+      { "stage": "Capstone", "focus": "Building an integrated business operating system" }
     ]
   },
   "hands_on_tech": {
-    "data_analytics": [
-      {
-        "tool": "Microsoft Excel",
-        "purpose": "Financial & operational modeling",
-        "skills": "XLOOKUP, SUMIFS, Dynamic Arrays, PivotTables, What-If Analysis"
-      },
-      {
-        "tool": "Power Query",
-        "purpose": "Automated data transformation & ETL",
-        "skills": "Folder ingestion, column unpivoting, merging, data type hygiene"
-      },
-      {
-        "tool": "Power BI & DAX",
-        "purpose": "Enterprise business intelligence",
-        "skills": "Star schemas, CALCULATE, RELATED, time intelligence, interactive drill-through"
-      },
-      {
-        "tool": "Python in Excel",
-        "purpose": "Lightweight business analytics",
-        "skills": "DataFrames, pandas statistics, correlation analysis, trend plots"
-      }
+    "core_tools": [
+      { "tool": "Microsoft Excel", "purpose": "Data analysis and reporting", "what_student_learns": "Advanced formulas, Power Query, Pivot Tables", "what_student_builds": "Business Dashboards" },
+      { "tool": "Notion", "purpose": "Knowledge and workspace management", "what_student_learns": "Databases, relations, and page architecture", "what_student_builds": "Company Intranet" },
+      { "tool": "ClickUp", "purpose": "Project management", "what_student_learns": "Task tracking and automations", "what_student_builds": "Project Management System" },
+      { "tool": "Tally", "purpose": "Financial management", "what_student_learns": "Accounting and GST compliance", "what_student_builds": "Financial Reports" }
     ],
-    "ai_productivity": [
-      {
-        "tool": "Microsoft 365 Copilot",
-        "purpose": "In-app AI assistant",
-        "skills": "Formula authoring, slide draft generation, meeting chat summarization"
-      },
-      {
-        "tool": "ChatGPT (GPT-4o)",
-        "purpose": "General operational reasoning",
-        "skills": "Formula diagnostics, business memo refinement, scenario simulation"
-      },
-      {
-        "tool": "Gemini for Workspace",
-        "purpose": "Google cloud intelligence",
-        "skills": "Document drafting, Sheets data extraction, email response structuring"
-      }
+    "supporting_tools": [
+      { "tool": "Word/PowerPoint", "purpose": "Document and presentation creation" },
+      { "tool": "Google Workspace", "purpose": "Cloud collaboration" }
     ],
-    "documents_presentations": [
-      {
-        "tool": "Microsoft Word",
-        "purpose": "Executive documentation",
-        "skills": "Custom styles, multi-level numbering, SOP templates, mail merge"
-      },
-      {
-        "tool": "Microsoft PowerPoint",
-        "purpose": "Executive presentations",
-        "skills": "Slide Master, visual hierarchy, data storytelling, pitch decks"
-      },
-      {
-        "tool": "Google Docs & Slides",
-        "purpose": "Real-time collaborative drafting",
-        "skills": "Version history, suggestion tracking, cloud commenting"
-      },
-      {
-        "tool": "Canva",
-        "purpose": "Business visual collateral",
-        "skills": "Infographics, report covers, executive summary graphics"
-      }
+    "emerging_tools": [
+      { "tool": "Notion AI", "purpose": "AI-assisted workspace management" }
     ],
-    "collaboration_operations": [
-      {
-        "tool": "Microsoft Teams & Outlook",
-        "purpose": "Corporate communication",
-        "skills": "Calendar scheduling, shared inboxes, channel management"
-      },
-      {
-        "tool": "Google Workspace",
-        "purpose": "Cloud team collaboration",
-        "skills": "Shared Drives, Forms workflows, Meet collaboration"
-      },
-      {
-        "tool": "Notion",
-        "purpose": "Company operating system",
-        "skills": "Relational databases, rollups, SOP wikis, team CRM hubs"
-      },
-      {
-        "tool": "ClickUp",
-        "purpose": "Project & operations management",
-        "skills": "Hierarchy spaces, custom statuses, Gantt charts, workload views"
-      }
-    ],
-    "automation_finance": [
-      {
-        "tool": "Microsoft Power Automate",
-        "purpose": "Cloud workflow automation",
-        "skills": "Trigger-condition-action flows, approval chains, email notifications"
-      },
-      {
-        "tool": "Zapier / Make / n8n Concepts",
-        "purpose": "Multi-app integration awareness",
-        "skills": "Webhook triggers, API data transfers, error handling"
-      },
-      {
-        "tool": "Tally Prime + GST",
-        "purpose": "Finance operations specialization",
-        "skills": "Ledgers, vouchers, GST invoicing, inventory tracking, financial reports"
-      },
-      {
-        "tool": "Tableau",
-        "purpose": "Supporting BI awareness",
-        "skills": "Interface comparison, visual analytics concepts, cross-tool benchmarking"
-      }
-    ]
+    "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "HOW MODERN BUSINESS OPERATIONS WORK: A connected 12-step operational and analytics lifecycle transforming raw information into automated business decisions:",
+    "overview": "Integrated Business Operations Workflow",
     "stages": [
-      {
-        "step": 1,
-        "name": "Raw Business Data",
-        "desc": "Ingest unstructured operational, sales, CRM, and inventory data from diverse sources."
-      },
-      {
-        "step": 2,
-        "name": "Clean & Transform",
-        "desc": "Cleanse data types, remove duplicates, and reshape datasets automatically via Power Query."
-      },
-      {
-        "step": 3,
-        "name": "Analyze",
-        "desc": "Run complex multi-condition calculations, variance tests, and statistical summaries."
-      },
-      {
-        "step": 4,
-        "name": "Build KPIs",
-        "desc": "Formulate strategic business measures: gross margins, churn rate, inventory turnover, and run-rates."
-      },
-      {
-        "step": 5,
-        "name": "Create Dashboard",
-        "desc": "Build interactive visualization interfaces in Excel and Power BI with dynamic slicers."
-      },
-      {
-        "step": 6,
-        "name": "Generate Management Insights",
-        "desc": "Identify anomalies, root causes, operational bottlenecks, and revenue growth drivers."
-      },
-      {
-        "step": 7,
-        "name": "Create Business Report",
-        "desc": "Draft concise executive decision memos and SOP documentation using the BLUF framework."
-      },
-      {
-        "step": 8,
-        "name": "Present to Management",
-        "desc": "Deliver persuasive executive presentations with clear visual hierarchy and data storytelling."
-      },
-      {
-        "step": 9,
-        "name": "Assign Tasks",
-        "desc": "Translate strategic management decisions into actionable tasks, assignees, and deadlines in ClickUp."
-      },
-      {
-        "step": 10,
-        "name": "Automate Repetitive Work",
-        "desc": "Deploy Power Automate trigger-action flows for routine notifications, approvals, and data syncing."
-      },
-      {
-        "step": 11,
-        "name": "Track Results",
-        "desc": "Monitor execution milestones, team workload capacity, and operational SLAs in real time."
-      },
-      {
-        "step": 12,
-        "name": "Improve Decisions",
-        "desc": "Feed execution data back into analytical models to continuously refine business operations."
-      }
+      { "step": 1, "name": "Data Collection", "desc": "Gathering business data in Excel/Sheets" },
+      { "step": 2, "name": "Task Allocation", "desc": "Assigning action items in ClickUp" },
+      { "step": 3, "name": "Documentation", "desc": "Recording processes in Notion" },
+      { "step": 4, "name": "Financial Tracking", "desc": "Logging transactions in Tally" }
     ]
   },
-  "practical_labs": [
-    {
-      "name": "The Messy Multi-File Excel Consolidation",
-      "focus": "Clean and combine 8 messy, mismatched regional sales workbooks into a unified, error-free master table in under 60 minutes."
-    },
-    {
-      "name": "Dynamic Sales & Profitability MIS Challenge",
-      "focus": "Build an executive spreadsheet dashboard with XLOOKUP, dynamic arrays, and interactive PivotTables tracking margin variances."
-    },
-    {
-      "name": "Folder-Based Drop Automated ETL (Power Query)",
-      "focus": "Build a zero-touch Power Query pipeline where dropping new monthly CSV files into a folder automatically updates the entire report."
-    },
-    {
-      "name": "AI Data Analyst & Python Quick-Diagnostic",
-      "focus": "Use Microsoft Copilot and Python in Excel to diagnose quarterly margin declines, generate trend charts, and extract key insights."
-    },
-    {
-      "name": "Power BI Executive Star-Schema Dashboard",
-      "focus": "Construct a star-schema model with fact/dimension tables, DAX measures (YTD, YoY Growth), and interactive drill-through visuals."
-    },
-    {
-      "name": "Board-Ready Quarterly Business Review (QBR)",
-      "focus": "Translate complex multi-departmental metrics into a 12-slide persuasive PowerPoint deck and executive decision memo."
-    },
-    {
-      "name": "Company Operating System & SOP Wiki in Notion",
-      "focus": "Architect a full Notion workspace with linked databases for employee directory, project tracking, meeting notes, and SOPs."
-    },
-    {
-      "name": "Cross-Functional Client Delivery in ClickUp",
-      "focus": "Set up a complete client operations hub with custom statuses, milestone dependencies, automated handoffs, and team workload views."
-    },
-    {
-      "name": "Zero-Touch Approval & Notification Pipeline",
-      "focus": "Build a multi-step Power Automate cloud flow: Form submitted → Excel logged → Manager approval in Teams → Confirmation email dispatched."
-    },
-    {
-      "name": "Finance Reconciliation & GST Compliance (Tally Prime)",
-      "focus": "Set up corporate accounts, post purchase/sales vouchers, calculate input tax credits, and generate GSTR-1/3B summary reports."
-    }
-  ],
   "business_use_cases": [
     {
-      "sector": "Retail & E-Commerce Operations",
-      "business_problem": "Disconnected inventory sheets across 5 warehouses lead to stockouts, delayed customer orders, and manual reconciliation errors.",
-      "approach": "Build a centralized Power Query ETL pipeline that ingests daily warehouse CSVs, calculates safety stock in Excel, and triggers reorder alerts.",
-      "toolset": "Excel, Power Query, Power Automate, Outlook",
-      "output": "Automated Multi-Warehouse Inventory MIS & Low-Stock Alert System"
-    },
-    {
-      "sector": "SaaS & Tech Product Operations",
-      "business_problem": "Leadership lacks real-time visibility into customer onboarding stages, sprint blockers, and customer churn metrics.",
-      "approach": "Model subscription data in Power BI with DAX churn measures and connect team onboarding tasks directly inside ClickUp.",
-      "toolset": "Power BI, DAX, ClickUp, Microsoft Teams",
-      "output": "Executive SaaS Retention Dashboard & Client Onboarding Tracker"
-    },
-    {
-      "sector": "Marketing Agency & Client Services",
-      "business_problem": "Account managers spend 15 hours each month manually copy-pasting campaign metrics into client presentation decks.",
-      "approach": "Automate campaign data compilation with Power Query and build a standardized Quarterly Business Review (QBR) deck template in PowerPoint.",
-      "toolset": "Power Query, Excel, PowerPoint, Notion",
-      "output": "Automated Client Performance Report & Branded QBR Deck System"
-    },
-    {
-      "sector": "Human Resources & People Operations",
-      "business_problem": "Employee onboarding paperwork, equipment requests, and policy acknowledgments are handled through chaotic email threads.",
-      "approach": "Create a centralized Notion Employee Hub and deploy a Power Automate approval flow connecting Microsoft Forms to Teams.",
-      "toolset": "Notion, Microsoft Forms, Power Automate, Teams",
-      "output": "Automated Employee Onboarding OS & Equipment Approval Flow"
-    },
-    {
-      "sector": "Manufacturing & Supply Chain Operations",
-      "business_problem": "Production supervisors struggle to identify which assembly lines have frequent bottlenecks and yield losses.",
-      "approach": "Design an Excel production tracker with dynamic arrays, conditional formatting heatmaps, and an executive summary memo.",
-      "toolset": "Excel Dynamic Arrays, Copilot, Word, Power BI",
-      "output": "Shop-Floor Production MIS & Monthly Executive Operations Review"
-    },
-    {
-      "sector": "SME Business & Accounting Services",
-      "business_problem": "A growing business loses money due to delayed invoicing, uncollected vendor credits, and late GST filing penalties.",
-      "approach": "Set up structured Tally Prime accounting ledgers, automate bank reconciliations, and track pending receivables in Excel.",
-      "toolset": "Tally Prime, GST Portal, Microsoft Excel",
-      "output": "End-to-End SME Accounting System & Tax Compliance Dashboard"
+      "sector": "Corporate Operations",
+      "business_problem": "Disconnected processes leading to inefficiency",
+      "approach": "Integrate data flow between project and knowledge management tools",
+      "toolset": "Notion, ClickUp, Excel",
+      "output": "Integrated Operations Dashboard"
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-AUGMENTED BUSINESS OPERATIONS SPECIALIST",
-    "ai_can_assist_with": "Authoring complex Excel formulas, explaining formula errors, generating initial DAX code, summarizing multi-page operational reports, drafting email updates, creating meeting agendas, and generating presentation outlines.",
-    "ai_can_automate": "Preliminary spelling and syntax cleanup, converting raw bullet points into formal memos, formatting table structures, and building repetitive starter templates.",
-    "ai_cannot_replace": "Commercial judgment, understanding corporate politics, verifying the numerical accuracy of financial models, strategic trade-off decisions, and live stakeholder presentation delivery.",
-    "human_expertise_required": "High. Operations professionals must validate formula logic against actual business rules, conduct sanity checks on financial metrics, and maintain personal accountability.",
-    "validation_protocol": "Every AI-generated formula, code snippet, and metric must be stress-tested against historical ground-truth data before presenting to management or deploying to production.",
-    "responsible_use": "Strictly prohibit uploading non-public company financial figures, proprietary source data, or customer PII into public AI prompts; utilize enterprise-licensed copilots and apply human review."
+    "role_classification": "AI-Enhanced Operator",
+    "ai_can_assist_with": "Drafting documentation, analyzing basic data trends",
+    "ai_can_automate": "Task assignments, meeting summaries",
+    "ai_cannot_replace": "Strategic workflow design and final financial audits",
+    "human_expertise_required": "High",
+    "validation_protocol": "Manual review of automated actions and AI drafts",
+    "responsible_use": "Ensuring data privacy when using AI in corporate environments"
   },
-  "course_comparison": {
-    "title": "Why This Program Is Radically Different",
-    "typical_heading": "Typical Office Course",
-    "novaskills_heading": "Nova Skills Business Operations & Analytics",
-    "typical_course": [
-      "Teaches basic MS Word formatting, typing, and standard text alignment",
-      "Covers only elementary Excel formulas (SUM, AVERAGE) and static charts",
-      "Teaches PowerPoint merely as bullet points, slide colors, and animations",
-      "Zero training on Power Query, automated ETL, or folder data cleaning",
-      "Ignores Power BI business intelligence, relational modeling, and DAX",
-      "No modern AI productivity tools (Microsoft Copilot, ChatGPT, Gemini)",
-      "Zero knowledge management systems (Notion databases, team wikis)",
-      "No project operations software (ClickUp, sprint management, workload)",
-      "No workflow automation (Power Automate, multi-step cloud triggers)",
-      "Provides disconnected exercises with fake, unrealistic mini-datasets"
-    ],
-    "novaskills_mastery": [
-      "Teaches professional business writing, SOP manuals, and executive decision memos",
-      "Deep Advanced Excel mastery: XLOOKUP, dynamic arrays, PivotTables, and MIS modeling",
-      "Executive data storytelling, problem-insight-action narratives, and board QBR decks",
-      "Dedicated Power Query module automating folder imports and monthly data cleanup",
-      "Full Power BI intelligence: star schemas, fact/dimension tables, and DAX measures",
-      "Comprehensive AI Copilot workflows: formula debugging, report analysis, prompt engineering",
-      "Architects complete Company Operating Systems (Notion relational databases & wikis)",
-      "Enterprise project execution: ClickUp spaces, custom statuses, and task dependencies",
-      "Full-scale cloud workflow automation using Microsoft Power Automate approval chains",
-      "Solves 10 Real Office Challenges using realistic, messy multi-thousand-row datasets"
-    ]
-  },
-  "portfolio_specs": {
-    "title": "Your Business Operations & Analytics Portfolio",
-    "description": "Graduates leave with tangible proof of operational excellence documented across 9 production-grade deliverables hosted in an employer-ready digital showcase:",
-    "deliverables": [
-      "1. Automated Sales & Profitability Excel MIS Dashboard (Multi-tab dynamic workbook with slicers)",
-      "2. Monthly Power Query Data Pipeline (Folder-based automated ingestion & cleaning system)",
-      "3. Power BI Executive Management Report (Star-schema relational model with custom DAX measures)",
-      "4. AI-Assisted Business Proposal & SOP Documentation Pack (Standardized corporate operational manual)",
-      "5. Board-Ready Quarterly Business Review (QBR) Deck (15-slide data-driven management presentation)",
-      "6. Company Notion Operating System (Relational databases, SOP knowledge base & CRM hub)",
-      "7. ClickUp Client Project Delivery System (Workspaces, custom statuses, dependencies & workload view)",
-      "8. Automated Multi-Step Approval & Alert Workflow (Power Automate cloud flow connecting Forms & Teams)",
-      "9. Final Business Operations Command Center Dossier (Full-scale enterprise simulation case study)"
-    ],
-    "case_study_structure": [
-      "1. Business Problem & Operational Bottleneck Definition",
-      "2. Raw Input Data Characteristics & Process Analysis",
-      "3. Solution Architecture & Tool Selection Rationale",
-      "4. Step-by-Step Implementation (Formulas, ETL Queries, DAX, Database Relations)",
-      "5. Operational Output & Interactive Dashboards Created",
-      "6. AI Acceleration & Verification Protocols Documented",
-      "7. Quantified Business Impact (Hours Saved, Errors Eliminated, Visibility Gained)",
-      "8. Live Demo Links, Screenshots, and Production Artifacts"
-    ]
-  },
-  "assessment_model": {
-    "title": "Practical Assessment & Competency Framework",
-    "breakdown": [
-      {
-        "item": "Weekly Real Office Challenge Labs",
-        "weight": "20%",
-        "desc": "Hands-on participation and timed execution across 10 weekly business problem simulations."
-      },
-      {
-        "item": "Excel & Power Query Practical Assessment",
-        "weight": "15%",
-        "desc": "Rigorous practical test evaluating complex lookup modeling, dynamic arrays, and ETL data transformation."
-      },
-      {
-        "item": "Power BI & DAX Business Intelligence Exam",
-        "weight": "15%",
-        "desc": "Building a functional star-schema business intelligence report with custom DAX calculations and interactive drill-throughs."
-      },
-      {
-        "item": "Operations Systems Assessment (Notion / ClickUp)",
-        "weight": "15%",
-        "desc": "Evaluation of relational workspace architecture, SOP hierarchy, custom fields, and task automation logic."
-      },
-      {
-        "item": "Portfolio Project Deliverables",
-        "weight": "15%",
-        "desc": "Grading of the 8 structured portfolio deliverables against corporate presentation, accuracy, and design standards."
-      },
-      {
-        "item": "Final Business Operations Command Center Capstone",
-        "weight": "20%",
-        "desc": "Comprehensive enterprise simulation integrating raw data ingestion, BI dashboards, executive memos, and automated approvals."
-      }
-    ]
-  },
+  "best_practices": [
+    "Maintain a single source of truth for business data",
+    "Automate repetitive tasks to focus on strategy",
+    "Standardize naming conventions across all platforms"
+  ],
+  "common_mistakes": [
+    { "mistake": "Over-complicating workflows", "why_it_happens": "Trying to use every feature available", "professional_approach": "Start simple and iterate based on actual needs" }
+  ],
   "career_paths": {
-    "entry_roles": "MIS Executive, Reporting Executive, Business Operations Executive, Operations Coordinator, Junior Business Analyst, Sales Operations Assistant, Executive Assistant",
-    "mid_roles": "Business Operations Manager, Senior MIS Specialist, Operations Analyst, Project Manager, Business Intelligence Analyst, Chief of Staff Support",
-    "specialist_roles": "Business Systems Architect, Workflow Automation Consultant, Power BI Analytics Specialist, Operations Excellence Lead",
-    "freelance_roles": "Operations Consultant, Notion Systems Architect, Custom Power BI Dashboard Developer, Excel MIS Specialist, Virtual COO",
-    "employer_expectations": "Ability to handle messy business data, build dynamic reports without assistance, eliminate manual work through automation, and present insights clearly to senior leadership.",
-    "what_student_demonstrates": "A verifiable 9-artifact portfolio demonstrating Advanced Excel, Power Query, Power BI, Notion, ClickUp, and Power Automate implementations."
+    "entry_roles": ["Operations Assistant", "Project Coordinator"],
+    "mid_roles": ["Business Operations Manager", "Project Manager"],
+    "specialist_roles": ["Productivity Consultant", "Operations Director"],
+    "freelance_roles": ["Virtual COO", "Systems Architect"],
+    "employer_expectations": "Ability to streamline operations and drive efficiency",
+    "what_student_demonstrates": "A portfolio of integrated business systems and dashboards"
   },
   "freelance_applications": {
-    "services_offered": [
-      "Custom Excel Financial & MIS Dashboard Development",
-      "Power Query Data Transformation & Automated Cleanup Pipelines",
-      "Interactive Power BI Executive Dashboard Architecture",
-      "End-to-End Notion Company OS & Knowledge Base Setup",
-      "ClickUp Project Management System Configuration for Agencies",
-      "Power Automate Approval & Notification Workflow Deployment",
-      "Quarterly Business Review (QBR) Presentation Design & Data Storytelling"
-    ],
-    "client_workflow": "Discovery Audit → Data & Process Mapping → System Architecture Design → Implementation & Testing → Staff Training & Handover",
-    "portfolio_requirements": "Interactive Power BI demo links, sanitized Excel MIS templates, recorded walkthroughs of Notion workspaces, and documented client ROI."
+    "services_offered": ["Workflow Optimization", "Custom Dashboard Creation", "Notion Workspace Setup"],
+    "client_workflow": "Discovery Call -> System Audit -> Architecture Design -> Implementation -> Training",
+    "portfolio_requirements": "Case studies of optimized workflows and anonymized dashboards"
   },
   "what_you_will_build": [
-    "Project 1: Advanced Excel Sales & Profitability MIS Dashboard",
-    "Project 2: Monthly Power Query Reporting Automation System",
-    "Project 3: Power BI Executive Management Dashboard",
-    "Project 4: Professional Business Proposal + SOP Pack",
-    "Project 5: Quarterly Business Review (QBR) Deck",
-    "Project 6: Company Notion Operating System (Company OS)",
-    "Project 7: ClickUp Project Operations System",
-    "Project 8: Automated Approval & Reporting Workflow (Power Automate)",
-    "Final Capstone Project: Business Operations Command Center"
+    "A comprehensive Notion Company Workspace",
+    "An automated ClickUp Project Management System",
+    "Advanced Excel Business Dashboards",
+    "Full Tally Financial Ledgers with GST Setup"
   ],
   "final_deliverables": [
-    "Multi-tab dynamic Excel MIS workbook with interactive slicers & dynamic arrays",
-    "Folder-based Power Query M-code ETL automation pipeline",
-    "Published Power BI .pbix report featuring star-schema data model & custom DAX measures",
-    "Standardized 20-page Corporate SOP manual & formal client proposal in Word/Docs",
-    "15-slide executive Quarterly Business Review presentation deck in PowerPoint/Canva",
-    "Full-featured Notion Company OS with 5 relational databases and connected team wikis",
-    "Configured ClickUp enterprise space with custom statuses, milestones & workload views",
-    "Deployed Power Automate cloud flow connecting Microsoft Forms, Excel & Teams approvals",
-    "Complete Master Business Operations Command Center Capstone Portfolio Dossier"
+    "Integrated Business Operating System Portfolio"
   ],
-  "capstone": {
-    "name": "Business Operations Command Center",
-    "tagline": "Industry-Style Business Capstone: The Complete Enterprise Operations Simulation",
-    "overview": "Learners take on the role of Operations & Analytics Lead for a simulated fast-growing commercial enterprise with fragmented operations. Over this comprehensive capstone, students integrate every discipline learned into a unified business command center.",
-    "workflow": [
-      "1. Ingest 12 months of disorganized multi-regional raw sales, payroll, and expense data.",
-      "2. Clean, unpivot, and merge datasets using an automated Power Query ETL pipeline.",
-      "3. Build advanced analytical models in Excel calculating customer acquisition cost, margins, and run-rates.",
-      "4. Model a star-schema in Power BI and build an interactive executive dashboard with DAX time-intelligence.",
-      "5. Extract strategic management takeaways and draft a 5-page executive decision memo using BLUF framing.",
-      "6. Design and deliver a 15-slide Quarterly Business Review (QBR) deck with data storytelling.",
-      "7. Architect a Company OS in Notion linking departmental SOPs, employee directories, and OKRs.",
-      "8. Configure the company's client delivery operations in ClickUp with automated handoffs and workload tracking.",
-      "9. Deploy a multi-step Power Automate cloud workflow automating purchase order approvals between Forms and Teams."
-    ]
+  "assessment": {
+    "model": "Project-based evaluation",
+    "criteria": "Efficiency, integration effectiveness, and accuracy of final systems"
   },
   "certification": {
-    "title": "Certified Business Operations, Analytics & AI Productivity Master",
-    "badge_text": "ISO 9001:2015 Verified Curriculum Standard",
-    "criteria": "Completion of all 13 modules, active participation in weekly real office challenges, submission of 8 portfolio projects, and passing the Business Operations Command Center capstone with at least 75% marks.",
-    "verification": "Cryptographically verifiable digital credential with permanent shareable portfolio links for LinkedIn and resumes."
+    "title": "Certified Business Productivity Master",
+    "criteria": "Completion of all capstone projects with passing grades",
+    "verification": "Digital Certificate with verifiable project links"
   },
-  "not_covered": "PhD-level machine learning math, advanced Python software development frameworks (Django/Flask), enterprise SAP ABAP coding, or hardware networking administration.",
+  "not_covered": "Advanced software development or highly specialized enterprise ERP implementations",
   "next_learning_path": {
-    "recommended_next": "AI Solutions Engineering & Agentic AI Mastery (for building autonomous enterprise AI agents)",
-    "related_programs": "AI Digital Marketing Master (for modern growth marketing and digital acquisition operations)"
+    "recommended_next": "Data Science or Advanced Business Analytics",
+    "related_programs": "Business Management Certification"
   },
+  "faq": [
+    { "question": "Do I need prior experience with all these tools?", "answer": "No, the course starts with foundations for each tool before moving to advanced integration." },
+    { "question": "Will I learn about GST in Tally?", "answer": "Yes, complete GST configuration and filing processes are covered." },
+    { "question": "Are software licenses provided?", "answer": "We guide you on using free tiers and educational licenses where available." }
+  ],
   "modules": [
     {
       "module_number": 1,
-      "module_title": "Digital Business Operations Foundation",
-      "module_purpose": "Establish bulletproof digital hygiene, workspace architecture, and file governance required in modern corporate environments.",
-      "what_you_will_learn": [
-        "Professional Workspace Setup",
-        "Data Hygiene & Naming Conventions",
-        "Business File Formats (XLSX, CSV, PDF)",
-        "Cloud Governance & Access Permissions"
-      ],
+      "module_title": "Data Mastery with Excel",
+      "module_purpose": "Build advanced data analysis capabilities",
+      "what_you_will_learn": ["Advanced Formulas", "Power Query", "Data Visualization"],
       "lessons": [
-        {
-          "lesson_number": "1.1",
-          "lesson_title": "The Modern Business Operating Environment",
-          "what_is_taught": "Digital workspace architecture, structured folder hierarchies, cloud storage vs. local silos, and business data lifecycles.",
-          "why_it_matters": "Disorganized files cause lost hours, security leaks, and communication breakdowns across teams.",
-          "what_learner_does": "Audits a messy corporate digital drive and designs a standardized departmental directory.",
-          "expected_outcome": "Mastery of enterprise folder architecture and file governance."
-        },
-        {
-          "lesson_number": "1.2",
-          "lesson_title": "Data Hygiene, Formats & Version Control",
-          "what_is_taught": "Differences between XLSX, CSV, TSV, and PDF; avoiding data corruption; naming conventions (ISO 8601 dates); versioning strategies (v1.0 vs Final_Final).",
-          "why_it_matters": "Proper data hygiene prevents calculation errors and ensures team alignment on single sources of truth.",
-          "what_learner_does": "Standardizes 30 inconsistently formatted business documents using automated renaming and file type conversion.",
-          "expected_outcome": "Ability to maintain clean, auditable business data repositories."
-        },
-        {
-          "lesson_number": "1.3",
-          "lesson_title": "Data Privacy, Confidentiality & Permissions",
-          "what_is_taught": "Access rights (View, Comment, Edit), role-based permissions, protecting sensitive business records, NDA compliance, and PII awareness.",
-          "why_it_matters": "Accidental exposure of confidential payroll or customer data can trigger severe legal liabilities.",
-          "what_learner_does": "Configures granular permission tiers across corporate cloud drives to protect sensitive payroll datasets.",
-          "expected_outcome": "Enterprise-level awareness of data privacy and access governance."
-        },
-        {
-          "lesson_number": "1.4",
-          "lesson_title": "Professional Digital Operations Workflow",
-          "what_is_taught": "Connecting digital tools, single source of truth (SSOT) philosophy, asynchronous communication etiquette, and digital workspace productivity.",
-          "why_it_matters": "High-performing operators build systems that run smoothly even when individual team members are offline.",
-          "what_learner_does": "Creates an end-to-end operational blueprint for a 20-person distributed company.",
-          "expected_outcome": "Solid foundational framework for all subsequent analytics and automation modules."
-        }
+        { "lesson_number": 1, "lesson_title": "Advanced Formulas & Functions", "what_is_taught": "VLOOKUP, INDEX-MATCH, SUMIFS", "why_it_matters": "Essential for complex data retrieval", "what_learner_does": "Builds a dynamic data lookup sheet", "expected_outcome": "Proficiency in complex formulas" },
+        { "lesson_number": 2, "lesson_title": "Data Transformation with Power Query", "what_is_taught": "Cleaning and shaping data", "why_it_matters": "Automates data preparation", "what_learner_does": "Cleans a messy dataset", "expected_outcome": "Automated data cleaning workflows" },
+        { "lesson_number": 3, "lesson_title": "Dashboard Design", "what_is_taught": "Pivot tables and interactive charts", "why_it_matters": "Crucial for business reporting", "what_learner_does": "Creates an interactive sales dashboard", "expected_outcome": "Professional business dashboard" },
+        { "lesson_number": 4, "lesson_title": "Excel Macros & Automation", "what_is_taught": "Recording and basic editing of Macros", "why_it_matters": "Saves time on repetitive tasks", "what_learner_does": "Automates a daily report generation", "expected_outcome": "Basic Excel automation skills" }
       ],
-      "key_concepts": [
-        "Single Source of Truth",
-        "Data Hygiene",
-        "Role-Based Access Control",
-        "Version Management"
-      ],
-      "tools": [
-        "Google Drive",
-        "OneDrive",
-        "Windows/Mac File System",
-        "PDF Tools"
-      ],
-      "hands_on_practice": "Reorganizing disorganized corporate folders and configuring multi-tier access permissions.",
-      "assignment": "Professional Business Workspace Architecture Setup",
-      "business_application": "Departmental document management and data governance",
-      "expected_outcome": "Structured, auditable digital workspace ready for operational execution."
+      "key_concepts": ["Data integrity", "Dynamic reporting", "Automation"],
+      "tools": ["Microsoft Excel"],
+      "hands_on_practice": "Weekly data analysis assignments",
+      "assignment": "Comprehensive Business Dashboard",
+      "business_application": "Sales and performance reporting",
+      "expected_outcome": "Advanced Excel user"
     },
     {
       "module_number": 2,
-      "module_title": "Advanced Excel for Business & MIS Modeling",
-      "module_purpose": "Master business modeling, multi-condition logic, dynamic arrays, and interactive PivotTables using real-world commercial datasets.",
-      "what_you_will_learn": [
-        "Excel Tables & Structured References",
-        "Modern Lookup Engines (XLOOKUP, INDEX/MATCH)",
-        "Dynamic Array Functions (FILTER, SORT, UNIQUE)",
-        "Interactive PivotTables & Dynamic MIS Dashboards"
-      ],
+      "module_title": "Workspace Architecture with Notion",
+      "module_purpose": "Design effective knowledge management systems",
+      "what_you_will_learn": ["Page Architecture", "Relational Databases", "Notion AI"],
       "lessons": [
-        {
-          "lesson_number": "2.1",
-          "lesson_title": "Excel Tables & Structured Data Modeling",
-          "what_is_taught": "Converting ranges to Excel Tables, structured references, data validation rules, custom number formatting, and formula error handling (IFERROR).",
-          "why_it_matters": "Structured tables prevent broken formulas as datasets expand and ensure automatic formula propagation.",
-          "what_learner_does": "Converts a 5,000-row raw sales ledger into a validated, structured Excel Table with auto-expanding formulas.",
-          "expected_outcome": "Error-resilient spreadsheet foundation for all corporate reporting."
-        },
-        {
-          "lesson_number": "2.2",
-          "lesson_title": "Modern Lookup & Multi-Condition Logic",
-          "what_is_taught": "XLOOKUP with exact, approximate, and wildcard matching; two-way INDEX/MATCH; SUMIFS, COUNTIFS, AVERAGEIFS; nested IF vs. modern IFS.",
-          "why_it_matters": "Core engine for extracting data across different sheets, department budgets, and sales matrices.",
-          "what_learner_does": "Builds a multi-condition sales commission and regional margin calculation model.",
-          "expected_outcome": "Fluent execution of complex multi-criteria business formulas."
-        },
-        {
-          "lesson_number": "2.3",
-          "lesson_title": "Dynamic Arrays & Modern Formula Stack",
-          "what_is_taught": "FILTER, SORT, SORTBY, UNIQUE, SEQUENCE, XMATCH; dynamic array spill behavior; text manipulation (TEXTSPLIT, TEXTBEFORE, TEXTAFTER).",
-          "why_it_matters": "Dynamic arrays replace hundreds of repetitive formula rows with single, elegant array formulas.",
-          "what_learner_does": "Constructs an auto-updating search and filter summary sheet for an inventory catalog.",
-          "expected_outcome": "Mastery of modern Microsoft 365 dynamic array formulas."
-        },
-        {
-          "lesson_number": "2.4",
-          "lesson_title": "Interactive PivotTables, PivotCharts & Slicers",
-          "what_is_taught": "PivotTable design, calculated fields and items, grouping by dates/tiers, multi-table data models, interactive slicers, and executive dashboard layout.",
-          "why_it_matters": "PivotTables provide instant business summaries for executive decision-makers without manual re-calculation.",
-          "what_learner_does": "Builds a multi-tab interactive Sales & Profitability MIS Workbook with slicers and KPI summary cards.",
-          "expected_outcome": "Production-grade Excel MIS dashboard ready for senior management."
-        }
+        { "lesson_number": 1, "lesson_title": "Notion Fundamentals & Page Design", "what_is_taught": "Blocks, pages, and layout", "why_it_matters": "Foundation of workspace design", "what_learner_does": "Builds a personal dashboard", "expected_outcome": "Understanding of Notion interface" },
+        { "lesson_number": 2, "lesson_title": "Mastering Databases & Relations", "what_is_taught": "Tables, boards, relations, and rollups", "why_it_matters": "Enables complex data tracking", "what_learner_does": "Creates a relational CRM", "expected_outcome": "Advanced database skills" },
+        { "lesson_number": 3, "lesson_title": "Formulas and Templates", "what_is_taught": "Notion formulas and custom templates", "why_it_matters": "Standardizes workflows", "what_learner_does": "Builds automated meeting notes templates", "expected_outcome": "Streamlined documentation process" },
+        { "lesson_number": 4, "lesson_title": "Integrating Notion AI", "what_is_taught": "Using AI for drafting and summarization", "why_it_matters": "Accelerates content creation", "what_learner_does": "Generates project summaries using AI", "expected_outcome": "AI-enhanced productivity" }
       ],
-      "key_concepts": [
-        "Structured References",
-        "XLOOKUP Engines",
-        "Dynamic Array Spills",
-        "Interactive Pivot Modeling"
-      ],
-      "tools": [
-        "Microsoft Excel 365"
-      ],
-      "hands_on_practice": "Analyzing 10,000+ row commercial datasets covering sales, margins, and employee records.",
-      "assignment": "Sales & Profitability MIS Workbook",
-      "business_application": "Quarterly sales variance tracking and regional profitability analysis",
-      "expected_outcome": "Advanced Excel power user capable of building executive-ready MIS models."
+      "key_concepts": ["Information architecture", "Relational data", "AI assistance"],
+      "tools": ["Notion", "Notion AI"],
+      "hands_on_practice": "Building various workspace components",
+      "assignment": "Company Intranet Setup",
+      "business_application": "Centralized company knowledge base",
+      "expected_outcome": "Capable Notion Architect"
     },
     {
       "module_number": 3,
-      "module_title": "Power Query & Automated Data Preparation (ETL)",
-      "module_purpose": "Eliminate hours of manual data cleanup by building automated Extract, Transform, and Load (ETL) data pipelines.",
-      "what_you_will_learn": [
-        "Connecting to Multiple Data Sources",
-        "Data Cleaning & Deduplication",
-        "Unpivoting & Column Reshaping",
-        "Folder-Based Automated Ingestion"
-      ],
+      "module_title": "Project Operations with ClickUp",
+      "module_purpose": "Implement robust project management systems",
+      "what_you_will_learn": ["Workspace Hierarchy", "Task Management", "Automations"],
       "lessons": [
-        {
-          "lesson_number": "3.1",
-          "lesson_title": "Introduction to Power Query & ETL Architecture",
-          "what_is_taught": "The Power Query Editor interface, data source connections (Excel, CSV, Web, SQL), applied steps concept, and non-destructive transformations.",
-          "why_it_matters": "Automates routine data scrubbing so you never have to manually clean the same report twice.",
-          "what_learner_does": "Imports raw, messy vendor transaction files and constructs an automated cleaning pipeline.",
-          "expected_outcome": "Understanding of repeatable, non-destructive ETL data pipelines."
-        },
-        {
-          "lesson_number": "3.2",
-          "lesson_title": "Cleaning, Parsing & Reshaping Complex Data",
-          "what_is_taught": "Handling nulls, removing duplicates, splitting/merging columns, text cleaning (trim, clean, case), date extractions, conditional columns, and type hygiene.",
-          "why_it_matters": "Dirty data leads to incorrect financial totals and corrupted business dashboards.",
-          "what_learner_does": "Cleans a corrupted export containing irregular dates, trailing spaces, and missing customer IDs.",
-          "expected_outcome": "Flawless data transformation and type validation."
-        },
-        {
-          "lesson_number": "3.3",
-          "lesson_title": "Merging, Appending & Unpivoting Data",
-          "what_is_taught": "Appending tables (stacking monthly files); Merging tables (Left Outer, Inner, Anti joins); Unpivoting crosstab columns into tabular datasets.",
-          "why_it_matters": "Unpivoting is essential to convert wide, human-friendly spreadsheets into analysis-ready database tables.",
-          "what_learner_does": "Combines 12 separate monthly financial reports and unpivots quarterly forecast columns into a clean fact table.",
-          "expected_outcome": "Ability to join and reshape complex multi-table operational databases."
-        },
-        {
-          "lesson_number": "3.4",
-          "lesson_title": "Folder Ingestion & Automated Monthly Reporting",
-          "what_is_taught": "Folder-based queries, combining binaries, parameterization, M-code formula basics, and setting scheduled refresh triggers.",
-          "why_it_matters": "Enables zero-touch reporting: simply drop new monthly CSV files into a folder and click Refresh.",
-          "what_learner_does": "Builds an automated folder-drop pipeline that ingests new regional sales sheets automatically.",
-          "expected_outcome": "Complete Monthly Sales Reporting Automation System."
-        }
+        { "lesson_number": 1, "lesson_title": "ClickUp Hierarchy & Setup", "what_is_taught": "Spaces, folders, lists, and tasks", "why_it_matters": "Proper structure is key to organization", "what_learner_does": "Sets up a departmental workspace", "expected_outcome": "Structured project environment" },
+        { "lesson_number": 2, "lesson_title": "Advanced Task Management", "what_is_taught": "Custom fields, statuses, and views", "why_it_matters": "Adapts tool to specific workflows", "what_learner_does": "Customizes a sprint tracking list", "expected_outcome": "Custom workflow implementation" },
+        { "lesson_number": 3, "lesson_title": "Workflow Automations", "what_is_taught": "Triggers and actions in ClickUp", "why_it_matters": "Reduces manual updates", "what_learner_does": "Creates task handoff automations", "expected_outcome": "Automated project tracking" },
+        { "lesson_number": 4, "lesson_title": "Reporting and Dashboards", "what_is_taught": "Building ClickUp dashboards", "why_it_matters": "Provides high-level visibility", "what_learner_does": "Builds a team performance dashboard", "expected_outcome": "Project visibility and reporting" }
       ],
-      "key_concepts": [
-        "Applied Steps ETL",
-        "Unpivoting Crosstabs",
-        "Folder-Based Ingestion",
-        "Scheduled Data Refresh"
-      ],
-      "tools": [
-        "Power Query for Excel & Power BI"
-      ],
-      "hands_on_practice": "Transforming messy real-world CSV exports and multi-tab financial ledgers.",
-      "assignment": "Monthly Sales Reporting Automation System",
-      "business_application": "Zero-touch monthly reporting and automated data consolidation",
-      "expected_outcome": "Automated data transformation workflows that save dozens of hours each month."
+      "key_concepts": ["Hierarchy", "Customization", "Workflow Automation"],
+      "tools": ["ClickUp"],
+      "hands_on_practice": "Managing a mock project lifecycle",
+      "assignment": "Complete Project Management System",
+      "business_application": "Managing cross-functional team projects",
+      "expected_outcome": "Proficient ClickUp Administrator"
     },
     {
       "module_number": 4,
-      "module_title": "Excel + AI Copilot + Python for Analytics",
-      "module_purpose": "Supercharge analytical speed using Microsoft Copilot and practical business Python directly inside Excel workbooks.",
-      "what_you_will_learn": [
-        "Microsoft Copilot Formula Generation",
-        "Natural Language Data Inquiries",
-        "Python in Excel Basics (pandas DataFrames)",
-        "AI Verification & Hallucination Defense"
-      ],
+      "module_title": "Financial Operations with Tally",
+      "module_purpose": "Manage business finances and compliance",
+      "what_you_will_learn": ["Company Creation", "Ledgers & Vouchers", "GST Configuration"],
       "lessons": [
-        {
-          "lesson_number": "4.1",
-          "lesson_title": "AI Copilot as Your Business Data Assistant",
-          "what_is_taught": "Microsoft 365 Copilot inside Excel, asking natural-language questions, generating complex nested formulas, and chart recommendations.",
-          "why_it_matters": "Reduces formula authoring time from 30 minutes to 30 seconds for complex logical queries.",
-          "what_learner_does": "Uses Copilot prompts to generate multi-tier nested conditional formulas and automated summary insights.",
-          "expected_outcome": "High-efficiency formula generation and data exploration using AI."
-        },
-        {
-          "lesson_number": "4.2",
-          "lesson_title": "Data Diagnostics, Trend Identification & AI QA",
-          "what_is_taught": "Using AI to spot data anomalies, outliers, and variance patterns; writing executive bullet summaries; strict verification protocols for AI outputs.",
-          "why_it_matters": "AI can hallucinate or misinterpret edge-case numbers; human-in-the-loop validation is non-negotiable.",
-          "what_learner_does": "Audits an AI-generated sales summary against raw ledger data to catch and correct mathematical hallucinations.",
-          "expected_outcome": "Rigorous verification framework ensuring 100% data credibility."
-        },
-        {
-          "lesson_number": "4.3",
-          "lesson_title": "Python in Excel: Practical Business DataFrames",
-          "what_is_taught": "Introduction to =PY() formula, pandas DataFrames concept, reading Excel tables into Python, basic syntax, and data inspection.",
-          "why_it_matters": "Enables advanced analytics directly in Excel without installing external developer environments.",
-          "what_learner_does": "Loads a 20,000-row transaction table into a pandas DataFrame and runs descriptive statistical summaries.",
-          "expected_outcome": "Basic operational proficiency with Python in Excel."
-        },
-        {
-          "lesson_number": "4.4",
-          "lesson_title": "Business Analytics with Python: Trends & Correlations",
-          "what_is_taught": "Grouping and aggregation with pandas (groupby), correlation matrices, detecting revenue drivers, and generating Seaborn/Matplotlib charts inside Excel.",
-          "why_it_matters": "Uncovers hidden correlations between marketing spend and product returns that basic formulas miss.",
-          "what_learner_does": "Builds an AI-Assisted Business Data Analyst workbook running automated correlation and trend diagnostics.",
-          "expected_outcome": "Practical business analysis blending Excel, AI prompts, and Python."
-        }
+        { "lesson_number": 1, "lesson_title": "Tally Basics & Company Setup", "what_is_taught": "Interface and company creation", "why_it_matters": "First step in financial management", "what_learner_does": "Sets up a new company profile", "expected_outcome": "Ready Tally environment" },
+        { "lesson_number": 2, "lesson_title": "Ledgers and Voucher Entry", "what_is_taught": "Creating accounts and recording transactions", "why_it_matters": "Core of daily accounting", "what_learner_does": "Records a month of business transactions", "expected_outcome": "Accurate bookkeeping skills" },
+        { "lesson_number": 3, "lesson_title": "Inventory Management", "what_is_taught": "Stock items, groups, and godowns", "why_it_matters": "Crucial for product-based businesses", "what_learner_does": "Sets up an inventory tracking system", "expected_outcome": "Inventory management capabilities" },
+        { "lesson_number": 4, "lesson_title": "GST Compliance & Reporting", "what_is_taught": "GST setup and GSTR generation", "why_it_matters": "Ensures legal compliance", "what_learner_does": "Configures GST and generates GSTR-1/3B", "expected_outcome": "GST compliance proficiency" }
       ],
-      "key_concepts": [
-        "Natural Language Formulas",
-        "Human-in-the-Loop Verification",
-        "pandas DataFrames in Excel",
-        "Correlation & Statistical Diagnostics"
-      ],
-      "tools": [
-        "Excel 365 Copilot",
-        "Python in Excel",
-        "pandas",
-        "ChatGPT"
-      ],
-      "hands_on_practice": "Interrogating large business sheets using AI prompts and Python aggregation scripts.",
-      "assignment": "AI-Assisted Business Data Analyst Project",
-      "business_application": "Automated trend diagnostics, outlier detection, and statistical reporting",
-      "expected_outcome": "Modern operations analyst leveraging AI and lightweight Python for deep insights."
+      "key_concepts": ["Double-entry accounting", "Inventory tracking", "Tax compliance"],
+      "tools": ["Tally Prime"],
+      "hands_on_practice": "Recording varied business scenarios",
+      "assignment": "End-to-end Financial Setup and Reporting",
+      "business_application": "Managing company accounts and taxes",
+      "expected_outcome": "Competent Tally Operator"
     },
     {
       "module_number": 5,
-      "module_title": "Power BI Business Intelligence & Executive Dashboards",
-      "module_purpose": "Transform raw operational numbers into enterprise-grade interactive dashboards using relational modeling and DAX.",
-      "what_you_will_learn": [
-        "Power BI Desktop & Data Import",
-        "Star Schema Relational Modeling",
-        "DAX Fundamentals (Measures vs Columns)",
-        "Interactive Visuals, Drill-Throughs & RLS Basics"
-      ],
+      "module_title": "Professional Communications",
+      "module_purpose": "Create professional documents and presentations",
+      "what_you_will_learn": ["Advanced Word Formatting", "Impactful Presentations", "Google Workspace Collaboration"],
       "lessons": [
-        {
-          "lesson_number": "5.1",
-          "lesson_title": "Power BI Desktop Architecture & Data Modeling",
-          "what_is_taught": "Power BI interface, importing transformed queries, building data models, relationships (1-to-many, many-to-many pitfalls), star schema vs. snowflake design.",
-          "why_it_matters": "A clean relational model is the foundation of fast, accurate, and scalable business intelligence reports.",
-          "what_learner_does": "Constructs a robust star schema linking a central Sales Fact table to Customer, Product, Date, and Region Dimensions.",
-          "expected_outcome": "Solid grasp of enterprise star-schema data modeling."
-        },
-        {
-          "lesson_number": "5.2",
-          "lesson_title": "DAX Fundamentals: Measures, Columns & Context",
-          "what_is_taught": "Calculated columns vs. DAX measures, row context vs. filter context, core functions (SUM, DIVIDE, COUNTROWS), and the pivotal CALCULATE() engine.",
-          "why_it_matters": "DAX allows dynamic calculation of complex business metrics on the fly regardless of active slicer filters.",
-          "what_learner_does": "Writes custom DAX measures for Gross Profit, Margin %, Target Variance, and YTD Revenue.",
-          "expected_outcome": "Ability to write practical business DAX measures with confidence."
-        },
-        {
-          "lesson_number": "5.3",
-          "lesson_title": "Advanced DAX: Time Intelligence & Filter Overrides",
-          "what_is_taught": "Creating dedicated Date tables, time intelligence functions (TOTALYTD, SAMEPERIODLASTYEAR, DATEADD), ALL(), ALLEXCEPT(), and percentage contribution.",
-          "why_it_matters": "Enables year-over-year (YoY) and quarter-over-quarter (QoQ) growth tracking demanded by executive leadership.",
-          "what_learner_does": "Builds dynamic YoY Growth % and Rolling 3-Month Average measures in DAX.",
-          "expected_outcome": "Fluency in corporate time-intelligence metrics."
-        },
-        {
-          "lesson_number": "5.4",
-          "lesson_title": "Executive Dashboard Design & Data Storytelling",
-          "what_is_taught": "Visual selection (Cards, Matrix, Clustered Bars, Trendlines), visual hierarchies, interactive slicers, drill-down and drill-through pages, custom tooltips, mobile layout, and export.",
-          "why_it_matters": "Executive dashboards must provide at-a-glance clarity within 5 seconds for busy directors.",
-          "what_learner_does": "Designs a complete Executive Management Dashboard tracking sales, region, product, target, profit, and trends.",
-          "expected_outcome": "Production-ready Power BI Executive Management Dashboard."
-        }
+        { "lesson_number": 1, "lesson_title": "Professional Documents in Word", "what_is_taught": "Styles, templates, and mail merge", "why_it_matters": "Ensures brand consistency and efficiency", "what_learner_does": "Creates a branded report template", "expected_outcome": "Professional document design" },
+        { "lesson_number": 2, "lesson_title": "Visual Storytelling in PowerPoint", "what_is_taught": "Slide masters, animations, and Canva integration", "why_it_matters": "Keeps audiences engaged", "what_learner_does": "Designs a pitch deck", "expected_outcome": "High-impact presentation skills" },
+        { "lesson_number": 3, "lesson_title": "Collaborative Workflows in Google Workspace", "what_is_taught": "Real-time editing and shared drives", "why_it_matters": "Essential for modern remote teams", "what_learner_does": "Sets up a shared team drive structure", "expected_outcome": "Effective cloud collaboration" },
+        { "lesson_number": 4, "lesson_title": "System Integration Capstone", "what_is_taught": "Connecting all learned tools", "why_it_matters": "Demonstrates full mastery", "what_learner_does": "Builds the final integrated project", "expected_outcome": "Complete Business Operating System" }
       ],
-      "key_concepts": [
-        "Star Schema Architecture",
-        "Filter Context vs Row Context",
-        "CALCULATE Engine",
-        "Executive Visual Hierarchy"
-      ],
-      "tools": [
-        "Power BI Desktop",
-        "DAX Studio Basics"
-      ],
-      "hands_on_practice": "Building end-to-end business intelligence reports on real commercial sales datasets.",
-      "assignment": "Executive Management Power BI Dashboard",
-      "business_application": "C-suite executive reporting, regional performance tracking, and KPI monitoring",
-      "expected_outcome": "Competent Power BI report builder capable of delivering executive intelligence."
-    },
-    {
-      "module_number": 6,
-      "module_title": "Executive Reporting & Business Documentation",
-      "module_purpose": "Master business writing, corporate typography, Standard Operating Procedures (SOPs), and executive decision memos.",
-      "what_you_will_learn": [
-        "Professional Document Architecture",
-        "Standard Operating Procedures (SOPs)",
-        "Executive Decision Memos (BLUF Framework)",
-        "Collaborative Review & AI-Assisted Drafting"
-      ],
-      "lessons": [
-        {
-          "lesson_number": "6.1",
-          "lesson_title": "Professional Document Architecture & Typography",
-          "what_is_taught": "Heading hierarchies, custom corporate style sets, table of contents automation, cross-referencing, headers/footers, and clean layout grids.",
-          "why_it_matters": "Sloppily formatted documents immediately undermine professional credibility and executive authority.",
-          "what_learner_does": "Builds a corporate document template incorporating branded styles, callout boxes, and automated tables of contents.",
-          "expected_outcome": "Ability to format pristine, boardroom-ready documents."
-        },
-        {
-          "lesson_number": "6.2",
-          "lesson_title": "Standard Operating Procedures (SOPs) & Policies",
-          "what_is_taught": "SOP anatomy: purpose, scope, roles & responsibilities, step-by-step procedures, decision trees, exception handling, and revision logs.",
-          "why_it_matters": "Clear SOPs allow businesses to scale operations reliably and train new team members in days rather than months.",
-          "what_learner_does": "Drafts a comprehensive 5-page operational SOP for a client refund and escalation protocol.",
-          "expected_outcome": "Proficiency in authoring clear, executable corporate SOPs."
-        },
-        {
-          "lesson_number": "6.3",
-          "lesson_title": "Executive Summaries & The BLUF Framework",
-          "what_is_taught": "Bottom Line Up Front (BLUF) writing, problem-implication-solution framing, distilling 50-page reports into 1-page executive memos.",
-          "why_it_matters": "Senior executives rarely read long documents; concise BLUF memos drive immediate approvals.",
-          "what_learner_does": "Synthesizes an extensive operational audit into a crisp 1-page executive decision memo.",
-          "expected_outcome": "High-impact executive copywriting and summarization skills."
-        },
-        {
-          "lesson_number": "6.4",
-          "lesson_title": "Collaborative Editing, Review Workflows & AI Drafting",
-          "what_is_taught": "Track changes, comment threads, resolve workflows, document comparisons, mail merge for client notices, and using AI for tone refinement.",
-          "why_it_matters": "Enables frictionless multi-stakeholder document reviews across legal, finance, and operations.",
-          "what_learner_does": "Builds a complete Business Proposal + SOP Pack with automated mail merge client notices.",
-          "expected_outcome": "Complete Business Proposal + SOP Pack deliverable."
-        }
-      ],
-      "key_concepts": [
-        "BLUF Methodology",
-        "SOP Architecture",
-        "Style Hierarchies",
-        "Multi-Stakeholder Collaboration"
-      ],
-      "tools": [
-        "Microsoft Word",
-        "Google Docs"
-      ],
-      "hands_on_practice": "Drafting real operational policies, executive memos, and business proposals.",
-      "assignment": "Business Proposal + SOP Pack",
-      "business_application": "Corporate governance, operational standardization, and executive approvals",
-      "expected_outcome": "Polished business writer capable of creating authoritative corporate documentation."
-    },
-    {
-      "module_number": 7,
-      "module_title": "Executive Presentations & Data Storytelling",
-      "module_purpose": "Translate complex analytical metrics into compelling slide decks that persuade leadership and drive decisions.",
-      "what_you_will_learn": [
-        "Executive Slide Architecture",
-        "Data Storytelling & Chart Selection",
-        "Slide Master & Corporate Branding",
-        "Quarterly Business Review (QBR) Decks"
-      ],
-      "lessons": [
-        {
-          "lesson_number": "7.1",
-          "lesson_title": "Executive Presentation Structure & Narrative Flow",
-          "what_is_taught": "The Problem → Insight → Action framework, Pyramid Principle in slide design, action titles vs. descriptive titles, and avoiding text-heavy slides.",
-          "why_it_matters": "Weak presentations confuse management and result in indecision on strategic initiatives.",
-          "what_learner_does": "Outlines a 15-slide management strategy deck using structured storyboards.",
-          "expected_outcome": "Clear narrative architecture for executive presentations."
-        },
-        {
-          "lesson_number": "7.2",
-          "lesson_title": "Data Storytelling: Choosing & Designing Visuals",
-          "what_is_taught": "Matching charts to business messages (comparison, composition, trend, distribution), decluttering charts, highlighting focal points with accent color.",
-          "why_it_matters": "Well-designed charts allow executives to grasp complex financial insights within seconds.",
-          "what_learner_does": "Redesigns 5 cluttered, illegible default Excel charts into high-impact executive presentation visuals.",
-          "expected_outcome": "Mastery of visual data storytelling and chart selection."
-        },
-        {
-          "lesson_number": "7.3",
-          "lesson_title": "Slide Master, Corporate Branding & Visual Polish",
-          "what_is_taught": "Configuring Slide Masters, establishing consistent color palettes, typography rules, grid alignment, custom shapes, and Canva asset integration.",
-          "why_it_matters": "Consistent slide branding signals corporate rigor and meticulous attention to detail.",
-          "what_learner_does": "Builds a branded Slide Master template with custom layouts for title, metric cards, and comparison slides.",
-          "expected_outcome": "Ability to design polished corporate slide templates."
-        },
-        {
-          "lesson_number": "7.4",
-          "lesson_title": "Delivering the Quarterly Business Review (QBR)",
-          "what_is_taught": "QBR anatomy: performance review, wins/losses, pipeline health, strategic blockers, resource requests, speaker notes, and managing tough Q&A.",
-          "why_it_matters": "The QBR is the definitive executive milestone determining departmental budget and strategy.",
-          "what_learner_does": "Builds a complete 15-slide Quarterly Business Review Deck using data from their Excel and Power BI projects.",
-          "expected_outcome": "Board-ready Quarterly Business Review Deck project deliverable."
-        }
-      ],
-      "key_concepts": [
-        "Problem-Insight-Action Framing",
-        "Action Titles",
-        "Visual Decluttering",
-        "QBR Anatomy"
-      ],
-      "tools": [
-        "Microsoft PowerPoint",
-        "Google Slides",
-        "Canva"
-      ],
-      "hands_on_practice": "Designing and narrating executive slide decks based on real spreadsheet metrics.",
-      "assignment": "Quarterly Business Review (QBR) Presentation Deck",
-      "business_application": "Board meetings, executive reviews, and departmental strategy pitches",
-      "expected_outcome": "Persuasive presenter capable of commanding executive boardroom attention."
-    },
-    {
-      "module_number": 8,
-      "module_title": "Microsoft 365 & Google Workspace Ecosystems",
-      "module_purpose": "Master modern corporate productivity suites, comparing Microsoft 365 and Google Workspace workflows for seamless team collaboration.",
-      "what_you_will_learn": [
-        "Microsoft 365 Suite Workflows",
-        "Google Workspace Cloud Collaboration",
-        "Forms to Automated Data Capture",
-        "Ecosystem Selection & Integration"
-      ],
-      "lessons": [
-        {
-          "lesson_number": "8.1",
-          "lesson_title": "The Microsoft 365 Enterprise Ecosystem",
-          "what_is_taught": "Connecting Outlook, OneDrive, Word, Excel, PowerPoint, and Teams; calendar management; shared mailboxes; meeting scheduling workflows.",
-          "why_it_matters": "Standard operating environment in Fortune 500 companies and enterprise corporations worldwide.",
-          "what_learner_does": "Sets up an integrated Microsoft 365 project hub linking Teams channels, shared OneDrive folders, and Outlook calendars.",
-          "expected_outcome": "Seamless operational navigation of Microsoft 365."
-        },
-        {
-          "lesson_number": "8.2",
-          "lesson_title": "The Google Workspace Cloud Ecosystem",
-          "what_is_taught": "Gmail power features (filters, templates, aliases), Google Drive shared drives, Docs/Sheets collaborative real-time editing, Meet integrations, and Gemini features.",
-          "why_it_matters": "Dominant cloud platform for high-growth tech startups, agencies, and distributed remote teams.",
-          "what_learner_does": "Establishes a Google Workspace shared drive architecture with access tiers and automated form intake.",
-          "expected_outcome": "Fluency in cloud-first Google Workspace collaboration."
-        },
-        {
-          "lesson_number": "8.3",
-          "lesson_title": "Forms to Data: Automated Data Capture",
-          "what_is_taught": "Designing Microsoft Forms and Google Forms, conditional branching, collecting survey data, and piping responses into live Sheets/Excel tables.",
-          "why_it_matters": "Eliminates manual survey entry and automates employee feedback, purchase orders, and client intake.",
-          "what_learner_does": "Builds an internal equipment requisition form that logs submissions directly into a live tracking sheet.",
-          "expected_outcome": "Automated data collection and survey processing."
-        },
-        {
-          "lesson_number": "8.4",
-          "lesson_title": "Ecosystem Comparison & Strategic Tool Selection",
-          "what_is_taught": "Strategic analysis: when to choose Microsoft 365 vs. Google Workspace; cross-ecosystem file conversions; migration challenges; security policies.",
-          "why_it_matters": "Senior operators must guide company leadership on software investment and tooling efficiency.",
-          "what_learner_does": "Authorizes an executive software evaluation matrix comparing costs, features, and workflows for a 50-person company.",
-          "expected_outcome": "Strategic software consultant perspective on corporate productivity suites."
-        }
-      ],
-      "key_concepts": [
-        "Enterprise Collaboration",
-        "Shared Drive Governance",
-        "Forms-to-Sheet Pipelines",
-        "Ecosystem Selection"
-      ],
-      "tools": [
-        "Microsoft 365 (Outlook, Teams, OneDrive)",
-        "Google Workspace (Gmail, Drive, Forms)"
-      ],
-      "hands_on_practice": "Setting up collaborative team spaces and multi-user data collection workflows.",
-      "assignment": "Cross-Platform Team Operations Blueprint",
-      "business_application": "Company-wide digital infrastructure and cross-functional team coordination",
-      "expected_outcome": "Operator proficient in deploying and managing both major enterprise productivity suites."
-    },
-    {
-      "module_number": 9,
-      "module_title": "Notion Business Operating System (Company OS)",
-      "module_purpose": "Architect an all-in-one digital operating system combining relational databases, team wikis, SOP repositories, and client CRMs.",
-      "what_you_will_learn": [
-        "Notion Page Architecture & Blocks",
-        "Relational Databases & Rollups",
-        "Formulas & Filtered Views",
-        "Complete Company Workspace OS Design"
-      ],
-      "lessons": [
-        {
-          "lesson_number": "9.1",
-          "lesson_title": "Notion Architecture & Database Fundamentals",
-          "what_is_taught": "Blocks, pages, databases (Table, Board, Gallery, List, Calendar, Timeline views), property types, and clean workspace information architecture.",
-          "why_it_matters": "Replaces fragmented notes and scattered docs with a centralized, navigable business knowledge hub.",
-          "what_learner_does": "Builds an organized departmental dashboard with multiple linked views.",
-          "expected_outcome": "Mastery of Notion's foundational database engine."
-        },
-        {
-          "lesson_number": "9.2",
-          "lesson_title": "Relational Databases, Rollups & Formulas",
-          "what_is_taught": "Connecting databases via 1-to-many and many-to-many Relations, aggregating values with Rollups, and building custom Notion formulas.",
-          "why_it_matters": "Enables complex relational data modeling: linking Projects to Tasks, Clients to Invoices, and Employees to Departments.",
-          "what_learner_does": "Builds a relational Client CRM database linked to project delivery records and billing statuses.",
-          "expected_outcome": "Ability to architect interconnected relational systems in Notion."
-        },
-        {
-          "lesson_number": "9.3",
-          "lesson_title": "Knowledge Bases, SOP Wikis & Meeting Hubs",
-          "what_is_taught": "Standardized templates, creating company-wide wikis, employee directories, automated recurring meeting notes with action item rollups.",
-          "why_it_matters": "Ensures institutional knowledge is preserved and easily discoverable by any team member in seconds.",
-          "what_learner_does": "Builds a searchable company SOP repository with categorized tags, owners, and review dates.",
-          "expected_outcome": "Centralized company knowledge management architecture."
-        },
-        {
-          "lesson_number": "9.4",
-          "lesson_title": "Building the Complete Company Operating System",
-          "what_is_taught": "Synthesizing CRM, Projects, SOPs, Meetings, and Employee Directories into a unified Company OS; permission tiers, public sharing, and template publishing.",
-          "why_it_matters": "A complete Company OS allows an organization to run efficiently with transparent accountability.",
-          "what_learner_does": "Builds an end-to-end Company Notion Operating System featuring 5 interconnected databases.",
-          "expected_outcome": "Production-ready Company Notion Workspace OS project deliverable."
-        }
-      ],
-      "key_concepts": [
-        "Relational Architecture",
-        "Rollup Aggregations",
-        "Company Wiki OS",
-        "Template Automation"
-      ],
-      "tools": [
-        "Notion",
-        "Notion AI"
-      ],
-      "hands_on_practice": "Constructing relational databases, formulas, and company-wide digital dashboards.",
-      "assignment": "Complete Company Notion Workspace OS",
-      "business_application": "Centralized corporate knowledge base, lightweight CRM, and internal portal",
-      "expected_outcome": "Proficient Notion Systems Architect capable of building enterprise operating hubs."
-    },
-    {
-      "module_number": 10,
-      "module_title": "Project & Operations Management with ClickUp",
-      "module_purpose": "Implement professional project hierarchies, agile task workflows, milestone dependencies, and team capacity management.",
-      "what_you_will_learn": [
-        "ClickUp Hierarchy Architecture",
-        "Custom Statuses, Fields & Views",
-        "Dependencies, Sprints & Milestones",
-        "Resource Workload & Client Delivery Systems"
-      ],
-      "lessons": [
-        {
-          "lesson_number": "10.1",
-          "lesson_title": "ClickUp Hierarchy & Workspace Architecture",
-          "what_is_taught": "Workspaces, Spaces, Folders, Lists, Tasks, and Subtasks; structuring agencies vs. corporate departments; folder templates.",
-          "why_it_matters": "A clean hierarchy prevents chaotic task clutter and ensures scalable multi-team execution.",
-          "what_learner_does": "Configures a corporate operations space with dedicated client delivery and internal operations folders.",
-          "expected_outcome": "Mastery of ClickUp's scalable workspace hierarchy."
-        },
-        {
-          "lesson_number": "10.2",
-          "lesson_title": "Task Lifecycle, Custom Statuses & Views",
-          "what_is_taught": "Designing workflow-specific custom statuses, custom fields (dropdowns, currency, formulas), and views (List, Board, Gantt, Timeline, Calendar).",
-          "why_it_matters": "Provides different stakeholders with views tailored to their needs (Gantt for managers, Board for creators).",
-          "what_learner_does": "Configures a 5-stage client onboarding pipeline with custom status stages and automated notifications.",
-          "expected_outcome": "Custom workflow implementation across diverse business functions."
-        },
-        {
-          "lesson_number": "10.3",
-          "lesson_title": "Dependencies, Milestones & Sprint Operations",
-          "what_is_taught": "Task dependencies (Blocking, Waiting on), milestone tracking, sprint points, recurring tasks, and meeting-to-task operational follow-ups.",
-          "why_it_matters": "Prevents delivery bottlenecks by clarifying exact task sequencing and critical path items.",
-          "what_learner_does": "Builds a 4-week product rollout schedule in ClickUp with critical-path milestone dependencies.",
-          "expected_outcome": "Ability to manage complex multi-dependency operational projects."
-        },
-        {
-          "lesson_number": "10.4",
-          "lesson_title": "Workload Management, Dashboards & Delivery Ops",
-          "what_is_taught": "Resource allocation, Workload view, time tracking, ClickUp executive dashboards (sprint velocity, overdue tasks, team capacity), and client sharing.",
-          "why_it_matters": "Prevents team burnout and ensures client delivery deadlines are met consistently.",
-          "what_learner_does": "Constructs a Client Delivery Operations System complete with team workload views and executive dashboard widgets.",
-          "expected_outcome": "Client Delivery Operations System project deliverable."
-        }
-      ],
-      "key_concepts": [
-        "ClickUp Hierarchy",
-        "Gantt Dependencies",
-        "Workload Capacity Tracking",
-        "Executive Project Dashboards"
-      ],
-      "tools": [
-        "ClickUp",
-        "Slack / Teams"
-      ],
-      "hands_on_practice": "Managing complete mock project lifecycles, sprint schedules, and team workload balances.",
-      "assignment": "Client Delivery Operations System",
-      "business_application": "Cross-functional team task execution, client project management, and agency operations",
-      "expected_outcome": "Certified ClickUp Administrator capable of orchestrating complex operations."
-    },
-    {
-      "module_number": 11,
-      "module_title": "Workflow Automation (Microsoft Power Automate & Cloud Triggers)",
-      "module_purpose": "Transform manual, repetitive office work into automated zero-touch workflows using Microsoft Power Automate, Zapier, and Make.",
-      "what_you_will_learn": [
-        "Automated Cloud Flows & Triggers",
-        "Conditions, Loops & Dynamic Data",
-        "Multi-Step Approval Workflows",
-        "Integration Across Forms, Sheets & Teams"
-      ],
-      "lessons": [
-        {
-          "lesson_number": "11.1",
-          "lesson_title": "Introduction to Business Workflow Automation",
-          "what_is_taught": "Automation principles, Triggers, Actions, Connectors; identifying high-ROI automation candidates; comparing Power Automate, Zapier, Make, and n8n.",
-          "why_it_matters": "Automating manual data entry saves hundreds of administrative hours and eliminates human data errors.",
-          "what_learner_does": "Maps out a manual company purchase request process and creates an automated workflow architecture diagram.",
-          "expected_outcome": "Clear methodology for mapping and designing business automations."
-        },
-        {
-          "lesson_number": "11.2",
-          "lesson_title": "Building Automated Cloud Flows in Power Automate",
-          "what_is_taught": "Creating automated, instant, and scheduled cloud flows; dynamic content; expressions basics; connecting Microsoft Forms, Excel, and Outlook.",
-          "why_it_matters": "Enables instant actions: when a form is submitted, log it to Excel and notify the account owner automatically.",
-          "what_learner_does": "Builds a flow that logs customer inquiry form submissions into a secured Excel file and dispatches a confirmation email.",
-          "expected_outcome": "Operational proficiency building multi-step cloud flows."
-        },
-        {
-          "lesson_number": "11.3",
-          "lesson_title": "Condition Logic, Approvals & Error Handling",
-          "what_is_taught": "If/Else conditional branching, switch statements, manager approval flows with adaptive cards in Microsoft Teams, error handling (Run After configuration).",
-          "why_it_matters": "Multi-tier approvals ensure internal controls while eliminating slow email chains.",
-          "what_learner_does": "Builds an employee leave approval workflow: If days > 3, route to Director; else, auto-approve and update schedule.",
-          "expected_outcome": "Mastery of enterprise approval chains and conditional business logic."
-        },
-        {
-          "lesson_number": "11.4",
-          "lesson_title": "End-to-End Approval & Notification Workflow",
-          "what_is_taught": "Full pipeline implementation: Form Submitted → Excel Updated → Teams Manager Notification with Approve/Reject buttons → Status Logged → Final Email Sent.",
-          "why_it_matters": "The definitive commercial workflow automation requested by enterprise operations teams.",
-          "what_learner_does": "Builds and tests an Automated Approval & Reporting Workflow connecting Forms, Excel, Teams, and Outlook.",
-          "expected_outcome": "Automated Approval & Reporting Workflow project deliverable."
-        }
-      ],
-      "key_concepts": [
-        "Trigger-Action Logic",
-        "Dynamic Content Piping",
-        "Adaptive Card Approvals",
-        "Error Handling (Run After)"
-      ],
-      "tools": [
-        "Microsoft Power Automate",
-        "Make / Zapier Concepts",
-        "Microsoft Forms",
-        "Teams"
-      ],
-      "hands_on_practice": "Building live multi-app automated pipelines connecting forms, spreadsheets, and messaging.",
-      "assignment": "Automated Approval & Reporting Workflow",
-      "business_application": "Zero-touch purchase requests, leave approvals, and automated reporting pipelines",
-      "expected_outcome": "Workflow automation specialist capable of building reliable business pipelines."
-    },
-    {
-      "module_number": 12,
-      "module_title": "AI at Work: Business Operations & Productivity",
-      "module_purpose": "Deploy modern AI tools safely and ethically across daily business operations to accelerate drafting, analysis, and research.",
-      "what_you_will_learn": [
-        "Operational Prompt Engineering",
-        "AI for Document & Email Refinement",
-        "Extracting Action Items & Meeting Summaries",
-        "AI Ethics, Confidentiality & Hallucination QA"
-      ],
-      "lessons": [
-        {
-          "lesson_number": "12.1",
-          "lesson_title": "Operational Prompt Engineering for Business",
-          "what_is_taught": "System prompts, role prompting, context framing, few-shot examples, constraining outputs to clean tables and JSON, building a corporate prompt library.",
-          "why_it_matters": "Vague prompts produce generic junk; structured operational prompts produce precise business deliverables.",
-          "what_learner_does": "Builds a curated Business Prompt Library covering 15 recurring corporate workflows.",
-          "expected_outcome": "Proficiency in precision business prompt engineering."
-        },
-        {
-          "lesson_number": "12.2",
-          "lesson_title": "AI for Business Analysis & Research",
-          "what_is_taught": "Uploading operational data sheets, asking analytical questions, competitor benchmarking, synthesizing industry market reports, identifying risk factors.",
-          "why_it_matters": "Compresses days of market and operational desk research into hours of high-value analysis.",
-          "what_learner_does": "Uses AI to analyze three competing vendor software contracts and generate a risk comparison matrix.",
-          "expected_outcome": "Ability to conduct rapid operational analysis using AI assistants."
-        },
-        {
-          "lesson_number": "12.3",
-          "lesson_title": "Meeting Summarization & Executive Communication",
-          "what_is_taught": "Pasting raw meeting transcripts, extracting decisions and assigned action items, drafting polite diplomatic client responses, re-toning blunt emails.",
-          "why_it_matters": "Turns unstructured 60-minute verbal meetings into actionable, documented task lists in minutes.",
-          "what_learner_does": "Transforms a messy 45-minute call transcript into an executive Minutes of Meeting (MoM) with owners and deadlines.",
-          "expected_outcome": "Accelerated executive meeting documentation and email drafting."
-        },
-        {
-          "lesson_number": "12.4",
-          "lesson_title": "AI Governance, Privacy & Professional Judgment",
-          "what_is_taught": "Data privacy rules, safeguarding company IP, PII redaction protocols, verifying AI math, understanding AI hallucinations, responsible workplace policies.",
-          "why_it_matters": "Protecting company secrets and preventing costly errors caused by unverified AI calculations.",
-          "what_learner_does": "Drafts an official Corporate AI Responsible Use Policy for an organization.",
-          "expected_outcome": "Ethical, secure, and professional deployment of AI productivity tools."
-        }
-      ],
-      "key_concepts": [
-        "Structured Business Prompts",
-        "Transcript Action Item Extraction",
-        "PII Redaction",
-        "Human Judgment Primacy"
-      ],
-      "tools": [
-        "ChatGPT (GPT-4o)",
-        "Microsoft 365 Copilot",
-        "Google Gemini"
-      ],
-      "hands_on_practice": "Generating business memos, extracting meeting action items, and verifying AI outputs.",
-      "assignment": "Corporate AI Prompt Library & Governance Guide",
-      "business_application": "Day-to-day administrative acceleration, meeting documentation, and research",
-      "expected_outcome": "AI-empowered business professional operating with speed and governance."
-    },
-    {
-      "module_number": 13,
-      "module_title": "Finance Operations: Tally Prime & GST Specialization",
-      "module_purpose": "Master foundational corporate accounting, voucher management, inventory tracking, and GST statutory compliance in Tally Prime.",
-      "what_you_will_learn": [
-        "Company Setup & Chart of Accounts",
-        "Ledger & Voucher Entry Workflows",
-        "Inventory Management & Godown Tracking",
-        "GST Invoicing, Reconciliation & Statutory Reports"
-      ],
-      "lessons": [
-        {
-          "lesson_number": "13.1",
-          "lesson_title": "Tally Prime Architecture & Company Setup",
-          "what_is_taught": "Tally Prime interface, creating company profiles, financial year setup, Chart of Accounts, group hierarchies, and primary vs. sub-ledgers.",
-          "why_it_matters": "First essential step in establishing auditable, legally compliant double-entry financial records.",
-          "what_learner_does": "Sets up a complete commercial enterprise company profile with multi-tier charts of accounts.",
-          "expected_outcome": "Ready-to-use Tally Prime corporate accounting environment."
-        },
-        {
-          "lesson_number": "13.2",
-          "lesson_title": "Voucher Entry & Daily Bookkeeping Workflows",
-          "what_is_taught": "Recording Payment, Receipt, Contra, Journal, Sales, and Purchase vouchers; managing accounts payable and receivable; bank reconciliation statements (BRS).",
-          "why_it_matters": "Accurate voucher logging ensures flawless financial balances and prevents cash flow discrepancies.",
-          "what_learner_does": "Records a complete month of simulated business transactions and reconciles bank statements.",
-          "expected_outcome": "Fluent commercial bookkeeping and voucher entry execution."
-        },
-        {
-          "lesson_number": "13.3",
-          "lesson_title": "Inventory Management & Invoicing",
-          "what_is_taught": "Stock items, stock groups, units of measure (UoM), godowns/warehouses, batch management, purchase orders, sales orders, and delivery challans.",
-          "why_it_matters": "Essential for retail, wholesale, and manufacturing businesses tracking physical product stock.",
-          "what_learner_does": "Builds a multi-location inventory system with batch tracking and reorder minimums in Tally.",
-          "expected_outcome": "Complete inventory and commercial order processing capability."
-        },
-        {
-          "lesson_number": "13.4",
-          "lesson_title": "GST Statutory Compliance & Financial Reporting",
-          "what_is_taught": "Configuring CGST, SGST, IGST; HSN/SAC codes; tax invoices; generating GSTR-1, GSTR-3B summaries; Balance Sheet, Profit & Loss, Trial Balance analysis.",
-          "why_it_matters": "Statutory tax compliance is legally mandated for every registered business in India.",
-          "what_learner_does": "Generates a full financial closing pack: Trial Balance, Balance Sheet, P&L, and GSTR filing summaries.",
-          "expected_outcome": "End-to-end Financial Setup and GST Reporting specialization deliverable."
-        }
-      ],
-      "key_concepts": [
-        "Double-Entry Principles",
-        "Bank Reconciliation (BRS)",
-        "Inventory Godown Tracking",
-        "GST Compliance (GSTR-1/3B)"
-      ],
-      "tools": [
-        "Tally Prime",
-        "GST Portal Simulator"
-      ],
-      "hands_on_practice": "Posting multi-scenario business transactions, reconciling accounts, and generating tax returns.",
-      "assignment": "End-to-End Financial Setup and GST Reporting Pack",
-      "business_application": "SME accounting, statutory tax compliance, and business financial operations",
-      "expected_outcome": "Capable Tally Prime operator qualified for finance and accounts operations support."
-    }
-  ],
-  "faq": [
-    {
-      "question": "Is this an MS Office course?",
-      "answer": "No. While Microsoft Excel, Word, and PowerPoint are included, this is a comprehensive Business Operations, Analytics & AI Productivity program. You learn how business data actually flows through an organization: from raw data extraction and Power Query cleaning, to Power BI dashboards, automated cloud workflows in Power Automate, company workspaces in Notion, project delivery in ClickUp, and AI copilot integration."
-    },
-    {
-      "question": "Is the course suitable for beginners?",
-      "answer": "Yes. The curriculum starts with foundational digital hygiene, workspace organization, and core spreadsheet logic before systematically building up to advanced analytics, Power BI modeling, and workflow automation. No prior advanced technical background is required."
-    },
-    {
-      "question": "Will I learn Advanced Excel?",
-      "answer": "Yes, extensively. Module 2 is a flagship module covering modern Excel: Tables with structured references, modern lookup engines (XLOOKUP, INDEX/MATCH), dynamic arrays (FILTER, SORT, UNIQUE), nested logical formulas, error handling, What-If analysis, and interactive multi-tab PivotTable MIS workbooks."
-    },
-    {
-      "question": "Will Power Query be covered?",
-      "answer": "Yes. Power Query has its own dedicated flagship module (Module 3). You will learn how to connect to multiple data sources, clean and deduplicate messy records, unpivot wide crosstabs, merge/append tables, and build automated folder-drop pipelines where dropping new files into a folder refreshes your entire report automatically."
-    },
-    {
-      "question": "Will I learn Power BI?",
-      "answer": "Yes. Module 5 is a complete Business Intelligence module covering Power BI Desktop: importing data models, designing star schemas with fact and dimension tables, calculated columns, DAX measures, interactive visual hierarchies, slicers, drill-down/drill-through pages, and executive dashboard design."
-    },
-    {
-      "question": "Is DAX included?",
-      "answer": "Yes. You will learn practical business DAX: understanding row context vs. filter context, core aggregations (SUM, DIVIDE, COUNTROWS), the CALCULATE engine, filter overrides (ALL, ALLEXCEPT), and time intelligence functions (TOTALYTD, SAMEPERIODLASTYEAR, DATEADD) to track YoY and QoQ growth."
-    },
-    {
-      "question": "Will I learn Python in Excel?",
-      "answer": "Yes. In Module 4, you learn practical business analytics with Python inside Excel using the =PY() formula. You will understand pandas DataFrames, descriptive statistics, group aggregations, correlation matrices, and statistical trend charting directly in your spreadsheet without needing a software engineering setup."
-    },
-    {
-      "question": "Do I need coding knowledge?",
-      "answer": "No. You do not need any coding or computer science background. The Python elements taught are strictly high-level, business-focused data analysis concepts inside Excel. The rest of the course focuses on formulas, visual ETL tools, low-code automations, and intuitive workspace builders."
-    },
-    {
-      "question": "Will AI tools be included?",
-      "answer": "Yes. Modern AI tools are woven throughout the entire program. You will use Microsoft 365 Copilot, ChatGPT (GPT-4o), and Google Gemini to accelerate formula writing, troubleshoot syntax errors, summarize lengthy reports, draft business memos, and extract meeting action items."
-    },
-    {
-      "question": "Will I learn Microsoft Copilot?",
-      "answer": "Yes. You will learn how to use Microsoft Copilot inside Excel, Word, PowerPoint, and Teams for natural-language data inquiries, automated chart recommendations, presentation drafting, and meeting chat summarization."
-    },
-    {
-      "question": "Is Google Workspace included?",
-      "answer": "Yes. Module 8 covers the Google Workspace ecosystem: Gmail power filters and templates, Google Drive shared drive governance, collaborative editing in Docs and Sheets, Google Forms for automated data intake, and when companies choose Google Workspace vs. Microsoft 365."
-    },
-    {
-      "question": "Will I learn Notion?",
-      "answer": "Yes. Module 9 teaches you how to build a complete Company Operating System (Company OS) in Notion using relational databases, rollups, custom formulas, employee directories, SOP document wikis, and client CRM hubs."
-    },
-    {
-      "question": "Is ClickUp included?",
-      "answer": "Yes. Module 10 is dedicated to professional project and operations management in ClickUp: workspace hierarchy (Spaces, Folders, Lists, Tasks), custom statuses, Gantt charts, milestone dependencies, recurring tasks, and resource workload views."
-    },
-    {
-      "question": "Will workflow automation be taught?",
-      "answer": "Yes. Module 11 focuses on Microsoft Power Automate cloud flows. You will build zero-touch pipelines connecting form submissions to spreadsheet updates, multi-tier manager approval chains with adaptive cards in Teams, and automated notification emails."
-    },
-    {
-      "question": "Is Tally/GST compulsory?",
-      "answer": "No, it is an optional specialization pathway (Track D). If your career focus is business analytics, project management, or operations, you can focus on Power BI, ClickUp, and automation. If you are a commerce graduate or targeting SME office/accounts roles, Tally Prime with GST provides immediate commercial value."
-    },
-    {
-      "question": "What projects will I build?",
-      "answer": "You will build 8 structured production projects: an Excel MIS Dashboard, a Power Query Reporting Automation, a Power BI Executive Dashboard, a Business Proposal + SOP Pack, a Quarterly Business Review (QBR) Deck, a Company Notion OS, a ClickUp Delivery System, and an Automated Power Automate Workflow, plus 1 comprehensive Final Business Capstone."
-    },
-    {
-      "question": "Will I build a portfolio?",
-      "answer": "Yes. You will complete the course with a verified 9-deliverable digital proof-of-work portfolio documented using our standardized 8-part case study architecture. This gives employers tangible evidence of your operational and analytical capabilities."
-    },
-    {
-      "question": "What is the final capstone?",
-      "answer": "The final capstone is the 'Business Operations Command Center'—an industry-style business simulation where you act as Operations Lead for a growing company. You ingest raw multi-source data, build ETL pipelines, design Power BI dashboards, draft an executive decision memo, build a Notion wiki, configure ClickUp task delivery, and deploy automated approval workflows."
-    },
-    {
-      "question": "Is this useful for commerce students?",
-      "answer": "Exceptionally useful. Most commerce degrees teach textbook accounting but neglect modern workplace tools like Advanced Excel modeling, Power Query automation, Power BI analytics, and cloud collaboration. This program provides the exact technical and operational toolkit corporate employers demand."
-    },
-    {
-      "question": "Is this useful for working professionals?",
-      "answer": "Yes. If you currently spend hours manually copy-pasting numbers, formatting repetitive weekly reports, or chasing approvals over email, this program will show you how to automate your workload, present data persuasively to leadership, and position yourself for promotion into operations management."
-    },
-    {
-      "question": "What jobs can this course support?",
-      "answer": "Graduates are equipped for roles including MIS Executive, Reporting Executive, Business Operations Executive, Operations Coordinator, Junior Business Analyst, Project Coordinator, Sales Operations Specialist, Executive Assistant, and Office Operations Manager."
-    },
-    {
-      "question": "Will I learn reporting and dashboards?",
-      "answer": "Yes. Reporting and dashboards are central to the entire curriculum. You will build automated spreadsheet MIS reports, interactive Power BI executive dashboards, formal written executive decision memos, and board-ready Quarterly Business Review presentation decks."
+      "key_concepts": ["Brand consistency", "Visual communication", "Cloud collaboration"],
+      "tools": ["Word", "PowerPoint", "Google Workspace", "Canva"],
+      "hands_on_practice": "Drafting and presenting business materials",
+      "assignment": "Final Capstone Presentation and Documentation",
+      "business_application": "Internal and external corporate communication",
+      "expected_outcome": "Mastery of business communication tools"
     }
   ]
 }

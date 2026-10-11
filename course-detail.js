@@ -346,21 +346,15 @@ function populateDomainMentors(course) {
     'digital-marketing': { lead: 'Growth & Ads Lead Mentor', role: 'Head of Performance & GEO Strategy', bio: 'Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture.' },
     'ai-academy': { lead: 'Principal AI Architect', role: 'Applied Generative AI & Agents Lead', bio: 'Specialist in multi-agent orchestration, LLM application pipelines, workflow automation, and enterprise deployment.' },
     'design-academy': { lead: 'Design Director & UI Lead', role: 'Product Design & Brand Architect', bio: 'Specialist in design systems, micro-interactions, commercial packaging, and user experience psychology.' },
-    'design': { lead: 'Design Director & UI Lead', role: 'Product Design & Brand Architect', bio: 'Specialist in design systems, micro-interactions, commercial packaging, and user experience psychology.' },
     'programming-academy': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.' },
-    'programming': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.' },
     'nocode-academy': { lead: 'Lead No-Code Architect', role: 'Enterprise Webflow & Shopify Lead', bio: 'Specialist in scalable headless web systems, e-commerce conversion pipelines, and workflow automation.' },
     'video-academy': { lead: 'Post-Production Director', role: 'Senior Video Editor & Motion Lead', bio: 'Specialist in high-retention commercial storytelling, color grading, dynamic motion graphics, and audio mastering.' },
     '3d-academy': { lead: 'Senior 3D & Technical Artist', role: 'Real-Time Pipeline & ArchViz Lead', bio: 'Specialist in Blender, Unreal Engine 5 Lumen/Nanite workflows, architectural visualization, and photorealistic asset creation.' },
     'career-academy': { lead: 'Agency Strategist & Founder', role: 'Freelance & Retainer Monetization Mentor', bio: 'Specialist in international client acquisition, proposal engineering, high-ticket packaging, and business operations.' },
-    'career': { lead: 'Agency Strategist & Founder', role: 'Freelance & Retainer Monetization Mentor', bio: 'Specialist in international client acquisition, proposal engineering, high-ticket packaging, and business operations.' },
     'comm-academy': { lead: 'Executive Voice Coach', role: 'Leadership Communication & Pitch Specialist', bio: 'Specialist in executive presence, persuasive presentations, high-stakes stakeholder meetings, and corporate dialogue.' },
-    'communication': { lead: 'Executive Voice Coach', role: 'Leadership Communication & Pitch Specialist', bio: 'Specialist in executive presence, persuasive presentations, high-stakes stakeholder meetings, and corporate dialogue.' },
     'kids-tech': { lead: 'Certified STEM Educator', role: 'Creative Computing & Logic Mentor', bio: 'Dedicated educator specializing in gamified algorithmic thinking, beginner Python, and interactive digital creation.' },
-    'creator-academy': { lead: 'Creator Economy Strategist', role: 'YouTube Production & Distribution Lead', bio: 'Specialist in audience strategy, high-retention video storytelling, packaging, channel analytics, and creator monetization.' },
-    'creator': { lead: 'Creator Economy Strategist', role: 'YouTube Production & Distribution Lead', bio: 'Specialist in audience strategy, high-retention video storytelling, packaging, channel analytics, and creator monetization.' },
-    'office-academy': { lead: 'Business Intelligence Lead', role: 'Data Analytics & Copilot Specialist', bio: 'Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.' },
-    'office': { lead: 'Business Intelligence Lead', role: 'Data Analytics & Copilot Specialist', bio: 'Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.' }
+    'creator-academy': { lead: 'Creator Economy Strategist', role: 'YouTube Production & Distribution Lead', bio: 'Specialist in audience analytics, algorithmic retention optimization, content monetization, and personal branding.' },
+    'office-academy': { lead: 'Business Intelligence Lead', role: 'Data Analytics & Copilot Specialist', bio: 'Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.' }
   };
 
   const domain = academyMentors[course.academyId] || academyMentors['digital-marketing'];
@@ -507,11 +501,6 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   if (buildSection && buildContainer) {
     if (data.what_you_will_be_able_to_build && Array.isArray(data.what_you_will_be_able_to_build) && data.what_you_will_be_able_to_build.length > 0) {
       buildSection.style.display = 'block';
-      const bTag = document.getElementById('build-outcomes-tag');
-      const bTitle = document.getElementById('build-outcomes-title');
-      if (bTag && data.outcomes_tag) bTag.textContent = data.outcomes_tag;
-      if (bTitle && data.outcomes_title) bTitle.innerHTML = data.outcomes_title;
-
       buildContainer.innerHTML = `
         <div class="build-outcomes-grid">
           ${data.what_you_will_be_able_to_build.map(item => `
@@ -537,11 +526,6 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   if (tracksSection && tracksContainer) {
     if (data.specialization_tracks && Array.isArray(data.specialization_tracks) && data.specialization_tracks.length > 0) {
       tracksSection.style.display = 'block';
-      const sTag = document.getElementById('specialization-tracks-tag');
-      const sTitle = document.getElementById('specialization-tracks-title');
-      if (sTag && data.tracks_tag) sTag.textContent = data.tracks_tag;
-      if (sTitle && data.tracks_title) sTitle.innerHTML = data.tracks_title;
-
       tracksContainer.innerHTML = `
         <div class="specialization-tracks-grid">
           ${data.specialization_tracks.map((track, tIdx) => `
@@ -755,17 +739,12 @@ function renderEnrichedCourseDetail(baseCourse, data) {
     `;
   }
 
-  // --- Industry Workflow Pipeline (Templates B & C) ---
+  // --- 10-Step Industry Workflow Pipeline (Templates B & C) ---
   const workflowSection = document.getElementById('workflow-section');
   const workflowContainer = document.getElementById('workflow-container');
   if (workflowSection && workflowContainer) {
     if ((isMaster || isProOrSpec) && data.industry_workflow && data.industry_workflow.stages) {
       workflowSection.style.display = 'block';
-      const wTag = document.getElementById('workflow-section-tag');
-      const wTitle = document.getElementById('workflow-section-title');
-      if (wTag && data.workflow_tag) wTag.textContent = data.workflow_tag;
-      if (wTitle && data.workflow_title) wTitle.innerHTML = data.workflow_title;
-
       workflowContainer.innerHTML = `
         <div class="workflow-pipeline-container">
           <p class="course-section-intro">${escapeHTML(data.industry_workflow.overview || 'How senior practitioners execute client deliverables in 2026/27:')}</p>
@@ -782,33 +761,6 @@ function renderEnrichedCourseDetail(baseCourse, data) {
       `;
     } else {
       workflowSection.style.display = 'none';
-    }
-  }
-
-  // --- Weekly Practical Labs ---
-  const labsSection = document.getElementById('practical-labs-section');
-  const labsContainer = document.getElementById('practical-labs-container');
-  if (labsSection && labsContainer) {
-    if (data.practical_labs && Array.isArray(data.practical_labs) && data.practical_labs.length > 0) {
-      labsSection.style.display = 'block';
-      const lTag = document.getElementById('practical-labs-tag');
-      const lTitle = document.getElementById('practical-labs-title');
-      if (lTag && data.labs_tag) lTag.textContent = data.labs_tag;
-      if (lTitle && data.labs_title) lTitle.innerHTML = data.labs_title;
-
-      labsContainer.innerHTML = `
-        <div class="practical-labs-grid">
-          ${data.practical_labs.map((lab, lIdx) => `
-            <div class="practical-lab-card">
-              <div class="lab-number-badge">Lab ${lIdx + 1}</div>
-              <div class="lab-title">${escapeHTML(lab.name || '')}</div>
-              <p class="lab-focus">${escapeHTML(lab.focus || '')}</p>
-            </div>
-          `).join('')}
-        </div>
-      `;
-    } else {
-      labsSection.style.display = 'none';
     }
   }
 
@@ -965,8 +917,8 @@ function renderEnrichedCourseDetail(baseCourse, data) {
             <table class="comparison-table">
               <thead>
                 <tr>
-                  <th style="width:50%;">${escapeHTML(data.course_comparison.typical_heading || (data.course_id === 'ai-mastery' ? 'Typical AI Courses' : 'Typical Course'))}</th>
-                  <th class="col-nova" style="width:50%;">${escapeHTML(data.course_comparison.novaskills_heading || (data.course_id === 'ai-mastery' ? 'Nova Skills AI Mastery' : 'Nova Skills Mastery'))}</th>
+                  <th style="width:50%;">Typical AI Courses</th>
+                  <th class="col-nova" style="width:50%;">Nova Skills AI Mastery</th>
                 </tr>
               </thead>
               <tbody>
@@ -1176,16 +1128,6 @@ function renderEnrichedCourseDetail(baseCourse, data) {
         </span>
       `;
     }
-  }
-
-  if (data.course_name) {
-    const title = document.getElementById('detail-title');
-    if (title) title.textContent = data.course_name;
-  }
-
-  if (data.hero_subtitle) {
-    const desc = document.getElementById('detail-desc');
-    if (desc) desc.textContent = data.hero_subtitle;
   }
 
   // Update Dynamic JSON-LD with Schema.org @graph
