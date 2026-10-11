@@ -1318,10 +1318,64 @@
   margin: 0;
 }
 
+/* ============================================================
+   PRACTICAL LABS SECTION
+   ============================================================ */
+.practical-labs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.practical-lab-card {
+  background: #ffffff;
+  border: 1px solid rgba(1, 23, 49, 0.08);
+  border-radius: var(--radius-lg, 16px);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.05));
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.practical-lab-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
+}
+
+.lab-number-badge {
+  background: rgba(5, 153, 168, 0.1);
+  color: var(--teal, #0599a8);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-full, 9999px);
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.lab-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy, #011731);
+  line-height: 1.4;
+}
+
+.lab-focus {
+  font-size: 0.88rem;
+  color: var(--text-secondary, #475569);
+  line-height: 1.5;
+  margin: 0;
+}
+
 /* Strict mobile 1-column responsive collapses */
 @media (max-width: 640px) {
   .build-outcomes-grid,
   .specialization-tracks-grid,
+  .practical-labs-grid,
   .portfolio-deliverables-grid,
   .case-study-steps-grid,
   .assessment-tiers-grid {
@@ -1329,7 +1383,9 @@
   }
   .specialization-track-card,
   .portfolio-specs-card,
-  .assessment-model-card {
-    padding: 20px 16px;
+  .assessment-model-card,
+  .practical-lab-card {
+    padding: 18px 16px;
   }
 }
+

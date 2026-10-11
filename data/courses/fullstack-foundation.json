@@ -1,664 +1,2256 @@
 {
   "course_id": "fullstack-foundation",
-  "course_name": "Full Stack Programming Foundation",
+  "course_name": "Full Stack Software Engineering & AI-Assisted Development",
+  "short_name": "Full Stack Development",
   "academy": "Programming Academy",
   "academy_id": "programming",
   "course_type": "MASTER",
-  "course_role": "Career/Monetization",
-  "level": "BEGINNER+",
+  "course_role": "Full Stack Software Engineer",
+  "level": "BEGINNER TO PROFESSIONAL",
   "duration": "6 Months",
+  "duration_months": 6,
   "learning_hours": 240,
-  "future_review_status": "EVOLVING",
+  "price": 29999,
+  "original_price": 84999,
+  "discount": "65% OFF",
+  "future_review_status": "STABLE",
+  "eyebrow": "CODE • BUILD • TEST • DEPLOY",
+  "positioning_statement": "From your first line of code to a tested, documented and deployed full-stack application.",
+  "core_positioning_quote": "Don't Just Learn Coding. Build, Test, Deploy & Maintain Real Applications.",
+  "primary_sales_hook": "Learn How Professional Software Gets Built.",
+  "hero_subtitle": "Build modern frontend and backend applications using TypeScript, React, Next.js, Node.js, PostgreSQL and APIs, then test, secure, deploy and maintain them using professional engineering workflows.",
+  "supporting_line": "From your first line of code to a tested, documented and deployed full-stack application.",
+  "seo_title": "Full Stack Software Engineering Course | Nova Skills",
+  "seo_description": "Learn TypeScript, React, Next.js, Node.js, PostgreSQL, APIs, authentication, testing, Git, Docker, deployment and AI-assisted development with Nova Skills' practical Full Stack Software Engineering program.",
+  "outcomes_tag": "WHAT YOU WILL BUILD",
+  "outcomes_title": "What You Will <span class=\"gradient-text\">Build, Test & Deploy</span>",
+  "tracks_tag": "CHOOSE YOUR ENGINEERING PATHWAY",
+  "tracks_title": "4 Industry <span class=\"gradient-text\">Specialization Pathways</span>",
+  "workflow_tag": "HOW PROFESSIONAL SOFTWARE GETS BUILT",
+  "workflow_title": "The 13-Step <span class=\"gradient-text\">Software Engineering Lifecycle</span>",
+  "labs_tag": "PRACTICAL LABS & SPRINTS",
+  "labs_title": "Weekly Engineering <span class=\"gradient-text\">Labs, Sprints & Code Reviews</span>",
+  "badges": [
+    "6 Months",
+    "Beginner Friendly",
+    "TypeScript + React",
+    "Node + PostgreSQL",
+    "Authentication & RBAC",
+    "Testing & Quality",
+    "Git & GitHub",
+    "Docker & Deployment",
+    "6 Practical Projects",
+    "1 Production Capstone"
+  ],
   "target_audience": {
     "best_for": [
-      "Aspiring professionals aiming to master Full Stack Programming Foundation and secure industry roles.",
-      "Current developers wanting to upskill using modern HTML workflows.",
-      "Freelancers looking to offer Full Stack Programming Foundation services to clients."
+      "Beginners and students seeking a structured path into software engineering without superficial shortcuts.",
+      "Graduates and career switchers wanting to build production-grade web applications with a modern stack.",
+      "Frontend learners wanting to master backend architecture, databases, authentication, and DevOps fundamentals.",
+      "Self-taught coders with disjointed knowledge seeking engineering discipline, code reviews, and Git team workflows.",
+      "Technical founders and builders wanting to ship scalable full-stack products independently."
     ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in High logical aptitude, basic computer literacy should complete the prerequisite foundation before enrolling.",
+    "who_should_take_foundation_first": "Learners should have basic computer literacy and strong logical curiosity. No prior programming background or computer science degree is required.",
     "not_for": [
-      "Students looking for purely theoretical knowledge without hands-on implementation.",
-      "Individuals unwilling to engage in active problem-solving and coding."
+      "Individuals looking for quick syntax memorization without writing and debugging real code.",
+      "Students seeking passive lecture watching without active project execution and peer code reviews.",
+      "Those expecting job guarantees without defending their technical projects in viva examinations."
     ]
   },
   "prerequisites": {
-    "required": "High logical aptitude, basic computer literacy",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "required": "Basic computer operation, text typing, logical curiosity, and commitment to regular coding practice.",
+    "recommended": "Familiarity with web browsing and problem-solving mindset.",
+    "not_required": "Advanced mathematics, computer science degree, or prior professional software development experience.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "JavaScript/TypeScript, React / Next.js, Node.js, PostgreSQL / Supabase (student/free tiers sufficient for coursework)"
+      "hardware": "Laptop or desktop computer (Windows, macOS, or Linux) with at least 8 GB RAM and 20 GB free disk space.",
+      "software_accounts": "VS Code, Git, Node.js LTS, PostgreSQL, GitHub account, and modern web browser (Chrome, Firefox, or Edge)."
     }
   },
   "overview": {
-    "positioning": "Modernize to Next.js App Router, TypeScript, Supabase, Cursor AI.",
-    "short_description": "Comprehensive curriculum covering HTML, CSS, JavaScript, React to build production-grade projects.",
+    "positioning": "Don't Just Learn Coding. Build, Test, Deploy & Maintain Real Applications.",
+    "short_description": "A comprehensive 6-month software engineering program covering TypeScript, React, Next.js, Node.js, PostgreSQL, REST APIs, authentication, testing, Git, Docker, CI/CD, and AI-assisted engineering.",
     "key_facts": {
-      "level": "BEGINNER+",
-      "duration": "6 Months",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
+      "level": "BEGINNER TO PROFESSIONAL",
+      "duration": "6 Months (24 Weeks)",
+      "format": "Interactive Live Mentorship + Hands-On Engineering Labs + Weekly Code Reviews",
       "estimated_learning_hours": "240 Hours",
-      "project_count": "MULTIPLE PROJECTS + CAPSTONE",
-      "capstone": "Mandatory Enterprise Capstone",
-      "ai_integration": "AI-TRANSFORMING",
-      "career_focus": "Full Stack Software Engineer, Web App Developer"
+      "project_count": "6 Practical Projects + 1 Production Capstone",
+      "capstone": "Production SaaS Service Booking & Operations Platform",
+      "ai_integration": "AI-ASSISTED SOFTWARE ENGINEER",
+      "career_focus": "Junior Full-Stack Developer, Junior Frontend Developer, Junior Backend Developer, Web Engineer"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end solutions using HTML.",
-      "Solve concrete business problems applying Full Stack Programming Foundation principles.",
-      "Package professional case studies demonstrating verifiable skills."
+      "Architect and code responsive, accessible, mobile-first web applications using semantic HTML, modern CSS, and Tailwind CSS.",
+      "Write clean, type-safe, maintainable JavaScript and TypeScript adhering to professional industry design patterns.",
+      "Engineer modular React and Next.js applications leveraging the App Router, server/client components, hooks, and state management.",
+      "Design and deploy scalable REST APIs with Node.js and Express utilizing layered controller-service-repository architecture.",
+      "Model relational schemas, write complex SQL queries, migrations, indexes, and transactions in PostgreSQL with Prisma ORM.",
+      "Implement secure authentication, password hashing, JWTs, secure cookies, and Role-Based Access Control (RBAC).",
+      "Defend applications against OWASP Top 10 vulnerabilities including SQL injection, XSS, CSRF, and broken access control.",
+      "Write unit, component, integration, and end-to-end tests using Vitest, React Testing Library, and Playwright.",
+      "Collaborate in engineering teams using Git, GitHub feature branches, pull requests, issue tracking, and peer code reviews.",
+      "Containerize applications with Docker and configure automated CI/CD pipelines deploying to Vercel, Render, and cloud infrastructure.",
+      "Leverage modern AI tools (Cursor, Copilot, Claude) as engineering co-pilots while maintaining full technical responsibility."
     ]
   },
+  "what_you_will_be_able_to_build": [
+    {
+      "title": "Responsive Business Website",
+      "tag": "PROJECT 1 • FRONTEND FOUNDATIONS",
+      "desc": "A multi-page, responsive, accessible corporate web application built with semantic HTML5, modern CSS Grid/Flexbox, Tailwind CSS, and mobile-first responsive architecture.",
+      "features": [
+        "Semantic, W3C-validated HTML5 document structure with accessibility (ARIA) and SEO metadata",
+        "Mobile-first responsive layouts utilizing CSS Grid, Flexbox, and Tailwind CSS utility tokens",
+        "Interactive navigation drawer, animated modal dialogue, and validated contact intake form",
+        "Light/dark mode theming using CSS custom properties and persistent local storage",
+        "Lighthouse performance score 95+ with responsive picture elements and web font optimization",
+        "Deployed to production with automated git-push continuous deployment"
+      ]
+    },
+    {
+      "title": "React Productivity Application",
+      "tag": "PROJECT 2 • COMPONENT ARCHITECTURE",
+      "desc": "A feature-rich personal workspace and productivity management application built with TypeScript, React 19, custom hooks, and dynamic client-side state.",
+      "features": [
+        "Component-driven UI architecture decomposed into reusable, type-safe functional components",
+        "Client-side state orchestration using useState, useReducer, and React Context API",
+        "Custom hooks for debounced search, persistent local storage, and window viewport tracking",
+        "Dynamic filtering, multi-criteria sorting, drag-and-drop task prioritization, and tag taxonomy",
+        "Form validation with Zod schema verification and accessible keyboard navigation",
+        "Integration with external REST weather/calendar APIs with graceful loading and error states"
+      ]
+    },
+    {
+      "title": "Authentication & Role-Based Access System",
+      "tag": "PROJECT 3 • BACKEND & SECURITY",
+      "desc": "A production-grade identity, authentication, and authorization engine built with Node.js, Express, PostgreSQL, and cryptographic token management.",
+      "features": [
+        "User registration with bcrypt password hashing (salt rounds: 12) and email format validation",
+        "JWT-based access token architecture paired with secure HTTP-only refresh cookie rotation",
+        "Role-Based Access Control (RBAC) middleware verifying permissions across User, Manager, and Admin tiers",
+        "Protected API endpoints rejecting unauthorized requests with standardized 401/403 status codes",
+        "Brute-force protection via Redis/memory rate limiting and account lockout thresholds",
+        "Complete password reset workflow with cryptographically random one-time recovery tokens"
+      ]
+    },
+    {
+      "title": "Full-Stack Booking / E-Commerce Application",
+      "tag": "PROJECT 4 • FULL-STACK CRUD & COMMERCE",
+      "desc": "An end-to-end commercial booking and marketplace application connecting a Next.js frontend to a Node/PostgreSQL backend with transactional checkout.",
+      "features": [
+        "Catalog browsing with server-side pagination, full-text search, and multi-facet filtering",
+        "Interactive shopping cart / reservation scheduler with real-time stock and slot collision checks",
+        "Normalized PostgreSQL schema with foreign keys, cascading deletes, and ACID transactions",
+        "REST API endpoints supporting complete CRUD operations with request payload validation",
+        "Customer order history dashboard and merchant management portal with status transitions",
+        "Simulated payment gateway integration with webhook listeners and idempotent order fulfillment"
+      ]
+    },
+    {
+      "title": "SaaS-Style Analytics Dashboard",
+      "tag": "PROJECT 5 • NEXT.JS & DATA VIZ",
+      "desc": "An enterprise analytics and operational dashboard built with Next.js App Router, TypeScript, Prisma ORM, and real-time visualization widgets.",
+      "features": [
+        "Next.js App Router architecture leveraging React Server Components for ultra-fast initial render",
+        "Interactive data visualizations: revenue charts, conversion funnels, and user activity timelines",
+        "Prisma ORM database querying with optimized aggregations, grouping, and relation joins",
+        "CSV export utility, bulk record mutations, and optimistic UI updates for instant feedback",
+        "Dynamic breadcrumb navigation, nested route layouts, and parallel route modals",
+        "Role-sensitive views adapting dashboard cards based on authenticated administrator privileges"
+      ]
+    },
+    {
+      "title": "Team Software Engineering Project",
+      "tag": "PROJECT 6 • AGILE COLLABORATION",
+      "desc": "A collaborative team build executed by small squads of 3–4 learners using professional GitHub workflows, branches, pull requests, and peer reviews.",
+      "features": [
+        "GitHub project board management with epics, user stories, task estimations, and milestone sprints",
+        "Strict Git workflow: issue tracking, feature branch naming conventions, and pull request templates",
+        "Mandatory peer code reviews with constructive comments on maintainability and test coverage",
+        "Merge conflict resolution drills and git rebase / squash commit history hygiene",
+        "Automated CI linting and test execution running on GitHub Actions before every PR merge",
+        "Team sprint demo presenting architecture decisions, trade-offs, and retrospectives"
+      ]
+    },
+    {
+      "title": "Flagship Production Capstone: Service Booking SaaS",
+      "tag": "PROJECT 7 • ENTERPRISE CAPSTONE",
+      "desc": "A production-grade, multi-role Service Booking & Operations SaaS platform containerized with Docker, covered by automated test suites, and deployed to cloud infrastructure.",
+      "features": [
+        "Three distinct authenticated user portals: Client Customer, Service Provider, and Platform Administrator",
+        "Full calendar availability scheduling engine with automated conflict avoidance and timezone handling",
+        "PostgreSQL database with 15+ normalized tables, indexes, constraints, and Prisma schema migrations",
+        "Defensive security layer: Helmet security headers, CORS origin whitelisting, and SQL/XSS sanitization",
+        "Automated test suite combining Vitest unit tests, Supertest API tests, and Playwright end-to-end flows",
+        "Containerized with multi-stage Dockerfiles and deployed live to cloud staging and production environments"
+      ]
+    }
+  ],
   "why_now": {
-    "industry_shift": "The transition toward modern cloud and web ecosystems requires deep expertise in HTML and related technologies.",
-    "ai_impact": "AI tools have automated routine syntax and repetitive tasks, shifting the professional premium toward systems architecture, strategic context, and quality assurance.",
-    "business_demand": "Businesses actively seek talent who can deliver robust Full Stack Programming Foundation solutions efficiently.",
-    "career_opportunity": "Mastering these tools opens doors to high-paying specialized roles and global freelance opportunities."
+    "industry_shift": "The software industry in 2026/27 has moved beyond syntax memorization. Companies require engineers who understand the complete software lifecycle: type safety, API design, relational data integrity, security, automated testing, and cloud deployment.",
+    "ai_impact": "Generative AI coding assistants (Cursor, Copilot, Claude) generate boilerplate code in seconds. The professional engineering premium has shifted to architectural judgment, system design, debugging complex failures, verifying AI suggestions, and delivering secure, reliable systems.",
+    "business_demand": "Businesses cannot afford fragile code. They hire developers who know how to collaborate via Git, defend their schemas, write automated tests, prevent data breaches, and keep production systems running reliably.",
+    "career_opportunity": "Full-stack developers who master TypeScript, React, Next.js, Node.js, and PostgreSQL possess the most versatile and resilient skillset in the tech ecosystem, qualifying for junior to mid-level roles and high-value remote projects."
   },
+  "specialization_tracks": [
+    {
+      "track": "Track A",
+      "title": "Frontend Engineering",
+      "focus": "TypeScript, React 19, Next.js App Router, UI Architecture, Web Performance & Accessibility.",
+      "primary_offer": "Specialized in building fast, responsive, accessible web interfaces, component design systems, and client-side application architecture.",
+      "market_application": "Ideal for roles focusing on modern frontend web development, design engineering, and React/Next.js product teams."
+    },
+    {
+      "track": "Track B",
+      "title": "Backend Engineering",
+      "focus": "Node.js, Express, RESTful APIs, PostgreSQL Schema Design, Authentication, RBAC & Backend Testing.",
+      "primary_offer": "Specialized in architecting secure, scalable backend services, relational database schemas, complex business logic, and API integrations.",
+      "market_application": "Ideal for roles focusing on server-side engineering, database operations, microservices, and backend API platforms."
+    },
+    {
+      "track": "Track C",
+      "title": "Full-Stack Product Engineering",
+      "focus": "End-to-End Product Architecture, Frontend + Backend Integration, Docker, CI/CD & Cloud Deployment.",
+      "primary_offer": "Specialized in shipping complete software products from wireframe to production cloud deployment with continuous integration.",
+      "market_application": "Ideal for startup engineering roles, early-stage product teams, digital agencies, and independent technical founders."
+    },
+    {
+      "track": "Track D",
+      "title": "AI-Enabled Web Development",
+      "focus": "LLM API Integrations, Vector Search, AI-Powered Features, Modern Coding Workflows & Automated QA.",
+      "primary_offer": "Specialized in enhancing web applications with AI capabilities (OpenAI/Anthropic APIs, embeddings, structured outputs) while leveraging AI coding tools responsibly.",
+      "market_application": "Ideal for modern product teams incorporating generative AI capabilities and engineering teams operating at 10x development velocity."
+    }
+  ],
   "learning_outcomes": [
-    "PLAN: Formulate project architectures utilizing HTML.",
-    "BUILD: Construct professional deliverables using modern workflows.",
-    "OPTIMIZE: Refine outputs against strict quality metrics."
+    "FOUNDATIONS: Understand how the modern internet works, from DNS resolution and HTTP/HTTPS request-response cycles to client-server architecture.",
+    "SEMANTIC HTML: Write clean, accessible, SEO-friendly HTML5 document structures adhering strictly to W3C standards and ARIA best practices.",
+    "RESPONSIVE CSS: Build production-grade responsive user interfaces using Flexbox, CSS Grid, custom properties, and Tailwind CSS tokens without layout shifts.",
+    "JAVASCRIPT CORE: Master modern ES6+ JavaScript including lexical scope, closures, array methods, asynchronous promises, async/await, and event delegation.",
+    "TYPE SAFETY: Apply TypeScript across frontend and backend codebases, writing type-safe interfaces, generics, unions, and API response contracts.",
+    "REACT ARCHITECTURE: Build modular single-page applications with React 19, mastering component lifecycles, hooks (useState, useEffect, custom hooks), and Context.",
+    "NEXT.JS APPS: Develop full-stack applications with Next.js App Router, utilizing React Server Components, server actions, route handlers, and SEO optimization.",
+    "NODE.JS BACKEND: Architect modular server-side applications in Node.js and Express using structured routes, controllers, services, and error-handling middleware.",
+    "RESTFUL APIS: Design and implement predictable RESTful APIs with standardized HTTP status codes, pagination, filtering, sorting, and Postman documentation.",
+    "SQL & POSTGRESQL: Design normalized relational schemas in PostgreSQL, write complex SQL queries, JOINs, aggregations, indexes, and migrations with Prisma ORM.",
+    "AUTHENTICATION: Implement robust user authentication using bcrypt password hashing, JWTs, HTTP-only refresh cookies, and session management.",
+    "AUTHORIZATION: Enforce Role-Based Access Control (RBAC) across frontend routes and backend middleware to safeguard protected business resources.",
+    "DEFENSIVE SECURITY: Protect web applications against OWASP Top 10 vulnerabilities including SQL injection, Cross-Site Scripting (XSS), CSRF, and CORS exploits.",
+    "SOFTWARE TESTING: Write automated test suites combining unit tests, component tests, integration tests, and Playwright end-to-end user flows.",
+    "GIT COLLABORATION: Use Git and GitHub professionally throughout development: feature branching, clean commit messages, pull requests, and resolving merge conflicts.",
+    "SYSTEMATIC DEBUGGING: Diagnose and resolve software defects using Chrome DevTools, network inspection, server logs, breakpoint debugging, and minimal reproductions.",
+    "AI DEVELOPMENT: Leverage modern AI coding assistants (Cursor, Copilot, Claude) for rapid scaffolding and refactoring while verifying every suggestion with engineering rigor.",
+    "SUPPORTING PYTHON: Write Python scripts for developer automation, API consumption, data manipulation, and integrating external AI/LLM web services.",
+    "CONTAINERIZATION: Dockerize full-stack applications with multi-stage Dockerfiles and manage local multi-container development environments with Docker Compose.",
+    "CI/CD DEPLOYMENT: Build automated deployment pipelines using GitHub Actions to continuously test and deploy applications to Vercel, Render, and cloud infrastructure.",
+    "MONITORING: Monitor production applications with structured logging, error tracking, API uptime checks, and frontend Core Web Vitals optimization.",
+    "SYSTEM DESIGN: Create clear architectural system diagrams illustrating client-server separation, database relationships, caching layers, and API gateways.",
+    "CODING INTERVIEWS: Solve 30–40 practical data structure and algorithmic coding challenges covering arrays, strings, hash maps, two pointers, and basic recursion.",
+    "CAREER READINESS: Assemble a verified GitHub portfolio of 6 projects, 3+ live deployed apps, 1 enterprise capstone, and successfully defend technical decisions in viva interviews."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+        "stage": "Phase 1: Web Foundations & Core Programming (Weeks 1–6)",
+        "focus": "Internet mechanics, semantic HTML5, professional CSS Grid/Flexbox, Tailwind CSS, and deep modern JavaScript (ES6+ through asynchronous programming)."
       },
       {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+        "stage": "Phase 2: Frontend Engineering with TypeScript, React & Next.js (Weeks 7–12)",
+        "focus": "TypeScript type safety, React component architecture, custom hooks, state management, and full-stack Next.js App Router applications."
       },
       {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
+        "stage": "Phase 3: Backend Engineering, SQL & Database Architecture (Weeks 13–18)",
+        "focus": "Node.js server architecture, RESTful API design, PostgreSQL database modeling, SQL queries, Prisma ORM, and defensive security."
       },
       {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
+        "stage": "Phase 4: Authentication, Testing & DevOps Foundations (Weeks 19–22)",
+        "focus": "JWT/Session authentication, RBAC, Vitest and Playwright testing, Git team pull request workflows, Docker containerization, and CI/CD deployment."
       },
       {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      },
-      {
-        "stage": "Stage 6: Major Capstone & Defense",
-        "focus": "End-to-end enterprise solution delivery and oral jury presentation."
+        "stage": "Phase 5: Enterprise Capstone, Sprint & Career Defense (Weeks 23–24)",
+        "focus": "Multi-role SaaS capstone build, Agile team sprint simulation, code review defense, resume/GitHub portfolio polish, and technical interview preparation."
       }
     ]
   },
   "hands_on_tech": {
-    "core_tools": [
+    "core_languages": [
       {
-        "tool": "HTML",
-        "purpose": "Structure web pages with semantic tags.",
-        "what_student_learns": "Semantic structure, forms, and accessibility.",
-        "what_student_builds": "Accessible page layouts."
+        "tool": "HTML5",
+        "purpose": "Semantic document structuring",
+        "skills": "Semantic tags, accessible form validation, ARIA landmarks, SEO metadata"
       },
       {
-        "tool": "CSS",
-        "purpose": "Style web applications and create responsive layouts.",
-        "what_student_learns": "Flexbox, Grid, animations, and media queries.",
-        "what_student_builds": "Responsive UI components."
+        "tool": "CSS3 & Tailwind CSS",
+        "purpose": "Responsive styling & design tokens",
+        "skills": "Flexbox, CSS Grid, custom properties, utility-first styling, animations, mobile-first design"
       },
       {
-        "tool": "JavaScript",
-        "purpose": "Add interactivity and complex logic to web pages.",
-        "what_student_learns": "ES6+ syntax, DOM manipulation, and asynchronous programming.",
-        "what_student_builds": "Interactive web widgets."
+        "tool": "JavaScript (ES6+)",
+        "purpose": "Core programming & async logic",
+        "skills": "Closures, array methods, DOM manipulation, promises, async/await, event loop"
       },
       {
-        "tool": "React",
-        "purpose": "Build modular single-page applications.",
-        "what_student_learns": "Component lifecycle, state management, and hooks.",
-        "what_student_builds": "Dynamic user interfaces."
-      },
-      {
-        "tool": "Node.js",
-        "purpose": "Execute JavaScript on the server side.",
-        "what_student_learns": "Event loop, file system operations, and server configuration.",
-        "what_student_builds": "Backend server foundations."
-      },
-      {
-        "tool": "MongoDB",
-        "purpose": "Store unstructured data in a NoSQL database.",
-        "what_student_learns": "Document schemas, CRUD operations, and indexing.",
-        "what_student_builds": "Scalable data models."
-      },
-      {
-        "tool": "Git",
-        "purpose": "Track code changes and collaborate with teams.",
-        "what_student_learns": "Branching, merging, and version history.",
-        "what_student_builds": "Organized code repositories."
-      },
-      {
-        "tool": "VS Code",
-        "purpose": "Write and debug code efficiently.",
-        "what_student_learns": "Extensions, shortcuts, and debugging tools.",
-        "what_student_builds": "Configured development environment."
+        "tool": "TypeScript",
+        "purpose": "Type-safe application engineering",
+        "skills": "Interfaces, type aliases, generics, union types, type narrowing, API response typing"
       }
     ],
-    "supporting_tools": [
+    "frontend_stack": [
+      {
+        "tool": "React 19",
+        "purpose": "Component-based user interfaces",
+        "skills": "Functional components, hooks (useState, useEffect, custom hooks), Context API, UI state"
+      },
+      {
+        "tool": "Next.js (App Router)",
+        "purpose": "Full-stack React framework",
+        "skills": "Server & client components, nested layouts, server actions, route handlers, image optimization"
+      }
+    ],
+    "backend_database": [
+      {
+        "tool": "Node.js & Express",
+        "purpose": "Server-side runtime & REST APIs",
+        "skills": "Layered architecture (controller/service), middleware, routing, error handling, environment variables"
+      },
+      {
+        "tool": "PostgreSQL & SQL",
+        "purpose": "Relational data persistence",
+        "skills": "Relational schema design, normalization, JOINs, aggregations, indexes, transactions, ACID compliance"
+      },
+      {
+        "tool": "Prisma ORM",
+        "purpose": "Type-safe database client",
+        "skills": "Schema modeling, migrations, type-safe queries, relation joins, seeding"
+      }
+    ],
+    "devops_testing": [
+      {
+        "tool": "Git & GitHub",
+        "purpose": "Version control & team collaboration",
+        "skills": "Branching, commits, pull requests, merge conflict resolution, code reviews, issues"
+      },
+      {
+        "tool": "Vitest & Playwright",
+        "purpose": "Automated testing suite",
+        "skills": "Unit testing, React component testing, API testing, end-to-end browser flows"
+      },
       {
         "tool": "Docker",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "purpose": "Application containerization",
+        "skills": "Dockerfiles, container builds, port mapping, local development environment consistency"
       },
       {
-        "tool": "Postman",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Vercel",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Prisma / Drizzle ORM",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "GitHub Actions",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "tool": "Vercel & Render",
+        "purpose": "Production cloud deployment",
+        "skills": "Git-based continuous deployment, environment variable configuration, build logs"
       }
     ],
-    "emerging_tools": [
+    "ai_supporting": [
       {
-        "tool": "v0.dev",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
+        "tool": "Cursor & GitHub Copilot",
+        "purpose": "AI coding assistants",
+        "skills": "Code explanation, scaffolding, refactoring, test generation, critical code review"
       },
       {
-        "tool": "Cloudflare Workers",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "pgvector",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Bun",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Biome",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
+        "tool": "Python",
+        "purpose": "Supporting scripting & automation",
+        "skills": "Data manipulation, automated scripts, API requests, AI integration workflows"
       }
-    ],
-    "tools_to_review": [
-      "Create React App (deprecated)",
-      "jQuery",
-      "Raw vanilla CSS resets without component utilities",
-      "Manual FTP server deployments"
     ]
   },
   "industry_workflow": {
-    "overview": "How leading practitioners implement Full Stack Programming Foundation in 2026/27:",
+    "overview": "HOW PROFESSIONAL SOFTWARE GETS BUILT: The complete 13-step software engineering lifecycle taught throughout the Nova Skills curriculum:",
     "stages": [
       {
         "step": 1,
-        "name": "Requirements Analysis",
-        "desc": "Deconstruct the business problem and technical constraints."
+        "name": "Requirement & User Stories",
+        "desc": "Deconstruct business requirements into user stories, acceptance criteria, and edge-case definitions."
       },
       {
         "step": 2,
-        "name": "Architecture & Setup",
-        "desc": "Initialize the environment and plan the structure."
+        "name": "UI / Wireframe & Component Hierarchy",
+        "desc": "Map user interfaces into modular component trees, identifying state boundaries and props flow."
       },
       {
         "step": 3,
-        "name": "Implementation",
-        "desc": "Execute core development using standard practices."
+        "name": "Frontend UI Implementation",
+        "desc": "Build responsive, accessible, mobile-first user interfaces using TypeScript, React/Next.js, and Tailwind."
       },
       {
         "step": 4,
-        "name": "Testing & Deployment",
-        "desc": "Validate functionality and release to production."
+        "name": "API Contract & Schema Design",
+        "desc": "Define RESTful endpoint specifications, request payloads, response schemas, and error structures."
+      },
+      {
+        "step": 5,
+        "name": "Backend Business Logic",
+        "desc": "Implement robust server logic using layered Node.js/Express controllers, services, and validation."
+      },
+      {
+        "step": 6,
+        "name": "Database Schema & Migrations",
+        "desc": "Design normalized PostgreSQL tables, foreign key constraints, indexes, and versioned Prisma migrations."
+      },
+      {
+        "step": 7,
+        "name": "Authentication & Authorization (RBAC)",
+        "desc": "Secure endpoints with bcrypt password hashing, JWTs, HTTP-only cookies, and role-based permissions."
+      },
+      {
+        "step": 8,
+        "name": "Automated Testing Suite",
+        "desc": "Execute automated unit tests (Vitest), integration tests, and Playwright end-to-end verification."
+      },
+      {
+        "step": 9,
+        "name": "Peer Code Review & Linting",
+        "desc": "Audit pull requests against style guides, security standards, maintainability, and naming clarity."
+      },
+      {
+        "step": 10,
+        "name": "Git Feature Branch & Pull Request",
+        "desc": "Commit clean, atomic code changes and open pull requests with detailed descriptions and issue links."
+      },
+      {
+        "step": 11,
+        "name": "CI/CD Build & Container Deployment",
+        "desc": "Trigger automated GitHub Actions pipelines to run tests, build Docker containers, and deploy to staging."
+      },
+      {
+        "step": 12,
+        "name": "Production Monitoring & Error Logging",
+        "desc": "Verify live deployment health through application logs, error tracking, and uptime monitors."
+      },
+      {
+        "step": 13,
+        "name": "Performance Tuning & Improvement",
+        "desc": "Profile database queries, cache frequent endpoints, audit Core Web Vitals, and refactor bottlenecks."
       }
     ]
   },
+  "practical_labs": [
+    {
+      "week": "Lab 01",
+      "title": "Semantic HTML5 & Responsive CSS Layout Clinic",
+      "objective": "Build a responsive, accessible multi-column landing page adhering strictly to W3C standards and mobile-first breakpoints.",
+      "deliverable": "W3C-validated HTML/CSS landing page with 100% Lighthouse accessibility score and fluid responsive grid."
+    },
+    {
+      "week": "Lab 02",
+      "title": "JavaScript DOM & Asynchronous Data Fetching Lab",
+      "objective": "Implement an interactive browser application consuming real-time REST APIs with error handling and loading indicators.",
+      "deliverable": "Vanilla JavaScript dynamic web application handling API pagination, debounced search, and network failures."
+    },
+    {
+      "week": "Lab 03",
+      "title": "TypeScript Migration & Type Safety Refactor Clinic",
+      "objective": "Refactor an untyped JavaScript codebase into strict TypeScript, eliminating all 'any' types with proper interfaces and generics.",
+      "deliverable": "Fully typed TypeScript project compiling with strict mode enabled and zero compiler warnings."
+    },
+    {
+      "week": "Lab 04",
+      "title": "React Component Architecture & Custom Hooks Studio",
+      "objective": "Build a modular React application decomposing complex UI state into reusable functional components and custom hooks.",
+      "deliverable": "Production React app featuring custom useFetch and useLocalStorage hooks with clean state isolation."
+    },
+    {
+      "week": "Lab 05",
+      "title": "Next.js App Router & Server Components Workshop",
+      "objective": "Architect a multi-route Next.js application leveraging React Server Components for fast data fetching and SEO optimization.",
+      "deliverable": "Deployed Next.js application with dynamic routing, loading skeletons, error boundaries, and metadata tags."
+    },
+    {
+      "week": "Lab 06",
+      "title": "Node.js REST API Architecture & PostgreSQL Schema Lab",
+      "objective": "Build a layered Express backend connected to a normalized PostgreSQL database with parameterized queries and migrations.",
+      "deliverable": "Documented REST API with controller-service architecture, PostgreSQL schema migrations, and Postman collection."
+    },
+    {
+      "week": "Lab 07",
+      "title": "JWT Authentication & Role-Based Access Control Studio",
+      "objective": "Implement secure user registration, bcrypt password hashing, JWT token rotation, and RBAC authorization middleware.",
+      "deliverable": "Secure auth service with protected routes, HTTP-only refresh cookies, and multi-role permission guards."
+    },
+    {
+      "week": "Lab 08",
+      "title": "Web Application Security & OWASP Defense Clinic",
+      "objective": "Identify and patch security vulnerabilities in a deliberately vulnerable web app: SQL injection, XSS, CSRF, and CORS bugs.",
+      "deliverable": "Defensively secured application with security headers (Helmet), input sanitization, and automated audit report."
+    },
+    {
+      "week": "Lab 09",
+      "title": "Automated Testing Suite: Vitest & Playwright Lab",
+      "objective": "Write automated unit tests for business utilities, component tests for React UI, and Playwright end-to-end user flows.",
+      "deliverable": "Comprehensive test suite covering 80%+ critical path code with passing unit, integration, and E2E specs."
+    },
+    {
+      "week": "Lab 10",
+      "title": "Dockerization, CI/CD Pipeline & Team Sprint Launch",
+      "objective": "Containerize the application with Docker, configure GitHub Actions CI/CD, and launch the 2-week team engineering sprint.",
+      "deliverable": "Multi-stage Dockerfile, automated GitHub Actions workflow passing on PRs, and team backlog on GitHub Projects."
+    }
+  ],
   "business_use_cases": [
     {
-      "sector": "Startups & SMEs",
-      "business_problem": "Need rapid, scalable digital solutions.",
-      "approach": "Utilize HTML to quickly iterate and deliver value.",
-      "toolset": "HTML, CSS, JavaScript",
-      "output": "Functional Minimum Viable Product (MVP)."
+      "sector": "B2B SaaS & Enterprise Software",
+      "business_problem": "SaaS startups require scalable multi-tenant architectures with role-based access control, subscription tiers, and reliable database isolation.",
+      "approach": "Engineer a Next.js frontend with Node.js microservices, PostgreSQL with tenant schema separation, and RBAC middleware.",
+      "toolset": "TypeScript, Next.js, Node.js, PostgreSQL, Prisma, JWT, Docker",
+      "output": "Scalable multi-tenant SaaS foundation with automated role gating and subscription analytics."
+    },
+    {
+      "sector": "Direct-to-Consumer (D2C) E-Commerce",
+      "business_problem": "Retail brands suffer from slow page load times, poor mobile conversions, and inventory booking race conditions during peak flash sales.",
+      "approach": "Build a server-side rendered Next.js storefront with optimistic UI, PostgreSQL ACID transactions for inventory locks, and webhook fulfillment.",
+      "toolset": "React, Next.js, Node.js, PostgreSQL, Tailwind CSS, Stripe Webhooks",
+      "output": "High-performance storefront achieving sub-second page loads and zero inventory overselling."
+    },
+    {
+      "sector": "Healthcare & Professional Service Booking",
+      "business_problem": "Clinics and consulting firms struggle with double-bookings, timezone confusion, and manual client appointment confirmations.",
+      "approach": "Implement an automated scheduling engine with PostgreSQL timestamp range constraints, provider availability buffers, and SMS/Email notification hooks.",
+      "toolset": "TypeScript, React, Node.js, PostgreSQL, REST APIs, Nodemailer",
+      "output": "Automated appointment booking platform eliminating manual scheduling conflicts."
+    },
+    {
+      "sector": "Financial Operations & Internal Tooling",
+      "business_problem": "Operations teams waste hundreds of hours manually compiling spreadsheets across disjointed internal tools with zero audit trails.",
+      "approach": "Construct a centralized internal operations dashboard with aggregated SQL reporting, CSV batch uploads, and detailed administrative audit logs.",
+      "toolset": "TypeScript, Next.js, Express, PostgreSQL, Prisma, Chart.js",
+      "output": "Internal operations portal automating daily financial reconciliation with full role-based audit history."
+    },
+    {
+      "sector": "AI-Powered Knowledge & Document Tools",
+      "business_problem": "Enterprises need internal portals allowing employees to search, summarize, and extract insights from dense policy and technical documentation.",
+      "approach": "Develop a full-stack document portal with file upload pipelines, background job processing, and LLM API integrations for smart summarization.",
+      "toolset": "TypeScript, React, Node.js, PostgreSQL, Python, OpenAI/Claude APIs",
+      "output": "Secure internal document intelligence portal providing instant AI-assisted Q&A."
+    },
+    {
+      "sector": "High-Traffic Content Publishing & Media",
+      "business_problem": "Digital media outlets require fast publishing workflows, outstanding SEO scores, dynamic author management, and resilience against sudden traffic spikes.",
+      "approach": "Deploy a headless Next.js publishing platform with Incremental Static Regeneration (ISR), automated image optimization, and CDN edge caching.",
+      "toolset": "Next.js, Tailwind CSS, PostgreSQL, Cloudflare CDN, Vercel",
+      "output": "Lightning-fast media portal maintaining 99+ Core Web Vitals under high concurrent traffic."
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-TRANSFORMING",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "role_classification": "AI-ASSISTED SOFTWARE ENGINEER",
+    "ai_can_assist_with": "Explaining complex code and legacy patterns, generating boilerplate structures (schemas, interfaces, DTOs), suggesting refactorings, generating initial unit test templates, drafting documentation, and explaining cryptic error messages.",
+    "ai_can_automate": "Routine syntax lookup, repetitive mock data generation, boilerplate CRUD scaffolding, initial regex pattern drafting, and converting JSON structures into TypeScript type definitions.",
+    "ai_cannot_replace": "System architectural judgment, relational database schema design, defensive security analysis, empathy for user experience, debugging distributed race conditions, and technical accountability for production outages.",
+    "human_expertise_required": "Validating that AI-generated code meets business specifications, verifying library versions and API signatures, testing edge cases and security vulnerabilities, and ensuring code maintainability for the entire engineering team.",
+    "validation_protocol": "Every piece of AI-assisted code must undergo a mandatory 5-step verification protocol: (1) Understand line-by-line what the code does, (2) Verify no hallucinated methods or deprecated libraries exist, (3) Check for SQL injection, XSS, and unhandled errors, (4) Write passing automated unit tests, and (5) Manually test the code in a running local environment.",
+    "responsible_use": "Developers remain 100% responsible for the code they commit. Never paste private credentials, API keys, or confidential client proprietary data into public AI models."
   },
-  "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
-  ],
-  "common_mistakes": [
-    {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
-    }
-  ],
+  "course_comparison": {
+    "title": "Why This Program Is Different",
+    "typical_heading": "Typical Full-Stack Courses",
+    "novaskills_heading": "Nova Skills Software Engineering Program",
+    "typical_course": [
+      "Basic HTML/CSS syntax taught in isolation from modern layout systems",
+      "Plain JavaScript only; skips TypeScript completely or treats it as optional",
+      "React taught as isolated syntax without component architecture or state patterns",
+      "Skips Next.js or covers it superficially without App Router or server components",
+      "NoSQL (MongoDB) tutorials that skip real relational data modeling",
+      "Basic CRUD tutorials with zero authentication or insecure plain text passwords",
+      "Application security completely ignored; teaches vulnerable code patterns",
+      "Testing is entirely skipped or treated as an afterthought in one slide",
+      "Git taught as a single lecture; all code committed directly to main branch",
+      "Debugging is random trial-and-error console.log statements",
+      "Docker, CI/CD, and deployment are omitted or left as self-study",
+      "Students rely naively on AI code without understanding how to verify it",
+      "Solitary coding with zero experience in team collaboration or peer code reviews",
+      "Toy clone tutorials (todo list, basic blog) that recruiters immediately ignore"
+    ],
+    "novaskills_mastery": [
+      "Semantic HTML5, CSS Grid/Flexbox, accessibility (ARIA), and Tailwind CSS tokens",
+      "TypeScript made a core foundational standard across both frontend and backend",
+      "React 19 component thinking, custom hooks, state architecture, and clean UI state",
+      "Full-stack Next.js App Router, React Server Components, and server actions",
+      "PostgreSQL relational modeling, complex SQL queries, JOINs, ACID transactions & Prisma",
+      "Dedicated authentication & authorization (RBAC) with bcrypt, JWTs, and secure cookies",
+      "Defensive web security: OWASP Top 10, input sanitization, CSRF, and CORS defense",
+      "Mandatory automated testing: Vitest unit tests, component tests & Playwright E2E",
+      "Professional Git workflow used throughout: feature branches, PRs, issues & code reviews",
+      "Systematic debugging methodology: DevTools, network tab, server logs & breakpoints",
+      "Docker containerization, GitHub Actions CI/CD pipelines & cloud cloud deployment",
+      "AI tools (Cursor, Copilot, Claude) taught with rigorous human review & verification protocol",
+      "Software Engineering Sprint: team builds in squads of 3–4 with peer code reviews",
+      "6 practical engineering projects + 1 production SaaS capstone defended before jury"
+    ]
+  },
+  "portfolio_specs": {
+    "title": "Your Software Engineering Portfolio",
+    "description": "Graduates leave with a verifiable, recruiter-ready GitHub portfolio demonstrating real engineering discipline, clean code, and deployed applications:",
+    "deliverables": [
+      "GitHub Profile with meaningful commit green-square activity and polished README overview",
+      "6 Project Repositories with professional README documentation and architecture diagrams",
+      "3+ Live Deployed Applications hosted on Vercel, Render, or cloud infrastructure",
+      "1 Flagship Enterprise Capstone: Production Service Booking & Operations SaaS platform",
+      "Type-Safe Codebases: Strict TypeScript compilation across frontend and backend repos",
+      "Normalized PostgreSQL Database Schemas documented with Entity-Relationship (ER) diagrams",
+      "Complete REST API Documentation with Postman collections and HTTP status specifications",
+      "Automated Test Evidence: Passing test suites with Vitest, React Testing Library, and Playwright",
+      "Defensive Security Audits: Documented OWASP mitigation measures and sanitized inputs",
+      "Git History: Atomic commit messages, feature branches, and merged pull request records",
+      "Team Engineering Sprint Artefacts: Documented issue boards, sprint velocity, and code reviews",
+      "Docker Containers: Working Dockerfiles and Docker Compose files for local reproduction",
+      "CI/CD Pipelines: Passing GitHub Actions configuration files with automated test triggers",
+      "Technical Project Defense Presentation: Slide deck and video demo explaining architectural decisions"
+    ],
+    "case_study_structure": [
+      "1. Project Title, Live Deployment Link & Repository Overview",
+      "2. Problem Statement & Commercial Motivation",
+      "3. System Architecture & High-Level Data Flow Diagram",
+      "4. Database Schema Design & Entity Relationships (PostgreSQL)",
+      "5. Key Technical Challenges & Engineering Trade-Off Decisions",
+      "6. Security Considerations & Authentication Implementation",
+      "7. Automated Testing Strategy & Code Quality Metrics",
+      "8. Production Deployment, Performance Benchmarks & Future Roadmap"
+    ]
+  },
+  "assessment_model": {
+    "title": "Competency-Based Engineering Assessment",
+    "breakdown": [
+      {
+        "item": "Weekly Coding & Debugging Labs",
+        "weight": "15%",
+        "desc": "Hands-on execution of 10 practical engineering labs validating weekly concepts and bug resolution."
+      },
+      {
+        "item": "Frontend Engineering Assessment",
+        "weight": "10%",
+        "desc": "Independent build of a responsive, type-safe React/Next.js application evaluated on UI architecture and performance."
+      },
+      {
+        "item": "Backend & API Architecture Assessment",
+        "weight": "10%",
+        "desc": "Evaluation of RESTful API design, controller-service separation, input validation, and error resilience."
+      },
+      {
+        "item": "Database Modeling & SQL Proficiency",
+        "weight": "10%",
+        "desc": "Assessment of PostgreSQL relational schema normalization, complex SQL joins, indexing, and Prisma migrations."
+      },
+      {
+        "item": "Testing, Security & Quality Assurance",
+        "weight": "10%",
+        "desc": "Evaluation of unit test coverage, Playwright E2E tests, OWASP vulnerability defense, and clean error handling."
+      },
+      {
+        "item": "Team Software Engineering Sprint",
+        "weight": "15%",
+        "desc": "Faculty and peer assessment of collaborative Git workflows, pull request quality, issue tracking, and sprint demos."
+      },
+      {
+        "item": "Portfolio Project Repositories",
+        "weight": "10%",
+        "desc": "Audit of GitHub repositories, commit hygiene, README clarity, architecture diagrams, and live deployment links."
+      },
+      {
+        "item": "Final Production Capstone & Viva Defense",
+        "weight": "20%",
+        "desc": "Oral jury examination where learners present and defend architectural choices, database schema, and security of their SaaS capstone."
+      }
+    ]
+  },
   "career_paths": {
-    "entry_roles": "Full Stack Software Engineer",
-    "mid_roles": " Web App Developer",
-    "specialist_roles": "Frontend/Backend Engineer",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": "Junior Full-Stack Developer, Junior Frontend Developer, Junior React Developer, Junior Web Developer, Software Developer Intern",
+    "mid_roles": "Full-Stack Developer, Frontend Engineer, Backend Developer, Web Application Engineer",
+    "specialist_roles": "React/Next.js Specialist, Node.js API Engineer, Database Developer",
+    "freelance_roles": "Independent Web App Developer, Full-Stack Freelance Contractor, Technical Web Consultant",
+    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean Git commit history, ability to write and test code independently, and clear communication.",
+    "what_student_demonstrates": "Ability to take a product specification, engineer the frontend and backend, integrate a relational database, write automated tests, and deploy to production."
   },
   "freelance_applications": {
     "services_offered": [
-      "End-to-end Full Stack Programming Foundation project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
+      "Custom full-stack web application development for SMEs, startups, and agencies.",
+      "Frontend development and responsive UI implementation using React, Next.js, and Tailwind CSS.",
+      "Backend RESTful API development and third-party API integration with Node.js and PostgreSQL.",
+      "Database schema design, query optimization, and data migration for existing applications.",
+      "Website performance optimization, accessibility remediation, and bug fixing.",
+      "Monthly technical maintenance, dependency updates, and cloud hosting management retainers."
     ],
-    "client_workflow": "Technical Architecture Discovery -> Full Stack Sprint Planning -> Frontend & Backend Staging Deploys -> Code Review & Production Launch",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "client_workflow": "Requirements Gathering -> UI Wireframing -> Architecture & Schema Planning -> Agile Development Sprints -> Staging QA & Testing -> Production Deployment -> Post-Launch Support",
+    "portfolio_requirements": "GitHub repositories with clear README documentation, architecture diagrams, and live deployed application links showcasing commercial competence."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration.",
-    "Enterprise Capstone Project: Comprehensive full-scale system defended before mentors."
+    "Responsive Business Website (Semantic HTML5, CSS Grid, Tailwind CSS, Mobile-First)",
+    "React Productivity Application (TypeScript, React 19, Custom Hooks, State Architecture)",
+    "Authentication & Role-Based Access System (Node.js, PostgreSQL, JWTs, RBAC)",
+    "Full-Stack Booking / E-Commerce Application (Next.js, Node.js, PostgreSQL, CRUD)",
+    "SaaS-Style Analytics Dashboard (Next.js App Router, Prisma ORM, Data Viz)",
+    "Team Software Engineering Project (Collaborative GitHub Workflow, PRs, Code Reviews)",
+    "Flagship Production Capstone: Multi-Role Service Booking SaaS Platform"
   ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "GitHub portfolio with 6 structured repositories and 1 enterprise capstone repository.",
+    "3+ live deployed web applications accessible via public URLs on cloud hosting.",
+    "Complete technical case studies detailing architecture, database schemas, and testing.",
+    "Professional developer resume and optimized GitHub / LinkedIn engineering profiles.",
+    "ISO 9001:2015 verified Nova Skills Software Engineering certificate with permanent online QR verification."
   ],
-  "assessment": {
-    "model": "Continuous Lab Validation (30%) + Portfolio Projects (40%) + Capstone Defense (30%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+  "capstone": {
+    "title": "Service Booking & Operations SaaS Platform",
+    "description": "A production-ready, multi-tenant Service Booking & Operations SaaS application built from the ground up using TypeScript, Next.js, Node.js, PostgreSQL, Docker, and automated test pipelines.",
+    "user_features": [
+      "Customer registration, secure login, and profile management with avatar uploads",
+      "Service catalog browsing with full-text search, category filtering, and provider ratings",
+      "Interactive appointment scheduler with real-time slot availability and collision checks",
+      "Booking confirmation, automated calendar invite triggers, and self-service rescheduling",
+      "Customer dashboard displaying past bookings, upcoming appointments, and invoice receipts"
+    ],
+    "provider_features": [
+      "Service provider onboarding, business profile setup, and service pricing catalog",
+      "Dynamic working hours configuration, buffer time rules, and recurring availability rules",
+      "Provider appointments dashboard with status management (Pending, Confirmed, Completed, Cancelled)",
+      "Customer notes, booking history tracking, and revenue overview analytics"
+    ],
+    "admin_features": [
+      "Platform administrator dashboard with system-wide user, provider, and booking metrics",
+      "Provider verification and account approval workflow with document inspection",
+      "Platform commission management, dispute handling, and service category taxonomy",
+      "Audit logs recording security events, role escalations, and system configuration updates"
+    ],
+    "technical_requirements": [
+      "Responsive, accessible frontend built with TypeScript, React, Next.js App Router, and Tailwind CSS",
+      "Layered backend API built with Node.js, Express, and strict controller-service-repository separation",
+      "Normalized PostgreSQL database schema with 15+ tables, foreign keys, indexes, and Prisma migrations",
+      "JWT authentication paired with HTTP-only refresh cookies and Role-Based Access Control (RBAC)",
+      "Automated test coverage combining Vitest unit tests, API integration tests, and Playwright E2E flows",
+      "Multi-stage Dockerfile for containerized deployment and GitHub Actions CI/CD workflow configuration",
+      "Deployed to production cloud environments with environment variable isolation and monitoring"
+    ],
+    "workflow": "Requirements Specification -> UI Wireframes -> Architecture Diagram -> Relational Schema Design -> REST API Contracts -> Frontend Implementation -> Backend Logic -> Authentication & RBAC -> Automated Testing -> Code Review & Refactor -> Docker Containerization -> Cloud Deployment -> Final Project Defense"
   },
   "certification": {
-    "title": "Master Graduate in Full Stack Programming Foundation",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Graduate in Full Stack Software Engineering & AI-Assisted Development",
+    "criteria": "100% submission of required weekly labs, passing scores on all 6 project repositories, successful execution of the team engineering sprint, and formal oral defense of the flagship capstone before the faculty jury.",
+    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards with permanent credential URLs."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "not_covered": "This program focuses strictly on modern web software engineering with TypeScript, React, Next.js, Node.js, and PostgreSQL. It does NOT cover obsolete legacy technologies (such as jQuery, PHP 5, AngularJS 1.x, Create React App), competitive programming puzzles unrelated to real applications, or deep enterprise cloud architecture (such as complex Kubernetes cluster administration).",
   "next_learning_path": {
-    "recommended_next": "Advance to ai-web-dev-pro to specialize further.",
-    "related_programs": "For broader career mastery, compare with Subsumes HTML, JS, React, Node, SQL, Git."
+    "recommended_next": "Advance to ai-mastery to build autonomous multi-agent AI systems and enterprise RAG pipelines, or freelancing-mastery to monetize your software engineering skills through high-ticket client acquisition.",
+    "related_programs": "Compare with react-cert for specialized frontend development, or node-js for dedicated backend runtime mastery."
   },
   "faq": [
     {
-      "question": "What prior experience do I need for Full Stack Programming Foundation?",
-      "answer": "High logical aptitude, basic computer literacy"
+      "question": "Is this course suitable for complete beginners?",
+      "answer": "Yes. The program is designed from first principles. Module 1 starts with how the internet and client-server architectures work, followed by semantic HTML and CSS, before advancing into JavaScript, TypeScript, React, Node.js, databases, and deployment. No prior programming background is required, but you must be prepared to write code and debug regularly."
     },
     {
-      "question": "What tools will I learn?",
-      "answer": "You will gain hands-on experience with HTML, CSS, JavaScript, React, Node.js, MongoDB, Git, VS Code."
+      "question": "Do I need prior coding experience before joining?",
+      "answer": "No prior coding experience is necessary. What you need is basic computer literacy, problem-solving curiosity, text typing ability, and the discipline to complete weekly coding labs. We teach you how to think like an engineer from day one."
     },
     {
-      "question": "Are the projects practical?",
-      "answer": "Yes, all projects simulate real-world client briefs and business requirements."
+      "question": "Will HTML and CSS be taught from basics?",
+      "answer": "Yes, absolutely. Modules 2 and 3 teach semantic HTML5, accessible form validation, document outlines, CSS cascade, specificity, the box model, Flexbox, CSS Grid, mobile-first responsive design, and Tailwind CSS. We ensure you build rock-solid layout fundamentals before moving to frontend frameworks."
+    },
+    {
+      "question": "Is JavaScript thoroughly included?",
+      "answer": "Yes. Module 4 is dedicated entirely to modern JavaScript (ES6+). You will master variables, data types, arrow functions, scope, closures, higher-order array methods (map, filter, reduce), DOM manipulation, event delegation, promises, async/await, and fetching data from REST APIs."
+    },
+    {
+      "question": "Is TypeScript included in the curriculum?",
+      "answer": "Yes. TypeScript is a mandatory core module (Module 5) and is used throughout the rest of the course across both React and Node.js. You will learn interfaces, type aliases, union types, type narrowing, generics, component prop typing, and type-safe API contracts."
+    },
+    {
+      "question": "Will I learn React?",
+      "answer": "Yes. Module 6 provides deep training in React 19 application engineering. You will learn component decomposition, JSX/TSX, state management with useState and useReducer, lifecycle side-effects with useEffect, custom hooks, the Context API, and building modular, testable user interfaces."
+    },
+    {
+      "question": "Will Next.js be taught?",
+      "answer": "Yes. Module 7 covers Next.js with the modern App Router. You will learn nested layouts, dynamic routes, React Server Components vs Client Components, server actions, data fetching patterns, image optimization, SEO metadata, and production deployment workflows."
+    },
+    {
+      "question": "Is Node.js included in the program?",
+      "answer": "Yes. Module 8 covers backend engineering with Node.js and Express. You will learn event-driven runtime architecture, modular routing, custom middleware, the controller-service-repository pattern, request validation, environment configuration, and structured error handling."
+    },
+    {
+      "question": "Which database will I learn?",
+      "answer": "You will learn PostgreSQL, the industry's most respected open-source relational database. We also cover modern Object-Relational Mapping (ORM) using Prisma to manage schemas, migrations, and type-safe database queries."
+    },
+    {
+      "question": "Will PostgreSQL and relational SQL be covered deeply?",
+      "answer": "Yes. Module 10 is dedicated to SQL and PostgreSQL. You will learn relational database design, table normalization (1NF, 2NF, 3NF), primary and foreign keys, complex JOINs, aggregations, GROUP BY, transactions (ACID), indexes, and performance query tuning before introducing the Prisma ORM."
+    },
+    {
+      "question": "Will I learn how to build REST APIs?",
+      "answer": "Yes. Module 9 focuses on REST API engineering. You will learn HTTP methods, status codes, query/path parameters, JSON serialization, payload validation, pagination, filtering, search, versioning, Postman testing, and designing predictable API contracts."
+    },
+    {
+      "question": "Will authentication and authorization be included?",
+      "answer": "Yes. Module 11 is dedicated to authentication and authorization. You will implement secure user registration, bcrypt password hashing, session tokens, JWTs with HTTP-only cookie storage, token refresh rotation, and Role-Based Access Control (RBAC) across frontend and backend routes."
+    },
+    {
+      "question": "Will application security be taught?",
+      "answer": "Yes. Module 12 covers defensive web application security based on the OWASP Top 10. You will learn to prevent SQL injection, Cross-Site Scripting (XSS), CSRF attacks, CORS misconfigurations, broken access control, insecure secrets management (.env), and rate limiting."
+    },
+    {
+      "question": "Will I learn software testing?",
+      "answer": "Yes. Module 13 makes testing mandatory. You will learn unit testing for business logic, component testing for React UI using Vitest and React Testing Library, API integration testing, and end-to-end browser user flows using Playwright."
+    },
+    {
+      "question": "Is Git and GitHub included throughout the course?",
+      "answer": "Yes. Module 14 teaches Git and GitHub, but Git is used continuously from your very first project. You will master git init, branching, committing, pull requests, resolving merge conflicts, writing meaningful commit messages, and managing project boards on GitHub."
+    },
+    {
+      "question": "Will I work with Pull Requests and code reviews?",
+      "answer": "Yes. In Module 14, Module 16, and during the Team Software Engineering Sprint, all project features must be submitted via GitHub Pull Requests. You will participate in weekly code review labs where trainers and peers review your code against professional maintainability standards."
+    },
+    {
+      "question": "Will I learn Docker?",
+      "answer": "Yes. Module 18 introduces Docker containerization for developers. You will learn container concepts, write multi-stage Dockerfiles, build and run container images, configure port mappings, and use Docker Compose to run your web application and PostgreSQL database locally with consistency."
+    },
+    {
+      "question": "Will deployment be taught?",
+      "answer": "Yes. Module 19 covers production deployment across modern cloud platforms. You will deploy frontend applications to Vercel and backend services and databases to Render or cloud providers, configuring custom domains, HTTPS, and production environment variables."
+    },
+    {
+      "question": "Will CI/CD fundamentals be covered?",
+      "answer": "Yes. Module 19 introduces Continuous Integration and Continuous Deployment (CI/CD) using GitHub Actions. You will build automated workflows that run linting, execute automated tests on every pull request, and deploy code automatically upon merging."
+    },
+    {
+      "question": "Will Python be taught in this course?",
+      "answer": "Yes. Module 17 covers supporting Python for developers. You will learn Python fundamentals, file handling, data structures, making HTTP requests, writing developer automation scripts, and integrating external AI/LLM web services."
+    },
+    {
+      "question": "Is Python the main backend technology in this course?",
+      "answer": "No. The primary production full-stack path is JavaScript/TypeScript with Node.js, Express, and PostgreSQL. Python is taught as a valuable supporting skill for automation, scripting, and AI integration, keeping the main 6-month production stack focused and coherent."
+    },
+    {
+      "question": "Will modern AI coding tools be taught?",
+      "answer": "Yes. Module 16 teaches modern AI-assisted software development using tools like Cursor, GitHub Copilot, and Claude. You will learn prompt patterns for code explanation, boilerplate generation, refactoring, test scaffolding, and documentation."
+    },
+    {
+      "question": "Will AI build the projects for me?",
+      "answer": "No. AI is taught strictly as an engineering assistant. In Nova Skills, every student must understand, explain, debug, and defend every line of code they commit. You must complete oral viva examinations and project defense sessions where AI cannot assist you."
+    },
+    {
+      "question": "How many practical projects will I build?",
+      "answer": "You will build 6 practical engineering projects (Responsive Business Site, React Productivity App, Auth & RBAC System, Full-Stack Booking App, SaaS Dashboard, Team Project) plus 1 comprehensive production SaaS capstone."
+    },
+    {
+      "question": "Will I work on team engineering projects?",
+      "answer": "Yes. In the signature Software Engineering Sprint (Module 14 & Project 6), you will collaborate in squads of 3–4 learners using GitHub Issues, feature branches, pull requests, sprint boards, and peer code reviews to experience real workplace engineering dynamics."
+    },
+    {
+      "question": "Will I create a professional GitHub portfolio?",
+      "answer": "Yes. You will build a recruiter-ready GitHub profile with pinned repositories, clean commit histories, detailed architecture diagrams, live deployment links, test badges, and comprehensive README documentation for all major projects."
+    },
+    {
+      "question": "Is technical interview preparation included?",
+      "answer": "Yes. Module 22 covers practical Data Structures & Algorithms (30–40 targeted interview problems), and Module 23 covers technical interview preparation: JavaScript/React/SQL/API viva practice, system design diagrams, resume polish, and oral project defense."
+    },
+    {
+      "question": "What realistic job roles does this course prepare me for?",
+      "answer": "This course prepares you for realistic entry and junior software engineering roles: Junior Full-Stack Developer, Junior Frontend Developer, Junior React Developer, Junior Backend Developer, Junior Web Developer, Software Developer Intern, or Freelance Web Developer. We focus on building verifiable competence rather than making false claims of senior-level placement."
     }
   ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "HTML5 Semantic Structure & Responsive CSS Grid",
-      "module_purpose": "Build accessible, responsive web layouts using modern CSS techniques.",
+      "module_title": "Web & Software Development Foundations",
+      "module_purpose": "Understand how the internet, client-server architectures, and developer toolchains function before writing code.",
       "what_you_will_learn": [
-        "Master the concepts of HTML5 Semantic Structure & Responsive CSS Grid.",
-        "Apply HTML effectively.",
-        "Troubleshoot common issues in this domain."
+        "Master the core principles of Web & Software Development Foundations.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
       ],
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "Structuring Documents with Semantic HTML5",
-          "what_is_taught": "Proper use of header, main, article, and section tags.",
-          "why_it_matters": "Improves accessibility and SEO rankings.",
-          "what_learner_does": "Writes an accessible HTML document from a raw text file.",
-          "expected_outcome": "W3C-validated HTML page."
+          "lesson_title": "How the Internet Works: Clients, Servers & Protocols",
+          "what_is_taught": "DNS resolution, IP routing, client/server model, and HTTP/HTTPS request-response cycles.",
+          "why_it_matters": "Provides the foundational mental model required for all full-stack web and API architecture.",
+          "what_learner_does": "Traces an HTTP request lifecycle from browser URL to server response using curl and browser tools.",
+          "expected_outcome": "Clear conceptual grasp of internet communication layers."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "Styling with CSS Variables & Selectors",
-          "what_is_taught": "Advanced selectors, pseudo-classes, and CSS custom properties.",
-          "why_it_matters": "Enables maintainable and scalable stylesheets.",
-          "what_learner_does": "Refactors hardcoded CSS into dynamic variables.",
-          "expected_outcome": "Maintainable CSS architecture."
+          "lesson_title": "Web Architecture: Frontend, Backend & Database",
+          "what_is_taught": "Separation of concerns between client presentation, server business logic, and database persistence.",
+          "why_it_matters": "Prevents confusing client-side state with server-side business rules.",
+          "what_learner_does": "Draws an architectural diagram identifying the role of each tier in a modern web application.",
+          "expected_outcome": "Verified 3-tier system architecture diagram."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "Building Responsive Layouts with Flexbox",
-          "what_is_taught": "1D layout models using flex containers and items.",
-          "why_it_matters": "Essential for alignment and distribution of space.",
-          "what_learner_does": "Creates a responsive navigation bar.",
-          "expected_outcome": "Flexbox-based UI component."
+          "lesson_title": "Developer Toolchain: VS Code, Terminal & Environment Setup",
+          "what_is_taught": "Terminal navigation (bash/zsh), shell commands, file systems, VS Code extensions, and Node.js setup.",
+          "why_it_matters": "Developer speed and comfort with command-line tools are vital for professional workflows.",
+          "what_learner_does": "Initializes a structured project directory, installs CLI tools, and configures VS Code formatting.",
+          "expected_outcome": "Configured developer environment with standard linting extensions."
         },
         {
           "lesson_number": "1.4",
-          "lesson_title": "Advanced Grid Systems with CSS Grid",
-          "what_is_taught": "2D layout models, grid templates, and areas.",
-          "why_it_matters": "Allows complex magazine-style layouts without hacks.",
-          "what_learner_does": "Designs a complex dashboard layout.",
-          "expected_outcome": "Grid-based application dashboard."
+          "lesson_title": "Browser DevTools: Elements, Console & Network Inspection",
+          "what_is_taught": "Inspecting DOM nodes, reviewing console errors, analyzing network waterfalls, and editing CSS live.",
+          "why_it_matters": "DevTools is the primary diagnostic instrument for frontend debugging and performance auditing.",
+          "what_learner_does": "Debugs a broken mock website by analyzing HTTP status codes and inspecting console stack traces.",
+          "expected_outcome": "Solved diagnostic challenge using browser developer tools."
         }
       ],
       "key_concepts": [
-        "Semantic HTML",
-        "CSS Flexbox",
-        "CSS Grid",
-        "Responsive Design"
+        "Client/Server Architecture",
+        "HTTP/HTTPS Protocols",
+        "DNS & Hosting",
+        "Browser DevTools",
+        "Terminal CLI"
       ],
       "tools": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "VS Code",
+        "Terminal",
+        "Chrome DevTools",
+        "Git Basics"
       ],
-      "hands_on_practice": "Guided lab focused on HTML5 Semantic Structure & Responsive CSS Grid.",
-      "assignment": "Deliverable: Complete implementation of HTML5 Semantic Structure & Responsive CSS Grid.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "hands_on_practice": "Configure an isolated developer environment in VS Code with terminal CLI and inspect network requests in DevTools.",
+      "assignment": "Complete initial developer toolchain setup and submit DevTools network analysis report.",
+      "business_application": "Essential engineering foundation for diagnosing connectivity, CORS, and deployment issues in production.",
+      "expected_outcome": "Fully configured developer environment with terminal proficiency and basic network diagnostic skills."
     },
     {
       "module_number": "Module 02",
-      "module_title": "JavaScript ES6+ Core: Variables, Functions & DOM",
-      "module_purpose": "Master core programming concepts and interactive web scripting.",
+      "module_title": "Semantic HTML & Web Foundations",
+      "module_purpose": "Master document structure, semantic markup, web accessibility (ARIA), and SEO-friendly document architecture.",
       "what_you_will_learn": [
-        "Master the concepts of JavaScript ES6+ Core: Variables, Functions & DOM.",
-        "Apply HTML effectively.",
-        "Troubleshoot common issues in this domain."
+        "Master the core principles of Semantic HTML & Web Foundations.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
       ],
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "Variables, Scope, and Data Types in ES6",
-          "what_is_taught": "Let, const, primitive vs reference types, and lexical scope.",
-          "why_it_matters": "Prevents subtle bugs related to variable hoisting and mutation.",
-          "what_learner_does": "Writes scripts enforcing strict scope rules.",
-          "expected_outcome": "Bug-free data structures."
+          "lesson_title": "Document Structure & Semantic HTML5 Elements",
+          "what_is_taught": "header, main, section, article, nav, aside, footer, and proper heading hierarchies (h1-h6).",
+          "why_it_matters": "Improves organic search ranking, content scrapability, and assistive screen reader navigation.",
+          "what_learner_does": "Refactors an unsemantic div-heavy web document into clean semantic HTML5 markup.",
+          "expected_outcome": "W3C-compliant semantic HTML document."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "Functions, Closures, and Higher-Order Methods",
-          "what_is_taught": "Arrow functions, callbacks, map, filter, and reduce.",
-          "why_it_matters": "Forms the foundation of functional programming in JS.",
-          "what_learner_does": "Processes JSON data using array methods.",
-          "expected_outcome": "Data processing utility script."
+          "lesson_title": "Accessible Forms, Input Types & Native Validation",
+          "what_is_taught": "form, input types, labels, fieldsets, required attributes, regex patterns, and validation constraints.",
+          "why_it_matters": "Forms are the primary conversion mechanism and data intake funnel for commercial web apps.",
+          "what_learner_does": "Creates a multi-field customer registration form with client-side pattern matching and error states.",
+          "expected_outcome": "Accessible, validated HTML5 form."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "DOM Manipulation and Event Handling",
-          "what_is_taught": "Selecting nodes, modifying attributes, and listening to user events.",
-          "why_it_matters": "Enables dynamic user interactions without page reloads.",
-          "what_learner_does": "Builds a dynamic to-do list.",
-          "expected_outcome": "Interactive web component."
+          "lesson_title": "Web Accessibility (a11y) & ARIA Fundamentals",
+          "what_is_taught": "WCAG principles, color contrast, keyboard navigation, tabindex, aria-label, and aria-expanded.",
+          "why_it_matters": "Enterprise software legally requires accessibility compliance for all users including disabled audiences.",
+          "what_learner_does": "Audits a webpage with Lighthouse and keyboard-only navigation to fix contrast and focus order bugs.",
+          "expected_outcome": "Keyboard-accessible web page with zero ARIA violations."
         },
         {
           "lesson_number": "2.4",
-          "lesson_title": "Asynchronous JavaScript: Promises & Async/Await",
-          "what_is_taught": "Handling asynchronous operations and network requests.",
-          "why_it_matters": "Crucial for fetching data from external APIs smoothly.",
-          "what_learner_does": "Fetches user data from a mock API.",
-          "expected_outcome": "Asynchronous data loader."
+          "lesson_title": "SEO Fundamentals, Metadata & Responsive Media",
+          "what_is_taught": "Meta title, description, Open Graph social tags, viewport settings, picture element, and srcset.",
+          "why_it_matters": "Controls how links appear on social media platforms and optimizes asset loading across device displays.",
+          "what_learner_does": "Configures rich Open Graph metadata and sets up responsive picture tags with lazy loading.",
+          "expected_outcome": "Search-engine-optimized web document with responsive images."
         }
       ],
       "key_concepts": [
-        "Lexical Scope",
-        "Higher-Order Functions",
-        "Event Delegation",
-        "Promises"
+        "Semantic HTML5",
+        "Accessibility (a11y)",
+        "ARIA Roles",
+        "Form Validation",
+        "SEO Meta Tags"
       ],
       "tools": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "HTML5",
+        "W3C Validator",
+        "Lighthouse",
+        "Screen Readers"
       ],
-      "hands_on_practice": "Guided lab focused on JavaScript ES6+ Core: Variables, Functions & DOM.",
-      "assignment": "Deliverable: Complete implementation of JavaScript ES6+ Core: Variables, Functions & DOM.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "hands_on_practice": "Construct a multi-section, accessible corporate web document with structured forms, tables, and media.",
+      "assignment": "Project 1 (Part A): Build a semantic, accessible corporate business page passing W3C validation.",
+      "business_application": "Directly improves search engine rankings, enterprise accessibility compliance, and screen-reader usability.",
+      "expected_outcome": "Accessible, semantic HTML5 document achieving 100% Lighthouse accessibility score."
     },
     {
       "module_number": "Module 03",
-      "module_title": "React Component Architecture & State Management",
-      "module_purpose": "Develop modular single-page applications using React hooks.",
+      "module_title": "Professional CSS & Responsive UI",
+      "module_purpose": "Build responsive, mobile-first user interfaces using modern CSS, Flexbox, Grid, custom properties, and Tailwind CSS.",
       "what_you_will_learn": [
-        "Master the concepts of React Component Architecture & State Management.",
-        "Apply HTML effectively.",
-        "Troubleshoot common issues in this domain."
+        "Master the core principles of Professional CSS & Responsive UI.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
       ],
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "Introduction to JSX and React Components",
-          "what_is_taught": "Writing markup in JS and creating functional components.",
-          "why_it_matters": "Modern standard for building modular user interfaces.",
-          "what_learner_does": "Creates reusable button and card components.",
-          "expected_outcome": "Component library subset."
+          "lesson_title": "CSS Core: The Cascade, Specificity & Box Model",
+          "what_is_taught": "Margin, border, padding, content box vs border-box, specificity hierarchy, and inheritance.",
+          "why_it_matters": "Prevents unintentional style overrides and layout overflow bugs.",
+          "what_learner_does": "Calculates selector specificity scores and eliminates layout bugs caused by content-box defaults.",
+          "expected_outcome": "Predictable stylesheet architecture following standard box sizing."
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "Managing Local State with useState Hook",
-          "what_is_taught": "Handling mutable data within a component.",
-          "why_it_matters": "Allows UI to update reactively to user input.",
-          "what_learner_does": "Builds an interactive counter and form.",
-          "expected_outcome": "Stateful React component."
+          "lesson_title": "Modern Layouts with Flexbox & CSS Grid",
+          "what_is_taught": "1D layout alignment with Flexbox (justify, align, gap) and 2D grid templates, areas, and auto-fit.",
+          "why_it_matters": "Enables flexible, responsive card layouts and complex dashboard grids without CSS float hacks.",
+          "what_learner_does": "Builds a responsive navigation bar with Flexbox and a dynamic product card matrix with CSS Grid.",
+          "expected_outcome": "Fluid component layouts adapting smoothly to screen resizing."
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "Handling Side Effects with useEffect",
-          "what_is_taught": "Component lifecycle, data fetching, and cleanup functions.",
-          "why_it_matters": "Prevents memory leaks and handles external data synchronization.",
-          "what_learner_does": "Fetches data on component mount and cleans up intervals.",
-          "expected_outcome": "Data-fetching component."
+          "lesson_title": "Mobile-First Responsive Design & Breakpoints",
+          "what_is_taught": "Media queries, mobile-first breakpoint strategy (min-width), fluid typography (clamp), and viewport units.",
+          "why_it_matters": "Over 60% of web traffic originates on mobile devices; mobile-first ensures fast, clean mobile rendering.",
+          "what_learner_does": "Codes responsive breakpoints (320px, 768px, 1024px, 1440px) ensuring zero horizontal scrolling.",
+          "expected_outcome": "Flawlessly responsive multi-device web page."
         },
         {
           "lesson_number": "3.4",
-          "lesson_title": "Global State and Context API",
-          "what_is_taught": "Passing data deeply through the component tree without prop drilling.",
-          "why_it_matters": "Simplifies state management for themes and user authentication.",
-          "what_learner_does": "Implements a dark mode toggle across the app.",
-          "expected_outcome": "Context-enabled application."
+          "lesson_title": "Design Tokens, CSS Variables & Tailwind CSS",
+          "what_is_taught": "CSS custom properties for themes (dark mode), spacing scales, and utility-first Tailwind CSS workflow.",
+          "why_it_matters": "Accelerates frontend UI engineering velocity while maintaining consistent design system tokens.",
+          "what_learner_does": "Re-engineers components using Tailwind CSS utility classes and toggles dark mode via CSS variables.",
+          "expected_outcome": "Themeable, production-ready UI component library."
         }
       ],
       "key_concepts": [
-        "Virtual DOM",
-        "React Hooks",
-        "Prop Drilling",
-        "Component Lifecycle"
+        "CSS Box Model",
+        "Flexbox & Grid",
+        "Mobile-First Design",
+        "CSS Variables",
+        "Tailwind CSS"
       ],
       "tools": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "CSS3",
+        "Tailwind CSS",
+        "PostCSS",
+        "Chrome Device Mode"
       ],
-      "hands_on_practice": "Guided lab focused on React Component Architecture & State Management.",
-      "assignment": "Deliverable: Complete implementation of React Component Architecture & State Management.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "hands_on_practice": "Convert a multi-breakpoint Figma design into a responsive, fluid layout without horizontal scrollbars.",
+      "assignment": "Project 1 (Part B): Complete responsive business website styled with modern CSS and Tailwind CSS.",
+      "business_application": "Ensures flawless user experiences across smartphones, tablets, laptops, and ultra-wide desktop monitors.",
+      "expected_outcome": "Fully responsive, pixel-accurate web application tested across mobile and desktop viewport widths."
     },
     {
       "module_number": "Module 04",
-      "module_title": "Backend API Development with Node.js & Express",
-      "module_purpose": "Create robust server-side applications and RESTful endpoints.",
+      "module_title": "Modern JavaScript (ES6+ to Async)",
+      "module_purpose": "Master modern ECMAScript programming, DOM manipulation, asynchronous promises, and API consumption.",
       "what_you_will_learn": [
-        "Master the concepts of Backend API Development with Node.js & Express.",
-        "Apply HTML effectively.",
-        "Troubleshoot common issues in this domain."
+        "Master the core principles of Modern JavaScript (ES6+ to Async).",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
       ],
       "lessons": [
         {
           "lesson_number": "4.1",
-          "lesson_title": "Node.js Fundamentals and CommonJS Modules",
-          "what_is_taught": "Event loop, file system module, and module exports.",
-          "why_it_matters": "Understanding the core runtime environments.",
-          "what_learner_does": "Writes a script to parse log files.",
-          "expected_outcome": "File processing CLI tool."
+          "lesson_title": "Variables, Scope, Closures & Data Types",
+          "what_is_taught": "let, const, primitive vs reference types, lexical scope, hoisting, closures, and immutability.",
+          "why_it_matters": "Understanding reference mutation and closure scope prevents subtle runtime memory and state bugs.",
+          "what_learner_does": "Writes private state counter modules using closures and demonstrates reference cloning techniques.",
+          "expected_outcome": "Strong command of JavaScript execution context and lexical scope."
         },
         {
           "lesson_number": "4.2",
-          "lesson_title": "Building HTTP Servers with Express.js",
-          "what_is_taught": "Setting up an Express server and handling basic routes.",
-          "why_it_matters": "Standard framework for Node backend development.",
-          "what_learner_does": "Creates a server returning JSON responses.",
-          "expected_outcome": "Basic Express server."
+          "lesson_title": "Modern ES6+ Syntax & Higher-Order Array Methods",
+          "what_is_taught": "Arrow functions, destructuring, spread/rest operators, map, filter, reduce, find, and some/every.",
+          "why_it_matters": "Functional data transformations are the standard way data is processed in React and Node.js.",
+          "what_learner_does": "Transforms, filters, and aggregates complex nested JSON datasets using chained array methods.",
+          "expected_outcome": "Clean, declarative data-processing scripts."
         },
         {
           "lesson_number": "4.3",
-          "lesson_title": "REST API Design and CRUD Operations",
-          "what_is_taught": "Designing endpoints following REST conventions.",
-          "why_it_matters": "Ensures APIs are predictable and easy to consume.",
-          "what_learner_does": "Builds endpoints for creating and reading users.",
-          "expected_outcome": "Functional REST API."
+          "lesson_title": "DOM Manipulation, Event Delegation & Web Storage",
+          "what_is_taught": "querySelector, creating/removing nodes, event bubbling, event delegation, localStorage, and sessionStorage.",
+          "why_it_matters": "Enables interactive, responsive user interfaces that persist user preferences between browser sessions.",
+          "what_learner_does": "Builds a dynamic interactive to-do and filter list utilizing event delegation and localStorage persistence.",
+          "expected_outcome": "Interactive browser application with state persistence."
         },
         {
           "lesson_number": "4.4",
-          "lesson_title": "Middleware and Error Handling",
-          "what_is_taught": "Request interception, logging, and global error handlers.",
-          "why_it_matters": "Secures applications and standardizes error responses.",
-          "what_learner_does": "Implements authentication middleware.",
-          "expected_outcome": "Secure API endpoint."
+          "lesson_title": "Asynchronous JavaScript: Promises, Async/Await & Fetch",
+          "what_is_taught": "The JavaScript event loop, microtask queue, Promise lifecycle, async/await syntax, try/catch, and Fetch API.",
+          "why_it_matters": "All modern full-stack web applications interact asynchronously with remote servers and database APIs.",
+          "what_learner_does": "Fetches live user records from a mock REST API, rendering loading skeletons and handling 404/500 errors.",
+          "expected_outcome": "Asynchronous client application with graceful loading and error states."
         }
       ],
       "key_concepts": [
-        "Event Loop",
-        "Express Routing",
-        "REST Architecture",
-        "Middleware Pipelines"
+        "ES6+ Syntax",
+        "Closures & Scope",
+        "Higher-Order Functions",
+        "Async/Await & Promises",
+        "DOM & Events"
       ],
       "tools": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "JavaScript (Node & Browser)",
+        "Fetch API",
+        "JSON",
+        "ESLint"
       ],
-      "hands_on_practice": "Guided lab focused on Backend API Development with Node.js & Express.",
-      "assignment": "Deliverable: Complete implementation of Backend API Development with Node.js & Express.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "hands_on_practice": "Build an interactive, asynchronous web application that fetches data from an external REST API.",
+      "assignment": "Build an interactive JavaScript currency/weather converter application with live API search and error handling.",
+      "business_application": "JavaScript is the core runtime language powering both browser interactions and server-side Node.js applications.",
+      "expected_outcome": "Bug-free, modular JavaScript web application with robust asynchronous error handling."
     },
     {
       "module_number": "Module 05",
-      "module_title": "MongoDB Data Modeling & CRUD Operations",
-      "module_purpose": "Design NoSQL databases and integrate them with Node.js.",
+      "module_title": "TypeScript for Professional Development",
+      "module_purpose": "Introduce strict static type safety across variables, functions, interfaces, generics, and API contracts.",
       "what_you_will_learn": [
-        "Master the concepts of MongoDB Data Modeling & CRUD Operations.",
-        "Apply HTML effectively.",
-        "Troubleshoot common issues in this domain."
+        "Master the core principles of TypeScript for Professional Development.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
       ],
       "lessons": [
         {
           "lesson_number": "5.1",
-          "lesson_title": "Introduction to NoSQL and MongoDB Schema",
-          "what_is_taught": "Differences between SQL and NoSQL, document structure.",
-          "why_it_matters": "Crucial for unstructured or rapidly changing data.",
-          "what_learner_does": "Designs a JSON schema for a blog post.",
-          "expected_outcome": "MongoDB data model."
+          "lesson_title": "Why TypeScript: The Case for Static Type Safety",
+          "what_is_taught": "TypeScript architecture, compiler options (strict mode), primitive types, and benefits over vanilla JS.",
+          "why_it_matters": "Catches type mismatch bugs at compile-time during development rather than in production.",
+          "what_learner_does": "Initializes a tsconfig.json file, configures strict compilation, and migrates basic JS functions.",
+          "expected_outcome": "Working TypeScript project environment compiling without warnings."
         },
         {
           "lesson_number": "5.2",
-          "lesson_title": "Integrating Mongoose with Node.js",
-          "what_is_taught": "Connecting to MongoDB and defining Mongoose models.",
-          "why_it_matters": "Provides validation and strict typing for MongoDB.",
-          "what_learner_does": "Sets up database connection in Express.",
-          "expected_outcome": "Connected Node application."
+          "lesson_title": "Interfaces, Type Aliases & Union Types",
+          "what_is_taught": "Defining interfaces, type aliases, optional properties, readonly fields, union types, and intersections.",
+          "why_it_matters": "Creates clear, self-documenting data models for business entities like Users, Products, and Orders.",
+          "what_learner_does": "Models an e-commerce data domain with strict interfaces for customers, carts, and order items.",
+          "expected_outcome": "Comprehensive domain type definitions for a commercial web app."
         },
         {
           "lesson_number": "5.3",
-          "lesson_title": "Advanced Database Queries and Aggregations",
-          "what_is_taught": "Filtering, sorting, populating references, and aggregation pipelines.",
-          "why_it_matters": "Extracts meaningful insights from raw data.",
-          "what_learner_does": "Writes queries to fetch related data.",
-          "expected_outcome": "Complex data retrieval script."
+          "lesson_title": "Type Narrowing, Literal Types & Type Guards",
+          "what_is_taught": "typeof, instanceof, in operator, discriminating unions, custom type predicates, and exhaustiveness checking.",
+          "why_it_matters": "Allows safe handling of complex state shapes and polymorphic API response objects.",
+          "what_learner_does": "Writes custom type guards and switch statements with exhaustive never-type checking for payment states.",
+          "expected_outcome": "Type-safe state dispatch handling all variant scenarios."
         },
         {
           "lesson_number": "5.4",
-          "lesson_title": "Data Security and Validation",
-          "what_is_taught": "Sanitizing inputs and validating schemas before saving.",
-          "why_it_matters": "Prevents NoSQL injection and data corruption.",
-          "what_learner_does": "Adds validation rules to user models.",
-          "expected_outcome": "Secure database model."
+          "lesson_title": "Generics Fundamentals & API Response Contracts",
+          "what_is_taught": "Generic functions, generic interfaces, constraints (extends), and typing standardized API response envelopes.",
+          "why_it_matters": "Enables writing reusable utility functions and API clients that retain strong type inference.",
+          "what_learner_does": "Creates a generic ApiResponse<T> interface and generic fetcher function typing diverse database entities.",
+          "expected_outcome": "Reusable, type-safe API client wrapper."
         }
       ],
       "key_concepts": [
-        "Document Database",
-        "Mongoose ORM",
-        "Aggregation Framework",
-        "Data Validation"
+        "Static Type Safety",
+        "Interfaces & Types",
+        "Generics",
+        "Type Narrowing",
+        "API Contract Typing"
       ],
       "tools": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "TypeScript Compiler (tsc)",
+        "tsconfig.json",
+        "ts-node",
+        "VS Code Intellisense"
       ],
-      "hands_on_practice": "Guided lab focused on MongoDB Data Modeling & CRUD Operations.",
-      "assignment": "Deliverable: Complete implementation of MongoDB Data Modeling & CRUD Operations.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "hands_on_practice": "Refactor an existing JavaScript project into strict TypeScript, eliminating all implicit 'any' types.",
+      "assignment": "Convert a JavaScript CRUD utility into strict TypeScript with reusable domain models and type guards.",
+      "business_application": "Reduces production runtime bugs by up to 30% and dramatically improves team collaboration and codebase maintainability.",
+      "expected_outcome": "Strictly typed TypeScript codebase passing compiler checks with zero type errors."
     },
     {
       "module_number": "Module 06",
-      "module_title": "Full Stack Capstone: Production SaaS Application",
-      "module_purpose": "Deploy a complete MERN stack application with authentication.",
+      "module_title": "React Application Engineering",
+      "module_purpose": "Master modern component-based frontend engineering using React 19, functional components, hooks, and state patterns.",
       "what_you_will_learn": [
-        "Master the concepts of Full Stack Capstone: Production SaaS Application.",
-        "Apply HTML effectively.",
-        "Troubleshoot common issues in this domain."
+        "Master the core principles of React Application Engineering.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
       ],
       "lessons": [
         {
           "lesson_number": "6.1",
-          "lesson_title": "Project Architecture and Environment Setup",
-          "what_is_taught": "Structuring a monorepo or separate client/server folders.",
-          "why_it_matters": "Sets the foundation for a scalable project.",
-          "what_learner_does": "Initializes Git and folder structure.",
-          "expected_outcome": "Scaffolded full-stack project."
+          "lesson_title": "React Component Thinking & JSX/TSX Architecture",
+          "what_is_taught": "Declarative UI, JSX/TSX syntax rules, functional components, props passing, and component composition.",
+          "why_it_matters": "Breaks monolithic web pages into small, testable, reusable UI building blocks.",
+          "what_learner_does": "Builds a modular card and modal UI library by composing child components via props.",
+          "expected_outcome": "Reusable React component library."
         },
         {
           "lesson_number": "6.2",
-          "lesson_title": "Implementing JWT Authentication",
-          "what_is_taught": "Hashing passwords with bcrypt and signing JSON Web Tokens.",
-          "why_it_matters": "Standard mechanism for stateless session management.",
-          "what_learner_does": "Builds login and registration flows.",
-          "expected_outcome": "Secure authentication system."
+          "lesson_title": "Local State Management with useState & useReducer",
+          "what_is_taught": "Immutable state updates, useState hook, controlled inputs, and useReducer for complex multi-step states.",
+          "why_it_matters": "Proper state management prevents stale state bugs and unwanted component re-renders.",
+          "what_learner_does": "Implements a multi-step checkout form utilizing useReducer for predictable state transitions.",
+          "expected_outcome": "Predictable, multi-step state machine component."
         },
         {
           "lesson_number": "6.3",
-          "lesson_title": "Connecting React Frontend to Node Backend",
-          "what_is_taught": "Configuring CORS, proxying requests, and handling API states.",
-          "why_it_matters": "Bridges the gap between client UI and server logic.",
-          "what_learner_does": "Integrates UI with backend endpoints.",
-          "expected_outcome": "Connected full-stack application."
+          "lesson_title": "Side Effects & Lifecycle with useEffect",
+          "what_is_taught": "The useEffect hook, dependency arrays, cleanup functions, timers, and fetching data on mount.",
+          "why_it_matters": "Prevents memory leaks, infinite re-render loops, and unhandled race conditions.",
+          "what_learner_does": "Builds a real-time search input that debounces API queries and cancels pending fetch requests on unmount.",
+          "expected_outcome": "Clean, leak-free asynchronous side-effect integration."
         },
         {
           "lesson_number": "6.4",
-          "lesson_title": "Deployment and CI/CD Basics",
-          "what_is_taught": "Deploying Node to Render/Heroku and React to Vercel/Netlify.",
-          "why_it_matters": "Brings the application to live users.",
-          "what_learner_does": "Pushes code to trigger automated builds.",
-          "expected_outcome": "Live deployed application URL."
+          "lesson_title": "Custom Hooks & Global State with Context API",
+          "what_is_taught": "Extracting reusable logic into custom hooks (useDebounce, useLocalStorage) and React Context for themes/auth.",
+          "why_it_matters": "Keeps components clean and prevents prop-drilling across deep component hierarchies.",
+          "what_learner_does": "Creates a ThemeContext providing dark/light toggles and a custom useLocalStorage hook.",
+          "expected_outcome": "Global state architecture with custom reusable hooks."
         }
       ],
       "key_concepts": [
-        "JWT Authentication",
-        "CORS",
-        "Environment Variables",
-        "Cloud Deployment"
+        "Component Thinking",
+        "React Hooks",
+        "Custom Hooks",
+        "State Management",
+        "Context API"
       ],
       "tools": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "React 19",
+        "Vite",
+        "React Developer Tools",
+        "Tailwind CSS"
       ],
-      "hands_on_practice": "Guided lab focused on Full Stack Capstone: Production SaaS Application.",
-      "assignment": "Deliverable: Complete implementation of Full Stack Capstone: Production SaaS Application.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "hands_on_practice": "Build a modular, interactive productivity dashboard with custom hooks, filtering, and local state.",
+      "assignment": "Project 2: Build a React Productivity Application with task filtering, custom hooks, and persistent state.",
+      "business_application": "React is the dominant global enterprise UI library, powering applications at Meta, Netflix, Airbnb, and thousands of tech companies.",
+      "expected_outcome": "Production React web application demonstrating clean component decomposition and state management."
+    },
+    {
+      "module_number": "Module 07",
+      "module_title": "Next.js Application Development",
+      "module_purpose": "Develop full-stack web applications with Next.js App Router, React Server Components, server actions, and SEO.",
+      "what_you_will_learn": [
+        "Master the core principles of Next.js Application Development.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "7.1",
+          "lesson_title": "Next.js App Router: Structure, Layouts & Routing",
+          "what_is_taught": "app directory layout, page.tsx, layout.tsx, template.tsx, nested routes, and dynamic segment params.",
+          "why_it_matters": "Provides intuitive, file-system-based routing with shared UI layouts that don't re-render on navigation.",
+          "what_learner_does": "Builds a multi-route application with shared header/footer layouts and dynamic [id] route segments.",
+          "expected_outcome": "Structured Next.js project with nested routing."
+        },
+        {
+          "lesson_number": "7.2",
+          "lesson_title": "React Server Components (RSC) vs Client Components",
+          "what_is_taught": "Server-first mental model, 'use client' directive boundaries, server data fetching without useEffect, and bundle sizes.",
+          "why_it_matters": "Drastically reduces client-side JavaScript bundle sizes and boosts initial page rendering speeds.",
+          "what_learner_does": "Refactors data fetching to happen directly on the server while keeping interactive widgets on the client.",
+          "expected_outcome": "Optimized server-rendered application with minimal client JS overhead."
+        },
+        {
+          "lesson_number": "7.3",
+          "lesson_title": "Data Mutations with Server Actions & Route Handlers",
+          "what_is_taught": "Server Actions for form submissions, revalidatePath, revalidateTag, and route.ts REST API handlers.",
+          "why_it_matters": "Eliminates the need for boilerplate API endpoints for simple form submissions and database mutations.",
+          "what_learner_does": "Creates a comment submission form powered by a Server Action that revalidates the cache instantly.",
+          "expected_outcome": "Fast, secure server-side form mutation without client-side API boilerplate."
+        },
+        {
+          "lesson_number": "7.4",
+          "lesson_title": "Next.js SEO, Metadata & Production Deployment",
+          "what_is_taught": "GenerateMetadata function, dynamic Open Graph tags, next/image optimization, environment variables, and Vercel deploy.",
+          "why_it_matters": "Ensures production web applications rank high on Google and share beautifully on social platforms.",
+          "what_learner_does": "Configures dynamic metadata for blog posts and deploys the application live to Vercel.",
+          "expected_outcome": "Production Next.js application live on the web with optimized SEO."
+        }
+      ],
+      "key_concepts": [
+        "Next.js App Router",
+        "Server vs Client Components",
+        "Nested Layouts",
+        "Server Actions",
+        "Route Handlers"
+      ],
+      "tools": [
+        "Next.js 15",
+        "React Server Components",
+        "Vercel",
+        "Tailwind CSS"
+      ],
+      "hands_on_practice": "Construct a multi-route Next.js application with dynamic routing, server-rendered data, and SEO metadata.",
+      "assignment": "Build a production-style Next.js blog or product portal with dynamic routes, metadata, and server actions.",
+      "business_application": "Next.js provides superior Core Web Vitals, automatic image optimization, and server rendering essential for consumer web applications.",
+      "expected_outcome": "Deployed Next.js application featuring nested layouts, fast server-rendered pages, and optimized SEO."
+    },
+    {
+      "module_number": "Module 08",
+      "module_title": "Backend Engineering with Node.js",
+      "module_purpose": "Architect modular, maintainable server-side applications using Node.js, Express, middleware, and layered architecture.",
+      "what_you_will_learn": [
+        "Master the core principles of Backend Engineering with Node.js.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "8.1",
+          "lesson_title": "Node.js Fundamentals & Server Architecture",
+          "what_is_taught": "V8 engine, non-blocking I/O, event loop, CommonJS vs ES Modules, process object, and package.json scripts.",
+          "why_it_matters": "Understanding the single-threaded event loop prevents writing blocking code that degrades server throughput.",
+          "what_learner_does": "Creates a basic HTTP server, benchmarks event loop non-blocking behavior, and manages npm dependencies.",
+          "expected_outcome": "Solid mental model of Node.js asynchronous server mechanics."
+        },
+        {
+          "lesson_number": "8.2",
+          "lesson_title": "Express.js Routing, Request & Response Lifecycle",
+          "what_is_taught": "Express application setup, route definitions (GET, POST, PUT, DELETE), req.params, req.query, and req.body.",
+          "why_it_matters": "Express provides the standard minimalist web framework for building Node.js HTTP services.",
+          "what_learner_does": "Builds a resource router handling CRUD HTTP operations with proper JSON response headers.",
+          "expected_outcome": "Working Express API router with standard HTTP verb handling."
+        },
+        {
+          "lesson_number": "8.3",
+          "lesson_title": "Middleware Architecture & Request Pipelines",
+          "what_is_taught": "Built-in middleware (express.json), third-party middleware (cors, morgan), and custom request validation middleware.",
+          "why_it_matters": "Middleware allows cross-cutting concerns like logging, authentication, and validation to be applied cleanly.",
+          "what_learner_does": "Writes custom request logging and execution-time benchmarking middleware functions.",
+          "expected_outcome": "Configured middleware pipeline processing incoming requests sequentially."
+        },
+        {
+          "lesson_number": "8.4",
+          "lesson_title": "Layered Architecture: Routes, Controllers & Services",
+          "what_is_taught": "Separating routes (HTTP mapping) from controllers (request handling) from services (business logic).",
+          "why_it_matters": "Prevents monolithic 'fat controller' files and makes code modular, reusable, and easy to unit test.",
+          "what_learner_does": "Refactors an API endpoint into strict Route -> Controller -> Service -> Data Layer separation.",
+          "expected_outcome": "Enterprise-grade layered backend project structure."
+        }
+      ],
+      "key_concepts": [
+        "Node.js Runtime",
+        "Express Framework",
+        "Layered Architecture",
+        "Middleware Pipelines",
+        "Error Handling"
+      ],
+      "tools": [
+        "Node.js LTS",
+        "Express.js",
+        "npm / pnpm",
+        "dotenv"
+      ],
+      "hands_on_practice": "Construct a layered backend service implementing strict separation between routes, controllers, and services.",
+      "assignment": "Build a modular Node.js backend server with structured logging, configuration management, and custom error middleware.",
+      "business_application": "Forms the scalable backend engine powering commercial APIs, business logic execution, and database communication.",
+      "expected_outcome": "Robust, organized Node.js backend server ready for enterprise API development."
+    },
+    {
+      "module_number": "Module 09",
+      "module_title": "REST API Engineering",
+      "module_purpose": "Design, implement, and document predictable, robust RESTful APIs with pagination, filtering, and validation.",
+      "what_you_will_learn": [
+        "Master the core principles of REST API Engineering.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "9.1",
+          "lesson_title": "REST Principles & Standard HTTP Status Codes",
+          "what_is_taught": "Resource-based URI naming, idempotency, proper status codes (200, 201, 204, 400, 401, 403, 404, 409, 500).",
+          "why_it_matters": "Standardized status codes ensure client applications handle success and error states predictably.",
+          "what_learner_does": "Designs a REST API specification ensuring nouns are used for endpoints and status codes convey exact outcomes.",
+          "expected_outcome": "Clean REST URI schema following industry conventions."
+        },
+        {
+          "lesson_number": "9.2",
+          "lesson_title": "Request Validation & Schema Enforcement with Zod",
+          "what_is_taught": "Validating req.body, req.query, and req.params using Zod schemas; returning structured 400 error arrays.",
+          "why_it_matters": "Invalid input is the number one cause of server crashes and database corruption.",
+          "what_learner_does": "Creates validation middleware that validates incoming payloads against Zod schemas before reaching controllers.",
+          "expected_outcome": "Type-safe request validation returning standardized error messages."
+        },
+        {
+          "lesson_number": "9.3",
+          "lesson_title": "Pagination, Filtering, Sorting & Search",
+          "what_is_taught": "Limit/offset pagination, cursor-based pagination concepts, query parameter filtering, sorting, and search.",
+          "why_it_matters": "Prevents servers from crashing when querying large datasets and gives clients fast, responsive search.",
+          "what_learner_does": "Implements page/limit pagination with total page counts and dynamic column sorting on a mock dataset.",
+          "expected_outcome": "Performant API endpoints supporting complex client query parameters."
+        },
+        {
+          "lesson_number": "9.4",
+          "lesson_title": "API Documentation with Postman & Error Standards",
+          "what_is_taught": "Designing Postman collections, environment variables, automated Postman test scripts, and RFC 7807 error formats.",
+          "why_it_matters": "APIs without clear documentation are unusable by frontend developers and external integration partners.",
+          "what_learner_does": "Publishes a comprehensive Postman collection documenting all endpoints, query parameters, and example responses.",
+          "expected_outcome": "Verified Postman API documentation and automated test collection."
+        }
+      ],
+      "key_concepts": [
+        "RESTful Principles",
+        "HTTP Status Codes",
+        "Payload Validation",
+        "Pagination & Filtering",
+        "API Documentation"
+      ],
+      "tools": [
+        "Express.js",
+        "Zod",
+        "Postman",
+        "Swagger / OpenAPI"
+      ],
+      "hands_on_practice": "Build a fully validated REST API with pagination, sorting, search, and comprehensive Postman documentation.",
+      "assignment": "Project 4 (Part A): Build a commercial REST API for a product/service marketplace with full documentation.",
+      "business_application": "REST APIs serve as the universal communication bridge between mobile apps, web frontends, and external business partners.",
+      "expected_outcome": "Complete RESTful API adhering strictly to HTTP conventions with Postman collection tests."
+    },
+    {
+      "module_number": "Module 10",
+      "module_title": "SQL & PostgreSQL Database Architecture",
+      "module_purpose": "Master relational database design, table normalization, SQL queries, JOINs, transactions, and Prisma ORM.",
+      "what_you_will_learn": [
+        "Master the core principles of SQL & PostgreSQL Database Architecture.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "10.1",
+          "lesson_title": "Relational Database Concepts & Schema Design",
+          "what_is_taught": "Tables, rows, columns, data types (VARCHAR, INT, UUID, TIMESTAMP, JSONB), primary keys, and foreign keys.",
+          "why_it_matters": "A poorly designed database schema creates insurmountable technical debt and data inconsistencies.",
+          "what_learner_does": "Designs an Entity-Relationship (ER) diagram for an e-commerce platform with users, products, and orders.",
+          "expected_outcome": "Normalized ER diagram and schema blueprint."
+        },
+        {
+          "lesson_number": "10.2",
+          "lesson_title": "Core SQL: CRUD, Constraints & Filtering",
+          "what_is_taught": "CREATE TABLE, INSERT, SELECT, UPDATE, DELETE, WHERE, ORDER BY, LIMIT, and table constraints (NOT NULL, UNIQUE, CHECK).",
+          "why_it_matters": "Writing raw SQL builds the fundamental data manipulation skills required across all relational engines.",
+          "what_learner_does": "Executes raw SQL scripts creating tables and populating mock records with foreign key integrity checks.",
+          "expected_outcome": "Working PostgreSQL database with verified relational constraints."
+        },
+        {
+          "lesson_number": "10.3",
+          "lesson_title": "Advanced SQL: JOINs, Aggregations & Transactions",
+          "what_is_taught": "INNER JOIN, LEFT JOIN, FULL JOIN, GROUP BY, HAVING, COUNT, SUM, AVG, indexes, and ACID transactions (BEGIN/COMMIT/ROLLBACK).",
+          "why_it_matters": "Allows generating complex business reports and guarantees that multi-step operations (e.g. checkout) succeed atomically.",
+          "what_learner_does": "Writes complex multi-table SQL queries joining orders, users, and line items, wrapping order placement in transactions.",
+          "expected_outcome": "Atomic transaction scripts and analytical reporting queries."
+        },
+        {
+          "lesson_number": "10.4",
+          "lesson_title": "Modern ORM Integration: Prisma with PostgreSQL",
+          "what_is_taught": "Prisma schema definition, migrations (prisma migrate), type-safe client queries, relations, and database seeding.",
+          "why_it_matters": "Accelerates backend development velocity by generating TypeScript types directly from your database schema.",
+          "what_learner_does": "Configures Prisma ORM in a Node.js project, generates migrations, and performs type-safe database queries.",
+          "expected_outcome": "Fully integrated Prisma client querying live PostgreSQL database."
+        }
+      ],
+      "key_concepts": [
+        "Relational Schema Design",
+        "Normalization (3NF)",
+        "SQL JOINs & Aggregations",
+        "ACID Transactions",
+        "Prisma ORM"
+      ],
+      "tools": [
+        "PostgreSQL",
+        "pgAdmin / DBeaver",
+        "SQL",
+        "Prisma ORM"
+      ],
+      "hands_on_practice": "Design and query a multi-table normalized PostgreSQL database for an e-commerce / booking system.",
+      "assignment": "Project 4 (Part B): Create a normalized PostgreSQL database schema, write complex SQL queries, and integrate Prisma ORM.",
+      "business_application": "Relational databases safeguard mission-critical commercial data, maintaining strict financial and operational consistency.",
+      "expected_outcome": "Production-grade relational database schema with verified SQL migrations and Prisma integration."
+    },
+    {
+      "module_number": "Module 11",
+      "module_title": "Authentication & Role-Based Access Control (RBAC)",
+      "module_purpose": "Implement secure user authentication, password hashing, JWTs, HTTP-only refresh cookies, and RBAC authorization.",
+      "what_you_will_learn": [
+        "Master the core principles of Authentication & Role-Based Access Control (RBAC).",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "11.1",
+          "lesson_title": "Authentication Fundamentals & Secure Password Hashing",
+          "what_is_taught": "Difference between Authentication (Who are you?) and Authorization (What can you do?); salting and hashing with bcrypt.",
+          "why_it_matters": "Storing plain-text or poorly hashed passwords leads to catastrophic credential leaks and regulatory fines.",
+          "what_learner_does": "Implements user registration endpoint hashing passwords with bcrypt (cost factor 12) before database insertion.",
+          "expected_outcome": "Secure user registration endpoint with salted password storage."
+        },
+        {
+          "lesson_number": "11.2",
+          "lesson_title": "JSON Web Tokens (JWT) & Stateless Sessions",
+          "what_is_taught": "JWT anatomy (header, payload, signature), token signing, verification, expiration claims, and stateless architecture.",
+          "why_it_matters": "Enables fast, scalable authentication across modern decoupled frontends and microservice backends.",
+          "what_learner_does": "Generates signed JWT access tokens upon login and validates them in an Express authentication middleware.",
+          "expected_outcome": "Working JWT issuance and verification middleware."
+        },
+        {
+          "lesson_number": "11.3",
+          "lesson_title": "Secure Cookie Storage & Refresh Token Rotation",
+          "what_is_taught": "Vulnerabilities of localStorage token storage (XSS risks), HTTP-only SameSite cookies, and refresh token rotation.",
+          "why_it_matters": "Prevents token theft via client-side script injection and provides seamless user session longevity.",
+          "what_learner_does": "Implements short-lived access tokens (15m) paired with rotating refresh tokens stored in HTTP-only cookies.",
+          "expected_outcome": "Secure session architecture protected against XSS token harvesting."
+        },
+        {
+          "lesson_number": "11.4",
+          "lesson_title": "Role-Based Access Control (RBAC) & Protected Routes",
+          "what_is_taught": "Role hierarchies (User, Moderator, Admin), permission matrices, and role-guard middleware on routes.",
+          "why_it_matters": "Guarantees that regular customers cannot access admin management endpoints or mutate other users' records.",
+          "what_learner_does": "Codes an authorize('admin', 'manager') middleware restricting sensitive endpoints to authorized roles.",
+          "expected_outcome": "Role-protected API routes with automated 403 Forbidden enforcement."
+        }
+      ],
+      "key_concepts": [
+        "Authentication vs Authorization",
+        "Password Hashing (bcrypt)",
+        "JWT & Refresh Tokens",
+        "Secure Cookies",
+        "RBAC Middleware"
+      ],
+      "tools": [
+        "Node.js",
+        "bcryptjs",
+        "jsonwebtoken",
+        "cookie-parser",
+        "PostgreSQL"
+      ],
+      "hands_on_practice": "Build a complete identity system with registration, login, token refresh, and role-gated admin endpoints.",
+      "assignment": "Project 3: Build an Authentication & Role-Based Access System with protected routes and password recovery.",
+      "business_application": "Protects user data privacy and ensures sensitive commercial operations can only be performed by verified, authorized personnel.",
+      "expected_outcome": "Production-ready authentication and authorization microservice following modern security guidelines."
+    },
+    {
+      "module_number": "Module 12",
+      "module_title": "Web Application Security & OWASP Defense",
+      "module_purpose": "Understand defensive application security fundamentals, auditing and patching OWASP Top 10 web vulnerabilities.",
+      "what_you_will_learn": [
+        "Master the core principles of Web Application Security & OWASP Defense.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "12.1",
+          "lesson_title": "The Secure Coding Mindset & OWASP Top 10 Overview",
+          "what_is_taught": "Core principle: 'Working code does not mean secure code'; overview of the OWASP Top 10 web security risks.",
+          "why_it_matters": "Security must be designed into applications from day one rather than patched after a catastrophic breach.",
+          "what_learner_does": "Analyzes real-world corporate data breach case studies to identify root cause coding vulnerabilities.",
+          "expected_outcome": "Foundational awareness of defensive application security principles."
+        },
+        {
+          "lesson_number": "12.2",
+          "lesson_title": "Preventing SQL Injection & Broken Object-Level Authorization (BOLA)",
+          "what_is_taught": "Parameterized queries vs string concatenation; Object-Level Authorization verifying resource ownership (req.user.id).",
+          "why_it_matters": "SQL injection allows attackers to dump or wipe entire databases; BOLA allows viewing other users' private records.",
+          "what_learner_does": "Refactors raw concatenated SQL queries into parameterized queries and adds user ownership checks.",
+          "expected_outcome": "Endpoints immune to SQL injection and unauthorized record access."
+        },
+        {
+          "lesson_number": "12.3",
+          "lesson_title": "Defending Against Cross-Site Scripting (XSS) & CSRF",
+          "what_is_taught": "Stored, reflected, and DOM-based XSS; Content Security Policy (CSP); sanitizing HTML with DOMPurify; SameSite cookies for CSRF.",
+          "why_it_matters": "XSS allows malicious scripts to run in victims' browsers, stealing sessions and defacing interfaces.",
+          "what_learner_does": "Implements input sanitization and configures Content Security Policy headers blocking inline script execution.",
+          "expected_outcome": "Frontend and backend protected against script injection attacks."
+        },
+        {
+          "lesson_number": "12.4",
+          "lesson_title": "API Hardening: CORS, Rate Limiting & Secrets Management",
+          "what_is_taught": "Cross-Origin Resource Sharing (CORS) whitelisting, brute-force rate limiting, Helmet HTTP headers, and .env secrets hygiene.",
+          "why_it_matters": "Stops automated credential stuffing bots and prevents unauthorized third-party domains from querying your APIs.",
+          "what_learner_does": "Configures Helmet headers, strict CORS origin policies, and IP rate limiters on login endpoints.",
+          "expected_outcome": "Hardened API gateway with rate limiting and secure headers."
+        }
+      ],
+      "key_concepts": [
+        "OWASP Top 10",
+        "SQL Injection Prevention",
+        "XSS Defense",
+        "CSRF Protection",
+        "CORS & Security Headers"
+      ],
+      "tools": [
+        "Helmet.js",
+        "express-rate-limit",
+        "DOMPurify",
+        "npm audit"
+      ],
+      "hands_on_practice": "Audit a deliberately vulnerable web application and patch SQL injection, XSS, and CORS security holes.",
+      "assignment": "Complete security hardening on an existing backend API, implementing rate limiting, Helmet, and input sanitization.",
+      "business_application": "Essential for protecting customer data, preventing ransomware/database wipes, and maintaining SOC2 / ISO compliance.",
+      "expected_outcome": "Hardened web application passing security linters and automated vulnerability audits."
+    },
+    {
+      "module_number": "Module 13",
+      "module_title": "Testing & Software Quality Assurance",
+      "module_purpose": "Implement automated testing across the entire stack: unit tests, component tests, integration tests, and E2E flows.",
+      "what_you_will_learn": [
+        "Master the core principles of Testing & Software Quality Assurance.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "13.1",
+          "lesson_title": "Testing Fundamentals & The Test Pyramid",
+          "what_is_taught": "Why testing matters, Unit vs Integration vs E2E tests, cost vs speed trade-offs, and Test-Driven Development (TDD) concepts.",
+          "why_it_matters": "Gives engineers the strategic framework to write high-value tests without wasting time on brittle low-value tests.",
+          "what_learner_does": "Configures Vitest in a TypeScript project and writes first unit tests verifying edge cases in utility functions.",
+          "expected_outcome": "Working Vitest test runner with passing unit tests."
+        },
+        {
+          "lesson_number": "13.2",
+          "lesson_title": "Unit Testing Business Logic & Edge Cases",
+          "what_is_taught": "Test suites, describe/it blocks, expect assertions, mocking functions (vi.fn), and boundary condition testing.",
+          "why_it_matters": "Ensures critical business calculations (discounts, taxes, permissions) remain 100% accurate through future refactors.",
+          "what_learner_does": "Writes comprehensive unit tests for a financial calculation module covering zero, negative, and extreme values.",
+          "expected_outcome": "100% unit test coverage on core business logic functions."
+        },
+        {
+          "lesson_number": "13.3",
+          "lesson_title": "React Component Testing with React Testing Library",
+          "what_is_taught": "Testing user behavior instead of implementation details; screen queries (getByRole, getByText), userEvent, and mocking API calls.",
+          "why_it_matters": "Ensures UI components behave correctly from the user's perspective without breaking on internal refactors.",
+          "what_learner_does": "Tests a user login component: entering credentials, clicking submit, and verifying error messages render.",
+          "expected_outcome": "Resilient React component tests verifying user interaction."
+        },
+        {
+          "lesson_number": "13.4",
+          "lesson_title": "API Integration & End-to-End Testing with Playwright",
+          "what_is_taught": "Supertest for backend API route testing; Playwright for automating real Chromium browsers through end-to-end user journeys.",
+          "why_it_matters": "Validates that the entire full-stack system (browser, API, database) works seamlessly together in real conditions.",
+          "what_learner_does": "Writes an E2E test automating: Register -> Login -> Create Record -> Update Record -> Logout in a real browser.",
+          "expected_outcome": "Automated Playwright E2E test verifying complete user journey."
+        }
+      ],
+      "key_concepts": [
+        "Test Pyramid",
+        "Unit Testing",
+        "Component Testing",
+        "API Integration Testing",
+        "End-to-End (E2E) Testing"
+      ],
+      "tools": [
+        "Vitest",
+        "React Testing Library",
+        "Supertest",
+        "Playwright"
+      ],
+      "hands_on_practice": "Build a comprehensive automated test suite testing business utilities, React components, and full browser flows.",
+      "assignment": "Write a test suite for an existing application covering unit tests, integration tests, and 1 complete Playwright E2E flow.",
+      "business_application": "Enables rapid software deployment with high confidence, preventing costly regression bugs from reaching production.",
+      "expected_outcome": "Passing automated test suite integrated into developer workflows with clear test coverage reports."
+    },
+    {
+      "module_number": "Module 14",
+      "module_title": "Git, GitHub & Team Software Engineering",
+      "module_purpose": "Master professional version control, feature branches, pull requests, merge conflicts, and team collaboration workflows.",
+      "what_you_will_learn": [
+        "Master the core principles of Git, GitHub & Team Software Engineering.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "14.1",
+          "lesson_title": "Git Mastery: Commits, History & Branching Strategies",
+          "what_is_taught": "git status, diff, add, commit, log, branch, checkout/switch; conventional commit message standards.",
+          "why_it_matters": "Clean commit histories make it easy for engineering teams to track changes, bisect bugs, and audit releases.",
+          "what_learner_does": "Practices creating descriptive feature branches and writing atomic commits adhering to conventional specs.",
+          "expected_outcome": "Clean, readable Git commit tree on a local repository."
+        },
+        {
+          "lesson_number": "14.2",
+          "lesson_title": "Remote Collaboration with GitHub: Push, Pull & Remotes",
+          "what_is_taught": "git remote, push, fetch, pull, upstream repositories, fork workflows, and configuring .gitignore files.",
+          "why_it_matters": "Synchronizes work safely across remote developer machines and cloud code repositories.",
+          "what_learner_does": "Sets up a remote GitHub repository, configures SSH keys, pushes branches, and ignores node_modules and .env files.",
+          "expected_outcome": "Configured GitHub repository with secure remote sync."
+        },
+        {
+          "lesson_number": "14.3",
+          "lesson_title": "Pull Requests, Code Reviews & Team Workflow",
+          "what_is_taught": "Creating pull requests, linking GitHub issues, writing PR descriptions, reviewing peer code, and leaving constructive comments.",
+          "why_it_matters": "The Pull Request is the fundamental atomic unit of team software development and code quality control in industry.",
+          "what_learner_does": "Submits a pull request with a complete description and conducts a thorough peer review on a teammate's PR.",
+          "expected_outcome": "Approved and merged pull request with documented review comments."
+        },
+        {
+          "lesson_number": "14.4",
+          "lesson_title": "Merge Conflicts, Git Rebase & Repository Hygiene",
+          "what_is_taught": "How merge conflicts occur, manual conflict resolution in VS Code, git rebase vs merge, and README documentation.",
+          "why_it_matters": "Resolving merge conflicts calmly and correctly is a mandatory survival skill for every professional developer.",
+          "what_learner_does": "Intentionally creates conflicting changes on two branches, resolves the conflicts manually, and verifies clean build.",
+          "expected_outcome": "Successfully resolved merge conflicts with verified code integrity."
+        }
+      ],
+      "key_concepts": [
+        "Git Branching Strategies",
+        "Pull Requests (PRs)",
+        "Code Review Hygiene",
+        "Merge Conflict Resolution",
+        "GitHub Project Boards"
+      ],
+      "tools": [
+        "Git CLI",
+        "GitHub",
+        "GitHub Issues",
+        "Markdown"
+      ],
+      "hands_on_practice": "Simulate a multi-developer team collaboration: create feature branches, submit PRs, conduct reviews, and resolve conflicts.",
+      "assignment": "Project 6: Launch and contribute to a collaborative Team Software Engineering Project on GitHub.",
+      "business_application": "Individual coding ability is useless in industry without the ability to collaborate cleanly inside a Git engineering team.",
+      "expected_outcome": "Demonstrated proficiency in branching, atomic commits, pull requests, and resolving complex merge conflicts."
+    },
+    {
+      "module_number": "Module 15",
+      "module_title": "Systematic Debugging & Problem Solving",
+      "module_purpose": "Learn disciplined debugging methodologies to diagnose and resolve frontend, backend, database, and network defects.",
+      "what_you_will_learn": [
+        "Master the core principles of Systematic Debugging & Problem Solving.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "15.1",
+          "lesson_title": "The Engineering Debugging Mindset: Isolate & Reproduce",
+          "what_is_taught": "The scientific debugging method: Observe -> Hypothesize -> Experiment -> Verify; creating minimal reproducible examples.",
+          "why_it_matters": "Stops developers from making random code edits that introduce new secondary bugs.",
+          "what_learner_does": "Documents a bug report, isolates root cause variables, and produces a minimal code snippet reproducing the defect.",
+          "expected_outcome": "Structured bug diagnostic report and reproduction case."
+        },
+        {
+          "lesson_number": "15.2",
+          "lesson_title": "Frontend Debugging: Breakpoints, Call Stacks & State",
+          "what_is_taught": "Setting conditional breakpoints in Chrome DevTools Sources tab, stepping through code, and inspecting call stacks.",
+          "why_it_matters": "Ten times faster and more informative than cluttering code with temporary console.log statements.",
+          "what_learner_does": "Debugs a subtle React state mutation bug using DevTools breakpoints and the Call Stack inspector.",
+          "expected_outcome": "Resolved frontend defect using interactive debugger tools."
+        },
+        {
+          "lesson_number": "15.3",
+          "lesson_title": "Backend Debugging: Server Logs, Error Tracing & Postman",
+          "what_is_taught": "Analyzing uncaught exceptions, reading Node.js stack traces, debugging middleware order, and inspecting Postman logs.",
+          "why_it_matters": "Enables rapidly locating which line in which service file triggered a 500 Internal Server Error.",
+          "what_learner_does": "Traces a crashing API request back through middleware and service layers to an unhandled null pointer error.",
+          "expected_outcome": "Diagnosed and resolved backend server crash."
+        },
+        {
+          "lesson_number": "15.4",
+          "lesson_title": "Database & Network Debugging: Status Codes & SQL Errors",
+          "what_is_taught": "Debugging HTTP status code mismatches (CORS, 401, 404, 502), database constraint violations, and connection timeouts.",
+          "why_it_matters": "Resolves frustrating integration failures between decoupled frontend and backend services.",
+          "what_learner_does": "Debugs a failing database insert caused by foreign key constraint violations and missing environment variables.",
+          "expected_outcome": "Resolved full-stack network and database connection failure."
+        }
+      ],
+      "key_concepts": [
+        "Scientific Debugging Method",
+        "DevTools Breakpoints",
+        "Stack Trace Analysis",
+        "Server Logging",
+        "Minimal Reproductions"
+      ],
+      "tools": [
+        "Chrome DevTools",
+        "Node.js Inspector",
+        "Postman Console",
+        "VS Code Debugger"
+      ],
+      "hands_on_practice": "Diagnose and fix 5 deliberate real-world bugs: asynchronous race conditions, memory leaks, and 500 server crashes.",
+      "assignment": "Complete the Debugging Clinic challenge: isolate, document, and resolve 5 complex full-stack bugs.",
+      "business_application": "Professional software engineers spend over 50% of their time diagnosing why software fails rather than writing new syntax.",
+      "expected_outcome": "Methodical debugging skills eliminating reliance on random guessing or trial-and-error edits."
+    },
+    {
+      "module_number": "Module 16",
+      "module_title": "AI-Assisted Software Development & Code Review",
+      "module_purpose": "Leverage modern AI tools responsibly for scaffolding, refactoring, and test generation with rigorous human verification.",
+      "what_you_will_learn": [
+        "Master the core principles of AI-Assisted Software Development & Code Review.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "16.1",
+          "lesson_title": "AI-Assisted Engineering: Tools & Effective Workflows",
+          "what_is_taught": "Overview of modern AI coding environments (Cursor, Copilot, Claude); crafting precise context-rich developer prompts.",
+          "why_it_matters": "Dramatically accelerates boilerplate coding, documentation writing, and exploring architectural alternatives.",
+          "what_learner_does": "Uses Cursor/Copilot to generate preliminary boilerplate for a data transformation utility.",
+          "expected_outcome": "Accelerated scaffolding workflow utilizing developer AI tools."
+        },
+        {
+          "lesson_number": "16.2",
+          "lesson_title": "Refactoring, Boilerplate Scaffolding & Documentation",
+          "what_is_taught": "Using AI to generate TypeScript interfaces from JSON, write unit test templates, and draft function documentation.",
+          "why_it_matters": "Automates tedious repetitive coding tasks, freeing human cognitive bandwidth for architecture and business logic.",
+          "what_learner_does": "Prompts AI to scaffold 10 unit test cases for an existing service, reviewing and refining the output.",
+          "expected_outcome": "Comprehensive test suite and documentation generated with AI assistance."
+        },
+        {
+          "lesson_number": "16.3",
+          "lesson_title": "Mandatory AI Review Skills: Catching Hallucinations & Insecure Code",
+          "what_is_taught": "Detecting hallucinated methods, outdated library syntax, hidden security vulnerabilities, and overcomplicated logic in AI code.",
+          "why_it_matters": "AI code frequently introduces subtle security flaws and obsolete patterns that human engineers must catch.",
+          "what_learner_does": "Audits AI-generated authentication code, identifying and patching an insecure token verification flaw.",
+          "expected_outcome": "Documented security audit and correction of flawed AI code."
+        },
+        {
+          "lesson_number": "16.4",
+          "lesson_title": "The Developer Responsibility Principle",
+          "what_is_taught": "Core rule: 'AI may write code faster, but the developer owns 100% of the responsibility'; intellectual property and data privacy.",
+          "why_it_matters": "Employers hold developers legally and professionally liable for software reliability and data security.",
+          "what_learner_does": "Formulates a personal engineering checklist for verifying, testing, and approving any AI-generated code snippet.",
+          "expected_outcome": "Institutional AI code review protocol and verified feature commit."
+        }
+      ],
+      "key_concepts": [
+        "AI Coding Workflows",
+        "Prompt Engineering for Code",
+        "AI Verification Protocol",
+        "Catching Hallucinations",
+        "Automated Refactoring"
+      ],
+      "tools": [
+        "Cursor",
+        "GitHub Copilot",
+        "Claude 3.7",
+        "ChatGPT"
+      ],
+      "hands_on_practice": "Use an AI coding assistant to scaffold a feature, then audit, test, and fix security and logic bugs in the generated code.",
+      "assignment": "Produce an AI-assisted feature implementation alongside a documented Human Verification and Security Audit checklist.",
+      "business_application": "Enables engineers to build and ship at 3x to 5x velocity while maintaining uncompromising security and code quality.",
+      "expected_outcome": "Proficiency in modern AI-assisted engineering workflows with demonstrated ability to audit and verify AI output."
+    },
+    {
+      "module_number": "Module 17",
+      "module_title": "Supporting Python for Developers & Automation",
+      "module_purpose": "Learn supporting Python programming for developer automation, scripting, data manipulation, and API integrations.",
+      "what_you_will_learn": [
+        "Master the core principles of Supporting Python for Developers & Automation.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "17.1",
+          "lesson_title": "Python Core for Programmers: Syntax, Lists & Dictionaries",
+          "what_is_taught": "Python variables, indentation, lists, tuples, dictionaries, sets, loops, functions, and list comprehensions.",
+          "why_it_matters": "Allows full-stack developers to quickly leverage Python for scripting without needing a separate full-length course.",
+          "what_learner_does": "Writes Python scripts demonstrating list comprehensions and dictionary aggregations on customer datasets.",
+          "expected_outcome": "Clean, idiomatic Python data processing script."
+        },
+        {
+          "lesson_number": "17.2",
+          "lesson_title": "File Operations, JSON Parsing & Virtual Environments",
+          "what_is_taught": "Reading and writing files (with open), parsing JSON files, pip package manager, and virtual environments (venv).",
+          "why_it_matters": "Essential for processing data exports, configuration files, and managing isolated Python project dependencies.",
+          "what_learner_does": "Sets up a Python virtual environment and builds a script parsing and cleaning raw JSON transaction exports.",
+          "expected_outcome": "Functional file-processing script running inside an isolated venv."
+        },
+        {
+          "lesson_number": "17.3",
+          "lesson_title": "Consuming Web APIs with Python Requests",
+          "what_is_taught": "The Requests library, sending GET/POST requests, handling query parameters, headers, and parsing JSON responses.",
+          "why_it_matters": "Enables rapid backend scripting for automated health checks, webhooks, and third-party integrations.",
+          "what_learner_does": "Writes a Python script querying a public weather API, handling HTTP errors, and logging results.",
+          "expected_outcome": "Automated API query script with error handling."
+        },
+        {
+          "lesson_number": "17.4",
+          "lesson_title": "Developer Automation & AI/API Integration Scripts",
+          "what_is_taught": "Writing command-line automation utilities (argparse) and calling external LLM APIs (OpenAI / Anthropic) with Python.",
+          "why_it_matters": "Equips full-stack engineers to build lightweight internal tools, scrapers, and AI preprocessing scripts.",
+          "what_learner_does": "Builds a CLI script that takes a markdown file, calls an AI API for summarization, and saves output.",
+          "expected_outcome": "Practical developer automation CLI script."
+        }
+      ],
+      "key_concepts": [
+        "Python Fundamentals",
+        "Developer Scripting",
+        "Data Structures",
+        "HTTP Requests",
+        "Automation Scripts"
+      ],
+      "tools": [
+        "Python 3",
+        "pip",
+        "Requests library",
+        "Virtualenv"
+      ],
+      "hands_on_practice": "Write Python scripts to automate local developer tasks, parse JSON files, and consume external web APIs.",
+      "assignment": "Create a Python developer automation script that fetches data from an API, processes records, and generates a formatted report.",
+      "business_application": "Python is the undisputed language of automation, data engineering, and modern AI/LLM tool integrations.",
+      "expected_outcome": "Working Python automation scripts capable of handling files, API requests, and data transformations."
+    },
+    {
+      "module_number": "Module 18",
+      "module_title": "Docker & Development Environments",
+      "module_purpose": "Understand containerization fundamentals, writing Dockerfiles, and orchestrating local multi-container environments.",
+      "what_you_will_learn": [
+        "Master the core principles of Docker & Development Environments.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "18.1",
+          "lesson_title": "Why Containers: What Docker Solves for Developers",
+          "what_is_taught": "Virtual machines vs containers, dependency isolation, environment parity, and the Docker engine architecture.",
+          "why_it_matters": "Ensures every engineer on a team and every production server runs the exact same software environment.",
+          "what_learner_does": "Installs Docker, runs basic test containers, and inspects running container processes via Docker CLI.",
+          "expected_outcome": "Clear conceptual model of containerization and container lifecycles."
+        },
+        {
+          "lesson_number": "18.2",
+          "lesson_title": "Writing Dockerfiles & Building Container Images",
+          "what_is_taught": "FROM, WORKDIR, COPY, RUN, EXPOSE, CMD/ENTRYPOINT instructions, .dockerignore, and image layer caching.",
+          "why_it_matters": "Enables packaging full-stack code and dependencies into portable, immutable executable images.",
+          "what_learner_does": "Writes a Dockerfile for an Express.js backend, builds the image, and verifies local container execution.",
+          "expected_outcome": "Working container image running an Express web service."
+        },
+        {
+          "lesson_number": "18.3",
+          "lesson_title": "Port Mapping, Environment Variables & Volume Concepts",
+          "what_is_taught": "-p port forwarding, passing -e environment variables at runtime, and volume mounting for live development.",
+          "why_it_matters": "Allows accessing containerized web apps from the host browser while keeping sensitive secrets configurable.",
+          "what_learner_does": "Runs a containerized API with port mapping and injects database credentials via environment variables.",
+          "expected_outcome": "Accessible containerized application with dynamic environment configuration."
+        },
+        {
+          "lesson_number": "18.4",
+          "lesson_title": "Local Multi-Container Stacks with Docker Compose",
+          "what_is_taught": "docker-compose.yml syntax, defining web and db services, container networks, and volume persistence for PostgreSQL.",
+          "why_it_matters": "Spins up an entire full-stack system (app + database) with a single command without installing local databases.",
+          "what_learner_does": "Writes a docker-compose.yml orchestrating a Node.js API and PostgreSQL container with persistent volume data.",
+          "expected_outcome": "One-command local full-stack development environment via Docker Compose."
+        }
+      ],
+      "key_concepts": [
+        "Containerization Concepts",
+        "Images vs Containers",
+        "Multi-Stage Dockerfiles",
+        "Port Mapping",
+        "Docker Compose"
+      ],
+      "tools": [
+        "Docker Desktop",
+        "Dockerfile",
+        ".dockerignore",
+        "Docker Compose"
+      ],
+      "hands_on_practice": "Dockerize a full-stack application and run Node.js and PostgreSQL together using Docker Compose.",
+      "assignment": "Write a multi-stage Dockerfile for a Node.js API and a docker-compose.yml file linking it to PostgreSQL.",
+      "business_application": "Eliminates the dreaded 'it works on my machine' bug, ensuring 100% parity between local development and cloud production.",
+      "expected_outcome": "Containerized full-stack application running reliably inside Docker containers."
+    },
+    {
+      "module_number": "Module 19",
+      "module_title": "CI/CD & Deployment Fundamentals",
+      "module_purpose": "Build automated Continuous Integration and Continuous Deployment pipelines deploying to modern cloud infrastructure.",
+      "what_you_will_learn": [
+        "Master the core principles of CI/CD & Deployment Fundamentals.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "19.1",
+          "lesson_title": "The Deployment Lifecycle: Build, Test & Release",
+          "what_is_taught": "Development vs production builds, minification, tree-shaking, environment variable security, and cloud hosting tiers.",
+          "why_it_matters": "Prepares raw source code into high-performance, secure production bundles ready for public traffic.",
+          "what_learner_does": "Generates a production build of a Next.js application, inspecting bundle analysis and static output.",
+          "expected_outcome": "Optimized production build ready for cloud deployment."
+        },
+        {
+          "lesson_number": "19.2",
+          "lesson_title": "Continuous Integration with GitHub Actions",
+          "what_is_taught": "CI concepts, .github/workflows YAML syntax, triggers (on: push, pull_request), jobs, steps, and action runners.",
+          "why_it_matters": "Automatically prevents broken or untested code from ever being merged into main branches.",
+          "what_learner_does": "Writes a GitHub Actions workflow that automatically installs dependencies, runs linters, and executes tests on PRs.",
+          "expected_outcome": "Active GitHub Actions CI pipeline guarding repository merges."
+        },
+        {
+          "lesson_number": "19.3",
+          "lesson_title": "Deploying Full-Stack Applications to the Cloud",
+          "what_is_taught": "Deploying Next.js to Vercel, deploying Node.js web services to Render, and provisioning managed PostgreSQL instances.",
+          "why_it_matters": "Provides live public URLs for your applications that recruiters and real users can interact with.",
+          "what_learner_does": "Deploys a full-stack application connecting a Vercel frontend to a Render backend and managed PostgreSQL database.",
+          "expected_outcome": "Live, public full-stack web application running on cloud infrastructure."
+        },
+        {
+          "lesson_number": "19.4",
+          "lesson_title": "Custom Domains, SSL Certificates & Environment Isolation",
+          "what_is_taught": "DNS records (A, CNAME), automated SSL/HTTPS encryption, and separating Staging vs Production environments.",
+          "why_it_matters": "Gives applications professional branded domains while ensuring test data never pollutes production databases.",
+          "what_learner_does": "Configures DNS settings, verifies SSL certificate issuance, and manages separate staging/production .env keys.",
+          "expected_outcome": "Secure, custom-domain web application with production environment separation."
+        }
+      ],
+      "key_concepts": [
+        "CI/CD Pipelines",
+        "Automated Testing on PR",
+        "GitHub Actions",
+        "Cloud Deployment",
+        "Production Builds"
+      ],
+      "tools": [
+        "GitHub Actions",
+        "Vercel",
+        "Render",
+        "Cloudflare"
+      ],
+      "hands_on_practice": "Configure a GitHub Actions workflow that automatically runs linter and test suites on pull requests.",
+      "assignment": "Deploy a full-stack application with automated GitHub Actions CI/CD to Vercel (frontend) and Render (backend).",
+      "business_application": "Allows software teams to deploy features and bug fixes dozens of times per week with zero manual deployment errors.",
+      "expected_outcome": "Fully automated CI/CD pipeline verifying code quality and deploying to live cloud servers on git push."
+    },
+    {
+      "module_number": "Module 20",
+      "module_title": "Production Monitoring, Logging & Performance",
+      "module_purpose": "Learn how to monitor, diagnose, and optimize live production applications using logging, metrics, and error tracking.",
+      "what_you_will_learn": [
+        "Master the core principles of Production Monitoring, Logging & Performance.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "20.1",
+          "lesson_title": "Structured Logging & Application Monitoring",
+          "what_is_taught": "Log levels (info, warn, error), structured JSON logs with Winston, request correlation IDs, and log aggregation.",
+          "why_it_matters": "Standard console.log statements are lost in production; structured logs enable searching and diagnosing live crashes.",
+          "what_learner_does": "Replaces console.log with Winston structured logger recording timestamped JSON log events.",
+          "expected_outcome": "Enterprise logging system generating searchable log entries."
+        },
+        {
+          "lesson_number": "20.2",
+          "lesson_title": "API Health Checks & Uptime Monitoring",
+          "what_is_taught": "Designing /health and /ready endpoints, database ping checks, and setting up automated external uptime monitors.",
+          "why_it_matters": "Alerts the engineering team immediately when a server or database goes down before customers complain.",
+          "what_learner_does": "Builds a /health endpoint verifying PostgreSQL connectivity and configures an external uptime ping monitor.",
+          "expected_outcome": "Automated uptime monitoring with live health check endpoint."
+        },
+        {
+          "lesson_number": "20.3",
+          "lesson_title": "Frontend Performance & Core Web Vitals Optimization",
+          "what_is_taught": "Largest Contentful Paint (LCP), Cumulative Layout Shift (CLS), Interaction to Next Paint (INP), and asset compression.",
+          "why_it_matters": "Google heavily penalizes slow websites in search rankings; fast loading directly increases user conversion rates.",
+          "what_learner_does": "Audits a Next.js application, optimizes heavy images, eliminates layout shift, and boosts Lighthouse scores to 90+.",
+          "expected_outcome": "High-performance frontend achieving green Core Web Vitals."
+        },
+        {
+          "lesson_number": "20.4",
+          "lesson_title": "Database Query Optimization & Basic Caching",
+          "what_is_taught": "Identifying slow queries, EXPLAIN ANALYZE in PostgreSQL, adding B-tree indexes, and in-memory caching concepts.",
+          "why_it_matters": "Slow database queries are the primary bottleneck causing sluggish response times as user traffic scales.",
+          "what_learner_does": "Uses EXPLAIN ANALYZE to identify an unindexed sequential scan and adds indexes to reduce query execution time by 90%.",
+          "expected_outcome": "Optimized database queries with verified index performance gains."
+        }
+      ],
+      "key_concepts": [
+        "Application Logging",
+        "Error Tracking",
+        "Health Checks",
+        "Core Web Vitals",
+        "Database Query Performance"
+      ],
+      "tools": [
+        "Winston / Morgan",
+        "Sentry concepts",
+        "UptimeRobot",
+        "Chrome Lighthouse"
+      ],
+      "hands_on_practice": "Implement structured JSON logging, health check endpoints, and profile slow database queries.",
+      "assignment": "Add production health monitoring, structured logging, and Core Web Vitals optimization to an existing application.",
+      "business_application": "Answers the critical engineering question: 'How do we know the deployed application is functioning properly right now?'",
+      "expected_outcome": "Production-ready application with automated error monitoring, health check endpoints, and high Core Web Vitals."
+    },
+    {
+      "module_number": "Module 21",
+      "module_title": "Practical System Design & Architecture",
+      "module_purpose": "Understand pragmatic, beginner-friendly system design principles, architectural patterns, and creating technical diagrams.",
+      "what_you_will_learn": [
+        "Master the core principles of Practical System Design & Architecture.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "21.1",
+          "lesson_title": "System Design Foundations: Scaling Concepts & Trade-Offs",
+          "what_is_taught": "Vertical vs horizontal scaling, load balancers, stateless servers, stateful databases, and latency vs throughput.",
+          "why_it_matters": "Teaches engineers how systems grow from 100 users to 100,000 users without crashing.",
+          "what_learner_does": "Analyzes system scaling bottlenecks and designs a horizontally scalable server architecture on paper.",
+          "expected_outcome": "Clear conceptual grasp of scalability trade-offs and bottlenecks."
+        },
+        {
+          "lesson_number": "21.2",
+          "lesson_title": "Architectural Patterns: Monoliths vs Modular Services",
+          "what_is_taught": "Pros and cons of modular monoliths vs microservices; why startups should almost always build modular monoliths first.",
+          "why_it_matters": "Prevents engineers from prematurely over-engineering complex microservices that cripple startup velocity.",
+          "what_learner_does": "Evaluates architectural trade-offs for a new startup, justifying a modular monolith architecture.",
+          "expected_outcome": "Written architectural justification report defending design decisions."
+        },
+        {
+          "lesson_number": "21.3",
+          "lesson_title": "Storage, Caching & Content Delivery Networks (CDNs)",
+          "what_is_taught": "Object storage (S3 concepts) for user media uploads, CDN edge caching for static assets, and Redis caching concepts.",
+          "why_it_matters": "Keeps application servers fast and light by offloading heavy media files and static assets to specialized infrastructure.",
+          "what_learner_does": "Diagrams the upload lifecycle of user images: direct upload to cloud storage with CDN distribution.",
+          "expected_outcome": "Optimized media storage and caching architecture design."
+        },
+        {
+          "lesson_number": "21.4",
+          "lesson_title": "Creating Technical System Architecture Diagrams",
+          "what_is_taught": "Standard architectural diagramming symbols, component boundaries, data flow arrows, and sequence diagrams with Mermaid.",
+          "why_it_matters": "Technical diagrams are the universal language used in senior technical interviews and corporate engineering design reviews.",
+          "what_learner_does": "Creates a professional architectural diagram illustrating browser, Next.js frontend, Node API, PostgreSQL, and auth flow.",
+          "expected_outcome": "Comprehensive, publication-quality system architecture diagram."
+        }
+      ],
+      "key_concepts": [
+        "System Design Principles",
+        "Monoliths vs Microservices",
+        "Caching Layers",
+        "File Storage & CDNs",
+        "Architecture Diagrams"
+      ],
+      "tools": [
+        "Mermaid.js",
+        "Excalidraw",
+        "Architecture Blueprinting"
+      ],
+      "hands_on_practice": "Design and diagram the complete architecture for a scalable service booking or e-commerce platform.",
+      "assignment": "Create a comprehensive System Architecture Blueprint for your Capstone project including data flow and storage.",
+      "business_application": "Prepares engineers to make sound architectural trade-offs and communicate technical visions clearly to stakeholders.",
+      "expected_outcome": "Professional architectural diagram and written technical design specification for a web system."
+    },
+    {
+      "module_number": "Module 22",
+      "module_title": "Data Structures, Algorithms & Coding Interview Prep",
+      "module_purpose": "Master practical data structures, algorithmic intuition, and solve 30–40 targeted coding interview challenges.",
+      "what_you_will_learn": [
+        "Master the core principles of Data Structures, Algorithms & Coding Interview Prep.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "22.1",
+          "lesson_title": "Big-O Notation & Algorithmic Complexity Intuition",
+          "what_is_taught": "Time and space complexity: O(1), O(log n), O(n), O(n log n), O(n^2); recognizing performance bottlenecks in code.",
+          "why_it_matters": "Allows engineers to immediately spot accidental quadratic algorithms that would freeze browser tabs or servers.",
+          "what_learner_does": "Analyzes multiple implementations of array search and sorting, plotting time complexity comparisons.",
+          "expected_outcome": "Ability to evaluate time and space complexity of code intuitively."
+        },
+        {
+          "lesson_number": "22.2",
+          "lesson_title": "Array & String Manipulation Patterns",
+          "what_is_taught": "Two-pointer technique, sliding window basics, frequency counters, string palindrome checks, and anagrams.",
+          "why_it_matters": "Arrays and strings form over 60% of entry-level technical coding interview screening questions.",
+          "what_learner_does": "Solves 10 classic array and string interview problems (Two Sum, Valid Anagram, Reverse String, Max Subarray).",
+          "expected_outcome": "Mastery of essential array and string interview patterns."
+        },
+        {
+          "lesson_number": "22.3",
+          "lesson_title": "Hash Maps, Sets & Fast Lookup Data Structures",
+          "what_is_taught": "Hash tables, Map and Set in JavaScript, O(1) average lookup times, caching, and deduplication patterns.",
+          "why_it_matters": "Hash maps are the single most useful data structure in real software engineering for fast data retrieval.",
+          "what_learner_does": "Solves 10 hash map challenges: group anagrams, first unique character, intersection of two arrays.",
+          "expected_outcome": "Proficiency in leveraging hash maps for linear-time problem solving."
+        },
+        {
+          "lesson_number": "22.4",
+          "lesson_title": "Stacks, Queues & Basic Recursion Patterns",
+          "what_is_taught": "LIFO stack mechanics, FIFO queues, call stack recursion basics, base cases, and valid parentheses matching.",
+          "why_it_matters": "Underpins browser history, undo/redo features, routing call stacks, and job processing queues.",
+          "what_learner_does": "Solves classic stack problems (Valid Parentheses, Min Stack) and writes simple recursive tree/object traversals.",
+          "expected_outcome": "Strong command of linear data structures and recursive thinking."
+        }
+      ],
+      "key_concepts": [
+        "Big-O Complexity",
+        "Arrays & Strings",
+        "Hash Maps & Sets",
+        "Two Pointers",
+        "Stacks & Queues"
+      ],
+      "tools": [
+        "JavaScript / TypeScript",
+        "LeetCode / HackerRank",
+        "VS Code"
+      ],
+      "hands_on_practice": "Solve 30–40 practical coding challenges focusing on real software patterns rather than competitive trivia.",
+      "assignment": "Complete the Coding Interview Lab: submit verified solutions and Big-O explanations for 30 coding problems.",
+      "business_application": "Builds problem-solving speed and algorithmic intuition required to pass technical screening rounds at tech companies.",
+      "expected_outcome": "Strong algorithmic intuition and verified solutions to 30+ practical software engineering interview problems."
+    },
+    {
+      "module_number": "Module 23",
+      "module_title": "Software Engineering Career Launch & Project Defense",
+      "module_purpose": "Prepare for technical hiring: engineer a recruiter-ready GitHub portfolio, resume, and defend code in viva juries.",
+      "what_you_will_learn": [
+        "Master the core principles of Software Engineering Career Launch & Project Defense.",
+        "Implement production-grade practical code following modern industry best practices.",
+        "Systematically troubleshoot, test, and debug common real-world errors in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "23.1",
+          "lesson_title": "The Developer Resume & ATS Optimization",
+          "what_is_taught": "Writing achievement-oriented bullet points (Action + Context + Metric), ATS keyword optimization, and tech stack summaries.",
+          "why_it_matters": "Ensures your resume passes automated applicant tracking systems and catches engineering managers' attention.",
+          "what_learner_does": "Drafts a technical developer resume highlighting projects, tech stack competencies, and live deployment links.",
+          "expected_outcome": "ATS-optimized, clean software engineering resume."
+        },
+        {
+          "lesson_number": "23.2",
+          "lesson_title": "GitHub Profile & Portfolio Showcase Engineering",
+          "what_is_taught": "Structuring a compelling GitHub profile README, pinning best projects, writing great repo READMEs, and recording video demos.",
+          "why_it_matters": "A clean GitHub profile with working live links provides instant verifiable proof-of-work to recruiters.",
+          "what_learner_does": "Polishes GitHub profile and writes comprehensive READMEs with screenshots, architecture diagrams, and setup steps.",
+          "expected_outcome": "Recruiter-ready GitHub profile showcasing 6 projects and 1 capstone."
+        },
+        {
+          "lesson_number": "23.3",
+          "lesson_title": "Mastering the Technical Interview: JavaScript, React & SQL",
+          "what_is_taught": "Common technical interview questions on closures, event loop, React rendering, SQL joins, REST design, and async code.",
+          "why_it_matters": "Allows engineers to communicate complex technical concepts clearly and authoritatively during interviews.",
+          "what_learner_does": "Participates in live 1-on-1 mock technical interview simulations with mentor feedback.",
+          "expected_outcome": "Confidence explaining full-stack technical concepts clearly under pressure."
+        },
+        {
+          "lesson_number": "23.4",
+          "lesson_title": "The Oral Project Defense: Defending Your Code",
+          "what_is_taught": "Answering tough jury questions: 'Why PostgreSQL?', 'How does auth work?', 'What breaks at 10x scale?', 'How did you test this?'",
+          "why_it_matters": "Proves you genuinely wrote, understand, and can defend every technical decision in your application.",
+          "what_learner_does": "Presents flagship capstone project before faculty jury, defending architecture, schema, security, and trade-offs.",
+          "expected_outcome": "Successful defense of capstone project and graduation qualification."
+        }
+      ],
+      "key_concepts": [
+        "Technical Project Defense",
+        "Developer Resume & ATS",
+        "GitHub Portfolio Polish",
+        "Technical Interviews",
+        "Behavioral Interview Prep"
+      ],
+      "tools": [
+        "GitHub",
+        "LinkedIn",
+        "Resume Builders",
+        "Mock Interview Sessions"
+      ],
+      "hands_on_practice": "Conduct a live project defense viva before faculty jury, explaining architectural decisions and code trade-offs.",
+      "assignment": "Submit finalized GitHub portfolio, polished developer resume, and complete the oral Technical Project Defense.",
+      "business_application": "Translates hard technical competence into credible professional positioning that secures developer interviews and offers.",
+      "expected_outcome": "Polished developer portfolio, verified resume, and demonstrated mastery defending technical decisions in interviews."
     }
   ]
 }

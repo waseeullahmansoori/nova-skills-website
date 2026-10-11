@@ -1,250 +1,1959 @@
 {
-    "course_id": "freelancing-mastery",
-    "course_name": "Freelancing Mastery",
-    "academy": "Career & Freelancing Academy",
-    "academy_id": "career-freelancing-academy",
-    "course_type": "MASTER",
-    "course_role": "Freelancer",
-    "level": "Intermediate",
-    "duration": "6 Months",
-    "learning_hours": 200,
-    "future_review_status": "Up to date",
-    "target_audience": {
-        "best_for": ["Aspiring freelancers", "Professionals transitioning to independent work", "Creative and technical specialists"],
-        "not_for": ["Individuals seeking traditional W2 corporate employment"],
-        "who_should_take_foundation_first": "Absolute beginners without a core hard skill."
-    },
-    "prerequisites": {
-        "required": "A marketable hard skill (e.g., coding, writing, design, marketing).",
-        "recommended": "Basic understanding of professional communication.",
-        "system_requirements": {
-            "hardware": "A computer with reliable internet access.",
-            "software_accounts": "Upwork, Fiverr, LinkedIn, Notion, Calendly, Stripe, Loom."
-        },
-        "not_required": "Prior business ownership experience."
-    },
-    "overview": {
-        "positioning": "Master the complete lifecycle of running a profitable freelance business, from niche selection to scaling.",
-        "short_description": "Comprehensive guide to launching, operating, and scaling a successful freelance career.",
-        "key_facts": {
-            "level": "Intermediate",
-            "duration": "6 Months",
-            "format": "Online",
-            "estimated_learning_hours": 200,
-            "project_count": 5,
-            "capstone": true,
-            "ai_integration": "High",
-            "career_focus": "Independent Business Owner"
-        },
-        "what_you_will_be_able_to_do": [
-            "Define profitable niches and strategically package your services.",
-            "Acquire high-paying clients through Upwork, Fiverr, and outbound LinkedIn strategies.",
-            "Draft high-converting proposals and navigate complex client negotiations.",
-            "Manage multiple freelance projects simultaneously using robust CRM systems.",
-            "Transition from a solo freelancer to a scalable agency model."
-        ]
-    },
-    "why_now": {
-        "industry_shift": "The global workforce is shifting towards specialized independent contractors over full-time hires.",
-        "ai_impact": "AI tools allow solo freelancers to handle operations, marketing, and delivery at an agency level.",
-        "business_demand": "Companies are seeking flexible, specialized talent for project-based outcomes.",
-        "career_opportunity": "Uncapped earning potential and total geographical freedom."
-    },
-    "learning_outcomes": [
-        "DEFINE your unique value proposition and target client avatar.",
-        "OPTIMIZE conversion-focused profiles on Upwork, Fiverr, and LinkedIn.",
-        "PITCH specialized services to enterprise and SMB clients effectively.",
-        "NEGOTIATE project rates and close high-ticket retainer contracts.",
-        "DELIVER exceptional client experiences to maximize retention and referrals."
+  "course_id": "freelancing-mastery",
+  "course_name": "Freelance Business & Client Acquisition Mastery",
+  "short_name": "Freelancing Mastery",
+  "academy": "Career & Freelancing Academy",
+  "academy_id": "career",
+  "course_type": "MASTER",
+  "course_role": "Freelance Business Consultant",
+  "level": "BEGINNER TO PROFESSIONAL",
+  "duration": "6 Months",
+  "duration_months": 6,
+  "learning_hours": 240,
+  "price": 18999,
+  "original_price": 49999,
+  "discount": "62% OFF",
+  "future_review_status": "STABLE",
+  "eyebrow": "FREELANCING • CLIENT ACQUISITION • SALES • BUSINESS",
+  "positioning_statement": "From Skill → Offer → Client → Delivery → Retainer",
+  "core_positioning_quote": "Don't Chase Gigs. Build a Freelance Business System.",
+  "primary_sales_hook": "Build Your Offer. Find Clients. Close Projects. Deliver Professionally. Grow Repeat Revenue.",
+  "hero_subtitle": "Turn your professional skill into a structured freelance business. Learn positioning, client acquisition, proposals, pricing, sales, delivery and recurring revenue.",
+  "supporting_line": "Learn how to build a freelance business — not just how to create profiles on marketplaces.",
+  "seo_title": "Freelance Business & Client Acquisition Course | Nova Skills",
+  "seo_description": "Learn freelance positioning, portfolio building, Upwork, Fiverr, direct client acquisition, sales calls, proposals, pricing, contracts, delivery and client retention with Nova Skills.",
+  "outcomes_tag": "WHAT YOU WILL BUILD",
+  "outcomes_title": "What You Will <span class=\"gradient-text\">Build & Deploy</span>",
+  "tracks_tag": "CHOOSE YOUR FREELANCE SPECIALIZATION",
+  "tracks_title": "5 Industry <span class=\"gradient-text\">Specialization Pathways</span>",
+  "workflow_tag": "THE COMPLETE FREELANCE JOURNEY",
+  "workflow_title": "How Modern <span class=\"gradient-text\">Freelance Businesses Work</span>",
+  "labs_tag": "CLIENT ACQUISITION SPRINT & LABS",
+  "labs_title": "Weekly Real-World <span class=\"gradient-text\">Client Acquisition & Delivery Labs</span>",
+  "badges": [
+    "6 Months",
+    "Beginner Friendly",
+    "5 Specialization Tracks",
+    "8 Business Deliverables",
+    "Client Acquisition Sprint",
+    "Sales Role-Plays",
+    "AI-Assisted Workflows",
+    "Freelance Business Capstone"
+  ],
+  "target_audience": {
+    "best_for": [
+      "Designers, developers, video editors, and digital marketers wanting to transition to full-time freelancing",
+      "Content creators, writers, and AI automation builders seeking high-paying international clients",
+      "Virtual assistants and business support professionals looking to package premium service offers",
+      "Working professionals wanting to build a predictable secondary freelance income stream",
+      "Experienced freelancers struggling with irregular gig chasing who want retainers and predictable systems",
+      "Solo service providers preparing to transition into a boutique digital agency model"
     ],
-    "learning_journey": {
-        "stages": [
-            {"stage": "Foundation", "focus": "Niche selection, branding, and service packaging."},
-            {"stage": "Acquisition", "focus": "Platform optimization and outbound lead generation."},
-            {"stage": "Operations", "focus": "Client onboarding, CRM setup, and project delivery."},
-            {"stage": "Scaling", "focus": "Retainers, outsourcing, and transition to agency."}
-        ]
-    },
-    "hands_on_tech": {
-        "core_tools": [
-            {"tool": "Upwork", "purpose": "Client acquisition", "what_student_learns": "Advanced profile optimization and bidding strategies.", "what_student_builds": "A top-rated tier freelancer profile."},
-            {"tool": "LinkedIn", "purpose": "Outbound Lead Gen", "what_student_learns": "Social selling and direct outreach.", "what_student_builds": "A robust professional network and content funnel."},
-            {"tool": "Notion", "purpose": "Business Management", "what_student_learns": "Building custom client portals and CRMs.", "what_student_builds": "A personalized freelance operations dashboard."}
-        ],
-        "supporting_tools": [
-            {"tool": "Calendly", "purpose": "Automated scheduling"},
-            {"tool": "Stripe", "purpose": "Invoicing and payment processing"},
-            {"tool": "Loom", "purpose": "Asynchronous client updates"}
-        ],
-        "emerging_tools": [
-            {"tool": "AI Copywriters", "purpose": "Drafting initial proposal frameworks."}
-        ],
-        "tools_to_review": ["Fiverr", "ClickUp"]
-    },
-    "industry_workflow": {
-        "overview": "The standard lifecycle of a high-ticket freelance engagement.",
-        "stages": [
-            {"step": 1, "name": "Lead Generation", "desc": "Sourcing qualified prospects via inbound profiles and outbound outreach."},
-            {"step": 2, "name": "Discovery & Pitching", "desc": "Conducting needs analysis calls and submitting tailored proposals."},
-            {"step": 3, "name": "Contracting & Onboarding", "desc": "Securing deposits and integrating the client into your workflow."},
-            {"step": 4, "name": "Execution & Reporting", "desc": "Delivering milestones with structured asynchronous updates."},
-            {"step": 5, "name": "Offboarding & Upselling", "desc": "Handing over final deliverables, collecting testimonials, and pitching retainers."}
-        ]
-    },
-    "business_use_cases": [
-        {"sector": "Professional Services", "business_problem": "Inconsistent lead flow and feast-or-famine cycles.", "approach": "Implementing a hybrid inbound/outbound client acquisition system.", "toolset": "LinkedIn, Upwork, Notion", "output": "A predictable pipeline of qualified client inquiries."}
+    "not_for": [
+      "Individuals without any marketable professional skill who expect freelancing platforms to generate effortless income",
+      "Those looking for guaranteed passive income schemes, survey-clicking, or data entry gigs",
+      "People seeking platform ranking hacks, fake review exchanges, or spam outreach tactics"
     ],
-    "ai_integration": {
-        "role_classification": "AI as an operational assistant.",
-        "ai_can_assist_with": "Drafting proposal outlines, generating content ideas, structuring standard contracts.",
-        "ai_can_automate": "Basic inquiry categorization and initial email responses.",
-        "ai_cannot_replace": "Building genuine trust, navigating complex negotiations, and understanding nuanced client politics.",
-        "human_expertise_required": "Strategic decision-making, closing high-value deals, and relationship management.",
-        "validation_protocol": "Human review of all AI-generated client communications before sending.",
-        "responsible_use": "Maintaining authenticity and avoiding overstating AI's role in deliverables."
+    "who_should_take_foundation_first": "Individuals who do not yet have a marketable core skill (design, coding, writing, marketing, video editing, or operations) should first develop a hard skill before enrolling."
+  },
+  "prerequisites": {
+    "required": "At least one marketable professional skill (e.g., graphic design, video editing, web development, SEO, copywriting, or virtual assistance).",
+    "recommended": "Basic computer literacy and willingness to participate in live sales role-plays and client discovery simulations.",
+    "system_requirements": {
+      "hardware": "A working laptop or desktop computer with a reliable webcam and high-speed internet connection for mock client calls.",
+      "software_accounts": "Free accounts on Upwork, Fiverr, LinkedIn, Notion, Google Workspace, Calendly, and Loom."
     },
-    "best_practices": [
-        "Always require a signed contract and upfront deposit.",
-        "Establish clear scope boundaries during the proposal phase.",
-        "Over-communicate via asynchronous tools during project execution.",
-        "Systematize the collection of case studies and testimonials."
-    ],
-    "common_mistakes": [
-        {"mistake": "Competing purely on price.", "why_it_happens": "Imposter syndrome and fear of losing bids to cheaper alternatives.", "professional_approach": "Adopting value-based pricing and confidently articulating ROI."}
-    ],
-    "career_paths": {
-        "entry_roles": ["Specialized Freelancer"],
-        "mid_roles": ["Premium Consultant", "Top-Rated Talent"],
-        "specialist_roles": ["Niche Industry Expert"],
-        "freelance_roles": ["Independent Contractor", "Boutique Agency Owner"],
-        "employer_expectations": "Unwavering reliability, exceptional communication, and high-quality autonomous execution.",
-        "what_student_demonstrates": "A thriving, structurally sound freelance business with active client accounts."
+    "not_required": "Prior business ownership, formal sales background, or existing paying clients."
+  },
+  "overview": {
+    "positioning": "Don't Chase Gigs. Build a Freelance Business System.",
+    "short_description": "Freelancing is not the core skill—freelancing monetizes a core professional skill. Master the complete journey: niche positioning, productized service design, proof-of-work portfolios, Upwork, Fiverr, direct LinkedIn outbound, sales discovery calls, proposals, pricing, contracts, client onboarding, and recurring retainer systems.",
+    "key_facts": {
+      "level": "Beginner to Professional",
+      "duration": "6 Months",
+      "format": "Hybrid (Live Interactive Sales Labs + System Critiques + Asynchronous Outreach Sprints)",
+      "estimated_learning_hours": "240 hrs",
+      "project_count": 8,
+      "capstone": "1 Complete Freelance Business Launch System",
+      "ai_integration": "High (AI Research, Outreach Drafting, Discovery Prep, Proposal QA)",
+      "career_focus": "Independent Freelancer, Freelance Consultant, Boutique Agency Founder"
     },
-    "freelance_applications": {
-        "services_offered": ["Consulting", "Done-for-you execution", "Strategic auditing"],
-        "client_workflow": "Discovery -> Proposal -> Deposit -> Execution -> Milestone Review -> Final Delivery -> Retainer",
-        "portfolio_requirements": "Detailed case studies highlighting the business problem, approach, and quantifiable ROI."
-    },
-    "what_you_will_build": [
-        "A comprehensive freelance business plan and service menu.",
-        "Fully optimized conversion profiles on Upwork and LinkedIn.",
-        "A library of reusable proposal and contract templates.",
-        "A custom CRM and project management system in Notion."
-    ],
-    "final_deliverables": [
-        "A documented client acquisition and operations playbook.",
-        "Active, optimized lead generation profiles.",
-        "A portfolio featuring at least one comprehensive case study."
-    ],
-    "assessment": {
-        "model": "Business implementation evaluation.",
-        "criteria": "Quality of platform profiles, strength of proposal templates, and structural soundness of operational workflows."
-    },
-    "certification": {
-        "title": "Certified Freelance Business Professional",
-        "criteria": "Completion of all modules, launch of profiles, and successful setup of business infrastructure.",
-        "verification": "Review of the operational playbook and public profiles."
-    },
-    "not_covered": "Instruction on specific hard skills (e.g., how to write code or design graphics).",
-    "next_learning_path": {
-        "recommended_next": "Agency Building",
-        "related_programs": "Client Communication, Proposal Writing"
-    },
-    "faq": [
-        {"question": "Do I need an existing skill before taking this course?", "answer": "Yes, this course focuses entirely on the business and sales side of freelancing. You must bring a marketable skill to sell."},
-        {"question": "Does this only cover Upwork?", "answer": "No. While Upwork is a core component, we extensively cover direct outreach via LinkedIn and other platforms."},
-        {"question": "How quickly can I expect to land my first client?", "answer": "While results vary based on your skill and effort, students who implement the outbound strategies often secure initial conversations within weeks."}
-    ],
-    "modules": [
-        {
-            "module_number": 1,
-            "module_title": "Niche Selection & Service Packaging",
-            "module_purpose": "Define your offering and target market to stand out.",
-            "what_you_will_learn": ["Auditing your skills for market viability.", "Identifying high-value target audiences.", "Structuring tiered service packages.", "Developing a unique value proposition."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Marketable Skill Assessment", "what_is_taught": "Evaluating existing skills against current market demand.", "why_it_matters": "Ensures you offer services clients are actively paying for.", "what_learner_does": "Conducts a personal skill audit.", "expected_outcome": "A refined list of core offerings."},
-                {"lesson_number": 2, "lesson_title": "Defining Your Niche", "what_is_taught": "Strategies for narrowing down target industries.", "why_it_matters": "Specialists command higher rates than generalists.", "what_learner_does": "Researches industry pain points and competitors.", "expected_outcome": "A specific niche statement."},
-                {"lesson_number": 3, "lesson_title": "Structuring Service Packages", "what_is_taught": "Creating clear, tiered deliverables.", "why_it_matters": "Reduces friction in the buying process.", "what_learner_does": "Designs a 3-tier service menu.", "expected_outcome": "A defined service and pricing menu."},
-                {"lesson_number": 4, "lesson_title": "Value-Based Pricing Strategies", "what_is_taught": "Moving away from hourly billing to ROI-focused pricing.", "why_it_matters": "Dramatically increases earning potential.", "what_learner_does": "Calculates project minimums based on value.", "expected_outcome": "A robust pricing strategy."}
-            ],
-            "key_concepts": ["Niche Positioning", "Tiered Packaging", "Value-Based Pricing"],
-            "tools": ["Notion", "Google Docs"],
-            "hands_on_practice": "Develop a comprehensive one-page business plan.",
-            "assignment": "Submit your defined niche, target audience, and service tiers.",
-            "business_application": "Establishing clear, high-value market positioning.",
-            "expected_outcome": "A finalized freelance offering ready for market."
-        },
-        {
-            "module_number": 2,
-            "module_title": "Client Acquisition & Platform Optimization",
-            "module_purpose": "Build lead generation engines across key platforms.",
-            "what_you_will_learn": ["Optimizing Upwork profiles for SEO.", "Setting up high-converting Fiverr gigs.", "Leveraging LinkedIn for outbound sales.", "Building cold outreach systems."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Upwork Profile Mastery", "what_is_taught": "Advanced techniques for Upwork SEO and profile structuring.", "why_it_matters": "Ensures visibility to enterprise clients.", "what_learner_does": "Rewrites profile overview and structures portfolio.", "expected_outcome": "A top-tier Upwork profile."},
-                {"lesson_number": 2, "lesson_title": "Inbound Marketing on LinkedIn", "what_is_taught": "Optimizing LinkedIn to attract target clients organically.", "why_it_matters": "Builds authority and passive lead flow.", "what_learner_does": "Updates headline, summary, and content strategy.", "expected_outcome": "An optimized LinkedIn presence."},
-                {"lesson_number": 3, "lesson_title": "Cold Outreach Mechanics", "what_is_taught": "Structuring cold emails and DMs that get responses.", "why_it_matters": "Provides a proactive method to land specific dream clients.", "what_learner_does": "Drafts customized outreach templates.", "expected_outcome": "A library of outreach scripts."},
-                {"lesson_number": 4, "lesson_title": "Building a Lead Pipeline", "what_is_taught": "Managing and tracking prospects.", "why_it_matters": "Prevents potential clients from falling through the cracks.", "what_learner_does": "Sets up a lead tracking system.", "expected_outcome": "An active sales pipeline."}
-            ],
-            "key_concepts": ["Platform SEO", "Outbound Sales", "Pipeline Management"],
-            "tools": ["Upwork", "LinkedIn", "Notion"],
-            "hands_on_practice": "Launch profiles and initiate a cold outreach campaign.",
-            "assignment": "Submit profile links and initial outreach data.",
-            "business_application": "Establishing reliable channels for client acquisition.",
-            "expected_outcome": "Active, optimized profiles generating leads."
-        },
-        {
-            "module_number": 3,
-            "module_title": "Proposals, Pitching & Negotiation",
-            "module_purpose": "Convert interested leads into high-paying clients.",
-            "what_you_will_learn": ["Crafting customized proposals.", "Conducting effective discovery calls.", "Handling client objections.", "Negotiating rates and scope."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Anatomy of a Winning Proposal", "what_is_taught": "Structuring proposals focused on client ROI.", "why_it_matters": "Differentiates you from template-driven competitors.", "what_learner_does": "Drafts a detailed proposal for a mock project.", "expected_outcome": "A highly effective proposal template."},
-                {"lesson_number": 2, "lesson_title": "Mastering the Discovery Call", "what_is_taught": "Leading sales calls to uncover true client needs.", "why_it_matters": "Builds trust and allows for accurate pricing.", "what_learner_does": "Roleplays a discovery call scenario.", "expected_outcome": "A structured discovery call script."},
-                {"lesson_number": 3, "lesson_title": "Objection Handling Frameworks", "what_is_taught": "Strategies for addressing budget and scope concerns.", "why_it_matters": "Protects your pricing and professional boundaries.", "what_learner_does": "Practices responses to common objections.", "expected_outcome": "Confidence in client negotiations."},
-                {"lesson_number": 4, "lesson_title": "Contracting & Closing", "what_is_taught": "Setting up bulletproof contracts and securing deposits.", "why_it_matters": "Legally protects your business and guarantees payment.", "what_learner_does": "Customizes a standard freelance contract.", "expected_outcome": "A ready-to-use legal contract."}
-            ],
-            "key_concepts": ["Sales Psychology", "Needs Analysis", "Contractual Protection"],
-            "tools": ["Google Docs", "Zoom", "Stripe"],
-            "hands_on_practice": "Conduct mock pitches and draft sample proposals.",
-            "assignment": "Submit a completed proposal and contract for review.",
-            "business_application": "Increasing conversion rates from lead to closed deal.",
-            "expected_outcome": "The ability to confidently close high-value contracts."
-        },
-        {
-            "module_number": 4,
-            "module_title": "Operations, Delivery & Retention",
-            "module_purpose": "Streamline execution and maximize client lifetime value.",
-            "what_you_will_learn": ["Building a custom CRM.", "Managing asynchronous communication.", "Handling scope creep.", "Pitching retainer agreements."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Building a Notion CRM", "what_is_taught": "Architecting a system to manage clients and projects.", "why_it_matters": "Essential for scaling without dropping balls.", "what_learner_does": "Builds a custom CRM dashboard.", "expected_outcome": "A functional business operations hub."},
-                {"lesson_number": 2, "lesson_title": "Asynchronous Client Management", "what_is_taught": "Using Loom and regular updates to manage expectations.", "why_it_matters": "Reduces unnecessary meetings and keeps clients happy.", "what_learner_does": "Records standardized update videos.", "expected_outcome": "A communication protocol."},
-                {"lesson_number": 3, "lesson_title": "Navigating Scope Creep", "what_is_taught": "Techniques for pushing back professionally on extra requests.", "why_it_matters": "Protects profitability and time.", "what_learner_does": "Drafts response scripts for scope expansion.", "expected_outcome": "Clear boundary management strategies."},
-                {"lesson_number": 4, "lesson_title": "Retainers & Upselling", "what_is_taught": "Transitioning project clients into ongoing retainers.", "why_it_matters": "Creates predictable, recurring monthly revenue.", "what_learner_does": "Designs a retainer package for a past project.", "expected_outcome": "A structured upsell offering."}
-            ],
-            "key_concepts": ["CRM Management", "Scope Management", "Recurring Revenue"],
-            "tools": ["Notion", "Loom"],
-            "hands_on_practice": "Finalize the CRM and draft retainer pitches.",
-            "assignment": "Submit screenshots of the operational dashboard.",
-            "business_application": "Running a highly efficient, scalable freelance practice.",
-            "expected_outcome": "Optimized operations and strategies for long-term client retention."
-        },
-        {
-            "module_number": 5,
-            "module_title": "Scaling to Agency",
-            "module_purpose": "Transition from solo freelancer to agency owner.",
-            "what_you_will_learn": ["Identifying scalable services.", "Hiring and managing subcontractors.", "Implementing quality control systems.", "Advanced client acquisition."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "The Agency Model Blueprint", "what_is_taught": "Structuring services for delegation.", "why_it_matters": "You cannot scale if every task requires your direct involvement.", "what_learner_does": "Maps out a delegatable service workflow.", "expected_outcome": "An agency service blueprint."},
-                {"lesson_number": 2, "lesson_title": "Sourcing and Vetting Talent", "what_is_taught": "Finding reliable freelancers to fulfill your contracts.", "why_it_matters": "Your reputation relies on their output.", "what_learner_does": "Creates a hiring test task.", "expected_outcome": "A vetted talent pool strategy."},
-                {"lesson_number": 3, "lesson_title": "Quality Control & Delivery", "what_is_taught": "Setting up review processes before final delivery.", "why_it_matters": "Maintains premium standards while stepping back from production.", "what_learner_does": "Designs a QA checklist for their core service.", "expected_outcome": "A standardized QA protocol."},
-                {"lesson_number": 4, "lesson_title": "Scaling Client Acquisition", "what_is_taught": "Using paid ads and automated outreach to drive higher volume.", "why_it_matters": "An agency requires a larger, more consistent pipeline than a solo freelancer.", "what_learner_does": "Drafts an automated outreach sequence.", "expected_outcome": "A scalable lead generation plan."}
-            ],
-            "key_concepts": ["Delegation", "Quality Assurance", "Scalable Processes"],
-            "tools": ["ClickUp", "Slack"],
-            "hands_on_practice": "Hire a freelancer for a small test project.",
-            "assignment": "Submit the agency blueprint and QA checklist.",
-            "business_application": "Multiplying revenue potential without linearly increasing personal work hours.",
-            "expected_outcome": "A clear roadmap for building and managing a boutique agency."
-        }
+    "what_you_will_be_able_to_do": [
+      "Select a profitable freelance specialization and define your Ideal Client Profile (ICP)",
+      "Package your core skill into high-value productized service tiers with strict scope boundaries",
+      "Build a proof-of-work portfolio with 3 in-depth case studies documenting commercial problem-solving",
+      "Optimize search-friendly, conversion-focused marketplace profiles on Upwork and Fiverr",
+      "Execute a multi-channel direct client acquisition campaign across LinkedIn and cold email",
+      "Conduct structured sales discovery calls that uncover client pain points and budget without sounding salesy",
+      "Write customized, winning business proposals and statements of work (SOW) that justify premium pricing",
+      "Price projects confidently using value concepts and defend your rates during negotiation",
+      "Protect your business using clear scope contracts, milestone payment schedules, and international invoicing",
+      "Onboard clients seamlessly and establish proactive delivery workflows that eliminate micromanagement",
+      "Handle scope creep, difficult client scenarios, and unpaid change requests with diplomatic firmness",
+      "Convert one-off project clients into recurring monthly retainer contracts and structured referral engines"
     ]
+  },
+  "what_you_will_be_able_to_build": [
+    {
+      "title": "Specialized Freelance Positioning",
+      "description": "Clear positioning statement, market selection, buyer persona, and differentiation strategy moving you away from crowded generalist competition."
+    },
+    {
+      "title": "Productized Service Offer",
+      "description": "3-tier service menu (Starter, Growth, Performance) with defined deliverables, revision policies, turnaround times, and add-on upsells."
+    },
+    {
+      "title": "Professional Portfolio",
+      "description": "Comprehensive proof-of-work showcase featuring 3 structured case studies, introduction video, professional bio, and service landing page."
+    },
+    {
+      "title": "Optimized Marketplace Profiles",
+      "description": "High-converting, specialized Upwork profile (headline, overview, catalog projects) and professional Fiverr gig architecture."
+    },
+    {
+      "title": "Prospect Database & CRM",
+      "description": "Centralized Notion or Google Sheets CRM tracking leads, outreach stages, response rates, discovery calls, and active pipeline value."
+    },
+    {
+      "title": "Direct Outreach System",
+      "description": "Targeted 100-prospect client acquisition system complete with personalized LinkedIn messages, Loom audit scripts, and cold email follow-up sequences."
+    },
+    {
+      "title": "Proposal + Contract + Invoice Kit",
+      "description": "Standardized 10-part client proposal template, protective Statement of Work (SOW) contract, and international invoice setup."
+    },
+    {
+      "title": "Client Onboarding System",
+      "description": "Automated post-close workflow including client intake questionnaires, kickoff call agendas, shared project drives, and communication protocols."
+    },
+    {
+      "title": "Delivery Workflow",
+      "description": "Proactive project delivery system featuring milestone updates, version-controlled handovers, QA review checklists, and formal sign-off documents."
+    },
+    {
+      "title": "Retainer & Referral Strategy",
+      "description": "Predictable recurring revenue model converting completed one-off projects into monthly maintenance, growth retainers, and client referral loops."
+    },
+    {
+      "title": "Final Freelance Business System",
+      "description": "Complete operational command center connecting your positioning, marketing, sales, contracts, delivery, and financial tracking into one repeatable engine."
+    }
+  ],
+  "why_now": {
+    "industry_shift": "Global companies increasingly rely on specialized remote freelancers and boutique consultants over slow, expensive agency retainers or rigid full-time hires.",
+    "ai_impact": "Modern AI tools allow a solo freelancer to handle research, prospecting, drafting, and operational management at the level of a 5-person agency.",
+    "business_demand": "Businesses don't want generalist gig-workers; they eagerly pay premiums for specialized problem-solvers who understand business outcomes and communicate proactively.",
+    "career_opportunity": "Building an independent freelance business offers uncapped earning potential, location independence, and the foundation to scale into a boutique digital agency."
+  },
+  "specialization_tracks": [
+    {
+      "track_id": "track-creative",
+      "name": "Track A: Creative Freelancer",
+      "target_audience": "Graphic designers, brand identity specialists, UI/UX designers, video editors, and motion creators.",
+      "focus": "Productizing creative deliverables (brand identity kits, monthly short-form video retainers, website redesigns), visual portfolio curation, and presenting creative ROI.",
+      "potential_roles": "Freelance Brand Strategist, UI/UX Consultant, Commercial Video Editor, Creative Director for Hire",
+      "key_tools": "Figma, Premiere Pro, After Effects, Loom, Notion, Upwork"
+    },
+    {
+      "track_id": "track-marketing",
+      "name": "Track B: Marketing Freelancer",
+      "target_audience": "Media buyers, SEO specialists, social media managers, copywriters, and performance marketers.",
+      "focus": "Outcome-based pricing, monthly ad management retainers, SEO audit outreach, lead generation services, and client reporting dashboards.",
+      "potential_roles": "Freelance Performance Marketer, SEO Consultant, Growth Strategist, Paid Ads Specialist",
+      "key_tools": "Meta Ads Manager, Google Ads, GA4, Semrush, Loom, Notion"
+    },
+    {
+      "track_id": "track-tech",
+      "name": "Track C: Tech & Web Freelancer",
+      "target_audience": "Web developers, WordPress specialists, Shopify designers, and full-stack implementation contractors.",
+      "focus": "High-ticket web development scopes, e-commerce migration packages, monthly maintenance retainers, technical discovery calls, and project milestone contracts.",
+      "potential_roles": "Freelance Web Developer, Shopify Expert, WordPress Consultant, Headless CMS Contractor",
+      "key_tools": "Webflow, Shopify, WordPress, GitHub, Stripe, PandaDoc"
+    },
+    {
+      "track_id": "track-ai-automation",
+      "name": "Track D: AI & Automation Freelancer",
+      "target_audience": "Prompt engineers, n8n builders, Zapier/Make automation consultants, and AI integration specialists.",
+      "focus": "Packaging internal operational automations, CRM workflow integrations, AI chatbot development for local businesses, and recurring system maintenance retainers.",
+      "potential_roles": "Freelance Automation Consultant, AI Integration Specialist, Operations Systems Architect",
+      "key_tools": "n8n, Make, Zapier, OpenAI APIs, Airtable, Notion"
+    },
+    {
+      "track_id": "track-business-support",
+      "name": "Track E: Business Support Freelancer",
+      "target_audience": "Executive virtual assistants, Excel/MIS reporting specialists, market researchers, and operational coordinators.",
+      "focus": "Dedicated executive support packages, monthly reporting retainers, asynchronous inbox/calendar management, and operational process documentation.",
+      "potential_roles": "Virtual Operations Lead, Freelance MIS Specialist, Executive Business Assistant, Systems Coordinator",
+      "key_tools": "Excel, Google Workspace, ClickUp, Notion, Slack, Calendly"
+    }
+  ],
+  "learning_outcomes": [
+    "POSITION: Define a high-value niche combining your hard skill with a specific buyer, business problem, and commercial outcome.",
+    "PACKAGE: Create a 3-tier productized service menu with crystal-clear deliverables, revision caps, and scope boundaries.",
+    "SHOWCASE: Build a compelling 3-case-study portfolio demonstrating problem analysis, creative/technical process, and business results.",
+    "ACQUIRE: Secure client conversations across Upwork, Fiverr, LinkedIn direct outreach, and personalized cold email sequences.",
+    "DISCOVER: Lead consultative 20-minute client discovery calls that diagnose client pain points and qualify budget without awkwardness.",
+    "PROPOSE: Write high-converting, personalized business proposals that justify premium fees and eliminate price shopping.",
+    "PRICE & NEGOTIATE: Price projects with confidence, defend your rates against cheap competitors, and negotiate by adjusting scope rather than discounting.",
+    "PROTECT: Secure every engagement using protective Statements of Work (SOW), milestone escrow terms, and international invoicing compliant with GST/Wise.",
+    "DELIVER: Implement proactive communication and project delivery workflows so clients never have to chase you for updates.",
+    "RETAIN: Build recurring monthly retainers, client referral loops, and upsell packages that generate predictable recurring income."
+  ],
+  "learning_journey": {
+    "stages": [
+      {
+        "stage": "Phase 1: Foundation & Positioning",
+        "focus": "Skill audit, niche selection, Ideal Client Profile, and productized service design."
+      },
+      {
+        "stage": "Phase 2: Portfolio & Marketplace Presence",
+        "focus": "3-case-study proof-of-work portfolio, Upwork specialized profiles, and Fiverr gig systems."
+      },
+      {
+        "stage": "Phase 3: Direct Client Acquisition & Outbound Sprint",
+        "focus": "100-prospect database, personalized LinkedIn outreach, Loom audits, and cold email sequences."
+      },
+      {
+        "stage": "Phase 4: Sales, Proposals & Commercial Protection",
+        "focus": "Consultative discovery calls, proposal writing, pricing negotiation, SOW contracts, and payment setup."
+      },
+      {
+        "stage": "Phase 5: Operations, Delivery & Retainer Scaling",
+        "focus": "Client onboarding, proactive delivery, managing scope creep, monthly retainers, and agency scaling foundations."
+      }
+    ]
+  },
+  "hands_on_tech": {
+    "marketplaces": [
+      {
+        "tool": "Upwork",
+        "purpose": "Marketplace client acquisition",
+        "skills": "Specialized profiles, diagnostic proposals, job qualification, Connects management"
+      },
+      {
+        "tool": "Fiverr",
+        "purpose": "Productized service marketplace",
+        "skills": "Gig architecture, commercial video intros, 3-tier packaging, custom order upsells"
+      }
+    ],
+    "brand_prospecting": [
+      {
+        "tool": "LinkedIn",
+        "purpose": "B2B direct client acquisition",
+        "skills": "Profile positioning, prospect research, personalized connection notes, social proof"
+      },
+      {
+        "tool": "Portfolio Website / Notion",
+        "purpose": "Proof-of-work showcase",
+        "skills": "Case study layout, interactive previews, client testimonials, service landing page"
+      },
+      {
+        "tool": "Loom",
+        "purpose": "Audit-based video outreach",
+        "skills": "2-minute personalized video audits, screen walkthroughs, async client updates"
+      }
+    ],
+    "communication_sales": [
+      {
+        "tool": "Calendly",
+        "purpose": "Frictionless meeting scheduling",
+        "skills": "Discovery call intake questions, automated reminders, timezone coordination"
+      },
+      {
+        "tool": "Zoom / Google Meet",
+        "purpose": "Consultative sales discovery",
+        "skills": "Screen sharing, diagnostic questioning, closing next steps, verbal presence"
+      },
+      {
+        "tool": "Gmail / Google Workspace",
+        "purpose": "Professional correspondence",
+        "skills": "Professional email domain, follow-up sequences, proposal dispatch"
+      }
+    ],
+    "crm_operations": [
+      {
+        "tool": "Notion",
+        "purpose": "Freelance OS & Client Portal",
+        "skills": "Pipeline CRM, client onboarding workspaces, resource hubs, delivery SOPs"
+      },
+      {
+        "tool": "Google Sheets / Airtable",
+        "purpose": "Lead list & pipeline tracking",
+        "skills": "100-prospect tracking, outreach conversion metrics, revenue forecasting"
+      },
+      {
+        "tool": "ClickUp / Trello",
+        "purpose": "Project delivery management",
+        "skills": "Milestone scheduling, client review pipelines, task handoffs"
+      }
+    ],
+    "proposals_payments": [
+      {
+        "tool": "PandaDoc / Bonsai Concepts",
+        "purpose": "Contracts & proposals",
+        "skills": "Statements of Work (SOW), e-signatures, scope revision clauses"
+      },
+      {
+        "tool": "Wise / Stripe / Escrow",
+        "purpose": "International payment processing",
+        "skills": "Invoicing, multi-currency accounts, international wire compliance, GST exports"
+      }
+    ],
+    "ai_tools": [
+      {
+        "tool": "ChatGPT (GPT-4o) / Claude",
+        "purpose": "Operational AI co-pilot",
+        "skills": "Prospect research, outreach drafting, meeting summaries, proposal QA"
+      }
+    ]
+  },
+  "industry_workflow": {
+    "overview": "THE COMPLETE FREELANCE BUSINESS JOURNEY: A proven 16-step professional operational cycle turning a marketable skill into predictable recurring client revenue:",
+    "stages": [
+      {
+        "step": 1,
+        "name": "Marketable Skill",
+        "desc": "Identify your core, deliverable technical or creative hard skill."
+      },
+      {
+        "step": 2,
+        "name": "Specialization",
+        "desc": "Focus on a specific capability rather than being an undifferentiated generalist."
+      },
+      {
+        "step": 3,
+        "name": "Niche Selection",
+        "desc": "Choose an industry vertical (e.g., D2C, B2B SaaS, Real Estate) with budget."
+      },
+      {
+        "step": 4,
+        "name": "Ideal Client Profile",
+        "desc": "Define the exact buyer role, pain points, and commercial priorities."
+      },
+      {
+        "step": 5,
+        "name": "Productized Offer",
+        "desc": "Package your capability into clear 3-tier service packages with defined scope."
+      },
+      {
+        "step": 6,
+        "name": "Proof-of-Work Portfolio",
+        "desc": "Build 3 in-depth case studies demonstrating business problem solving."
+      },
+      {
+        "step": 7,
+        "name": "Client Acquisition",
+        "desc": "Execute outbound outreach (LinkedIn/Email) and optimize marketplace profiles."
+      },
+      {
+        "step": 8,
+        "name": "Discovery Call",
+        "desc": "Conduct consultative 20-minute diagnostic calls to understand client needs."
+      },
+      {
+        "step": 9,
+        "name": "Proposal Design",
+        "desc": "Author customized, 10-part proposals outlining approach, scope, and investment."
+      },
+      {
+        "step": 10,
+        "name": "Pricing & Negotiation",
+        "desc": "Defend project rates, trade scope concessions, and agree on commercial terms."
+      },
+      {
+        "step": 11,
+        "name": "Contract & Deposit",
+        "desc": "Sign a protective Statement of Work (SOW) and collect upfront deposits."
+      },
+      {
+        "step": 12,
+        "name": "Client Onboarding",
+        "desc": "Collect assets, align on communication rules, and set expectations via kickoff."
+      },
+      {
+        "step": 13,
+        "name": "Project Delivery",
+        "desc": "Deliver milestones proactively with transparent updates and zero client chasing."
+      },
+      {
+        "step": 14,
+        "name": "Client Retention",
+        "desc": "Present delivered results and pitch ongoing monthly maintenance or growth."
+      },
+      {
+        "step": 15,
+        "name": "Recurring Revenue",
+        "desc": "Transition satisfied project clients into stable monthly retainer contracts."
+      },
+      {
+        "step": 16,
+        "name": "Agency Foundations",
+        "desc": "Document delivery SOPs and subcontract specialist tasks to build scale."
+      }
+    ]
+  },
+  "practical_labs": [
+    {
+      "name": "Freelance Readiness & Niche Positioning Audit",
+      "focus": "Complete a 360-degree audit of your marketable skill, define your Ideal Client Profile (ICP), and craft an irresistible positioning statement."
+    },
+    {
+      "name": "Productized Service Menu Architecture",
+      "focus": "Design a complete 3-tier service menu (Starter, Growth, Performance) with exact deliverables, turnaround times, and revision limits."
+    },
+    {
+      "name": "3-Case-Study Proof-of-Work Review & Defense",
+      "focus": "Build and present 3 comprehensive case studies using the Problem-Research-Approach-Result architecture to faculty mentors."
+    },
+    {
+      "name": "Upwork Specialized Profile & Diagnostic Bidding",
+      "focus": "Construct a conversion-optimized Upwork profile and author 3 diagnostic, zero-fluff proposals responding to active live job posts."
+    },
+    {
+      "name": "Fiverr Productized Gig System Optimization",
+      "focus": "Build a multi-package Fiverr gig with search-optimized copy, custom thumbnail graphics, video intro script, and onboarding questions."
+    },
+    {
+      "name": "100-Prospect Direct Client Acquisition Sprint",
+      "focus": "Build a targeted database of 100 verified B2B prospects, launch personalized LinkedIn outreach, and record 3 personalized Loom audits."
+    },
+    {
+      "name": "Live Mock Client Discovery Call Role-Play",
+      "focus": "Face off against a mentor acting as a skeptical prospective client; practice agenda setting, diagnostic questioning, and closing next steps."
+    },
+    {
+      "name": "Client Proposal Writing & Price Defense Arena",
+      "focus": "Draft a customized 10-part business proposal and role-play overcoming common price objections ('Your price is too high', 'Can you discount?')."
+    },
+    {
+      "name": "Client Onboarding Workspace & SOW Contract Setup",
+      "focus": "Build a dedicated Notion client onboarding portal and configure protective Statements of Work with clear milestone payment terms."
+    },
+    {
+      "name": "Scope Creep Defense & Monthly Retainer Pitch",
+      "focus": "Role-play handling an aggressive scope creep request diplomatically and pitch a completed project client on a $1,500/mo retainer."
+    }
+  ],
+  "business_use_cases": [
+    {
+      "sector": "D2C E-Commerce & Retail",
+      "business_problem": "A D2C skincare brand struggles with high ad costs and declining conversion rates on their Shopify store.",
+      "approach": "A freelance specialist pitches an audit of their mobile checkout flow and packages a 2-week conversion rate redesign.",
+      "toolset": "Shopify, Figma, Loom, Notion",
+      "output": "Shopify CRO Audit + Redesign Project converted into a monthly creative testing retainer"
+    },
+    {
+      "sector": "B2B SaaS & Tech Startups",
+      "business_problem": "A funded B2B SaaS startup has an innovative product but produces dry, text-heavy LinkedIn content that generates zero demo requests.",
+      "approach": "A freelance content and video specialist packages an 8-video monthly short-form content retainer targeting startup founders.",
+      "toolset": "Premiere Pro, Notion, LinkedIn, Loom",
+      "output": "Monthly Video Retainer Pack with recurring monthly billing"
+    },
+    {
+      "sector": "Local Business & Professional Services",
+      "business_problem": "A multi-partner dental clinic loses prospective patients because their website is slow and lacks online booking.",
+      "approach": "A tech freelancer conducts a 2-minute Loom audit showing the booking flaw and proposes a modern Webflow rebuild.",
+      "toolset": "Webflow, Calendly, Loom, PandaDoc",
+      "output": "Website Redesign Project + Monthly Maintenance & Local SEO Retainer"
+    },
+    {
+      "sector": "High-Growth Digital Marketing Agencies",
+      "business_problem": "A fast-growing agency is overwhelmed with client campaigns and needs reliable specialist support without hiring full-time staff.",
+      "approach": "A freelance media buyer pitches white-label ad management services handling 4 client accounts at a fixed monthly rate.",
+      "toolset": "Meta Ads Manager, Slack, Google Sheets, Wise",
+      "output": "White-Label Agency Partnership providing predictable recurring monthly revenue"
+    },
+    {
+      "sector": "Corporate Real Estate & Architecture",
+      "business_problem": "A commercial developer needs high-end 3D renderings to pre-sell office suites before construction begins.",
+      "approach": "A 3D archviz freelancer creates a 3-tier rendering proposal with defined camera angles, lighting passes, and milestone payments.",
+      "toolset": "Blender, Unreal Engine, PandaDoc, Stripe",
+      "output": "Milestone-Based 3D Visualization Package with 50% upfront deposit"
+    },
+    {
+      "sector": "Executive Coaching & Consulting",
+      "business_problem": "An executive coach spends 20 hours a week answering emails, managing calendar bookings, and formatting client summaries.",
+      "approach": "A freelance business operations specialist builds an automated booking workflow and provides dedicated monthly operational support.",
+      "toolset": "ClickUp, Zapier, Google Workspace, Calendly",
+      "output": "Operations Management Retainer Package freeing 15+ hours weekly for the client"
+    }
+  ],
+  "ai_integration": {
+    "role_classification": "AI-AUGMENTED FREELANCE BUSINESS OPERATOR",
+    "ai_can_assist_with": "Niche research, Ideal Client Profile brainstorming, analyzing prospect websites, drafting personalized outreach openers, summarizing discovery call notes, generating proposal outlines, drafting contract scope descriptions, and brainstorming retention ideas.",
+    "ai_can_automate": "Preliminary lead research formatting, initial email grammar polish, converting rough meeting notes into formatted action items, and creating standardized template scaffolding.",
+    "ai_cannot_replace": "Live interpersonal empathy during sales calls, commercial intuition, understanding unspoken client hesitations, creative craftsmanship, and personal professional accountability.",
+    "human_expertise_required": "High. Clients hire human problem-solvers. Every AI-assisted outreach message, proposal, and deliverable must be rigorously reviewed, contextualized, and authenticated.",
+    "validation_protocol": "The AI Quality Protocol: AI Draft → Human Review → Client Context Check → Fact Check → Tone Calibration → Send. Never send unedited AI copy.",
+    "responsible_use": "Strictly prohibit uploading client proprietary data, non-disclosure agreement (NDA) details, or confidential customer databases into public AI models."
+  },
+  "course_comparison": {
+    "title": "Why This Program Is Radically Different",
+    "typical_heading": "Typical Freelancing Course",
+    "novaskills_heading": "Nova Skills Freelance Business System",
+    "typical_course": [
+      "Tells you to create a generic profile on Fiverr and Upwork and wait for orders",
+      "Encourages copy-pasting generic proposal templates to 50 jobs daily",
+      "Teaches low-ticket bidding wars where you compete on being the cheapest",
+      "Shows fake income screenshots and promises '$1,000/month in 30 days'",
+      "Ignores client qualification and discovery calls entirely",
+      "No training on contracts, scope protection, or milestone payment security",
+      "Zero direct outbound client acquisition (LinkedIn, cold email, Loom audits)",
+      "Leaves you trapped chasing one-off gigs with unpredictable income swings",
+      "No systems for client onboarding, project delivery, or proactive updates",
+      "Treats freelancing as a platform hack rather than a structured business"
+    ],
+    "novaskills_mastery": [
+      "Anchors your freelancing in a marketable core skill and defined niche positioning",
+      "Teaches diagnostic, client-centric proposal writing with high win rates",
+      "Focuses on high-value productized service packages and value-based pricing",
+      "Provides realistic process-driven training with zero false income guarantees",
+      "Rigorous training in consultative sales discovery calls and qualification",
+      "Complete protective Statements of Work (SOW), contracts, and Wise/GST setup",
+      "Master direct B2B client acquisition through the 100-Prospect Client Sprint",
+      "Teaches client retention strategies that turn one-off projects into monthly retainers",
+      "Builds full client onboarding workspaces, delivery SOPs, and Notion CRM hubs",
+      "Builds a complete, repeatable freelance business engine that works long-term"
+    ]
+  },
+  "portfolio_specs": {
+    "title": "Your Freelance Business Operating Portfolio",
+    "description": "Graduates leave with tangible proof of business readiness documented across 14 verified commercial artifacts hosted in an employer- and client-ready digital showcase:",
+    "deliverables": [
+      "1. Freelance Positioning & ICP Blueprint (Niche definition, buyer persona, differentiation statement)",
+      "2. Productized Service Menu (3-tier offerings: Starter, Growth, Performance with scope boundaries)",
+      "3. 3-Case-Study Proof-of-Work Showcase (Detailed Problem-Research-Approach-Result case studies)",
+      "4. Professional 60-Second Video Bio & Service Page (Hosted digital introduction and capability breakdown)",
+      "5. Optimized Upwork Specialized Profile (Headline, overview, portfolio catalog, and skill tags)",
+      "6. Complete Fiverr Productized Gig Architecture (Search-optimized copy, video script, multi-tier pricing)",
+      "7. 100-Prospect Lead Database & Pipeline CRM (Segmented prospect list tracking outreach conversions)",
+      "8. Direct Outreach Campaign Suite (Personalized LinkedIn templates, Loom video scripts, cold email sequences)",
+      "9. Recorded Mock Client Discovery Call Video (20-minute simulated diagnostic call with trainer rubric)",
+      "10. Standardized 10-Part Client Proposal Pack (Comprehensive client pitch deck with scope and deliverables)",
+      "11. Protective Statement of Work (SOW) & Contract Kit (Milestone schedules, revision limits, IP transfer)",
+      "12. Client Onboarding Notion Workspace (Intake forms, shared drive hierarchy, communication guidelines)",
+      "13. Proactive Client Delivery System & SOP (Milestone update templates, review QA checklists, handover pack)",
+      "14. Recurring Client Retention & Retainer Proposal (Monthly maintenance and growth package pitches)"
+    ],
+    "case_study_structure": [
+      "1. Client & Industry Context (Business background and market landscape)",
+      "2. The Core Problem & Commercial Impact (What was broken, costing money, or lost)",
+      "3. Diagnostic Research & Audit (What data, user behavior, or technical audit revealed)",
+      "4. Strategic Approach & Tool Selection (Why specific frameworks and tools were selected)",
+      "5. Step-by-Step Execution (Chronological breakdown of design, coding, or marketing execution)",
+      "6. Key Deliverables Produced (Exact artifacts handed over to the client)",
+      "7. Measured Business Result / Projected ROI (Conversion lifts, hours saved, traffic gained)",
+      "8. Key Takeaways & Client Testimonial / Recommendation"
+    ]
+  },
+  "assessment_model": {
+    "title": "Practical Assessment & Competency Framework",
+    "breakdown": [
+      {
+        "item": "Weekly Freelance Labs & Role-Plays",
+        "weight": "15%",
+        "desc": "Active participation and execution across weekly positioning, outreach, and sales simulations."
+      },
+      {
+        "item": "Offer Design & Niche Positioning",
+        "weight": "10%",
+        "desc": "Evaluation of niche clarity, Ideal Client Profile depth, and productized service package tiering."
+      },
+      {
+        "item": "Proof-of-Work Portfolio Review",
+        "weight": "15%",
+        "desc": "Rigorous mentor grading of 3 in-depth case studies against commercial presentation and problem-solving standards."
+      },
+      {
+        "item": "30-Day Client Acquisition Sprint",
+        "weight": "20%",
+        "desc": "Execution and data tracking across a 100-prospect outbound sprint (research, outreach, replies, booked calls)."
+      },
+      {
+        "item": "Discovery Call & Proposal Assessment",
+        "weight": "15%",
+        "desc": "Evaluation of a recorded 20-minute mock discovery call and customized 10-part written business proposal."
+      },
+      {
+        "item": "Client Operations & Onboarding System",
+        "weight": "10%",
+        "desc": "Grading of the Notion onboarding workspace, SOW contract clauses, and proactive delivery SOP."
+      },
+      {
+        "item": "Final Freelance Business Launch Capstone",
+        "weight": "15%",
+        "desc": "Comprehensive defense of the complete end-to-end freelance business system before a faculty panel."
+      }
+    ]
+  },
+  "career_paths": {
+    "entry_roles": "Independent Freelancer, Solo Service Provider, Freelance Contractor, Remote Project Specialist",
+    "mid_roles": "Freelance Consultant, Retainer-Based Specialist, Senior Contract Professional, White-Label Agency Partner",
+    "specialist_roles": "High-Ticket Freelance Strategist, Fractional Department Specialist, Independent Operations Lead",
+    "freelance_roles": "Boutique Agency Founder, Micro-Agency Owner, Service Business Operator",
+    "employer_expectations": "Ability to take vague client briefs, propose clear commercial solutions, execute with high technical quality, communicate proactively, and respect deadlines.",
+    "what_student_demonstrates": "A complete, verifiable 14-artifact freelance business portfolio demonstrating positioning, sales, contracts, delivery, and retention capabilities."
+  },
+  "freelance_applications": {
+    "services_offered": [
+      "Specialized Project Delivery in Chosen Core Skill (Design, Tech, Marketing, Video, AI, Ops)",
+      "Audit-Based Consulting & Diagnostic Strategy Sessions",
+      "Monthly Recurring Maintenance & Performance Retainers",
+      "White-Label Implementation Services for Expanding Agencies",
+      "One-on-One Technical Consultation & Workflow Setup"
+    ],
+    "client_workflow": "Discovery Call → Diagnostic Audit → Tailored Proposal → SOW & Deposit → Structured Onboarding → Milestone Delivery → Retainer Transition",
+    "portfolio_requirements": "3 comprehensive case studies, recorded video introduction, client onboarding portal, and sample SOW agreement."
+  },
+  "what_you_will_build": [
+    "Deliverable 1: Freelance Positioning & ICP Blueprint",
+    "Deliverable 2: Productized Service Package Menu",
+    "Deliverable 3: 3-Case-Study Proof-of-Work Portfolio",
+    "Deliverable 4: Optimized Marketplace & LinkedIn Profile Suite",
+    "Deliverable 5: 100-Prospect Lead Database & Pipeline CRM",
+    "Deliverable 6: Multi-Channel Direct Outreach Campaign System",
+    "Deliverable 7: Client Proposal + SOW Contract + Invoice Kit",
+    "Deliverable 8: Client Onboarding & Delivery Operations Workspace",
+    "Final Capstone Project: Complete Freelance Business Launch System"
+  ],
+  "final_deliverables": [
+    "Validated Freelance Positioning & Ideal Client Profile Blueprint Document",
+    "3-Tier Productized Service Menu with Scope Boundaries & Revision Policies",
+    "Employer-ready digital portfolio featuring 3 structured commercial case studies",
+    "Fully configured Upwork Specialized Profile, Fiverr Gig System, and LinkedIn Creator Profile",
+    "Notion or Google Sheets CRM tracking 100 verified B2B prospects and pipeline metrics",
+    "Multi-channel outreach suite with personalized LinkedIn scripts, cold emails, and Loom audit templates",
+    "Standardized 10-part business proposal deck and legally protective Statement of Work (SOW)",
+    "Turnkey Notion Client Onboarding Portal with intake forms, kickoff agendas, and delivery SOPs",
+    "Master Freelance Business Launch System Capstone Dossier & Mentor Evaluation Rubric"
+  ],
+  "capstone": {
+    "name": "Freelance Business Launch System",
+    "tagline": "Industry-Style Freelance Business Capstone: From Skill to Sustainable Business",
+    "overview": "The definitive capstone project where learners synthesize every discipline into an operational, market-ready freelance business. Students select their core skill, define a high-value niche, build productized offers, create a proof-of-work portfolio, set up marketplace and direct outbound pipelines, simulate discovery calls, and establish complete operational delivery systems.",
+    "workflow": [
+      "1. Skill Audit: Audit and select one core marketable hard skill to monetize.",
+      "2. Niche & ICP: Define a specific industry vertical, buyer persona, and commercial problem.",
+      "3. Offer Packaging: Create a 3-tier productized service menu with defined deliverables and boundaries.",
+      "4. Portfolio Build: Produce 3 in-depth case studies documenting research, process, and business results.",
+      "5. Profile Optimization: Build high-converting profiles on Upwork, Fiverr, and LinkedIn.",
+      "6. Prospecting Sprint: Compile a database of 100 verified target B2B prospects in Notion CRM.",
+      "7. Outreach Deployment: Execute personalized multi-touch outreach sequences and Loom audits.",
+      "8. Discovery Simulation: Conduct a recorded 20-minute consultative discovery call.",
+      "9. Proposal & Pricing: Author a tailored 10-part proposal with value-based pricing options.",
+      "10. Contract & SOW: Draft a protective Statement of Work contract with milestone payment terms.",
+      "11. Client Portal: Build a Notion client onboarding workspace with intake questions and kickoff agendas.",
+      "12. Delivery & Retention: Document delivery SOPs, scope creep scripts, and monthly retainer packages."
+    ]
+  },
+  "certification": {
+    "title": "Certified Freelance Business & Client Acquisition Specialist",
+    "badge_text": "ISO 9001:2015 Verified Curriculum Standard",
+    "criteria": "Completion of all 20 modules, active participation in weekly sales and discovery labs, execution of the 100-Prospect Client Acquisition Sprint, submission of all 8 business deliverables, and passing the Freelance Business Launch System capstone with at least 75% marks.",
+    "verification": "Cryptographically verifiable digital credential with permanent shareable portfolio links for LinkedIn, Upwork, and client proposals."
+  },
+  "not_covered": "Guaranteed income promises, platform algorithm manipulation, buying fake reviews or Upwork Connects bots, multi-level marketing (MLM), or dropshipping.",
+  "next_learning_path": {
+    "recommended_next": "AI Solutions Engineering & Agentic AI Mastery (for building high-ticket enterprise AI automation services)",
+    "related_programs": "AI Digital Marketing Master (for offering full-stack growth and performance marketing agency retainers)"
+  },
+  "modules": [
+    {
+      "module_number": 1,
+      "module_title": "Freelance Business Fundamentals",
+      "module_purpose": "Transition from an employee/gig mindset to treating freelancing as an intentional, professional service business.",
+      "what_you_will_learn": [
+        "Freelancing vs Employment vs Agency",
+        "Economics of Service Businesses (Hourly vs Project vs Retainer)",
+        "B2B vs B2C Client Dynamics",
+        "The Complete Client Lifecycle"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "1.1",
+          "lesson_title": "The Service Business Mindset",
+          "what_is_taught": "The shift from trading hours for wages to selling commercial outcomes; freelancing as a business; professional responsibility; setting realistic timeline expectations.",
+          "why_it_matters": "Viewing freelancing as a gig creates feast-or-famine cycles; treating it as a business builds longevity.",
+          "what_learner_does": "Conducts a personal Freelance Readiness Audit evaluating hard skills, portfolio assets, and financial runway.",
+          "expected_outcome": "Clear, grounded understanding of freelance economics and business expectations."
+        },
+        {
+          "lesson_number": "1.2",
+          "lesson_title": "Freelance Economics: How Income Is Actually Generated",
+          "what_is_taught": "Revenue models: hourly billing pitfalls, fixed-price projects, monthly retainers, and productized services; calculating billable vs. non-billable hours.",
+          "why_it_matters": "Charging hourly penalizes you for working faster; value-based project pricing rewards efficiency.",
+          "what_learner_does": "Calculates their minimum acceptable hourly rate (MAHR) and target project fee structure.",
+          "expected_outcome": "Financial clarity on pricing, capacity limits, and overhead costs."
+        },
+        {
+          "lesson_number": "1.3",
+          "lesson_title": "B2B vs B2C Clients & The Client Lifecycle",
+          "what_is_taught": "Why businesses have larger budgets than consumers; understanding corporate buying cycles; the 6 stages of the client lifecycle (Awareness to Retainer).",
+          "why_it_matters": "B2B clients invest in ROI and time-savings; consumer clients haggle over minor expenses.",
+          "what_learner_does": "Maps out the complete lifecycle of their target client from initial problem awareness to repeat business.",
+          "expected_outcome": "Strategic orientation toward high-budget B2B commercial clients."
+        },
+        {
+          "lesson_number": "1.4",
+          "lesson_title": "Skill-First Foundation: Identifying Your Monetizable Core",
+          "what_is_taught": "Freelancing is not the core skill—it monetizes a core skill; auditing technical, design, marketing, or operational abilities; avoiding selling services you cannot deliver.",
+          "why_it_matters": "Selling services without technical delivery competence destroys client trust and platform ratings.",
+          "what_learner_does": "Selects their primary core skill to monetize across the program and defines delivery boundaries.",
+          "expected_outcome": "Rock-solid alignment between core delivery skills and freelance market demand."
+        }
+      ],
+      "key_concepts": [
+        "Service Business Economics",
+        "Billable vs Non-Billable Hours",
+        "B2B Client Dynamics",
+        "Skill-First Monetization"
+      ],
+      "tools": [
+        "Notion",
+        "Google Sheets"
+      ],
+      "hands_on_practice": "Completing a comprehensive Freelance Readiness Audit and capacity calculator.",
+      "assignment": "Freelance Readiness & Skills Inventory Audit",
+      "business_application": "Business foundation setup and financial capacity planning",
+      "expected_outcome": "Professional business mindset ready for niche selection and offer design."
+    },
+    {
+      "module_number": 2,
+      "module_title": "Niche, Positioning & Ideal Client Profile (ICP)",
+      "module_purpose": "Escape crowded generalist bidding by carving out a sharp, high-value positioning framework.",
+      "what_you_will_learn": [
+        "The 5-Part Positioning Framework",
+        "Selecting a Profitable Market Vertical",
+        "Building an Ideal Client Profile (ICP)",
+        "Crafting a Magnetic Positioning Statement"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "2.1",
+          "lesson_title": "Why Generalists Starve: The Power of Specialization",
+          "what_is_taught": "The risks of being a 'jack-of-all-trades'; how specialization increases perceived authority, conversion rates, and pricing power.",
+          "why_it_matters": "Clients gladly pay 3x more for a specialist who understands their specific industry nuances.",
+          "what_learner_does": "Analyzes 5 competing generalist profiles vs 5 specialist profiles to identify pricing differentials.",
+          "expected_outcome": "Compelling conviction to specialize in a defined market."
+        },
+        {
+          "lesson_number": "2.2",
+          "lesson_title": "The 5-Part Positioning Framework",
+          "what_is_taught": "Skill + Market + Business Problem + Buyer + Outcome; moving from 'I am a web designer' to 'I help B2B SaaS companies increase demo bookings with high-converting landing pages'.",
+          "why_it_matters": "Transforms you from a replaceable technician into an indispensable strategic partner.",
+          "what_learner_does": "Applies the 5-part framework to write 3 distinct positioning options for their chosen skill.",
+          "expected_outcome": "Clear, differentiated positioning statements."
+        },
+        {
+          "lesson_number": "2.3",
+          "lesson_title": "Building the Ideal Client Profile (ICP)",
+          "what_is_taught": "Defining target companies: industry vertical, company size, revenue tier, buyer job titles (Founder, CMO, Head of Ops), and urgent pain points.",
+          "why_it_matters": "Knowing exactly who buys your service prevents wasting hundreds of hours on low-budget prospects.",
+          "what_learner_does": "Builds a detailed 2-page ICP dossier for their primary target market.",
+          "expected_outcome": "Laser-focused target buyer profile for direct outreach."
+        },
+        {
+          "lesson_number": "2.4",
+          "lesson_title": "Validating Market Demand & Problem-Solution Fit",
+          "what_is_taught": "Researching active market demand on Upwork, LinkedIn job boards, and industry communities; verifying that target buyers have real budgets to spend.",
+          "why_it_matters": "Ensures you pick a niche that actively hires and pays well rather than an unprofitable hobby sector.",
+          "what_learner_does": "Identifies 20 live job posts and RFP announcements matching their target niche to validate budget size.",
+          "expected_outcome": "Market-validated Freelance Positioning Blueprint project deliverable."
+        }
+      ],
+      "key_concepts": [
+        "5-Part Positioning Formula",
+        "Ideal Client Profile (ICP)",
+        "Market Demand Validation",
+        "Pain-to-Outcome Mapping"
+      ],
+      "tools": [
+        "LinkedIn",
+        "Upwork Research",
+        "Google Search",
+        "Notion"
+      ],
+      "hands_on_practice": "Drafting and refining a 2-page Ideal Client Profile and Positioning Blueprint.",
+      "assignment": "Freelance Positioning Blueprint",
+      "business_application": "Market differentiation and targeted client messaging",
+      "expected_outcome": "Clear, professional positioning that immediately resonates with target buyers."
+    },
+    {
+      "module_number": 3,
+      "module_title": "Service Design & Productized Offers",
+      "module_purpose": "Package custom, unpredictable freelancing into clean, high-converting productized service packages.",
+      "what_you_will_learn": [
+        "Productized Services vs Custom Scopes",
+        "3-Tier Service Menu Architecture",
+        "Setting Strict Scope Boundaries",
+        "Add-Ons, Upsells & Turnaround Times"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "3.1",
+          "lesson_title": "The Power of Productized Services",
+          "what_is_taught": "What is a productized service; why clients prefer buying defined packages over vague hourly estimates; standardizing your delivery process.",
+          "why_it_matters": "Eliminates endless custom scoping discussions and makes services easier to sell and faster to deliver.",
+          "what_learner_does": "Deconstructs a complex service into standardized, repeatable delivery steps.",
+          "expected_outcome": "Understanding of scalable productized service architecture."
+        },
+        {
+          "lesson_number": "3.2",
+          "lesson_title": "Designing a 3-Tier Service Menu",
+          "what_is_taught": "Structuring Starter (entry audit/small scope), Growth (core complete project), and Performance (premium package with advanced optimizations).",
+          "why_it_matters": "Provides psychological price anchoring and gives clients multiple buying options without negotiating price down.",
+          "what_learner_does": "Builds a 3-tier service menu for their chosen skill with explicit deliverables and features.",
+          "expected_outcome": "Complete 3-tier commercial service packaging."
+        },
+        {
+          "lesson_number": "3.3",
+          "lesson_title": "Defining Deliverables, Turnaround Times & Revisions",
+          "what_is_taught": "Establishing explicit revision caps (e.g., 2 revision rounds within 7 business days), turnaround SLAs, and required client inputs.",
+          "why_it_matters": "Ambiguous revision terms lead directly to profit-killing scope creep.",
+          "what_learner_does": "Writes strict revision policies and turnaround timelines for all 3 service tiers.",
+          "expected_outcome": "Ironclad scope boundaries protecting your time and profit margins."
+        },
+        {
+          "lesson_number": "3.4",
+          "lesson_title": "Creating Entry Audits, Add-Ons & Upsells",
+          "what_is_taught": "Low-friction paid discovery audits (e.g., $150–$300 website or ad audit), high-margin add-ons (rush delivery, source files, extra asset variations).",
+          "why_it_matters": "Lowers client buying friction and increases average contract value by 30–50%.",
+          "what_learner_does": "Designs a paid entry audit offer and a menu of 4 high-value upsell add-ons.",
+          "expected_outcome": "Complete Productized Service Menu deliverable ready for client presentation."
+        }
+      ],
+      "key_concepts": [
+        "Productized Packaging",
+        "3-Tier Price Anchoring",
+        "Revision Limits",
+        "Paid Discovery Audits"
+      ],
+      "tools": [
+        "Notion",
+        "Google Docs"
+      ],
+      "hands_on_practice": "Creating a complete 3-tier service menu with deliverables, boundaries, and upsells.",
+      "assignment": "Productized Service Package Menu",
+      "business_application": "Standardized service selling and scope control",
+      "expected_outcome": "Professional service menu ready to publish on portfolios and proposals."
+    },
+    {
+      "module_number": 4,
+      "module_title": "Portfolio & Proof-of-Work Architecture",
+      "module_purpose": "Build a persuasive, evidence-based portfolio featuring 3 detailed case studies that prove your business problem-solving capability.",
+      "what_you_will_learn": [
+        "Case Study vs Artwork Gallery",
+        "The 8-Part Case Study Architecture",
+        "Handling Zero Past Clients with Concept Audits",
+        "Portfolio Presentation & Video Bios"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "4.1",
+          "lesson_title": "Why Galleries Don't Sell: The Proof-of-Work Strategy",
+          "what_is_taught": "The difference between an amateur visual gallery and a commercial case study; framing work around client problems, research, and business outcomes.",
+          "why_it_matters": "Clients don't buy pretty visuals; they buy solutions to expensive operational or commercial problems.",
+          "what_learner_does": "Critiques 3 weak screenshot portfolios and contrasts them with 3 high-converting case study websites.",
+          "expected_outcome": "Mastery of commercial case study psychology."
+        },
+        {
+          "lesson_number": "4.2",
+          "lesson_title": "The 8-Part Case Study Framework",
+          "what_is_taught": "1. Context → 2. Problem → 3. Research/Audit → 4. Approach → 5. Execution → 6. Deliverables → 7. Business Impact → 8. Key Takeaways.",
+          "why_it_matters": "Provides a standardized, professional structure that demonstrates deep strategic thinking.",
+          "what_learner_does": "Drafts their first comprehensive written case study following the exact 8-part framework.",
+          "expected_outcome": "Structured, authoritative case study narrative."
+        },
+        {
+          "lesson_number": "4.3",
+          "lesson_title": "Building Proof When You Have No Past Clients",
+          "what_is_taught": "Ethical representation: creating simulated client briefs, unsolicited redesigns/audits, concept campaigns, and clearly labeling self-initiated work.",
+          "why_it_matters": "Allows beginners to showcase professional capability honestly without fabricating fake client claims.",
+          "what_learner_does": "Selects a real brand, identifies a clear problem, and executes a thorough self-initiated redesign or audit case study.",
+          "expected_outcome": "High-quality, ethical proof-of-work created from scratch."
+        },
+        {
+          "lesson_number": "4.4",
+          "lesson_title": "Portfolio Page Setup & The 60-Second Video Bio",
+          "what_is_taught": "Assembling a clean portfolio page (Notion, portfolio site), structuring service highlights, recording a 60-second video elevator pitch for prospective clients.",
+          "why_it_matters": "A warm video introduction builds immediate personal trust and sets you apart from faceless bidders.",
+          "what_learner_does": "Records a 60-second professional video bio and publishes their 3-case-study portfolio page.",
+          "expected_outcome": "Published 3-Case-Study Proof-of-Work Portfolio deliverable."
+        }
+      ],
+      "key_concepts": [
+        "Proof-of-Work Framework",
+        "8-Part Case Study Narrative",
+        "Ethical Self-Initiated Work",
+        "Video Bio Trust Building"
+      ],
+      "tools": [
+        "Notion / Webflow",
+        "Loom",
+        "Figma",
+        "Google Docs"
+      ],
+      "hands_on_practice": "Authoring 3 structured case studies and recording a 60-second video introduction.",
+      "assignment": "3-Case-Study Proof-of-Work Portfolio",
+      "business_application": "Client credibility establishment and sales conversion assets",
+      "expected_outcome": "Employer- and client-ready portfolio demonstrating tangible business impact."
+    },
+    {
+      "module_number": 5,
+      "module_title": "Upwork & Marketplace Client Acquisition",
+      "module_purpose": "Master Upwork professionally through specialized profile design, job qualification, and diagnostic proposal submissions.",
+      "what_you_will_learn": [
+        "Upwork Profile Architecture & SEO",
+        "Job Qualification & Reading Between the Lines",
+        "Connects Economics & Budget Analysis",
+        "Diagnostic Proposal Writing for Marketplaces"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "5.1",
+          "lesson_title": "Upwork Specialized Profile Architecture",
+          "what_is_taught": "General vs. Specialized profiles, craft title headlines that search well, writing client-centric overview copy, featured project catalogs, portfolio tags.",
+          "why_it_matters": "Specialized profiles convert client invitations at 3x higher rates than generic overview profiles.",
+          "what_learner_does": "Drafts and optimizes an Upwork Specialized Profile tailored to their chosen niche.",
+          "expected_outcome": "High-converting, specialized Upwork profile architecture."
+        },
+        {
+          "lesson_number": "5.2",
+          "lesson_title": "Job Qualification: How to Filter Out Bad Clients",
+          "what_is_taught": "Analyzing client history: hire rate, average hourly paid, reviews left for freelancers, payment verification, detecting red-flag job descriptions.",
+          "why_it_matters": "Bidding on bad jobs wastes precious Connects and invites low ratings from demanding micro-managers.",
+          "what_learner_does": "Analyzes 15 live Upwork job postings and filters out the top 3 high-quality opportunities.",
+          "expected_outcome": "Sharp judgment for identifying high-budget, respectful clients."
+        },
+        {
+          "lesson_number": "5.3",
+          "lesson_title": "Connects Economics & Bidding Strategy",
+          "what_is_taught": "Connects ROI: maintaining high proposal-to-interview win rates (20–30%), fixed vs. hourly milestone mechanics, bidding budgets strategically.",
+          "why_it_matters": "Prevents burning money on blind bidding; treats proposal submissions as strategic investments.",
+          "what_learner_does": "Develops a disciplined weekly bidding schedule and Connects budget plan.",
+          "expected_outcome": "Sustainable, ROI-positive bidding methodology."
+        },
+        {
+          "lesson_number": "5.4",
+          "lesson_title": "Writing Diagnostic Upwork Proposals",
+          "what_is_taught": "The 4-part marketplace proposal: Hook (1st two lines that appear in preview), Diagnosing their problem, Outlining next steps, Proof link + Question.",
+          "why_it_matters": "Clients review 30+ bids; generic 'Dear Hiring Manager' templates are archived in 2 seconds.",
+          "what_learner_does": "Authors 3 diagnostic, tailored proposals responding to live Upwork job posts.",
+          "expected_outcome": "High-converting, personalized Upwork proposal workflow."
+        }
+      ],
+      "key_concepts": [
+        "Specialized Profile Positioning",
+        "Job Qualification Filters",
+        "Connects Economics",
+        "Diagnostic Proposal Hooks"
+      ],
+      "tools": [
+        "Upwork",
+        "Google Docs"
+      ],
+      "hands_on_practice": "Auditing live job postings and authoring custom diagnostic proposals.",
+      "assignment": "Optimized Upwork Specialized Profile & Proposal Pack",
+      "business_application": "Marketplace lead qualification and high-win-rate bidding",
+      "expected_outcome": "Live Upwork profile and repeatable bidding system that commands client interviews."
+    },
+    {
+      "module_number": 6,
+      "module_title": "Fiverr Service Productization & Gig Architecture",
+      "module_purpose": "Deploy Fiverr as a structured productized service marketplace rather than a low-priced bidding site.",
+      "what_you_will_learn": [
+        "Fiverr Gig Architecture & Search Nuances",
+        "Multi-Tier Package Pricing ($50–$500+)",
+        "High-Converting Gig Media & Video Hooks",
+        "Buyer Requirement Questionnaires"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "6.1",
+          "lesson_title": "Fiverr Gig Architecture & Algorithm Principles",
+          "what_is_taught": "How Fiverr search works; long-tail keyword research (low competition, high intent); crafting click-worthy gig titles without keyword stuffing.",
+          "why_it_matters": "Targeting specific long-tail buyer intents allows new sellers to get discovered without existing reviews.",
+          "what_learner_does": "Conducts Fiverr search research to identify 3 profitable, underserved niche service keywords.",
+          "expected_outcome": "Data-backed niche gig topic selection."
+        },
+        {
+          "lesson_number": "6.2",
+          "lesson_title": "3-Tier Package Structuring & Commercial Pricing",
+          "what_is_taught": "Designing Basic, Standard, and Premium packages; pricing for profit ($50, $150, $350+); eliminating $5 gig mentality; defining deliverable limits.",
+          "why_it_matters": "Modern successful Fiverr sellers sell high-ticket packages and custom enterprise offers.",
+          "what_learner_does": "Builds a detailed 3-tier package matrix with clear inclusions and delivery turnaround times.",
+          "expected_outcome": "Commercially viable, profitable Fiverr gig packaging."
+        },
+        {
+          "lesson_number": "6.3",
+          "lesson_title": "High-Converting Gig Media, Descriptions & Video",
+          "what_is_taught": "Designing professional 1280x769 gig cards, writing persuasive benefit-driven descriptions with bold formatting, recording a 30-second gig video.",
+          "why_it_matters": "Gigs with high-quality video introductions receive up to 40% higher click-through rates.",
+          "what_learner_does": "Creates gig visual cards in Canva and writes a complete 1,200-character gig description.",
+          "expected_outcome": "Polished, professional gig presentation assets."
+        },
+        {
+          "lesson_number": "6.4",
+          "lesson_title": "Buyer Requirements, Custom Orders & Reviews",
+          "what_is_taught": "Structuring mandatory buyer requirement questions; converting chat inquiries into high-ticket Custom Offers; ethical review generation strategies.",
+          "why_it_matters": "Mandatory requirements prevent buyers from placing orders without giving you necessary project assets.",
+          "what_learner_does": "Sets up a comprehensive buyer onboarding questionnaire and custom offer scripts.",
+          "expected_outcome": "Complete Professional Fiverr Offer System deliverable."
+        }
+      ],
+      "key_concepts": [
+        "Long-Tail Search Intent",
+        "3-Tier Fiverr Packaging",
+        "Buyer Requirement Gates",
+        "Custom Offer Upsells"
+      ],
+      "tools": [
+        "Fiverr",
+        "Canva",
+        "Loom"
+      ],
+      "hands_on_practice": "Designing and writing a complete multi-tier Fiverr gig with media and FAQs.",
+      "assignment": "Professional Fiverr Offer System",
+      "business_application": "Inbound marketplace productized service sales",
+      "expected_outcome": "Ready-to-launch productized Fiverr gig system targeting qualified international buyers."
+    },
+    {
+      "module_number": 7,
+      "module_title": "Direct Client Acquisition & The 100-Prospect Sprint",
+      "module_purpose": "Build and execute an outbound client acquisition machine across LinkedIn, cold email, and personalized Loom audits.",
+      "what_you_will_learn": [
+        "5 Direct Acquisition Channels",
+        "Prospect Research & List Building",
+        "Personalized LinkedIn & Email Sequences",
+        "The 100-Prospect Client Acquisition Sprint"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "7.1",
+          "lesson_title": "The 5 Channels of Direct Client Acquisition",
+          "what_is_taught": "1. LinkedIn outbound, 2. Cold email, 3. Referrals, 4. Local business outreach, 5. Inbound content; comparing pros/cons and timelines.",
+          "why_it_matters": "Direct outreach gives you 100% control over your pipeline without depending on third-party marketplace algorithms.",
+          "what_learner_does": "Selects their primary and secondary outbound channels based on their Ideal Client Profile.",
+          "expected_outcome": "Strategic channel selection tailored to target buyers."
+        },
+        {
+          "lesson_number": "7.2",
+          "lesson_title": "Prospect Research & Building the 100-Lead Database",
+          "what_is_taught": "Finding qualified companies on LinkedIn, company directories, and Google; identifying decision-maker names, verified emails, and business triggers.",
+          "why_it_matters": "High-quality prospect data is 80% of outbound success; mass spamming bad leads produces zero replies.",
+          "what_learner_does": "Researches and logs 25 qualified target prospects into their CRM with verified contact details.",
+          "expected_outcome": "Disciplined B2B prospect research capability."
+        },
+        {
+          "lesson_number": "7.3",
+          "lesson_title": "Crafting High-Converting Personalized Outreach",
+          "what_is_taught": "The Anatomy of High-Value Outreach: Contextual observation → Specific problem identified → Gentle insight/suggestion → Low-friction CTA (no hard pitch).",
+          "why_it_matters": "Prospects delete sales spam; they respond warmly to thoughtful, relevant observations about their business.",
+          "what_learner_does": "Writes 5 highly personalized outreach messages tailored to specific prospect accounts.",
+          "expected_outcome": "Mastery of non-salesy, high-response direct messaging."
+        },
+        {
+          "lesson_number": "7.4",
+          "lesson_title": "The Loom Video Audit Method & Follow-Up Sequences",
+          "what_is_taught": "Recording 2-minute personalized video audits showing an exact improvement opportunity; multi-touch follow-up cadence (Day 1, 4, 8, 14).",
+          "why_it_matters": "Video audits demonstrate your expertise upfront and achieve 5x higher meeting booking rates.",
+          "what_learner_does": "Records a 2-minute personalized Loom audit for a real target company and launches their 100-prospect sprint.",
+          "expected_outcome": "100-Prospect Client Acquisition Sprint project launch."
+        }
+      ],
+      "key_concepts": [
+        "Direct Outbound Architecture",
+        "High-Value Personalization",
+        "2-Minute Loom Audits",
+        "Multi-Touch Follow-Up Sequences"
+      ],
+      "tools": [
+        "LinkedIn",
+        "Google Sheets / Notion",
+        "Loom",
+        "Gmail"
+      ],
+      "hands_on_practice": "Building a 100-prospect database and recording a live video audit.",
+      "assignment": "100-Prospect Client Acquisition Sprint Launch",
+      "business_application": "Systematic, independent outbound B2B lead generation",
+      "expected_outcome": "Active direct client acquisition pipeline running with tracked metrics."
+    },
+    {
+      "module_number": 8,
+      "module_title": "Sales Discovery & Client Qualification Calls",
+      "module_purpose": "Lead structured, consultative 20-minute discovery calls that diagnose client pain points and qualify budget without awkwardness.",
+      "what_you_will_learn": [
+        "The 4-Part Discovery Call Framework",
+        "Diagnostic Questioning Techniques",
+        "Budget, Authority & Timeline Qualification",
+        "Graceful Disqualification & Next Steps"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "8.1",
+          "lesson_title": "The Discovery Call Mindset: Consultant vs Salesperson",
+          "what_is_taught": "Why pitching too early loses deals; adopting the mindset of a doctor diagnosing a patient; agenda setting and establishing mutual conversational control.",
+          "why_it_matters": "When you ask insightful diagnostic questions, clients naturally view you as an authority rather than a vendor.",
+          "what_learner_does": "Drafts their 2-minute call opening script establishing rapport and setting the agenda.",
+          "expected_outcome": "Confidence and calm authority at the start of client calls."
+        },
+        {
+          "lesson_number": "8.2",
+          "lesson_title": "Diagnostic Questioning: Uncovering Pain & Impact",
+          "what_is_taught": "Current situation questions, business goal questions, bottleneck questions, and the critical impact question ('What happens if this isn't fixed?').",
+          "why_it_matters": "Uncovering the financial or operational cost of their problem makes your project fee feel small by comparison.",
+          "what_learner_does": "Develops a question bank of 10 diagnostic questions tailored to their specific niche.",
+          "expected_outcome": "Ability to guide conversations deeply into client business needs."
+        },
+        {
+          "lesson_number": "8.3",
+          "lesson_title": "Qualifying Budget, Authority, Need & Timeline (BANT)",
+          "what_is_taught": "How to ask about budget diplomatically ('What investment range have you allocated for this?'); identifying all decision-makers; timeline urgency.",
+          "why_it_matters": "Prevents spending hours writing detailed proposals for clients who have no budget or authority to buy.",
+          "what_learner_does": "Practices budget and timeline qualification scripts in peer role-plays.",
+          "expected_outcome": "Fluency in vetting prospect readiness and commercial capacity."
+        },
+        {
+          "lesson_number": "8.4",
+          "lesson_title": "Closing Next Steps & Disqualifying Bad Fits",
+          "what_is_taught": "Never end a call without an agreed next step on the calendar; how to politely disqualify bad-fit clients; scheduling the proposal review call.",
+          "why_it_matters": "Eliminates post-call ghosting by locking in exact review dates while on the phone.",
+          "what_learner_does": "Conducts and records a complete 20-minute simulated discovery call evaluated against faculty rubrics.",
+          "expected_outcome": "Recorded Mock Client Discovery Call project deliverable."
+        }
+      ],
+      "key_concepts": [
+        "Diagnostic Doctor Mindset",
+        "Cost-of-Inaction Framing",
+        "BANT Qualification",
+        "Locked-In Next Steps"
+      ],
+      "tools": [
+        "Zoom / Google Meet",
+        "Calendly",
+        "Loom"
+      ],
+      "hands_on_practice": "Conducting full 20-minute simulated discovery calls with peer and mentor critique.",
+      "assignment": "Recorded Mock Client Discovery Call",
+      "business_application": "B2B client qualification and consultative sales closing",
+      "expected_outcome": "Command of professional client discovery calls that lead directly to closed deals."
+    },
+    {
+      "module_number": 9,
+      "module_title": "High-Converting Proposal Writing",
+      "module_purpose": "Craft customized, 10-part business proposals that articulate client ROI and win projects without price haggling.",
+      "what_you_will_learn": [
+        "The 10-Part Proposal Anatomy",
+        "Marketplace vs Email vs PDF Proposals",
+        "Reframing Technical Tasks into Business Value",
+        "Proposal Follow-Up & Review Presentation"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "9.1",
+          "lesson_title": "The Purpose of a Proposal: Confirming, Not Selling",
+          "what_is_taught": "Why a proposal should only summarize what was already agreed upon on the discovery call; avoiding blind proposal submissions; formats (Email vs PDF deck).",
+          "why_it_matters": "If you pitch surprise numbers in a proposal without verbal alignment, close rates plummet.",
+          "what_learner_does": "Analyzes losing template proposals vs winning consultative proposals.",
+          "expected_outcome": "Strategic understanding of proposal timing and structure."
+        },
+        {
+          "lesson_number": "9.2",
+          "lesson_title": "The 10-Part Proposal Anatomy",
+          "what_is_taught": "1. Client Problem → 2. Goal → 3. Recommended Approach → 4. Deliverables → 5. Scope Boundaries → 6. Timeline → 7. Investment Tiers → 8. Assumptions → 9. Revisions → 10. Next Steps.",
+          "why_it_matters": "Provides a comprehensive, professional business document that executives can easily take to internal committees.",
+          "what_learner_does": "Writes a full 10-part client proposal based on their simulated discovery call notes.",
+          "expected_outcome": "Mastery of comprehensive corporate proposal authoring."
+        },
+        {
+          "lesson_number": "9.3",
+          "lesson_title": "Communicating Value: Translating Tasks into Outcomes",
+          "what_is_taught": "Moving from task descriptions ('I will write 5 CSS files') to commercial value ('A responsive, mobile-first design ensuring zero lost checkout conversions').",
+          "why_it_matters": "Clients gladly pay for outcomes; they ruthlessly negotiate down raw technical labor.",
+          "what_learner_does": "Rewrites 10 technical feature bullet points into commercial client benefit statements.",
+          "expected_outcome": "Persuasive value-focused business copywriting."
+        },
+        {
+          "lesson_number": "9.4",
+          "lesson_title": "Presenting the Proposal & The Live Review Call",
+          "what_is_taught": "Never 'just email' a proposal and hope; walk the client through it on a 15-minute screen share; follow-up sequence if the decision is delayed.",
+          "why_it_matters": "Walking clients through proposals allows you to address doubts live and close on the spot.",
+          "what_learner_does": "Assembles a Client Proposal Pack and simulates a live 15-minute proposal presentation.",
+          "expected_outcome": "Complete Client Proposal Pack project deliverable."
+        }
+      ],
+      "key_concepts": [
+        "10-Part Proposal Structure",
+        "Value vs Task Framing",
+        "Live Proposal Presentation",
+        "Zero-Surprise Alignment"
+      ],
+      "tools": [
+        "Google Docs / Notion",
+        "PandaDoc",
+        "Loom"
+      ],
+      "hands_on_practice": "Writing and refining a customized 10-part proposal for a target client scenario.",
+      "assignment": "Client Proposal Pack",
+      "business_application": "Formal project bidding and high-ticket service pitching",
+      "expected_outcome": "High-converting proposal pack ready to close four- and five-figure engagements."
+    },
+    {
+      "module_number": 10,
+      "module_title": "Pricing, Negotiation & Freelance Economics",
+      "module_purpose": "Price projects with confidence, master value pricing principles, and negotiate firmly without discounting.",
+      "what_you_will_learn": [
+        "Pricing Models (Hourly vs Project vs Retainer)",
+        "Value-Based Pricing Principles",
+        "Defending Rates Against Cheap Competitors",
+        "The 'Reduce Scope, Never Price' Rule"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "10.1",
+          "lesson_title": "Deconstructing Pricing Models & Estimating Effort",
+          "what_is_taught": "Hourly billing limits, fixed-price project budgeting, retainer models; accurately estimating hours, buffer time (20–30%), and contractor expenses.",
+          "why_it_matters": "Underestimating hours turns profitable projects into unpaid overtime traps.",
+          "what_learner_does": "Builds an accurate project estimation model calculating true labor costs and profit margins.",
+          "expected_outcome": "Accurate, profitable project cost estimation capability."
+        },
+        {
+          "lesson_number": "10.2",
+          "lesson_title": "Value-Based Pricing Concepts for Freelancers",
+          "what_is_taught": "Anchoring prices to client upside (e.g., charging $3,000 for a landing page that generates $50,000 in new customer revenue); calculating ROI ratios.",
+          "why_it_matters": "Decouples your income from time spent, allowing you to earn significantly more as you become faster.",
+          "what_learner_does": "Calculates the client business impact for 3 service scenarios to justify 3x higher pricing.",
+          "expected_outcome": "Grounded understanding of value-based pricing logic."
+        },
+        {
+          "lesson_number": "10.3",
+          "lesson_title": "Handling Tough Pricing Objections & Pushback",
+          "what_is_taught": "Overcoming: 'Your price is too high', 'Another freelancer offered half', 'Can you give a 20% discount?'; exact diplomatic spoken scripts.",
+          "why_it_matters": "Cave in to discounts immediately signals that your original price was inflated and arbitrary.",
+          "what_learner_does": "Practices role-play responses to aggressive client discount demands.",
+          "expected_outcome": "Poise and verbal confidence when defending project fees."
+        },
+        {
+          "lesson_number": "10.4",
+          "lesson_title": "Negotiation Strategy: Reduce Scope, Never Price",
+          "what_is_taught": "The Golden Rule of Freelance Negotiation: If the client's budget is lower, remove features and deliverables rather than dropping your rate; payment concessions.",
+          "why_it_matters": "Maintains your effective hourly rate and trains clients that additional work costs money.",
+          "what_learner_does": "Conducts a Pricing & Negotiation Role-Play simulation defending rates and trading scope.",
+          "expected_outcome": "Mastery of assertive, diplomatic freelance pricing negotiation."
+        }
+      ],
+      "key_concepts": [
+        "Value-Based ROI Anchoring",
+        "Scope vs Price Trading",
+        "Buffer Estimation",
+        "Objection Defense Scripts"
+      ],
+      "tools": [
+        "Google Sheets",
+        "Pricing Calculators"
+      ],
+      "hands_on_practice": "Live peer role-plays defending rates against aggressive client price pushback.",
+      "assignment": "Pricing Model & Negotiation Defense Playbook",
+      "business_application": "Fee defense, commercial negotiation, and margin protection",
+      "expected_outcome": "Unshakeable confidence when quoting, defending, and closing project rates."
+    },
+    {
+      "module_number": 11,
+      "module_title": "Contracts, Scope & Payment Protection",
+      "module_purpose": "Protect your business using legally sound Statements of Work (SOW), milestone terms, and international payment setups.",
+      "what_you_will_learn": [
+        "Statement of Work (SOW) Anatomy",
+        "IP Ownership & Copyright Transfer",
+        "Deposit & Milestone Payment Schedules",
+        "International Invoicing & GST Compliance"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "11.1",
+          "lesson_title": "Why Handshake Deals Fail: The Statement of Work (SOW)",
+          "what_is_taught": "The critical role of contracts; key clauses: Scope of Work, Deliverables, Timeline, Payment Schedule, Revision Policy, Change Requests, Termination.",
+          "why_it_matters": "Without a signed SOW, you have zero legal protection when a client refuses to pay or demands endless changes.",
+          "what_learner_does": "Drafts an exhaustive Statement of Work (SOW) agreement for a target project scope.",
+          "expected_outcome": "Complete protective contract authoring capability."
+        },
+        {
+          "lesson_number": "11.2",
+          "lesson_title": "Intellectual Property (IP) & Payment Milestones",
+          "what_is_taught": "The golden rule of IP: Copyright transfers ONLY upon receipt of final 100% payment; deposit structures (50% upfront, 25% milestone, 25% final).",
+          "why_it_matters": "Retaining copyright until final payment ensures clients never disappear with your work without paying.",
+          "what_learner_does": "Configures milestone payment schedules with explicit copyright transfer trigger clauses.",
+          "expected_outcome": "Elimination of late payment and intellectual property theft risks."
+        },
+        {
+          "lesson_number": "11.3",
+          "lesson_title": "International Invoicing & Multi-Currency Payment Setups",
+          "what_is_taught": "Using Wise, Stripe, and direct wire transfers; setting up professional PDF invoices with PO numbers and bank details; handling exchange rate fees.",
+          "why_it_matters": "Ensures international payments land quickly in your local bank account with minimal transaction fee losses.",
+          "what_learner_does": "Builds a professional invoice template and configures a multi-currency payment reception pipeline.",
+          "expected_outcome": "Seamless global invoicing and payment reception."
+        },
+        {
+          "lesson_number": "11.4",
+          "lesson_title": "Basic Tax, GST & Service Export Compliance Awareness",
+          "what_is_taught": "General awareness of GST on export of services from India, LUT (Letter of Undertaking) filing basics, FIRC (Foreign Inward Remittance Certificate), disclaimer on consulting qualified CAs.",
+          "why_it_matters": "Compliance prevents surprise tax notices and ensures smooth foreign exchange repatriation.",
+          "what_learner_does": "Compiles a complete Proposal + SOW + Invoice Kit ready for client execution.",
+          "expected_outcome": "Proposal + SOW + Invoice Kit project deliverable."
+        }
+      ],
+      "key_concepts": [
+        "Statement of Work (SOW)",
+        "Conditional IP Transfer",
+        "Deposit Milestones",
+        "Export Compliance Awareness"
+      ],
+      "tools": [
+        "PandaDoc / Bonsai",
+        "Wise",
+        "Google Docs"
+      ],
+      "hands_on_practice": "Customizing a legally sound Statement of Work, payment schedule, and professional invoice.",
+      "assignment": "Proposal + SOW + Invoice Kit",
+      "business_application": "Legal protection, commercial agreements, and international payment processing",
+      "expected_outcome": "Ironclad business protection kit ensuring you always get paid on time."
+    },
+    {
+      "module_number": 12,
+      "module_title": "Client Onboarding Systems",
+      "module_purpose": "Establish a repeatable, professional onboarding workflow that builds client confidence from Day 1.",
+      "what_you_will_learn": [
+        "The 8-Step Client Onboarding Journey",
+        "Intake Questionnaires & Asset Collection",
+        "Kickoff Calls & Communication Ground Rules",
+        "Building the Client Notion Portal"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "12.1",
+          "lesson_title": "The First 48 Hours: Setting the Professional Tone",
+          "what_is_taught": "Why the period immediately after contract signing determines client satisfaction; eliminating buyer's remorse; sending the welcome packet.",
+          "why_it_matters": "A smooth onboarding experience turns anxious clients into relaxed, trusting partners.",
+          "what_learner_does": "Maps out their 8-step client onboarding sequence from signed contract to project kickoff.",
+          "expected_outcome": "Structured onboarding protocol ready for immediate deployment."
+        },
+        {
+          "lesson_number": "12.2",
+          "lesson_title": "Intake Questionnaires & Asset Collection Workflows",
+          "what_is_taught": "Designing intake forms (Google Forms/Notion); gathering brand guidelines, logins, API keys, and reference files before starting work.",
+          "why_it_matters": "Prevents mid-project delivery stops caused by missing assets or unclear client requirements.",
+          "what_learner_does": "Builds a comprehensive client intake questionnaire tailored to their service niche.",
+          "expected_outcome": "Automated, thorough asset collection system."
+        },
+        {
+          "lesson_number": "12.3",
+          "lesson_title": "The Kickoff Call & Communication Ground Rules",
+          "what_is_taught": "Running a 30-minute kickoff call; establishing communication channels (Slack/Email/Loom), office hours, response time expectations (e.g., 24 business hours).",
+          "why_it_matters": "Setting boundaries on Day 1 prevents clients from texting you on WhatsApp at 11 PM on Sundays.",
+          "what_learner_does": "Drafts an onboarding welcome email outlining communication rules and office hours.",
+          "expected_outcome": "Clear client expectations and healthy operational boundaries."
+        },
+        {
+          "lesson_number": "12.4",
+          "lesson_title": "Building the Client Notion Portal",
+          "what_is_taught": "Creating a dedicated client Notion workspace: centralizing project roadmap, shared files, milestone links, meeting notes, and feedback submission forms.",
+          "why_it_matters": "Gives clients a single, clean dashboard to track progress, eliminating 90% of status inquiry emails.",
+          "what_learner_does": "Builds a complete, branded Client Onboarding Workspace in Notion.",
+          "expected_outcome": "Client Onboarding Workspace project deliverable."
+        }
+      ],
+      "key_concepts": [
+        "First-48-Hours Experience",
+        "Intake Asset Gates",
+        "Communication Ground Rules",
+        "Centralized Client Portals"
+      ],
+      "tools": [
+        "Notion",
+        "Google Drive",
+        "Calendly",
+        "Loom"
+      ],
+      "hands_on_practice": "Constructing an interactive Notion client onboarding hub and intake questionnaire.",
+      "assignment": "Client Onboarding Workspace",
+      "business_application": "Client relationship management and seamless project kickoff",
+      "expected_outcome": "High-trust onboarding system that delights enterprise and startup clients alike."
+    },
+    {
+      "module_number": 13,
+      "module_title": "Professional Project Delivery Workflows",
+      "module_purpose": "Deliver exceptional work with proactive milestone updates, organized review cycles, and zero client chasing.",
+      "what_you_will_learn": [
+        "The 'Zero-Chasing' Communication Principle",
+        "Milestone Delivery & Loom Walkthroughs",
+        "Structured Review & Feedback Cycles",
+        "Organized Handover & Project Closure"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "13.1",
+          "lesson_title": "The 'Zero-Chasing' Principle of Project Delivery",
+          "what_is_taught": "Why clients must never have to ask 'Project kaha tak pahucha?'; sending scheduled weekly asynchronous updates (Friday Loom/Email summaries).",
+          "why_it_matters": "Proactive communication is the single highest predictor of 5-star reviews and repeat retainers.",
+          "what_learner_does": "Drafts a weekly project status memo template communicating progress, decisions, and upcoming steps.",
+          "expected_outcome": "Proactive client update discipline."
+        },
+        {
+          "lesson_number": "13.2",
+          "lesson_title": "Delivering Milestones with Loom Video Walkthroughs",
+          "what_is_taught": "Never send raw files in an email; record a 3-minute Loom walkthrough explaining the design/code rationale, guiding client review, and framing feedback.",
+          "why_it_matters": "A recorded walkthrough anchors the client to your strategic thinking and cuts down revision rounds by half.",
+          "what_learner_does": "Records a 3-minute presentation walkthrough delivering a completed project milestone.",
+          "expected_outcome": "Mastery of high-touch milestone delivery presentation."
+        },
+        {
+          "lesson_number": "13.3",
+          "lesson_title": "Managing Feedback & Structured Revision Cycles",
+          "what_is_taught": "Handling vague feedback ('Make it pop', 'I don't like it'); teaching clients how to give actionable feedback; consolidating revision requests into one master list.",
+          "why_it_matters": "Prevents piecemeal, scattered feedback across 10 emails that derail timelines.",
+          "what_learner_does": "Builds a structured client feedback form and writes a script clarifying vague client revisions.",
+          "expected_outcome": "Orderly, efficient revision management."
+        },
+        {
+          "lesson_number": "13.4",
+          "lesson_title": "Clean File Organization, Handover & Project Sign-Off",
+          "what_is_taught": "Organizing final asset folders (Figma clean files, GitHub repo, export formats); final walkthrough call; collecting written project sign-off.",
+          "why_it_matters": "A clean handover leaves a lasting professional impression and unlocks final invoice release immediately.",
+          "what_learner_does": "Builds an organized Client Delivery System folder structure and handover checklist.",
+          "expected_outcome": "Client Delivery System project deliverable."
+        }
+      ],
+      "key_concepts": [
+        "Zero-Chasing Principle",
+        "Loom Milestone Walkthroughs",
+        "Consolidated Feedback Lists",
+        "Formal Handover Sign-Off"
+      ],
+      "tools": [
+        "Loom",
+        "Notion",
+        "Google Drive",
+        "ClickUp"
+      ],
+      "hands_on_practice": "Simulating a complete milestone delivery, revision cycle, and formal project sign-off.",
+      "assignment": "Client Delivery System & Handover Protocol",
+      "business_application": "Flawless operational project execution and client delight",
+      "expected_outcome": "Smooth delivery workflows that generate consistent 5-star reviews and repeat contracts."
+    },
+    {
+      "module_number": 14,
+      "module_title": "Scope Creep & Difficult Client Scenarios",
+      "module_purpose": "Handle demanding clients, unapproved change requests, delayed feedback, and scope creep with diplomatic firmness.",
+      "what_you_will_learn": [
+        "Identifying & Defusing Scope Creep Early",
+        "The 'Yes, And...' Change Request Formula",
+        "Handling Late Feedback & Stalled Projects",
+        "Diplomatic Boundary Setting & Project Termination"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "14.1",
+          "lesson_title": "The Psychology of Scope Creep",
+          "what_is_taught": "Why clients ask for 'just one small extra thing'; identifying the slope from minor favors to 20 hours of unpaid work; recognizing internal guilt triggers.",
+          "why_it_matters": "Unchecked scope creep reduces your effective hourly rate by 40% and causes burnout.",
+          "what_learner_does": "Audits 5 realistic scope creep scenarios and identifies the exact contract boundary breaches.",
+          "expected_outcome": "Immediate sensitivity to scope boundary violations."
+        },
+        {
+          "lesson_number": "14.2",
+          "lesson_title": "The 'Yes, And...' Change Order Formula",
+          "what_is_taught": "Never just say a blunt 'No'; say: 'Yes, we can definitely build that! That falls outside our current SOW, so here is the change order estimate and timeline adjustment.'",
+          "why_it_matters": "Empowers the client to decide whether the new feature is worth the extra investment without damaging rapport.",
+          "what_learner_does": "Writes 3 diplomatic change order email scripts responding to unreasonable client requests.",
+          "expected_outcome": "Fluency in turning scope creep into paid upsells."
+        },
+        {
+          "lesson_number": "14.3",
+          "lesson_title": "Handling Late Feedback, Ghosting & Paused Projects",
+          "what_is_taught": "The 'Project Dormancy' contract clause: if client doesn't reply in 14 days, project is paused and re-activation fee applies; re-engaging stalled clients.",
+          "why_it_matters": "Prevents stalled client projects from clogging your calendar schedule for months.",
+          "what_learner_does": "Drafts a project pause notice and polite re-engagement sequence for silent clients.",
+          "expected_outcome": "Protection against chronic client unresponsiveness."
+        },
+        {
+          "lesson_number": "14.4",
+          "lesson_title": "Managing Difficult Clients & Firing Bad Fits Diplomatically",
+          "what_is_taught": "De-escalating angry or rude clients; managing payment disputes; when and how to terminate a toxic client contract professionally.",
+          "why_it_matters": "Knowing how to exit a toxic engagement protects your mental health and professional reputation.",
+          "what_learner_does": "Role-plays a difficult client confrontation and drafts a mutual contract termination agreement.",
+          "expected_outcome": "Professional boundaries and conflict resolution mastery."
+        }
+      ],
+      "key_concepts": [
+        "'Yes, And...' Change Orders",
+        "Dormancy Clauses",
+        "Boundary Defense Scripts",
+        "Professional Contract Termination"
+      ],
+      "tools": [
+        "Google Docs",
+        "Email Templates"
+      ],
+      "hands_on_practice": "Practicing live role-play responses to demanding scope creep requests and hostile clients.",
+      "assignment": "Scope Creep Defense & Change Order Playbook",
+      "business_application": "Profit margin defense and crisis conflict resolution",
+      "expected_outcome": "Unshakeable professional boundaries that eliminate unpaid overtime."
+    },
+    {
+      "module_number": 15,
+      "module_title": "Client Retention & Recurring Retainers",
+      "module_purpose": "Transform completed one-off project clients into long-term, high-value monthly retainer partnerships.",
+      "what_you_will_learn": [
+        "The Retention Multiplier in Freelancing",
+        "Packaging Monthly Retainers (Maintenance & Growth)",
+        "The Post-Project Review Call",
+        "Client Referral & Testimonial Systems"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "15.1",
+          "lesson_title": "The Freelance Retainer Advantage",
+          "what_is_taught": "Why retaining 3 clients at $1,500/mo is 10x easier than hunting 3 new clients every month; recurring revenue stability; lowering marketing costs to zero.",
+          "why_it_matters": "Retainers eliminate the feast-or-famine income rollercoaster permanently.",
+          "what_learner_does": "Calculates their retainer target: how many recurring clients are needed to cover 100% of living expenses.",
+          "expected_outcome": "Clear strategic model for recurring service revenue."
+        },
+        {
+          "lesson_number": "15.2",
+          "lesson_title": "Designing Retainer Packages Across Industries",
+          "what_is_taught": "Websites: Hosting + Maintenance + Monthly CRO updates; Marketing: Monthly ad spend management + Creative testing; Video: Monthly content packages.",
+          "why_it_matters": "Clients gladly pay retainers when packages are tied to ongoing growth, prevention, or peace of mind.",
+          "what_learner_does": "Designs a tailored monthly retainer package for their primary core skill.",
+          "expected_outcome": "Compelling recurring retainer offering."
+        },
+        {
+          "lesson_number": "15.3",
+          "lesson_title": "The Post-Project Review Call & The Retainer Pitch",
+          "what_is_taught": "Scheduling the review call 14 days after handover; reviewing results achieved; pitching the ongoing retainer: 'Now that the foundation is live, here is how we scale it.'",
+          "why_it_matters": "Pitching right after delivering wins catches clients at peak satisfaction.",
+          "what_learner_does": "Scripts a 15-minute post-project review call and retainer proposal deck.",
+          "expected_outcome": "High-conversion post-project retainer pitch flow."
+        },
+        {
+          "lesson_number": "15.4",
+          "lesson_title": "Referral Loops & Social Proof Collection",
+          "what_is_taught": "The 3-question testimonial framework; asking for introductions to 2 peer founders; automating referral requests into project sign-offs.",
+          "why_it_matters": "Referred clients close at 70%+ rates and rarely negotiate on price.",
+          "what_learner_does": "Builds a Client Retention Plan and automated referral request email sequence.",
+          "expected_outcome": "Client Retention Plan project deliverable."
+        }
+      ],
+      "key_concepts": [
+        "Retainer Economics",
+        "Maintenance vs Growth Retainers",
+        "Post-Project Pitch Timing",
+        "3-Question Testimonial System"
+      ],
+      "tools": [
+        "Notion",
+        "Google Docs"
+      ],
+      "hands_on_practice": "Structuring recurring retainer packages and role-playing the post-project retainer pitch.",
+      "assignment": "Client Retention & Recurring Retainer Plan",
+      "business_application": "Predictable monthly cash flow and client lifetime value optimization",
+      "expected_outcome": "Predictable recurring revenue system converting one-off gigs into long-term retainers."
+    },
+    {
+      "module_number": 16,
+      "module_title": "Freelance CRM & Pipeline Management",
+      "module_purpose": "Build and manage an operational CRM to track leads, follow-ups, proposals, and pipeline conversion metrics.",
+      "what_you_will_learn": [
+        "The 8-Stage Freelance Pipeline",
+        "Building a Notion / Sheets CRM",
+        "Tracking Outreach Conversion Metrics",
+        "Pipeline Forecasting & Revenue Health"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "16.1",
+          "lesson_title": "Why Spreadsheets Beat Memory: The Freelance Pipeline",
+          "what_is_taught": "The 8 stages: Lead → Qualified → Contacted → Replied → Discovery Call → Proposal Sent → Won/Lost → Retainer; why deals die without follow-up.",
+          "why_it_matters": "Most client deals are closed on the 4th to 6th follow-up; disorganized freelancers forget to follow up.",
+          "what_learner_does": "Maps their personal sales pipeline stages and defines transition criteria.",
+          "expected_outcome": "Structured, visible sales pipeline stages."
+        },
+        {
+          "lesson_number": "16.2",
+          "lesson_title": "Building Your Freelance CRM in Notion or Sheets",
+          "what_is_taught": "Configuring CRM databases: contact info, company, deal value, last contact date, next action date, lead source, status boards.",
+          "why_it_matters": "Centralizes all prospect conversations so you know exactly who to follow up with every morning.",
+          "what_learner_does": "Builds a functional Freelance CRM Dashboard in Notion with filtered views.",
+          "expected_outcome": "Functional, custom Freelance CRM Dashboard."
+        },
+        {
+          "lesson_number": "16.3",
+          "lesson_title": "Tracking Acquisition & Conversion Metrics",
+          "what_is_taught": "Calculating key ratios: Response Rate (Replies/Outreach), Discovery Rate (Calls/Replies), Proposal Win Rate (Won/Proposals), Average Deal Size.",
+          "why_it_matters": "Data reveals exact pipeline bottlenecks (e.g., if calls are high but proposals fail, pricing or scope is the issue).",
+          "what_learner_does": "Populates their CRM with simulated outreach data and calculates conversion funnels.",
+          "expected_outcome": "Data-driven diagnosis of sales performance."
+        },
+        {
+          "lesson_number": "16.4",
+          "lesson_title": "Pipeline Forecasting & Daily Sales Habits",
+          "what_is_taught": "The 'Rule of 5' daily habit: 5 touches every morning regardless of client workload; forecasting expected cash flow 30–60 days out.",
+          "why_it_matters": "Consistent daily outreach completely eliminates feast-or-famine cycles.",
+          "what_learner_does": "Establishes a daily 30-minute sales routine and pipeline forecasting dashboard.",
+          "expected_outcome": "Freelance CRM Dashboard project deliverable."
+        }
+      ],
+      "key_concepts": [
+        "8-Stage Sales Pipeline",
+        "Pipeline Conversion Funnels",
+        "Daily Outreach Habits",
+        "Cash Flow Forecasting"
+      ],
+      "tools": [
+        "Notion",
+        "Google Sheets",
+        "Airtable"
+      ],
+      "hands_on_practice": "Constructing and managing an active 100-contact sales CRM with automated follow-up dates.",
+      "assignment": "Freelance CRM Dashboard",
+      "business_application": "Systematic sales tracking, follow-up execution, and revenue forecasting",
+      "expected_outcome": "Operational sales pipeline providing transparent visibility into upcoming revenue."
+    },
+    {
+      "module_number": 17,
+      "module_title": "AI-Assisted Freelance Operations",
+      "module_purpose": "Deploy modern AI tools safely across prospecting, drafting, research, and client reporting with rigorous human verification.",
+      "what_you_will_learn": [
+        "AI for Prospect & Account Research",
+        "Drafting Personalized Outreach with AI",
+        "Proposal & Scope Scaffolding with Claude/ChatGPT",
+        "The AI Quality Protocol & Confidentiality"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "17.1",
+          "lesson_title": "AI as Your 24/7 Operations Analyst",
+          "what_is_taught": "Using ChatGPT and Claude for rapid desk research: analyzing prospect company websites, identifying hiring trends, extracting company pain points.",
+          "why_it_matters": "Cuts prospect research time from 45 minutes to 5 minutes per high-value target account.",
+          "what_learner_does": "Uses structured prompts to generate a 1-page account intelligence brief for a target client.",
+          "expected_outcome": "High-speed B2B account intelligence."
+        },
+        {
+          "lesson_number": "17.2",
+          "lesson_title": "Drafting Personalized Outreach & Follow-Ups with AI",
+          "what_is_taught": "Feeding account briefs into AI to generate 3 unique personalized opening observations; refining tone from generic pitch to authentic insight.",
+          "why_it_matters": "Enables personalized outreach at scale without sounding like an automated spam bot.",
+          "what_learner_does": "Drafts 5 tailored LinkedIn outreach notes using AI assistance, edited for personal voice.",
+          "expected_outcome": "Efficient, high-authenticity personalized outreach copy."
+        },
+        {
+          "lesson_number": "17.3",
+          "lesson_title": "Proposal Scaffolding & Meeting Note Extraction",
+          "what_is_taught": "Pasting raw discovery call notes to generate proposal deliverables sections, timeline estimates, and clean executive summaries.",
+          "why_it_matters": "Accelerates proposal turnaround time from 4 hours to 45 minutes.",
+          "what_learner_does": "Uses AI to convert raw discovery notes into a formatted Statement of Work scope draft.",
+          "expected_outcome": "Rapid proposal authoring workflow."
+        },
+        {
+          "lesson_number": "17.4",
+          "lesson_title": "The AI Quality Protocol & Data Confidentiality",
+          "what_is_taught": "The 6-step QA rule: AI Draft → Human Review → Client Context Check → Fact Check → Tone Calibration → Send; strict NDA and PII privacy rules.",
+          "why_it_matters": "Never send unedited AI copy; clients instantly recognize and disqualify lazy AI-generated bids.",
+          "what_learner_does": "Audits 3 AI-generated proposals, removes robotic language, and adds human strategic nuance.",
+          "expected_outcome": "Ethical, high-standard AI operational integration."
+        }
+      ],
+      "key_concepts": [
+        "Account Intelligence Prompts",
+        "AI Quality Protocol",
+        "Voice Calibration",
+        "Client Data Privacy & NDA Guardrails"
+      ],
+      "tools": [
+        "ChatGPT (GPT-4o)",
+        "Claude",
+        "Notion AI"
+      ],
+      "hands_on_practice": "Executing the complete AI Quality Protocol across research, outreach, and proposal drafts.",
+      "assignment": "AI-Augmented Freelance Operations Suite",
+      "business_application": "Solo operator efficiency acceleration and high-speed delivery",
+      "expected_outcome": "10x operational speed without sacrificing personal authenticity or client trust."
+    },
+    {
+      "module_number": 18,
+      "module_title": "Personal Brand & Inbound Client Attraction",
+      "module_purpose": "Build authority on LinkedIn and digital channels so qualified clients discover you organically.",
+      "what_you_will_learn": [
+        "LinkedIn Authority Profile Optimization",
+        "Content Pillars That Attract Buyers (Not Just Likes)",
+        "Case Study Breakdowns & Social Proof",
+        "Inbound-to-Conversation Conversion"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "18.1",
+          "lesson_title": "Optimizing Your LinkedIn Profile for Inbound Clients",
+          "what_is_taught": "Transforming your profile from a resume into a client landing page: outcome-focused headline, customer-centric About section, featured proof links.",
+          "why_it_matters": "When prospects visit your profile, they should immediately understand who you help and see proof within 5 seconds.",
+          "what_learner_does": "Rewrites their LinkedIn headline, banner, and About section into an inbound sales landing page.",
+          "expected_outcome": "Conversion-optimized LinkedIn personal brand profile."
+        },
+        {
+          "lesson_number": "18.2",
+          "lesson_title": "Content That Attracts Buyers vs Content That Chases Likes",
+          "what_is_taught": "The 3 content pillars: 1. Case Study Breakdowns (showing results), 2. Educational How-Tos (showing process), 3. Industry Opinions (showing worldview).",
+          "why_it_matters": "Viral memes don't generate clients; specific case breakdown posts attract executive buyers.",
+          "what_learner_does": "Authors 3 high-authority educational posts breaking down an industry case study.",
+          "expected_outcome": "Authoritative B2B content creation capability."
+        },
+        {
+          "lesson_number": "18.3",
+          "lesson_title": "Publishing Project Breakdowns & Micro-Case Studies",
+          "what_is_taught": "Formatting quick problem-solution before/after posts; tagging clients ethically; creating visual carousels and teardowns.",
+          "why_it_matters": "Consistent project breakdowns provide undeniable social proof that you actively deliver great work.",
+          "what_learner_does": "Creates a visual 5-slide project breakdown carousel in Canva.",
+          "expected_outcome": "Compelling proof-of-work content asset."
+        },
+        {
+          "lesson_number": "18.4",
+          "lesson_title": "Converting Content Engagement into Direct Conversations",
+          "what_is_taught": "The Content → Conversation → Opportunity framework: messaging people who engage with posts without pitching; warm relationship building.",
+          "why_it_matters": "Turns passive content likes into qualified discovery call opportunities.",
+          "what_learner_does": "Practices warm DM conversion scripts connecting with engaged profile visitors.",
+          "expected_outcome": "Freelancer Authority Profile project deliverable."
+        }
+      ],
+      "key_concepts": [
+        "Profile Landing Page",
+        "Buyer vs Vanity Content",
+        "Micro-Case Studies",
+        "Warm DM Engagement"
+      ],
+      "tools": [
+        "LinkedIn",
+        "Canva",
+        "Notion"
+      ],
+      "hands_on_practice": "Rewriting your complete LinkedIn profile and authoring 3 buyer-focused case breakdown posts.",
+      "assignment": "Freelancer Authority Profile & Inbound Content Kit",
+      "business_application": "Organic inbound authority building and executive networking",
+      "expected_outcome": "Polished digital personal brand that attracts warm inbound client inquiries."
+    },
+    {
+      "module_number": 19,
+      "module_title": "Professional Client Communication & Executive Presence",
+      "module_purpose": "Master professional English, meeting etiquette, clear status messaging, and executive presence in remote corporate environments.",
+      "what_you_will_learn": [
+        "Professional Written Email Etiquette",
+        "Video Meeting Presence & Screen Sharing",
+        "Communicating Blockers & Delays Early",
+        "Managing Multi-Cultural International Clients"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "19.1",
+          "lesson_title": "Professional Written Communication: Brevity & Clarity",
+          "what_is_taught": "The BLUF email structure for clients, bulleted status updates, eliminating overly casual or timid phrasing ('Sorry to bother you...'), projecting calm confidence.",
+          "why_it_matters": "Busy international founders value crisp, decisive communication and ignore vague walls of text.",
+          "what_learner_does": "Rewrites 5 overly verbose client emails into concise, authoritative executive updates.",
+          "expected_outcome": "Polished, confident business email communication."
+        },
+        {
+          "lesson_number": "19.2",
+          "lesson_title": "Video Meeting Etiquette & Executive Screen Presence",
+          "what_is_taught": "Lighting, audio quality, camera framing, holding eye contact down the lens, clean screen sharing (closing messy tabs), professional verbal pacing.",
+          "why_it_matters": "Professional virtual presence instantly elevates your perceived tier and justifies premium rates.",
+          "what_learner_does": "Audits their home video setup across lighting, framing, and screen share cleaniness.",
+          "expected_outcome": "Flawless virtual video presentation standards."
+        },
+        {
+          "lesson_number": "19.3",
+          "lesson_title": "Communicating Bad News & Delays Proactively",
+          "what_is_taught": "Never wait until the deadline to report a delay; the 3-part delay formula: Identify early → Explain root cause without excuses → Present mitigation plan.",
+          "why_it_matters": "Clients forgive delays when communicated early; they fire freelancers who miss deadlines in silence.",
+          "what_learner_does": "Drafts a proactive project delay memo presenting two alternative solutions.",
+          "expected_outcome": "Grace and trust preservation during project emergencies."
+        },
+        {
+          "lesson_number": "19.4",
+          "lesson_title": "Cross-Cultural Communication with Global Clients",
+          "what_is_taught": "Navigating direct vs. indirect feedback styles (US, UK, European, Australian, Middle Eastern business norms); managing time zones asynchronously.",
+          "why_it_matters": "Prevents cultural misunderstandings and establishes effortless cross-border collaboration.",
+          "what_learner_does": "Participates in a simulated cross-cultural client communication scenario.",
+          "expected_outcome": "Fluent, culturally attuned international client communication."
+        }
+      ],
+      "key_concepts": [
+        "BLUF Client Writing",
+        "Executive Virtual Presence",
+        "Proactive Delay Formula",
+        "Cross-Cultural Business Norms"
+      ],
+      "tools": [
+        "Zoom",
+        "Gmail",
+        "Loom"
+      ],
+      "hands_on_practice": "Simulating high-stakes client communication scenarios, emergency delay alerts, and video calls.",
+      "assignment": "Client Communication Playbook & Email Suite",
+      "business_application": "International remote stakeholder management and relationship building",
+      "expected_outcome": "Flawless communication standards that make international clients love working with you."
+    },
+    {
+      "module_number": 20,
+      "module_title": "Freelance Business Metrics & Boutique Agency Foundations",
+      "module_purpose": "Track business performance data and establish foundational systems to scale from a solo freelancer toward a boutique digital agency.",
+      "what_you_will_learn": [
+        "The 4 Core Freelance Metric Categories",
+        "Calculating Effective Hourly Rate (EHR)",
+        "Subcontracting & Contractor Quality Control",
+        "The Boutique Agency Transition Roadmap"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "20.1",
+          "lesson_title": "Tracking Your Business Numbers: The 4 Metric Categories",
+          "what_is_taught": "1. Acquisition Metrics (Response/Close rates), 2. Financial Metrics (Revenue, Profit, EHR), 3. Client Metrics (Retention, Referrals), 4. Delivery Metrics (Turnaround, Revision count).",
+          "why_it_matters": "You cannot improve what you do not measure; metrics pinpoint exact business leaks.",
+          "what_learner_does": "Builds an automated Freelance Business Metrics dashboard in Google Sheets.",
+          "expected_outcome": "Data-driven business health monitoring."
+        },
+        {
+          "lesson_number": "20.2",
+          "lesson_title": "Effective Hourly Rate (EHR) & Time Allocation Audits",
+          "what_is_taught": "Calculating Total Cash Collected divided by Total Hours Worked (billable + non-billable); identifying which projects generate high profit vs. unpaid drain.",
+          "why_it_matters": "A $2,000 project that takes 10 hours (EHR = $200) is far better than a $4,000 project taking 80 hours (EHR = $50).",
+          "what_learner_does": "Audits 3 past projects to calculate real EHR and identifies high-margin service winners.",
+          "expected_outcome": "Strategic allocation of time to high-margin service offerings."
+        },
+        {
+          "lesson_number": "20.3",
+          "lesson_title": "Subcontracting & Quality Control: Hiring Specialists",
+          "what_is_taught": "When to hire your first contractor; creating step-by-step Loom SOPs; white-label subcontractor agreements; maintaining 50%+ gross margins.",
+          "why_it_matters": "Allows you to take on larger client engagements without working 70 hours a week.",
+          "what_learner_does": "Writes a detailed delivery SOP and subcontractor test brief for a specialist task.",
+          "expected_outcome": "Ability to delegate operational tasks with high quality control."
+        },
+        {
+          "lesson_number": "20.4",
+          "lesson_title": "The Boutique Agency Transition Roadmap",
+          "what_is_taught": "Transitioning from solo freelancer to agency: repositioning from 'I' to 'We', project management roles, multi-client retainers, managing cash flow runway.",
+          "why_it_matters": "Provides a clear, sustainable scaling roadmap when personal delivery capacity is maxed out.",
+          "what_learner_does": "Creates a Boutique Agency Scaling Roadmap and finalizes their Freelance Business Launch System.",
+          "expected_outcome": "Complete Freelance Business Launch System capstone deliverable."
+        }
+      ],
+      "key_concepts": [
+        "Effective Hourly Rate (EHR)",
+        "Subcontractor SOPs",
+        "Gross Margin Protection",
+        "Boutique Agency Roadmap"
+      ],
+      "tools": [
+        "Google Sheets",
+        "Notion",
+        "ClickUp"
+      ],
+      "hands_on_practice": "Building an operational business metrics dashboard and authoring contractor delegation SOPs.",
+      "assignment": "Freelance Business Metrics Dashboard & Agency Roadmap",
+      "business_application": "Business optimization, margin expansion, and agency scaling foundations",
+      "expected_outcome": "Mature, scalable business systems capable of growing from solo practice to boutique agency."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is freelancing itself a skill?",
+      "answer": "No. Freelancing is a business model that monetizes a core professional hard skill (such as web development, graphic design, video editing, SEO, copywriting, or business operations). You do not sell 'freelancing'; you sell specialized solutions to business problems using your core capability."
+    },
+    {
+      "question": "Do I need a professional skill before joining?",
+      "answer": "Yes. You should already have—or be actively learning—at least one marketable professional hard skill. If you are an absolute beginner without any skill, we recommend pairing this course with one of our specialized academy programs (like Digital Marketing, Programming, or Design)."
+    },
+    {
+      "question": "How do I choose my freelance niche?",
+      "answer": "In Module 2, we guide you through our 5-Part Positioning Framework (Skill + Market + Business Problem + Buyer + Outcome). We help you identify an industry vertical where businesses have real budgets and actively look for external specialists."
+    },
+    {
+      "question": "Will I learn Upwork?",
+      "answer": "Yes. Module 5 is dedicated to Upwork. You will learn specialized profile architecture, project catalog setups, job qualification filters, Connects budget management, and how to write diagnostic, tailored proposals that win interviews."
+    },
+    {
+      "question": "Will I learn Fiverr?",
+      "answer": "Yes. Module 6 covers Fiverr as a productized service marketplace. You will learn long-tail keyword research, 3-tier package structuring ($50 to $500+), high-converting gig video scripts, mandatory buyer requirements, and custom order upsells."
+    },
+    {
+      "question": "Will I learn direct client acquisition?",
+      "answer": "Yes. Direct client acquisition is a flagship pillar of this course (Module 7). You will learn how to find high-budget B2B clients directly across LinkedIn and cold email, bypassing competitive marketplace platforms entirely."
+    },
+    {
+      "question": "Is cold email covered?",
+      "answer": "Yes. We teach personalized, low-friction cold email outreach. You will learn how to research verified decision-maker emails, write customized 4-sentence emails focused on prospect problems, and execute multi-touch follow-up sequences."
+    },
+    {
+      "question": "Is LinkedIn outreach included?",
+      "answer": "Yes. You will learn how to turn your LinkedIn profile into a landing page, identify decision-makers (Founders, CMOs, Operations Heads), send personalized connection requests, and engage in high-value conversations that lead to discovery calls."
+    },
+    {
+      "question": "Will I learn how to build a portfolio?",
+      "answer": "Yes. Module 4 teaches our 8-Part Case Study Architecture. You will build 3 in-depth, problem-solving case studies. If you have no past clients, we teach you how to ethically create and present self-initiated concept campaigns and diagnostic audits."
+    },
+    {
+      "question": "Will I learn pricing?",
+      "answer": "Yes. Module 10 covers pricing models: estimating hourly effort, fixed-price project budgeting, retainer packages, and value-based pricing principles where fees are anchored to client upside."
+    },
+    {
+      "question": "Will negotiation be taught?",
+      "answer": "Yes. You will participate in live sales role-plays defending your rates against tough objections ('Your price is too high', 'Can you discount?'). You will master our golden rule: reduce scope before reducing price."
+    },
+    {
+      "question": "Will I learn proposal writing?",
+      "answer": "Yes. Module 9 teaches our comprehensive 10-Part Proposal Anatomy. You will learn how to reframe raw technical tasks into business outcomes, present investment options, and walk clients through proposals on screen-share calls."
+    },
+    {
+      "question": "Are contracts covered?",
+      "answer": "Yes. Module 11 covers Statements of Work (SOW), milestone payment terms, revision caps, and the golden rule of IP transfer (ownership transfers only upon 100% final payment). We also cover international invoicing via Wise and GST export compliance awareness."
+    },
+    {
+      "question": "Will I learn client onboarding?",
+      "answer": "Yes. Module 12 teaches our 8-step onboarding workflow: welcome packets, client intake forms, kickoff call agendas, communication rules, and setting up centralized client Notion portals."
+    },
+    {
+      "question": "Will I learn project delivery?",
+      "answer": "Yes. Module 13 covers proactive project delivery: the 'Zero-Chasing' principle, recording 3-minute Loom milestone walkthroughs, structuring client review rounds, and organized file handovers."
+    },
+    {
+      "question": "Will I learn how to handle scope creep?",
+      "answer": "Yes. Module 14 is dedicated to realistic client challenges. You will learn the 'Yes, And...' change order formula to turn unpaid extra requests into paid upsells diplomatically, along with dormancy clauses for ghosting clients."
+    },
+    {
+      "question": "Will AI tools be covered?",
+      "answer": "Yes. Module 17 integrates ChatGPT and Claude for prospect research, account intelligence, drafting personalized outreach, and proposal scaffolding, supported by our strict 6-step AI Quality Protocol."
+    },
+    {
+      "question": "Is there a client acquisition sprint?",
+      "answer": "Yes! Section 8 features our signature 30-Day Client Acquisition Sprint, where you build a 100-prospect database, launch outreach, record Loom video audits, conduct discovery calls, and track pipeline metrics."
+    },
+    {
+      "question": "Are clients guaranteed?",
+      "answer": "No. We do not make false promises of guaranteed clients. Winning clients depends on your skill quality, consistency, and execution. We give you proven systems, templates, role-play practice, and faculty feedback to maximize your success."
+    },
+    {
+      "question": "Is income guaranteed?",
+      "answer": "No. Income guarantees are deceptive and unethical. We do not promise fixed monthly earnings or overnight wealth. We teach you a repeatable, professional business system so you can build and grow a sustainable freelance business."
+    },
+    {
+      "question": "What specialization tracks are available?",
+      "answer": "We offer 5 specialization tracks: Track A: Creative Freelancer, Track B: Marketing Freelancer, Track C: Tech Freelancer, Track D: AI & Automation Freelancer, and Track E: Business Support Freelancer."
+    },
+    {
+      "question": "Can beginners join?",
+      "answer": "Beginners can join provided they have a basic hard skill to monetize. The course starts from foundational service business economics before progressing to advanced client acquisition and agency scaling."
+    },
+    {
+      "question": "Will I build a freelance CRM?",
+      "answer": "Yes. In Module 16, every student builds an operational 8-stage sales pipeline CRM in Notion or Google Sheets to track leads, follow-up dates, deal values, and conversion ratios."
+    },
+    {
+      "question": "Will agency scaling be covered?",
+      "answer": "Yes. Module 20 covers the foundations of scaling from a solo freelancer toward a boutique agency: calculating Effective Hourly Rate (EHR), creating subcontractor SOPs, white-label agreements, and protected profit margins."
+    }
+  ]
 }

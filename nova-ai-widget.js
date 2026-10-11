@@ -180,7 +180,7 @@
     {
       id: 'creative-design',
       slug: 'creative-design',
-      name: 'Creative Design Master',
+      name: 'Creative Design & Brand Experience Mastery',
       academy: 'Design Academy',
       academyId: 'design',
       programLevel: 'Career Program',
@@ -190,13 +190,13 @@
       originalPrice: 69999,
       rating: 4.9,
       reviews: 175,
-      liveProjects: 18,
+      liveProjects: 9,
       mode: 'Hybrid',
-      level: 'Advanced',
+      level: 'Beginner to Professional',
       placementSupport: true,
-      salary: '₹4.0 – ₹8.5 LPA',
-      shortDesc: 'Complete 6-month visual & brand design master program with live agency portfolio.',
-      tools: ['Adobe Photoshop', 'Illustrator', 'Figma', 'Canva Pro', 'After Effects']
+      salary: 'Junior to Mid-Level Creative Roles',
+      shortDesc: 'Visual communication, branding, advertising, packaging, digital UI, motion & AI design.',
+      tools: ['Adobe Photoshop', 'Adobe Illustrator', 'CorelDRAW', 'Figma', 'Adobe After Effects', 'Adobe Firefly', 'Midjourney']
     },
     {
       id: 'graphic-design-pro',
@@ -243,7 +243,7 @@
     {
       id: 'fullstack-foundation',
       slug: 'fullstack-foundation',
-      name: 'Full Stack Programming Foundation',
+      name: 'Full Stack Software Engineering & AI-Assisted Development',
       academy: 'Programming Academy',
       academyId: 'programming',
       programLevel: 'Career Program',
@@ -253,13 +253,13 @@
       originalPrice: 84999,
       rating: 4.9,
       reviews: 210,
-      liveProjects: 20,
+      liveProjects: 7,
       mode: 'Hybrid',
-      level: 'Advanced',
+      level: 'Beginner to Professional',
       placementSupport: true,
-      salary: '₹4.5 – ₹10 LPA',
-      shortDesc: 'End-to-end full stack development: HTML/CSS, JavaScript, React, Node.js, REST APIs and SQL.',
-      tools: ['JavaScript', 'React.js', 'Node.js', 'Express', 'SQL', 'Git', 'Vercel']
+      salary: 'Junior to Mid-Level Developer Roles',
+      shortDesc: 'Build modern web apps with TypeScript, React, Next.js, Node.js, PostgreSQL, APIs, testing, Git & Docker.',
+      tools: ['TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'Git', 'Docker']
     },
     {
       id: 'python-developer',
@@ -369,23 +369,23 @@
     {
       id: 'freelancing-mastery',
       slug: 'freelancing-mastery',
-      name: 'Freelancing Mastery Program',
+      name: 'Freelance Business & Client Acquisition Mastery',
       academy: 'Career & Freelancing Academy',
       academyId: 'career',
       programLevel: 'Career Program',
       duration: '6 Months',
       durationMonths: 6,
       price: 18999,
-      originalPrice: 54999,
+      originalPrice: 49999,
       rating: 4.9,
       reviews: 310,
-      liveProjects: 12,
+      liveProjects: 8,
       mode: 'Hybrid',
-      level: 'All Levels',
+      level: 'Beginner to Professional',
       placementSupport: true,
-      salary: '₹50k – ₹2 Lakhs/mo Freelance',
-      shortDesc: 'End-to-end blueprint to launch a 6-figure global freelancing business on Upwork, Fiverr & LinkedIn.',
-      tools: ['Upwork', 'Fiverr', 'LinkedIn Sales Navigator', 'Stripe', 'PayPal', 'Notion CRM']
+      salary: 'Independent Business / Retainers',
+      shortDesc: 'Turn your professional skill into a freelance business: positioning, Upwork, Fiverr, direct outreach, sales calls & contracts.',
+      tools: ['Upwork', 'Fiverr', 'LinkedIn', 'Notion', 'Calendly', 'PandaDoc / Bonsai', 'Wise', 'ChatGPT / Claude']
     },
     {
       id: 'career-launch',
@@ -411,7 +411,7 @@
     {
       id: 'business-english',
       slug: 'business-english',
-      name: 'Business English & Personality Development',
+      name: 'Business English & Executive Communication Mastery',
       academy: 'Communication Academy',
       academyId: 'communication',
       programLevel: 'Career Program',
@@ -421,13 +421,13 @@
       originalPrice: 39999,
       rating: 4.9,
       reviews: 190,
-      liveProjects: 10,
+      liveProjects: 6,
       mode: 'Live Online',
-      level: 'All Levels',
+      level: 'Beginner to Professional',
       placementSupport: true,
       salary: 'Corporate Ready',
-      shortDesc: 'Master fluent spoken English, executive business presentations, public speaking and corporate etiquette.',
-      tools: ['Live Speech Labs', 'Presentation Deck Tools', 'Vocabulary Trainers']
+      shortDesc: 'Master professional English for meetings, interviews, presentations, emails, client calls and workplace conversations.',
+      tools: ['Zoom & Meet', 'Gmail & Outlook', 'PowerPoint & Canva', 'ChatGPT & Copilot', 'Grammarly', 'LinkedIn']
     },
     {
       id: 'spoken-english-pro',
@@ -495,44 +495,44 @@
     {
       id: 'youtube-mastery',
       slug: 'youtube-mastery',
-      name: 'YouTube Growth Mastery',
+      name: 'YouTube Creator Business & Growth Mastery',
       academy: 'Creator Academy',
       academyId: 'creator',
       programLevel: 'Career Program',
       duration: '6 Months',
       durationMonths: 6,
       price: 19999,
-      originalPrice: 59999,
+      originalPrice: 54999,
       rating: 4.9,
       reviews: 120,
-      liveProjects: 12,
+      liveProjects: 9,
       mode: 'Hybrid',
-      level: 'Beginner to Pro',
+      level: 'Beginner to Professional',
       placementSupport: true,
-      salary: 'Creator Monetization',
-      shortDesc: 'Channel setup, scripting, viral hooks, YouTube SEO, thumbnail design, and brand sponsorship monetization.',
-      tools: ['YouTube Studio', 'VidIQ', 'TubeBuddy', 'Premiere Pro', 'Photoshop']
+      salary: 'Creator Monetization & Channel Management',
+      shortDesc: 'Niche positioning, 30-idea banks, title/thumbnail packaging, retention scripting, Shorts, analytics & sponsorships.',
+      tools: ['YouTube Studio', 'Adobe Photoshop', 'CapCut Desktop', 'Premiere Pro', 'Notion', 'VidIQ']
     },
     {
       id: 'biz-productivity',
       slug: 'biz-productivity',
-      name: 'Business Productivity Mastery',
+      name: 'Business Operations, Analytics & AI Productivity Mastery',
       academy: 'Office Productivity Academy',
       academyId: 'office',
       programLevel: 'Career Program',
       duration: '6 Months',
       durationMonths: 6,
       price: 16999,
-      originalPrice: 49999,
+      originalPrice: 44999,
       rating: 4.8,
       reviews: 140,
-      liveProjects: 12,
+      liveProjects: 8,
       mode: 'Hybrid',
-      level: 'All Levels',
+      level: 'Beginner to Professional',
       placementSupport: true,
       salary: '₹3.5 – ₹6.5 LPA',
-      shortDesc: 'Advanced Excel, Word, PowerPoint, Google Workspace, Notion, Copilot and Tally with GST.',
-      tools: ['Microsoft Excel (Advanced)', 'Notion', 'Microsoft Copilot', 'Tally Prime', 'Google Sheets']
+      shortDesc: 'Master Advanced Excel, Power Query, Power BI, AI Copilots, business reporting, project operations & Power Automate workflows.',
+      tools: ['Advanced Excel', 'Power Query', 'Power BI & DAX', 'Copilot', 'Power Automate', 'Notion', 'ClickUp', 'Tally Prime']
     },
     {
       id: 'office-pro',
@@ -1040,7 +1040,7 @@
         const c = findCourse('freelancing-mastery') || FALLBACK_COURSES[15];
         sessionMemory.lastDiscussedCourse = c;
         return {
-          text: `Awesome! Graduate / Career seeker hone ke saath **Freelancing** target karna bahut rewarding decision hai.\n\n⭐ **Recommended for You: ${c.name}**\n\n**Why it matches your profile:**\n• **Zero to 6-Figure Freelance Blueprint**: Upwork, Fiverr, LinkedIn outreach & direct international client closing.\n• **High-Income Skills**: Digital Marketing, Content, Automation aur Design client workflows.\n• **Live Client Acquisition**: Proposal writing, rate negotiation & global payment setup (Stripe/PayPal).\n\n• **Duration:** ${c.duration}\n• **Live Projects:** ${c.liveProjects} Client Projects\n• **Fee:** ${formatFee(c.price)} *(No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n• **Mode:** ${c.mode}\n\nKya aap iska detailed curriculum dekhna chahenge ya 1-on-1 free counselling book karein?`,
+          text: `Awesome! Graduate / Career seeker hone ke saath **Freelance Business System** build karna ek solid professional career path hai.\n\n⭐ **Recommended for You: ${c.name}**\n\n**Why it matches your profile:**\n• **Structured Freelance Business System**: Positioning, productized offers, Upwork, Fiverr, direct outreach & discovery sales calls.\n• **Practical Client Acquisition**: 100-Prospect Sprint, high-converting proposals, scope contracts & value pricing.\n• **Delivery & Recurring Retainers**: Onboarding systems, client retention workflows & boutique agency foundations.\n\n• **Duration:** ${c.duration}\n• **Live Projects:** ${c.liveProjects} Business Deliverables\n• **Fee:** ${formatFee(c.price)} *(No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n• **Mode:** ${c.mode}\n\nKya aap iska detailed curriculum dekhna chahenge ya 1-on-1 free counselling book karein?`,
           recommendedCourse: c
         };
       }
@@ -1115,7 +1115,7 @@
         const cDesign = findCourse('creative-design') || FALLBACK_COURSES[6];
         sessionMemory.lastDiscussedCourse = cDesign;
         return {
-          text: `Design ek aisa creative field hai jisme freelance aur agency dono me bohot scope hai!\n\n⭐ **Recommended: ${cDesign.name}**\n\n**What you will master:**\n• Adobe Photoshop, Illustrator, Figma, Canva Pro aur Midjourney AI.\n• Brand Identity, Advertising Creatives, Social Media Posters, Packaging aur UI/UX Wireframing.\n• 18 Live Client Projects + High-converting Behance/Dribbble Portfolio.\n\n• **Duration:** 6 Months *(Fast-track option: Graphic Design Professional • 3 Months, ₹13,999)*\n• **Fee:** ${formatFee(cDesign.price)} *(No-Cost EMI: ${calculateEMI(cDesign.price)}/mo)*\n• **Placement:** Dedicated Placement Support\n\nKya aap creative design me job chahte hain ya freelancing?`,
+          text: `Design ek aisa creative field hai jisme freelance aur agency dono me bohot scope hai!\n\n⭐ **Recommended: ${cDesign.name}**\n\n**What you will master:**\n• Visual communication, commercial typography, layout grids aur color psychology.\n• Adobe Photoshop (Key Visuals), Illustrator (Vector Branding), CorelDRAW (Print Prepress), Figma (UI Foundations) aur After Effects (Brand Motion).\n• 9 Real-world portfolio projects + Behance case studies + Studio critique reviews.\n\n• **Duration:** 6 Months *(Fast-track option: Graphic Design Professional • 3 Months, ₹13,999)*\n• **Fee:** ${formatFee(cDesign.price)} *(No-Cost EMI: ${calculateEMI(cDesign.price)}/mo)*\n• **Placement:** Dedicated Placement Support\n\nKya aap creative design me job chahte hain ya freelancing?`,
           recommendedCourse: cDesign
         };
       }
@@ -1125,7 +1125,7 @@
         const cProg = findCourse('fullstack-foundation') || FALLBACK_COURSES[9];
         sessionMemory.lastDiscussedCourse = cProg;
         return {
-          text: `Software Development aur Full-Stack me high packages aur global tech hiring demand hamesha rehti hai!\n\n⭐ **Recommended: ${cProg.name}**\n\n**What you will master:**\n• HTML5, CSS3, Modern JavaScript (ES6+), React.js, Node.js, Express, SQL/NoSQL Databases, REST APIs aur Git/GitHub.\n• 20 Live Real-World Projects (E-commerce app, SaaS portal, Live Chat, etc.).\n• Dedicated Placement Support with technical mock interviews.\n\n• **Duration:** 6 Months *(Fast-track: Python Developer Professional • 3 Months, ₹14,999)*\n• **Fee:** ${formatFee(cProg.price)} *(No-Cost EMI: ${calculateEMI(cProg.price)}/mo)*\n\nKya aap zero coding background se start kar rahe hain ya basic knowledge hai?`,
+          text: `Software Engineering aur Full-Stack me high global tech hiring demand hamesha rehti hai!\n\n⭐ **Recommended: ${cProg.name}**\n\n**What you will master:**\n• **Modern Web & Frontend**: Semantic HTML5, Tailwind CSS, TypeScript, React 19 & Next.js App Router.\n• **Backend & Databases**: Node.js, Express, REST APIs, PostgreSQL, Prisma ORM, Authentication & RBAC.\n• **Engineering Discipline**: Testing (Vitest/Playwright), Git/GitHub PR workflows, Docker, CI/CD deployment & AI coding workflows.\n• **Production Portfolio**: 6 Practical Projects + 1 Flagship Production SaaS Capstone.\n\n• **Duration:** 6 Months *(Fast-track: Python Developer Professional • 3 Months, ₹14,999)*\n• **Fee:** ${formatFee(cProg.price)} *(No-Cost EMI: ${calculateEMI(cProg.price)}/mo)*\n\nKya aap zero coding background se start kar rahe hain ya basic knowledge hai?`,
           recommendedCourse: cProg
         };
       }
@@ -1167,6 +1167,16 @@
         return {
           text: `Bina code likhe professional websites aur e-commerce stores banana aaj ki sabse profitable freelancing skill hai!\n\n⭐ **Recommended: ${cNC.name}**\n\n• **Tools**: Shopify, WordPress, WooCommerce, Elementor, Webflow & Stripe.\n• **Projects**: 14 Live E-commerce and corporate client stores.\n• **Duration:** 6 Months *(Fast-track: No-Code Website Professional • 3 Months, ₹12,999)*\n• **Fee:** ${formatFee(cNC.price)} *(No-Cost EMI: ${calculateEMI(cNC.price)}/mo)*\n\nKya aap freelancing clients ke liye websites banana chahte hain ya apne business ke liye?`,
           recommendedCourse: cNC
+        };
+      }
+
+      // YouTube & Creator Business
+      if (sessionMemory.targetField === 'creator') {
+        const cYT = findCourse('youtube-mastery') || FALLBACK_COURSES[16];
+        sessionMemory.lastDiscussedCourse = cYT;
+        return {
+          text: `YouTube aaj ke digital era me ek powerful media business platform hai!\n\n⭐ **Recommended: ${cYT.name}**\n\n• **Core Skills**: Niche positioning, 30-idea content banks, title & thumbnail packaging, high-retention scripting, studio production aur deep analytics.\n• **Deliverables**: 8 Practical creator deliverables + 90-Day YouTube Growth Capstone.\n• **Tools**: YouTube Studio, Photoshop, CapCut Desktop, Premiere Pro, Notion aur VidIQ.\n• **Duration:** 6 Months *(Hybrid / Live Online Labs)*\n• **Fee:** ${formatFee(cYT.price)} *(No-Cost EMI: ${calculateEMI(cYT.price)}/mo)*\n\nKya aap apna personal channel build karna chahte hain ya business channel?`,
+          recommendedCourse: cYT
         };
       }
     }
@@ -1214,7 +1224,7 @@
       sessionMemory.lastDiscussedCourse = c;
 
       return {
-        text: `Freelancing start karne ke liye 3 main pillars hote hain:\n1. **High-Demand Practical Skill** (AI Automation, Digital Marketing, Graphic Design, Web Development)\n2. **Live Proof-of-Work Portfolio** (Real client case studies)\n3. **Client Acquisition Strategy** (Fiverr Gig ranking, Upwork proposals, LinkedIn outreach & international contract closing)\n\n⭐ **Recommended Program: ${c.name}**\n\nNova Skills ke is 6-month program me hum international freelancing zero se sikhate hain — profile setup, high-converting proposal templates, rate negotiation aur direct client contracts.\n\n• **Duration:** 6 Months | **Fee:** ${formatFee(c.price)} *(No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n\nKya aap freelancing kisi specific skill me shuru karna chahte hain?`,
+        text: `Freelancing start karne ke liye 3 core pillars hote hain:\n1. **High-Value Marketable Skill & Niche Positioning**\n2. **Proof-of-Work Portfolio & Productized Offer**\n3. **Systematic Client Acquisition System** (Upwork, Fiverr, Direct 100-Prospect Outreach, Discovery Calls & SOW Contracts)\n\n⭐ **Recommended Program: ${c.name}**\n\nNova Skills ke is 6-month program me hum complete freelance business system sikhate hain — offer packaging, proposal writing, value pricing, contracts, onboarding aur recurring retainers.\n\n• **Duration:** 6 Months | **Fee:** ${formatFee(c.price)} *(No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n\nKya aap freelancing kisi specific skill me shuru karna chahte hain?`,
         recommendedCourse: c
       };
     }
