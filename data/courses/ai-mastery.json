@@ -1,625 +1,1274 @@
 {
   "course_id": "ai-mastery",
-  "course_name": "AI Mastery Program",
+  "course_name": "AI Solutions Engineering & Agentic AI Mastery",
+  "short_name": "AI Mastery",
   "academy": "AI Academy",
   "academy_id": "ai",
   "course_type": "MASTER",
   "course_role": "Career/Monetization",
-  "level": "ADVANCED",
+  "level": "BEGINNER TO PROFESSIONAL",
   "duration": "6 Months",
+  "duration_months": 6,
   "learning_hours": 240,
+  "price": 39999,
+  "original_price": 79999,
+  "discount": "50% OFF",
   "future_review_status": "FAST-CHANGING",
+  "eyebrow": "AI • AUTOMATION • AGENTS • PRODUCTION AI",
+  "positioning_statement": "Beginner to Production AI Builder in 6 Months",
+  "core_positioning_quote": "Don't Just Use AI. Build AI Systems Businesses Can Actually Deploy.",
+  "hero_subtitle": "Build production-ready AI agents, RAG applications, business automations and connected AI systems using Python, APIs, n8n, modern LLMs and agent frameworks.",
+  "seo_title": "AI Solutions Engineering & Agentic AI Course | Nova Skills",
+  "seo_description": "Learn AI agents, RAG, Python, n8n automation, APIs, MCP and production AI application development in Nova Skills' 6-month AI Solutions Engineering & Agentic AI program.",
+  "badges": [
+    "6 Months",
+    "Beginner → Professional",
+    "Live Interactive Training",
+    "12+ Practical Labs",
+    "6 Portfolio Projects",
+    "1 Industry Capstone",
+    "Deployment Included",
+    "Certificate",
+    "Placement Support"
+  ],
   "target_audience": {
     "best_for": [
-      "Professionals looking to master AI Mastery Program.",
-      "Forward-thinking individuals aiming to integrate AI tools into their workflows.",
-      "Tech enthusiasts looking to build practical, deployable AI projects."
+      "Aspiring AI Engineers, Software Developers & IT graduates aiming to build production-grade agentic AI applications.",
+      "Working Professionals & Operations Managers seeking to automate complex business workflows using n8n, APIs and LLMs.",
+      "Digital Marketers & Business Analysts wanting to implement intelligent lead qualification, custom RAG search, and automated research.",
+      "Entrepreneurs, Freelancers & Agency Owners building AI automation services and enterprise solution client retainers."
     ],
-    "who_should_take_foundation_first": "Beginners lacking basic digital literacy should take foundation courses first.",
+    "who_should_take_foundation_first": "Absolute beginners with zero computer literacy should review basic digital computer use before jumping into API coding.",
     "not_for": [
-      "Those looking for abstract theory without hands-on practice.",
-      "Individuals expecting overnight success without building real projects."
+      "Those looking only for generic prompt tips or surface-level ChatGPT tricks without hands-on system building.",
+      "Individuals looking for abstract academic machine-learning math without commercial deployment."
     ]
   },
   "prerequisites": {
-    "required": "Basic computer literacy and understanding of web applications.",
-    "recommended": "Familiarity with the domain relevant to the tools.",
+    "required": "Basic computer knowledge, logical thinking, and comfort using modern web applications. No advanced programming background required — foundational Python for AI is taught from scratch.",
+    "recommended": "Willingness to learn practical Python, API integration concepts, and build weekly hands-on labs.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with internet connection",
-      "software_accounts": "ChatGPT, Claude, Gemini, Midjourney, n8n, Make.com, Python, GitHub Copilot, Cursor"
+      "hardware": "Standard laptop or desktop (Windows, macOS, or Linux) with minimum 8GB RAM and stable internet connectivity.",
+      "software_accounts": "Free/starter accounts on GitHub, OpenAI API, Anthropic Claude, Google Gemini, n8n (cloud or local), Supabase, and Cursor."
     },
-    "not_required": "Advanced programming degrees"
+    "not_required": "Advanced mathematics, calculus, or prior computer science degree."
   },
   "overview": {
-    "positioning": "Flagship career program in modern generative AI, autonomous agent architectures, workflow automation, and custom model integration.",
-    "short_description": "Learn to leverage ChatGPT, Claude, Gemini to solve real problems.",
+    "positioning": "Don't Just Use AI. Build AI Systems Businesses Can Actually Deploy. Beginner to Production AI Builder in 6 Months.",
+    "short_description": "Learn how to identify real business problems, design AI solutions, connect LLMs with APIs and company data, build AI agents and automation systems, evaluate their reliability, and deploy working AI applications.",
     "key_facts": {
-      "level": "ADVANCED",
+      "level": "Beginner to Professional",
       "duration": "6 Months",
-      "format": "Hands-On Projects",
+      "format": "Live Interactive Mentorship + Hands-On Labs",
       "estimated_learning_hours": "240 Hours",
-      "project_count": "6 Projects",
-      "capstone": "Final Delivery Project",
-      "ai_integration": "AI-CRITICAL",
-      "career_focus": "AI Practitioner"
+      "project_count": "6 Portfolio Projects + 1 Capstone",
+      "capstone": "AI Operations System for a Real Business",
+      "ai_integration": "AI-ENGINEERING & AGENTIC",
+      "career_focus": "AI Solutions Engineer & AI Automation Specialist"
     },
     "what_you_will_be_able_to_do": [
-      "Implement AI-driven workflows.",
-      "Master tools like ChatGPT, Claude.",
-      "Deploy functional projects to production."
+      "Design and deploy production-grade RAG knowledge assistants with accurate citations and vector search.",
+      "Build autonomous multi-agent systems with tool calling, memory, planning, and human-in-the-loop approvals.",
+      "Architect end-to-end business automation pipelines in n8n integrating CRMs, databases, and LLM APIs.",
+      "Develop and deploy FastAPI backend AI applications containerized with Docker to cloud environments.",
+      "Benchmark and evaluate LLM reliability using golden test datasets, latency metrics, and guardrail protocols.",
+      "Connect models to external business software using the open Model Context Protocol (MCP) standard."
     ]
   },
+  "what_you_will_be_able_to_build": [
+    {
+      "title": "Enterprise Knowledge AI Assistant",
+      "icon": "📚",
+      "tag": "RAG & VECTOR SEARCH",
+      "description": "Production RAG assistant ingesting PDFs, docs, and databases with semantic vector search, strict hallucination controls, and verified source citations."
+    },
+    {
+      "title": "AI Lead Qualification System",
+      "icon": "⚡",
+      "tag": "END-TO-END AUTOMATION",
+      "description": "Automated inbound lead capture pipeline with real-time AI scoring, CRM enrichment, automated multi-channel follow-up, and salesperson notifications."
+    },
+    {
+      "title": "AI Customer Support Agent",
+      "icon": "🎧",
+      "tag": "AUTONOMOUS TOOL CALLING",
+      "description": "Intelligent support agent answering technical questions from knowledge bases, creating tickets in Zendesk/CRM, and executing safe escalation workflows."
+    },
+    {
+      "title": "Multi-Agent Business Workflow",
+      "icon": "🤖",
+      "tag": "MULTI-AGENT ORCHESTRATION",
+      "description": "Collaborative agent architecture (Researcher → Planner → Executor → Reviewer) executing autonomous end-to-end industry reports."
+    },
+    {
+      "title": "AI Data Analyst",
+      "icon": "📊",
+      "tag": "STRUCTURED REASONING",
+      "description": "Conversational data intelligence tool converting plain-English queries into SQL/Python data transforms, statistical summaries, and visual charts."
+    },
+    {
+      "title": "Production AI Application",
+      "icon": "🚀",
+      "tag": "FULL-STACK DEPLOYMENT",
+      "description": "Full-stack AI SaaS microservice with FastAPI, database persistence, JWT authentication, Docker container, and public cloud deployment."
+    }
+  ],
   "why_now": {
-    "industry_shift": "Enterprises have moved past simple chat prompts toward end-to-end automated AI workflows, multi-agent systems, and production pipelines.",
-    "ai_impact": "Mastering AI architecture enables a single professional to deliver software, content, and automation systems previously requiring entire departments.",
-    "business_demand": "Companies are actively seeking practitioners skilled in modern AI tools.",
-    "career_opportunity": "Early adopters can secure high-leverage roles."
+    "industry_shift": "Enterprises have moved past basic chat prompts toward end-to-end automated AI workflows, multi-agent architectures, connected MCP tools, and reliable production pipelines.",
+    "ai_impact": "Modern AI Solutions Engineers build software, automation, and decision systems in hours that previously required whole engineering departments.",
+    "business_demand": "Businesses worldwide are urgently hiring specialists who can connect LLMs to their internal databases, CRMs, and APIs rather than just chatting with a bot.",
+    "career_opportunity": "Early movers who master Agentic AI, RAG, and n8n automations can command premium salaries and lucrative freelance consulting retainers."
   },
+  "specialization_tracks": [
+    {
+      "track": "Track A",
+      "title": "AI Automation Specialist",
+      "badge": "LOW-CODE & BUSINESS WORKFLOWS",
+      "focus": "n8n, APIs, Webhooks, CRM integrations, business automations, RAG integrations, Model Context Protocol (MCP), and operational workflow orchestration.",
+      "ideal_for": "Non-coders, business professionals, digital marketers, operations leaders, entrepreneurs, and automation freelancers.",
+      "target_roles": ["AI Automation Specialist", "AI Workflow Developer", "AI Operations Consultant", "Freelance AI Automation Agency Owner"]
+    },
+    {
+      "track": "Track B",
+      "title": "AI Solutions Engineer",
+      "badge": "CODE-DRIVEN APPLICATION ENGINEERING",
+      "focus": "Python, LLM APIs, FastAPI, Advanced RAG, LangGraph, agentic loops, vector databases, Docker containerization, cloud deployment, and LLMOps evaluation.",
+      "ideal_for": "Developers, computer science graduates, tech professionals, and engineers seeking deep AI application engineering capabilities.",
+      "target_roles": ["AI Solutions Engineer", "Generative AI Developer", "Agentic AI Engineer", "LLM Application Developer"]
+    }
+  ],
   "learning_outcomes": [
-    "DESIGN architectures utilizing ChatGPT.",
-    "BUILD practical solutions for business needs.",
-    "DEPLOY projects adhering to best practices."
+    "ARCHITECT practical, business-ready AI solutions solving high-impact operational bottlenecks.",
+    "INTEGRATE OpenAI, Anthropic Claude, and Google Gemini APIs with structured JSON output enforcement.",
+    "DEVELOP enterprise RAG knowledge engines with pgvector, chunking optimizations, and source attribution.",
+    "BUILD autonomous AI agents with tool calling, persistent state, dynamic routing, and memory.",
+    "ORCHESTRATE collaborative multi-agent teams using LangGraph and the OpenAI Agents SDK.",
+    "AUTOMATE complex company workflows with n8n, webhooks, CRMs, Google Workspace, and databases.",
+    "DEVELOP Python-based backend microservices using FastAPI, async requests, and environment secrets.",
+    "CONNECT local and cloud vector databases including PostgreSQL, Supabase, pgvector, and Qdrant.",
+    "IMPLEMENT Model Context Protocol (MCP) clients and servers for standardized external tool access.",
+    "CONTAINERIZE and deploy working AI web services using Docker to modern cloud hosting platforms.",
+    "EVALUATE AI accuracy and latency using golden test datasets, hallucination metrics, and LLMOps tracing.",
+    "APPLY defensive AI security protocols including prompt injection defense and PII protection.",
+    "PRESENT commercial AI consulting proposals, ROI projections, and architectural blueprints to stakeholders."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1",
-        "focus": "Prompt Engineering Fundamentals"
+        "stage": "Stage 1: Core Foundation",
+        "focus": "Modern LLM Systems, Context Windows & Context Engineering"
       },
       {
-        "stage": "Stage 2",
-        "focus": "AI for Content & Creative Generation"
+        "stage": "Stage 2: Developer Tooling",
+        "focus": "Python for AI Builders, REST APIs & Multi-Model Integration"
       },
       {
-        "stage": "Stage 3",
-        "focus": "AI Automation & Workflow Orchestration"
+        "stage": "Stage 3: Enterprise RAG",
+        "focus": "Embeddings, Vector Databases, Semantic Search & Retrieval Guardrails"
       },
       {
-        "stage": "Stage 4",
-        "focus": "AI Agents & Autonomous Systems"
+        "stage": "Stage 4: Workflow Automation",
+        "focus": "n8n Enterprise Automation, Webhook Orchestration & CRM Sync"
       },
       {
-        "stage": "Stage 5",
-        "focus": "AI for Code Generation & Development"
+        "stage": "Stage 5: Agentic AI & MCP",
+        "focus": "Tool Calling, Multi-Agent Teams, LangGraph & Model Context Protocol"
       },
       {
-        "stage": "Stage 6",
-        "focus": "Capstone AI Solution Architecture"
+        "stage": "Stage 6: Production & Capstone",
+        "focus": "FastAPI, Docker, Cloud Deployment, LLMOps Evaluation & Live Business Capstone"
       }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
       {
-        "tool": "ChatGPT",
-        "purpose": "Essential for AI Mastery Program.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "Python 3.11+",
+        "purpose": "Primary language for LLM scripting, data manipulation, and backend AI services.",
+        "what_student_learns": "Scripting, requests, JSON handling, async execution, and environment secrets.",
+        "what_student_builds": "API clients, RAG pipelines, and FastAPI endpoints."
       },
       {
-        "tool": "Claude",
-        "purpose": "Essential for AI Mastery Program.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "n8n Automation",
+        "purpose": "Enterprise workflow automation platform connecting LLMs to business applications.",
+        "what_student_learns": "Trigger architectures, webhook listeners, conditional routing, error retries, and CRM nodes.",
+        "what_student_builds": "Automated lead qualification and CRM synchronization pipelines."
       },
       {
-        "tool": "Gemini",
-        "purpose": "Essential for AI Mastery Program.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "OpenAI & Anthropic APIs",
+        "purpose": "Frontier foundation model APIs (GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro).",
+        "what_student_learns": "System instructions, structured JSON schema outputs, streaming, and tool definitions.",
+        "what_student_builds": "Multi-model business assistants and intelligent classification engines."
       },
       {
-        "tool": "Midjourney",
-        "purpose": "Essential for AI Mastery Program.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "LangGraph & LangChain",
+        "purpose": "Stateful agentic framework for cyclic multi-agent orchestration and human-in-the-loop.",
+        "what_student_learns": "State graphs, node routing, conditional edges, checkpointing, and tool binding.",
+        "what_student_builds": "Multi-agent research and execution teams."
       },
       {
-        "tool": "n8n",
-        "purpose": "Essential for AI Mastery Program.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "PostgreSQL & pgvector",
+        "purpose": "Enterprise database and vector storage for document embeddings and search.",
+        "what_student_learns": "Embedding storage, cosine similarity indexing, metadata filtering, and hybrid search.",
+        "what_student_builds": "Enterprise document retrieval engine."
       },
       {
-        "tool": "Make.com",
-        "purpose": "Essential for AI Mastery Program.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "Model Context Protocol (MCP)",
+        "purpose": "Open standard for connecting AI assistants securely to external tools and data stores.",
+        "what_student_learns": "MCP client-server architecture, resources, tools, prompts, and permission boundaries.",
+        "what_student_builds": "Connected business AI assistant with standardized tool integration."
       },
       {
-        "tool": "Python",
-        "purpose": "Essential for AI Mastery Program.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "FastAPI & Docker",
+        "purpose": "High-performance Python backend framework and containerization for live deployment.",
+        "what_student_learns": "REST endpoint design, Pydantic validation, Dockerfile creation, and cloud deploys.",
+        "what_student_builds": "Containerized AI microservice deployed to live public cloud URLs."
       },
       {
-        "tool": "GitHub Copilot",
-        "purpose": "Essential for AI Mastery Program.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
-      },
-      {
-        "tool": "Cursor",
-        "purpose": "Essential for AI Mastery Program.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "Cursor & AI Coding Tools",
+        "purpose": "Agentic AI-assisted software development environment.",
+        "what_student_learns": "Code generation, codebase comprehension, AI refactoring, and test generation.",
+        "what_student_builds": "Clean, modular production codebases."
       }
     ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
+    "supporting_tools": [
+      { "tool": "Supabase", "purpose": "Hosted Postgres and vector storage backend." },
+      { "tool": "Qdrant / Chroma", "purpose": "Dedicated vector search engines." },
+      { "tool": "Ollama", "purpose": "Local open-source LLM inference (Llama 3, Mistral)." },
+      { "tool": "Hugging Face", "purpose": "Open-source embedding models and model exploration." },
+      { "tool": "Make.com", "purpose": "Low-code alternative integration platform." },
+      { "tool": "Git & GitHub", "purpose": "Version control, PR reviews, and public portfolio hosting." },
+      { "tool": "Ragas / LangSmith", "purpose": "LLM evaluation and observability tracking." }
+    ],
+    "emerging_tools": [
+      { "tool": "OpenAI Agents SDK", "purpose": "Lightweight native agentic abstractions." },
+      { "tool": "Claude Computer Use", "purpose": "Next-gen desktop and browser automation concepts." },
+      { "tool": "OpenTelemetry for AI", "purpose": "Standardized AI tracing and latency monitoring." }
+    ]
   },
   "industry_workflow": {
-    "overview": "Standard operations:",
+    "overview": "How a Senior AI Solutions Engineer executes client & enterprise deliverables in 2026/27:",
     "stages": [
-      {
-        "step": 1,
-        "name": "Discovery",
-        "desc": "Identify the problem."
-      },
-      {
-        "step": 2,
-        "name": "Tool Selection",
-        "desc": "Choose the right AI stack."
-      },
-      {
-        "step": 3,
-        "name": "Implementation",
-        "desc": "Build the workflow."
-      },
-      {
-        "step": 4,
-        "name": "Deployment",
-        "desc": "Launch and monitor."
-      }
+      { "step": 1, "name": "Business Discovery", "desc": "Identify high-friction manual workflows, stakeholder needs, and data availability." },
+      { "step": 2, "name": "Requirement & Feasibility", "desc": "Evaluate AI feasibility, error tolerance, latency expectations, and build-vs-buy decisions." },
+      { "step": 3, "name": "Solution Architecture", "desc": "Map data flow, model roles, vector storage, external APIs, and human approval checkpoints." },
+      { "step": 4, "name": "Data Ingestion & Knowledge Prep", "desc": "Clean, parse, and chunk company documentation; generate embeddings into vector databases." },
+      { "step": 5, "name": "Model & Tool Selection", "desc": "Select optimal frontier and open-source models balancing cost, reasoning speed, and context window." },
+      { "step": 6, "name": "API & System Integration", "desc": "Connect external software via REST webhooks, CRMs, and Model Context Protocol (MCP)." },
+      { "step": 7, "name": "Agent & Workflow Construction", "desc": "Build autonomous agent loops, prompt chains, stateful LangGraph workflows, and n8n nodes." },
+      { "step": 8, "name": "Evaluation & Testing", "desc": "Benchmark against golden datasets; measure retrieval accuracy, tool selection, and hallucination rates." },
+      { "step": 9, "name": "Defensive Security & Privacy", "desc": "Enforce prompt injection guardrails, role-based access, PII redaction, and secret protection." },
+      { "step": 10, "name": "Containerization & Deployment", "desc": "Package solution with Docker, configure FastAPI endpoints, and deploy to scalable cloud infrastructure." },
+      { "step": 11, "name": "Observability & Monitoring", "desc": "Track production latency, token costs, drift, error rates, and user feedback." },
+      { "step": 12, "name": "Business Handover & ROI Review", "desc": "Deliver documentation, train operators, present measurable impact metrics, and establish maintenance retainers." }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Technology",
-      "business_problem": "Inefficient processes",
-      "approach": "AI automation",
-      "toolset": "ChatGPT",
-      "output": "Optimized workflow"
+      "sector": "Enterprise Operations & Knowledge",
+      "business_problem": "Staff spend 20+ hours weekly searching hundreds of internal policy PDFs and legal SOPs with slow, inaccurate answers.",
+      "approach": "Hybrid RAG pipeline with semantic vector search, metadata filtering, and strict hallucination prevention.",
+      "toolset": "Python, Supabase pgvector, LangChain, Claude 3.5 Sonnet, FastAPI",
+      "output": "Instant sub-second answers with exact page citations and zero hallucination risk."
+    },
+    {
+      "sector": "B2B Sales & Lead Generation",
+      "business_problem": "Inbound website leads wait 12–24 hours for manual sales review; cold leads receive generic mass email blasts.",
+      "approach": "Automated real-time lead capture, web scraping company enrichment, LLM intent scoring, and personalized CRM sync.",
+      "toolset": "n8n, Webhooks, OpenAI API, HubSpot CRM, Gmail API",
+      "output": "Instant 60-second personalized response, automated qualification, and alert sent directly to sales team."
+    },
+    {
+      "sector": "E-Commerce & SaaS Support",
+      "business_problem": "Tier-1 repetitive customer tickets overwhelm human support teams during peak order and renewal periods.",
+      "approach": "Autonomous agent capable of querying inventory and order status APIs, answering FAQs, and escalating complex issues.",
+      "toolset": "LangGraph, OpenAI Agents SDK, REST APIs, Zendesk Webhooks",
+      "output": "68% first-touch automated resolution with zero human intervention and seamless human handoff."
+    },
+    {
+      "sector": "Strategic Business Research",
+      "business_problem": "Market analysis across competing products requires days of manual web research, comparison charting, and report drafting.",
+      "approach": "Multi-agent research pipeline where specialized sub-agents independently research, analyze, synthesize, and review findings.",
+      "toolset": "LangGraph, Tavily API, Claude 3.5 Sonnet, Markdown Exporter",
+      "output": "Comprehensive 15-page market briefing synthesized autonomously in 8 minutes with verified references."
     }
   ],
   "ai_integration": {
-    "role_classification": "AI-CRITICAL",
-    "ai_can_assist_with": "Ideation and drafting.",
-    "ai_can_automate": "Repetitive execution.",
-    "ai_cannot_replace": "Strategic decision making.",
-    "human_expertise_required": "Quality assurance.",
-    "validation_protocol": "Manual review of outputs.",
-    "responsible_use": "Adherence to data privacy."
+    "role_classification": "APPLIED-AI-SOLUTIONS-ENGINEER",
+    "ai_can_assist_with": "Drafting code scaffolding, generating synthetic test datasets, analyzing error traces, and summarizing documentation.",
+    "ai_can_automate": "Structured classification, repetitive ETL data extraction, document embeddings generation, and preliminary support triaging.",
+    "ai_cannot_replace": "System architectural design, commercial empathy, enterprise security boundaries, and critical client relationship management.",
+    "human_expertise_required": "Architectural trade-offs, defensive security validation, edge-case debugging, model evaluation design, and business alignment.",
+    "validation_protocol": "Every production AI pipeline must be validated with regression test suites, golden question-answer datasets, and latency tracking.",
+    "responsible_use": "Strict zero-data-leakage policies, end-user transparency, PII sanitization, and compliance with enterprise data governance."
   },
-  "best_practices": [
-    "Iterate rapidly.",
-    "Verify all AI outputs.",
-    "Maintain organized project files."
-  ],
-  "common_mistakes": [
-    {
-      "mistake": "Trusting AI blindly.",
-      "why_it_happens": "Overconfidence.",
-      "professional_approach": "Always verify output."
-    }
-  ],
+  "course_comparison": {
+    "title": "Why This Program Is Radically Different",
+    "typical_course": [
+      "Teaches basic ChatGPT chatting and generic prompt engineering",
+      "Memorizes prompts and collects 'top 100 prompt' cheat sheets",
+      "Rambles through dozens of flashy web tools without deep integration",
+      "Creates toy chatbots that only run on a local laptop",
+      "Zero API coding, zero Python, zero database integration",
+      "No evaluation, no test datasets, no accuracy benchmarking",
+      "No security training, prompt injection, or vulnerability awareness",
+      "No deployment experience — projects never reach real users"
+    ],
+    "novaskills_mastery": [
+      "Teaches applied AI solutions engineering for real business architectures",
+      "Designs context engineering, structured JSON schemas & API workflows",
+      "Focuses on core engineering stacks: Python, n8n, LangGraph, Supabase, MCP",
+      "Builds production multi-agent systems and enterprise RAG engines",
+      "Full API integration, vector databases, webhooks & CRM connections",
+      "Rigorously measures accuracy using golden test suites & LLMOps tracing",
+      "Covers prompt injection defense, PII redaction & permission guardrails",
+      "Deploys containerized FastAPI applications with public live URLs"
+    ]
+  },
+  "portfolio_specs": {
+    "title": "Your AI Engineering Portfolio",
+    "description": "Graduates leave with an employer-ready proof-of-work portfolio hosted on public GitHub and deployed to the cloud:",
+    "deliverables": [
+      "Public GitHub profile with clean, documented project repositories",
+      "Production READMEs with system architecture diagrams and setup guides",
+      "Live working application URLs accessible to hiring managers and clients",
+      "Measured evaluation benchmark reports demonstrating verified reliability",
+      "Video walkthroughs explaining design decisions and workflow logic",
+      "Comprehensive business case study writeups demonstrating commercial ROI"
+    ],
+    "case_study_structure": [
+      "1. Business Problem & Opportunity Identification",
+      "2. Stakeholder Requirements & Constraints",
+      "3. Solution Architecture & Flow Diagram",
+      "4. Toolchain & Foundation Model Selection",
+      "5. Technical Implementation & Integration",
+      "6. Challenges Faced & Debugging Decisions",
+      "7. Systematic Evaluation & Benchmark Results",
+      "8. Commercial Business Impact & ROI"
+    ]
+  },
+  "assessment_model": {
+    "title": "Practical Assessment & Competency Model",
+    "breakdown": [
+      { "item": "Weekly Hands-On Practical Labs", "weight": "20%", "desc": "Targeted technical lab exercises reinforcing each module's core engineering concepts." },
+      { "item": "Module Practical Assessments", "weight": "15%", "desc": "Hands-on coding challenges and workflow implementations submitted via GitHub/n8n." },
+      { "item": "Core Portfolio Projects (6 Builds)", "weight": "20%", "desc": "Six production-grade AI system implementations evaluated on functionality and code quality." },
+      { "item": "AI Evaluation & Benchmark Reports", "weight": "10%", "desc": "Rigorously measured test suites and hallucination assessments on student projects." },
+      { "item": "Industry Problem-Solving Assignment", "weight": "15%", "desc": "Commercial AI implementation proposal and solution blueprint for a real or simulated SME." },
+      { "item": "Final Industry Capstone Deployment", "weight": "20%", "desc": "Live end-to-end AI operations system defending architecture, code, and business ROI before mentors." }
+    ]
+  },
   "career_paths": {
-    "entry_roles": "AI Specialist",
-    "mid_roles": "AI Architect",
-    "specialist_roles": "Automation Consultant",
-    "freelance_roles": "AI Freelancer",
-    "employer_expectations": "Proven ability to deploy AI solutions.",
-    "what_student_demonstrates": "Portfolio of working projects."
+    "entry_roles": "AI Automation Specialist, AI Workflow Developer, Generative AI Application Developer, AI Integration Associate, Junior AI Solutions Engineer, Prompt & Context Engineering Specialist, AI Operations Associate.",
+    "mid_roles": "AI Solutions Engineer, Autonomous Agent Developer, Enterprise RAG Specialist, AI Automation Consultant, LLMOps Specialist.",
+    "specialist_roles": "Lead AI Solutions Engineer, Agentic AI Architect, Enterprise AI Integration Consultant, Independent AI Agency Founder.",
+    "freelance_roles": "AI Automation Freelancer, Business Workflow Consultant, Custom RAG Developer, Retainer-based AI Ops Partner.",
+    "employer_expectations": "Demonstrated proof of work: public GitHub repositories, deployed working apps, vector database experience, and measured evaluation results.",
+    "what_student_demonstrates": "A battle-tested portfolio of 6 production systems + 1 comprehensive industry capstone with live URLs and architecture diagrams."
   },
   "freelance_applications": {
     "services_offered": [
-      "AI Integration",
-      "Workflow Automation"
+      "Custom Enterprise RAG Knowledge Base Setup (₹40,000 – ₹1,50,000 per project)",
+      "Inbound AI Lead Qualification & CRM Automation (₹30,000 – ₹90,000 per implementation)",
+      "Autonomous Customer Support & Ticketing AI Agents (₹50,000 – ₹1,20,000 per setup)",
+      "Internal Business Workflow Automation with n8n (₹25,000 – ₹75,000 monthly retainer)",
+      "AI Strategic Audit & Solution Architecture Proposals (₹20,000 – ₹50,000 per discovery)"
     ],
-    "client_workflow": "Consult -> Build -> Deploy -> Maintain",
-    "portfolio_requirements": "Working prototypes."
+    "client_workflow": "Discovery & Mapping -> Architecture Proposal -> Prototype Build -> Tool Integration -> Evaluation -> Staging Deployment -> Team Handover & Retainer Maintenance",
+    "portfolio_requirements": "Working prototypes, client-facing demo recordings, and architectural diagrams proving reliability."
   },
   "what_you_will_build": [
-    "Project focused on Prompt Engineering Fundamentals",
-    "Project focused on AI for Content & Creative Generation",
-    "Project focused on AI Automation & Workflow Orchestration",
-    "Project focused on AI Agents & Autonomous Systems",
-    "Project focused on AI for Code Generation & Development",
-    "Project focused on Capstone AI Solution Architecture"
+    "AI Research & Report Agent (Autonomous multi-source research with structured markdown synthesis)",
+    "Enterprise RAG Knowledge Assistant (Vector search, pgvector, metadata filtering, citations & guardrails)",
+    "AI Lead Qualification & CRM Automation (Website webhook -> AI qualification -> CRM update -> follow-up)",
+    "AI Customer Support Agent (Autonomous tool-calling, knowledge retrieval, ticket creation & escalation)",
+    "AI Data Analyst (Natural language to SQL/Python analytics, statistics & visual dashboard charts)",
+    "Multi-Agent Business Workflow (Collaborative team: Researcher, Analyst, Writer, and Reviewer)",
+    "Enterprise AI Operations System (End-to-end multi-workflow business capstone deployed live to production)"
   ],
   "final_deliverables": [
-    "Code repository or live app",
-    "Documentation"
+    "Full public GitHub repository with architecture diagrams and test suites",
+    "Live deployed application URL with functioning endpoints and authentication",
+    "Formal Evaluation Benchmark Report measuring latency, accuracy, and token spend",
+    "Video demo presentation walking through system architecture and business impact"
   ],
-  "assessment": {
-    "model": "Project-based evaluation",
-    "criteria": "Functionality and clean execution."
-  },
   "certification": {
-    "title": "Certified AI Mastery Program Professional",
-    "criteria": "Completion of all projects.",
-    "verification": "Online portal."
+    "title": "Certificate in AI Solutions Engineering & Agentic AI",
+    "criteria": "Successful completion of all 14 curriculum modules, 12 practical labs, 6 portfolio builds, and defense of the final industry capstone.",
+    "verification": "ISO 9001:2015 verified credential with permanent QR-code validation and LinkedIn sharing badge."
   },
-  "not_covered": "Theoretical machine learning math.",
+  "not_covered": "Theoretical machine-learning mathematics, low-level CUDA GPU kernel development, or training raw billion-parameter LLMs from scratch. This program focuses entirely on Applied AI Engineering, Agents, RAG, and Business Solution Deployment.",
   "next_learning_path": {
-    "recommended_next": "Advanced AI Architecture",
-    "related_programs": "Other AI Academy courses."
+    "recommended_next": "Full-Stack AI SaaS Development or Enterprise AI Architecture Retainers",
+    "related_programs": "Python Developer Professional, No-Code Web Academy, AI Digital Marketing Master."
   },
   "faq": [
     {
-      "question": "Is AI Mastery Program for beginners?",
-      "answer": "Check the prerequisites, but generally we start from practical basics."
+      "question": "Is this course suitable for beginners?",
+      "answer": "Yes! The program is structured from beginner foundations to professional-level implementation. Module 1 establishes core LLM concepts without jargon, and Module 3 introduces Python specifically tailored for AI builders step-by-step. While prior tech interest helps, no computer science degree or advanced coding background is required."
     },
     {
-      "question": "Will I build real projects?",
-      "answer": "Yes, every module includes hands-on builds."
+      "question": "Do I need prior coding experience?",
+      "answer": "No prior software development experience is required. We teach you the exact Python needed to build, connect, and debug AI applications (functions, data structures, APIs, JSON, and environment variables). If you prefer a minimal-code career, Track A (AI Automation Specialist) focuses on n8n, webhooks, and visual workflow builders."
     },
     {
-      "question": "Are the tools free?",
-      "answer": "Most tools have free tiers sufficient for learning."
+      "question": "How much Python will I learn?",
+      "answer": "You will learn practical, modern Python specifically for AI solution engineering: calling LLM APIs, handling structured JSON, parsing files, interacting with vector databases (pgvector/Supabase), creating REST endpoints with FastAPI, and handling environment secrets. We skip irrelevant academic theory to focus purely on building functional AI systems."
+    },
+    {
+      "question": "What is Agentic AI?",
+      "answer": "Agentic AI refers to autonomous systems that don't just generate text, but actively reason, plan, choose tools, and execute multi-step tasks to achieve a goal. In this course, you advance from simple tool calling to building stateful multi-agent workflows using LangGraph and the OpenAI Agents SDK where agents collaborate to solve complex problems."
+    },
+    {
+      "question": "What is RAG (Retrieval-Augmented Generation)?",
+      "answer": "RAG connects LLMs to your private business documents and databases so the model provides accurate, up-to-date answers with verifiable citations without retraining. You will master document chunking, embeddings, vector indexing with pgvector/Supabase, semantic search, and hallucination reduction guardrails."
+    },
+    {
+      "question": "What is Model Context Protocol (MCP)?",
+      "answer": "Model Context Protocol (MCP) is an open industry standard introduced by Anthropic that standardizes how AI applications connect to external tools, databases, and enterprise software. In Module 8, you will build connected AI systems that utilize MCP servers and clients to interact safely with external business tools."
+    },
+    {
+      "question": "Will I learn n8n for enterprise automation?",
+      "answer": "Yes! n8n is our primary enterprise automation engine in Module 6. You will build production-grade workflows triggered by webhooks, integrating Google Workspace, CRMs (like HubSpot), databases, and LLM nodes with error retries, logging, and human-in-the-loop approval steps."
+    },
+    {
+      "question": "Will I build real AI agents and deploy them?",
+      "answer": "Absolutely. You will build multiple real-world agents including a multi-agent business research team, an automated lead qualification system, and an intelligent customer support agent. Every major project is packaged and deployed with live public URLs—not just run on your local computer."
+    },
+    {
+      "question": "What portfolio projects will I build?",
+      "answer": "You will build 6 core portfolio projects and 1 industry capstone: (1) AI Research & Report Agent, (2) Enterprise RAG Knowledge Assistant, (3) AI Lead Qualification & CRM Automation, (4) AI Customer Support Agent, (5) AI Data Analyst, (6) Production Full-Stack AI Microservice, and (7) An end-to-end AI Operations System for a real business."
+    },
+    {
+      "question": "Can non-technical students join this program?",
+      "answer": "Yes. Non-technical students and business professionals thrive in this course, especially on Track A (AI Automation Specialist), which leverages n8n, webhooks, and visual logic. For those wanting deeper engineering skills, our progressive curriculum supports you from first principles into Python development."
+    },
+    {
+      "question": "What is the difference between AI Automation Specialist and AI Solutions Engineer?",
+      "answer": "AI Automation Specialists focus on no-code/low-code workflow orchestration, connecting enterprise software, CRMs, and LLMs using platforms like n8n and Make. AI Solutions Engineers build custom software, writing Python, designing vector databases, building custom agent loops in LangGraph, and deploying containerized FastAPI backends. Both paths share common foundations in this unified program."
+    },
+    {
+      "question": "Will I receive a portfolio upon graduation?",
+      "answer": "Yes. You will graduate with a verified public GitHub portfolio containing clean code repositories, architectural diagrams, video demonstrations, live cloud deployment URLs, and systematic evaluation reports that give hiring managers and clients tangible proof of work."
+    },
+    {
+      "question": "Which AI models and toolchains are covered?",
+      "answer": "You will work with OpenAI (GPT-4o), Anthropic (Claude 3.5 Sonnet), Google (Gemini 1.5 Pro), open-source local models via Ollama (Llama 3), Python, n8n, LangGraph, Supabase, pgvector, Cursor, Docker, and modern cloud deployment platforms."
+    },
+    {
+      "question": "What happens if AI tools change during the course?",
+      "answer": "Nova Skills teaches underlying architectural principles—context windows, embeddings, vector mathematics, state machines, API protocols, and evaluation—rather than fleeting tool interfaces. When a new model or tool releases, you will know how to plug it in seamlessly within hours."
+    },
+    {
+      "question": "What is the fee and are there EMI options?",
+      "answer": "The official tuition is ₹39,999 (all-inclusive with 18% GST). We provide 0% interest No-Cost EMI options starting at approximately ₹3,999/month across flexible bank and NBFC tenures. Live interactive mentoring, 12+ labs, portfolio reviews, and dedicated placement support are fully included."
     }
   ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Prompt Engineering Fundamentals",
-      "module_purpose": "Master advanced prompting techniques to control output quality.",
+      "module_title": "AI Foundations & Modern LLM Systems",
+      "module_purpose": "Understand core LLM architectures, tokens, context windows, model capabilities, and structured business problem formulation.",
       "what_you_will_learn": [
-        "Learn Anatomy of a Prompt",
-        "Learn Chain-of-Thought & Few-Shot",
-        "Learn System Instructions",
-        "Learn Evaluating Model Responses"
+        "Core mechanics: Generative AI, Transformers, tokens, and context window economics",
+        "Frontier and open-source models: GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, and Llama 3",
+        "Hallucination mechanics, reasoning workflows, and deterministic structured outputs",
+        "Multimodal AI concepts, enterprise privacy standards, and business problem discovery"
       ],
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "Anatomy of a Prompt",
-          "what_is_taught": "Fundamentals of Anatomy of a Prompt",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Anatomy of a Prompt in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Generative AI, Transformers & Token Economics",
+          "what_is_taught": "How modern LLMs process tokens, calculate probability, and manage context window limitations.",
+          "why_it_matters": "Prevents catastrophic context truncation and controls API usage costs.",
+          "what_learner_does": "Calculate token consumption and context window requirements across varying business document lengths.",
+          "expected_outcome": "Accurate token and cost calculation model for business document processing."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "Chain-of-Thought & Few-Shot",
-          "what_is_taught": "Fundamentals of Chain-of-Thought & Few-Shot",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Chain-of-Thought & Few-Shot in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Frontier vs Open-Source Model Evaluation",
+          "what_is_taught": "Direct comparative analysis of GPT-4o, Claude 3.5, Gemini 1.5 Pro, and local Llama 3 models.",
+          "why_it_matters": "Enables choosing the right model for reasoning vs speed vs privacy requirements.",
+          "what_learner_does": "Benchmark 3 frontier models on the exact same business categorization and extraction task.",
+          "expected_outcome": "Model selection scorecard comparing latency, output quality, and cost."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "System Instructions",
-          "what_is_taught": "Fundamentals of System Instructions",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice System Instructions in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Hallucinations, Reasoning Workflows & Grounding",
+          "what_is_taught": "Root causes of hallucinations and proven architectural grounding protocols.",
+          "why_it_matters": "Businesses cannot deploy unreliable AI that invents unverified facts.",
+          "what_learner_does": "Design constraint mechanisms that force models to decline answering when data is absent.",
+          "expected_outcome": "Defensive grounding prompt and validation test suite."
         },
         {
           "lesson_number": "1.4",
-          "lesson_title": "Evaluating Model Responses",
-          "what_is_taught": "Fundamentals of Evaluating Model Responses",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Evaluating Model Responses in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Business AI Solution Thinking & Discovery",
+          "what_is_taught": "How to evaluate whether a company problem is genuinely suitable for Generative AI.",
+          "why_it_matters": "Protects clients and employers from wasteful, unfeasible AI experiments.",
+          "what_learner_does": "Analyze 3 real SME business processes and score AI feasibility and commercial ROI.",
+          "expected_outcome": "AI Opportunity Matrix and business recommendation brief."
         }
       ],
       "key_concepts": [
-        "Anatomy of a Prompt",
-        "Chain-of-Thought & Few-Shot",
-        "System Instructions",
-        "Evaluating Model Responses"
+        "Tokenomics & Context Windows",
+        "Model Selection Strategy",
+        "Hallucination Control",
+        "Structured Reasoning",
+        "Business Feasibility Analysis"
       ],
-      "tools": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ],
-      "hands_on_practice": "Lab focused on Prompt Engineering Fundamentals",
-      "assignment": "Module 1 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "tools": ["OpenAI Playground", "Anthropic Console", "Google AI Studio"],
+      "hands_on_practice": "Comparative multi-model benchmarking lab on business data.",
+      "assignment": "AI Business Use-Case Analyzer & Feasibility Brief",
+      "business_application": "Guides corporate leadership on model selection and project viability.",
+      "expected_outcome": "Documented feasibility analysis and model selection framework."
     },
     {
       "module_number": "Module 02",
-      "module_title": "AI for Content & Creative Generation",
-      "module_purpose": "Generate multimodal assets for production use.",
+      "module_title": "Prompt & Context Engineering",
+      "module_purpose": "Master production prompt architecture, role/task framing, reusable prompt chains, and structured JSON outputs.",
       "what_you_will_learn": [
-        "Learn Text Generation Pipelines",
-        "Learn Image Generation with Midjourney",
-        "Learn Audio & Video AI Basics",
-        "Learn Multimodal Consistency"
+        "Anatomy of robust production prompts: system instructions, roles, tasks, and constraints",
+        "Few-shot prompting techniques and in-context demonstration design",
+        "Strict JSON schema enforcement and structured response validation",
+        "Long-context retrieval, prompt chaining, and prompt versioning workflows"
       ],
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "Text Generation Pipelines",
-          "what_is_taught": "Fundamentals of Text Generation Pipelines",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Text Generation Pipelines in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Production Prompt Anatomy & System Roles",
+          "what_is_taught": "Structuring system instructions with explicit boundaries, roles, tasks, and output formats.",
+          "why_it_matters": "Eliminates vague, conversational outputs and delivers consistent, production-safe answers.",
+          "what_learner_does": "Write modular system instruction templates incorporating strict business constraints.",
+          "expected_outcome": "Production-ready system prompt library for corporate use."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "Image Generation with Midjourney",
-          "what_is_taught": "Fundamentals of Image Generation with Midjourney",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Image Generation with Midjourney in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Few-Shot Prompting & Constraint Design",
+          "what_is_taught": "Crafting high-leverage input-output demonstration pairs to guide complex reasoning.",
+          "why_it_matters": "Dramatically improves model adherence to intricate business formatting rules.",
+          "what_learner_does": "Design 5-shot prompts for complex unstructured invoice and lead classification.",
+          "expected_outcome": "Validated few-shot prompt achieving 100% adherence to schema."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "Audio & Video AI Basics",
-          "what_is_taught": "Fundamentals of Audio & Video AI Basics",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Audio & Video AI Basics in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Structured JSON Outputs & Schema Enforcing",
+          "what_is_taught": "Configuring models to return strict, typed JSON conforming to exact Pydantic schemas.",
+          "why_it_matters": "Downstream software and databases cannot parse conversational text.",
+          "what_learner_does": "Force an LLM to extract customer feedback into structured sentiment, topic, and urgency JSON.",
+          "expected_outcome": "Zero-error JSON extraction pipeline."
         },
         {
           "lesson_number": "2.4",
-          "lesson_title": "Multimodal Consistency",
-          "what_is_taught": "Fundamentals of Multimodal Consistency",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Multimodal Consistency in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Prompt Chaining & Version Control",
+          "what_is_taught": "Decomposing complex business workflows into reliable multi-stage prompt chains with Git tracking.",
+          "why_it_matters": "Single massive prompts fail; staged prompt chains provide explainable, debuggable workflows.",
+          "what_learner_does": "Build a 3-step prompt chain: Research -> Outline -> Executive Summary Generator.",
+          "expected_outcome": "Automated prompt chaining workflow tracked in Git."
         }
       ],
       "key_concepts": [
-        "Text Generation Pipelines",
-        "Image Generation with Midjourney",
-        "Audio & Video AI Basics",
-        "Multimodal Consistency"
+        "System Instruction Architecture",
+        "Few-Shot In-Context Learning",
+        "JSON Schema Strictness",
+        "Prompt Decomposition",
+        "Prompt Versioning"
       ],
-      "tools": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ],
-      "hands_on_practice": "Lab focused on AI for Content & Creative Generation",
-      "assignment": "Module 2 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "tools": ["Claude Artifacts", "OpenAI Playground", "Git"],
+      "hands_on_practice": "Designing reusable enterprise prompt libraries with JSON schema enforcement.",
+      "assignment": "AI Research & Structured Report Generator (Portfolio Project 1)",
+      "business_application": "Standardizes corporate prompts for consistent internal operations.",
+      "expected_outcome": "Production prompt library and structured report generation pipeline."
     },
     {
       "module_number": "Module 03",
-      "module_title": "AI Automation & Workflow Orchestration",
-      "module_purpose": "Connect APIs and automate business logic.",
+      "module_title": "Python & APIs for AI Builders",
+      "module_purpose": "Learn essential developer-grade Python, API communication, webhook handling, and environment security required to build AI systems.",
       "what_you_will_learn": [
-        "Learn n8n Webhooks & Triggers",
-        "Learn Data Parsing & Routing",
-        "Learn Integrating LLMs into Flows",
-        "Learn Error Handling & Retries"
+        "Modern Python setup, virtual environments, variables, data structures, and functions",
+        "JSON manipulation, error handling, and environment variables (.env)",
+        "HTTP requests, REST APIs, headers, authentication, and webhooks",
+        "Basic database queries, Git workflows, and GitHub repository hosting"
       ],
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "n8n Webhooks & Triggers",
-          "what_is_taught": "Fundamentals of n8n Webhooks & Triggers",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice n8n Webhooks & Triggers in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Python Essentials for AI Applications",
+          "what_is_taught": "Lists, dictionaries, list comprehensions, custom functions, and exception handling.",
+          "why_it_matters": "The fundamental building blocks needed to manipulate prompt payloads and parse model outputs.",
+          "what_learner_does": "Write clean Python scripts to parse, filter, and format nested business data.",
+          "expected_outcome": "Working data manipulation script verified with unit tests."
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "Data Parsing & Routing",
-          "what_is_taught": "Fundamentals of Data Parsing & Routing",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Data Parsing & Routing in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Environment Security & .env Secrets Management",
+          "what_is_taught": "Managing API credentials using python-dotenv, OS environment variables, and .gitignore.",
+          "why_it_matters": "Exposing API keys on GitHub leads to catastrophic financial loss and security breaches.",
+          "what_learner_does": "Configure secure development environments with encrypted key management.",
+          "expected_outcome": "Hardened project template adhering to zero-leak security standards."
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "Integrating LLMs into Flows",
-          "what_is_taught": "Fundamentals of Integrating LLMs into Flows",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Integrating LLMs into Flows in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Consuming REST APIs & Webhook Handlers",
+          "what_is_taught": "Making GET/POST requests, managing authorization headers, payload serialization, and handling status codes.",
+          "why_it_matters": "All LLMs and external business systems communicate via HTTP REST endpoints.",
+          "what_learner_does": "Write Python scripts that query external weather and market APIs, parsing JSON responses.",
+          "expected_outcome": "Functional REST integration module with automated error retries."
         },
         {
           "lesson_number": "3.4",
-          "lesson_title": "Error Handling & Retries",
-          "what_is_taught": "Fundamentals of Error Handling & Retries",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Error Handling & Retries in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Calling Foundation LLM APIs from Python",
+          "what_is_taught": "Connecting to the OpenAI, Anthropic, and Gemini SDKs via Python.",
+          "why_it_matters": "Transitions students from web interfaces to automated code-driven AI execution.",
+          "what_learner_does": "Write a Python script that submits a business prompt and safely handles rate limits.",
+          "expected_outcome": "Working Python AI integration script with token tracking."
         }
       ],
       "key_concepts": [
-        "n8n Webhooks & Triggers",
-        "Data Parsing & Routing",
-        "Integrating LLMs into Flows",
-        "Error Handling & Retries"
+        "Python Data Structures",
+        "Environment Secrets Security",
+        "REST API Communication",
+        "SDK Client Integration",
+        "Git Version Control"
       ],
-      "tools": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ],
-      "hands_on_practice": "Lab focused on AI Automation & Workflow Orchestration",
-      "assignment": "Module 3 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "tools": ["Python 3.11", "VS Code / Cursor", "Git", "GitHub"],
+      "hands_on_practice": "Building an API-driven Python script with rate-limit and error handling.",
+      "assignment": "AI API-Powered Business Assistant Script",
+      "business_application": "Automates internal business tasks via code rather than manual browser chat.",
+      "expected_outcome": "Modular Python repository connecting to multiple foundation model APIs."
     },
     {
       "module_number": "Module 04",
-      "module_title": "AI Agents & Autonomous Systems",
-      "module_purpose": "Build agents that can reason and use tools.",
+      "module_title": "LLM APIs & AI Application Engineering",
+      "module_purpose": "Master advanced model APIs, structured outputs, streaming, file/vision processing, rate limiting, and cost estimation.",
       "what_you_will_learn": [
-        "Learn Agent Architectures",
-        "Learn Tool Calling & Function Calling",
-        "Learn Memory & Context Windows",
-        "Learn Multi-Agent Collaboration"
+        "Advanced messaging architectures: system, user, assistant, and tool message schemas",
+        "Tool and function calling mechanics using typed schemas",
+        "Streaming response generation for responsive real-time user experiences",
+        "Multimodal vision/file processing, cost estimation, and intelligent model routing"
       ],
       "lessons": [
         {
           "lesson_number": "4.1",
-          "lesson_title": "Agent Architectures",
-          "what_is_taught": "Fundamentals of Agent Architectures",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Agent Architectures in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Conversational Memory & Messages Schema",
+          "what_is_taught": "Constructing multi-turn conversation arrays with state persistence.",
+          "why_it_matters": "Essential for maintaining context across user sessions without exceeding token limits.",
+          "what_learner_does": "Implement a sliding context memory window that retains only the last N turns + summary.",
+          "expected_outcome": "Memory-efficient conversational agent pipeline."
         },
         {
           "lesson_number": "4.2",
-          "lesson_title": "Tool Calling & Function Calling",
-          "what_is_taught": "Fundamentals of Tool Calling & Function Calling",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Tool Calling & Function Calling in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Function & Tool Calling Deep Dive",
+          "what_is_taught": "Defining JSON function schemas for tools and parsing tool_calls arguments.",
+          "why_it_matters": "The core technical mechanism powering all modern Agentic AI workflows.",
+          "what_learner_does": "Equip an LLM with calculator, currency converter, and database query tools.",
+          "expected_outcome": "Function-calling engine capable of running local functions dynamically."
         },
         {
           "lesson_number": "4.3",
-          "lesson_title": "Memory & Context Windows",
-          "what_is_taught": "Fundamentals of Memory & Context Windows",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Memory & Context Windows in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Streaming Responses & Real-Time UX",
+          "what_is_taught": "Consuming Server-Sent Events (SSE) and token streaming in Python.",
+          "why_it_matters": "Reduces perceived user latency from 5+ seconds to under 200 milliseconds.",
+          "what_learner_does": "Build a streaming CLI interface that prints tokens in real-time as the model generates them.",
+          "expected_outcome": "Zero-latency streaming interface."
         },
         {
           "lesson_number": "4.4",
-          "lesson_title": "Multi-Agent Collaboration",
-          "what_is_taught": "Fundamentals of Multi-Agent Collaboration",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Multi-Agent Collaboration in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Model Routing & Cost Optimization",
+          "what_is_taught": "Directing simple tasks to lightweight models (GPT-4o-mini, Haiku) and hard queries to frontier models.",
+          "why_it_matters": "Cuts enterprise AI API bills by 60%–85% with zero quality degradation.",
+          "what_learner_does": "Build an intelligent router classifying request complexity and dispatching to the cheapest capable model.",
+          "expected_outcome": "Production-grade model routing microservice."
         }
       ],
       "key_concepts": [
-        "Agent Architectures",
-        "Tool Calling & Function Calling",
-        "Memory & Context Windows",
-        "Multi-Agent Collaboration"
+        "Tool & Function Calling",
+        "Conversational Memory Strategies",
+        "Token Streaming Architecture",
+        "Multimodal Vision Payloads",
+        "Dynamic Model Routing & Cost Control"
       ],
-      "tools": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ],
-      "hands_on_practice": "Lab focused on AI Agents & Autonomous Systems",
-      "assignment": "Module 4 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "tools": ["OpenAI SDK", "Anthropic SDK", "Google GenAI SDK"],
+      "hands_on_practice": "Building an automated multi-model routing engine.",
+      "assignment": "Multi-Model AI Routing & Processing Engine",
+      "business_application": "Optimizes enterprise AI software speed and operating costs.",
+      "expected_outcome": "Cost-optimized multi-model application codebase."
     },
     {
       "module_number": "Module 05",
-      "module_title": "AI for Code Generation & Development",
-      "module_purpose": "Accelerate software development using AI.",
+      "module_title": "RAG & Enterprise Knowledge AI",
+      "module_purpose": "Build production Retrieval-Augmented Generation systems using vector databases, semantic search, chunking strategies, and source citations.",
       "what_you_will_learn": [
-        "Learn Cursor IDE Workflows",
-        "Learn GitHub Copilot Best Practices",
-        "Learn Refactoring & Debugging with AI",
-        "Learn Building Full Apps with AI"
+        "RAG architecture: Ingestion, parsing, chunking, embeddings, indexing, and retrieval",
+        "Chunking strategies: Fixed-size, semantic, recursive character, and document hierarchy",
+        "Vector databases: PostgreSQL with pgvector, Supabase Vector, and Qdrant",
+        "Retrieval refinement: Cosine similarity, metadata filtering, reranking, and citation attribution",
+        "Hallucination elimination, fallback protocols, and RAG quality evaluation"
       ],
       "lessons": [
         {
           "lesson_number": "5.1",
-          "lesson_title": "Cursor IDE Workflows",
-          "what_is_taught": "Fundamentals of Cursor IDE Workflows",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Cursor IDE Workflows in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Data Ingestion, Document Parsing & Chunking Strategies",
+          "what_is_taught": "Extracting clean text from PDFs, DOCX, and web pages, testing chunk sizes and overlaps.",
+          "why_it_matters": "Poor chunking is the #1 cause of RAG failures and missing context.",
+          "what_learner_does": "Parse a 50-page enterprise handbook into optimized semantic chunks with metadata tags.",
+          "expected_outcome": "Structured, clean document chunk library ready for embedding."
         },
         {
           "lesson_number": "5.2",
-          "lesson_title": "GitHub Copilot Best Practices",
-          "what_is_taught": "Fundamentals of GitHub Copilot Best Practices",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice GitHub Copilot Best Practices in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Embeddings & Vector Databases with pgvector",
+          "what_is_taught": "Generating text embeddings (text-embedding-3-small, voyage-3) and storing in PostgreSQL with pgvector.",
+          "why_it_matters": "Vector search allows computers to understand semantic intent rather than simple keywords.",
+          "what_learner_does": "Deploy a Supabase pgvector instance, create tables with vector columns, and run cosine similarity queries.",
+          "expected_outcome": "Live cloud vector database with indexed document chunks."
         },
         {
           "lesson_number": "5.3",
-          "lesson_title": "Refactoring & Debugging with AI",
-          "what_is_taught": "Fundamentals of Refactoring & Debugging with AI",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Refactoring & Debugging with AI in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Context Injection, Citations & Source Attribution",
+          "what_is_taught": "Constructing RAG prompt envelopes that inject retrieved chunks with strict attribution rules.",
+          "why_it_matters": "Users require verified page numbers and document names to trust AI answers.",
+          "what_learner_does": "Build prompt templates that force the model to provide inline [Doc 1, p. 4] citations.",
+          "expected_outcome": "Citation-backed RAG generation pipeline."
         },
         {
           "lesson_number": "5.4",
-          "lesson_title": "Building Full Apps with AI",
-          "what_is_taught": "Fundamentals of Building Full Apps with AI",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Building Full Apps with AI in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Guardrails, No-Answer Behavior & RAG Evaluation",
+          "what_is_taught": "Configuring explicit fallback responses when retrieved context similarity is below threshold.",
+          "why_it_matters": "Eliminates enterprise embarrassment caused by models inventing non-existent company policies.",
+          "what_learner_does": "Benchmark RAG retrieval against 20 difficult edge-case questions measuring hit-rate.",
+          "expected_outcome": "Zero-hallucination RAG pipeline with measured retrieval metrics."
         }
       ],
       "key_concepts": [
-        "Cursor IDE Workflows",
-        "GitHub Copilot Best Practices",
-        "Refactoring & Debugging with AI",
-        "Building Full Apps with AI"
+        "Recursive Chunking & Overlap",
+        "Vector Embeddings & Semantic Similarity",
+        "PostgreSQL pgvector Indexing",
+        "Metadata Filtering & Hybrid Search",
+        "Citation Attribution & Zero-Hallucination Guardrails"
       ],
-      "tools": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
-      ],
-      "hands_on_practice": "Lab focused on AI for Code Generation & Development",
-      "assignment": "Module 5 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "tools": ["Supabase", "PostgreSQL", "pgvector", "LangChain", "OpenAI Embeddings"],
+      "hands_on_practice": "End-to-end RAG pipeline ingesting real enterprise PDF manuals.",
+      "assignment": "ENTERPRISE KNOWLEDGE ASSISTANT (Major Portfolio Project 2)",
+      "business_application": "Unlocks proprietary company documentation for instant internal search.",
+      "expected_outcome": "Deployed RAG knowledge assistant with semantic search and citations."
     },
     {
       "module_number": "Module 06",
-      "module_title": "Capstone AI Solution Architecture",
-      "module_purpose": "Design and deploy a complete AI product.",
+      "module_title": "AI Automation Engineering",
+      "module_purpose": "Design, build, and deploy enterprise AI automation workflows using n8n, webhooks, CRMs, and human-in-the-loop approvals.",
       "what_you_will_learn": [
-        "Learn Requirements Gathering",
-        "Learn System Design & Prompts",
-        "Learn Implementation & Integration",
-        "Learn Final Deployment & Demo"
+        "Automation system architecture: Triggers, actions, nodes, execution lifecycles, and webhooks",
+        "n8n enterprise platform setup (cloud & local Docker)",
+        "Integrating LLM nodes for real-time text analysis, classification, and summarization",
+        "Connecting Google Sheets, Gmail, CRMs (HubSpot/Supabase), and Slack/WhatsApp",
+        "Production resilience: Retry logic, error catching, logging, and human-in-the-loop approvals"
       ],
       "lessons": [
         {
           "lesson_number": "6.1",
-          "lesson_title": "Requirements Gathering",
-          "what_is_taught": "Fundamentals of Requirements Gathering",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Requirements Gathering in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "n8n Architecture, Nodes & Webhook Triggers",
+          "what_is_taught": "Setting up n8n, listening for HTTP webhooks, extracting JSON payloads, and managing state.",
+          "why_it_matters": "Webhooks are the universal bridge connecting websites and SaaS platforms to automation.",
+          "what_learner_does": "Build an n8n webhook workflow that captures form submissions and validates fields.",
+          "expected_outcome": "Live webhook receiver processing JSON payloads in real-time."
         },
         {
           "lesson_number": "6.2",
-          "lesson_title": "System Design & Prompts",
-          "what_is_taught": "Fundamentals of System Design & Prompts",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice System Design & Prompts in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "LLM Integration Nodes & Data Transformation",
+          "what_is_taught": "Injecting OpenAI/Claude nodes directly into n8n workflows for sentiment, scoring, and routing.",
+          "why_it_matters": "Transforms dumb linear automations into intelligent cognitive decision pipelines.",
+          "what_learner_does": "Build an n8n workflow that reads incoming customer emails and classifies intent into 5 buckets.",
+          "expected_outcome": "Intelligent automated email classification pipeline."
         },
         {
           "lesson_number": "6.3",
-          "lesson_title": "Implementation & Integration",
-          "what_is_taught": "Fundamentals of Implementation & Integration",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Implementation & Integration in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "CRM & Business Tool Synchronization",
+          "what_is_taught": "Reading and writing to Google Sheets, Supabase, and HubSpot CRM via API nodes.",
+          "why_it_matters": "Eliminates manual data entry between marketing funnels and sales teams.",
+          "what_learner_does": "Sync qualified leads to a CRM table, formatting phone numbers and appending AI notes.",
+          "expected_outcome": "Bi-directional CRM synchronization workflow."
         },
         {
           "lesson_number": "6.4",
-          "lesson_title": "Final Deployment & Demo",
-          "what_is_taught": "Fundamentals of Final Deployment & Demo",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Final Deployment & Demo in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
+          "lesson_title": "Human-in-the-Loop Approvals & Error Handling",
+          "what_is_taught": "Configuring approval pauses (Slack/Email approve button) before executing high-stakes actions.",
+          "why_it_matters": "Protects businesses from accidental mass emails or incorrect transaction execution.",
+          "what_learner_does": "Implement an approval branch where draft emails require one-click human signoff.",
+          "expected_outcome": "Resilient automation workflow with human-in-the-loop verification."
         }
       ],
       "key_concepts": [
-        "Requirements Gathering",
-        "System Design & Prompts",
-        "Implementation & Integration",
-        "Final Deployment & Demo"
+        "Webhook Triggers & Payload Extraction",
+        "n8n Workflow Orchestration",
+        "Cognitive LLM Decision Nodes",
+        "CRM & Database Synchronization",
+        "Human-in-the-Loop & Error Handling"
       ],
-      "tools": [
-        "ChatGPT",
-        "Claude",
-        "Gemini"
+      "tools": ["n8n", "Make.com", "HubSpot", "Google Workspace", "Supabase"],
+      "hands_on_practice": "Building an end-to-end lead qualification and CRM sync workflow.",
+      "assignment": "AI LEAD QUALIFICATION & CRM AUTOMATION (Major Portfolio Project 3)",
+      "business_application": "Automates lead ingestion, scoring, and personalized sales follow-up.",
+      "expected_outcome": "Live production n8n automation pipeline with error handling."
+    },
+    {
+      "module_number": "Module 07",
+      "module_title": "Agentic AI Engineering",
+      "module_purpose": "Master autonomous agent architectures, state graphs, planning loops, multi-agent teams, and resilient production execution using LangGraph.",
+      "what_you_will_learn": [
+        "7 Levels of Agentic Progression: From Tool Calling to Autonomous Multi-Agent Teams",
+        "State, memory, scratchpads, planning, and dynamic tool selection",
+        "LangGraph state machine architecture: State graphs, nodes, conditional edges, and checkpointing",
+        "Agent loops, handoffs, supervisor architectures, and failure recovery",
+        "Building a 4-agent collaborative business research team (Researcher, Analyst, Writer, Reviewer)"
       ],
-      "hands_on_practice": "Lab focused on Capstone AI Solution Architecture",
-      "assignment": "Module 6 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "lessons": [
+        {
+          "lesson_number": "7.1",
+          "lesson_title": "The 7 Levels of Agentic AI Progression",
+          "what_is_taught": "The evolutionary path from prompt -> tool caller -> stateful agent -> multi-agent system.",
+          "why_it_matters": "Clarifies architectural boundaries so students don't overcomplicate simple workflows.",
+          "what_learner_does": "Map enterprise use cases to their appropriate agentic level.",
+          "expected_outcome": "Architectural roadmap classifying agent complexity."
+        },
+        {
+          "lesson_number": "7.2",
+          "lesson_title": "LangGraph Core: State Graphs, Nodes & Conditional Edges",
+          "what_is_taught": "Creating typed State objects, defining node functions, and writing conditional router edges.",
+          "why_it_matters": "State machines are the industry-standard way to prevent infinite agent loops.",
+          "what_learner_does": "Build a stateful agent graph that searches the web, verifies results, and loops until criteria is met.",
+          "expected_outcome": "Controlled looping agent with cycle protection."
+        },
+        {
+          "lesson_number": "7.3",
+          "lesson_title": "Supervisor & Multi-Agent Collaboration",
+          "what_is_taught": "Implementing hierarchical multi-agent architectures where a supervisor coordinates worker agents.",
+          "why_it_matters": "Enables complex tasks to be distributed among specialized domain agents.",
+          "what_learner_does": "Build a multi-agent system pairing a web research agent with a financial analysis agent.",
+          "expected_outcome": "Multi-agent coordination system with structured handoffs."
+        },
+        {
+          "lesson_number": "7.4",
+          "lesson_title": "Agent Timeouts, Retries & Production Reliability",
+          "what_is_taught": "Implementing max-step budgets, tool call timeouts, fallback error recovery, and checkpointers.",
+          "why_it_matters": "Autonomous agents without guardrails burn massive API tokens and get stuck.",
+          "what_learner_does": "Stress-test an agent against broken tools and verify self-healing recovery.",
+          "expected_outcome": "Production-hardened reliable agent codebase."
+        }
+      ],
+      "key_concepts": [
+        "7 Levels of Agentic AI",
+        "LangGraph State Machines",
+        "Supervisor & Worker Handoffs",
+        "Conditional Graph Routing",
+        "Cycle Safeguards & Self-Healing"
+      ],
+      "tools": ["LangGraph", "LangChain", "OpenAI Agents SDK", "Tavily Search API"],
+      "hands_on_practice": "Building a multi-agent state graph with human approval checkpoints.",
+      "assignment": "MULTI-AGENT BUSINESS RESEARCH SYSTEM (Major Portfolio Project 4)",
+      "business_application": "Automates multi-department research, validation, and content creation.",
+      "expected_outcome": "Multi-agent research system code repository with architecture diagram."
+    },
+    {
+      "module_number": "Module 08",
+      "module_title": "MCP & Connected AI Systems",
+      "module_purpose": "Integrate the open Model Context Protocol (MCP) to connect AI assistants securely to external tools, databases, and enterprise systems.",
+      "what_you_will_learn": [
+        "Model Context Protocol fundamentals: Hosts, clients, servers, resources, tools, and prompts",
+        "Connecting AI assistants to external file systems, SQL databases, and internal APIs via MCP",
+        "Security boundaries, authentication tokens, and granular permission enforcement",
+        "Architectural decision framework: When to use MCP vs direct REST API function calling"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "8.1",
+          "lesson_title": "MCP Architecture & The Host-Client-Server Model",
+          "what_is_taught": "The open Anthropic MCP standard, protocol specifications, and communication channels (stdio/SSE).",
+          "why_it_matters": "MCP is becoming the universal USB-C standard for connecting AI to company tools.",
+          "what_learner_does": "Inspect standard MCP servers connecting to SQLite, GitHub, and local file systems.",
+          "expected_outcome": "Working understanding of MCP specifications and architecture."
+        },
+        {
+          "lesson_number": "8.2",
+          "lesson_title": "Building a Custom MCP Server",
+          "what_is_taught": "Writing a custom Python MCP server exposing company database tools and resources.",
+          "why_it_matters": "Enables any compatible AI host to query internal proprietary business tools safely.",
+          "what_learner_does": "Build an MCP server exposing internal CRM query functions and order status lookups.",
+          "expected_outcome": "Custom MCP server codebase tested and running locally."
+        },
+        {
+          "lesson_number": "8.3",
+          "lesson_title": "Connecting AI Clients to MCP Servers",
+          "what_is_taught": "Configuring AI clients (Claude Desktop / custom client) to consume custom MCP servers.",
+          "why_it_matters": "Empowers non-technical team members to interact with company databases via chat.",
+          "what_learner_does": "Connect an AI client to your custom MCP server and execute natural language queries.",
+          "expected_outcome": "Integrated connected assistant querying external tools via MCP."
+        },
+        {
+          "lesson_number": "8.4",
+          "lesson_title": "MCP Security, Permission Boundaries & Best Practices",
+          "what_is_taught": "Enforcing read-only scopes, user confirmation prompts, and safe tool sandboxing.",
+          "why_it_matters": "Prevents unauthorized database mutations or data exfiltration via connected tools.",
+          "what_learner_does": "Configure strict permission boundaries on a multi-tool MCP environment.",
+          "expected_outcome": "Hardened, permission-controlled enterprise MCP integration."
+        }
+      ],
+      "key_concepts": [
+        "Model Context Protocol (MCP)",
+        "Host-Client-Server Topology",
+        "Custom MCP Server Development",
+        "Resource & Tool Exposition",
+        "Permission Scoping & Sandboxing"
+      ],
+      "tools": ["MCP SDK (Python)", "Claude Desktop", "SQLite", "FastAPI"],
+      "hands_on_practice": "Developing and connecting a custom MCP server to enterprise tools.",
+      "assignment": "Connected Business AI Assistant via MCP (Lab Build)",
+      "business_application": "Standardizes internal tooling access for AI assistants across departments.",
+      "expected_outcome": "Custom MCP server and client integration codebase."
+    },
+    {
+      "module_number": "Module 09",
+      "module_title": "AI Coding & Development Workflows",
+      "module_purpose": "Master agentic AI-assisted software development using Cursor, GitHub Copilot, and Claude Code with rigorous review practices.",
+      "what_you_will_learn": [
+        "Agentic AI coding workflows: Cursor composer, codebase indexing, and multi-file editing",
+        "Prompting coding models for architectural scaffolding, refactoring, and test suite generation",
+        "Reviewing AI-generated code: Security verification, hallucinated packages, and edge-case testing",
+        "Automating documentation, Git commit workflows, and pull request generation"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "9.1",
+          "lesson_title": "Cursor & Codebase Context Indexing",
+          "what_is_taught": "Setting up Cursor, configuring .cursorrules, and indexing large multi-file codebases.",
+          "why_it_matters": "Enables AI models to understand entire repository architectures rather than isolated snippets.",
+          "what_learner_does": "Configure a multi-module repository in Cursor with custom business development rules.",
+          "expected_outcome": "Configured repository with custom .cursorrules and full codebase indexing."
+        },
+        {
+          "lesson_number": "9.2",
+          "lesson_title": "Multi-File Generation, Refactoring & Test Suites",
+          "what_is_taught": "Directing AI coding assistants to refactor legacy code, add typing, and generate pytest suites.",
+          "why_it_matters": "Accelerates developer shipping velocity by 3x–5x while increasing automated test coverage.",
+          "what_learner_does": "Use AI to generate comprehensive pytest test suites achieving 90%+ branch coverage.",
+          "expected_outcome": "Fully tested application module with automated unit and integration tests."
+        },
+        {
+          "lesson_number": "9.3",
+          "lesson_title": "Defensive Code Review: Hallucinations & Security",
+          "what_is_taught": "Identifying hallucinated dependencies, insecure deserialization, and subtle logic flaws in AI code.",
+          "why_it_matters": "Blindly accepting AI-generated code introduces severe production vulnerabilities.",
+          "what_learner_does": "Audit an AI-generated codebase, identify 4 intentional security flaws, and fix them.",
+          "expected_outcome": "Code audit checklist and hardened codebase."
+        },
+        {
+          "lesson_number": "9.4",
+          "lesson_title": "Agentic Coding CLI Workflows & Git Automation",
+          "what_is_taught": "Using terminal-based coding agents for autonomous bug reproduction and branch patching.",
+          "why_it_matters": "The future of development: AI agents handling routine bug fixes and pull requests.",
+          "what_learner_does": "Direct a coding agent to fix an error reported in error logs and commit the fix to a Git branch.",
+          "expected_outcome": "Automated bugfix and pull request lifecycle."
+        }
+      ],
+      "key_concepts": [
+        "Context-Aware Codebase Indexing",
+        ".cursorrules Architecture",
+        "Automated Test Generation",
+        "Defensive Code Auditing",
+        "Agentic Coding Workflows"
+      ],
+      "tools": ["Cursor", "GitHub Copilot", "pytest", "Git"],
+      "hands_on_practice": "Refactoring and testing an AI microservice using Cursor and agentic workflows.",
+      "assignment": "Automated Codebase Refactoring & Test Suite Project",
+      "business_application": "Multiplies engineering productivity and ensures high test quality.",
+      "expected_outcome": "Refactored, fully tested software repository."
+    },
+    {
+      "module_number": "Module 10",
+      "module_title": "Production AI Applications & Deployment",
+      "module_purpose": "Package AI systems into containerized FastAPI applications, configure database persistence, and deploy to live cloud infrastructure.",
+      "what_you_will_learn": [
+        "Backend architecture: FastAPI application design, Pydantic data validation, and async routes",
+        "Database connectivity, connection pooling, and JWT bearer authentication",
+        "Docker containerization: Writing multi-stage Dockerfiles and managing images",
+        "Cloud deployment platforms: Deploying to Render, Railway, Cloudflare, and AWS concepts",
+        "HTTPS, custom domains, environment secret injection, and health checks"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "10.1",
+          "lesson_title": "FastAPI Architecture for AI Microservices",
+          "what_is_taught": "Structuring modular FastAPI apps with routers, Pydantic request/response models, and async endpoints.",
+          "why_it_matters": "FastAPI is the industry standard for high-performance Python AI microservices.",
+          "what_learner_does": "Build a FastAPI service exposing /chat, /rag/query, and /health endpoints.",
+          "expected_outcome": "Clean, interactive Swagger/OpenAPI documentation for your AI service."
+        },
+        {
+          "lesson_number": "10.2",
+          "lesson_title": "Database Persistence & JWT Authentication",
+          "what_is_taught": "Connecting FastAPI to PostgreSQL/Supabase, saving conversation histories, and verifying JWT auth.",
+          "why_it_matters": "Production applications require multi-tenant security and persistent user sessions.",
+          "what_learner_does": "Implement user authentication and save chat histories to a PostgreSQL database.",
+          "expected_outcome": "Multi-user authenticated AI backend application."
+        },
+        {
+          "lesson_number": "10.3",
+          "lesson_title": "Docker Containerization for AI Services",
+          "what_is_taught": "Writing clean Dockerfiles, managing dependencies, configuring port exposures, and Docker Compose.",
+          "why_it_matters": "Eliminates 'it works on my machine' bugs and enables seamless cloud deployment.",
+          "what_learner_does": "Build and run a lightweight Docker container running your FastAPI AI application.",
+          "expected_outcome": "Verified Docker image running cleanly on any environment."
+        },
+        {
+          "lesson_number": "10.4",
+          "lesson_title": "Cloud Deployment, Custom Domains & Monitoring",
+          "what_is_taught": "Deploying Docker containers to cloud hosts (Render/Railway/Cloudflare), setting secrets, and checking logs.",
+          "why_it_matters": "A project is not complete until it has a live, accessible public URL for clients to use.",
+          "what_learner_does": "Deploy your containerized AI service to the cloud with public HTTPS endpoints.",
+          "expected_outcome": "Live public application URL tested with automated curl requests."
+        }
+      ],
+      "key_concepts": [
+        "FastAPI Asynchronous Architecture",
+        "Pydantic Data Validation",
+        "Docker Multi-Stage Containers",
+        "Cloud Hosting & Environment Secrets",
+        "Live Public HTTPS Deployment"
+      ],
+      "tools": ["FastAPI", "Docker", "Render / Railway", "Supabase", "Swagger"],
+      "hands_on_practice": "Packaging an AI assistant into Docker and deploying to live cloud hosting.",
+      "assignment": "PRODUCTION AI APPLICATION DEPLOYMENT (Major Portfolio Project 6)",
+      "business_application": "Delivers live, shareable AI web applications to clients and end users.",
+      "expected_outcome": "Live public deployed AI application with documentation."
+    },
+    {
+      "module_number": "Module 11",
+      "module_title": "AI Evaluation, Observability & LLMOps",
+      "module_purpose": "Implement golden test datasets, automated grading, latency tracking, hallucination benchmarking, and production LLMOps observability.",
+      "what_you_will_learn": [
+        "Why evaluation is critical: Moving from subjective prompt testing to objective metric verification",
+        "Creating golden test datasets: Ground truth queries, expected outputs, and edge cases",
+        "Automated grading architectures: LLM-as-a-judge, semantic similarity, and Ragas metrics",
+        "LLMOps observability: Tracing agent execution, measuring latency, token usage, and per-query costs",
+        "Regression testing protocols: Ensuring prompt updates don't break existing capabilities"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "11.1",
+          "lesson_title": "Golden Datasets & Objective Evaluation Benchmarks",
+          "what_is_taught": "Designing a structured test suite containing 100 business queries, edge cases, and expected outputs.",
+          "why_it_matters": "You cannot manage or sell what you cannot objectively measure.",
+          "what_learner_does": "Build an evaluation CSV dataset covering common, difficult, and adversarial business questions.",
+          "expected_outcome": "Comprehensive benchmark evaluation dataset."
+        },
+        {
+          "lesson_number": "11.2",
+          "lesson_title": "Automated Graders & LLM-as-a-Judge",
+          "what_is_taught": "Using frontier models as deterministic judges to evaluate accuracy, faithfulness, and tone.",
+          "why_it_matters": "Automates testing thousands of responses in minutes without expensive manual review.",
+          "what_learner_does": "Implement an automated grading script that scores RAG responses on a 1–5 faithfulness scale.",
+          "expected_outcome": "Automated evaluation script scoring test runs."
+        },
+        {
+          "lesson_number": "11.3",
+          "lesson_title": "Observability, Tracing & Cost Monitoring",
+          "what_is_taught": "Implementing tracing (LangSmith / OpenTelemetry) to inspect nested agent chains, latency, and costs.",
+          "why_it_matters": "Pinpoints exactly which node failed or consumed excessive tokens in a complex agent loop.",
+          "what_learner_does": "Instrument an AI agent with tracing and analyze waterfall execution diagrams.",
+          "expected_outcome": "Live telemetry dashboard tracking latency, tokens, and errors."
+        },
+        {
+          "lesson_number": "11.4",
+          "lesson_title": "Prompt Regression Testing in CI/CD",
+          "what_is_taught": "Running automated prompt evaluation runs in GitHub Actions before code is merged.",
+          "why_it_matters": "Prevents prompt changes from causing unexpected degradations in production quality.",
+          "what_learner_does": "Create an automated test script that runs on git commit and fails if benchmark accuracy drops below 90%.",
+          "expected_outcome": "Automated regression testing pipeline."
+        }
+      ],
+      "key_concepts": [
+        "Golden Evaluation Datasets",
+        "LLM-as-a-Judge Grading",
+        "Ragas Retrieval Metrics",
+        "Tracing & Latency Observability",
+        "Automated Prompt Regression"
+      ],
+      "tools": ["LangSmith", "Ragas", "OpenTelemetry", "pytest"],
+      "hands_on_practice": "Generating an objective evaluation benchmark report on your RAG assistant.",
+      "assignment": "AI System Evaluation & Benchmark Report (Portfolio Requirement)",
+      "business_application": "Provides proof of accuracy and reliability to corporate clients.",
+      "expected_outcome": "Formal evaluation report with measured accuracy and latency metrics."
+    },
+    {
+      "module_number": "Module 12",
+      "module_title": "AI Security & Responsible Deployment",
+      "module_purpose": "Protect AI applications against prompt injection, data poisoning, tool exfiltration, PII leakage, and unauthorized execution.",
+      "what_you_will_learn": [
+        "Direct and indirect prompt injection attacks and defensive architecture",
+        "PII sanitization and data leakage prevention protocols",
+        "Tool execution security: Sandboxing, permission boundaries, and least-privilege access",
+        "Output validation guardrails and responsible AI compliance"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "12.1",
+          "lesson_title": "Prompt Injection & Jailbreak Defense",
+          "what_is_taught": "How attackers manipulate prompts via user input and third-party web content, and how to defend.",
+          "why_it_matters": "Protects systems from revealing secret system prompts or bypassing business rules.",
+          "what_learner_does": "Perform controlled attacks on a test prompt and implement input sanitization guardrails.",
+          "expected_outcome": "Hardened prompt architecture immune to standard injection attacks."
+        },
+        {
+          "lesson_number": "12.2",
+          "lesson_title": "Indirect Prompt Injection via Unsafe Data",
+          "what_is_taught": "Defending RAG and agent systems when reading external emails, PDFs, or untrusted websites.",
+          "why_it_matters": "External malicious content can hijack agent tools to steal data or send unauthorized emails.",
+          "what_learner_does": "Build an input isolation boundary that quarantines untrusted text before processing.",
+          "expected_outcome": "Secure data ingestion filter preventing indirect injections."
+        },
+        {
+          "lesson_number": "12.3",
+          "lesson_title": "PII Redaction & Enterprise Data Privacy",
+          "what_is_taught": "Detecting and redacting sensitive data (phone numbers, Aadhaar/SSN, emails) before sending to APIs.",
+          "why_it_matters": "Ensures compliance with GDPR, DPDP (India), and corporate privacy regulations.",
+          "what_learner_does": "Integrate an automated regex/NER PII scrubber into an API preprocessing pipeline.",
+          "expected_outcome": "Automated PII scrubbing module."
+        },
+        {
+          "lesson_number": "12.4",
+          "lesson_title": "Least-Privilege Tool Permissions & Safe Sandboxing",
+          "what_is_taught": "Restricting agent tool permissions to read-only where possible and requiring approval for writes.",
+          "why_it_matters": "Prevents catastrophic data loss if an agent misinterprets a command.",
+          "what_learner_does": "Configure strict database permissions and transaction rollbacks for an agent.",
+          "expected_outcome": "Hardened, least-privilege tool execution environment."
+        }
+      ],
+      "key_concepts": [
+        "Prompt Injection & Jailbreaks",
+        "Indirect Injection Defense",
+        "PII Redaction Pipelines",
+        "Least-Privilege Tool Scoping",
+        "Enterprise Compliance & Audit Logs"
+      ],
+      "tools": ["Llama Guard", "Regex Scrubbers", "Python Sandboxes"],
+      "hands_on_practice": "Conducting an authorized defensive security audit on an AI workflow.",
+      "assignment": "AI Security Hardening & Penetration Defense Lab",
+      "business_application": "Prevents data breaches and legal liabilities for enterprise clients.",
+      "expected_outcome": "Security audit report and hardened AI application configuration."
+    },
+    {
+      "module_number": "Module 13",
+      "module_title": "AI Solution Consulting & Business Implementation",
+      "module_purpose": "Master business discovery, process mapping, AI feasibility scoping, ROI estimation, proposal creation, and client retainers.",
+      "what_you_will_learn": [
+        "Client discovery interviews: Identifying high-cost repetitive manual processes",
+        "Process mapping: Documenting workflow steps, input data, and decision bottlenecks",
+        "Build-vs-buy analysis, ROI estimation, and technical feasibility scoping",
+        "Writing professional AI solution proposals and client architecture blueprints",
+        "Client demo presentations, operator training, and retainer pricing models"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "13.1",
+          "lesson_title": "Client Discovery & Workflow Mapping",
+          "what_is_taught": "Conducting stakeholder discovery interviews and charting business workflow diagrams.",
+          "why_it_matters": "Most failed AI projects fail due to poor problem definition, not technical bugs.",
+          "what_learner_does": "Map the end-to-end customer onboarding workflow of a real or simulated SME.",
+          "expected_outcome": "Comprehensive process map identifying automation bottlenecks."
+        },
+        {
+          "lesson_number": "13.2",
+          "lesson_title": "Feasibility, Scope & ROI Estimation",
+          "what_is_taught": "Calculating labor hours saved, API costs, implementation expenses, and net ROI for stakeholders.",
+          "why_it_matters": "Executives approve AI projects based on measurable ROI, not technical novelty.",
+          "what_learner_does": "Build an ROI financial model demonstrating ₹5L+ annual savings for an automated workflow.",
+          "expected_outcome": "Executive ROI financial model and feasibility assessment."
+        },
+        {
+          "lesson_number": "13.3",
+          "lesson_title": "Writing Winning AI Transformation Proposals",
+          "what_is_taught": "Drafting commercial proposals: Executive summary, architecture, milestones, deliverables, and fees.",
+          "why_it_matters": "Essential for closing high-ticket consulting projects and winning internal corporate budgets.",
+          "what_learner_does": "Write a complete commercial proposal for an enterprise RAG or automation build.",
+          "expected_outcome": "Client-ready commercial AI transformation proposal."
+        },
+        {
+          "lesson_number": "13.4",
+          "lesson_title": "Client Demos, Handover & Retainer Pricing",
+          "what_is_taught": "Conducting compelling software demos, training non-technical staff, and structuring monthly retainers.",
+          "why_it_matters": "Turns one-time project fees into stable, recurring monthly revenue.",
+          "what_learner_does": "Record a 5-minute executive demo presentation walking through a business AI prototype.",
+          "expected_outcome": "Recorded demo presentation and maintenance retainer agreement."
+        }
+      ],
+      "key_concepts": [
+        "Process Discovery & Workflow Mapping",
+        "ROI & Cost-Benefit Modeling",
+        "Commercial Proposal Structuring",
+        "Client Demo Presentation",
+        "Recurring Maintenance Retainers"
+      ],
+      "tools": ["Miro / Mermaid", "Google Docs / Notion", "Loom"],
+      "hands_on_practice": "Creating a full commercial AI solution proposal for a target SME.",
+      "assignment": "Commercial AI Implementation Blueprint & Proposal",
+      "business_application": "Enables learners to pitch, close, and deliver paid AI consulting projects.",
+      "expected_outcome": "Complete commercial proposal and executive ROI model."
+    },
+    {
+      "module_number": "Module 14",
+      "module_title": "Industry Capstone: AI Operations System",
+      "module_purpose": "Synthesize all program competencies into a comprehensive, deployed AI Operations System for a real business with end-to-end documentation.",
+      "what_you_will_learn": [
+        "End-to-end architecture: Combining RAG, autonomous agents, n8n automations, and FastAPI",
+        "Integrating real business software: Webhooks, CRMs, email, and databases",
+        "Rigorous systematic evaluation against a custom benchmark test dataset",
+        "Containerized cloud deployment with public live URLs and monitoring",
+        "Final capstone defense before senior industry mentors and hiring partners"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "14.1",
+          "lesson_title": "Capstone Scoping & Architectural Blueprint",
+          "what_is_taught": "Defining scope, data sources, user personas, and technical architecture for your business system.",
+          "why_it_matters": "Ensures capstones solve genuine commercial problems rather than trivial demo exercises.",
+          "what_learner_does": "Submit an architectural specification document and obtain mentor approval.",
+          "expected_outcome": "Approved Capstone Architectural Specification."
+        },
+        {
+          "lesson_number": "14.2",
+          "lesson_title": "Core System Build: RAG, Agents & Automation",
+          "what_is_taught": "Implementing the complete multi-component system connecting vector search, agents, and n8n.",
+          "why_it_matters": "Demonstrates mastery of full-stack AI integration.",
+          "what_learner_does": "Build and link all modules into a unified working operations platform.",
+          "expected_outcome": "Functional integrated AI operations codebase."
+        },
+        {
+          "lesson_number": "14.3",
+          "lesson_title": "Systematic Evaluation, Benchmarks & Security",
+          "what_is_taught": "Benchmarking your system across 100 test scenarios, measuring latency, and hardening security.",
+          "why_it_matters": "Provides undeniable objective proof of system reliability and accuracy.",
+          "what_learner_does": "Generate an automated evaluation report proving 90%+ task completion.",
+          "expected_outcome": "Comprehensive Capstone Evaluation Benchmark Report."
+        },
+        {
+          "lesson_number": "14.4",
+          "lesson_title": "Cloud Deployment, Documentation & Capstone Defense",
+          "what_is_taught": "Deploying the complete platform to cloud hosting, finalizing README docs, and defending the build.",
+          "why_it_matters": "The ultimate portfolio centerpiece that wins senior job offers and consulting contracts.",
+          "what_learner_does": "Deploy live application, publish GitHub repo, and present a 10-minute project defense.",
+          "expected_outcome": "Live public deployed Capstone with verified certificate credential."
+        }
+      ],
+      "key_concepts": [
+        "Full-Stack AI Integration",
+        "End-to-End Business Automation",
+        "Objective Quality Benchmarking",
+        "Cloud Container Deployment",
+        "Professional Capstone Defense"
+      ],
+      "tools": ["Python", "FastAPI", "n8n", "LangGraph", "Supabase", "Docker", "Render"],
+      "hands_on_practice": "Building and deploying the complete AI Operations System.",
+      "assignment": "FINAL INDUSTRY CAPSTONE PROJECT (Graduation Requirement)",
+      "business_application": "Enterprise-grade operations system automating company workflows.",
+      "expected_outcome": "Live production AI operations platform, public GitHub repository, and evaluation report."
     }
   ]
 }

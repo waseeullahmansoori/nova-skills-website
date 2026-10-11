@@ -45,9 +45,58 @@
   color: var(--navy);
 }
 
+/* ============================================================
+   MOBILE GUTTER SYSTEM & RESPONSIVE CONTAINER ARCHITECTURE
+   Unified horizontal breathing room across all course-detail sections
+   ============================================================ */
+:root {
+  --course-gutter: clamp(16px, 5vw, 24px);
+}
+
+/* 320–389px: 16px minimum horizontal padding */
+@media (max-width: 389px) {
+  :root {
+    --course-gutter: 16px;
+  }
+}
+
+/* 390–479px: 18–20px preferred horizontal padding */
+@media (min-width: 390px) and (max-width: 479px) {
+  :root {
+    --course-gutter: 18px;
+  }
+}
+
+/* 480–767px: 20–24px horizontal padding */
+@media (min-width: 480px) and (max-width: 767px) {
+  :root {
+    --course-gutter: 22px;
+  }
+}
+
+/* 768px+: Desktop layout uses standard container padding */
+@media (min-width: 768px) {
+  :root {
+    --course-gutter: var(--container-pad, clamp(20px, 5vw, 48px));
+  }
+}
+
 /* --- Section Containers & Layout --- */
 .course-body-section {
-  padding: 56px 0;
+  width: 100%;
+  max-width: var(--container-max, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-inline: auto;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  padding-left: var(--course-gutter);
+  padding-right: var(--course-gutter);
+  padding-block: 56px;
+  padding-inline: var(--course-gutter);
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   border-bottom: 1px solid rgba(1, 23, 49, 0.06);
 }
 .course-body-section:last-of-type {
@@ -772,7 +821,12 @@
 /* --- Responsive Breakpoints & Overflow Protections --- */
 @media (max-width: 900px) {
   .course-body-section {
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: var(--course-gutter);
+    padding-right: var(--course-gutter);
+    padding-block: 40px;
+    padding-inline: var(--course-gutter);
   }
   .prerequisites-box {
     grid-template-columns: 1fr;
@@ -784,6 +838,83 @@
   }
   .workflow-stages-grid {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  #certification-section .why-visual-card {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding: 28px 20px !important;
+    box-sizing: border-box;
+  }
+  #certification-section .certificate-mockup {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Harmonize Hero container & advisory banner with gutter system */
+  .course-detail-hero .container,
+  #course-advisory-container {
+    padding-left: var(--course-gutter) !important;
+    padding-right: var(--course-gutter) !important;
+    padding-inline: var(--course-gutter) !important;
+    box-sizing: border-box;
+  }
+
+  /* Section Header & Title responsive typography */
+  .course-body-section .section-header {
+    margin-bottom: 24px !important;
+  }
+  .course-body-section .section-title {
+    font-size: clamp(1.6rem, 6.5vw, 2.15rem);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+  .course-body-section .section-tag {
+    margin-bottom: 12px;
+  }
+
+  /* Program Overview reading column */
+  #overview-content {
+    font-size: 1rem !important;
+    line-height: 1.68 !important;
+    margin-bottom: 20px !important;
+    overflow-wrap: break-word;
+  }
+  #overview-content p {
+    line-height: 1.68 !important;
+    overflow-wrap: break-word;
+  }
+  #overview-content p:first-child {
+    font-size: 1.0625rem !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Testimonials Grid */
+  #testimonials-section .testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .testimonial-card {
+    padding: 22px 20px !important;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 640px) {
+  #mentors-section .mentors-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  #related-section .related-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
   }
 }
 
@@ -802,7 +933,7 @@
     padding: 0 16px 16px;
   }
   .workflow-stages-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
   .next-path-flow {
     flex-direction: column;
@@ -822,7 +953,8 @@
   .career-freelance-grid,
   .outcomes-grid,
   .tools-cards-grid,
-  .ai-matrix-grid {
+  .ai-matrix-grid,
+  .workflow-stages-grid {
     grid-template-columns: 1fr !important;
   }
   .why-now-card,
@@ -830,5 +962,374 @@
   .ai-integration-card,
   .next-path-card {
     padding: 18px 16px;
+  }
+  #certification-section .why-visual-card {
+    padding: 22px 16px !important;
+    border-radius: var(--radius-xl);
+  }
+  #certification-section .certificate-mockup {
+    padding: 20px 14px !important;
+  }
+}
+
+/* Sticky Mobile Enrollment CTA & Floating Elements Safe Area Support */
+@media (max-width: 1024px) {
+  .sticky-enroll-bar {
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)) !important;
+    box-sizing: border-box;
+  }
+  #course-detail-main {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  }
+  .whatsapp-float {
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 16px !important;
+  }
+  .nova-ai-float-btn {
+    bottom: calc(140px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 16px !important;
+  }
+}
+
+/* Wide Content & Table Responsive Wrapper */
+.table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   WHAT YOU WILL BE ABLE TO BUILD (OUTCOME CARDS)
+   ============================================================ */
+.build-outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.build-outcome-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(1, 23, 49, 0.08);
+  border-radius: var(--radius-lg, 16px);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.build-outcome-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--teal, #0599a8);
+  box-shadow: 0 12px 28px rgba(5, 153, 168, 0.12);
+}
+
+.build-outcome-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.build-outcome-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.build-outcome-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(5, 153, 168, 0.1);
+  color: var(--teal, #0599a8);
+}
+
+.build-outcome-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--navy, #011731);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.build-outcome-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary, #475569);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* ============================================================
+   SPECIALIZATION TRACKS
+   ============================================================ */
+.specialization-tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.specialization-track-card {
+  background: #ffffff;
+  border: 2px solid rgba(1, 23, 49, 0.08);
+  border-radius: var(--radius-xl, 20px);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.specialization-track-card.featured-track {
+  border-color: var(--teal, #0599a8);
+  box-shadow: 0 12px 32px rgba(5, 153, 168, 0.1);
+}
+
+.track-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.track-pill {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--navy, #011731);
+  color: #ffffff;
+}
+
+.track-focus-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(117, 215, 102, 0.2);
+  color: #15803d;
+}
+
+.track-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--navy, #011731);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.track-focus-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #475569);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.track-ideal-for {
+  font-size: 0.88rem;
+  background: #f8fafc;
+  padding: 12px 16px;
+  border-radius: var(--radius-md, 10px);
+  margin-bottom: 16px;
+  color: var(--text-main, #1e293b);
+  line-height: 1.5;
+}
+
+.track-roles-list {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(1, 23, 49, 0.08);
+}
+
+.track-roles-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted, #64748b);
+  margin-bottom: 8px;
+}
+
+.track-roles-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.track-role-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  color: var(--navy, #011731);
+}
+
+/* ============================================================
+   PROGRAM COMPARISON MATRIX (WHY THIS IS DIFFERENT)
+   ============================================================ */
+.comparison-matrix-wrapper {
+  background: #ffffff;
+  border: 1.5px solid rgba(1, 23, 49, 0.1);
+  border-radius: var(--radius-xl, 20px);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 16px 20px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(1, 23, 49, 0.08);
+  box-sizing: border-box;
+}
+
+.comparison-table th {
+  background: #f8fafc;
+  font-weight: 800;
+  color: var(--navy, #011731);
+  font-size: 0.95rem;
+}
+
+.comparison-table th.col-nova {
+  background: linear-gradient(135deg, rgba(5, 153, 168, 0.12), rgba(117, 215, 102, 0.12));
+  color: var(--navy, #011731);
+  border-left: 2px solid var(--teal, #0599a8);
+}
+
+.comparison-table td.col-nova {
+  background: rgba(5, 153, 168, 0.03);
+  font-weight: 600;
+  color: var(--navy, #011731);
+  border-left: 2px solid var(--teal, #0599a8);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ============================================================
+   PORTFOLIO SPECIFICATIONS & ASSESSMENT MODEL
+   ============================================================ */
+.portfolio-specs-card,
+.assessment-model-card {
+  background: #ffffff;
+  border: 1.5px solid rgba(1, 23, 49, 0.08);
+  border-radius: var(--radius-xl, 20px);
+  padding: 28px;
+  box-sizing: border-box;
+}
+
+.portfolio-deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.portfolio-deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #f8fafc;
+  padding: 14px 16px;
+  border-radius: var(--radius-md, 10px);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--navy, #011731);
+}
+
+.case-study-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.case-study-step-item {
+  background: #f1f5f9;
+  padding: 12px 14px;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy, #011731);
+}
+
+.assessment-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.assessment-tier-card {
+  background: #f8fafc;
+  border: 1px solid rgba(1, 23, 49, 0.06);
+  border-radius: var(--radius-md, 12px);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.assessment-tier-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.assessment-tier-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--navy, #011731);
+}
+
+.assessment-tier-weight {
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--navy, #011731);
+  color: #ffffff;
+}
+
+.assessment-tier-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary, #475569);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Strict mobile 1-column responsive collapses */
+@media (max-width: 640px) {
+  .build-outcomes-grid,
+  .specialization-tracks-grid,
+  .portfolio-deliverables-grid,
+  .case-study-steps-grid,
+  .assessment-tiers-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .specialization-track-card,
+  .portfolio-specs-card,
+  .assessment-model-card {
+    padding: 20px 16px;
   }
 }

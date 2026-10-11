@@ -495,6 +495,65 @@ function renderEnrichedCourseDetail(baseCourse, data) {
     }
   }
 
+  // --- What You Will Be Able to Build (Outcome Cards) ---
+  const buildSection = document.getElementById('build-outcomes-section');
+  const buildContainer = document.getElementById('build-outcomes-container');
+  if (buildSection && buildContainer) {
+    if (data.what_you_will_be_able_to_build && Array.isArray(data.what_you_will_be_able_to_build) && data.what_you_will_be_able_to_build.length > 0) {
+      buildSection.style.display = 'block';
+      buildContainer.innerHTML = `
+        <div class="build-outcomes-grid">
+          ${data.what_you_will_be_able_to_build.map(item => `
+            <div class="build-outcome-card">
+              <div class="build-outcome-header">
+                <span class="build-outcome-icon">${item.icon || '🚀'}</span>
+                <span class="build-outcome-tag">${escapeHTML(item.tag || 'BUILD')}</span>
+              </div>
+              <div class="build-outcome-title">${escapeHTML(item.title || '')}</div>
+              <p class="build-outcome-desc">${escapeHTML(item.description || '')}</p>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    } else {
+      buildSection.style.display = 'none';
+    }
+  }
+
+  // --- Specialization Tracks ---
+  const tracksSection = document.getElementById('specialization-tracks-section');
+  const tracksContainer = document.getElementById('specialization-tracks-container');
+  if (tracksSection && tracksContainer) {
+    if (data.specialization_tracks && Array.isArray(data.specialization_tracks) && data.specialization_tracks.length > 0) {
+      tracksSection.style.display = 'block';
+      tracksContainer.innerHTML = `
+        <div class="specialization-tracks-grid">
+          ${data.specialization_tracks.map((track, tIdx) => `
+            <div class="specialization-track-card ${tIdx === 1 ? 'featured-track' : ''}">
+              <div class="track-badge-row">
+                <span class="track-pill">${escapeHTML(track.track || `Track ${tIdx + 1}`)}</span>
+                <span class="track-focus-badge">${escapeHTML(track.badge || 'SPECIALIZATION')}</span>
+              </div>
+              <div class="track-title">${escapeHTML(track.title || '')}</div>
+              <p class="track-focus-text">${escapeHTML(track.focus || '')}</p>
+              ${track.ideal_for ? `<div class="track-ideal-for"><strong>Ideal For:</strong> ${escapeHTML(track.ideal_for)}</div>` : ''}
+              ${track.target_roles && Array.isArray(track.target_roles) ? `
+                <div class="track-roles-list">
+                  <div class="track-roles-label">Target Roles:</div>
+                  <div class="track-roles-pills">
+                    ${track.target_roles.map(r => `<span class="track-role-tag">${escapeHTML(r)}</span>`).join('')}
+                  </div>
+                </div>
+              ` : ''}
+            </div>
+          `).join('')}
+        </div>
+      `;
+    } else {
+      tracksSection.style.display = 'none';
+    }
+  }
+
   // --- Target Audience & Prerequisites ---
   const audienceContainer = document.getElementById('audience-container');
   if (audienceContainer && data.target_audience) {
@@ -832,6 +891,115 @@ function renderEnrichedCourseDetail(baseCourse, data) {
     }
   }
 
+  // --- Program Comparison Matrix (Why This Is Different) ---
+  const compSection = document.getElementById('course-comparison-section');
+  const compContainer = document.getElementById('course-comparison-container');
+  if (compSection && compContainer) {
+    if (data.course_comparison && data.course_comparison.typical_course && data.course_comparison.novaskills_mastery) {
+      compSection.style.display = 'block';
+      const typical = data.course_comparison.typical_course;
+      const nova = data.course_comparison.novaskills_mastery;
+      const rowCount = Math.max(typical.length, nova.length);
+      
+      let rowsHtml = '';
+      for (let r = 0; r < rowCount; r++) {
+        rowsHtml += `
+          <tr>
+            <td>${typical[r] ? `✕ ${escapeHTML(typical[r])}` : ''}</td>
+            <td class="col-nova">${nova[r] ? `✓ ${escapeHTML(nova[r])}` : ''}</td>
+          </tr>
+        `;
+      }
+
+      compContainer.innerHTML = `
+        <div class="comparison-matrix-wrapper">
+          <div class="table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th style="width:50%;">Typical AI Courses</th>
+                  <th class="col-nova" style="width:50%;">Nova Skills AI Mastery</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rowsHtml}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `;
+    } else {
+      compSection.style.display = 'none';
+    }
+  }
+
+  // --- Portfolio Specifications ---
+  const portSection = document.getElementById('portfolio-specs-section');
+  const portContainer = document.getElementById('portfolio-specs-container');
+  if (portSection && portContainer) {
+    if (data.portfolio_specs) {
+      portSection.style.display = 'block';
+      const ps = data.portfolio_specs;
+      portContainer.innerHTML = `
+        <div class="portfolio-specs-card">
+          <p style="font-size:1.02rem; color:var(--text-secondary); margin-bottom:16px; line-height:1.6;">
+            ${escapeHTML(ps.description || 'Graduates leave with an employer-ready proof-of-work portfolio hosted on GitHub:')}
+          </p>
+          ${ps.deliverables && Array.isArray(ps.deliverables) ? `
+            <div class="portfolio-deliverables-grid">
+              ${ps.deliverables.map(d => `
+                <div class="portfolio-deliverable-item">
+                  <span style="font-size:1.2rem;">📁</span>
+                  <span>${escapeHTML(d)}</span>
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
+          ${ps.case_study_structure && Array.isArray(ps.case_study_structure) ? `
+            <div style="margin-top:24px;">
+              <div style="font-size:0.95rem; font-weight:800; color:var(--navy); margin-bottom:10px;">
+                Standardized 8-Part Case Study Architecture:
+              </div>
+              <div class="case-study-steps-grid">
+                ${ps.case_study_structure.map(step => `
+                  <div class="case-study-step-item">${escapeHTML(step)}</div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    } else {
+      portSection.style.display = 'none';
+    }
+  }
+
+  // --- Practical Assessment Model ---
+  const assessSection = document.getElementById('assessment-model-section');
+  const assessContainer = document.getElementById('assessment-model-container');
+  if (assessSection && assessContainer) {
+    if (data.assessment_model && data.assessment_model.breakdown) {
+      assessSection.style.display = 'block';
+      assessContainer.innerHTML = `
+        <div class="assessment-model-card">
+          <div class="assessment-tiers-grid">
+            ${data.assessment_model.breakdown.map(tier => `
+              <div class="assessment-tier-card">
+                <div class="assessment-tier-header">
+                  <span class="assessment-tier-name">${escapeHTML(tier.item)}</span>
+                  <span class="assessment-tier-weight">${escapeHTML(tier.weight)}</span>
+                </div>
+                <p class="assessment-tier-desc">${escapeHTML(tier.desc || '')}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    } else {
+      assessSection.style.display = 'none';
+    }
+  }
+
   // --- Certification ---
   const certDesc = document.getElementById('cert-desc');
   if (certDesc && data.certification) {
@@ -928,14 +1096,39 @@ function renderEnrichedCourseDetail(baseCourse, data) {
     `;
   }
 
+  // Apply Custom SEO Title & Meta Description if provided
+  if (data.seo_title) {
+    document.title = data.seo_title;
+    const pageTitle = document.getElementById('page-title');
+    if (pageTitle) pageTitle.textContent = data.seo_title;
+    const ogTitle = document.getElementById('og-title') || document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', data.seo_title);
+    const twTitle = document.getElementById('tw-title') || document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute('content', data.seo_title);
+  }
+
   // Refresh meta description with specific hands-on tools & target audience from deep curriculum data
-  const updatedDesc = getCourseMetaDescription(baseCourse, data);
+  const updatedDesc = data.seo_description || getCourseMetaDescription(baseCourse, data);
   const metaDesc = document.getElementById('page-meta-desc') || document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', updatedDesc);
   const ogDesc = document.getElementById('og-desc') || document.querySelector('meta[property="og:description"]');
   if (ogDesc) ogDesc.setAttribute('content', updatedDesc);
   const twDesc = document.getElementById('tw-desc') || document.querySelector('meta[name="twitter:description"]');
   if (twDesc) twDesc.setAttribute('content', updatedDesc);
+
+  // Apply Eyebrow if present
+  if (data.eyebrow) {
+    const academyTag = document.getElementById('detail-academy-tag');
+    if (academyTag) {
+      academyTag.innerHTML = `
+        <span style="display:inline-flex; align-items:center; gap:8px;">
+          <a href="/courses.html?academy=${encodeURIComponent(baseCourse.academyId || '')}" style="color:inherit; text-decoration:none;">${baseCourse.icon || '🎓'} ${baseCourse.academy || 'Academy'}</a>
+          <span style="opacity:0.4;">|</span>
+          <span style="font-weight:800; letter-spacing:0.04em; color:var(--teal);">${escapeHTML(data.eyebrow)}</span>
+        </span>
+      `;
+    }
+  }
 
   // Update Dynamic JSON-LD with Schema.org @graph
   injectCourseSchema(baseCourse, 'https://novaskills.in/public/images/seo/og-banner.png?v=2026', `https://novaskills.in/course-detail.html?id=${encodeURIComponent(baseCourse.id)}`, data);

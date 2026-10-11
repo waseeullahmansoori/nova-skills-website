@@ -3885,7 +3885,15 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
 .course-card-includes ul { display: flex; flex-direction: column; gap: 8px; }
 .course-card-includes li { display: flex; align-items: center; gap: 10px; font-size: 0.875rem; color: var(--text-secondary); }
 .include-icon { font-size: 1rem; flex-shrink: 0; }
-.course-body-section { padding: var(--section-py) 0; border-bottom: 1px solid rgba(5,153,168,0.06); }
+.course-body-section {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--section-py) var(--container-pad);
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(5,153,168,0.06);
+}
 .course-body-section:last-of-type { border-bottom: none; }
 .curriculum-modules { display: flex; flex-direction: column; gap: 8px; }
 .curriculum-module { background: var(--bg-white); border: 1px solid rgba(5,153,168,0.1); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); }
@@ -3905,7 +3913,7 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
 .tool-pill { display: inline-flex; align-items: center; gap: 8px; background: var(--bg-secondary); border: 1px solid rgba(5,153,168,0.1); border-radius: var(--radius-full); padding: 10px 20px; font-size: 0.875rem; font-weight: 600; color: var(--text-secondary); transition: all var(--transition-base); box-shadow: var(--shadow-sm); }
 .tool-pill:hover { border-color: var(--teal); color: var(--teal); background: rgba(5,153,168,0.05); transform: translateY(-2px); box-shadow: var(--shadow-teal); }
 .tool-emoji { font-size: 1.125rem; }
-.sticky-enroll-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 1px solid rgba(5,153,168,0.1); padding: 12px 20px; z-index: var(--z-nav); box-shadow: 0 -8px 32px rgba(1,23,49,0.1); align-items: center; gap: 16px; }
+.sticky-enroll-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 1px solid rgba(5,153,168,0.1); padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px)); z-index: var(--z-nav); box-shadow: 0 -8px 32px rgba(1,23,49,0.1); align-items: center; gap: 16px; box-sizing: border-box; }
 .sticky-enroll-bar .price-group { display: flex; align-items: baseline; gap: 8px; }
 .sticky-enroll-bar .price-current { font-size: 1.375rem; font-weight: 800; color: var(--navy); }
 .sticky-enroll-bar .price-original { font-size: 0.875rem; color: var(--text-light); text-decoration: line-through; }
