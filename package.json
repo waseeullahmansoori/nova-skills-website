@@ -4,8 +4,9 @@
   "description": "Nova Skills Education Institute Official Website",
   "main": "main.js",
   "scripts": {
+    "build:js": "node scripts/build_min_js.js",
     "generate:sitemap": "node scripts/generate-sitemap.js",
-    "build": "node scripts/generate-sitemap.js"
+    "build": "node scripts/build_min_js.js && node scripts/generate-sitemap.js"
   },
   "keywords": [
     "education",

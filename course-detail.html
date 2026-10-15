@@ -13,8 +13,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" id="page-meta-desc" content="Explore comprehensive course details, syllabus modules, practical tools, live projects, certification info, and mentor profiles at Nova Skills Institute." />
-  <!-- Default noindex: overridden by course-detail.js when a valid course is found -->
-  <meta name="robots" id="page-robots" content="noindex, follow" />
+  <!-- Default robots: indexable with rich previews -->
+  <meta name="robots" id="page-robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <!-- Canonical Link -->
+  <link rel="canonical" id="page-canonical" href="https://novaskills.in/course-detail.html" />
+  <script>
+    (function() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var cId = (params.get('id') || params.get('course') || '').trim();
+        var canLink = document.getElementById('page-canonical');
+        if (cId) {
+          var canUrl = 'https://novaskills.in/course-detail.html?id=' + encodeURIComponent(cId);
+          if (canLink) {
+            canLink.setAttribute('href', canUrl);
+          }
+        } else {
+          if (canLink) {
+            canLink.setAttribute('href', 'https://novaskills.in/courses.html');
+          }
+        }
+      } catch(e) {}
+    })();
+  </script>
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:type" content="website" />
@@ -39,8 +60,6 @@
   <meta name="twitter:image" id="tw-image" content="https://novaskills.in/public/images/seo/og-banner.png?v=2026" />
   <meta name="twitter:image:alt" id="tw-image-alt" content="Course Details — Nova Skills Education Institute" />
 
-  <!-- Canonical Link -->
-  <link rel="canonical" id="page-canonical" href="https://novaskills.in/courses.html" />
   <link rel="icon" type="image/svg+xml" href="/branding%20content/icon%202.svg" />
 
   <title id="page-title">Course Details — Nova Skills</title>

@@ -174,6 +174,8 @@ function initFormSubmission() {
         form,
         submitBtn,
         loadingText: 'Booking...',
+        formName: 'counselling_form',
+        submissionMethod: 'inline_counselling_form',
         data: {
           name,
           mobile: phone,

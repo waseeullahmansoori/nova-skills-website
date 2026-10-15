@@ -87,6 +87,10 @@ function generateSitemap() {
     loc: `${DOMAIN}/blog/high-demand-courses-2027-ai-skills-careers/`,
     lastmod: today
   });
+  urlEntries.push({
+    loc: `${DOMAIN}/blog/n8n-ai-automation-beginners/`,
+    lastmod: today
+  });
 
   // 3. Clean Academy Directory URLs
   urlEntries.push({
@@ -142,7 +146,6 @@ function generateSitemap() {
     'digital-marketing-salary-india',
     'learn-graphic-design-beginner-guide',
     'freelancing-fiverr-india-guide',
-    'n8n-ai-automation-beginners',
     'youtube-channel-monetise-2026',
     'chatgpt-prompts-marketing',
     'kids-coding-benefits-india',

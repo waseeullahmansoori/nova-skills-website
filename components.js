@@ -73,7 +73,10 @@ function detectDevice() {
 }
 
 function detectScreenResolution() {
-  return `${window.screen.width}x${window.screen.height}`;
+  if (typeof window !== 'undefined' && window.screen) {
+    return `${window.screen.width || 0}x${window.screen.height || 0}`;
+  }
+  return 'Unknown';
 }
 
 function detectTimezone() {
@@ -231,11 +234,36 @@ function showToastNotification({ title, message, type = 'success' }) {
   setTimeout(removeToast, isSuccess ? 6500 : 5000);
 }
 
+/**
+ * Centralized Safe GA4 Event Dispatcher
+ * Dispatches events to window.gtag or safely queues into window.dataLayer.
+ * Guarantees zero runtime errors and zero PII leakage.
+ */
+function sendGA4Event(eventName, params = {}) {
+  try {
+    if (typeof window === 'undefined') return;
+    window.dataLayer = window.dataLayer || [];
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, params);
+    } else {
+      window.dataLayer.push({
+        event: eventName,
+        ...params
+      });
+    }
+  } catch (err) {
+    console.warn('[Nova GA4 Error]:', err);
+  }
+}
+window.sendGA4Event = sendGA4Event;
+
 async function submitNovaForm({
   form,
   submitBtn,
   data = {},
   loadingText = 'Booking...',
+  formName = null,
+  submissionMethod = null,
   onSuccessCallback = null
 }) {
   if (!form || !submitBtn) return false;
@@ -268,7 +296,7 @@ async function submitNovaForm({
 
     const payload = {
       name: data.name || '',
-      mobile: data.mobile || '',
+      mobile: data.mobile || data.phone || '',
       email: data.email || '',
       course: data.course || '',
       city: data.city || '',
@@ -337,9 +365,33 @@ async function submitNovaForm({
       type: 'success'
     });
 
-    // Fire GA4 Event for Consultation Submit
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      try { window.gtag('event', 'consultation_submit', { form_type: 'consultation', course: data.course || 'General' }); } catch(err) {}
+    // 4. Fire GA4 Recommended Event: generate_lead (Confirmed backend success only, zero PII)
+    const formId = form.id || '';
+    const nonLeadFormIds = ['comment-form', 'article-newsletter-form', 'sidebar-newsletter-form', 'article-sub-form'];
+
+    if (!nonLeadFormIds.includes(formId)) {
+      const resolvedFormName = formName ||
+        (formId === 'counselling-form' ? 'counselling_form' :
+         formId === 'popup-form' ? 'consultation_popup' :
+         formId === 'course-enrollment-form' ? 'course_enrollment' :
+         formId === 'contact-enquiry-form' ? 'contact_enquiry' :
+         (formId || 'counselling_form'));
+
+      const resolvedMethod = submissionMethod ||
+        (formId === 'counselling-form' ? 'inline_counselling_form' :
+         formId === 'popup-form' ? 'consultation_popup_modal' :
+         formId === 'course-enrollment-form' ? 'enrollment_modal' :
+         formId === 'contact-enquiry-form' ? 'contact_page_form' :
+         'web_form');
+
+      const cleanCourseName = (data.course || 'General').toString().trim() || 'General';
+
+      sendGA4Event('generate_lead', {
+        form_name: resolvedFormName,
+        course_name: cleanCourseName,
+        submission_method: resolvedMethod,
+        page_path: window.location.pathname
+      });
     }
 
     // 4. Trigger callback
@@ -412,28 +464,28 @@ function buildNavLinksHTML(page) {
       <div class="dropdown-menu mega-menu">
         <div class="mega-menu-grid">
           <div class="mega-col">
-            <a href="/courses.html?academy=digital-marketing" class="mega-item">
+            <a href="/academies/digital-marketing/" class="mega-item">
               <span class="mega-icon">📊</span>
               <div>
                 <div class="mega-title">Digital Marketing</div>
                 <div class="mega-sub">SEO, Google Ads, Meta Ads</div>
               </div>
             </a>
-            <a href="/courses.html?academy=ai" class="mega-item">
+            <a href="/academies/ai/" class="mega-item">
               <span class="mega-icon">🤖</span>
               <div>
                 <div class="mega-title">AI & Automation</div>
                 <div class="mega-sub">Prompt Engg, ChatGPT, Workflows</div>
               </div>
             </a>
-            <a href="/courses.html?academy=design" class="mega-item">
+            <a href="/academies/design/" class="mega-item">
               <span class="mega-icon">🎨</span>
               <div>
                 <div class="mega-title">Graphic Design</div>
                 <div class="mega-sub">Photoshop, Figma, Illustrator</div>
               </div>
             </a>
-            <a href="/courses.html?academy=video" class="mega-item">
+            <a href="/academies/video-motion/" class="mega-item">
               <span class="mega-icon">🎬</span>
               <div>
                 <div class="mega-title">Motion Graphics & Video</div>
@@ -443,28 +495,28 @@ function buildNavLinksHTML(page) {
           </div>
 
           <div class="mega-col">
-            <a href="/courses.html?academy=programming" class="mega-item">
+            <a href="/academies/programming/" class="mega-item">
               <span class="mega-icon">💻</span>
               <div>
                 <div class="mega-title">Web Development</div>
                 <div class="mega-sub">HTML, CSS, React, Full-Stack</div>
               </div>
             </a>
-            <a href="/courses.html?academy=programming" class="mega-item">
+            <a href="/course-detail.html?id=python-developer" class="mega-item">
               <span class="mega-icon">🐍</span>
               <div>
                 <div class="mega-title">Python Programming</div>
                 <div class="mega-sub">Data Structures, Backend APIs</div>
               </div>
             </a>
-            <a href="/courses.html?academy=programming" class="mega-item">
+            <a href="/course-detail.html?id=data-analytics-powerbi" class="mega-item">
               <span class="mega-icon">📈</span>
               <div>
                 <div class="mega-title">Data Analytics</div>
                 <div class="mega-sub">Excel, PowerBI, SQL</div>
               </div>
             </a>
-            <a href="/courses.html?academy=nocode" class="mega-item">
+            <a href="/academies/no-code-web/" class="mega-item">
               <span class="mega-icon">🌐</span>
               <div>
                 <div class="mega-title">No-Code E-Commerce</div>
@@ -527,7 +579,7 @@ function buildHeaderHTML(page) {
 
         <!-- Slide 1 -->
         <div class="announcement-slide active" data-index="0">
-          <span class="announcement-text">🎓 <strong>Admissions Open for August 2026</strong> • Industry-ready practical training with limited seats available.</span>
+          <span class="announcement-text">🎓 <strong>Admissions Open for New Batches</strong> • Industry-ready practical training with limited seats available.</span>
           <a href="#counselling" onclick="openConsultationPopup(); return false;" class="announcement-cta">Apply Now →</a>
         </div>
 
@@ -644,7 +696,7 @@ function buildFooterHTML() {
               <a href="https://share.google/ltSK5FfbuJ7U0kegw" class="social-link" aria-label="Google Business Profile" title="Google Business Profile" target="_blank" rel="noopener noreferrer">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
               </a>
-              <a href="https://wa.me/919695904440" class="social-link" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919695904440" class="social-link" id="footer-whatsapp-link" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               </a>
             </div>
@@ -656,14 +708,14 @@ function buildFooterHTML() {
             <div class="footer-col">
               <h3 class="footer-heading">Our Academies</h3>
               <ul class="footer-links">
-                <li><a href="/courses.html?academy=digital-marketing">📊 Digital Marketing</a></li>
-                <li><a href="/courses.html?academy=ai">🤖 AI Academy</a></li>
-                <li><a href="/courses.html?academy=design">🎨 Design Academy</a></li>
-                <li><a href="/courses.html?academy=video">🎬 Video & Motion</a></li>
-                <li><a href="/courses.html?academy=programming">💻 Programming</a></li>
-                <li><a href="/courses.html?academy=nocode">🌐 No-Code Web</a></li>
-                <li><a href="/courses.html?academy=3d">🏗️ 3D Academy</a></li>
-                <li><a href="/courses.html?academy=kids">👨‍💻 Kids Tech</a></li>
+                <li><a href="/academies/digital-marketing/">📊 Digital Marketing</a></li>
+                <li><a href="/academies/ai/">🤖 AI Academy</a></li>
+                <li><a href="/academies/design/">🎨 Design Academy</a></li>
+                <li><a href="/academies/video-motion/">🎬 Video & Motion</a></li>
+                <li><a href="/academies/programming/">💻 Programming</a></li>
+                <li><a href="/academies/no-code-web/">🌐 No-Code Web</a></li>
+                <li><a href="/academies/3d/">🏗️ 3D Academy</a></li>
+                <li><a href="/academies/kids-tech/">👨‍💻 Kids Tech</a></li>
               </ul>
             </div>
 
@@ -691,7 +743,7 @@ function buildFooterHTML() {
                 <span class="contact-icon">📞</span>
                 <div>
                   <div class="contact-label">Call / WhatsApp</div>
-                  <a href="tel:+919695904440">+91 9695904440</a>
+                  <a href="tel:+919695904440" id="footer-phone-link">+91 9695904440</a>
                 </div>
               </div>
               <div class="contact-item">
@@ -746,8 +798,7 @@ function buildWhatsAppHTML() {
   return `
   <a href="https://wa.me/919695904440?text=Hi%2C%20I%27m%20interested%20in%20Nova%20Skills%20courses.%20Can%20you%20help%20me%3F"
      class="whatsapp-float" id="whatsapp-btn" aria-label="Chat on WhatsApp"
-     target="_blank" rel="noopener noreferrer"
-     onclick="if(typeof window!=='undefined'&&typeof window.gtag==='function') window.gtag('event','whatsapp_click',{event_category:'contact'});">
+     target="_blank" rel="noopener noreferrer">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span class="whatsapp-pulse" aria-hidden="true"></span>
   </a>`;
@@ -948,6 +999,7 @@ function initShared() {
   initConsultationPopup();
   initYearAuto();
   initWhatsAppDelay();
+  initGA4ClickTracking();
   if (typeof window !== 'undefined' && window.NovaSkillsData && typeof window.NovaSkillsData.hydrateDOM === 'function') {
     window.NovaSkillsData.hydrateDOM();
   }
@@ -1207,6 +1259,69 @@ function initWhatsAppDelay() {
   setTimeout(() => { btn.style.opacity = '1'; btn.style.transform = 'scale(1) translateY(0)'; }, 2500);
 }
 
+/* ── GA4 Global Click Tracking (WhatsApp & Telephone Links) ── */
+function initGA4ClickTracking() {
+  if (typeof window === 'undefined' || window.__ns_ga4_click_tracking_initialized) return;
+  window.__ns_ga4_click_tracking_initialized = true;
+
+  document.addEventListener('click', (event) => {
+    try {
+      const link = event.target.closest('a');
+      if (!link) return;
+
+      const href = (link.getAttribute('href') || '').trim();
+      if (!href) return;
+
+      // 1. WhatsApp Links (click_whatsapp)
+      if (href.includes('wa.me') || href.includes('api.whatsapp.com') || href.includes('whatsapp.com') || href.startsWith('whatsapp:')) {
+        const buttonId = link.id || link.getAttribute('data-tracking-id') || 
+          (link.classList.contains('whatsapp-float') ? 'whatsapp-btn' :
+           link.closest('footer, #ns-footer, #footer') ? 'footer-whatsapp-link' :
+           link.closest('header, .navbar, #main-header') ? 'header-whatsapp-link' :
+           (link.getAttribute('id') || 'whatsapp-link'));
+
+        const linkType = (link.id === 'whatsapp-btn' || link.classList.contains('whatsapp-float'))
+          ? 'floating_button'
+          : (link.closest('footer, #ns-footer, #footer') || link.classList.contains('social-link'))
+            ? 'footer_link'
+            : (link.classList.contains('btn') || link.classList.contains('contact-card-link') ? 'cta_button' : 'inline_link');
+
+        sendGA4Event('click_whatsapp', {
+          button_id: buttonId,
+          page_path: window.location.pathname,
+          link_type: linkType
+        });
+        return;
+      }
+
+      // 2. Telephone Links (click_phone, tel: protocol) - ZERO personal data / phone numbers sent
+      if (href.startsWith('tel:')) {
+        const buttonId = link.id || link.getAttribute('data-tracking-id') ||
+          (link.classList.contains('nav-phone') || link.closest('header, .navbar, #main-header') ? 'header-phone-link' :
+           link.closest('footer, #ns-footer, #footer') ? 'footer-phone-link' :
+           (link.classList.contains('btn') || link.classList.contains('contact-card-link') ? 'cta-phone-btn' : 'phone-link'));
+
+        sendGA4Event('click_phone', {
+          button_id: buttonId,
+          page_path: window.location.pathname
+        });
+        return;
+      }
+    } catch (err) {
+      console.warn('[Nova GA4 Click Tracking Error]:', err);
+    }
+  }, { passive: true });
+}
+
+// Auto-initialize click tracking immediately if DOM is already ready
+if (typeof document !== 'undefined') {
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    initGA4ClickTracking();
+  } else {
+    document.addEventListener('DOMContentLoaded', initGA4ClickTracking, { once: true });
+  }
+}
+
 /* ─────────────────────────────────────────────
    CONSULTATION POPUP LOGIC
 ───────────────────────────────────────────── */
@@ -1309,6 +1424,8 @@ function initConsultationPopup() {
       form,
       submitBtn,
       loadingText: 'Booking...',
+      formName: 'consultation_popup',
+      submissionMethod: 'consultation_popup_modal',
       data: {
         name: nameEl?.value.trim() || '',
         mobile: phoneEl?.value.trim() || '',
@@ -1813,6 +1930,8 @@ async function handleEnrollmentSubmit(e) {
     form,
     submitBtn,
     loadingText: 'Securing Your Seat... 🔒',
+    formName: 'course_enrollment',
+    submissionMethod: 'enrollment_modal',
     data: {
       name,
       mobile: phone,
@@ -1845,11 +1964,6 @@ async function handleEnrollmentSubmit(e) {
       const existing = JSON.parse(localStorage.getItem('novaskills_enquiries') || '[]');
       existing.unshift(leadData);
       localStorage.setItem('novaskills_enquiries', JSON.stringify(existing));
-
-      // Fire GA4 Event for Enrollment Submit
-      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-        try { window.gtag('event', 'enrollment_submit', { course_name: courseName, academy_name: academyName }); } catch(err) {}
-      }
 
       // Show Success View inside enrollment modal
       if (formContainer) formContainer.setAttribute('hidden', '');

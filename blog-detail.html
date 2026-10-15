@@ -1,6 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Canonical Link -->
+  <link rel="canonical" id="page-canonical" href="https://novaskills.in/blog.html" />
+  <script>
+    (function() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var id = (params.get('id') || '').trim();
+        var canLink = document.getElementById('page-canonical');
+        if (id) {
+          if (id === 'n8n-ai-automation-beginners') {
+            if (canLink) canLink.setAttribute('href', 'https://novaskills.in/blog/n8n-ai-automation-beginners/');
+            window.location.replace('/blog/n8n-ai-automation-beginners/');
+            return;
+          }
+          if (id === 'high-demand-courses-2027-ai-skills-careers') {
+            if (canLink) canLink.setAttribute('href', 'https://novaskills.in/blog/high-demand-courses-2027-ai-skills-careers/');
+            window.location.replace('/blog/high-demand-courses-2027-ai-skills-careers/');
+            return;
+          }
+          if (id === 'ai-seo-geo-digital-marketing-2026') {
+            if (canLink) canLink.setAttribute('href', 'https://novaskills.in/blog/ai-seo-geo-digital-marketing-2026/');
+            window.location.replace('/blog/ai-seo-geo-digital-marketing-2026/');
+            return;
+          }
+          if (id === 'waseeullah-mansoori') {
+            if (canLink) canLink.setAttribute('href', 'https://novaskills.in/blog/waseeullah-mansoori/');
+            window.location.replace('/blog/waseeullah-mansoori/');
+            return;
+          }
+          if (canLink) {
+            canLink.setAttribute('href', 'https://novaskills.in/blog-detail.html?id=' + encodeURIComponent(id));
+          }
+        } else {
+          if (canLink) {
+            canLink.setAttribute('href', 'https://novaskills.in/blog.html');
+          }
+        }
+      } catch(e) {}
+    })();
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WN9N2KF12"></script>
   <script>
@@ -40,8 +80,6 @@
   <meta name="twitter:image" id="tw-image" content="https://novaskills.in/public/images/seo/og-banner.png?v=2026" />
   <meta name="twitter:image:alt" id="tw-image-alt" content="Nova Skills Blog Article" />
 
-  <!-- Canonical Link -->
-  <link rel="canonical" id="page-canonical" href="https://novaskills.in/blog-detail.html" />
   <link rel="icon" type="image/svg+xml" href="/branding%20content/icon%202.svg" />
 
   <title id="page-title">Article — Nova Skills Blog</title>

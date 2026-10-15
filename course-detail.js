@@ -28,6 +28,30 @@ const COURSE_ALIASES = {
   'freelance-mastery': 'freelancing-mastery'
 };
 
+const ACADEMY_SLUG_MAP = {
+  'digital-marketing': 'digital-marketing',
+  'ai': 'ai',
+  'design': 'design',
+  'programming': 'programming',
+  'nocode': 'no-code-web',
+  'no-code-web': 'no-code-web',
+  'video': 'video-motion',
+  'video-motion': 'video-motion',
+  '3d': '3d',
+  'career': 'career-freelancing',
+  'career-freelancing': 'career-freelancing',
+  'communication': 'communication',
+  'kids': 'kids-tech',
+  'kids-tech': 'kids-tech',
+  'creator': 'creator',
+  'office': 'office-productivity',
+  'office-productivity': 'office-productivity'
+};
+
+function getAcademySlug(id) {
+  return ACADEMY_SLUG_MAP[id] || id || '';
+}
+
 function getTargetCourse() {
   const params = new URLSearchParams(window.location.search);
   const rawId = (params.get('id') || params.get('course') || '').trim();
@@ -137,9 +161,11 @@ function populateCourseDetail(course) {
 
   // Breadcrumb & Hero Silo Linking
   const bcAcademy = document.getElementById('breadcrumb-academy-link') || document.querySelector('.course-detail-breadcrumb a:nth-of-type(2)');
+  const acadSlug = getAcademySlug(course.academyId);
+  const acadUrl = acadSlug ? `/academies/${acadSlug}/` : '/academies/';
   if (bcAcademy) {
     bcAcademy.textContent = course.academy || 'Courses';
-    bcAcademy.setAttribute('href', `/courses.html?academy=${encodeURIComponent(course.academyId || '')}`);
+    bcAcademy.setAttribute('href', acadUrl);
   }
 
   const bc = document.getElementById('breadcrumb-course-name');
@@ -147,7 +173,7 @@ function populateCourseDetail(course) {
 
   const tag = document.getElementById('detail-academy-tag');
   if (tag) {
-    tag.innerHTML = `<a href="/courses.html?academy=${encodeURIComponent(course.academyId || '')}" style="color:inherit; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">${course.icon || '🎓'} ${course.academy || 'Academy'}</a>`;
+    tag.innerHTML = `<a href="${acadUrl}" style="color:inherit; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">${course.icon || '🎓'} ${course.academy || 'Academy'}</a>`;
   }
 
   const title = document.getElementById('detail-title');
@@ -1087,7 +1113,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
               Advance to Next Program →
             </a>
           ` : `
-            <a href="/courses.html?academy=${encodeURIComponent(baseCourse.academyId)}" class="btn btn-outline btn-sm">
+            <a href="/academies/${getAcademySlug(baseCourse.academyId)}/" class="btn btn-outline btn-sm">
               Explore Advanced Programs in ${escapeHTML(baseCourse.academy)} →
             </a>
           `}
@@ -1122,7 +1148,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
     if (academyTag) {
       academyTag.innerHTML = `
         <span style="display:inline-flex; align-items:center; gap:8px;">
-          <a href="/courses.html?academy=${encodeURIComponent(baseCourse.academyId || '')}" style="color:inherit; text-decoration:none;">${baseCourse.icon || '🎓'} ${baseCourse.academy || 'Academy'}</a>
+          <a href="/academies/${getAcademySlug(baseCourse.academyId)}/" style="color:inherit; text-decoration:none;">${baseCourse.icon || '🎓'} ${baseCourse.academy || 'Academy'}</a>
           <span style="opacity:0.4;">|</span>
           <span style="font-weight:800; letter-spacing:0.04em; color:var(--teal);">${escapeHTML(data.eyebrow)}</span>
         </span>
@@ -1261,7 +1287,7 @@ function injectCourseSchema(course, courseImg, canonicalUrl, detailData = null) 
         "@type": "ListItem",
         "position": 2,
         "name": course.academy || "Academy",
-        "item": `https://novaskills.in/courses.html?academy=${encodeURIComponent(course.academyId || '')}`
+        "item": `https://novaskills.in/academies/${getAcademySlug(course.academyId)}/`
       },
       {
         "@type": "ListItem",

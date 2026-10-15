@@ -144,10 +144,74 @@ function getSmartRelatedAcademies(currentSlug) {
     .slice(0, 4);
 }
 
+const ACADEMY_SEO_MAP = {
+  'digital-marketing': {
+    title: 'Digital Marketing Course & Certification | Nova Skills Academy',
+    metaDesc: 'Master Digital Marketing with 100% practical training in SEO, Google Ads, Meta Ads & AI tools. Classroom & live online batches with 100% placement support.',
+    h1: 'Digital Marketing Academy: Job-Ready Training & Certification'
+  },
+  '3d': {
+    title: '3D Academy — 3ds Max, Blender & V-Ray Courses | Nova Skills',
+    metaDesc: 'Master 3D modeling, interior rendering & animation with 3ds Max, Blender, Unreal Engine & V-Ray. Hands-on portfolio projects with career placement support.',
+    h1: '3D Academy: Practical 3D Modeling, ArchViz & Animation Training'
+  },
+  'kids-tech': {
+    title: 'Kids Tech Academy — Coding, AI & Robotics for Ages 8–16 | Nova Skills',
+    metaDesc: 'Empower your child with future tech skills. Hands-on coding, Scratch, Python, game development & AI fundamentals for kids aged 8–16. Safe interactive learning.',
+    h1: 'Kids Tech Academy: Coding, AI & Future Skills for Young Innovators'
+  },
+  'video-motion': {
+    title: 'Video Editing & Motion Graphics Course | Premiere Pro & After Effects',
+    metaDesc: 'Learn professional video editing & motion design in Premiere Pro, DaVinci Resolve & After Effects. Build a commercial showreel with 100% placement support.',
+    h1: 'Video & Motion Academy: Professional Post-Production & VFX Training'
+  },
+  'programming': {
+    title: 'Web & App Development Courses — Full-Stack & Python | Nova Skills',
+    metaDesc: 'Learn Full-Stack Web Development, Python, and Mobile Apps with live project building. Master HTML, CSS, JavaScript, React & Node.js with placement support.',
+    h1: 'Programming Academy: Full-Stack Web & Software Engineering Training'
+  },
+  'ai': {
+    title: 'AI & Automation Academy — n8n, AI Agents & Prompt Engineering | Nova Skills',
+    metaDesc: 'Master Generative AI, prompt engineering, n8n automated workflows, and custom AI agents. Practical hands-on training using ChatGPT, Claude, and OpenAI APIs.',
+    h1: 'AI Academy: Generative AI, Workflow Automation & Agentic Systems'
+  },
+  'design': {
+    title: 'Graphic Design & UI/UX Academy — Figma & Adobe Suite | Nova Skills',
+    metaDesc: 'Master graphic design, brand identity, and UI/UX with Figma, Photoshop & Illustrator. Build a hiring-ready design portfolio with 100% placement support.',
+    h1: 'Design Academy: Graphic Design, Branding & UI/UX Training'
+  },
+  'no-code-web': {
+    title: 'No-Code Web Academy — Webflow, WordPress & Shopify | Nova Skills',
+    metaDesc: 'Build client websites without code using Webflow, WordPress, Shopify & Framer. Master freelancing and agency web development with practical client projects.',
+    h1: 'No-Code Web Academy: Webflow, WordPress & E-Commerce Development'
+  },
+  'creator': {
+    title: 'Creator Academy — YouTube, Content Creation & Monetization | Nova Skills',
+    metaDesc: 'Learn audience building, YouTube growth, viral content strategy & personal branding. Master content monetization and social media production workflows.',
+    h1: 'Creator Academy: Content Strategy, YouTube & Personal Branding'
+  },
+  'communication': {
+    title: 'Communication Academy — Business English & Interview Skills | Nova Skills',
+    metaDesc: 'Boost your career with fluent business English, corporate communication, public speaking, and job interview mastery. Practical confidence training.',
+    h1: 'Communication Academy: Business English, Public Speaking & Career Confidence'
+  },
+  'office-productivity': {
+    title: 'Office Productivity Academy — Advanced Excel, MIS & AI Tools | Nova Skills',
+    metaDesc: 'Master Advanced Excel, Google Sheets, MIS reporting, PowerPoint presentations, and AI productivity tools for high-efficiency office and corporate work.',
+    h1: 'Office Productivity Academy: Advanced Excel, MIS & Workplace Tools'
+  },
+  'career-freelancing': {
+    title: 'Career & Freelancing Academy — Upwork, Fiverr & Agency Growth | Nova Skills',
+    metaDesc: 'Learn how to get high-paying freelance clients on Upwork, Fiverr, and LinkedIn. Master international client pitching, proposals, pricing, and scaling.',
+    h1: 'Career & Freelancing Academy: High-Income Client Acquisition & Agency Growth'
+  }
+};
+
 function injectAcademySEOAndSchema(academy, landingData, totalCoursesCount) {
   const canonicalUrl = `https://novaskills.in/academies/${academy.slug}/`;
-  const pageTitle = `${academy.name} — Nova Skills Education Institute`;
-  const metaDesc = `Master ${academy.name} with 100% practical training, live client projects, ISO certification & placement support at Nova Skills Institute.`;
+  const seoConfig = ACADEMY_SEO_MAP[academy.slug] || {};
+  const pageTitle = seoConfig.title || `${academy.name} — Nova Skills Education Institute`;
+  const metaDesc = seoConfig.metaDesc || `Master ${academy.name} with 100% practical training, live client projects, and placement support at Nova Skills Institute.`;
   const ogImage = `https://novaskills.in/public/images/seo/og-banner.png?v=2026`;
 
   // 1. Page Title
@@ -417,11 +481,12 @@ function renderAcademyLandingPage(academy) {
   const nameEl = document.getElementById('academy-name-display');
   const descEl = document.getElementById('academy-desc-display');
 
-  if (iconEl) iconEl.textContent = academy.icon || '🎓';
-  if (nameEl) nameEl.textContent = academy.name;
+  const seoConfig = ACADEMY_SEO_MAP[academy.slug] || {};
+  if (nameEl) nameEl.textContent = seoConfig.h1 || academy.name;
   if (descEl) {
+    const deliveryBadge = `<span class="badge-delivery" style="display:inline-block; background:rgba(117,215,102,0.15); color:#75d766; border:1px solid rgba(117,215,102,0.3); padding:4px 12px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px;">📍 Classroom in Siddharth Nagar • 💻 Live Interactive Online (Pan-India & Mumbai)</span><br>`;
     const headline = landingData.headline ? `<strong style="display:block; font-size:1.25rem; color:#75d766; margin-bottom:8px;">${landingData.headline}</strong>` : '';
-    descEl.innerHTML = `${headline}${academy.description}`;
+    descEl.innerHTML = `${deliveryBadge}${headline}${academy.description}`;
   }
 
   const statsContainer = document.getElementById('academy-stats-pills');
@@ -460,7 +525,7 @@ function renderAcademyLandingPage(academy) {
   // ----------------------------------------------------
   const overview = landingData.overview || {
     intro: `${academy.name} provides end-to-end practical skills training to launch and scale high-growth careers in modern industry.`,
-    benefits: ["100% Practical Training on Real Projects", "Live Mentor Guidance & Code Reviews", "ISO-Recognized Industry Certification", "Dedicated Placement & Freelance Support"],
+    benefits: ["100% Practical Training on Real Projects", "Live Mentor Guidance & Code Reviews", "Industry-Recognized Professional Certification", "Dedicated Placement & Freelance Support"],
     outcomes: ["Build verifiable portfolio projects", "Gain mastery in modern industry software tools", "Qualify for high-paying job opportunities", "Launch freelance or agency business paths"]
   };
 
@@ -1046,7 +1111,7 @@ function renderAcademyLandingPage(academy) {
     { "q": `What are the eligibility criteria for ${academy.name}?`, "a": "Anyone with a passion for learning can join. We start from foundational concepts and build up to advanced professional levels." },
     { "q": "Do you provide placement assistance?", "a": "Yes! Our Career and Professional Programs include dedicated placement assistance, resume reviews, mock interviews, and hiring connections." },
     { "q": "Are classes available in online or hybrid modes?", "a": "Both! You can choose interactive live online sessions or hybrid classroom learning." },
-    { "q": "Will I receive a certificate after completing the course?", "a": "Yes, you will earn an official ISO-recognized certificate from Nova Skills Education Institute upon course completion." }
+    { "q": "Will I receive a certificate after completing the course?", "a": "Yes, you will earn an official industry-recognized certificate from Nova Skills Education Institute upon course completion." }
   ];
 
   html += `

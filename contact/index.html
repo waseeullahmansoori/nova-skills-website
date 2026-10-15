@@ -977,31 +977,18 @@
         console.log(`[Nova Analytics Tracked]: ${eventName}`, payload);
       }
 
-      // Track Phone Clicks
-      document.querySelectorAll('a[href^="tel:"]').forEach(el => {
-        el.addEventListener('click', () => {
-          trackConversion('phone_click', { phone: el.getAttribute('href') });
-        });
-      });
-
-      // Track WhatsApp Clicks
-      document.querySelectorAll('a[href*="wa.me"]').forEach(el => {
-        el.addEventListener('click', () => {
-          trackConversion('whatsapp_click', { destination: 'whatsapp' });
-        });
-      });
-
-      // Track Email Clicks
+      // Note: WhatsApp and Phone click tracking are handled centrally by components.js without PII leakage.
+      // Track Email Clicks (No PII)
       document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
         el.addEventListener('click', () => {
-          trackConversion('email_click', { email: el.getAttribute('href') });
+          trackConversion('email_click', { button_id: el.id || 'click-email-card', link_type: 'email' });
         });
       });
 
-      // Track Map Clicks
+      // Track Map Clicks (No PII)
       document.querySelectorAll('a[href*="maps.app.goo.gl"]').forEach(el => {
         el.addEventListener('click', () => {
-          trackConversion('map_click', { mapUrl: el.getAttribute('href') });
+          trackConversion('map_click', { button_id: el.id || 'click-map-card', link_type: 'map' });
         });
       });
 
@@ -1085,14 +1072,9 @@
             form,
             submitBtn,
             data: formData,
-            loadingText: 'Submitting Enquiry...',
-            onSuccessCallback: () => {
-              trackConversion('form_submit', {
-                course: formData.course,
-                city: formData.city,
-                mode: selectedMode
-              });
-            }
+            formName: 'contact_enquiry',
+            submissionMethod: 'contact_page_form',
+            loadingText: 'Submitting Enquiry...'
           });
         } else {
           // Fallback alert if submitNovaForm is loading

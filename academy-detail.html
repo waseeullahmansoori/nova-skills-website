@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="canonical" id="page-canonical" href="https://novaskills.in/courses.html">
   <script>
     (function() {
-      const params = new URLSearchParams(window.location.search);
-      const slug = params.get('academy') || params.get('id');
-      if (slug) {
-        const map = {
-          'nocode': 'no-code-web',
-          'video': 'video-motion',
-          'career': 'career-freelancing',
-          'kids': 'kids-tech',
-          'office': 'office-productivity'
-        };
-        const cleanSlug = map[slug] || slug;
-        window.location.replace('/academies/' + cleanSlug + '/');
-      }
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var slug = params.get('academy') || params.get('id');
+        if (slug) {
+          var map = {
+            'nocode': 'no-code-web',
+            'video': 'video-motion',
+            'career': 'career-freelancing',
+            'kids': 'kids-tech',
+            'office': 'office-productivity'
+          };
+          var cleanSlug = map[slug] || slug;
+          var canLink = document.getElementById('page-canonical');
+          if (canLink) {
+            canLink.setAttribute('href', 'https://novaskills.in/academies/' + cleanSlug + '/');
+          }
+          window.location.replace('/academies/' + cleanSlug + '/');
+        }
+      } catch(e) {}
     })();
   </script>
   <!-- Google tag (gtag.js) -->
@@ -33,7 +40,6 @@
   <title id="page-title">Academy — Nova Skills Institute</title>
   <meta name="description" id="page-meta-desc" content="Explore career-focused academies at Nova Skills Institute. Master practical skills with industry experts, live projects, and placement assistance.">
   <meta name="robots" content="noindex, follow">
-  <link rel="canonical" id="page-canonical" href="https://novaskills.in/academies/">
   
   <!-- Open Graph Meta Tags -->
   <meta property="og:type" content="website">
