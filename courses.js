@@ -347,32 +347,85 @@ function initMobileFilters() {
 
   if (!openBtn || !drawer) return;
 
+  openBtn.setAttribute('aria-expanded', 'false');
+
+  const closeDrawer = () => {
+    backdrop?.classList.remove('open');
+    drawer?.classList.remove('open');
+    openBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    if (document.activeElement && drawer.contains(document.activeElement)) {
+      openBtn.focus();
+    }
+  };
+
   openBtn.addEventListener('click', () => {
     // Copy sidebar contents to mobile drawer slot if empty
     const sidebarBody = document.querySelector('.filters-body');
     if (sidebarBody && slot && slot.children.length === 0) {
-      slot.appendChild(sidebarBody.cloneNode(true));
+      const clonedBody = sidebarBody.cloneNode(true);
+      // Remove IDs from clone to avoid duplicate IDs in DOM
+      clonedBody.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+      slot.appendChild(clonedBody);
+
       // Sync events inside mobile drawer
       slot.querySelectorAll('input').forEach(inp => {
-        inp.addEventListener('change', () => {
-          // Sync desktop sidebar checkbox state
-          if (inp.name && inp.value) {
-            const sidebarInp = document.querySelector(`#filters-sidebar input[name="${inp.name}"][value="${inp.value}"]`);
-            if (sidebarInp) sidebarInp.checked = inp.checked;
-          }
-          renderCourses();
-        });
+        if (inp.type === 'checkbox' || inp.type === 'radio') {
+          inp.addEventListener('change', () => {
+            const orig = document.querySelector(`#filters-sidebar input[name="${inp.name}"][value="${inp.value}"]`);
+            if (orig) orig.checked = inp.checked;
+            renderCourses();
+          });
+        } else if (inp.type === 'text') {
+          inp.addEventListener('input', () => {
+            const origSearch = document.getElementById('filter-search-input');
+            if (origSearch) origSearch.value = inp.value;
+            renderCourses();
+          });
+        } else if (inp.type === 'range') {
+          inp.addEventListener('input', () => {
+            const origRange = document.getElementById('filter-price-range');
+            if (origRange) {
+              origRange.value = inp.value;
+              const display = document.getElementById('price-max-display');
+              if (display) display.textContent = `₹${parseInt(inp.value, 10).toLocaleString('en-IN')}`;
+            }
+            renderCourses();
+          });
+        }
       });
     }
-    backdrop?.classList.add('open');
-    drawer.classList.add('open');
-  });
 
-  const closeDrawer = () => {
-    backdrop?.classList.remove('open');
-    drawer.classList.remove('open');
-  };
+    // Synchronize cloned inputs with current desktop state
+    if (slot) {
+      slot.querySelectorAll('input').forEach(inp => {
+        if (inp.type === 'checkbox' || inp.type === 'radio') {
+          const orig = document.querySelector(`#filters-sidebar input[name="${inp.name}"][value="${inp.value}"]`);
+          if (orig) inp.checked = orig.checked;
+        } else if (inp.type === 'text') {
+          const origSearch = document.getElementById('filter-search-input');
+          if (origSearch) inp.value = origSearch.value;
+        } else if (inp.type === 'range') {
+          const origRange = document.getElementById('filter-price-range');
+          if (origRange) inp.value = origRange.value;
+        }
+      });
+    }
+
+    backdrop?.classList.add('open');
+    drawer?.classList.add('open');
+    openBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    const firstInput = drawer.querySelector('input, button');
+    if (firstInput) setTimeout(() => firstInput.focus(), 80);
+  });
 
   closeBtn?.addEventListener('click', closeDrawer);
   backdrop?.addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer?.classList.contains('open')) {
+      closeDrawer();
+    }
+  });
 }

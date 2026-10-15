@@ -559,6 +559,16 @@ function buildNavLinksHTML(page) {
 
     <!-- 6. CONTACT -->
     <li><a href="/contact/" class="${activeClass('contact')}">Contact</a></li>
+
+    <!-- 7. MOBILE DRAWER ACTIONS (Visible on mobile navigation drawer) -->
+    <li class="mobile-drawer-action-group">
+      <a href="/login.html" onclick="handleNavAuthClick(event);" class="mobile-drawer-action-btn mobile-drawer-login" id="mobile-drawer-auth-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Login / Sign Up
+      </a>
+      <a href="tel:+919695904440" class="mobile-drawer-action-btn mobile-drawer-call" id="mobile-drawer-phone-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 9695904440
+      </a>
+    </li>
   `;
 }
 
@@ -1062,6 +1072,10 @@ function initNavBehaviour() {
     navLinks.classList.add('open');
     navOverlay.classList.add('visible');
     document.body.style.overflow = 'hidden';
+    const firstFocusable = navLinks.querySelector('a, button');
+    if (firstFocusable) {
+      setTimeout(() => firstFocusable.focus(), 80);
+    }
   }
 
   function closeMenu() {
@@ -1070,6 +1084,9 @@ function initNavBehaviour() {
     navLinks.classList.remove('open');
     navOverlay.classList.remove('visible');
     document.body.style.overflow = '';
+    if (document.activeElement && navLinks.contains(document.activeElement)) {
+      hamburger.focus();
+    }
   }
 
   // Hamburger toggle click
@@ -1126,6 +1143,8 @@ function initAnnouncementBar() {
 
   if (localStorage.getItem('ns_announcement_closed') === 'true') {
     bar.style.display = 'none';
+    const headerWrapper = document.getElementById('ns-header');
+    if (headerWrapper) headerWrapper.style.minHeight = 'auto';
     return;
   }
 
@@ -1236,6 +1255,8 @@ function initAnnouncementBar() {
     bar.style.opacity = '0';
     bar.style.padding = '0';
     localStorage.setItem('ns_announcement_closed', 'true');
+    const headerWrapper = document.getElementById('ns-header');
+    if (headerWrapper) headerWrapper.style.minHeight = 'auto';
     setTimeout(() => bar.style.display = 'none', 320);
   });
 

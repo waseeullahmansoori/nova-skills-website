@@ -41,6 +41,18 @@
       background-color: #f8fafc;
       color: #011731;
     }
+    #ns-header {
+      display: contents;
+    }
+    #ns-header:empty {
+      display: block;
+      min-height: 112px;
+    }
+    @media (max-width: 1024px) {
+      #ns-header:empty {
+        min-height: 104px;
+      }
+    }
     .academy-hero-section {
       background: linear-gradient(135deg, #011731 0%, #0599a8 100%);
       color: white;
@@ -272,7 +284,6 @@
   <!-- JavaScript Bundles -->
   <script src="/js/data.min.js" defer></script>
   <script src="/js/components.min.js" defer></script>
-  <script src="/nova-ai-widget.js?v=3.0" defer></script>
-  <script src="/academy-detail.js" defer></script>
+  <script src="/js/academy-detail.min.js" defer></script>
 </body>
 </html>
