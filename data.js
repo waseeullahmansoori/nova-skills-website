@@ -276,18 +276,33 @@ const NS_COURSES = [
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Social Media & Content Strategy",
-        "lessons": 3
+        "title": "Digital Marketing Foundations, Personas & Strategy",
+        "lessons": 4
       },
       {
         "module": "Module 02",
-        "title": "Paid Advertising Essentials",
-        "lessons": 3
+        "title": "Content Strategy, Canva Design & Organic Social Media",
+        "lessons": 5
       },
       {
         "module": "Module 03",
-        "title": "Measurement & Optimization",
-        "lessons": 3
+        "title": "Local Business Presence, Google Business Profile & Website UX",
+        "lessons": 4
+      },
+      {
+        "module": "Module 04",
+        "title": "Introductory Paid Advertising: Google Search & Meta Ads",
+        "lessons": 4
+      },
+      {
+        "module": "Module 05",
+        "title": "Lead Capture, Customer Follow-Up & AI Productivity",
+        "lessons": 4
+      },
+      {
+        "module": "Module 06",
+        "title": "Campaign Measurement, GA4 Analytics & Performance Reporting",
+        "lessons": 4
       }
     ],
     "tags": [
@@ -302,9 +317,9 @@ const NS_COURSES = [
     "url": "/course-detail.html?id=digital-marketing-pro",
     "courseType": "MERGE",
     "courseRole": "Professional Skill",
-    "learningHours": 40,
+    "learningHours": 88,
     "futureReviewStatus": "FAST-CHANGING",
-    "positioning": "Consolidate into single dm-professional track."
+    "positioning": "Digital Marketing Standard / Foundation"
   },
   {
     "id": "google-ads",
@@ -7618,18 +7633,33 @@ const NS_ACADEMIES = [
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Social Media & Content Strategy",
-            "lessons": 3
+            "title": "Digital Marketing Foundations, Personas & Strategy",
+            "lessons": 4
           },
           {
             "module": "Module 02",
-            "title": "Paid Advertising Essentials",
-            "lessons": 3
+            "title": "Content Strategy, Canva Design & Organic Social Media",
+            "lessons": 5
           },
           {
             "module": "Module 03",
-            "title": "Measurement & Optimization",
-            "lessons": 3
+            "title": "Local Business Presence, Google Business Profile & Website UX",
+            "lessons": 4
+          },
+          {
+            "module": "Module 04",
+            "title": "Introductory Paid Advertising: Google Search & Meta Ads",
+            "lessons": 4
+          },
+          {
+            "module": "Module 05",
+            "title": "Lead Capture, Customer Follow-Up & AI Productivity",
+            "lessons": 4
+          },
+          {
+            "module": "Module 06",
+            "title": "Campaign Measurement, GA4 Analytics & Performance Reporting",
+            "lessons": 4
           }
         ],
         "tags": [
@@ -7644,9 +7674,9 @@ const NS_ACADEMIES = [
         "url": "/course-detail.html?id=digital-marketing-pro",
         "courseType": "MERGE",
         "courseRole": "Professional Skill",
-        "learningHours": 40,
+        "learningHours": 88,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Consolidate into single dm-professional track."
+        "positioning": "Digital Marketing Standard / Foundation"
       },
       {
         "id": "google-ads",

@@ -681,7 +681,18 @@ function renderEnrichedCourseDetail(baseCourse, data) {
         </div>
         <div class="curriculum-module-body">
           <div class="module-purpose-box">
-            <strong>Module Focus:</strong> ${escapeHTML(mod.module_purpose || mod.what_you_will_learn || 'Practical implementation and commercial standards.')}
+            <strong>Module Focus:</strong> ${escapeHTML(typeof mod.module_purpose === 'string' ? mod.module_purpose : (typeof mod.what_you_will_learn === 'string' ? mod.what_you_will_learn : 'Practical implementation and commercial standards.'))}
+            ${Array.isArray(mod.what_you_will_learn) && mod.what_you_will_learn.length > 0 ? `
+              <ul style="margin: 8px 0 0 18px; padding: 0; list-style-type: disc; font-size: 0.88rem; line-height: 1.5; color: var(--text-secondary);">
+                ${mod.what_you_will_learn.map(item => `<li>${escapeHTML(item)}</li>`).join('')}
+              </ul>
+            ` : ''}
+            ${Array.isArray(mod.key_concepts) && mod.key_concepts.length > 0 ? `
+              <div style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center;">
+                <span style="font-size: 0.78rem; font-weight: 700; color: var(--navy);">Key Concepts:</span>
+                ${mod.key_concepts.map(k => `<span style="background: rgba(5, 153, 168, 0.08); color: var(--teal); border: 1px solid rgba(5, 153, 168, 0.2); font-size: 0.75rem; font-weight: 600; padding: 2px 8px; border-radius: var(--radius-full);">${escapeHTML(k)}</span>`).join('')}
+              </div>
+            ` : ''}
           </div>
 
           <div class="lessons-timeline">
@@ -692,10 +703,18 @@ function renderEnrichedCourseDetail(baseCourse, data) {
                   <span class="lesson-title-text">${escapeHTML(lesson.lesson_title || '')}</span>
                 </div>
                 <div class="lesson-meta-grid">
-                  <div class="lesson-meta-item"><strong>Taught:</strong> ${escapeHTML(lesson.what_is_taught || '')}</div>
+                  <div class="lesson-meta-item">
+                    <strong>Taught:</strong> ${escapeHTML(lesson.what_is_taught || '')}
+                    ${Array.isArray(lesson.subtopics) && lesson.subtopics.length > 0 ? `
+                      <ul style="margin: 6px 0 0 16px; padding: 0; list-style-type: disc; font-size: 0.8rem; line-height: 1.45; color: var(--text-secondary);">
+                        ${lesson.subtopics.map(st => `<li>${escapeHTML(st)}</li>`).join('')}
+                      </ul>
+                    ` : ''}
+                  </div>
                   <div class="lesson-meta-item"><strong>Learner Lab:</strong> ${escapeHTML(lesson.what_learner_does || '')}</div>
                   <div class="lesson-meta-item"><strong>Why It Matters:</strong> ${escapeHTML(lesson.why_it_matters || '')}</div>
                   <div class="lesson-meta-item"><strong>Expected Deliverable:</strong> ${escapeHTML(lesson.expected_outcome || '')}</div>
+                  ${lesson.example ? `<div class="lesson-meta-item" style="grid-column: 1 / -1;"><strong>Industry Example:</strong> ${escapeHTML(lesson.example)}</div>` : ''}
                 </div>
               </div>
             `).join('')}
@@ -704,6 +723,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
           <div class="module-footer-meta">
             ${mod.hands_on_practice ? `<div><strong>🛠️ Hands-on Lab:</strong> ${escapeHTML(mod.hands_on_practice)}</div>` : ''}
             ${mod.assignment ? `<div><strong>📝 Practical Assignment:</strong> ${escapeHTML(mod.assignment)}</div>` : ''}
+            ${mod.business_application ? `<div><strong>💼 Commercial Application:</strong> ${escapeHTML(mod.business_application)}</div>` : ''}
             ${mod.expected_outcome ? `<div><strong>🎯 Expected Outcome:</strong> ${escapeHTML(mod.expected_outcome)}</div>` : ''}
           </div>
         </div>
@@ -1018,6 +1038,32 @@ function renderEnrichedCourseDetail(baseCourse, data) {
                 <p class="assessment-tier-desc">${escapeHTML(tier.desc || '')}</p>
               </div>
             `).join('')}
+          </div>
+        </div>
+      `;
+    } else if (data.assessment && (data.assessment.model || data.assessment.criteria)) {
+      assessSection.style.display = 'block';
+      assessContainer.innerHTML = `
+        <div class="assessment-model-card">
+          <div class="assessment-tiers-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            ${data.assessment.model ? `
+              <div class="assessment-tier-card">
+                <div class="assessment-tier-header">
+                  <span class="assessment-tier-name">Evaluation Model</span>
+                  <span class="assessment-tier-weight">Weighting</span>
+                </div>
+                <p class="assessment-tier-desc">${escapeHTML(data.assessment.model)}</p>
+              </div>
+            ` : ''}
+            ${data.assessment.criteria ? `
+              <div class="assessment-tier-card">
+                <div class="assessment-tier-header">
+                  <span class="assessment-tier-name">Evaluation Standards</span>
+                  <span class="assessment-tier-weight">Criteria</span>
+                </div>
+                <p class="assessment-tier-desc">${escapeHTML(data.assessment.criteria)}</p>
+              </div>
+            ` : ''}
           </div>
         </div>
       `;
