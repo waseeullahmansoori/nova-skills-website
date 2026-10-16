@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     populateCourseDetail(course);
     renderRelatedCourses(course);
     loadDetailedCourseData(course);
+  } else {
+    renderCourseNotFound();
   }
 });
 
@@ -55,17 +57,57 @@ function getAcademySlug(id) {
 function getTargetCourse() {
   const params = new URLSearchParams(window.location.search);
   const rawId = (params.get('id') || params.get('course') || '').trim();
-  const id = COURSE_ALIASES[rawId] || rawId || 'dm-mastery';
 
   const courses = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
     ? NS_COURSES
     : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []);
 
-  return courses.find(c => c.id === id || c.slug === id) ||
-         courses.find(c => c.id === rawId || c.slug === rawId) ||
-         courses.find(c => c.id === 'dm-mastery') ||
-         courses[0];
+  if (!rawId) {
+    // If no course specified in URL, load default flagship course dm-mastery
+    return courses.find(c => c.id === 'dm-mastery') || courses[0] || null;
+  }
+
+  const id = COURSE_ALIASES[rawId] || rawId;
+
+  // Search exact id or slug
+  const match = courses.find(c => c.id === id || c.slug === id) ||
+                courses.find(c => c.id === rawId || c.slug === rawId);
+
+  return match || null;
 }
+
+function renderCourseNotFound() {
+  document.title = 'Course Not Found — Nova Skills';
+  const pageTitle = document.getElementById('page-title');
+  if (pageTitle) pageTitle.textContent = 'Course Not Found — Nova Skills';
+
+  const robotsMeta = document.getElementById('page-robots') || document.querySelector('meta[name="robots"]');
+  if (robotsMeta) robotsMeta.setAttribute('content', 'noindex, follow');
+
+  const main = document.getElementById('course-detail-main');
+  if (main) {
+    main.innerHTML = `
+      <div class="container" style="padding-top:40px; padding-bottom:80px;">
+        <div class="course-error-state">
+          <div style="font-size:3.5rem; margin-bottom:16px;">🔍</div>
+          <h2>Course Not Found</h2>
+          <p>
+            The program you are looking for may have been modernized, renamed, or relocated. 
+            Explore our catalog of 109+ industry-standard career courses across 12 academies.
+          </p>
+          <div class="course-error-actions">
+            <a href="/courses.html" class="btn btn-primary">Browse All Courses →</a>
+            <a href="/index.html" class="btn btn-outline">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  const stickyBar = document.getElementById('sticky-mobile-bar');
+  if (stickyBar) stickyBar.style.display = 'none';
+}
+
 
 /* ============================================================
    1. SEO / GEO DYNAMIC METADATA ENGINE & IMMEDIATE RENDER
@@ -218,12 +260,24 @@ function populateCourseDetail(course) {
   if (price) price.textContent = `₹${(course.price || 0).toLocaleString('en-IN')}`;
 
   const origPrice = document.getElementById('detail-original-price');
-  if (origPrice) origPrice.textContent = `₹${(course.originalPrice || course.price * 2 || 0).toLocaleString('en-IN')}`;
+  if (origPrice) {
+    if (course.originalPrice) {
+      origPrice.textContent = `₹${course.originalPrice.toLocaleString('en-IN')}`;
+      origPrice.style.display = '';
+    } else {
+      origPrice.style.display = 'none';
+    }
+  }
 
   const discount = document.getElementById('detail-discount');
-  if (discount && course.originalPrice && course.originalPrice > course.price) {
-    const pct = Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100);
-    discount.textContent = `${pct}% OFF`;
+  if (discount) {
+    if (course.originalPrice && course.originalPrice > course.price) {
+      const pct = Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100);
+      discount.textContent = `${pct}% OFF`;
+      discount.style.display = '';
+    } else {
+      discount.style.display = 'none';
+    }
   }
 
   // Dynamic EMI with 18% GST
@@ -243,7 +297,14 @@ function populateCourseDetail(course) {
   const mobPrice = document.getElementById('mobile-price');
   if (mobPrice) mobPrice.textContent = `₹${(course.price || 0).toLocaleString('en-IN')}`;
   const mobOrig = document.getElementById('mobile-orig-price');
-  if (mobOrig) mobOrig.textContent = `₹${(course.originalPrice || 0).toLocaleString('en-IN')}`;
+  if (mobOrig) {
+    if (course.originalPrice) {
+      mobOrig.textContent = `₹${course.originalPrice.toLocaleString('en-IN')}`;
+      mobOrig.style.display = '';
+    } else {
+      mobOrig.style.display = 'none';
+    }
+  }
 
   // Cert Course Display Name
   const certDisplay = document.getElementById('cert-course-display');

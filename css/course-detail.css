@@ -1333,3 +1333,58 @@
     padding: 20px 16px;
   }
 }
+
+/* ============================================================
+   NEUTRAL COURSE LOADING SKELETON & NOT-FOUND ERROR STATE
+   ============================================================ */
+.course-skeleton-text {
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(255,255,255,0.08) 25%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0.08) 75%);
+  background-size: 200% 100%;
+  animation: courseSkeletonPulse 1.6s ease-in-out infinite;
+  border-radius: 6px;
+  color: transparent !important;
+  user-select: none;
+}
+.course-skeleton-dark {
+  background: linear-gradient(90deg, rgba(1,23,49,0.06) 25%, rgba(1,23,49,0.14) 50%, rgba(1,23,49,0.06) 75%);
+  background-size: 200% 100%;
+  animation: courseSkeletonPulse 1.6s ease-in-out infinite;
+  border-radius: 6px;
+  color: transparent !important;
+  user-select: none;
+}
+@keyframes courseSkeletonPulse {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.course-error-state {
+  background: white;
+  border: 1px solid rgba(1, 23, 49, 0.08);
+  border-radius: var(--radius-xl, 24px);
+  padding: 48px 32px;
+  text-align: center;
+  max-width: 680px;
+  margin: 48px auto;
+  box-shadow: var(--shadow-lg);
+}
+.course-error-state h2 {
+  color: var(--navy);
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+.course-error-state p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.course-error-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
