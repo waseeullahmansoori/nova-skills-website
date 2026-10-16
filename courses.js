@@ -134,12 +134,18 @@ function buildCourseCardHTML(course) {
           ${course.placementSupport ? '<span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>' : ''}
           <span class="feature-item">⭐ ${course.rating} (${course.reviews})</span>
         </div>
-        <div class="course-footer">
-          <div class="course-pricing">
-            <span class="price-current">₹${course.price.toLocaleString('en-IN')}</span>
-            <span class="price-original">₹${course.originalPrice.toLocaleString('en-IN')}</span>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <div>
+              <span class="price-current">₹${course.price.toLocaleString('en-IN')}</span>
+              <span class="price-original">₹${course.originalPrice.toLocaleString('en-IN')}</span>
+            </div>
+            ${course.originalPrice > course.price ? `<span class="price-off">${Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100)}% OFF</span>` : ''}
           </div>
-          <button type="button" class="btn btn-primary btn-sm" onclick="openEnrollmentModal('${course.name.replace(/'/g, "\\'")}', '${course.academy.replace(/'/g, "\\'")}')">Enroll Now →</button>
+          <div style="display:flex; gap:10px; width:100%;">
+            <a href="/course-detail.html?id=${course.id}" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center; text-decoration:none;">View Syllabus</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('${course.name.replace(/'/g, "\\'")}', '${course.academy.replace(/'/g, "\\'")}')">Enroll Now →</button>
+          </div>
         </div>
       </div>
     </div>
