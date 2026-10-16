@@ -1487,6 +1487,32 @@ h1, h2, h3, h4, h5, h6 {
   gap: 12px;
 }
 
+.course-footer-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.course-pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.course-card-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.course-card-actions .btn {
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
 .course-pricing {
   display: flex;
   align-items: baseline;

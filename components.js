@@ -509,11 +509,11 @@ function buildNavLinksHTML(page) {
                 <div class="mega-sub">Data Structures, Backend APIs</div>
               </div>
             </a>
-            <a href="/course-detail.html?id=sql-basics" class="mega-item">
+            <a href="/course-detail.html?id=biz-productivity" class="mega-item">
               <span class="mega-icon">📈</span>
               <div>
-                <div class="mega-title">SQL & Database Management</div>
-                <div class="mega-sub">PostgreSQL, Query Optimization</div>
+                <div class="mega-title">Data Analytics & MIS</div>
+                <div class="mega-sub">Excel, Power BI, Dashboards</div>
               </div>
             </a>
             <a href="/academies/no-code-web/" class="mega-item">

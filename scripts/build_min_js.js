@@ -24,7 +24,7 @@ function simpleJsMinify(code) {
   return cleaned.join('\n').replace(/\n\s*\n/g, '\n').trim();
 }
 
-const files = ['data.js', 'components.js', 'main.js', 'nova-ai-widget.js', 'blog.js', 'blog-detail.js', 'academy-detail.js', 'course-detail.js'];
+const files = ['data.js', 'components.js', 'main.js', 'nova-ai-widget.js', 'blog.js', 'blog-detail.js', 'academy-detail.js', 'course-detail.js', 'courses.js'];
 
 files.forEach(f => {
   const srcPath = path.join(BASE_DIR, f);
