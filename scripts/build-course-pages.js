@@ -805,11 +805,45 @@ function generateStaticCourseHtml(courseId, templateHtml) {
     html = html.replace(/<div\s+class="related-grid"\s+id="related-courses-grid">[\s\S]*?<\/div>/i, `<div class="related-grid" id="related-courses-grid">\n        ${relatedHtml}\n      </div>`);
   }
 
+  // Dynamic Includes List
+  const placementIncludeItem = baseCourse.placementSupport
+    ? `<li><span class="include-icon">🎯</span> Placement Support & Interviews</li>`
+    : `<li><span class="include-icon">💼</span> Practical Portfolio & Capstone Support</li>`;
+
+  const includesHtml = `
+              <ul id="detail-includes-list">
+                <li><span class="include-icon">🎥</span> Live Interactive Classes</li>
+                <li><span class="include-icon">💻</span> Hands-on Live Projects</li>
+                <li><span class="include-icon">👤</span> 1-on-1 Mentor Guidance</li>
+                <li><span class="include-icon">📜</span> Industry Recognized Certificate</li>
+                ${placementIncludeItem}
+                <li><span class="include-icon">♾️</span> Lifetime Community Access</li>
+              </ul>
+  `.trim();
+  html = html.replace(/<ul\s+id="detail-includes-list">[\s\S]*?<\/ul>/i, includesHtml);
+
+  // High-Conversion CTAs with exact pre-filled parameters
+  const safeName = baseCourse.name.replace(/'/g, "\\'");
+  const safeAcademy = (baseCourse.academy || '').replace(/'/g, "\\'");
+  const safeDuration = baseCourse.duration || '';
+  const safePrice = priceFormatted;
+  const safeId = baseCourse.id;
+
+  html = html.replace(
+    /<button\s+class="btn\s+btn-primary\s+btn-enroll-full"[^>]*>[\s\S]*?<\/button>/i,
+    `<button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('${safeName}', '${safeAcademy}', '${safeDuration}', '${safePrice}', '${safeId}')">Enroll Now — Book Seat →</button>`
+  );
+
+  html = html.replace(
+    /<button\s+class="btn-consult-full"[^>]*>[\s\S]*?<\/button>/i,
+    `<button class="btn-consult-full" onclick="openConsultationPopup('${safeName}')">📞 Request Callback / Syllabus</button>`
+  );
+
   // Sticky Mobile Bar
-  html = html.replace(/<span\s+class="price-current"\s+id="mobile-price">[\s\S]*?<\/span>/i, `<span class="price-current" id="mobile-price">${priceFormatted}</span>`);
-  if (origPriceFormatted) {
-    html = html.replace(/<span\s+class="price-original"\s+id="mobile-orig-price"[\s\S]*?<\/span>/i, `<span class="price-original" id="mobile-orig-price">${origPriceFormatted}</span>`);
-  }
+  html = html.replace(
+    /<div\s+class="sticky-enroll-bar"\s+id="sticky-mobile-bar">[\s\S]*?<\/div>/i,
+    `<div class="sticky-enroll-bar" id="sticky-mobile-bar">\n    <div class="price-group">\n      <span class="price-current" id="mobile-price">${priceFormatted}</span>\n      ${origPriceFormatted ? `<span class="price-original" id="mobile-orig-price">${origPriceFormatted}</span>` : '<span class="price-original" id="mobile-orig-price" style="display:none;"></span>'}\n    </div>\n    <button class="btn btn-primary" onclick="openEnrollmentModal('${safeName}', '${safeAcademy}', '${safeDuration}', '${safePrice}', '${safeId}')">Enroll Now →</button>\n  </div>`
+  );
 
   // Cert Course Display Name
   html = html.replace(/<div\s+class="cert-course-name"\s+id="cert-course-display"[\s\S]*?<\/div>/i, `<div class="cert-course-name" id="cert-course-display" style="font-size:0.8rem; padding:4px 12px;">${escapeHTML(baseCourse.name)}</div>`);

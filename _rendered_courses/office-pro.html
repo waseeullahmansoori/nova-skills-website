@@ -254,13 +254,9 @@
 
             <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options starting at <strong>₹3,933/month</strong> · 18% GST included</p>
 
-            <button class="btn btn-primary btn-enroll-full" onclick="openConsultationPopup()">
-              Enroll Now — Book Seat →
-            </button>
+            <button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('Office Productivity Professional', 'Office Productivity Academy', '3 Months', '₹9,999', 'office-pro')">Enroll Now — Book Seat →</button>
 
-            <button class="btn-consult-full" onclick="openConsultationPopup()">
-              📞 Request Callback / Syllabus
-            </button>
+            <button class="btn-consult-full" onclick="openConsultationPopup('Office Productivity Professional')">📞 Request Callback / Syllabus</button>
 
             <div class="course-card-includes">
               <h4>This Course Includes:</h4>
@@ -1261,9 +1257,11 @@
   <!-- STICKY MOBILE ENROLL BAR -->
   <div class="sticky-enroll-bar" id="sticky-mobile-bar">
     <div class="price-group">
-      <span class="price-current" id="mobile-price">₹9,999</span></span>
+      <span class="price-current" id="mobile-price">₹9,999</span>
       <span class="price-original" id="mobile-orig-price">₹24,999</span>
     </div>
+    <button class="btn btn-primary" onclick="openEnrollmentModal('Office Productivity Professional', 'Office Productivity Academy', '3 Months', '₹9,999', 'office-pro')">Enroll Now →</button>
+  </div>
     <button class="btn btn-primary" onclick="openConsultationPopup()">Enroll Now →</button>
   </div>
 

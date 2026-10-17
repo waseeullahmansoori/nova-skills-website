@@ -262,13 +262,9 @@
 
             <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options starting at <strong>₹3,579/month</strong> · 18% GST included</p>
 
-            <button class="btn btn-primary btn-enroll-full" onclick="openConsultationPopup()">
-              Enroll Now — Book Seat →
-            </button>
+            <button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('Career Launch Program', 'Career & Freelancing Academy', '3 Months', '₹9,099', 'career-launch')">Enroll Now — Book Seat →</button>
 
-            <button class="btn-consult-full" onclick="openConsultationPopup()">
-              📞 Request Callback / Syllabus
-            </button>
+            <button class="btn-consult-full" onclick="openConsultationPopup('Career Launch Program')">📞 Request Callback / Syllabus</button>
 
             <div class="course-card-includes">
               <h4>This Course Includes:</h4>
@@ -1305,9 +1301,11 @@
   <!-- STICKY MOBILE ENROLL BAR -->
   <div class="sticky-enroll-bar" id="sticky-mobile-bar">
     <div class="price-group">
-      <span class="price-current" id="mobile-price">₹9,099</span></span>
+      <span class="price-current" id="mobile-price">₹9,099</span>
       <span class="price-original" id="mobile-orig-price">₹24,999</span>
     </div>
+    <button class="btn btn-primary" onclick="openEnrollmentModal('Career Launch Program', 'Career & Freelancing Academy', '3 Months', '₹9,099', 'career-launch')">Enroll Now →</button>
+  </div>
     <button class="btn btn-primary" onclick="openConsultationPopup()">Enroll Now →</button>
   </div>
 

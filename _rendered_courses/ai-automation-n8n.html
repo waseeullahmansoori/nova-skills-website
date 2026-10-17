@@ -263,13 +263,9 @@
 
             <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options starting at <strong>₹4,129/month</strong> · 18% GST included</p>
 
-            <button class="btn btn-primary btn-enroll-full" onclick="openConsultationPopup()">
-              Enroll Now — Book Seat →
-            </button>
+            <button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('AI Automation with n8n', 'AI Academy', '2 Months', '₹6,999', 'ai-automation-n8n')">Enroll Now — Book Seat →</button>
 
-            <button class="btn-consult-full" onclick="openConsultationPopup()">
-              📞 Request Callback / Syllabus
-            </button>
+            <button class="btn-consult-full" onclick="openConsultationPopup('AI Automation with n8n')">📞 Request Callback / Syllabus</button>
 
             <div class="course-card-includes">
               <h4>This Course Includes:</h4>
@@ -278,7 +274,7 @@
                 <li><span class="include-icon">💻</span> Hands-on Live Projects</li>
                 <li><span class="include-icon">👤</span> 1-on-1 Mentor Guidance</li>
                 <li><span class="include-icon">📜</span> Industry Recognized Certificate</li>
-                <li><span class="include-icon">🎯</span> Placement Support & Interviews</li>
+                <li><span class="include-icon">💼</span> Practical Portfolio & Capstone Support</li>
                 <li><span class="include-icon">♾️</span> Lifetime Community Access</li>
               </ul>
             </div>
@@ -1286,9 +1282,11 @@
   <!-- STICKY MOBILE ENROLL BAR -->
   <div class="sticky-enroll-bar" id="sticky-mobile-bar">
     <div class="price-group">
-      <span class="price-current" id="mobile-price">₹6,999</span></span>
+      <span class="price-current" id="mobile-price">₹6,999</span>
       <span class="price-original" id="mobile-orig-price">₹19,999</span>
     </div>
+    <button class="btn btn-primary" onclick="openEnrollmentModal('AI Automation with n8n', 'AI Academy', '2 Months', '₹6,999', 'ai-automation-n8n')">Enroll Now →</button>
+  </div>
     <button class="btn btn-primary" onclick="openConsultationPopup()">Enroll Now →</button>
   </div>
 

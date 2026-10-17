@@ -1513,6 +1513,126 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.course-card-actions .btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid rgba(1, 23, 49, 0.25);
+  font-weight: 600;
+}
+
+.course-card-actions .btn-outline:hover {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+
+.course-card-actions .btn-primary {
+  background: var(--grad-teal-green);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(5, 153, 168, 0.25);
+}
+
+.course-card-actions .btn-primary:hover {
+  box-shadow: 0 6px 18px rgba(5, 153, 168, 0.4);
+  transform: translateY(-2px);
+}
+
+.course-track-pill {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.course-track-pill.track-career {
+  background: rgba(139, 92, 246, 0.12);
+  color: #7c3aed;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.course-track-pill.track-pro {
+  background: rgba(5, 153, 168, 0.12);
+  color: var(--teal);
+  border: 1px solid rgba(5, 153, 168, 0.25);
+}
+
+.course-track-pill.track-cert {
+  background: rgba(117, 215, 102, 0.15);
+  color: #15803d;
+  border: 1px solid rgba(117, 215, 102, 0.3);
+}
+
+.course-tools-preview {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: -4px;
+  margin-bottom: 12px;
+}
+
+.course-tools-preview .tools-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.course-tools-preview .tool-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(1, 23, 49, 0.04);
+  color: var(--text-secondary);
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid rgba(1, 23, 49, 0.08);
+}
+
+.courses-quick-tracks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 0 16px 0;
+  margin-bottom: 8px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.courses-quick-tracks::-webkit-scrollbar {
+  display: none;
+}
+
+.quick-track-btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-white);
+  border: 1px solid rgba(5, 153, 168, 0.2);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.quick-track-btn:hover {
+  color: var(--teal);
+  border-color: var(--teal);
+  background: rgba(5, 153, 168, 0.05);
+}
+
+.quick-track-btn.active {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+
 .course-pricing {
   display: flex;
   align-items: baseline;

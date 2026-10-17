@@ -263,13 +263,9 @@
 
             <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options starting at <strong>₹5,900/month</strong> · 18% GST included</p>
 
-            <button class="btn btn-primary btn-enroll-full" onclick="openConsultationPopup()">
-              Enroll Now — Book Seat →
-            </button>
+            <button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('UI/UX Design Professional', 'Design Academy', '3 Months', '₹14,999', 'uiux-design-pro')">Enroll Now — Book Seat →</button>
 
-            <button class="btn-consult-full" onclick="openConsultationPopup()">
-              📞 Request Callback / Syllabus
-            </button>
+            <button class="btn-consult-full" onclick="openConsultationPopup('UI/UX Design Professional')">📞 Request Callback / Syllabus</button>
 
             <div class="course-card-includes">
               <h4>This Course Includes:</h4>
@@ -1290,9 +1286,11 @@
   <!-- STICKY MOBILE ENROLL BAR -->
   <div class="sticky-enroll-bar" id="sticky-mobile-bar">
     <div class="price-group">
-      <span class="price-current" id="mobile-price">₹14,999</span></span>
+      <span class="price-current" id="mobile-price">₹14,999</span>
       <span class="price-original" id="mobile-orig-price">₹39,999</span>
     </div>
+    <button class="btn btn-primary" onclick="openEnrollmentModal('UI/UX Design Professional', 'Design Academy', '3 Months', '₹14,999', 'uiux-design-pro')">Enroll Now →</button>
+  </div>
     <button class="btn btn-primary" onclick="openConsultationPopup()">Enroll Now →</button>
   </div>
 

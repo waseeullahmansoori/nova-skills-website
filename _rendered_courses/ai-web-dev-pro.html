@@ -258,13 +258,9 @@
 
             <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options starting at <strong>₹6,293/month</strong> · 18% GST included</p>
 
-            <button class="btn btn-primary btn-enroll-full" onclick="openConsultationPopup()">
-              Enroll Now — Book Seat →
-            </button>
+            <button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('AI Web Development Professional', 'Programming Academy', '3 Months', '₹15,999', 'ai-web-dev-pro')">Enroll Now — Book Seat →</button>
 
-            <button class="btn-consult-full" onclick="openConsultationPopup()">
-              📞 Request Callback / Syllabus
-            </button>
+            <button class="btn-consult-full" onclick="openConsultationPopup('AI Web Development Professional')">📞 Request Callback / Syllabus</button>
 
             <div class="course-card-includes">
               <h4>This Course Includes:</h4>
@@ -1119,9 +1115,11 @@
   <!-- STICKY MOBILE ENROLL BAR -->
   <div class="sticky-enroll-bar" id="sticky-mobile-bar">
     <div class="price-group">
-      <span class="price-current" id="mobile-price">₹15,999</span></span>
+      <span class="price-current" id="mobile-price">₹15,999</span>
       <span class="price-original" id="mobile-orig-price">₹44,999</span>
     </div>
+    <button class="btn btn-primary" onclick="openEnrollmentModal('AI Web Development Professional', 'Programming Academy', '3 Months', '₹15,999', 'ai-web-dev-pro')">Enroll Now →</button>
+  </div>
     <button class="btn btn-primary" onclick="openConsultationPopup()">Enroll Now →</button>
   </div>
 

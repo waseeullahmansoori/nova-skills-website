@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   currentCourses = [...getCoursesData()];
   initAcademyFilterOptions();
   readUrlParamsAndApply();
+  initQuickTrackTabs();
   renderCourses();
   bindFilterEvents();
   initMobileFilters();
@@ -109,6 +110,7 @@ function renderCourses() {
   }
 
   updateActiveFilterChips();
+  syncQuickTrackTabState();
 }
 
 function getCourseUrl(course) {
@@ -117,6 +119,22 @@ function getCourseUrl(course) {
 
 function buildCourseCardHTML(course) {
   const courseUrl = getCourseUrl(course);
+  
+  let trackClass = 'track-cert';
+  const progLevel = course.programLevel || 'Certification Course';
+  if (progLevel.includes('Career')) trackClass = 'track-career';
+  else if (progLevel.includes('Professional')) trackClass = 'track-pro';
+
+  const toolsHTML = (course.tools && course.tools.length > 0)
+    ? `<div class="course-tools-preview"><span class="tools-label">Key Tools:</span> ${course.tools.slice(0, 3).map(t => `<span class="tool-tag">${t}</span>`).join('')}</div>`
+    : '';
+
+  const safeName = course.name.replace(/'/g, "\\'");
+  const safeAcademy = (course.academy || '').replace(/'/g, "\\'");
+  const safeDuration = course.duration || '';
+  const safePrice = `₹${course.price.toLocaleString('en-IN')}`;
+  const safeId = course.id;
+
   return `
     <div class="course-card" data-category="${course.academyId}">
       ${course.featured ? '<span class="course-hot-tag">🔥 Popular</span>' : ''}
@@ -130,13 +148,17 @@ function buildCourseCardHTML(course) {
         <div class="course-duration-badge">⏱️ ${course.duration}</div>
       </div>
       <div class="course-body">
-        <div class="course-academy-tag">${course.icon} ${course.academy}</div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; gap:8px;">
+          <div class="course-academy-tag" style="margin-bottom:0;">${course.icon} ${course.academy}</div>
+          <span class="course-track-pill ${trackClass}">${progLevel}</span>
+        </div>
         <h3 class="course-title"><a href="${courseUrl}">${course.name}</a></h3>
         <p class="course-desc">${course.shortDesc}</p>
+        ${toolsHTML}
         <div class="course-features">
           <span class="feature-item">💻 ${course.liveProjects} Projects</span>
           <span class="feature-item">📜 ISO Certificate</span>
-          ${course.placementSupport ? '<span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>' : ''}
+          ${course.placementSupport ? '<span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>' : '<span class="feature-item">💼 Capstone Portfolio</span>'}
           <span class="feature-item">⭐ ${course.rating} (${course.reviews})</span>
         </div>
         <div class="course-footer course-footer-stack">
@@ -149,7 +171,7 @@ function buildCourseCardHTML(course) {
           </div>
           <div class="course-card-actions">
             <a href="${courseUrl}" class="btn btn-outline btn-sm">View Syllabus</a>
-            <button type="button" class="btn btn-primary btn-sm" onclick="openEnrollmentModal('${course.name.replace(/'/g, "\\'")}', '${course.academy.replace(/'/g, "\\'")}')">Enroll Now →</button>
+            <button type="button" class="btn btn-primary btn-sm" onclick="openEnrollmentModal('${safeName}', '${safeAcademy}', '${safeDuration}', '${safePrice}', '${safeId}')">Enroll Now →</button>
           </div>
         </div>
       </div>
@@ -439,4 +461,57 @@ function initMobileFilters() {
       closeDrawer();
     }
   });
+}
+
+/* Quick Program Track Tabs logic */
+function initQuickTrackTabs() {
+  const container = document.getElementById('courses-quick-tracks');
+  if (!container) return;
+
+  container.addEventListener('click', (e) => {
+    const btn = e.target.closest('.quick-track-btn');
+    if (!btn) return;
+
+    container.querySelectorAll('.quick-track-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const track = btn.dataset.track;
+
+    // Clear existing program level and placement filter inputs
+    document.querySelectorAll('#filters-sidebar input[name="programLevel"]').forEach(cb => cb.checked = false);
+    const placementCb = document.getElementById('filter-placement');
+    if (placementCb) placementCb.checked = false;
+
+    if (track === 'all') {
+      // Nothing checked -> shows all 109 programs
+    } else if (track === 'placement') {
+      if (placementCb) placementCb.checked = true;
+    } else {
+      const matchCb = Array.from(document.querySelectorAll('#filters-sidebar input[name="programLevel"]')).find(cb => cb.value.includes(track) || track.includes(cb.value));
+      if (matchCb) matchCb.checked = true;
+    }
+
+    renderCourses();
+  });
+}
+
+function syncQuickTrackTabState() {
+  const container = document.getElementById('courses-quick-tracks');
+  if (!container) return;
+
+  const checkedLevels = Array.from(document.querySelectorAll('#filters-sidebar input[name="programLevel"]:checked')).map(cb => cb.value);
+  const placementChecked = document.getElementById('filter-placement')?.checked || false;
+
+  container.querySelectorAll('.quick-track-btn').forEach(b => b.classList.remove('active'));
+
+  if (placementChecked && checkedLevels.length === 0) {
+    container.querySelector('.quick-track-btn[data-track="placement"]')?.classList.add('active');
+  } else if (checkedLevels.length === 1) {
+    const lvl = checkedLevels[0];
+    const matchBtn = Array.from(container.querySelectorAll('.quick-track-btn')).find(b => b.dataset.track && (lvl.includes(b.dataset.track) || b.dataset.track.includes(lvl)));
+    if (matchBtn) matchBtn.classList.add('active');
+    else container.querySelector('.quick-track-btn[data-track="all"]')?.classList.add('active');
+  } else {
+    container.querySelector('.quick-track-btn[data-track="all"]')?.classList.add('active');
+  }
 }

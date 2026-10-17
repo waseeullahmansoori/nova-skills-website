@@ -1356,10 +1356,31 @@ function shouldShowPopup() {
   return Date.now() - dismissed > POPUP_RESHOW_MS;
 }
 
-function openConsultationPopup() {
+function openConsultationPopup(courseName) {
   const overlay = document.getElementById('popup-overlay');
   if (!overlay) return;
   
+  if (courseName) {
+    const interestEl = document.getElementById('popup-interest');
+    if (interestEl) {
+      let matched = false;
+      const cLower = String(courseName).toLowerCase().trim();
+      for (let i = 0; i < interestEl.options.length; i++) {
+        const optText = interestEl.options[i].text.toLowerCase();
+        const optVal = interestEl.options[i].value.toLowerCase();
+        if (optText.includes(cLower) || optVal.includes(cLower) || cLower.includes(optVal)) {
+          interestEl.selectedIndex = i;
+          matched = true;
+          break;
+        }
+      }
+      if (!matched && interestEl.options.length > 0) {
+        const newOpt = new Option(courseName, courseName, true, true);
+        interestEl.add(newOpt);
+      }
+    }
+  }
+
   // Hide floating widgets while consultation popup is open
   document.body.classList.add('modal-open-hide-widgets');
   
@@ -1815,7 +1836,7 @@ const COURSE_CATALOG_METADATA = {
   'AI Digital Marketing Mastery': { academy: 'Digital Marketing Academy', duration: '6 Months', fee: '₹44,999', category: 'digital-marketing' }
 };
 
-function openEnrollmentModal(courseName, academyName) {
+function openEnrollmentModal(courseName, academyName, optionalDuration, optionalFee, optionalId) {
   injectEnrollmentModalHTML();
 
   const modal = document.getElementById('course-enrollment-modal');
@@ -1835,27 +1856,36 @@ function openEnrollmentModal(courseName, academyName) {
   const formContainer = document.getElementById('enroll-form-container');
   const successContainer = document.getElementById('enroll-success-container');
 
-  const meta = COURSE_CATALOG_METADATA[courseName] || {
-    academy: academyName || 'Nova Skills Academy',
-    duration: '3 to 6 Months',
-    fee: '₹24,999',
-    category: 'general'
-  };
+  // Dynamic course resolution from NS_COURSES
+  let found = null;
+  const coursesList = (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : [];
+  if (coursesList.length > 0) {
+    if (optionalId) {
+      found = coursesList.find(c => c.id === optionalId);
+    }
+    if (!found && courseName) {
+      const cLower = String(courseName).toLowerCase().trim();
+      found = coursesList.find(c => (c.name && c.name.toLowerCase() === cLower) || c.id === cLower || c.slug === cLower);
+    }
+  }
 
-  const finalCourse = courseName || 'Selected Course';
-  const finalAcademy = academyName || meta.academy;
+  const finalCourse = (found ? found.name : courseName) || 'Selected Course';
+  const finalAcademy = (found ? found.academy : academyName) || 'Nova Skills Academy';
+  const finalDuration = optionalDuration || (found ? found.duration : (COURSE_CATALOG_METADATA[courseName]?.duration || '3 Months'));
+  const finalFee = optionalFee || (found ? ('₹' + found.price.toLocaleString('en-IN')) : (COURSE_CATALOG_METADATA[courseName]?.fee || '₹11,999'));
+  const finalCategory = (found ? found.academyId : null) || COURSE_CATALOG_METADATA[courseName]?.category || 'general';
 
   if (titleSpan) titleSpan.textContent = finalCourse;
   if (cardCourseName) cardCourseName.textContent = finalCourse;
   if (cardAcademyName) cardAcademyName.textContent = finalAcademy;
-  if (cardDuration) cardDuration.textContent = meta.duration;
-  if (cardFee) cardFee.textContent = meta.fee;
+  if (cardDuration) cardDuration.textContent = finalDuration;
+  if (cardFee) cardFee.textContent = finalFee;
 
   if (courseInput) courseInput.value = finalCourse;
   if (academyInput) academyInput.value = finalAcademy;
-  if (categoryInput) categoryInput.value = meta.category;
-  if (durationInput) durationInput.value = meta.duration;
-  if (feeInput) feeInput.value = meta.fee;
+  if (categoryInput) categoryInput.value = finalCategory;
+  if (durationInput) durationInput.value = finalDuration;
+  if (feeInput) feeInput.value = finalFee;
 
   if (errDiv) errDiv.setAttribute('hidden', '');
   if (formContainer) formContainer.removeAttribute('hidden');

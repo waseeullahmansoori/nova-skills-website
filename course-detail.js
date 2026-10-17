@@ -404,13 +404,14 @@ function hydratePrerenderedCourse(course) {
 
 /* Bind High-Conversion CTAs to pre-fill enrollment modal with course & academy */
 function bindCourseCtas(course) {
+  const safeFee = '₹' + (course.price ? course.price.toLocaleString('en-IN') : '');
   const enrollBtn = document.querySelector('.btn-enroll-full');
   if (enrollBtn) {
     enrollBtn.onclick = () => {
       if (typeof openEnrollmentModal === 'function') {
-        openEnrollmentModal(course.name, course.academy);
+        openEnrollmentModal(course.name, course.academy, course.duration, safeFee, course.id);
       } else if (typeof openConsultationPopup === 'function') {
-        openConsultationPopup();
+        openConsultationPopup(course.name);
       }
     };
   }
@@ -419,7 +420,7 @@ function bindCourseCtas(course) {
   if (consultBtn) {
     consultBtn.onclick = () => {
       if (typeof openConsultationPopup === 'function') {
-        openConsultationPopup();
+        openConsultationPopup(course.name);
       }
     };
   }
@@ -428,9 +429,9 @@ function bindCourseCtas(course) {
   if (mobileEnrollBtn) {
     mobileEnrollBtn.onclick = () => {
       if (typeof openEnrollmentModal === 'function') {
-        openEnrollmentModal(course.name, course.academy);
+        openEnrollmentModal(course.name, course.academy, course.duration, safeFee, course.id);
       } else if (typeof openConsultationPopup === 'function') {
-        openConsultationPopup();
+        openConsultationPopup(course.name);
       }
     };
   }
