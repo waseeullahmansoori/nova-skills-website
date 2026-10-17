@@ -20,7 +20,7 @@ const vm = require('vm');
 const http = require('http');
 const { spawn } = require('child_process');
 
-const PREVIEW_BASE_URL = 'https://0888b816.nova-skills-website.pages.dev';
+const PREVIEW_BASE_URL = process.env.PREVIEW_URL || 'https://b48f9a19.nova-skills-website.pages.dev';
 const CHROME_PORT = 9225;
 const ROOT_DIR = path.resolve(__dirname, '..');
 const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
