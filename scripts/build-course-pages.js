@@ -1,11 +1,17 @@
 /**
- * Build Static Pre-rendered SEO HTML Pages for Nova Skills Courses
- * Pilot Implementation: digital-marketing-pro
+ * Build Static Pre-rendered Course Pages for Cloudflare Edge & Local Serving
+ * Controlled Expansion: 4 Target Representative Courses
  * 
- * Generates clean-directory static course pages (e.g. /courses/digital-marketing-pro/index.html)
- * with complete initial server-rendered HTML for search crawlers, social bots, and JS-disabled users.
+ * 1. digital-marketing-pro (Advanced Digital Marketing Professional)
+ * 2. dm-professional (AI Digital Marketing Professional)
+ * 3. dm-mastery (AI Digital Marketing Master)
+ * 4. python-developer (Python Developer Professional)
  * 
- * Supports progressive hydration via course-detail.js.
+ * Preserves existing canonical public URLs: /course-detail.html?id=COURSE_ID
+ * Outputs:
+ * - functions/_rendered_courses.js (in-memory bundle for Cloudflare Pages Functions)
+ * - functions/_middleware.js (Cloudflare Pages edge middleware)
+ * - _rendered_courses/<id>.html (static audit files)
  */
 
 'use strict';
@@ -20,23 +26,53 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const dataJs = fs.readFileSync(path.join(ROOT_DIR, 'data.js'), 'utf8');
 vm.runInThisContext(dataJs);
 
+const TARGET_COURSES = [
+  'digital-marketing-pro',
+  'dm-professional',
+  'dm-mastery',
+  'python-developer'
+];
+
+const COURSE_ALIASES = {
+  'dm-master': 'dm-mastery',
+  'full-stack': 'fullstack-foundation',
+  'design-mastery': 'creative-design',
+  'video-editing': 'video-pro',
+  'digital-marketing': 'dm-mastery',
+  'ai-master': 'ai-mastery',
+  'python-dev': 'python-developer',
+  'prompt-engineering': 'prompt-engineering-mastery',
+  'freelance-agency-master': 'freelance-agency-mastery',
+  'freelance-mastery': 'freelancing-mastery'
+};
+
 const ACADEMY_SLUG_MAP = {
   'digital-marketing': 'digital-marketing',
   'ai': 'ai',
+  'ai-academy': 'ai',
   'design': 'design',
+  'design-academy': 'design',
   'programming': 'programming',
+  'programming-academy': 'programming',
   'nocode': 'no-code-web',
+  'nocode-academy': 'no-code-web',
   'no-code-web': 'no-code-web',
   'video': 'video-motion',
+  'video-academy': 'video-motion',
   'video-motion': 'video-motion',
   '3d': '3d',
+  '3d-academy': '3d',
   'career': 'career-freelancing',
+  'career-academy': 'career-freelancing',
   'career-freelancing': 'career-freelancing',
   'communication': 'communication',
+  'comm-academy': 'communication',
   'kids': 'kids-tech',
   'kids-tech': 'kids-tech',
   'creator': 'creator',
+  'creator-academy': 'creator',
   'office': 'office-productivity',
+  'office-academy': 'office-productivity',
   'office-productivity': 'office-productivity'
 };
 
@@ -60,7 +96,7 @@ function getCourseSeoTitle(course) {
   
   if (type === 'MASTER') {
     return `${name} — Flagship Career Program | Nova Skills`;
-  } else if (type === 'PROFESSIONAL') {
+  } else if (type === 'PROFESSIONAL' || type === 'MERGE') {
     return `${name} — Professional Certification Course | Nova Skills`;
   } else if (type === 'SPECIALIZATION') {
     return `${name} Specialization Course | Hands-on Labs | Nova Skills`;
@@ -70,8 +106,6 @@ function getCourseSeoTitle(course) {
     return `${name} Practical Skill Module | Guided Labs | Nova Skills`;
   } else if (type === 'REPOSITION') {
     return `${name} Training — Industry Aligned Course | Nova Skills`;
-  } else if (type === 'MERGE') {
-    return `${name} — Professional Certification Course | Nova Skills`;
   } else if (type === 'RETIRE') {
     return `${name} Training | Modernized Curriculum Advisory | Nova Skills`;
   }
@@ -87,7 +121,7 @@ function getCourseMetaDescription(course, detailData = null) {
   }
   const toolClause = tools ? ` using ${tools}` : '';
   const duration = course.duration || 'flexible duration';
-  const hours = (detailData && detailData.learning_hours) || course.learningHours;
+  const hours = course.learningHours || (detailData && detailData.learning_hours);
   const hoursClause = hours ? ` (${hours} hrs)` : '';
   const rawAudience = (detailData && detailData.target_audience && detailData.target_audience.best_for && detailData.target_audience.best_for[0]) || 'aspiring professionals';
   const role = rawAudience.replace(/\.$/, '').split(' seeking ')[0].split(' wanting ')[0].split(' aiming ')[0].trim();
@@ -196,7 +230,7 @@ function buildCourseSchema(course, canonicalUrl, detailData) {
   };
 
   if (detailData && detailData.modules && Array.isArray(detailData.modules)) {
-    courseSchema.hasCourseInstance.courseWorkload = `${detailData.learning_hours || 40} Hours`;
+    courseSchema.hasCourseInstance.courseWorkload = `${course.learningHours || (detailData && detailData.learning_hours) || 40} Hours`;
     courseSchema.syllabusSections = detailData.modules.map(m => ({
       "@type": "Syllabus",
       "name": m.module_title,
@@ -229,7 +263,7 @@ function buildCourseSchema(course, canonicalUrl, detailData) {
   };
 }
 
-function generateStaticCourseHtml(courseId) {
+function generateStaticCourseHtml(courseId, templateHtml) {
   const baseCourse = NS_COURSES.find(c => c.id === courseId);
   if (!baseCourse) {
     throw new Error(`Course not found in NS_COURSES: ${courseId}`);
@@ -241,12 +275,10 @@ function generateStaticCourseHtml(courseId) {
     detailData = JSON.parse(fs.readFileSync(detailPath, 'utf8'));
   }
 
-  const canonicalUrl = `https://novaskills.in/courses/${courseId}/`;
+  // Preserve existing canonical public URL
+  const canonicalUrl = `https://novaskills.in/course-detail.html?id=${encodeURIComponent(courseId)}`;
   const pageTitleText = (detailData && detailData.seo_title) || getCourseSeoTitle(baseCourse);
   const metaDescText = (detailData && detailData.seo_description) || getCourseMetaDescription(baseCourse, detailData);
-  const ogImage = 'https://novaskills.in/public/images/seo/og-banner.png?v=2026';
-
-  const templateHtml = fs.readFileSync(path.join(ROOT_DIR, 'course-detail.html'), 'utf8');
 
   // Compute pricing values
   const priceFormatted = `₹${(baseCourse.price || 0).toLocaleString('en-IN')}`;
@@ -267,7 +299,7 @@ function generateStaticCourseHtml(courseId) {
   const acadUrl = acadSlug ? `/academies/${acadSlug}/` : '/academies/';
 
   // Hours and project count
-  const hours = (detailData && detailData.learning_hours) || baseCourse.learningHours || 40;
+  const hours = baseCourse.learningHours || (detailData && detailData.learning_hours) || 40;
   const projectCount = (detailData && detailData.what_you_will_build) ? detailData.what_you_will_build.length : (baseCourse.projects || baseCourse.liveProjects || 2);
   const projectLabel = `${projectCount} Core Production Projects`;
 
@@ -289,17 +321,7 @@ function generateStaticCourseHtml(courseId) {
   `.trim();
 
   // Render Thumb
-  const thumbHtml = `<span style="font-size:4rem; filter:drop-shadow(0 10px 20px rgba(0,0,0,0.3));">${baseCourse.icon || '📊'}</span>`;
-
-  // Includes list
-  let includesListHtml = `
-    <li><span class="include-icon">🎥</span> Live Interactive Classes & Labs</li>
-    <li><span class="include-icon">💻</span> Real Commercial Client Projects</li>
-    <li><span class="include-icon">👤</span> 1-on-1 Senior Mentor Reviews</li>
-    <li><span class="include-icon">📜</span> ISO 9001:2015 Verified Certificate</li>
-    <li><span class="include-icon">🎯</span> Placement Support & Interviews</li>
-    <li><span class="include-icon">♾️</span> Lifetime Practitioner Community Access</li>
-  `;
+  const thumbHtml = `<span style="font-size:4rem; filter:drop-shadow(0 10px 20px rgba(0,0,0,0.3));">${baseCourse.icon || '🎓'}</span>`;
 
   // Advisory Banner (MERGE notice)
   let advisoryHtml = '';
@@ -418,7 +440,7 @@ function generateStaticCourseHtml(courseId) {
     `.trim();
   }
 
-  // Curriculum Accordion (Modules 1 to 6)
+  // Curriculum Accordion
   let curriculumHtml = '';
   if (detailData && detailData.modules && Array.isArray(detailData.modules)) {
     curriculumHtml = detailData.modules.map((mod, idx) => `
@@ -481,7 +503,7 @@ function generateStaticCourseHtml(courseId) {
     `).join('').trim();
   }
 
-  // Hands-on Tech
+  // Tools
   let toolsHtml = '';
   if (detailData && detailData.hands_on_tech) {
     const core = detailData.hands_on_tech.core_tools || [];
@@ -533,7 +555,7 @@ function generateStaticCourseHtml(courseId) {
     `.trim();
   }
 
-  // Production Projects
+  // Projects
   let projectsHtml = '';
   if (detailData && detailData.what_you_will_build) {
     const builds = detailData.what_you_will_build || [];
@@ -559,14 +581,20 @@ function generateStaticCourseHtml(courseId) {
     `.trim();
   }
 
-  // Mentors
+  // Domain Mentors
+  const academyMentors = {
+    'digital-marketing': { lead: 'Growth & Ads Lead Mentor', role: 'Head of Performance & GEO Strategy', bio: 'Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture.', initials: 'GA' },
+    'programming': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.', initials: 'FS' },
+    'programming-academy': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.', initials: 'FS' }
+  };
+  const mentorData = academyMentors[baseCourse.academyId] || academyMentors['digital-marketing'];
   const mentorsHtml = `
     <div class="mentor-card">
-      <div class="mentor-avatar" style="background:var(--grad-hero);"><span class="mentor-initials">GA</span></div>
-      <h3 class="mentor-name">Growth &amp; Ads Lead Mentor</h3>
-      <div class="mentor-role">Head of Performance &amp; GEO Strategy</div>
+      <div class="mentor-avatar" style="background:var(--grad-hero);"><span class="mentor-initials">${mentorData.initials}</span></div>
+      <h3 class="mentor-name">${escapeHTML(mentorData.lead)}</h3>
+      <div class="mentor-role">${escapeHTML(mentorData.role)}</div>
       <span class="mentor-exp">Industry Practitioner Mentorship</span>
-      <p class="mentor-bio">Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture.</p>
+      <p class="mentor-bio">${escapeHTML(mentorData.bio)}</p>
     </div>
 
     <div class="mentor-card">
@@ -578,7 +606,7 @@ function generateStaticCourseHtml(courseId) {
     </div>
   `.trim();
 
-  // Boundaries / Scope
+  // Boundaries
   let boundariesHtml = '';
   if (detailData && detailData.not_covered) {
     boundariesHtml = `
@@ -612,30 +640,6 @@ function generateStaticCourseHtml(courseId) {
     }).join('').trim();
   }
 
-  // Next Learning Path
-  let nextPathHtml = '';
-  if (detailData && detailData.next_learning_path) {
-    nextPathHtml = `
-      <div class="next-path-card">
-        <div style="font-weight:700; color:var(--navy); font-size:1.05rem;">
-          Your Progressive Learning Journey
-        </div>
-        <div class="next-path-flow">
-          <div class="flow-node active">${escapeHTML(baseCourse.name)} (Current)</div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-node target">
-            AI Digital Marketing Mastery Track
-          </div>
-        </div>
-        <div class="next-path-actions">
-          <a href="/course-detail.html?id=dm-mastery" class="btn btn-primary btn-sm">
-            Advance to Flagship Career Track →
-          </a>
-        </div>
-      </div>
-    `.trim();
-  }
-
   // Related Courses (3 courses)
   const relatedCourses = NS_COURSES.filter(c => c.id !== baseCourse.id && c.academyId === baseCourse.academyId).slice(0, 3);
   let relatedHtml = relatedCourses.map(c => `
@@ -663,7 +667,7 @@ function generateStaticCourseHtml(courseId) {
   const schemaObj = buildCourseSchema(baseCourse, canonicalUrl, detailData);
   const schemaScriptTag = `<script type="application/ld+json" id="ns-dynamic-course-schema">\n${JSON.stringify(schemaObj, null, 2)}\n  </script>`;
 
-  // 2. Perform DOM replacements in master template using robust regex matching
+  // Perform DOM replacements in master template using robust regex
   let html = templateHtml;
 
   // Title
@@ -785,11 +789,6 @@ function generateStaticCourseHtml(courseId) {
     html = html.replace(/<div\s+class="faq-grid"[\s\S]*?id="course-faq-grid">[\s\S]*?<\/div>/i, `<div class="faq-grid" style="max-width:860px; margin:0;" id="course-faq-grid">\n        ${faqHtml}\n      </div>`);
   }
 
-  // Next Path
-  if (nextPathHtml) {
-    html = html.replace(/<div\s+id="next-path-container"[\s\S]*?<\/div>/i, `<div id="next-path-container" style="max-width:860px;">\n        ${nextPathHtml}\n      </div>`);
-  }
-
   // Related Courses
   if (relatedHtml) {
     html = html.replace(/<div\s+class="related-grid"\s+id="related-courses-grid">[\s\S]*?<\/div>/i, `<div class="related-grid" id="related-courses-grid">\n        ${relatedHtml}\n      </div>`);
@@ -807,18 +806,147 @@ function generateStaticCourseHtml(courseId) {
   return html;
 }
 
+function generateNotFoundHtml(templateHtml) {
+  let html = templateHtml;
+  html = html.replace(/<title id="page-title">[\s\S]*?<\/title>/i, '<title id="page-title">Course Not Found — Nova Skills</title>');
+  html = html.replace(/<meta\s+name="robots"[\s\S]*?\/>/i, '<meta name="robots" id="page-robots" content="noindex, follow" />');
+  html = html.replace(/<main id="course-detail-main">[\s\S]*?<\/main>/i, `
+    <main id="course-detail-main">
+      <div class="container" style="padding-top:40px; padding-bottom:80px;">
+        <div class="course-error-state" style="text-align:center; padding:60px 20px; background:white; border-radius:24px; max-width:640px; margin:40px auto; box-shadow:var(--shadow-md);">
+          <div style="font-size:3.5rem; margin-bottom:16px;">🔍</div>
+          <h1 style="font-size:2rem; font-weight:800; color:var(--navy); margin-bottom:12px;">Course Not Found</h1>
+          <p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:24px; line-height:1.6;">
+            The program you are looking for may have been modernized, renamed, or relocated. 
+            Explore our catalog of 109+ industry-standard career courses across 12 academies.
+          </p>
+          <div class="course-error-actions" style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+            <a href="/courses.html" class="btn btn-primary">Browse All Courses →</a>
+            <a href="/" class="btn btn-outline">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  `);
+  html = html.replace(/<div class="sticky-enroll-bar"[\s\S]*?<\/div>/i, '');
+  return html;
+}
+
 function runBuild() {
-  const targetCourseId = process.argv[2] || 'digital-marketing-pro';
-  console.log(`Generating static pre-rendered SEO page for course: "${targetCourseId}"...`);
+  console.log('=== BUILDING CONTROLLED COURSE RENDERING (4 COURSES) ===\n');
 
-  const html = generateStaticCourseHtml(targetCourseId);
-  const outDir = path.join(ROOT_DIR, 'courses', targetCourseId);
-  fs.mkdirSync(outDir, { recursive: true });
+  const templateHtml = fs.readFileSync(path.join(ROOT_DIR, 'course-detail.html'), 'utf8');
+  const renderedMap = {};
 
-  const outFile = path.join(outDir, 'index.html');
-  fs.writeFileSync(outFile, html, 'utf8');
+  const staticOutDir = path.join(ROOT_DIR, '_rendered_courses');
+  fs.mkdirSync(staticOutDir, { recursive: true });
 
-  console.log(`✅ Pre-rendered course page successfully written to: ${outFile} (${(html.length / 1024).toFixed(1)} KB)`);
+  TARGET_COURSES.forEach(courseId => {
+    console.log(`Pre-rendering course: "${courseId}"...`);
+    const html = generateStaticCourseHtml(courseId, templateHtml);
+    renderedMap[courseId] = html;
+
+    const outFile = path.join(staticOutDir, `${courseId}.html`);
+    fs.writeFileSync(outFile, html, 'utf8');
+    console.log(`  ✅ Written static file: _rendered_courses/${courseId}.html (${(html.length / 1024).toFixed(1)} KB)`);
+  });
+
+  const notFoundHtml = generateNotFoundHtml(templateHtml);
+  fs.writeFileSync(path.join(staticOutDir, '404.html'), notFoundHtml, 'utf8');
+
+  // Build functions/ directory for Cloudflare Pages Functions
+  const functionsDir = path.join(ROOT_DIR, 'functions');
+  fs.mkdirSync(functionsDir, { recursive: true });
+
+  const allValidCourseIds = NS_COURSES.map(c => c.id);
+
+  // Write functions/_rendered_courses.js
+  const renderedJsPath = path.join(functionsDir, '_rendered_courses.js');
+  const renderedJsContent = `/**
+ * Pre-rendered Course HTML Dictionary for Cloudflare Pages Edge Middleware
+ * Generated at ${new Date().toISOString()}
+ */
+
+export const RENDERED_COURSES = ${JSON.stringify(renderedMap)};
+
+export const ALL_VALID_COURSE_IDS = new Set(${JSON.stringify(allValidCourseIds)});
+
+export const COURSE_ALIASES = ${JSON.stringify(COURSE_ALIASES)};
+
+export const COURSE_NOT_FOUND_HTML = ${JSON.stringify(notFoundHtml)};
+`;
+  fs.writeFileSync(renderedJsPath, renderedJsContent, 'utf8');
+  console.log(`\n✅ Generated Edge Functions bundle: functions/_rendered_courses.js (${(renderedJsContent.length / 1024).toFixed(1)} KB)`);
+
+  // Write functions/_middleware.js
+  const middlewarePath = path.join(functionsDir, '_middleware.js');
+  const middlewareContent = `/**
+ * Cloudflare Pages Edge Middleware for Course-Specific Initial HTML
+ * Intercepts /course-detail and /course-detail.html to serve course-specific initial HTML
+ * before client JavaScript execution, preserving existing public URLs.
+ */
+
+import { RENDERED_COURSES, ALL_VALID_COURSE_IDS, COURSE_ALIASES, COURSE_NOT_FOUND_HTML } from './_rendered_courses.js';
+
+export async function onRequest(context) {
+  const { request } = context;
+  const url = new URL(request.url);
+  const pathname = url.pathname.replace(/\\/$/, '');
+
+  // Intercept /course-detail and /course-detail.html
+  if (pathname === '/course-detail' || pathname === '/course-detail.html') {
+    const rawId = (url.searchParams.get('id') || url.searchParams.get('course') || '').trim();
+
+    if (rawId) {
+      const id = COURSE_ALIASES[rawId] || rawId;
+
+      // 1. If pre-rendered, return course-specific HTML with status 200 OK
+      if (RENDERED_COURSES[id]) {
+        return new Response(RENDERED_COURSES[id], {
+          status: 200,
+          headers: {
+            'Content-Type': 'text/html; charset=utf-8',
+            'Cache-Control': 'public, max-age=0, must-revalidate',
+            'X-Robots-Tag': 'index, follow'
+          }
+        });
+      }
+
+      // 2. If unknown/invalid course ID, return 404 Not Found response
+      if (!ALL_VALID_COURSE_IDS.has(id)) {
+        return new Response(COURSE_NOT_FOUND_HTML, {
+          status: 404,
+          headers: {
+            'Content-Type': 'text/html; charset=utf-8',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'X-Robots-Tag': 'noindex, follow'
+          }
+        });
+      }
+    } else {
+      // If no ID is specified, default flagship course: dm-mastery
+      if (RENDERED_COURSES['dm-mastery']) {
+        return new Response(RENDERED_COURSES['dm-mastery'], {
+          status: 200,
+          headers: {
+            'Content-Type': 'text/html; charset=utf-8',
+            'Cache-Control': 'public, max-age=0, must-revalidate',
+            'X-Robots-Tag': 'index, follow'
+          }
+        });
+      }
+    }
+
+    // 3. For any other course ID, pass through to shared client template
+    return context.next();
+  }
+
+  return context.next();
+}
+`;
+  fs.writeFileSync(middlewarePath, middlewareContent, 'utf8');
+  console.log(`✅ Generated Cloudflare Pages Middleware: functions/_middleware.js`);
+  console.log(`\n🎉 BUILD COMPLETE FOR 4 TARGET COURSES.`);
 }
 
 runBuild();

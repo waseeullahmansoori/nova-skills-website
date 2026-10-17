@@ -193,9 +193,7 @@ function populateCourseDetail(course) {
   const pageTitle = document.getElementById('page-title');
   if (pageTitle) pageTitle.textContent = pageTitleText;
 
-  const canonicalUrl = course.id === 'digital-marketing-pro'
-    ? 'https://novaskills.in/courses/digital-marketing-pro/'
-    : `https://novaskills.in/course-detail.html?id=${encodeURIComponent(course.id)}`;
+  const canonicalUrl = `https://novaskills.in/course-detail.html?id=${encodeURIComponent(course.id)}`;
   const canonicalEl = document.getElementById('page-canonical') || document.querySelector('link[rel="canonical"]');
   if (canonicalEl) canonicalEl.setAttribute('href', canonicalUrl);
 

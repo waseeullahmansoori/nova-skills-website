@@ -112,9 +112,6 @@ function renderCourses() {
 }
 
 function getCourseUrl(course) {
-  if (course.id === 'digital-marketing-pro') {
-    return '/courses/digital-marketing-pro/';
-  }
   return `/course-detail.html?id=${course.id}`;
 }
 

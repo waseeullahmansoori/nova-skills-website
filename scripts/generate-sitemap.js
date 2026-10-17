@@ -134,18 +134,10 @@ function generateSitemap() {
   }
   const coursePageDate = getFormattedDate(path.join(ROOT_DIR, 'course-detail.html'));
   courseIds.forEach((cId) => {
-    if (cId === 'digital-marketing-pro') {
-      const pilotPath = path.join(ROOT_DIR, 'courses', 'digital-marketing-pro', 'index.html');
-      urlEntries.push({
-        loc: `${DOMAIN}/courses/digital-marketing-pro/`,
-        lastmod: getFormattedDate(pilotPath)
-      });
-    } else {
-      urlEntries.push({
-        loc: `${DOMAIN}/course-detail.html?id=${cId}`,
-        lastmod: coursePageDate
-      });
-    }
+    urlEntries.push({
+      loc: `${DOMAIN}/course-detail.html?id=${cId}`,
+      lastmod: coursePageDate
+    });
   });
 
   // 5. Dynamic Blog Article URLs
