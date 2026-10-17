@@ -23,6 +23,14 @@
         var params = new URLSearchParams(window.location.search);
         var cId = (params.get('id') || params.get('course') || '').trim();
         var canLink = document.getElementById('page-canonical');
+        if (cId === 'digital-marketing-pro') {
+          var canUrl = 'https://novaskills.in/courses/digital-marketing-pro/';
+          if (canLink) {
+            canLink.setAttribute('href', canUrl);
+          }
+          window.location.replace('/courses/digital-marketing-pro/' + (window.location.hash || ''));
+          return;
+        }
         if (cId) {
           var canUrl = 'https://novaskills.in/course-detail.html?id=' + encodeURIComponent(cId);
           if (canLink) {

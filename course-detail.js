@@ -7,11 +7,16 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const isPrerendered = !!document.querySelector('meta[name="prerendered"][content="true"]');
   const course = getTargetCourse();
   if (course) {
-    populateCourseDetail(course);
-    renderRelatedCourses(course);
-    loadDetailedCourseData(course);
+    if (isPrerendered) {
+      hydratePrerenderedCourse(course);
+    } else {
+      populateCourseDetail(course);
+      renderRelatedCourses(course);
+      loadDetailedCourseData(course);
+    }
   } else {
     renderCourseNotFound();
   }
@@ -55,12 +60,30 @@ function getAcademySlug(id) {
 }
 
 function getTargetCourse() {
-  const params = new URLSearchParams(window.location.search);
-  const rawId = (params.get('id') || params.get('course') || '').trim();
-
   const courses = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
     ? NS_COURSES
     : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []);
+
+  // 1. Check meta tag (pre-rendered course pages)
+  const metaCourseEl = document.querySelector('meta[name="course-id"]');
+  const metaCourseId = metaCourseEl ? metaCourseEl.getAttribute('content') : null;
+  if (metaCourseId) {
+    const match = courses.find(c => c.id === metaCourseId);
+    if (match) return match;
+  }
+
+  // 2. Check path pattern /courses/<course-id>/
+  const pathMatch = window.location.pathname.match(/\/courses\/([a-z0-9-]+)/i);
+  if (pathMatch && pathMatch[1]) {
+    const pathId = pathMatch[1].toLowerCase();
+    const resolved = COURSE_ALIASES[pathId] || pathId;
+    const match = courses.find(c => c.id === resolved || c.slug === resolved);
+    if (match) return match;
+  }
+
+  // 3. Check query parameter (?id= or ?course=)
+  const params = new URLSearchParams(window.location.search);
+  const rawId = (params.get('id') || params.get('course') || '').trim();
 
   if (!rawId) {
     // If no course specified in URL, load default flagship course dm-mastery
@@ -170,7 +193,9 @@ function populateCourseDetail(course) {
   const pageTitle = document.getElementById('page-title');
   if (pageTitle) pageTitle.textContent = pageTitleText;
 
-  const canonicalUrl = `https://novaskills.in/course-detail.html?id=${encodeURIComponent(course.id)}`;
+  const canonicalUrl = course.id === 'digital-marketing-pro'
+    ? 'https://novaskills.in/courses/digital-marketing-pro/'
+    : `https://novaskills.in/course-detail.html?id=${encodeURIComponent(course.id)}`;
   const canonicalEl = document.getElementById('page-canonical') || document.querySelector('link[rel="canonical"]');
   if (canonicalEl) canonicalEl.setAttribute('href', canonicalUrl);
 
@@ -314,36 +339,7 @@ function populateCourseDetail(course) {
   populateEnrollIncludes(course);
 
   // Bind High-Conversion CTAs to pre-fill enrollment modal with course & academy
-  const enrollBtn = document.querySelector('.btn-enroll-full');
-  if (enrollBtn) {
-    enrollBtn.onclick = () => {
-      if (typeof openEnrollmentModal === 'function') {
-        openEnrollmentModal(course.name, course.academy);
-      } else if (typeof openConsultationPopup === 'function') {
-        openConsultationPopup();
-      }
-    };
-  }
-
-  const consultBtn = document.querySelector('.btn-consult-full');
-  if (consultBtn) {
-    consultBtn.onclick = () => {
-      if (typeof openConsultationPopup === 'function') {
-        openConsultationPopup();
-      }
-    };
-  }
-
-  const mobileEnrollBtn = document.querySelector('#sticky-mobile-bar .btn-primary');
-  if (mobileEnrollBtn) {
-    mobileEnrollBtn.onclick = () => {
-      if (typeof openEnrollmentModal === 'function') {
-        openEnrollmentModal(course.name, course.academy);
-      } else if (typeof openConsultationPopup === 'function') {
-        openConsultationPopup();
-      }
-    };
-  }
+  bindCourseCtas(course);
 
   // Initial Curriculum rendering while fetch loads
   const curr = document.getElementById('curriculum-container');
@@ -387,6 +383,56 @@ function populateCourseDetail(course) {
 
   // Inject Base Schema.org
   injectCourseSchema(course, courseImg, canonicalUrl);
+}
+
+/* Progressive Hydration for Pre-rendered Course Pages */
+function hydratePrerenderedCourse(course) {
+  // Bind high-conversion enrollment CTAs
+  bindCourseCtas(course);
+
+  // Bind interactive accordion & FAQ toggle events
+  bindAccordionEvents();
+  bindFaqEvents();
+
+  // If related courses were not statically baked, render them
+  const relatedContainer = document.getElementById('related-courses-grid');
+  if (relatedContainer && relatedContainer.children.length === 0) {
+    renderRelatedCourses(course);
+  }
+}
+
+/* Bind High-Conversion CTAs to pre-fill enrollment modal with course & academy */
+function bindCourseCtas(course) {
+  const enrollBtn = document.querySelector('.btn-enroll-full');
+  if (enrollBtn) {
+    enrollBtn.onclick = () => {
+      if (typeof openEnrollmentModal === 'function') {
+        openEnrollmentModal(course.name, course.academy);
+      } else if (typeof openConsultationPopup === 'function') {
+        openConsultationPopup();
+      }
+    };
+  }
+
+  const consultBtn = document.querySelector('.btn-consult-full');
+  if (consultBtn) {
+    consultBtn.onclick = () => {
+      if (typeof openConsultationPopup === 'function') {
+        openConsultationPopup();
+      }
+    };
+  }
+
+  const mobileEnrollBtn = document.querySelector('#sticky-mobile-bar .btn-primary');
+  if (mobileEnrollBtn) {
+    mobileEnrollBtn.onclick = () => {
+      if (typeof openEnrollmentModal === 'function') {
+        openEnrollmentModal(course.name, course.academy);
+      } else if (typeof openConsultationPopup === 'function') {
+        openConsultationPopup();
+      }
+    };
+  }
 }
 
 /* Dynamically tailor the "This Course Includes" checklist without unsupported placement promises */
