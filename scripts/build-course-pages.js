@@ -26,11 +26,19 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const dataJs = fs.readFileSync(path.join(ROOT_DIR, 'data.js'), 'utf8');
 vm.runInThisContext(dataJs);
 
-const TARGET_COURSES = [
-  'digital-marketing-pro',
-  'dm-professional',
-  'dm-mastery',
-  'python-developer'
+const BATCHES = [
+  { batchNum: 1, academyId: 'digital-marketing', name: 'Digital Marketing Academy' },
+  { batchNum: 2, academyId: 'ai', name: 'AI & Automation Academy' },
+  { batchNum: 3, academyId: 'design', name: 'Graphic Design & UI/UX Academy' },
+  { batchNum: 4, academyId: 'programming', name: 'Programming & Web Dev Academy' },
+  { batchNum: 5, academyId: 'nocode', name: 'No-Code Web Academy' },
+  { batchNum: 6, academyId: 'video', name: 'Video & Motion Academy' },
+  { batchNum: 7, academyId: '3d', name: '3D Animation & VFX Academy' },
+  { batchNum: 8, academyId: 'career', name: 'Career & Freelancing Academy' },
+  { batchNum: 9, academyId: 'communication', name: 'Communication Academy' },
+  { batchNum: 10, academyId: 'kids', name: 'Kids Tech Academy' },
+  { batchNum: 11, academyId: 'creator', name: 'Creator Academy' },
+  { batchNum: 12, academyId: 'office', name: 'Office Productivity Academy' }
 ];
 
 const COURSE_ALIASES = {
@@ -41,8 +49,9 @@ const COURSE_ALIASES = {
   'digital-marketing': 'dm-mastery',
   'ai-master': 'ai-mastery',
   'python-dev': 'python-developer',
-  'prompt-engineering': 'prompt-engineering-mastery',
-  'freelance-agency-master': 'freelance-agency-mastery',
+  'prompt-engineering-mastery': 'prompt-engineering',
+  'freelance-agency-master': 'agency-building',
+  'freelance-agency-mastery': 'agency-building',
   'freelance-mastery': 'freelancing-mastery'
 };
 
@@ -277,7 +286,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
 
   // Preserve existing canonical public URL
   const canonicalUrl = `https://novaskills.in/course-detail.html?id=${encodeURIComponent(courseId)}`;
-  const pageTitleText = (detailData && detailData.seo_title) || getCourseSeoTitle(baseCourse);
+  const pageTitleText = getCourseSeoTitle(baseCourse);
   const metaDescText = (detailData && detailData.seo_description) || getCourseMetaDescription(baseCourse, detailData);
 
   // Compute pricing values
@@ -832,25 +841,96 @@ function generateNotFoundHtml(templateHtml) {
   return html;
 }
 
+function validateCourseHtml(baseCourse, html) {
+  if (!html || typeof html !== 'string') throw new Error(`Empty HTML for course ${baseCourse.id}`);
+  if (html.length < 5000) throw new Error(`HTML unusually short (${html.length} chars) for ${baseCourse.id}`);
+
+  // 1. Title
+  if (!html.includes('<title id="page-title">')) {
+    throw new Error(`Missing page title tag for ${baseCourse.id}`);
+  }
+
+  // 2. H1
+  if (!html.includes('<h1 class="course-detail-title" id="detail-title">')) {
+    throw new Error(`Missing H1 title tag for ${baseCourse.id}`);
+  }
+
+  // 3. Canonical
+  const expectedCanonical = `https://novaskills.in/course-detail.html?id=${encodeURIComponent(baseCourse.id)}`;
+  if (!html.includes(`href="${expectedCanonical}"`)) {
+    throw new Error(`Missing or incorrect canonical for ${baseCourse.id}: expected ${expectedCanonical}`);
+  }
+
+  // 4. Meta prerendered & course-id
+  if (!html.includes(`content="${baseCourse.id}"`) || !html.includes('content="true"')) {
+    throw new Error(`Missing prerendered meta tags for ${baseCourse.id}`);
+  }
+
+  // 5. Meta description
+  if (!html.includes('id="page-meta-desc"')) {
+    throw new Error(`Missing meta description tag for ${baseCourse.id}`);
+  }
+
+  // 6. Schema.org
+  if (!html.includes('id="ns-dynamic-course-schema"')) {
+    throw new Error(`Missing Schema.org JSON-LD tag for ${baseCourse.id}`);
+  }
+
+  // 7. Commercial pricing
+  const expectedPrice = `₹${(baseCourse.price || 0).toLocaleString('en-IN')}`;
+  if (!html.includes(expectedPrice)) {
+    throw new Error(`Missing approved price ${expectedPrice} in HTML for ${baseCourse.id}`);
+  }
+
+  // 8. Duration
+  if (!html.includes(baseCourse.duration)) {
+    throw new Error(`Missing duration ${baseCourse.duration} in HTML for ${baseCourse.id}`);
+  }
+
+  // 9. Zero skeletons
+  if (html.includes('course-skeleton')) {
+    throw new Error(`Unrendered course-skeleton found in HTML for ${baseCourse.id}`);
+  }
+
+  return true;
+}
+
 function runBuild() {
-  console.log('=== BUILDING CONTROLLED COURSE RENDERING (4 COURSES) ===\n');
+  console.log('=== FULL 109-COURSE SEO ROLLOUT (12 BATCHES) ===\n');
 
   const templateHtml = fs.readFileSync(path.join(ROOT_DIR, 'course-detail.html'), 'utf8');
   const renderedMap = {};
-
   const staticOutDir = path.join(ROOT_DIR, '_rendered_courses');
   fs.mkdirSync(staticOutDir, { recursive: true });
 
-  TARGET_COURSES.forEach(courseId => {
-    console.log(`Pre-rendering course: "${courseId}"...`);
-    const html = generateStaticCourseHtml(courseId, templateHtml);
-    renderedMap[courseId] = html;
+  let totalCoursesProcessed = 0;
 
-    const outFile = path.join(staticOutDir, `${courseId}.html`);
-    fs.writeFileSync(outFile, html, 'utf8');
-    console.log(`  ✅ Written static file: _rendered_courses/${courseId}.html (${(html.length / 1024).toFixed(1)} KB)`);
-  });
+  for (const batch of BATCHES) {
+    const batchCourses = NS_COURSES.filter(c => c.academyId === batch.academyId);
+    console.log(`\n------------------------------------------------------------`);
+    console.log(`▶ BATCH ${batch.batchNum}/12: ${batch.name} (${batchCourses.length} courses)`);
+    console.log(`------------------------------------------------------------`);
 
+    for (const course of batchCourses) {
+      const html = generateStaticCourseHtml(course.id, templateHtml);
+      validateCourseHtml(course, html);
+
+      renderedMap[course.id] = html;
+      const outFile = path.join(staticOutDir, `${course.id}.html`);
+      fs.writeFileSync(outFile, html, 'utf8');
+
+      totalCoursesProcessed++;
+      console.log(`  [${String(totalCoursesProcessed).padStart(3, ' ')}/109] ✅ ${course.id} (${(html.length / 1024).toFixed(1)} KB)`);
+    }
+
+    console.log(`✔ BATCH ${batch.batchNum} VERIFIED: All ${batchCourses.length} courses passed validation.`);
+  }
+
+  if (totalCoursesProcessed !== 109) {
+    throw new Error(`Expected 109 courses, but processed ${totalCoursesProcessed}!`);
+  }
+
+  // Generate 404 page
   const notFoundHtml = generateNotFoundHtml(templateHtml);
   fs.writeFileSync(path.join(staticOutDir, '404.html'), notFoundHtml, 'utf8');
 
@@ -865,6 +945,7 @@ function runBuild() {
   const renderedJsContent = `/**
  * Pre-rendered Course HTML Dictionary for Cloudflare Pages Edge Middleware
  * Generated at ${new Date().toISOString()}
+ * Total Pre-rendered Courses: ${totalCoursesProcessed}
  */
 
 export const RENDERED_COURSES = ${JSON.stringify(renderedMap)};
@@ -876,7 +957,7 @@ export const COURSE_ALIASES = ${JSON.stringify(COURSE_ALIASES)};
 export const COURSE_NOT_FOUND_HTML = ${JSON.stringify(notFoundHtml)};
 `;
   fs.writeFileSync(renderedJsPath, renderedJsContent, 'utf8');
-  console.log(`\n✅ Generated Edge Functions bundle: functions/_rendered_courses.js (${(renderedJsContent.length / 1024).toFixed(1)} KB)`);
+  console.log(`\n✅ Generated Edge Functions bundle: functions/_rendered_courses.js (${(renderedJsContent.length / (1024 * 1024)).toFixed(2)} MB)`);
 
   // Write functions/_middleware.js
   const middlewarePath = path.join(functionsDir, '_middleware.js');
@@ -946,7 +1027,7 @@ export async function onRequest(context) {
 `;
   fs.writeFileSync(middlewarePath, middlewareContent, 'utf8');
   console.log(`✅ Generated Cloudflare Pages Middleware: functions/_middleware.js`);
-  console.log(`\n🎉 BUILD COMPLETE FOR 4 TARGET COURSES.`);
+  console.log(`\n🎉 BUILD COMPLETE FOR ALL 109 COURSES ACROSS 12 ACADEMIES.`);
 }
 
 runBuild();
