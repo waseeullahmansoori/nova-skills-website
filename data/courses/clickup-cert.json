@@ -7,11 +7,17 @@
   "course_role": "Project Coordinator",
   "level": "Beginner",
   "duration": "1 Month",
-  "learning_hours": "40 hrs",
+  "learning_hours": 40,
   "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": ["Project Managers", "Scrum Masters", "Team Leads"],
-    "not_for": ["Individuals looking for simple personal to-do lists"],
+    "best_for": [
+      "Project Managers",
+      "Scrum Masters",
+      "Team Leads"
+    ],
+    "not_for": [
+      "Individuals looking for simple personal to-do lists"
+    ],
     "who_should_take_foundation_first": "Those unfamiliar with basic project management concepts"
   },
   "prerequisites": {
@@ -30,7 +36,7 @@
       "level": "Beginner to Intermediate",
       "duration": "1 Month",
       "format": "Online",
-      "estimated_learning_hours": "40 hrs",
+      "estimated_learning_hours": "40 Hours",
       "project_count": 2,
       "capstone": "Yes",
       "ai_integration": "Yes",
@@ -57,15 +63,34 @@
   ],
   "learning_journey": {
     "stages": [
-      { "stage": "Hierarchy", "focus": "Understanding Spaces and Lists" },
-      { "stage": "Execution", "focus": "Tasks, Views, and Custom Fields" },
-      { "stage": "Optimization", "focus": "Dashboards and Automations" }
+      {
+        "stage": "Hierarchy",
+        "focus": "Understanding Spaces and Lists"
+      },
+      {
+        "stage": "Execution",
+        "focus": "Tasks, Views, and Custom Fields"
+      },
+      {
+        "stage": "Optimization",
+        "focus": "Dashboards and Automations"
+      }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
-      { "tool": "ClickUp", "purpose": "Project Management", "what_student_learns": "Complete platform usage", "what_student_builds": "Project Workspaces" },
-      { "tool": "ClickUp Automations", "purpose": "Workflow automation", "what_student_learns": "Triggers and actions", "what_student_builds": "Automated task pipelines" }
+      {
+        "tool": "ClickUp",
+        "purpose": "Project Management",
+        "what_student_learns": "Complete platform usage",
+        "what_student_builds": "Project Workspaces"
+      },
+      {
+        "tool": "ClickUp Automations",
+        "purpose": "Workflow automation",
+        "what_student_learns": "Triggers and actions",
+        "what_student_builds": "Automated task pipelines"
+      }
     ],
     "supporting_tools": [],
     "emerging_tools": [],
@@ -74,10 +99,26 @@
   "industry_workflow": {
     "overview": "Agile Project Workflow in ClickUp",
     "stages": [
-      { "step": 1, "name": "Planning", "desc": "Setting up the sprint backlog in a List view" },
-      { "step": 2, "name": "Execution", "desc": "Moving tasks through a Kanban Board" },
-      { "step": 3, "name": "Tracking", "desc": "Monitoring dependencies on a Gantt chart" },
-      { "step": 4, "name": "Reporting", "desc": "Reviewing sprint performance on a Dashboard" }
+      {
+        "step": 1,
+        "name": "Planning",
+        "desc": "Setting up the sprint backlog in a List view"
+      },
+      {
+        "step": 2,
+        "name": "Execution",
+        "desc": "Moving tasks through a Kanban Board"
+      },
+      {
+        "step": 3,
+        "name": "Tracking",
+        "desc": "Monitoring dependencies on a Gantt chart"
+      },
+      {
+        "step": 4,
+        "name": "Reporting",
+        "desc": "Reviewing sprint performance on a Dashboard"
+      }
     ]
   },
   "business_use_cases": [
@@ -104,18 +145,38 @@
     "Leverage recurring tasks for administrative duties"
   ],
   "common_mistakes": [
-    { "mistake": "Overusing Custom Fields", "why_it_happens": "Trying to track too much metadata", "professional_approach": "Only create fields that directly impact reporting or workflows" }
+    {
+      "mistake": "Overusing Custom Fields",
+      "why_it_happens": "Trying to track too much metadata",
+      "professional_approach": "Only create fields that directly impact reporting or workflows"
+    }
   ],
   "career_paths": {
-    "entry_roles": ["Project Coordinator", "Administrative Assistant"],
-    "mid_roles": ["Project Manager", "Scrum Master"],
-    "specialist_roles": ["ClickUp Consultant", "Operations Director"],
-    "freelance_roles": ["Virtual Assistant", "Systems Implementer"],
+    "entry_roles": [
+      "Project Coordinator",
+      "Administrative Assistant"
+    ],
+    "mid_roles": [
+      "Project Manager",
+      "Scrum Master"
+    ],
+    "specialist_roles": [
+      "ClickUp Consultant",
+      "Operations Director"
+    ],
+    "freelance_roles": [
+      "Virtual Assistant",
+      "Systems Implementer"
+    ],
     "employer_expectations": "Ability to keep projects on track and teams aligned",
     "what_student_demonstrates": "A fully functional, automated project workspace"
   },
   "freelance_applications": {
-    "services_offered": ["Workspace Setup", "Workflow Automation", "Team Training"],
+    "services_offered": [
+      "Workspace Setup",
+      "Workflow Automation",
+      "Team Training"
+    ],
     "client_workflow": "Process Mapping -> Workspace Configuration -> Onboarding",
     "portfolio_requirements": "Screenshots/Templates of customized spaces"
   },
@@ -141,22 +202,58 @@
     "related_programs": "Advanced Workspace Architecture (Notion)"
   },
   "faq": [
-    { "question": "Is ClickUp better than Asana or Monday?", "answer": "ClickUp offers more customization and hierarchy levels, which we cover extensively. It is often preferred for complex workflows." },
-    { "question": "Do I need the paid version?", "answer": "The free version is very robust and sufficient for the course." }
+    {
+      "question": "Is ClickUp better than Asana or Monday?",
+      "answer": "ClickUp offers more customization and hierarchy levels, which we cover extensively. It is often preferred for complex workflows."
+    },
+    {
+      "question": "Do I need the paid version?",
+      "answer": "The free version is very robust and sufficient for the course."
+    }
   ],
   "modules": [
     {
       "module_number": 1,
       "module_title": "Hierarchy & Task Management",
       "module_purpose": "Understand the core structure of ClickUp",
-      "what_you_will_learn": ["Workspace Hierarchy", "Task Creation", "Views"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "The ClickUp Hierarchy", "what_is_taught": "Workspaces, Spaces, Folders, and Lists", "why_it_matters": "Proper setup prevents future organizational chaos", "what_learner_does": "Sets up a departmental structure", "expected_outcome": "Workspace architecture understanding" },
-        { "lesson_number": 2, "lesson_title": "Task Mastery", "what_is_taught": "Tasks, subtasks, checklists, and assignees", "why_it_matters": "The core of getting work done", "what_learner_does": "Creates a detailed task breakdown for a project", "expected_outcome": "Proficient task management" },
-        { "lesson_number": 3, "lesson_title": "Working with Views", "what_is_taught": "List, Board, and Calendar views", "why_it_matters": "Different roles need to see data differently", "what_learner_does": "Configures specific views for managers vs. makers", "expected_outcome": "Ability to visualize work effectively" }
+      "what_you_will_learn": [
+        "Workspace Hierarchy",
+        "Task Creation",
+        "Views"
       ],
-      "key_concepts": ["Structure", "Visibility"],
-      "tools": ["ClickUp"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "The ClickUp Hierarchy",
+          "what_is_taught": "Workspaces, Spaces, Folders, and Lists",
+          "why_it_matters": "Proper setup prevents future organizational chaos",
+          "what_learner_does": "Sets up a departmental structure",
+          "expected_outcome": "Workspace architecture understanding"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Task Mastery",
+          "what_is_taught": "Tasks, subtasks, checklists, and assignees",
+          "why_it_matters": "The core of getting work done",
+          "what_learner_does": "Creates a detailed task breakdown for a project",
+          "expected_outcome": "Proficient task management"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Working with Views",
+          "what_is_taught": "List, Board, and Calendar views",
+          "why_it_matters": "Different roles need to see data differently",
+          "what_learner_does": "Configures specific views for managers vs. makers",
+          "expected_outcome": "Ability to visualize work effectively"
+        }
+      ],
+      "key_concepts": [
+        "Structure",
+        "Visibility"
+      ],
+      "tools": [
+        "ClickUp"
+      ],
       "hands_on_practice": "Structuring a basic project workspace",
       "assignment": "Marketing Campaign Setup",
       "business_application": "Organizing team initiatives",
@@ -166,14 +263,45 @@
       "module_number": 2,
       "module_title": "Customization & Automation",
       "module_purpose": "Adapt ClickUp to specific business workflows",
-      "what_you_will_learn": ["Custom Fields", "Automations", "Dashboards"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Custom Fields and Statuses", "what_is_taught": "Tailoring task metadata and workflows", "why_it_matters": "Makes the tool fit the business, not vice versa", "what_learner_does": "Builds a customized bug tracking workflow", "expected_outcome": "Workflow customization skills" },
-        { "lesson_number": 2, "lesson_title": "ClickUp Automations", "what_is_taught": "When/Then automation rules", "why_it_matters": "Reduces manual clicks and errors", "what_learner_does": "Automates task assignment based on status changes", "expected_outcome": "Basic automation proficiency" },
-        { "lesson_number": 3, "lesson_title": "Reporting with Dashboards", "what_is_taught": "Building visual reporting dashboards", "why_it_matters": "Provides high-level project health overviews", "what_learner_does": "Creates a sprint performance dashboard", "expected_outcome": "Reporting and analytics skills" }
+      "what_you_will_learn": [
+        "Custom Fields",
+        "Automations",
+        "Dashboards"
       ],
-      "key_concepts": ["Adaptability", "Efficiency", "Analytics"],
-      "tools": ["ClickUp Automations"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Custom Fields and Statuses",
+          "what_is_taught": "Tailoring task metadata and workflows",
+          "why_it_matters": "Makes the tool fit the business, not vice versa",
+          "what_learner_does": "Builds a customized bug tracking workflow",
+          "expected_outcome": "Workflow customization skills"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "ClickUp Automations",
+          "what_is_taught": "When/Then automation rules",
+          "why_it_matters": "Reduces manual clicks and errors",
+          "what_learner_does": "Automates task assignment based on status changes",
+          "expected_outcome": "Basic automation proficiency"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Reporting with Dashboards",
+          "what_is_taught": "Building visual reporting dashboards",
+          "why_it_matters": "Provides high-level project health overviews",
+          "what_learner_does": "Creates a sprint performance dashboard",
+          "expected_outcome": "Reporting and analytics skills"
+        }
+      ],
+      "key_concepts": [
+        "Adaptability",
+        "Efficiency",
+        "Analytics"
+      ],
+      "tools": [
+        "ClickUp Automations"
+      ],
       "hands_on_practice": "Building automated workflows and reports",
       "assignment": "Automated IT Ticketing System",
       "business_application": "Streamlining operational processes",

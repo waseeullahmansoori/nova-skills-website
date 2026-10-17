@@ -1,203 +1,389 @@
 {
-    "course_id": "client-communication",
-    "course_name": "Client Communication",
-    "academy": "Career & Freelancing Academy",
-    "academy_id": "career-freelancing-academy",
-    "course_type": "MODULE",
-    "course_role": "Freelancer",
-    "level": "Intermediate",
-    "duration": "1 Month",
-    "learning_hours": 20,
-    "future_review_status": "Up to date",
-    "target_audience": {
-        "best_for": ["Freelancers", "Agency owners", "Client-facing professionals"],
-        "not_for": ["Individuals with no client interaction in their roles"],
-        "who_should_take_foundation_first": "None."
-    },
-    "prerequisites": {
-        "required": "Basic professional email etiquette.",
-        "recommended": "Active or past experience working with clients.",
-        "system_requirements": {
-            "hardware": "A computer with a webcam.",
-            "software_accounts": "Slack, Loom, Gmail/Email client."
-        },
-        "not_required": "Advanced conflict resolution training."
-    },
-    "overview": {
-        "positioning": "Master the art of professional client management, from setting expectations to handling difficult conversations.",
-        "short_description": "Learn frameworks for clear, confident communication that builds trust and retains clients.",
-        "key_facts": {
-            "level": "Intermediate",
-            "duration": "1 Month",
-            "format": "Online",
-            "estimated_learning_hours": 20,
-            "project_count": 2,
-            "capstone": false,
-            "ai_integration": "Medium",
-            "career_focus": "Client Management"
-        },
-        "what_you_will_be_able_to_do": [
-            "Set clear boundaries and expectations during onboarding.",
-            "Communicate project updates efficiently using asynchronous tools.",
-            "Navigate scope creep and push back professionally.",
-            "De-escalate conflicts and handle unhappy clients."
-        ]
-    },
-    "why_now": {
-        "industry_shift": "Remote work has made asynchronous communication the primary mode of client interaction.",
-        "ai_impact": "While AI can draft emails, nuance, empathy, and boundary-setting remain strictly human skills.",
-        "business_demand": "Poor communication is the #1 reason freelancers and agencies lose clients.",
-        "career_opportunity": "Excellent communicators retain clients longer, generate more referrals, and command higher rates."
-    },
-    "learning_outcomes": [
-        "ESTABLISH strong communication protocols during client onboarding.",
-        "EXECUTE structured asynchronous updates to minimize unnecessary meetings.",
-        "MANAGE scope creep through professional boundary setting.",
-        "RESOLVE client disputes using empathy and solution-oriented frameworks."
+  "course_id": "client-communication",
+  "course_name": "Client Communication",
+  "academy": "Career & Freelancing Academy",
+  "academy_id": "career-freelancing-academy",
+  "course_type": "MODULE",
+  "course_role": "Freelancer",
+  "level": "Intermediate",
+  "duration": "1 Month",
+  "learning_hours": 20,
+  "future_review_status": "Up to date",
+  "target_audience": {
+    "best_for": [
+      "Freelancers",
+      "Agency owners",
+      "Client-facing professionals"
     ],
-    "learning_journey": {
-        "stages": [
-            {"stage": "Onboarding", "focus": "Setting the rules of engagement."},
-            {"stage": "Execution", "focus": "Routine updates and async communication."},
-            {"stage": "Conflict Resolution", "focus": "Handling scope creep and difficult conversations."}
-        ]
-    },
-    "hands_on_tech": {
-        "core_tools": [
-            {"tool": "Loom", "purpose": "Async updates", "what_student_learns": "Recording clear, concise video updates.", "what_student_builds": "A standard project update template."},
-            {"tool": "Email/Slack", "purpose": "Written communication", "what_student_learns": "Structuring professional messages.", "what_student_builds": "A library of response templates."}
-        ],
-        "supporting_tools": [
-            {"tool": "Notion", "purpose": "Client portals"},
-            {"tool": "Google Meet", "purpose": "Synchronous meetings"}
-        ],
-        "emerging_tools": [
-            {"tool": "AI Tone Analyzers", "purpose": "Checking email tone before sending."}
-        ],
-        "tools_to_review": ["Grammarly"]
-    },
-    "industry_workflow": {
-        "overview": "The lifecycle of client communication during a project.",
-        "stages": [
-            {"step": 1, "name": "Onboarding", "desc": "Defining how and when communication will happen."},
-            {"step": 2, "name": "Active Project", "desc": "Providing weekly structured updates."},
-            {"step": 3, "name": "Feedback Loop", "desc": "Receiving and responding to client revisions."},
-            {"step": 4, "name": "Offboarding", "desc": "Closing the project and requesting testimonials."}
-        ]
-    },
-    "business_use_cases": [
-        {"sector": "Freelance/Agency", "business_problem": "Clients constantly messaging after hours and expanding project scope.", "approach": "Implementing strict communication SLAs and scope management scripts.", "toolset": "Email, Loom", "output": "Reclaimed time and protected profit margins."}
+    "not_for": [
+      "Individuals with no client interaction in their roles"
     ],
-    "ai_integration": {
-        "role_classification": "AI as a drafting assistant.",
-        "ai_can_assist_with": "Drafting initial responses to difficult emails, checking tone.",
-        "ai_can_automate": "Routine status update formatting.",
-        "ai_cannot_replace": "The empathy required to de-escalate a frustrated client.",
-        "human_expertise_required": "Judging when to move from text to a live call.",
-        "validation_protocol": "Always reviewing AI drafts for appropriate professional nuance.",
-        "responsible_use": "Do not use AI to generate excuses; maintain accountability."
+    "who_should_take_foundation_first": "None."
+  },
+  "prerequisites": {
+    "required": "Basic professional email etiquette.",
+    "recommended": "Active or past experience working with clients.",
+    "system_requirements": {
+      "hardware": "A computer with a webcam.",
+      "software_accounts": "Slack, Loom, Gmail/Email client."
     },
-    "best_practices": [
-        "Never deliver bad news via text or Slack; use video or a live call.",
-        "Respond to inquiries within 24 business hours, even if just to say you are looking into it.",
-        "Over-communicate progress; silence creates client anxiety.",
-        "Set clear 'office hours' and stick to them."
-    ],
-    "common_mistakes": [
-        {"mistake": "Answering emails late at night or on weekends.", "why_it_happens": "Desire to please the client.", "professional_approach": "Setting strict communication boundaries to train clients on response times."}
-    ],
-    "career_paths": {
-        "entry_roles": ["Account Executive", "Junior Freelancer"],
-        "mid_roles": ["Account Manager", "Senior Consultant"],
-        "specialist_roles": ["Client Success Manager"],
-        "freelance_roles": ["Agency Owner"],
-        "employer_expectations": "Ability to handle clients independently without escalation.",
-        "what_student_demonstrates": "Professionalism, boundary management, and de-escalation skills."
+    "not_required": "Advanced conflict resolution training."
+  },
+  "overview": {
+    "positioning": "Master the art of professional client management, from setting expectations to handling difficult conversations.",
+    "short_description": "Learn frameworks for clear, confident communication that builds trust and retains clients.",
+    "key_facts": {
+      "level": "Intermediate",
+      "duration": "1 Month",
+      "format": "Online",
+      "estimated_learning_hours": "20 Hours",
+      "project_count": 2,
+      "capstone": false,
+      "ai_integration": "Medium",
+      "career_focus": "Client Management"
     },
-    "freelance_applications": {
-        "services_offered": ["N/A - This is an operational skill for all services."],
-        "client_workflow": "Applied across the entire client lifecycle.",
-        "portfolio_requirements": "N/A"
-    },
-    "what_you_will_build": [
-        "A client onboarding communication protocol.",
-        "A library of email templates for common scenarios (scope creep, late payments, etc.).",
-        "A standardized Loom update format."
-    ],
-    "final_deliverables": [
-        "A comprehensive 'Client Communication Playbook' for your business."
-    ],
-    "assessment": {
-        "model": "Scenario-based evaluation.",
-        "criteria": "Appropriateness of tone, clarity of boundaries, and effectiveness of conflict resolution."
-    },
-    "certification": {
-        "title": "N/A",
-        "criteria": "N/A",
-        "verification": "N/A"
-    },
-    "not_covered": "Sales pitching or proposal writing (covered in other modules).",
-    "next_learning_path": {
-        "recommended_next": "Agency Building",
-        "related_programs": "Freelancing Mastery"
-    },
-    "faq": [
-        {"question": "How do I handle a client who won't stop texting me?", "answer": "We provide exact scripts on how to transition them back to professional channels without offending them."},
-        {"question": "Is async communication really better than meetings?", "answer": "For routine updates, yes. It saves time for both parties. We teach you when to use async and when a live meeting is necessary."},
-        {"question": "What if I made a major mistake on a project?", "answer": "You will learn the framework for owning the mistake, proposing a solution, and communicating it professionally."}
-    ],
-    "modules": [
-        {
-            "module_number": 1,
-            "module_title": "Setting Expectations & Onboarding",
-            "module_purpose": "Establish control and professionalism from day one.",
-            "what_you_will_learn": ["Defining communication channels.", "Setting SLAs (Service Level Agreements).", "The kickoff message."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "The Rules of Engagement", "what_is_taught": "Defining when and where communication happens.", "why_it_matters": "Prevents 10 PM WhatsApp messages.", "what_learner_does": "Drafts their business hours and preferred channels policy.", "expected_outcome": "A clear communication policy."},
-                {"lesson_number": 2, "lesson_title": "The Welcome Packet", "what_is_taught": "Communicating the process to the client.", "why_it_matters": "Reduces client anxiety by showing them the roadmap.", "what_learner_does": "Creates a welcome email/document.", "expected_outcome": "An onboarding template."},
-                {"lesson_number": 3, "lesson_title": "Managing Response Times", "what_is_taught": "The 24-hour acknowledgment rule.", "why_it_matters": "Keeps clients calm even if the work isn't done yet.", "what_learner_does": "Sets up auto-responders or canned responses.", "expected_outcome": "An acknowledgment protocol."}
-            ],
-            "key_concepts": ["Boundaries", "SLAs", "Proactive Communication"],
-            "tools": ["Email"],
-            "hands_on_practice": "Finalize the onboarding communication protocol.",
-            "assignment": "Submit the welcome packet and communication policy.",
-            "business_application": "Starting projects smoothly and establishing authority.",
-            "expected_outcome": "A professional onboarding workflow."
-        },
-        {
-            "module_number": 2,
-            "module_title": "Asynchronous Updates & Routine Communication",
-            "module_purpose": "Keep clients informed without wasting time in meetings.",
-            "what_you_will_learn": ["Structuring written updates.", "Recording effective Loom videos.", "Managing feedback loops."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "The Weekly Update Structure", "what_is_taught": "What we did, What we're doing, What we need from you.", "why_it_matters": "Provides clarity and keeps projects moving.", "what_learner_does": "Drafts a weekly update template.", "expected_outcome": "A status report format."},
-                {"lesson_number": 2, "lesson_title": "Mastering Async Video (Loom)", "what_is_taught": "Using screen recordings to present work or explain complex issues.", "why_it_matters": "Adds personal touch and replaces 30-minute meetings with 3-minute videos.", "what_learner_does": "Records a mock project update.", "expected_outcome": "Competence in video updates."},
-                {"lesson_number": 3, "lesson_title": "Structuring Feedback Requests", "what_is_taught": "How to ask for consolidated, actionable feedback.", "why_it_matters": "Prevents the 'drip-feed' of endless minor revisions.", "what_learner_does": "Drafts a feedback request template.", "expected_outcome": "A streamlined revision process."}
-            ],
-            "key_concepts": ["Asynchronous Communication", "Status Reporting", "Consolidated Feedback"],
-            "tools": ["Loom", "Slack"],
-            "hands_on_practice": "Record a Loom video presenting a hypothetical project milestone.",
-            "assignment": "Submit the update template and Loom video.",
-            "business_application": "Maximizing efficiency and minimizing meeting fatigue.",
-            "expected_outcome": "A streamlined routine communication system."
-        },
-        {
-            "module_number": 3,
-            "module_title": "Conflict, Scope Creep & Difficult Conversations",
-            "module_purpose": "Protect your business while maintaining the client relationship.",
-            "what_you_will_learn": ["Identifying and addressing scope creep.", "De-escalating angry clients.", "Delivering bad news.", "Chasing late payments."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Pushing Back on Scope Creep", "what_is_taught": "How to say 'no' or 'that costs extra' professionally.", "why_it_matters": "Protects your hourly rate and profit margin.", "what_learner_does": "Drafts 3 scope creep response scripts.", "expected_outcome": "Scripts for boundary enforcement."},
-                {"lesson_number": 2, "lesson_title": "Delivering Bad News", "what_is_taught": "The framework for communicating delays or mistakes.", "why_it_matters": "Honesty builds trust; hiding mistakes destroys it.", "what_learner_does": "Roleplays a bad news scenario.", "expected_outcome": "A protocol for handling errors."},
-                {"lesson_number": 3, "lesson_title": "De-escalation Techniques", "what_is_taught": "Moving from text to voice, active listening, and proposing solutions.", "why_it_matters": "Saves at-risk client relationships.", "what_learner_does": "Analyzes a case study of a client conflict.", "expected_outcome": "Conflict resolution strategies."},
-                {"lesson_number": 4, "lesson_title": "The Late Payment Sequence", "what_is_taught": "Professional persistence in accounts receivable.", "why_it_matters": "Ensures you get paid without burning bridges.", "what_learner_does": "Drafts a 3-step invoice follow-up sequence.", "expected_outcome": "A collections email sequence."}
-            ],
-            "key_concepts": ["Scope Management", "De-escalation", "Professional Persistence"],
-            "tools": ["Email", "Google Meet"],
-            "hands_on_practice": "Compile all scripts into the 'Client Communication Playbook'.",
-            "assignment": "Submit the completed playbook.",
-            "business_application": "Protecting revenue and reputation.",
-            "expected_outcome": "Confidence in handling any client situation."
-        }
+    "what_you_will_be_able_to_do": [
+      "Set clear boundaries and expectations during onboarding.",
+      "Communicate project updates efficiently using asynchronous tools.",
+      "Navigate scope creep and push back professionally.",
+      "De-escalate conflicts and handle unhappy clients."
     ]
+  },
+  "why_now": {
+    "industry_shift": "Remote work has made asynchronous communication the primary mode of client interaction.",
+    "ai_impact": "While AI can draft emails, nuance, empathy, and boundary-setting remain strictly human skills.",
+    "business_demand": "Poor communication is the #1 reason freelancers and agencies lose clients.",
+    "career_opportunity": "Excellent communicators retain clients longer, generate more referrals, and command higher rates."
+  },
+  "learning_outcomes": [
+    "ESTABLISH strong communication protocols during client onboarding.",
+    "EXECUTE structured asynchronous updates to minimize unnecessary meetings.",
+    "MANAGE scope creep through professional boundary setting.",
+    "RESOLVE client disputes using empathy and solution-oriented frameworks."
+  ],
+  "learning_journey": {
+    "stages": [
+      {
+        "stage": "Onboarding",
+        "focus": "Setting the rules of engagement."
+      },
+      {
+        "stage": "Execution",
+        "focus": "Routine updates and async communication."
+      },
+      {
+        "stage": "Conflict Resolution",
+        "focus": "Handling scope creep and difficult conversations."
+      }
+    ]
+  },
+  "hands_on_tech": {
+    "core_tools": [
+      {
+        "tool": "Loom",
+        "purpose": "Async updates",
+        "what_student_learns": "Recording clear, concise video updates.",
+        "what_student_builds": "A standard project update template."
+      },
+      {
+        "tool": "Email/Slack",
+        "purpose": "Written communication",
+        "what_student_learns": "Structuring professional messages.",
+        "what_student_builds": "A library of response templates."
+      }
+    ],
+    "supporting_tools": [
+      {
+        "tool": "Notion",
+        "purpose": "Client portals"
+      },
+      {
+        "tool": "Google Meet",
+        "purpose": "Synchronous meetings"
+      }
+    ],
+    "emerging_tools": [
+      {
+        "tool": "AI Tone Analyzers",
+        "purpose": "Checking email tone before sending."
+      }
+    ],
+    "tools_to_review": [
+      "Grammarly"
+    ]
+  },
+  "industry_workflow": {
+    "overview": "The lifecycle of client communication during a project.",
+    "stages": [
+      {
+        "step": 1,
+        "name": "Onboarding",
+        "desc": "Defining how and when communication will happen."
+      },
+      {
+        "step": 2,
+        "name": "Active Project",
+        "desc": "Providing weekly structured updates."
+      },
+      {
+        "step": 3,
+        "name": "Feedback Loop",
+        "desc": "Receiving and responding to client revisions."
+      },
+      {
+        "step": 4,
+        "name": "Offboarding",
+        "desc": "Closing the project and requesting testimonials."
+      }
+    ]
+  },
+  "business_use_cases": [
+    {
+      "sector": "Freelance/Agency",
+      "business_problem": "Clients constantly messaging after hours and expanding project scope.",
+      "approach": "Implementing strict communication SLAs and scope management scripts.",
+      "toolset": "Email, Loom",
+      "output": "Reclaimed time and protected profit margins."
+    }
+  ],
+  "ai_integration": {
+    "role_classification": "AI as a drafting assistant.",
+    "ai_can_assist_with": "Drafting initial responses to difficult emails, checking tone.",
+    "ai_can_automate": "Routine status update formatting.",
+    "ai_cannot_replace": "The empathy required to de-escalate a frustrated client.",
+    "human_expertise_required": "Judging when to move from text to a live call.",
+    "validation_protocol": "Always reviewing AI drafts for appropriate professional nuance.",
+    "responsible_use": "Do not use AI to generate excuses; maintain accountability."
+  },
+  "best_practices": [
+    "Never deliver bad news via text or Slack; use video or a live call.",
+    "Respond to inquiries within 24 business hours, even if just to say you are looking into it.",
+    "Over-communicate progress; silence creates client anxiety.",
+    "Set clear 'office hours' and stick to them."
+  ],
+  "common_mistakes": [
+    {
+      "mistake": "Answering emails late at night or on weekends.",
+      "why_it_happens": "Desire to please the client.",
+      "professional_approach": "Setting strict communication boundaries to train clients on response times."
+    }
+  ],
+  "career_paths": {
+    "entry_roles": [
+      "Account Executive",
+      "Junior Freelancer"
+    ],
+    "mid_roles": [
+      "Account Manager",
+      "Senior Consultant"
+    ],
+    "specialist_roles": [
+      "Client Success Manager"
+    ],
+    "freelance_roles": [
+      "Agency Owner"
+    ],
+    "employer_expectations": "Ability to handle clients independently without escalation.",
+    "what_student_demonstrates": "Professionalism, boundary management, and de-escalation skills."
+  },
+  "freelance_applications": {
+    "services_offered": [
+      "N/A - This is an operational skill for all services."
+    ],
+    "client_workflow": "Applied across the entire client lifecycle.",
+    "portfolio_requirements": "N/A"
+  },
+  "what_you_will_build": [
+    "A client onboarding communication protocol.",
+    "A library of email templates for common scenarios (scope creep, late payments, etc.).",
+    "A standardized Loom update format."
+  ],
+  "final_deliverables": [
+    "A comprehensive 'Client Communication Playbook' for your business."
+  ],
+  "assessment": {
+    "model": "Scenario-based evaluation.",
+    "criteria": "Appropriateness of tone, clarity of boundaries, and effectiveness of conflict resolution."
+  },
+  "certification": {
+    "title": "N/A",
+    "criteria": "N/A",
+    "verification": "N/A"
+  },
+  "not_covered": "Sales pitching or proposal writing (covered in other modules).",
+  "next_learning_path": {
+    "recommended_next": "Agency Building",
+    "related_programs": "Freelancing Mastery"
+  },
+  "faq": [
+    {
+      "question": "How do I handle a client who won't stop texting me?",
+      "answer": "We provide exact scripts on how to transition them back to professional channels without offending them."
+    },
+    {
+      "question": "Is async communication really better than meetings?",
+      "answer": "For routine updates, yes. It saves time for both parties. We teach you when to use async and when a live meeting is necessary."
+    },
+    {
+      "question": "What if I made a major mistake on a project?",
+      "answer": "You will learn the framework for owning the mistake, proposing a solution, and communicating it professionally."
+    }
+  ],
+  "modules": [
+    {
+      "module_number": 1,
+      "module_title": "Setting Expectations & Onboarding",
+      "module_purpose": "Establish control and professionalism from day one.",
+      "what_you_will_learn": [
+        "Defining communication channels.",
+        "Setting SLAs (Service Level Agreements).",
+        "The kickoff message."
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "The Rules of Engagement",
+          "what_is_taught": "Defining when and where communication happens.",
+          "why_it_matters": "Prevents 10 PM WhatsApp messages.",
+          "what_learner_does": "Drafts their business hours and preferred channels policy.",
+          "expected_outcome": "A clear communication policy."
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "The Welcome Packet",
+          "what_is_taught": "Communicating the process to the client.",
+          "why_it_matters": "Reduces client anxiety by showing them the roadmap.",
+          "what_learner_does": "Creates a welcome email/document.",
+          "expected_outcome": "An onboarding template."
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Managing Response Times",
+          "what_is_taught": "The 24-hour acknowledgment rule.",
+          "why_it_matters": "Keeps clients calm even if the work isn't done yet.",
+          "what_learner_does": "Sets up auto-responders or canned responses.",
+          "expected_outcome": "An acknowledgment protocol."
+        }
+      ],
+      "key_concepts": [
+        "Boundaries",
+        "SLAs",
+        "Proactive Communication"
+      ],
+      "tools": [
+        "Email"
+      ],
+      "hands_on_practice": "Finalize the onboarding communication protocol.",
+      "assignment": "Submit the welcome packet and communication policy.",
+      "business_application": "Starting projects smoothly and establishing authority.",
+      "expected_outcome": "A professional onboarding workflow."
+    },
+    {
+      "module_number": 2,
+      "module_title": "Asynchronous Updates & Routine Communication",
+      "module_purpose": "Keep clients informed without wasting time in meetings.",
+      "what_you_will_learn": [
+        "Structuring written updates.",
+        "Recording effective Loom videos.",
+        "Managing feedback loops."
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "The Weekly Update Structure",
+          "what_is_taught": "What we did, What we're doing, What we need from you.",
+          "why_it_matters": "Provides clarity and keeps projects moving.",
+          "what_learner_does": "Drafts a weekly update template.",
+          "expected_outcome": "A status report format."
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Mastering Async Video (Loom)",
+          "what_is_taught": "Using screen recordings to present work or explain complex issues.",
+          "why_it_matters": "Adds personal touch and replaces 30-minute meetings with 3-minute videos.",
+          "what_learner_does": "Records a mock project update.",
+          "expected_outcome": "Competence in video updates."
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Structuring Feedback Requests",
+          "what_is_taught": "How to ask for consolidated, actionable feedback.",
+          "why_it_matters": "Prevents the 'drip-feed' of endless minor revisions.",
+          "what_learner_does": "Drafts a feedback request template.",
+          "expected_outcome": "A streamlined revision process."
+        }
+      ],
+      "key_concepts": [
+        "Asynchronous Communication",
+        "Status Reporting",
+        "Consolidated Feedback"
+      ],
+      "tools": [
+        "Loom",
+        "Slack"
+      ],
+      "hands_on_practice": "Record a Loom video presenting a hypothetical project milestone.",
+      "assignment": "Submit the update template and Loom video.",
+      "business_application": "Maximizing efficiency and minimizing meeting fatigue.",
+      "expected_outcome": "A streamlined routine communication system."
+    },
+    {
+      "module_number": 3,
+      "module_title": "Conflict, Scope Creep & Difficult Conversations",
+      "module_purpose": "Protect your business while maintaining the client relationship.",
+      "what_you_will_learn": [
+        "Identifying and addressing scope creep.",
+        "De-escalating angry clients.",
+        "Delivering bad news.",
+        "Chasing late payments."
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Pushing Back on Scope Creep",
+          "what_is_taught": "How to say 'no' or 'that costs extra' professionally.",
+          "why_it_matters": "Protects your hourly rate and profit margin.",
+          "what_learner_does": "Drafts 3 scope creep response scripts.",
+          "expected_outcome": "Scripts for boundary enforcement."
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Delivering Bad News",
+          "what_is_taught": "The framework for communicating delays or mistakes.",
+          "why_it_matters": "Honesty builds trust; hiding mistakes destroys it.",
+          "what_learner_does": "Roleplays a bad news scenario.",
+          "expected_outcome": "A protocol for handling errors."
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "De-escalation Techniques",
+          "what_is_taught": "Moving from text to voice, active listening, and proposing solutions.",
+          "why_it_matters": "Saves at-risk client relationships.",
+          "what_learner_does": "Analyzes a case study of a client conflict.",
+          "expected_outcome": "Conflict resolution strategies."
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "The Late Payment Sequence",
+          "what_is_taught": "Professional persistence in accounts receivable.",
+          "why_it_matters": "Ensures you get paid without burning bridges.",
+          "what_learner_does": "Drafts a 3-step invoice follow-up sequence.",
+          "expected_outcome": "A collections email sequence."
+        }
+      ],
+      "key_concepts": [
+        "Scope Management",
+        "De-escalation",
+        "Professional Persistence"
+      ],
+      "tools": [
+        "Email",
+        "Google Meet"
+      ],
+      "hands_on_practice": "Compile all scripts into the 'Client Communication Playbook'.",
+      "assignment": "Submit the completed playbook.",
+      "business_application": "Protecting revenue and reputation.",
+      "expected_outcome": "Confidence in handling any client situation."
+    }
+  ]
 }

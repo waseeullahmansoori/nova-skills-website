@@ -5,85 +5,85 @@
   "academy_id": "3d",
   "course_type": "MICRO",
   "course_role": "Career/Monetization",
-  "level": "BEGINNER+",
-  "duration": "2 Months",
-  "learning_hours": 80,
+  "level": "BEGINNER",
+  "duration": "1 Month",
+  "learning_hours": 40,
   "future_review_status": "STABLE",
   "target_audience": {
     "best_for": [
-      "Aspiring Architectural Visualizers seeking mastery in photorealistic rendering.",
-      "Architects wanting to create high-end presentations.",
-      "3D Artists shifting to real-time ArchViz workflows."
+      "Beginners and aspiring 3D artists wanting to master open-source 3D modeling and animation.",
+      "Graphic designers, digital illustrators, and game developers creating custom 3D assets.",
+      "Content creators seeking to produce 3D motion graphics, product showcases, and stylized renders."
     ],
-    "who_should_take_foundation_first": "Learners without basic spatial awareness or CAD reading skills should complete foundational drafting first.",
+    "who_should_take_foundation_first": "No prior 3D experience required; basic computer literacy and mouse/keyboard navigation skills are sufficient.",
     "not_for": [
-      "Individuals looking for character animation.",
-      "Students wanting theoretical architecture without 3D production."
+      "Students seeking advanced character rigging and visual effects pipeline programming.",
+      "Learners looking exclusively for 2D CAD drafting without 3D creative production."
     ]
   },
   "prerequisites": {
-    "required": "Basic understanding of architectural plans.",
-    "recommended": "Familiarity with digital art tools.",
-    "not_required": "Advanced mathematics or prior coding experience.",
+    "required": "Basic computer literacy and comfort with standard keyboard/mouse navigation.",
+    "recommended": "Familiarity with digital graphics or vector design tools is helpful but not mandatory.",
+    "not_required": "Prior 3D modeling experience, coding, or mathematical background.",
     "system_requirements": {
-      "hardware": "Modern multi-core CPU, 32GB+ RAM, dedicated GPU (RTX 3070+).",
-      "software_accounts": "3ds Max, V-Ray, Photoshop, Twinmotion, SketchUp."
+      "hardware": "Modern 64-bit multi-core CPU, 8GB+ RAM (16GB recommended), OpenGL 3.3 compatible GPU (NVIDIA/AMD dedicated GPU recommended).",
+      "software_accounts": "Blender 4.x (Free & Open Source, downloadable from blender.org)."
     }
   },
   "overview": {
-    "positioning": "Hands-on practical certification in open-source 3D modeling, sculpting, procedural texturing, and rendering with Blender.",
-    "short_description": "Learn modeling, materials, and rendering in Blender.",
+    "positioning": "Hands-on practical certification in open-source 3D modeling, procedural shading, and photorealistic rendering with Blender.",
+    "short_description": "Master 3D poly-modeling, modifier stacks, PBR shader materials, and photorealistic rendering using Blender's Cycles and EEVEE engines.",
     "key_facts": {
       "level": "BEGINNER",
-      "duration": "2 Months",
+      "duration": "1 Month",
       "format": "Hands-On",
-      "estimated_learning_hours": "80 Hours",
+      "estimated_learning_hours": "40 Hours",
       "project_count": "3 Projects",
-      "capstone": "Stylized Environment Render",
+      "capstone": "Stylized 3D Isometric Environment Render",
       "ai_integration": "NONE",
-      "career_focus": "3D Generalist"
+      "career_focus": "Junior 3D Artist / Generalist"
     },
     "what_you_will_be_able_to_do": [
-      "Navigate the Blender interface confidently.",
-      "Model 3D assets using poly modeling and modifiers.",
-      "Create procedural materials and apply UV maps.",
-      "Render scenes using Cycles and EEVEE."
+      "Navigate the Blender 4.x interface and viewport workspace confidently.",
+      "Model hard-surface and stylized 3D assets using Edit Mode and procedural modifiers.",
+      "Create node-based PBR materials, procedural textures, and unwrap UV maps.",
+      "Set up studio lighting and render photorealistic scenes using Cycles and real-time EEVEE."
     ]
   },
   "why_now": {
-    "industry_shift": "Blender has become an industry powerhouse in game dev, indie film, and design studios due to its zero licensing fees and rapid updates.",
-    "ai_impact": "AI plugins within Blender automate retopology, UV unwrapping, and scene scaffolding, allowing artists to focus on creative execution.",
-    "business_demand": "Real estate developers and architecture firms require rapid, photorealistic visual assets for marketing.",
-    "career_opportunity": "Skilled ArchViz artists command premium rates in global freelance markets."
+    "industry_shift": "Blender has become an industry powerhouse in game development, indie films, and product design due to its zero licensing fees, rapid feature updates, and thriving community.",
+    "ai_impact": "AI addons and procedural geometry nodes in Blender automate tedious modeling tasks, allowing artists to focus on creative storytelling and visual aesthetics.",
+    "business_demand": "Brands, indie game studios, and marketing agencies actively seek Blender artists for cost-effective 3D product visualizations and social motion assets.",
+    "career_opportunity": "Blender skills provide an immediate pathway into freelance 3D asset creation, game prop modeling, and stylized illustration."
   },
   "learning_outcomes": [
-    "MODEL: Construct accurate 3D architectural scenes from 2D plans.",
-    "TEXTURE: Apply physically based rendering (PBR) materials for realism.",
-    "LIGHT: Configure realistic interior and exterior lighting setups.",
-    "RENDER: Optimize render settings for balance between quality and speed.",
-    "ANIMATE: Develop smooth camera paths for real-time walkthroughs."
+    "MODEL: Construct clean low-poly and high-poly 3D models using Blender's Edit Mode and Modifier stack.",
+    "TEXTURE: Build procedural node-based materials and unwrap UVs for realistic PBR surface textures.",
+    "LIGHT: Set up natural 3-point studio lighting and HDRI environments for dramatic scene presentation.",
+    "RENDER: Optimize real-time EEVEE and ray-traced Cycles rendering settings for high-resolution portfolio renders.",
+    "ANIMATE: Create turntable camera animations and simple object keyframing for commercial showcases."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Structural Modeling",
-        "focus": "Translating CAD plans into 3D geometry in 3ds Max."
+        "stage": "Stage 1: Interface & Geometry",
+        "focus": "Navigating 3D space, primitive mesh modeling, and viewport transform tools."
       },
       {
-        "stage": "Stage 2: Materiality",
-        "focus": "Creating and applying realistic V-Ray materials."
+        "stage": "Stage 2: Modifiers & Detailing",
+        "focus": "Non-destructive modeling with Array, Mirror, Bevel, and Subdivision Surface."
       },
       {
-        "stage": "Stage 3: Illumination",
-        "focus": "Mastering HDRI and artificial lighting setups."
+        "stage": "Stage 3: Materials & Shading",
+        "focus": "Node-based Principled BSDF, roughness/normal maps, and UV unwrapping."
       },
       {
-        "stage": "Stage 4: Post-Production",
-        "focus": "Enhancing raw renders using Photoshop techniques."
+        "stage": "Stage 4: Lighting & Camera Setup",
+        "focus": "Studio lighting, camera focal lengths, and scene composition."
       },
       {
-        "stage": "Stage 5: Real-Time Environments",
-        "focus": "Importing scenes into Twinmotion for interactive walkthroughs."
+        "stage": "Stage 5: Final Rendering & Export",
+        "focus": "Cycles raytracing, EEVEE real-time engine, and portfolio image delivery."
       }
     ]
   },
@@ -91,9 +91,9 @@
     "core_tools": [
       {
         "tool": "Blender",
-        "purpose": "All-in-one 3D creation suite.",
-        "what_student_learns": "Modeling, texturing, rendering.",
-        "what_student_builds": "Complete 3D scenes."
+        "purpose": "Free and open-source 3D creation pipeline suite.",
+        "what_student_learns": "3D poly-modeling, modifier stacks, node shading, and rendering.",
+        "what_student_builds": "Stylized 3D prop models and isometric environment renders."
       }
     ],
     "supporting_tools": [],
@@ -101,42 +101,42 @@
     "tools_to_review": []
   },
   "industry_workflow": {
-    "overview": "Standard ArchViz Production Pipeline:",
+    "overview": "Modern 3D Asset Creation Pipeline in Blender:",
     "stages": [
       {
         "step": 1,
-        "name": "CAD Import & Cleanup",
-        "desc": "Preparing 2D plans for 3D modeling."
+        "name": "Concept & Reference",
+        "desc": "Gathering reference images and setting up viewport image planes."
       },
       {
         "step": 2,
-        "name": "Whitebox Modeling",
-        "desc": "Building the primary structure and testing camera angles."
+        "name": "Blockout & Poly-Modeling",
+        "desc": "Blocking primary shapes and refining geometry in Edit Mode."
       },
       {
         "step": 3,
-        "name": "Material & Texture Application",
-        "desc": "Assigning PBR materials to surfaces."
+        "name": "Modifier Detailing",
+        "desc": "Applying subdivision, bevel, and procedural modifiers non-destructively."
       },
       {
         "step": 4,
-        "name": "Lighting Setup",
-        "desc": "Configuring natural and artificial light sources."
+        "name": "UV Unwrapping & Shading",
+        "desc": "Unwrapping seams and configuring PBR material nodes in the Shader Editor."
       },
       {
         "step": 5,
-        "name": "Rendering & Post-Production",
-        "desc": "Generating final images and applying adjustments in Photoshop."
+        "name": "Lighting & Rendering",
+        "desc": "Setting up cameras, HDRI lighting, and outputting final 4K renders in Cycles/EEVEE."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Real Estate Marketing",
-      "business_problem": "Selling off-plan properties before construction.",
-      "approach": "Create photorealistic visual assets based on architectural plans.",
-      "toolset": "3ds Max, V-Ray, Photoshop",
-      "output": "High-converting marketing brochures and virtual tours."
+      "sector": "Indie Game & Product Visualization",
+      "business_problem": "Producing high-quality 3D assets without expensive proprietary software license overhead.",
+      "approach": "Utilize Blender's end-to-end pipeline to model, texture, and render commercial-grade assets.",
+      "toolset": "Blender 4.x (Cycles & EEVEE)",
+      "output": "Production-ready 3D prop assets and photorealistic marketing renders."
     }
   ],
   "ai_integration": {
@@ -161,57 +161,57 @@
     }
   ],
   "career_paths": {
-    "entry_roles": "Junior ArchViz Artist",
-    "mid_roles": "Senior 3D Visualizer",
-    "specialist_roles": "Lighting TD, Environment Artist",
-    "freelance_roles": "Freelance Architectural Renderer",
-    "employer_expectations": "Strong portfolio of photorealistic renders and fast turnaround times.",
-    "what_student_demonstrates": "Ability to deliver complete ArchViz projects from CAD to final render."
+    "entry_roles": "Junior 3D Artist, 3D Generalist",
+    "mid_roles": "3D Environment Artist, 3D Prop Modeler",
+    "specialist_roles": "Blender Shading Specialist, Lighting Artist",
+    "freelance_roles": "Freelance 3D Asset Creator, Isometric Illustrator",
+    "employer_expectations": "Clean topology, solid sense of lighting/composition, and an impressive portfolio of finished renders.",
+    "what_student_demonstrates": "Ability to take a 3D asset from initial mesh blockout to final lit and textured render."
   },
   "freelance_applications": {
     "services_offered": [
-      "Exterior Renders",
-      "Interior Renders",
-      "Real-time Walkthroughs"
+      "Low-Poly & Stylized 3D Game Props",
+      "Commercial 3D Product Renders",
+      "Isometric 3D Illustrations"
     ],
-    "client_workflow": "Receive CAD -> Whitebox Approval -> Texture/Light Approval -> Final Render Delivery",
-    "portfolio_requirements": "3-5 high-quality projects showing various lighting conditions (day/night)."
+    "client_workflow": "Receive Client Brief -> 3D Blockout Approval -> Material & Color Palette -> Final 4K Render Delivery",
+    "portfolio_requirements": "3-5 finished portfolio pieces demonstrating clean mesh topology, realistic/stylized materials, and studio lighting."
   },
   "what_you_will_build": [
-    "Modern Residential Exterior Render",
-    "Luxury Interior Living Space Render",
-    "Commercial Building Real-Time Walkthrough"
+    "Stylized 3D Game Prop (Chest / Weapon / Low-Poly Vehicle)",
+    "Hard-Surface Product Model (Wireless Headphones / Gadget)",
+    "Stylized 3D Isometric Room Environment with Cycles Lighting"
   ],
   "final_deliverables": [
-    "Set of 4K photorealistic architectural renders.",
-    "Playable real-time architectural walkthrough executable."
+    "Portfolio of 3 textured and lit 3D assets rendered in 4K resolution.",
+    "Clean Blender project source files (.blend) with organized modifier stacks and node networks."
   ],
   "assessment": {
     "model": "Project-Based Evaluation",
     "criteria": "Photorealism, modeling accuracy, lighting quality, and material realism."
   },
   "certification": {
-    "title": "Certified Architectural Visualizer",
-    "criteria": "Completion of all module projects and capstone presentation.",
-    "verification": "Digital verified certificate."
+    "title": "Certified Blender 3D Practitioner",
+    "criteria": "Completion of all module assignments and final isometric render capstone.",
+    "verification": "Digital verified certificate shareable on LinkedIn."
   },
-  "not_covered": "Structural engineering analysis and MEP (Mechanical, Electrical, Plumbing) design.",
+  "not_covered": "Advanced character skeletal rigging, complex cloth/hair simulations, and game engine script programming.",
   "next_learning_path": {
-    "recommended_next": "Unreal Engine Advanced for ArchViz",
-    "related_programs": "3D Visualisation Professional"
+    "recommended_next": "3D Animation & VFX Specialization",
+    "related_programs": "Cinema 4D Professional, Motion Graphics Essentials"
   },
   "faq": [
     {
-      "question": "Do I need to be an architect?",
-      "answer": "No, but you need to learn how to read architectural floor plans."
+      "question": "Is Blender completely free to use commercially?",
+      "answer": "Yes. Blender is open-source under the GNU GPL license. You can use it freely for commercial projects, client work, and personal art without any subscription or license fees."
     },
     {
-      "question": "Why learn both V-Ray and Twinmotion?",
-      "answer": "V-Ray is industry standard for high-end static renders, while Twinmotion allows rapid real-time interactive presentations."
+      "question": "Do I need a powerful computer to run Blender?",
+      "answer": "You can learn the fundamentals on most modern laptops or desktops with 8GB RAM. For faster Cycles rendering, a dedicated NVIDIA or AMD graphics card is recommended, though EEVEE runs smoothly on standard hardware."
     },
     {
-      "question": "Can my laptop run 3ds Max and V-Ray?",
-      "answer": "You need a system with a dedicated GPU (like an RTX 3060 or better) for smooth rendering performance."
+      "question": "Can Blender assets be exported to game engines like Unreal Engine or Unity?",
+      "answer": "Absolutely. Blender is widely used to model and texture 3D assets, which are then exported as standard FBX or glTF files directly into Unreal Engine, Unity, or Godot."
     }
   ],
   "modules": [

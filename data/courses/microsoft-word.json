@@ -7,11 +7,17 @@
   "course_role": "Document Specialist",
   "level": "Beginner",
   "duration": "1 Month",
-  "learning_hours": "40 hrs",
+  "learning_hours": 40,
   "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": ["Administrative Staff", "Students", "Writers"],
-    "not_for": ["Graphic Designers looking for page layout tools like InDesign"],
+    "best_for": [
+      "Administrative Staff",
+      "Students",
+      "Writers"
+    ],
+    "not_for": [
+      "Graphic Designers looking for page layout tools like InDesign"
+    ],
     "who_should_take_foundation_first": "Absolute computer beginners"
   },
   "prerequisites": {
@@ -30,7 +36,7 @@
       "level": "Beginner to Intermediate",
       "duration": "1 Month",
       "format": "Online",
-      "estimated_learning_hours": "40 hrs",
+      "estimated_learning_hours": "40 Hours",
       "project_count": 2,
       "capstone": "Yes",
       "ai_integration": "No",
@@ -57,14 +63,28 @@
   ],
   "learning_journey": {
     "stages": [
-      { "stage": "Basics", "focus": "Typing, selecting, and basic formatting" },
-      { "stage": "Structure", "focus": "Styles, headers, and layouts" },
-      { "stage": "Automation", "focus": "Mail Merge and Templates" }
+      {
+        "stage": "Basics",
+        "focus": "Typing, selecting, and basic formatting"
+      },
+      {
+        "stage": "Structure",
+        "focus": "Styles, headers, and layouts"
+      },
+      {
+        "stage": "Automation",
+        "focus": "Mail Merge and Templates"
+      }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
-      { "tool": "Microsoft Word", "purpose": "Word processing", "what_student_learns": "Complete application usage", "what_student_builds": "Professional Documents" }
+      {
+        "tool": "Microsoft Word",
+        "purpose": "Word processing",
+        "what_student_learns": "Complete application usage",
+        "what_student_builds": "Professional Documents"
+      }
     ],
     "supporting_tools": [],
     "emerging_tools": [],
@@ -73,10 +93,26 @@
   "industry_workflow": {
     "overview": "Document Production Workflow",
     "stages": [
-      { "step": 1, "name": "Drafting", "desc": "Entering raw text" },
-      { "step": 2, "name": "Structuring", "desc": "Applying Styles for headings and body" },
-      { "step": 3, "name": "Formatting", "desc": "Adjusting margins, headers, and footers" },
-      { "step": 4, "name": "Reviewing", "desc": "Using Track Changes and finalizing" }
+      {
+        "step": 1,
+        "name": "Drafting",
+        "desc": "Entering raw text"
+      },
+      {
+        "step": 2,
+        "name": "Structuring",
+        "desc": "Applying Styles for headings and body"
+      },
+      {
+        "step": 3,
+        "name": "Formatting",
+        "desc": "Adjusting margins, headers, and footers"
+      },
+      {
+        "step": 4,
+        "name": "Reviewing",
+        "desc": "Using Track Changes and finalizing"
+      }
     ]
   },
   "business_use_cases": [
@@ -103,18 +139,37 @@
     "Turn on 'Show/Hide ¶' to troubleshoot formatting issues"
   ],
   "common_mistakes": [
-    { "mistake": "Using the spacebar to align text", "why_it_happens": "Not understanding Tabs and Tables", "professional_approach": "Use Tabs, Indents, or invisible Tables for perfect alignment" }
+    {
+      "mistake": "Using the spacebar to align text",
+      "why_it_happens": "Not understanding Tabs and Tables",
+      "professional_approach": "Use Tabs, Indents, or invisible Tables for perfect alignment"
+    }
   ],
   "career_paths": {
-    "entry_roles": ["Data Entry Clerk", "Receptionist"],
-    "mid_roles": ["Administrative Assistant", "Document Specialist"],
-    "specialist_roles": ["Technical Writer"],
-    "freelance_roles": ["Transcriptionist", "Proofreader"],
+    "entry_roles": [
+      "Data Entry Clerk",
+      "Receptionist"
+    ],
+    "mid_roles": [
+      "Administrative Assistant",
+      "Document Specialist"
+    ],
+    "specialist_roles": [
+      "Technical Writer"
+    ],
+    "freelance_roles": [
+      "Transcriptionist",
+      "Proofreader"
+    ],
     "employer_expectations": "Produce error-free, neatly formatted documents quickly",
     "what_student_demonstrates": "A polished business report with automated elements"
   },
   "freelance_applications": {
-    "services_offered": ["Document Formatting", "Template Creation", "Copy Typing"],
+    "services_offered": [
+      "Document Formatting",
+      "Template Creation",
+      "Copy Typing"
+    ],
     "client_workflow": "Receive Draft -> Apply Styles/Formatting -> Return PDF/Word File",
     "portfolio_requirements": "Before/After examples of formatted documents"
   },
@@ -140,21 +195,54 @@
     "related_programs": "Office Productivity Professional"
   },
   "faq": [
-    { "question": "Does this cover Word for Mac?", "answer": "Yes, while the interface differs slightly, the core concepts like Styles and Mail Merge apply to both." }
+    {
+      "question": "Does this cover Word for Mac?",
+      "answer": "Yes, while the interface differs slightly, the core concepts like Styles and Mail Merge apply to both."
+    }
   ],
   "modules": [
     {
       "module_number": 1,
       "module_title": "Core Formatting & Styles",
       "module_purpose": "Learn the professional way to format text",
-      "what_you_will_learn": ["Font Formatting", "Paragraph Alignment", "Styles"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Basic Navigation and Text Entry", "what_is_taught": "Interface, selecting text, cut/copy/paste", "why_it_matters": "Fundamental operations", "what_learner_does": "Drafts a simple memo", "expected_outcome": "Basic text entry" },
-        { "lesson_number": 2, "lesson_title": "Paragraph Formatting", "what_is_taught": "Alignment, spacing, indents, and tabs", "why_it_matters": "Ensures clean readability", "what_learner_does": "Formats a block of text professionally", "expected_outcome": "Clean paragraph layouts" },
-        { "lesson_number": 3, "lesson_title": "The Power of Styles", "what_is_taught": "Applying and modifying Heading styles", "why_it_matters": "The secret to fast, consistent formatting", "what_learner_does": "Applies styles to a multi-page document", "expected_outcome": "Style proficiency" }
+      "what_you_will_learn": [
+        "Font Formatting",
+        "Paragraph Alignment",
+        "Styles"
       ],
-      "key_concepts": ["Consistency", "Efficiency"],
-      "tools": ["Microsoft Word"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Basic Navigation and Text Entry",
+          "what_is_taught": "Interface, selecting text, cut/copy/paste",
+          "why_it_matters": "Fundamental operations",
+          "what_learner_does": "Drafts a simple memo",
+          "expected_outcome": "Basic text entry"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Paragraph Formatting",
+          "what_is_taught": "Alignment, spacing, indents, and tabs",
+          "why_it_matters": "Ensures clean readability",
+          "what_learner_does": "Formats a block of text professionally",
+          "expected_outcome": "Clean paragraph layouts"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "The Power of Styles",
+          "what_is_taught": "Applying and modifying Heading styles",
+          "why_it_matters": "The secret to fast, consistent formatting",
+          "what_learner_does": "Applies styles to a multi-page document",
+          "expected_outcome": "Style proficiency"
+        }
+      ],
+      "key_concepts": [
+        "Consistency",
+        "Efficiency"
+      ],
+      "tools": [
+        "Microsoft Word"
+      ],
       "hands_on_practice": "Formatting raw text using Styles",
       "assignment": "Formatted Business Memo",
       "business_application": "Internal corporate communications",
@@ -164,15 +252,53 @@
       "module_number": 2,
       "module_title": "Page Layout & Long Documents",
       "module_purpose": "Manage complex, multi-page reports",
-      "what_you_will_learn": ["Headers/Footers", "Tables of Contents", "Graphics"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Page Layout and Margins", "what_is_taught": "Page orientation, margins, and columns", "why_it_matters": "Prepares document for printing or PDF", "what_learner_does": "Creates a 2-column newsletter layout", "expected_outcome": "Page setup skills" },
-        { "lesson_number": 2, "lesson_title": "Headers, Footers, and Pagination", "what_is_taught": "Page numbers and repeating headers", "why_it_matters": "Required for long reports", "what_learner_does": "Adds branded headers and page numbers to a report", "expected_outcome": "Pagination proficiency" },
-        { "lesson_number": 3, "lesson_title": "Tables and Graphics", "what_is_taught": "Inserting and formatting tables and images", "why_it_matters": "Breaks up text and presents data clearly", "what_learner_does": "Builds a visually appealing pricing table", "expected_outcome": "Document design skills" },
-        { "lesson_number": 4, "lesson_title": "Long Document Automation", "what_is_taught": "Automated Table of Contents and Cover Pages", "why_it_matters": "Saves hours of manual updating", "what_learner_does": "Generates a dynamic TOC for a 10-page report", "expected_outcome": "Ability to handle long documents" }
+      "what_you_will_learn": [
+        "Headers/Footers",
+        "Tables of Contents",
+        "Graphics"
       ],
-      "key_concepts": ["Structure", "Automation", "Visuals"],
-      "tools": ["Microsoft Word"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Page Layout and Margins",
+          "what_is_taught": "Page orientation, margins, and columns",
+          "why_it_matters": "Prepares document for printing or PDF",
+          "what_learner_does": "Creates a 2-column newsletter layout",
+          "expected_outcome": "Page setup skills"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Headers, Footers, and Pagination",
+          "what_is_taught": "Page numbers and repeating headers",
+          "why_it_matters": "Required for long reports",
+          "what_learner_does": "Adds branded headers and page numbers to a report",
+          "expected_outcome": "Pagination proficiency"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Tables and Graphics",
+          "what_is_taught": "Inserting and formatting tables and images",
+          "why_it_matters": "Breaks up text and presents data clearly",
+          "what_learner_does": "Builds a visually appealing pricing table",
+          "expected_outcome": "Document design skills"
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "Long Document Automation",
+          "what_is_taught": "Automated Table of Contents and Cover Pages",
+          "why_it_matters": "Saves hours of manual updating",
+          "what_learner_does": "Generates a dynamic TOC for a 10-page report",
+          "expected_outcome": "Ability to handle long documents"
+        }
+      ],
+      "key_concepts": [
+        "Structure",
+        "Automation",
+        "Visuals"
+      ],
+      "tools": [
+        "Microsoft Word"
+      ],
       "hands_on_practice": "Building a comprehensive report",
       "assignment": "Final Comprehensive Business Report",
       "business_application": "Creating formal corporate reports and proposals",

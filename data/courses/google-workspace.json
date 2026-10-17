@@ -7,11 +7,17 @@
   "course_role": "Collaboration Specialist",
   "level": "Beginner",
   "duration": "1 Month",
-  "learning_hours": "40 hrs",
+  "learning_hours": 40,
   "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": ["Remote Workers", "Freelancers", "Small Business Owners"],
-    "not_for": ["Enterprise Microsoft 365 Administrators"],
+    "best_for": [
+      "Remote Workers",
+      "Freelancers",
+      "Small Business Owners"
+    ],
+    "not_for": [
+      "Enterprise Microsoft 365 Administrators"
+    ],
     "who_should_take_foundation_first": "Those unfamiliar with web browsers"
   },
   "prerequisites": {
@@ -30,7 +36,7 @@
       "level": "Beginner",
       "duration": "1 Month",
       "format": "Online",
-      "estimated_learning_hours": "40 hrs",
+      "estimated_learning_hours": "40 Hours",
       "project_count": 2,
       "capstone": "Yes",
       "ai_integration": "No",
@@ -57,16 +63,40 @@
   ],
   "learning_journey": {
     "stages": [
-      { "stage": "Communication", "focus": "Gmail, Calendar, Meet" },
-      { "stage": "Storage", "focus": "Google Drive and Permissions" },
-      { "stage": "Creation", "focus": "Docs, Sheets, and Slides" }
+      {
+        "stage": "Communication",
+        "focus": "Gmail, Calendar, Meet"
+      },
+      {
+        "stage": "Storage",
+        "focus": "Google Drive and Permissions"
+      },
+      {
+        "stage": "Creation",
+        "focus": "Docs, Sheets, and Slides"
+      }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
-      { "tool": "Google Drive", "purpose": "Cloud storage", "what_student_learns": "File organization and sharing", "what_student_builds": "Shared Team Folder Structure" },
-      { "tool": "Google Docs/Sheets/Slides", "purpose": "Content creation", "what_student_learns": "Real-time editing and commenting", "what_student_builds": "Collaborative Project Plan" },
-      { "tool": "Google Calendar/Meet", "purpose": "Scheduling and communication", "what_student_learns": "Event creation and video conferencing", "what_student_builds": "Meeting Schedules" }
+      {
+        "tool": "Google Drive",
+        "purpose": "Cloud storage",
+        "what_student_learns": "File organization and sharing",
+        "what_student_builds": "Shared Team Folder Structure"
+      },
+      {
+        "tool": "Google Docs/Sheets/Slides",
+        "purpose": "Content creation",
+        "what_student_learns": "Real-time editing and commenting",
+        "what_student_builds": "Collaborative Project Plan"
+      },
+      {
+        "tool": "Google Calendar/Meet",
+        "purpose": "Scheduling and communication",
+        "what_student_learns": "Event creation and video conferencing",
+        "what_student_builds": "Meeting Schedules"
+      }
     ],
     "supporting_tools": [],
     "emerging_tools": [],
@@ -75,10 +105,26 @@
   "industry_workflow": {
     "overview": "Cloud-First Remote Workflow",
     "stages": [
-      { "step": 1, "name": "Schedule", "desc": "Setting up a sync in Calendar" },
-      { "step": 2, "name": "Meet", "desc": "Discussing strategy on Google Meet" },
-      { "step": 3, "name": "Co-Author", "desc": "Drafting the plan live in Google Docs" },
-      { "step": 4, "name": "Share", "desc": "Distributing the final link via Drive" }
+      {
+        "step": 1,
+        "name": "Schedule",
+        "desc": "Setting up a sync in Calendar"
+      },
+      {
+        "step": 2,
+        "name": "Meet",
+        "desc": "Discussing strategy on Google Meet"
+      },
+      {
+        "step": 3,
+        "name": "Co-Author",
+        "desc": "Drafting the plan live in Google Docs"
+      },
+      {
+        "step": 4,
+        "name": "Share",
+        "desc": "Distributing the final link via Drive"
+      }
     ]
   },
   "business_use_cases": [
@@ -105,18 +151,36 @@
     "Organize Drive with clear naming conventions"
   ],
   "common_mistakes": [
-    { "mistake": "Sharing 'Editor' access broadly", "why_it_happens": "Faster than setting granular permissions", "professional_approach": "Default to 'Viewer' or 'Commenter' unless active editing is required" }
+    {
+      "mistake": "Sharing 'Editor' access broadly",
+      "why_it_happens": "Faster than setting granular permissions",
+      "professional_approach": "Default to 'Viewer' or 'Commenter' unless active editing is required"
+    }
   ],
   "career_paths": {
-    "entry_roles": ["Virtual Assistant", "Customer Support Rep"],
-    "mid_roles": ["Team Coordinator", "Project Manager"],
-    "specialist_roles": ["Workspace Administrator"],
-    "freelance_roles": ["Freelance Consultant"],
+    "entry_roles": [
+      "Virtual Assistant",
+      "Customer Support Rep"
+    ],
+    "mid_roles": [
+      "Team Coordinator",
+      "Project Manager"
+    ],
+    "specialist_roles": [
+      "Workspace Administrator"
+    ],
+    "freelance_roles": [
+      "Freelance Consultant"
+    ],
     "employer_expectations": "Seamless ability to work in a browser and manage links/permissions",
     "what_student_demonstrates": "A fully organized and shared team workspace"
   },
   "freelance_applications": {
-    "services_offered": ["Virtual Assistance", "Inbox Management", "Cloud Organization"],
+    "services_offered": [
+      "Virtual Assistance",
+      "Inbox Management",
+      "Cloud Organization"
+    ],
     "client_workflow": "Gain access -> Organize Drive -> Manage Calendar -> Collaborate on Docs",
     "portfolio_requirements": "Demonstrated understanding of permissions (via interview or sample drive links)"
   },
@@ -142,23 +206,70 @@
     "related_programs": "Office Productivity Professional"
   },
   "faq": [
-    { "question": "Is this different from regular Gmail?", "answer": "The tools are the same, but we teach the professional, collaborative workflows used in businesses." },
-    { "question": "Do I need to pay for Google Workspace?", "answer": "No, all exercises can be completed with a free personal Google account." }
+    {
+      "question": "Is this different from regular Gmail?",
+      "answer": "The tools are the same, but we teach the professional, collaborative workflows used in businesses."
+    },
+    {
+      "question": "Do I need to pay for Google Workspace?",
+      "answer": "No, all exercises can be completed with a free personal Google account."
+    }
   ],
   "modules": [
     {
       "module_number": 1,
       "module_title": "Communication & Storage",
       "module_purpose": "Master professional email, scheduling, and file management",
-      "what_you_will_learn": ["Gmail Efficiency", "Calendar Management", "Drive Organization"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Advanced Gmail", "what_is_taught": "Labels, filters, templates, and snooze", "why_it_matters": "Achieving Inbox Zero efficiently", "what_learner_does": "Sets up automated email filtering rules", "expected_outcome": "Inbox management skills" },
-        { "lesson_number": 2, "lesson_title": "Google Calendar and Meet", "what_is_taught": "Scheduling, shared calendars, and Meet controls", "why_it_matters": "Core to remote team coordination", "what_learner_does": "Schedules a team meeting with a video link", "expected_outcome": "Scheduling proficiency" },
-        { "lesson_number": 3, "lesson_title": "Google Drive Organization", "what_is_taught": "Folder structures, search operators, and offline access", "why_it_matters": "Prevents lost files", "what_learner_does": "Creates a logical team folder hierarchy", "expected_outcome": "Cloud storage management" },
-        { "lesson_number": 4, "lesson_title": "Sharing and Permissions", "what_is_taught": "Viewer, Commenter, Editor roles and link sharing", "why_it_matters": "Crucial for data security", "what_learner_does": "Shares specific files with varied permission levels", "expected_outcome": "Understanding of cloud security" }
+      "what_you_will_learn": [
+        "Gmail Efficiency",
+        "Calendar Management",
+        "Drive Organization"
       ],
-      "key_concepts": ["Cloud Storage", "Permissions", "Coordination"],
-      "tools": ["Gmail", "Calendar", "Drive", "Meet"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Advanced Gmail",
+          "what_is_taught": "Labels, filters, templates, and snooze",
+          "why_it_matters": "Achieving Inbox Zero efficiently",
+          "what_learner_does": "Sets up automated email filtering rules",
+          "expected_outcome": "Inbox management skills"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Google Calendar and Meet",
+          "what_is_taught": "Scheduling, shared calendars, and Meet controls",
+          "why_it_matters": "Core to remote team coordination",
+          "what_learner_does": "Schedules a team meeting with a video link",
+          "expected_outcome": "Scheduling proficiency"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Google Drive Organization",
+          "what_is_taught": "Folder structures, search operators, and offline access",
+          "why_it_matters": "Prevents lost files",
+          "what_learner_does": "Creates a logical team folder hierarchy",
+          "expected_outcome": "Cloud storage management"
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "Sharing and Permissions",
+          "what_is_taught": "Viewer, Commenter, Editor roles and link sharing",
+          "why_it_matters": "Crucial for data security",
+          "what_learner_does": "Shares specific files with varied permission levels",
+          "expected_outcome": "Understanding of cloud security"
+        }
+      ],
+      "key_concepts": [
+        "Cloud Storage",
+        "Permissions",
+        "Coordination"
+      ],
+      "tools": [
+        "Gmail",
+        "Calendar",
+        "Drive",
+        "Meet"
+      ],
       "hands_on_practice": "Organizing files and setting up meetings",
       "assignment": "Organized Team Drive Setup",
       "business_application": "Remote team infrastructure setup",
@@ -168,15 +279,55 @@
       "module_number": 2,
       "module_title": "Collaborative Content Creation",
       "module_purpose": "Create and co-author documents, spreadsheets, and presentations",
-      "what_you_will_learn": ["Google Docs", "Google Sheets", "Google Slides"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Co-Authoring in Google Docs", "what_is_taught": "Suggesting mode, comments, @mentions, and version history", "why_it_matters": "Replaces emailing document versions back and forth", "what_learner_does": "Collaboratively edits a policy document", "expected_outcome": "Real-time editing skills" },
-        { "lesson_number": 2, "lesson_title": "Data Management in Google Sheets", "what_is_taught": "Basic formulas, data validation, and filter views", "why_it_matters": "Allows multiple people to track data simultaneously", "what_learner_does": "Builds a shared team task tracker", "expected_outcome": "Basic cloud spreadsheet skills" },
-        { "lesson_number": 3, "lesson_title": "Presenting with Google Slides", "what_is_taught": "Themes, collaboration, and presenting remotely", "why_it_matters": "Standard for startup pitch decks", "what_learner_does": "Designs a brief project update presentation", "expected_outcome": "Cloud presentation skills" },
-        { "lesson_number": 4, "lesson_title": "Integration Capstone", "what_is_taught": "Using all tools together (e.g., linking Sheets charts to Docs)", "why_it_matters": "Creates dynamic, self-updating reports", "what_learner_does": "Builds a final report linking data from Sheets", "expected_outcome": "Integrated Workspace Mastery" }
+      "what_you_will_learn": [
+        "Google Docs",
+        "Google Sheets",
+        "Google Slides"
       ],
-      "key_concepts": ["Real-time Collaboration", "Version Control", "Integration"],
-      "tools": ["Docs", "Sheets", "Slides"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Co-Authoring in Google Docs",
+          "what_is_taught": "Suggesting mode, comments, @mentions, and version history",
+          "why_it_matters": "Replaces emailing document versions back and forth",
+          "what_learner_does": "Collaboratively edits a policy document",
+          "expected_outcome": "Real-time editing skills"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Data Management in Google Sheets",
+          "what_is_taught": "Basic formulas, data validation, and filter views",
+          "why_it_matters": "Allows multiple people to track data simultaneously",
+          "what_learner_does": "Builds a shared team task tracker",
+          "expected_outcome": "Basic cloud spreadsheet skills"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Presenting with Google Slides",
+          "what_is_taught": "Themes, collaboration, and presenting remotely",
+          "why_it_matters": "Standard for startup pitch decks",
+          "what_learner_does": "Designs a brief project update presentation",
+          "expected_outcome": "Cloud presentation skills"
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "Integration Capstone",
+          "what_is_taught": "Using all tools together (e.g., linking Sheets charts to Docs)",
+          "why_it_matters": "Creates dynamic, self-updating reports",
+          "what_learner_does": "Builds a final report linking data from Sheets",
+          "expected_outcome": "Integrated Workspace Mastery"
+        }
+      ],
+      "key_concepts": [
+        "Real-time Collaboration",
+        "Version Control",
+        "Integration"
+      ],
+      "tools": [
+        "Docs",
+        "Sheets",
+        "Slides"
+      ],
       "hands_on_practice": "Creating and linking various document types",
       "assignment": "Collaborative Remote Project Launch Plan",
       "business_application": "Executing team projects remotely",

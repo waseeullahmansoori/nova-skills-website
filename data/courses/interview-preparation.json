@@ -1,202 +1,376 @@
 {
-    "course_id": "interview-preparation",
-    "course_name": "Interview Preparation",
-    "academy": "Career & Freelancing Academy",
-    "academy_id": "career-freelancing-academy",
-    "course_type": "MODULE",
-    "course_role": "Job Seeker",
-    "level": "Intermediate",
-    "duration": "1 Month",
-    "learning_hours": 30,
-    "future_review_status": "Up to date",
-    "target_audience": {
-        "best_for": ["Active job seekers", "Professionals preparing for promotion interviews", "Recent graduates"],
-        "not_for": ["Freelancers (unless applying for long-term contract roles)"],
-        "who_should_take_foundation_first": "Those without a finalized resume should take Resume Building first."
-    },
-    "prerequisites": {
-        "required": "A defined target role or industry.",
-        "recommended": "A completed resume.",
-        "system_requirements": {
-            "hardware": "A computer with a webcam and microphone for mock interviews.",
-            "software_accounts": "Zoom, Google Meet, Loom."
-        },
-        "not_required": "Prior interview experience."
-    },
-    "overview": {
-        "positioning": "Transform interview anxiety into confidence through structured preparation and proven behavioral frameworks.",
-        "short_description": "Master the art of interviewing, from the initial HR screen to the final executive round.",
-        "key_facts": {
-            "level": "Intermediate",
-            "duration": "1 Month",
-            "format": "Online",
-            "estimated_learning_hours": 30,
-            "project_count": 2,
-            "capstone": false,
-            "ai_integration": "Medium",
-            "career_focus": "Corporate Employment"
-        },
-        "what_you_will_be_able_to_do": [
-            "Deliver a compelling 'Tell me about yourself' elevator pitch.",
-            "Answer complex behavioral questions using the STAR method.",
-            "Navigate difficult questions regarding employment gaps or weaknesses.",
-            "Conduct structured follow-ups that leave a lasting impression."
-        ]
-    },
-    "why_now": {
-        "industry_shift": "Interviews have largely shifted to remote video formats, requiring new techniques for building rapport.",
-        "ai_impact": "Some initial screening is now done via automated asynchronous video interviews (e.g., HireVue).",
-        "business_demand": "Employers are placing higher emphasis on cultural fit and behavioral competencies over pure technical skills.",
-        "career_opportunity": "Strong interview skills directly correlate with higher starting salaries and better job placements."
-    },
-    "learning_outcomes": [
-        "STRUCTURE concise and impactful responses to common interview questions.",
-        "DEMONSTRATE problem-solving skills through behavioral storytelling.",
-        "EVALUATE company culture and role alignment by asking strategic questions.",
-        "PERFORM confidently in both live video and asynchronous interview formats."
+  "course_id": "interview-preparation",
+  "course_name": "Interview Preparation",
+  "academy": "Career & Freelancing Academy",
+  "academy_id": "career-freelancing-academy",
+  "course_type": "MODULE",
+  "course_role": "Job Seeker",
+  "level": "Intermediate",
+  "duration": "1 Month",
+  "learning_hours": 20,
+  "future_review_status": "Up to date",
+  "target_audience": {
+    "best_for": [
+      "Active job seekers",
+      "Professionals preparing for promotion interviews",
+      "Recent graduates"
     ],
-    "learning_journey": {
-        "stages": [
-            {"stage": "Foundations", "focus": "The elevator pitch and interview mindset."},
-            {"stage": "Behavioral", "focus": "Mastering the STAR method."},
-            {"stage": "Advanced", "focus": "Handling difficult questions and video dynamics."}
-        ]
-    },
-    "hands_on_tech": {
-        "core_tools": [
-            {"tool": "Zoom", "purpose": "Live mock interviews", "what_student_learns": "Virtual presence and eye contact.", "what_student_builds": "Video interview confidence."},
-            {"tool": "Loom", "purpose": "Asynchronous practice", "what_student_learns": "Self-review of body language and tone.", "what_student_builds": "Recorded response library."}
-        ],
-        "supporting_tools": [
-            {"tool": "Google Docs", "purpose": "Scripting stories"}
-        ],
-        "emerging_tools": [
-            {"tool": "AI Interview Bots", "purpose": "Practicing randomized questions."}
-        ],
-        "tools_to_review": ["HireVue", "Pramp"]
-    },
-    "industry_workflow": {
-        "overview": "The standard corporate interview pipeline.",
-        "stages": [
-            {"step": 1, "name": "HR Screen", "desc": "Brief phone call confirming basic qualifications and salary expectations."},
-            {"step": 2, "name": "Hiring Manager", "desc": "Deep dive into experience, cultural fit, and specific role requirements."},
-            {"step": 3, "name": "Panel/Technical", "desc": "Assessing hard skills or team dynamics with multiple stakeholders."},
-            {"step": 4, "name": "Executive Round", "desc": "Final alignment check with senior leadership."}
-        ]
-    },
-    "business_use_cases": [
-        {"sector": "Career Transition", "business_problem": "Getting interviews but failing to receive offers.", "approach": "Implementing structured behavioral storytelling.", "toolset": "Loom, Zoom", "output": "Higher offer conversion rates."}
+    "not_for": [
+      "Freelancers (unless applying for long-term contract roles)"
     ],
-    "ai_integration": {
-        "role_classification": "AI as a practice partner.",
-        "ai_can_assist_with": "Generating role-specific mock questions, analyzing speech patterns.",
-        "ai_can_automate": "Scheduling practice sessions.",
-        "ai_cannot_replace": "Authentic enthusiasm and genuine human connection.",
-        "human_expertise_required": "Reading the interviewer's body language and adjusting tone.",
-        "validation_protocol": "Human review of recorded mock interviews.",
-        "responsible_use": "Do not read AI-generated scripts verbatim during live interviews."
+    "who_should_take_foundation_first": "Those without a finalized resume should take Resume Building first."
+  },
+  "prerequisites": {
+    "required": "A defined target role or industry.",
+    "recommended": "A completed resume.",
+    "system_requirements": {
+      "hardware": "A computer with a webcam and microphone for mock interviews.",
+      "software_accounts": "Zoom, Google Meet, Loom."
     },
-    "best_practices": [
-        "Always research the company and the specific interviewers beforehand.",
-        "Have 5 core STAR stories prepared that can be adapted to multiple questions.",
-        "Look at the camera, not the screen, during video interviews.",
-        "Send a personalized thank-you note within 24 hours."
-    ],
-    "common_mistakes": [
-        {"mistake": "Rambling without a clear point.", "why_it_happens": "Nervousness and lack of structured preparation.", "professional_approach": "Using the STAR method to keep answers concise (under 2 minutes)."}
-    ],
-    "career_paths": {
-        "entry_roles": ["N/A - Skill applies to all roles"],
-        "mid_roles": ["N/A"],
-        "specialist_roles": ["N/A"],
-        "freelance_roles": ["Interview Coach (Service Offering)"],
-        "employer_expectations": "Articulate communication, self-awareness, and professionalism.",
-        "what_student_demonstrates": "The ability to confidently navigate high-pressure conversations."
+    "not_required": "Prior interview experience."
+  },
+  "overview": {
+    "positioning": "Transform interview anxiety into confidence through structured preparation and proven behavioral frameworks.",
+    "short_description": "Master the art of interviewing, from the initial HR screen to the final executive round.",
+    "key_facts": {
+      "level": "Intermediate",
+      "duration": "1 Month",
+      "format": "Online",
+      "estimated_learning_hours": "20 Hours",
+      "project_count": 2,
+      "capstone": false,
+      "ai_integration": "Medium",
+      "career_focus": "Corporate Employment"
     },
-    "freelance_applications": {
-        "services_offered": ["Mock interview coaching"],
-        "client_workflow": "Intake -> Live Mock Interview -> Detailed Feedback Session",
-        "portfolio_requirements": "Testimonials from clients who landed jobs."
-    },
-    "what_you_will_build": [
-        "A customized 'Tell me about yourself' pitch.",
-        "A library of 5 versatile STAR stories.",
-        "A prepared list of questions to ask employers.",
-        "Recorded mock interview self-assessments."
-    ],
-    "final_deliverables": [
-        "A complete interview preparation portfolio."
-    ],
-    "assessment": {
-        "model": "Mock interview evaluation.",
-        "criteria": "Clarity of answers, body language, and effective use of the STAR framework."
-    },
-    "certification": {
-        "title": "N/A",
-        "criteria": "N/A",
-        "verification": "N/A"
-    },
-    "not_covered": "Highly specific technical coding challenges (e.g., LeetCode).",
-    "next_learning_path": {
-        "recommended_next": "Career Launch Program",
-        "related_programs": "Client Communication"
-    },
-    "faq": [
-        {"question": "How do I prepare for a video interview versus in-person?", "answer": "We cover specific techniques for video, including lighting, camera angle, and digital eye contact."},
-        {"question": "What if I don't have experience for a behavioral question?", "answer": "We teach you how to draw from academic, volunteer, or parallel experiences to answer effectively."},
-        {"question": "How do I answer 'What is your biggest weakness?'", "answer": "You will learn the framework for providing a genuine weakness along with the actionable steps you are taking to overcome it."}
-    ],
-    "modules": [
-        {
-            "module_number": 1,
-            "module_title": "The Fundamentals & The Elevator Pitch",
-            "module_purpose": "Master the critical first 5 minutes of any interview.",
-            "what_you_will_learn": ["Researching the company.", "Structuring the 'Tell me about yourself' pitch.", "Setting up for video interviews."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Pre-Interview Intelligence", "what_is_taught": "How to research the company, role, and interviewers.", "why_it_matters": "Demonstrates proactive interest and allows for tailored answers.", "what_learner_does": "Completes a research worksheet for a target company.", "expected_outcome": "A company dossier."},
-                {"lesson_number": 2, "lesson_title": "The Perfect Elevator Pitch", "what_is_taught": "The Present-Past-Future framework for introducing yourself.", "why_it_matters": "Sets the tone for the entire interview.", "what_learner_does": "Scripts their elevator pitch.", "expected_outcome": "A 90-second introduction script."},
-                {"lesson_number": 3, "lesson_title": "Virtual Presence Setup", "what_is_taught": "Lighting, audio, camera framing, and digital eye contact.", "why_it_matters": "Poor video quality distracts from your qualifications.", "what_learner_does": "Records a test video in Loom.", "expected_outcome": "An optimized video interview environment."}
-            ],
-            "key_concepts": ["Present-Past-Future Framework", "Digital Presence", "Company Intelligence"],
-            "tools": ["Loom", "Google Docs"],
-            "hands_on_practice": "Record the elevator pitch on video.",
-            "assignment": "Submit the Loom link of the elevator pitch for review.",
-            "business_application": "Making a strong, immediate professional impression.",
-            "expected_outcome": "Confidence in opening the interview."
-        },
-        {
-            "module_number": 2,
-            "module_title": "Behavioral Interviewing & The STAR Method",
-            "module_purpose": "Provide concrete proof of your skills through storytelling.",
-            "what_you_will_learn": ["The STAR framework.", "Identifying core competencies.", "Adapting stories to different questions."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Deconstructing STAR", "what_is_taught": "Situation, Task, Action, Result.", "why_it_matters": "Keeps answers concise, structured, and focused on your specific contribution.", "what_learner_does": "Breaks down a past project into STAR format.", "expected_outcome": "Understanding of the framework."},
-                {"lesson_number": 2, "lesson_title": "Building Your Story Library", "what_is_taught": "Developing 5 stories that cover leadership, failure, conflict, success, and teamwork.", "why_it_matters": "Prepares you for 90% of behavioral questions.", "what_learner_does": "Scripts 5 core STAR stories.", "expected_outcome": "A behavioral story library."},
-                {"lesson_number": 3, "lesson_title": "Adapting on the Fly", "what_is_taught": "Pivoting a prepared story to fit a slightly different question.", "why_it_matters": "Prevents sounding overly rehearsed.", "what_learner_does": "Practices answering randomized questions.", "expected_outcome": "Flexibility in storytelling."}
-            ],
-            "key_concepts": ["STAR Method", "Behavioral Competencies", "Narrative Agility"],
-            "tools": ["Loom"],
-            "hands_on_practice": "Record responses to 3 common behavioral questions.",
-            "assignment": "Submit the written story library and one video response.",
-            "business_application": "Proving competence through past performance.",
-            "expected_outcome": "Mastery of behavioral interview answers."
-        },
-        {
-            "module_number": 3,
-            "module_title": "Difficult Questions & Closing Strongly",
-            "module_purpose": "Navigate tricky topics and leave a lasting impression.",
-            "what_you_will_learn": ["Handling the 'weakness' question.", "Addressing employment gaps.", "Asking strategic questions.", "Post-interview follow-up."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Navigating Red Flags", "what_is_taught": "Discussing weaknesses, gaps, or being fired professionally.", "why_it_matters": "Turns potential disqualifiers into demonstrations of maturity.", "what_learner_does": "Scripts responses to their specific 'weak spots'.", "expected_outcome": "Prepared answers for difficult topics."},
-                {"lesson_number": 2, "lesson_title": "Flipping the Interview", "what_is_taught": "Formulating insightful questions to ask the interviewer.", "why_it_matters": "Shows critical thinking and helps you evaluate the company.", "what_learner_does": "Drafts 5 questions to ask.", "expected_outcome": "A custom question bank."},
-                {"lesson_number": 3, "lesson_title": "The Follow-Up Strategy", "what_is_taught": "Writing thank-you notes and managing post-interview communication.", "why_it_matters": "Demonstrates professionalism and keeps you top-of-mind.", "what_learner_does": "Creates a thank-you email template.", "expected_outcome": "A follow-up protocol."}
-            ],
-            "key_concepts": ["Reframing Weaknesses", "Strategic Inquiry", "Professional Follow-up"],
-            "tools": ["Google Docs"],
-            "hands_on_practice": "Conduct a full 30-minute mock interview with a peer or mentor.",
-            "assignment": "Submit the strategic questions and follow-up template.",
-            "business_application": "Closing the deal and evaluating employer fit.",
-            "expected_outcome": "Complete end-to-end interview readiness."
-        }
+    "what_you_will_be_able_to_do": [
+      "Deliver a compelling 'Tell me about yourself' elevator pitch.",
+      "Answer complex behavioral questions using the STAR method.",
+      "Navigate difficult questions regarding employment gaps or weaknesses.",
+      "Conduct structured follow-ups that leave a lasting impression."
     ]
+  },
+  "why_now": {
+    "industry_shift": "Interviews have largely shifted to remote video formats, requiring new techniques for building rapport.",
+    "ai_impact": "Some initial screening is now done via automated asynchronous video interviews (e.g., HireVue).",
+    "business_demand": "Employers are placing higher emphasis on cultural fit and behavioral competencies over pure technical skills.",
+    "career_opportunity": "Strong interview skills directly correlate with higher starting salaries and better job placements."
+  },
+  "learning_outcomes": [
+    "STRUCTURE concise and impactful responses to common interview questions.",
+    "DEMONSTRATE problem-solving skills through behavioral storytelling.",
+    "EVALUATE company culture and role alignment by asking strategic questions.",
+    "PERFORM confidently in both live video and asynchronous interview formats."
+  ],
+  "learning_journey": {
+    "stages": [
+      {
+        "stage": "Foundations",
+        "focus": "The elevator pitch and interview mindset."
+      },
+      {
+        "stage": "Behavioral",
+        "focus": "Mastering the STAR method."
+      },
+      {
+        "stage": "Advanced",
+        "focus": "Handling difficult questions and video dynamics."
+      }
+    ]
+  },
+  "hands_on_tech": {
+    "core_tools": [
+      {
+        "tool": "Zoom",
+        "purpose": "Live mock interviews",
+        "what_student_learns": "Virtual presence and eye contact.",
+        "what_student_builds": "Video interview confidence."
+      },
+      {
+        "tool": "Loom",
+        "purpose": "Asynchronous practice",
+        "what_student_learns": "Self-review of body language and tone.",
+        "what_student_builds": "Recorded response library."
+      }
+    ],
+    "supporting_tools": [
+      {
+        "tool": "Google Docs",
+        "purpose": "Scripting stories"
+      }
+    ],
+    "emerging_tools": [
+      {
+        "tool": "AI Interview Bots",
+        "purpose": "Practicing randomized questions."
+      }
+    ],
+    "tools_to_review": [
+      "HireVue",
+      "Pramp"
+    ]
+  },
+  "industry_workflow": {
+    "overview": "The standard corporate interview pipeline.",
+    "stages": [
+      {
+        "step": 1,
+        "name": "HR Screen",
+        "desc": "Brief phone call confirming basic qualifications and salary expectations."
+      },
+      {
+        "step": 2,
+        "name": "Hiring Manager",
+        "desc": "Deep dive into experience, cultural fit, and specific role requirements."
+      },
+      {
+        "step": 3,
+        "name": "Panel/Technical",
+        "desc": "Assessing hard skills or team dynamics with multiple stakeholders."
+      },
+      {
+        "step": 4,
+        "name": "Executive Round",
+        "desc": "Final alignment check with senior leadership."
+      }
+    ]
+  },
+  "business_use_cases": [
+    {
+      "sector": "Career Transition",
+      "business_problem": "Getting interviews but failing to receive offers.",
+      "approach": "Implementing structured behavioral storytelling.",
+      "toolset": "Loom, Zoom",
+      "output": "Higher offer conversion rates."
+    }
+  ],
+  "ai_integration": {
+    "role_classification": "AI as a practice partner.",
+    "ai_can_assist_with": "Generating role-specific mock questions, analyzing speech patterns.",
+    "ai_can_automate": "Scheduling practice sessions.",
+    "ai_cannot_replace": "Authentic enthusiasm and genuine human connection.",
+    "human_expertise_required": "Reading the interviewer's body language and adjusting tone.",
+    "validation_protocol": "Human review of recorded mock interviews.",
+    "responsible_use": "Do not read AI-generated scripts verbatim during live interviews."
+  },
+  "best_practices": [
+    "Always research the company and the specific interviewers beforehand.",
+    "Have 5 core STAR stories prepared that can be adapted to multiple questions.",
+    "Look at the camera, not the screen, during video interviews.",
+    "Send a personalized thank-you note within 24 hours."
+  ],
+  "common_mistakes": [
+    {
+      "mistake": "Rambling without a clear point.",
+      "why_it_happens": "Nervousness and lack of structured preparation.",
+      "professional_approach": "Using the STAR method to keep answers concise (under 2 minutes)."
+    }
+  ],
+  "career_paths": {
+    "entry_roles": [
+      "N/A - Skill applies to all roles"
+    ],
+    "mid_roles": [
+      "N/A"
+    ],
+    "specialist_roles": [
+      "N/A"
+    ],
+    "freelance_roles": [
+      "Interview Coach (Service Offering)"
+    ],
+    "employer_expectations": "Articulate communication, self-awareness, and professionalism.",
+    "what_student_demonstrates": "The ability to confidently navigate high-pressure conversations."
+  },
+  "freelance_applications": {
+    "services_offered": [
+      "Mock interview coaching"
+    ],
+    "client_workflow": "Intake -> Live Mock Interview -> Detailed Feedback Session",
+    "portfolio_requirements": "Testimonials from clients who landed jobs."
+  },
+  "what_you_will_build": [
+    "A customized 'Tell me about yourself' pitch.",
+    "A library of 5 versatile STAR stories.",
+    "A prepared list of questions to ask employers.",
+    "Recorded mock interview self-assessments."
+  ],
+  "final_deliverables": [
+    "A complete interview preparation portfolio."
+  ],
+  "assessment": {
+    "model": "Mock interview evaluation.",
+    "criteria": "Clarity of answers, body language, and effective use of the STAR framework."
+  },
+  "certification": {
+    "title": "N/A",
+    "criteria": "N/A",
+    "verification": "N/A"
+  },
+  "not_covered": "Highly specific technical coding challenges (e.g., LeetCode).",
+  "next_learning_path": {
+    "recommended_next": "Career Launch Program",
+    "related_programs": "Client Communication"
+  },
+  "faq": [
+    {
+      "question": "How do I prepare for a video interview versus in-person?",
+      "answer": "We cover specific techniques for video, including lighting, camera angle, and digital eye contact."
+    },
+    {
+      "question": "What if I don't have experience for a behavioral question?",
+      "answer": "We teach you how to draw from academic, volunteer, or parallel experiences to answer effectively."
+    },
+    {
+      "question": "How do I answer 'What is your biggest weakness?'",
+      "answer": "You will learn the framework for providing a genuine weakness along with the actionable steps you are taking to overcome it."
+    }
+  ],
+  "modules": [
+    {
+      "module_number": 1,
+      "module_title": "The Fundamentals & The Elevator Pitch",
+      "module_purpose": "Master the critical first 5 minutes of any interview.",
+      "what_you_will_learn": [
+        "Researching the company.",
+        "Structuring the 'Tell me about yourself' pitch.",
+        "Setting up for video interviews."
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Pre-Interview Intelligence",
+          "what_is_taught": "How to research the company, role, and interviewers.",
+          "why_it_matters": "Demonstrates proactive interest and allows for tailored answers.",
+          "what_learner_does": "Completes a research worksheet for a target company.",
+          "expected_outcome": "A company dossier."
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "The Perfect Elevator Pitch",
+          "what_is_taught": "The Present-Past-Future framework for introducing yourself.",
+          "why_it_matters": "Sets the tone for the entire interview.",
+          "what_learner_does": "Scripts their elevator pitch.",
+          "expected_outcome": "A 90-second introduction script."
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Virtual Presence Setup",
+          "what_is_taught": "Lighting, audio, camera framing, and digital eye contact.",
+          "why_it_matters": "Poor video quality distracts from your qualifications.",
+          "what_learner_does": "Records a test video in Loom.",
+          "expected_outcome": "An optimized video interview environment."
+        }
+      ],
+      "key_concepts": [
+        "Present-Past-Future Framework",
+        "Digital Presence",
+        "Company Intelligence"
+      ],
+      "tools": [
+        "Loom",
+        "Google Docs"
+      ],
+      "hands_on_practice": "Record the elevator pitch on video.",
+      "assignment": "Submit the Loom link of the elevator pitch for review.",
+      "business_application": "Making a strong, immediate professional impression.",
+      "expected_outcome": "Confidence in opening the interview."
+    },
+    {
+      "module_number": 2,
+      "module_title": "Behavioral Interviewing & The STAR Method",
+      "module_purpose": "Provide concrete proof of your skills through storytelling.",
+      "what_you_will_learn": [
+        "The STAR framework.",
+        "Identifying core competencies.",
+        "Adapting stories to different questions."
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Deconstructing STAR",
+          "what_is_taught": "Situation, Task, Action, Result.",
+          "why_it_matters": "Keeps answers concise, structured, and focused on your specific contribution.",
+          "what_learner_does": "Breaks down a past project into STAR format.",
+          "expected_outcome": "Understanding of the framework."
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Building Your Story Library",
+          "what_is_taught": "Developing 5 stories that cover leadership, failure, conflict, success, and teamwork.",
+          "why_it_matters": "Prepares you for 90% of behavioral questions.",
+          "what_learner_does": "Scripts 5 core STAR stories.",
+          "expected_outcome": "A behavioral story library."
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Adapting on the Fly",
+          "what_is_taught": "Pivoting a prepared story to fit a slightly different question.",
+          "why_it_matters": "Prevents sounding overly rehearsed.",
+          "what_learner_does": "Practices answering randomized questions.",
+          "expected_outcome": "Flexibility in storytelling."
+        }
+      ],
+      "key_concepts": [
+        "STAR Method",
+        "Behavioral Competencies",
+        "Narrative Agility"
+      ],
+      "tools": [
+        "Loom"
+      ],
+      "hands_on_practice": "Record responses to 3 common behavioral questions.",
+      "assignment": "Submit the written story library and one video response.",
+      "business_application": "Proving competence through past performance.",
+      "expected_outcome": "Mastery of behavioral interview answers."
+    },
+    {
+      "module_number": 3,
+      "module_title": "Difficult Questions & Closing Strongly",
+      "module_purpose": "Navigate tricky topics and leave a lasting impression.",
+      "what_you_will_learn": [
+        "Handling the 'weakness' question.",
+        "Addressing employment gaps.",
+        "Asking strategic questions.",
+        "Post-interview follow-up."
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Navigating Red Flags",
+          "what_is_taught": "Discussing weaknesses, gaps, or being fired professionally.",
+          "why_it_matters": "Turns potential disqualifiers into demonstrations of maturity.",
+          "what_learner_does": "Scripts responses to their specific 'weak spots'.",
+          "expected_outcome": "Prepared answers for difficult topics."
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Flipping the Interview",
+          "what_is_taught": "Formulating insightful questions to ask the interviewer.",
+          "why_it_matters": "Shows critical thinking and helps you evaluate the company.",
+          "what_learner_does": "Drafts 5 questions to ask.",
+          "expected_outcome": "A custom question bank."
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "The Follow-Up Strategy",
+          "what_is_taught": "Writing thank-you notes and managing post-interview communication.",
+          "why_it_matters": "Demonstrates professionalism and keeps you top-of-mind.",
+          "what_learner_does": "Creates a thank-you email template.",
+          "expected_outcome": "A follow-up protocol."
+        }
+      ],
+      "key_concepts": [
+        "Reframing Weaknesses",
+        "Strategic Inquiry",
+        "Professional Follow-up"
+      ],
+      "tools": [
+        "Google Docs"
+      ],
+      "hands_on_practice": "Conduct a full 30-minute mock interview with a peer or mentor.",
+      "assignment": "Submit the strategic questions and follow-up template.",
+      "business_application": "Closing the deal and evaluating employer fit.",
+      "expected_outcome": "Complete end-to-end interview readiness."
+    }
+  ]
 }

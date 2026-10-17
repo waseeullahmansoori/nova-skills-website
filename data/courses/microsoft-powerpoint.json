@@ -7,11 +7,17 @@
   "course_role": "Presentation Specialist",
   "level": "Beginner",
   "duration": "1 Month",
-  "learning_hours": "40 hrs",
+  "learning_hours": 40,
   "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": ["Sales Professionals", "Educators", "Managers"],
-    "not_for": ["Professional Video Editors"],
+    "best_for": [
+      "Sales Professionals",
+      "Educators",
+      "Managers"
+    ],
+    "not_for": [
+      "Professional Video Editors"
+    ],
     "who_should_take_foundation_first": "Absolute computer beginners"
   },
   "prerequisites": {
@@ -30,7 +36,7 @@
       "level": "Beginner to Intermediate",
       "duration": "1 Month",
       "format": "Online",
-      "estimated_learning_hours": "40 hrs",
+      "estimated_learning_hours": "40 Hours",
       "project_count": 2,
       "capstone": "Yes",
       "ai_integration": "No",
@@ -57,15 +63,34 @@
   ],
   "learning_journey": {
     "stages": [
-      { "stage": "Design Basics", "focus": "Layouts, fonts, and colors" },
-      { "stage": "Slide Master", "focus": "Templates and consistency" },
-      { "stage": "Visuals", "focus": "Graphics, Canva, and Animation" }
+      {
+        "stage": "Design Basics",
+        "focus": "Layouts, fonts, and colors"
+      },
+      {
+        "stage": "Slide Master",
+        "focus": "Templates and consistency"
+      },
+      {
+        "stage": "Visuals",
+        "focus": "Graphics, Canva, and Animation"
+      }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
-      { "tool": "Microsoft PowerPoint", "purpose": "Presentation creation", "what_student_learns": "Complete application usage", "what_student_builds": "Slide Decks" },
-      { "tool": "Canva", "purpose": "Graphic creation", "what_student_learns": "Basic graphic design", "what_student_builds": "Custom slide assets" }
+      {
+        "tool": "Microsoft PowerPoint",
+        "purpose": "Presentation creation",
+        "what_student_learns": "Complete application usage",
+        "what_student_builds": "Slide Decks"
+      },
+      {
+        "tool": "Canva",
+        "purpose": "Graphic creation",
+        "what_student_learns": "Basic graphic design",
+        "what_student_builds": "Custom slide assets"
+      }
     ],
     "supporting_tools": [],
     "emerging_tools": [],
@@ -74,10 +99,26 @@
   "industry_workflow": {
     "overview": "Presentation Design Workflow",
     "stages": [
-      { "step": 1, "name": "Storyboarding", "desc": "Planning the narrative" },
-      { "step": 2, "name": "Drafting", "desc": "Adding core text to slides" },
-      { "step": 3, "name": "Designing", "desc": "Applying visuals and layouts" },
-      { "step": 4, "name": "Refining", "desc": "Adding animations and practicing delivery" }
+      {
+        "step": 1,
+        "name": "Storyboarding",
+        "desc": "Planning the narrative"
+      },
+      {
+        "step": 2,
+        "name": "Drafting",
+        "desc": "Adding core text to slides"
+      },
+      {
+        "step": 3,
+        "name": "Designing",
+        "desc": "Applying visuals and layouts"
+      },
+      {
+        "step": 4,
+        "name": "Refining",
+        "desc": "Adding animations and practicing delivery"
+      }
     ]
   },
   "business_use_cases": [
@@ -104,18 +145,36 @@
     "Animations should explain, not just entertain"
   ],
   "common_mistakes": [
-    { "mistake": "Reading from the slides", "why_it_happens": "Putting too much text on the slide instead of the speaker notes", "professional_approach": "Put text in speaker notes; keep slides visual" }
+    {
+      "mistake": "Reading from the slides",
+      "why_it_happens": "Putting too much text on the slide instead of the speaker notes",
+      "professional_approach": "Put text in speaker notes; keep slides visual"
+    }
   ],
   "career_paths": {
-    "entry_roles": ["Marketing Assistant", "Sales Support"],
-    "mid_roles": ["Presentation Designer", "Marketing Executive"],
-    "specialist_roles": ["Corporate Communications Manager"],
-    "freelance_roles": ["Freelance Pitch Deck Designer"],
+    "entry_roles": [
+      "Marketing Assistant",
+      "Sales Support"
+    ],
+    "mid_roles": [
+      "Presentation Designer",
+      "Marketing Executive"
+    ],
+    "specialist_roles": [
+      "Corporate Communications Manager"
+    ],
+    "freelance_roles": [
+      "Freelance Pitch Deck Designer"
+    ],
     "employer_expectations": "Ability to distill complex information into clear visuals",
     "what_student_demonstrates": "A portfolio of redesigned, high-impact presentation decks"
   },
   "freelance_applications": {
-    "services_offered": ["Pitch Deck Design", "Template Creation", "Webinar Slide Prep"],
+    "services_offered": [
+      "Pitch Deck Design",
+      "Template Creation",
+      "Webinar Slide Prep"
+    ],
     "client_workflow": "Receive Outline -> Design Draft -> Client Review -> Final Polish",
     "portfolio_requirements": "Before/After slide redesigns"
   },
@@ -141,21 +200,55 @@
     "related_programs": "Public Speaking"
   },
   "faq": [
-    { "question": "I'm not creative, can I still learn this?", "answer": "Yes, we teach formulaic design principles (alignment, contrast) that don't require innate artistic talent." }
+    {
+      "question": "I'm not creative, can I still learn this?",
+      "answer": "Yes, we teach formulaic design principles (alignment, contrast) that don't require innate artistic talent."
+    }
   ],
   "modules": [
     {
       "module_number": 1,
       "module_title": "Slide Design & Layout",
       "module_purpose": "Learn the principles of effective visual communication",
-      "what_you_will_learn": ["Layouts", "Typography", "Images"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "The Interface and Basic Layouts", "what_is_taught": "Navigating PowerPoint and using standard layouts", "why_it_matters": "Foundation for building slides", "what_learner_does": "Creates a basic 5-slide outline", "expected_outcome": "Basic software navigation" },
-        { "lesson_number": 2, "lesson_title": "Typography and Colors", "what_is_taught": "Choosing readable fonts and applying theme colors", "why_it_matters": "Crucial for readability and branding", "what_learner_does": "Redesigns a poorly colored slide", "expected_outcome": "Understanding of visual design basics" },
-        { "lesson_number": 3, "lesson_title": "Working with Images and Icons", "what_is_taught": "Inserting, cropping, and aligning visuals", "why_it_matters": "Visuals convey messages faster than text", "what_learner_does": "Replaces a bulleted list with an icon-driven layout", "expected_outcome": "Visual communication skills" }
+      "what_you_will_learn": [
+        "Layouts",
+        "Typography",
+        "Images"
       ],
-      "key_concepts": ["White Space", "Contrast", "Alignment"],
-      "tools": ["Microsoft PowerPoint"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "The Interface and Basic Layouts",
+          "what_is_taught": "Navigating PowerPoint and using standard layouts",
+          "why_it_matters": "Foundation for building slides",
+          "what_learner_does": "Creates a basic 5-slide outline",
+          "expected_outcome": "Basic software navigation"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Typography and Colors",
+          "what_is_taught": "Choosing readable fonts and applying theme colors",
+          "why_it_matters": "Crucial for readability and branding",
+          "what_learner_does": "Redesigns a poorly colored slide",
+          "expected_outcome": "Understanding of visual design basics"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Working with Images and Icons",
+          "what_is_taught": "Inserting, cropping, and aligning visuals",
+          "why_it_matters": "Visuals convey messages faster than text",
+          "what_learner_does": "Replaces a bulleted list with an icon-driven layout",
+          "expected_outcome": "Visual communication skills"
+        }
+      ],
+      "key_concepts": [
+        "White Space",
+        "Contrast",
+        "Alignment"
+      ],
+      "tools": [
+        "Microsoft PowerPoint"
+      ],
       "hands_on_practice": "Redesigning 'bad' slides",
       "assignment": "Visual Intro Deck",
       "business_application": "Making everyday meetings more engaging",
@@ -165,15 +258,54 @@
       "module_number": 2,
       "module_title": "Advanced Tools, Templates & Delivery",
       "module_purpose": "Create professional corporate assets and deliver confidently",
-      "what_you_will_learn": ["Slide Master", "Animations", "Canva Integration"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Mastering the Slide Master", "what_is_taught": "Creating custom layouts and locking branding", "why_it_matters": "Essential for corporate consistency", "what_learner_does": "Builds a reusable corporate template", "expected_outcome": "Template architecture skills" },
-        { "lesson_number": 2, "lesson_title": "Canva for PowerPoint", "what_is_taught": "Designing complex graphics in Canva and exporting to PPT", "why_it_matters": "Expands design capabilities beyond native PPT tools", "what_learner_does": "Designs a custom cover graphic in Canva", "expected_outcome": "Cross-platform design capability" },
-        { "lesson_number": 3, "lesson_title": "Meaningful Animations & Transitions", "what_is_taught": "Morph transition, entrance/exit effects", "why_it_matters": "Controls audience focus", "what_learner_does": "Animates a complex chart to reveal data step-by-step", "expected_outcome": "Animation proficiency" },
-        { "lesson_number": 4, "lesson_title": "Delivery and Presenter Tools", "what_is_taught": "Presenter View, speaker notes, and exporting to PDF/Video", "why_it_matters": "Prepares the speaker for the actual presentation", "what_learner_does": "Configures a presentation for a dual-monitor setup", "expected_outcome": "Presentation readiness" }
+      "what_you_will_learn": [
+        "Slide Master",
+        "Animations",
+        "Canva Integration"
       ],
-      "key_concepts": ["Consistency", "Pacing", "Delivery"],
-      "tools": ["Microsoft PowerPoint", "Canva"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Mastering the Slide Master",
+          "what_is_taught": "Creating custom layouts and locking branding",
+          "why_it_matters": "Essential for corporate consistency",
+          "what_learner_does": "Builds a reusable corporate template",
+          "expected_outcome": "Template architecture skills"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Canva for PowerPoint",
+          "what_is_taught": "Designing complex graphics in Canva and exporting to PPT",
+          "why_it_matters": "Expands design capabilities beyond native PPT tools",
+          "what_learner_does": "Designs a custom cover graphic in Canva",
+          "expected_outcome": "Cross-platform design capability"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Meaningful Animations & Transitions",
+          "what_is_taught": "Morph transition, entrance/exit effects",
+          "why_it_matters": "Controls audience focus",
+          "what_learner_does": "Animates a complex chart to reveal data step-by-step",
+          "expected_outcome": "Animation proficiency"
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "Delivery and Presenter Tools",
+          "what_is_taught": "Presenter View, speaker notes, and exporting to PDF/Video",
+          "why_it_matters": "Prepares the speaker for the actual presentation",
+          "what_learner_does": "Configures a presentation for a dual-monitor setup",
+          "expected_outcome": "Presentation readiness"
+        }
+      ],
+      "key_concepts": [
+        "Consistency",
+        "Pacing",
+        "Delivery"
+      ],
+      "tools": [
+        "Microsoft PowerPoint",
+        "Canva"
+      ],
       "hands_on_practice": "Building templates and animating data",
       "assignment": "Final Animated Pitch Deck",
       "business_application": "High-stakes sales pitches and executive reporting",

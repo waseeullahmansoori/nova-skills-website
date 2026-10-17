@@ -6,12 +6,18 @@
   "course_type": "MICRO",
   "course_role": "Junior Robotics Engineer",
   "level": "Beginner",
-  "duration": "2 Months",
-  "learning_hours": 60,
+  "duration": "1 Month",
+  "learning_hours": 40,
   "future_review_status": "Scheduled for 2027",
   "target_audience": {
-    "best_for": ["Kids aged 10-15 who love tinkering", "Students interested in electronics and engineering", "Makers who want to build physical projects"],
-    "not_for": ["Students who prefer only software/screen-based coding"],
+    "best_for": [
+      "Kids aged 10-15 who love tinkering",
+      "Students interested in electronics and engineering",
+      "Makers who want to build physical projects"
+    ],
+    "not_for": [
+      "Students who prefer only software/screen-based coding"
+    ],
     "who_should_take_foundation_first": "No prior electronics experience needed, but basic block coding experience helps."
   },
   "prerequisites": {
@@ -28,9 +34,9 @@
     "short_description": "Bring your code to life! Learn how to build basic circuits, wire up LEDs and sensors, and program virtual (or physical) robots using Arduino and Tinkercad.",
     "key_facts": {
       "level": "Beginner",
-      "duration": "2 Months",
+      "duration": "1 Month",
       "format": "Interactive Online/Hybrid",
-      "estimated_learning_hours": 60,
+      "estimated_learning_hours": "40 Hours",
       "project_count": 8,
       "capstone": "Design a Virtual Smart Home System or Robot Controller",
       "ai_integration": "Low - Focuses on hardware logic",
@@ -151,15 +157,26 @@
     }
   ],
   "career_paths": {
-    "entry_roles": ["Student Maker"],
-    "mid_roles": ["Robotics Club Member"],
-    "specialist_roles": ["Hardware Engineer", "Robotics Technician"],
-    "freelance_roles": ["N/A"],
+    "entry_roles": [
+      "Student Maker"
+    ],
+    "mid_roles": [
+      "Robotics Club Member"
+    ],
+    "specialist_roles": [
+      "Hardware Engineer",
+      "Robotics Technician"
+    ],
+    "freelance_roles": [
+      "N/A"
+    ],
     "employer_expectations": "Basic understanding of electronics and microcontrollers.",
     "what_student_demonstrates": "Working circuit simulations."
   },
   "freelance_applications": {
-    "services_offered": ["N/A"],
+    "services_offered": [
+      "N/A"
+    ],
     "client_workflow": "N/A",
     "portfolio_requirements": "Tinkercad project links."
   },
@@ -184,7 +201,9 @@
   "not_covered": "Soldering, advanced robotics math, physical construction (course is simulation focused).",
   "next_learning_path": {
     "recommended_next": "Young Coders Program (for more coding)",
-    "related_programs": ["Future Tech Kids Mastery"]
+    "related_programs": [
+      "Future Tech Kids Mastery"
+    ]
   },
   "faq": [
     {
@@ -233,8 +252,15 @@
           "expected_outcome": "A safe, switch-controlled circuit."
         }
       ],
-      "key_concepts": ["Circuits", "Polarity", "Breadboards", "Resistance"],
-      "tools": ["Tinkercad Circuits"],
+      "key_concepts": [
+        "Circuits",
+        "Polarity",
+        "Breadboards",
+        "Resistance"
+      ],
+      "tools": [
+        "Tinkercad Circuits"
+      ],
       "hands_on_practice": "Build a circuit with a switch that controls 3 LEDs at once.",
       "assignment": "Submit the Tinkercad circuit link.",
       "business_application": "Basic electrical engineering.",
@@ -276,8 +302,16 @@
           "expected_outcome": "A functional traffic light simulation."
         }
       ],
-      "key_concepts": ["Microcontrollers", "Pins", "Digital Output", "Sequencing"],
-      "tools": ["Tinkercad Circuits", "Arduino"],
+      "key_concepts": [
+        "Microcontrollers",
+        "Pins",
+        "Digital Output",
+        "Sequencing"
+      ],
+      "tools": [
+        "Tinkercad Circuits",
+        "Arduino"
+      ],
       "hands_on_practice": "Program a customized police-light flashing sequence.",
       "assignment": "Submit the Traffic Light project link.",
       "business_application": "Embedded systems programming.",
@@ -319,8 +353,15 @@
           "expected_outcome": "A complex, interactive hardware simulation."
         }
       ],
-      "key_concepts": ["Analog Input", "Sensors", "Motors", "Hardware Logic"],
-      "tools": ["Tinkercad Circuits"],
+      "key_concepts": [
+        "Analog Input",
+        "Sensors",
+        "Motors",
+        "Hardware Logic"
+      ],
+      "tools": [
+        "Tinkercad Circuits"
+      ],
       "hands_on_practice": "Build the Smart Robot capstone project.",
       "assignment": "Submit the final Tinkercad simulation link.",
       "business_application": "Sensor integration and motor control.",

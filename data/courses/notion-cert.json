@@ -6,12 +6,18 @@
   "course_type": "SPECIALIZATION",
   "course_role": "Workspace Architect",
   "level": "Intermediate",
-  "duration": "2 Months",
-  "learning_hours": "60 hrs",
+  "duration": "1 Month",
+  "learning_hours": 80,
   "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": ["Project Managers", "Operations Teams", "Knowledge Workers"],
-    "not_for": ["Data Scientists requiring big data analytics"],
+    "best_for": [
+      "Project Managers",
+      "Operations Teams",
+      "Knowledge Workers"
+    ],
+    "not_for": [
+      "Data Scientists requiring big data analytics"
+    ],
     "who_should_take_foundation_first": "Individuals completely new to cloud-based software"
   },
   "prerequisites": {
@@ -28,9 +34,9 @@
     "short_description": "Learn to build complex relational databases, automated workflows, and custom team workspaces in Notion.",
     "key_facts": {
       "level": "Intermediate",
-      "duration": "2 Months",
+      "duration": "1 Month",
       "format": "Online",
-      "estimated_learning_hours": "60 hrs",
+      "estimated_learning_hours": "80 Hours",
       "project_count": 4,
       "capstone": "Yes",
       "ai_integration": "Yes",
@@ -57,17 +63,44 @@
   ],
   "learning_journey": {
     "stages": [
-      { "stage": "Fundamentals", "focus": "Blocks, Pages, and Layouts" },
-      { "stage": "Data Structures", "focus": "Databases, Views, and Relations" },
-      { "stage": "Advanced Mechanics", "focus": "Formulas, Rollups, and Automations" },
-      { "stage": "Integration", "focus": "Notion AI and API integrations" }
+      {
+        "stage": "Fundamentals",
+        "focus": "Blocks, Pages, and Layouts"
+      },
+      {
+        "stage": "Data Structures",
+        "focus": "Databases, Views, and Relations"
+      },
+      {
+        "stage": "Advanced Mechanics",
+        "focus": "Formulas, Rollups, and Automations"
+      },
+      {
+        "stage": "Integration",
+        "focus": "Notion AI and API integrations"
+      }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
-      { "tool": "Notion", "purpose": "Workspace creation", "what_student_learns": "Page and database architecture", "what_student_builds": "Company Intranet" },
-      { "tool": "Notion AI", "purpose": "Content enhancement", "what_student_learns": "AI prompting within the workspace", "what_student_builds": "Automated meeting notes" },
-      { "tool": "Notion API", "purpose": "External automation", "what_student_learns": "Connecting Notion to other apps", "what_student_builds": "Automated data syncs" }
+      {
+        "tool": "Notion",
+        "purpose": "Workspace creation",
+        "what_student_learns": "Page and database architecture",
+        "what_student_builds": "Company Intranet"
+      },
+      {
+        "tool": "Notion AI",
+        "purpose": "Content enhancement",
+        "what_student_learns": "AI prompting within the workspace",
+        "what_student_builds": "Automated meeting notes"
+      },
+      {
+        "tool": "Notion API",
+        "purpose": "External automation",
+        "what_student_learns": "Connecting Notion to other apps",
+        "what_student_builds": "Automated data syncs"
+      }
     ],
     "supporting_tools": [],
     "emerging_tools": [],
@@ -76,10 +109,26 @@
   "industry_workflow": {
     "overview": "Notion System Design Workflow",
     "stages": [
-      { "step": 1, "name": "Wireframe", "desc": "Mapping the workspace structure" },
-      { "step": 2, "name": "Database Build", "desc": "Creating backend data tables and relations" },
-      { "step": 3, "name": "Dashboard Design", "desc": "Building frontend dashboards with linked views" },
-      { "step": 4, "name": "Onboarding", "desc": "Creating templates and SOPs for team use" }
+      {
+        "step": 1,
+        "name": "Wireframe",
+        "desc": "Mapping the workspace structure"
+      },
+      {
+        "step": 2,
+        "name": "Database Build",
+        "desc": "Creating backend data tables and relations"
+      },
+      {
+        "step": 3,
+        "name": "Dashboard Design",
+        "desc": "Building frontend dashboards with linked views"
+      },
+      {
+        "step": 4,
+        "name": "Onboarding",
+        "desc": "Creating templates and SOPs for team use"
+      }
     ]
   },
   "business_use_cases": [
@@ -106,18 +155,36 @@
     "Keep page permissions granular to protect sensitive data"
   ],
   "common_mistakes": [
-    { "mistake": "Nesting pages too deeply", "why_it_happens": "Treating Notion like a traditional folder system", "professional_approach": "Use databases and tags instead of deep page hierarchies" }
+    {
+      "mistake": "Nesting pages too deeply",
+      "why_it_happens": "Treating Notion like a traditional folder system",
+      "professional_approach": "Use databases and tags instead of deep page hierarchies"
+    }
   ],
   "career_paths": {
-    "entry_roles": ["Operations Assistant"],
-    "mid_roles": ["Workspace Administrator", "Operations Manager"],
-    "specialist_roles": ["Notion Certified Consultant"],
-    "freelance_roles": ["Notion Architect", "System Builder"],
+    "entry_roles": [
+      "Operations Assistant"
+    ],
+    "mid_roles": [
+      "Workspace Administrator",
+      "Operations Manager"
+    ],
+    "specialist_roles": [
+      "Notion Certified Consultant"
+    ],
+    "freelance_roles": [
+      "Notion Architect",
+      "System Builder"
+    ],
     "employer_expectations": "Ability to streamline information access and project tracking",
     "what_student_demonstrates": "A portfolio of functional, aesthetically pleasing Notion templates"
   },
   "freelance_applications": {
-    "services_offered": ["Custom Template Design", "Workspace Audit", "Team Migration to Notion"],
+    "services_offered": [
+      "Custom Template Design",
+      "Workspace Audit",
+      "Team Migration to Notion"
+    ],
     "client_workflow": "Needs Analysis -> System Architecture -> Build -> Training",
     "portfolio_requirements": "Publicly shared Notion templates demonstrating various use cases"
   },
@@ -145,23 +212,63 @@
     "related_programs": "Agile Project Management"
   },
   "faq": [
-    { "question": "Do I need a paid Notion account?", "answer": "The free plan is sufficient for learning, though we will demonstrate paid features like Notion AI." },
-    { "question": "Is Notion better than Excel for data?", "answer": "Notion is better for qualitative data and text-based project tracking, while Excel remains superior for complex numerical analysis." },
-    { "question": "Can I sell the templates I build?", "answer": "Yes, many Notion creators sell their templates online, which we will briefly discuss." }
+    {
+      "question": "Do I need a paid Notion account?",
+      "answer": "The free plan is sufficient for learning, though we will demonstrate paid features like Notion AI."
+    },
+    {
+      "question": "Is Notion better than Excel for data?",
+      "answer": "Notion is better for qualitative data and text-based project tracking, while Excel remains superior for complex numerical analysis."
+    },
+    {
+      "question": "Can I sell the templates I build?",
+      "answer": "Yes, many Notion creators sell their templates online, which we will briefly discuss."
+    }
   ],
   "modules": [
     {
       "module_number": 1,
       "module_title": "Notion Architecture & Aesthetics",
       "module_purpose": "Master page design and basic structural hierarchy",
-      "what_you_will_learn": ["Blocks & Pages", "Formatting", "Navigation"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "The Block Paradigm", "what_is_taught": "Understanding blocks, pages, and basic text formatting", "why_it_matters": "The fundamental building block of Notion", "what_learner_does": "Builds a formatted text document", "expected_outcome": "Basic Notion proficiency" },
-        { "lesson_number": 2, "lesson_title": "Page Architecture and Layouts", "what_is_taught": "Columns, toggles, callouts, and page styling", "why_it_matters": "Improves readability and user experience", "what_learner_does": "Designs a personal dashboard layout", "expected_outcome": "Aesthetic page design skills" },
-        { "lesson_number": 3, "lesson_title": "Navigation and Linking", "what_is_taught": "Sync blocks, page links, and breadcrumbs", "why_it_matters": "Ensures users can find information quickly", "what_learner_does": "Creates an interconnected wiki structure", "expected_outcome": "Understanding of internal navigation" }
+      "what_you_will_learn": [
+        "Blocks & Pages",
+        "Formatting",
+        "Navigation"
       ],
-      "key_concepts": ["Modularity", "Aesthetics", "Hierarchy"],
-      "tools": ["Notion"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "The Block Paradigm",
+          "what_is_taught": "Understanding blocks, pages, and basic text formatting",
+          "why_it_matters": "The fundamental building block of Notion",
+          "what_learner_does": "Builds a formatted text document",
+          "expected_outcome": "Basic Notion proficiency"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Page Architecture and Layouts",
+          "what_is_taught": "Columns, toggles, callouts, and page styling",
+          "why_it_matters": "Improves readability and user experience",
+          "what_learner_does": "Designs a personal dashboard layout",
+          "expected_outcome": "Aesthetic page design skills"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Navigation and Linking",
+          "what_is_taught": "Sync blocks, page links, and breadcrumbs",
+          "why_it_matters": "Ensures users can find information quickly",
+          "what_learner_does": "Creates an interconnected wiki structure",
+          "expected_outcome": "Understanding of internal navigation"
+        }
+      ],
+      "key_concepts": [
+        "Modularity",
+        "Aesthetics",
+        "Hierarchy"
+      ],
+      "tools": [
+        "Notion"
+      ],
       "hands_on_practice": "Designing various page layouts",
       "assignment": "Personal Life Operating System Dashboard",
       "business_application": "Creating readable company documentation",
@@ -171,14 +278,45 @@
       "module_number": 2,
       "module_title": "Mastering Databases & Relations",
       "module_purpose": "Build scalable data structures",
-      "what_you_will_learn": ["Database Views", "Properties", "Relations & Rollups"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Database Fundamentals & Views", "what_is_taught": "Tables, boards, calendars, and galleries", "why_it_matters": "Allows visualizing data in multiple ways", "what_learner_does": "Creates a task tracker with multiple views", "expected_outcome": "Database management skills" },
-        { "lesson_number": 2, "lesson_title": "Advanced Properties", "what_is_taught": "Using tags, dates, formulas, and advanced properties", "why_it_matters": "Adds structure to raw data", "what_learner_does": "Configures properties for a CRM", "expected_outcome": "Structured data entry setup" },
-        { "lesson_number": 3, "lesson_title": "Relations and Rollups", "what_is_taught": "Connecting different databases (e.g., Projects to Tasks)", "why_it_matters": "Creates a single source of truth without duplication", "what_learner_does": "Builds a relational Project/Task system", "expected_outcome": "Relational database mastery" }
+      "what_you_will_learn": [
+        "Database Views",
+        "Properties",
+        "Relations & Rollups"
       ],
-      "key_concepts": ["Relational Data", "Data Visualization", "Single Source of Truth"],
-      "tools": ["Notion"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Database Fundamentals & Views",
+          "what_is_taught": "Tables, boards, calendars, and galleries",
+          "why_it_matters": "Allows visualizing data in multiple ways",
+          "what_learner_does": "Creates a task tracker with multiple views",
+          "expected_outcome": "Database management skills"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Advanced Properties",
+          "what_is_taught": "Using tags, dates, formulas, and advanced properties",
+          "why_it_matters": "Adds structure to raw data",
+          "what_learner_does": "Configures properties for a CRM",
+          "expected_outcome": "Structured data entry setup"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Relations and Rollups",
+          "what_is_taught": "Connecting different databases (e.g., Projects to Tasks)",
+          "why_it_matters": "Creates a single source of truth without duplication",
+          "what_learner_does": "Builds a relational Project/Task system",
+          "expected_outcome": "Relational database mastery"
+        }
+      ],
+      "key_concepts": [
+        "Relational Data",
+        "Data Visualization",
+        "Single Source of Truth"
+      ],
+      "tools": [
+        "Notion"
+      ],
       "hands_on_practice": "Building interconnected databases",
       "assignment": "Relational Client CRM and Project Tracker",
       "business_application": "Managing complex business operations",
@@ -188,14 +326,46 @@
       "module_number": 3,
       "module_title": "Automation, AI, & Team Collaboration",
       "module_purpose": "Supercharge the workspace with automation and AI",
-      "what_you_will_learn": ["Notion AI", "Native Automations", "Team Permissions"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Database Templates and Buttons", "what_is_taught": "Creating repeatable templates and action buttons", "why_it_matters": "Standardizes data entry and saves time", "what_learner_does": "Builds a meeting notes template with a generation button", "expected_outcome": "Workflow standardization" },
-        { "lesson_number": 2, "lesson_title": "Integrating Notion AI", "what_is_taught": "Using AI properties and inline AI generation", "why_it_matters": "Automates summarization and drafting", "what_learner_does": "Configures a database to automatically summarize meeting transcripts", "expected_outcome": "AI workspace integration" },
-        { "lesson_number": 3, "lesson_title": "Team Workspaces and Permissions", "what_is_taught": "Managing groups, guests, and page-level security", "why_it_matters": "Protects sensitive company information", "what_learner_does": "Sets up a secure HR portal", "expected_outcome": "Workspace administration skills" }
+      "what_you_will_learn": [
+        "Notion AI",
+        "Native Automations",
+        "Team Permissions"
       ],
-      "key_concepts": ["Automation", "Security", "AI Augmentation"],
-      "tools": ["Notion", "Notion AI"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Database Templates and Buttons",
+          "what_is_taught": "Creating repeatable templates and action buttons",
+          "why_it_matters": "Standardizes data entry and saves time",
+          "what_learner_does": "Builds a meeting notes template with a generation button",
+          "expected_outcome": "Workflow standardization"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Integrating Notion AI",
+          "what_is_taught": "Using AI properties and inline AI generation",
+          "why_it_matters": "Automates summarization and drafting",
+          "what_learner_does": "Configures a database to automatically summarize meeting transcripts",
+          "expected_outcome": "AI workspace integration"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Team Workspaces and Permissions",
+          "what_is_taught": "Managing groups, guests, and page-level security",
+          "why_it_matters": "Protects sensitive company information",
+          "what_learner_does": "Sets up a secure HR portal",
+          "expected_outcome": "Workspace administration skills"
+        }
+      ],
+      "key_concepts": [
+        "Automation",
+        "Security",
+        "AI Augmentation"
+      ],
+      "tools": [
+        "Notion",
+        "Notion AI"
+      ],
       "hands_on_practice": "Configuring AI and automation features",
       "assignment": "Automated Company Intranet",
       "business_application": "Scaling team operations and communication",

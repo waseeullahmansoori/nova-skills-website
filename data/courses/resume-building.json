@@ -1,201 +1,373 @@
 {
-    "course_id": "resume-building",
-    "course_name": "Resume Building",
-    "academy": "Career & Freelancing Academy",
-    "academy_id": "career-freelancing-academy",
-    "course_type": "MODULE",
-    "course_role": "Job Seeker",
-    "level": "Beginner",
-    "duration": "1 Month",
-    "learning_hours": 20,
-    "future_review_status": "Up to date",
-    "target_audience": {
-        "best_for": ["Active job seekers", "Recent graduates", "Professionals updating their profiles"],
-        "not_for": ["Freelancers seeking clients (should take Proposal Writing instead)"],
-        "who_should_take_foundation_first": "None, this is a foundational skill."
-    },
-    "prerequisites": {
-        "required": "A basic work history or educational background.",
-        "recommended": "None.",
-        "system_requirements": {
-            "hardware": "A computer with reliable internet access.",
-            "software_accounts": "Google Docs, Canva."
-        },
-        "not_required": "Prior design experience."
-    },
-    "overview": {
-        "positioning": "Master the technical and narrative elements of creating an ATS-optimized, high-converting resume.",
-        "short_description": "Learn to craft resumes that pass automated scanners and compel recruiters to call.",
-        "key_facts": {
-            "level": "Beginner",
-            "duration": "1 Month",
-            "format": "Online",
-            "estimated_learning_hours": 20,
-            "project_count": 1,
-            "capstone": false,
-            "ai_integration": "Medium",
-            "career_focus": "Application Materials"
-        },
-        "what_you_will_be_able_to_do": [
-            "Design clean, ATS-compliant resume formats.",
-            "Write high-impact, quantified achievement bullet points.",
-            "Tailor resumes rapidly for specific job descriptions.",
-            "Structure effective cover letters."
-        ]
-    },
-    "why_now": {
-        "industry_shift": "The vast majority of large employers now use ATS, making formatting and keyword optimization mandatory.",
-        "ai_impact": "AI screening tools ruthlessly filter out poorly formatted or unoptimized resumes.",
-        "business_demand": "Recruiters spend an average of 7 seconds on a resume; immediate impact is critical.",
-        "career_opportunity": "A strong resume significantly increases interview rates and potential starting salary."
-    },
-    "learning_outcomes": [
-        "FORMAT a resume to pass Applicant Tracking Systems flawlessly.",
-        "WRITE compelling bullet points using the Action-Context-Result framework.",
-        "OPTIMIZE content by integrating keywords from target job descriptions.",
-        "CREATE specialized resumes for career transitions or gaps."
+  "course_id": "resume-building",
+  "course_name": "Resume Building",
+  "academy": "Career & Freelancing Academy",
+  "academy_id": "career-freelancing-academy",
+  "course_type": "MODULE",
+  "course_role": "Job Seeker",
+  "level": "Beginner",
+  "duration": "1 Month",
+  "learning_hours": 20,
+  "future_review_status": "Up to date",
+  "target_audience": {
+    "best_for": [
+      "Active job seekers",
+      "Recent graduates",
+      "Professionals updating their profiles"
     ],
-    "learning_journey": {
-        "stages": [
-            {"stage": "Structure", "focus": "Formatting and ATS compliance."},
-            {"stage": "Content", "focus": "Writing impactful bullets and summaries."},
-            {"stage": "Optimization", "focus": "Tailoring for specific roles."}
-        ]
-    },
-    "hands_on_tech": {
-        "core_tools": [
-            {"tool": "Google Docs", "purpose": "Document creation", "what_student_learns": "Using styles and clean formatting.", "what_student_builds": "Master resume template."},
-            {"tool": "ATS Scanners", "purpose": "Validation", "what_student_learns": "Testing keyword match rates.", "what_student_builds": "Optimized document output."}
-        ],
-        "supporting_tools": [
-            {"tool": "Canva", "purpose": "Creative resumes (for specific industries)"}
-        ],
-        "emerging_tools": [
-            {"tool": "AI Resume Builders", "purpose": "Generating bullet variations."}
-        ],
-        "tools_to_review": ["Jobscan"]
-    },
-    "industry_workflow": {
-        "overview": "The resume creation and submission process.",
-        "stages": [
-            {"step": 1, "name": "Audit", "desc": "Compiling all past experience and metrics."},
-            {"step": 2, "name": "Formatting", "desc": "Applying an ATS-friendly layout."},
-            {"step": 3, "name": "Drafting", "desc": "Writing impact-focused bullet points."},
-            {"step": 4, "name": "Tailoring", "desc": "Adjusting keywords for a specific application."}
-        ]
-    },
-    "business_use_cases": [
-        {"sector": "Personal Branding", "business_problem": "Low interview callback rates.", "approach": "Restructuring the resume for ATS compliance and impact.", "toolset": "Google Docs, ATS Scanners", "output": "Higher application conversion rates."}
+    "not_for": [
+      "Freelancers seeking clients (should take Proposal Writing instead)"
     ],
-    "ai_integration": {
-        "role_classification": "AI as a drafting assistant.",
-        "ai_can_assist_with": "Suggesting strong action verbs, rewording bullets for conciseness.",
-        "ai_can_automate": "Keyword matching analysis.",
-        "ai_cannot_replace": "The authenticity of the achievements and the strategic narrative.",
-        "human_expertise_required": "Selecting which experiences to highlight for a specific role.",
-        "validation_protocol": "Ensuring all AI-generated metrics are factually accurate.",
-        "responsible_use": "Never fabricating experience or metrics using AI."
+    "who_should_take_foundation_first": "None, this is a foundational skill."
+  },
+  "prerequisites": {
+    "required": "A basic work history or educational background.",
+    "recommended": "None.",
+    "system_requirements": {
+      "hardware": "A computer with reliable internet access.",
+      "software_accounts": "Google Docs, Canva."
     },
-    "best_practices": [
-        "Avoid multi-column layouts, tables, and graphics for standard applications.",
-        "Start every bullet point with a strong action verb.",
-        "Quantify results whenever possible (%, $, time saved).",
-        "Keep the resume to one page for early/mid-career professionals."
-    ],
-    "common_mistakes": [
-        {"mistake": "Listing job duties instead of achievements.", "why_it_happens": "Copying and pasting from old job descriptions.", "professional_approach": "Focusing on what was accomplished, not just what was assigned."}
-    ],
-    "career_paths": {
-        "entry_roles": ["N/A - Skill applies to all roles"],
-        "mid_roles": ["N/A"],
-        "specialist_roles": ["N/A"],
-        "freelance_roles": ["Resume Writer (Service Offering)"],
-        "employer_expectations": "Clear, error-free, and relevant professional documentation.",
-        "what_student_demonstrates": "A market-ready professional resume."
+    "not_required": "Prior design experience."
+  },
+  "overview": {
+    "positioning": "Master the technical and narrative elements of creating an ATS-optimized, high-converting resume.",
+    "short_description": "Learn to craft resumes that pass automated scanners and compel recruiters to call.",
+    "key_facts": {
+      "level": "Beginner",
+      "duration": "1 Month",
+      "format": "Online",
+      "estimated_learning_hours": "20 Hours",
+      "project_count": 1,
+      "capstone": false,
+      "ai_integration": "Medium",
+      "career_focus": "Application Materials"
     },
-    "freelance_applications": {
-        "services_offered": ["Resume writing", "Profile optimization"],
-        "client_workflow": "Intake questionnaire -> Draft -> Client Review -> Final Polish",
-        "portfolio_requirements": "Before-and-after resume transformations."
-    },
-    "what_you_will_build": [
-        "A master ATS-friendly resume.",
-        "A tailored version of the resume for a specific job.",
-        "A standard cover letter template."
-    ],
-    "final_deliverables": [
-        "A completed, optimized resume ready for applications."
-    ],
-    "assessment": {
-        "model": "Document review.",
-        "criteria": "Formatting cleanliness, impact of bullet points, and ATS match score."
-    },
-    "certification": {
-        "title": "N/A",
-        "criteria": "N/A",
-        "verification": "N/A"
-    },
-    "not_covered": "Interview techniques.",
-    "next_learning_path": {
-        "recommended_next": "LinkedIn Optimisation",
-        "related_programs": "Interview Preparation"
-    },
-    "faq": [
-        {"question": "Should my resume be one or two pages?", "answer": "Generally, one page for less than 10 years of experience, two pages for extensive, relevant experience."},
-        {"question": "Do I need a visually designed resume?", "answer": "Unless you are in a highly creative field (e.g., Graphic Design), a clean, text-based ATS resume is vastly superior for online applications."},
-        {"question": "How do I handle employment gaps?", "answer": "We cover strategies for formatting and phrasing to address gaps professionally."}
-    ],
-    "modules": [
-        {
-            "module_number": 1,
-            "module_title": "Formatting & ATS Compliance",
-            "module_purpose": "Ensure your resume can be read by automated systems.",
-            "what_you_will_learn": ["ATS functionality.", "Appropriate layouts and fonts.", "Structuring sections correctly."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Understanding the ATS", "what_is_taught": "How tracking systems parse data.", "why_it_matters": "Complex formatting gets scrambled, causing automatic rejection.", "what_learner_does": "Reviews examples of parsed vs. unparsed resumes.", "expected_outcome": "Understanding of ATS rules."},
-                {"lesson_number": 2, "lesson_title": "The Master Template", "what_is_taught": "Setting up a clean, single-column layout.", "why_it_matters": "Provides a robust foundation for all applications.", "what_learner_does": "Builds the shell of their resume in Google Docs.", "expected_outcome": "A formatted blank template."},
-                {"lesson_number": 3, "lesson_title": "Contact Info & Summaries", "what_is_taught": "Crafting the header and professional summary.", "why_it_matters": "The first thing recruiters see.", "what_learner_does": "Writes a targeted 3-line summary.", "expected_outcome": "Completed header and summary."}
-            ],
-            "key_concepts": ["ATS Parsing", "Single-column Layout", "Professional Summary"],
-            "tools": ["Google Docs"],
-            "hands_on_practice": "Create the structural foundation of the resume.",
-            "assignment": "Submit the formatted template shell.",
-            "business_application": "Ensuring technical compliance in applications.",
-            "expected_outcome": "A technically sound resume structure."
-        },
-        {
-            "module_number": 2,
-            "module_title": "High-Impact Content Creation",
-            "module_purpose": "Write bullet points that prove your value.",
-            "what_you_will_learn": ["The Action-Context-Result framework.", "Quantifying soft skills.", "Selecting the right action verbs."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Action Verbs & Impact", "what_is_taught": "Replacing weak verbs (e.g., 'helped', 'responsible for') with strong ones.", "why_it_matters": "Changes the tone from passive to active.", "what_learner_does": "Audits old resume bullets for weak verbs.", "expected_outcome": "A list of upgraded action verbs."},
-                {"lesson_number": 2, "lesson_title": "The XYZ Formula", "what_is_taught": "Accomplished [X] as measured by [Y], by doing [Z].", "why_it_matters": "Provides concrete proof of competence.", "what_learner_does": "Rewrites 5 experience bullets using the formula.", "expected_outcome": "High-impact bullet points."},
-                {"lesson_number": 3, "lesson_title": "Education & Skills Sections", "what_is_taught": "Formatting degrees, certifications, and technical skills.", "why_it_matters": "Crucial for keyword matching.", "what_learner_does": "Populates the skills and education sections.", "expected_outcome": "Completed secondary sections."}
-            ],
-            "key_concepts": ["XYZ Formula", "Action Verbs", "Quantification"],
-            "tools": ["Google Docs"],
-            "hands_on_practice": "Complete the first draft of the experience section.",
-            "assignment": "Submit the draft for review.",
-            "business_application": "Communicating professional value effectively.",
-            "expected_outcome": "A fully drafted master resume."
-        },
-        {
-            "module_number": 3,
-            "module_title": "Tailoring & Cover Letters",
-            "module_purpose": "Customize your assets for specific opportunities.",
-            "what_you_will_learn": ["Keyword optimization.", "Rapid tailoring techniques.", "Cover letter structure."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Keyword Matching", "what_is_taught": "Extracting keywords from job descriptions.", "why_it_matters": "Increases ATS match score.", "what_learner_does": "Analyzes a target job description.", "expected_outcome": "A list of target keywords."},
-                {"lesson_number": 2, "lesson_title": "Rapid Tailoring", "what_is_taught": "Adjusting the master resume efficiently for a specific application.", "why_it_matters": "Saves time while maintaining high quality.", "what_learner_does": "Creates a tailored version of the resume.", "expected_outcome": "A job-specific resume."},
-                {"lesson_number": 3, "lesson_title": "Modern Cover Letters", "what_is_taught": "Writing concise, impactful cover letters.", "why_it_matters": "Provides narrative context to the resume.", "what_learner_does": "Drafts a cover letter template.", "expected_outcome": "A reusable cover letter framework."}
-            ],
-            "key_concepts": ["Keyword Extraction", "Tailoring", "Narrative Context"],
-            "tools": ["ATS Scanners (e.g., Jobscan)"],
-            "hands_on_practice": "Run the tailored resume through an ATS scanner.",
-            "assignment": "Submit the tailored resume, job description, and cover letter.",
-            "business_application": "Deploying targeted applications rapidly.",
-            "expected_outcome": "A finalized, highly competitive application package."
-        }
+    "what_you_will_be_able_to_do": [
+      "Design clean, ATS-compliant resume formats.",
+      "Write high-impact, quantified achievement bullet points.",
+      "Tailor resumes rapidly for specific job descriptions.",
+      "Structure effective cover letters."
     ]
+  },
+  "why_now": {
+    "industry_shift": "The vast majority of large employers now use ATS, making formatting and keyword optimization mandatory.",
+    "ai_impact": "AI screening tools ruthlessly filter out poorly formatted or unoptimized resumes.",
+    "business_demand": "Recruiters spend an average of 7 seconds on a resume; immediate impact is critical.",
+    "career_opportunity": "A strong resume significantly increases interview rates and potential starting salary."
+  },
+  "learning_outcomes": [
+    "FORMAT a resume to pass Applicant Tracking Systems flawlessly.",
+    "WRITE compelling bullet points using the Action-Context-Result framework.",
+    "OPTIMIZE content by integrating keywords from target job descriptions.",
+    "CREATE specialized resumes for career transitions or gaps."
+  ],
+  "learning_journey": {
+    "stages": [
+      {
+        "stage": "Structure",
+        "focus": "Formatting and ATS compliance."
+      },
+      {
+        "stage": "Content",
+        "focus": "Writing impactful bullets and summaries."
+      },
+      {
+        "stage": "Optimization",
+        "focus": "Tailoring for specific roles."
+      }
+    ]
+  },
+  "hands_on_tech": {
+    "core_tools": [
+      {
+        "tool": "Google Docs",
+        "purpose": "Document creation",
+        "what_student_learns": "Using styles and clean formatting.",
+        "what_student_builds": "Master resume template."
+      },
+      {
+        "tool": "ATS Scanners",
+        "purpose": "Validation",
+        "what_student_learns": "Testing keyword match rates.",
+        "what_student_builds": "Optimized document output."
+      }
+    ],
+    "supporting_tools": [
+      {
+        "tool": "Canva",
+        "purpose": "Creative resumes (for specific industries)"
+      }
+    ],
+    "emerging_tools": [
+      {
+        "tool": "AI Resume Builders",
+        "purpose": "Generating bullet variations."
+      }
+    ],
+    "tools_to_review": [
+      "Jobscan"
+    ]
+  },
+  "industry_workflow": {
+    "overview": "The resume creation and submission process.",
+    "stages": [
+      {
+        "step": 1,
+        "name": "Audit",
+        "desc": "Compiling all past experience and metrics."
+      },
+      {
+        "step": 2,
+        "name": "Formatting",
+        "desc": "Applying an ATS-friendly layout."
+      },
+      {
+        "step": 3,
+        "name": "Drafting",
+        "desc": "Writing impact-focused bullet points."
+      },
+      {
+        "step": 4,
+        "name": "Tailoring",
+        "desc": "Adjusting keywords for a specific application."
+      }
+    ]
+  },
+  "business_use_cases": [
+    {
+      "sector": "Personal Branding",
+      "business_problem": "Low interview callback rates.",
+      "approach": "Restructuring the resume for ATS compliance and impact.",
+      "toolset": "Google Docs, ATS Scanners",
+      "output": "Higher application conversion rates."
+    }
+  ],
+  "ai_integration": {
+    "role_classification": "AI as a drafting assistant.",
+    "ai_can_assist_with": "Suggesting strong action verbs, rewording bullets for conciseness.",
+    "ai_can_automate": "Keyword matching analysis.",
+    "ai_cannot_replace": "The authenticity of the achievements and the strategic narrative.",
+    "human_expertise_required": "Selecting which experiences to highlight for a specific role.",
+    "validation_protocol": "Ensuring all AI-generated metrics are factually accurate.",
+    "responsible_use": "Never fabricating experience or metrics using AI."
+  },
+  "best_practices": [
+    "Avoid multi-column layouts, tables, and graphics for standard applications.",
+    "Start every bullet point with a strong action verb.",
+    "Quantify results whenever possible (%, $, time saved).",
+    "Keep the resume to one page for early/mid-career professionals."
+  ],
+  "common_mistakes": [
+    {
+      "mistake": "Listing job duties instead of achievements.",
+      "why_it_happens": "Copying and pasting from old job descriptions.",
+      "professional_approach": "Focusing on what was accomplished, not just what was assigned."
+    }
+  ],
+  "career_paths": {
+    "entry_roles": [
+      "N/A - Skill applies to all roles"
+    ],
+    "mid_roles": [
+      "N/A"
+    ],
+    "specialist_roles": [
+      "N/A"
+    ],
+    "freelance_roles": [
+      "Resume Writer (Service Offering)"
+    ],
+    "employer_expectations": "Clear, error-free, and relevant professional documentation.",
+    "what_student_demonstrates": "A market-ready professional resume."
+  },
+  "freelance_applications": {
+    "services_offered": [
+      "Resume writing",
+      "Profile optimization"
+    ],
+    "client_workflow": "Intake questionnaire -> Draft -> Client Review -> Final Polish",
+    "portfolio_requirements": "Before-and-after resume transformations."
+  },
+  "what_you_will_build": [
+    "A master ATS-friendly resume.",
+    "A tailored version of the resume for a specific job.",
+    "A standard cover letter template."
+  ],
+  "final_deliverables": [
+    "A completed, optimized resume ready for applications."
+  ],
+  "assessment": {
+    "model": "Document review.",
+    "criteria": "Formatting cleanliness, impact of bullet points, and ATS match score."
+  },
+  "certification": {
+    "title": "N/A",
+    "criteria": "N/A",
+    "verification": "N/A"
+  },
+  "not_covered": "Interview techniques.",
+  "next_learning_path": {
+    "recommended_next": "LinkedIn Optimisation",
+    "related_programs": "Interview Preparation"
+  },
+  "faq": [
+    {
+      "question": "Should my resume be one or two pages?",
+      "answer": "Generally, one page for less than 10 years of experience, two pages for extensive, relevant experience."
+    },
+    {
+      "question": "Do I need a visually designed resume?",
+      "answer": "Unless you are in a highly creative field (e.g., Graphic Design), a clean, text-based ATS resume is vastly superior for online applications."
+    },
+    {
+      "question": "How do I handle employment gaps?",
+      "answer": "We cover strategies for formatting and phrasing to address gaps professionally."
+    }
+  ],
+  "modules": [
+    {
+      "module_number": 1,
+      "module_title": "Formatting & ATS Compliance",
+      "module_purpose": "Ensure your resume can be read by automated systems.",
+      "what_you_will_learn": [
+        "ATS functionality.",
+        "Appropriate layouts and fonts.",
+        "Structuring sections correctly."
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Understanding the ATS",
+          "what_is_taught": "How tracking systems parse data.",
+          "why_it_matters": "Complex formatting gets scrambled, causing automatic rejection.",
+          "what_learner_does": "Reviews examples of parsed vs. unparsed resumes.",
+          "expected_outcome": "Understanding of ATS rules."
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "The Master Template",
+          "what_is_taught": "Setting up a clean, single-column layout.",
+          "why_it_matters": "Provides a robust foundation for all applications.",
+          "what_learner_does": "Builds the shell of their resume in Google Docs.",
+          "expected_outcome": "A formatted blank template."
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Contact Info & Summaries",
+          "what_is_taught": "Crafting the header and professional summary.",
+          "why_it_matters": "The first thing recruiters see.",
+          "what_learner_does": "Writes a targeted 3-line summary.",
+          "expected_outcome": "Completed header and summary."
+        }
+      ],
+      "key_concepts": [
+        "ATS Parsing",
+        "Single-column Layout",
+        "Professional Summary"
+      ],
+      "tools": [
+        "Google Docs"
+      ],
+      "hands_on_practice": "Create the structural foundation of the resume.",
+      "assignment": "Submit the formatted template shell.",
+      "business_application": "Ensuring technical compliance in applications.",
+      "expected_outcome": "A technically sound resume structure."
+    },
+    {
+      "module_number": 2,
+      "module_title": "High-Impact Content Creation",
+      "module_purpose": "Write bullet points that prove your value.",
+      "what_you_will_learn": [
+        "The Action-Context-Result framework.",
+        "Quantifying soft skills.",
+        "Selecting the right action verbs."
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Action Verbs & Impact",
+          "what_is_taught": "Replacing weak verbs (e.g., 'helped', 'responsible for') with strong ones.",
+          "why_it_matters": "Changes the tone from passive to active.",
+          "what_learner_does": "Audits old resume bullets for weak verbs.",
+          "expected_outcome": "A list of upgraded action verbs."
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "The XYZ Formula",
+          "what_is_taught": "Accomplished [X] as measured by [Y], by doing [Z].",
+          "why_it_matters": "Provides concrete proof of competence.",
+          "what_learner_does": "Rewrites 5 experience bullets using the formula.",
+          "expected_outcome": "High-impact bullet points."
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Education & Skills Sections",
+          "what_is_taught": "Formatting degrees, certifications, and technical skills.",
+          "why_it_matters": "Crucial for keyword matching.",
+          "what_learner_does": "Populates the skills and education sections.",
+          "expected_outcome": "Completed secondary sections."
+        }
+      ],
+      "key_concepts": [
+        "XYZ Formula",
+        "Action Verbs",
+        "Quantification"
+      ],
+      "tools": [
+        "Google Docs"
+      ],
+      "hands_on_practice": "Complete the first draft of the experience section.",
+      "assignment": "Submit the draft for review.",
+      "business_application": "Communicating professional value effectively.",
+      "expected_outcome": "A fully drafted master resume."
+    },
+    {
+      "module_number": 3,
+      "module_title": "Tailoring & Cover Letters",
+      "module_purpose": "Customize your assets for specific opportunities.",
+      "what_you_will_learn": [
+        "Keyword optimization.",
+        "Rapid tailoring techniques.",
+        "Cover letter structure."
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Keyword Matching",
+          "what_is_taught": "Extracting keywords from job descriptions.",
+          "why_it_matters": "Increases ATS match score.",
+          "what_learner_does": "Analyzes a target job description.",
+          "expected_outcome": "A list of target keywords."
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Rapid Tailoring",
+          "what_is_taught": "Adjusting the master resume efficiently for a specific application.",
+          "why_it_matters": "Saves time while maintaining high quality.",
+          "what_learner_does": "Creates a tailored version of the resume.",
+          "expected_outcome": "A job-specific resume."
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Modern Cover Letters",
+          "what_is_taught": "Writing concise, impactful cover letters.",
+          "why_it_matters": "Provides narrative context to the resume.",
+          "what_learner_does": "Drafts a cover letter template.",
+          "expected_outcome": "A reusable cover letter framework."
+        }
+      ],
+      "key_concepts": [
+        "Keyword Extraction",
+        "Tailoring",
+        "Narrative Context"
+      ],
+      "tools": [
+        "ATS Scanners (e.g., Jobscan)"
+      ],
+      "hands_on_practice": "Run the tailored resume through an ATS scanner.",
+      "assignment": "Submit the tailored resume, job description, and cover letter.",
+      "business_application": "Deploying targeted applications rapidly.",
+      "expected_outcome": "A finalized, highly competitive application package."
+    }
+  ]
 }

@@ -6,12 +6,18 @@
   "course_type": "REPOSITION",
   "course_role": "Data Analyst",
   "level": "Intermediate",
-  "duration": "2 Months",
-  "learning_hours": "80 hrs",
+  "duration": "1 Month",
+  "learning_hours": 60,
   "future_review_status": "Needs Review",
   "target_audience": {
-    "best_for": ["Data Analysts", "Financial Analysts", "Operations Professionals"],
-    "not_for": ["Complete computer novices"],
+    "best_for": [
+      "Data Analysts",
+      "Financial Analysts",
+      "Operations Professionals"
+    ],
+    "not_for": [
+      "Complete computer novices"
+    ],
     "who_should_take_foundation_first": "Those who have never used a spreadsheet before"
   },
   "prerequisites": {
@@ -28,9 +34,9 @@
     "short_description": "Master advanced formulas, Power Query, Power Pivot, and dashboard creation in Microsoft Excel.",
     "key_facts": {
       "level": "Intermediate",
-      "duration": "2 Months",
+      "duration": "1 Month",
       "format": "Online",
-      "estimated_learning_hours": "80 hrs",
+      "estimated_learning_hours": "60 Hours",
       "project_count": 4,
       "capstone": "Yes",
       "ai_integration": "No",
@@ -57,17 +63,44 @@
   ],
   "learning_journey": {
     "stages": [
-      { "stage": "Formulas", "focus": "Mastering data manipulation functions" },
-      { "stage": "Analysis", "focus": "Pivot tables and data validation" },
-      { "stage": "Power Tools", "focus": "Power Query and Power Pivot" },
-      { "stage": "Dashboarding", "focus": "Bringing it all together visually" }
+      {
+        "stage": "Formulas",
+        "focus": "Mastering data manipulation functions"
+      },
+      {
+        "stage": "Analysis",
+        "focus": "Pivot tables and data validation"
+      },
+      {
+        "stage": "Power Tools",
+        "focus": "Power Query and Power Pivot"
+      },
+      {
+        "stage": "Dashboarding",
+        "focus": "Bringing it all together visually"
+      }
     ]
   },
   "hands_on_tech": {
     "core_tools": [
-      { "tool": "Microsoft Excel", "purpose": "Data analysis and reporting", "what_student_learns": "Formulas, Pivot Tables, Charts", "what_student_builds": "Dashboards" },
-      { "tool": "Power Query", "purpose": "Data transformation", "what_student_learns": "Automated data cleaning", "what_student_builds": "Data pipelines" },
-      { "tool": "Power Pivot", "purpose": "Data modeling", "what_student_learns": "DAX basics and relational models", "what_student_builds": "Complex data models" }
+      {
+        "tool": "Microsoft Excel",
+        "purpose": "Data analysis and reporting",
+        "what_student_learns": "Formulas, Pivot Tables, Charts",
+        "what_student_builds": "Dashboards"
+      },
+      {
+        "tool": "Power Query",
+        "purpose": "Data transformation",
+        "what_student_learns": "Automated data cleaning",
+        "what_student_builds": "Data pipelines"
+      },
+      {
+        "tool": "Power Pivot",
+        "purpose": "Data modeling",
+        "what_student_learns": "DAX basics and relational models",
+        "what_student_builds": "Complex data models"
+      }
     ],
     "supporting_tools": [],
     "emerging_tools": [],
@@ -76,10 +109,26 @@
   "industry_workflow": {
     "overview": "Data Analysis Workflow in Excel",
     "stages": [
-      { "step": 1, "name": "Import", "desc": "Connecting to data sources with Power Query" },
-      { "step": 2, "name": "Clean", "desc": "Transforming data types and handling errors" },
-      { "step": 3, "name": "Model", "desc": "Building relationships in Power Pivot" },
-      { "step": 4, "name": "Visualize", "desc": "Creating Pivot Charts and Dashboards" }
+      {
+        "step": 1,
+        "name": "Import",
+        "desc": "Connecting to data sources with Power Query"
+      },
+      {
+        "step": 2,
+        "name": "Clean",
+        "desc": "Transforming data types and handling errors"
+      },
+      {
+        "step": 3,
+        "name": "Model",
+        "desc": "Building relationships in Power Pivot"
+      },
+      {
+        "step": 4,
+        "name": "Visualize",
+        "desc": "Creating Pivot Charts and Dashboards"
+      }
     ]
   },
   "business_use_cases": [
@@ -106,18 +155,37 @@
     "Document complex Power Query steps"
   ],
   "common_mistakes": [
-    { "mistake": "Using VLOOKUP for everything", "why_it_happens": "Lack of awareness of newer/better functions", "professional_approach": "Use INDEX-MATCH or XLOOKUP for flexibility and performance" }
+    {
+      "mistake": "Using VLOOKUP for everything",
+      "why_it_happens": "Lack of awareness of newer/better functions",
+      "professional_approach": "Use INDEX-MATCH or XLOOKUP for flexibility and performance"
+    }
   ],
   "career_paths": {
-    "entry_roles": ["Data Entry Specialist", "Reporting Assistant"],
-    "mid_roles": ["Data Analyst", "Financial Analyst"],
-    "specialist_roles": ["BI Developer (Excel Focus)"],
-    "freelance_roles": ["Excel Consultant", "Dashboard Designer"],
+    "entry_roles": [
+      "Data Entry Specialist",
+      "Reporting Assistant"
+    ],
+    "mid_roles": [
+      "Data Analyst",
+      "Financial Analyst"
+    ],
+    "specialist_roles": [
+      "BI Developer (Excel Focus)"
+    ],
+    "freelance_roles": [
+      "Excel Consultant",
+      "Dashboard Designer"
+    ],
     "employer_expectations": "Ability to handle large datasets without crashing Excel",
     "what_student_demonstrates": "A portfolio of automated reports and dashboards"
   },
   "freelance_applications": {
-    "services_offered": ["Data Cleaning", "Dashboard Creation", "Process Automation"],
+    "services_offered": [
+      "Data Cleaning",
+      "Dashboard Creation",
+      "Process Automation"
+    ],
     "client_workflow": "Receive raw data -> Clean -> Build Report -> Handover",
     "portfolio_requirements": "Sample dashboards (anonymized data)"
   },
@@ -144,24 +212,70 @@
     "related_programs": "Data Science with Python"
   },
   "faq": [
-    { "question": "Do I need to know VBA?", "answer": "No, we focus on modern tools like Power Query which replace much of the need for VBA." },
-    { "question": "Is this for Mac or PC?", "answer": "The course is taught on PC. Mac users can follow along but Power Pivot is not available on Mac." },
-    { "question": "Will we cover XLOOKUP?", "answer": "Yes, we cover VLOOKUP, INDEX-MATCH, and the modern XLOOKUP." }
+    {
+      "question": "Do I need to know VBA?",
+      "answer": "No, we focus on modern tools like Power Query which replace much of the need for VBA."
+    },
+    {
+      "question": "Is this for Mac or PC?",
+      "answer": "The course is taught on PC. Mac users can follow along but Power Pivot is not available on Mac."
+    },
+    {
+      "question": "Will we cover XLOOKUP?",
+      "answer": "Yes, we cover VLOOKUP, INDEX-MATCH, and the modern XLOOKUP."
+    }
   ],
   "modules": [
     {
       "module_number": 1,
       "module_title": "Advanced Formulas & Functions",
       "module_purpose": "Master complex data manipulation",
-      "what_you_will_learn": ["Lookup Functions", "Logical Functions", "Text Functions"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Mastering Lookups", "what_is_taught": "VLOOKUP, HLOOKUP, INDEX-MATCH, XLOOKUP", "why_it_matters": "Essential for combining data", "what_learner_does": "Builds a dynamic pricing engine", "expected_outcome": "Can retrieve data across tables reliably" },
-        { "lesson_number": 2, "lesson_title": "Logical and Math Functions", "what_is_taught": "IF, IFS, SUMIFS, COUNTIFS", "why_it_matters": "Allows conditional analysis", "what_learner_does": "Creates a conditional bonus calculator", "expected_outcome": "Can perform complex conditional calculations" },
-        { "lesson_number": 3, "lesson_title": "Text & Date Functions", "what_is_taught": "LEFT, RIGHT, MID, TEXT, EOMONTH", "why_it_matters": "Crucial for data cleaning before analysis", "what_learner_does": "Cleans a raw employee roster", "expected_outcome": "Can manipulate string and date data" },
-        { "lesson_number": 4, "lesson_title": "Data Validation & Conditional Formatting", "what_is_taught": "Drop-downs, data rules, and visual formatting", "why_it_matters": "Prevents errors and highlights trends", "what_learner_does": "Builds an error-proof data entry form", "expected_outcome": "Can create robust data entry templates" }
+      "what_you_will_learn": [
+        "Lookup Functions",
+        "Logical Functions",
+        "Text Functions"
       ],
-      "key_concepts": ["Dynamic arrays", "Absolute vs Relative references"],
-      "tools": ["Microsoft Excel"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Mastering Lookups",
+          "what_is_taught": "VLOOKUP, HLOOKUP, INDEX-MATCH, XLOOKUP",
+          "why_it_matters": "Essential for combining data",
+          "what_learner_does": "Builds a dynamic pricing engine",
+          "expected_outcome": "Can retrieve data across tables reliably"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Logical and Math Functions",
+          "what_is_taught": "IF, IFS, SUMIFS, COUNTIFS",
+          "why_it_matters": "Allows conditional analysis",
+          "what_learner_does": "Creates a conditional bonus calculator",
+          "expected_outcome": "Can perform complex conditional calculations"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Text & Date Functions",
+          "what_is_taught": "LEFT, RIGHT, MID, TEXT, EOMONTH",
+          "why_it_matters": "Crucial for data cleaning before analysis",
+          "what_learner_does": "Cleans a raw employee roster",
+          "expected_outcome": "Can manipulate string and date data"
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "Data Validation & Conditional Formatting",
+          "what_is_taught": "Drop-downs, data rules, and visual formatting",
+          "why_it_matters": "Prevents errors and highlights trends",
+          "what_learner_does": "Builds an error-proof data entry form",
+          "expected_outcome": "Can create robust data entry templates"
+        }
+      ],
+      "key_concepts": [
+        "Dynamic arrays",
+        "Absolute vs Relative references"
+      ],
+      "tools": [
+        "Microsoft Excel"
+      ],
       "hands_on_practice": "Formula drills and practical scenarios",
       "assignment": "Dynamic Pricing and Commission Model",
       "business_application": "Automating HR and Sales calculations",
@@ -171,15 +285,52 @@
       "module_number": 2,
       "module_title": "Data Analysis with Pivot Tables",
       "module_purpose": "Summarize and analyze large datasets quickly",
-      "what_you_will_learn": ["Pivot Tables", "Pivot Charts", "Slicers"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Pivot Table Fundamentals", "what_is_taught": "Creating and structuring Pivot Tables", "why_it_matters": "Fastest way to summarize data", "what_learner_does": "Analyzes a 10,000-row sales dataset", "expected_outcome": "Can build basic Pivot Tables" },
-        { "lesson_number": 2, "lesson_title": "Advanced Pivot Features", "what_is_taught": "Calculated fields, grouping, and custom sorting", "why_it_matters": "Extracts deeper insights", "what_learner_does": "Creates custom metrics within a Pivot Table", "expected_outcome": "Advanced Pivot Table manipulation" },
-        { "lesson_number": 3, "lesson_title": "Visualizing with Pivot Charts", "what_is_taught": "Linking charts to Pivot data", "why_it_matters": "Makes data digestible", "what_learner_does": "Builds dynamic charts", "expected_outcome": "Can create interactive visualizations" },
-        { "lesson_number": 4, "lesson_title": "Interactive Controls", "what_is_taught": "Slicers and Timelines", "why_it_matters": "Enables user interaction", "what_learner_does": "Connects slicers to multiple Pivot Tables", "expected_outcome": "Can build interactive report interfaces" }
+      "what_you_will_learn": [
+        "Pivot Tables",
+        "Pivot Charts",
+        "Slicers"
       ],
-      "key_concepts": ["Data summarization", "Interactivity"],
-      "tools": ["Microsoft Excel"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Pivot Table Fundamentals",
+          "what_is_taught": "Creating and structuring Pivot Tables",
+          "why_it_matters": "Fastest way to summarize data",
+          "what_learner_does": "Analyzes a 10,000-row sales dataset",
+          "expected_outcome": "Can build basic Pivot Tables"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Advanced Pivot Features",
+          "what_is_taught": "Calculated fields, grouping, and custom sorting",
+          "why_it_matters": "Extracts deeper insights",
+          "what_learner_does": "Creates custom metrics within a Pivot Table",
+          "expected_outcome": "Advanced Pivot Table manipulation"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Visualizing with Pivot Charts",
+          "what_is_taught": "Linking charts to Pivot data",
+          "why_it_matters": "Makes data digestible",
+          "what_learner_does": "Builds dynamic charts",
+          "expected_outcome": "Can create interactive visualizations"
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "Interactive Controls",
+          "what_is_taught": "Slicers and Timelines",
+          "why_it_matters": "Enables user interaction",
+          "what_learner_does": "Connects slicers to multiple Pivot Tables",
+          "expected_outcome": "Can build interactive report interfaces"
+        }
+      ],
+      "key_concepts": [
+        "Data summarization",
+        "Interactivity"
+      ],
+      "tools": [
+        "Microsoft Excel"
+      ],
       "hands_on_practice": "Analyzing various datasets",
       "assignment": "Interactive Sales Summary Report",
       "business_application": "Monthly performance reporting",
@@ -189,15 +340,52 @@
       "module_number": 3,
       "module_title": "Modern Data Prep with Power Query",
       "module_purpose": "Automate data cleaning and loading",
-      "what_you_will_learn": ["Connecting to data", "Transformations", "Merging queries"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Introduction to Power Query", "what_is_taught": "The Power Query interface and basic imports", "why_it_matters": "Replaces manual copy-pasting", "what_learner_does": "Imports data from CSV and Web sources", "expected_outcome": "Can connect to external data" },
-        { "lesson_number": 2, "lesson_title": "Data Transformation Techniques", "what_is_taught": "Pivoting, unpivoting, splitting columns, handling nulls", "why_it_matters": "Essential for reshaping messy data", "what_learner_does": "Cleans a poorly formatted financial report", "expected_outcome": "Can clean and reshape data" },
-        { "lesson_number": 3, "lesson_title": "Merging and Appending Data", "what_is_taught": "Combining multiple tables/files", "why_it_matters": "Consolidates data for analysis", "what_learner_does": "Combines 12 months of sales files automatically", "expected_outcome": "Automated data consolidation" },
-        { "lesson_number": 4, "lesson_title": "Power Query Best Practices", "what_is_taught": "Query optimization and folder imports", "why_it_matters": "Ensures robust automated processes", "what_learner_does": "Sets up a dynamic folder import system", "expected_outcome": "Robust automated data pipelines" }
+      "what_you_will_learn": [
+        "Connecting to data",
+        "Transformations",
+        "Merging queries"
       ],
-      "key_concepts": ["ETL (Extract, Transform, Load)", "M Code basics"],
-      "tools": ["Power Query"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Introduction to Power Query",
+          "what_is_taught": "The Power Query interface and basic imports",
+          "why_it_matters": "Replaces manual copy-pasting",
+          "what_learner_does": "Imports data from CSV and Web sources",
+          "expected_outcome": "Can connect to external data"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Data Transformation Techniques",
+          "what_is_taught": "Pivoting, unpivoting, splitting columns, handling nulls",
+          "why_it_matters": "Essential for reshaping messy data",
+          "what_learner_does": "Cleans a poorly formatted financial report",
+          "expected_outcome": "Can clean and reshape data"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Merging and Appending Data",
+          "what_is_taught": "Combining multiple tables/files",
+          "why_it_matters": "Consolidates data for analysis",
+          "what_learner_does": "Combines 12 months of sales files automatically",
+          "expected_outcome": "Automated data consolidation"
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "Power Query Best Practices",
+          "what_is_taught": "Query optimization and folder imports",
+          "why_it_matters": "Ensures robust automated processes",
+          "what_learner_does": "Sets up a dynamic folder import system",
+          "expected_outcome": "Robust automated data pipelines"
+        }
+      ],
+      "key_concepts": [
+        "ETL (Extract, Transform, Load)",
+        "M Code basics"
+      ],
+      "tools": [
+        "Power Query"
+      ],
       "hands_on_practice": "Cleaning messy real-world datasets",
       "assignment": "Automated Data Cleaning Pipeline",
       "business_application": "Automating monthly reporting prep",
@@ -207,15 +395,54 @@
       "module_number": 4,
       "module_title": "Data Modeling & Dashboards",
       "module_purpose": "Build professional, interactive business dashboards",
-      "what_you_will_learn": ["Power Pivot", "Data Models", "Dashboard Design"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Introduction to Data Models & Power Pivot", "what_is_taught": "Relational databases in Excel", "why_it_matters": "Bypasses the 1-million row limit and VLOOKUP constraints", "what_learner_does": "Builds a relationship between Sales and Products tables", "expected_outcome": "Can build a basic Data Model" },
-        { "lesson_number": 2, "lesson_title": "Introduction to DAX", "what_is_taught": "Basic DAX measures (CALCULATE, RELATED)", "why_it_matters": "More powerful than standard Excel formulas", "what_learner_does": "Creates custom DAX measures for profit margin", "expected_outcome": "Basic understanding of DAX" },
-        { "lesson_number": 3, "lesson_title": "Dashboard Design Principles", "what_is_taught": "Layout, color theory, and UX for dashboards", "why_it_matters": "Ensures dashboards are usable and professional", "what_learner_does": "Wireframes a dashboard layout", "expected_outcome": "Understanding of dashboard UX" },
-        { "lesson_number": 4, "lesson_title": "Building the Final Dashboard", "what_is_taught": "Integrating Power Query, Data Models, and Pivot Charts", "why_it_matters": "The culmination of all Excel skills", "what_learner_does": "Builds the final capstone dashboard", "expected_outcome": "Professional Dashboard Creation" }
+      "what_you_will_learn": [
+        "Power Pivot",
+        "Data Models",
+        "Dashboard Design"
       ],
-      "key_concepts": ["Relational Data", "DAX", "Visual Design"],
-      "tools": ["Power Pivot", "Excel"],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "lesson_title": "Introduction to Data Models & Power Pivot",
+          "what_is_taught": "Relational databases in Excel",
+          "why_it_matters": "Bypasses the 1-million row limit and VLOOKUP constraints",
+          "what_learner_does": "Builds a relationship between Sales and Products tables",
+          "expected_outcome": "Can build a basic Data Model"
+        },
+        {
+          "lesson_number": 2,
+          "lesson_title": "Introduction to DAX",
+          "what_is_taught": "Basic DAX measures (CALCULATE, RELATED)",
+          "why_it_matters": "More powerful than standard Excel formulas",
+          "what_learner_does": "Creates custom DAX measures for profit margin",
+          "expected_outcome": "Basic understanding of DAX"
+        },
+        {
+          "lesson_number": 3,
+          "lesson_title": "Dashboard Design Principles",
+          "what_is_taught": "Layout, color theory, and UX for dashboards",
+          "why_it_matters": "Ensures dashboards are usable and professional",
+          "what_learner_does": "Wireframes a dashboard layout",
+          "expected_outcome": "Understanding of dashboard UX"
+        },
+        {
+          "lesson_number": 4,
+          "lesson_title": "Building the Final Dashboard",
+          "what_is_taught": "Integrating Power Query, Data Models, and Pivot Charts",
+          "why_it_matters": "The culmination of all Excel skills",
+          "what_learner_does": "Builds the final capstone dashboard",
+          "expected_outcome": "Professional Dashboard Creation"
+        }
+      ],
+      "key_concepts": [
+        "Relational Data",
+        "DAX",
+        "Visual Design"
+      ],
+      "tools": [
+        "Power Pivot",
+        "Excel"
+      ],
       "hands_on_practice": "Building the final capstone project",
       "assignment": "Executive Business Dashboard",
       "business_application": "Executive reporting and KPI tracking",

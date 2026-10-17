@@ -303,7 +303,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   const totalWithGST = (baseCourse.price || 0) + gstAmount;
   const monthlyInstallment = Math.round(totalWithGST / durationMonths);
   const emiText = durationMonths > 1
-    ? `💳 Easy No-Cost EMI starting at <strong>₹${monthlyInstallment.toLocaleString('en-IN')}/month</strong> · 18% GST included`
+    ? `💳 Flexible monthly installment options starting at <strong>₹${monthlyInstallment.toLocaleString('en-IN')}/month</strong> · 18% GST included`
     : `💳 Flexible payment options available · 18% GST included`;
 
   const acadSlug = getAcademySlug(baseCourse.academyId);
