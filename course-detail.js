@@ -314,7 +314,9 @@ function populateCourseDetail(course) {
 
   const emiEl = document.getElementById('detail-emi');
   if (emiEl) {
-    emiEl.innerHTML = `💳 Easy No-Cost EMI starting at <strong>₹${monthlyInstallment.toLocaleString('en-IN')}/month</strong> · 18% GST included`;
+    emiEl.innerHTML = durationMonths > 1
+      ? `💳 Easy No-Cost EMI starting at <strong>₹${monthlyInstallment.toLocaleString('en-IN')}/month</strong> · 18% GST included`
+      : `💳 Flexible payment options available · 18% GST included`;
   }
 
   // Mobile sticky price

@@ -302,7 +302,9 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   const gstAmount = (baseCourse.price || 0) * 0.18;
   const totalWithGST = (baseCourse.price || 0) + gstAmount;
   const monthlyInstallment = Math.round(totalWithGST / durationMonths);
-  const emiText = `💳 Easy No-Cost EMI starting at <strong>₹${monthlyInstallment.toLocaleString('en-IN')}/month</strong> · 18% GST included`;
+  const emiText = durationMonths > 1
+    ? `💳 Easy No-Cost EMI starting at <strong>₹${monthlyInstallment.toLocaleString('en-IN')}/month</strong> · 18% GST included`
+    : `💳 Flexible payment options available · 18% GST included`;
 
   const acadSlug = getAcademySlug(baseCourse.academyId);
   const acadUrl = acadSlug ? `/academies/${acadSlug}/` : '/academies/';
@@ -786,7 +788,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
 
   // Mentors
-  html = html.replace(/<div\s+class="mentors-grid"\s+id="mentors-container">[\s\S]*?<\/div>/i, `<div class="mentors-grid" id="mentors-container">\n        ${mentorsHtml}\n      </div>`);
+  html = html.replace(/<div\s+class="mentors-grid"\s+id="mentors-container">[\s\S]*?<\/section>/i, `<div class="mentors-grid" id="mentors-container">\n        ${mentorsHtml}\n      </div>\n    </section>`);
 
   // Boundaries
   if (boundariesHtml) {
