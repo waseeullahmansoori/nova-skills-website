@@ -80,6 +80,10 @@ function generateSitemap() {
     lastmod: today
   });
   urlEntries.push({
+    loc: `${DOMAIN}/blog/ai-skills-future-careers-2027-2030/`,
+    lastmod: today
+  });
+  urlEntries.push({
     loc: `${DOMAIN}/blog/ai-seo-geo-digital-marketing-2026/`,
     lastmod: today
   });

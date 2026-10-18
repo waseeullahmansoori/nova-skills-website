@@ -113,7 +113,7 @@ console.log('\n--- TEST 2: Future Blog Automatic Top Position ---');
     id: 'test-new-blog',
     slug: 'test-new-blog',
     title: 'Test New Blog',
-    publishedAt: '2026-10-01T10:00:00+05:30',
+    publishedAt: '2026-11-01T10:00:00+05:30',
     status: 'published',
     category: 'AI & Technology',
     author: 'AI Expert'
@@ -149,7 +149,14 @@ console.log('\n--- TEST 3: Older Test Blog Moves Down ---');
   console.log('Position 1:', grid[0].slug);
   console.log('Position 2:', grid[1].slug);
   console.log('Position 3:', grid[2].slug);
-  console.log('Is sorting correct?', (grid[0].slug === 'high-demand-courses-2027-ai-skills-careers' && grid[1].slug === 'ai-seo-geo-digital-marketing-2026' && grid[2].slug === 'test-older-blog') ? 'PASS' : 'FAIL');
+  console.log('Position 4:', grid[3].slug);
+  const isSorted = (
+    grid[0].slug === 'ai-skills-future-careers-2027-2030' &&
+    grid[1].slug === 'high-demand-courses-2027-ai-skills-careers' &&
+    grid[2].slug === 'ai-seo-geo-digital-marketing-2026' &&
+    grid[3].slug === 'test-older-blog'
+  );
+  console.log('Is sorting correct?', isSorted ? 'PASS' : 'FAIL');
 }
 
 // TEST 4: Search for 'AI'

@@ -10,6 +10,11 @@
         var id = (params.get('id') || '').trim();
         var canLink = document.getElementById('page-canonical');
         if (id) {
+          if (id === 'ai-skills-future-careers-2027-2030') {
+            if (canLink) canLink.setAttribute('href', 'https://novaskills.in/blog/ai-skills-future-careers-2027-2030/');
+            window.location.replace('/blog/ai-skills-future-careers-2027-2030/');
+            return;
+          }
           if (id === 'n8n-ai-automation-beginners') {
             if (canLink) canLink.setAttribute('href', 'https://novaskills.in/blog/n8n-ai-automation-beginners/');
             window.location.replace('/blog/n8n-ai-automation-beginners/');

@@ -41,6 +41,7 @@ function populateArticle(post) {
 
   // Map specific OG / Twitter images for blog posts
   const blogImageMap = {
+    'ai-skills-future-careers-2027-2030': 'https://novaskills.in/images/seo/ai-skills-future-careers-2027-2030.jpg',
     'high-demand-courses-2027-ai-skills-careers': 'https://novaskills.in/images/seo/high-demand-courses-2027-ai-skills-careers.jpg',
     'ai-seo-geo-digital-marketing-2026': 'https://novaskills.in/images/seo/ai-seo-geo-digital-marketing-2026.jpg',
     'waseeullah-mansoori': 'https://novaskills.in/images/seo/waseeullah-mansoori.png',

@@ -86,6 +86,20 @@ assert(n8nHtml.includes('<link rel="canonical" href="https://novaskills.in/blog/
 assert(n8nHtml.includes('"@type": "BlogPosting"'), 'n8n blog has BlogPosting schema');
 assert(n8nHtml.includes('"@type": "FAQPage"'), 'n8n blog has FAQPage schema');
 
+// 4b. Validate ai-skills-future-careers-2027-2030 static blog post
+console.log('\n--- 4b. Validating /blog/ai-skills-future-careers-2027-2030/ ---');
+const aiPostPath = path.join(ROOT_DIR, 'blog', 'ai-skills-future-careers-2027-2030', 'index.html');
+assert(fs.existsSync(aiPostPath), 'Static blog/ai-skills-future-careers-2027-2030/index.html exists');
+const aiPostHtml = fs.readFileSync(aiPostPath, 'utf8');
+assert(aiPostHtml.includes('<link rel="canonical" href="https://novaskills.in/blog/ai-skills-future-careers-2027-2030/" />'), 'Research blog has correct canonical');
+assert(aiPostHtml.includes('"@type": "BlogPosting"'), 'Research blog has BlogPosting schema');
+assert(aiPostHtml.includes('"@type": "FAQPage"'), 'Research blog has FAQPage schema');
+assert(aiPostHtml.includes('"@type": "BreadcrumbList"'), 'Research blog has BreadcrumbList schema');
+const h1Match = aiPostHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+assert(h1Match && h1Match[1].includes('Will Your Skills Still Be Valuable'), 'Research blog has correct H1 heading');
+assert(aiPostHtml.includes('id="quick-answers-future-skills"'), 'Research blog has Quick Answers section');
+assert(aiPostHtml.includes('Waseeullah Mansoori'), 'Research blog attributes author Waseeullah Mansoori');
+
 // 5. Validate components.js announcement bar
 console.log('\n--- 5. Validating components.js & Minified Bundles ---');
 const compJs = fs.readFileSync(path.join(ROOT_DIR, 'components.js'), 'utf8');
@@ -96,6 +110,7 @@ assert(compJs.includes('Admissions Open for New Batches'), 'components.js has ac
 console.log('\n--- 6. Validating sitemap.xml ---');
 const sitemap = fs.readFileSync(path.join(ROOT_DIR, 'sitemap.xml'), 'utf8');
 assert(sitemap.includes('<loc>https://novaskills.in/blog/n8n-ai-automation-beginners/</loc>'), 'sitemap.xml includes static n8n blog post');
+assert(sitemap.includes('<loc>https://novaskills.in/blog/ai-skills-future-careers-2027-2030/</loc>'), 'sitemap.xml includes static ai-skills-future-careers-2027-2030 blog post');
 assert(sitemap.includes('<loc>https://novaskills.in/academies/digital-marketing/</loc>'), 'sitemap.xml includes digital-marketing academy');
 assert(!sitemap.includes('blog-detail.html?id=n8n-ai-automation-beginners'), 'sitemap.xml excludes obsolete dynamic n8n url');
 

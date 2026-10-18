@@ -14824,6 +14824,43 @@ const NS_ACADEMIES = [
 /* Blog posts data */
 const NS_BLOG_POSTS = [
   {
+    "id": "ai-skills-future-careers-2027-2030",
+    "slug": "ai-skills-future-careers-2027-2030",
+    "url": "/blog/ai-skills-future-careers-2027-2030/",
+    "title": "Will Your Skills Still Be Valuable When AI Can Do the Easy Part? (2027–2030)",
+    "excerpt": "Research-backed guide to AI jobs in 2030, agentic AI, digital marketing, automation, and future-ready skills. Includes evidence, FAQs, and a 90-day roadmap.",
+    "content": "Will Your Skills Still Be Valuable When AI Can Do the Easy Part? A Research-Based Guide to Future-Proof Careers, Agentic AI, Digital Marketing, Automation and Human Advantage (2027–2030). ILO WEF Stanford HAI PwC Microsoft UNESCO artificial intelligence agentic AI workflow automation digital marketing data analytics 90-day roadmap career guidance Nova Skills Waseeullah Mansoori.",
+    "category": "AI & Automation",
+    "author": "Waseeullah Mansoori",
+    "authorRole": "Founder & Chief Learning Officer",
+    "featuredExpert": "Waseeullah Mansoori, Founder & Chief Learning Officer, Nova Skills",
+    "featuredImage": "/images/blog/ai-skills-future-careers-2027-2030.jpg",
+    "image": "/images/blog/ai-skills-future-careers-2027-2030.jpg",
+    "publishedAt": "2026-10-18T12:00:00+05:30",
+    "publishDate": "2026-10-18",
+    "date": "2026-10-18",
+    "readingTime": 32,
+    "readTime": 32,
+    "tags": [
+      "Agentic AI",
+      "AI Automation",
+      "Future of Work",
+      "Digital Marketing",
+      "Data Analytics",
+      "Career Guidance",
+      "AI Skills",
+      "Nova Skills"
+    ],
+    "status": "published",
+    "isFeatured": false,
+    "featured": false,
+    "isDemo": false,
+    "trending": true,
+    "seoTitle": "Will AI Replace Jobs by 2030? Future Skills & Careers | Nova Skills",
+    "metaDescription": "Research-backed guide to AI jobs in 2030, agentic AI, digital marketing, automation and future-ready skills. Includes evidence, FAQs and a 90-day roadmap.",
+    "ogImage": "https://novaskills.in/images/seo/ai-skills-future-careers-2027-2030.jpg"
+  },
+  {
     "id": "high-demand-courses-2027-ai-skills-careers",
     "slug": "high-demand-courses-2027-ai-skills-careers",
     "url": "/blog/high-demand-courses-2027-ai-skills-careers/",
