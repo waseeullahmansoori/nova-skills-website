@@ -98,6 +98,133 @@ function getUTMParams() {
   };
 }
 
+
+/* ============================================================
+   FIRST-TOUCH & MULTI-TOUCH ATTRIBUTION ENGINE
+   Preserves ChatGPT, Google, Perplexity, Meta, and UTMs across
+   internal navigation without leaking PII or falsifying source.
+   ============================================================ */
+
+function initAttribution() {
+  if (typeof window === 'undefined' || !window.sessionStorage) return;
+
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const utmSource = (params.get('utm_source') || '').trim();
+    const utmMedium = (params.get('utm_medium') || '').trim();
+    const utmCampaign = (params.get('utm_campaign') || '').trim();
+    const utmContent = (params.get('utm_content') || '').trim();
+    const utmTerm = (params.get('utm_term') || '').trim();
+
+    const rawReferrer = (document.referrer || '').trim();
+    let refHostname = '';
+    if (rawReferrer) {
+      try {
+        refHostname = new URL(rawReferrer).hostname.toLowerCase();
+      } catch (e) {
+        refHostname = rawReferrer.toLowerCase();
+      }
+    }
+
+    const isInternalRef = refHostname && (refHostname === window.location.hostname || refHostname.endsWith('.novaskills.in') || refHostname === 'novaskills.in');
+
+    let detectedAiPlatform = '';
+    let detectedSource = utmSource;
+    let detectedMedium = utmMedium;
+
+    if (refHostname.includes('chatgpt.com') || refHostname.includes('chat.openai.com') || rawReferrer.includes('com.openai.chatgpt') || utmSource.toLowerCase().includes('chatgpt')) {
+      detectedAiPlatform = 'ChatGPT';
+      if (!detectedSource) detectedSource = 'chatgpt.com';
+      if (!detectedMedium) detectedMedium = 'ai_search';
+    } else if (refHostname.includes('perplexity.ai') || utmSource.toLowerCase().includes('perplexity')) {
+      detectedAiPlatform = 'Perplexity';
+      if (!detectedSource) detectedSource = 'perplexity.ai';
+      if (!detectedMedium) detectedMedium = 'ai_search';
+    } else if (refHostname.includes('claude.ai') || utmSource.toLowerCase().includes('claude')) {
+      detectedAiPlatform = 'Claude';
+      if (!detectedSource) detectedSource = 'claude.ai';
+      if (!detectedMedium) detectedMedium = 'ai_chat';
+    } else if (refHostname.includes('gemini.google.com') || utmSource.toLowerCase().includes('gemini')) {
+      detectedAiPlatform = 'Gemini';
+      if (!detectedSource) detectedSource = 'gemini.google.com';
+      if (!detectedMedium) detectedMedium = 'ai_search';
+    } else if (!isInternalRef && refHostname) {
+      if (refHostname.includes('google.')) {
+        if (!detectedSource) detectedSource = 'google';
+        if (!detectedMedium) detectedMedium = 'organic';
+      } else if (refHostname.includes('bing.com')) {
+        if (!detectedSource) detectedSource = 'bing';
+        if (!detectedMedium) detectedMedium = 'organic';
+      } else if (refHostname.includes('facebook.com') || refHostname.includes('fb.com')) {
+        if (!detectedSource) detectedSource = 'facebook';
+        if (!detectedMedium) detectedMedium = 'social';
+      } else if (refHostname.includes('instagram.com')) {
+        if (!detectedSource) detectedSource = 'instagram';
+        if (!detectedMedium) detectedMedium = 'social';
+      } else if (refHostname.includes('linkedin.com')) {
+        if (!detectedSource) detectedSource = 'linkedin';
+        if (!detectedMedium) detectedMedium = 'social';
+      } else if (refHostname.includes('t.co') || refHostname.includes('twitter.com') || refHostname.includes('x.com')) {
+        if (!detectedSource) detectedSource = 'twitter';
+        if (!detectedMedium) detectedMedium = 'social';
+      } else if (refHostname.includes('youtube.com')) {
+        if (!detectedSource) detectedSource = 'youtube';
+        if (!detectedMedium) detectedMedium = 'video';
+      } else if (!detectedSource) {
+        detectedSource = refHostname;
+        if (!detectedMedium) detectedMedium = 'referral';
+      }
+    }
+
+    const currentTouch = {
+      source: detectedSource || '',
+      medium: detectedMedium || '',
+      campaign: utmCampaign || '',
+      content: utmContent || '',
+      term: utmTerm || '',
+      referrer: (!isInternalRef && rawReferrer) ? rawReferrer : '',
+      landingPage: window.location.href,
+      aiPlatform: detectedAiPlatform || '',
+      timestamp: new Date().toISOString()
+    };
+
+    const existingFirstTouch = sessionStorage.getItem('ns_first_touch');
+    if (!existingFirstTouch) {
+      if (!currentTouch.source && !currentTouch.referrer) {
+        currentTouch.source = 'direct';
+        currentTouch.medium = 'none';
+      }
+      sessionStorage.setItem('ns_first_touch', JSON.stringify(currentTouch));
+    }
+
+    if (!isInternalRef || utmSource) {
+      sessionStorage.setItem('ns_last_touch', JSON.stringify(currentTouch));
+    }
+  } catch (e) {}
+}
+
+function getStoredAttribution() {
+  let firstTouch = null;
+  let lastTouch = null;
+  try {
+    if (typeof window !== 'undefined' && window.sessionStorage) {
+      const ftStr = sessionStorage.getItem('ns_first_touch');
+      if (ftStr) firstTouch = JSON.parse(ftStr);
+      const ltStr = sessionStorage.getItem('ns_last_touch');
+      if (ltStr) lastTouch = JSON.parse(ltStr);
+    }
+  } catch (e) {}
+  return { firstTouch, lastTouch };
+}
+
+// Immediately capture attribution on script execution
+if (typeof window !== 'undefined') {
+  initAttribution();
+}
+window.initAttribution = initAttribution;
+window.getStoredAttribution = getStoredAttribution;
+
+
 function injectToastStyles() {
   if (document.getElementById('ns-toast-styles')) return;
   const style = document.createElement('style');
@@ -291,8 +418,17 @@ async function submitNovaForm({
   try {
     const publicIP = await fetchPublicIP();
     const utm = getUTMParams();
+    const { firstTouch, lastTouch } = getStoredAttribution();
 
     const honeypotValue = (form.querySelector('input[name="website"]')?.value || data.website || '').trim();
+
+    const resolvedUtmSource = utm.utmSource || (firstTouch && firstTouch.source) || '';
+    const resolvedUtmMedium = utm.utmMedium || (firstTouch && firstTouch.medium) || '';
+    const resolvedUtmCampaign = utm.utmCampaign || (firstTouch && firstTouch.campaign) || '';
+    const resolvedUtmContent = utm.utmContent || (firstTouch && firstTouch.content) || '';
+    const resolvedUtmTerm = utm.utmTerm || (firstTouch && firstTouch.term) || '';
+    const resolvedReferrer = (firstTouch && firstTouch.referrer) || document.referrer || '';
+    const detectedAi = (firstTouch && firstTouch.aiPlatform) || (lastTouch && lastTouch.aiPlatform) || '';
 
     const payload = {
       name: data.name || '',
@@ -304,13 +440,19 @@ async function submitNovaForm({
       website: honeypotValue,
 
       pageUrl: window.location.href,
-      referrer: document.referrer || '',
+      referrer: resolvedReferrer,
 
-      utmSource: utm.utmSource,
-      utmMedium: utm.utmMedium,
-      utmCampaign: utm.utmCampaign,
-      utmContent: utm.utmContent,
-      utmTerm: utm.utmTerm,
+      utmSource: resolvedUtmSource,
+      utmMedium: resolvedUtmMedium,
+      utmCampaign: resolvedUtmCampaign,
+      utmContent: resolvedUtmContent,
+      utmTerm: resolvedUtmTerm,
+
+      firstTouchSource: (firstTouch && firstTouch.source) || resolvedUtmSource,
+      firstTouchMedium: (firstTouch && firstTouch.medium) || resolvedUtmMedium,
+      firstTouchReferrer: (firstTouch && firstTouch.referrer) || '',
+      firstLandingPage: (firstTouch && firstTouch.landingPage) || window.location.href,
+      aiPlatform: detectedAi,
 
       browser: detectBrowser(),
       device: detectDevice(),
@@ -386,11 +528,21 @@ async function submitNovaForm({
 
       const cleanCourseName = (data.course || 'General').toString().trim() || 'General';
 
+      const landingPagePath = (firstTouch && firstTouch.landingPage)
+        ? (function() {
+            try { return new URL(firstTouch.landingPage).pathname; } catch (e) { return window.location.pathname; }
+          })()
+        : window.location.pathname;
+
       sendGA4Event('generate_lead', {
         form_name: resolvedFormName,
         course_name: cleanCourseName,
         submission_method: resolvedMethod,
-        page_path: window.location.pathname
+        page_path: window.location.pathname,
+        traffic_source: resolvedUtmSource || 'direct',
+        traffic_medium: resolvedUtmMedium || 'none',
+        ai_platform: detectedAi || 'none',
+        landing_page: landingPagePath
       });
     }
 

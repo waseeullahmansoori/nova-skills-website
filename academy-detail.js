@@ -517,6 +517,7 @@ function renderAcademyLandingPage(academy) {
 
   const mainContainer = document.getElementById('academy-sections-container');
   if (!mainContainer) return;
+  if (mainContainer.getAttribute('data-prerendered') === 'true') return;
 
   let html = '';
 

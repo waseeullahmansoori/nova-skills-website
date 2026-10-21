@@ -5,7 +5,12 @@
   "main": "main.js",
   "scripts": {
     "build:js": "node scripts/build_min_js.js",
+    "build:academies": "node scripts/build-academy-pages.js",
+    "build:courses-catalog": "node scripts/build-courses-page.js",
+    "build:courses-edge": "node scripts/build-course-pages.js",
     "generate:sitemap": "node scripts/generate-sitemap.js",
+    "test:remediation": "node scripts/test-ai-search-audit-remediation.js",
+    "test:attribution": "node scripts/test-attribution-lead-flow.js",
     "build": "node scripts/build_min_js.js && node scripts/generate-sitemap.js"
   },
   "keywords": [

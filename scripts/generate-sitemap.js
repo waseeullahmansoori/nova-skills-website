@@ -1,10 +1,18 @@
 /**
  * Automated Production-Ready XML Sitemap Generator for Nova Skills
  * Compliant with sitemaps.org 0.9 protocol and Google Technical SEO standards.
+ * 
+ * Generates 100% 200 OK canonical URLs without 308 redirects:
+ * - Clean URLs for root static pages (/courses, /blog, /assessment, etc.)
+ * - Pre-rendered Edge Course URLs (/course-detail.html?id=...)
+ * - Pre-rendered Academy Directory URLs (/academies/.../)
+ * - Canonical Static Blog Article URLs (/blog/.../)
+ * - Legal & Contact Directory URLs (/privacy-policy/, etc.)
  */
 
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');
 
 const DOMAIN = 'https://novaskills.in';
 const ROOT_DIR = path.resolve(__dirname, '..');
@@ -46,19 +54,20 @@ function generateSitemap() {
     lastmod: getFormattedDate(indexPath)
   });
 
-  // 2. Standard Public HTML Pages
+  // 2. Standard Public Pages (Clean URLs without .html to prevent Cloudflare 308 redirects)
   const files = fs.readdirSync(ROOT_DIR);
   files.forEach((file) => {
     if (file.endsWith('.html') && file !== 'index.html' && !EXCLUDED_FILES.has(file)) {
       const filePath = path.join(ROOT_DIR, file);
+      const cleanSlug = file.replace(/\.html$/, '');
       urlEntries.push({
-        loc: `${DOMAIN}/${file}`,
+        loc: `${DOMAIN}/${cleanSlug}`,
         lastmod: getFormattedDate(filePath)
       });
     }
   });
 
-  // Dedicated Legal Policy directory URLs (Only indexable canonical directories)
+  // 3. Dedicated Legal Policy & Contact directory URLs
   urlEntries.push({
     loc: `${DOMAIN}/privacy-policy/`,
     lastmod: today
@@ -75,28 +84,24 @@ function generateSitemap() {
     loc: `${DOMAIN}/contact/`,
     lastmod: today
   });
-  urlEntries.push({
-    loc: `${DOMAIN}/blog/waseeullah-mansoori/`,
-    lastmod: today
-  });
-  urlEntries.push({
-    loc: `${DOMAIN}/blog/ai-skills-future-careers-2027-2030/`,
-    lastmod: today
-  });
-  urlEntries.push({
-    loc: `${DOMAIN}/blog/ai-seo-geo-digital-marketing-2026/`,
-    lastmod: today
-  });
-  urlEntries.push({
-    loc: `${DOMAIN}/blog/high-demand-courses-2027-ai-skills-careers/`,
-    lastmod: today
-  });
-  urlEntries.push({
-    loc: `${DOMAIN}/blog/n8n-ai-automation-beginners/`,
-    lastmod: today
+
+  // 4. Canonical Static Blog Article URLs (200 OK directories)
+  const blogArticles = [
+    'waseeullah-mansoori',
+    'ai-skills-future-careers-2027-2030',
+    'ai-seo-geo-digital-marketing-2026',
+    'high-demand-courses-2027-ai-skills-careers',
+    'n8n-ai-automation-beginners'
+  ];
+  blogArticles.forEach((slug) => {
+    const articlePath = path.join(ROOT_DIR, 'blog', slug, 'index.html');
+    urlEntries.push({
+      loc: `${DOMAIN}/blog/${slug}/`,
+      lastmod: getFormattedDate(articlePath)
+    });
   });
 
-  // 3. Clean Academy Directory URLs
+  // 5. Clean Academy Directory URLs
   urlEntries.push({
     loc: `${DOMAIN}/academies/`,
     lastmod: today
@@ -124,42 +129,23 @@ function generateSitemap() {
     });
   });
 
-  // 4. Dynamic Course URLs (All Restructured Courses)
+  // 6. Dynamic Course URLs (All 109 Restructured Courses)
   let courseIds = [];
   try {
-    const { NS_COURSES } = require('../data.js');
-    courseIds = NS_COURSES.map(c => c.id);
+    const dataJs = fs.readFileSync(path.join(ROOT_DIR, 'data.js'), 'utf8');
+    vm.runInThisContext(dataJs);
+    if (Array.isArray(NS_COURSES)) {
+      courseIds = NS_COURSES.map(c => c.id);
+    }
   } catch (err) {
-    courseIds = [
-      'dm-professional', 'dm-mastery', 'ai-mastery', 'fullstack-foundation',
-      'creative-design', 'motion-mastery', 'archviz-mastery', 'ecommerce-mastery',
-      'youtube-mastery', 'biz-productivity', 'business-english', 'freelancing-mastery'
-    ];
+    console.error('Error loading NS_COURSES from data.js:', err);
   }
+
   const coursePageDate = getFormattedDate(path.join(ROOT_DIR, 'course-detail.html'));
   courseIds.forEach((cId) => {
     urlEntries.push({
       loc: `${DOMAIN}/course-detail.html?id=${cId}`,
       lastmod: coursePageDate
-    });
-  });
-
-  // 5. Dynamic Blog Article URLs
-  const blogSlugs = [
-    'ai-jobs-india-2026',
-    'digital-marketing-salary-india',
-    'learn-graphic-design-beginner-guide',
-    'freelancing-fiverr-india-guide',
-    'youtube-channel-monetise-2026',
-    'chatgpt-prompts-marketing',
-    'kids-coding-benefits-india',
-    'python-vs-javascript-2026'
-  ];
-  const blogPageDate = getFormattedDate(path.join(ROOT_DIR, 'blog-detail.html'));
-  blogSlugs.forEach((slug) => {
-    urlEntries.push({
-      loc: `${DOMAIN}/blog-detail.html?id=${slug}`,
-      lastmod: blogPageDate
     });
   });
 

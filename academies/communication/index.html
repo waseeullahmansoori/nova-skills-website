@@ -41,6 +41,18 @@
       background-color: #f8fafc;
       color: #011731;
     }
+    #ns-header {
+      display: contents;
+    }
+    #ns-header:empty {
+      display: block;
+      min-height: 112px;
+    }
+    @media (max-width: 1024px) {
+      #ns-header:empty {
+        min-height: 104px;
+      }
+    }
     .academy-hero-section {
       background: linear-gradient(135deg, #011731 0%, #0599a8 100%);
       color: white;
@@ -143,7 +155,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Academies",
-          "item": "https://novaskills.in/courses.html"
+          "item": "https://novaskills.in/courses"
         },
         {
           "@type": "ListItem",
@@ -162,9 +174,18 @@
         "@type": "EducationalOrganization",
         "name": "Nova Skills Education Institute",
         "url": "https://novaskills.in/",
-        "logo": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
+        "logo": "https://novaskills.in/public/images/seo/og-banner.png?v=2026",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Nova Skills Institute Campus",
+          "addressLocality": "Siddharth Nagar",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "272153",
+          "addressCountry": "IN"
+        }
       },
-      "educationalProgramMode": "Hybrid"
+      "educationalProgramMode": "Hybrid",
+      "numberOfCredits": 7
     },
     {
       "@type": "FAQPage",
@@ -172,18 +193,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Who is Communication Academy designed for?",
+          "name": "How will this academy improve my spoken English?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It is designed for students, job-seekers, and working professionals seeking to speak fluent English, excel in interviews, and lead meetings with confidence."
+            "text": "Through daily interactive speaking drills, vocabulary expansion sessions, impromptu speeches, and real-time pronunciation corrections."
           }
         },
         {
           "@type": "Question",
-          "name": "How are classes conducted?",
+          "name": "Is corporate email and memo writing included?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Classes are interactive workshops with real-world role-plays, mock interviews, speech practice, and personalized feedback from expert trainers."
+            "text": "Yes, you will master professional email etiquette, executive presentation design, and cross-cultural business communication."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you conduct mock job interviews?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, every student undergoes simulated HR and managerial interview rounds with feedback on tone, body language, and answer structuring."
           }
         }
       ]
@@ -207,7 +236,7 @@
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a>
           <span>›</span>
-          <a href="/courses.html">Academies</a>
+          <a href="/courses">Academies</a>
           <span>›</span>
           <span id="breadcrumb-selected-academy" style="color:white;">Communication Academy</span>
         </nav>
@@ -220,41 +249,802 @@
           Spoken English, Business Communication, Presentation Skills, Public Speaking & Personality Development.
         </p>
 
-        <!-- Dynamic Stats Pills -->
+        <!-- Accurate Dynamic Stats Pills -->
         <div class="academy-stats-pills" id="academy-stats-pills">
-          <span id="stat-career-programs" class="stats-pill">💼 Career Programs: Loading...</span>
-          <span id="stat-pro-programs" class="stats-pill">⚡ Professional Programs: Loading...</span>
-          <span id="stat-cert-courses" class="stats-pill">📜 Certification Courses: Loading...</span>
-          <span id="stat-total-courses" class="stats-pill">📚 Total Courses: Loading...</span>
+          <span id="stat-career-programs" class="stats-pill">💼 Career Programs: 1</span>
+          <span id="stat-pro-programs" class="stats-pill">⚡ Professional Programs: 1</span>
+          <span id="stat-cert-courses" class="stats-pill">📜 Certification Courses: 5</span>
+          <span id="stat-total-courses" class="stats-pill">📚 Total Courses: 7</span>
         </div>
 
         <!-- Action CTAs -->
         <div class="academy-actions" style="display:flex; gap:12px; flex-wrap:wrap;">
-          <button id="btn-enroll-now" class="btn btn-primary btn-lg">Enroll Now →</button>
-          <button id="btn-free-consultation" class="btn btn-outline btn-lg" style="color:white; border-color:rgba(255,255,255,0.4);">Free Consultation</button>
+          <button id="btn-enroll-now" class="btn btn-primary btn-lg" onclick="openEnrollmentModal('', 'Communication Academy')">Enroll Now →</button>
+          <button id="btn-free-consultation" class="btn btn-outline btn-lg" style="color:white; border-color:rgba(255,255,255,0.4);" onclick="openConsultationPopup()">Free Consultation</button>
         </div>
       </div>
     </section>
 
-    <!-- Dynamic Academy Program & Course Sections Container -->
-    <div id="academy-sections-container"></div>
+    <!-- Pre-rendered Semantic Academy Programs & Course Sections -->
+    <div id="academy-sections-container" data-prerendered="true">
 
-    <!-- 404 Academy Not Found Section -->
-    <section id="academy-404-container" class="academy-404-container" style="display:none;">
+    <section class="section-academy-overview" style="padding: 72px 0; background: #ffffff; border-bottom: 1px solid #e2e8f0;">
       <div class="container">
-        <div style="background:white; padding:48px; border-radius:24px; text-align:center;">
-          <div style="font-size:3.5rem; margin-bottom:16px;">⚠️</div>
-          <h2 style="font-size:2rem; font-weight:800; color:#011731; margin-bottom:12px;">404 — Academy Not Found</h2>
-          <p style="color:#64748b; font-size:1.05rem; margin-bottom:24px;">
-            The academy page you requested does not exist or may have been renamed.
+        <div class="section-header" style="text-align: center; margin-bottom: 48px;">
+          <span class="section-tag" style="background: rgba(1, 23, 49, 0.08); color: #011731;">ACADEMY OVERVIEW & OUTCOMES</span>
+          <h2 class="section-title">Master Communication Academy</h2>
+          <p class="section-subtitle" style="max-width: 760px; margin: 0 auto; color: #475569; font-size: 1.05rem;">
+            Spoken English, Business Communication, Presentation Skills, Public Speaking & Personality Development. Our curriculum combines hands-on live project labs, code/design critiques, and industry-standard commercial tools.
           </p>
-          <div style="display:flex; justify-content:center; gap:12px;">
-            <a href="/" class="btn btn-primary">Return Home →</a>
-            <a href="/courses.html" class="btn btn-outline">Explore All Academies</a>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px;">
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 32px; border-radius: 18px;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+              <span style="font-size:1.8rem; background:rgba(5,153,168,0.1); width:48px; height:48px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; color:#0599a8;">🏆</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #011731; margin: 0;">Industry Benefits</h3>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+              <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#0599a8; font-weight:800;">✓</span> <span>100% Practical Training on Real Projects</span></li>
+              <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#0599a8; font-weight:800;">✓</span> <span>Live Mentor Guidance & Code/Design Reviews</span></li>
+              <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#0599a8; font-weight:800;">✓</span> <span>Industry-Recognized Professional Certification</span></li>
+              <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#0599a8; font-weight:800;">✓</span> <span>Dedicated Placement Support & Interview Prep</span></li>
+            </ul>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 32px; border-radius: 18px;">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+              <span style="font-size:1.8rem; background:rgba(117,215,102,0.15); width:48px; height:48px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; color:#2e7d32;">🎯</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #011731; margin: 0;">Career Outcomes</h3>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+              <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#75d766; font-weight:800;">🎯</span> <span>Build verifiable client-ready portfolio projects</span></li>
+              <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#75d766; font-weight:800;">🎯</span> <span>Gain fluent mastery in modern software & AI tools</span></li>
+              <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#75d766; font-weight:800;">🎯</span> <span>Qualify for high-demand agency and corporate roles</span></li>
+              <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#75d766; font-weight:800;">🎯</span> <span>Launch freelance services on Upwork, Fiverr & LinkedIn</span></li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
+  
+    <section class="section-career-roadmap" style="padding: 80px 0; background: #011731; color: white;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 56px;">
+          <span class="section-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">STRUCTURED LEARNING JOURNEY</span>
+          <h2 class="section-title" style="color: white;">Visual Career Roadmap</h2>
+          <p class="section-subtitle" style="color: #94a3b8; max-width: 680px; margin: 0 auto;">
+            Step-by-step career progression from tool fundamentals to high-paying employment & client retainers.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; align-items: stretch;">
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🌱</div>
+            <span style="font-size: 0.75rem; background: rgba(56,189,248,0.2); color: #38bdf8; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 1</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Beginner</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Tool Orientation & Basics</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🏛️</div>
+            <span style="font-size: 0.75rem; background: rgba(5,153,168,0.2); color: #0599a8; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 2</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Foundation</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Core Concepts & Drills</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">💻</div>
+            <span style="font-size: 0.75rem; background: rgba(37,99,235,0.2); color: #60a5fa; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 3</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Projects</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Real Client Case Studies</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">💼</div>
+            <span style="font-size: 0.75rem; background: rgba(139,92,246,0.2); color: #c084fc; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 4</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Internship</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Agency & Live Lab</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">📜</div>
+            <span style="font-size: 0.75rem; background: rgba(234,179,8,0.2); color: #facc15; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 5</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Certification</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">ISO Verified Credential</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🎯</div>
+            <span style="font-size: 0.75rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 6</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Placement</h4>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Job Referrals & Freelance</p>
+          </div>
+          <div style="background: linear-gradient(135deg, rgba(5,153,168,0.3), rgba(117,215,102,0.3)); border: 1px solid #75d766; padding: 20px; border-radius: 14px; text-align: center;">
+            <div style="font-size: 1.5rem; margin-bottom: 8px;">🚀</div>
+            <span style="font-size: 0.75rem; background: #75d766; color: #011731; padding: 2px 8px; border-radius: 50px; font-weight: 800; display: inline-block; margin-bottom: 8px;">GOAL</span>
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Advanced Career</h4>
+            <p style="font-size: 0.8rem; color: #e2e8f0; margin: 0;">Senior Lead & Scale</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+      <section class="section-career-programs" style="padding: 72px 0; background: white; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+          <div class="section-header" style="text-align: left; margin-bottom: 36px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+              <div>
+                <span class="section-tag" style="background: rgba(1, 23, 49, 0.08); color: var(--navy);">6–12 MONTH TRANSFORMATION</span>
+                <h2 class="section-title" style="margin-bottom: 0;">Career Programs</h2>
+              </div>
+              <span style="background: rgba(5, 153, 168, 0.1); color: #0599a8; padding: 6px 16px; border-radius: 50px; font-weight: 700; font-size: 0.9rem;">
+                1 Program
+              </span>
+            </div>
+          </div>
+          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+            
+    <div class="course-card " data-category="communication" data-level="Career Program" data-title="Business English & Personality Development" data-desc="Spoken English, Business Writing, Public Speaking, Executive Presence & Soft Skills.">
+      <span class="course-hot-tag">🔥 Popular</span>
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #011731)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Career Program</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 6 Months</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=business-english">Business English & Personality Development</a></h3>
+        <p class="course-desc">Spoken English, Business Writing, Public Speaking, Executive Presence & Soft Skills.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 3+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          <span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>
+          <span class="feature-item">⭐ 4.9 (240)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹14,999</span>
+            <span class="price-original">₹39,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=business-english" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Business English & Personality Development', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+          </div>
+        </div>
+      </section>
+    
+      <section class="section-pro-programs" style="padding: 72px 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+          <div class="section-header" style="text-align: left; margin-bottom: 36px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+              <div>
+                <span class="section-tag" style="background: rgba(5, 153, 168, 0.1); color: var(--teal);">3–6 MONTH SKILL MASTERY</span>
+                <h2 class="section-title" style="margin-bottom: 0;">Professional Programs</h2>
+              </div>
+              <span style="background: rgba(5, 153, 168, 0.1); color: #0599a8; padding: 6px 16px; border-radius: 50px; font-weight: 700; font-size: 0.9rem;">
+                1 Program
+              </span>
+            </div>
+          </div>
+          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+            
+    <div class="course-card " data-category="communication" data-level="Professional Program" data-title="Professional Spoken English" data-desc="Speak English fluently and confidently in workplace meetings, interviews, and presentations.">
+      <span class="course-hot-tag">🔥 Popular</span>
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #0599a8)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Professional Program</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 3 Months</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=spoken-english-pro">Professional Spoken English</a></h3>
+        <p class="course-desc">Speak English fluently and confidently in workplace meetings, interviews, and presentations.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          <span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>
+          <span class="feature-item">⭐ 4.8 (190)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹8,999</span>
+            <span class="price-original">₹22,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=spoken-english-pro" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Professional Spoken English', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+          </div>
+        </div>
+      </section>
+    
+      <section class="section-cert-courses" style="padding: 72px 0; background: white; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+          <div class="section-header" style="text-align: left; margin-bottom: 36px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+              <div>
+                <span class="section-tag" style="background: rgba(117, 215, 102, 0.15); color: #2e7d32;">1–2 MONTH FOCUSED SKILLS</span>
+                <h2 class="section-title" style="margin-bottom: 0;">Certification Courses</h2>
+              </div>
+              <span style="background: rgba(5, 153, 168, 0.1); color: #0599a8; padding: 6px 16px; border-radius: 50px; font-weight: 700; font-size: 0.9rem;">
+                5 Courses
+              </span>
+            </div>
+          </div>
+          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+            
+    <div class="course-card " data-category="communication" data-level="Certification Course" data-title="Spoken English" data-desc="Build everyday English speaking confidence, vocabulary, and correct pronunciation.">
+      <span class="course-hot-tag">🔥 Popular</span>
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #2563EB)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Certification Course</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 1 Month</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=spoken-english-cert">Spoken English</a></h3>
+        <p class="course-desc">Build everyday English speaking confidence, vocabulary, and correct pronunciation.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          
+          <span class="feature-item">⭐ 4.8 (160)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹3,999</span>
+            <span class="price-original">₹11,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=spoken-english-cert" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Spoken English', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="course-card " data-category="communication" data-level="Certification Course" data-title="Business Communication" data-desc="Write professional emails, reports, proposals, and lead clear workplace communications.">
+      
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #8B5CF6)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Certification Course</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 1 Month</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=business-communication">Business Communication</a></h3>
+        <p class="course-desc">Write professional emails, reports, proposals, and lead clear workplace communications.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          
+          <span class="feature-item">⭐ 4.7 (120)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹3,999</span>
+            <span class="price-original">₹11,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=business-communication" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Business Communication', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="course-card " data-category="communication" data-level="Certification Course" data-title="Presentation Skills" data-desc="Deliver engaging slide decks, pitch ideas convincingly, and handle Q&A sessions smoothly.">
+      
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #FF6B00)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Certification Course</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 1 Month</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=presentation-skills">Presentation Skills</a></h3>
+        <p class="course-desc">Deliver engaging slide decks, pitch ideas convincingly, and handle Q&A sessions smoothly.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          
+          <span class="feature-item">⭐ 4.8 (90)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹3,999</span>
+            <span class="price-original">₹11,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=presentation-skills" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Presentation Skills', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="course-card " data-category="communication" data-level="Certification Course" data-title="Public Speaking" data-desc="Overcome stage fright, command attention, and speak with impact on stage or video.">
+      <span class="course-hot-tag">🔥 Popular</span>
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #EF4444)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Certification Course</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 1 Month</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=public-speaking">Public Speaking</a></h3>
+        <p class="course-desc">Overcome stage fright, command attention, and speak with impact on stage or video.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          
+          <span class="feature-item">⭐ 4.9 (115)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹3,999</span>
+            <span class="price-original">₹11,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=public-speaking" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Public Speaking', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="course-card " data-category="communication" data-level="Certification Course" data-title="Soft Skills" data-desc="Develop emotional intelligence, teamwork, conflict resolution, and problem-solving.">
+      
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #F59E0B)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Certification Course</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 1 Month</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=soft-skills">Soft Skills</a></h3>
+        <p class="course-desc">Develop emotional intelligence, teamwork, conflict resolution, and problem-solving.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          
+          <span class="feature-item">⭐ 4.7 (80)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹3,999</span>
+            <span class="price-original">₹11,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=soft-skills" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Soft Skills', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+          </div>
+        </div>
+      </section>
+    
+    <section class="section-course-explorer" style="padding: 80px 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">DYNAMIC COURSE EXPLORER</span>
+          <h2 class="section-title">Explore All Communication Academy Offerings</h2>
+          <p class="section-subtitle">Filter programs by duration and career depth to find your ideal learning track.</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin-bottom: 32px; background: white; padding: 16px 20px; border-radius: 16px; border: 1px solid #e2e8f0;">
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <button type="button" class="explorer-tab-btn" onclick="filterExplorerCourses('all', this)" style="background: #011731; color: white; border: 1px solid #011731; padding: 8px 18px; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 0.9rem;">All (7)</button>
+            <button type="button" class="explorer-tab-btn" onclick="filterExplorerCourses('Career Program', this)" style="background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; padding: 8px 18px; border-radius: 50px; font-weight: 600; cursor: pointer; font-size: 0.9rem;">Career Programs (1)</button>
+            <button type="button" class="explorer-tab-btn" onclick="filterExplorerCourses('Professional Program', this)" style="background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; padding: 8px 18px; border-radius: 50px; font-weight: 600; cursor: pointer; font-size: 0.9rem;">Professional Programs (1)</button>
+            <button type="button" class="explorer-tab-btn" onclick="filterExplorerCourses('Certification Course', this)" style="background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; padding: 8px 18px; border-radius: 50px; font-weight: 600; cursor: pointer; font-size: 0.9rem;">Certification Courses (5)</button>
+          </div>
+          <div style="flex: 1; max-width: 300px; min-width: 200px;">
+            <input type="text" placeholder="🔍 Search courses..." onkeyup="searchExplorerCourses(this.value)" style="width: 100%; padding: 10px 16px; border-radius: 50px; border: 1px solid #cbd5e1; font-size: 0.9rem; outline: none;">
+          </div>
+        </div>
+
+        <div id="explorer-courses-grid" class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+          
+    <div class="course-card explorer-course-item" data-category="communication" data-level="Career Program" data-title="Business English & Personality Development" data-desc="Spoken English, Business Writing, Public Speaking, Executive Presence & Soft Skills.">
+      <span class="course-hot-tag">🔥 Popular</span>
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #011731)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Career Program</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 6 Months</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=business-english">Business English & Personality Development</a></h3>
+        <p class="course-desc">Spoken English, Business Writing, Public Speaking, Executive Presence & Soft Skills.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 3+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          <span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>
+          <span class="feature-item">⭐ 4.9 (240)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹14,999</span>
+            <span class="price-original">₹39,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=business-english" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Business English & Personality Development', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="course-card explorer-course-item" data-category="communication" data-level="Professional Program" data-title="Professional Spoken English" data-desc="Speak English fluently and confidently in workplace meetings, interviews, and presentations.">
+      <span class="course-hot-tag">🔥 Popular</span>
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #0599a8)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Professional Program</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 3 Months</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=spoken-english-pro">Professional Spoken English</a></h3>
+        <p class="course-desc">Speak English fluently and confidently in workplace meetings, interviews, and presentations.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          <span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>
+          <span class="feature-item">⭐ 4.8 (190)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹8,999</span>
+            <span class="price-original">₹22,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=spoken-english-pro" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Professional Spoken English', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="course-card explorer-course-item" data-category="communication" data-level="Certification Course" data-title="Spoken English" data-desc="Build everyday English speaking confidence, vocabulary, and correct pronunciation.">
+      <span class="course-hot-tag">🔥 Popular</span>
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #2563EB)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Certification Course</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 1 Month</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=spoken-english-cert">Spoken English</a></h3>
+        <p class="course-desc">Build everyday English speaking confidence, vocabulary, and correct pronunciation.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          
+          <span class="feature-item">⭐ 4.8 (160)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹3,999</span>
+            <span class="price-original">₹11,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=spoken-english-cert" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Spoken English', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="course-card explorer-course-item" data-category="communication" data-level="Certification Course" data-title="Business Communication" data-desc="Write professional emails, reports, proposals, and lead clear workplace communications.">
+      
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #8B5CF6)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Certification Course</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 1 Month</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=business-communication">Business Communication</a></h3>
+        <p class="course-desc">Write professional emails, reports, proposals, and lead clear workplace communications.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          
+          <span class="feature-item">⭐ 4.7 (120)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹3,999</span>
+            <span class="price-original">₹11,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=business-communication" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Business Communication', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="course-card explorer-course-item" data-category="communication" data-level="Certification Course" data-title="Presentation Skills" data-desc="Deliver engaging slide decks, pitch ideas convincingly, and handle Q&A sessions smoothly.">
+      
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #FF6B00)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Certification Course</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 1 Month</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=presentation-skills">Presentation Skills</a></h3>
+        <p class="course-desc">Deliver engaging slide decks, pitch ideas convincingly, and handle Q&A sessions smoothly.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          
+          <span class="feature-item">⭐ 4.8 (90)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹3,999</span>
+            <span class="price-original">₹11,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=presentation-skills" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Presentation Skills', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="course-card explorer-course-item" data-category="communication" data-level="Certification Course" data-title="Public Speaking" data-desc="Overcome stage fright, command attention, and speak with impact on stage or video.">
+      <span class="course-hot-tag">🔥 Popular</span>
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #EF4444)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Certification Course</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 1 Month</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=public-speaking">Public Speaking</a></h3>
+        <p class="course-desc">Overcome stage fright, command attention, and speak with impact on stage or video.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          
+          <span class="feature-item">⭐ 4.9 (115)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹3,999</span>
+            <span class="price-original">₹11,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=public-speaking" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Public Speaking', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="course-card explorer-course-item" data-category="communication" data-level="Certification Course" data-title="Soft Skills" data-desc="Develop emotional intelligence, teamwork, conflict resolution, and problem-solving.">
+      
+      <div class="course-thumbnail">
+        <div class="course-thumb-bg" style="background:linear-gradient(135deg, #75d766, #F59E0B)">
+          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">💬</span>
+        </div>
+        <div class="course-badge-overlay">
+          <span class="course-level-badge">Certification Course</span>
+        </div>
+        <div class="course-duration-badge">⏱️ 1 Month</div>
+      </div>
+      <div class="course-body">
+        <div class="course-academy-tag">💬 Communication Academy</div>
+        <h3 class="course-title"><a href="/course-detail.html?id=soft-skills">Soft Skills</a></h3>
+        <p class="course-desc">Develop emotional intelligence, teamwork, conflict resolution, and problem-solving.</p>
+        <div class="course-features">
+          <span class="feature-item">💻 2+ Live Projects</span>
+          <span class="feature-item">📜 ISO Certificate</span>
+          
+          <span class="feature-item">⭐ 4.7 (80)</span>
+        </div>
+        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
+          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
+            <span class="price-current">₹3,999</span>
+            <span class="price-original">₹11,999</span>
+          </div>
+          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
+            <a href="/course-detail.html?id=soft-skills" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('Soft Skills', 'Communication Academy')">Enroll Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+        </div>
+      </div>
+    </section>
+  
+    <section class="section-faqs" style="padding: 80px 0; background: white; border-bottom: 1px solid #e2e8f0;">
+      <div class="container" style="max-width: 860px;">
+        <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="section-title">Got Questions? We Have Answers</h2>
+          <p class="section-subtitle">Find key details about admissions, practical training, and placement support for Communication Academy.</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          
+            <div style="border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; background: #f8fafc;">
+              <button type="button" onclick="toggleFaq(this)" style="width: 100%; padding: 20px 24px; text-align: left; background: none; border: none; font-size: 1.05rem; font-weight: 700; color: #011731; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <span>How will this academy improve my spoken English?</span>
+                <span class="faq-toggle-icon" style="font-size: 1.3rem; color: #0599a8; font-weight: 800; margin-left: 12px;">+</span>
+              </button>
+              <div class="faq-answer-block" style="display: none; padding: 0 24px 20px; color: #475569; font-size: 0.95rem; line-height: 1.6; border-top: 1px solid #e2e8f0; background: white;">
+                Through daily interactive speaking drills, vocabulary expansion sessions, impromptu speeches, and real-time pronunciation corrections.
+              </div>
+            </div>
+          
+            <div style="border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; background: #f8fafc;">
+              <button type="button" onclick="toggleFaq(this)" style="width: 100%; padding: 20px 24px; text-align: left; background: none; border: none; font-size: 1.05rem; font-weight: 700; color: #011731; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <span>Is corporate email and memo writing included?</span>
+                <span class="faq-toggle-icon" style="font-size: 1.3rem; color: #0599a8; font-weight: 800; margin-left: 12px;">+</span>
+              </button>
+              <div class="faq-answer-block" style="display: none; padding: 0 24px 20px; color: #475569; font-size: 0.95rem; line-height: 1.6; border-top: 1px solid #e2e8f0; background: white;">
+                Yes, you will master professional email etiquette, executive presentation design, and cross-cultural business communication.
+              </div>
+            </div>
+          
+            <div style="border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; background: #f8fafc;">
+              <button type="button" onclick="toggleFaq(this)" style="width: 100%; padding: 20px 24px; text-align: left; background: none; border: none; font-size: 1.05rem; font-weight: 700; color: #011731; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                <span>Do you conduct mock job interviews?</span>
+                <span class="faq-toggle-icon" style="font-size: 1.3rem; color: #0599a8; font-weight: 800; margin-left: 12px;">+</span>
+              </button>
+              <div class="faq-answer-block" style="display: none; padding: 0 24px 20px; color: #475569; font-size: 0.95rem; line-height: 1.6; border-top: 1px solid #e2e8f0; background: white;">
+                Yes, every student undergoes simulated HR and managerial interview rounds with feedback on tone, body language, and answer structuring.
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+  
+      <section class="section-related-academies" style="padding: 80px 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+        <div class="container">
+          <div class="section-header" style="text-align: center; margin-bottom: 44px;">
+            <span class="section-tag">EXPLORE SPECIALISATIONS</span>
+            <h2 class="section-title">Related Skill Academies</h2>
+            <p class="section-subtitle">Discover complementary academies to expand your professional career skill set.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+            
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 28px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <div style="font-size: 2.8rem; margin-bottom: 12px;">💼</div>
+                    <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Career & Freelancing Academy</h3>
+                    <p style="color: #64748b; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">Freelancing Mastery, Resume Building, LinkedIn Optimisation, Proposals & Agency Building.</p>
+                  </div>
+                  <a href="/academies/career-freelancing/" class="btn btn-outline btn-sm" style="text-align: center; justify-content: center;">Explore Academy →</a>
+                </div>
+              
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 28px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <div style="font-size: 2.8rem; margin-bottom: 12px;">📋</div>
+                    <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Office Productivity Academy</h3>
+                    <p style="color: #64748b; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">Advanced Excel, Word, PowerPoint, Google Workspace, Notion, ClickUp, Copilot & Tally with GST.</p>
+                  </div>
+                  <a href="/academies/office-productivity/" class="btn btn-outline btn-sm" style="text-align: center; justify-content: center;">Explore Academy →</a>
+                </div>
+              
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 28px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <div style="font-size: 2.8rem; margin-bottom: 12px;">📊</div>
+                    <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Digital Marketing Academy</h3>
+                    <p style="color: #64748b; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">Master SEO, Google Ads, Meta Ads, Social Media, Content & AI-powered marketing strategies with 100% practical training.</p>
+                  </div>
+                  <a href="/academies/digital-marketing/" class="btn btn-outline btn-sm" style="text-align: center; justify-content: center;">Explore Academy →</a>
+                </div>
+              
+                <div style="background: white; border: 1px solid #e2e8f0; padding: 28px; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+                  <div>
+                    <div style="font-size: 2.8rem; margin-bottom: 12px;">🎥</div>
+                    <h3 style="font-size: 1.2rem; font-weight: 700; color: #011731; margin-bottom: 8px;">Creator Academy</h3>
+                    <p style="color: #64748b; font-size: 0.88rem; line-height: 1.5; margin-bottom: 20px;">YouTube Growth, Short Video Strategy, Podcasting, Personal Branding & Monetising Content Creation.</p>
+                  </div>
+                  <a href="/academies/creator/" class="btn btn-outline btn-sm" style="text-align: center; justify-content: center;">Explore Academy →</a>
+                </div>
+              
+          </div>
+        </div>
+      </section>
+    
+    <section class="section-final-cta" style="padding: 80px 0; background: linear-gradient(135deg, #0599a8 0%, #011731 100%); color: white; text-align: center;">
+      <div class="container" style="max-width: 860px;">
+        <span class="section-tag" style="background: rgba(255,255,255,0.2); color: white;">START YOUR TRANSFORMATION TODAY</span>
+        <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; margin: 16px 0;">Ready to Become a Master in Communication Academy?</h2>
+        <p style="font-size: 1.1rem; color: #e2e8f0; margin-bottom: 32px; line-height: 1.6;">
+          Speak with our senior academic counsellors today to get custom roadmap guidance, scholarship details, and reserve your seat.
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; margin-bottom: 24px;">
+          <button type="button" class="btn btn-primary btn-lg" style="background: #75d766; color: #011731; font-weight: 800;" onclick="openEnrollmentModal('', 'Communication Academy')">Enroll Now →</button>
+          <button type="button" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);" onclick="openConsultationPopup()">Free Career Counselling</button>
+          <a href="tel:+919695904440" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);">📞 Call Now</a>
+          <a href="https://wa.me/919695904440?text=Hi%20Nova%20Skills%2C%20I%20want%20to%20know%20more%20about%20admission%20%26%20fees%20for%20Communication%20Academy." target="_blank" rel="noopener" class="btn btn-outline btn-lg" style="color: #75d766; border-color: #75d766;">💬 WhatsApp Us</a>
+        </div>
+
+        <div style="display: flex; gap: 20px; justify-content: center; font-size: 0.92rem; opacity: 0.9; flex-wrap: wrap;">
+          <a href="/courses" style="color: white; text-decoration: underline;">Explore All 109 Courses →</a>
+          <span>•</span>
+          <a href="/contact/" style="color: white; text-decoration: underline;">Contact Admissions →</a>
+        </div>
+      </div>
+    </section>
+  
+    </div>
+
+    <!-- 404 Academy Container (Populated via JS only on invalid route) -->
+    <section id="academy-404-container" class="academy-404-container" style="display:none;"></section>
 
   </main>
 

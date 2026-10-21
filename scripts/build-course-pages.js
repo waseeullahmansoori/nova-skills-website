@@ -161,8 +161,10 @@ function buildCourseSchema(course, canonicalUrl, detailData) {
     ],
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Hyderabad",
-      "addressRegion": "Telangana",
+      "streetAddress": "Nova Skills Institute Campus",
+      "addressLocality": "Siddharth Nagar",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "272153",
       "addressCountry": "IN"
     }
   };
