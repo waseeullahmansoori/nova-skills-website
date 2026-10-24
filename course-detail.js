@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const COURSE_ALIASES = {
+  'perf-marketing-pro': 'performance-marketing-specialist',
   'digital-marketing-pro': 'ecommerce-growth-marketing-specialist',
   'dm-master': 'dm-mastery',
   'full-stack': 'fullstack-foundation',
@@ -219,12 +220,20 @@ function populateCourseDetail(course) {
   if (price) price.textContent = `₹${(course.price || 0).toLocaleString('en-IN')}`;
 
   const origPrice = document.getElementById('detail-original-price');
-  if (origPrice) origPrice.textContent = `₹${(course.originalPrice || course.price * 2 || 0).toLocaleString('en-IN')}`;
-
   const discount = document.getElementById('detail-discount');
-  if (discount && course.originalPrice && course.originalPrice > course.price) {
-    const pct = Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100);
-    discount.textContent = `${pct}% OFF`;
+  if (course.originalPrice && course.originalPrice > course.price) {
+    if (origPrice) {
+      origPrice.textContent = `₹${course.originalPrice.toLocaleString('en-IN')}`;
+      origPrice.style.display = '';
+    }
+    if (discount) {
+      const pct = Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100);
+      discount.textContent = `${pct}% OFF`;
+      discount.style.display = '';
+    }
+  } else {
+    if (origPrice) origPrice.style.display = 'none';
+    if (discount) discount.style.display = 'none';
   }
 
   // Dynamic EMI with 18% GST
@@ -244,7 +253,14 @@ function populateCourseDetail(course) {
   const mobPrice = document.getElementById('mobile-price');
   if (mobPrice) mobPrice.textContent = `₹${(course.price || 0).toLocaleString('en-IN')}`;
   const mobOrig = document.getElementById('mobile-orig-price');
-  if (mobOrig) mobOrig.textContent = `₹${(course.originalPrice || 0).toLocaleString('en-IN')}`;
+  if (mobOrig) {
+    if (course.originalPrice && course.originalPrice > course.price) {
+      mobOrig.textContent = `₹${course.originalPrice.toLocaleString('en-IN')}`;
+      mobOrig.style.display = '';
+    } else {
+      mobOrig.style.display = 'none';
+    }
+  }
 
   // Cert Course Display Name
   const certDisplay = document.getElementById('cert-course-display');
