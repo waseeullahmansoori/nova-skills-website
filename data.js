@@ -102,14 +102,14 @@ const NS_COURSES = [
     "programLevel": "Professional Program",
     "icon": "📊",
     "color": "linear-gradient(135deg, #FF6B00, #FF9A3C)",
-    "name": "AI Digital Marketing Professional",
-    "shortDesc": "Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
-    "fullDesc": "Keep as the primary 3-4 month professional standalone track. Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
-    "duration": "4 Months",
-    "durationMonths": 4,
+    "name": "AI Digital Marketing Specialist",
+    "shortDesc": "Entry-level, AI-assisted digital marketing execution program covering SEO, Google Ads, Meta Ads, social content, and analytics.",
+    "fullDesc": "Entry-level, AI-assisted digital marketing execution program. Master Google Ads, Meta Ads Manager, SEO, social content, landing pages, and GA4 analytics with 120 guided hours of practical training.",
+    "duration": "3 Months",
+    "durationMonths": 3,
     "mode": "Hybrid",
     "level": "Beginner",
-    "price": 17499,
+    "price": 24900,
     "originalPrice": 49999,
     "rating": 4.8,
     "reviews": 312,
@@ -120,37 +120,52 @@ const NS_COURSES = [
     "tools": [
       "Google Ads",
       "Meta Ads Manager",
-      "GA4",
-      "SEMrush",
+      "Google Analytics 4",
+      "Google Search Console",
       "Canva",
       "ChatGPT",
-      "Looker Studio"
+      "Google Gemini"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Digital Marketing Strategy & AI",
+        "title": "Marketing Fundamentals & Customer Research",
         "lessons": 4
       },
       {
         "module": "Module 02",
-        "title": "Search Engine Optimization (SEO)",
-        "lessons": 4
+        "title": "SEO, Local SEO & AI Search Fundamentals",
+        "lessons": 5
       },
       {
         "module": "Module 03",
-        "title": "Paid Search (Google Ads)",
-        "lessons": 4
+        "title": "Social Media Marketing, Content & AI Creatives",
+        "lessons": 5
       },
       {
         "module": "Module 04",
-        "title": "Paid Social (Meta Ads)",
-        "lessons": 4
+        "title": "Google Ads & Meta Ads Fundamentals",
+        "lessons": 5
       },
       {
         "module": "Module 05",
-        "title": "Analytics & Reporting",
+        "title": "Website, Landing Pages & Conversion Basics",
+        "lessons": 5
+      },
+      {
+        "module": "Module 06",
+        "title": "GA4, Analytics, Conversion Tracking & Reporting",
+        "lessons": 5
+      },
+      {
+        "module": "Module 07",
+        "title": "Email Marketing & Basic Automation",
         "lessons": 4
+      },
+      {
+        "module": "Module 08",
+        "title": "Industry Capstone, Portfolio & Final Assessment",
+        "lessons": 5
       }
     ],
     "tags": [
@@ -158,8 +173,8 @@ const NS_COURSES = [
       "placement"
     ],
     "featured": true,
-    "title": "AI Digital Marketing Professional",
-    "description": "Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
+    "title": "AI Digital Marketing Specialist",
+    "description": "Entry-level, AI-assisted digital marketing execution program covering SEO, Google Ads, Meta Ads, social content, and analytics.",
     "projects": 10,
     "category": "Digital Marketing Academy",
     "status": "active",
@@ -168,7 +183,7 @@ const NS_COURSES = [
     "courseRole": "Professional Skill",
     "learningHours": 120,
     "futureReviewStatus": "FAST-CHANGING",
-    "positioning": "Keep as the primary 3-4 month professional standalone track."
+    "positioning": "Entry-level, AI-assisted digital marketing execution program for career-track agency and in-house roles."
   },
   {
     "id": "perf-marketing-pro",
@@ -7459,14 +7474,14 @@ const NS_ACADEMIES = [
         "programLevel": "Professional Program",
         "icon": "📊",
         "color": "linear-gradient(135deg, #FF6B00, #FF9A3C)",
-        "name": "AI Digital Marketing Professional",
-        "shortDesc": "Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
-        "fullDesc": "Keep as the primary 3-4 month professional standalone track. Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
-        "duration": "4 Months",
-        "durationMonths": 4,
+        "name": "AI Digital Marketing Specialist",
+        "shortDesc": "Entry-level, AI-assisted digital marketing execution program covering SEO, Google Ads, Meta Ads, social content, and analytics.",
+        "fullDesc": "Entry-level, AI-assisted digital marketing execution program. Master Google Ads, Meta Ads Manager, SEO, social content, landing pages, and GA4 analytics with 120 guided hours of practical training.",
+        "duration": "3 Months",
+        "durationMonths": 3,
         "mode": "Hybrid",
         "level": "Beginner",
-        "price": 17499,
+        "price": 24900,
         "originalPrice": 49999,
         "rating": 4.8,
         "reviews": 312,
@@ -7477,37 +7492,52 @@ const NS_ACADEMIES = [
         "tools": [
           "Google Ads",
           "Meta Ads Manager",
-          "GA4",
-          "SEMrush",
+          "Google Analytics 4",
+          "Google Search Console",
           "Canva",
           "ChatGPT",
-          "Looker Studio"
+          "Google Gemini"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Digital Marketing Strategy & AI",
+            "title": "Marketing Fundamentals & Customer Research",
             "lessons": 4
           },
           {
             "module": "Module 02",
-            "title": "Search Engine Optimization (SEO)",
-            "lessons": 4
+            "title": "SEO, Local SEO & AI Search Fundamentals",
+            "lessons": 5
           },
           {
             "module": "Module 03",
-            "title": "Paid Search (Google Ads)",
-            "lessons": 4
+            "title": "Social Media Marketing, Content & AI Creatives",
+            "lessons": 5
           },
           {
             "module": "Module 04",
-            "title": "Paid Social (Meta Ads)",
-            "lessons": 4
+            "title": "Google Ads & Meta Ads Fundamentals",
+            "lessons": 5
           },
           {
             "module": "Module 05",
-            "title": "Analytics & Reporting",
+            "title": "Website, Landing Pages & Conversion Basics",
+            "lessons": 5
+          },
+          {
+            "module": "Module 06",
+            "title": "GA4, Analytics, Conversion Tracking & Reporting",
+            "lessons": 5
+          },
+          {
+            "module": "Module 07",
+            "title": "Email Marketing & Basic Automation",
             "lessons": 4
+          },
+          {
+            "module": "Module 08",
+            "title": "Industry Capstone, Portfolio & Final Assessment",
+            "lessons": 5
           }
         ],
         "tags": [
@@ -7515,8 +7545,8 @@ const NS_ACADEMIES = [
           "placement"
         ],
         "featured": true,
-        "title": "AI Digital Marketing Professional",
-        "description": "Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
+        "title": "AI Digital Marketing Specialist",
+        "description": "Entry-level, AI-assisted digital marketing execution program covering SEO, Google Ads, Meta Ads, social content, and analytics.",
         "projects": 10,
         "category": "Digital Marketing Academy",
         "status": "active",
@@ -7525,7 +7555,7 @@ const NS_ACADEMIES = [
         "courseRole": "Professional Skill",
         "learningHours": 120,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Keep as the primary 3-4 month professional standalone track."
+        "positioning": "Entry-level, AI-assisted digital marketing execution program for career-track agency and in-house roles."
       },
       {
         "id": "perf-marketing-pro",
