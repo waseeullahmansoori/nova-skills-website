@@ -13,14 +13,14 @@ const NS_COURSES = [
     "programLevel": "Career Program",
     "icon": "📊",
     "color": "linear-gradient(135deg, #FF6B00, #8B5CF6)",
-    "name": "AI Digital Marketing Master",
-    "shortDesc": "Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
-    "fullDesc": "Flagship Career Program. Modernize into modern Growth Marketing & GEO. Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
+    "name": "AI Digital Marketing Strategist",
+    "shortDesc": "Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.",
+    "fullDesc": "Flagship 6-month career mastery program. Master integrated digital marketing strategy, full-funnel customer acquisition, advanced SEO/GEO, Google & Meta Ads, conversion rate optimization, analytics attribution, and CRM lifecycle automation with 240 guided instructional hours.",
     "duration": "6 Months",
     "durationMonths": 6,
     "mode": "Hybrid",
-    "level": "Advanced",
-    "price": 31499,
+    "level": "Beginner to Advanced",
+    "price": 44900,
     "originalPrice": 89999,
     "rating": 4.9,
     "reviews": 198,
@@ -31,49 +31,75 @@ const NS_COURSES = [
     "tools": [
       "Google Ads",
       "Meta Ads Manager",
-      "GA4",
+      "Google Analytics 4",
+      "Google Tag Manager",
       "Google Search Console",
-      "SEMrush",
-      "HubSpot",
-      "n8n",
-      "ChatGPT",
-      "Claude",
-      "Canva",
       "Looker Studio",
-      "Mailchimp",
-      "Shopify",
-      "WordPress"
+      "Semrush",
+      "Screaming Frog",
+      "HubSpot CRM",
+      "n8n",
+      "Brevo",
+      "WordPress",
+      "ChatGPT",
+      "Google Gemini",
+      "Canva"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "SEO & Keyword Strategy",
+        "title": "Business & Marketing Strategy",
         "lessons": 4
       },
       {
         "module": "Module 02",
-        "title": "Google Ads Campaign Architecture",
-        "lessons": 4
+        "title": "Advanced SEO, GEO & Search Intelligence",
+        "lessons": 6
       },
       {
         "module": "Module 03",
-        "title": "Meta Ads Targeting & Creative",
-        "lessons": 4
+        "title": "Content, Social & Brand Strategy",
+        "lessons": 5
       },
       {
         "module": "Module 04",
-        "title": "Content Marketing & Funnels",
-        "lessons": 4
+        "title": "Google Ads Strategy",
+        "lessons": 6
       },
       {
         "module": "Module 05",
-        "title": "Analytics & Conversion Tracking",
-        "lessons": 4
+        "title": "Meta & Multi-Channel Advertising",
+        "lessons": 5
       },
       {
         "module": "Module 06",
-        "title": "AI-Powered Marketing Automation",
+        "title": "Marketing Analytics & Attribution",
+        "lessons": 5
+      },
+      {
+        "module": "Module 07",
+        "title": "Conversion Rate Optimization (CRO)",
         "lessons": 4
+      },
+      {
+        "module": "Module 08",
+        "title": "CRM, Lifecycle & Automation",
+        "lessons": 5
+      },
+      {
+        "module": "Module 09",
+        "title": "AI Marketing Operations",
+        "lessons": 4
+      },
+      {
+        "module": "Module 10",
+        "title": "Budgeting, Growth & Agency Operations",
+        "lessons": 3
+      },
+      {
+        "module": "Module 11",
+        "title": "Integrated Capstone & Assessment",
+        "lessons": 6
       }
     ],
     "tags": [
@@ -82,8 +108,8 @@ const NS_COURSES = [
       "placement"
     ],
     "featured": true,
-    "title": "AI Digital Marketing Master",
-    "description": "Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
+    "title": "AI Digital Marketing Strategist",
+    "description": "Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.",
     "projects": 20,
     "category": "Digital Marketing Academy",
     "status": "active",
@@ -92,7 +118,7 @@ const NS_COURSES = [
     "courseRole": "Career/Monetization",
     "learningHours": 240,
     "futureReviewStatus": "FAST-CHANGING",
-    "positioning": "Flagship Career Program. Modernize into modern Growth Marketing & GEO."
+    "positioning": "Industry-oriented, project-based digital marketing career mastery."
   },
   {
     "id": "dm-professional",
@@ -7385,14 +7411,14 @@ const NS_ACADEMIES = [
         "programLevel": "Career Program",
         "icon": "📊",
         "color": "linear-gradient(135deg, #FF6B00, #8B5CF6)",
-        "name": "AI Digital Marketing Master",
-        "shortDesc": "Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
-        "fullDesc": "Flagship Career Program. Modernize into modern Growth Marketing & GEO. Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
+        "name": "AI Digital Marketing Strategist",
+        "shortDesc": "Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.",
+        "fullDesc": "Flagship 6-month career mastery program. Master integrated digital marketing strategy, full-funnel customer acquisition, advanced SEO/GEO, Google & Meta Ads, conversion rate optimization, analytics attribution, and CRM lifecycle automation with 240 guided instructional hours.",
         "duration": "6 Months",
         "durationMonths": 6,
         "mode": "Hybrid",
-        "level": "Advanced",
-        "price": 31499,
+        "level": "Beginner to Advanced",
+        "price": 44900,
         "originalPrice": 89999,
         "rating": 4.9,
         "reviews": 198,
@@ -7403,49 +7429,75 @@ const NS_ACADEMIES = [
         "tools": [
           "Google Ads",
           "Meta Ads Manager",
-          "GA4",
+          "Google Analytics 4",
+          "Google Tag Manager",
           "Google Search Console",
-          "SEMrush",
-          "HubSpot",
-          "n8n",
-          "ChatGPT",
-          "Claude",
-          "Canva",
           "Looker Studio",
-          "Mailchimp",
-          "Shopify",
-          "WordPress"
+          "Semrush",
+          "Screaming Frog",
+          "HubSpot CRM",
+          "n8n",
+          "Brevo",
+          "WordPress",
+          "ChatGPT",
+          "Google Gemini",
+          "Canva"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "SEO & Keyword Strategy",
+            "title": "Business & Marketing Strategy",
             "lessons": 4
           },
           {
             "module": "Module 02",
-            "title": "Google Ads Campaign Architecture",
-            "lessons": 4
+            "title": "Advanced SEO, GEO & Search Intelligence",
+            "lessons": 6
           },
           {
             "module": "Module 03",
-            "title": "Meta Ads Targeting & Creative",
-            "lessons": 4
+            "title": "Content, Social & Brand Strategy",
+            "lessons": 5
           },
           {
             "module": "Module 04",
-            "title": "Content Marketing & Funnels",
-            "lessons": 4
+            "title": "Google Ads Strategy",
+            "lessons": 6
           },
           {
             "module": "Module 05",
-            "title": "Analytics & Conversion Tracking",
-            "lessons": 4
+            "title": "Meta & Multi-Channel Advertising",
+            "lessons": 5
           },
           {
             "module": "Module 06",
-            "title": "AI-Powered Marketing Automation",
+            "title": "Marketing Analytics & Attribution",
+            "lessons": 5
+          },
+          {
+            "module": "Module 07",
+            "title": "Conversion Rate Optimization (CRO)",
             "lessons": 4
+          },
+          {
+            "module": "Module 08",
+            "title": "CRM, Lifecycle & Automation",
+            "lessons": 5
+          },
+          {
+            "module": "Module 09",
+            "title": "AI Marketing Operations",
+            "lessons": 4
+          },
+          {
+            "module": "Module 10",
+            "title": "Budgeting, Growth & Agency Operations",
+            "lessons": 3
+          },
+          {
+            "module": "Module 11",
+            "title": "Integrated Capstone & Assessment",
+            "lessons": 6
           }
         ],
         "tags": [
@@ -7454,8 +7506,8 @@ const NS_ACADEMIES = [
           "placement"
         ],
         "featured": true,
-        "title": "AI Digital Marketing Master",
-        "description": "Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
+        "title": "AI Digital Marketing Strategist",
+        "description": "Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.",
         "projects": 20,
         "category": "Digital Marketing Academy",
         "status": "active",
@@ -7464,7 +7516,7 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 240,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Flagship Career Program. Modernize into modern Growth Marketing & GEO."
+        "positioning": "Industry-oriented, project-based digital marketing career mastery."
       },
       {
         "id": "dm-professional",
