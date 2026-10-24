@@ -42,6 +42,8 @@ const BATCHES = [
 ];
 
 const COURSE_ALIASES = {
+  'digital-marketing-pro': 'ecommerce-growth-marketing-specialist',
+  'perf-marketing-pro': 'performance-marketing-specialist',
   'dm-master': 'dm-mastery',
   'full-stack': 'fullstack-foundation',
   'design-mastery': 'creative-design',

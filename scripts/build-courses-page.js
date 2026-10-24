@@ -172,7 +172,7 @@ function updateCoursesPage() {
 
   // 4. Pre-render course cards inside #courses-grid-page
   const cardsHtml = NS_COURSES.map(c => buildCourseCardHTML(c)).join('\n');
-  const gridRegex = /<div class="courses-grid-page" id="courses-grid-page">[\s\S]*?<\/div>/;
+  const gridRegex = /<div class="courses-grid-page" id="courses-grid-page">[\s\S]*?(?=\s*<!-- No results container -->)/;
   const replacementGrid = `<div class="courses-grid-page" id="courses-grid-page">\n${cardsHtml}\n        </div>`;
 
   if (!gridRegex.test(html)) {

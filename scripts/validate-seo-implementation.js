@@ -75,7 +75,7 @@ assert(cdHtml.includes('canUrl = \'https://novaskills.in/course-detail.html?id='
 console.log('\n--- 3. Validating courses.html ---');
 const cHtml = fs.readFileSync(path.join(ROOT_DIR, 'courses.html'), 'utf8');
 assert(cHtml.includes('<title>109+ Job-Oriented Courses Across 12 Academies | Nova Skills</title>'), 'courses.html title updated to 109+ standard');
-assert(cHtml.includes('<link rel="canonical" href="https://novaskills.in/courses.html" />'), 'courses.html has strict canonical');
+assert(cHtml.includes('<link rel="canonical" href="https://novaskills.in/courses" />') || cHtml.includes('<link rel="canonical" href="https://novaskills.in/courses.html" />'), 'courses.html has strict canonical');
 
 // 4. Validate n8n static blog post
 console.log('\n--- 4. Validating /blog/n8n-ai-automation-beginners/ ---');

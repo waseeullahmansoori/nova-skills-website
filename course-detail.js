@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const COURSE_ALIASES = {
+  'digital-marketing-pro': 'ecommerce-growth-marketing-specialist',
+  'perf-marketing-pro': 'performance-marketing-specialist',
   'dm-master': 'dm-mastery',
   'full-stack': 'fullstack-foundation',
   'design-mastery': 'creative-design',
@@ -284,24 +286,20 @@ function populateCourseDetail(course) {
   if (price) price.textContent = `₹${(course.price || 0).toLocaleString('en-IN')}`;
 
   const origPrice = document.getElementById('detail-original-price');
-  if (origPrice) {
-    if (course.originalPrice) {
-      origPrice.textContent = `₹${course.originalPrice.toLocaleString('en-IN')}`;
-      origPrice.style.display = '';
-    } else {
-      origPrice.style.display = 'none';
-    }
-  }
-
   const discount = document.getElementById('detail-discount');
-  if (discount) {
-    if (course.originalPrice && course.originalPrice > course.price) {
-      const pct = Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100);
-      discount.textContent = `${pct}% OFF`;
-      discount.style.display = '';
-    } else {
-      discount.style.display = 'none';
+  if (course.originalPrice && course.originalPrice > course.price) {
+    if (origPrice) {
+      origPrice.textContent = '₹' + course.originalPrice.toLocaleString('en-IN');
+      origPrice.style.display = '';
     }
+    if (discount) {
+      const pct = Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100);
+      discount.textContent = pct + '% OFF';
+      discount.style.display = '';
+    }
+  } else {
+    if (origPrice) origPrice.style.display = 'none';
+    if (discount) discount.style.display = 'none';
   }
 
   // Dynamic EMI with 18% GST
@@ -324,15 +322,14 @@ function populateCourseDetail(course) {
   if (mobPrice) mobPrice.textContent = `₹${(course.price || 0).toLocaleString('en-IN')}`;
   const mobOrig = document.getElementById('mobile-orig-price');
   if (mobOrig) {
-    if (course.originalPrice) {
-      mobOrig.textContent = `₹${course.originalPrice.toLocaleString('en-IN')}`;
+    if (course.originalPrice && course.originalPrice > course.price) {
+      mobOrig.textContent = '₹' + course.originalPrice.toLocaleString('en-IN');
       mobOrig.style.display = '';
     } else {
       mobOrig.style.display = 'none';
     }
   }
 
-  // Cert Course Display Name
   const certDisplay = document.getElementById('cert-course-display');
   if (certDisplay) certDisplay.textContent = course.name;
 

@@ -1,8 +1,6 @@
-/**
- * Nova Skills - Global Course, Academy & Blog Data Architecture
- * Canonical Data Source: 109 Courses across 12 Academies & Published Blog Ecosystem
- * ISO 9001:2015 Verified Curriculum Standard
- */
+// ============================================================
+// NOVA SKILLS — CANONICAL COURSE DATA REGISTRY (V1.2.0)
+// ============================================================
 
 const NS_COURSES = [
   {
@@ -13,14 +11,14 @@ const NS_COURSES = [
     "programLevel": "Career Program",
     "icon": "📊",
     "color": "linear-gradient(135deg, #FF6B00, #8B5CF6)",
-    "name": "AI Digital Marketing Master",
-    "shortDesc": "Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
-    "fullDesc": "Flagship Career Program. Modernize into modern Growth Marketing & GEO. Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
+    "name": "AI Digital Marketing Strategist",
+    "shortDesc": "Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.",
+    "fullDesc": "Flagship 6-month career mastery program. Master integrated digital marketing strategy, full-funnel customer acquisition, advanced SEO/GEO, Google & Meta Ads, conversion rate optimization, analytics attribution, and CRM lifecycle automation with 240 guided instructional hours.",
     "duration": "6 Months",
     "durationMonths": 6,
     "mode": "Hybrid",
-    "level": "Advanced",
-    "price": 31499,
+    "level": "Beginner to Advanced",
+    "price": 44900,
     "originalPrice": 89999,
     "rating": 4.9,
     "reviews": 198,
@@ -31,49 +29,75 @@ const NS_COURSES = [
     "tools": [
       "Google Ads",
       "Meta Ads Manager",
-      "GA4",
+      "Google Analytics 4",
+      "Google Tag Manager",
       "Google Search Console",
-      "SEMrush",
-      "HubSpot",
-      "n8n",
-      "ChatGPT",
-      "Claude",
-      "Canva",
       "Looker Studio",
-      "Mailchimp",
-      "Shopify",
-      "WordPress"
+      "Semrush",
+      "Screaming Frog",
+      "HubSpot CRM",
+      "n8n",
+      "Brevo",
+      "WordPress",
+      "ChatGPT",
+      "Google Gemini",
+      "Canva"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "SEO & Keyword Strategy",
+        "title": "Business & Marketing Strategy",
         "lessons": 4
       },
       {
         "module": "Module 02",
-        "title": "Google Ads Campaign Architecture",
-        "lessons": 4
+        "title": "Advanced SEO, GEO & Search Intelligence",
+        "lessons": 6
       },
       {
         "module": "Module 03",
-        "title": "Meta Ads Targeting & Creative",
-        "lessons": 4
+        "title": "Content, Social & Brand Strategy",
+        "lessons": 5
       },
       {
         "module": "Module 04",
-        "title": "Content Marketing & Funnels",
-        "lessons": 4
+        "title": "Google Ads Strategy",
+        "lessons": 6
       },
       {
         "module": "Module 05",
-        "title": "Analytics & Conversion Tracking",
-        "lessons": 4
+        "title": "Meta & Multi-Channel Advertising",
+        "lessons": 5
       },
       {
         "module": "Module 06",
-        "title": "AI-Powered Marketing Automation",
+        "title": "Marketing Analytics & Attribution",
+        "lessons": 5
+      },
+      {
+        "module": "Module 07",
+        "title": "Conversion Rate Optimization (CRO)",
         "lessons": 4
+      },
+      {
+        "module": "Module 08",
+        "title": "CRM, Lifecycle & Automation",
+        "lessons": 5
+      },
+      {
+        "module": "Module 09",
+        "title": "AI Marketing Operations",
+        "lessons": 4
+      },
+      {
+        "module": "Module 10",
+        "title": "Budgeting, Growth & Agency Operations",
+        "lessons": 3
+      },
+      {
+        "module": "Module 11",
+        "title": "Integrated Capstone & Assessment",
+        "lessons": 6
       }
     ],
     "tags": [
@@ -82,8 +106,8 @@ const NS_COURSES = [
       "placement"
     ],
     "featured": true,
-    "title": "AI Digital Marketing Master",
-    "description": "Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
+    "title": "AI Digital Marketing Strategist",
+    "description": "Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.",
     "projects": 20,
     "category": "Digital Marketing Academy",
     "status": "active",
@@ -92,7 +116,7 @@ const NS_COURSES = [
     "courseRole": "Career/Monetization",
     "learningHours": 240,
     "futureReviewStatus": "FAST-CHANGING",
-    "positioning": "Flagship Career Program. Modernize into modern Growth Marketing & GEO."
+    "positioning": "Industry-oriented, project-based digital marketing career mastery."
   },
   {
     "id": "dm-professional",
@@ -102,14 +126,14 @@ const NS_COURSES = [
     "programLevel": "Professional Program",
     "icon": "📊",
     "color": "linear-gradient(135deg, #FF6B00, #FF9A3C)",
-    "name": "AI Digital Marketing Professional",
-    "shortDesc": "Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
-    "fullDesc": "Keep as the primary 3-4 month professional standalone track. Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
-    "duration": "4 Months",
-    "durationMonths": 4,
+    "name": "AI Digital Marketing Specialist",
+    "shortDesc": "Entry-level, AI-assisted digital marketing execution program covering SEO, Google Ads, Meta Ads, social content, and analytics.",
+    "fullDesc": "Entry-level, AI-assisted digital marketing execution program. Master Google Ads, Meta Ads Manager, SEO, social content, landing pages, and GA4 analytics with 120 guided hours of practical training.",
+    "duration": "3 Months",
+    "durationMonths": 3,
     "mode": "Hybrid",
     "level": "Beginner",
-    "price": 17499,
+    "price": 24900,
     "originalPrice": 49999,
     "rating": 4.8,
     "reviews": 312,
@@ -120,37 +144,52 @@ const NS_COURSES = [
     "tools": [
       "Google Ads",
       "Meta Ads Manager",
-      "GA4",
-      "SEMrush",
+      "Google Analytics 4",
+      "Google Search Console",
       "Canva",
       "ChatGPT",
-      "Looker Studio"
+      "Google Gemini"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Digital Marketing Strategy & AI",
+        "title": "Marketing Fundamentals & Customer Research",
         "lessons": 4
       },
       {
         "module": "Module 02",
-        "title": "Search Engine Optimization (SEO)",
-        "lessons": 4
+        "title": "SEO, Local SEO & AI Search Fundamentals",
+        "lessons": 5
       },
       {
         "module": "Module 03",
-        "title": "Paid Search (Google Ads)",
-        "lessons": 4
+        "title": "Social Media Marketing, Content & AI Creatives",
+        "lessons": 5
       },
       {
         "module": "Module 04",
-        "title": "Paid Social (Meta Ads)",
-        "lessons": 4
+        "title": "Google Ads & Meta Ads Fundamentals",
+        "lessons": 5
       },
       {
         "module": "Module 05",
-        "title": "Analytics & Reporting",
+        "title": "Website, Landing Pages & Conversion Basics",
+        "lessons": 5
+      },
+      {
+        "module": "Module 06",
+        "title": "GA4, Analytics, Conversion Tracking & Reporting",
+        "lessons": 5
+      },
+      {
+        "module": "Module 07",
+        "title": "Email Marketing & Basic Automation",
         "lessons": 4
+      },
+      {
+        "module": "Module 08",
+        "title": "Industry Capstone, Portfolio & Final Assessment",
+        "lessons": 5
       }
     ],
     "tags": [
@@ -158,8 +197,8 @@ const NS_COURSES = [
       "placement"
     ],
     "featured": true,
-    "title": "AI Digital Marketing Professional",
-    "description": "Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
+    "title": "AI Digital Marketing Specialist",
+    "description": "Entry-level, AI-assisted digital marketing execution program covering SEO, Google Ads, Meta Ads, social content, and analytics.",
     "projects": 10,
     "category": "Digital Marketing Academy",
     "status": "active",
@@ -168,25 +207,25 @@ const NS_COURSES = [
     "courseRole": "Professional Skill",
     "learningHours": 120,
     "futureReviewStatus": "FAST-CHANGING",
-    "positioning": "Keep as the primary 3-4 month professional standalone track."
+    "positioning": "Entry-level, AI-assisted digital marketing execution program for career-track agency and in-house roles."
   },
   {
-    "id": "perf-marketing-pro",
-    "slug": "performance-marketing-professional",
+    "id": "performance-marketing-specialist",
+    "slug": "performance-marketing-specialist",
     "academy": "Digital Marketing Academy",
     "academyId": "digital-marketing",
     "programLevel": "Professional Program",
     "icon": "📊",
     "color": "linear-gradient(135deg, #FF6B00, #EF4444)",
-    "name": "Performance Marketing Professional",
+    "name": "Performance Marketing Specialist",
     "shortDesc": "Scale paid acquisition campaigns, optimize ROAS, and master media buying across channels.",
     "fullDesc": "Position as high-value post-foundation specialization. Scale paid acquisition campaigns, optimize ROAS, and master media buying across channels.",
-    "duration": "3 Months",
-    "durationMonths": 3,
+    "duration": "4 Months",
+    "durationMonths": 4,
     "mode": "Online",
     "level": "Intermediate",
-    "price": 12999,
-    "originalPrice": 34999,
+    "price": 34900,
+    "originalPrice": 34900,
     "rating": 4.8,
     "reviews": 142,
     "students": 640,
@@ -195,32 +234,60 @@ const NS_COURSES = [
     "placementSupport": true,
     "tools": [
       "Google Ads",
+      "Google Ads Editor",
+      "Google Ads Data Manager",
       "Meta Ads Manager",
-      "GA4",
-      "SEMrush",
-      "Canva",
-      "ChatGPT",
-      "Looker Studio"
+      "Meta Events Manager",
+      "Google Analytics 4",
+      "Google Tag Manager",
+      "Google Merchant Center",
+      "Looker Studio",
+      "Google Sheets"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Tracking & Infrastructure",
+        "title": "Performance Marketing Fundamentals",
         "lessons": 4
       },
       {
         "module": "Module 02",
-        "title": "Advanced Google Ads",
-        "lessons": 4
+        "title": "Google Search Ads & AI Max",
+        "lessons": 6
       },
       {
         "module": "Module 03",
-        "title": "Advanced Meta Ads",
+        "title": "Shopping, Performance Max, Demand Gen & YouTube",
         "lessons": 4
       },
       {
         "module": "Module 04",
-        "title": "Conversion Optimization & Analytics",
+        "title": "Meta Ads Mastery",
+        "lessons": 6
+      },
+      {
+        "module": "Module 05",
+        "title": "Tracking & Conversion Engineering",
+        "lessons": 6
+      },
+      {
+        "module": "Module 06",
+        "title": "Landing Pages & CRO",
+        "lessons": 4
+      },
+      {
+        "module": "Module 07",
+        "title": "Campaign Optimization, Reporting & Budgeting",
+        "lessons": 4
+      },
+      {
+        "module": "Module 08",
+        "title": "AI Advertising & Media Operations",
+        "lessons": 2
+      },
+      {
+        "module": "Module 09",
+        "title": "Paid Media Industry Capstone",
         "lessons": 4
       }
     ],
@@ -229,97 +296,121 @@ const NS_COURSES = [
       "placement"
     ],
     "featured": false,
-    "title": "Performance Marketing Professional",
+    "title": "Performance Marketing Specialist",
     "description": "Scale paid acquisition campaigns, optimize ROAS, and master media buying across channels.",
     "projects": 8,
     "category": "Digital Marketing Academy",
     "status": "active",
-    "url": "/course-detail.html?id=perf-marketing-pro",
+    "url": "/course-detail.html?id=performance-marketing-specialist",
     "courseType": "SPECIALIZATION",
     "courseRole": "Advanced Skill",
-    "learningHours": 80,
+    "learningHours": 160,
     "futureReviewStatus": "FAST-CHANGING",
     "positioning": "Position as high-value post-foundation specialization."
   },
   {
-    "id": "digital-marketing-pro",
-    "slug": "digital-marketing-professional",
+    "id": "ecommerce-growth-marketing-specialist",
+    "slug": "ecommerce-growth-marketing-specialist",
     "academy": "Digital Marketing Academy",
     "academyId": "digital-marketing",
-    "programLevel": "Professional Program",
-    "icon": "📊",
-    "color": "linear-gradient(135deg, #FF6B00, #F59E0B)",
-    "name": "Advanced Digital Marketing Professional",
-    "shortDesc": "3-month professional course covering SEO, SEM, SMM, and AI Content Creation.",
-    "fullDesc": "Consolidate into single dm-professional track. 3-month professional course covering SEO, SEM, SMM, and AI Content Creation.",
-    "duration": "3 Months",
-    "durationMonths": 3,
-    "mode": "Online",
-    "level": "Beginner to Professional",
-    "price": 11999,
-    "originalPrice": 29999,
-    "rating": 4.7,
-    "reviews": 165,
-    "students": 710,
-    "liveProjects": 2,
+    "programLevel": "Professional Specialization",
+    "icon": "🛍️",
+    "color": "linear-gradient(135deg, #10B981, #059669)",
+    "name": "E-Commerce & Growth Marketing Specialist",
+    "shortDesc": "Specialized 4-month program in e-commerce growth, Shopify store optimization, Google Merchant Center, Shopping & Performance Max ads, Meta Catalog ads, CRO, and Klaviyo lifecycle retention.",
+    "fullDesc": "Professional 4-month e-commerce specialization. Master Shopify architecture, Google Merchant Center feed diagnostics, Google Shopping & Performance Max campaigns, Meta Advantage+ Catalog ads, PDP conversion optimization, and Klaviyo lifecycle retention with 160 guided training hours.",
+    "duration": "4 Months",
+    "durationMonths": 4,
+    "mode": "Hybrid",
+    "level": "Intermediate",
+    "price": 34900,
+    "originalPrice": 34900,
+    "rating": 4.8,
+    "reviews": 142,
+    "students": 680,
+    "liveProjects": 8,
     "certificate": true,
     "placementSupport": true,
     "tools": [
+      "Shopify",
+      "Google Merchant Center",
       "Google Ads",
       "Meta Ads Manager",
-      "GA4",
-      "SEMrush",
-      "Canva",
-      "ChatGPT",
-      "Looker Studio"
+      "Meta Commerce Manager",
+      "Google Analytics 4",
+      "Google Tag Manager",
+      "Klaviyo",
+      "Microsoft Clarity"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Digital Marketing Foundations, Personas & Strategy",
+        "title": "E-Commerce Business Models, Unit Economics & Customer Journey",
         "lessons": 4
       },
       {
         "module": "Module 02",
-        "title": "Content Strategy, Canva Design & Organic Social Media",
+        "title": "Shopify Store Architecture, Product Merchandising & Conversion Design",
         "lessons": 5
       },
       {
         "module": "Module 03",
-        "title": "Local Business Presence, Google Business Profile & Website UX",
-        "lessons": 4
+        "title": "Google Merchant Center Architecture, Feed Optimization & Diagnostics",
+        "lessons": 5
       },
       {
         "module": "Module 04",
-        "title": "Introductory Paid Advertising: Google Search & Meta Ads",
+        "title": "E-Commerce SEO, Category Architecture & Generative Search Visibility",
         "lessons": 4
       },
       {
         "module": "Module 05",
-        "title": "Lead Capture, Customer Follow-Up & AI Productivity",
-        "lessons": 4
+        "title": "Google Ads for E-Commerce: Shopping, Performance Max & Demand Gen",
+        "lessons": 6
       },
       {
         "module": "Module 06",
-        "title": "Campaign Measurement, GA4 Analytics & Performance Reporting",
+        "title": "Meta Ads for E-Commerce: Catalog Ads, Advantage+ & Creative Iteration",
         "lessons": 4
+      },
+      {
+        "module": "Module 07",
+        "title": "Conversion Rate Optimization, PDP Architecture & Checkout Friction",
+        "lessons": 5
+      },
+      {
+        "module": "Module 08",
+        "title": "E-Commerce Retention, Lifecycle Automation & Email/SMS (Klaviyo/Brevo)",
+        "lessons": 4
+      },
+      {
+        "module": "Module 09",
+        "title": "E-Commerce Analytics, GA4 E-Commerce Schema & Profit-Aware Reporting",
+        "lessons": 3
+      },
+      {
+        "module": "Module 10",
+        "title": "Capstone E-Commerce Growth Sprint & Client Pitch",
+        "lessons": 5
       }
     ],
     "tags": [
-      "popular"
+      "popular",
+      "ecommerce",
+      "specialization"
     ],
     "featured": false,
-    "title": "Advanced Digital Marketing Professional",
-    "description": "3-month professional course covering SEO, SEM, SMM, and AI Content Creation.",
-    "projects": 6,
+    "title": "E-Commerce & Growth Marketing Specialist",
+    "description": "Specialized 4-month program in e-commerce growth, Shopify store optimization, Google Merchant Center, Shopping & Performance Max ads, Meta Catalog ads, CRO, and Klaviyo lifecycle retention.",
+    "projects": 8,
     "category": "Digital Marketing Academy",
     "status": "active",
-    "url": "/course-detail.html?id=digital-marketing-pro",
-    "courseType": "MERGE",
-    "courseRole": "Professional Skill",
-    "learningHours": 88,
+    "url": "/course-detail.html?id=ecommerce-growth-marketing-specialist",
+    "courseType": "SPECIALIZATION",
+    "courseRole": "Professional Specialization",
+    "learningHours": 160,
     "futureReviewStatus": "FAST-CHANGING",
-    "positioning": "Digital Marketing Standard / Foundation"
+    "positioning": "E-Commerce & Growth Marketing Specialization"
   },
   {
     "id": "google-ads",
@@ -4188,7 +4279,11 @@ const NS_COURSES = [
     "liveProjects": 2,
     "certificate": true,
     "placementSupport": false,
-    "tools": ["Blender", "Cycles", "EEVEE"],
+    "tools": [
+      "Blender",
+      "Cycles",
+      "EEVEE"
+    ],
     "curriculum": [
       {
         "module": "Module 01",
@@ -7359,67 +7454,93 @@ const NS_ACADEMIES = [
         "programLevel": "Career Program",
         "icon": "📊",
         "color": "linear-gradient(135deg, #FF6B00, #8B5CF6)",
-        "name": "AI Digital Marketing Master",
-        "shortDesc": "Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
-        "fullDesc": "Flagship Career Program. Modernize into modern Growth Marketing & GEO. Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
+        "name": "AI Digital Marketing Strategist",
+        "shortDesc": "Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.",
+        "fullDesc": "Flagship 6-month career mastery program. Master integrated digital marketing strategy, full-funnel customer acquisition, advanced SEO/GEO, Google & Meta Ads, conversion rate optimization, analytics attribution, and CRM lifecycle automation with 240 guided instructional hours.",
         "duration": "6 Months",
         "durationMonths": 6,
         "mode": "Hybrid",
-        "level": "Advanced",
-        "price": 31499,
+        "level": "Beginner to Advanced",
+        "price": 44900,
         "originalPrice": 89999,
         "rating": 4.9,
         "reviews": 198,
         "students": 920,
-        "liveProjects": 20,
+        "liveProjects": 3,
         "certificate": true,
         "placementSupport": true,
         "tools": [
           "Google Ads",
           "Meta Ads Manager",
-          "GA4",
+          "Google Analytics 4",
+          "Google Tag Manager",
           "Google Search Console",
-          "SEMrush",
-          "HubSpot",
-          "n8n",
-          "ChatGPT",
-          "Claude",
-          "Canva",
           "Looker Studio",
-          "Mailchimp",
-          "Shopify",
-          "WordPress"
+          "Semrush",
+          "Screaming Frog",
+          "HubSpot CRM",
+          "n8n",
+          "Brevo",
+          "WordPress",
+          "ChatGPT",
+          "Google Gemini",
+          "Canva"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "SEO & Keyword Strategy",
+            "title": "Business & Marketing Strategy",
             "lessons": 4
           },
           {
             "module": "Module 02",
-            "title": "Google Ads Campaign Architecture",
-            "lessons": 4
+            "title": "Advanced SEO, GEO & Search Intelligence",
+            "lessons": 6
           },
           {
             "module": "Module 03",
-            "title": "Meta Ads Targeting & Creative",
-            "lessons": 4
+            "title": "Content, Social & Brand Strategy",
+            "lessons": 5
           },
           {
             "module": "Module 04",
-            "title": "Content Marketing & Funnels",
-            "lessons": 4
+            "title": "Google Ads Strategy",
+            "lessons": 6
           },
           {
             "module": "Module 05",
-            "title": "Analytics & Conversion Tracking",
-            "lessons": 4
+            "title": "Meta & Multi-Channel Advertising",
+            "lessons": 5
           },
           {
             "module": "Module 06",
-            "title": "AI-Powered Marketing Automation",
+            "title": "Marketing Analytics & Attribution",
+            "lessons": 5
+          },
+          {
+            "module": "Module 07",
+            "title": "Conversion Rate Optimization (CRO)",
             "lessons": 4
+          },
+          {
+            "module": "Module 08",
+            "title": "CRM, Lifecycle & Automation",
+            "lessons": 5
+          },
+          {
+            "module": "Module 09",
+            "title": "AI Marketing Operations",
+            "lessons": 4
+          },
+          {
+            "module": "Module 10",
+            "title": "Budgeting, Growth & Agency Operations",
+            "lessons": 3
+          },
+          {
+            "module": "Module 11",
+            "title": "Integrated Capstone & Assessment",
+            "lessons": 6
           }
         ],
         "tags": [
@@ -7428,8 +7549,8 @@ const NS_ACADEMIES = [
           "placement"
         ],
         "featured": true,
-        "title": "AI Digital Marketing Master",
-        "description": "Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.",
+        "title": "AI Digital Marketing Strategist",
+        "description": "Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.",
         "projects": 20,
         "category": "Digital Marketing Academy",
         "status": "active",
@@ -7438,7 +7559,7 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 240,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Flagship Career Program. Modernize into modern Growth Marketing & GEO."
+        "positioning": "Industry-oriented, project-based digital marketing career mastery."
       },
       {
         "id": "dm-professional",
@@ -7448,55 +7569,70 @@ const NS_ACADEMIES = [
         "programLevel": "Professional Program",
         "icon": "📊",
         "color": "linear-gradient(135deg, #FF6B00, #FF9A3C)",
-        "name": "AI Digital Marketing Professional",
-        "shortDesc": "Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
-        "fullDesc": "Keep as the primary 3-4 month professional standalone track. Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
-        "duration": "4 Months",
-        "durationMonths": 4,
+        "name": "AI Digital Marketing Specialist",
+        "shortDesc": "Entry-level, AI-assisted digital marketing execution program covering SEO, Google Ads, Meta Ads, social content, and analytics.",
+        "fullDesc": "Entry-level, AI-assisted digital marketing execution program. Master Google Ads, Meta Ads Manager, SEO, social content, landing pages, and GA4 analytics with 120 guided hours of practical training.",
+        "duration": "3 Months",
+        "durationMonths": 3,
         "mode": "Hybrid",
         "level": "Beginner",
-        "price": 17499,
+        "price": 24900,
         "originalPrice": 49999,
         "rating": 4.8,
         "reviews": 312,
         "students": 1840,
-        "liveProjects": 10,
+        "liveProjects": 2,
         "certificate": true,
         "placementSupport": true,
         "tools": [
           "Google Ads",
           "Meta Ads Manager",
-          "GA4",
-          "SEMrush",
+          "Google Analytics 4",
+          "Google Search Console",
           "Canva",
           "ChatGPT",
-          "Looker Studio"
+          "Google Gemini"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Digital Marketing Strategy & AI",
+            "title": "Marketing Fundamentals & Customer Research",
             "lessons": 4
           },
           {
             "module": "Module 02",
-            "title": "Search Engine Optimization (SEO)",
-            "lessons": 4
+            "title": "SEO, Local SEO & AI Search Fundamentals",
+            "lessons": 5
           },
           {
             "module": "Module 03",
-            "title": "Paid Search (Google Ads)",
-            "lessons": 4
+            "title": "Social Media Marketing, Content & AI Creatives",
+            "lessons": 5
           },
           {
             "module": "Module 04",
-            "title": "Paid Social (Meta Ads)",
-            "lessons": 4
+            "title": "Google Ads & Meta Ads Fundamentals",
+            "lessons": 5
           },
           {
             "module": "Module 05",
-            "title": "Analytics & Reporting",
+            "title": "Website, Landing Pages & Conversion Basics",
+            "lessons": 5
+          },
+          {
+            "module": "Module 06",
+            "title": "GA4, Analytics, Conversion Tracking & Reporting",
+            "lessons": 5
+          },
+          {
+            "module": "Module 07",
+            "title": "Email Marketing & Basic Automation",
             "lessons": 4
+          },
+          {
+            "module": "Module 08",
+            "title": "Industry Capstone, Portfolio & Final Assessment",
+            "lessons": 5
           }
         ],
         "tags": [
@@ -7504,8 +7640,8 @@ const NS_ACADEMIES = [
           "placement"
         ],
         "featured": true,
-        "title": "AI Digital Marketing Professional",
-        "description": "Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.",
+        "title": "AI Digital Marketing Specialist",
+        "description": "Entry-level, AI-assisted digital marketing execution program covering SEO, Google Ads, Meta Ads, social content, and analytics.",
         "projects": 10,
         "category": "Digital Marketing Academy",
         "status": "active",
@@ -7514,59 +7650,87 @@ const NS_ACADEMIES = [
         "courseRole": "Professional Skill",
         "learningHours": 120,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Keep as the primary 3-4 month professional standalone track."
+        "positioning": "Entry-level, AI-assisted digital marketing execution program for career-track agency and in-house roles."
       },
       {
-        "id": "perf-marketing-pro",
-        "slug": "performance-marketing-professional",
+        "id": "performance-marketing-specialist",
+        "slug": "performance-marketing-specialist",
         "academy": "Digital Marketing Academy",
         "academyId": "digital-marketing",
         "programLevel": "Professional Program",
         "icon": "📊",
         "color": "linear-gradient(135deg, #FF6B00, #EF4444)",
-        "name": "Performance Marketing Professional",
+        "name": "Performance Marketing Specialist",
         "shortDesc": "Scale paid acquisition campaigns, optimize ROAS, and master media buying across channels.",
         "fullDesc": "Position as high-value post-foundation specialization. Scale paid acquisition campaigns, optimize ROAS, and master media buying across channels.",
-        "duration": "3 Months",
-        "durationMonths": 3,
+        "duration": "4 Months",
+        "durationMonths": 4,
         "mode": "Online",
         "level": "Intermediate",
-        "price": 12999,
-        "originalPrice": 34999,
+        "price": 34900,
+        "originalPrice": 34900,
         "rating": 4.8,
         "reviews": 142,
         "students": 640,
-        "liveProjects": 8,
+        "liveProjects": 2,
         "certificate": true,
         "placementSupport": true,
         "tools": [
           "Google Ads",
+          "Google Ads Editor",
+          "Google Ads Data Manager",
           "Meta Ads Manager",
-          "GA4",
-          "SEMrush",
-          "Canva",
-          "ChatGPT",
-          "Looker Studio"
+          "Meta Events Manager",
+          "Google Analytics 4",
+          "Google Tag Manager",
+          "Google Merchant Center",
+          "Looker Studio",
+          "Google Sheets"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Tracking & Infrastructure",
+            "title": "Performance Marketing Fundamentals",
             "lessons": 4
           },
           {
             "module": "Module 02",
-            "title": "Advanced Google Ads",
-            "lessons": 4
+            "title": "Google Search Ads & AI Max",
+            "lessons": 6
           },
           {
             "module": "Module 03",
-            "title": "Advanced Meta Ads",
+            "title": "Shopping, Performance Max, Demand Gen & YouTube",
             "lessons": 4
           },
           {
             "module": "Module 04",
-            "title": "Conversion Optimization & Analytics",
+            "title": "Meta Ads Mastery",
+            "lessons": 6
+          },
+          {
+            "module": "Module 05",
+            "title": "Tracking & Conversion Engineering",
+            "lessons": 6
+          },
+          {
+            "module": "Module 06",
+            "title": "Landing Pages & CRO",
+            "lessons": 4
+          },
+          {
+            "module": "Module 07",
+            "title": "Campaign Optimization, Reporting & Budgeting",
+            "lessons": 4
+          },
+          {
+            "module": "Module 08",
+            "title": "AI Advertising & Media Operations",
+            "lessons": 2
+          },
+          {
+            "module": "Module 09",
+            "title": "Paid Media Industry Capstone",
             "lessons": 4
           }
         ],
@@ -7575,97 +7739,121 @@ const NS_ACADEMIES = [
           "placement"
         ],
         "featured": false,
-        "title": "Performance Marketing Professional",
+        "title": "Performance Marketing Specialist",
         "description": "Scale paid acquisition campaigns, optimize ROAS, and master media buying across channels.",
         "projects": 8,
         "category": "Digital Marketing Academy",
         "status": "active",
-        "url": "/course-detail.html?id=perf-marketing-pro",
+        "url": "/course-detail.html?id=performance-marketing-specialist",
         "courseType": "SPECIALIZATION",
         "courseRole": "Advanced Skill",
-        "learningHours": 80,
+        "learningHours": 160,
         "futureReviewStatus": "FAST-CHANGING",
         "positioning": "Position as high-value post-foundation specialization."
       },
       {
-        "id": "digital-marketing-pro",
-        "slug": "digital-marketing-professional",
+        "id": "ecommerce-growth-marketing-specialist",
+        "slug": "ecommerce-growth-marketing-specialist",
         "academy": "Digital Marketing Academy",
         "academyId": "digital-marketing",
-        "programLevel": "Professional Program",
-        "icon": "📊",
-        "color": "linear-gradient(135deg, #FF6B00, #F59E0B)",
-        "name": "Advanced Digital Marketing Professional",
-        "shortDesc": "3-month professional course covering SEO, SEM, SMM, and AI Content Creation.",
-        "fullDesc": "Consolidate into single dm-professional track. 3-month professional course covering SEO, SEM, SMM, and AI Content Creation.",
-        "duration": "3 Months",
-        "durationMonths": 3,
-        "mode": "Online",
-        "level": "Beginner to Professional",
-        "price": 11999,
-        "originalPrice": 29999,
-        "rating": 4.7,
-        "reviews": 165,
-        "students": 710,
-        "liveProjects": 6,
+        "programLevel": "Professional Specialization",
+        "icon": "🛍️",
+        "color": "linear-gradient(135deg, #10B981, #059669)",
+        "name": "E-Commerce & Growth Marketing Specialist",
+        "shortDesc": "Specialized 4-month program in e-commerce growth, Shopify store optimization, Google Merchant Center, Shopping & Performance Max ads, Meta Catalog ads, CRO, and Klaviyo lifecycle retention.",
+        "fullDesc": "Professional 4-month e-commerce specialization. Master Shopify architecture, Google Merchant Center feed diagnostics, Google Shopping & Performance Max campaigns, Meta Advantage+ Catalog ads, PDP conversion optimization, and Klaviyo lifecycle retention with 160 guided training hours.",
+        "duration": "4 Months",
+        "durationMonths": 4,
+        "mode": "Hybrid",
+        "level": "Intermediate",
+        "price": 34900,
+        "originalPrice": 34900,
+        "rating": 4.8,
+        "reviews": 142,
+        "students": 680,
+        "liveProjects": 8,
         "certificate": true,
         "placementSupport": true,
         "tools": [
+          "Shopify",
+          "Google Merchant Center",
           "Google Ads",
           "Meta Ads Manager",
-          "GA4",
-          "SEMrush",
-          "Canva",
-          "ChatGPT",
-          "Looker Studio"
+          "Meta Commerce Manager",
+          "Google Analytics 4",
+          "Google Tag Manager",
+          "Klaviyo",
+          "Microsoft Clarity"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Digital Marketing Foundations, Personas & Strategy",
+            "title": "E-Commerce Business Models, Unit Economics & Customer Journey",
             "lessons": 4
           },
           {
             "module": "Module 02",
-            "title": "Content Strategy, Canva Design & Organic Social Media",
+            "title": "Shopify Store Architecture, Product Merchandising & Conversion Design",
             "lessons": 5
           },
           {
             "module": "Module 03",
-            "title": "Local Business Presence, Google Business Profile & Website UX",
-            "lessons": 4
+            "title": "Google Merchant Center Architecture, Feed Optimization & Diagnostics",
+            "lessons": 5
           },
           {
             "module": "Module 04",
-            "title": "Introductory Paid Advertising: Google Search & Meta Ads",
+            "title": "E-Commerce SEO, Category Architecture & Generative Search Visibility",
             "lessons": 4
           },
           {
             "module": "Module 05",
-            "title": "Lead Capture, Customer Follow-Up & AI Productivity",
-            "lessons": 4
+            "title": "Google Ads for E-Commerce: Shopping, Performance Max & Demand Gen",
+            "lessons": 6
           },
           {
             "module": "Module 06",
-            "title": "Campaign Measurement, GA4 Analytics & Performance Reporting",
+            "title": "Meta Ads for E-Commerce: Catalog Ads, Advantage+ & Creative Iteration",
             "lessons": 4
+          },
+          {
+            "module": "Module 07",
+            "title": "Conversion Rate Optimization, PDP Architecture & Checkout Friction",
+            "lessons": 5
+          },
+          {
+            "module": "Module 08",
+            "title": "E-Commerce Retention, Lifecycle Automation & Email/SMS (Klaviyo/Brevo)",
+            "lessons": 4
+          },
+          {
+            "module": "Module 09",
+            "title": "E-Commerce Analytics, GA4 E-Commerce Schema & Profit-Aware Reporting",
+            "lessons": 3
+          },
+          {
+            "module": "Module 10",
+            "title": "Capstone E-Commerce Growth Sprint & Client Pitch",
+            "lessons": 5
           }
         ],
         "tags": [
-          "popular"
+          "popular",
+          "ecommerce",
+          "specialization"
         ],
         "featured": false,
-        "title": "Advanced Digital Marketing Professional",
-        "description": "3-month professional course covering SEO, SEM, SMM, and AI Content Creation.",
-        "projects": 6,
+        "title": "E-Commerce & Growth Marketing Specialist",
+        "description": "Specialized 4-month program in e-commerce growth, Shopify store optimization, Google Merchant Center, Shopping & Performance Max ads, Meta Catalog ads, CRO, and Klaviyo lifecycle retention.",
+        "projects": 8,
         "category": "Digital Marketing Academy",
         "status": "active",
-        "url": "/course-detail.html?id=digital-marketing-pro",
-        "courseType": "MERGE",
-        "courseRole": "Professional Skill",
-        "learningHours": 88,
+        "url": "/course-detail.html?id=ecommerce-growth-marketing-specialist",
+        "courseType": "SPECIALIZATION",
+        "courseRole": "Professional Specialization",
+        "learningHours": 160,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Digital Marketing Standard / Foundation"
+        "positioning": "E-Commerce & Growth Marketing Specialization"
       },
       {
         "id": "google-ads",
@@ -14821,7 +15009,6 @@ const NS_ACADEMIES = [
   }
 ];
 
-/* Blog posts data */
 const NS_BLOG_POSTS = [
   {
     "id": "ai-skills-future-careers-2027-2030",
