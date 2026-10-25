@@ -12230,476 +12230,1186 @@
     "academy": "AI Academy",
     "academy_id": "ai",
     "course_type": "PROFESSIONAL",
-    "course_role": "Career/Monetization",
-    "level": "BEGINNER",
+    "course_role": "Professional Skill",
+    "level": "Beginner to Professional Workplace Proficiency",
     "duration": "3 Months",
     "learning_hours": 120,
+    "price": 19900,
     "future_review_status": "FAST-CHANGING",
     "target_audience": {
       "best_for": [
-        "Professionals looking to master AI Productivity Professional.",
-        "Forward-thinking individuals aiming to integrate AI tools into their workflows.",
-        "Tech enthusiasts looking to build practical, deployable AI projects."
+        "Executive assistants, administrative managers, and office operations coordinators seeking to eliminate 15+ hours of weekly clerical friction.",
+        "Business analysts, financial associates, and project managers wanting to accelerate spreadsheet data cleaning, formula creation, and variance reporting.",
+        "Marketing, HR, sales, and customer operations professionals drafting high-stakes communications, SOPs, and visual decks.",
+        "Consultants, freelancers, and knowledge workers seeking to master frontier AI tools (ChatGPT, Claude, Gemini Notebook, Copilot, Gamma) for professional service delivery."
       ],
-      "who_should_take_foundation_first": "Beginners lacking basic digital literacy should take foundation courses first.",
+      "who_should_take_foundation_first": "Learners without basic digital literacy (familiarity with web browsing, managing files/folders, and working with standard office applications) should complete foundational computer literacy first.",
       "not_for": [
-        "Those looking for abstract theory without hands-on practice.",
-        "Individuals expecting overnight success without building real projects."
+        "Software developers looking for Python AI programming, REST APIs, or autonomous agent coding (take AI Solutions Engineering & Agentic AI Mastery instead).",
+        "Data engineers seeking advanced SQL database tuning, deep learning math, or machine learning model training.",
+        "Individuals looking for passive theory or unverified '10x overnight' productivity shortcuts."
       ]
     },
     "prerequisites": {
-      "required": "Basic computer literacy and understanding of web applications.",
-      "recommended": "Familiarity with the domain relevant to the tools.",
+      "required": "Basic computer literacy: comfortable using a modern web browser, managing files and folders, and working with standard office software (Word, Excel, or Google Docs/Sheets).",
+      "recommended": "Active day-to-day office, administrative, analytical, or project coordination responsibilities where coursework can be applied directly.",
       "system_requirements": {
-        "hardware": "Standard laptop/PC with internet connection",
-        "software_accounts": "ChatGPT, Claude, Gemini, Notion AI, Canva AI, Gamma"
+        "hardware": "Standard desktop or laptop computer (Windows 10/11 or macOS 12+) with 8GB RAM and reliable high-speed broadband internet.",
+        "software_accounts": "Free accounts on ChatGPT, Claude, Google (for Gemini & Gemini Notebook), Canva, Gamma, and Notion. Access to Microsoft 365 (Desktop or Web) or Google Workspace. Microsoft 365 Copilot demonstrated with complete free-tier fallbacks provided."
       },
-      "not_required": "Advanced programming degrees"
+      "not_required": "Zero coding, programming, Python, terminal, or computer science background assumed or required."
     },
-    "overview": {
-      "positioning": "Practical executive and professional AI workflows to automate writing, data synthesis, slide creation, and meeting management.",
-      "short_description": "Learn to leverage ChatGPT, Claude, Gemini to solve real problems.",
-      "key_facts": {
-        "level": "BEGINNER",
-        "duration": "3 Months",
-        "format": "Hands-On Projects",
-        "estimated_learning_hours": "120 Hours",
-        "project_count": "4 Projects",
-        "capstone": "Final Delivery Project",
-        "ai_integration": "AI-CRITICAL",
-        "career_focus": "AI Practitioner"
-      },
-      "what_you_will_be_able_to_do": [
-        "Implement AI-driven workflows.",
-        "Master tools like ChatGPT, Claude.",
-        "Deploy functional projects to production."
-      ]
-    },
-    "why_now": {
-      "industry_shift": "Knowledge workers using generative copilots complete complex analytical and communications tasks in 30% of the time.",
-      "ai_impact": "Multimodal AI models can parse complex PDFs, generate executive presentations, and draft professional communications on command.",
-      "business_demand": "Companies are actively seeking practitioners skilled in modern AI tools.",
-      "career_opportunity": "Early adopters can secure high-leverage roles."
-    },
+    "overview": "The AI Productivity Professional program is Nova Skills' focused, intensive 3-month (120 guided hours) vocational qualification designed to transform knowledge workers, team leads, office administrators, and professionals into high-efficiency AI power users. Rather than relying on trial-and-error prompting, students learn structured context engineering, grounded document synthesis with Gemini Notebook (formerly NotebookLM), high-stakes communications in Claude and ChatGPT Canvas, publication-grade document and deck creation in Microsoft 365 Copilot and Gamma, advanced Excel data analysis, and no-code desktop workflow automation with Power Automate. The program strictly enforces verifiable accuracy, data privacy compliance, and human-in-the-loop accountability, resulting in an audited digital portfolio demonstrating measured 40–60% efficiency improvements.",
+    "why_now": "In 2026, enterprise software suites (Microsoft 365 Copilot, Google Workspace with Gemini, Notion AI) have embedded artificial intelligence directly into the core tools of desk work. Casual chatbot usage is no longer a differentiator; knowledge workers who fail to master structured context engineering, grounded synthesis, and workflow automation face increasing workplace obsolescence, while certified AI productivity professionals deliver superior outputs in half the time.",
     "learning_outcomes": [
-      "DESIGN architectures utilizing ChatGPT.",
-      "BUILD practical solutions for business needs.",
-      "DEPLOY projects adhering to best practices."
+      "Engineer structured, constraint-bounded business prompts using the PREP and CREATE frameworks with zero conversational filler.",
+      "Synthesize multi-document libraries (up to 50 sources) into grounded research briefs with verified citation anchors using Gemini Notebook (formerly NotebookLM).",
+      "Draft, de-escalate, and calibrate high-stakes business communications, executive memos, and standard operating procedures across diverse stakeholder personas.",
+      "Produce professional slide decks and executive visual documents in Gamma, Microsoft PowerPoint Copilot, and Canva Magic Studio within minutes.",
+      "Clean messy tabular business datasets and construct advanced Excel formulas (XLOOKUP, dynamic arrays) using conversational AI assistance.",
+      "Conduct exploratory spreadsheet data analysis, identify operational variance trends, and write C-suite financial summary memos.",
+      "Extract actionable task matrices from multi-speaker meeting recordings and architect a searchable personal knowledge workspace in Notion AI.",
+      "Build and deploy functional no-code automated business workflows connecting emails, cloud storage, and task trackers with human approval gates."
     ],
-    "learning_journey": {
-      "stages": [
-        {
-          "stage": "Stage 1",
-          "focus": "Chatbot Fundamentals for Daily Tasks"
-        },
-        {
-          "stage": "Stage 2",
-          "focus": "Knowledge Management with Notion AI"
-        },
-        {
-          "stage": "Stage 3",
-          "focus": "Visual Content Creation"
-        },
-        {
-          "stage": "Stage 4",
-          "focus": "Workflow Integration & Daily Routines"
-        }
-      ]
-    },
+    "learning_journey": [
+      {
+        "phase": "Month 1: Prompt Engineering, Grounded Research & Executive Writing",
+        "weeks": "Weeks 1–4",
+        "focus": "Modules 01–03: Master LLM fundamentals, PREP/CREATE prompt frameworks, Custom Instructions, Claude Projects, Gemini Notebook (formerly NotebookLM) source-grounded research, fact-checking protocols, and professional executive communications."
+      },
+      {
+        "phase": "Month 2: Visual Storytelling, Presentation Decks & Spreadsheet Analytics",
+        "weeks": "Weeks 5–8",
+        "focus": "Modules 04–05: Create multimodal business proposals in Word/Docs, generate presentation decks in Gamma and PowerPoint Copilot, design infographics in Canva Magic Studio, master advanced Excel formulas, data cleaning, and executive variance reporting."
+      },
+      {
+        "phase": "Month 3: Meeting Intelligence, Connected Automations & Capstone Defense",
+        "weeks": "Weeks 9–12",
+        "focus": "Modules 06–08: Implement meeting transcription and action-item tracking in Teams/Meet, build team wikis in Notion AI, deploy no-code automations in Power Automate/Zapier, and execute the final 360° Department Operations Overhaul Capstone."
+      }
+    ],
     "hands_on_tech": {
       "core_tools": [
-        {
-          "tool": "ChatGPT",
-          "purpose": "Essential for AI Productivity Professional.",
-          "what_student_learns": "Core mechanics and advanced features.",
-          "what_student_builds": "Course projects"
-        },
-        {
-          "tool": "Claude",
-          "purpose": "Essential for AI Productivity Professional.",
-          "what_student_learns": "Core mechanics and advanced features.",
-          "what_student_builds": "Course projects"
-        },
-        {
-          "tool": "Gemini",
-          "purpose": "Essential for AI Productivity Professional.",
-          "what_student_learns": "Core mechanics and advanced features.",
-          "what_student_builds": "Course projects"
-        },
-        {
-          "tool": "Notion AI",
-          "purpose": "Essential for AI Productivity Professional.",
-          "what_student_learns": "Core mechanics and advanced features.",
-          "what_student_builds": "Course projects"
-        },
-        {
-          "tool": "Canva AI",
-          "purpose": "Essential for AI Productivity Professional.",
-          "what_student_learns": "Core mechanics and advanced features.",
-          "what_student_builds": "Course projects"
-        },
-        {
-          "tool": "Gamma",
-          "purpose": "Essential for AI Productivity Professional.",
-          "what_student_learns": "Core mechanics and advanced features.",
-          "what_student_builds": "Course projects"
-        }
+        "ChatGPT (GPT-4o, Canvas, Voice, Search, Custom GPTs)",
+        "Claude (Sonnet 3.5/3.7, Artifacts, Claude Projects)",
+        "Google Gemini (Gemini 2.0 / 1.5 Pro multimodal)",
+        "Gemini Notebook (formerly NotebookLM) (Grounded Q&A & Audio)",
+        "Microsoft 365 Copilot (Word, Excel, PowerPoint) [Primary Assessed Suite]",
+        "Microsoft Excel (Desktop & Online with AI formula assistance)"
       ],
-      "supporting_tools": [],
-      "emerging_tools": [],
-      "tools_to_review": []
+      "supporting_tools": [
+        "Google Workspace with Gemini (Docs, Sheets, Slides) [Comparative Suite]",
+        "Gamma (AI presentation generation & interactive one-pagers)",
+        "Canva Magic Studio (Infographics, visual collateral, brand templates)",
+        "Notion AI (Personal knowledge systems, team wikis, meeting notes)",
+        "Microsoft Teams & Google Meet (AI meeting transcription & recaps)",
+        "Microsoft Power Automate Desktop / Zapier (No-code workflow automation)"
+      ],
+      "exposure_concepts": [
+        "Claude Artifacts & Projects for persistent workspace memory",
+        "ChatGPT Connected Apps (Google Drive, OneDrive, Slack)",
+        "Microsoft Copilot Studio & document agents overview",
+        "Model Context Protocol (MCP 2026: Desktop tool-connection awareness)",
+        "No-code webhook triggers and event-driven automation principles"
+      ],
+      "license_requirements_and_fallbacks": {
+        "primary_assessment_suite": "Microsoft 365 Copilot demonstrated in class; students without Copilot licenses use Microsoft Office Online + ChatGPT/Claude formula and outline templates with zero grading penalty.",
+        "research_tools": "Gemini Notebook (formerly NotebookLM) is 100% free with any standard Google account; Perplexity Free and ChatGPT Search Free tier fully supported.",
+        "visual_and_presentation_tools": "Gamma provides 400 free credits upon signup; Canva Free tier provides comprehensive design tools; standard PowerPoint/Slides supported.",
+        "automation_tools": "Microsoft Power Automate Desktop is pre-installed free on Windows 10/11; Zapier Free tier (100 tasks/month) supported for cloud flows."
+      }
     },
     "industry_workflow": {
-      "overview": "Standard operations:",
+      "methodology": "The 5-Stage Workplace AI Productivity Execution Cycle",
       "stages": [
         {
-          "step": 1,
-          "name": "Discovery",
-          "desc": "Identify the problem."
+          "stage_number": "Stage 01",
+          "stage_name": "Scoping & Context Engineering",
+          "description": "Deconstruct the business task, define explicit persona, target audience, format constraints, and assemble reference materials into a persistent project knowledge repository."
         },
         {
-          "step": 2,
-          "name": "Tool Selection",
-          "desc": "Choose the right AI stack."
+          "stage_number": "Stage 02",
+          "stage_name": "Source-Grounded Ingestion & Research",
+          "description": "Upload authorized source PDFs, transcripts, and financial filings into Gemini Notebook or Claude Projects; execute structured Q&A with direct citation verification."
         },
         {
-          "step": 3,
-          "name": "Implementation",
-          "desc": "Build the workflow."
+          "stage_number": "Stage 03",
+          "stage_name": "Multimodal Synthesis & Asset Generation",
+          "description": "Generate first-pass documents, slide decks, spreadsheet models, and visual assets across Word, Gamma, Excel, and Canva using calibrated tone and corporate styling."
         },
         {
-          "step": 4,
-          "name": "Deployment",
-          "desc": "Launch and monitor."
+          "stage_number": "Stage 04",
+          "stage_name": "Fact-Checking & Human-in-the-Loop Quality Assurance",
+          "description": "Execute the reverse-verification protocol to audit calculations, eliminate hallucinations, confirm tone alignment, and ensure PII compliance."
+        },
+        {
+          "stage_number": "Stage 05",
+          "stage_name": "Automated Distribution & Workflow Archival",
+          "description": "Package final deliverables, update operational knowledge wikis in Notion, and trigger automated notification and distribution flows via Power Automate or Zapier."
         }
       ]
     },
     "business_use_cases": [
       {
-        "sector": "Technology",
-        "business_problem": "Inefficient processes",
-        "approach": "AI automation",
-        "toolset": "ChatGPT",
-        "output": "Optimized workflow"
+        "department": "Executive Support & Administration",
+        "scenario": "Calendar and inbox overload, multi-stakeholder meeting minutes, and travel logistics.",
+        "solution": "AI-assisted email triage sequences, automated meeting transcription action matrices in Notion, and Gemini Notebook briefing documents."
+      },
+      {
+        "department": "Finance & Business Operations",
+        "scenario": "Cleaning messy quarterly transaction data, generating complex lookup formulas, and writing monthly budget variance reports.",
+        "solution": "Excel AI-assisted formula synthesis (XLOOKUP, SUMIFS), automated anomaly detection, and executive variance memos in Word."
+      },
+      {
+        "department": "Sales & Client Account Management",
+        "scenario": "Drafting bespoke client proposals and high-impact pitch decks under tight client turnaround deadlines.",
+        "solution": "Multimodal business proposal package: Word Copilot document structuring, 10-slide Gamma presentation, and Canva visual pricing infographic."
+      },
+      {
+        "department": "Human Resources & Internal Communications",
+        "scenario": "Publishing employee policy handbooks, standard operating procedures (SOPs), and multi-channel staff announcements.",
+        "solution": "1-to-5 content cascade in Claude Artifacts: generating an internal memo, intranet FAQ, SOP checklist, and leadership announcement from a single policy draft."
       }
     ],
-    "ai_integration": {
-      "role_classification": "AI-CRITICAL",
-      "ai_can_assist_with": "Ideation and drafting.",
-      "ai_can_automate": "Repetitive execution.",
-      "ai_cannot_replace": "Strategic decision making.",
-      "human_expertise_required": "Quality assurance.",
-      "validation_protocol": "Manual review of outputs.",
-      "responsible_use": "Adherence to data privacy."
-    },
+    "ai_integration": "This program teaches students to integrate artificial intelligence responsibly across desktop applications, web interfaces, and cloud storage systems without compromising organizational data privacy, breaching copyright standards, or relying on unverified model assertions.",
     "best_practices": [
-      "Iterate rapidly.",
-      "Verify all AI outputs.",
-      "Maintain organized project files."
+      "Always apply the Reverse-Verification Protocol: trace every AI-generated number, quote, or statistical claim back to an authorized primary source.",
+      "Never paste sensitive personal identifiable information (PII), customer credentials, or unreleased financials into public model interfaces with training enabled.",
+      "Use persistent Custom Instructions and Claude Projects to enforce corporate tone, banned vocabulary, and preferred structural formats across tasks.",
+      "Treat AI outputs as high-velocity first drafts that always require human expert review, editorial calibration, and accountability.",
+      "Measure productivity improvements through honest time-tracking and error-rate auditing rather than ungrounded '10x' claims."
     ],
     "common_mistakes": [
-      {
-        "mistake": "Trusting AI blindly.",
-        "why_it_happens": "Overconfidence.",
-        "professional_approach": "Always verify output."
-      }
+      "Typing vague, single-sentence prompts ('write an email') and spending 20 minutes manually fixing generic, rambling outputs.",
+      "Failing to verify citations and presenting plausible-sounding hallucinations to clients or executives.",
+      "Over-relying on a single tool rather than matching specific tasks to optimal engines (e.g. using a conversational bot for grounded multi-PDF synthesis instead of Gemini Notebook).",
+      "Neglecting spreadsheet formula verification and assuming AI-generated Excel formulas handle edge cases without testing.",
+      "Creating unmaintainable, brittle automation workflows that lack error handling and human approval gates."
     ],
     "career_paths": {
-      "entry_roles": "AI Specialist",
-      "mid_roles": "AI Architect",
-      "specialist_roles": "Automation Consultant",
-      "freelance_roles": "AI Freelancer",
-      "employer_expectations": "Proven ability to deploy AI solutions.",
-      "what_student_demonstrates": "Portfolio of working projects."
+      "entry_roles": "AI Productivity Specialist, AI-Enabled Administrative Executive, AI Office Productivity Associate",
+      "mid_roles": "AI Research/Documentation Assistant, AI-Enabled Operations Coordinator, Workplace AI Lead",
+      "specialist_roles": "Executive AI Operations Specialist, Departmental Workflow Coordinator",
+      "freelance_roles": "AI Workflow Consultant for Small Business, Executive Research & Presentation Specialist",
+      "employer_expectations": "Demonstrated ability to produce verified, hallucination-free research dossiers, clean spreadsheet models, executive presentation decks, and automated email/triage flows with measurable time savings.",
+      "what_student_demonstrates": "A verified 5-part workplace productivity portfolio and capstone department overhaul demonstrating 40–60% efficiency improvement with strict data privacy compliance."
     },
-    "freelance_applications": {
-      "services_offered": [
-        "AI Integration",
-        "Workflow Automation"
-      ],
-      "client_workflow": "Consult -> Build -> Deploy -> Maintain",
-      "portfolio_requirements": "Working prototypes."
-    },
+    "freelance_applications": [
+      "Executive Research & Briefing Service: Delivering grounded industry dossiers with verified citation anchors for corporate executives and consultants.",
+      "Pitch Deck & Presentation Modernization: Converting messy client briefs into interactive, publication-grade slide decks using Gamma and PowerPoint Copilot.",
+      "Spreadsheet Clean-Up & MIS Reporting: Structuring raw client operational spreadsheets, implementing dynamic lookup formulas, and writing variance memos.",
+      "Small Business No-Code Automation Setup: Implementing automated email triage, customer inquiry routing, and cloud document filing using Power Automate or Zapier."
+    ],
     "what_you_will_build": [
-      "Project focused on Chatbot Fundamentals for Daily Tasks",
-      "Project focused on Knowledge Management with Notion AI",
-      "Project focused on Visual Content Creation",
-      "Project focused on Workflow Integration & Daily Routines"
+      {
+        "title": "Executive Intelligence & Research Dossier",
+        "tool_stack": "Gemini Notebook (formerly NotebookLM), Claude, ChatGPT Search",
+        "description": "10-page synthesized competitive intelligence dossier with 100% verified citation anchors and an accompanying 5-minute Audio Overview briefing."
+      },
+      {
+        "title": "Multimodal Business Proposal Package",
+        "tool_stack": "Microsoft Word (Copilot), Gamma, Canva Magic Studio",
+        "description": "Formatted 8-page client proposal document, 10-slide interactive pitch deck in Gamma, and branded visual summary infographic."
+      },
+      {
+        "title": "AI-Driven Business Analytics Dossier",
+        "tool_stack": "Microsoft Excel, ChatGPT Advanced Data Analysis, Copilot",
+        "description": "Audited Excel workbook with dynamic formulas (XLOOKUP, SUMIFS), pivot charts, outlier detection, and a 2-page executive variance memo."
+      },
+      {
+        "title": "Connected Personal Workflow Automation",
+        "tool_stack": "Microsoft Power Automate Desktop, Zapier, Cloud Storage",
+        "description": "Deployed no-code automated flow handling email triage, attachment filing, and task notification, with live video demonstration and SOP."
+      },
+      {
+        "title": "360° Department Operations Overhaul Capstone",
+        "tool_stack": "Full Course Tool Ecosystem: ChatGPT, Claude, Gemini Notebook, M365 Copilot, Gamma, Notion AI",
+        "description": "Comprehensive operational overhaul of a designated business function featuring a workflow diagnostic, 5 SOPs, an operational knowledge wiki, and a live executive defense."
+      }
     ],
     "final_deliverables": [
-      "Code repository or live app",
-      "Documentation"
+      "1. Verified Business Research Dossier (Gemini Notebook with direct citation anchors and Audio Overview briefing)",
+      "2. Professional Business Communication Toolkit (Executive emails, de-escalation scripts, Minto memos, and SOPs)",
+      "3. Multimodal Document & Presentation Package (Formatted Word/Docs proposal, 10-slide Gamma deck, Canva visual)",
+      "4. Audited Excel Analytics Workbook & Dashboard (Dynamic formulas, pivot analysis, and executive variance memo)",
+      "5. Meeting Intelligence & Knowledge Workspace (Teams/Meet transcription extraction matrix in Notion AI wiki)",
+      "6. Functional No-Code AI Workflow Automation (Working Power Automate/Zapier flow with recorded verification)",
+      "7. Productivity Process Documentation & SOP Manual (Complete standard operating procedures for all automated tasks)",
+      "8. Independent Practical Demonstration & Capstone Defense (Live 10-minute presentation before academic panel)"
     ],
     "assessment": {
-      "model": "Project-based evaluation",
-      "criteria": "Functionality and clean execution."
+      "breakdown": [
+        {
+          "component": "Assessed Workplace Deliverable 1: Executive Intelligence Dossier",
+          "weight": "15%"
+        },
+        {
+          "component": "Assessed Workplace Deliverable 2: Multimodal Business Proposal Package",
+          "weight": "15%"
+        },
+        {
+          "component": "Assessed Workplace Deliverable 3: AI-Driven Business Analytics Dossier",
+          "weight": "20%"
+        },
+        {
+          "component": "Assessed Workplace Deliverable 4: Connected Personal Workflow Automation",
+          "weight": "15%"
+        },
+        {
+          "component": "Comprehensive Final Capstone Project & Live Defense",
+          "weight": "25%"
+        },
+        {
+          "component": "Continuous Classroom Labs & Personal Prompt Library",
+          "weight": "10%"
+        }
+      ],
+      "evaluation_criteria": [
+        "Prompt Precision & Framework Rigor (PREP/CREATE compliance, parameterized templates, zero filler)",
+        "Factual Verification & Accuracy (100% verified source citation anchors, zero hallucinations)",
+        "Analytical Depth & Business Context (Executive synthesis, financial variance drivers, strategic clarity)",
+        "Multimodal Polish & Presentation (Consistent typography, professional layouts in Word, Gamma, and Canva)",
+        "Workflow Reliability & Compliance (Functional automations, strict PII privacy adherence, robust SOPs)"
+      ]
     },
     "certification": {
-      "title": "Certified AI Productivity Professional Professional",
-      "criteria": "Completion of all projects.",
-      "verification": "Online portal."
+      "title": "Professional Certificate in Workplace AI Productivity & Connected Workflows",
+      "standard": "ISO 9001:2015 Verified Curriculum Standard",
+      "issuing_body": "Nova Skills Academic Board",
+      "credential_verification": "QR-code verifiable digital credential with permanent institutional ledger record"
     },
-    "not_covered": "Theoretical machine learning math.",
-    "next_learning_path": {
-      "recommended_next": "Advanced AI Architecture",
-      "related_programs": "Other AI Academy courses."
-    },
+    "not_covered": [
+      "Python, JavaScript, or any programming/coding languages",
+      "REST APIs, SDK integrations, JSON schema writing, or developer terminal workflows",
+      "Self-hosted server administration, Docker containerization, or cloud DevOps",
+      "Custom Model Context Protocol (MCP) server development (conceptual desktop awareness only)",
+      "Custom vector database construction, mathematical embeddings, or LLM fine-tuning",
+      "Advanced enterprise data engineering, Power BI DAX modeling, or data warehouse architecture"
+    ],
+    "next_learning_path": [
+      {
+        "course_id": "ai-mastery",
+        "course_name": "AI Solutions Engineering & Agentic AI Mastery",
+        "description": "9-month advanced engineering track: Python, FastAPI, PostgreSQL, RAG with pgvector, LangGraph multi-agent teams, and Docker deployment."
+      },
+      {
+        "course_id": "dm-mastery",
+        "course_name": "AI Digital Marketing Mastery",
+        "description": "6-month comprehensive marketing specialization: performance marketing, AI ad creative pipelines, SEO/GEO optimization, and conversion tracking."
+      }
+    ],
     "faq": [
       {
-        "question": "Is AI Productivity Professional for beginners?",
-        "answer": "Check the prerequisites, but generally we start from practical basics."
+        "question": "Do I need any programming, coding, or math background for this course?",
+        "answer": "No. AI Productivity Professional is a strictly zero-coding qualification designed for office professionals, administrators, analysts, and managers. All instruction focuses on web interfaces, desktop applications, spreadsheet formulas, and no-code visual workflow builders."
       },
       {
-        "question": "Will I build real projects?",
-        "answer": "Yes, every module includes hands-on builds."
+        "question": "What is the exact course fee and duration?",
+        "answer": "The commercial tuition is INR 19,900 (exclusive of 18% GST; total INR 23,482). We offer No-Cost EMI options starting at INR 2,609/month for 9 months or INR 7,827/month for 3 months. The program spans 3 months (12 calendar weeks) with exactly 120 guided instructional hours."
       },
       {
-        "question": "Are the tools free?",
-        "answer": "Most tools have free tiers sufficient for learning."
+        "question": "Which primary AI tools will I master in this program?",
+        "answer": "You will master ChatGPT (GPT-4o, Canvas, Search), Claude (Sonnet 3.5/3.7, Artifacts, Projects), Google Gemini, Gemini Notebook (formerly NotebookLM), Microsoft Excel with AI formula assistance, Microsoft 365 Copilot (Word, PowerPoint), Gamma, Canva Magic Studio, Notion AI, and Microsoft Power Automate Desktop."
+      },
+      {
+        "question": "What is Gemini Notebook, and why is it taught?",
+        "answer": "Gemini Notebook (formerly NotebookLM) is Google's state-of-the-art grounded AI research tool. Unlike standard chatbots that can hallucinate, Gemini Notebook queries only your uploaded source documents (PDFs, URLs, notes) with exact citation anchors, and can generate audio overview briefings. It is the gold standard for reliable corporate research."
+      },
+      {
+        "question": "Do I need a paid Microsoft 365 Copilot or ChatGPT Plus subscription?",
+        "answer": "No. While instructor demonstrations utilize premium enterprise features, every exercise has a verified zero-cost alternative. Free tiers of ChatGPT, Claude, Gemini Notebook (100% free), free Office Online, Gamma (400 free credits), and Windows Power Automate Desktop allow full completion without required paid subscriptions."
+      },
+      {
+        "question": "What is the difference between this course and AI Solutions Engineering & Agentic AI Mastery?",
+        "answer": "AI Productivity Professional is a 3-month, 120-hour, zero-coding program focused on daily workplace efficiency (emails, research, slides, Excel, and desktop automation). AI Solutions Engineering & Agentic AI Mastery is a 9-month, 360-hour advanced software engineering program teaching Python, FastAPI, pgvector, LangGraph, and cloud deployment."
+      },
+      {
+        "question": "How are the 120 guided hours distributed across the curriculum?",
+        "answer": "The 120 guided instructional hours are distributed across 8 modules: Module 01 (12h), Module 02 (16h), Module 03 (16h), Module 04 (18h), Module 05 (18h), Module 06 (12h), Module 07 (12h), and Module 08 (16h). An additional 40–60 hours of independent lab practice is recommended."
+      },
+      {
+        "question": "What portfolio deliverables will I graduate with?",
+        "answer": "You will graduate with 5 major assessed deliverables: (1) An Executive Intelligence Dossier in Gemini Notebook with citations, (2) A Multimodal Business Proposal Package in Word, Gamma, and Canva, (3) An Audited Excel Analytics Workbook with variance memo, (4) A Deployed Power Automate Workflow, and (5) A 360° Department Operations Overhaul Capstone."
+      },
+      {
+        "question": "How does the course ensure my company's data privacy and security?",
+        "answer": "Module 01 and Module 08 explicitly teach enterprise data governance: training opt-out toggles, PII anonymization techniques, corporate acceptable use policies, and the safe use of local/private document contexts like Gemini Notebook and Claude Projects."
+      },
+      {
+        "question": "Will this course teach me how to create slide presentations with AI?",
+        "answer": "Yes. Module 04 is dedicated to visual storytelling and presentations, covering Gamma (generating interactive decks from raw outlines in minutes), Microsoft PowerPoint Copilot, and Canva Magic Studio for visual charts and banners."
+      },
+      {
+        "question": "What spreadsheet skills are taught in Module 05?",
+        "answer": "Module 05 covers AI-assisted formula creation (XLOOKUP, INDEX/MATCH, SUMIFS, dynamic arrays), error debugging, data cleaning, pivot tables, anomaly detection using ChatGPT Data Analysis, Copilot in Excel, and authoring C-suite variance memos."
+      },
+      {
+        "question": "Does the course cover meeting notes and transcription?",
+        "answer": "Yes. Module 06 covers Microsoft Teams Intelligent Recap, Google Meet with Gemini, converting noisy transcripts into accountable [Owner - Task - Deadline] action matrices, and organizing knowledge wikis in Notion AI."
+      },
+      {
+        "question": "What kind of automation will I build in Module 07?",
+        "answer": "You will build no-code event-driven workflows using Microsoft Power Automate Desktop and Zapier, such as automated email classification, attachment filing to cloud drives, and task creation with human-in-the-loop approval gates."
+      },
+      {
+        "question": "What is Model Context Protocol (MCP) and how is it covered?",
+        "answer": "Model Context Protocol (MCP) is an open standard allowing AI assistants to connect to local files, calendars, and enterprise tools safely. Module 07 covers MCP conceptually so you understand how desktop AI tools will interact with corporate systems in 2026/2027."
+      },
+      {
+        "question": "Can I take this course while working full-time?",
+        "answer": "Yes. The program is designed for working professionals with flexible evening and weekend batches, requiring approximately 10 guided instructional hours per week over 12 weeks."
+      },
+      {
+        "question": "What certificate do I receive upon completion?",
+        "answer": "Graduates who successfully complete all lab assessments and defend their Capstone receive the ISO 9001:2015 Verified Professional Certificate in Workplace AI Productivity & Connected Workflows from Nova Skills."
+      },
+      {
+        "question": "Does Nova Skills promise guaranteed 10x productivity?",
+        "answer": "No. Nova Skills rejects unsubstantiated marketing hype. Instead, we teach a rigorous methodology that students measure directly in before-and-after time audits, typically achieving a verified 40% to 60% reduction in routine administrative and analytical task duration."
+      },
+      {
+        "question": "What career roles does this program qualify me for?",
+        "answer": "Graduates are qualified for roles such as AI Productivity Specialist, AI-Enabled Administrative Executive, AI Office Productivity Associate, AI Research/Documentation Assistant, and Departmental Workflow Coordinator."
+      },
+      {
+        "question": "Does Nova Skills guarantee a job placement for this course?",
+        "answer": "We provide dedicated placement assistance, resume refactoring, and portfolio review, but we do not make false 100% job guarantees. Employment depends on your demonstrated portfolio quality, interview performance, and professional background."
+      },
+      {
+        "question": "Is there any software I need to install before class begins?",
+        "answer": "You only need a modern web browser (Google Chrome or Microsoft Edge recommended) and Microsoft Office or Google Workspace access. Detailed setup guides for free accounts (ChatGPT, Claude, Notion, Gamma, Canva) are provided during onboarding."
+      },
+      {
+        "question": "How are classes delivered?",
+        "answer": "Classes are delivered online via interactive live instructor-led workshops, live hands-on screen-share labs, peer code reviews, and structured office hours with industry mentors."
+      },
+      {
+        "question": "What happens if I miss a live class?",
+        "answer": "All live sessions are recorded in high-definition and uploaded to your student portal within 4 hours, accompanied by lab files, step-by-step practical guides, and prompt templates."
+      },
+      {
+        "question": "Can I claim the course fee as a corporate training reimbursement?",
+        "answer": "Yes. Nova Skills provides official corporate GST tax invoices and documentation aligned with employer learning & development (L&D) reimbursement programs."
+      },
+      {
+        "question": "How do I enroll in the AI Productivity Professional program?",
+        "answer": "Click the 'Enrol Now' button on this course page to complete registration through our secure admissions portal, or request a 1-on-1 academic consultation with our career advisory team."
       }
     ],
     "modules": [
       {
         "module_number": "Module 01",
-        "module_title": "Chatbot Fundamentals for Daily Tasks",
-        "module_purpose": "Use conversational AI for emails, summaries, and drafting.",
+        "module_title": "AI Fundamentals, Prompting & Context Engineering",
+        "module_duration": "12 Hours",
+        "duration_hours": 12,
+        "module_purpose": "Establish foundational fluency with frontier generative AI models, deconstruct the mechanics of context windows and temperature, master structured prompting frameworks (PREP & CREATE), configure persistent custom instructions and Claude Projects, and enforce rigorous enterprise data privacy and PII protection.",
         "what_you_will_learn": [
-          "Learn Intro to Conversational AI",
-          "Learn Drafting Professional Emails",
-          "Learn Summarizing Long Documents",
-          "Learn Ideation and Brainstorming"
+          "Evolution of reasoning and multimodal LLMs in the 2026 workplace: GPT-4o, Claude 3.5/3.7, and Gemini 2.0",
+          "Understanding model capabilities, non-determinism, context boundaries, and hallucination mechanics",
+          "Structured prompting methodologies: PREP (Persona, Role, Context, Constraints) and CREATE frameworks",
+          "Configuring persistent Custom Instructions in ChatGPT and managing Claude Projects with knowledge repositories",
+          "Real-time collaborative document co-authoring using ChatGPT Canvas and Claude Artifacts",
+          "Enterprise AI security: Data retention opt-outs, training exclusions, and PII anonymization techniques"
         ],
         "lessons": [
           {
-            "lesson_number": "1.1",
-            "lesson_title": "Intro to Conversational AI",
-            "what_is_taught": "Fundamentals of Intro to Conversational AI",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Intro to Conversational AI in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 1.1",
+            "lesson_title": "The Modern Workplace AI Landscape & Model Selection",
+            "what_is_taught": "Overview of frontier generative AI models (ChatGPT, Claude, Google Gemini); understanding architectural differences, token economics, context windows, and matching model strengths to specific business tasks.",
+            "subtopics": [
+              "Generative AI and LLM fundamentals for modern knowledge work",
+              "AI capabilities, inherent limitations, and non-deterministic behavior",
+              "Comparative evaluation: ChatGPT vs Claude vs Google Gemini across speed, reasoning, and context",
+              "Selecting the optimal tool based on task requirements: drafting vs analysis vs synthesis",
+              "Understanding temperature, token windows, and response formatting controls"
+            ],
+            "why_it_matters": "Prevents frustration and wasted time by ensuring office professionals choose the right model for each specific task rather than relying on a single generic chatbot.",
+            "what_learner_does": "Benchmark ChatGPT, Claude, and Gemini across 5 standard office tasks; evaluate response quality, speed, and accuracy in a structured comparison matrix.",
+            "expected_outcome": "Workplace AI Model Selection Decision Matrix."
           },
           {
-            "lesson_number": "1.2",
-            "lesson_title": "Drafting Professional Emails",
-            "what_is_taught": "Fundamentals of Drafting Professional Emails",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Drafting Professional Emails in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 1.2",
+            "lesson_title": "The PREP & CREATE Prompt Engineering Frameworks",
+            "what_is_taught": "Systematic prompt construction replacing conversational rambling with structured parameters: Persona, Role, Context, Constraints, Few-Shot exemplars, and strict output schemas.",
+            "subtopics": [
+              "Effective instructions, context boundaries, and task decomposition",
+              "Defining explicit personas, stakeholder roles, and professional tones",
+              "Few-shot prompting: embedding exemplary input-output pairs for deterministic outputs",
+              "Negative prompting: banning conversational filler, cliches, and ungrounded assumptions",
+              "Specifying strict output formats: markdown tables, bulleted executive briefs, and JSON schemas"
+            ],
+            "why_it_matters": "Eliminates the 'prompt-and-pray' loop, allowing professionals to generate publication-grade business drafts on the first attempt without extensive manual editing.",
+            "what_learner_does": "Refactor 10 vague workplace prompts into parameter-rich, structured prompt templates using the PREP framework.",
+            "expected_outcome": "Refactored Workplace Prompt Library with 10 tested business templates."
           },
           {
-            "lesson_number": "1.3",
-            "lesson_title": "Summarizing Long Documents",
-            "what_is_taught": "Fundamentals of Summarizing Long Documents",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Summarizing Long Documents in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 1.3",
+            "lesson_title": "Context Architecture: Custom Instructions, Projects & Artifacts",
+            "what_is_taught": "Building persistent workspace memory using ChatGPT Custom Instructions, Claude Projects, and Custom GPTs; utilizing Canvas and Artifacts for iterative document co-authoring.",
+            "subtopics": [
+              "Writing persistent Custom Instructions in ChatGPT and system prompts in Claude",
+              "Creating and structuring Claude Projects with uploaded corporate style guides and reference documents",
+              "Building personal Custom GPTs configured with specialized instructions and action parameters",
+              "Using ChatGPT Canvas and Claude Artifacts for side-by-side iterative text and code editing",
+              "Working with uploaded files and multimodal inputs (screenshots, PDFs, and scanned receipts)"
+            ],
+            "why_it_matters": "Removes the overhead of re-explaining company context, brand guidelines, and tone rules in every single new chat session.",
+            "what_learner_does": "Configure personal Custom Instructions and assemble a persistent Claude Project loaded with industry-specific reference files.",
+            "expected_outcome": "Configured Executive Assistant Claude Project & Custom GPT with verified knowledge recall."
           },
           {
-            "lesson_number": "1.4",
-            "lesson_title": "Ideation and Brainstorming",
-            "what_is_taught": "Fundamentals of Ideation and Brainstorming",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Ideation and Brainstorming in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 1.4",
+            "lesson_title": "AI Security, Data Governance & Confidentiality",
+            "what_is_taught": "Enterprise data privacy protocols, training opt-out mechanisms, PII de-identification techniques, and establishing human-in-the-loop accountability for AI outputs.",
+            "subtopics": [
+              "Safe handling of confidential, proprietary, and customer information",
+              "Configuring privacy settings: disabling model training on ChatGPT, Claude, and Gemini",
+              "PII anonymization workflows: stripping employee names, accounts, and financial identifiers before prompting",
+              "AI hallucinations: understanding why models confabulate and implementing verification checkpoints",
+              "Corporate acceptable use policies and human accountability for published AI content"
+            ],
+            "why_it_matters": "Protects professionals and organizations from costly data leaks, regulatory non-compliance, and reputational damage caused by careless prompting.",
+            "what_learner_does": "Audit a sensitive internal customer dispute record; anonymize all PII, configure enterprise privacy toggles, and draft a compliant resolution brief.",
+            "expected_outcome": "Data Governance & PII Redaction Audit Checklist."
           }
         ],
         "key_concepts": [
-          "Intro to Conversational AI",
-          "Drafting Professional Emails",
-          "Summarizing Long Documents",
-          "Ideation and Brainstorming"
+          "Prompt Engineering",
+          "PREP Framework",
+          "Few-Shot Prompting",
+          "Context Windows",
+          "Claude Projects",
+          "ChatGPT Canvas",
+          "PII Anonymization",
+          "Data Privacy Toggles"
         ],
         "tools": [
-          "ChatGPT",
-          "Claude",
-          "Gemini"
+          "ChatGPT (GPT-4o)",
+          "Claude (Sonnet 3.5/3.7)",
+          "Google Gemini",
+          "ChatGPT Canvas",
+          "Claude Artifacts"
         ],
-        "hands_on_practice": "Lab focused on Chatbot Fundamentals for Daily Tasks",
-        "assignment": "Module 1 Capstone",
-        "business_application": "Improves operational efficiency.",
-        "expected_outcome": "Working module prototype."
+        "hands_on_practice": "Construct and test a personal workplace prompt library containing 15 parameterized templates for research, email drafting, data summarization, and policy briefs.",
+        "assignment": "Personal Workplace Prompt Engineering & Context Management Library",
+        "business_application": "Eliminates repetitive daily prompting overhead while enforcing strict corporate confidentiality and brand tone consistency across all AI interactions.",
+        "expected_outcome": "A reusable, audited prompt repository with verified Custom Instructions and Claude Project configurations."
       },
       {
         "module_number": "Module 02",
-        "module_title": "Knowledge Management with Notion AI",
-        "module_purpose": "Organize and extract insights from your notes.",
+        "module_title": "AI Research, Fact-Checking & Knowledge Management",
+        "module_duration": "16 Hours",
+        "duration_hours": 16,
+        "module_purpose": "Master grounded business research workflows using Gemini Notebook (formerly NotebookLM), Perplexity AI, and Claude Projects; synthesize multi-source corporate filings and PDFs into verified briefs; eliminate hallucinations using the reverse-verification protocol; and produce executive intelligence dossiers with direct citation anchors.",
         "what_you_will_learn": [
-          "Learn Setting up Notion Databases",
-          "Learn Using Notion AI for Tagging",
-          "Learn Auto-generating Meeting Minutes",
-          "Learn Creating Content Calendars"
+          "End-to-end business research workflows: scoping research questions, evaluating source credibility, and deep research",
+          "Grounded document synthesis using Gemini Notebook (formerly NotebookLM) across PDFs, URLs, and notes",
+          "Generating, auditing, and validating source-anchored citations and Audio Overview deep-dive briefings",
+          "Multi-document comparative analysis: extracting key operational metrics and identifying factual contradictions",
+          "Fact-checking protocols: reverse-verification of statistics, quotations, and market projections",
+          "Ethical source attribution, copyright compliance, and corporate research documentation"
         ],
         "lessons": [
           {
-            "lesson_number": "2.1",
-            "lesson_title": "Setting up Notion Databases",
-            "what_is_taught": "Fundamentals of Setting up Notion Databases",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Setting up Notion Databases in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 2.1",
+            "lesson_title": "Business Research Workflows & Search vs Deep Research",
+            "what_is_taught": "Methodologies for structuring workplace research inquiries; distinguishing between real-time web search (ChatGPT Search, Perplexity) and grounded deep research; establishing credibility criteria for secondary sources.",
+            "subtopics": [
+              "Structuring business research questions and defining investigative scope",
+              "Real-time web search vs multi-document deep research workflows",
+              "Evaluating source credibility, publication dates, and domain authority",
+              "Using Perplexity AI and ChatGPT Search for date-bounded, citation-backed market scanning",
+              "Competitor research basics: tracking pricing changes, feature matrices, and executive press releases"
+            ],
+            "why_it_matters": "Prevents flawed strategic decisions based on outdated web results, biased blogs, or hallucinated market statistics.",
+            "what_learner_does": "Conduct a structured competitive market scan of three SaaS competitors; compile a verified feature-and-pricing matrix using Perplexity AI.",
+            "expected_outcome": "Competitive Market Scanning Matrix with Verified Web Citations."
           },
           {
-            "lesson_number": "2.2",
-            "lesson_title": "Using Notion AI for Tagging",
-            "what_is_taught": "Fundamentals of Using Notion AI for Tagging",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Using Notion AI for Tagging in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 2.2",
+            "lesson_title": "Grounded Synthesis with Gemini Notebook (formerly NotebookLM)",
+            "what_is_taught": "Mastering Gemini Notebook for zero-hallucination document intelligence; ingesting up to 50 multi-format sources; querying source files with clickable citation anchors; generating study guides and briefings.",
+            "subtopics": [
+              "Introduction to Gemini Notebook (formerly NotebookLM) architecture and grounded RAG mechanics",
+              "Uploading and managing multi-source documents: PDFs, Google Docs, copied text, URLs, and YouTube transcripts",
+              "Source-grounded Q&A: querying source materials with exact page and paragraph citation anchors",
+              "Synthesizing multiple conflicting reports and identifying factual contradictions across sources",
+              "Generating structured study guides, briefing documents, FAQs, and executive timelines"
+            ],
+            "why_it_matters": "Enables office professionals to digest hundreds of pages of technical, financial, or regulatory documents in minutes without missing critical details or generating false claims.",
+            "what_learner_does": "Ingest 4 quarterly earnings reports into Gemini Notebook; query key performance indicators and verify every generated answer against highlighted source coordinates.",
+            "expected_outcome": "Grounded Financial Analysis Brief with Clickable Source Citation Anchors."
           },
           {
-            "lesson_number": "2.3",
-            "lesson_title": "Auto-generating Meeting Minutes",
-            "what_is_taught": "Fundamentals of Auto-generating Meeting Minutes",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Auto-generating Meeting Minutes in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 2.3",
+            "lesson_title": "Audio Overviews, Claude Projects & Knowledge Management",
+            "what_is_taught": "Creating and critically auditing Gemini Notebook Audio Overviews (conversational podcast briefings); building persistent research knowledge bases in Claude Projects; organizing long-term intellectual property.",
+            "subtopics": [
+              "Generating Audio Overviews in Gemini Notebook for rapid commute and executive briefings",
+              "Critically reviewing and fact-checking AI audio discussions against source source texts",
+              "Claude Projects for persistent research: managing document libraries and project-specific custom instructions",
+              "Building structured research tables and extracting structured tabular data from unstructured PDFs",
+              "Organizing personal and team research repositories for rapid retrieval and reuse"
+            ],
+            "why_it_matters": "Provides executive stakeholders with multi-format intelligence (text briefings + audio podcasts) while maintaining a structured knowledge repository for the team.",
+            "what_learner_does": "Generate a 5-minute Audio Overview from an industry regulatory whitepaper; evaluate its accuracy and create an accompanying executive summary in Claude.",
+            "expected_outcome": "Audited Audio Overview Briefing & Executive Summary Memo."
           },
           {
-            "lesson_number": "2.4",
-            "lesson_title": "Creating Content Calendars",
-            "what_is_taught": "Fundamentals of Creating Content Calendars",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Creating Content Calendars in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 2.4",
+            "lesson_title": "Fact-Checking, Hallucination Auditing & Source Attribution",
+            "what_is_taught": "Systematic auditing protocols to catch subtle AI hallucinations; the reverse-verification protocol; copyright guidelines, fair use in business, and ethical source attribution.",
+            "subtopics": [
+              "Types of subtle AI hallucinations: invented statistics, non-existent URLs, and fabricated attributions",
+              "The Reverse-Verification Protocol: cross-checking AI assertions against primary databases and government reports",
+              "Extracting hard facts, validating numbers, and documenting confidence ratings",
+              "Copyright, fair use, and commercial source attribution guidelines for corporate deliverables",
+              "Synthesizing final executive intelligence dossiers ready for leadership presentation"
+            ],
+            "why_it_matters": "Builds bulletproof professional credibility by guaranteeing that every claim presented to executives or clients is 100% verified and attributed.",
+            "what_learner_does": "Complete a rigorous fact-checking audit of a deliberately corrupted AI research report, identifying all 5 planted factual and statistical errors.",
+            "expected_outcome": "Completed Fact-Checking Audit Sheet & Verified Executive Intelligence Dossier."
           }
         ],
         "key_concepts": [
-          "Setting up Notion Databases",
-          "Using Notion AI for Tagging",
-          "Auto-generating Meeting Minutes",
-          "Creating Content Calendars"
+          "Grounded AI Synthesis",
+          "Gemini Notebook",
+          "Citation Anchors",
+          "Audio Overviews",
+          "Reverse-Verification Protocol",
+          "Hallucination Auditing",
+          "Perplexity AI",
+          "Source Attribution"
         ],
         "tools": [
-          "ChatGPT",
-          "Claude",
-          "Gemini"
+          "Gemini Notebook (formerly NotebookLM)",
+          "ChatGPT Search",
+          "Claude (Projects)",
+          "Perplexity AI",
+          "Google Gemini"
         ],
-        "hands_on_practice": "Lab focused on Knowledge Management with Notion AI",
-        "assignment": "Module 2 Capstone",
-        "business_application": "Improves operational efficiency.",
-        "expected_outcome": "Working module prototype."
+        "hands_on_practice": "Ingest 5 complex annual reports into Gemini Notebook and compile a 10-page synthesized competitive intelligence dossier with 100% clickable citation anchors.",
+        "assignment": "Assessed Workplace Deliverable 1: Executive Intelligence & Research Dossier",
+        "business_application": "Compresses 20+ hours of manual report reading into a verified, executive-ready market research briefing with complete source attribution.",
+        "expected_outcome": "A publication-grade executive intelligence report with verified citations, competitor comparison table, and accompanying audio overview briefing."
       },
       {
         "module_number": "Module 03",
-        "module_title": "Visual Content Creation",
-        "module_purpose": "Create presentations and graphics instantly.",
+        "module_title": "Professional Communication & Content Workflows",
+        "module_duration": "16 Hours",
+        "duration_hours": 16,
+        "module_purpose": "Develop mastery in high-stakes workplace written communication, tone calibration, conflict de-escalation, executive memos using the Minto Pyramid Principle, Standard Operating Procedures (SOPs), customer crisis responses, and multichannel 1-to-5 content repurposing workflows.",
         "what_you_will_learn": [
-          "Learn Canva AI Features",
-          "Learn Gamma for Presentations",
-          "Learn Generating Stock Imagery",
-          "Learn Brand Consistency with AI"
+          "Business email architecture: formal, assertive, diplomatic, and empathetic tone calibration",
+          "Handling high-stakes workplace correspondence: client conflict de-escalation and billing negotiations",
+          "Structuring C-suite memos and proposals using the Minto Pyramid Principle (Situation, Complication, Question, Answer)",
+          "Authoring clear, compliant Standard Operating Procedures (SOPs) and administrative workflows",
+          "Multichannel 1-to-5 content cascade: repurposing corporate announcements across diverse internal and external channels",
+          "Human review protocols: proofreading, readability scoring, and brand voice adherence"
         ],
         "lessons": [
           {
-            "lesson_number": "3.1",
-            "lesson_title": "Canva AI Features",
-            "what_is_taught": "Fundamentals of Canva AI Features",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Canva AI Features in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 3.1",
+            "lesson_title": "Executive Email Writing, Tone Calibration & De-escalation",
+            "what_is_taught": "Crafting impactful workplace emails; calibrating tone for diverse organizational hierarchies; de-escalating tense customer or vendor disputes; writing persuasive follow-up sequences.",
+            "subtopics": [
+              "Business email writing: structure, clarity, and subject-line optimization",
+              "Tone adjustment: transitioning between formal, informal, assertive, diplomatic, and urgent styles",
+              "The 3-Draft Email Strategy: drafting for content, editing for brevity, and polishing for executive impact",
+              "Client communication: handling scope creep, project delays, and price increases with tact",
+              "Conflict de-escalation: responding to dissatisfied customers and critical internal stakeholders"
+            ],
+            "why_it_matters": "Prevents organizational friction and damaged client relationships by ensuring all written correspondence is professionally calibrated, clear, and objective.",
+            "what_learner_does": "Draft a 3-stage email sequence addressing a critical project delay to a high-value enterprise client, balancing accountability with constructive solutions.",
+            "expected_outcome": "Enterprise Client De-escalation & Follow-up Email Sequence."
           },
           {
-            "lesson_number": "3.2",
-            "lesson_title": "Gamma for Presentations",
-            "what_is_taught": "Fundamentals of Gamma for Presentations",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Gamma for Presentations in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 3.2",
+            "lesson_title": "Executive Memos, Proposals & Decision Briefs",
+            "what_is_taught": "Applying the Minto Pyramid Principle to corporate memos; writing concise executive summaries; formatting business proposals and quotations for decision-makers.",
+            "subtopics": [
+              "The Minto Pyramid Principle: leading with the core recommendation (SCQA framework)",
+              "Executive summaries: distilling 50-page initiatives into a high-impact 1-page decision memo",
+              "Business proposal and quotation drafting: structuring deliverables, timelines, and commercial terms",
+              "Meeting agendas and follow-up decision logs: converting verbal discussions into accountable action items",
+              "Translation and localization basics: adapting corporate messages for international teams"
+            ],
+            "why_it_matters": "Enables busy executives to understand and approve business recommendations immediately without wading through unstructured background narrative.",
+            "what_learner_does": "Transform a chaotic 10-page project briefing into a crisp 1-page executive decision memo using the SCQA framework.",
+            "expected_outcome": "C-Suite Executive Decision Memo & Proposal Framework."
           },
           {
-            "lesson_number": "3.3",
-            "lesson_title": "Generating Stock Imagery",
-            "what_is_taught": "Fundamentals of Generating Stock Imagery",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Generating Stock Imagery in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 3.3",
+            "lesson_title": "Standard Operating Procedures (SOPs) & HR Documentation",
+            "what_is_taught": "Documenting complex operational workflows into step-by-step Standard Operating Procedures (SOPs); creating administrative checklists, policy guidelines, and HR correspondence.",
+            "subtopics": [
+              "Standard Operating Procedures (SOPs): structure, step-by-step logic, and role accountability",
+              "Converting informal voice memos or meeting notes into formal corporate SOP documentation",
+              "HR and administrative documents: drafting job descriptions, onboarding checklists, and policy updates",
+              "Customer support response libraries: building categorized, approved macro responses for support teams",
+              "Resume and LinkedIn profile optimization: crafting professional executive bios and achievement bullets"
+            ],
+            "why_it_matters": "Standardizes departmental processes, eliminates single-person dependencies, and ensures high operational consistency across the organization.",
+            "what_learner_does": "Interview a peer on a routine administrative workflow; use Claude Artifacts to generate a formal, ISO-compliant Standard Operating Procedure document.",
+            "expected_outcome": "Validated Departmental Standard Operating Procedure (SOP) Manual."
           },
           {
-            "lesson_number": "3.4",
-            "lesson_title": "Brand Consistency with AI",
-            "what_is_taught": "Fundamentals of Brand Consistency with AI",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Brand Consistency with AI in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 3.4",
+            "lesson_title": "The 1-to-5 Content Repurposing Cascade & Human Review",
+            "what_is_taught": "Executing the one-to-many content cascade workflow; repurposing a single core corporate announcement across 5 diverse communication channels while maintaining brand voice.",
+            "subtopics": [
+              "The 1-to-5 Content Cascade: whitepaper -> executive memo -> LinkedIn post -> newsletter -> FAQ sheet",
+              "Maintaining brand voice, corporate vocabulary, and organizational style guides across assets",
+              "AI-assisted editing, proofreading, and readability scoring (Flesch-Kincaid formula)",
+              "Eliminating bureaucratic jargon, repetitive phrases, and generic AI idioms",
+              "Establishing the final Human Review Protocol before publishing or sending external communications"
+            ],
+            "why_it_matters": "Multiplies communications team output by 5x while ensuring consistent corporate messaging and zero unreviewed AI-generated gaffes.",
+            "what_learner_does": "Take a corporate quarterly sustainability update and generate 5 distinct channel assets: internal staff memo, CEO LinkedIn post, client newsletter, FAQ sheet, and press release.",
+            "expected_outcome": "Complete Multichannel Communications Campaign Kit."
           }
         ],
         "key_concepts": [
-          "Canva AI Features",
-          "Gamma for Presentations",
-          "Generating Stock Imagery",
-          "Brand Consistency with AI"
+          "Tone Calibration",
+          "Minto Pyramid Principle",
+          "Conflict De-escalation",
+          "Executive Memos",
+          "Standard Operating Procedures (SOPs)",
+          "Content Cascade",
+          "Brand Voice Adherence",
+          "Human Review Protocol"
         ],
         "tools": [
-          "ChatGPT",
-          "Claude",
-          "Gemini"
+          "Claude (Artifacts)",
+          "ChatGPT (Canvas)",
+          "Google Gemini",
+          "Microsoft Word (Copilot)",
+          "Google Docs"
         ],
-        "hands_on_practice": "Lab focused on Visual Content Creation",
-        "assignment": "Module 3 Capstone",
-        "business_application": "Improves operational efficiency.",
-        "expected_outcome": "Working module prototype."
+        "hands_on_practice": "Assemble a comprehensive professional communication toolkit containing tested, reviewed templates for executive memos, client negotiations, SOPs, and multichannel releases.",
+        "assignment": "Professional Workplace Communication & SOP Toolkit",
+        "business_application": "Accelerates daily corporate writing tasks while guaranteeing executive-level polish, clear accountability, and conflict de-escalation.",
+        "expected_outcome": "A complete professional communication toolkit with 15+ reviewed, reusable business templates and a fully drafted SOP manual."
       },
       {
         "module_number": "Module 04",
-        "module_title": "Workflow Integration & Daily Routines",
-        "module_purpose": "Embed AI into daily work habits seamlessly.",
+        "module_title": "AI Documents, Presentations & Visual Communication",
+        "module_duration": "18 Hours",
+        "duration_hours": 18,
+        "module_purpose": "Bridge the gap between raw textual intelligence and compelling visual storytelling; master AI-assisted document creation and styling in Microsoft Word and Google Docs; build publication-grade slide presentations in Gamma and PowerPoint Copilot; and design branded business infographics, flowcharts, and visual assets in Canva Magic Studio.",
         "what_you_will_learn": [
-          "Learn AI Browser Extensions",
-          "Learn Mobile AI Productivity",
-          "Learn Data Privacy Basics",
-          "Learn Building an AI Routine"
+          "AI-assisted document structuring, styling, and executive formatting in Microsoft Word and Google Docs",
+          "Transforming narrative business reports into compelling slide storyboards with clear visual hierarchy",
+          "Rapid presentation generation in Gamma: prompting for slide decks, web pages, and interactive cards",
+          "Microsoft 365 Copilot in PowerPoint: generating slides from Word documents, restyling, and adding speaker notes",
+          "Google Slides and Gemini workflows for cloud-based team presentations",
+          "Designing branded visual assets, process flowcharts, and infographics using Canva Magic Studio"
         ],
         "lessons": [
           {
-            "lesson_number": "4.1",
-            "lesson_title": "AI Browser Extensions",
-            "what_is_taught": "Fundamentals of AI Browser Extensions",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice AI Browser Extensions in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 4.1",
+            "lesson_title": "AI-Assisted Document Structuring & Formatting in Word & Docs",
+            "what_is_taught": "Creating publication-grade corporate reports; using Microsoft Word with Copilot and Google Docs with Gemini; structuring long documents with executive cover pages, tables of contents, callouts, and data tables.",
+            "subtopics": [
+              "AI-assisted document creation: converting messy notes into structured corporate layouts",
+              "Document structure: executive summaries, numbered headings, callout boxes, and appendices",
+              "Microsoft 365 Copilot in Word: in-line drafting, document summarization, and table formatting",
+              "Google Docs with Gemini: side-panel prompts, tone expansion, and collaborative editing",
+              "Professional typography, spacing, page breaks, and corporate template alignment"
+            ],
+            "why_it_matters": "Ensures proposals and reports look like they were designed by a professional agency, establishing immediate visual authority with clients and executives.",
+            "what_learner_does": "Take an unstructured 6-page raw project debrief and use Word Copilot / Docs Gemini to format it into a publication-grade client proposal document.",
+            "expected_outcome": "Formatted 8-Page Corporate Business Proposal Document."
           },
           {
-            "lesson_number": "4.2",
-            "lesson_title": "Mobile AI Productivity",
-            "what_is_taught": "Fundamentals of Mobile AI Productivity",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Mobile AI Productivity in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 4.2",
+            "lesson_title": "Presentation Storytelling, Slide Hierarchy & Outlines",
+            "what_is_taught": "The architecture of high-impact executive presentations; converting long-form text into slide outlines; managing cognitive load; establishing visual hierarchy and slide narratives.",
+            "subtopics": [
+              "Presentation storytelling: problem-solution-impact narrative structures for executives",
+              "Slide hierarchy: title-lead, supporting evidence, visual anchor, and clear takeaway",
+              "Report-to-presentation conversion: distilling 20-page documents into 10–12 slide outlines",
+              "Data storytelling: presenting complex statistics visually rather than through walls of bullet points",
+              "Writing effective presentation outlines with detailed speaker notes and timing allocations"
+            ],
+            "why_it_matters": "Prevents 'Death by PowerPoint' by training professionals to build clear, narrative-driven decks that communicate key decisions in under 15 seconds per slide.",
+            "what_learner_does": "Extract a 10-slide executive pitch deck outline with speaker notes from an approved business proposal document.",
+            "expected_outcome": "Structured 10-Slide Presentation Storyboard & Speaker Notes."
           },
           {
-            "lesson_number": "4.3",
-            "lesson_title": "Data Privacy Basics",
-            "what_is_taught": "Fundamentals of Data Privacy Basics",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Data Privacy Basics in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 4.3",
+            "lesson_title": "Rapid Slide Generation with Gamma & PowerPoint Copilot",
+            "what_is_taught": "Using modern AI presentation engines; generating interactive web presentations and PPTX exports in Gamma; leveraging Microsoft 365 Copilot in PowerPoint; comparative cloud workflows in Google Slides.",
+            "subtopics": [
+              "Introduction to Gamma: prompting for slide decks, cards, and interactive web documents",
+              "Customizing Gamma decks: visual themes, typography, image replacements, and PPTX export",
+              "PowerPoint Copilot: 'Create presentation from file' workflow using linked Word proposals",
+              "Microsoft 365 document agents and automated layout restructuring where licensed",
+              "Google Slides and Gemini side-panel workflows for cloud presentation assembly"
+            ],
+            "why_it_matters": "Slashes presentation creation time from 8 hours to 30 minutes, allowing professionals to focus on delivery and strategic messaging rather than manual slide formatting.",
+            "what_learner_does": "Generate a complete 10-slide interactive client pitch deck in Gamma from a raw outline; edit copy, adjust styling, and export to PowerPoint format.",
+            "expected_outcome": "Completed 10-Slide Client Pitch Deck in Gamma & PowerPoint."
           },
           {
-            "lesson_number": "4.4",
-            "lesson_title": "Building an AI Routine",
-            "what_is_taught": "Fundamentals of Building an AI Routine",
-            "why_it_matters": "Crucial for real-world application.",
-            "what_learner_does": "Practice Building an AI Routine in a sandbox.",
-            "expected_outcome": "Completed lesson exercise."
+            "lesson_number": "Lesson 4.4",
+            "lesson_title": "Visual Assets, Flowcharts & Infographics with Canva AI",
+            "what_is_taught": "Designing branded visual collateral; using Canva Magic Studio (Magic Design, Magic Media, Magic Switch); creating process diagrams, infographics, and report cover graphics.",
+            "subtopics": [
+              "Canva Magic Studio: Magic Design for presentations, banners, and social collateral",
+              "AI-assisted diagramming: creating process flowcharts, customer journeys, and timelines",
+              "Visual asset selection: generating bespoke business imagery and avoiding stock photo cliches",
+              "Magic Switch: instantly converting slide decks into executive summaries, blogs, and infographics",
+              "Brand consistency: locking corporate color palettes, fonts, and logo placements"
+            ],
+            "why_it_matters": "Empowers non-designers to produce polished, branded visual collateral that enhances executive proposals and marketing materials without agency expense.",
+            "what_learner_does": "Design a branded process infographic illustrating an operational workflow using Canva Magic Studio tools.",
+            "expected_outcome": "Branded Operational Process Infographic & Visual Collateral Package."
           }
         ],
         "key_concepts": [
-          "AI Browser Extensions",
-          "Mobile AI Productivity",
-          "Data Privacy Basics",
-          "Building an AI Routine"
+          "Document Formatting",
+          "Presentation Storytelling",
+          "Slide Hierarchy",
+          "Gamma App",
+          "PowerPoint Copilot",
+          "Word Copilot",
+          "Canva Magic Studio",
+          "Infographic Design"
         ],
         "tools": [
-          "ChatGPT",
-          "Claude",
-          "Gemini"
+          "Microsoft Word (Copilot)",
+          "Microsoft PowerPoint (Copilot)",
+          "Gamma",
+          "Canva Magic Studio",
+          "Google Docs & Slides (Gemini)"
         ],
-        "hands_on_practice": "Lab focused on Workflow Integration & Daily Routines",
-        "assignment": "Module 4 Capstone",
-        "business_application": "Improves operational efficiency.",
-        "expected_outcome": "Working module prototype."
+        "hands_on_practice": "Produce a professional 8-page business proposal and an accompanying 10–12 slide presentation deck from a realistic corporate client brief.",
+        "assignment": "Assessed Workplace Deliverable 2: Multimodal Business Proposal Package",
+        "business_application": "Transforms raw corporate proposals into high-converting, visually compelling executive documents and presentation decks in record time.",
+        "expected_outcome": "A unified proposal package containing a formatted Word document, a 10-slide Gamma/PowerPoint presentation, and a Canva visual infographic."
+      },
+      {
+        "module_number": "Module 05",
+        "module_title": "Excel, Data Analysis & Business Reporting with AI",
+        "module_duration": "18 Hours",
+        "duration_hours": 18,
+        "module_purpose": "Harness AI to eliminate spreadsheet friction; generate and debug complex Excel formulas (XLOOKUP, SUMIFS, dynamic arrays); clean and standardize noisy tabular datasets; perform automated exploratory data analysis with ChatGPT Advanced Data Analysis; utilize Microsoft 365 Copilot in Excel; and author C-suite executive financial variance memos.",
+        "what_you_will_learn": [
+          "Spreadsheet data organization: structuring clean tabular data and managing data types",
+          "AI-assisted data cleaning: handling missing values, text splitting, date normalization, and duplicate removal",
+          "Conversational formula generation and debugging: IF, SUMIF/SUMIFS, COUNTIF/COUNTIFS, and XLOOKUP",
+          "Dynamic array formulas: FILTER, UNIQUE, SORT, and multi-criteria lookup logic",
+          "Exploratory business dataset analysis using ChatGPT Advanced Data Analysis (Code Interpreter)",
+          "Copilot-assisted spreadsheet analysis, pivot tables, chart generation, and executive variance reporting"
+        ],
+        "lessons": [
+          {
+            "lesson_number": "Lesson 5.1",
+            "lesson_title": "Spreadsheet Data Organization & AI-Assisted Cleaning",
+            "what_is_taught": "Principles of tidy tabular data; using AI prompts to clean, normalize, and restructure messy corporate spreadsheets; date standardization, text-to-columns, and duplicate elimination.",
+            "subtopics": [
+              "Spreadsheet data organization: tabular guidelines, headers, and data type consistency",
+              "Data cleaning: handling missing values, trailing spaces, and mixed date formats",
+              "Duplicate detection and automated merging logic",
+              "Using ChatGPT and Claude to write Power Query M-code and simple text-cleaning macros",
+              "Google Sheets with Gemini: smart fill, table formatting, and automated cleanup suggestions"
+            ],
+            "why_it_matters": "Saves hours of tedious manual data scrubbing and eliminates the #1 cause of spreadsheet formula errors: dirty, inconsistent raw data.",
+            "what_learner_does": "Take a corrupted 1,500-row customer transaction database and use AI prompts to clean, reformat, and validate all fields.",
+            "expected_outcome": "Cleaned, Normalized Corporate Transaction Spreadsheet."
+          },
+          {
+            "lesson_number": "Lesson 5.2",
+            "lesson_title": "Conversational Formula Generation & Debugging",
+            "what_is_taught": "Translating business requirements into advanced Excel formulas; generating XLOOKUP, nested IF/IFS, SUMIFS, and dynamic arrays; debugging complex formula calculation errors.",
+            "subtopics": [
+              "Excel formula fundamentals: mathematical syntax, cell referencing, and logical operators",
+              "Conditional aggregations: SUMIF/SUMIFS, COUNTIF/COUNTIFS, and AVERAGEIFS",
+              "Modern lookup mechanics: mastering XLOOKUP over legacy VLOOKUP and INDEX/MATCH",
+              "Dynamic array formulas: FILTER, UNIQUE, SORT, and SEQUENCE",
+              "Spreadsheet formula verification: debugging #N/A, #VALUE!, #REF!, and circular calculation errors"
+            ],
+            "why_it_matters": "Enables non-technical professionals to build sophisticated, error-free spreadsheet calculations without having to memorize complex nested syntax.",
+            "what_learner_does": "Use conversational AI prompting to build a multi-tiered sales commission and bonus calculation engine in Excel.",
+            "expected_outcome": "Audited Excel Calculation Engine with Tested Dynamic Formulas."
+          },
+          {
+            "lesson_number": "Lesson 5.3",
+            "lesson_title": "Automated Data Analysis with ChatGPT & Copilot in Excel",
+            "what_is_taught": "Uploading spreadsheets directly to ChatGPT Advanced Data Analysis (Code Interpreter); automated descriptive statistics, outlier detection, and correlation analysis; Copilot in Excel workflows.",
+            "subtopics": [
+              "CSV and spreadsheet analysis using ChatGPT Advanced Data Analysis (Code Interpreter)",
+              "Explaining business trends, identifying revenue anomalies, and performing cohort analysis",
+              "Basic forecasting concepts: linear projections and seasonal variance detection",
+              "Microsoft 365 Copilot in Excel: analyzing tables, adding formula columns, and highlighting trends",
+              "AI-assisted Python-in-Excel exposure where licensed (understanding the boundary without coding)"
+            ],
+            "why_it_matters": "Extracts deep analytical insights from raw data in minutes, uncovering hidden business opportunities and operational bottlenecks that traditional manual scanning misses.",
+            "what_learner_does": "Upload a 12-month departmental expenditure dataset into ChatGPT; execute automated statistical analysis, identify cost spikes, and generate visualization charts.",
+            "expected_outcome": "Exploratory Data Analysis Report with AI-Generated Charts."
+          },
+          {
+            "lesson_number": "Lesson 5.4",
+            "lesson_title": "PivotTables, MIS Dashboards & Executive Variance Reporting",
+            "what_is_taught": "Building interactive Excel PivotTables and dashboard charts with AI guidance; structuring Management Information System (MIS) reports; translating tabular findings into C-suite financial memos.",
+            "subtopics": [
+              "PivotTables and PivotCharts: slicing business data by region, product, and quarter",
+              "Dashboard structure: organizing key KPI cards, trend graphs, and interactive slicers",
+              "Data accuracy and mathematical verification checkpoints",
+              "Executive MIS summary: translating numbers into strategic business recommendations",
+              "Reporting automation concepts: refreshing dashboards and scheduling automated updates"
+            ],
+            "why_it_matters": "Bridges the gap between raw spreadsheet numbers and senior leadership decision-making, positioning the professional as a strategic business partner.",
+            "what_learner_does": "Construct a dynamic sales performance dashboard in Excel and author a 2-page executive variance memo explaining quarterly performance drivers.",
+            "expected_outcome": "Interactive Excel Dashboard & Executive Financial Variance Memo."
+          }
+        ],
+        "key_concepts": [
+          "Data Cleaning",
+          "XLOOKUP",
+          "Dynamic Arrays",
+          "Formula Debugging",
+          "ChatGPT Data Analysis",
+          "Copilot in Excel",
+          "PivotTables",
+          "Executive Variance Memo"
+        ],
+        "tools": [
+          "Microsoft Excel (Desktop & Online)",
+          "ChatGPT Advanced Data Analysis (Code Interpreter)",
+          "Microsoft 365 Copilot in Excel",
+          "Google Sheets with Gemini"
+        ],
+        "hands_on_practice": "Analyze a complex business performance dataset, validate all calculations, create an interactive dashboard, and prepare an executive financial variance memo.",
+        "assignment": "Assessed Workplace Deliverable 3: AI-Driven Business Analytics Dossier",
+        "business_application": "Enables office professionals to clean, analyze, and present corporate financial and operational data with the speed and rigor of a dedicated financial analyst.",
+        "expected_outcome": "An audited Excel workbook with dynamic formulas, interactive charts, and a 2-page C-suite financial performance briefing."
+      },
+      {
+        "module_number": "Module 06",
+        "module_title": "Meetings, Collaboration & Personal Knowledge Systems",
+        "module_duration": "12 Hours",
+        "duration_hours": 12,
+        "module_purpose": "Eliminate meeting fatigue and communication silos; utilize AI meeting intelligence in Microsoft Teams and Google Meet; transform raw transcripts into accountable action-item matrices; build a personal and team knowledge wiki in Notion AI; and architect a daily executive planning routine.",
+        "what_you_will_learn": [
+          "AI meeting preparation: automated agenda generation and stakeholder pre-read compilation",
+          "Authorized transcription workflows and legal recording consent guidelines",
+          "Extracting structured summaries, decision logs, and [Owner - Action Item - Deadline] matrices",
+          "Personal knowledge organization using the P.A.R.A. method (Projects, Areas, Resources, Archives)",
+          "Building searchable team wikis, project trackers, and SOP hubs in Notion AI",
+          "Structuring the AI-augmented workday: morning briefing generation, calendar prioritization, and time blocking"
+        ],
+        "lessons": [
+          {
+            "lesson_number": "Lesson 6.1",
+            "lesson_title": "AI Meeting Preparation, Agendas & Transcription Systems",
+            "what_is_taught": "Preparing for high-stakes business meetings with AI; automated agenda drafting; authorized transcription tools (Teams Intelligent Recap, Google Meet with Gemini); recording consent and privacy ethics.",
+            "subtopics": [
+              "AI meeting preparation: synthesizing background context and drafting targeted agendas",
+              "Authorized transcription workflows in Microsoft Teams and Google Meet",
+              "Overview of third-party recording tools (Otter.ai, Fireflies.ai, Fathom) and compliance risks",
+              "Recording consent, data privacy, and corporate meeting governance policies",
+              "Managing multi-speaker attribution and noisy meeting audio environments"
+            ],
+            "why_it_matters": "Ensures meetings start with clear focus and intent while capturing complete, compliant audio records without manual note-taking distraction.",
+            "what_learner_does": "Draft an executive meeting agenda using AI and configure an automated recording/transcription pipeline for a simulated strategy session.",
+            "expected_outcome": "Executive Meeting Agenda & Audio Transcription Protocol."
+          },
+          {
+            "lesson_number": "Lesson 6.2",
+            "lesson_title": "Meeting Summaries, Decision Logs & Action-Item Tracking",
+            "what_is_taught": "Converting unstructured 60-minute verbal meeting transcripts into clear, accountable documentation; extracting decisions, risks, and assigned action items; writing professional follow-up messages.",
+            "subtopics": [
+              "Meeting summaries: executive summary, discussion highlights, and key decisions log",
+              "The Action-Item Extraction Formula: [Owner] - [Action Item] - [Deadline] - [Dependency]",
+              "Drafting immediate post-meeting follow-up communications to all attendees",
+              "Task prioritization: categorizing action items using the Eisenhower Matrix (Urgent vs Important)",
+              "Calendar planning: scheduling time blocks for assigned action items automatically"
+            ],
+            "why_it_matters": "Stops tasks from falling through the cracks and enforces clear organizational accountability immediately following every business discussion.",
+            "what_learner_does": "Ingest a messy 45-minute multi-speaker transcript; extract a structured summary, a decision log, and an accountable action-item matrix.",
+            "expected_outcome": "Executive Meeting Summary & Action-Item Tracking Matrix."
+          },
+          {
+            "lesson_number": "Lesson 6.3",
+            "lesson_title": "Personal Knowledge Management (PKM) with Notion AI",
+            "what_is_taught": "Architecting a personal and departmental knowledge operating system; organizing information using the P.A.R.A. method; leveraging Notion AI for semantic search, auto-tagging, and database properties.",
+            "subtopics": [
+              "Personal knowledge organization: Projects, Areas, Resources, and Archives (P.A.R.A.)",
+              "Notion databases: creating linked databases for projects, meeting notes, and SOPs",
+              "Notion AI features: workspace Q&A, auto-generating summaries, and auto-filling database properties",
+              "Building searchable information systems and internal team wikis",
+              "Document versioning, permissions, and sharing controls across cross-functional teams"
+            ],
+            "why_it_matters": "Transforms scattered desktop notes and buried emails into a centralized, searchable organizational brain accessible to the entire team in seconds.",
+            "what_learner_does": "Build a structured Notion knowledge workspace containing linked databases for projects, meeting minutes, and corporate SOPs with Notion AI enabled.",
+            "expected_outcome": "Operational Team Knowledge Wiki & Database in Notion."
+          },
+          {
+            "lesson_number": "Lesson 6.4",
+            "lesson_title": "Daily Routine Design, Morning Briefings & Time Blocking",
+            "what_is_taught": "Designing a high-productivity daily workflow; automated morning briefing generation; synthesizing calendar events, priority emails, and pending tasks into a focused daily battle plan.",
+            "subtopics": [
+              "Structuring the AI-augmented workday: the 80/20 rule of automated administration vs deep work",
+              "Daily morning briefing generation: synthesizing overnight emails and calendar commitments",
+              "AI-assisted calendar audit: identifying meeting bloat and protecting deep-work focus blocks",
+              "End-of-day retrospectives and automated handoff notes for remote team members",
+              "Maintaining long-term habit consistency and preventing digital burnout"
+            ],
+            "why_it_matters": "Reclaims 2+ hours every morning by eliminating cognitive overwhelm and directing focus immediately to high-priority business outcomes.",
+            "what_learner_does": "Construct a reusable morning briefing prompt template that digests daily commitments into a prioritized 1-page action agenda.",
+            "expected_outcome": "Personal Daily Executive Planning System & Morning Briefing Template."
+          }
+        ],
+        "key_concepts": [
+          "Meeting Intelligence",
+          "Teams Intelligent Recap",
+          "Action-Item Extraction",
+          "P.A.R.A. Method",
+          "Notion AI",
+          "Personal Knowledge Systems",
+          "Morning Briefings",
+          "Calendar Prioritization"
+        ],
+        "tools": [
+          "Microsoft Teams (Intelligent Recap)",
+          "Google Meet with Gemini",
+          "Notion AI",
+          "Claude",
+          "ChatGPT"
+        ],
+        "hands_on_practice": "Build an end-to-end meeting-to-action workflow and construct a searchable personal and team knowledge workspace in Notion AI.",
+        "assignment": "Meeting-to-Action Pipeline & Operational Knowledge Workspace",
+        "business_application": "Eliminates post-meeting documentation lag and organizes departmental intellectual property into a searchable, permanent knowledge hub.",
+        "expected_outcome": "A functional meeting transcription summary pipeline linked to an active Notion knowledge database and personal executive dashboard."
+      },
+      {
+        "module_number": "Module 07",
+        "module_title": "AI Workflow Automation & Connected Apps",
+        "module_duration": "12 Hours",
+        "duration_hours": 12,
+        "module_purpose": "Transition from manual copying-and-pasting to automated business workflows; connect AI models directly to email and cloud drives; build no-code automations in Microsoft Power Automate Desktop and Zapier; implement human-in-the-loop approval gates; and understand emerging Model Context Protocol (MCP) concepts.",
+        "what_you_will_learn": [
+          "Principles of workplace automation: mapping business processes from triggers to actions",
+          "Connected applications in ChatGPT and Claude: querying Google Drive and OneDrive directly",
+          "Building email triage automations in Power Automate: classification, draft response, and alert dispatch",
+          "Automated cloud document filing: sorting email attachments into date-stamped folders with AI filenames",
+          "Human-in-the-loop approval gates: ensuring zero automated actions execute without human sign-off",
+          "Modern agentic concepts and Model Context Protocol (MCP 2026) awareness for connected desktop tools"
+        ],
+        "lessons": [
+          {
+            "lesson_number": "Lesson 7.1",
+            "lesson_title": "Workplace Automation Fundamentals & Process Mapping",
+            "what_is_taught": "Deconstructing repetitive office tasks into automated logic; triggers, actions, filters, and branching conditions; identifying high-ROI automation opportunities; data security in automation.",
+            "subtopics": [
+              "What workplace automation means for modern desk workers: manual vs automated tasks",
+              "Business process mapping: drawing flowchart logic from trigger event to final outcome",
+              "Event-driven architecture: webhooks, scheduled triggers, and polling monitors",
+              "App permissions, API security tokens, and safe credential handling",
+              "Error handling fundamentals: managing failed runs and setting up automated alert notifications"
+            ],
+            "why_it_matters": "Prevents flawed automations by teaching professionals how to map and test process logic before connecting live applications.",
+            "what_learner_does": "Map a 4-step administrative inquiry intake process into a formal workflow diagram specifying triggers, conditions, and actions.",
+            "expected_outcome": "Administrative Process Flowchart & Automation Blueprint."
+          },
+          {
+            "lesson_number": "Lesson 7.2",
+            "lesson_title": "Connected Apps & Cloud Drive Intelligence",
+            "what_is_taught": "Connecting language models directly to enterprise storage; using ChatGPT and Claude connected extensions; querying Google Drive and Microsoft OneDrive; automated document cross-referencing.",
+            "subtopics": [
+              "Connected applications in ChatGPT and Claude: capabilities and boundaries",
+              "Querying cloud document repositories directly from conversational interfaces",
+              "Comparing multiple cloud documents without manual downloading and re-uploading",
+              "Gmail and Outlook connected workflows for message drafting and calendar scheduling",
+              "Managing access scopes and revoking application permissions securely"
+            ],
+            "why_it_matters": "Eliminates tedious downloading and uploading of files, allowing professionals to search and analyze enterprise cloud repositories in seconds.",
+            "what_learner_does": "Connect cloud storage to AI interface and execute a comparative cross-document audit across three customer contracts in separate folders.",
+            "expected_outcome": "Connected Cloud Storage Document Audit Report."
+          },
+          {
+            "lesson_number": "Lesson 7.3",
+            "lesson_title": "Building No-Code Flows with Power Automate & Zapier",
+            "what_is_taught": "Hands-on no-code automation construction; building an email triage and attachment filing flow using Microsoft Power Automate Desktop or Zapier; integrating AI classification and automated draft replies.",
+            "subtopics": [
+              "Microsoft Power Automate Desktop: building local desktop automation flows on Windows",
+              "Cloud automation with Zapier / Google Workspace Studio: multi-step trigger-action flows",
+              "Building an automated email triage flow: classifying incoming emails using AI (Urgent, Billing, General)",
+              "Automated attachment routing: saving invoice PDFs into categorized, date-stamped folders",
+              "Building human-in-the-loop approval gates before emails are dispatched"
+            ],
+            "why_it_matters": "Saves 5+ hours every week by automatically handling high-volume email triage and file management without human clerical effort.",
+            "what_learner_does": "Build and test a 4-step no-code workflow: incoming test request -> AI classification -> automated attachment filing -> human approval alert.",
+            "expected_outcome": "Functional No-Code Automated Workflow with Recorded Test Run."
+          },
+          {
+            "lesson_number": "Lesson 7.4",
+            "lesson_title": "Agentic AI Concepts & Model Context Protocol (MCP) Awareness",
+            "what_is_taught": "The shift from passive chat to active AI agents; understanding autonomous tools; Model Context Protocol (MCP 2026) awareness; enterprise governance and safety guardrails.",
+            "subtopics": [
+              "The evolution from conversational chatbots to autonomous task-executing agents",
+              "What is the Model Context Protocol (MCP)? Conceptual overview of connected desktop assistants",
+              "How MCP enables desktop AI to safely read local calendars, contacts, and files without cloud exposure",
+              "Enterprise risks: unauthorized actions, data leakage, and excessive agent permissions",
+              "Governance checklists: establishing boundaries and audit trails for workplace AI agents"
+            ],
+            "why_it_matters": "Prepares knowledge workers for the next major wave of enterprise AI adoption (connected desktop agents) while ensuring they understand critical safety and governance guardrails.",
+            "what_learner_does": "Analyze an enterprise agent deployment scenario; draft an Agent Governance & Permission Checklist for departmental leadership.",
+            "expected_outcome": "Agentic Workflow Governance & MCP Awareness Brief."
+          }
+        ],
+        "key_concepts": [
+          "Workflow Automation",
+          "Triggers & Actions",
+          "Power Automate Desktop",
+          "Zapier",
+          "Email Triage Flow",
+          "Human-in-the-Loop",
+          "Connected Apps",
+          "Model Context Protocol (MCP)"
+        ],
+        "tools": [
+          "Microsoft Power Automate Desktop",
+          "Zapier (Free Tier)",
+          "ChatGPT Connected Apps",
+          "Claude",
+          "Google Drive & OneDrive"
+        ],
+        "hands_on_practice": "Build a complete no-code automated business workflow that receives a request, classifies it with AI, files attachments to cloud storage, and alerts a human for approval.",
+        "assignment": "Assessed Workplace Deliverable 4: Connected Personal Workflow Automation",
+        "business_application": "Eliminates repetitive clerical email and filing tasks through reliable, event-driven no-code automation flows with strict human approval gates.",
+        "expected_outcome": "A deployed, recorded no-code automation flow connecting email, cloud storage, and task management with complete documentation."
+      },
+      {
+        "module_number": "Module 08",
+        "module_title": "Workplace Productivity Portfolio & Assessment",
+        "module_duration": "16 Hours",
+        "duration_hours": 16,
+        "module_purpose": "Synthesize all course skills into a comprehensive, enterprise-grade capstone project: the 360° AI-Augmented Department Operations Overhaul; compile the four core workplace deliverables into a professional digital showcase; calculate honest before-and-after time savings; and complete an independent practical defense before an academic assessment panel.",
+        "what_you_will_learn": [
+          "Assembling the complete workplace productivity portfolio into a polished digital showcase",
+          "Calculating verifiable time-saving metrics and ROI using honest, measured methodology",
+          "Enterprise AI ethics, compliance, copyright, and acceptable use policies",
+          "Managing organizational change: overcoming colleague resistance and coaching teams on AI safety",
+          "Executing the 360° AI-Augmented Department Operations Overhaul Capstone project",
+          "Delivering a live executive presentation and defending technical decisions before an assessment panel"
+        ],
+        "lessons": [
+          {
+            "lesson_number": "Lesson 8.1",
+            "lesson_title": "Portfolio Synthesis & Professional Showcase",
+            "what_is_taught": "Curating the four core deliverables into a unified digital portfolio in Notion or Gamma; documenting before-and-after workflow metrics; presenting work to internal leadership or prospective clients.",
+            "subtopics": [
+              "Assembling the four core assessed deliverables into a cohesive digital showcase",
+              "Documenting workflow diagnostics: baseline manual hours vs AI-assisted completion hours",
+              "Calculating realistic efficiency improvements (demonstrating 40–60% time savings)",
+              "Writing executive case studies highlighting business problem, AI stack, and measurable impact",
+              "Hosting and publishing the digital portfolio for career advancement"
+            ],
+            "why_it_matters": "Provides tangible, auditable proof of workplace AI proficiency that differentiates the professional in performance reviews and job applications.",
+            "what_learner_does": "Compile all 4 course deliverables, prompt templates, and SOPs into an interactive digital portfolio showcase in Notion.",
+            "expected_outcome": "Curated Professional Workplace AI Digital Portfolio."
+          },
+          {
+            "lesson_number": "Lesson 8.2",
+            "lesson_title": "Enterprise AI Governance, Ethics & Change Management",
+            "what_is_taught": "Navigating corporate AI governance; acceptable use policies; addressing copyright and intellectual property concerns; coaching resistant team members; leading departmental AI adoption.",
+            "subtopics": [
+              "Corporate acceptable use policies: permitted tools, restricted data, and disclosure standards",
+              "Copyright and IP: understanding current legal rulings on AI-generated content in business",
+              "Managing organizational change: addressing employee job-loss anxiety and skepticism",
+              "Establishing departmental peer-review circles and internal AI best-practice sharing",
+              "Continuous learning: tracking rapid AI tool updates without getting overwhelmed"
+            ],
+            "why_it_matters": "Transforms the learner from an isolated tool user into a respected internal AI champion capable of guiding colleagues safely and ethically.",
+            "what_learner_does": "Draft an enterprise AI Acceptable Use Policy and adoption roadmap tailored for a 25-person business department.",
+            "expected_outcome": "Departmental AI Acceptable Use Policy & Adoption Roadmap."
+          },
+          {
+            "lesson_number": "Lesson 8.3",
+            "lesson_title": "Capstone Execution: 360° Department Operations Overhaul",
+            "what_is_taught": "Executing the comprehensive Capstone: conducting a full operational overhaul of a designated business function (HR, Operations, Sales, Finance, or Executive Support); integrating research, communications, slides, data, and automation.",
+            "subtopics": [
+              "Department workflow diagnostic: mapping 5 operational bottlenecks and measuring baseline time",
+              "Authoring the AI-Powered SOP Manual: 5 complete standard operating procedures",
+              "Constructing the live operational knowledge wiki and template library in Notion",
+              "Implementing the automated intake and routing workflow flow",
+              "Preparing the Executive Defense slide deck in Gamma/PowerPoint"
+            ],
+            "why_it_matters": "Synthesizes every module of the curriculum into an integrated, real-world business transformation project proving comprehensive vocational mastery.",
+            "what_learner_does": "Execute the complete 360° Department Operations Overhaul Capstone across all 5 required operational components.",
+            "expected_outcome": "Integrated 360° Department Operations Overhaul Capstone Project."
+          },
+          {
+            "lesson_number": "Lesson 8.4",
+            "lesson_title": "Independent Practical Demonstration & Live Defense",
+            "what_is_taught": "Presenting and defending the Capstone project; live demonstration of prompt engineering and workflow tools; answering panel questions on accuracy, privacy, and ROI; final credential audit.",
+            "subtopics": [
+              "Structuring the 10-minute executive capstone presentation",
+              "Conducting live tool demonstrations under panel observation",
+              "Defending methodology: answering questions on data privacy, verification, and exception handling",
+              "Peer critique and faculty evaluation against the 5-category rubric",
+              "Final course debrief and graduation credential verification"
+            ],
+            "why_it_matters": "Validates authentic, independent student competence, ensuring certificates represent genuine, unassisted workplace capability.",
+            "what_learner_does": "Deliver a live 10-minute presentation of the Capstone project and successfully complete an independent tool practical challenge.",
+            "expected_outcome": "Successful Capstone Defense & ISO 9001:2015 Professional Credential Verification."
+          }
+        ],
+        "key_concepts": [
+          "Portfolio Showcase",
+          "Efficiency Measurement",
+          "ROI Calculation",
+          "AI Governance",
+          "Change Management",
+          "Department Operations Overhaul",
+          "Capstone Defense",
+          "Independent Verification"
+        ],
+        "tools": [
+          "Full Course Tool Ecosystem: ChatGPT, Claude, Gemini Notebook, M365 Copilot, Gamma, Canva, Excel, Notion AI, Power Automate"
+        ],
+        "hands_on_practice": "Complete the 360° AI-Augmented Department Operations Overhaul Capstone project and deliver a live 10-minute presentation and tool defense before an evaluation panel.",
+        "assignment": "Capstone Project: 360° AI-Augmented Department Operations Overhaul",
+        "business_application": "Delivers an immediate, auditable operational efficiency overhaul for an entire business department, establishing the graduate as an indispensable AI operations leader.",
+        "expected_outcome": "A complete departmental AI overhaul package and verified professional graduation portfolio."
       }
-    ]
+    ],
+    "core_projects": {
+      "project_01": {
+        "title": "Executive Intelligence Dossier",
+        "milestone": "Module 02",
+        "tools": "Gemini Notebook (formerly NotebookLM), Claude, Perplexity",
+        "deliverable": "10-page synthesized report with 100% verified citation anchors, competitor comparison table, and an accompanying 5-minute Audio Overview briefing."
+      },
+      "project_02": {
+        "title": "Multimodal Business Proposal Package",
+        "milestone": "Module 04",
+        "tools": "Microsoft Word (Copilot), Gamma, Canva Magic Studio",
+        "deliverable": "Formatted 8-page client proposal document, 10-slide interactive Gamma presentation deck, and branded visual summary infographic."
+      },
+      "project_03": {
+        "title": "AI-Driven Business Analytics Dossier",
+        "milestone": "Module 05",
+        "tools": "Microsoft Excel, ChatGPT Data Analysis, Copilot",
+        "deliverable": "Audited Excel workbook with dynamic formulas, pivot charts, anomaly detection, and a 2-page executive financial variance memo."
+      },
+      "project_04": {
+        "title": "Connected Personal Workflow Automation",
+        "milestone": "Module 07",
+        "tools": "Microsoft Power Automate Desktop, Zapier, Cloud Storage",
+        "deliverable": "Deployed no-code automated flow handling email triage, attachment filing, and task notification, with recorded video demonstration."
+      },
+      "capstone": {
+        "title": "360° AI-Augmented Department Operations Overhaul",
+        "milestone": "Module 08",
+        "tools": "Full Course Tool Ecosystem",
+        "deliverable": "Comprehensive departmental overhaul featuring workflow diagnostic, 5 SOPs, Notion knowledge wiki, automated triage flow, and live defense."
+      }
+    },
+    "seo_title": "AI Productivity Professional | Nova Skills"
   },
   {
     "course_id": "ai-for-business-pro",
