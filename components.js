@@ -1812,7 +1812,8 @@ const COURSE_CATALOG_METADATA = {
   'AI-Assisted Full Stack Web Development': { academy: 'Programming Academy', duration: '8 Months', fee: '₹64,900', category: 'programming' },
   'AI Digital Marketing Professional': { academy: 'Digital Marketing Academy', duration: '3 Months', fee: '₹24,999', category: 'digital-marketing' },
   'AI Mastery Program': { academy: 'AI Academy', duration: '6 Months', fee: '₹39,999', category: 'ai' },
-  'Full Stack Programming Foundation': { academy: 'Programming Academy', duration: '6 Months', fee: '₹44,999', category: 'programming' },
+  'Full Stack Programming Foundation': { academy: 'Programming Academy', duration: '6 Months', fee: '₹39,999', category: 'programming' },
+  'Python Developer Professional': { academy: 'Programming Academy', duration: '3 Months', fee: '₹19,999', category: 'programming' },
   'Creative Design Mastery': { academy: 'Design Academy', duration: '6 Months', fee: '₹39,999', category: 'design' },
   'Motion Graphics Mastery': { academy: 'Video & Motion Academy', duration: '6 Months', fee: '₹39,999', category: 'video' },
   'AI Digital Marketing Mastery': { academy: 'Digital Marketing Academy', duration: '6 Months', fee: '₹44,999', category: 'digital-marketing' }

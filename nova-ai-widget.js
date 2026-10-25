@@ -249,7 +249,7 @@
       programLevel: 'Career Program',
       duration: '6 Months',
       durationMonths: 6,
-      price: 29999,
+      price: 39999,
       originalPrice: 84999,
       rating: 4.9,
       reviews: 210,
@@ -270,7 +270,7 @@
       programLevel: 'Professional Program',
       duration: '3 Months',
       durationMonths: 3,
-      price: 14999,
+      price: 19999,
       originalPrice: 42999,
       rating: 4.8,
       reviews: 140,
@@ -620,7 +620,7 @@
     if (typeof amount === 'number') {
       return `₹${amount.toLocaleString('en-IN')}`;
     }
-    return amount || '₹14,999';
+    return amount || '₹19,999';
   }
 
   function calculateEMI(priceNum, months = 6) {
@@ -1125,7 +1125,7 @@
         const cProg = findCourse('fullstack-foundation') || FALLBACK_COURSES[9];
         sessionMemory.lastDiscussedCourse = cProg;
         return {
-          text: `Software Development aur Full-Stack me high packages aur global tech hiring demand hamesha rehti hai!\n\n⭐ **Recommended: ${cProg.name}**\n\n**What you will master:**\n• HTML5, CSS3, Modern JavaScript (ES6+), React.js, Node.js, Express, SQL/NoSQL Databases, REST APIs aur Git/GitHub.\n• 20 Live Real-World Projects (E-commerce app, SaaS portal, Live Chat, etc.).\n• Dedicated Placement Support with technical mock interviews.\n\n• **Duration:** 6 Months *(Fast-track: Python Developer Professional • 3 Months, ₹14,999)*\n• **Fee:** ${formatFee(cProg.price)} *(No-Cost EMI: ${calculateEMI(cProg.price)}/mo)*\n\nKya aap zero coding background se start kar rahe hain ya basic knowledge hai?`,
+          text: `Software Development aur Full-Stack me high packages aur global tech hiring demand hamesha rehti hai!\n\n⭐ **Recommended: ${cProg.name}**\n\n**What you will master:**\n• HTML5, CSS3, Modern JavaScript (ES6+), React.js, Node.js, Express, SQL/NoSQL Databases, REST APIs aur Git/GitHub.\n• 20 Live Real-World Projects (E-commerce app, SaaS portal, Live Chat, etc.).\n• Dedicated Placement Support with technical mock interviews.\n\n• **Duration:** 6 Months *(Fast-track: Python Developer Professional • 3 Months, ₹19,999)*\n• **Fee:** ${formatFee(cProg.price)} *(No-Cost EMI: ${calculateEMI(cProg.price)}/mo)*\n\nKya aap zero coding background se start kar rahe hain ya basic knowledge hai?`,
           recommendedCourse: cProg
         };
       }
