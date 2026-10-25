@@ -573,13 +573,122 @@
     </section>
 
     <!-- SPECIALIZATION TRACKS SECTION -->
-    <section class="container course-body-section" id="specialization-tracks-section" style="display:none;">
+    <section class="container course-body-section" id="specialization-tracks-section" style="display:block;">
       <div class="section-header" style="text-align:left; margin-bottom:32px;">
-        <span class="section-tag">SPECIALIZATION PATHWAYS</span>
-        <h2 class="section-title">Choose Your <span class="gradient-text">Focus Track</span></h2>
+        <span class="section-tag">CAREER SPECIALIZATION</span>
+        <h2 class="section-title">Choose Your Specialization</h2>
       </div>
       <div id="specialization-tracks-container" style="max-width:860px;">
-        <!-- Populated by JS -->
+        
+      <p style="font-size:1.0625rem; line-height:1.6; color:var(--text-secondary); margin-bottom:12px; max-width:860px;">
+        Complete the common full-stack curriculum, then specialize in one career-focused pathway.
+      </p>
+      <div style="background: rgba(5, 153, 168, 0.05); border: 1px solid rgba(5, 153, 168, 0.2); border-radius: var(--radius-md, 12px); padding: 12px 18px; margin-bottom: 24px; font-size: 0.9rem; color: var(--navy); line-height: 1.5;">
+        <strong>Specialization Policy:</strong> 300 Hours Common Core + 20 Hours Selected Pathway = <strong>320 Total Guided Hours</strong>. Tuition is <strong>INR 64,900</strong> across all options. Exactly <strong>ONE</strong> specialization track is included per enrollment.
+      </div>
+      <div id="specialization-selection-alert" style="display:none; margin-bottom: 20px; padding: 12px 18px; border-radius: var(--radius-md, 12px); background: #fef2f2; border: 1px solid #f87171; color: #b91c1c; font-weight: 700; font-size: 0.95rem;">
+        ⚠️ Please select one specialization to continue.
+      </div>
+      <div class="specialization-tracks-grid" role="radiogroup" aria-label="Choose Your Specialization">
+        
+          <div class="specialization-track-card specialization-selector-card"
+               role="radio"
+               aria-checked="false"
+               tabindex="0"
+               data-path-id="agency-website">
+            <div class="track-badge-row" style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="track-pill">Path A</span>
+              <span class="track-focus-badge" style="background:rgba(5, 153, 168, 0.15); color:var(--teal);">
+                20 Hours (Included)
+              </span>
+            </div>
+            <div class="track-title" style="margin-top:8px;">Agency Website Developer</div>
+            <p class="track-focus-text">Designed for developers who want to launch a high-earning freelance studio or join fast-paced creative agencies delivering bespoke, animated client websites.</p>
+            <div style="margin-bottom:12px; font-size:0.86rem; color:var(--text-secondary);">
+              <strong style="color:var(--navy);">Career Direction:</strong> Freelance Web Developer, Digital Agency Developer, CMS Solutions Specialist, Creative Technologist
+            </div>
+            <div style="margin-bottom:12px;">
+              <div style="font-size:0.82rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Primary Tools:</div>
+              <div class="track-roles-pills">
+                <span class="track-role-tag">Framer</span><span class="track-role-tag">WordPress 6.x</span><span class="track-role-tag">LocalWP</span><span class="track-role-tag">Advanced Custom Fields (ACF)</span><span class="track-role-tag">WPForms</span><span class="track-role-tag">Cloudflare</span>
+              </div>
+            </div>
+            <div style="margin-bottom:14px; font-size:0.85rem; color:var(--text-secondary);">
+              <strong style="color:var(--navy);">Practical Project:</strong> Portfolio Project 5A: Commercial Agency Client Website featuring interactive Framer layouts, dynamic WordPress CMS integration, and automated lead capture.
+            </div>
+            <div style="margin-top:auto; padding-top:16px;">
+              <button type="button" class="btn btn-outline btn-block select-path-btn" style="width:100%; font-weight:700;">
+                Select Pathway →
+              </button>
+            </div>
+          </div>
+        
+          <div class="specialization-track-card specialization-selector-card"
+               role="radio"
+               aria-checked="false"
+               tabindex="0"
+               data-path-id="ecommerce-developer">
+            <div class="track-badge-row" style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="track-pill">Path B</span>
+              <span class="track-focus-badge" style="background:rgba(5, 153, 168, 0.15); color:var(--teal);">
+                20 Hours (Included)
+              </span>
+            </div>
+            <div class="track-title" style="margin-top:8px;">E-commerce Developer</div>
+            <p class="track-focus-text">Designed for developers targeting the multi-billion-dollar global e-commerce ecosystem, mastering storefront development, Liquid customization, and merchant operations.</p>
+            <div style="margin-bottom:12px; font-size:0.86rem; color:var(--text-secondary);">
+              <strong style="color:var(--navy);">Career Direction:</strong> Junior Shopify Developer, E-commerce Solutions Specialist, Storefront Implementation Associate, DTC Brand Developer
+            </div>
+            <div style="margin-bottom:12px;">
+              <div style="font-size:0.82rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Primary Tools:</div>
+              <div class="track-roles-pills">
+                <span class="track-role-tag">Shopify Partner Dashboard</span><span class="track-role-tag">Shopify CLI</span><span class="track-role-tag">Liquid</span><span class="track-role-tag">Dawn Theme Architecture</span><span class="track-role-tag">Shopify Admin API</span><span class="track-role-tag">Payment Sandbox</span>
+              </div>
+            </div>
+            <div style="margin-bottom:14px; font-size:0.85rem; color:var(--text-secondary);">
+              <strong style="color:var(--navy);">Practical Project:</strong> Portfolio Project 5B: Fully Functional Shopify E-commerce Store with customized Liquid sections, dynamic cart upsells, and validated sandbox checkout.
+            </div>
+            <div style="margin-top:auto; padding-top:16px;">
+              <button type="button" class="btn btn-outline btn-block select-path-btn" style="width:100%; font-weight:700;">
+                Select Pathway →
+              </button>
+            </div>
+          </div>
+        
+          <div class="specialization-track-card specialization-selector-card"
+               role="radio"
+               aria-checked="false"
+               tabindex="0"
+               data-path-id="ai-saas-developer">
+            <div class="track-badge-row" style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="track-pill">Path C</span>
+              <span class="track-focus-badge" style="background:rgba(5, 153, 168, 0.15); color:var(--teal);">
+                20 Hours (Included)
+              </span>
+            </div>
+            <div class="track-title" style="margin-top:8px;">AI Web App &amp; SaaS Developer</div>
+            <p class="track-focus-text">Designed for ambitious engineers aiming to build, monetize, and launch scalable AI software products, micro-SaaS applications, or join venture-backed tech startups.</p>
+            <div style="margin-bottom:12px; font-size:0.86rem; color:var(--text-secondary);">
+              <strong style="color:var(--navy);">Career Direction:</strong> Junior Full-Stack AI Developer, SaaS Application Engineer, Web Product Developer, Startup Technical Associate
+            </div>
+            <div style="margin-bottom:12px;">
+              <div style="font-size:0.82rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Primary Tools:</div>
+              <div class="track-roles-pills">
+                <span class="track-role-tag">Next.js 15 App Router</span><span class="track-role-tag">Supabase (Advanced RLS)</span><span class="track-role-tag">Stripe Elements &amp; Billing API</span><span class="track-role-tag">Vercel AI SDK</span><span class="track-role-tag">Sentry Observability</span><span class="track-role-tag">Upstash Redis</span>
+              </div>
+            </div>
+            <div style="margin-bottom:14px; font-size:0.85rem; color:var(--text-secondary);">
+              <strong style="color:var(--navy);">Practical Project:</strong> Portfolio Project 5C: Production-Grade AI SaaS MVP featuring multi-tenant workspace switching, Stripe subscription billing, protected AI features, and observability.
+            </div>
+            <div style="margin-top:auto; padding-top:16px;">
+              <button type="button" class="btn btn-outline btn-block select-path-btn" style="width:100%; font-weight:700;">
+                Select Pathway →
+              </button>
+            </div>
+          </div>
+        
+      </div>
+    
       </div>
     </section>
 
@@ -3451,8 +3560,8 @@ sequenceDiagram
   <div id="ns-footer"></div>
 
   <!-- JavaScript -->
-  <script src="/js/data.min.js?v=1.4.0" defer></script>
-  <script src="/js/components.min.js?v=1.1.0" defer></script>
-  <script src="/js/course-detail.min.js?v=1.2.0" defer></script>
+  <script src="/js/data.min.js?v=1.5.0" defer></script>
+  <script src="/js/components.min.js?v=1.2.0" defer></script>
+  <script src="/js/course-detail.min.js?v=1.3.0" defer></script>
 </body>
 </html>

@@ -457,6 +457,61 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
 
   // Curriculum Accordion
+  
+  // Specialization Tracks Pre-rendering
+  let specTracksHtml = '';
+  let showSpecSection = false;
+  if (detailData && detailData.specialization_selector_config) {
+    showSpecSection = true;
+    const cfg = detailData.specialization_selector_config;
+    specTracksHtml = `
+      <p style="font-size:1.0625rem; line-height:1.6; color:var(--text-secondary); margin-bottom:12px; max-width:860px;">
+        ${escapeHTML(cfg.subheading || 'Complete the common full-stack curriculum, then specialize in one career-focused pathway.')}
+      </p>
+      <div style="background: rgba(5, 153, 168, 0.05); border: 1px solid rgba(5, 153, 168, 0.2); border-radius: var(--radius-md, 12px); padding: 12px 18px; margin-bottom: 24px; font-size: 0.9rem; color: var(--navy); line-height: 1.5;">
+        <strong>Specialization Policy:</strong> 300 Hours Common Core + 20 Hours Selected Pathway = <strong>320 Total Guided Hours</strong>. Tuition is <strong>INR 64,900</strong> across all options. Exactly <strong>ONE</strong> specialization track is included per enrollment.
+      </div>
+      <div id="specialization-selection-alert" style="display:none; margin-bottom: 20px; padding: 12px 18px; border-radius: var(--radius-md, 12px); background: #fef2f2; border: 1px solid #f87171; color: #b91c1c; font-weight: 700; font-size: 0.95rem;">
+        ⚠️ Please select one specialization to continue.
+      </div>
+      <div class="specialization-tracks-grid" role="radiogroup" aria-label="Choose Your Specialization">
+        ${cfg.paths.map((p, idx) => `
+          <div class="specialization-track-card specialization-selector-card"
+               role="radio"
+               aria-checked="false"
+               tabindex="0"
+               data-path-id="${p.id}">
+            <div class="track-badge-row" style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="track-pill">${escapeHTML(p.path_code)}</span>
+              <span class="track-focus-badge" style="background:rgba(5, 153, 168, 0.15); color:var(--teal);">
+                ${escapeHTML(p.duration)}
+              </span>
+            </div>
+            <div class="track-title" style="margin-top:8px;">${escapeHTML(p.name)}</div>
+            <p class="track-focus-text">${escapeHTML(p.description || '')}</p>
+            <div style="margin-bottom:12px; font-size:0.86rem; color:var(--text-secondary);">
+              <strong style="color:var(--navy);">Career Direction:</strong> ${escapeHTML(p.suitable_career_direction)}
+            </div>
+            <div style="margin-bottom:12px;">
+              <div style="font-size:0.82rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Primary Tools:</div>
+              <div class="track-roles-pills">
+                ${(p.primary_tools || []).map(t => `<span class="track-role-tag">${escapeHTML(t)}</span>`).join('')}
+              </div>
+            </div>
+            <div style="margin-bottom:14px; font-size:0.85rem; color:var(--text-secondary);">
+              <strong style="color:var(--navy);">Practical Project:</strong> ${escapeHTML(p.practical_project)}
+            </div>
+            <div style="margin-top:auto; padding-top:16px;">
+              <button type="button" class="btn btn-outline btn-block select-path-btn" style="width:100%; font-weight:700;">
+                Select Pathway →
+              </button>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
   let curriculumHtml = '';
   if (detailData && detailData.modules && Array.isArray(detailData.modules)) {
     curriculumHtml = detailData.modules.map((mod, idx) => `
@@ -782,6 +837,21 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
 
   // Curriculum
+  if (showSpecSection && specTracksHtml) {
+    html = html.replace(
+      /<section class="container course-body-section" id="specialization-tracks-section" style="display:none;">[\s\S]*?<div id="specialization-tracks-container"[^>]*>[\s\S]*?<\/div>\s*<\/section>/i,
+      `<section class="container course-body-section" id="specialization-tracks-section" style="display:block;">
+      <div class="section-header" style="text-align:left; margin-bottom:32px;">
+        <span class="section-tag">CAREER SPECIALIZATION</span>
+        <h2 class="section-title">Choose Your Specialization</h2>
+      </div>
+      <div id="specialization-tracks-container" style="max-width:860px;">
+        ${specTracksHtml}
+      </div>
+    </section>`
+    );
+  }
+
   if (curriculumHtml) {
     html = html.replace(/<div\s+class="curriculum-modules"\s+id="curriculum-container"[\s\S]*?<\/div>/i, `<div class="curriculum-modules" id="curriculum-container" style="max-width:860px;">\n        ${curriculumHtml}\n      </div>`);
   }
