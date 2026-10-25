@@ -1,5 +1,5 @@
 // ============================================================
-// NOVA SKILLS — CANONICAL COURSE DATA REGISTRY (V1.2.0)
+// NOVA SKILLS — CANONICAL COURSE DATA REGISTRY (V1.3.0)
 // ============================================================
 
 const NS_COURSES = [
@@ -1004,13 +1004,13 @@ const NS_COURSES = [
     "color": "linear-gradient(135deg, #0599a8, #75d766)",
     "name": "AI Solutions Engineering & Agentic AI Mastery",
     "shortDesc": "Build AI Agents, RAG Systems, Business Automations & Production AI Applications.",
-    "fullDesc": "Don't Just Use AI. Build AI Systems Businesses Can Actually Deploy. 6-month comprehensive program covering Python, APIs, RAG, n8n, LangGraph, Model Context Protocol (MCP), Docker, and live deployment.",
-    "duration": "6 Months",
-    "durationMonths": 6,
+    "fullDesc": "Don't Just Use AI. Build AI Systems Businesses Can Actually Deploy. 9-month comprehensive program covering Python, APIs, RAG, n8n, LangGraph, Model Context Protocol (MCP), Docker, and live deployment.",
+    "duration": "9 Months",
+    "durationMonths": 9,
     "mode": "Hybrid",
-    "level": "Beginner to Professional",
-    "price": 39999,
-    "originalPrice": 79999,
+    "level": "Beginner to Applied AI Engineer",
+    "price": 89900,
+    "originalPrice": 89900,
     "rating": 4.9,
     "reviews": 284,
     "students": 1560,
@@ -1019,88 +1019,86 @@ const NS_COURSES = [
     "placementSupport": true,
     "tools": [
       "Python",
-      "OpenAI API",
-      "Anthropic Claude API",
-      "n8n",
-      "LangGraph",
-      "Model Context Protocol (MCP)",
-      "Supabase pgvector",
+      "Visual Studio Code",
+      "Git and GitHub",
+      "OpenAI Responses API",
+      "OpenAI Agents SDK",
       "FastAPI",
+      "PostgreSQL",
+      "n8n",
+      "Model Context Protocol — Python SDK",
       "Docker",
-      "Cursor",
-      "Ollama",
-      "Hugging Face",
-      "Make.com"
+      "Pytest + Pydantic"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Modern LLMs & Foundation Model Architectures",
+        "title": "AI Solutions Foundations & Engineering Environment",
         "lessons": 4
       },
       {
         "module": "Module 02",
-        "title": "Prompt Engineering & Context Engineering",
-        "lessons": 4
+        "title": "Python Programming for AI Engineers",
+        "lessons": 5
       },
       {
         "module": "Module 03",
-        "title": "Python for AI Builders & REST API Integration",
+        "title": "APIs, FastAPI & Backend Engineering",
         "lessons": 4
       },
       {
         "module": "Module 04",
-        "title": "LLM APIs & Multi-Model Integration",
+        "title": "SQL, PostgreSQL & Data Engineering",
         "lessons": 4
       },
       {
         "module": "Module 05",
-        "title": "Retrieval-Augmented Generation (RAG) Architecture",
+        "title": "LLM Foundations, Model APIs & Economics",
         "lessons": 4
       },
       {
         "module": "Module 06",
-        "title": "n8n & Advanced Business Workflow Automation",
+        "title": "Prompt Engineering, Structured Outputs & Tool Calling",
         "lessons": 4
       },
       {
         "module": "Module 07",
-        "title": "Agentic AI & Autonomous Agent Systems",
+        "title": "n8n & Business Workflow Automation",
         "lessons": 4
       },
       {
         "module": "Module 08",
-        "title": "Model Context Protocol (MCP) & Tool Standards",
+        "title": "RAG & Enterprise Knowledge Systems",
         "lessons": 4
       },
       {
         "module": "Module 09",
-        "title": "AI-Assisted Software Development & Fast Prototyping",
+        "title": "Agent Engineering, LangGraph & Multi-Agent Systems",
         "lessons": 4
       },
       {
         "module": "Module 10",
-        "title": "Building & Deploying Production AI Applications",
+        "title": "MCP Client/Server Engineering & Integrations",
         "lessons": 4
       },
       {
         "module": "Module 11",
-        "title": "AI Evaluation, Guardrails & LLMOps",
+        "title": "Evaluation, Security & Observability",
         "lessons": 4
       },
       {
         "module": "Module 12",
-        "title": "AI Security, Data Governance & Business Safety",
+        "title": "Docker, Deployment & AI Application Operations",
         "lessons": 4
       },
       {
         "module": "Module 13",
-        "title": "AI Consulting, Business Scoping & Monetization",
+        "title": "AI Solution Architecture, Consulting & ROI",
         "lessons": 4
       },
       {
         "module": "Module 14",
-        "title": "Industry Capstone: AI Operations System",
+        "title": "Industry Portfolio & Final Capstone",
         "lessons": 4
       }
     ],
@@ -1112,16 +1110,16 @@ const NS_COURSES = [
     ],
     "featured": true,
     "title": "AI Solutions Engineering & Agentic AI Mastery",
-    "description": "Build production-ready AI agents, RAG applications, business automations and connected AI systems using Python, APIs, n8n, modern LLMs and agent frameworks.",
+    "description": "Train students to design, build, integrate, evaluate, secure and deploy practical AI solutions using Python, model APIs, RAG, automation, agent frameworks and MCP.",
     "projects": 7,
     "category": "AI Academy",
     "status": "active",
     "url": "/course-detail.html?id=ai-mastery",
     "courseType": "MASTER",
     "courseRole": "Career/Monetization",
-    "learningHours": 240,
+    "learningHours": 360,
     "futureReviewStatus": "FAST-CHANGING",
-    "positioning": "Anchor program for AI Solutions Engineering & Agentic systems. Beginner to Production AI Builder in 6 Months."
+    "positioning": "Flagship applied AI engineering and agentic AI career program."
   },
   {
     "id": "ai-productivity",
@@ -1132,49 +1130,80 @@ const NS_COURSES = [
     "icon": "🤖",
     "color": "linear-gradient(135deg, #0599a8, #75d766)",
     "name": "AI Productivity Professional",
-    "shortDesc": "Use AI tools to 10x your work output: ChatGPT, Prompt Engineering, AI Automation & AI Research.",
-    "fullDesc": "Ideal for office professionals wanting multi-LLM workflows. Use AI tools to 10x your work output: ChatGPT, Prompt Engineering, AI Automation & AI Research.",
+    "shortDesc": "Master modern workplace AI tools to achieve a measured 40–60% efficiency improvement across research, writing, slides, Excel & automations.",
+    "fullDesc": "3-month professional program for office professionals, administrators, analysts & managers. Master ChatGPT, Claude, Gemini Notebook, Microsoft 365 Copilot, Excel AI, Gamma & Power Automate.",
     "duration": "3 Months",
     "durationMonths": 3,
     "mode": "Online",
     "level": "Beginner",
-    "price": 13999,
-    "originalPrice": 39999,
+    "price": 19900,
+    "originalPrice": 19900,
     "rating": 4.8,
     "reviews": 176,
     "students": 980,
-    "liveProjects": 2,
+    "liveProjects": 5,
     "certificate": true,
     "placementSupport": true,
     "tools": [
       "ChatGPT",
       "Claude",
-      "OpenAI API",
-      "n8n",
-      "Perplexity",
-      "Make.com",
-      "Gemini"
+      "Google Gemini",
+      "Gemini Notebook",
+      "Microsoft 365 Copilot",
+      "Microsoft Excel",
+      "Gamma",
+      "Canva",
+      "Notion AI",
+      "Power Automate"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Chatbot Fundamentals for Daily Tasks",
-        "lessons": 4
+        "title": "AI Fundamentals, Prompting & Context Engineering",
+        "lessons": 4,
+        "hours": 12
       },
       {
         "module": "Module 02",
-        "title": "Knowledge Management with Notion AI",
-        "lessons": 4
+        "title": "AI Research, Fact-Checking & Knowledge Management",
+        "lessons": 4,
+        "hours": 16
       },
       {
         "module": "Module 03",
-        "title": "Visual Content Creation",
-        "lessons": 4
+        "title": "Professional Communication & Content Workflows",
+        "lessons": 4,
+        "hours": 16
       },
       {
         "module": "Module 04",
-        "title": "Workflow Integration & Daily Routines",
-        "lessons": 4
+        "title": "AI Documents, Presentations & Visual Communication",
+        "lessons": 4,
+        "hours": 18
+      },
+      {
+        "module": "Module 05",
+        "title": "Excel, Data Analysis & Business Reporting with AI",
+        "lessons": 4,
+        "hours": 18
+      },
+      {
+        "module": "Module 06",
+        "title": "Meetings, Collaboration & Personal Knowledge Systems",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 07",
+        "title": "AI Workflow Automation & Connected Apps",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 08",
+        "title": "Workplace Productivity Portfolio & Assessment",
+        "lessons": 4,
+        "hours": 16
       }
     ],
     "tags": [
@@ -1182,8 +1211,8 @@ const NS_COURSES = [
     ],
     "featured": false,
     "title": "AI Productivity Professional",
-    "description": "Use AI tools to 10x your work output: ChatGPT, Prompt Engineering, AI Automation & AI Research.",
-    "projects": 10,
+    "description": "Master modern workplace AI tools to achieve a measured 40–60% efficiency improvement across research, writing, slides, Excel & automations.",
+    "projects": 5,
     "category": "AI Academy",
     "status": "active",
     "url": "/course-detail.html?id=ai-productivity",
@@ -1191,7 +1220,7 @@ const NS_COURSES = [
     "courseRole": "Professional Skill",
     "learningHours": 120,
     "futureReviewStatus": "FAST-CHANGING",
-    "positioning": "Ideal for office professionals wanting multi-LLM workflows."
+    "positioning": "Professional Certificate in Workplace AI Productivity & Connected Workflows."
   },
   {
     "id": "ai-for-business-pro",
@@ -1202,48 +1231,83 @@ const NS_COURSES = [
     "icon": "🤖",
     "color": "linear-gradient(135deg, #0599a8, #2563EB)",
     "name": "AI for Business Professional",
-    "shortDesc": "Deploy AI solutions, custom GPTs, enterprise automation, and AI business strategy.",
-    "fullDesc": "Position for business leaders and consultants. Deploy AI solutions, custom GPTs, enterprise automation, and AI business strategy.",
-    "duration": "3 Months",
-    "durationMonths": 3,
+    "shortDesc": "Learn to identify business AI opportunities, automate workflows, integrate CRM and operational tools, build controlled AI assistants, analyze business data and measure automation ROI.",
+    "fullDesc": "Learn to identify business AI opportunities, automate workflows, integrate CRM and operational tools, build controlled AI assistants, analyze business data and measure automation ROI.",
+    "duration": "4 Months",
+    "durationMonths": 4,
     "mode": "Online",
-    "level": "Intermediate",
-    "price": 14999,
-    "originalPrice": 42999,
+    "level": "Professional / Applied Business AI",
+    "price": 39900,
+    "originalPrice": 39900,
     "rating": 4.9,
     "reviews": 128,
     "students": 590,
-    "liveProjects": 2,
+    "liveProjects": 4,
     "certificate": true,
     "placementSupport": true,
     "tools": [
+      "n8n",
+      "HubSpot CRM",
+      "Airtable",
       "ChatGPT",
       "Claude",
-      "OpenAI API",
-      "n8n",
-      "Perplexity",
-      "Make.com",
-      "Gemini"
+      "Google Sheets",
+      "Looker Studio",
+      "Make",
+      "Microsoft Power Automate",
+      "Microsoft Copilot Studio",
+      "Google Gemini",
+      "Notion"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "AI Strategy for Enterprises",
+        "title": "Business AI Strategy & Opportunity Discovery",
         "lessons": 4
       },
       {
         "module": "Module 02",
-        "title": "Automating Customer Support",
+        "title": "Business Process Mapping & Automation Design",
         "lessons": 4
       },
       {
         "module": "Module 03",
-        "title": "Marketing & Sales Automation",
+        "title": "n8n Workflow Automation Engineering",
         "lessons": 4
       },
       {
         "module": "Module 04",
-        "title": "Operations & Internal Tooling",
+        "title": "CRM, Sales & Marketing Automation",
+        "lessons": 4
+      },
+      {
+        "module": "Module 05",
+        "title": "AI Customer Support & Knowledge Assistants",
+        "lessons": 4
+      },
+      {
+        "module": "Module 06",
+        "title": "Business Operations & Document Automation",
+        "lessons": 4
+      },
+      {
+        "module": "Module 07",
+        "title": "AI Business Analytics & Decision Dashboards",
+        "lessons": 4
+      },
+      {
+        "module": "Module 08",
+        "title": "Business AI Agents & MCP Integrations",
+        "lessons": 4
+      },
+      {
+        "module": "Module 09",
+        "title": "Governance, Testing, Security & ROI",
+        "lessons": 4
+      },
+      {
+        "module": "Module 10",
+        "title": "Industry Capstone & Client Implementation",
         "lessons": 4
       }
     ],
@@ -1252,16 +1316,16 @@ const NS_COURSES = [
     ],
     "featured": false,
     "title": "AI for Business Professional",
-    "description": "Deploy AI solutions, custom GPTs, enterprise automation, and AI business strategy.",
-    "projects": 8,
+    "description": "Learn to identify business AI opportunities, automate workflows, integrate CRM and operational tools, build controlled AI assistants, analyze business data and measure automation ROI.",
+    "projects": 4,
     "category": "AI Academy",
     "status": "active",
     "url": "/course-detail.html?id=ai-for-business-pro",
     "courseType": "SPECIALIZATION",
     "courseRole": "Professional Skill",
-    "learningHours": 80,
+    "learningHours": 160,
     "futureReviewStatus": "FAST-CHANGING",
-    "positioning": "Position for business leaders and consultants."
+    "positioning": "Professional Diploma in Business AI Implementation & Workflow Automation."
   },
   {
     "id": "prompt-engineering",
@@ -8458,13 +8522,13 @@ const NS_ACADEMIES = [
         "color": "linear-gradient(135deg, #0599a8, #75d766)",
         "name": "AI Solutions Engineering & Agentic AI Mastery",
         "shortDesc": "Build AI Agents, RAG Systems, Business Automations & Production AI Applications.",
-        "fullDesc": "Don't Just Use AI. Build AI Systems Businesses Can Actually Deploy. 6-month comprehensive program covering Python, APIs, RAG, n8n, LangGraph, Model Context Protocol (MCP), Docker, and live deployment.",
-        "duration": "6 Months",
-        "durationMonths": 6,
+        "fullDesc": "Don't Just Use AI. Build AI Systems Businesses Can Actually Deploy. 9-month comprehensive program covering Python, APIs, RAG, n8n, LangGraph, Model Context Protocol (MCP), Docker, and live deployment.",
+        "duration": "9 Months",
+        "durationMonths": 9,
         "mode": "Hybrid",
-        "level": "Beginner to Professional",
-        "price": 39999,
-        "originalPrice": 79999,
+        "level": "Beginner to Applied AI Engineer",
+        "price": 89900,
+        "originalPrice": 89900,
         "rating": 4.9,
         "reviews": 284,
         "students": 1560,
@@ -8473,88 +8537,86 @@ const NS_ACADEMIES = [
         "placementSupport": true,
         "tools": [
           "Python",
-          "OpenAI API",
-          "Anthropic Claude API",
-          "n8n",
-          "LangGraph",
-          "Model Context Protocol (MCP)",
-          "Supabase pgvector",
+          "Visual Studio Code",
+          "Git and GitHub",
+          "OpenAI Responses API",
+          "OpenAI Agents SDK",
           "FastAPI",
+          "PostgreSQL",
+          "n8n",
+          "Model Context Protocol — Python SDK",
           "Docker",
-          "Cursor",
-          "Ollama",
-          "Hugging Face",
-          "Make.com"
+          "Pytest + Pydantic"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Modern LLMs & Foundation Model Architectures",
+            "title": "AI Solutions Foundations & Engineering Environment",
             "lessons": 4
           },
           {
             "module": "Module 02",
-            "title": "Prompt Engineering & Context Engineering",
-            "lessons": 4
+            "title": "Python Programming for AI Engineers",
+            "lessons": 5
           },
           {
             "module": "Module 03",
-            "title": "Python for AI Builders & REST API Integration",
+            "title": "APIs, FastAPI & Backend Engineering",
             "lessons": 4
           },
           {
             "module": "Module 04",
-            "title": "LLM APIs & Multi-Model Integration",
+            "title": "SQL, PostgreSQL & Data Engineering",
             "lessons": 4
           },
           {
             "module": "Module 05",
-            "title": "Retrieval-Augmented Generation (RAG) Architecture",
+            "title": "LLM Foundations, Model APIs & Economics",
             "lessons": 4
           },
           {
             "module": "Module 06",
-            "title": "n8n & Advanced Business Workflow Automation",
+            "title": "Prompt Engineering, Structured Outputs & Tool Calling",
             "lessons": 4
           },
           {
             "module": "Module 07",
-            "title": "Agentic AI & Autonomous Agent Systems",
+            "title": "n8n & Business Workflow Automation",
             "lessons": 4
           },
           {
             "module": "Module 08",
-            "title": "Model Context Protocol (MCP) & Tool Standards",
+            "title": "RAG & Enterprise Knowledge Systems",
             "lessons": 4
           },
           {
             "module": "Module 09",
-            "title": "AI-Assisted Software Development & Fast Prototyping",
+            "title": "Agent Engineering, LangGraph & Multi-Agent Systems",
             "lessons": 4
           },
           {
             "module": "Module 10",
-            "title": "Building & Deploying Production AI Applications",
+            "title": "MCP Client/Server Engineering & Integrations",
             "lessons": 4
           },
           {
             "module": "Module 11",
-            "title": "AI Evaluation, Guardrails & LLMOps",
+            "title": "Evaluation, Security & Observability",
             "lessons": 4
           },
           {
             "module": "Module 12",
-            "title": "AI Security, Data Governance & Business Safety",
+            "title": "Docker, Deployment & AI Application Operations",
             "lessons": 4
           },
           {
             "module": "Module 13",
-            "title": "AI Consulting, Business Scoping & Monetization",
+            "title": "AI Solution Architecture, Consulting & ROI",
             "lessons": 4
           },
           {
             "module": "Module 14",
-            "title": "Industry Capstone: AI Operations System",
+            "title": "Industry Portfolio & Final Capstone",
             "lessons": 4
           }
         ],
@@ -8566,16 +8628,16 @@ const NS_ACADEMIES = [
         ],
         "featured": true,
         "title": "AI Solutions Engineering & Agentic AI Mastery",
-        "description": "Build production-ready AI agents, RAG applications, business automations and connected AI systems using Python, APIs, n8n, modern LLMs and agent frameworks.",
+        "description": "Train students to design, build, integrate, evaluate, secure and deploy practical AI solutions using Python, model APIs, RAG, automation, agent frameworks and MCP.",
         "projects": 7,
         "category": "AI Academy",
         "status": "active",
         "url": "/course-detail.html?id=ai-mastery",
         "courseType": "MASTER",
         "courseRole": "Career/Monetization",
-        "learningHours": 240,
+        "learningHours": 360,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Anchor program for AI Solutions Engineering & Agentic systems. Beginner to Production AI Builder in 6 Months."
+        "positioning": "Flagship applied AI engineering and agentic AI career program."
       },
       {
         "id": "ai-productivity",
@@ -8586,49 +8648,80 @@ const NS_ACADEMIES = [
         "icon": "🤖",
         "color": "linear-gradient(135deg, #0599a8, #75d766)",
         "name": "AI Productivity Professional",
-        "shortDesc": "Use AI tools to 10x your work output: ChatGPT, Prompt Engineering, AI Automation & AI Research.",
-        "fullDesc": "Ideal for office professionals wanting multi-LLM workflows. Use AI tools to 10x your work output: ChatGPT, Prompt Engineering, AI Automation & AI Research.",
+        "shortDesc": "Master modern workplace AI tools to achieve a measured 40–60% efficiency improvement across research, writing, slides, Excel & automations.",
+        "fullDesc": "3-month professional program for office professionals, administrators, analysts & managers. Master ChatGPT, Claude, Gemini Notebook, Microsoft 365 Copilot, Excel AI, Gamma & Power Automate.",
         "duration": "3 Months",
         "durationMonths": 3,
         "mode": "Online",
         "level": "Beginner",
-        "price": 13999,
-        "originalPrice": 39999,
+        "price": 19900,
+        "originalPrice": 19900,
         "rating": 4.8,
         "reviews": 176,
         "students": 980,
-        "liveProjects": 10,
+        "liveProjects": 5,
         "certificate": true,
         "placementSupport": true,
         "tools": [
           "ChatGPT",
           "Claude",
-          "OpenAI API",
-          "n8n",
-          "Perplexity",
-          "Make.com",
-          "Gemini"
+          "Google Gemini",
+          "Gemini Notebook",
+          "Microsoft 365 Copilot",
+          "Microsoft Excel",
+          "Gamma",
+          "Canva",
+          "Notion AI",
+          "Power Automate"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Chatbot Fundamentals for Daily Tasks",
-            "lessons": 4
+            "title": "AI Fundamentals, Prompting & Context Engineering",
+            "lessons": 4,
+            "hours": 12
           },
           {
             "module": "Module 02",
-            "title": "Knowledge Management with Notion AI",
-            "lessons": 4
+            "title": "AI Research, Fact-Checking & Knowledge Management",
+            "lessons": 4,
+            "hours": 16
           },
           {
             "module": "Module 03",
-            "title": "Visual Content Creation",
-            "lessons": 4
+            "title": "Professional Communication & Content Workflows",
+            "lessons": 4,
+            "hours": 16
           },
           {
             "module": "Module 04",
-            "title": "Workflow Integration & Daily Routines",
-            "lessons": 4
+            "title": "AI Documents, Presentations & Visual Communication",
+            "lessons": 4,
+            "hours": 18
+          },
+          {
+            "module": "Module 05",
+            "title": "Excel, Data Analysis & Business Reporting with AI",
+            "lessons": 4,
+            "hours": 18
+          },
+          {
+            "module": "Module 06",
+            "title": "Meetings, Collaboration & Personal Knowledge Systems",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 07",
+            "title": "AI Workflow Automation & Connected Apps",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 08",
+            "title": "Workplace Productivity Portfolio & Assessment",
+            "lessons": 4,
+            "hours": 16
           }
         ],
         "tags": [
@@ -8636,8 +8729,8 @@ const NS_ACADEMIES = [
         ],
         "featured": false,
         "title": "AI Productivity Professional",
-        "description": "Use AI tools to 10x your work output: ChatGPT, Prompt Engineering, AI Automation & AI Research.",
-        "projects": 10,
+        "description": "Master modern workplace AI tools to achieve a measured 40–60% efficiency improvement across research, writing, slides, Excel & automations.",
+        "projects": 5,
         "category": "AI Academy",
         "status": "active",
         "url": "/course-detail.html?id=ai-productivity",
@@ -8645,7 +8738,7 @@ const NS_ACADEMIES = [
         "courseRole": "Professional Skill",
         "learningHours": 120,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Ideal for office professionals wanting multi-LLM workflows."
+        "positioning": "Professional Certificate in Workplace AI Productivity & Connected Workflows."
       },
       {
         "id": "ai-for-business-pro",
@@ -8656,48 +8749,83 @@ const NS_ACADEMIES = [
         "icon": "🤖",
         "color": "linear-gradient(135deg, #0599a8, #2563EB)",
         "name": "AI for Business Professional",
-        "shortDesc": "Deploy AI solutions, custom GPTs, enterprise automation, and AI business strategy.",
-        "fullDesc": "Position for business leaders and consultants. Deploy AI solutions, custom GPTs, enterprise automation, and AI business strategy.",
-        "duration": "3 Months",
-        "durationMonths": 3,
+        "shortDesc": "Learn to identify business AI opportunities, automate workflows, integrate CRM and operational tools, build controlled AI assistants, analyze business data and measure automation ROI.",
+        "fullDesc": "Learn to identify business AI opportunities, automate workflows, integrate CRM and operational tools, build controlled AI assistants, analyze business data and measure automation ROI.",
+        "duration": "4 Months",
+        "durationMonths": 4,
         "mode": "Online",
-        "level": "Intermediate",
-        "price": 14999,
-        "originalPrice": 42999,
+        "level": "Professional / Applied Business AI",
+        "price": 39900,
+        "originalPrice": 39900,
         "rating": 4.9,
         "reviews": 128,
         "students": 590,
-        "liveProjects": 8,
+        "liveProjects": 4,
         "certificate": true,
         "placementSupport": true,
         "tools": [
+          "n8n",
+          "HubSpot CRM",
+          "Airtable",
           "ChatGPT",
           "Claude",
-          "OpenAI API",
-          "n8n",
-          "Perplexity",
-          "Make.com",
-          "Gemini"
+          "Google Sheets",
+          "Looker Studio",
+          "Make",
+          "Microsoft Power Automate",
+          "Microsoft Copilot Studio",
+          "Google Gemini",
+          "Notion"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "AI Strategy for Enterprises",
+            "title": "Business AI Strategy & Opportunity Discovery",
             "lessons": 4
           },
           {
             "module": "Module 02",
-            "title": "Automating Customer Support",
+            "title": "Business Process Mapping & Automation Design",
             "lessons": 4
           },
           {
             "module": "Module 03",
-            "title": "Marketing & Sales Automation",
+            "title": "n8n Workflow Automation Engineering",
             "lessons": 4
           },
           {
             "module": "Module 04",
-            "title": "Operations & Internal Tooling",
+            "title": "CRM, Sales & Marketing Automation",
+            "lessons": 4
+          },
+          {
+            "module": "Module 05",
+            "title": "AI Customer Support & Knowledge Assistants",
+            "lessons": 4
+          },
+          {
+            "module": "Module 06",
+            "title": "Business Operations & Document Automation",
+            "lessons": 4
+          },
+          {
+            "module": "Module 07",
+            "title": "AI Business Analytics & Decision Dashboards",
+            "lessons": 4
+          },
+          {
+            "module": "Module 08",
+            "title": "Business AI Agents & MCP Integrations",
+            "lessons": 4
+          },
+          {
+            "module": "Module 09",
+            "title": "Governance, Testing, Security & ROI",
+            "lessons": 4
+          },
+          {
+            "module": "Module 10",
+            "title": "Industry Capstone & Client Implementation",
             "lessons": 4
           }
         ],
@@ -8706,16 +8834,16 @@ const NS_ACADEMIES = [
         ],
         "featured": false,
         "title": "AI for Business Professional",
-        "description": "Deploy AI solutions, custom GPTs, enterprise automation, and AI business strategy.",
-        "projects": 8,
+        "description": "Learn to identify business AI opportunities, automate workflows, integrate CRM and operational tools, build controlled AI assistants, analyze business data and measure automation ROI.",
+        "projects": 4,
         "category": "AI Academy",
         "status": "active",
         "url": "/course-detail.html?id=ai-for-business-pro",
         "courseType": "SPECIALIZATION",
         "courseRole": "Professional Skill",
-        "learningHours": 80,
+        "learningHours": 160,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Position for business leaders and consultants."
+        "positioning": "Professional Diploma in Business AI Implementation & Workflow Automation."
       },
       {
         "id": "prompt-engineering",
@@ -15009,6 +15137,7 @@ const NS_ACADEMIES = [
   }
 ];
 
+/* Blog posts data */
 const NS_BLOG_POSTS = [
   {
     "id": "ai-skills-future-careers-2027-2030",
@@ -15658,12 +15787,11 @@ const NS_BLOG_POSTS = [
   }
 ];
 
+// CommonJS export for Node scripts
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { NS_COURSES, NS_ACADEMIES, NS_BLOG_POSTS };
-}
-
-if (typeof window !== 'undefined') {
-  window.NS_COURSES = NS_COURSES;
-  window.NS_ACADEMIES = NS_ACADEMIES;
-  window.NS_BLOG_POSTS = NS_BLOG_POSTS;
+  module.exports = {
+    NS_COURSES,
+    NS_ACADEMIES,
+    NS_BLOG_POSTS
+  };
 }
