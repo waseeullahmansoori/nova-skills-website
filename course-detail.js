@@ -860,16 +860,19 @@ function renderEnrichedCourseDetail(baseCourse, data) {
     projectsContainer.innerHTML = `
       <div class="projects-suite-grid">
         ${builds.map((b, bIdx) => {
-          const isCapstone = b.toLowerCase().includes('capstone');
+          const title = typeof b === 'object' ? (b.title || b.project_title || b.name || '') : b;
+          const isCapstone = (typeof b === 'object' ? (b.badge || b.title || '') : String(b)).toLowerCase().includes('capstone');
+          const desc = typeof b === 'object' ? (b.client_brief || b.business_problem || '') : (data.modules?.[bIdx]?.assignment || data.modules?.[bIdx]?.hands_on_practice || 'Built to professional standards, verified through peer critique and mentor review.');
+          const deliverable = typeof b === 'object' ? (Array.isArray(b.deliverables) ? b.deliverables[0] : (b.deliverables || '')) : (deliverables[bIdx] || 'Production ready asset in student portfolio');
           return `
             <div class="portfolio-project-card ${isCapstone ? 'capstone' : ''}">
-              <span class="project-tag-badge">${isCapstone ? 'Enterprise Capstone Project' : `Production Project ${bIdx + 1}`}</span>
-              <div class="project-card-title">${escapeHTML(b)}</div>
+              <span class="project-tag-badge">${isCapstone ? 'Enterprise Capstone Project' : (typeof b === 'object' && b.badge ? escapeHTML(b.badge) : `Production Project ${bIdx + 1}`)}</span>
+              <div class="project-card-title">${escapeHTML(title)}</div>
               <p class="project-card-desc">
-                ${escapeHTML(data.modules?.[bIdx]?.assignment || data.modules?.[bIdx]?.hands_on_practice || 'Built to professional standards, verified through peer critique and mentor review.')}
+                ${escapeHTML(desc)}
               </p>
               <div class="project-deliverable-badge">
-                <span>📁</span> Deliverable: ${escapeHTML(deliverables[bIdx] || 'Production ready asset in student portfolio')}
+                <span>📁</span> Deliverable: ${escapeHTML(deliverable)}
               </div>
             </div>
           `;
@@ -1118,7 +1121,8 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   if (faqGrid && data.faq && Array.isArray(data.faq) && data.faq.length > 0) {
     const builds = data.what_you_will_build || [];
     faqGrid.innerHTML = data.faq.map((item, fIdx) => {
-      let answer = item.answer || (builds.length > 0 ? `You will build production-grade projects: ${builds.slice(0, 2).join(' and ')}, resulting in portfolio-ready case studies.` : '');
+      const buildNames = builds.map(b => typeof b === 'object' ? (b.title || b.name || '') : b);
+      let answer = item.answer || (buildNames.length > 0 ? `You will build production-grade projects: ${buildNames.slice(0, 2).join(' and ')}, resulting in portfolio-ready case studies.` : '');
       return `
         <div class="faq-item">
           <button class="faq-question" aria-expanded="${fIdx === 0 ? 'true' : 'false'}">
@@ -1427,7 +1431,8 @@ function injectCourseSchema(course, courseImg, canonicalUrl, detailData = null) 
       "mainEntity": detailData.faq.map((item, fIdx) => {
         let ans = item.answer;
         if (fIdx === 1 && builds.length > 0) {
-          ans = `You will build production-grade projects: ${builds.slice(0, 2).join(' and ')}, resulting in portfolio-ready case studies rather than trivial homework exercises.`;
+          const bNames = builds.map(b => typeof b === 'object' ? (b.title || b.name || '') : b);
+          ans = `You will build production-grade projects: ${bNames.slice(0, 2).join(' and ')}, resulting in portfolio-ready case studies rather than trivial homework exercises.`;
         }
         return {
           "@type": "Question",
