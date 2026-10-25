@@ -1,8 +1,6 @@
-/**
- * Nova Skills - Global Course, Academy & Blog Data Architecture
- * Canonical Data Source: 109 Courses across 12 Academies & Published Blog Ecosystem
- * ISO 9001:2015 Verified Curriculum Standard
- */
+// ============================================================
+// NOVA SKILLS — CANONICAL COURSE DATA REGISTRY (V1.3.0)
+// ============================================================
 
 const NS_COURSES = [
   {
@@ -2043,56 +2041,56 @@ const NS_COURSES = [
       "Microsoft Clarity"
     ],
     "curriculum": [
-        {
-            "module": "Module 01",
-            "title": "UX Research, Problem Framing & Product Strategy",
-            "lessons": 4
-        },
-        {
-            "module": "Module 02",
-            "title": "Information Architecture, User Flows & Wireframing",
-            "lessons": 4
-        },
-        {
-            "module": "Module 03",
-            "title": "UI Visual Design & Figma Fundamentals",
-            "lessons": 4
-        },
-        {
-            "module": "Module 04",
-            "title": "Advanced Figma, Auto Layout & Responsive Components",
-            "lessons": 4
-        },
-        {
-            "module": "Module 05",
-            "title": "Design Systems, Accessibility & Developer Handoff",
-            "lessons": 4
-        },
-        {
-            "module": "Module 06",
-            "title": "Interaction Design, Prototyping & Usability Testing",
-            "lessons": 4
-        },
-        {
-            "module": "Module 07",
-            "title": "Framer Website Design, CMS, Motion & Publishing",
-            "lessons": 4
-        },
-        {
-            "module": "Module 08",
-            "title": "Generative AI for UX, UI & Product Design",
-            "lessons": 4
-        },
-        {
-            "module": "Module 09",
-            "title": "Product Thinking, UX Metrics & Team Collaboration",
-            "lessons": 2
-        },
-        {
-            "module": "Module 10",
-            "title": "Professional Portfolio & Integrated Capstone",
-            "lessons": 4
-        }
+      {
+        "module": "Module 01",
+        "title": "UX Research, Problem Framing & Product Strategy",
+        "lessons": 4
+      },
+      {
+        "module": "Module 02",
+        "title": "Information Architecture, User Flows & Wireframing",
+        "lessons": 4
+      },
+      {
+        "module": "Module 03",
+        "title": "UI Visual Design & Figma Fundamentals",
+        "lessons": 4
+      },
+      {
+        "module": "Module 04",
+        "title": "Advanced Figma, Auto Layout & Responsive Components",
+        "lessons": 4
+      },
+      {
+        "module": "Module 05",
+        "title": "Design Systems, Accessibility & Developer Handoff",
+        "lessons": 4
+      },
+      {
+        "module": "Module 06",
+        "title": "Interaction Design, Prototyping & Usability Testing",
+        "lessons": 4
+      },
+      {
+        "module": "Module 07",
+        "title": "Framer Website Design, CMS, Motion & Publishing",
+        "lessons": 4
+      },
+      {
+        "module": "Module 08",
+        "title": "Generative AI for UX, UI & Product Design",
+        "lessons": 4
+      },
+      {
+        "module": "Module 09",
+        "title": "Product Thinking, UX Metrics & Team Collaboration",
+        "lessons": 2
+      },
+      {
+        "module": "Module 10",
+        "title": "Professional Portfolio & Integrated Capstone",
+        "lessons": 4
+      }
     ],
     "tags": [
       "popular",
@@ -2573,7 +2571,7 @@ const NS_COURSES = [
     "liveProjects": 3,
     "certificate": true,
     "placementSupport": true,
-        "tools": [
+    "tools": [
       "HTML5",
       "CSS3",
       "JavaScript",
@@ -2590,57 +2588,57 @@ const NS_COURSES = [
       "Cursor"
     ],
     "curriculum": [
-          {
-            "module": "Module 01",
-            "title": "Programming Fundamentals, Developer Tools & Git",
-            "lessons": 6
-          },
-          {
-            "module": "Module 02",
-            "title": "HTML5, CSS3, Responsive Design & Accessibility",
-            "lessons": 7
-          },
-          {
-            "module": "Module 03",
-            "title": "JavaScript Programming, DOM & Async APIs",
-            "lessons": 6
-          },
-          {
-            "module": "Module 04",
-            "title": "TypeScript & Code Quality Fundamentals",
-            "lessons": 5
-          },
-          {
-            "module": "Module 05",
-            "title": "React Frontend Development",
-            "lessons": 6
-          },
-          {
-            "module": "Module 06",
-            "title": "Node.js, Express & REST API Development",
-            "lessons": 6
-          },
-          {
-            "module": "Module 07",
-            "title": "SQL, PostgreSQL & Database Integration",
-            "lessons": 5
-          },
-          {
-            "module": "Module 08",
-            "title": "Authentication, Security & Testing",
-            "lessons": 5
-          },
-          {
-            "module": "Module 09",
-            "title": "Next.js, Full-Stack Integration & Deployment",
-            "lessons": 5
-          },
-          {
-            "module": "Module 10",
-            "title": "Industry Projects, Portfolio & Final Capstone",
-            "lessons": 5
-          }
-        ],
+      {
+        "module": "Module 01",
+        "title": "Programming Fundamentals, Developer Tools & Git",
+        "lessons": 6
+      },
+      {
+        "module": "Module 02",
+        "title": "HTML5, CSS3, Responsive Design & Accessibility",
+        "lessons": 7
+      },
+      {
+        "module": "Module 03",
+        "title": "JavaScript Programming, DOM & Async APIs",
+        "lessons": 6
+      },
+      {
+        "module": "Module 04",
+        "title": "TypeScript & Code Quality Fundamentals",
+        "lessons": 5
+      },
+      {
+        "module": "Module 05",
+        "title": "React Frontend Development",
+        "lessons": 6
+      },
+      {
+        "module": "Module 06",
+        "title": "Node.js, Express & REST API Development",
+        "lessons": 6
+      },
+      {
+        "module": "Module 07",
+        "title": "SQL, PostgreSQL & Database Integration",
+        "lessons": 5
+      },
+      {
+        "module": "Module 08",
+        "title": "Authentication, Security & Testing",
+        "lessons": 5
+      },
+      {
+        "module": "Module 09",
+        "title": "Next.js, Full-Stack Integration & Deployment",
+        "lessons": 5
+      },
+      {
+        "module": "Module 10",
+        "title": "Industry Projects, Portfolio & Final Capstone",
+        "lessons": 5
+      }
+    ],
     "tags": [
       "bestseller",
       "popular",
@@ -2886,24 +2884,24 @@ const NS_COURSES = [
     ],
     "specializationOptions": [
       {
-            "id": "agency-website",
-            "code": "Path A",
-            "name": "Agency Website Developer",
-            "duration": "20 Hours"
+        "id": "agency-website",
+        "code": "Path A",
+        "name": "Agency Website Developer",
+        "duration": "20 Hours"
       },
       {
-            "id": "ecommerce-developer",
-            "code": "Path B",
-            "name": "E-commerce Developer",
-            "duration": "20 Hours"
+        "id": "ecommerce-developer",
+        "code": "Path B",
+        "name": "E-commerce Developer",
+        "duration": "20 Hours"
       },
       {
-            "id": "ai-saas-developer",
-            "code": "Path C",
-            "name": "AI Web App & SaaS Developer",
-            "duration": "20 Hours"
+        "id": "ai-saas-developer",
+        "code": "Path C",
+        "name": "AI Web App & SaaS Developer",
+        "duration": "20 Hours"
       }
-],
+    ],
     "tags": [
       "trending",
       "flagship",
@@ -9821,56 +9819,56 @@ const NS_ACADEMIES = [
           "Microsoft Clarity"
         ],
         "curriculum": [
-                {
-                        "module": "Module 01",
-                        "title": "UX Research, Problem Framing & Product Strategy",
-                        "lessons": 4
-                },
-                {
-                        "module": "Module 02",
-                        "title": "Information Architecture, User Flows & Wireframing",
-                        "lessons": 4
-                },
-                {
-                        "module": "Module 03",
-                        "title": "UI Visual Design & Figma Fundamentals",
-                        "lessons": 4
-                },
-                {
-                        "module": "Module 04",
-                        "title": "Advanced Figma, Auto Layout & Responsive Components",
-                        "lessons": 4
-                },
-                {
-                        "module": "Module 05",
-                        "title": "Design Systems, Accessibility & Developer Handoff",
-                        "lessons": 4
-                },
-                {
-                        "module": "Module 06",
-                        "title": "Interaction Design, Prototyping & Usability Testing",
-                        "lessons": 4
-                },
-                {
-                        "module": "Module 07",
-                        "title": "Framer Website Design, CMS, Motion & Publishing",
-                        "lessons": 4
-                },
-                {
-                        "module": "Module 08",
-                        "title": "Generative AI for UX, UI & Product Design",
-                        "lessons": 4
-                },
-                {
-                        "module": "Module 09",
-                        "title": "Product Thinking, UX Metrics & Team Collaboration",
-                        "lessons": 2
-                },
-                {
-                        "module": "Module 10",
-                        "title": "Professional Portfolio & Integrated Capstone",
-                        "lessons": 4
-                }
+          {
+            "module": "Module 01",
+            "title": "UX Research, Problem Framing & Product Strategy",
+            "lessons": 4
+          },
+          {
+            "module": "Module 02",
+            "title": "Information Architecture, User Flows & Wireframing",
+            "lessons": 4
+          },
+          {
+            "module": "Module 03",
+            "title": "UI Visual Design & Figma Fundamentals",
+            "lessons": 4
+          },
+          {
+            "module": "Module 04",
+            "title": "Advanced Figma, Auto Layout & Responsive Components",
+            "lessons": 4
+          },
+          {
+            "module": "Module 05",
+            "title": "Design Systems, Accessibility & Developer Handoff",
+            "lessons": 4
+          },
+          {
+            "module": "Module 06",
+            "title": "Interaction Design, Prototyping & Usability Testing",
+            "lessons": 4
+          },
+          {
+            "module": "Module 07",
+            "title": "Framer Website Design, CMS, Motion & Publishing",
+            "lessons": 4
+          },
+          {
+            "module": "Module 08",
+            "title": "Generative AI for UX, UI & Product Design",
+            "lessons": 4
+          },
+          {
+            "module": "Module 09",
+            "title": "Product Thinking, UX Metrics & Team Collaboration",
+            "lessons": 2
+          },
+          {
+            "module": "Module 10",
+            "title": "Professional Portfolio & Integrated Capstone",
+            "lessons": 4
+          }
         ],
         "tags": [
           "popular",
@@ -10353,8 +10351,8 @@ const NS_ACADEMIES = [
         "durationMonths": 6,
         "mode": "Hybrid",
         "level": "Beginner to Junior Full-Stack Development",
-        "price": 29999,
-        "originalPrice": 29999,
+        "price": 39999,
+        "originalPrice": 39999,
         "discount": 0,
         "rating": 4.9,
         "reviews": 230,
@@ -10362,7 +10360,7 @@ const NS_ACADEMIES = [
         "liveProjects": 3,
         "certificate": true,
         "placementSupport": true,
-                "tools": [
+        "tools": [
           "HTML5",
           "CSS3",
           "JavaScript",
@@ -10379,57 +10377,57 @@ const NS_ACADEMIES = [
           "Cursor"
         ],
         "curriculum": [
-              {
-                "module": "Module 01",
-                "title": "Programming Fundamentals, Developer Tools & Git",
-                "lessons": 6
-              },
-              {
-                "module": "Module 02",
-                "title": "HTML5, CSS3, Responsive Design & Accessibility",
-                "lessons": 7
-              },
-              {
-                "module": "Module 03",
-                "title": "JavaScript Programming, DOM & Async APIs",
-                "lessons": 6
-              },
-              {
-                "module": "Module 04",
-                "title": "TypeScript & Code Quality Fundamentals",
-                "lessons": 5
-              },
-              {
-                "module": "Module 05",
-                "title": "React Frontend Development",
-                "lessons": 6
-              },
-              {
-                "module": "Module 06",
-                "title": "Node.js, Express & REST API Development",
-                "lessons": 6
-              },
-              {
-                "module": "Module 07",
-                "title": "SQL, PostgreSQL & Database Integration",
-                "lessons": 5
-              },
-              {
-                "module": "Module 08",
-                "title": "Authentication, Security & Testing",
-                "lessons": 5
-              },
-              {
-                "module": "Module 09",
-                "title": "Next.js, Full-Stack Integration & Deployment",
-                "lessons": 5
-              },
-              {
-                "module": "Module 10",
-                "title": "Industry Projects, Portfolio & Final Capstone",
-                "lessons": 5
-              }
-            ],
+          {
+            "module": "Module 01",
+            "title": "Programming Fundamentals, Developer Tools & Git",
+            "lessons": 6
+          },
+          {
+            "module": "Module 02",
+            "title": "HTML5, CSS3, Responsive Design & Accessibility",
+            "lessons": 7
+          },
+          {
+            "module": "Module 03",
+            "title": "JavaScript Programming, DOM & Async APIs",
+            "lessons": 6
+          },
+          {
+            "module": "Module 04",
+            "title": "TypeScript & Code Quality Fundamentals",
+            "lessons": 5
+          },
+          {
+            "module": "Module 05",
+            "title": "React Frontend Development",
+            "lessons": 6
+          },
+          {
+            "module": "Module 06",
+            "title": "Node.js, Express & REST API Development",
+            "lessons": 6
+          },
+          {
+            "module": "Module 07",
+            "title": "SQL, PostgreSQL & Database Integration",
+            "lessons": 5
+          },
+          {
+            "module": "Module 08",
+            "title": "Authentication, Security & Testing",
+            "lessons": 5
+          },
+          {
+            "module": "Module 09",
+            "title": "Next.js, Full-Stack Integration & Deployment",
+            "lessons": 5
+          },
+          {
+            "module": "Module 10",
+            "title": "Industry Projects, Portfolio & Final Capstone",
+            "lessons": 5
+          }
+        ],
         "tags": [
           "bestseller",
           "popular",
@@ -10463,8 +10461,8 @@ const NS_ACADEMIES = [
         "durationMonths": 3,
         "mode": "Online",
         "level": "Beginner to Career Applied Professional",
-        "price": 14999,
-        "originalPrice": 14999,
+        "price": 19999,
+        "originalPrice": 19999,
         "discount": 0,
         "rating": 4.8,
         "reviews": 160,
@@ -16154,12 +16152,11 @@ const NS_BLOG_POSTS = [
   }
 ];
 
+// CommonJS export for Node scripts
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { NS_COURSES, NS_ACADEMIES, NS_BLOG_POSTS };
-}
-
-if (typeof window !== 'undefined') {
-  window.NS_COURSES = NS_COURSES;
-  window.NS_ACADEMIES = NS_ACADEMIES;
-  window.NS_BLOG_POSTS = NS_BLOG_POSTS;
+  module.exports = {
+    NS_COURSES,
+    NS_ACADEMIES,
+    NS_BLOG_POSTS
+  };
 }
