@@ -304,24 +304,24 @@
       tools: ['Shopify', 'WordPress', 'WooCommerce', 'Elementor', 'Stripe', 'Razorpay']
     },
     {
-      id: 'motion-mastery',
-      slug: 'motion-mastery',
-      name: 'Motion Graphics Master',
+      id: 'ai-integrated-video-editing-motion-graphics-professional',
+      slug: 'ai-integrated-video-editing-motion-graphics-professional',
+      name: 'AI-Integrated Video Editing & Motion Graphics Professional',
       academy: 'Video & Motion Academy',
       academyId: 'video',
       programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 26999,
-      originalPrice: 74999,
+      duration: '8 Months',
+      durationMonths: 8,
+      price: 69900,
+      originalPrice: 69900,
       rating: 4.9,
       reviews: 115,
-      liveProjects: 16,
+      liveProjects: 7,
       mode: 'Hybrid',
       level: 'Advanced',
       placementSupport: true,
-      salary: '₹4.0 – ₹8.5 LPA',
-      shortDesc: 'Advanced 2D/3D motion design, Premiere Pro, After Effects, VFX compositing and generative AI video.',
+      salary: '₹4.5 – ₹11.0 LPA',
+      shortDesc: 'Edit. Animate. Create with AI. Master Premiere Pro, After Effects, DaVinci Resolve, Fairlight, Blender, and generative AI video tools.',
       tools: ['Premiere Pro', 'After Effects', 'Cinema 4D Lite', 'DaVinci Resolve', 'Midjourney Video']
     },
     {
@@ -1132,10 +1132,10 @@
 
       // Video & Motion
       if (sessionMemory.targetField === 'video') {
-        const cVid = findCourse('motion-mastery') || FALLBACK_COURSES[12];
+        const cVid = findCourse('ai-integrated-video-editing-motion-graphics-professional') || findCourse('motion-mastery') || FALLBACK_COURSES[12];
         sessionMemory.lastDiscussedCourse = cVid;
         return {
-          text: `Content creation aur advertising ke boom ke chalte video editors aur motion designers ki bhari demand hai!\n\n⭐ **Recommended: ${cVid.name}**\n\n• **Tools**: Premiere Pro, After Effects, DaVinci Resolve, Cinema 4D Lite & AI Video Tools.\n• **Projects**: 16 Live Projects (Reels editing, TV commercials, kinetic typography, 3D titles, color grading).\n• **Duration:** 6 Months *(Fast-track: Professional Video Editing • 3 Months, ₹13,999)*\n• **Fee:** ${formatFee(cVid.price)} *(No-Cost EMI: ${calculateEMI(cVid.price)}/mo)*\n\nKya aap iska live practical syllabus dekhna chahte hain?`,
+          text: `Content creation aur advertising ke boom ke chalte video editors aur motion designers ki bhari demand hai!\n\n⭐ **Recommended: ${cVid.name}**\n\n• **Tools**: Premiere Pro, After Effects, DaVinci Resolve, Fairlight, Blender & AI Video Tools (Firefly, Veo, Runway).\n• **Projects**: 7 Portfolio Deliverables (Viral vertical ads, commercial campaigns, 2D motion systems, 3D titles, cinematic grading).\n• **Duration:** 8 Months *(Fast-track: Professional Video Editing • 3 Months, ₹13,999)*\n• **Fee:** ${formatFee(cVid.price)} *(No-Cost EMI: ${calculateEMI(cVid.price)}/mo)*\n\nKya aap iska live practical syllabus dekhna chahte hain?`,
           recommendedCourse: cVid
         };
       }

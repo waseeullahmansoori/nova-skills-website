@@ -128,7 +128,7 @@ function generateSitemap() {
   } catch (err) {
     courseIds = [
       'dm-professional', 'dm-mastery', 'ai-mastery', 'fullstack-foundation',
-      'creative-design', 'motion-mastery', 'archviz-mastery', 'ecommerce-mastery',
+      'creative-design', 'ai-integrated-video-editing-motion-graphics-professional', 'archviz-mastery', 'ecommerce-mastery',
       'youtube-mastery', 'biz-productivity', 'business-english', 'freelancing-mastery'
     ];
   }

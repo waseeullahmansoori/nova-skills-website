@@ -3964,63 +3964,198 @@ const NS_COURSES = [
     "positioning": "High-velocity 2026 tool for tech startup sites."
   },
   {
-    "id": "motion-mastery",
-    "slug": "motion-graphics-master",
+    "id": "ai-integrated-video-editing-motion-graphics-professional",
+    "slug": "ai-integrated-video-editing-motion-graphics-professional",
     "academy": "Video & Motion Academy",
     "academyId": "video",
     "programLevel": "Career Program",
     "icon": "🎬",
     "color": "linear-gradient(135deg, #EF4444, #F97316)",
-    "name": "Motion Graphics Master",
-    "shortDesc": "Premiere Pro, After Effects, DaVinci Resolve, Motion Graphics, 3D Animation & AI Video tools.",
-    "fullDesc": "Flagship creative video career track. Premiere Pro, After Effects, DaVinci Resolve, Motion Graphics, 3D Animation & AI Video tools.",
-    "duration": "6 Months",
-    "durationMonths": 6,
+    "name": "AI-Integrated Video Editing & Motion Graphics Professional",
+    "shortDesc": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.",
+    "fullDesc": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.",
+    "duration": "8 Months",
+    "durationMonths": 8,
     "mode": "Hybrid",
-    "level": "Beginner",
-    "price": 26999,
-    "originalPrice": 74999,
+    "level": "Beginner to Applied Professional",
+    "price": 69900,
+    "originalPrice": 69900,
     "rating": 4.9,
     "reviews": 188,
     "students": 960,
-    "liveProjects": 3,
+    "liveProjects": 7,
     "certificate": true,
     "placementSupport": true,
     "tools": [
       "Adobe Premiere Pro",
-      "DaVinci Resolve Studio",
       "Adobe After Effects",
-      "CapCut Desktop",
-      "Audition",
-      "Photoshop",
-      "Canva",
-      "Envato"
+      "DaVinci Resolve",
+      "Fairlight",
+      "Adobe Firefly",
+      "Google Flow / Veo",
+      "Runway Gen-3",
+      "ElevenLabs",
+      "Blender",
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+      "Claude / ChatGPT"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Motion Principles & After Effects Essentials",
-        "lessons": 4
+        "title": "Visual Storytelling & Editing Fundamentals",
+        "lessons": 4,
+        "hours": 12
       },
       {
         "module": "Module 02",
-        "title": "Shape Animation & Kinetic Typography",
-        "lessons": 4
+        "title": "Adobe Premiere Pro Essentials",
+        "lessons": 5,
+        "hours": 20
       },
       {
         "module": "Module 03",
-        "title": "3D Integration & Cinema 4D Lite",
-        "lessons": 4
+        "title": "AI-Assisted Pre-production",
+        "lessons": 3,
+        "hours": 8
       },
       {
         "module": "Module 04",
-        "title": "Character Rigging & Animation",
-        "lessons": 4
+        "title": "Advanced Premiere Pro",
+        "lessons": 4,
+        "hours": 18
       },
       {
         "module": "Module 05",
-        "title": "Broadcast Design Capstone & Showreel",
-        "lessons": 4
+        "title": "Commercial Editing & Audience Retention",
+        "lessons": 3,
+        "hours": 14
+      },
+      {
+        "module": "Module 06",
+        "title": "AI Editing Acceleration",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 07",
+        "title": "Graphic Design for Motion",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 08",
+        "title": "Adobe After Effects Essentials",
+        "lessons": 5,
+        "hours": 22
+      },
+      {
+        "module": "Module 09",
+        "title": "Creative Animation Exercises",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 10",
+        "title": "Professional 2D Motion Systems",
+        "lessons": 3,
+        "hours": 16
+      },
+      {
+        "module": "Module 11",
+        "title": "Commercial Motion Graphics",
+        "lessons": 3,
+        "hours": 16
+      },
+      {
+        "module": "Module 12",
+        "title": "Integrated Motion Production",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 13",
+        "title": "Motion Tracking & Camera Integration",
+        "lessons": 3,
+        "hours": 12
+      },
+      {
+        "module": "Module 14",
+        "title": "Rotoscoping & Compositing",
+        "lessons": 3,
+        "hours": 12
+      },
+      {
+        "module": "Module 15",
+        "title": "Advanced Compositing Techniques",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 16",
+        "title": "3D Workflow Introduction",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 17",
+        "title": "Professional Colour Correction & Grading",
+        "lessons": 4,
+        "hours": 20
+      },
+      {
+        "module": "Module 18",
+        "title": "Sound Editing & Fairlight",
+        "lessons": 3,
+        "hours": 12
+      },
+      {
+        "module": "Module 19",
+        "title": "Professional Finishing & Delivery",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 20",
+        "title": "AI Creative Direction & Pre-production",
+        "lessons": 3,
+        "hours": 8
+      },
+      {
+        "module": "Module 21",
+        "title": "AI Video & Visual Generation",
+        "lessons": 3,
+        "hours": 14
+      },
+      {
+        "module": "Module 22",
+        "title": "Hybrid Production Pipeline",
+        "lessons": 3,
+        "hours": 12
+      },
+      {
+        "module": "Module 23",
+        "title": "Commercial AI Production Standards",
+        "lessons": 3,
+        "hours": 6
+      },
+      {
+        "module": "Module 24",
+        "title": "Industry Client Production",
+        "lessons": 3,
+        "hours": 20
+      },
+      {
+        "module": "Module 25",
+        "title": "Multi-Platform Delivery",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 26",
+        "title": "Portfolio & Professional Readiness",
+        "lessons": 3,
+        "hours": 12
       }
     ],
     "tags": [
@@ -4029,17 +4164,17 @@ const NS_COURSES = [
       "placement"
     ],
     "featured": true,
-    "title": "Motion Graphics Master",
-    "description": "Premiere Pro, After Effects, DaVinci Resolve, Motion Graphics, 3D Animation & AI Video tools.",
-    "projects": 16,
+    "title": "AI-Integrated Video Editing & Motion Graphics Professional",
+    "description": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.",
+    "projects": 7,
     "category": "Video & Motion Academy",
     "status": "active",
-    "url": "/course-detail.html?id=motion-mastery",
+    "url": "/course-detail.html?id=ai-integrated-video-editing-motion-graphics-professional",
     "courseType": "MASTER",
     "courseRole": "Career/Monetization",
-    "learningHours": 240,
+    "learningHours": 320,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "Flagship creative video career track."
+    "positioning": "Flagship creative video editing, motion graphics, and generative AI career track."
   },
   {
     "id": "video-pro",
@@ -11777,63 +11912,198 @@ const NS_ACADEMIES = [
     "status": "active",
     "courses": [
       {
-        "id": "motion-mastery",
-        "slug": "motion-graphics-master",
+        "id": "ai-integrated-video-editing-motion-graphics-professional",
+        "slug": "ai-integrated-video-editing-motion-graphics-professional",
         "academy": "Video & Motion Academy",
         "academyId": "video",
         "programLevel": "Career Program",
         "icon": "🎬",
         "color": "linear-gradient(135deg, #EF4444, #F97316)",
-        "name": "Motion Graphics Master",
-        "shortDesc": "Premiere Pro, After Effects, DaVinci Resolve, Motion Graphics, 3D Animation & AI Video tools.",
-        "fullDesc": "Flagship creative video career track. Premiere Pro, After Effects, DaVinci Resolve, Motion Graphics, 3D Animation & AI Video tools.",
-        "duration": "6 Months",
-        "durationMonths": 6,
+        "name": "AI-Integrated Video Editing & Motion Graphics Professional",
+        "shortDesc": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.",
+        "fullDesc": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.",
+        "duration": "8 Months",
+        "durationMonths": 8,
         "mode": "Hybrid",
-        "level": "Beginner",
-        "price": 26999,
-        "originalPrice": 74999,
+        "level": "Beginner to Applied Professional",
+        "price": 69900,
+        "originalPrice": 69900,
         "rating": 4.9,
         "reviews": 188,
         "students": 960,
-        "liveProjects": 16,
+        "liveProjects": 7,
         "certificate": true,
         "placementSupport": true,
         "tools": [
           "Adobe Premiere Pro",
-          "DaVinci Resolve Studio",
           "Adobe After Effects",
-          "CapCut Desktop",
-          "Audition",
-          "Photoshop",
-          "Canva",
-          "Envato"
+          "DaVinci Resolve",
+          "Fairlight",
+          "Adobe Firefly",
+          "Google Flow / Veo",
+          "Runway Gen-3",
+          "ElevenLabs",
+          "Blender",
+          "Adobe Illustrator",
+          "Adobe Photoshop",
+          "Claude / ChatGPT"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Motion Principles & After Effects Essentials",
-            "lessons": 4
+            "title": "Visual Storytelling & Editing Fundamentals",
+            "lessons": 4,
+            "hours": 12
           },
           {
             "module": "Module 02",
-            "title": "Shape Animation & Kinetic Typography",
-            "lessons": 4
+            "title": "Adobe Premiere Pro Essentials",
+            "lessons": 5,
+            "hours": 20
           },
           {
             "module": "Module 03",
-            "title": "3D Integration & Cinema 4D Lite",
-            "lessons": 4
+            "title": "AI-Assisted Pre-production",
+            "lessons": 3,
+            "hours": 8
           },
           {
             "module": "Module 04",
-            "title": "Character Rigging & Animation",
-            "lessons": 4
+            "title": "Advanced Premiere Pro",
+            "lessons": 4,
+            "hours": 18
           },
           {
             "module": "Module 05",
-            "title": "Broadcast Design Capstone & Showreel",
-            "lessons": 4
+            "title": "Commercial Editing & Audience Retention",
+            "lessons": 3,
+            "hours": 14
+          },
+          {
+            "module": "Module 06",
+            "title": "AI Editing Acceleration",
+            "lessons": 2,
+            "hours": 8
+          },
+          {
+            "module": "Module 07",
+            "title": "Graphic Design for Motion",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 08",
+            "title": "Adobe After Effects Essentials",
+            "lessons": 5,
+            "hours": 22
+          },
+          {
+            "module": "Module 09",
+            "title": "Creative Animation Exercises",
+            "lessons": 2,
+            "hours": 8
+          },
+          {
+            "module": "Module 10",
+            "title": "Professional 2D Motion Systems",
+            "lessons": 3,
+            "hours": 16
+          },
+          {
+            "module": "Module 11",
+            "title": "Commercial Motion Graphics",
+            "lessons": 3,
+            "hours": 16
+          },
+          {
+            "module": "Module 12",
+            "title": "Integrated Motion Production",
+            "lessons": 2,
+            "hours": 8
+          },
+          {
+            "module": "Module 13",
+            "title": "Motion Tracking & Camera Integration",
+            "lessons": 3,
+            "hours": 12
+          },
+          {
+            "module": "Module 14",
+            "title": "Rotoscoping & Compositing",
+            "lessons": 3,
+            "hours": 12
+          },
+          {
+            "module": "Module 15",
+            "title": "Advanced Compositing Techniques",
+            "lessons": 2,
+            "hours": 8
+          },
+          {
+            "module": "Module 16",
+            "title": "3D Workflow Introduction",
+            "lessons": 2,
+            "hours": 8
+          },
+          {
+            "module": "Module 17",
+            "title": "Professional Colour Correction & Grading",
+            "lessons": 4,
+            "hours": 20
+          },
+          {
+            "module": "Module 18",
+            "title": "Sound Editing & Fairlight",
+            "lessons": 3,
+            "hours": 12
+          },
+          {
+            "module": "Module 19",
+            "title": "Professional Finishing & Delivery",
+            "lessons": 2,
+            "hours": 8
+          },
+          {
+            "module": "Module 20",
+            "title": "AI Creative Direction & Pre-production",
+            "lessons": 3,
+            "hours": 8
+          },
+          {
+            "module": "Module 21",
+            "title": "AI Video & Visual Generation",
+            "lessons": 3,
+            "hours": 14
+          },
+          {
+            "module": "Module 22",
+            "title": "Hybrid Production Pipeline",
+            "lessons": 3,
+            "hours": 12
+          },
+          {
+            "module": "Module 23",
+            "title": "Commercial AI Production Standards",
+            "lessons": 3,
+            "hours": 6
+          },
+          {
+            "module": "Module 24",
+            "title": "Industry Client Production",
+            "lessons": 3,
+            "hours": 20
+          },
+          {
+            "module": "Module 25",
+            "title": "Multi-Platform Delivery",
+            "lessons": 2,
+            "hours": 8
+          },
+          {
+            "module": "Module 26",
+            "title": "Portfolio & Professional Readiness",
+            "lessons": 3,
+            "hours": 12
           }
         ],
         "tags": [
@@ -11842,17 +12112,17 @@ const NS_ACADEMIES = [
           "placement"
         ],
         "featured": true,
-        "title": "Motion Graphics Master",
-        "description": "Premiere Pro, After Effects, DaVinci Resolve, Motion Graphics, 3D Animation & AI Video tools.",
-        "projects": 16,
+        "title": "AI-Integrated Video Editing & Motion Graphics Professional",
+        "description": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.",
+        "projects": 7,
         "category": "Video & Motion Academy",
         "status": "active",
-        "url": "/course-detail.html?id=motion-mastery",
+        "url": "/course-detail.html?id=ai-integrated-video-editing-motion-graphics-professional",
         "courseType": "MASTER",
         "courseRole": "Career/Monetization",
-        "learningHours": 240,
+        "learningHours": 320,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Flagship creative video career track."
+        "positioning": "Flagship creative video editing, motion graphics, and generative AI career track."
       },
       {
         "id": "video-pro",

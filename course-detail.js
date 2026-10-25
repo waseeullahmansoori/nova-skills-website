@@ -57,6 +57,17 @@ if (typeof window !== 'undefined') {
 document.addEventListener('DOMContentLoaded', () => {
   const course = getTargetCourse();
   if (course) {
+    if (typeof window !== 'undefined' && window.history && window.history.replaceState) {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const rawId = (params.get('id') || params.get('course') || '').trim();
+        if (rawId && COURSE_ALIASES[rawId] && rawId !== course.id) {
+          const url = new URL(window.location.href);
+          url.searchParams.set('id', course.id);
+          window.history.replaceState({}, '', url.toString());
+        }
+      } catch (e) {}
+    }
     populateCourseDetail(course);
     renderRelatedCourses(course);
     loadDetailedCourseData(course);
@@ -76,7 +87,8 @@ const COURSE_ALIASES = {
   'ai-web-dev-pro': 'ai-assisted-full-stack-web-development',
   'prompt-engineering': 'prompt-engineering-mastery',
   'freelance-agency-master': 'freelance-agency-mastery',
-  'freelance-mastery': 'freelancing-mastery'
+  'freelance-mastery': 'freelancing-mastery',
+  'motion-mastery': 'ai-integrated-video-editing-motion-graphics-professional'
 };
 
 const ACADEMY_SLUG_MAP = {
