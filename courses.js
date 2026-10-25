@@ -154,7 +154,10 @@ function filterAndSortCourses() {
   const selectedModes = Array.from(document.querySelectorAll('input[name="mode"]:checked')).map(cb => cb.value);
   const selectedLevels = Array.from(document.querySelectorAll('input[name="level"]:checked')).map(cb => cb.value);
   const selectedDurations = Array.from(document.querySelectorAll('input[name="duration"]:checked')).map(cb => cb.value);
-  const maxPrice = parseInt(document.getElementById('filter-price-range')?.value || '90000', 10);
+  const priceInput = document.getElementById('filter-price-range');
+  const maxPrice = (priceInput && parseInt(priceInput.value, 10) >= 88000 && parseInt(priceInput.max, 10) >= 90000)
+    ? parseInt(priceInput.max, 10)
+    : parseInt(priceInput?.value || '90000', 10);
   const placementOnly = document.getElementById('filter-placement')?.checked || false;
 
   let result = getCoursesData().filter(c => {
