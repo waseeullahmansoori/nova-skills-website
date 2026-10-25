@@ -578,16 +578,19 @@ function generateStaticCourseHtml(courseId, templateHtml) {
     projectsHtml = `
       <div class="projects-suite-grid">
         ${builds.map((b, bIdx) => {
-          const isCapstone = b.toLowerCase().includes('capstone');
+          const bTitle = (typeof b === 'object' && b !== null) ? (b.title || b.name || '') : String(b);
+          const isCapstone = bTitle.toLowerCase().includes('capstone');
+          const bDesc = (typeof b === 'object' && b !== null) ? (b.description || b.business_brief || '') : (detailData.modules?.[bIdx]?.assignment || detailData.modules?.[bIdx]?.hands_on_practice || 'Built to professional standards, verified through peer critique and mentor review.');
+          const bDeliverable = (typeof b === 'object' && b !== null && Array.isArray(b.deliverables)) ? b.deliverables[0] : (deliverables[bIdx] || 'Production ready asset in student portfolio');
           return `
             <div class="portfolio-project-card ${isCapstone ? 'capstone' : ''}">
               <span class="project-tag-badge">${isCapstone ? 'Enterprise Capstone Project' : `Production Project ${bIdx + 1}`}</span>
-              <div class="project-card-title">${escapeHTML(b)}</div>
+              <div class="project-card-title">${escapeHTML(bTitle)}</div>
               <p class="project-card-desc">
-                ${escapeHTML(detailData.modules?.[bIdx]?.assignment || detailData.modules?.[bIdx]?.hands_on_practice || 'Built to professional standards, verified through peer critique and mentor review.')}
+                ${escapeHTML(bDesc)}
               </p>
               <div class="project-deliverable-badge">
-                <span>📁</span> Deliverable: ${escapeHTML(deliverables[bIdx] || 'Production ready asset in student portfolio')}
+                <span>📁</span> Deliverable: ${escapeHTML(bDeliverable)}
               </div>
             </div>
           `;
@@ -640,7 +643,8 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   if (detailData && detailData.faq && Array.isArray(detailData.faq)) {
     const builds = detailData.what_you_will_build || [];
     faqHtml = detailData.faq.map((item, fIdx) => {
-      let answer = item.answer || (builds.length > 0 ? `You will build production-grade projects: ${builds.slice(0, 2).join(' and ')}, resulting in portfolio-ready case studies.` : '');
+      const buildTitles = builds.map(b => (typeof b === 'object' && b !== null) ? (b.title || b.name || '') : String(b));
+      let answer = item.answer || (buildTitles.length > 0 ? `You will build production-grade projects: ${buildTitles.slice(0, 2).join(' and ')}, resulting in portfolio-ready case studies.` : '');
       return `
         <div class="faq-item">
           <button class="faq-question" aria-expanded="${fIdx === 0 ? 'true' : 'false'}">
