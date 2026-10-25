@@ -3472,51 +3472,90 @@ const NS_COURSES = [
     "icon": "🌐",
     "color": "linear-gradient(135deg, #F59E0B, #8B5CF6)",
     "name": "No-Code Website Professional",
-    "shortDesc": "Build responsive websites for clients without coding using WordPress, Webflow, Framer, and Elementor.",
-    "fullDesc": "Strong 3-month multi-platform no-code website program. Build responsive websites for clients without coding using WordPress, Webflow, Framer, and Elementor.",
+    "shortDesc": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
+    "fullDesc": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
     "duration": "3 Months",
     "durationMonths": 3,
     "mode": "Online",
-    "level": "Beginner",
+    "level": "Beginner to Applied Professional Foundation",
     "price": 12999,
-    "originalPrice": 34999,
+    "originalPrice": 12999,
     "rating": 4.7,
     "reviews": 142,
     "students": 720,
-    "liveProjects": 2,
+    "liveProjects": 3,
     "certificate": true,
     "placementSupport": true,
     "tools": [
-      "Webflow",
-      "Framer",
-      "Shopify",
       "WordPress",
-      "Make.com",
+      "Elementor",
+      "Framer",
+      "Webflow",
       "Figma",
-      "Airtable",
-      "Stripe",
-      "Google Tag Manager"
+      "Google Analytics 4",
+      "Google Search Console",
+      "Lighthouse",
+      "Google Sheets",
+      "Make.com",
+      "Framer Agents",
+      "Webflow AI",
+      "ChatGPT & Claude",
+      "Canva AI"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Web Architecture & The Box Model",
-        "lessons": 4
+        "title": "Website Fundamentals, Design Principles & Client Briefs",
+        "lessons": 5,
+        "hours": 8
       },
       {
         "module": "Module 02",
-        "title": "WordPress & Elementor",
-        "lessons": 4
+        "title": "Figma-to-Web & Responsive Design Foundations",
+        "lessons": 5,
+        "hours": 10
       },
       {
         "module": "Module 03",
-        "title": "Framer for Rapid Prototyping",
-        "lessons": 4
+        "title": "WordPress, Site Editor & Elementor Website Production",
+        "lessons": 6,
+        "hours": 24
       },
       {
         "module": "Module 04",
-        "title": "Webflow Enterprise Architecture",
-        "lessons": 4
+        "title": "Framer Website Design, Motion, CMS & Publishing",
+        "lessons": 6,
+        "hours": 24
+      },
+      {
+        "module": "Module 05",
+        "title": "Webflow Visual Development, CMS & Interactions",
+        "lessons": 6,
+        "hours": 24
+      },
+      {
+        "module": "Module 06",
+        "title": "Generative AI & Agent-Assisted Website Production",
+        "lessons": 5,
+        "hours": 10
+      },
+      {
+        "module": "Module 07",
+        "title": "Lead Forms, Integrations, SEO & Analytics",
+        "lessons": 4,
+        "hours": 8
+      },
+      {
+        "module": "Module 08",
+        "title": "Accessibility, QA, Security & Website Maintenance",
+        "lessons": 3,
+        "hours": 6
+      },
+      {
+        "module": "Module 09",
+        "title": "Industry Portfolio & Client Capstone",
+        "lessons": 3,
+        "hours": 6
       }
     ],
     "tags": [
@@ -3525,16 +3564,16 @@ const NS_COURSES = [
     ],
     "featured": false,
     "title": "No-Code Website Professional",
-    "description": "Build responsive websites for clients without coding using WordPress, Webflow, Framer, and Elementor.",
-    "projects": 8,
+    "description": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
+    "projects": 3,
     "category": "No-Code Web Academy",
     "status": "active",
     "url": "/course-detail.html?id=nocode-web-pro",
     "courseType": "PROFESSIONAL",
-    "courseRole": "Professional Skill",
+    "courseRole": "Career/Monetization",
     "learningHours": 120,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "Strong 3-month multi-platform no-code website program."
+    "positioning": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows."
   },
   {
     "id": "wordpress-cert",
@@ -11235,51 +11274,90 @@ const NS_ACADEMIES = [
         "icon": "🌐",
         "color": "linear-gradient(135deg, #F59E0B, #8B5CF6)",
         "name": "No-Code Website Professional",
-        "shortDesc": "Build responsive websites for clients without coding using WordPress, Webflow, Framer, and Elementor.",
-        "fullDesc": "Strong 3-month multi-platform no-code website program. Build responsive websites for clients without coding using WordPress, Webflow, Framer, and Elementor.",
+        "shortDesc": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
+        "fullDesc": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
         "duration": "3 Months",
         "durationMonths": 3,
         "mode": "Online",
-        "level": "Beginner",
+        "level": "Beginner to Applied Professional Foundation",
         "price": 12999,
-        "originalPrice": 34999,
+        "originalPrice": 12999,
         "rating": 4.7,
         "reviews": 142,
         "students": 720,
-        "liveProjects": 8,
+        "liveProjects": 3,
         "certificate": true,
         "placementSupport": true,
         "tools": [
-          "Webflow",
-          "Framer",
-          "Shopify",
           "WordPress",
-          "Make.com",
+          "Elementor",
+          "Framer",
+          "Webflow",
           "Figma",
-          "Airtable",
-          "Stripe",
-          "Google Tag Manager"
+          "Google Analytics 4",
+          "Google Search Console",
+          "Lighthouse",
+          "Google Sheets",
+          "Make.com",
+          "Framer Agents",
+          "Webflow AI",
+          "ChatGPT & Claude",
+          "Canva AI"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Web Architecture & The Box Model",
-            "lessons": 4
+            "title": "Website Fundamentals, Design Principles & Client Briefs",
+            "lessons": 5,
+            "hours": 8
           },
           {
             "module": "Module 02",
-            "title": "WordPress & Elementor",
-            "lessons": 4
+            "title": "Figma-to-Web & Responsive Design Foundations",
+            "lessons": 5,
+            "hours": 10
           },
           {
             "module": "Module 03",
-            "title": "Framer for Rapid Prototyping",
-            "lessons": 4
+            "title": "WordPress, Site Editor & Elementor Website Production",
+            "lessons": 6,
+            "hours": 24
           },
           {
             "module": "Module 04",
-            "title": "Webflow Enterprise Architecture",
-            "lessons": 4
+            "title": "Framer Website Design, Motion, CMS & Publishing",
+            "lessons": 6,
+            "hours": 24
+          },
+          {
+            "module": "Module 05",
+            "title": "Webflow Visual Development, CMS & Interactions",
+            "lessons": 6,
+            "hours": 24
+          },
+          {
+            "module": "Module 06",
+            "title": "Generative AI & Agent-Assisted Website Production",
+            "lessons": 5,
+            "hours": 10
+          },
+          {
+            "module": "Module 07",
+            "title": "Lead Forms, Integrations, SEO & Analytics",
+            "lessons": 4,
+            "hours": 8
+          },
+          {
+            "module": "Module 08",
+            "title": "Accessibility, QA, Security & Website Maintenance",
+            "lessons": 3,
+            "hours": 6
+          },
+          {
+            "module": "Module 09",
+            "title": "Industry Portfolio & Client Capstone",
+            "lessons": 3,
+            "hours": 6
           }
         ],
         "tags": [
@@ -11288,16 +11366,16 @@ const NS_ACADEMIES = [
         ],
         "featured": false,
         "title": "No-Code Website Professional",
-        "description": "Build responsive websites for clients without coding using WordPress, Webflow, Framer, and Elementor.",
-        "projects": 8,
+        "description": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
+        "projects": 3,
         "category": "No-Code Web Academy",
         "status": "active",
         "url": "/course-detail.html?id=nocode-web-pro",
         "courseType": "PROFESSIONAL",
-        "courseRole": "Professional Skill",
+        "courseRole": "Career/Monetization",
         "learningHours": 120,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Strong 3-month multi-platform no-code website program."
+        "positioning": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows."
       },
       {
         "id": "wordpress-cert",
