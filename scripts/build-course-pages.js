@@ -51,6 +51,7 @@ const COURSE_ALIASES = {
   'digital-marketing': 'dm-mastery',
   'ai-master': 'ai-mastery',
   'python-dev': 'python-developer',
+  'ai-web-dev-pro': 'ai-assisted-full-stack-web-development',
   'prompt-engineering-mastery': 'prompt-engineering',
   'freelance-agency-master': 'agency-building',
   'freelance-agency-mastery': 'agency-building',

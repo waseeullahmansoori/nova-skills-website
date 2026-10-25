@@ -1388,3 +1388,35 @@
   flex-wrap: wrap;
 }
 
+
+
+/* Interactive Specialization Selector Cards */
+.specialization-selector-card {
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+.specialization-selector-card:hover {
+  border-color: rgba(5, 153, 168, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(1, 23, 49, 0.08);
+}
+.specialization-selector-card:focus-visible {
+  outline: 3px solid var(--teal, #0599a8);
+  outline-offset: 3px;
+}
+.specialization-selector-card.selected-track {
+  border-color: var(--teal, #0599a8) !important;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(5, 153, 168, 0.04) 100%);
+  box-shadow: 0 14px 36px rgba(5, 153, 168, 0.18);
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+  50% { transform: scale(1.02); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.pulse-animation {
+  animation: pulseGlow 1.2s ease-in-out 2;
+}

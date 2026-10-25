@@ -1839,6 +1839,7 @@ function injectEnrollmentModalHTML() {
               <div class="meta-item"><span class="meta-icon">⏱️</span> <span id="card-duration">6 Months</span></div>
               <div class="meta-item"><span class="meta-icon">💻</span> <span id="card-mode">Online / Offline</span></div>
               <div class="meta-item"><span class="meta-icon">🏷️</span> <span id="card-fee" class="card-fee-highlight">₹39,999</span></div>
+              <div class="meta-item" id="modal-meta-path" style="display:none; grid-column:1 / -1;"><span class="meta-icon">🎯</span> <span id="card-path" style="font-weight:700; color:var(--teal,#0599a8);">Specialization: Agency Website Developer</span></div>
             </div>
           </div>
 
@@ -1861,6 +1862,7 @@ function injectEnrollmentModalHTML() {
               <input type="hidden" id="enroll-category-display" name="category" />
               <input type="hidden" id="enroll-duration-display" name="duration" />
               <input type="hidden" id="enroll-fee-display" name="fee" />
+          <input type="hidden" id="enroll-path-display" name="specialization_path" value="">
 
               <div class="enroll-form-grid">
                 <div class="form-group half-width">
@@ -1980,16 +1982,30 @@ function injectEnrollmentModalHTML() {
 }
 
 const COURSE_CATALOG_METADATA = {
+  'AI-Assisted Full Stack Web Development': { academy: 'Programming Academy', duration: '8 Months', fee: '₹64,900', category: 'programming' },
+  'AI Web Development Professional': { academy: 'Programming Academy', duration: '8 Months', fee: '₹64,900', category: 'programming' },
+  'Full Stack Programming Foundation': { academy: 'Programming Academy', duration: '6 Months', fee: '₹39,999', category: 'programming' },
+  'Python Developer Professional': { academy: 'Programming Academy', duration: '3 Months', fee: '₹19,999', category: 'programming' },
+  'Creative Design Master': { academy: 'Design Academy', duration: '8 Months', fee: '₹64,900', category: 'design' },
+  'Creative Design Mastery': { academy: 'Design Academy', duration: '8 Months', fee: '₹64,900', category: 'design' },
+  'Graphic Design Professional': { academy: 'Design Academy', duration: '4 Months', fee: '₹29,900', category: 'design' },
+  'UI/UX Design Professional': { academy: 'Design Academy', duration: '5 Months', fee: '₹44,900', category: 'design' },
+  'AI Solutions Engineering & Agentic AI Mastery': { academy: 'AI & Automation Academy', duration: '9 Months', fee: '₹89,900', category: 'ai' },
+  'AI Productivity Professional': { academy: 'AI & Automation Academy', duration: '3 Months', fee: '₹19,900', category: 'ai' },
+  'AI for Business Professional': { academy: 'AI & Automation Academy', duration: '4 Months', fee: '₹39,900', category: 'ai' },
   'AI Digital Marketing Professional': { academy: 'Digital Marketing Academy', duration: '3 Months', fee: '₹24,999', category: 'digital-marketing' },
-  'AI Mastery Program': { academy: 'AI Academy', duration: '6 Months', fee: '₹39,999', category: 'ai' },
-  'Full Stack Programming Foundation': { academy: 'Programming Academy', duration: '6 Months', fee: '₹44,999', category: 'programming' },
-  'Creative Design Mastery': { academy: 'Design Academy', duration: '6 Months', fee: '₹39,999', category: 'design' },
+  'AI Mastery Program': { academy: 'AI Academy', duration: '9 Months', fee: '₹89,900', category: 'ai' },
   'Motion Graphics Mastery': { academy: 'Video & Motion Academy', duration: '6 Months', fee: '₹39,999', category: 'video' },
   'AI Digital Marketing Mastery': { academy: 'Digital Marketing Academy', duration: '6 Months', fee: '₹44,999', category: 'digital-marketing' }
 };
 
 function openEnrollmentModal(courseName, academyName, optionalDuration, optionalFee, optionalId) {
   injectEnrollmentModalHTML();
+
+  const options = (typeof optionalDuration === 'object' && optionalDuration !== null) ? optionalDuration : {};
+  const explicitDuration = (typeof optionalDuration === 'string') ? optionalDuration : options.duration;
+  const explicitFee = optionalFee || options.fee;
+  const explicitId = optionalId || options.courseId;
 
   const modal = document.getElementById('course-enrollment-modal');
   const titleSpan = document.getElementById('enroll-course-title-span');
@@ -2012,8 +2028,8 @@ function openEnrollmentModal(courseName, academyName, optionalDuration, optional
   let found = null;
   const coursesList = (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : [];
   if (coursesList.length > 0) {
-    if (optionalId) {
-      found = coursesList.find(c => c.id === optionalId);
+    if (explicitId) {
+      found = coursesList.find(c => c.id === explicitId);
     }
     if (!found && courseName) {
       const cLower = String(courseName).toLowerCase().trim();
@@ -2021,17 +2037,40 @@ function openEnrollmentModal(courseName, academyName, optionalDuration, optional
     }
   }
 
+  const meta = COURSE_CATALOG_METADATA[courseName] || {};
   const finalCourse = (found ? found.name : courseName) || 'Selected Course';
-  const finalAcademy = (found ? found.academy : academyName) || 'Nova Skills Academy';
-  const finalDuration = optionalDuration || (found ? found.duration : (COURSE_CATALOG_METADATA[courseName]?.duration || '3 Months'));
-  const finalFee = optionalFee || (found ? ('₹' + found.price.toLocaleString('en-IN')) : (COURSE_CATALOG_METADATA[courseName]?.fee || '₹11,999'));
-  const finalCategory = (found ? found.academyId : null) || COURSE_CATALOG_METADATA[courseName]?.category || 'general';
+  const finalAcademy = (found ? found.academy : (academyName || meta.academy)) || 'Nova Skills Academy';
+  const finalDuration = explicitDuration || (found ? found.duration : (meta.duration || '3 Months'));
+  const finalFee = explicitFee || (found ? ('₹' + found.price.toLocaleString('en-IN')) : (meta.fee || '₹11,999'));
+  const finalCategory = (found ? found.academyId : null) || meta.category || 'general';
 
   if (titleSpan) titleSpan.textContent = finalCourse;
   if (cardCourseName) cardCourseName.textContent = finalCourse;
   if (cardAcademyName) cardAcademyName.textContent = finalAcademy;
   if (cardDuration) cardDuration.textContent = finalDuration;
   if (cardFee) cardFee.textContent = finalFee;
+
+  // Handle Specialization Path selection
+  const selectedPath = options.selectedPath || (typeof window !== 'undefined' && window.novaSelectedSpecialization) || '';
+  const pathTitleMap = {
+    'agency-website': 'Path A: Agency Website Developer (20h)',
+    'ecommerce-developer': 'Path B: E-commerce Developer (20h)',
+    'ai-saas-developer': 'Path C: AI Web App & SaaS Developer (20h)'
+  };
+  const pathTitle = options.pathTitle || pathTitleMap[selectedPath] || (selectedPath ? `Specialization: ${selectedPath}` : '');
+  const pathInput = document.getElementById('enroll-path-display');
+  const modalMetaPath = document.getElementById('modal-meta-path');
+  const cardPath = document.getElementById('card-path');
+  if (pathInput) pathInput.value = selectedPath;
+  if (modalMetaPath && cardPath) {
+    if (pathTitle) {
+      cardPath.textContent = `Specialization: ${pathTitle}`;
+      modalMetaPath.style.display = 'flex';
+    } else {
+      cardPath.textContent = '';
+      modalMetaPath.style.display = 'none';
+    }
+  }
 
   if (courseInput) courseInput.value = finalCourse;
   if (academyInput) academyInput.value = finalAcademy;
@@ -2169,6 +2208,10 @@ async function handleEnrollmentSubmit(e) {
       localStorage.setItem('novaskills_enquiries', JSON.stringify(existing));
 
       // Show Success View inside enrollment modal
+      const successDesc = document.querySelector('#enroll-success-container .success-desc');
+      if (successDesc && selectedPath && isAFSD) {
+        successDesc.innerHTML = `Your course enrollment enquiry for <strong>${escapeHTML ? escapeHTML(courseName) : courseName}</strong> (Specialization: <strong>${selectedPathTitle}</strong>) has been successfully submitted.<br />Our admission counsellor will contact you shortly.`;
+      }
       if (formContainer) formContainer.setAttribute('hidden', '');
       if (successContainer) successContainer.removeAttribute('hidden');
     }
