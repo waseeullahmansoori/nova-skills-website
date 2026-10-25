@@ -3341,56 +3341,108 @@ const NS_COURSES = [
     "icon": "🌐",
     "color": "linear-gradient(135deg, #F59E0B, #EF4444)",
     "name": "E-Commerce Website Mastery",
-    "shortDesc": "Build & scale high-converting online stores using Shopify, WooCommerce, Webflow & payment gateways.",
-    "fullDesc": "Flagship e-commerce career and agency pathway. Build & scale high-converting online stores using Shopify, WooCommerce, Webflow & payment gateways.",
+    "shortDesc": "Master Shopify and WooCommerce to build, launch, and scale high-converting online stores with payment gateways, GST compliance, and automated logistics.",
+    "fullDesc": "Flagship no-code e-commerce career program. Master Shopify OS 2.0 and WooCommerce 9.x to architect, design, and scale high-converting commercial online stores with payment gateways, Indian GST compliance, Shiprocket logistics, and retention automation.",
     "duration": "6 Months",
     "durationMonths": 6,
     "mode": "Hybrid",
     "level": "Beginner",
-    "price": 22999,
-    "originalPrice": 64999,
+    "price": 49900,
+    "originalPrice": 49900,
     "rating": 4.8,
     "reviews": 164,
     "students": 890,
-    "liveProjects": 3,
+    "liveProjects": 4,
     "certificate": true,
     "placementSupport": true,
     "tools": [
-      "Webflow",
-      "Framer",
       "Shopify",
+      "WooCommerce",
       "WordPress",
-      "Make.com",
-      "Figma",
-      "Airtable",
-      "Stripe",
-      "Google Tag Manager"
+      "WordPress Block Editor",
+      "Shopify Flow",
+      "Razorpay",
+      "Shiprocket",
+      "Google Analytics 4",
+      "Google Merchant Center",
+      "Google Search Console",
+      "Klaviyo",
+      "Shopify Magic",
+      "ChatGPT & Claude",
+      "Canva AI"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "E-Commerce Strategy & Platform Setup",
-        "lessons": 4
+        "title": "E-Commerce Business Strategy, Models & Architecture",
+        "lessons": 4,
+        "hours": 12
       },
       {
         "module": "Module 02",
-        "title": "Product Catalogs, Variants & Inventory Logic",
-        "lessons": 4
+        "title": "Product Catalogs, Information Architecture & Inventory Operations",
+        "lessons": 4,
+        "hours": 20
       },
       {
         "module": "Module 03",
-        "title": "Storefront Design & Conversion UX",
-        "lessons": 4
+        "title": "Shopify Store Implementation & Theme Architecture",
+        "lessons": 6,
+        "hours": 32
       },
       {
         "module": "Module 04",
-        "title": "Checkout, Payments & Shipping Logistics",
-        "lessons": 4
+        "title": "WordPress & WooCommerce Store Engineering",
+        "lessons": 6,
+        "hours": 32
       },
       {
         "module": "Module 05",
-        "title": "Marketing Tech, SEO & Analytics",
-        "lessons": 4
+        "title": "Storefront UX, Mobile CRO & Conversion Architecture",
+        "lessons": 4,
+        "hours": 20
+      },
+      {
+        "module": "Module 06",
+        "title": "Checkout Architecture, Indian Payment Gateways, Statutory GST & Security",
+        "lessons": 5,
+        "hours": 24
+      },
+      {
+        "module": "Module 07",
+        "title": "Shipping, Fulfillment, Tracking & Reverse Logistics",
+        "lessons": 4,
+        "hours": 20
+      },
+      {
+        "module": "Module 08",
+        "title": "Technical E-Commerce SEO, Analytics & Product Feed Syndication",
+        "lessons": 4,
+        "hours": 18
+      },
+      {
+        "module": "Module 09",
+        "title": "Customer Retention, E-Commerce CRM & Marketing Automation",
+        "lessons": 4,
+        "hours": 16
+      },
+      {
+        "module": "Module 10",
+        "title": "Generative AI for E-Commerce Creative, Copywriting & Catalog Operations",
+        "lessons": 4,
+        "hours": 18
+      },
+      {
+        "module": "Module 11",
+        "title": "Store Quality Assurance, Security, Performance & Maintenance Protocols",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 12",
+        "title": "Industry Portfolio Defense, Client Handoff & Capstone Launch",
+        "lessons": 4,
+        "hours": 16
       }
     ],
     "tags": [
@@ -3400,8 +3452,8 @@ const NS_COURSES = [
     ],
     "featured": true,
     "title": "E-Commerce Website Mastery",
-    "description": "Build & scale high-converting online stores using Shopify, WooCommerce, Webflow & payment gateways.",
-    "projects": 12,
+    "description": "Build & scale high-converting online stores using Shopify, WooCommerce, Indian payment gateways & automated logistics.",
+    "projects": 4,
     "category": "No-Code Web Academy",
     "status": "active",
     "url": "/course-detail.html?id=ecommerce-mastery",
@@ -3409,7 +3461,7 @@ const NS_COURSES = [
     "courseRole": "Career/Monetization",
     "learningHours": 240,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "Flagship e-commerce career and agency pathway."
+    "positioning": "Flagship no-code e-commerce career program. Master Shopify and WooCommerce store architecture, Indian payment gateways, GST compliance, logistics, and retention automation."
   },
   {
     "id": "nocode-web-pro",
@@ -11052,56 +11104,108 @@ const NS_ACADEMIES = [
         "icon": "🌐",
         "color": "linear-gradient(135deg, #F59E0B, #EF4444)",
         "name": "E-Commerce Website Mastery",
-        "shortDesc": "Build & scale high-converting online stores using Shopify, WooCommerce, Webflow & payment gateways.",
-        "fullDesc": "Flagship e-commerce career and agency pathway. Build & scale high-converting online stores using Shopify, WooCommerce, Webflow & payment gateways.",
+        "shortDesc": "Master Shopify and WooCommerce to build, launch, and scale high-converting online stores with payment gateways, GST compliance, and automated logistics.",
+        "fullDesc": "Flagship no-code e-commerce career program. Master Shopify OS 2.0 and WooCommerce 9.x to architect, design, and scale high-converting commercial online stores with payment gateways, Indian GST compliance, Shiprocket logistics, and retention automation.",
         "duration": "6 Months",
         "durationMonths": 6,
         "mode": "Hybrid",
         "level": "Beginner",
-        "price": 22999,
-        "originalPrice": 64999,
+        "price": 49900,
+        "originalPrice": 49900,
         "rating": 4.8,
         "reviews": 164,
         "students": 890,
-        "liveProjects": 12,
+        "liveProjects": 4,
         "certificate": true,
         "placementSupport": true,
         "tools": [
-          "Webflow",
-          "Framer",
           "Shopify",
+          "WooCommerce",
           "WordPress",
-          "Make.com",
-          "Figma",
-          "Airtable",
-          "Stripe",
-          "Google Tag Manager"
+          "WordPress Block Editor",
+          "Shopify Flow",
+          "Razorpay",
+          "Shiprocket",
+          "Google Analytics 4",
+          "Google Merchant Center",
+          "Google Search Console",
+          "Klaviyo",
+          "Shopify Magic",
+          "ChatGPT & Claude",
+          "Canva AI"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "E-Commerce Strategy & Platform Setup",
-            "lessons": 4
+            "title": "E-Commerce Business Strategy, Models & Architecture",
+            "lessons": 4,
+            "hours": 12
           },
           {
             "module": "Module 02",
-            "title": "Product Catalogs, Variants & Inventory Logic",
-            "lessons": 4
+            "title": "Product Catalogs, Information Architecture & Inventory Operations",
+            "lessons": 4,
+            "hours": 20
           },
           {
             "module": "Module 03",
-            "title": "Storefront Design & Conversion UX",
-            "lessons": 4
+            "title": "Shopify Store Implementation & Theme Architecture",
+            "lessons": 6,
+            "hours": 32
           },
           {
             "module": "Module 04",
-            "title": "Checkout, Payments & Shipping Logistics",
-            "lessons": 4
+            "title": "WordPress & WooCommerce Store Engineering",
+            "lessons": 6,
+            "hours": 32
           },
           {
             "module": "Module 05",
-            "title": "Marketing Tech, SEO & Analytics",
-            "lessons": 4
+            "title": "Storefront UX, Mobile CRO & Conversion Architecture",
+            "lessons": 4,
+            "hours": 20
+          },
+          {
+            "module": "Module 06",
+            "title": "Checkout Architecture, Indian Payment Gateways, Statutory GST & Security",
+            "lessons": 5,
+            "hours": 24
+          },
+          {
+            "module": "Module 07",
+            "title": "Shipping, Fulfillment, Tracking & Reverse Logistics",
+            "lessons": 4,
+            "hours": 20
+          },
+          {
+            "module": "Module 08",
+            "title": "Technical E-Commerce SEO, Analytics & Product Feed Syndication",
+            "lessons": 4,
+            "hours": 18
+          },
+          {
+            "module": "Module 09",
+            "title": "Customer Retention, E-Commerce CRM & Marketing Automation",
+            "lessons": 4,
+            "hours": 16
+          },
+          {
+            "module": "Module 10",
+            "title": "Generative AI for E-Commerce Creative, Copywriting & Catalog Operations",
+            "lessons": 4,
+            "hours": 18
+          },
+          {
+            "module": "Module 11",
+            "title": "Store Quality Assurance, Security, Performance & Maintenance Protocols",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 12",
+            "title": "Industry Portfolio Defense, Client Handoff & Capstone Launch",
+            "lessons": 4,
+            "hours": 16
           }
         ],
         "tags": [
@@ -11111,8 +11215,8 @@ const NS_ACADEMIES = [
         ],
         "featured": true,
         "title": "E-Commerce Website Mastery",
-        "description": "Build & scale high-converting online stores using Shopify, WooCommerce, Webflow & payment gateways.",
-        "projects": 12,
+        "description": "Build & scale high-converting online stores using Shopify, WooCommerce, Indian payment gateways & automated logistics.",
+        "projects": 4,
         "category": "No-Code Web Academy",
         "status": "active",
         "url": "/course-detail.html?id=ecommerce-mastery",
@@ -11120,7 +11224,7 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 240,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Flagship e-commerce career and agency pathway."
+        "positioning": "Flagship no-code e-commerce career program. Master Shopify and WooCommerce store architecture, Indian payment gateways, GST compliance, logistics, and retention automation."
       },
       {
         "id": "nocode-web-pro",

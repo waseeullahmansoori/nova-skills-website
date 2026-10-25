@@ -390,7 +390,7 @@ function populateCourseDetail(course) {
       </div>
     `).join('');
     bindAccordionEvents();
-    renderModule10();
+    if (typeof renderModule10 === 'function') renderModule10();
   }
 
   // Initial Tools rendering
