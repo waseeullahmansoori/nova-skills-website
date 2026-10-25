@@ -2558,66 +2558,89 @@ const NS_COURSES = [
     "icon": "💻",
     "color": "linear-gradient(135deg, #2563EB, #0599a8)",
     "name": "Full Stack Programming Foundation",
-    "shortDesc": "HTML/CSS, JavaScript, React, Node.js, Python, SQL, REST APIs, Git & Deployment.",
-    "fullDesc": "Modernize to Next.js App Router, TypeScript, Supabase, Cursor AI. HTML/CSS, JavaScript, React, Node.js, Python, SQL, REST APIs, Git & Deployment.",
+    "shortDesc": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment.",
+    "fullDesc": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment.",
     "duration": "6 Months",
     "durationMonths": 6,
     "mode": "Hybrid",
-    "level": "Beginner",
+    "level": "Beginner to Junior Full-Stack Development",
     "price": 29999,
-    "originalPrice": 84999,
+    "originalPrice": 29999,
+    "discount": 0,
     "rating": 4.9,
     "reviews": 230,
     "students": 1340,
     "liveProjects": 3,
     "certificate": true,
     "placementSupport": true,
-    "tools": [
-      "JavaScript/TypeScript",
-      "React / Next.js",
+        "tools": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
       "Node.js",
-      "PostgreSQL / Supabase",
+      "Express",
+      "PostgreSQL",
+      "Prisma ORM",
       "Tailwind CSS",
       "Git & GitHub",
-      "Cursor / VS Code",
-      "Docker",
-      "Postman",
-      "Vercel",
-      "Prisma / Drizzle ORM",
-      "GitHub Actions"
+      "Visual Studio Code",
+      "Cursor"
     ],
     "curriculum": [
-      {
-        "module": "Module 01",
-        "title": "HTML5 Semantic Structure & Responsive CSS Grid",
-        "lessons": 4
-      },
-      {
-        "module": "Module 02",
-        "title": "JavaScript ES6+ Core: Variables, Functions & DOM",
-        "lessons": 4
-      },
-      {
-        "module": "Module 03",
-        "title": "React Component Architecture & State Management",
-        "lessons": 4
-      },
-      {
-        "module": "Module 04",
-        "title": "Backend API Development with Node.js & Express",
-        "lessons": 4
-      },
-      {
-        "module": "Module 05",
-        "title": "MongoDB Data Modeling & CRUD Operations",
-        "lessons": 4
-      },
-      {
-        "module": "Module 06",
-        "title": "Full Stack Capstone: Production SaaS Application",
-        "lessons": 4
-      }
-    ],
+          {
+            "module": "Module 01",
+            "title": "Programming Fundamentals, Developer Tools & Git",
+            "lessons": 6
+          },
+          {
+            "module": "Module 02",
+            "title": "HTML5, CSS3, Responsive Design & Accessibility",
+            "lessons": 7
+          },
+          {
+            "module": "Module 03",
+            "title": "JavaScript Programming, DOM & Async APIs",
+            "lessons": 6
+          },
+          {
+            "module": "Module 04",
+            "title": "TypeScript & Code Quality Fundamentals",
+            "lessons": 5
+          },
+          {
+            "module": "Module 05",
+            "title": "React Frontend Development",
+            "lessons": 6
+          },
+          {
+            "module": "Module 06",
+            "title": "Node.js, Express & REST API Development",
+            "lessons": 6
+          },
+          {
+            "module": "Module 07",
+            "title": "SQL, PostgreSQL & Database Integration",
+            "lessons": 5
+          },
+          {
+            "module": "Module 08",
+            "title": "Authentication, Security & Testing",
+            "lessons": 5
+          },
+          {
+            "module": "Module 09",
+            "title": "Next.js, Full-Stack Integration & Deployment",
+            "lessons": 5
+          },
+          {
+            "module": "Module 10",
+            "title": "Industry Projects, Portfolio & Final Capstone",
+            "lessons": 5
+          }
+        ],
     "tags": [
       "bestseller",
       "popular",
@@ -2625,8 +2648,8 @@ const NS_COURSES = [
     ],
     "featured": true,
     "title": "Full Stack Programming Foundation",
-    "description": "HTML/CSS, JavaScript, React, Node.js, Python, SQL, REST APIs, Git & Deployment.",
-    "projects": 15,
+    "description": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment.",
+    "projects": 3,
     "category": "Programming Academy",
     "status": "active",
     "url": "/course-detail.html?id=fullstack-foundation",
@@ -2634,7 +2657,7 @@ const NS_COURSES = [
     "courseRole": "Career/Monetization",
     "learningHours": 240,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "Modernize to Next.js App Router, TypeScript, Supabase, Cursor AI."
+    "positioning": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment."
   },
   {
     "id": "python-developer",
@@ -10194,66 +10217,89 @@ const NS_ACADEMIES = [
         "icon": "💻",
         "color": "linear-gradient(135deg, #2563EB, #0599a8)",
         "name": "Full Stack Programming Foundation",
-        "shortDesc": "HTML/CSS, JavaScript, React, Node.js, Python, SQL, REST APIs, Git & Deployment.",
-        "fullDesc": "Modernize to Next.js App Router, TypeScript, Supabase, Cursor AI. HTML/CSS, JavaScript, React, Node.js, Python, SQL, REST APIs, Git & Deployment.",
+        "shortDesc": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment.",
+        "fullDesc": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment.",
         "duration": "6 Months",
         "durationMonths": 6,
         "mode": "Hybrid",
-        "level": "Beginner",
+        "level": "Beginner to Junior Full-Stack Development",
         "price": 29999,
-        "originalPrice": 84999,
+        "originalPrice": 29999,
+        "discount": 0,
         "rating": 4.9,
         "reviews": 230,
         "students": 1340,
-        "liveProjects": 15,
+        "liveProjects": 3,
         "certificate": true,
         "placementSupport": true,
-        "tools": [
-          "JavaScript/TypeScript",
-          "React / Next.js",
+                "tools": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Next.js",
           "Node.js",
-          "PostgreSQL / Supabase",
+          "Express",
+          "PostgreSQL",
+          "Prisma ORM",
           "Tailwind CSS",
           "Git & GitHub",
-          "Cursor / VS Code",
-          "Docker",
-          "Postman",
-          "Vercel",
-          "Prisma / Drizzle ORM",
-          "GitHub Actions"
+          "Visual Studio Code",
+          "Cursor"
         ],
         "curriculum": [
-          {
-            "module": "Module 01",
-            "title": "HTML5 Semantic Structure & Responsive CSS Grid",
-            "lessons": 4
-          },
-          {
-            "module": "Module 02",
-            "title": "JavaScript ES6+ Core: Variables, Functions & DOM",
-            "lessons": 4
-          },
-          {
-            "module": "Module 03",
-            "title": "React Component Architecture & State Management",
-            "lessons": 4
-          },
-          {
-            "module": "Module 04",
-            "title": "Backend API Development with Node.js & Express",
-            "lessons": 4
-          },
-          {
-            "module": "Module 05",
-            "title": "MongoDB Data Modeling & CRUD Operations",
-            "lessons": 4
-          },
-          {
-            "module": "Module 06",
-            "title": "Full Stack Capstone: Production SaaS Application",
-            "lessons": 4
-          }
-        ],
+              {
+                "module": "Module 01",
+                "title": "Programming Fundamentals, Developer Tools & Git",
+                "lessons": 6
+              },
+              {
+                "module": "Module 02",
+                "title": "HTML5, CSS3, Responsive Design & Accessibility",
+                "lessons": 7
+              },
+              {
+                "module": "Module 03",
+                "title": "JavaScript Programming, DOM & Async APIs",
+                "lessons": 6
+              },
+              {
+                "module": "Module 04",
+                "title": "TypeScript & Code Quality Fundamentals",
+                "lessons": 5
+              },
+              {
+                "module": "Module 05",
+                "title": "React Frontend Development",
+                "lessons": 6
+              },
+              {
+                "module": "Module 06",
+                "title": "Node.js, Express & REST API Development",
+                "lessons": 6
+              },
+              {
+                "module": "Module 07",
+                "title": "SQL, PostgreSQL & Database Integration",
+                "lessons": 5
+              },
+              {
+                "module": "Module 08",
+                "title": "Authentication, Security & Testing",
+                "lessons": 5
+              },
+              {
+                "module": "Module 09",
+                "title": "Next.js, Full-Stack Integration & Deployment",
+                "lessons": 5
+              },
+              {
+                "module": "Module 10",
+                "title": "Industry Projects, Portfolio & Final Capstone",
+                "lessons": 5
+              }
+            ],
         "tags": [
           "bestseller",
           "popular",
@@ -10261,8 +10307,8 @@ const NS_ACADEMIES = [
         ],
         "featured": true,
         "title": "Full Stack Programming Foundation",
-        "description": "HTML/CSS, JavaScript, React, Node.js, Python, SQL, REST APIs, Git & Deployment.",
-        "projects": 15,
+        "description": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment.",
+        "projects": 3,
         "category": "Programming Academy",
         "status": "active",
         "url": "/course-detail.html?id=fullstack-foundation",
@@ -10270,7 +10316,7 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 240,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Modernize to Next.js App Router, TypeScript, Supabase, Cursor AI."
+        "positioning": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment."
       },
       {
         "id": "python-developer",
