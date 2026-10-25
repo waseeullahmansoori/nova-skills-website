@@ -1,3 +1,51 @@
+
+/* ── Specialization Validation & Helper Engine ── */
+function showSpecializationRequired() {
+  const tracksSection = document.getElementById('specialization-tracks-section');
+  if (tracksSection) {
+    tracksSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const alertEl = document.getElementById('specialization-selection-alert');
+    if (alertEl) {
+      alertEl.style.display = 'block';
+      alertEl.classList.remove('pulse-animation');
+      void alertEl.offsetWidth;
+      alertEl.classList.add('pulse-animation');
+    }
+    const firstCard = tracksSection.querySelector('.specialization-selector-card');
+    if (firstCard) firstCard.focus();
+  }
+  if (typeof showToastNotification === 'function') {
+    showToastNotification({
+      title: 'Specialization Required',
+      message: 'Please select one specialization to continue.',
+      type: 'error'
+    });
+  }
+}
+
+function updateWhatsAppCourseLink(courseName, pathTitle) {
+  const waBtn = document.getElementById('whatsapp-btn') || document.querySelector('.whatsapp-float');
+  if (waBtn) {
+    let msg = `Hi, I'm interested in ${courseName || 'AI-Assisted Full Stack Web Development'}`;
+    if (pathTitle) {
+      msg += ` (Specialization: ${pathTitle})`;
+    }
+    msg += '. Please share details and admission schedule.';
+    waBtn.href = `https://wa.me/919695904440?text=${encodeURIComponent(msg)}`;
+  }
+}
+
+// Initialize specialization selection state (fresh visit has NO default selection unless valid explicit path supplied in URL)
+if (typeof window !== 'undefined') {
+  try {
+    const _p = new URLSearchParams(window.location.search).get('path');
+    const _valid = ['agency-website', 'ecommerce-developer', 'ai-saas-developer'];
+    window.novaSelectedSpecialization = (_p && _valid.includes(_p)) ? _p : null;
+  } catch (e) {
+    window.novaSelectedSpecialization = null;
+  }
+}
+
 /* ============================================================
    NOVA SKILLS — Course Detail Page Dynamic Controller (Step 7 QA Hardened)
    Supports Templates A, B, C · Real-Time Modular Loading
@@ -25,6 +73,7 @@ const COURSE_ALIASES = {
   'digital-marketing': 'dm-mastery',
   'ai-master': 'ai-mastery',
   'python-dev': 'python-developer',
+  'ai-web-dev-pro': 'ai-assisted-full-stack-web-development',
   'prompt-engineering': 'prompt-engineering-mastery',
   'freelance-agency-master': 'freelance-agency-mastery',
   'freelance-mastery': 'freelancing-mastery'
@@ -75,7 +124,7 @@ function getTargetCourse() {
 function getCourseSeoTitle(course) {
   const type = (course.courseType || course.course_type || course.type || '').toUpperCase();
   const name = course.name || course.course_name;
-  
+
   if (type === 'MASTER') {
     return `${name} — Flagship Career Program | Nova Skills`;
   } else if (type === 'PROFESSIONAL') {
@@ -269,16 +318,37 @@ function populateCourseDetail(course) {
   // Dynamically populate Enroll Card "This Course Includes" Checklist based on course type & placementSupport
   populateEnrollIncludes(course);
 
-  // Bind High-Conversion CTAs to pre-fill enrollment modal with course & academy
+  // Specialization-Aware Enrollment Handler
+  const handleCourseEnrollment = () => {
+    const isTargetAFSD = (course.id === 'ai-assisted-full-stack-web-development' || (course.name && course.name.includes('AI-Assisted Full Stack')));
+    if (isTargetAFSD) {
+      if (!window.novaSelectedSpecialization) {
+        showSpecializationRequired();
+        return;
+      }
+    }
+
+    if (typeof openEnrollmentModal === 'function') {
+      const pathTitleMap = {
+        'agency-website': 'Path A: Agency Website Developer (20h)',
+        'ecommerce-developer': 'Path B: E-commerce Developer (20h)',
+        'ai-saas-developer': 'Path C: AI Web App & SaaS Developer (20h)'
+      };
+      const pathTitle = pathTitleMap[window.novaSelectedSpecialization] || '';
+      openEnrollmentModal(course.name, course.academy, {
+        selectedPath: window.novaSelectedSpecialization || '',
+        pathTitle: pathTitle,
+        courseId: course.id
+      });
+    } else if (typeof openConsultationPopup === 'function') {
+      openConsultationPopup();
+    }
+  };
+
+  // Bind High-Conversion CTAs to pre-fill enrollment modal with course, academy & specialization
   const enrollBtn = document.querySelector('.btn-enroll-full');
   if (enrollBtn) {
-    enrollBtn.onclick = () => {
-      if (typeof openEnrollmentModal === 'function') {
-        openEnrollmentModal(course.name, course.academy);
-      } else if (typeof openConsultationPopup === 'function') {
-        openConsultationPopup();
-      }
-    };
+    enrollBtn.onclick = handleCourseEnrollment;
   }
 
   const consultBtn = document.querySelector('.btn-consult-full');
@@ -292,13 +362,7 @@ function populateCourseDetail(course) {
 
   const mobileEnrollBtn = document.querySelector('#sticky-mobile-bar .btn-primary');
   if (mobileEnrollBtn) {
-    mobileEnrollBtn.onclick = () => {
-      if (typeof openEnrollmentModal === 'function') {
-        openEnrollmentModal(course.name, course.academy);
-      } else if (typeof openConsultationPopup === 'function') {
-        openConsultationPopup();
-      }
-    };
+    mobileEnrollBtn.onclick = handleCourseEnrollment;
   }
 
   // Initial Curriculum rendering while fetch loads
@@ -326,6 +390,7 @@ function populateCourseDetail(course) {
       </div>
     `).join('');
     bindAccordionEvents();
+    renderModule10();
   }
 
   // Initial Tools rendering
@@ -473,7 +538,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
           <div class="advisory-content">
             <h4>Curriculum Integration Pathway Notice</h4>
             <p>
-              This program is an integrated specialization module. If you are seeking complete career mastery, 
+              This program is an integrated specialization module. If you are seeking complete career mastery,
               this entire curriculum is also included in our flagship career track:
               <a href="/course-detail.html?id=${parentId}" class="advisory-link">Explore Parent Career Program →</a>
             </p>
@@ -487,7 +552,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
           <div class="advisory-content">
             <h4>Modernization & Successor Notice</h4>
             <p>
-              This curriculum is scheduled for modernization to reflect 2026/27 workplace standards. 
+              This curriculum is scheduled for modernization to reflect 2026/27 workplace standards.
               We recommend reviewing our modernized flagship alternatives for maximum job market impact.
             </p>
           </div>
@@ -508,8 +573,8 @@ function renderEnrichedCourseDetail(baseCourse, data) {
       </p>
       <p style="margin-bottom:16px;">${escapeHTML(data.overview.short_description || '')}</p>
       <p style="margin-bottom:0;">
-        Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through 
-        <strong>${projectCount} major production portfolio projects</strong>, live interactive labs, 
+        Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through
+        <strong>${projectCount} major production portfolio projects</strong>, live interactive labs,
         code/design critiques, and commercial delivery standards.
       </p>
     `;
@@ -563,11 +628,176 @@ function renderEnrichedCourseDetail(baseCourse, data) {
     }
   }
 
-  // --- Specialization Tracks ---
+  // --- Specialization Tracks & Interactive Path Selector ---
   const tracksSection = document.getElementById('specialization-tracks-section');
   const tracksContainer = document.getElementById('specialization-tracks-container');
   if (tracksSection && tracksContainer) {
-    if (data.specialization_tracks && Array.isArray(data.specialization_tracks) && data.specialization_tracks.length > 0) {
+    if (data.specialization_selector_config) {
+      const cfg = data.specialization_selector_config;
+      tracksSection.style.display = 'block';
+
+      // Update Section Header for Specialization Selector
+      const tagEl = tracksSection.querySelector('.section-tag');
+      const titleEl = tracksSection.querySelector('.section-title');
+      if (tagEl) tagEl.textContent = 'CAREER SPECIALIZATION';
+      if (titleEl) titleEl.innerHTML = `${escapeHTML(cfg.heading || 'Choose Your Specialization')}`;
+
+      function renderSelectorHTML() {
+        const curPath = window.novaSelectedSpecialization;
+        const pathTitleMap = {
+          'agency-website': 'Path A: Agency Website Developer (20h)',
+          'ecommerce-developer': 'Path B: E-commerce Developer (20h)',
+          'ai-saas-developer': 'Path C: AI Web App & SaaS Developer (20h)'
+        };
+
+        tracksContainer.innerHTML = `
+          <p style="font-size:1.0625rem; line-height:1.6; color:var(--text-secondary); margin-bottom:12px; max-width:860px;">
+            ${escapeHTML(cfg.subheading || 'Complete the common full-stack curriculum, then specialize in one career-focused pathway.')}
+          </p>
+          <div style="background: rgba(5, 153, 168, 0.05); border: 1px solid rgba(5, 153, 168, 0.2); border-radius: var(--radius-md, 12px); padding: 12px 18px; margin-bottom: 24px; font-size: 0.9rem; color: var(--navy); line-height: 1.5;">
+            <strong>Specialization Policy:</strong> 300 Hours Common Core + 20 Hours Selected Pathway = <strong>320 Total Guided Hours</strong>. Tuition is <strong>INR 64,900</strong> across all options. Exactly <strong>ONE</strong> specialization track is included per enrollment.
+          </div>
+
+          <div id="specialization-selection-alert" style="display:none; margin-bottom: 20px; padding: 12px 18px; border-radius: var(--radius-md, 12px); background: #fef2f2; border: 1px solid #f87171; color: #b91c1c; font-weight: 700; font-size: 0.95rem;">
+            ⚠️ Please select one specialization to continue.
+          </div>
+
+          <div class="specialization-tracks-grid" role="radiogroup" aria-label="Choose Your Specialization">
+            ${cfg.paths.map((p, idx) => {
+              const isSelected = curPath === p.id;
+              return `
+                <div class="specialization-track-card specialization-selector-card ${isSelected ? 'selected-track' : ''}"
+                     role="radio"
+                     aria-checked="${isSelected ? 'true' : 'false'}"
+                     tabindex="0"
+                     data-path-id="${p.id}">
+
+                  <div class="track-badge-row" style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="track-pill">${escapeHTML(p.path_code)}</span>
+                    <span class="track-focus-badge" style="background:${isSelected ? 'var(--teal)' : 'rgba(5, 153, 168, 0.15)'}; color:${isSelected ? '#ffffff' : 'var(--teal)'};">
+                      ${escapeHTML(p.duration)}
+                    </span>
+                  </div>
+
+                  <div class="track-title" style="margin-top:8px;">${escapeHTML(p.name)}</div>
+                  <p class="track-focus-text">${escapeHTML(p.description || '')}</p>
+
+                  <div style="margin-bottom:12px; font-size:0.86rem; color:var(--text-secondary);">
+                    <strong style="color:var(--navy);">Career Direction:</strong> ${escapeHTML(p.suitable_career_direction)}
+                  </div>
+
+                  <div style="margin-bottom:12px;">
+                    <div style="font-size:0.82rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Primary Tools:</div>
+                    <div class="track-roles-pills">
+                      ${(p.primary_tools || []).map(t => `<span class="track-role-tag">${escapeHTML(t)}</span>`).join('')}
+                    </div>
+                  </div>
+
+                  <div style="margin-bottom:14px; font-size:0.85rem; color:var(--text-secondary);">
+                    <strong style="color:var(--navy);">Practical Project:</strong> ${escapeHTML(p.practical_project)}
+                  </div>
+
+                  <div style="margin-top:auto; padding-top:16px;">
+                    <button type="button" class="btn ${isSelected ? 'btn-primary' : 'btn-outline'} btn-block select-path-btn" style="width:100%; font-weight:700;">
+                      ${isSelected ? 'Selected Pathway ✓' : 'Select Pathway →'}
+                    </button>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+
+          <!-- Bottom Selection Status & Action Bar -->
+          <div id="selector-status-bar" style="margin-top: 24px; padding: 18px 24px; border-radius: var(--radius-lg, 16px); background: ${curPath ? 'rgba(5, 153, 168, 0.08)' : '#f8fafc'}; border: 1px solid ${curPath ? 'rgba(5, 153, 168, 0.3)' : '#e2e8f0'}; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px;">
+            <div>
+              <div style="font-size:0.82rem; text-transform:uppercase; letter-spacing:0.05em; font-weight:800; color:${curPath ? 'var(--teal)' : 'var(--text-secondary)'};">
+                ${curPath ? 'ACTIVE SPECIALIZATION SELECTION' : 'SPECIALIZATION STATUS'}
+              </div>
+              <div style="font-size:1.05rem; font-weight:800; color:var(--navy); margin-top:2px;">
+                ${curPath ? `${pathTitleMap[curPath]} (Total Program: 8 Months | 320h | ₹64,900)` : 'No pathway selected yet. Please select one of the 3 tracks above.'}
+              </div>
+            </div>
+            <div style="display:flex; gap:10px; align-items:center;">
+              ${curPath ? `
+                <button type="button" class="btn btn-outline btn-sm" id="btn-change-path" style="font-weight:700;">
+                  Change Path
+                </button>
+                <button type="button" class="btn btn-primary btn-sm" id="btn-enroll-selected-path" style="font-weight:700;">
+                  Enroll with This Path →
+                </button>
+              ` : `
+                <span style="font-size:0.88rem; color:var(--text-secondary);">Click any pathway above to select</span>
+              `}
+            </div>
+          </div>
+        `;
+
+        // Bind Card Selection Events
+        tracksContainer.querySelectorAll('.specialization-selector-card').forEach(card => {
+          const pathId = card.getAttribute('data-path-id');
+          const onSelect = () => {
+            selectPath(pathId);
+          };
+          card.onclick = (e) => {
+            onSelect();
+          };
+          card.onkeydown = (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              onSelect();
+            }
+          };
+        });
+
+        // Bind Change Path & Enroll buttons
+        document.getElementById('btn-change-path')?.addEventListener('click', (e) => {
+          e.preventDefault();
+          selectPath(null);
+        });
+
+        document.getElementById('btn-enroll-selected-path')?.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (typeof handleCourseEnrollment === 'function') {
+            handleCourseEnrollment();
+          } else if (typeof openEnrollmentModal === 'function') {
+            openEnrollmentModal(baseCourse.name, baseCourse.academy, {
+              selectedPath: window.novaSelectedSpecialization,
+              pathTitle: pathTitleMap[window.novaSelectedSpecialization] || '',
+              courseId: baseCourse.id
+            });
+          }
+        });
+      }
+
+      function selectPath(pathId) {
+        window.novaSelectedSpecialization = pathId;
+        const pathTitleMap = {
+          'agency-website': 'Path A: Agency Website Developer (20h)',
+          'ecommerce-developer': 'Path B: E-commerce Developer (20h)',
+          'ai-saas-developer': 'Path C: AI Web App & SaaS Developer (20h)'
+        };
+        const title = pathTitleMap[pathId] || '';
+
+        // Update WhatsApp Link
+        updateWhatsAppCourseLink(baseCourse.name, title);
+
+        // Update URL query parameter cleanly without reload (preserves single canonical SEO URL)
+        try {
+          const url = new URL(window.location.href);
+          if (pathId) {
+            url.searchParams.set('path', pathId);
+          } else {
+            url.searchParams.delete('path');
+          }
+          window.history.replaceState({}, '', url.toString());
+        } catch (e) {}
+
+        renderSelectorHTML();
+        renderModule10();
+      }
+
+      renderSelectorHTML();
+    } else if (data.specialization_tracks && Array.isArray(data.specialization_tracks) && data.specialization_tracks.length > 0) {
       tracksSection.style.display = 'block';
       tracksContainer.innerHTML = `
         <div class="specialization-tracks-grid">
@@ -687,16 +917,122 @@ function renderEnrichedCourseDetail(baseCourse, data) {
 
   // --- Step-by-Step Modules & Lessons Accordion ---
   const currContainer = document.getElementById('curriculum-container');
+
+  function renderModule10() {
+    const mod10Container = document.getElementById('curriculum-module-10-body');
+    const mod10HeaderTitle = document.getElementById('curriculum-module-10-title');
+    const mod10LessonCount = document.getElementById('curriculum-module-10-lessons-count');
+    if (!mod10Container || !data.modules || !data.modules[9]) return;
+
+    const mod10 = data.modules[9];
+    const curPath = window.novaSelectedSpecialization;
+    const paths = mod10.specialization_paths || {};
+
+    const pathKeyMap = {
+      'agency-website': 'path_a_agency',
+      'ecommerce-developer': 'path_b_ecommerce',
+      'ai-saas-developer': 'path_c_saas'
+    };
+    const activeKey = curPath ? pathKeyMap[curPath] : null;
+    const activePathData = activeKey ? paths[activeKey] : null;
+
+    if (activePathData) {
+      if (mod10HeaderTitle) mod10HeaderTitle.textContent = `Selected Specialization: ${activePathData.path_title || 'Chosen Pathway'} (20 Hours)`;
+      if (mod10LessonCount) mod10LessonCount.textContent = `${activePathData.lessons ? activePathData.lessons.length : 5} Lessons (20h)`;
+
+      mod10Container.innerHTML = `
+        <div style="background: rgba(5, 153, 168, 0.06); border: 1px solid rgba(5, 153, 168, 0.25); border-radius: var(--radius-md, 12px); padding: 16px 20px; margin-bottom: 20px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+            <div>
+              <span style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--teal); letter-spacing:0.05em;">ACTIVE SPECIALIZATION ENROLLMENT</span>
+              <h4 style="margin:4px 0 0; color:var(--navy); font-size:1.15rem; font-weight:800;">${escapeHTML(activePathData.path_title)}</h4>
+            </div>
+            <button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('specialization-tracks-section')?.scrollIntoView({behavior:'smooth'});" style="font-weight:700;">
+              Change Specialization Track
+            </button>
+          </div>
+          <p style="margin:10px 0 0; font-size:0.9rem; line-height:1.5; color:var(--text-secondary);">
+            ${escapeHTML(activePathData.focus || '')}
+          </p>
+          <div style="margin-top:10px; font-size:0.82rem; color:var(--navy);">
+            <strong>Included in Program:</strong> 20 guided instructional hours. No additional tuition fee. Alternate tracks are available for selection prior to enrollment.
+          </div>
+        </div>
+
+        <div class="lessons-timeline">
+          ${(activePathData.lessons || []).map(lesson => `
+            <div class="lesson-card">
+              <div class="lesson-card-header">
+                <span class="lesson-num-badge">${escapeHTML(lesson.lesson_number || 'Lab')}</span>
+                <span class="lesson-title-text">${escapeHTML(lesson.lesson_title || '')}</span>
+              </div>
+              <div class="lesson-meta-grid">
+                <div class="lesson-meta-item">
+                  <strong>Taught:</strong> ${escapeHTML(lesson.what_is_taught || '')}
+                  ${Array.isArray(lesson.subtopics) && lesson.subtopics.length > 0 ? `
+                    <ul style="margin: 6px 0 0 16px; padding: 0; list-style-type: disc; font-size: 0.8rem; line-height: 1.45; color: var(--text-secondary);">
+                      ${lesson.subtopics.map(st => `<li>${escapeHTML(st)}</li>`).join('')}
+                    </ul>
+                  ` : ''}
+                </div>
+                ${lesson.what_learner_does ? `<div class="lesson-meta-item"><strong>Learner Lab:</strong> ${escapeHTML(lesson.what_learner_does)}</div>` : ''}
+                ${lesson.why_it_matters ? `<div class="lesson-meta-item"><strong>Why It Matters:</strong> ${escapeHTML(lesson.why_it_matters)}</div>` : ''}
+                ${lesson.expected_outcome ? `<div class="lesson-meta-item"><strong>Expected Deliverable:</strong> ${escapeHTML(lesson.expected_outcome)}</div>` : ''}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="module-footer-meta" style="margin-top:20px;">
+          <div><strong>🎯 Practical Project Deliverable:</strong> ${escapeHTML(activePathData.practical_assignment || '')}</div>
+        </div>
+      `;
+    } else {
+      if (mod10HeaderTitle) mod10HeaderTitle.textContent = 'Module 10: Selected Commercial Specialization (20 Hours) — Choose Pathway Above';
+      if (mod10LessonCount) mod10LessonCount.textContent = '3 Options Available';
+
+      mod10Container.innerHTML = `
+        <div style="background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: var(--radius-md, 12px); padding: 24px; text-align: center; margin-bottom: 20px;">
+          <div style="font-size: 1.8rem; margin-bottom: 8px;">🎯</div>
+          <h4 style="color:var(--navy); font-size:1.15rem; font-weight:800; margin-bottom:6px;">Choose Your Specialization Pathway</h4>
+          <p style="color:var(--text-secondary); font-size:0.92rem; max-width:600px; margin:0 auto 16px; line-height:1.5;">
+            Every student completes 300 hours of common full-stack development, followed by 20 hours in their selected commercial specialization. Select a pathway above to preview its detailed syllabus:
+          </p>
+          <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+            <button type="button" class="btn btn-outline btn-sm" onclick="window.novaSelectPathAndScroll('agency-website')">Path A: Agency Website</button>
+            <button type="button" class="btn btn-outline btn-sm" onclick="window.novaSelectPathAndScroll('ecommerce-developer')">Path B: E-commerce</button>
+            <button type="button" class="btn btn-outline btn-sm" onclick="window.novaSelectPathAndScroll('ai-saas-developer')">Path C: AI Web App & SaaS</button>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  // Global helper for in-page buttons
+  if (typeof window !== 'undefined') {
+    window.novaSelectPathAndScroll = function(pathId) {
+      window.novaSelectedSpecialization = pathId;
+      const tracksSection = document.getElementById('specialization-tracks-section');
+      if (tracksSection) {
+        tracksSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      const card = document.querySelector(`[data-path-id="${pathId}"]`);
+      if (card) {
+        card.click();
+      }
+    };
+  }
+
   if (currContainer && data.modules && Array.isArray(data.modules)) {
     currContainer.innerHTML = data.modules.map((mod, idx) => `
       <div class="curriculum-module ${idx === 0 ? 'open' : ''}">
         <div class="curriculum-module-header" role="button" tabindex="0" aria-expanded="${idx === 0}">
           <span class="module-label">${String(mod.module_number || 'Module ' + (idx + 1)).replace(/^Module\s*/i, 'Module ')}</span>
-          <span class="module-title">${escapeHTML(mod.module_title || 'Module Overview')}</span>
-          <span class="module-lessons-count">${mod.lessons ? mod.lessons.length : 4} Lessons</span>
+          <span class="module-title" ${idx === 9 && mod.specialization_paths ? 'id="curriculum-module-10-title"' : ''}>${escapeHTML(mod.module_title || 'Module Overview')}</span>
+          <span class="module-lessons-count" ${idx === 9 && mod.specialization_paths ? 'id="curriculum-module-10-lessons-count"' : ''}>${mod.lessons ? mod.lessons.length : 4} Lessons</span>
           <span class="module-chevron">⌄</span>
         </div>
-        <div class="curriculum-module-body">
+        <div class="curriculum-module-body" ${idx === 9 && mod.specialization_paths ? 'id="curriculum-module-10-body"' : ''}>
           <div class="module-purpose-box">
             <strong>Module Focus:</strong> ${escapeHTML(typeof mod.module_purpose === 'string' ? mod.module_purpose : (typeof mod.what_you_will_learn === 'string' ? mod.what_you_will_learn : 'Practical implementation and commercial standards.'))}
             ${Array.isArray(mod.what_you_will_learn) && mod.what_you_will_learn.length > 0 ? `
@@ -966,7 +1302,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
       const typical = data.course_comparison.typical_course;
       const nova = data.course_comparison.novaskills_mastery;
       const rowCount = Math.max(typical.length, nova.length);
-      
+
       let rowsHtml = '';
       for (let r = 0; r < rowCount; r++) {
         rowsHtml += `
@@ -1096,8 +1432,8 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   const certDesc = document.getElementById('cert-desc');
   if (certDesc && data.certification) {
     certDesc.innerHTML = `
-      Upon completing this program and defending your portfolio projects, you earn the 
-      <strong>${escapeHTML(data.certification.title || baseCourse.name)}</strong> credential from Nova Skills — 
+      Upon completing this program and defending your portfolio projects, you earn the
+      <strong>${escapeHTML(data.certification.title || baseCourse.name)}</strong> credential from Nova Skills —
       ISO 9001:2015 verified with permanent online QR-code validation.
     `;
   }
@@ -1142,7 +1478,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   const nextPathContainer = document.getElementById('next-path-container');
   if (nextPathContainer && data.next_learning_path) {
     const nextText = data.next_learning_path.recommended_next || '';
-    
+
     // Find potential course ID
     const words = nextText.match(/[a-z0-9]+-[a-z0-9-]+/gi) || [];
     let nextCourseId = null;

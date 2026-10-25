@@ -1666,6 +1666,7 @@ function injectEnrollmentModalHTML() {
               <div class="meta-item"><span class="meta-icon">⏱️</span> <span id="card-duration">6 Months</span></div>
               <div class="meta-item"><span class="meta-icon">💻</span> <span id="card-mode">Online / Offline</span></div>
               <div class="meta-item"><span class="meta-icon">🏷️</span> <span id="card-fee" class="card-fee-highlight">₹39,999</span></div>
+              <div class="meta-item" id="modal-meta-path" style="display:none; grid-column:1 / -1;"><span class="meta-icon">🎯</span> <span id="card-path" style="font-weight:700; color:var(--teal,#0599a8);">Specialization: Agency Website Developer</span></div>
             </div>
           </div>
 
@@ -1688,6 +1689,7 @@ function injectEnrollmentModalHTML() {
               <input type="hidden" id="enroll-category-display" name="category" />
               <input type="hidden" id="enroll-duration-display" name="duration" />
               <input type="hidden" id="enroll-fee-display" name="fee" />
+              <input type="hidden" id="enroll-path-display" name="selectedPath" />
 
               <div class="enroll-form-grid">
                 <div class="form-group half-width">
@@ -1807,6 +1809,7 @@ function injectEnrollmentModalHTML() {
 }
 
 const COURSE_CATALOG_METADATA = {
+  'AI-Assisted Full Stack Web Development': { academy: 'Programming Academy', duration: '8 Months', fee: '₹64,900', category: 'programming' },
   'AI Digital Marketing Professional': { academy: 'Digital Marketing Academy', duration: '3 Months', fee: '₹24,999', category: 'digital-marketing' },
   'AI Mastery Program': { academy: 'AI Academy', duration: '6 Months', fee: '₹39,999', category: 'ai' },
   'Full Stack Programming Foundation': { academy: 'Programming Academy', duration: '6 Months', fee: '₹44,999', category: 'programming' },
@@ -1815,7 +1818,7 @@ const COURSE_CATALOG_METADATA = {
   'AI Digital Marketing Mastery': { academy: 'Digital Marketing Academy', duration: '6 Months', fee: '₹44,999', category: 'digital-marketing' }
 };
 
-function openEnrollmentModal(courseName, academyName) {
+function openEnrollmentModal(courseName, academyName, options = {}) {
   injectEnrollmentModalHTML();
 
   const modal = document.getElementById('course-enrollment-modal');
@@ -1850,6 +1853,23 @@ function openEnrollmentModal(courseName, academyName) {
   if (cardAcademyName) cardAcademyName.textContent = finalAcademy;
   if (cardDuration) cardDuration.textContent = meta.duration;
   if (cardFee) cardFee.textContent = meta.fee;
+
+  // Handle Specialization Path selection
+  const selectedPath = (options && options.selectedPath) || (typeof window !== 'undefined' && window.novaSelectedSpecialization) || '';
+  const pathTitle = (options && options.pathTitle) || (selectedPath ? (selectedPath === 'agency-website' ? 'Path A: Agency Website Developer (20h)' : (selectedPath === 'ecommerce-developer' ? 'Path B: E-commerce Developer (20h)' : 'Path C: AI Web App & SaaS Developer (20h)')) : '');
+  const pathInput = document.getElementById('enroll-path-display');
+  const modalMetaPath = document.getElementById('modal-meta-path');
+  const cardPath = document.getElementById('card-path');
+  if (pathInput) pathInput.value = selectedPath;
+  if (modalMetaPath && cardPath) {
+    if (pathTitle) {
+      cardPath.textContent = `Specialization: ${pathTitle}`;
+      modalMetaPath.style.display = 'flex';
+    } else {
+      cardPath.textContent = '';
+      modalMetaPath.style.display = 'none';
+    }
+  }
 
   if (courseInput) courseInput.value = finalCourse;
   if (academyInput) academyInput.value = finalAcademy;
@@ -1933,6 +1953,23 @@ async function handleEnrollmentSubmit(e) {
     return;
   }
 
+  // Specialization validation for AI-Assisted Full Stack Web Development
+  const selectedPath = document.getElementById('enroll-path-display')?.value || (typeof window !== 'undefined' ? window.novaSelectedSpecialization : '') || '';
+  const isAFSD = courseName.includes('AI-Assisted Full Stack') || courseName.toLowerCase().includes('ai-assisted full stack') || category === 'programming';
+  if (isAFSD && courseName.includes('AI-Assisted Full Stack')) {
+    const validPaths = ['agency-website', 'ecommerce-developer', 'ai-saas-developer'];
+    if (!selectedPath || !validPaths.includes(selectedPath)) {
+      showEnrollError('Please select one specialization to continue.');
+      return;
+    }
+  }
+  const pathTitleMap = {
+    'agency-website': 'Path A: Agency Website Developer (20h)',
+    'ecommerce-developer': 'Path B: E-commerce Developer (20h)',
+    'ai-saas-developer': 'Path C: AI Web App & SaaS Developer (20h)'
+  };
+  const selectedPathTitle = pathTitleMap[selectedPath] || selectedPath;
+
   const fullMessageDetails = [
     `Qualification: ${qualification}`,
     `Preferred Mode: ${mode}`,
@@ -1940,7 +1977,8 @@ async function handleEnrollmentSubmit(e) {
     `Start Date: ${startDate}`,
     fee ? `Course Fee: ${fee}` : '',
     duration ? `Duration: ${duration}` : '',
-    userMessage ? `User Note: ${userMessage}` : ''
+    userMessage ? `User Note: ${userMessage}` : '',
+    selectedPath ? `Specialization: ${selectedPathTitle}` : ''
   ].filter(Boolean).join(' | ');
 
   const courseTitleFull = courseName 
@@ -1960,6 +1998,7 @@ async function handleEnrollmentSubmit(e) {
       email,
       course: courseTitleFull,
       city,
+      selectedPath: selectedPath || undefined,
       message: fullMessageDetails
     },
     onSuccessCallback: () => {
@@ -1980,13 +2019,18 @@ async function handleEnrollmentSubmit(e) {
         academyName,
         category,
         duration,
-        fee
+        fee,
+        selectedPath: selectedPath || undefined
       };
       const existing = JSON.parse(localStorage.getItem('novaskills_enquiries') || '[]');
       existing.unshift(leadData);
       localStorage.setItem('novaskills_enquiries', JSON.stringify(existing));
 
       // Show Success View inside enrollment modal
+      const successDesc = document.querySelector('#enroll-success-container .success-desc');
+      if (successDesc && selectedPath && isAFSD) {
+        successDesc.innerHTML = `Your course enrollment enquiry for <strong>${escapeHTML ? escapeHTML(courseName) : courseName}</strong> (Specialization: <strong>${selectedPathTitle}</strong>) has been successfully submitted.<br />Our admission counsellor will contact you shortly.`;
+      }
       if (formContainer) formContainer.setAttribute('hidden', '');
       if (successContainer) successContainer.removeAttribute('hidden');
     }
