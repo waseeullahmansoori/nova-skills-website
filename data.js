@@ -2668,14 +2668,15 @@ const NS_COURSES = [
     "icon": "💻",
     "color": "linear-gradient(135deg, #2563EB, #75d766)",
     "name": "Python Developer Professional",
-    "shortDesc": "Master Python programming, FastAPI, Web Scraping, Automation, Data Structures, and SQL.",
-    "fullDesc": "Standout backend and general-purpose programming track. Master Python programming, FastAPI, Web Scraping, Automation, Data Structures, and SQL.",
+    "shortDesc": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment.",
+    "fullDesc": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment.",
     "duration": "3 Months",
     "durationMonths": 3,
     "mode": "Online",
-    "level": "Beginner",
+    "level": "Beginner to Career Applied Professional",
     "price": 14999,
-    "originalPrice": 39999,
+    "originalPrice": 14999,
+    "discount": 0,
     "rating": 4.8,
     "reviews": 160,
     "students": 920,
@@ -2683,32 +2684,61 @@ const NS_COURSES = [
     "certificate": true,
     "placementSupport": true,
     "tools": [
-      "Python Developer Professional",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Pydantic",
+      "Pytest",
+      "uv",
+      "Ruff",
+      "httpx",
+      "Docker",
       "Git & GitHub",
-      "VS Code",
+      "Visual Studio Code",
       "Postman",
-      "Docker"
+      "Cursor"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Python Syntax, Data Structures & Logic",
-        "lessons": 4
+        "title": "Python Programming Fundamentals & Problem Solving",
+        "lessons": 6
       },
       {
         "module": "Module 02",
-        "title": "Object-Oriented Programming & File I/O",
-        "lessons": 4
+        "title": "Intermediate Python, OOP & Type-Safe Development",
+        "lessons": 6
       },
       {
         "module": "Module 03",
-        "title": "Web Development with Flask & API Integration",
-        "lessons": 4
+        "title": "File Processing, Automation & API Integration",
+        "lessons": 5
       },
       {
         "module": "Module 04",
-        "title": "Enterprise Web Apps using Django Framework",
+        "title": "Git, Python Tooling, Debugging & Code Quality",
+        "lessons": 6
+      },
+      {
+        "module": "Module 05",
+        "title": "SQL, PostgreSQL & ORM Integration",
         "lessons": 4
+      },
+      {
+        "module": "Module 06",
+        "title": "FastAPI & Backend Application Development",
+        "lessons": 7
+      },
+      {
+        "module": "Module 07",
+        "title": "Authentication, Security, Testing & Deployment",
+        "lessons": 4
+      },
+      {
+        "module": "Module 08",
+        "title": "Professional Projects, Portfolio & Capstone",
+        "lessons": 2
       }
     ],
     "tags": [
@@ -2717,8 +2747,8 @@ const NS_COURSES = [
     ],
     "featured": false,
     "title": "Python Developer Professional",
-    "description": "Master Python programming, FastAPI, Web Scraping, Automation, Data Structures, and SQL.",
-    "projects": 8,
+    "description": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment.",
+    "projects": 2,
     "category": "Programming Academy",
     "status": "active",
     "url": "/course-detail.html?id=python-developer",
@@ -2726,7 +2756,7 @@ const NS_COURSES = [
     "courseRole": "Professional Skill",
     "learningHours": 120,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "Standout backend and general-purpose programming track."
+    "positioning": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment."
   },
   {
     "id": "ai-web-dev-pro",
@@ -10327,47 +10357,77 @@ const NS_ACADEMIES = [
         "icon": "💻",
         "color": "linear-gradient(135deg, #2563EB, #75d766)",
         "name": "Python Developer Professional",
-        "shortDesc": "Master Python programming, FastAPI, Web Scraping, Automation, Data Structures, and SQL.",
-        "fullDesc": "Standout backend and general-purpose programming track. Master Python programming, FastAPI, Web Scraping, Automation, Data Structures, and SQL.",
+        "shortDesc": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment.",
+        "fullDesc": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment.",
         "duration": "3 Months",
         "durationMonths": 3,
         "mode": "Online",
-        "level": "Beginner",
+        "level": "Beginner to Career Applied Professional",
         "price": 14999,
-        "originalPrice": 39999,
+        "originalPrice": 14999,
+        "discount": 0,
         "rating": 4.8,
         "reviews": 160,
         "students": 920,
-        "liveProjects": 8,
+        "liveProjects": 2,
         "certificate": true,
         "placementSupport": true,
         "tools": [
-          "Python Developer Professional",
+          "Python",
+          "FastAPI",
+          "PostgreSQL",
+          "SQLAlchemy",
+          "Pydantic",
+          "Pytest",
+          "uv",
+          "Ruff",
+          "httpx",
+          "Docker",
           "Git & GitHub",
-          "VS Code",
+          "Visual Studio Code",
           "Postman",
-          "Docker"
+          "Cursor"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Python Syntax, Data Structures & Logic",
-            "lessons": 4
+            "title": "Python Programming Fundamentals & Problem Solving",
+            "lessons": 6
           },
           {
             "module": "Module 02",
-            "title": "Object-Oriented Programming & File I/O",
-            "lessons": 4
+            "title": "Intermediate Python, OOP & Type-Safe Development",
+            "lessons": 6
           },
           {
             "module": "Module 03",
-            "title": "Web Development with Flask & API Integration",
-            "lessons": 4
+            "title": "File Processing, Automation & API Integration",
+            "lessons": 5
           },
           {
             "module": "Module 04",
-            "title": "Enterprise Web Apps using Django Framework",
+            "title": "Git, Python Tooling, Debugging & Code Quality",
+            "lessons": 6
+          },
+          {
+            "module": "Module 05",
+            "title": "SQL, PostgreSQL & ORM Integration",
             "lessons": 4
+          },
+          {
+            "module": "Module 06",
+            "title": "FastAPI & Backend Application Development",
+            "lessons": 7
+          },
+          {
+            "module": "Module 07",
+            "title": "Authentication, Security, Testing & Deployment",
+            "lessons": 4
+          },
+          {
+            "module": "Module 08",
+            "title": "Professional Projects, Portfolio & Capstone",
+            "lessons": 2
           }
         ],
         "tags": [
@@ -10376,8 +10436,8 @@ const NS_ACADEMIES = [
         ],
         "featured": false,
         "title": "Python Developer Professional",
-        "description": "Master Python programming, FastAPI, Web Scraping, Automation, Data Structures, and SQL.",
-        "projects": 8,
+        "description": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment.",
+        "projects": 2,
         "category": "Programming Academy",
         "status": "active",
         "url": "/course-detail.html?id=python-developer",
@@ -10385,7 +10445,7 @@ const NS_ACADEMIES = [
         "courseRole": "Professional Skill",
         "learningHours": 120,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Standout backend and general-purpose programming track."
+        "positioning": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment."
       },
       {
         "id": "ai-web-dev-pro",
