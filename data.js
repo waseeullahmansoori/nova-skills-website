@@ -1805,61 +1805,92 @@ const NS_COURSES = [
     "icon": "🎨",
     "color": "linear-gradient(135deg, #8B5CF6, #EC4899)",
     "name": "Creative Design Master",
-    "shortDesc": "Complete 6-month program: Graphic Design, Figma UI/UX, Motion Graphics, Branding & AI Design.",
-    "fullDesc": "Reposition toward Brand Strategy, Design Systems & AI Creative Direction. Complete 6-month program: Graphic Design, Figma UI/UX, Motion Graphics, Branding & AI Design.",
-    "duration": "6 Months",
-    "durationMonths": 6,
+    "shortDesc": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI.",
+    "fullDesc": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI.",
+    "duration": "8 Months",
+    "durationMonths": 8,
     "mode": "Hybrid",
-    "level": "Beginner",
-    "price": 24999,
-    "originalPrice": 69999,
+    "level": "Beginner to Career Professional",
+    "price": 64900,
+    "originalPrice": 64900,
     "rating": 4.8,
     "reviews": 210,
     "students": 1120,
-    "liveProjects": 3,
+    "liveProjects": 6,
     "certificate": true,
     "placementSupport": true,
     "tools": [
-      "Figma",
       "Adobe Photoshop",
       "Adobe Illustrator",
-      "Midjourney",
+      "Figma",
+      "Adobe InDesign",
+      "Adobe After Effects",
       "Adobe Firefly",
-      "FigJam",
-      "Framer",
+      "Midjourney",
+      "ChatGPT",
+      "Google Gemini",
       "Canva",
-      "Notion",
-      "InDesign"
+      "Adobe Acrobat"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Typography & Color Theory",
+        "title": "Design Foundations, Visual Thinking & Typography",
         "lessons": 4
       },
       {
         "module": "Module 02",
-        "title": "Layout Systems & Grid",
+        "title": "Photoshop & Professional Image Compositing",
         "lessons": 4
       },
       {
         "module": "Module 03",
-        "title": "Digital Illustration Basics",
+        "title": "Illustrator, Vector Art & Logo Engineering",
         "lessons": 4
       },
       {
         "module": "Module 04",
-        "title": "Photo Manipulation & Compositing",
+        "title": "Brand Strategy, Identity & Visual Systems",
         "lessons": 4
       },
       {
         "module": "Module 05",
-        "title": "Motion Graphics Fundamentals",
+        "title": "Advertising Campaigns & Digital Creative Production",
         "lessons": 4
       },
       {
         "module": "Module 06",
-        "title": "Portfolio & Brand Identity",
+        "title": "Editorial Design, InDesign & Print Production",
+        "lessons": 4
+      },
+      {
+        "module": "Module 07",
+        "title": "Packaging Design & Production Artwork",
+        "lessons": 4
+      },
+      {
+        "module": "Module 08",
+        "title": "Figma UI/UX Fundamentals & User-Centered Design",
+        "lessons": 4
+      },
+      {
+        "module": "Module 09",
+        "title": "Responsive UI, Design Systems & Prototyping",
+        "lessons": 4
+      },
+      {
+        "module": "Module 10",
+        "title": "Motion Graphics & Animated Brand Assets",
+        "lessons": 4
+      },
+      {
+        "module": "Module 11",
+        "title": "Generative AI for Creative Production & Art Direction",
+        "lessons": 4
+      },
+      {
+        "module": "Module 12",
+        "title": "Integrated Portfolio & Industry Capstone",
         "lessons": 4
       }
     ],
@@ -1870,16 +1901,16 @@ const NS_COURSES = [
     ],
     "featured": true,
     "title": "Creative Design Master",
-    "description": "Complete 6-month program: Graphic Design, Figma UI/UX, Motion Graphics, Branding & AI Design.",
-    "projects": 18,
+    "description": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI.",
+    "projects": 6,
     "category": "Design Academy",
     "status": "active",
     "url": "/course-detail.html?id=creative-design",
     "courseType": "MASTER",
     "courseRole": "Career/Monetization",
-    "learningHours": 240,
+    "learningHours": 320,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "Reposition toward Brand Strategy, Design Systems & AI Creative Direction."
+    "positioning": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI."
   },
   {
     "id": "graphic-design-pro",
@@ -9341,61 +9372,92 @@ const NS_ACADEMIES = [
         "icon": "🎨",
         "color": "linear-gradient(135deg, #8B5CF6, #EC4899)",
         "name": "Creative Design Master",
-        "shortDesc": "Complete 6-month program: Graphic Design, Figma UI/UX, Motion Graphics, Branding & AI Design.",
-        "fullDesc": "Reposition toward Brand Strategy, Design Systems & AI Creative Direction. Complete 6-month program: Graphic Design, Figma UI/UX, Motion Graphics, Branding & AI Design.",
-        "duration": "6 Months",
-        "durationMonths": 6,
+        "shortDesc": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI.",
+        "fullDesc": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI.",
+        "duration": "8 Months",
+        "durationMonths": 8,
         "mode": "Hybrid",
-        "level": "Beginner",
-        "price": 24999,
-        "originalPrice": 69999,
+        "level": "Beginner to Career Professional",
+        "price": 64900,
+        "originalPrice": 64900,
         "rating": 4.8,
         "reviews": 210,
         "students": 1120,
-        "liveProjects": 18,
+        "liveProjects": 6,
         "certificate": true,
         "placementSupport": true,
         "tools": [
-          "Figma",
           "Adobe Photoshop",
           "Adobe Illustrator",
-          "Midjourney",
+          "Figma",
+          "Adobe InDesign",
+          "Adobe After Effects",
           "Adobe Firefly",
-          "FigJam",
-          "Framer",
+          "Midjourney",
+          "ChatGPT",
+          "Google Gemini",
           "Canva",
-          "Notion",
-          "InDesign"
+          "Adobe Acrobat"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Typography & Color Theory",
+            "title": "Design Foundations, Visual Thinking & Typography",
             "lessons": 4
           },
           {
             "module": "Module 02",
-            "title": "Layout Systems & Grid",
+            "title": "Photoshop & Professional Image Compositing",
             "lessons": 4
           },
           {
             "module": "Module 03",
-            "title": "Digital Illustration Basics",
+            "title": "Illustrator, Vector Art & Logo Engineering",
             "lessons": 4
           },
           {
             "module": "Module 04",
-            "title": "Photo Manipulation & Compositing",
+            "title": "Brand Strategy, Identity & Visual Systems",
             "lessons": 4
           },
           {
             "module": "Module 05",
-            "title": "Motion Graphics Fundamentals",
+            "title": "Advertising Campaigns & Digital Creative Production",
             "lessons": 4
           },
           {
             "module": "Module 06",
-            "title": "Portfolio & Brand Identity",
+            "title": "Editorial Design, InDesign & Print Production",
+            "lessons": 4
+          },
+          {
+            "module": "Module 07",
+            "title": "Packaging Design & Production Artwork",
+            "lessons": 4
+          },
+          {
+            "module": "Module 08",
+            "title": "Figma UI/UX Fundamentals & User-Centered Design",
+            "lessons": 4
+          },
+          {
+            "module": "Module 09",
+            "title": "Responsive UI, Design Systems & Prototyping",
+            "lessons": 4
+          },
+          {
+            "module": "Module 10",
+            "title": "Motion Graphics & Animated Brand Assets",
+            "lessons": 4
+          },
+          {
+            "module": "Module 11",
+            "title": "Generative AI for Creative Production & Art Direction",
+            "lessons": 4
+          },
+          {
+            "module": "Module 12",
+            "title": "Integrated Portfolio & Industry Capstone",
             "lessons": 4
           }
         ],
@@ -9406,16 +9468,16 @@ const NS_ACADEMIES = [
         ],
         "featured": true,
         "title": "Creative Design Master",
-        "description": "Complete 6-month program: Graphic Design, Figma UI/UX, Motion Graphics, Branding & AI Design.",
-        "projects": 18,
+        "description": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI.",
+        "projects": 6,
         "category": "Design Academy",
         "status": "active",
         "url": "/course-detail.html?id=creative-design",
         "courseType": "MASTER",
         "courseRole": "Career/Monetization",
-        "learningHours": 240,
+        "learningHours": 320,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Reposition toward Brand Strategy, Design Systems & AI Creative Direction."
+        "positioning": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI."
       },
       {
         "id": "graphic-design-pro",
