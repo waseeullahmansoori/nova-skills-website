@@ -55,7 +55,9 @@ const COURSE_ALIASES = {
   'prompt-engineering-mastery': 'prompt-engineering',
   'freelance-agency-master': 'agency-building',
   'freelance-agency-mastery': 'agency-building',
-  'freelance-mastery': 'freelancing-mastery'
+  'freelance-mastery': 'freelancing-mastery',
+  'motion-mastery': 'ai-integrated-video-editing-motion-graphics-professional',
+  'ai-video-pro': 'generative-ai-video-production-professional'
 };
 
 const ACADEMY_SLUG_MAP = {
@@ -394,8 +396,8 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   // Target Audience & Prerequisites
   let audienceHtml = '';
   if (detailData && detailData.target_audience) {
-    const bestFor = detailData.target_audience.best_for || [];
-    const notFor = detailData.target_audience.not_for || [];
+    let bestFor = Array.isArray(detailData.target_audience.best_for) ? detailData.target_audience.best_for : (detailData.target_audience.best_for ? [detailData.target_audience.best_for] : []);
+    let notFor = Array.isArray(detailData.target_audience.not_for) ? detailData.target_audience.not_for : (detailData.target_audience.not_for ? [detailData.target_audience.not_for] : []);
     audienceHtml = `
       <div class="audience-grid">
         <div class="audience-card best-for">
@@ -1017,6 +1019,15 @@ function runBuild() {
   const renderedMap = {};
   const staticOutDir = path.join(ROOT_DIR, '_rendered_courses');
   fs.mkdirSync(staticOutDir, { recursive: true });
+
+  const validHtmlFiles = new Set(NS_COURSES.map(c => c.id + '.html'));
+  validHtmlFiles.add('404.html');
+  fs.readdirSync(staticOutDir).forEach(f => {
+    if (f.endsWith('.html') && !validHtmlFiles.has(f)) {
+      fs.unlinkSync(path.join(staticOutDir, f));
+      console.log('Cleaned up stale pre-rendered course file: ' + f);
+    }
+  });
 
   let totalCoursesProcessed = 0;
 

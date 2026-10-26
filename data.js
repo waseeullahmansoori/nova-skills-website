@@ -3341,56 +3341,108 @@ const NS_COURSES = [
     "icon": "🌐",
     "color": "linear-gradient(135deg, #F59E0B, #EF4444)",
     "name": "E-Commerce Website Mastery",
-    "shortDesc": "Build & scale high-converting online stores using Shopify, WooCommerce, Webflow & payment gateways.",
-    "fullDesc": "Flagship e-commerce career and agency pathway. Build & scale high-converting online stores using Shopify, WooCommerce, Webflow & payment gateways.",
+    "shortDesc": "Master Shopify and WooCommerce to build, launch, and scale high-converting online stores with payment gateways, GST compliance, and automated logistics.",
+    "fullDesc": "Flagship no-code e-commerce career program. Master Shopify OS 2.0 and WooCommerce 9.x to architect, design, and scale high-converting commercial online stores with payment gateways, Indian GST compliance, Shiprocket logistics, and retention automation.",
     "duration": "6 Months",
     "durationMonths": 6,
     "mode": "Hybrid",
     "level": "Beginner",
-    "price": 22999,
-    "originalPrice": 64999,
+    "price": 49900,
+    "originalPrice": 49900,
     "rating": 4.8,
     "reviews": 164,
     "students": 890,
-    "liveProjects": 3,
+    "liveProjects": 4,
     "certificate": true,
     "placementSupport": true,
     "tools": [
-      "Webflow",
-      "Framer",
       "Shopify",
+      "WooCommerce",
       "WordPress",
-      "Make.com",
-      "Figma",
-      "Airtable",
-      "Stripe",
-      "Google Tag Manager"
+      "WordPress Block Editor",
+      "Shopify Flow",
+      "Razorpay",
+      "Shiprocket",
+      "Google Analytics 4",
+      "Google Merchant Center",
+      "Google Search Console",
+      "Klaviyo",
+      "Shopify Magic",
+      "ChatGPT & Claude",
+      "Canva AI"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "E-Commerce Strategy & Platform Setup",
-        "lessons": 4
+        "title": "E-Commerce Business Strategy, Models & Architecture",
+        "lessons": 4,
+        "hours": 12
       },
       {
         "module": "Module 02",
-        "title": "Product Catalogs, Variants & Inventory Logic",
-        "lessons": 4
+        "title": "Product Catalogs, Information Architecture & Inventory Operations",
+        "lessons": 4,
+        "hours": 20
       },
       {
         "module": "Module 03",
-        "title": "Storefront Design & Conversion UX",
-        "lessons": 4
+        "title": "Shopify Store Implementation & Theme Architecture",
+        "lessons": 6,
+        "hours": 32
       },
       {
         "module": "Module 04",
-        "title": "Checkout, Payments & Shipping Logistics",
-        "lessons": 4
+        "title": "WordPress & WooCommerce Store Engineering",
+        "lessons": 6,
+        "hours": 32
       },
       {
         "module": "Module 05",
-        "title": "Marketing Tech, SEO & Analytics",
-        "lessons": 4
+        "title": "Storefront UX, Mobile CRO & Conversion Architecture",
+        "lessons": 4,
+        "hours": 20
+      },
+      {
+        "module": "Module 06",
+        "title": "Checkout Architecture, Indian Payment Gateways, Statutory GST & Security",
+        "lessons": 5,
+        "hours": 24
+      },
+      {
+        "module": "Module 07",
+        "title": "Shipping, Fulfillment, Tracking & Reverse Logistics",
+        "lessons": 4,
+        "hours": 20
+      },
+      {
+        "module": "Module 08",
+        "title": "Technical E-Commerce SEO, Analytics & Product Feed Syndication",
+        "lessons": 4,
+        "hours": 18
+      },
+      {
+        "module": "Module 09",
+        "title": "Customer Retention, E-Commerce CRM & Marketing Automation",
+        "lessons": 4,
+        "hours": 16
+      },
+      {
+        "module": "Module 10",
+        "title": "Generative AI for E-Commerce Creative, Copywriting & Catalog Operations",
+        "lessons": 4,
+        "hours": 18
+      },
+      {
+        "module": "Module 11",
+        "title": "Store Quality Assurance, Security, Performance & Maintenance Protocols",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 12",
+        "title": "Industry Portfolio Defense, Client Handoff & Capstone Launch",
+        "lessons": 4,
+        "hours": 16
       }
     ],
     "tags": [
@@ -3400,8 +3452,8 @@ const NS_COURSES = [
     ],
     "featured": true,
     "title": "E-Commerce Website Mastery",
-    "description": "Build & scale high-converting online stores using Shopify, WooCommerce, Webflow & payment gateways.",
-    "projects": 12,
+    "description": "Build & scale high-converting online stores using Shopify, WooCommerce, Indian payment gateways & automated logistics.",
+    "projects": 4,
     "category": "No-Code Web Academy",
     "status": "active",
     "url": "/course-detail.html?id=ecommerce-mastery",
@@ -3409,7 +3461,7 @@ const NS_COURSES = [
     "courseRole": "Career/Monetization",
     "learningHours": 240,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "Flagship e-commerce career and agency pathway."
+    "positioning": "Flagship no-code e-commerce career program. Master Shopify and WooCommerce store architecture, Indian payment gateways, GST compliance, logistics, and retention automation."
   },
   {
     "id": "nocode-web-pro",
@@ -3420,51 +3472,90 @@ const NS_COURSES = [
     "icon": "🌐",
     "color": "linear-gradient(135deg, #F59E0B, #8B5CF6)",
     "name": "No-Code Website Professional",
-    "shortDesc": "Build responsive websites for clients without coding using WordPress, Webflow, Framer, and Elementor.",
-    "fullDesc": "Strong 3-month multi-platform no-code website program. Build responsive websites for clients without coding using WordPress, Webflow, Framer, and Elementor.",
+    "shortDesc": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
+    "fullDesc": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
     "duration": "3 Months",
     "durationMonths": 3,
     "mode": "Online",
-    "level": "Beginner",
+    "level": "Beginner to Applied Professional Foundation",
     "price": 12999,
-    "originalPrice": 34999,
+    "originalPrice": 12999,
     "rating": 4.7,
     "reviews": 142,
     "students": 720,
-    "liveProjects": 2,
+    "liveProjects": 3,
     "certificate": true,
     "placementSupport": true,
     "tools": [
-      "Webflow",
-      "Framer",
-      "Shopify",
       "WordPress",
-      "Make.com",
+      "Elementor",
+      "Framer",
+      "Webflow",
       "Figma",
-      "Airtable",
-      "Stripe",
-      "Google Tag Manager"
+      "Google Analytics 4",
+      "Google Search Console",
+      "Lighthouse",
+      "Google Sheets",
+      "Make.com",
+      "Framer Agents",
+      "Webflow AI",
+      "ChatGPT & Claude",
+      "Canva AI"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Web Architecture & The Box Model",
-        "lessons": 4
+        "title": "Website Fundamentals, Design Principles & Client Briefs",
+        "lessons": 5,
+        "hours": 8
       },
       {
         "module": "Module 02",
-        "title": "WordPress & Elementor",
-        "lessons": 4
+        "title": "Figma-to-Web & Responsive Design Foundations",
+        "lessons": 5,
+        "hours": 10
       },
       {
         "module": "Module 03",
-        "title": "Framer for Rapid Prototyping",
-        "lessons": 4
+        "title": "WordPress, Site Editor & Elementor Website Production",
+        "lessons": 6,
+        "hours": 24
       },
       {
         "module": "Module 04",
-        "title": "Webflow Enterprise Architecture",
-        "lessons": 4
+        "title": "Framer Website Design, Motion, CMS & Publishing",
+        "lessons": 6,
+        "hours": 24
+      },
+      {
+        "module": "Module 05",
+        "title": "Webflow Visual Development, CMS & Interactions",
+        "lessons": 6,
+        "hours": 24
+      },
+      {
+        "module": "Module 06",
+        "title": "Generative AI & Agent-Assisted Website Production",
+        "lessons": 5,
+        "hours": 10
+      },
+      {
+        "module": "Module 07",
+        "title": "Lead Forms, Integrations, SEO & Analytics",
+        "lessons": 4,
+        "hours": 8
+      },
+      {
+        "module": "Module 08",
+        "title": "Accessibility, QA, Security & Website Maintenance",
+        "lessons": 3,
+        "hours": 6
+      },
+      {
+        "module": "Module 09",
+        "title": "Industry Portfolio & Client Capstone",
+        "lessons": 3,
+        "hours": 6
       }
     ],
     "tags": [
@@ -3473,16 +3564,16 @@ const NS_COURSES = [
     ],
     "featured": false,
     "title": "No-Code Website Professional",
-    "description": "Build responsive websites for clients without coding using WordPress, Webflow, Framer, and Elementor.",
-    "projects": 8,
+    "description": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
+    "projects": 3,
     "category": "No-Code Web Academy",
     "status": "active",
     "url": "/course-detail.html?id=nocode-web-pro",
     "courseType": "PROFESSIONAL",
-    "courseRole": "Professional Skill",
+    "courseRole": "Career/Monetization",
     "learningHours": 120,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "Strong 3-month multi-platform no-code website program."
+    "positioning": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows."
   },
   {
     "id": "wordpress-cert",
@@ -3873,63 +3964,198 @@ const NS_COURSES = [
     "positioning": "High-velocity 2026 tool for tech startup sites."
   },
   {
-    "id": "motion-mastery",
-    "slug": "motion-graphics-master",
+    "id": "ai-integrated-video-editing-motion-graphics-professional",
+    "slug": "ai-integrated-video-editing-motion-graphics-professional",
     "academy": "Video & Motion Academy",
     "academyId": "video",
     "programLevel": "Career Program",
     "icon": "🎬",
     "color": "linear-gradient(135deg, #EF4444, #F97316)",
-    "name": "Motion Graphics Master",
-    "shortDesc": "Premiere Pro, After Effects, DaVinci Resolve, Motion Graphics, 3D Animation & AI Video tools.",
-    "fullDesc": "Flagship creative video career track. Premiere Pro, After Effects, DaVinci Resolve, Motion Graphics, 3D Animation & AI Video tools.",
-    "duration": "6 Months",
-    "durationMonths": 6,
+    "name": "AI-Integrated Video Editing & Motion Graphics Professional",
+    "shortDesc": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.",
+    "fullDesc": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.",
+    "duration": "8 Months",
+    "durationMonths": 8,
     "mode": "Hybrid",
-    "level": "Beginner",
-    "price": 26999,
-    "originalPrice": 74999,
+    "level": "Beginner to Applied Professional",
+    "price": 69900,
+    "originalPrice": 69900,
     "rating": 4.9,
     "reviews": 188,
     "students": 960,
-    "liveProjects": 3,
+    "liveProjects": 7,
     "certificate": true,
     "placementSupport": true,
     "tools": [
       "Adobe Premiere Pro",
-      "DaVinci Resolve Studio",
       "Adobe After Effects",
-      "CapCut Desktop",
-      "Audition",
-      "Photoshop",
-      "Canva",
-      "Envato"
+      "DaVinci Resolve",
+      "Fairlight",
+      "Adobe Firefly",
+      "Google Flow / Veo",
+      "Runway Gen-3",
+      "ElevenLabs",
+      "Blender",
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+      "Claude / ChatGPT"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Motion Principles & After Effects Essentials",
-        "lessons": 4
+        "title": "Visual Storytelling & Editing Fundamentals",
+        "lessons": 4,
+        "hours": 12
       },
       {
         "module": "Module 02",
-        "title": "Shape Animation & Kinetic Typography",
-        "lessons": 4
+        "title": "Adobe Premiere Pro Essentials",
+        "lessons": 5,
+        "hours": 20
       },
       {
         "module": "Module 03",
-        "title": "3D Integration & Cinema 4D Lite",
-        "lessons": 4
+        "title": "AI-Assisted Pre-production",
+        "lessons": 3,
+        "hours": 8
       },
       {
         "module": "Module 04",
-        "title": "Character Rigging & Animation",
-        "lessons": 4
+        "title": "Advanced Premiere Pro",
+        "lessons": 4,
+        "hours": 18
       },
       {
         "module": "Module 05",
-        "title": "Broadcast Design Capstone & Showreel",
-        "lessons": 4
+        "title": "Commercial Editing & Audience Retention",
+        "lessons": 3,
+        "hours": 14
+      },
+      {
+        "module": "Module 06",
+        "title": "AI Editing Acceleration",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 07",
+        "title": "Graphic Design for Motion",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 08",
+        "title": "Adobe After Effects Essentials",
+        "lessons": 5,
+        "hours": 22
+      },
+      {
+        "module": "Module 09",
+        "title": "Creative Animation Exercises",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 10",
+        "title": "Professional 2D Motion Systems",
+        "lessons": 3,
+        "hours": 16
+      },
+      {
+        "module": "Module 11",
+        "title": "Commercial Motion Graphics",
+        "lessons": 3,
+        "hours": 16
+      },
+      {
+        "module": "Module 12",
+        "title": "Integrated Motion Production",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 13",
+        "title": "Motion Tracking & Camera Integration",
+        "lessons": 3,
+        "hours": 12
+      },
+      {
+        "module": "Module 14",
+        "title": "Rotoscoping & Compositing",
+        "lessons": 3,
+        "hours": 12
+      },
+      {
+        "module": "Module 15",
+        "title": "Advanced Compositing Techniques",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 16",
+        "title": "3D Workflow Introduction",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 17",
+        "title": "Professional Colour Correction & Grading",
+        "lessons": 4,
+        "hours": 20
+      },
+      {
+        "module": "Module 18",
+        "title": "Sound Editing & Fairlight",
+        "lessons": 3,
+        "hours": 12
+      },
+      {
+        "module": "Module 19",
+        "title": "Professional Finishing & Delivery",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 20",
+        "title": "AI Creative Direction & Pre-production",
+        "lessons": 3,
+        "hours": 8
+      },
+      {
+        "module": "Module 21",
+        "title": "AI Video & Visual Generation",
+        "lessons": 3,
+        "hours": 14
+      },
+      {
+        "module": "Module 22",
+        "title": "Hybrid Production Pipeline",
+        "lessons": 3,
+        "hours": 12
+      },
+      {
+        "module": "Module 23",
+        "title": "Commercial AI Production Standards",
+        "lessons": 3,
+        "hours": 6
+      },
+      {
+        "module": "Module 24",
+        "title": "Industry Client Production",
+        "lessons": 3,
+        "hours": 20
+      },
+      {
+        "module": "Module 25",
+        "title": "Multi-Platform Delivery",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 26",
+        "title": "Portfolio & Professional Readiness",
+        "lessons": 3,
+        "hours": 12
       }
     ],
     "tags": [
@@ -3938,17 +4164,17 @@ const NS_COURSES = [
       "placement"
     ],
     "featured": true,
-    "title": "Motion Graphics Master",
-    "description": "Premiere Pro, After Effects, DaVinci Resolve, Motion Graphics, 3D Animation & AI Video tools.",
-    "projects": 16,
+    "title": "AI-Integrated Video Editing & Motion Graphics Professional",
+    "description": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.",
+    "projects": 7,
     "category": "Video & Motion Academy",
     "status": "active",
-    "url": "/course-detail.html?id=motion-mastery",
+    "url": "/course-detail.html?id=ai-integrated-video-editing-motion-graphics-professional",
     "courseType": "MASTER",
     "courseRole": "Career/Monetization",
-    "learningHours": 240,
+    "learningHours": 320,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "Flagship creative video career track."
+    "positioning": "Flagship creative video editing, motion graphics, and generative AI career track."
   },
   {
     "id": "video-pro",
@@ -3959,50 +4185,96 @@ const NS_COURSES = [
     "icon": "🎬",
     "color": "linear-gradient(135deg, #EF4444, #8B5CF6)",
     "name": "Professional Video Editing",
-    "shortDesc": "Premiere Pro, After Effects, Runway, Kling, Veo, AI Voice, AI Subtitles & commercial edits.",
-    "fullDesc": "Core 3-month video editing standalone program. Premiere Pro, After Effects, Runway, Kling, Veo, AI Voice, AI Subtitles & commercial edits.",
-    "duration": "3 Months",
-    "durationMonths": 3,
+    "shortDesc": "A practical professional video editing program teaching Premiere Pro, DaVinci Resolve, Photoshop, professional audio, commercial video production and AI-assisted editing techniques.",
+    "fullDesc": "A practical professional video editing program teaching Premiere Pro, DaVinci Resolve, Photoshop, professional audio, commercial video production and AI-assisted editing techniques.",
+    "duration": "4 Months",
+    "durationMonths": 4,
     "mode": "Online",
-    "level": "Beginner",
-    "price": 13999,
-    "originalPrice": 39999,
+    "level": "Beginner to Applied Professional",
+    "price": 29900,
+    "originalPrice": 29900,
     "rating": 4.8,
     "reviews": 172,
     "students": 840,
-    "liveProjects": 2,
+    "liveProjects": 3,
     "certificate": true,
     "placementSupport": true,
     "tools": [
       "Adobe Premiere Pro",
-      "DaVinci Resolve Studio",
+      "DaVinci Resolve 21",
+      "Adobe Photoshop",
+      "Adobe Audition",
+      "Fairlight",
       "Adobe After Effects",
-      "CapCut Desktop",
-      "Audition",
-      "Photoshop",
-      "Canva",
-      "Envato"
+      "Adobe Firefly",
+      "Claude / ChatGPT"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Premiere Pro Fundamentals & The Rough Cut",
-        "lessons": 4
+        "title": "Visual Storytelling, Video Grammar & Editing Foundations",
+        "lessons": 4,
+        "hours": 12
       },
       {
         "module": "Module 02",
-        "title": "B-Roll, Transitions & Visual Effects",
-        "lessons": 4
+        "title": "Adobe Premiere Pro — Core Editing & Media Workflows",
+        "lessons": 4,
+        "hours": 24
       },
       {
         "module": "Module 03",
-        "title": "Audio Mixing & Sound Design",
-        "lessons": 4
+        "title": "Advanced Premiere Pro, Multicam & Efficient Editing",
+        "lessons": 4,
+        "hours": 20
       },
       {
         "module": "Module 04",
-        "title": "Color Correction & Grading (Lumetri & Resolve)",
-        "lessons": 4
+        "title": "Adobe Photoshop for Video Editing & Commercial Graphics",
+        "lessons": 4,
+        "hours": 16
+      },
+      {
+        "module": "Module 05",
+        "title": "DaVinci Resolve 21 — Editing, Color Correction & Grading",
+        "lessons": 4,
+        "hours": 24
+      },
+      {
+        "module": "Module 06",
+        "title": "Audio Post-Production, Audition & Fairlight",
+        "lessons": 4,
+        "hours": 16
+      },
+      {
+        "module": "Module 07",
+        "title": "Commercial Editing, YouTube & High-Retention Social Videos",
+        "lessons": 4,
+        "hours": 16
+      },
+      {
+        "module": "Module 08",
+        "title": "After Effects Fundamentals & Motion Assets for Editors",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 09",
+        "title": "AI-Assisted Editing & Generative Creative Workflows",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 10",
+        "title": "Professional Delivery, Quality Control & Client Workflow",
+        "lessons": 2,
+        "hours": 6
+      },
+      {
+        "module": "Module 11",
+        "title": "Industry Projects, Portfolio & Final Assessment",
+        "lessons": 2,
+        "hours": 8
       }
     ],
     "tags": [
@@ -4011,70 +4283,135 @@ const NS_COURSES = [
     ],
     "featured": false,
     "title": "Professional Video Editing",
-    "description": "Premiere Pro, After Effects, Runway, Kling, Veo, AI Voice, AI Subtitles & commercial edits.",
-    "projects": 10,
+    "description": "A practical professional video editing program teaching Premiere Pro, DaVinci Resolve, Photoshop, professional audio, commercial video production and AI-assisted editing techniques.",
+    "projects": 3,
     "category": "Video & Motion Academy",
     "status": "active",
     "url": "/course-detail.html?id=video-pro",
     "courseType": "PROFESSIONAL",
     "courseRole": "Professional Skill",
-    "learningHours": 120,
+    "learningHours": 160,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "Core 3-month video editing standalone program."
+    "positioning": "A practical professional video editing program teaching Premiere Pro, DaVinci Resolve, Photoshop, professional audio, commercial video production and AI-assisted editing techniques.",
+    "proposedRegularPrice": 35900
   },
   {
-    "id": "ai-video-pro",
-    "slug": "ai-video-editing-professional",
+    "id": "generative-ai-video-production-professional",
+    "slug": "generative-ai-video-production-professional",
     "academy": "Video & Motion Academy",
     "academyId": "video",
     "programLevel": "Professional Program",
     "icon": "🎬",
     "color": "linear-gradient(135deg, #EF4444, #75d766)",
-    "name": "AI Video Editing Professional",
-    "shortDesc": "Create commercial AI video ads, synthetic avatars, automated subtitles, and generative video clips.",
-    "fullDesc": "High-growth 2026/27 creative specialization. Create commercial AI video ads, synthetic avatars, automated subtitles, and generative video clips.",
-    "duration": "3 Months",
-    "durationMonths": 3,
+    "name": "Generative AI Video Production Professional",
+    "tagline": "Create Cinematic AI Commercials. Master the Complete Production Workflow.",
+    "shortDesc": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
+    "fullDesc": "An intensive 5-month commercial production program teaching multi-model generative video, character and product consistency, Premiere Pro assembly, After Effects hybrid compositing, and professional finishing.",
+    "duration": "5 Months",
+    "durationMonths": 5,
+    "hours": 200,
+    "modules": 13,
     "mode": "Online",
-    "level": "Intermediate",
-    "price": 14999,
-    "originalPrice": 42999,
+    "level": "Professional Specialization",
+    "price": 34900,
+    "originalPrice": 34900,
     "rating": 4.9,
     "reviews": 135,
     "students": 690,
-    "liveProjects": 2,
+    "liveProjects": 5,
     "certificate": true,
     "placementSupport": true,
     "tools": [
+      "Adobe Firefly Video",
+      "Google Flow / Veo",
+      "Kling AI",
+      "Runway Gen-3",
       "Adobe Premiere Pro",
-      "DaVinci Resolve Studio",
+      "Adobe Photoshop",
       "Adobe After Effects",
-      "CapCut Desktop",
-      "Audition",
-      "Photoshop",
-      "Canva",
-      "Envato"
+      "ElevenLabs",
+      "DaVinci Resolve 21",
+      "Topaz Video AI",
+      "Claude / ChatGPT"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Automated Editing & Audio AI",
-        "lessons": 3
+        "title": "Cinematic Visual Storytelling",
+        "lessons": 4,
+        "hours": 10
       },
       {
         "module": "Module 02",
-        "title": "Generative AI Video (Runway & Pika)",
-        "lessons": 4
+        "title": "Commercial Scriptwriting & AI Creative Direction",
+        "lessons": 4,
+        "hours": 10
       },
       {
         "module": "Module 03",
-        "title": "Synthetic Media & Avatars",
-        "lessons": 3
+        "title": "AI Images, Keyframes & Visual Asset Development",
+        "lessons": 5,
+        "hours": 20
       },
       {
         "module": "Module 04",
-        "title": "The Hybrid Workflow & Capstone",
-        "lessons": 3
+        "title": "Generative Video Fundamentals",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 05",
+        "title": "Advanced AI Video Production",
+        "lessons": 4,
+        "hours": 16
+      },
+      {
+        "module": "Module 06",
+        "title": "Character Consistency & Multi-Shot Storytelling",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 07",
+        "title": "Adobe Premiere Pro Professional Editing",
+        "lessons": 7,
+        "hours": 28
+      },
+      {
+        "module": "Module 08",
+        "title": "AI-Assisted Editing & Creative Optimization",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 09",
+        "title": "After Effects, Motion Graphics & Hybrid Compositing",
+        "lessons": 6,
+        "hours": 24
+      },
+      {
+        "module": "Module 10",
+        "title": "AI Audio, Colour Grading & Video Enhancement",
+        "lessons": 4,
+        "hours": 16
+      },
+      {
+        "module": "Module 11",
+        "title": "AI Advertising & Multi-Format Campaign Production",
+        "lessons": 4,
+        "hours": 14
+      },
+      {
+        "module": "Module 12",
+        "title": "Commercial Safety, Production Management & QA",
+        "lessons": 2,
+        "hours": 6
+      },
+      {
+        "module": "Module 13",
+        "title": "Industry Capstone & Career Portfolio",
+        "lessons": 5,
+        "hours": 20
       }
     ],
     "tags": [
@@ -4082,17 +4419,18 @@ const NS_COURSES = [
       "placement"
     ],
     "featured": false,
-    "title": "AI Video Editing Professional",
-    "description": "Create commercial AI video ads, synthetic avatars, automated subtitles, and generative video clips.",
-    "projects": 8,
+    "title": "Generative AI Video Production Professional",
+    "description": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
+    "projects": 5,
     "category": "Video & Motion Academy",
     "status": "active",
-    "url": "/course-detail.html?id=ai-video-pro",
+    "url": "/course-detail.html?id=generative-ai-video-production-professional",
     "courseType": "SPECIALIZATION",
-    "courseRole": "Advanced Skill",
-    "learningHours": 80,
+    "courseRole": "Career/Monetization",
+    "learningHours": 200,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "High-growth 2026/27 creative specialization."
+    "positioning": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
+    "proposedRegularPrice": 39900
   },
   {
     "id": "adobe-premiere-pro",
