@@ -1817,6 +1817,7 @@ const COURSE_CATALOG_METADATA = {
   'Creative Design Mastery': { academy: 'Design Academy', duration: '6 Months', fee: '₹39,999', category: 'design' },
   'Motion Graphics Mastery': { academy: 'Video & Motion Academy', duration: '8 Months', fee: '₹69,900', category: 'video' },
   'AI-Integrated Video Editing & Motion Graphics Professional': { academy: 'Video & Motion Academy', duration: '8 Months', fee: '₹69,900', category: 'video' },
+  'Generative AI Video Production Professional': { academy: 'Video & Motion Academy', duration: '5 Months', fee: '₹34,900', category: 'video' },
   'AI Digital Marketing Mastery': { academy: 'Digital Marketing Academy', duration: '6 Months', fee: '₹44,999', category: 'digital-marketing' }
 };
 

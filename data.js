@@ -4296,58 +4296,122 @@ const NS_COURSES = [
     "proposedRegularPrice": 35900
   },
   {
-    "id": "ai-video-pro",
-    "slug": "ai-video-editing-professional",
+    "id": "generative-ai-video-production-professional",
+    "slug": "generative-ai-video-production-professional",
     "academy": "Video & Motion Academy",
     "academyId": "video",
     "programLevel": "Professional Program",
     "icon": "🎬",
     "color": "linear-gradient(135deg, #EF4444, #75d766)",
-    "name": "AI Video Editing Professional",
-    "shortDesc": "Create commercial AI video ads, synthetic avatars, automated subtitles, and generative video clips.",
-    "fullDesc": "High-growth 2026/27 creative specialization. Create commercial AI video ads, synthetic avatars, automated subtitles, and generative video clips.",
-    "duration": "3 Months",
-    "durationMonths": 3,
+    "name": "Generative AI Video Production Professional",
+    "tagline": "Create Cinematic AI Commercials. Master the Complete Production Workflow.",
+    "shortDesc": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
+    "fullDesc": "An intensive 5-month commercial production program teaching multi-model generative video, character and product consistency, Premiere Pro assembly, After Effects hybrid compositing, and professional finishing.",
+    "duration": "5 Months",
+    "durationMonths": 5,
+    "hours": 200,
+    "modules": 13,
     "mode": "Online",
-    "level": "Intermediate",
-    "price": 14999,
-    "originalPrice": 42999,
+    "level": "Professional Specialization",
+    "price": 34900,
+    "originalPrice": 34900,
     "rating": 4.9,
     "reviews": 135,
     "students": 690,
-    "liveProjects": 2,
+    "liveProjects": 5,
     "certificate": true,
     "placementSupport": true,
     "tools": [
+      "Adobe Firefly Video",
+      "Google Flow / Veo",
+      "Kling AI",
+      "Runway Gen-3",
       "Adobe Premiere Pro",
-      "DaVinci Resolve Studio",
+      "Adobe Photoshop",
       "Adobe After Effects",
-      "CapCut Desktop",
-      "Audition",
-      "Photoshop",
-      "Canva",
-      "Envato"
+      "ElevenLabs",
+      "DaVinci Resolve 21",
+      "Topaz Video AI",
+      "Claude / ChatGPT"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Automated Editing & Audio AI",
-        "lessons": 3
+        "title": "Cinematic Visual Storytelling",
+        "lessons": 4,
+        "hours": 10
       },
       {
         "module": "Module 02",
-        "title": "Generative AI Video (Runway & Pika)",
-        "lessons": 4
+        "title": "Commercial Scriptwriting & AI Creative Direction",
+        "lessons": 4,
+        "hours": 10
       },
       {
         "module": "Module 03",
-        "title": "Synthetic Media & Avatars",
-        "lessons": 3
+        "title": "AI Images, Keyframes & Visual Asset Development",
+        "lessons": 5,
+        "hours": 20
       },
       {
         "module": "Module 04",
-        "title": "The Hybrid Workflow & Capstone",
-        "lessons": 3
+        "title": "Generative Video Fundamentals",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 05",
+        "title": "Advanced AI Video Production",
+        "lessons": 4,
+        "hours": 16
+      },
+      {
+        "module": "Module 06",
+        "title": "Character Consistency & Multi-Shot Storytelling",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 07",
+        "title": "Adobe Premiere Pro Professional Editing",
+        "lessons": 7,
+        "hours": 28
+      },
+      {
+        "module": "Module 08",
+        "title": "AI-Assisted Editing & Creative Optimization",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 09",
+        "title": "After Effects, Motion Graphics & Hybrid Compositing",
+        "lessons": 6,
+        "hours": 24
+      },
+      {
+        "module": "Module 10",
+        "title": "AI Audio, Colour Grading & Video Enhancement",
+        "lessons": 4,
+        "hours": 16
+      },
+      {
+        "module": "Module 11",
+        "title": "AI Advertising & Multi-Format Campaign Production",
+        "lessons": 4,
+        "hours": 14
+      },
+      {
+        "module": "Module 12",
+        "title": "Commercial Safety, Production Management & QA",
+        "lessons": 2,
+        "hours": 6
+      },
+      {
+        "module": "Module 13",
+        "title": "Industry Capstone & Career Portfolio",
+        "lessons": 5,
+        "hours": 20
       }
     ],
     "tags": [
@@ -4355,17 +4419,18 @@ const NS_COURSES = [
       "placement"
     ],
     "featured": false,
-    "title": "AI Video Editing Professional",
-    "description": "Create commercial AI video ads, synthetic avatars, automated subtitles, and generative video clips.",
-    "projects": 8,
+    "title": "Generative AI Video Production Professional",
+    "description": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
+    "projects": 5,
     "category": "Video & Motion Academy",
     "status": "active",
-    "url": "/course-detail.html?id=ai-video-pro",
+    "url": "/course-detail.html?id=generative-ai-video-production-professional",
     "courseType": "SPECIALIZATION",
-    "courseRole": "Advanced Skill",
-    "learningHours": 80,
+    "courseRole": "Career/Monetization",
+    "learningHours": 200,
     "futureReviewStatus": "EVOLVING",
-    "positioning": "High-growth 2026/27 creative specialization."
+    "positioning": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
+    "proposedRegularPrice": 39900
   },
   {
     "id": "adobe-premiere-pro",
@@ -12291,58 +12356,122 @@ const NS_ACADEMIES = [
         "proposedRegularPrice": 35900
       },
       {
-        "id": "ai-video-pro",
-        "slug": "ai-video-editing-professional",
+        "id": "generative-ai-video-production-professional",
+        "slug": "generative-ai-video-production-professional",
         "academy": "Video & Motion Academy",
         "academyId": "video",
         "programLevel": "Professional Program",
         "icon": "🎬",
         "color": "linear-gradient(135deg, #EF4444, #75d766)",
-        "name": "AI Video Editing Professional",
-        "shortDesc": "Create commercial AI video ads, synthetic avatars, automated subtitles, and generative video clips.",
-        "fullDesc": "High-growth 2026/27 creative specialization. Create commercial AI video ads, synthetic avatars, automated subtitles, and generative video clips.",
-        "duration": "3 Months",
-        "durationMonths": 3,
+        "name": "Generative AI Video Production Professional",
+        "tagline": "Create Cinematic AI Commercials. Master the Complete Production Workflow.",
+        "shortDesc": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
+        "fullDesc": "An intensive 5-month commercial production program teaching multi-model generative video, character and product consistency, Premiere Pro assembly, After Effects hybrid compositing, and professional finishing.",
+        "duration": "5 Months",
+        "durationMonths": 5,
+        "hours": 200,
+        "modules": 13,
         "mode": "Online",
-        "level": "Intermediate",
-        "price": 14999,
-        "originalPrice": 42999,
+        "level": "Professional Specialization",
+        "price": 34900,
+        "originalPrice": 34900,
         "rating": 4.9,
         "reviews": 135,
         "students": 690,
-        "liveProjects": 8,
+        "liveProjects": 5,
         "certificate": true,
         "placementSupport": true,
         "tools": [
+          "Adobe Firefly Video",
+          "Google Flow / Veo",
+          "Kling AI",
+          "Runway Gen-3",
           "Adobe Premiere Pro",
-          "DaVinci Resolve Studio",
+          "Adobe Photoshop",
           "Adobe After Effects",
-          "CapCut Desktop",
-          "Audition",
-          "Photoshop",
-          "Canva",
-          "Envato"
+          "ElevenLabs",
+          "DaVinci Resolve 21",
+          "Topaz Video AI",
+          "Claude / ChatGPT"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Automated Editing & Audio AI",
-            "lessons": 3
+            "title": "Cinematic Visual Storytelling",
+            "lessons": 4,
+            "hours": 10
           },
           {
             "module": "Module 02",
-            "title": "Generative AI Video (Runway & Pika)",
-            "lessons": 4
+            "title": "Commercial Scriptwriting & AI Creative Direction",
+            "lessons": 4,
+            "hours": 10
           },
           {
             "module": "Module 03",
-            "title": "Synthetic Media & Avatars",
-            "lessons": 3
+            "title": "AI Images, Keyframes & Visual Asset Development",
+            "lessons": 5,
+            "hours": 20
           },
           {
             "module": "Module 04",
-            "title": "The Hybrid Workflow & Capstone",
-            "lessons": 3
+            "title": "Generative Video Fundamentals",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 05",
+            "title": "Advanced AI Video Production",
+            "lessons": 4,
+            "hours": 16
+          },
+          {
+            "module": "Module 06",
+            "title": "Character Consistency & Multi-Shot Storytelling",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 07",
+            "title": "Adobe Premiere Pro Professional Editing",
+            "lessons": 7,
+            "hours": 28
+          },
+          {
+            "module": "Module 08",
+            "title": "AI-Assisted Editing & Creative Optimization",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 09",
+            "title": "After Effects, Motion Graphics & Hybrid Compositing",
+            "lessons": 6,
+            "hours": 24
+          },
+          {
+            "module": "Module 10",
+            "title": "AI Audio, Colour Grading & Video Enhancement",
+            "lessons": 4,
+            "hours": 16
+          },
+          {
+            "module": "Module 11",
+            "title": "AI Advertising & Multi-Format Campaign Production",
+            "lessons": 4,
+            "hours": 14
+          },
+          {
+            "module": "Module 12",
+            "title": "Commercial Safety, Production Management & QA",
+            "lessons": 2,
+            "hours": 6
+          },
+          {
+            "module": "Module 13",
+            "title": "Industry Capstone & Career Portfolio",
+            "lessons": 5,
+            "hours": 20
           }
         ],
         "tags": [
@@ -12350,17 +12479,18 @@ const NS_ACADEMIES = [
           "placement"
         ],
         "featured": false,
-        "title": "AI Video Editing Professional",
-        "description": "Create commercial AI video ads, synthetic avatars, automated subtitles, and generative video clips.",
-        "projects": 8,
+        "title": "Generative AI Video Production Professional",
+        "description": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
+        "projects": 5,
         "category": "Video & Motion Academy",
         "status": "active",
-        "url": "/course-detail.html?id=ai-video-pro",
+        "url": "/course-detail.html?id=generative-ai-video-production-professional",
         "courseType": "SPECIALIZATION",
-        "courseRole": "Advanced Skill",
-        "learningHours": 80,
+        "courseRole": "Career/Monetization",
+        "learningHours": 200,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "High-growth 2026/27 creative specialization."
+        "positioning": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
+        "proposedRegularPrice": 39900
       },
       {
         "id": "adobe-premiere-pro",
