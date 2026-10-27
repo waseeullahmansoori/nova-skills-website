@@ -6511,71 +6511,134 @@ const NS_COURSES = [
     "slug": "professional-spoken-english",
     "academy": "Communication Academy",
     "academyId": "communication",
-    "programLevel": "Professional Program",
+    "programLevel": "Professional Foundation",
     "icon": "💬",
     "color": "linear-gradient(135deg, #75d766, #0599a8)",
     "name": "Professional Spoken English",
-    "shortDesc": "Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
-    "fullDesc": "Core 3-month spoken fluency track. Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
+    "specialization": "Practical Spoken Fluency & Interactive Communication",
+    "tagline": "Speak English Clearly. Communicate Confidently. Express Yourself Professionally.",
+    "shortDesc": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice.",
+    "fullDesc": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice. Students develop communication skills through interactive instructor-led labs, recorded assessments, conversation exercises and individual feedback.",
     "duration": "3 Months",
     "durationMonths": 3,
-    "mode": "Online",
-    "level": "Beginner",
-    "price": 8999,
-    "originalPrice": 22999,
+    "hours": 90,
+    "learningHours": 90,
+    "mode": "Interactive Speaking Labs & Live Practice",
+    "level": "Professional Foundation",
+    "price": 12900,
+    "originalPrice": 12900,
+    "regularPrice": 12900,
+    "launchBatchFee": 12900,
     "rating": 4.8,
     "reviews": 190,
     "students": 1150,
-    "liveProjects": 2,
+    "liveProjects": 15,
     "certificate": true,
-    "placementSupport": true,
+    "placementSupport": false,
     "tools": [
-      "Zoom/Teams",
+      "ChatGPT Voice",
+      "British Council LearnEnglish",
+      "Cambridge Dictionary",
+      "Smartphone / PC Voice Recorder",
+      "Google Sheets / Approved LMS",
+      "Cambridge Speak & Improve",
+      "ELSA Speak",
+      "Approved Transcription Tools",
       "Grammarly / LanguageTool",
-      "ChatGPT / Claude for Communication Modeling",
-      "Loom",
-      "Google Docs",
-      "PowerPoint / Canva for Pitch Visuals",
-      "Otter.ai / Fireflies"
+      "Google Meet / Zoom / Teams"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Pronunciation & Phonetics",
-        "lessons": 4
+        "title": "English Assessment & Personal Speaking Roadmap",
+        "lessons": 4,
+        "hours": 4
       },
       {
         "module": "Module 02",
-        "title": "Fluency Building",
-        "lessons": 4
+        "title": "Functional Grammar & Sentence Construction",
+        "lessons": 8,
+        "hours": 10
       },
       {
         "module": "Module 03",
-        "title": "Conversational English & Small Talk",
-        "lessons": 4
+        "title": "Pronunciation, Speech Clarity & Voice Control",
+        "lessons": 6,
+        "hours": 8
       },
       {
         "module": "Module 04",
-        "title": "Interview English",
-        "lessons": 4
+        "title": "Everyday Vocabulary & Listening Comprehension",
+        "lessons": 6,
+        "hours": 8
+      },
+      {
+        "module": "Module 05",
+        "title": "Conversational Fluency & Spontaneous Speaking",
+        "lessons": 6,
+        "hours": 10
+      },
+      {
+        "module": "Module 06",
+        "title": "Everyday Conversations & Social Communication",
+        "lessons": 6,
+        "hours": 8
+      },
+      {
+        "module": "Module 07",
+        "title": "Listening Accuracy & Real-Time Response Skills",
+        "lessons": 4,
+        "hours": 6
+      },
+      {
+        "module": "Module 08",
+        "title": "AI-Assisted Conversation & Personalized Speaking Practice",
+        "lessons": 4,
+        "hours": 6
+      },
+      {
+        "module": "Module 09",
+        "title": "Workplace English & Professional Conversations",
+        "lessons": 6,
+        "hours": 9
+      },
+      {
+        "module": "Module 10",
+        "title": "Interview English & Professional Self-Introduction",
+        "lessons": 6,
+        "hours": 7
+      },
+      {
+        "module": "Module 11",
+        "title": "Public Speaking & Short Presentation Skills",
+        "lessons": 6,
+        "hours": 8
+      },
+      {
+        "module": "Module 12",
+        "title": "Final Spoken English Assessment & Communication Capstone",
+        "lessons": 6,
+        "hours": 6
       }
     ],
     "tags": [
       "popular",
-      "placement"
+      "spoken-english",
+      "communication"
     ],
-    "featured": false,
+    "featured": true,
     "title": "Professional Spoken English",
-    "description": "Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
-    "projects": 8,
+    "description": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice.",
+    "projects": 15,
     "category": "Communication Academy",
     "status": "active",
     "url": "/course-detail.html?id=spoken-english-pro",
     "courseType": "PROFESSIONAL",
-    "courseRole": "Professional Skill",
-    "learningHours": 120,
+    "courseRole": "Professional Foundation",
     "futureReviewStatus": "STABLE",
-    "positioning": "Core 3-month spoken fluency track."
+    "positioning": "Speak English Clearly. Communicate Confidently. Express Yourself Professionally.",
+    "academicLabel": "Practical Spoken Fluency & Interactive Communication",
+    "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
   },
   {
     "id": "spoken-english-cert",
@@ -15015,71 +15078,134 @@ const NS_ACADEMIES = [
         "slug": "professional-spoken-english",
         "academy": "Communication Academy",
         "academyId": "communication",
-        "programLevel": "Professional Program",
+        "programLevel": "Professional Foundation",
         "icon": "💬",
         "color": "linear-gradient(135deg, #75d766, #0599a8)",
         "name": "Professional Spoken English",
-        "shortDesc": "Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
-        "fullDesc": "Core 3-month spoken fluency track. Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
+        "specialization": "Practical Spoken Fluency & Interactive Communication",
+        "tagline": "Speak English Clearly. Communicate Confidently. Express Yourself Professionally.",
+        "shortDesc": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice.",
+        "fullDesc": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice. Students develop communication skills through interactive instructor-led labs, recorded assessments, conversation exercises and individual feedback.",
         "duration": "3 Months",
         "durationMonths": 3,
-        "mode": "Online",
-        "level": "Beginner",
-        "price": 8999,
-        "originalPrice": 22999,
+        "hours": 90,
+        "learningHours": 90,
+        "mode": "Interactive Speaking Labs & Live Practice",
+        "level": "Professional Foundation",
+        "price": 12900,
+        "originalPrice": 12900,
+        "regularPrice": 12900,
+        "launchBatchFee": 12900,
         "rating": 4.8,
         "reviews": 190,
         "students": 1150,
-        "liveProjects": 8,
+        "liveProjects": 15,
         "certificate": true,
-        "placementSupport": true,
+        "placementSupport": false,
         "tools": [
-          "Zoom/Teams",
+          "ChatGPT Voice",
+          "British Council LearnEnglish",
+          "Cambridge Dictionary",
+          "Smartphone / PC Voice Recorder",
+          "Google Sheets / Approved LMS",
+          "Cambridge Speak & Improve",
+          "ELSA Speak",
+          "Approved Transcription Tools",
           "Grammarly / LanguageTool",
-          "ChatGPT / Claude for Communication Modeling",
-          "Loom",
-          "Google Docs",
-          "PowerPoint / Canva for Pitch Visuals",
-          "Otter.ai / Fireflies"
+          "Google Meet / Zoom / Teams"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Pronunciation & Phonetics",
-            "lessons": 4
+            "title": "English Assessment & Personal Speaking Roadmap",
+            "lessons": 4,
+            "hours": 4
           },
           {
             "module": "Module 02",
-            "title": "Fluency Building",
-            "lessons": 4
+            "title": "Functional Grammar & Sentence Construction",
+            "lessons": 8,
+            "hours": 10
           },
           {
             "module": "Module 03",
-            "title": "Conversational English & Small Talk",
-            "lessons": 4
+            "title": "Pronunciation, Speech Clarity & Voice Control",
+            "lessons": 6,
+            "hours": 8
           },
           {
             "module": "Module 04",
-            "title": "Interview English",
-            "lessons": 4
+            "title": "Everyday Vocabulary & Listening Comprehension",
+            "lessons": 6,
+            "hours": 8
+          },
+          {
+            "module": "Module 05",
+            "title": "Conversational Fluency & Spontaneous Speaking",
+            "lessons": 6,
+            "hours": 10
+          },
+          {
+            "module": "Module 06",
+            "title": "Everyday Conversations & Social Communication",
+            "lessons": 6,
+            "hours": 8
+          },
+          {
+            "module": "Module 07",
+            "title": "Listening Accuracy & Real-Time Response Skills",
+            "lessons": 4,
+            "hours": 6
+          },
+          {
+            "module": "Module 08",
+            "title": "AI-Assisted Conversation & Personalized Speaking Practice",
+            "lessons": 4,
+            "hours": 6
+          },
+          {
+            "module": "Module 09",
+            "title": "Workplace English & Professional Conversations",
+            "lessons": 6,
+            "hours": 9
+          },
+          {
+            "module": "Module 10",
+            "title": "Interview English & Professional Self-Introduction",
+            "lessons": 6,
+            "hours": 7
+          },
+          {
+            "module": "Module 11",
+            "title": "Public Speaking & Short Presentation Skills",
+            "lessons": 6,
+            "hours": 8
+          },
+          {
+            "module": "Module 12",
+            "title": "Final Spoken English Assessment & Communication Capstone",
+            "lessons": 6,
+            "hours": 6
           }
         ],
         "tags": [
           "popular",
-          "placement"
+          "spoken-english",
+          "communication"
         ],
-        "featured": false,
+        "featured": true,
         "title": "Professional Spoken English",
-        "description": "Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
-        "projects": 8,
+        "description": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice.",
+        "projects": 15,
         "category": "Communication Academy",
         "status": "active",
         "url": "/course-detail.html?id=spoken-english-pro",
         "courseType": "PROFESSIONAL",
-        "courseRole": "Professional Skill",
-        "learningHours": 120,
+        "courseRole": "Professional Foundation",
         "futureReviewStatus": "STABLE",
-        "positioning": "Core 3-month spoken fluency track."
+        "positioning": "Speak English Clearly. Communicate Confidently. Express Yourself Professionally.",
+        "academicLabel": "Practical Spoken Fluency & Interactive Communication",
+        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
       },
       {
         "id": "spoken-english-cert",
