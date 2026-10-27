@@ -5473,85 +5473,168 @@ const NS_COURSES = [
     "positioning": "Leading edge 2026 specialization in 3D architecture."
   },
   {
-    "id": "freelancing-mastery",
-    "slug": "freelancing-mastery",
-    "academy": "Career & Freelancing Academy",
-    "academyId": "career",
-    "programLevel": "Career Program",
-    "icon": "💼",
-    "color": "linear-gradient(135deg, #011731, #0599a8)",
-    "name": "Freelancing Mastery",
-    "shortDesc": "Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-    "fullDesc": "Universal career acceleration flagship. Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-    "duration": "6 Months",
-    "durationMonths": 6,
-    "mode": "Online",
-    "level": "Beginner",
-    "price": 18999,
-    "originalPrice": 49999,
-    "rating": 4.9,
-    "reviews": 210,
-    "students": 1350,
-    "liveProjects": 3,
-    "certificate": true,
-    "placementSupport": true,
-    "tools": [
-      "LinkedIn",
-      "Upwork",
-      "Fiverr",
-      "Notion",
-      "ChatGPT / Claude for Proposals",
-      "Loom",
-      "Stripe / Wise",
-      "Calendly",
-      "Canva",
-      "Bonsai / PandaDoc"
-    ],
-    "curriculum": [
-      {
-        "module": "Module 01",
-        "title": "Niche Selection & Service Packaging",
-        "lessons": 4
-      },
-      {
-        "module": "Module 02",
-        "title": "Client Acquisition & Platform Optimization",
-        "lessons": 4
-      },
-      {
-        "module": "Module 03",
-        "title": "Proposals, Pitching & Negotiation",
-        "lessons": 4
-      },
-      {
-        "module": "Module 04",
-        "title": "Operations, Delivery & Retention",
-        "lessons": 4
-      },
-      {
-        "module": "Module 05",
-        "title": "Scaling to Agency",
-        "lessons": 4
-      }
-    ],
-    "tags": [
-      "bestseller",
-      "popular",
-      "placement",
-      "trending"
-    ],
-    "featured": true,
-    "title": "Freelancing Mastery",
-    "description": "Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-    "projects": 10,
-    "category": "Career & Freelancing Academy",
-    "status": "active",
-    "url": "/course-detail.html?id=freelancing-mastery",
-    "courseType": "MASTER",
-    "courseRole": "Career/Monetization",
-    "learningHours": 240,
-    "futureReviewStatus": "STABLE",
-    "positioning": "Universal career acceleration flagship."
+      "id": "freelancing-client-acquisition-professional",
+      "slug": "freelancing-client-acquisition-professional",
+      "academy": "Career & Freelancing Academy",
+      "academyId": "career",
+      "programLevel": "Professional Program",
+      "icon": "💼",
+      "color": "linear-gradient(135deg, #011731, #0599a8)",
+      "name": "Freelancing & Client Acquisition Professional",
+      "specialization": "Client Acquisition, Freelance Operations & Agency Growth",
+      "tagline": "Build Your Freelance Brand. Win Clients. Grow Your Business.",
+      "shortDesc": "Build Your Freelance Brand. Win Clients. Grow Your Business. Learn how to position professional skills, research client opportunities, develop service packages, create credible portfolios, acquire and qualify clients, write proposals, conduct discovery calls, negotiate projects, manage CRM pipelines, understand freelance payments and deliver client work professionally.",
+      "fullDesc": "A comprehensive 4-month professional specialization in freelance business launch, marketplace mastery, consultative client acquisition, contract negotiation, and sustainable independent agency operations.",
+      "duration": "4 Months",
+      "durationMonths": 4,
+      "hours": 160,
+      "learningHours": 160,
+      "modules": 16,
+      "mode": "Online",
+      "level": "Professional Specialization",
+      "price": 24900,
+      "originalPrice": 24900,
+      "regularPrice": 29900,
+      "launchBatchFee": 24900,
+      "rating": 4.9,
+      "reviews": 210,
+      "students": 1350,
+      "liveProjects": 12,
+      "certificate": true,
+      "placementSupport": true,
+      "tools": [
+          "Notion",
+          "Upwork",
+          "Fiverr",
+          "LinkedIn",
+          "HubSpot CRM",
+          "ChatGPT / Claude",
+          "Google Workspace",
+          "Google Meet",
+          "Loom",
+          "Calendly",
+          "Canva / Figma",
+          "Zoho Books / Sheets",
+          "Wise / Stripe",
+          "Make / n8n"
+      ],
+      "curriculum": [
+          {
+              "module": "Module 01",
+              "title": "Freelancing Industry & Business Fundamentals",
+              "lessons": 4,
+              "hours": 8
+          },
+          {
+              "module": "Module 02",
+              "title": "Market Research, Niche Selection & Ideal Clients",
+              "lessons": 4,
+              "hours": 10
+          },
+          {
+              "module": "Module 03",
+              "title": "Service Positioning, Packaging & Offers",
+              "lessons": 4,
+              "hours": 12
+          },
+          {
+              "module": "Module 04",
+              "title": "Personal Branding, Portfolio & Professional Credibility",
+              "lessons": 4,
+              "hours": 10
+          },
+          {
+              "module": "Module 05",
+              "title": "Upwork Professional Mastery",
+              "lessons": 4,
+              "hours": 12
+          },
+          {
+              "module": "Module 06",
+              "title": "Fiverr Gig Development & Marketplace Selling",
+              "lessons": 4,
+              "hours": 10
+          },
+          {
+              "module": "Module 07",
+              "title": "LinkedIn, Authority Building & Inbound Acquisition",
+              "lessons": 4,
+              "hours": 10
+          },
+          {
+              "module": "Module 08",
+              "title": "Direct Client Acquisition & AI-Assisted CRM",
+              "lessons": 4,
+              "hours": 8
+          },
+          {
+              "module": "Module 09",
+              "title": "Business Communication & Proposal Development",
+              "lessons": 4,
+              "hours": 10
+          },
+          {
+              "module": "Module 10",
+              "title": "Discovery Calls, Consultative Selling & Negotiation",
+              "lessons": 4,
+              "hours": 10
+          },
+          {
+              "module": "Module 11",
+              "title": "Profitable Pricing & Financial Decision-Making",
+              "lessons": 4,
+              "hours": 10
+          },
+          {
+              "module": "Module 12",
+              "title": "Contracts, Payments, Compliance & Client Onboarding",
+              "lessons": 4,
+              "hours": 10
+          },
+          {
+              "module": "Module 13",
+              "title": "Professional Project Delivery & Client Management",
+              "lessons": 4,
+              "hours": 10
+          },
+          {
+              "module": "Module 14",
+              "title": "Client Retention, Upselling & Freelance Business Growth",
+              "lessons": 4,
+              "hours": 10
+          },
+          {
+              "module": "Module 15",
+              "title": "AI Business Operations, Analytics & Automation",
+              "lessons": 4,
+              "hours": 8
+          },
+          {
+              "module": "Module 16",
+              "title": "Supervised Freelance Business Launch Lab",
+              "lessons": 4,
+              "hours": 12
+          }
+      ],
+      "tags": [
+          "bestseller",
+          "popular",
+          "placement",
+          "trending"
+      ],
+      "featured": true,
+      "title": "Freelancing & Client Acquisition Professional",
+      "description": "A comprehensive 4-month professional specialization in freelance business launch, marketplace mastery, consultative client acquisition, contract negotiation, and sustainable independent agency operations.",
+      "projects": 12,
+      "category": "Career & Freelancing Academy",
+      "status": "active",
+      "url": "/course-detail.html?id=freelancing-client-acquisition-professional",
+      "courseType": "PROFESSIONAL",
+      "courseRole": "Career/Monetization",
+      "futureReviewStatus": "STABLE",
+      "positioning": "Build Your Freelance Brand. Win Clients. Grow Your Business.",
+      "academicLabel": "Business & Career Development",
+      "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
   },
   {
     "id": "career-launch",
@@ -13703,89 +13786,172 @@ const NS_ACADEMIES = [
     "name": "Career & Freelancing Academy",
     "icon": "💼",
     "color": "linear-gradient(135deg,#011731,#0599a8)",
-    "description": "Freelancing Mastery, Resume Building, LinkedIn Optimisation, Proposals & Agency Building.",
+    "description": "Freelancing & Client Acquisition Professional, Resume Building, LinkedIn Optimisation, Proposals & Agency Building.",
     "status": "active",
     "courses": [
       {
-        "id": "freelancing-mastery",
-        "slug": "freelancing-mastery",
-        "academy": "Career & Freelancing Academy",
-        "academyId": "career",
-        "programLevel": "Career Program",
-        "icon": "💼",
-        "color": "linear-gradient(135deg, #011731, #0599a8)",
-        "name": "Freelancing Mastery",
-        "shortDesc": "Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-        "fullDesc": "Universal career acceleration flagship. Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-        "duration": "6 Months",
-        "durationMonths": 6,
-        "mode": "Online",
-        "level": "Beginner",
-        "price": 18999,
-        "originalPrice": 49999,
-        "rating": 4.9,
-        "reviews": 210,
-        "students": 1350,
-        "liveProjects": 10,
-        "certificate": true,
-        "placementSupport": true,
-        "tools": [
-          "LinkedIn",
-          "Upwork",
-          "Fiverr",
-          "Notion",
-          "ChatGPT / Claude for Proposals",
-          "Loom",
-          "Stripe / Wise",
-          "Calendly",
-          "Canva",
-          "Bonsai / PandaDoc"
-        ],
-        "curriculum": [
-          {
-            "module": "Module 01",
-            "title": "Niche Selection & Service Packaging",
-            "lessons": 4
-          },
-          {
-            "module": "Module 02",
-            "title": "Client Acquisition & Platform Optimization",
-            "lessons": 4
-          },
-          {
-            "module": "Module 03",
-            "title": "Proposals, Pitching & Negotiation",
-            "lessons": 4
-          },
-          {
-            "module": "Module 04",
-            "title": "Operations, Delivery & Retention",
-            "lessons": 4
-          },
-          {
-            "module": "Module 05",
-            "title": "Scaling to Agency",
-            "lessons": 4
-          }
-        ],
-        "tags": [
-          "bestseller",
-          "popular",
-          "placement",
-          "trending"
-        ],
-        "featured": true,
-        "title": "Freelancing Mastery",
-        "description": "Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-        "projects": 10,
-        "category": "Career & Freelancing Academy",
-        "status": "active",
-        "url": "/course-detail.html?id=freelancing-mastery",
-        "courseType": "MASTER",
-        "courseRole": "Career/Monetization",
-        "learningHours": 240,
-        "futureReviewStatus": "STABLE",
-        "positioning": "Universal career acceleration flagship."
+            "id": "freelancing-client-acquisition-professional",
+            "slug": "freelancing-client-acquisition-professional",
+            "academy": "Career & Freelancing Academy",
+            "academyId": "career",
+            "programLevel": "Professional Program",
+            "icon": "💼",
+            "color": "linear-gradient(135deg, #011731, #0599a8)",
+            "name": "Freelancing & Client Acquisition Professional",
+            "specialization": "Client Acquisition, Freelance Operations & Agency Growth",
+            "tagline": "Build Your Freelance Brand. Win Clients. Grow Your Business.",
+            "shortDesc": "Build Your Freelance Brand. Win Clients. Grow Your Business. Learn how to position professional skills, research client opportunities, develop service packages, create credible portfolios, acquire and qualify clients, write proposals, conduct discovery calls, negotiate projects, manage CRM pipelines, understand freelance payments and deliver client work professionally.",
+            "fullDesc": "A comprehensive 4-month professional specialization in freelance business launch, marketplace mastery, consultative client acquisition, contract negotiation, and sustainable independent agency operations.",
+            "duration": "4 Months",
+            "durationMonths": 4,
+            "hours": 160,
+            "learningHours": 160,
+            "modules": 16,
+            "mode": "Online",
+            "level": "Professional Specialization",
+            "price": 24900,
+            "originalPrice": 24900,
+            "regularPrice": 29900,
+            "launchBatchFee": 24900,
+            "rating": 4.9,
+            "reviews": 210,
+            "students": 1350,
+            "liveProjects": 12,
+            "certificate": true,
+            "placementSupport": true,
+            "tools": [
+                  "Notion",
+                  "Upwork",
+                  "Fiverr",
+                  "LinkedIn",
+                  "HubSpot CRM",
+                  "ChatGPT / Claude",
+                  "Google Workspace",
+                  "Google Meet",
+                  "Loom",
+                  "Calendly",
+                  "Canva / Figma",
+                  "Zoho Books / Sheets",
+                  "Wise / Stripe",
+                  "Make / n8n"
+            ],
+            "curriculum": [
+                  {
+                        "module": "Module 01",
+                        "title": "Freelancing Industry & Business Fundamentals",
+                        "lessons": 4,
+                        "hours": 8
+                  },
+                  {
+                        "module": "Module 02",
+                        "title": "Market Research, Niche Selection & Ideal Clients",
+                        "lessons": 4,
+                        "hours": 10
+                  },
+                  {
+                        "module": "Module 03",
+                        "title": "Service Positioning, Packaging & Offers",
+                        "lessons": 4,
+                        "hours": 12
+                  },
+                  {
+                        "module": "Module 04",
+                        "title": "Personal Branding, Portfolio & Professional Credibility",
+                        "lessons": 4,
+                        "hours": 10
+                  },
+                  {
+                        "module": "Module 05",
+                        "title": "Upwork Professional Mastery",
+                        "lessons": 4,
+                        "hours": 12
+                  },
+                  {
+                        "module": "Module 06",
+                        "title": "Fiverr Gig Development & Marketplace Selling",
+                        "lessons": 4,
+                        "hours": 10
+                  },
+                  {
+                        "module": "Module 07",
+                        "title": "LinkedIn, Authority Building & Inbound Acquisition",
+                        "lessons": 4,
+                        "hours": 10
+                  },
+                  {
+                        "module": "Module 08",
+                        "title": "Direct Client Acquisition & AI-Assisted CRM",
+                        "lessons": 4,
+                        "hours": 8
+                  },
+                  {
+                        "module": "Module 09",
+                        "title": "Business Communication & Proposal Development",
+                        "lessons": 4,
+                        "hours": 10
+                  },
+                  {
+                        "module": "Module 10",
+                        "title": "Discovery Calls, Consultative Selling & Negotiation",
+                        "lessons": 4,
+                        "hours": 10
+                  },
+                  {
+                        "module": "Module 11",
+                        "title": "Profitable Pricing & Financial Decision-Making",
+                        "lessons": 4,
+                        "hours": 10
+                  },
+                  {
+                        "module": "Module 12",
+                        "title": "Contracts, Payments, Compliance & Client Onboarding",
+                        "lessons": 4,
+                        "hours": 10
+                  },
+                  {
+                        "module": "Module 13",
+                        "title": "Professional Project Delivery & Client Management",
+                        "lessons": 4,
+                        "hours": 10
+                  },
+                  {
+                        "module": "Module 14",
+                        "title": "Client Retention, Upselling & Freelance Business Growth",
+                        "lessons": 4,
+                        "hours": 10
+                  },
+                  {
+                        "module": "Module 15",
+                        "title": "AI Business Operations, Analytics & Automation",
+                        "lessons": 4,
+                        "hours": 8
+                  },
+                  {
+                        "module": "Module 16",
+                        "title": "Supervised Freelance Business Launch Lab",
+                        "lessons": 4,
+                        "hours": 12
+                  }
+            ],
+            "tags": [
+                  "bestseller",
+                  "popular",
+                  "placement",
+                  "trending"
+            ],
+            "featured": true,
+            "title": "Freelancing & Client Acquisition Professional",
+            "description": "A comprehensive 4-month professional specialization in freelance business launch, marketplace mastery, consultative client acquisition, contract negotiation, and sustainable independent agency operations.",
+            "projects": 12,
+            "category": "Career & Freelancing Academy",
+            "status": "active",
+            "url": "/course-detail.html?id=freelancing-client-acquisition-professional",
+            "courseType": "PROFESSIONAL",
+            "courseRole": "Career/Monetization",
+            "futureReviewStatus": "STABLE",
+            "positioning": "Build Your Freelance Brand. Win Clients. Grow Your Business.",
+            "academicLabel": "Business & Career Development",
+            "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
       },
       {
         "id": "career-launch",
