@@ -83,7 +83,10 @@ const COURSE_ALIASES = {
   'prompt-engineering-mastery': 'prompt-engineering',
   'freelance-agency-master': 'agency-building',
   'freelance-agency-mastery': 'agency-building',
-  'freelance-mastery': 'freelancing-mastery',
+  'freelance-mastery': 'freelancing-client-acquisition-professional',
+  'freelancing-mastery': 'freelancing-client-acquisition-professional',
+  'career-launch': 'career-launch-placement-readiness-professional',
+  'career-launch-program': 'career-launch-placement-readiness-professional',
   'motion-mastery': 'ai-integrated-video-editing-motion-graphics-professional',
   'ai-video-pro': 'generative-ai-video-production-professional'
 };

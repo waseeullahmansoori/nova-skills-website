@@ -5466,65 +5466,147 @@ const NS_COURSES = [
     "positioning": "Leading edge 2026 specialization in 3D architecture."
   },
   {
-    "id": "freelancing-mastery",
-    "slug": "freelancing-mastery",
+    "id": "freelancing-client-acquisition-professional",
+    "slug": "freelancing-client-acquisition-professional",
     "academy": "Career & Freelancing Academy",
     "academyId": "career",
-    "programLevel": "Career Program",
+    "programLevel": "Professional Program",
     "icon": "💼",
     "color": "linear-gradient(135deg, #011731, #0599a8)",
-    "name": "Freelancing Mastery",
-    "shortDesc": "Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-    "fullDesc": "Universal career acceleration flagship. Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-    "duration": "6 Months",
-    "durationMonths": 6,
+    "name": "Freelancing & Client Acquisition Professional",
+    "specialization": "Client Acquisition, Freelance Operations & Agency Growth",
+    "tagline": "Build Your Freelance Brand. Win Clients. Grow Your Business.",
+    "shortDesc": "Build Your Freelance Brand. Win Clients. Grow Your Business. Learn how to position professional skills, research client opportunities, develop service packages, create credible portfolios, acquire and qualify clients, write proposals, conduct discovery calls, negotiate projects, manage CRM pipelines, understand freelance payments and deliver client work professionally.",
+    "fullDesc": "A comprehensive 4-month professional specialization in freelance business launch, marketplace mastery, consultative client acquisition, contract negotiation, and sustainable independent agency operations.",
+    "duration": "4 Months",
+    "durationMonths": 4,
+    "hours": 160,
+    "learningHours": 160,
+    "modules": 16,
     "mode": "Online",
-    "level": "Beginner",
-    "price": 18999,
-    "originalPrice": 49999,
+    "level": "Professional Specialization",
+    "price": 24900,
+    "originalPrice": 24900,
+    "regularPrice": 29900,
+    "launchBatchFee": 24900,
     "rating": 4.9,
     "reviews": 210,
     "students": 1350,
-    "liveProjects": 3,
+    "liveProjects": 12,
     "certificate": true,
     "placementSupport": true,
     "tools": [
-      "LinkedIn",
+      "Notion",
       "Upwork",
       "Fiverr",
-      "Notion",
-      "ChatGPT / Claude for Proposals",
+      "LinkedIn",
+      "HubSpot CRM",
+      "ChatGPT / Claude",
+      "Google Workspace",
+      "Google Meet",
       "Loom",
-      "Stripe / Wise",
       "Calendly",
-      "Canva",
-      "Bonsai / PandaDoc"
+      "Canva / Figma",
+      "Zoho Books / Sheets",
+      "Wise / Stripe",
+      "Make / n8n"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Niche Selection & Service Packaging",
-        "lessons": 4
+        "title": "Freelancing Industry & Business Fundamentals",
+        "lessons": 4,
+        "hours": 8
       },
       {
         "module": "Module 02",
-        "title": "Client Acquisition & Platform Optimization",
-        "lessons": 4
+        "title": "Market Research, Niche Selection & Ideal Clients",
+        "lessons": 4,
+        "hours": 10
       },
       {
         "module": "Module 03",
-        "title": "Proposals, Pitching & Negotiation",
-        "lessons": 4
+        "title": "Service Positioning, Packaging & Offers",
+        "lessons": 4,
+        "hours": 12
       },
       {
         "module": "Module 04",
-        "title": "Operations, Delivery & Retention",
-        "lessons": 4
+        "title": "Personal Branding, Portfolio & Professional Credibility",
+        "lessons": 4,
+        "hours": 10
       },
       {
         "module": "Module 05",
-        "title": "Scaling to Agency",
-        "lessons": 4
+        "title": "Upwork Professional Mastery",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 06",
+        "title": "Fiverr Gig Development & Marketplace Selling",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 07",
+        "title": "LinkedIn, Authority Building & Inbound Acquisition",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 08",
+        "title": "Direct Client Acquisition & AI-Assisted CRM",
+        "lessons": 4,
+        "hours": 8
+      },
+      {
+        "module": "Module 09",
+        "title": "Business Communication & Proposal Development",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 10",
+        "title": "Discovery Calls, Consultative Selling & Negotiation",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 11",
+        "title": "Profitable Pricing & Financial Decision-Making",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 12",
+        "title": "Contracts, Payments, Compliance & Client Onboarding",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 13",
+        "title": "Professional Project Delivery & Client Management",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 14",
+        "title": "Client Retention, Upselling & Freelance Business Growth",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 15",
+        "title": "AI Business Operations, Analytics & Automation",
+        "lessons": 4,
+        "hours": 8
+      },
+      {
+        "module": "Module 16",
+        "title": "Supervised Freelance Business Launch Lab",
+        "lessons": 4,
+        "hours": 12
       }
     ],
     "tags": [
@@ -5534,91 +5616,158 @@ const NS_COURSES = [
       "trending"
     ],
     "featured": true,
-    "title": "Freelancing Mastery",
-    "description": "Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-    "projects": 10,
+    "title": "Freelancing & Client Acquisition Professional",
+    "description": "A comprehensive 4-month professional specialization in freelance business launch, marketplace mastery, consultative client acquisition, contract negotiation, and sustainable independent agency operations.",
+    "projects": 12,
     "category": "Career & Freelancing Academy",
     "status": "active",
-    "url": "/course-detail.html?id=freelancing-mastery",
-    "courseType": "MASTER",
+    "url": "/course-detail.html?id=freelancing-client-acquisition-professional",
+    "courseType": "PROFESSIONAL",
     "courseRole": "Career/Monetization",
-    "learningHours": 240,
     "futureReviewStatus": "STABLE",
-    "positioning": "Universal career acceleration flagship."
+    "positioning": "Build Your Freelance Brand. Win Clients. Grow Your Business.",
+    "academicLabel": "Business & Career Development",
+    "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
   },
   {
-    "id": "career-launch",
-    "slug": "career-launch-program",
+    "id": "career-launch-placement-readiness-professional",
+    "slug": "career-launch-placement-readiness-professional",
     "academy": "Career & Freelancing Academy",
     "academyId": "career",
-    "programLevel": "Professional Program",
+    "programLevel": "Career Specialization",
     "icon": "💼",
-    "color": "linear-gradient(135deg, #011731, #75d766)",
-    "name": "Career Launch Program",
-    "shortDesc": "Resume Building, LinkedIn Optimisation, Portfolio, Interview Prep & Job Search strategy.",
-    "fullDesc": "3-month employment readiness standalone. Resume Building, LinkedIn Optimisation, Portfolio, Interview Prep & Job Search strategy.",
+    "color": "linear-gradient(135deg, #011731, #0599a8)",
+    "name": "Career Launch & Placement Readiness Professional",
+    "specialization": "Employment Readiness, Professional Profiling & Interview Mastery",
+    "tagline": "Build Your Profile. Prove Your Skills. Get Interview-Ready.",
+    "shortDesc": "A comprehensive 3-month employment readiness and placement preparation program designed to bridge the gap between technical capability and hiring success.",
+    "fullDesc": "Develop the skills and professional evidence needed to navigate modern recruitment processes. From ATS-ready resumes and verified portfolios to technical interview defense and compensation negotiation, this program prepares you for competitive entry-level and junior roles across tech, creative, and business domains.",
     "duration": "3 Months",
     "durationMonths": 3,
+    "hours": 120,
+    "learningHours": 120,
+    "modules": 12,
     "mode": "Online",
-    "level": "Beginner",
-    "price": 9099,
-    "originalPrice": 24999,
-    "rating": 4.8,
-    "reviews": 176,
-    "students": 1240,
-    "liveProjects": 2,
+    "level": "Career Specialization",
+    "price": 14900,
+    "originalPrice": 14900,
+    "regularPrice": 19900,
+    "launchBatchFee": 14900,
+    "rating": 4.9,
+    "reviews": 185,
+    "students": 1420,
+    "liveProjects": 14,
     "certificate": true,
     "placementSupport": true,
     "tools": [
-      "LinkedIn",
-      "Upwork",
-      "Fiverr",
-      "Notion",
-      "ChatGPT / Claude for Proposals",
+      "LinkedIn / LinkedIn Jobs",
+      "Naukri.com",
+      "Indeed / National Career Service",
+      "Company Career Portals",
+      "Google Docs",
+      "Microsoft Word",
+      "Google Workspace",
+      "LinkedIn Job Tracker / Sheets",
+      "ChatGPT",
+      "Claude / Gemini",
+      "GitHub / Behance / Figma",
+      "Google Meet / Zoom",
       "Loom",
-      "Stripe / Wise",
-      "Calendly",
-      "Canva",
-      "Bonsai / PandaDoc"
+      "Canva / Notion"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Professional Branding & Resume Building",
-        "lessons": 4
+        "title": "Career Discovery & Job-Market Intelligence",
+        "lessons": 4,
+        "hours": 10
       },
       {
         "module": "Module 02",
-        "title": "LinkedIn Optimization & Networking",
-        "lessons": 4
+        "title": "Skills-Gap Assessment & Individual Career Roadmap",
+        "lessons": 4,
+        "hours": 8
       },
       {
         "module": "Module 03",
-        "title": "Interview Mastery",
-        "lessons": 4
+        "title": "ATS-Compatible Resumes & Professional Applications",
+        "lessons": 4,
+        "hours": 12
       },
       {
         "module": "Module 04",
-        "title": "Offer Evaluation & Negotiation",
-        "lessons": 4
+        "title": "LinkedIn & Professional Personal Branding",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 05",
+        "title": "Industry Portfolio & Project Case-Study Development",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 06",
+        "title": "Job Search Strategy, Applications & Networking",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 07",
+        "title": "Business Communication & Behavioral Interview Preparation",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 08",
+        "title": "Recruitment Screening & Aptitude Fundamentals",
+        "lessons": 4,
+        "hours": 8
+      },
+      {
+        "module": "Module 09",
+        "title": "Industry-Specific Technical & Creative Assessments",
+        "lessons": 4,
+        "hours": 16
+      },
+      {
+        "module": "Module 10",
+        "title": "Advanced Interviews, Portfolio Defense & AI Coaching",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 11",
+        "title": "Salary Negotiation, Employment Offers & Workplace Readiness",
+        "lessons": 4,
+        "hours": 8
+      },
+      {
+        "module": "Module 12",
+        "title": "Career Launch & Final Placement Readiness Lab",
+        "lessons": 4,
+        "hours": 6
       }
     ],
     "tags": [
       "popular",
-      "placement"
+      "placement",
+      "career",
+      "bestseller"
     ],
-    "featured": false,
-    "title": "Career Launch Program",
-    "description": "Resume Building, LinkedIn Optimisation, Portfolio, Interview Prep & Job Search strategy.",
-    "projects": 6,
+    "featured": true,
+    "title": "Career Launch & Placement Readiness Professional",
+    "description": "A comprehensive 3-month employment readiness and placement preparation program designed to bridge the gap between technical capability and hiring success.",
+    "projects": 14,
     "category": "Career & Freelancing Academy",
     "status": "active",
-    "url": "/course-detail.html?id=career-launch",
+    "url": "/course-detail.html?id=career-launch-placement-readiness-professional",
     "courseType": "PROFESSIONAL",
     "courseRole": "Career/Monetization",
-    "learningHours": 120,
     "futureReviewStatus": "STABLE",
-    "positioning": "3-month employment readiness standalone."
+    "positioning": "Leading 2026 specialization in career launch and placement readiness.",
+    "academicLabel": "Business & Career Development",
+    "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
   },
   {
     "id": "resume-building",
@@ -6168,148 +6317,321 @@ const NS_COURSES = [
     "slug": "business-english-personality-development",
     "academy": "Communication Academy",
     "academyId": "communication",
-    "programLevel": "Career Program",
+    "programLevel": "Career Mastery",
     "icon": "💬",
     "color": "linear-gradient(135deg, #75d766, #011731)",
     "name": "Business English & Personality Development",
-    "shortDesc": "Spoken English, Business Writing, Public Speaking, Executive Presence & Soft Skills.",
-    "fullDesc": "Upgrade to Global Corporate Influence & Executive Storytelling. Spoken English, Business Writing, Public Speaking, Executive Presence & Soft Skills.",
+    "specialization": "Executive Communication, Fluency & Professional Presence",
+    "tagline": "Speak with Confidence. Communicate with Impact. Grow Professionally.",
+    "shortDesc": "Develop practical English fluency, professional communication, confidence, business writing, public speaking, interpersonal effectiveness and leadership communication through instructor-led speaking labs, real-world simulations, AI-assisted practice and individual feedback.",
+    "fullDesc": "Upgrade to executive presence and global business communication. Develop practical English fluency, business writing, presentation storytelling, interpersonal listening, and cross-cultural leadership through intensive speaking labs and individual coaching.",
     "duration": "6 Months",
     "durationMonths": 6,
+    "hours": 144,
+    "learningHours": 144,
     "mode": "Hybrid",
-    "level": "Beginner",
-    "price": 14999,
-    "originalPrice": 39999,
+    "level": "Career Mastery",
+    "price": 29900,
+    "originalPrice": 29900,
+    "regularPrice": 29900,
+    "launchBatchFee": 29900,
     "rating": 4.9,
-    "reviews": 240,
-    "students": 1480,
-    "liveProjects": 3,
+    "reviews": 195,
+    "students": 1320,
+    "liveProjects": 15,
     "certificate": true,
     "placementSupport": true,
     "tools": [
-      "Zoom/Teams",
+      "ChatGPT Voice",
       "Grammarly / LanguageTool",
-      "ChatGPT / Claude for Communication Modeling",
+      "ELSA Speak",
+      "Cambridge Speak & Improve",
+      "Microsoft Teams / Zoom",
+      "Google Docs / Microsoft Word",
+      "Microsoft PowerPoint",
+      "Google Slides / Canva",
+      "Smartphone / Computer Audio Recorder",
       "Loom",
-      "Google Docs",
-      "PowerPoint / Canva for Pitch Visuals",
-      "Otter.ai / Fireflies"
+      "Google Sheets / LMS",
+      "Google Workspace",
+      "Approved Transcription Tools (Otter.ai / Whisper)",
+      "AI Meeting Assistance (Teams / Copilot)"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Foundations of Professional English",
-        "lessons": 4
+        "title": "English Proficiency Assessment & Personal Development Plan",
+        "lessons": 4,
+        "hours": 4
       },
       {
         "module": "Module 02",
-        "title": "Effective Written Communication",
-        "lessons": 4
+        "title": "Functional English Grammar & Vocabulary",
+        "lessons": 6,
+        "hours": 8
       },
       {
         "module": "Module 03",
-        "title": "Meetings and Spoken English",
-        "lessons": 4
+        "title": "Pronunciation, Voice Clarity & Listening Foundations",
+        "lessons": 6,
+        "hours": 6
       },
       {
         "module": "Module 04",
-        "title": "Presentations and Negotiations",
-        "lessons": 4
+        "title": "Everyday Conversation & Confidence Building",
+        "lessons": 6,
+        "hours": 6
       },
       {
         "module": "Module 05",
-        "title": "Personality Development & Cross-Cultural Communication",
-        "lessons": 4
+        "title": "Conversational Fluency & Spontaneous Speaking",
+        "lessons": 6,
+        "hours": 8
+      },
+      {
+        "module": "Module 06",
+        "title": "Professional Vocabulary & Workplace Situations",
+        "lessons": 6,
+        "hours": 6
+      },
+      {
+        "module": "Module 07",
+        "title": "Active Listening & Interpersonal Communication",
+        "lessons": 6,
+        "hours": 6
+      },
+      {
+        "module": "Module 08",
+        "title": "Networking, Small Talk & Social Confidence",
+        "lessons": 6,
+        "hours": 4
+      },
+      {
+        "module": "Module 09",
+        "title": "Professional Business Writing",
+        "lessons": 7,
+        "hours": 10
+      },
+      {
+        "module": "Module 10",
+        "title": "Meetings, Discussions & Collaborative Communication",
+        "lessons": 7,
+        "hours": 8
+      },
+      {
+        "module": "Module 11",
+        "title": "Remote Communication & Client Interaction",
+        "lessons": 7,
+        "hours": 6
+      },
+      {
+        "module": "Module 12",
+        "title": "Professional Presentations & Business Storytelling",
+        "lessons": 7,
+        "hours": 10
+      },
+      {
+        "module": "Module 13",
+        "title": "Public Speaking & Impromptu Communication",
+        "lessons": 7,
+        "hours": 8
+      },
+      {
+        "module": "Module 14",
+        "title": "Persuasion, Negotiation & Influential Communication",
+        "lessons": 7,
+        "hours": 6
+      },
+      {
+        "module": "Module 15",
+        "title": "Professional Presence, Confidence & Emotional Intelligence",
+        "lessons": 7,
+        "hours": 8
+      },
+      {
+        "module": "Module 16",
+        "title": "Feedback, Conflict Resolution & Difficult Conversations",
+        "lessons": 7,
+        "hours": 8
+      },
+      {
+        "module": "Module 17",
+        "title": "Teamwork, Leadership & Cross-Cultural Communication",
+        "lessons": 7,
+        "hours": 8
+      },
+      {
+        "module": "Module 18",
+        "title": "Industry-Specific Business Communication",
+        "lessons": 7,
+        "hours": 8
+      },
+      {
+        "module": "Module 19",
+        "title": "AI-Assisted Communication Practice & Professional Digital Skills",
+        "lessons": 6,
+        "hours": 4
+      },
+      {
+        "module": "Module 20",
+        "title": "Industry Capstone & Final Communication Assessment",
+        "lessons": 7,
+        "hours": 12
       }
     ],
     "tags": [
       "bestseller",
       "popular",
-      "placement"
+      "placement",
+      "communication"
     ],
     "featured": true,
     "title": "Business English & Personality Development",
-    "description": "Spoken English, Business Writing, Public Speaking, Executive Presence & Soft Skills.",
-    "projects": 12,
+    "description": "Develop practical English fluency, professional communication, confidence, business writing, public speaking, interpersonal effectiveness and leadership communication through instructor-led speaking labs, real-world simulations, AI-assisted practice and individual feedback.",
+    "projects": 15,
     "category": "Communication Academy",
     "status": "active",
     "url": "/course-detail.html?id=business-english",
     "courseType": "MASTER",
     "courseRole": "Career/Monetization",
-    "learningHours": 240,
     "futureReviewStatus": "STABLE",
-    "positioning": "Upgrade to Global Corporate Influence & Executive Storytelling."
+    "positioning": "Speak with Confidence. Communicate with Impact. Grow Professionally.",
+    "academicLabel": "Business Communication & Executive Presence",
+    "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
   },
   {
     "id": "spoken-english-pro",
     "slug": "professional-spoken-english",
     "academy": "Communication Academy",
     "academyId": "communication",
-    "programLevel": "Professional Program",
+    "programLevel": "Professional Foundation",
     "icon": "💬",
     "color": "linear-gradient(135deg, #75d766, #0599a8)",
     "name": "Professional Spoken English",
-    "shortDesc": "Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
-    "fullDesc": "Core 3-month spoken fluency track. Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
+    "specialization": "Practical Spoken Fluency & Interactive Communication",
+    "tagline": "Speak English Clearly. Communicate Confidently. Express Yourself Professionally.",
+    "shortDesc": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice.",
+    "fullDesc": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice. Students develop communication skills through interactive instructor-led labs, recorded assessments, conversation exercises and individual feedback.",
     "duration": "3 Months",
     "durationMonths": 3,
-    "mode": "Online",
-    "level": "Beginner",
-    "price": 8999,
-    "originalPrice": 22999,
+    "hours": 90,
+    "learningHours": 90,
+    "mode": "Interactive Speaking Labs & Live Practice",
+    "level": "Professional Foundation",
+    "price": 12900,
+    "originalPrice": 12900,
+    "regularPrice": 12900,
+    "launchBatchFee": 12900,
     "rating": 4.8,
     "reviews": 190,
     "students": 1150,
-    "liveProjects": 2,
+    "liveProjects": 15,
     "certificate": true,
-    "placementSupport": true,
+    "placementSupport": false,
     "tools": [
-      "Zoom/Teams",
+      "ChatGPT Voice",
+      "British Council LearnEnglish",
+      "Cambridge Dictionary",
+      "Smartphone / PC Voice Recorder",
+      "Google Sheets / Approved LMS",
+      "Cambridge Speak & Improve",
+      "ELSA Speak",
+      "Approved Transcription Tools",
       "Grammarly / LanguageTool",
-      "ChatGPT / Claude for Communication Modeling",
-      "Loom",
-      "Google Docs",
-      "PowerPoint / Canva for Pitch Visuals",
-      "Otter.ai / Fireflies"
+      "Google Meet / Zoom / Teams"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Pronunciation & Phonetics",
-        "lessons": 4
+        "title": "English Assessment & Personal Speaking Roadmap",
+        "lessons": 4,
+        "hours": 4
       },
       {
         "module": "Module 02",
-        "title": "Fluency Building",
-        "lessons": 4
+        "title": "Functional Grammar & Sentence Construction",
+        "lessons": 8,
+        "hours": 10
       },
       {
         "module": "Module 03",
-        "title": "Conversational English & Small Talk",
-        "lessons": 4
+        "title": "Pronunciation, Speech Clarity & Voice Control",
+        "lessons": 6,
+        "hours": 8
       },
       {
         "module": "Module 04",
-        "title": "Interview English",
-        "lessons": 4
+        "title": "Everyday Vocabulary & Listening Comprehension",
+        "lessons": 6,
+        "hours": 8
+      },
+      {
+        "module": "Module 05",
+        "title": "Conversational Fluency & Spontaneous Speaking",
+        "lessons": 6,
+        "hours": 10
+      },
+      {
+        "module": "Module 06",
+        "title": "Everyday Conversations & Social Communication",
+        "lessons": 6,
+        "hours": 8
+      },
+      {
+        "module": "Module 07",
+        "title": "Listening Accuracy & Real-Time Response Skills",
+        "lessons": 4,
+        "hours": 6
+      },
+      {
+        "module": "Module 08",
+        "title": "AI-Assisted Conversation & Personalized Speaking Practice",
+        "lessons": 4,
+        "hours": 6
+      },
+      {
+        "module": "Module 09",
+        "title": "Workplace English & Professional Conversations",
+        "lessons": 6,
+        "hours": 9
+      },
+      {
+        "module": "Module 10",
+        "title": "Interview English & Professional Self-Introduction",
+        "lessons": 6,
+        "hours": 7
+      },
+      {
+        "module": "Module 11",
+        "title": "Public Speaking & Short Presentation Skills",
+        "lessons": 6,
+        "hours": 8
+      },
+      {
+        "module": "Module 12",
+        "title": "Final Spoken English Assessment & Communication Capstone",
+        "lessons": 6,
+        "hours": 6
       }
     ],
     "tags": [
       "popular",
-      "placement"
+      "spoken-english",
+      "communication"
     ],
-    "featured": false,
+    "featured": true,
     "title": "Professional Spoken English",
-    "description": "Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
-    "projects": 8,
+    "description": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice.",
+    "projects": 15,
     "category": "Communication Academy",
     "status": "active",
     "url": "/course-detail.html?id=spoken-english-pro",
     "courseType": "PROFESSIONAL",
-    "courseRole": "Professional Skill",
-    "learningHours": 120,
+    "courseRole": "Professional Foundation",
     "futureReviewStatus": "STABLE",
-    "positioning": "Core 3-month spoken fluency track."
+    "positioning": "Speak English Clearly. Communicate Confidently. Express Yourself Professionally.",
+    "academicLabel": "Practical Spoken Fluency & Interactive Communication",
+    "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
   },
   {
     "id": "spoken-english-cert",
@@ -12794,8 +13116,8 @@ const NS_ACADEMIES = [
         "icon": "🏗️",
         "color": "linear-gradient(135deg, #10B981, #2563EB)",
         "name": "3D Visualisation Professional",
-    "specialization": "Product Visualization, 3D Advertising & Animation",
-    "tagline": "Create Professional 3D Product Visuals and Animations for Modern Brands.",
+        "specialization": "Product Visualization, 3D Advertising & Animation",
+        "tagline": "Create Professional 3D Product Visuals and Animations for Modern Brands.",
         "shortDesc": "Create Professional 3D Product Visuals and Animations for Modern Brands. A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production.",
         "fullDesc": "A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production.",
         "duration": "5 Months",
@@ -13362,65 +13684,147 @@ const NS_ACADEMIES = [
     "status": "active",
     "courses": [
       {
-        "id": "freelancing-mastery",
-        "slug": "freelancing-mastery",
+        "id": "freelancing-client-acquisition-professional",
+        "slug": "freelancing-client-acquisition-professional",
         "academy": "Career & Freelancing Academy",
         "academyId": "career",
-        "programLevel": "Career Program",
+        "programLevel": "Professional Program",
         "icon": "💼",
         "color": "linear-gradient(135deg, #011731, #0599a8)",
-        "name": "Freelancing Mastery",
-        "shortDesc": "Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-        "fullDesc": "Universal career acceleration flagship. Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-        "duration": "6 Months",
-        "durationMonths": 6,
+        "name": "Freelancing & Client Acquisition Professional",
+        "specialization": "Client Acquisition, Freelance Operations & Agency Growth",
+        "tagline": "Build Your Freelance Brand. Win Clients. Grow Your Business.",
+        "shortDesc": "Build Your Freelance Brand. Win Clients. Grow Your Business. Learn how to position professional skills, research client opportunities, develop service packages, create credible portfolios, acquire and qualify clients, write proposals, conduct discovery calls, negotiate projects, manage CRM pipelines, understand freelance payments and deliver client work professionally.",
+        "fullDesc": "A comprehensive 4-month professional specialization in freelance business launch, marketplace mastery, consultative client acquisition, contract negotiation, and sustainable independent agency operations.",
+        "duration": "4 Months",
+        "durationMonths": 4,
+        "hours": 160,
+        "learningHours": 160,
+        "modules": 16,
         "mode": "Online",
-        "level": "Beginner",
-        "price": 18999,
-        "originalPrice": 49999,
+        "level": "Professional Specialization",
+        "price": 24900,
+        "originalPrice": 24900,
+        "regularPrice": 29900,
+        "launchBatchFee": 24900,
         "rating": 4.9,
         "reviews": 210,
         "students": 1350,
-        "liveProjects": 10,
+        "liveProjects": 12,
         "certificate": true,
         "placementSupport": true,
         "tools": [
-          "LinkedIn",
+          "Notion",
           "Upwork",
           "Fiverr",
-          "Notion",
-          "ChatGPT / Claude for Proposals",
+          "LinkedIn",
+          "HubSpot CRM",
+          "ChatGPT / Claude",
+          "Google Workspace",
+          "Google Meet",
           "Loom",
-          "Stripe / Wise",
           "Calendly",
-          "Canva",
-          "Bonsai / PandaDoc"
+          "Canva / Figma",
+          "Zoho Books / Sheets",
+          "Wise / Stripe",
+          "Make / n8n"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Niche Selection & Service Packaging",
-            "lessons": 4
+            "title": "Freelancing Industry & Business Fundamentals",
+            "lessons": 4,
+            "hours": 8
           },
           {
             "module": "Module 02",
-            "title": "Client Acquisition & Platform Optimization",
-            "lessons": 4
+            "title": "Market Research, Niche Selection & Ideal Clients",
+            "lessons": 4,
+            "hours": 10
           },
           {
             "module": "Module 03",
-            "title": "Proposals, Pitching & Negotiation",
-            "lessons": 4
+            "title": "Service Positioning, Packaging & Offers",
+            "lessons": 4,
+            "hours": 12
           },
           {
             "module": "Module 04",
-            "title": "Operations, Delivery & Retention",
-            "lessons": 4
+            "title": "Personal Branding, Portfolio & Professional Credibility",
+            "lessons": 4,
+            "hours": 10
           },
           {
             "module": "Module 05",
-            "title": "Scaling to Agency",
-            "lessons": 4
+            "title": "Upwork Professional Mastery",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 06",
+            "title": "Fiverr Gig Development & Marketplace Selling",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 07",
+            "title": "LinkedIn, Authority Building & Inbound Acquisition",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 08",
+            "title": "Direct Client Acquisition & AI-Assisted CRM",
+            "lessons": 4,
+            "hours": 8
+          },
+          {
+            "module": "Module 09",
+            "title": "Business Communication & Proposal Development",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 10",
+            "title": "Discovery Calls, Consultative Selling & Negotiation",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 11",
+            "title": "Profitable Pricing & Financial Decision-Making",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 12",
+            "title": "Contracts, Payments, Compliance & Client Onboarding",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 13",
+            "title": "Professional Project Delivery & Client Management",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 14",
+            "title": "Client Retention, Upselling & Freelance Business Growth",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 15",
+            "title": "AI Business Operations, Analytics & Automation",
+            "lessons": 4,
+            "hours": 8
+          },
+          {
+            "module": "Module 16",
+            "title": "Supervised Freelance Business Launch Lab",
+            "lessons": 4,
+            "hours": 12
           }
         ],
         "tags": [
@@ -13430,91 +13834,158 @@ const NS_ACADEMIES = [
           "trending"
         ],
         "featured": true,
-        "title": "Freelancing Mastery",
-        "description": "Earn $1,000+/month on Fiverr, Upwork & direct client acquisition. Profile design, proposals & pricing.",
-        "projects": 10,
+        "title": "Freelancing & Client Acquisition Professional",
+        "description": "A comprehensive 4-month professional specialization in freelance business launch, marketplace mastery, consultative client acquisition, contract negotiation, and sustainable independent agency operations.",
+        "projects": 12,
         "category": "Career & Freelancing Academy",
         "status": "active",
-        "url": "/course-detail.html?id=freelancing-mastery",
-        "courseType": "MASTER",
+        "url": "/course-detail.html?id=freelancing-client-acquisition-professional",
+        "courseType": "PROFESSIONAL",
         "courseRole": "Career/Monetization",
-        "learningHours": 240,
         "futureReviewStatus": "STABLE",
-        "positioning": "Universal career acceleration flagship."
+        "positioning": "Build Your Freelance Brand. Win Clients. Grow Your Business.",
+        "academicLabel": "Business & Career Development",
+        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
       },
       {
-        "id": "career-launch",
-        "slug": "career-launch-program",
+        "id": "career-launch-placement-readiness-professional",
+        "slug": "career-launch-placement-readiness-professional",
         "academy": "Career & Freelancing Academy",
         "academyId": "career",
-        "programLevel": "Professional Program",
+        "programLevel": "Career Specialization",
         "icon": "💼",
-        "color": "linear-gradient(135deg, #011731, #75d766)",
-        "name": "Career Launch Program",
-        "shortDesc": "Resume Building, LinkedIn Optimisation, Portfolio, Interview Prep & Job Search strategy.",
-        "fullDesc": "3-month employment readiness standalone. Resume Building, LinkedIn Optimisation, Portfolio, Interview Prep & Job Search strategy.",
+        "color": "linear-gradient(135deg, #011731, #0599a8)",
+        "name": "Career Launch & Placement Readiness Professional",
+        "specialization": "Employment Readiness, Professional Profiling & Interview Mastery",
+        "tagline": "Build Your Profile. Prove Your Skills. Get Interview-Ready.",
+        "shortDesc": "A comprehensive 3-month employment readiness and placement preparation program designed to bridge the gap between technical capability and hiring success.",
+        "fullDesc": "Develop the skills and professional evidence needed to navigate modern recruitment processes. From ATS-ready resumes and verified portfolios to technical interview defense and compensation negotiation, this program prepares you for competitive entry-level and junior roles across tech, creative, and business domains.",
         "duration": "3 Months",
         "durationMonths": 3,
+        "hours": 120,
+        "learningHours": 120,
+        "modules": 12,
         "mode": "Online",
-        "level": "Beginner",
-        "price": 9099,
-        "originalPrice": 24999,
-        "rating": 4.8,
-        "reviews": 176,
-        "students": 1240,
-        "liveProjects": 6,
+        "level": "Career Specialization",
+        "price": 14900,
+        "originalPrice": 14900,
+        "regularPrice": 19900,
+        "launchBatchFee": 14900,
+        "rating": 4.9,
+        "reviews": 185,
+        "students": 1420,
+        "liveProjects": 14,
         "certificate": true,
         "placementSupport": true,
         "tools": [
-          "LinkedIn",
-          "Upwork",
-          "Fiverr",
-          "Notion",
-          "ChatGPT / Claude for Proposals",
+          "LinkedIn / LinkedIn Jobs",
+          "Naukri.com",
+          "Indeed / National Career Service",
+          "Company Career Portals",
+          "Google Docs",
+          "Microsoft Word",
+          "Google Workspace",
+          "LinkedIn Job Tracker / Sheets",
+          "ChatGPT",
+          "Claude / Gemini",
+          "GitHub / Behance / Figma",
+          "Google Meet / Zoom",
           "Loom",
-          "Stripe / Wise",
-          "Calendly",
-          "Canva",
-          "Bonsai / PandaDoc"
+          "Canva / Notion"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Professional Branding & Resume Building",
-            "lessons": 4
+            "title": "Career Discovery & Job-Market Intelligence",
+            "lessons": 4,
+            "hours": 10
           },
           {
             "module": "Module 02",
-            "title": "LinkedIn Optimization & Networking",
-            "lessons": 4
+            "title": "Skills-Gap Assessment & Individual Career Roadmap",
+            "lessons": 4,
+            "hours": 8
           },
           {
             "module": "Module 03",
-            "title": "Interview Mastery",
-            "lessons": 4
+            "title": "ATS-Compatible Resumes & Professional Applications",
+            "lessons": 4,
+            "hours": 12
           },
           {
             "module": "Module 04",
-            "title": "Offer Evaluation & Negotiation",
-            "lessons": 4
+            "title": "LinkedIn & Professional Personal Branding",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 05",
+            "title": "Industry Portfolio & Project Case-Study Development",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 06",
+            "title": "Job Search Strategy, Applications & Networking",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 07",
+            "title": "Business Communication & Behavioral Interview Preparation",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 08",
+            "title": "Recruitment Screening & Aptitude Fundamentals",
+            "lessons": 4,
+            "hours": 8
+          },
+          {
+            "module": "Module 09",
+            "title": "Industry-Specific Technical & Creative Assessments",
+            "lessons": 4,
+            "hours": 16
+          },
+          {
+            "module": "Module 10",
+            "title": "Advanced Interviews, Portfolio Defense & AI Coaching",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 11",
+            "title": "Salary Negotiation, Employment Offers & Workplace Readiness",
+            "lessons": 4,
+            "hours": 8
+          },
+          {
+            "module": "Module 12",
+            "title": "Career Launch & Final Placement Readiness Lab",
+            "lessons": 4,
+            "hours": 6
           }
         ],
         "tags": [
           "popular",
-          "placement"
+          "placement",
+          "career",
+          "bestseller"
         ],
-        "featured": false,
-        "title": "Career Launch Program",
-        "description": "Resume Building, LinkedIn Optimisation, Portfolio, Interview Prep & Job Search strategy.",
-        "projects": 6,
+        "featured": true,
+        "title": "Career Launch & Placement Readiness Professional",
+        "description": "A comprehensive 3-month employment readiness and placement preparation program designed to bridge the gap between technical capability and hiring success.",
+        "projects": 14,
         "category": "Career & Freelancing Academy",
         "status": "active",
-        "url": "/course-detail.html?id=career-launch",
+        "url": "/course-detail.html?id=career-launch-placement-readiness-professional",
         "courseType": "PROFESSIONAL",
         "courseRole": "Career/Monetization",
-        "learningHours": 120,
         "futureReviewStatus": "STABLE",
-        "positioning": "3-month employment readiness standalone."
+        "positioning": "Leading 2026 specialization in career launch and placement readiness.",
+        "academicLabel": "Business & Career Development",
+        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
       },
       {
         "id": "resume-building",
@@ -14075,148 +14546,321 @@ const NS_ACADEMIES = [
         "slug": "business-english-personality-development",
         "academy": "Communication Academy",
         "academyId": "communication",
-        "programLevel": "Career Program",
+        "programLevel": "Career Mastery",
         "icon": "💬",
         "color": "linear-gradient(135deg, #75d766, #011731)",
         "name": "Business English & Personality Development",
-        "shortDesc": "Spoken English, Business Writing, Public Speaking, Executive Presence & Soft Skills.",
-        "fullDesc": "Upgrade to Global Corporate Influence & Executive Storytelling. Spoken English, Business Writing, Public Speaking, Executive Presence & Soft Skills.",
+        "specialization": "Executive Communication, Fluency & Professional Presence",
+        "tagline": "Speak with Confidence. Communicate with Impact. Grow Professionally.",
+        "shortDesc": "Develop practical English fluency, professional communication, confidence, business writing, public speaking, interpersonal effectiveness and leadership communication through instructor-led speaking labs, real-world simulations, AI-assisted practice and individual feedback.",
+        "fullDesc": "Upgrade to executive presence and global business communication. Develop practical English fluency, business writing, presentation storytelling, interpersonal listening, and cross-cultural leadership through intensive speaking labs and individual coaching.",
         "duration": "6 Months",
         "durationMonths": 6,
+        "hours": 144,
+        "learningHours": 144,
         "mode": "Hybrid",
-        "level": "Beginner",
-        "price": 14999,
-        "originalPrice": 39999,
+        "level": "Career Mastery",
+        "price": 29900,
+        "originalPrice": 29900,
+        "regularPrice": 29900,
+        "launchBatchFee": 29900,
         "rating": 4.9,
-        "reviews": 240,
-        "students": 1480,
-        "liveProjects": 12,
+        "reviews": 195,
+        "students": 1320,
+        "liveProjects": 15,
         "certificate": true,
         "placementSupport": true,
         "tools": [
-          "Zoom/Teams",
+          "ChatGPT Voice",
           "Grammarly / LanguageTool",
-          "ChatGPT / Claude for Communication Modeling",
+          "ELSA Speak",
+          "Cambridge Speak & Improve",
+          "Microsoft Teams / Zoom",
+          "Google Docs / Microsoft Word",
+          "Microsoft PowerPoint",
+          "Google Slides / Canva",
+          "Smartphone / Computer Audio Recorder",
           "Loom",
-          "Google Docs",
-          "PowerPoint / Canva for Pitch Visuals",
-          "Otter.ai / Fireflies"
+          "Google Sheets / LMS",
+          "Google Workspace",
+          "Approved Transcription Tools (Otter.ai / Whisper)",
+          "AI Meeting Assistance (Teams / Copilot)"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Foundations of Professional English",
-            "lessons": 4
+            "title": "English Proficiency Assessment & Personal Development Plan",
+            "lessons": 4,
+            "hours": 4
           },
           {
             "module": "Module 02",
-            "title": "Effective Written Communication",
-            "lessons": 4
+            "title": "Functional English Grammar & Vocabulary",
+            "lessons": 6,
+            "hours": 8
           },
           {
             "module": "Module 03",
-            "title": "Meetings and Spoken English",
-            "lessons": 4
+            "title": "Pronunciation, Voice Clarity & Listening Foundations",
+            "lessons": 6,
+            "hours": 6
           },
           {
             "module": "Module 04",
-            "title": "Presentations and Negotiations",
-            "lessons": 4
+            "title": "Everyday Conversation & Confidence Building",
+            "lessons": 6,
+            "hours": 6
           },
           {
             "module": "Module 05",
-            "title": "Personality Development & Cross-Cultural Communication",
-            "lessons": 4
+            "title": "Conversational Fluency & Spontaneous Speaking",
+            "lessons": 6,
+            "hours": 8
+          },
+          {
+            "module": "Module 06",
+            "title": "Professional Vocabulary & Workplace Situations",
+            "lessons": 6,
+            "hours": 6
+          },
+          {
+            "module": "Module 07",
+            "title": "Active Listening & Interpersonal Communication",
+            "lessons": 6,
+            "hours": 6
+          },
+          {
+            "module": "Module 08",
+            "title": "Networking, Small Talk & Social Confidence",
+            "lessons": 6,
+            "hours": 4
+          },
+          {
+            "module": "Module 09",
+            "title": "Professional Business Writing",
+            "lessons": 7,
+            "hours": 10
+          },
+          {
+            "module": "Module 10",
+            "title": "Meetings, Discussions & Collaborative Communication",
+            "lessons": 7,
+            "hours": 8
+          },
+          {
+            "module": "Module 11",
+            "title": "Remote Communication & Client Interaction",
+            "lessons": 7,
+            "hours": 6
+          },
+          {
+            "module": "Module 12",
+            "title": "Professional Presentations & Business Storytelling",
+            "lessons": 7,
+            "hours": 10
+          },
+          {
+            "module": "Module 13",
+            "title": "Public Speaking & Impromptu Communication",
+            "lessons": 7,
+            "hours": 8
+          },
+          {
+            "module": "Module 14",
+            "title": "Persuasion, Negotiation & Influential Communication",
+            "lessons": 7,
+            "hours": 6
+          },
+          {
+            "module": "Module 15",
+            "title": "Professional Presence, Confidence & Emotional Intelligence",
+            "lessons": 7,
+            "hours": 8
+          },
+          {
+            "module": "Module 16",
+            "title": "Feedback, Conflict Resolution & Difficult Conversations",
+            "lessons": 7,
+            "hours": 8
+          },
+          {
+            "module": "Module 17",
+            "title": "Teamwork, Leadership & Cross-Cultural Communication",
+            "lessons": 7,
+            "hours": 8
+          },
+          {
+            "module": "Module 18",
+            "title": "Industry-Specific Business Communication",
+            "lessons": 7,
+            "hours": 8
+          },
+          {
+            "module": "Module 19",
+            "title": "AI-Assisted Communication Practice & Professional Digital Skills",
+            "lessons": 6,
+            "hours": 4
+          },
+          {
+            "module": "Module 20",
+            "title": "Industry Capstone & Final Communication Assessment",
+            "lessons": 7,
+            "hours": 12
           }
         ],
         "tags": [
           "bestseller",
           "popular",
-          "placement"
+          "placement",
+          "communication"
         ],
         "featured": true,
         "title": "Business English & Personality Development",
-        "description": "Spoken English, Business Writing, Public Speaking, Executive Presence & Soft Skills.",
-        "projects": 12,
+        "description": "Develop practical English fluency, professional communication, confidence, business writing, public speaking, interpersonal effectiveness and leadership communication through instructor-led speaking labs, real-world simulations, AI-assisted practice and individual feedback.",
+        "projects": 15,
         "category": "Communication Academy",
         "status": "active",
         "url": "/course-detail.html?id=business-english",
         "courseType": "MASTER",
         "courseRole": "Career/Monetization",
-        "learningHours": 240,
         "futureReviewStatus": "STABLE",
-        "positioning": "Upgrade to Global Corporate Influence & Executive Storytelling."
+        "positioning": "Speak with Confidence. Communicate with Impact. Grow Professionally.",
+        "academicLabel": "Business Communication & Executive Presence",
+        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
       },
       {
         "id": "spoken-english-pro",
         "slug": "professional-spoken-english",
         "academy": "Communication Academy",
         "academyId": "communication",
-        "programLevel": "Professional Program",
+        "programLevel": "Professional Foundation",
         "icon": "💬",
         "color": "linear-gradient(135deg, #75d766, #0599a8)",
         "name": "Professional Spoken English",
-        "shortDesc": "Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
-        "fullDesc": "Core 3-month spoken fluency track. Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
+        "specialization": "Practical Spoken Fluency & Interactive Communication",
+        "tagline": "Speak English Clearly. Communicate Confidently. Express Yourself Professionally.",
+        "shortDesc": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice.",
+        "fullDesc": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice. Students develop communication skills through interactive instructor-led labs, recorded assessments, conversation exercises and individual feedback.",
         "duration": "3 Months",
         "durationMonths": 3,
-        "mode": "Online",
-        "level": "Beginner",
-        "price": 8999,
-        "originalPrice": 22999,
+        "hours": 90,
+        "learningHours": 90,
+        "mode": "Interactive Speaking Labs & Live Practice",
+        "level": "Professional Foundation",
+        "price": 12900,
+        "originalPrice": 12900,
+        "regularPrice": 12900,
+        "launchBatchFee": 12900,
         "rating": 4.8,
         "reviews": 190,
         "students": 1150,
-        "liveProjects": 8,
+        "liveProjects": 15,
         "certificate": true,
-        "placementSupport": true,
+        "placementSupport": false,
         "tools": [
-          "Zoom/Teams",
+          "ChatGPT Voice",
+          "British Council LearnEnglish",
+          "Cambridge Dictionary",
+          "Smartphone / PC Voice Recorder",
+          "Google Sheets / Approved LMS",
+          "Cambridge Speak & Improve",
+          "ELSA Speak",
+          "Approved Transcription Tools",
           "Grammarly / LanguageTool",
-          "ChatGPT / Claude for Communication Modeling",
-          "Loom",
-          "Google Docs",
-          "PowerPoint / Canva for Pitch Visuals",
-          "Otter.ai / Fireflies"
+          "Google Meet / Zoom / Teams"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Pronunciation & Phonetics",
-            "lessons": 4
+            "title": "English Assessment & Personal Speaking Roadmap",
+            "lessons": 4,
+            "hours": 4
           },
           {
             "module": "Module 02",
-            "title": "Fluency Building",
-            "lessons": 4
+            "title": "Functional Grammar & Sentence Construction",
+            "lessons": 8,
+            "hours": 10
           },
           {
             "module": "Module 03",
-            "title": "Conversational English & Small Talk",
-            "lessons": 4
+            "title": "Pronunciation, Speech Clarity & Voice Control",
+            "lessons": 6,
+            "hours": 8
           },
           {
             "module": "Module 04",
-            "title": "Interview English",
-            "lessons": 4
+            "title": "Everyday Vocabulary & Listening Comprehension",
+            "lessons": 6,
+            "hours": 8
+          },
+          {
+            "module": "Module 05",
+            "title": "Conversational Fluency & Spontaneous Speaking",
+            "lessons": 6,
+            "hours": 10
+          },
+          {
+            "module": "Module 06",
+            "title": "Everyday Conversations & Social Communication",
+            "lessons": 6,
+            "hours": 8
+          },
+          {
+            "module": "Module 07",
+            "title": "Listening Accuracy & Real-Time Response Skills",
+            "lessons": 4,
+            "hours": 6
+          },
+          {
+            "module": "Module 08",
+            "title": "AI-Assisted Conversation & Personalized Speaking Practice",
+            "lessons": 4,
+            "hours": 6
+          },
+          {
+            "module": "Module 09",
+            "title": "Workplace English & Professional Conversations",
+            "lessons": 6,
+            "hours": 9
+          },
+          {
+            "module": "Module 10",
+            "title": "Interview English & Professional Self-Introduction",
+            "lessons": 6,
+            "hours": 7
+          },
+          {
+            "module": "Module 11",
+            "title": "Public Speaking & Short Presentation Skills",
+            "lessons": 6,
+            "hours": 8
+          },
+          {
+            "module": "Module 12",
+            "title": "Final Spoken English Assessment & Communication Capstone",
+            "lessons": 6,
+            "hours": 6
           }
         ],
         "tags": [
           "popular",
-          "placement"
+          "spoken-english",
+          "communication"
         ],
-        "featured": false,
+        "featured": true,
         "title": "Professional Spoken English",
-        "description": "Speak English fluently and confidently in workplace meetings, interviews, and presentations.",
-        "projects": 8,
+        "description": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice.",
+        "projects": 15,
         "category": "Communication Academy",
         "status": "active",
         "url": "/course-detail.html?id=spoken-english-pro",
         "courseType": "PROFESSIONAL",
-        "courseRole": "Professional Skill",
-        "learningHours": 120,
+        "courseRole": "Professional Foundation",
         "futureReviewStatus": "STABLE",
-        "positioning": "Core 3-month spoken fluency track."
+        "positioning": "Speak English Clearly. Communicate Confidently. Express Yourself Professionally.",
+        "academicLabel": "Practical Spoken Fluency & Interactive Communication",
+        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
       },
       {
         "id": "spoken-english-cert",
@@ -16174,661 +16818,6 @@ const NS_ACADEMIES = [
   }
 ];
 
-/* Blog posts data */
-const NS_BLOG_POSTS = [
-  {
-    "id": "ai-skills-future-careers-2027-2030",
-    "slug": "ai-skills-future-careers-2027-2030",
-    "url": "/blog/ai-skills-future-careers-2027-2030/",
-    "title": "Will Your Skills Still Be Valuable When AI Can Do the Easy Part? (2027–2030)",
-    "excerpt": "Research-backed guide to AI jobs in 2030, agentic AI, digital marketing, automation, and future-ready skills. Includes evidence, FAQs, and a 90-day roadmap.",
-    "content": "Will Your Skills Still Be Valuable When AI Can Do the Easy Part? A Research-Based Guide to Future-Proof Careers, Agentic AI, Digital Marketing, Automation and Human Advantage (2027–2030). ILO WEF Stanford HAI PwC Microsoft UNESCO artificial intelligence agentic AI workflow automation digital marketing data analytics 90-day roadmap career guidance Nova Skills Waseeullah Mansoori.",
-    "category": "AI & Automation",
-    "author": "Waseeullah Mansoori",
-    "authorRole": "Founder & Chief Learning Officer",
-    "featuredExpert": "Waseeullah Mansoori, Founder & Chief Learning Officer, Nova Skills",
-    "featuredImage": "/images/blog/ai-skills-future-careers-2027-2030.jpg",
-    "image": "/images/blog/ai-skills-future-careers-2027-2030.jpg",
-    "publishedAt": "2026-10-18T12:00:00+05:30",
-    "publishDate": "2026-10-18",
-    "date": "2026-10-18",
-    "readingTime": 32,
-    "readTime": 32,
-    "tags": [
-      "Agentic AI",
-      "AI Automation",
-      "Future of Work",
-      "Digital Marketing",
-      "Data Analytics",
-      "Career Guidance",
-      "AI Skills",
-      "Nova Skills"
-    ],
-    "status": "published",
-    "isFeatured": false,
-    "featured": false,
-    "isDemo": false,
-    "trending": true,
-    "seoTitle": "Will AI Replace Jobs by 2030? Future Skills & Careers | Nova Skills",
-    "metaDescription": "Research-backed guide to AI jobs in 2030, agentic AI, digital marketing, automation and future-ready skills. Includes evidence, FAQs and a 90-day roadmap.",
-    "ogImage": "https://novaskills.in/images/seo/ai-skills-future-careers-2027-2030.jpg"
-  },
-  {
-    "id": "high-demand-courses-2027-ai-skills-careers",
-    "slug": "high-demand-courses-2027-ai-skills-careers",
-    "url": "/blog/high-demand-courses-2027-ai-skills-careers/",
-    "title": "15 High-Demand Courses for 2027: Skills, AI Tools & Career Opportunities",
-    "excerpt": "Explore 15 high-demand courses for 2027, including AI, cybersecurity, digital marketing, UI/UX and automation. Discover essential tools and career paths.",
-    "content": "15 High-Demand Courses for 2027 Generative AI applied AI automation agentic AI data analytics business intelligence data science machine learning cybersecurity cloud computing DevOps full-stack web development digital marketing performance marketing SEO GEO AEO UI UX product design graphic design branding video editing motion graphics 3D visualization architectural visualization no-code website e-commerce business analytics content creator entrepreneurship skills tools careers Nova Skills Waseeullah Mansoori.",
-    "category": "Career Guidance",
-    "author": "Waseeullah Mansoori",
-    "authorRole": "Founder & Lead Technical Director",
-    "featuredExpert": "Waseeullah Mansoori, Founder & Lead Technical Director, Nova Skills",
-    "featuredImage": "/images/blog/high-demand-courses-2027-ai-skills-careers.jpg",
-    "image": "/images/blog/high-demand-courses-2027-ai-skills-careers.jpg",
-    "publishedAt": "2026-09-27T00:00:00+05:30",
-    "publishDate": "2026-09-27",
-    "date": "2026-09-27",
-    "readingTime": 22,
-    "readTime": 22,
-    "tags": [
-      "Future Skills",
-      "Artificial Intelligence",
-      "Career Development",
-      "Professional Courses",
-      "Technology",
-      "Digital Skills",
-      "Nova Skills"
-    ],
-    "status": "published",
-    "isFeatured": false,
-    "featured": false,
-    "isDemo": false,
-    "trending": true,
-    "seoTitle": "15 High-Demand Courses for 2027: AI Tools & Careers | Nova Skills",
-    "metaDescription": "Explore 15 high-demand courses for 2027, including AI, cybersecurity, digital marketing, UI/UX and automation. Discover essential tools and career paths.",
-    "ogImage": "https://novaskills.in/images/seo/high-demand-courses-2027-ai-skills-careers.jpg"
-  },
-  {
-    "id": "waseeullah-mansoori",
-    "slug": "waseeullah-mansoori",
-    "url": "/blog/waseeullah-mansoori/",
-    "title": "From Creative Designer to AI Educator: Meet Waseeullah Mansoori",
-    "excerpt": "Discover Waseeullah Mansoori's 11+ year journey from multimedia designer & marketer to founding Nova Skills — empowering careers with practical AI & tech skills.",
-    "content": "Waseeullah Mansoori founder story multimedia digital marketing AI education practical skills career transformation Nova Skills institute.",
-    "category": "Founder Story",
-    "author": "Waseeullah Mansoori",
-    "authorRole": "Founder & Chief Learning Officer, Nova Skills",
-    "featuredImage": "/images/seo/waseeullah-mansoori.png",
-    "image": "/images/seo/waseeullah-mansoori.png",
-    "publishedAt": "2026-07-30T00:00:00+05:30",
-    "publishDate": "2026-07-30",
-    "date": "2026-07-30",
-    "readingTime": 15,
-    "readTime": 15,
-    "tags": [
-      "Founder Story",
-      "AI & Automation",
-      "Career Guidance",
-      "Graphic Design",
-      "NovaSkills"
-    ],
-    "status": "published",
-    "isFeatured": true,
-    "featured": true,
-    "isDemo": false,
-    "trending": true,
-    "seoTitle": "Meet Waseeullah Mansoori — Founder of Nova Skills",
-    "metaDescription": "Discover Waseeullah Mansoori's 11+ year journey from multimedia designer & marketer to founding Nova Skills.",
-    "ogImage": "https://novaskills.in/images/seo/waseeullah-mansoori.png"
-  },
-  {
-    "id": "ai-seo-geo-digital-marketing-2026",
-    "slug": "ai-seo-geo-digital-marketing-2026",
-    "url": "/blog/ai-seo-geo-digital-marketing-2026/",
-    "title": "SEO Is Dead? Not Exactly: How AI Search, GEO & AI Agents Are Changing Digital Marketing in 2026",
-    "excerpt": "SEO is not dead, but it's fundamentally evolving. Discover how AI search, Generative Engine Optimization (GEO), and autonomous AI browser agents are transforming digital marketing in 2026.",
-    "content": "SEO Is Dead AI Search GEO Generative Engine Optimization AI Agents digital marketing 2026 Google AI Overviews query fan-out topical authority Waseeullah Mansoori Nova Skills search evolution.",
-    "category": "Digital Marketing",
-    "author": "Waseeullah Mansoori",
-    "authorRole": "Founder & Digital Marketing Specialist, Nova Skills",
-    "featuredImage": "/images/seo/ai-seo-geo-digital-marketing-2026.jpg",
-    "image": "/images/seo/ai-seo-geo-digital-marketing-2026.jpg",
-    "publishedAt": "2026-08-11T00:00:00+05:30",
-    "publishDate": "2026-08-11",
-    "date": "2026-08-11",
-    "readingTime": 10,
-    "readTime": 10,
-    "tags": [
-      "SEO",
-      "GEO",
-      "AI Search",
-      "AI Agents",
-      "Digital Marketing",
-      "Google AI Mode",
-      "Career Guidance",
-      "NovaSkills"
-    ],
-    "status": "published",
-    "isFeatured": false,
-    "featured": false,
-    "isDemo": false,
-    "trending": true,
-    "seoTitle": "SEO Is Dead? Not Exactly: How AI Search, GEO & AI Agents Change Digital Marketing 2026",
-    "metaDescription": "SEO is not dead, but it's fundamentally evolving. Discover how AI search, Generative Engine Optimization (GEO), and AI agents are transforming digital marketing in 2026.",
-    "ogImage": "https://novaskills.in/images/seo/ai-seo-geo-digital-marketing-2026.jpg"
-  },
-  {
-    "id": 1,
-    "slug": "ai-jobs-india-2026",
-    "url": "blog-detail.html?id=ai-jobs-india-2026",
-    "title": "Top 15 AI Jobs in India 2026: Salaries, Skills & How to Get Hired",
-    "excerpt": "AI is not replacing jobs — it's creating them. Discover the highest-paying AI roles in India, what skills they require, and how Nova Skills can get you there in 6 months.",
-    "content": "Top 15 AI jobs in India 2026 artificial intelligence machine learning prompt engineering AI automation salary skills guide.",
-    "category": "AI & Automation",
-    "author": "Sanya Puri",
-    "authorRole": "Lead AI Trainer",
-    "featuredImage": "/public/images/seo/og-blog-ai-jobs-india-2026.png",
-    "image": null,
-    "publishedAt": "2026-07-20T00:00:00+05:30",
-    "publishDate": "2026-07-20",
-    "date": "2026-07-20",
-    "readingTime": 8,
-    "readTime": 8,
-    "tags": [
-      "AI",
-      "Career",
-      "Jobs",
-      "India",
-      "AI & Automation"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": true,
-    "seoTitle": "Top 15 AI Jobs in India 2026",
-    "metaDescription": "Discover highest-paying AI roles in India.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 2,
-    "slug": "digital-marketing-salary-india",
-    "url": "blog-detail.html?id=digital-marketing-salary-india",
-    "title": "Digital Marketing Salary in India 2026: Complete Guide",
-    "excerpt": "From freshers to senior marketers — everything you need to know about digital marketing salaries across India's top cities, industries and job roles.",
-    "content": "Digital marketing salary guide India 2026 SEO PPC social media performance marketing salaries top cities.",
-    "category": "Digital Marketing",
-    "author": "Arjun Kapoor",
-    "authorRole": "Head of Digital Marketing",
-    "featuredImage": "/public/images/seo/og-blog-digital-marketing-salary-india.png",
-    "image": null,
-    "publishedAt": "2026-07-15T00:00:00+05:30",
-    "publishDate": "2026-07-15",
-    "date": "2026-07-15",
-    "readingTime": 6,
-    "readTime": 6,
-    "tags": [
-      "Digital Marketing",
-      "Salary",
-      "Career",
-      "SEO",
-      "Performance Marketing"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": true,
-    "seoTitle": "Digital Marketing Salary in India 2026",
-    "metaDescription": "Complete guide to digital marketing salaries in India.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 3,
-    "slug": "learn-graphic-design-beginner-guide",
-    "url": "blog-detail.html?id=learn-graphic-design-beginner-guide",
-    "title": "How to Learn Graphic Design from Scratch: Complete 2026 Guide",
-    "excerpt": "Whether you're a complete beginner or want to go professional, this step-by-step guide covers tools, techniques, portfolio building and landing your first design client.",
-    "content": "Graphic design beginner guide 2026 Photoshop Illustrator Figma branding UI UX portfolio clients.",
-    "category": "Graphic Design",
-    "author": "Rajan Verma",
-    "authorRole": "Senior Design Trainer",
-    "featuredImage": "/public/images/seo/og-blog-learn-graphic-design-beginner-guide.png",
-    "image": null,
-    "publishedAt": "2026-07-10T00:00:00+05:30",
-    "publishDate": "2026-07-10",
-    "date": "2026-07-10",
-    "readingTime": 10,
-    "readTime": 10,
-    "tags": [
-      "Graphic Design",
-      "Beginner",
-      "Photoshop",
-      "Figma",
-      "Canva"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": false,
-    "seoTitle": "How to Learn Graphic Design from Scratch 2026",
-    "metaDescription": "Step by step guide to graphic design from scratch.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 4,
-    "slug": "freelancing-fiverr-india-guide",
-    "url": "blog-detail.html?id=freelancing-fiverr-india-guide",
-    "title": "How to Earn ₹1 Lakh/Month Freelancing on Fiverr in India",
-    "excerpt": "A practical, no-fluff guide to building a 6-figure freelance income on Fiverr from India — niche selection, profile optimisation, proposals and scaling strategies.",
-    "content": "Freelancing on Fiverr in India 1 lakh per month income freelance strategies client acquisition gig optimisation.",
-    "category": "Freelancing",
-    "author": "Priya Kumar",
-    "authorRole": "Freelancing Success Coach",
-    "featuredImage": "/public/images/seo/og-blog-freelancing-fiverr-india-guide.png",
-    "image": null,
-    "publishedAt": "2026-07-05T00:00:00+05:30",
-    "publishDate": "2026-07-05",
-    "date": "2026-07-05",
-    "readingTime": 7,
-    "readTime": 7,
-    "tags": [
-      "Freelancing",
-      "Fiverr",
-      "Income",
-      "Career",
-      "NovaSkills"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": true,
-    "seoTitle": "How to Earn ₹1 Lakh/Month Freelancing on Fiverr",
-    "metaDescription": "Practical guide to 6-figure freelancing income.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 5,
-    "slug": "n8n-ai-automation-beginners",
-    "url": "blog-detail.html?id=n8n-ai-automation-beginners",
-    "title": "n8n AI Automation for Beginners: Build Your First AI Workflow",
-    "excerpt": "Step-by-step tutorial to build a powerful AI automation workflow using n8n — no coding required. Automate repetitive tasks, connect APIs and build AI agents.",
-    "content": "n8n AI automation tutorial no-code AI workflows AI agents process automation.",
-    "category": "AI & Automation",
-    "author": "Sanya Puri",
-    "authorRole": "Lead AI Trainer",
-    "featuredImage": "/public/images/seo/og-blog-n8n-ai-automation-beginners.png",
-    "image": null,
-    "publishedAt": "2026-07-01T00:00:00+05:30",
-    "publishDate": "2026-07-01",
-    "date": "2026-07-01",
-    "readingTime": 12,
-    "readTime": 12,
-    "tags": [
-      "n8n",
-      "AI & Automation",
-      "No-Code",
-      "AI"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": false,
-    "seoTitle": "n8n AI Automation for Beginners 2026",
-    "metaDescription": "Step-by-step tutorial to build AI automation workflows.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 6,
-    "slug": "youtube-channel-monetise-2026",
-    "url": "blog-detail.html?id=youtube-channel-monetise-2026",
-    "title": "How to Start & Monetise a YouTube Channel in 2026: Step-by-Step",
-    "excerpt": "From zero subscribers to YouTube Partner — a complete, updated guide to growing a successful YouTube channel with the latest 2026 algorithm changes and strategies.",
-    "content": "YouTube channel monetisation 2026 content creation video editing Premiere Pro algorithm growth.",
-    "category": "Motion Graphics",
-    "author": "Mohammed Tahir",
-    "authorRole": "Creator Academy Lead",
-    "featuredImage": "/public/images/seo/og-blog-youtube-channel-monetise-2026.png",
-    "image": null,
-    "publishedAt": "2026-06-25T00:00:00+05:30",
-    "publishDate": "2026-06-25",
-    "date": "2026-06-25",
-    "readingTime": 9,
-    "readTime": 9,
-    "tags": [
-      "YouTube",
-      "VideoEditing",
-      "MotionGraphics",
-      "PremierePro"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": false,
-    "seoTitle": "How to Start & Monetise YouTube Channel 2026",
-    "metaDescription": "Complete guide to YouTube channel growth and monetisation.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 7,
-    "slug": "chatgpt-prompts-marketing",
-    "url": "blog-detail.html?id=chatgpt-prompts-marketing",
-    "title": "50 ChatGPT Prompts That Will Transform Your Marketing",
-    "excerpt": "Stop wasting time on generic AI outputs. These 50 expert-crafted prompts will give you high-converting ad copy, SEO content, email sequences and campaign strategies.",
-    "content": "50 ChatGPT prompts digital marketing copy SEO Google Ads Meta Ads email sequences.",
-    "category": "Performance Marketing",
-    "author": "Arjun Kapoor",
-    "authorRole": "Head of Digital Marketing",
-    "featuredImage": "/public/images/seo/og-blog-chatgpt-prompts-marketing.png",
-    "image": null,
-    "publishedAt": "2026-06-18T00:00:00+05:30",
-    "publishDate": "2026-06-18",
-    "date": "2026-06-18",
-    "readingTime": 5,
-    "readTime": 5,
-    "tags": [
-      "ChatGPT",
-      "AI",
-      "Performance Marketing",
-      "SEO",
-      "GoogleAds",
-      "MetaAds"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": false,
-    "seoTitle": "50 ChatGPT Prompts for Marketing 2026",
-    "metaDescription": "50 expert prompts for marketing, copy, and SEO.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 8,
-    "slug": "kids-coding-benefits-india",
-    "url": "blog-detail.html?id=kids-coding-benefits-india",
-    "title": "Why Every Indian Child Should Learn to Code Before Age 12",
-    "excerpt": "The future belongs to children who understand technology. Discover why coding education is critical for Indian kids and how parents can get their child started.",
-    "content": "Kids coding education India logic technology future skills STEM parents guide.",
-    "category": "Student Success",
-    "author": "Dr. Sunita Rao",
-    "authorRole": "Kids Tech Academy Director",
-    "featuredImage": "/public/images/seo/og-blog-kids-coding-benefits-india.png",
-    "image": null,
-    "publishedAt": "2026-06-12T00:00:00+05:30",
-    "publishDate": "2026-06-12",
-    "date": "2026-06-12",
-    "readingTime": 6,
-    "readTime": 6,
-    "tags": [
-      "Kids",
-      "Coding",
-      "Education",
-      "Student Success",
-      "Career Guidance"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": false,
-    "seoTitle": "Why Every Indian Child Should Learn Coding",
-    "metaDescription": "Importance of coding education for children in India.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 9,
-    "slug": "python-vs-javascript-2026",
-    "url": "blog-detail.html?id=python-vs-javascript-2026",
-    "title": "Python vs JavaScript in 2026: Which Should You Learn First?",
-    "excerpt": "The ultimate comparison for beginners — Python or JavaScript? We break down career paths, job market demand, salary potential and which language suits your goals.",
-    "content": "Python vs JavaScript 2026 programming web development career paths comparison.",
-    "category": "Web Development",
-    "author": "Vikram Nair",
-    "authorRole": "Programming Academy Lead",
-    "featuredImage": "/public/images/seo/og-blog-python-vs-javascript-2026.png",
-    "image": null,
-    "publishedAt": "2026-06-08T00:00:00+05:30",
-    "publishDate": "2026-06-08",
-    "date": "2026-06-08",
-    "readingTime": 8,
-    "readTime": 8,
-    "tags": [
-      "Python",
-      "JavaScript",
-      "Web Development",
-      "Career Guidance"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": false,
-    "seoTitle": "Python vs JavaScript in 2026",
-    "metaDescription": "Ultimate comparison between Python and JavaScript.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 10,
-    "slug": "ui-ux-design-roadmap",
-    "url": "blog-detail.html?id=ui-ux-design-roadmap",
-    "title": "UI/UX Design Roadmap 2026: From Zero to Hired in 6 Months",
-    "excerpt": "Step-by-step learning path to master Figma, wireframing, design systems and portfolio building for a lucrative career in UI/UX design.",
-    "content": "UI UX design roadmap 2026 Figma wireframing design systems portfolio career.",
-    "category": "Graphic Design",
-    "author": "Priya Mehta",
-    "authorRole": "Lead UI/UX Mentor",
-    "featuredImage": "/public/images/seo/og-blog-learn-graphic-design-beginner-guide.png",
-    "image": null,
-    "publishedAt": "2026-06-01T00:00:00+05:30",
-    "publishDate": "2026-06-01",
-    "date": "2026-06-01",
-    "readingTime": 10,
-    "readTime": 10,
-    "tags": [
-      "UI/UX",
-      "Figma",
-      "Graphic Design",
-      "Photoshop",
-      "Illustrator"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": true,
-    "seoTitle": "UI/UX Design Roadmap 2026",
-    "metaDescription": "Step-by-step learning path for UI/UX design.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 11,
-    "slug": "motion-graphics-after-effects-guide",
-    "url": "blog-detail.html?id=motion-graphics-after-effects-guide",
-    "title": "Top 10 Motion Graphics & After Effects Techniques for Beginners 2026",
-    "excerpt": "Master keyframes, kinetic typography, shape animations and visual effects in Adobe After Effects to create high-impact motion graphics.",
-    "content": "Motion graphics After Effects techniques keyframes kinetic typography video animation.",
-    "category": "Motion Graphics",
-    "author": "Mohammed Tahir",
-    "authorRole": "Creator Academy Lead",
-    "featuredImage": "/public/images/seo/og-blog-youtube-channel-monetise-2026.png",
-    "image": null,
-    "publishedAt": "2026-05-25T00:00:00+05:30",
-    "publishDate": "2026-05-25",
-    "date": "2026-05-25",
-    "readingTime": 9,
-    "readTime": 9,
-    "tags": [
-      "MotionGraphics",
-      "AfterEffects",
-      "VideoEditing",
-      "Design"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": true,
-    "seoTitle": "Top 10 Motion Graphics Techniques 2026",
-    "metaDescription": "Master motion graphics and After Effects techniques for beginners.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 12,
-    "slug": "video-editing-premiere-pro-2026",
-    "url": "blog-detail.html?id=video-editing-premiere-pro-2026",
-    "title": "Master Video Editing with Premiere Pro: Complete Creator Roadmap",
-    "excerpt": "Learn professional video cutting, color grading, audio cleanup and fast workflow techniques to edit high-converting reels and YouTube videos.",
-    "content": "Video editing Premiere Pro creator roadmap color grading audio editing shorts reels.",
-    "category": "Video Editing",
-    "author": "Mohammed Tahir",
-    "authorRole": "Creator Academy Lead",
-    "featuredImage": "/public/images/seo/og-blog-youtube-channel-monetise-2026.png",
-    "image": null,
-    "publishedAt": "2026-05-20T00:00:00+05:30",
-    "publishDate": "2026-05-20",
-    "date": "2026-05-20",
-    "readingTime": 8,
-    "readTime": 8,
-    "tags": [
-      "VideoEditing",
-      "PremierePro",
-      "YouTube",
-      "Content Creation"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": false,
-    "seoTitle": "Master Video Editing with Premiere Pro 2026",
-    "metaDescription": "Complete creator roadmap to master Adobe Premiere Pro.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 13,
-    "slug": "full-stack-web-development-roadmap",
-    "url": "blog-detail.html?id=full-stack-web-development-roadmap",
-    "title": "Full Stack Web Development Roadmap 2026: HTML, CSS, JS, React & Node",
-    "excerpt": "Complete developer pathway from front-end basics to back-end APIs, databases and cloud deployment for high-paying web developer jobs.",
-    "content": "Full stack web development roadmap HTML CSS JavaScript React Node database API Cloudflare.",
-    "category": "Web Development",
-    "author": "Vikram Nair",
-    "authorRole": "Programming Academy Lead",
-    "featuredImage": "/public/images/seo/og-blog-python-vs-javascript-2026.png",
-    "image": null,
-    "publishedAt": "2026-05-15T00:00:00+05:30",
-    "publishDate": "2026-05-15",
-    "date": "2026-05-15",
-    "readingTime": 11,
-    "readTime": 11,
-    "tags": [
-      "Web Development",
-      "JavaScript",
-      "React",
-      "Programming"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": true,
-    "seoTitle": "Full Stack Web Development Roadmap 2026",
-    "metaDescription": "Step-by-step full stack developer learning path.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 14,
-    "slug": "seo-geo-generative-engine-optimisation",
-    "url": "blog-detail.html?id=seo-geo-generative-engine-optimisation",
-    "title": "SEO vs GEO: How to Rank Your Website on Google, ChatGPT & Perplexity",
-    "excerpt": "Generative Engine Optimisation (GEO) is revolutionising search. Learn how to optimise your content for AI search engines alongside traditional Google SEO.",
-    "content": "SEO vs GEO generative engine optimisation AI search ChatGPT Perplexity Google ranking.",
-    "category": "SEO",
-    "author": "Waseeullah Mansoori",
-    "authorRole": "Founder, Nova Skills",
-    "featuredImage": "/public/images/seo/og-blog.png",
-    "image": null,
-    "publishedAt": "2026-05-10T00:00:00+05:30",
-    "publishDate": "2026-05-10",
-    "date": "2026-05-10",
-    "readingTime": 10,
-    "readTime": 10,
-    "tags": [
-      "SEO",
-      "GEO",
-      "AI",
-      "Digital Marketing",
-      "NovaSkills"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": true,
-    "seoTitle": "SEO vs GEO: Rank on Google, ChatGPT & Perplexity",
-    "metaDescription": "Master Generative Engine Optimisation alongside traditional SEO.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  },
-  {
-    "id": 15,
-    "slug": "canva-vs-photoshop-graphic-design",
-    "url": "blog-detail.html?id=canva-vs-photoshop-graphic-design",
-    "title": "Canva vs Photoshop: Which Tool Should Graphic Designers Use in 2026?",
-    "excerpt": "Comparing speed, flexibility, professional standards and client expectations between Canva and Adobe Photoshop for modern visual designers.",
-    "content": "Canva vs Photoshop graphic design tools comparison speed professional standards branding.",
-    "category": "Graphic Design",
-    "author": "Rajan Verma",
-    "authorRole": "Senior Design Trainer",
-    "featuredImage": "/public/images/seo/og-blog-learn-graphic-design-beginner-guide.png",
-    "image": null,
-    "publishedAt": "2026-05-05T00:00:00+05:30",
-    "publishDate": "2026-05-05",
-    "date": "2026-05-05",
-    "readingTime": 7,
-    "readTime": 7,
-    "tags": [
-      "Canva",
-      "Photoshop",
-      "Graphic Design",
-      "Design"
-    ],
-    "status": "draft",
-    "isDemo": true,
-    "isFeatured": false,
-    "featured": false,
-    "published": false,
-    "trending": false,
-    "seoTitle": "Canva vs Photoshop for Designers 2026",
-    "metaDescription": "Detailed tool comparison for graphic designers.",
-    "ogImage": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-  }
-];
-
-// CommonJS export for Node scripts
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = {
-    NS_COURSES,
-    NS_ACADEMIES,
-    NS_BLOG_POSTS
-  };
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { NS_COURSES, NS_ACADEMIES };
 }
