@@ -4755,57 +4755,138 @@ const NS_COURSES = [
     "icon": "🏗️",
     "color": "linear-gradient(135deg, #10B981, #059669)",
     "name": "Architectural Visualisation Master",
-    "shortDesc": "3ds Max, Blender, V-Ray, Corona, Twinmotion, Unreal Engine architectural rendering.",
-    "fullDesc": "Upgrade to real-time Unreal Engine 5 Lumen/Nanite rendering. 3ds Max, Blender, V-Ray, Corona, Twinmotion, Unreal Engine architectural rendering.",
-    "duration": "6 Months",
-    "durationMonths": 6,
+    "tagline": "From CAD Drawings to Photorealistic Renders, Walkthroughs and Modern 3D Automation.",
+    "shortDesc": "From CAD Drawings to Photorealistic Renders, Walkthroughs and Modern 3D Automation.",
+    "fullDesc": "A comprehensive architectural visualization program covering AutoCAD drafting, 3ds Max modeling, Chaos V-Ray rendering, Twinmotion real-time walkthroughs, and guided exposure to Unreal Engine, Blender and safe AI-assisted production.",
+    "duration": "8 Months",
+    "durationMonths": 8,
+    "hours": 320,
+    "modules": 17,
     "mode": "Hybrid",
-    "level": "Beginner",
-    "price": 28999,
-    "originalPrice": 79999,
+    "level": "Career Mastery",
+    "price": 69900,
+    "originalPrice": 69900,
     "rating": 4.9,
     "reviews": 142,
     "students": 710,
-    "liveProjects": 3,
+    "liveProjects": 4,
     "certificate": true,
     "placementSupport": true,
     "tools": [
       "3ds Max",
-      "Blender",
       "V-Ray",
-      "Unreal Engine 5",
-      "Twinmotion",
-      "Photoshop",
       "AutoCAD",
+      "Twinmotion",
+      "Adobe Photoshop",
+      "SketchUp",
+      "Unreal Engine 5",
+      "Blender",
       "Corona Renderer",
-      "Substance Painter",
-      "Cinema 4D"
+      "ChatGPT / Claude",
+      "Adobe Firefly"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "Architecture Modeling in 3ds Max",
-        "lessons": 4
+        "title": "Architectural Fundamentals & Visualisation Standards",
+        "lessons": 4,
+        "hours": 14
       },
       {
         "module": "Module 02",
-        "title": "Material Creation & PBR Texturing",
-        "lessons": 4
+        "title": "AutoCAD Drafting & CAD-to-3D Workflow",
+        "lessons": 4,
+        "hours": 26
       },
       {
         "module": "Module 03",
-        "title": "V-Ray Lighting & HDRI Setup",
-        "lessons": 4
+        "title": "3ds Max Architectural Modeling",
+        "lessons": 4,
+        "hours": 26
       },
       {
         "module": "Module 04",
-        "title": "Render Optimization & Post-Production",
-        "lessons": 4
+        "title": "Advanced Furniture & Parametric Modeling",
+        "lessons": 4,
+        "hours": 14
       },
       {
         "module": "Module 05",
-        "title": "Real-Time Walkthroughs in Twinmotion",
-        "lessons": 4
+        "title": "Asset Workflow, Topology & Scene Optimization",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 06",
+        "title": "UV Mapping, PBR & V-Ray Materials",
+        "lessons": 4,
+        "hours": 28
+      },
+      {
+        "module": "Module 07",
+        "title": "V-Ray Cameras & Physical Lighting",
+        "lessons": 4,
+        "hours": 20
+      },
+      {
+        "module": "Module 08",
+        "title": "High-End Interior & Exterior Rendering",
+        "lessons": 4,
+        "hours": 20
+      },
+      {
+        "module": "Module 09",
+        "title": "V-Ray Render Optimization & Passes",
+        "lessons": 4,
+        "hours": 20
+      },
+      {
+        "module": "Module 10",
+        "title": "Photoshop Architectural Post-Production",
+        "lessons": 3,
+        "hours": 12
+      },
+      {
+        "module": "Module 11",
+        "title": "Professional Rendering Production Lab",
+        "lessons": 2,
+        "hours": 8
+      },
+      {
+        "module": "Module 12",
+        "title": "Twinmotion Scene Development & Datasmith",
+        "lessons": 5,
+        "hours": 28
+      },
+      {
+        "module": "Module 13",
+        "title": "Real-Time Walkthrough & Presentation Delivery",
+        "lessons": 3,
+        "hours": 12
+      },
+      {
+        "module": "Module 14",
+        "title": "Unreal Engine 5.8 ArchViz Fundamentals",
+        "lessons": 4,
+        "hours": 18
+      },
+      {
+        "module": "Module 15",
+        "title": "Blender Procedural, Python & Secure MCP Workflows",
+        "lessons": 4,
+        "hours": 22
+      },
+      {
+        "module": "Module 16",
+        "title": "Industry Client Capstones",
+        "lessons": 4,
+        "hours": 28
+      },
+      {
+        "module": "Module 17",
+        "title": "Professional Portfolio & Studio Delivery",
+        "lessons": 3,
+        "hours": 12
       }
     ],
     "tags": [
@@ -4816,15 +4897,15 @@ const NS_COURSES = [
     "featured": true,
     "title": "Architectural Visualisation Master",
     "description": "3ds Max, Blender, V-Ray, Corona, Twinmotion, Unreal Engine architectural rendering.",
-    "projects": 12,
+    "projects": 4,
     "category": "3D Academy",
     "status": "active",
     "url": "/course-detail.html?id=archviz-mastery",
     "courseType": "MASTER",
     "courseRole": "Career/Monetization",
-    "learningHours": 240,
+    "learningHours": 320,
     "futureReviewStatus": "STABLE",
-    "positioning": "Upgrade to real-time Unreal Engine 5 Lumen/Nanite rendering."
+    "positioning": "A comprehensive architectural visualization program covering AutoCAD drafting, 3ds Max modeling, Chaos V-Ray rendering, Twinmotion real-time walkthroughs, and guided exposure to Unreal Engine, Blender and safe AI-assisted production."
   },
   {
     "id": "3d-viz-pro",
@@ -4835,52 +4916,124 @@ const NS_COURSES = [
     "icon": "🏗️",
     "color": "linear-gradient(135deg, #10B981, #2563EB)",
     "name": "3D Visualisation Professional",
-    "shortDesc": "3-month professional course covering 3D product rendering, lighting, materials, and Blender.",
-    "fullDesc": "Core 3-month visualization standalone. 3-month professional course covering 3D product rendering, lighting, materials, and Blender.",
-    "duration": "3 Months",
-    "durationMonths": 3,
+    "specialization": "Product Visualization, 3D Advertising & Animation",
+    "tagline": "Create Professional 3D Product Visuals and Animations for Modern Brands.",
+    "shortDesc": "Create Professional 3D Product Visuals and Animations for Modern Brands. A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production.",
+    "fullDesc": "A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production.",
+    "duration": "5 Months",
+    "durationMonths": 5,
+    "hours": 200,
+    "learningHours": 200,
+    "modules": 15,
     "mode": "Online",
-    "level": "Beginner",
-    "price": 14999,
-    "originalPrice": 39999,
+    "level": "Professional",
+    "price": 39900,
+    "originalPrice": 39900,
     "rating": 4.8,
     "reviews": 110,
     "students": 540,
-    "liveProjects": 2,
+    "liveProjects": 1,
     "certificate": true,
     "placementSupport": true,
     "tools": [
-      "3ds Max",
       "Blender",
-      "V-Ray",
-      "Unreal Engine 5",
-      "Twinmotion",
-      "Photoshop",
-      "AutoCAD",
-      "Corona Renderer",
+      "Adobe Photoshop",
+      "DaVinci Resolve",
       "Substance Painter",
-      "Cinema 4D"
+      "Python",
+      "ChatGPT / Claude",
+      "Adobe Firefly"
     ],
     "curriculum": [
       {
         "module": "Module 01",
-        "title": "3D Modeling Fundamentals in Blender",
-        "lessons": 4
+        "title": "Product Visualization & Blender Fundamentals",
+        "lessons": 4,
+        "hours": 12
       },
       {
         "module": "Module 02",
-        "title": "Advanced Texturing in Substance Painter",
-        "lessons": 4
+        "title": "Polygon Modeling, Topology & Modifiers",
+        "lessons": 4,
+        "hours": 18
       },
       {
         "module": "Module 03",
-        "title": "V-Ray Lighting & LookDev",
-        "lessons": 4
+        "title": "Hard-Surface Product Blockout",
+        "lessons": 4,
+        "hours": 10
       },
       {
         "module": "Module 04",
-        "title": "Final Rendering & Compositing",
-        "lessons": 4
+        "title": "Advanced Hard-Surface Product Modeling",
+        "lessons": 4,
+        "hours": 18
+      },
+      {
+        "module": "Module 05",
+        "title": "UV Mapping & Texture Baking",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 06",
+        "title": "PBR Materials & Shader Fundamentals",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 07",
+        "title": "Product Look Development & Advanced Texturing",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 08",
+        "title": "Studio Lighting, HDRI & Commercial Cameras",
+        "lessons": 4,
+        "hours": 16
+      },
+      {
+        "module": "Module 09",
+        "title": "Cycles, EEVEE & Render Optimization",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 10",
+        "title": "Product Animation & Advertising Motion",
+        "lessons": 4,
+        "hours": 18
+      },
+      {
+        "module": "Module 11",
+        "title": "Render Passes, Compositing & Colour Finishing",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 12",
+        "title": "Geometry Nodes for Product Visualization",
+        "lessons": 4,
+        "hours": 12
+      },
+      {
+        "module": "Module 13",
+        "title": "Generative AI for 3D Product Workflows",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 14",
+        "title": "Blender Python, Automation & Secure MCP",
+        "lessons": 4,
+        "hours": 10
+      },
+      {
+        "module": "Module 15",
+        "title": "Product Advertising Capstone & Client Delivery",
+        "lessons": 4,
+        "hours": 20
       }
     ],
     "tags": [
@@ -4889,16 +5042,15 @@ const NS_COURSES = [
     ],
     "featured": false,
     "title": "3D Visualisation Professional",
-    "description": "3-month professional course covering 3D product rendering, lighting, materials, and Blender.",
-    "projects": 8,
+    "description": "A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production.",
+    "projects": 1,
     "category": "3D Academy",
     "status": "active",
     "url": "/course-detail.html?id=3d-viz-pro",
     "courseType": "PROFESSIONAL",
     "courseRole": "Professional Skill",
-    "learningHours": 120,
     "futureReviewStatus": "STABLE",
-    "positioning": "Core 3-month visualization standalone."
+    "positioning": "A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production."
   },
   {
     "id": "blender-cert",
@@ -12481,57 +12633,138 @@ const NS_ACADEMIES = [
         "icon": "🏗️",
         "color": "linear-gradient(135deg, #10B981, #059669)",
         "name": "Architectural Visualisation Master",
-        "shortDesc": "3ds Max, Blender, V-Ray, Corona, Twinmotion, Unreal Engine architectural rendering.",
-        "fullDesc": "Upgrade to real-time Unreal Engine 5 Lumen/Nanite rendering. 3ds Max, Blender, V-Ray, Corona, Twinmotion, Unreal Engine architectural rendering.",
-        "duration": "6 Months",
-        "durationMonths": 6,
+        "tagline": "From CAD Drawings to Photorealistic Renders, Walkthroughs and Modern 3D Automation.",
+        "shortDesc": "From CAD Drawings to Photorealistic Renders, Walkthroughs and Modern 3D Automation.",
+        "fullDesc": "A comprehensive architectural visualization program covering AutoCAD drafting, 3ds Max modeling, Chaos V-Ray rendering, Twinmotion real-time walkthroughs, and guided exposure to Unreal Engine, Blender and safe AI-assisted production.",
+        "duration": "8 Months",
+        "durationMonths": 8,
+        "hours": 320,
+        "modules": 17,
         "mode": "Hybrid",
-        "level": "Beginner",
-        "price": 28999,
-        "originalPrice": 79999,
+        "level": "Career Mastery",
+        "price": 69900,
+        "originalPrice": 69900,
         "rating": 4.9,
         "reviews": 142,
         "students": 710,
-        "liveProjects": 12,
+        "liveProjects": 4,
         "certificate": true,
         "placementSupport": true,
         "tools": [
           "3ds Max",
-          "Blender",
           "V-Ray",
-          "Unreal Engine 5",
-          "Twinmotion",
-          "Photoshop",
           "AutoCAD",
+          "Twinmotion",
+          "Adobe Photoshop",
+          "SketchUp",
+          "Unreal Engine 5",
+          "Blender",
           "Corona Renderer",
-          "Substance Painter",
-          "Cinema 4D"
+          "ChatGPT / Claude",
+          "Adobe Firefly"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "Architecture Modeling in 3ds Max",
-            "lessons": 4
+            "title": "Architectural Fundamentals & Visualisation Standards",
+            "lessons": 4,
+            "hours": 14
           },
           {
             "module": "Module 02",
-            "title": "Material Creation & PBR Texturing",
-            "lessons": 4
+            "title": "AutoCAD Drafting & CAD-to-3D Workflow",
+            "lessons": 4,
+            "hours": 26
           },
           {
             "module": "Module 03",
-            "title": "V-Ray Lighting & HDRI Setup",
-            "lessons": 4
+            "title": "3ds Max Architectural Modeling",
+            "lessons": 4,
+            "hours": 26
           },
           {
             "module": "Module 04",
-            "title": "Render Optimization & Post-Production",
-            "lessons": 4
+            "title": "Advanced Furniture & Parametric Modeling",
+            "lessons": 4,
+            "hours": 14
           },
           {
             "module": "Module 05",
-            "title": "Real-Time Walkthroughs in Twinmotion",
-            "lessons": 4
+            "title": "Asset Workflow, Topology & Scene Optimization",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 06",
+            "title": "UV Mapping, PBR & V-Ray Materials",
+            "lessons": 4,
+            "hours": 28
+          },
+          {
+            "module": "Module 07",
+            "title": "V-Ray Cameras & Physical Lighting",
+            "lessons": 4,
+            "hours": 20
+          },
+          {
+            "module": "Module 08",
+            "title": "High-End Interior & Exterior Rendering",
+            "lessons": 4,
+            "hours": 20
+          },
+          {
+            "module": "Module 09",
+            "title": "V-Ray Render Optimization & Passes",
+            "lessons": 4,
+            "hours": 20
+          },
+          {
+            "module": "Module 10",
+            "title": "Photoshop Architectural Post-Production",
+            "lessons": 3,
+            "hours": 12
+          },
+          {
+            "module": "Module 11",
+            "title": "Professional Rendering Production Lab",
+            "lessons": 2,
+            "hours": 8
+          },
+          {
+            "module": "Module 12",
+            "title": "Twinmotion Scene Development & Datasmith",
+            "lessons": 5,
+            "hours": 28
+          },
+          {
+            "module": "Module 13",
+            "title": "Real-Time Walkthrough & Presentation Delivery",
+            "lessons": 3,
+            "hours": 12
+          },
+          {
+            "module": "Module 14",
+            "title": "Unreal Engine 5.8 ArchViz Fundamentals",
+            "lessons": 4,
+            "hours": 18
+          },
+          {
+            "module": "Module 15",
+            "title": "Blender Procedural, Python & Secure MCP Workflows",
+            "lessons": 4,
+            "hours": 22
+          },
+          {
+            "module": "Module 16",
+            "title": "Industry Client Capstones",
+            "lessons": 4,
+            "hours": 28
+          },
+          {
+            "module": "Module 17",
+            "title": "Professional Portfolio & Studio Delivery",
+            "lessons": 3,
+            "hours": 12
           }
         ],
         "tags": [
@@ -12542,15 +12775,15 @@ const NS_ACADEMIES = [
         "featured": true,
         "title": "Architectural Visualisation Master",
         "description": "3ds Max, Blender, V-Ray, Corona, Twinmotion, Unreal Engine architectural rendering.",
-        "projects": 12,
+        "projects": 4,
         "category": "3D Academy",
         "status": "active",
         "url": "/course-detail.html?id=archviz-mastery",
         "courseType": "MASTER",
         "courseRole": "Career/Monetization",
-        "learningHours": 240,
+        "learningHours": 320,
         "futureReviewStatus": "STABLE",
-        "positioning": "Upgrade to real-time Unreal Engine 5 Lumen/Nanite rendering."
+        "positioning": "A comprehensive architectural visualization program covering AutoCAD drafting, 3ds Max modeling, Chaos V-Ray rendering, Twinmotion real-time walkthroughs, and guided exposure to Unreal Engine, Blender and safe AI-assisted production."
       },
       {
         "id": "3d-viz-pro",
@@ -12561,52 +12794,124 @@ const NS_ACADEMIES = [
         "icon": "🏗️",
         "color": "linear-gradient(135deg, #10B981, #2563EB)",
         "name": "3D Visualisation Professional",
-        "shortDesc": "3-month professional course covering 3D product rendering, lighting, materials, and Blender.",
-        "fullDesc": "Core 3-month visualization standalone. 3-month professional course covering 3D product rendering, lighting, materials, and Blender.",
-        "duration": "3 Months",
-        "durationMonths": 3,
+    "specialization": "Product Visualization, 3D Advertising & Animation",
+    "tagline": "Create Professional 3D Product Visuals and Animations for Modern Brands.",
+        "shortDesc": "Create Professional 3D Product Visuals and Animations for Modern Brands. A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production.",
+        "fullDesc": "A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production.",
+        "duration": "5 Months",
+        "durationMonths": 5,
+        "hours": 200,
+        "learningHours": 200,
+        "modules": 15,
         "mode": "Online",
-        "level": "Beginner",
-        "price": 14999,
-        "originalPrice": 39999,
+        "level": "Professional",
+        "price": 39900,
+        "originalPrice": 39900,
         "rating": 4.8,
         "reviews": 110,
         "students": 540,
-        "liveProjects": 8,
+        "liveProjects": 1,
         "certificate": true,
         "placementSupport": true,
         "tools": [
-          "3ds Max",
           "Blender",
-          "V-Ray",
-          "Unreal Engine 5",
-          "Twinmotion",
-          "Photoshop",
-          "AutoCAD",
-          "Corona Renderer",
+          "Adobe Photoshop",
+          "DaVinci Resolve",
           "Substance Painter",
-          "Cinema 4D"
+          "Python",
+          "ChatGPT / Claude",
+          "Adobe Firefly"
         ],
         "curriculum": [
           {
             "module": "Module 01",
-            "title": "3D Modeling Fundamentals in Blender",
-            "lessons": 4
+            "title": "Product Visualization & Blender Fundamentals",
+            "lessons": 4,
+            "hours": 12
           },
           {
             "module": "Module 02",
-            "title": "Advanced Texturing in Substance Painter",
-            "lessons": 4
+            "title": "Polygon Modeling, Topology & Modifiers",
+            "lessons": 4,
+            "hours": 18
           },
           {
             "module": "Module 03",
-            "title": "V-Ray Lighting & LookDev",
-            "lessons": 4
+            "title": "Hard-Surface Product Blockout",
+            "lessons": 4,
+            "hours": 10
           },
           {
             "module": "Module 04",
-            "title": "Final Rendering & Compositing",
-            "lessons": 4
+            "title": "Advanced Hard-Surface Product Modeling",
+            "lessons": 4,
+            "hours": 18
+          },
+          {
+            "module": "Module 05",
+            "title": "UV Mapping & Texture Baking",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 06",
+            "title": "PBR Materials & Shader Fundamentals",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 07",
+            "title": "Product Look Development & Advanced Texturing",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 08",
+            "title": "Studio Lighting, HDRI & Commercial Cameras",
+            "lessons": 4,
+            "hours": 16
+          },
+          {
+            "module": "Module 09",
+            "title": "Cycles, EEVEE & Render Optimization",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 10",
+            "title": "Product Animation & Advertising Motion",
+            "lessons": 4,
+            "hours": 18
+          },
+          {
+            "module": "Module 11",
+            "title": "Render Passes, Compositing & Colour Finishing",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 12",
+            "title": "Geometry Nodes for Product Visualization",
+            "lessons": 4,
+            "hours": 12
+          },
+          {
+            "module": "Module 13",
+            "title": "Generative AI for 3D Product Workflows",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 14",
+            "title": "Blender Python, Automation & Secure MCP",
+            "lessons": 4,
+            "hours": 10
+          },
+          {
+            "module": "Module 15",
+            "title": "Product Advertising Capstone & Client Delivery",
+            "lessons": 4,
+            "hours": 20
           }
         ],
         "tags": [
@@ -12615,16 +12920,15 @@ const NS_ACADEMIES = [
         ],
         "featured": false,
         "title": "3D Visualisation Professional",
-        "description": "3-month professional course covering 3D product rendering, lighting, materials, and Blender.",
-        "projects": 8,
+        "description": "A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production.",
+        "projects": 1,
         "category": "3D Academy",
         "status": "active",
         "url": "/course-detail.html?id=3d-viz-pro",
         "courseType": "PROFESSIONAL",
         "courseRole": "Professional Skill",
-        "learningHours": 120,
         "futureReviewStatus": "STABLE",
-        "positioning": "Core 3-month visualization standalone."
+        "positioning": "A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production."
       },
       {
         "id": "blender-cert",
