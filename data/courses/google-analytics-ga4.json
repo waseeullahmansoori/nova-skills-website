@@ -1,328 +1,632 @@
 {
   "course_id": "google-analytics-ga4",
-  "course_name": "Google Analytics (GA4)",
+  "id": "google-analytics-ga4",
+  "slug": "google-analytics-ga4",
+  "course_name": "Google Analytics 4 & GTM",
+  "title": "Google Analytics 4 & GTM",
+  "name": "Google Analytics 4 & GTM",
+  "academic_sequence": 37,
+  "curriculum_edition": "2027 Edition",
   "academy": "Digital Marketing Academy",
   "academy_id": "digital-marketing",
-  "course_type": "MICRO",
-  "course_role": "Career/Monetization",
-  "level": "BEGINNER+",
-  "duration": "1 Month",
-  "learning_hours": 40,
-  "future_review_status": "FAST-CHANGING",
-  "target_audience": {
-    "best_for": [
-      "Aspiring digital marketing professionals.",
-      "Entrepreneurs wanting to scale their businesses online.",
-      "Freelancers looking to offer high-demand digital services."
-    ],
-    "who_should_take_foundation_first": "Learners lacking basic computer and internet literacy.",
-    "not_for": [
-      "Those looking for passive, theoretical lectures without hands-on implementation.",
-      "Students expecting get-rich-quick schemes."
-    ]
+  "academic_positioning": "Digital Analytics, Event Tracking & Marketing Measurement",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "Digital Analytics & Measurement Specialist",
+  "level": "Beginner to Intermediate",
+  "priority": "High Admission Priority",
+  "duration": "6 Weeks",
+  "durationMonths": 1.5,
+  "duration_weeks": 6,
+  "learning_hours": 48,
+  "learningHours": 48,
+  "guided_hours": 48,
+  "hours": 48,
+  "mode": "Interactive Software Labs & Guided Workplace Simulation",
+  "price": 7900,
+  "fee": "INR 7900 + applicable GST",
+  "regular_fee": 7900,
+  "originalPrice": 7900,
+  "commercial_notice": "Transparent institutional fee: INR 7,900 + applicable taxes. Truth in Pricing with zero artificial countdown discounts, inflated strike-throughs or fake retail offers.",
+  "pricing": {
+    "regular_fee": 7900,
+    "gst_percentage": "18%",
+    "gst_amount": 1422,
+    "total_fee_with_gst": 9322,
+    "discount": "0%",
+    "currency": "INR",
+    "pricing_model": "Truth in Pricing — Transparent institutional fee with zero fake countdown discounts."
   },
-  "prerequisites": {
-    "required": "Basic computer and internet literacy",
-    "recommended": "Familiarity with social media platforms",
-    "not_required": "Prior marketing degree or coding experience",
-    "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "Free tiers of covered tools (Google, Meta, etc.)"
-    }
+  "tagline": "Stop Guessing. Measure What Actually Drives Business Growth.",
+  "hero_headline": "Stop Guessing. Measure What Actually Drives Business Growth.",
+  "hero_supporting_heading": "Stop Guessing. Measure What Actually Drives Business Growth.",
+  "hero_supporting_headline": "From Tracking Setup to Business Insights — Master GA4, GTM and Professional Marketing Dashboards.",
+  "hero": {
+    "hook": "Stop Guessing. Measure What Actually Drives Business Growth.",
+    "subheadline": "From Tracking Setup to Business Insights — Master GA4, GTM and Professional Marketing Dashboards.",
+    "secondary_value_prop": "Hands-on practical training in Google Analytics 4, Google Tag Manager, custom event tracking, consent-aware measurement, GA4 Explorations, and Looker Studio dashboards. Includes guided preparation for the official Google Analytics certification on Google Skillshop.",
+    "badge": "Certification Course — 2027 Edition"
   },
-  "overview": {
-    "positioning": "Event-driven analytics tracking, exploration reports, custom audience triggers, and BigQuery data integration with GA4.",
-    "short_description": "Master web analytics using GA4 to track user journeys, events, and business conversions.",
-    "key_facts": {
-      "level": "BEGINNER+",
-      "duration": "1 Month",
-      "format": "Interactive Live Labs & Projects",
-      "estimated_learning_hours": "40 Hours",
-      "project_count": "2 Core Projects",
-      "capstone": "Final Portfolio Project",
-      "ai_integration": "AI-TRANSFORMING",
-      "career_focus": "Google Analytics (GA4) Specialist"
-    },
-    "what_you_will_be_able_to_do": [
-      "Plan and execute data-driven digital marketing campaigns.",
-      "Utilize industry-standard tools to optimize ROI.",
-      "Analyze campaign performance and make data-backed decisions.",
-      "Build a professional portfolio of real-world marketing assets."
-    ]
-  },
-  "why_now": {
-    "industry_shift": "The transition to Google Analytics 4 (GA4) requires marketers to understand event-based measurement and cookieless machine learning modeling.",
-    "ai_impact": "GA4 predictive metrics model user churn probability and projected purchase revenue using automated machine learning.",
-    "business_demand": "Every business needs a strong digital presence to survive, driving massive demand for skilled marketers.",
-    "career_opportunity": "High earning potential in remote freelance, agency, and in-house roles."
-  },
+  "short_description": "Master Google Analytics 4, Google Tag Manager, event tracking, conversion measurement, website traffic analysis and Looker Studio reporting through practical implementation projects.",
+  "shortDesc": "Master Google Analytics 4, Google Tag Manager, event tracking, conversion measurement, website traffic analysis and Looker Studio reporting through practical implementation projects.",
+  "description": "Learn how to implement, validate, analyze and report website and marketing performance using Google Analytics 4, Google Tag Manager and Looker Studio.",
+  "fullDesc": "Learn how to implement, validate, analyze and report website and marketing performance using Google Analytics 4, Google Tag Manager and Looker Studio. This practical Google Analytics 4 & GTM course teaches business measurement planning, event-based tracking, Google tag configuration, website conversions, audience analysis, campaign attribution and performance reporting. Develop hands-on skills in configuring GA4 properties, creating measurement plans, implementing events through Google Tag Manager, troubleshooting tracking issues and validating data quality. Understand privacy-aware measurement, consent signals, UTM governance, cross-domain measurement fundamentals and the limitations of digital attribution. Analyze website traffic, user engagement, marketing channels, funnels and key events using GA4 Reports and Explorations. Create stakeholder-ready dashboards in Looker Studio and translate performance data into meaningful business recommendations. Build a professional analytics portfolio containing an end-to-end measurement plan, validated event tracking implementation, a measurement quality audit and an interactive business performance dashboard. The course emphasizes accurate tracking, responsible data collection and actionable insights rather than simply installing tracking codes or reporting vanity metrics.",
+  "overview": "The Google Analytics 4 & GTM certification programme equips digital marketers, analysts, website managers, and entrepreneurs with rigorous, end-to-end digital measurement capabilities. Grounded in the core philosophy: 'Measure correctly. Understand user behavior. Convert data into better business decisions', the curriculum guides students through measurement framework architecture, GA4 property setup, Google Tag Manager event deployment, data layer fundamentals, consent mode governance, GA4 Explorations, and stakeholder reporting in Looker Studio. Students graduate with a 4-part client-ready measurement portfolio and preparation for the Google Analytics Skillshop assessment.",
+  "why_now": "Third-party cookie deprecation, privacy regulations (GDPR, DPDP), and the shift from session-based Universal Analytics to event-driven GA4 have transformed digital measurement. Businesses can no longer rely on vanity pageviews or generic tracking scripts. High-growth organizations demand analysts who can architect custom event schemas, deploy tags via GTM, validate data integrity in Tag Assistant and DebugView, respect user consent signals, and build executive Looker Studio dashboards that translate complex behavioral telemetry into profitable business decisions.",
+  "target_audience": [
+    "Digital marketing beginners and fresh graduates seeking high-demand analytics and measurement skills",
+    "Aspiring digital analysts and marketing executives transitioning from vanity metrics to event-driven analytics",
+    "SEO, content, and performance marketers wanting to measure true campaign impact, funnels, and conversions",
+    "Website managers, product coordinators, and UX professionals tracking user navigation and drop-off points",
+    "Freelancers and agency professionals wanting to offer high-ticket GA4 setup, GTM debugging, and Looker Studio dashboard services",
+    "Entrepreneurs and business owners seeking transparent, reliable measurement of marketing ROI"
+  ],
+  "prerequisites": [
+    "Basic computer literacy, web browsing capability, and familiarity with websites and digital marketing terms",
+    "A free Google account for accessing GA4, Google Tag Manager, Looker Studio, and Google Sheets",
+    "Access to a demo website, CMS, or training environment (provided in class) for tag implementation labs",
+    "No advanced programming, data engineering, or prior JavaScript expertise required (foundational HTML/data layer concepts are taught step-by-step)"
+  ],
+  "highlights": [
+    "GA4 Property & Event Setup",
+    "Google Tag Manager Implementation",
+    "Website Conversion Tracking",
+    "Custom Events & Key Events",
+    "Tag Assistant & Debugging",
+    "Consent-Aware Measurement",
+    "UTM & Cross-Domain Tracking",
+    "Traffic & Channel Analysis",
+    "Funnels & GA4 Explorations",
+    "Looker Studio Dashboards",
+    "Analytics Quality Audits",
+    "Business Performance Reporting",
+    "Google Analytics Skillshop Preparation",
+    "Practical Portfolio Projects"
+  ],
   "learning_outcomes": [
-    "STRATEGIZE: Develop comprehensive marketing plans based on business goals.",
-    "EXECUTE: Launch and manage campaigns across relevant digital channels.",
-    "MEASURE: Implement tracking and reporting to accurately attribute conversions.",
-    "OPTIMIZE: Improve campaign performance continuously using A/B testing and analytics."
+    "Design and document a business-first digital measurement plan translating stakeholder KPIs into structured event tracking requirements and data specifications.",
+    "Configure GA4 properties, web data streams, data retention, internal traffic filters, custom dimensions, metrics, and key events following Google's official event taxonomy.",
+    "Implement and debug tags, triggers, variables, and dataLayer events inside Google Tag Manager using GTM Preview mode and Tag Assistant.",
+    "Audit measurement quality, troubleshoot missing or duplicate events, enforce UTM governance, and configure consent-aware measurement using Google Consent Mode signals.",
+    "Perform deep user behavior and channel attribution analysis using GA4 Standard Reports, Funnel Explorations, Path Explorations, and Free-Form Explorations.",
+    "Build interactive, stakeholder-ready business intelligence dashboards in Looker Studio connecting live GA4 data to provide executive decision support."
   ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1: Fundamentals",
-        "focus": "Understanding platform mechanics and core concepts."
-      },
-      {
-        "stage": "Stage 2: Tool Mastery",
-        "focus": "Hands-on setup and navigation of key marketing software."
-      },
-      {
-        "stage": "Stage 3: Strategy & Execution",
-        "focus": "Launching live campaigns or building comprehensive strategies."
-      },
-      {
-        "stage": "Stage 4: Optimization",
-        "focus": "Analyzing data and refining assets for better performance."
-      }
+  "course_boundaries": {
+    "owns": [
+      "Digital measurement planning & KPI framework design",
+      "GA4 property & data stream configuration",
+      "Google Tag Manager tag, trigger, and variable deployment",
+      "Event-based tracking, custom parameters & key events",
+      "Tag Assistant & DebugView troubleshooting",
+      "Measurement quality audits & UTM governance",
+      "Google Consent Mode fundamentals & privacy compliance",
+      "GA4 standard reports, Free-Form, and Funnel Explorations",
+      "Looker Studio business dashboards & stakeholder storytelling"
+    ],
+    "excludes": [
+      "Google Ads campaign creation and bidding (owned by Course 31: Google Ads Performance Specialist)",
+      "Meta Ads campaign management & media buying (owned by Course 32: Meta Ads & Lead Generation Specialist)",
+      "Technical SEO & Core Web Vitals optimization (owned by Course 33: SEO & AI Search Optimization)",
+      "Enterprise data warehouse architecture & pipeline engineering",
+      "Advanced BigQuery SQL data modeling & Python data engineering (BigQuery is covered as awareness-only)",
+      "Server-side GTM infrastructure deployment (client-side GTM is the mandatory standard)"
     ]
   },
+  "not_covered": [
+    "Paid media campaign execution, bidding strategies, and ad copy creation (covered in Courses 31 & 32)",
+    "Search engine optimization audits and organic ranking tactics (covered in Course 33)",
+    "Server-side container provisioning on Google Cloud Platform or AWS",
+    "Advanced enterprise SQL modeling, BigQuery pipeline engineering, and Python statistical scripts",
+    "CRM platform administration (HubSpot/Salesforce enterprise database setup)"
+  ],
+  "external_credentials": {
+    "status": "Preparation Included",
+    "exam": "Google Analytics Certification (Google Skillshop)",
+    "reference_url": "https://skillshop.withgoogle.com/",
+    "notice": "Includes guided preparation for the Google Analytics certification available through Google Skillshop. Official Google certification must be earned separately by completing Google's applicable certification assessment. Nova Skills provides an institutional Certificate of Completion based on coursework and verified portfolio deliverables."
+  },
+  "tools": [
+    "Google Analytics 4",
+    "Google Tag Manager",
+    "Looker Studio",
+    "Google Tag Assistant",
+    "Google Sheets"
+  ],
   "hands_on_tech": {
-    "core_tools": [
-      {
-        "tool": "GA4",
-        "purpose": "Execute core Google Analytics (GA4) tasks efficiently.",
-        "what_student_learns": "Navigation, configuration, and advanced use cases of GA4.",
-        "what_student_builds": "Real-world campaigns or assets using GA4."
-      },
-      {
-        "tool": "Google Tag Manager",
-        "purpose": "Execute core Google Analytics (GA4) tasks efficiently.",
-        "what_student_learns": "Navigation, configuration, and advanced use cases of Google Tag Manager.",
-        "what_student_builds": "Real-world campaigns or assets using Google Tag Manager."
-      },
-      {
-        "tool": "Looker Studio",
-        "purpose": "Execute core Google Analytics (GA4) tasks efficiently.",
-        "what_student_learns": "Navigation, configuration, and advanced use cases of Looker Studio.",
-        "what_student_builds": "Real-world campaigns or assets using Looker Studio."
-      }
+    "primary": [
+      "Google Analytics 4 (GA4)",
+      "Google Tag Manager (GTM)",
+      "Looker Studio"
     ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": [
-      "Outdated SEO tactics",
-      "Manual reporting spreadsheets"
+    "supporting": [
+      "Google Tag Assistant",
+      "Google Sheets (Measurement Frameworks & UTM Governance)",
+      "GA4 Demo Account (Google Merchandise Store & Flood-It!)"
+    ],
+    "conceptual_references": [
+      "Google Consent Mode (analytics_storage, ad_storage, ad_user_data, ad_personalization)",
+      "Google Ads conversion measurement integration",
+      "BigQuery export awareness (why raw event data is exported and how analysts query it)",
+      "SQL concepts awareness",
+      "AI tools (ChatGPT/Gemini for measurement planning and regex drafting)"
     ]
   },
-  "industry_workflow": {
-    "overview": "Standard workflow for Google Analytics (GA4) projects:",
-    "stages": [
-      {
-        "step": 1,
-        "name": "Discovery",
-        "desc": "Auditing current presence and defining KPIs."
-      },
-      {
-        "step": 2,
-        "name": "Strategy",
-        "desc": "Selecting channels, budgets, and targeting."
-      },
-      {
-        "step": 3,
-        "name": "Asset Creation",
-        "desc": "Writing copy, designing creatives, and configuring setups."
-      },
-      {
-        "step": 4,
-        "name": "Launch",
-        "desc": "Deploying campaigns to live audiences."
-      },
-      {
-        "step": 5,
-        "name": "Optimization",
-        "desc": "Monitoring analytics and adjusting for performance."
-      }
-    ]
-  },
-  "business_use_cases": [
+  "career_paths": [
     {
-      "sector": "E-commerce",
-      "business_problem": "Low conversion rate and high CPA.",
-      "approach": "Implement optimized funnel tracking and targeted ad campaigns.",
-      "toolset": "GA4, Google Tag Manager, Looker Studio",
-      "output": "Increased ROAS and lowered acquisition costs."
-    }
-  ],
-  "ai_integration": {
-    "role_classification": "AI-TRANSFORMING",
-    "ai_can_assist_with": "Brainstorming copy, generating data insights, formatting reports.",
-    "ai_can_automate": "Routine keyword clustering, baseline creative variations.",
-    "ai_cannot_replace": "Brand voice, strategic budgeting, client communication.",
-    "human_expertise_required": "Interpreting nuanced data, setting business goals.",
-    "validation_protocol": "Always verify AI outputs against platform policies and brand guidelines.",
-    "responsible_use": "Maintain data privacy and avoid misleading AI-generated content."
-  },
-  "best_practices": [
-    "Always set up conversion tracking before spending ad budget.",
-    "Let data, not assumptions, drive your optimization decisions.",
-    "Continuously test new creatives and audiences."
-  ],
-  "common_mistakes": [
-    {
-      "mistake": "Setting and forgetting campaigns.",
-      "why_it_happens": "Lack of time or understanding of optimization processes.",
-      "professional_approach": "Schedule regular performance reviews and iterative testing."
-    }
-  ],
-  "career_paths": {
-    "entry_roles": "Marketing Coordinator, Paid Ads Assistant, SEO Junior",
-    "mid_roles": "Digital Marketing Manager, Performance Specialist",
-    "specialist_roles": "Growth Hacker, Head of Acquisition",
-    "freelance_roles": "Independent Consultant, Agency Owner",
-    "employer_expectations": "Proven ability to generate leads or sales with a measurable ROI.",
-    "what_student_demonstrates": "A portfolio of live or simulated campaigns with clear performance metrics."
-  },
-  "freelance_applications": {
-    "services_offered": [
-      "Campaign management",
-      "SEO audits",
-      "Analytics setup"
-    ],
-    "client_workflow": "Audit -> Proposal -> Setup -> Management -> Monthly Reporting",
-    "portfolio_requirements": "Case studies detailing problem, approach, and specific ROI."
-  },
-  "what_you_will_build": [
-    "Comprehensive marketing strategy document.",
-    "Live or simulated campaign builds across target platforms.",
-    "Custom analytics dashboard."
-  ],
-  "final_deliverables": [
-    "Completed campaign setups.",
-    "Optimization logbook.",
-    "Final presentation report."
-  ],
-  "assessment": {
-    "model": "Project-based evaluation (70%) + Quizzes (30%)",
-    "criteria": "Adherence to best practices, correct tool setup, and strategic reasoning."
-  },
-  "certification": {
-    "title": "Certified Google Analytics (GA4) Specialist",
-    "criteria": "Completion of all core projects with passing grades.",
-    "verification": "Digital badge and verifiable certificate."
-  },
-  "not_covered": "Advanced web development, graphic design theory.",
-  "next_learning_path": {
-    "recommended_next": "Cross-training in complementary digital marketing channels.",
-    "related_programs": "Other specialized courses in the Digital Marketing Academy."
-  },
-  "faq": [
-    {
-      "question": "Do I need to spend my own money on ads for the Google Analytics (GA4) course?",
-      "answer": "No, you can learn platform mechanics in draft mode or using simulator accounts, though small live budgets are recommended for full experience."
+      "role": "Junior Digital Analytics Specialist",
+      "salary_range": "INR 4.0L – INR 7.0L / year",
+      "focus": "GA4 property management, event tracking verification, and monthly performance reporting."
     },
     {
-      "question": "Is this course up to date with the latest platform changes?",
-      "answer": "Yes, our curriculum is continuously updated to reflect the latest UI changes and algorithm updates in 2026."
+      "role": "GA4 & GTM Implementation Executive",
+      "salary_range": "INR 4.5L – INR 7.5L / year",
+      "focus": "Configuring GTM tags, triggers, custom events, and validating data integrity via Tag Assistant."
     },
     {
-      "question": "Will I get help if I get stuck in a tool?",
-      "answer": "Yes, our instructors and community forums provide technical troubleshooting support."
+      "role": "Web Analytics Executive",
+      "salary_range": "INR 3.8L – INR 6.8L / year",
+      "focus": "Website traffic analysis, funnel drop-off diagnosis, and user journey optimization."
+    },
+    {
+      "role": "Looker Studio Reporting Specialist",
+      "salary_range": "INR 4.0L – INR 7.2L / year",
+      "focus": "Building automated marketing dashboards, blending GA4 data, and executive KPI reporting."
+    },
+    {
+      "role": "Freelance Analytics Consultant",
+      "salary_range": "INR 30,000 – INR 85,000 / month (or INR 20,000 – INR 50,000 per setup/audit project)",
+      "focus": "GA4 migrations, GTM tracking audits, conversion fix retainers, and custom client dashboards."
     }
   ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Setup & Event Tracking",
-      "module_purpose": "Develop practical competence in Setup & Event Tracking.",
-      "what_you_will_learn": [
-        "Understand core mechanics of Setup & Event Tracking.",
-        "Apply tools effectively for Setup & Event Tracking.",
-        "Troubleshoot common issues in this domain."
+      "module_number": 1,
+      "module": "Module 01",
+      "number": "01",
+      "title": "Digital Measurement Strategy & Planning",
+      "duration": "8 Hours",
+      "hours": 8,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Translate high-level business objectives into an implementable digital measurement framework, defining events, parameters, key events, and governance rules.",
+      "topics": [
+        "Digital analytics fundamentals & business-first measurement thinking: why measurement drives strategic growth",
+        "Website and marketing objectives: defining business KPIs versus vanity metrics (impressions vs. qualified leads/revenue)",
+        "Measurement strategy & digital analytics ecosystem overview: understanding user touchpoints across web and app",
+        "GA4 event-based data model: comparing event-driven architecture to legacy session/pageview systems",
+        "Events and event parameters: structure, data types, and value hierarchies",
+        "Users and active users: 1-day, 7-day, and 28-day active user metrics and engagement rate definition",
+        "Sessions, engagement metrics, and session duration: how GA4 defines session starts and engagement time",
+        "Traffic sources, channels, and Default Channel Grouping rules in GA4",
+        "Key events and conversions: defining high-value user milestones (lead forms, signups, transactions)",
+        "Lead-generation measurement vs. E-commerce measurement fundamentals",
+        "Customer journey analysis, funnel stages, and touchpoint interaction mapping",
+        "Attribution fundamentals, attribution model limitations, and cross-channel measurement concepts",
+        "Measurement framework development: business questions, metrics, data sources, and technical requirements",
+        "Event naming conventions & event taxonomy: snake_case rules, reserved prefixes, and character limits",
+        "Data collection requirements and measurement specification documents (Measurement Plan)",
+        "Marketing and stakeholder reporting goals: aligning tracking specifications with executive decision needs"
       ],
-      "lessons": [
-        {
-          "lesson_number": "1.1",
-          "lesson_title": "GA4 Configuration",
-          "what_is_taught": "Step-by-step breakdown of GA4 Configuration.",
-          "why_it_matters": "Essential for mastering the broader Setup & Event Tracking strategy.",
-          "what_learner_does": "Completes a targeted exercise focused on GA4 Configuration.",
-          "expected_outcome": "A tangible asset or configuration related to the lesson."
-        },
-        {
-          "lesson_number": "1.2",
-          "lesson_title": "Custom Event Setup in GTM",
-          "what_is_taught": "Step-by-step breakdown of Custom Event Setup in GTM.",
-          "why_it_matters": "Essential for mastering the broader Setup & Event Tracking strategy.",
-          "what_learner_does": "Completes a targeted exercise focused on Custom Event Setup in GTM.",
-          "expected_outcome": "A tangible asset or configuration related to the lesson."
-        },
-        {
-          "lesson_number": "1.3",
-          "lesson_title": "E-commerce Tracking Basics",
-          "what_is_taught": "Step-by-step breakdown of E-commerce Tracking Basics.",
-          "why_it_matters": "Essential for mastering the broader Setup & Event Tracking strategy.",
-          "what_learner_does": "Completes a targeted exercise focused on E-commerce Tracking Basics.",
-          "expected_outcome": "A tangible asset or configuration related to the lesson."
-        }
+      "hands_on_tools": [
+        "Google Sheets (Measurement Framework Template)",
+        "Google Analytics 4 Demo Account",
+        "Lucidchart / Miro"
       ],
-      "key_concepts": [
-        "Concept related to Setup & Event Tracking",
-        "Best Practices",
-        "Optimization"
+      "hands_on_practice": "Designing a comprehensive Measurement Plan spreadsheet for an e-commerce or lead generation website, mapping 10 business questions to specific GA4 events and parameters.",
+      "assignment": "End-to-End Business Measurement Plan (Google Sheets / PDF) detailing business objectives, user journey, KPI framework, event inventory, parameter taxonomy, key event criteria, and measurement validation checklist.",
+      "competencies": [
+        "Business KPI translation",
+        "GA4 event-based data modeling",
+        "Event naming governance",
+        "Measurement plan documentation"
       ],
-      "tools": [
-        "GA4",
-        "Google Tag Manager"
-      ],
-      "hands_on_practice": "Practical lab executing workflows for Setup & Event Tracking.",
-      "assignment": "Deliverable for Module 1.",
-      "business_application": "Directly applicable to improving business metrics related to Setup & Event Tracking.",
-      "expected_outcome": "Completion of the Setup & Event Tracking segment of the overall project."
+      "assessment_criteria": "Completeness of KPI mapping, precision of event parameter specifications, adherence to GA4 naming rules, and clarity of key event definitions."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Reporting & Insights",
-      "module_purpose": "Develop practical competence in Reporting & Insights.",
-      "what_you_will_learn": [
-        "Understand core mechanics of Reporting & Insights.",
-        "Apply tools effectively for Reporting & Insights.",
-        "Troubleshoot common issues in this domain."
+      "module_number": 2,
+      "module": "Module 02",
+      "number": "02",
+      "title": "Google Analytics 4 Implementation",
+      "duration": "10 Hours",
+      "hours": 10,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Configure a production-ready GA4 property, data streams, custom dimensions, data retention settings, and verify incoming telemetry using Realtime and DebugView.",
+      "topics": [
+        "Google Analytics ecosystem, GA4 account structure, property setup, and access permission hierarchies (Admin, Editor, Marketer, Viewer)",
+        "Web data streams, Measurement IDs (G-XXXXXXXXXX), and stream configuration options",
+        "Google tag fundamentals: gtag.js architecture and implementation approaches (direct installation vs. Google Tag Manager)",
+        "GA4 implementation through Google Tag Manager: Google tag configuration tag vs. GA4 Event tags",
+        "Enhanced measurement events: page_view, scroll, outbound clicks, site search, video engagement, file downloads",
+        "Automatically collected events vs. Recommended events vs. Custom events: when and how to choose each category",
+        "Recommended event implementation: view_item, select_content, generate_lead, sign_up, purchase",
+        "Event parameters and event parameter registration: creating Custom Dimensions (event-scoped and user-scoped) and Custom Metrics",
+        "Data retention settings: extending event data retention from 2 months to 14 months",
+        "Data filters: defining internal IP traffic filters and developer traffic filters",
+        "Referral exclusions & unwanted referrals: identifying payment gateway loops and third-party auth domains",
+        "Key event configuration: designating high-value events as Key Events in GA4 Admin",
+        "GA4 Key Events versus Google Ads conversions: understanding the distinction, counting methods, and import mechanics",
+        "Event values and counting concepts: once per event vs. once per session counting rules",
+        "User properties and custom audience configuration: building behavioral audiences for remarketing and reporting",
+        "Realtime reports, GA4 DebugView, event testing, verification, and implementation troubleshooting",
+        "E-commerce event awareness (view_item_list, add_to_cart, begin_checkout, purchase) and data quality reviews"
       ],
-      "lessons": [
-        {
-          "lesson_number": "2.1",
-          "lesson_title": "Standard Reports Overview",
-          "what_is_taught": "Step-by-step breakdown of Standard Reports Overview.",
-          "why_it_matters": "Essential for mastering the broader Reporting & Insights strategy.",
-          "what_learner_does": "Completes a targeted exercise focused on Standard Reports Overview.",
-          "expected_outcome": "A tangible asset or configuration related to the lesson."
-        },
-        {
-          "lesson_number": "2.2",
-          "lesson_title": "Explore Module Custom Reports",
-          "what_is_taught": "Step-by-step breakdown of Explore Module Custom Reports.",
-          "why_it_matters": "Essential for mastering the broader Reporting & Insights strategy.",
-          "what_learner_does": "Completes a targeted exercise focused on Explore Module Custom Reports.",
-          "expected_outcome": "A tangible asset or configuration related to the lesson."
-        },
-        {
-          "lesson_number": "2.3",
-          "lesson_title": "Audience Builder",
-          "what_is_taught": "Step-by-step breakdown of Audience Builder.",
-          "why_it_matters": "Essential for mastering the broader Reporting & Insights strategy.",
-          "what_learner_does": "Completes a targeted exercise focused on Audience Builder.",
-          "expected_outcome": "A tangible asset or configuration related to the lesson."
-        }
+      "hands_on_tools": [
+        "Google Analytics 4 Admin",
+        "GA4 DebugView",
+        "Google Tag Assistant",
+        "Browser Developer Tools"
       ],
-      "key_concepts": [
-        "Concept related to Reporting & Insights",
-        "Best Practices",
-        "Optimization"
+      "hands_on_practice": "Setting up a live GA4 property, creating custom dimensions for event parameters, adjusting data retention to 14 months, creating an internal traffic filter, and validating event arrival in DebugView.",
+      "assignment": "GA4 Property Configuration & Validation Record: documented setup of property, web data stream, 5 custom events, custom dimensions, key events, and DebugView verification evidence.",
+      "competencies": [
+        "GA4 property administration",
+        "Custom dimension and metric registration",
+        "Key event configuration",
+        "DebugView verification & troubleshooting"
+      ],
+      "assessment_criteria": "Correct configuration of web data stream, valid parameter registration, verified 14-month data retention, and error-free DebugView event stream."
+    },
+    {
+      "module_number": 3,
+      "module": "Module 03",
+      "number": "03",
+      "title": "Google Tag Manager & Event Tracking",
+      "duration": "10 Hours",
+      "hours": 10,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Master Google Tag Manager to configure tags, triggers, variables, and dataLayer events, thoroughly testing tracking sequences before publishing.",
+      "topics": [
+        "Google Tag Manager fundamentals: GTM architecture vs. hardcoded scripts, agility, governance, and site speed benefits",
+        "GTM accounts, containers, container IDs (GTM-XXXXXXX), and installation on websites (<head> and <body> snippets)",
+        "GTM Workspaces, version control, user permissions, and collaborative publishing workflows",
+        "GTM building blocks: Tags (what to do), Triggers (when to do it), and Variables (information needed)",
+        "Built-in variables (Page URL, Click Classes, Click ID, Form Element) vs. User-defined variables (Constant, Lookup Table, Data Layer Variable)",
+        "Google tag configuration in GTM: setting the Measurement ID and configuration parameters",
+        "GA4 Event tags: mapping event names and event parameters to GTM triggers and variables",
+        "Trigger types and evaluation: Page View, DOM Ready, Window Loaded",
+        "Click triggers: All Elements vs. Just Links, CSS selector targeting, and button interaction tracking",
+        "Form submission tracking: Form Submit trigger, element visibility triggers, and AJAX/custom submission challenges",
+        "Scroll depth tracking and custom event triggers",
+        "Data Layer fundamentals: understanding window.dataLayer array and dataLayer.push() syntax",
+        "Data Layer variables: extracting dynamic values (transaction IDs, lead values, user roles) from the data layer",
+        "Event parameters populated from Data Layer variables",
+        "Debugging tag behavior: GTM Preview Mode, Tag Assistant connection, and event timeline inspection",
+        "Tag firing sequences, trigger exceptions, blocking triggers, and duplicate event prevention",
+        "Understanding the measurement pipeline: User action -> GTM Trigger -> Tag executes -> GA4 receives -> GA4 processes -> Key event designated",
+        "Container export/import, version naming conventions, release notes, and tag governance best practices"
+      ],
+      "hands_on_tools": [
+        "Google Tag Manager",
+        "Google Tag Assistant",
+        "Browser DevTools Console",
+        "Demo Website / CMS"
+      ],
+      "hands_on_practice": "Building a complete GTM container with Google Tag, 4 GA4 Event tags (button click, contact form submission, file download, outbound link), testing via Preview Mode, and publishing version 1.0.",
+      "assignment": "GTM Container & Event Implementation Package: exported container JSON, setup documentation, trigger logic specifications, and Tag Assistant preview mode verification screenshots.",
+      "competencies": [
+        "GTM container architecture",
+        "Tag, trigger, and variable configuration",
+        "Data Layer parameter extraction",
+        "Tag Assistant debugging & version publishing"
+      ],
+      "assessment_criteria": "Correct tag-trigger binding, accurate variable mapping, zero duplicate firing in Preview mode, and properly structured GTM version release notes."
+    },
+    {
+      "module_number": 4,
+      "module": "Module 04",
+      "number": "04",
+      "title": "Measurement Quality, Privacy & Governance",
+      "duration": "8 Hours",
+      "hours": 8,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Audit tracking implementations for data discrepancies, enforce UTM governance, avoid PII collection, and configure consent-aware measurement using Google Consent Mode.",
+      "topics": [
+        "Measurement quality fundamentals: reliability, consistency, and completeness of digital telemetry",
+        "Event naming governance and taxonomy enforcement: preventing lowercase/uppercase fragmentation and duplicate events",
+        "Troubleshooting tracking failures: missing events, overcounting, incorrect triggers, and parameter mismatches",
+        "Internal traffic management and IP filtering verification",
+        "Campaign tracking & UTM parameter governance: utm_source, utm_medium, utm_campaign, utm_term, utm_content",
+        "Standardizing UTM taxonomy: case-sensitivity, naming conventions, UTM builder spreadsheets, and preventing attribution loss",
+        "Referral traffic issues, self-referrals, and payment gateway attribution preservation",
+        "Cross-domain measurement fundamentals: linking client IDs across multiple domains and preserving session continuity",
+        "Privacy and consent-aware analytics: GDPR, ePrivacy Directive, California CPRA, and India's DPDP Act implications",
+        "Google Consent Mode fundamentals: how consent signals adjust tag behavior (not a replacement for a consent banner)",
+        "Consent types and parameters: analytics_storage, ad_storage, ad_user_data, ad_personalization",
+        "Consent initialization in GTM: default consent state vs. updated consent state",
+        "Basic Consent Mode vs. Advanced Consent Mode: cookieless pings and behavioral modeling concepts",
+        "Consent Management Platforms (CMPs) overview: Cookiebot, OneTrust, Usercentrics integration patterns",
+        "Consent signal debugging using GTM Preview Mode and Tag Assistant",
+        "Strict prohibition of Personally Identifiable Information (PII) in GA4: emails, phone numbers, full names; data redaction tools",
+        "Data retention policies, user deletion requests, access governance, and tracking QA audit methodologies"
+      ],
+      "hands_on_tools": [
+        "Google Tag Assistant",
+        "Google Sheets (UTM Builder & Governance Matrix)",
+        "Consent Mode Debugger",
+        "Chrome DevTools Network Tab"
+      ],
+      "hands_on_practice": "Auditing a live website for tracking bugs, duplicate tags, and unmasked PII; creating a standardized enterprise UTM governance spreadsheet; testing Consent Mode tag behavior under denied vs. granted states.",
+      "assignment": "GA4/GTM Tracking Quality & Privacy Audit Report: evaluation of a website's measurement setup, identifying tracking errors, UTM inconsistencies, consent readiness, and remediation steps with severity ratings.",
+      "competencies": [
+        "Analytics QA & debugging",
+        "UTM parameter governance",
+        "Google Consent Mode configuration",
+        "PII avoidance and privacy compliance"
+      ],
+      "assessment_criteria": "Thoroughness of tracking audit, accuracy of Consent Mode signal evaluation, absence of PII in parameters, and clarity of prioritized remediation recommendations."
+    },
+    {
+      "module_number": 5,
+      "module": "Module 05",
+      "number": "05",
+      "title": "GA4 Analysis, Explorations & Reporting",
+      "duration": "6 Hours",
+      "hours": 6,
+      "lessons": 3,
+      "lesson_count": 3,
+      "objective": "Extract actionable business intelligence from GA4 data using Standard Reports, custom Funnel Explorations, Path Explorations, and user segmentation.",
+      "topics": [
+        "GA4 interface and navigation: Home, Reports workspace, Explore workspace, and Advertising workspace",
+        "Standard reports vs. custom reports: Reports snapshot, Realtime reporting, and report customization",
+        "Acquisition reporting: User Acquisition (first-touch channel) versus Traffic Acquisition (session-level channel)",
+        "Default Channel Groups: Organic Search, Paid Search, Direct, Organic Social, Paid Social, Email, Referral",
+        "Engagement reporting: Pages and screens, Landing page report, Events report, and Key events report",
+        "User metrics vs. Session metrics: Active users, New users, Sessions, Engaged sessions, Engagement rate, Average engagement time",
+        "Traffic source analysis: evaluating organic vs. paid campaigns, bounce/engagement rate correlations, and landing page effectiveness",
+        "Audience analysis: demographics, geography, technology devices, and custom audience behavior",
+        "GA4 Explorations deep-dive: Free-form explorations, nested dimensions, metric calculations, and data visualization types",
+        "Funnel Explorations: open vs. closed funnels, step progression, drop-off rate calculation, and abandonment bottleneck identification",
+        "Path Explorations: forward and backward user journey mapping from key event milestones",
+        "Segments and comparisons: creating user segments, session segments, and event segments for comparative analysis",
+        "Attribution interpretation: Data-Driven Attribution (DDA) vs. Last-Click model differences and conversion credit distribution",
+        "Reporting identity concepts: Blended, Observed, Device-based; understanding Google Signals, user ID, and device ID",
+        "Data limitations: data thresholding, orange warning icons, sampling limits, and cardinality management",
+        "Interpreting behavioral patterns: translating analytical findings into prioritized, testable business optimization recommendations"
+      ],
+      "hands_on_tools": [
+        "Google Analytics 4 Explore Workspace",
+        "GA4 Standard Reports",
+        "Google Analytics Demo Account"
+      ],
+      "hands_on_practice": "Building a multi-step checkout/lead funnel exploration, creating a backward path exploration from lead submission, and segmenting mobile vs. desktop user engagement.",
+      "assignment": "GA4 Website Performance Analysis & Funnel Diagnostic: executive analytical report with 5 core findings, funnel drop-off diagnostics, channel acquisition analysis, and 5 data-backed optimization recommendations.",
+      "competencies": [
+        "GA4 Standard Report navigation",
+        "Funnel and Path Exploration construction",
+        "Cohort and segment comparison",
+        "Actionable business recommendation formulation"
+      ],
+      "assessment_criteria": "Correct exploration configuration, accurate calculation of drop-off percentages, understanding of attribution models and thresholding, and business relevance of recommendations."
+    },
+    {
+      "module_number": 6,
+      "module": "Module 06",
+      "number": "06",
+      "title": "Looker Studio & Business Dashboards",
+      "duration": "6 Hours",
+      "hours": 6,
+      "lessons": 3,
+      "lesson_count": 3,
+      "objective": "Design interactive, stakeholder-ready business intelligence dashboards in Looker Studio connecting live GA4 data to provide executive decision support.",
+      "topics": [
+        "Business dashboard fundamentals: purpose, audience segmentation (executives, marketers, operational teams), and reporting cadences",
+        "Stakeholder information needs: identifying core questions, avoiding dashboard clutter, and choosing the right KPIs",
+        "Looker Studio interface, workspace setup, canvas formatting, themes, and branding customization",
+        "Data source connections: connecting Looker Studio to Google Analytics 4 via native connector; connecting Google Sheets",
+        "Dimensions (categorical data) and Metrics (quantitative data) in Looker Studio",
+        "Visual component mastery: Scorecards with comparison indicators, Time-series charts, Bar/Column charts, Pie/Donut charts, and Data tables with heatmaps",
+        "Interactive controls: Date range selectors, Dimension drop-down filters, Search boxes, and Cross-filtering interactions",
+        "Basic calculated fields: combining metrics, conversion rates (Key Events / Sessions), and custom naming",
+        "Dashboard information hierarchy: executive summary KPIs at the top, trendlines in the middle, granular breakdown tables at the bottom",
+        "Data storytelling & visual clarity: color harmony, readable typography, context benchmarks, and annotations",
+        "Interpreting trends: separating seasonal shifts from marketing campaign effects",
+        "Dashboard sharing permissions: View vs. Edit access, embedding reports, scheduled email delivery, and PDF export",
+        "Dashboard maintenance, connector troubleshooting, GA4 API quota limits (tokens per project/hour), and optimization strategies",
+        "Final Capstone Portfolio presentation: assembling all 4 course deliverables into a professional showcase for employment and freelancing"
+      ],
+      "hands_on_tools": [
+        "Looker Studio",
+        "Google Analytics 4 Connector",
+        "Google Sheets",
+        "Canva / Figma (header graphics)"
+      ],
+      "hands_on_practice": "Building an end-to-end 2-page marketing performance dashboard in Looker Studio with scorecards, channel acquisition bar charts, landing page performance table, date range picker, and channel filter.",
+      "assignment": "Stakeholder-Ready Marketing Performance Dashboard (Looker Studio link + PDF executive brief) featuring 5 core scorecards, channel performance trends, conversion breakdown, and executive summary notes.",
+      "competencies": [
+        "Looker Studio dashboard development",
+        "GA4 native data source connection",
+        "Data visualization and visual hierarchy",
+        "Executive presentation and storytelling"
+      ],
+      "assessment_criteria": "Professional visual layout, correct metric calculations, interactive filter functionality, thoughtful insight commentary, and complete absence of broken charts or quota errors."
+    }
+  ],
+  "what_you_will_build": [
+    {
+      "project_number": 1,
+      "badge": "Portfolio Project 01 — Strategy & Blueprint",
+      "title": "Business Measurement Strategy & Tracking Blueprint",
+      "subtitle": "End-to-End Digital Measurement Plan & Event Taxonomy Architecture",
+      "client_brief": "A high-growth direct-to-consumer (D2C) brand or B2B professional services firm needs a robust measurement architecture to replace fragmented tracking. You are hired to audit their digital touchpoints, align website interactions with executive business KPIs, and design an implementable measurement specification for GA4 and GTM.",
+      "deliverables": [
+        "Executive Business Overview & KPI Framework mapping business objectives to digital metrics",
+        "Customer Journey Map identifying critical touchpoints across awareness, consideration, and conversion stages",
+        "Comprehensive Event Inventory detailing event names, descriptions, triggers, and scoping following Google's recommended taxonomy",
+        "Event Parameter Specification defining required custom dimensions, custom metrics, and data types (string, numeric)",
+        "Key Event & Conversion Definitions specifying high-value conversion criteria and counting methodology (once per event vs. once per session)",
+        "GTM & GA4 Technical Implementation Matrix mapping each event to specific tag types, triggers, and dataLayer variables",
+        "Privacy & Consent Considerations detailing compliance rules, cookie categories, and data redaction requirements",
+        "Pre-Launch Measurement Validation Checklist establishing quality gates for tracking accuracy"
       ],
       "tools": [
-        "GA4",
-        "Google Tag Manager"
+        "Google Sheets",
+        "Google Analytics 4",
+        "Lucidchart / Miro",
+        "Notion / Google Docs"
       ],
-      "hands_on_practice": "Practical lab executing workflows for Reporting & Insights.",
-      "assignment": "Deliverable for Module 2.",
-      "business_application": "Directly applicable to improving business metrics related to Reporting & Insights.",
-      "expected_outcome": "Completion of the Reporting & Insights segment of the overall project."
+      "outcome": "A client-ready, professional measurement blueprint that translates business objectives into an implementable tracking architecture."
+    },
+    {
+      "project_number": 2,
+      "badge": "Portfolio Project 02 — Implementation & Debugging",
+      "title": "Event Tracking & Conversion Measurement Implementation",
+      "subtitle": "Live GA4 Property Setup, GTM Container Deployment & DebugView Validation",
+      "client_brief": "An e-commerce retailer or multi-service website requires complete event and conversion tracking deployment. Working in Google Tag Manager and GA4, you must configure the Google tag, deploy custom event tags, capture dynamic dataLayer variables, designate Key Events, and verify all telemetry through live debugging tools.",
+      "deliverables": [
+        "Production GA4 Property & Web Data Stream Configuration with 14-month data retention and internal IP filters",
+        "Exported Google Tag Manager Container (.json) featuring Google Tag, GA4 Event tags, triggers, and variables",
+        "Form Submission & Button Click Event Tracking implemented using CSS selectors and element visibility triggers",
+        "Custom Event & Parameter Implementation capturing user engagement telemetry (content type, lead source, download title)",
+        "Custom Dimensions & Metrics Registration in GA4 Admin matching the measurement specification",
+        "Key Event (Conversion) Designation and counting method configuration",
+        "GTM Preview Mode & Tag Assistant Verification Evidence confirming tag firing orders and parameter values",
+        "GA4 DebugView Event Stream Screenshots proving accurate event ingestion and parameter payload delivery",
+        "Event Validation Matrix comparing intended tracking specifications against verified telemetry in GA4"
+      ],
+      "tools": [
+        "Google Tag Manager",
+        "Google Analytics 4",
+        "Google Tag Assistant",
+        "Chrome DevTools"
+      ],
+      "outcome": "A fully working or documented simulated GA4 & GTM tracking deployment verified with real-time diagnostic evidence."
+    },
+    {
+      "project_number": 3,
+      "badge": "Portfolio Project 03 — Quality & Governance Audit",
+      "title": "GA4/GTM Tracking Quality Audit",
+      "subtitle": "Comprehensive Measurement QA, UTM Governance & Consent Compliance Review",
+      "client_brief": "An established company suspects significant data discrepancies in their analytics reports: duplicate conversions, unmapped referral loops, missing campaign attribution, and potential privacy risks. You are engaged as an independent analytics consultant to conduct a forensic tracking quality audit and recommend prioritized fixes.",
+      "deliverables": [
+        "Measurement Quality & Data Integrity Assessment scoring the website's existing tracking setup",
+        "Event Inventory & Validation Matrix identifying active tags, trigger conditions, and firing accuracy",
+        "Duplicate & Missing Event Diagnosis isolating causes of overcounting or tracking dropouts",
+        "Referral Traffic & Self-Referral Audit identifying unwanted payment gateway referrals and cross-domain session breakages",
+        "Standardized Enterprise UTM Parameter Governance Policy & Spreadsheet Builder enforcing strict campaign naming conventions",
+        "Google Consent Mode Configuration Review auditing consent initialization, signal propagation, and tag firing restrictions",
+        "PII (Personally Identifiable Information) Compliance Audit verifying zero collection of emails or phone numbers in GA4 parameters",
+        "Prioritized Remediation Roadmap categorizing issues into Critical, Major, and Minor severity with step-by-step fix instructions"
+      ],
+      "tools": [
+        "Google Tag Assistant",
+        "Google Sheets",
+        "Chrome DevTools Network Tab",
+        "Consent Mode Debugger"
+      ],
+      "outcome": "A professional analytics quality audit document suitable for presentation to enterprise clients, CTOs, and marketing directors."
+    },
+    {
+      "project_number": 4,
+      "badge": "Portfolio Project 04 — Business Intelligence Dashboard",
+      "title": "Marketing Performance Dashboard",
+      "subtitle": "Interactive Multi-Page Looker Studio Dashboard & Executive Insight Brief",
+      "client_brief": "The marketing leadership team requires a unified, automated executive dashboard that provides immediate visibility into marketing acquisition, user engagement, funnel bottlenecks, and key event conversions without having to manually log into GA4. You must build and present an interactive Looker Studio dashboard connected to GA4.",
+      "deliverables": [
+        "Live Looker Studio Marketing Dashboard (shareable link + high-resolution PDF export)",
+        "Executive KPI Scorecard Row displaying Users, Sessions, Engagement Rate, Key Events, and Conversion Rate with benchmark comparisons",
+        "Acquisition Channel Performance Analysis visualizing session volume and conversion efficiency by Default Channel Group",
+        "Landing Page & Content Engagement Table highlighting high-traffic vs. high-converting web pages",
+        "Interactive Date Range & Dimension Filters allowing stakeholders to slice data by channel, device category, and geography",
+        "Calculated Fields & Metrics demonstrating conversion ratios and custom performance indicators",
+        "Data Quality & Attribution Notes explaining data thresholds, model differences (DDA vs. Last-Click), and sampling limitations",
+        "Executive Presentation Brief translating visual metrics into 5 concrete, actionable business optimization recommendations"
+      ],
+      "tools": [
+        "Looker Studio",
+        "Google Analytics 4 Connector",
+        "Google Sheets",
+        "Google Slides / Canva"
+      ],
+      "outcome": "A professional business intelligence dashboard and executive insight presentation demonstrating data storytelling and decision support."
     }
+  ],
+  "faq": [
+    {
+      "question": "What is the Google Analytics 4 & GTM course?",
+      "answer": "The Google Analytics 4 & GTM course is a practical, 6-week (48 instructional hours) certification programme designed to teach students how to architect digital measurement plans, configure GA4 properties, deploy event tracking via Google Tag Manager (GTM), audit tracking quality and privacy compliance, perform advanced funnel analysis in GA4 Explorations, and build executive reporting dashboards in Looker Studio."
+    },
+    {
+      "question": "Is this course suitable for beginners?",
+      "answer": "Yes. The course begins with digital measurement fundamentals, business KPIs, and event concepts before advancing into Google Tag Manager tag configuration, debugging, and Looker Studio dashboards. While no prior analytics experience is required, basic familiarity with websites and digital marketing concepts is helpful."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course duration is 6 Weeks (48 total instructional hours across 6 comprehensive modules). The course tuition is an institutional fee of ₹7,900 (plus applicable GST). In accordance with Nova Skills Truth in Pricing policy, there are no artificial countdown discounts, inflated strike-through comparisons, or hidden fees."
+    },
+    {
+      "question": "What is the difference between GA4 and GTM?",
+      "answer": "Google Tag Manager (GTM) is a tag management system used to deploy, configure, and manage tracking codes (tags, triggers, and variables) on a website without constantly editing website source code. Google Analytics 4 (GA4) is an analytics platform that collects, stores, processes, and visualizes the measurement data sent by those tags. In professional workflows, GTM collects and dispatches data, while GA4 reports and analyzes it."
+    },
+    {
+      "question": "Will I learn Google Analytics setup?",
+      "answer": "Yes. You will learn end-to-end GA4 property setup from scratch, including creating accounts and web data streams, configuring Measurement IDs, setting 14-month data retention, establishing internal IP traffic filters, defining unwanted referral exclusions, registering custom dimensions and metrics, and configuring Key Events."
+    },
+    {
+      "question": "Does the course teach event tracking?",
+      "answer": "Yes, event tracking is at the core of the GA4 data model. You will master automatically collected events, enhanced measurement events, Google's recommended events (such as generate_lead, view_item, sign_up), and how to build custom events with specific event parameters to measure unique user actions like button clicks, video plays, and downloads."
+    },
+    {
+      "question": "Will I learn Google Tag Manager practically?",
+      "answer": "Yes. You will get extensive hands-on experience inside Google Tag Manager configuring Google tags, GA4 Event tags, click triggers, form submission triggers, user-defined variables, and dataLayer variables. You will also master GTM Preview mode and Tag Assistant to test and verify tag execution before publishing versions."
+    },
+    {
+      "question": "Does the course include conversion tracking?",
+      "answer": "Yes. The course thoroughly covers Key Events (GA4's modern terminology for conversions), event counting methodologies (once per event vs. once per session), custom conversion criteria, and how GA4 Key Events relate to and differ from Google Ads conversions and imported bidding goals."
+    },
+    {
+      "question": "Will I learn consent mode and privacy-aware measurement?",
+      "answer": "Yes. Module 04 specifically covers privacy regulations (GDPR, DPDP), Google Consent Mode fundamentals (analytics_storage, ad_storage, ad_user_data, ad_personalization), basic vs. advanced consent mode, consent signal debugging in Tag Assistant, and strict policies prohibiting Personally Identifiable Information (PII) from being passed into GA4."
+    },
+    {
+      "question": "Does this course cover Looker Studio?",
+      "answer": "Yes. Module 06 is completely dedicated to Looker Studio. You will learn how to connect live GA4 data sources, build executive scorecards, design time-series charts and acquisition tables, add interactive date and channel filters, write basic calculated fields, and structure stakeholder-ready dashboards that present clear business narratives."
+    },
+    {
+      "question": "Are real practical projects included?",
+      "answer": "Yes. You will complete four substantial, client-ready portfolio deliverables: (1) an End-to-End Business Measurement Plan, (2) a Validated GA4 & GTM Event Tracking Implementation with DebugView evidence, (3) a GA4/GTM Tracking Quality & Privacy Audit Report, and (4) an Interactive Looker Studio Marketing Performance Dashboard."
+    },
+    {
+      "question": "Will I learn Google Ads campaign management?",
+      "answer": "No. Campaign management, ad copywriting, keyword bidding, and media buying are owned by Course 31: Google Ads Performance Specialist. This course (Course 37) specializes exclusively in digital analytics, tracking implementation, data validation, and performance reporting. Campaign specialists rely on analytics specialists to ensure their conversions are tracked accurately."
+    },
+    {
+      "question": "Does the course require coding?",
+      "answer": "No advanced programming or software development experience is required. All GTM workflows use GTM's visual interface, built-in triggers, and standard CSS selectors. Foundational web concepts (HTML elements, basic JavaScript dataLayer snippets, and JSON data structures) are explained clearly from a marketer's and analyst's perspective."
+    },
+    {
+      "question": "Will I receive an official Google Analytics certification?",
+      "answer": "The course includes guided preparation and curriculum alignment for the official Google Analytics certification available on Google Skillshop. The official Google credential must be earned independently by passing Google's free online assessment on Skillshop. Upon completing the course and submitting your 4 portfolio deliverables, Nova Skills awards an institutional Certificate of Completion in Google Analytics 4 & GTM."
+    },
+    {
+      "question": "What career opportunities are available?",
+      "answer": "Graduates are equipped for roles such as Junior Digital Analytics Specialist, GA4 Implementation Executive, Web Analytics Executive, Marketing Reporting Specialist, and Freelance Analytics Consultant. Typical entry-to-intermediate analyst salaries in India range from ₹3.8L to ₹7.5L per year, with freelance implementation projects commanding ₹20,000 to ₹50,000 per setup."
+    }
+  ],
+  "seo_title": "GA4 & GTM Course | 6 Weeks, ₹7,900 | Nova Skills",
+  "meta_title": "GA4 & GTM Course | 6 Weeks, ₹7,900 | Nova Skills",
+  "seo_description": "Master Google Analytics 4, GTM, event tracking, conversion measurement and Looker Studio. 6 weeks, 48 practical hours at ₹7,900.",
+  "meta_description": "Master Google Analytics 4, GTM, event tracking, conversion measurement and Looker Studio. 6 weeks, 48 practical hours at ₹7,900.",
+  "keywords": [
+    "Google Analytics 4 Course",
+    "GA4 Course",
+    "Google Analytics Course in India",
+    "Google Tag Manager Course",
+    "GA4 and GTM Course",
+    "Google Analytics Training",
+    "GA4 Certification Course",
+    "Google Analytics 4 Training for Beginners",
+    "Google Tag Manager Training",
+    "Conversion Tracking Course",
+    "GA4 Event Tracking Course",
+    "GA4 Course Fees",
+    "GA4 Course Duration",
+    "Looker Studio Course",
+    "Digital Analytics Course",
+    "Marketing Analytics Course",
+    "Website Analytics Training"
   ]
 }
