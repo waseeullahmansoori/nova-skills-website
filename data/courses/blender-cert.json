@@ -1,362 +1,1859 @@
 {
   "course_id": "blender-cert",
-  "course_name": "Blender",
+  "id": "blender-cert",
+  "slug": "blender",
+  "course_name": "Blender 3D Modeling, Materials & Rendering",
+  "title": "Blender 3D Modeling, Materials & Rendering",
+  "name": "Blender 3D Modeling, Materials & Rendering",
+  "academic_sequence": 73,
+  "course_number": 73,
+  "curriculum_edition": "2027",
   "academy": "3D Academy",
   "academy_id": "3d",
-  "course_type": "MICRO",
-  "course_role": "Career/Monetization",
-  "level": "BEGINNER",
-  "duration": "1 Month",
-  "learning_hours": 40,
-  "future_review_status": "STABLE",
-  "target_audience": {
-    "best_for": [
-      "Beginners and aspiring 3D artists wanting to master open-source 3D modeling and animation.",
-      "Graphic designers, digital illustrators, and game developers creating custom 3D assets.",
-      "Content creators seeking to produce 3D motion graphics, product showcases, and stylized renders."
-    ],
-    "who_should_take_foundation_first": "No prior 3D experience required; basic computer literacy and mouse/keyboard navigation skills are sufficient.",
-    "not_for": [
-      "Students seeking advanced character rigging and visual effects pipeline programming.",
-      "Learners looking exclusively for 2D CAD drafting without 3D creative production."
-    ]
+  "academyId": "3d",
+  "academic_positioning": "Foundational 3D Modeling, PBR Materials, Studio Lighting & Product Visualization",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "Junior 3D Artist & Product Visualization Specialist",
+  "courseRole": "Junior 3D Artist & Product Visualization Specialist",
+  "level": "Beginner to Applied",
+  "priority": "P0",
+  "positioning": "Recommended Beginner Entry",
+  "duration": "8 Weeks",
+  "durationMonths": 2,
+  "duration_weeks": 8,
+  "learning_hours": 64,
+  "learningHours": 64,
+  "guided_hours": 64,
+  "hours": 64,
+  "weekly_workload": "8 hours per week (guided studio practice, 3D modeling labs and scene reviews)",
+  "mode": "Interactive 3D Studio Labs & Guided Project Mentorship",
+  "price": 9900,
+  "fee": 9900,
+  "regular_fee": 9900,
+  "originalPrice": 9900,
+  "commercial_notice": "Flat, transparent tuition of ₹9,900. No hidden fees or exaggerated comparison claims. Blender is free, open-source software.",
+  "pricing": {
+    "amount": 9900,
+    "currency": "INR",
+    "display": "₹9,900",
+    "comparison_price": 9900,
+    "discount_percent": 0,
+    "transparent_pricing": true
   },
-  "prerequisites": {
-    "required": "Basic computer literacy and comfort with standard keyboard/mouse navigation.",
-    "recommended": "Familiarity with digital graphics or vector design tools is helpful but not mandatory.",
-    "not_required": "Prior 3D modeling experience, coding, or mathematical background.",
-    "system_requirements": {
-      "hardware": "Modern 64-bit multi-core CPU, 8GB+ RAM (16GB recommended), OpenGL 3.3 compatible GPU (NVIDIA/AMD dedicated GPU recommended).",
-      "software_accounts": "Blender 4.x (Free & Open Source, downloadable from blender.org)."
+  "tagline": "From Your First 3D Model to Stunning, Portfolio-Ready Visuals.",
+  "hero_headline": "From Your First 3D Model to Stunning, Portfolio-Ready Visuals.",
+  "hero_supporting_heading": "3D ACADEMY / BEGINNER 3D DESIGN CERTIFICATION",
+  "hero_supporting_headline": "Model It. Texture It. Light It. Render It. Present It Professionally.",
+  "h1": "Blender 3D Modeling, Materials & Rendering",
+  "seo_title": "Blender 3D Modeling & Rendering Course | Nova Skills",
+  "meta_title": "Blender 3D Modeling & Rendering Course | Nova Skills",
+  "seo_description": "Learn Blender 3D modeling, PBR materials, lighting, Cycles, EEVEE and Geometry Nodes in 8 weeks (64 hours). Build 3D portfolio projects. Fee ₹9,900.",
+  "meta_description": "Learn Blender 3D modeling, PBR materials, lighting, Cycles, EEVEE and Geometry Nodes in 8 weeks (64 hours). Build 3D portfolio projects. Fee ₹9,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=blender-cert",
+  "hero": {
+    "eyebrow": "3D ACADEMY / BEGINNER 3D DESIGN CERTIFICATION",
+    "h1": "Blender 3D Modeling, Materials & Rendering",
+    "primary_hook": "From Your First 3D Model to Stunning, Portfolio-Ready Visuals.",
+    "short_description": "Learn Blender to create original 3D models, realistic materials, professional lighting and polished rendered visuals. Master mesh modeling, modifiers, UV mapping, PBR shading, Cycles and EEVEE rendering, introductory Geometry Nodes and practical product visualization through hands-on projects.",
+    "supporting_value_proposition": "Model It. Texture It. Light It. Render It. Present It Professionally.",
+    "quick_info": "8 Weeks | 64 Guided Hours | ₹9,900 | Beginner to Applied",
+    "primary_software_badge": "Primary: Blender 5.2 LTS | Engines: Cycles & EEVEE | Supporting: Geometry Nodes, Photoshop/Krita",
+    "skill_tags": [
+      "Blender",
+      "3D Modeling",
+      "Mesh Topology",
+      "UV Mapping",
+      "PBR Materials",
+      "Lighting",
+      "Cycles",
+      "EEVEE",
+      "Geometry Nodes",
+      "Product Visualization"
+    ],
+    "primary_cta": {
+      "text": "Enroll Now",
+      "action": "openEnrollmentModal"
+    },
+    "secondary_cta": {
+      "text": "Get Course Syllabus",
+      "action": "downloadSyllabus"
     }
   },
+  "short_description": "Learn Blender to create original 3D models, realistic materials, professional lighting and polished rendered visuals. Master mesh modeling, modifiers, UV mapping, PBR shading, Cycles and EEVEE rendering, introductory Geometry Nodes and practical product visualization through hands-on projects.",
+  "shortDesc": "Learn Blender to create original 3D models, realistic materials, professional lighting and polished rendered visuals. Master mesh modeling, modifiers, UV mapping, PBR shading, Cycles and EEVEE rendering, introductory Geometry Nodes and practical product visualization through hands-on projects.",
+  "full_description": "Learn the complete foundation of 3D visual creation using Blender. Develop practical skills in mesh modeling, object construction, modifiers, UV unwrapping, realistic materials, lighting and camera composition. Progress from simple geometric objects to original product models and professional presentation scenes. Explore Blender's powerful rendering engines, introductory Geometry Nodes and basic animation to create still visuals and product turntables.",
+  "fullDesc": "Learn the complete foundation of 3D visual creation using Blender. Develop practical skills in mesh modeling, object construction, modifiers, UV unwrapping, realistic materials, lighting and camera composition. Progress from simple geometric objects to original product models and professional presentation scenes. Explore Blender's powerful rendering engines, introductory Geometry Nodes and basic animation to create still visuals and product turntables.",
+  "description": "Learn Blender to create original 3D models, realistic materials, professional lighting and polished rendered visuals. Master mesh modeling, modifiers, UV mapping, PBR shading, Cycles and EEVEE rendering, introductory Geometry Nodes and practical product visualization through hands-on projects.",
   "overview": {
-    "positioning": "Hands-on practical certification in open-source 3D modeling, procedural shading, and photorealistic rendering with Blender.",
-    "short_description": "Master 3D poly-modeling, modifier stacks, PBR shader materials, and photorealistic rendering using Blender's Cycles and EEVEE engines.",
-    "key_facts": {
-      "level": "BEGINNER",
-      "duration": "1 Month",
-      "format": "Hands-On",
-      "estimated_learning_hours": "40 Hours",
-      "project_count": "3 Projects",
-      "capstone": "Stylized 3D Isometric Environment Render",
-      "ai_integration": "NONE",
-      "career_focus": "Junior 3D Artist / Generalist"
-    },
-    "what_you_will_be_able_to_do": [
-      "Navigate the Blender 4.x interface and viewport workspace confidently.",
-      "Model hard-surface and stylized 3D assets using Edit Mode and procedural modifiers.",
-      "Create node-based PBR materials, procedural textures, and unwrap UV maps.",
-      "Set up studio lighting and render photorealistic scenes using Cycles and real-time EEVEE."
+    "section_heading": "What You Will Master",
+    "positioning": "Foundational 3D Modeling, PBR Materials, Studio Lighting & Product Visualization",
+    "short_description": "Learn Blender to create original 3D models, realistic materials, professional lighting and polished rendered visuals. Master mesh modeling, modifiers, UV mapping, PBR shading, Cycles and EEVEE rendering, introductory Geometry Nodes and practical product visualization through hands-on projects.",
+    "expanded_overview": "Learn the complete foundation of 3D visual creation using Blender. Develop practical skills in mesh modeling, object construction, modifiers, UV unwrapping, realistic materials, lighting and camera composition. Progress from simple geometric objects to original product models and professional presentation scenes. Explore Blender's powerful rendering engines, introductory Geometry Nodes and basic animation to create still visuals and product turntables.",
+    "commercial_differentiation": "Don't Just Learn Blender Tools. Learn to Build and Present Original 3D Products.",
+    "workflow": "Brief → Reference → Model → UV → Material → Light → Compose → Render → Refine → Deliver"
+  },
+  "commercial_differentiation": {
+    "headline": "Your First Step From 2D Design to Professional 3D Visualization",
+    "supporting_copy": "Learn to turn product ideas into original 3D models, realistic materials and presentation-ready visuals. Build practical Blender skills through modeling, shading, studio lighting, rendering and short product animations.",
+    "differentiators": [
+      {
+        "title": "1. Original 3D Modeling",
+        "description": "Create clean hard-surface models from scratch instead of relying entirely on downloaded pre-made assets."
+      },
+      {
+        "title": "2. Professional Materials & Lighting",
+        "description": "Develop PBR materials, custom node shaders, studio lighting rigs and realistic product presentation."
+      },
+      {
+        "title": "3. Modern Blender Workflows",
+        "description": "Learn modifier stacks, introductory Geometry Nodes, Cycles path tracing, EEVEE real-time rendering and organized asset management."
+      },
+      {
+        "title": "4. Commercial Portfolio Proof",
+        "description": "Complete an original hard-surface product model, a premium multi-shot visualization scene, and a product turntable animation with editable .blend source files."
+      }
+    ]
+  },
+  "modern_workflow_2027": {
+    "section_title": "Create Original 3D Assets. Build Reusable Workflows. Render With Confidence.",
+    "website_copy": "Learn modern Blender workflows for clean mesh modeling, physically based materials, efficient rendering and introductory procedural design. Build original 3D assets, refine their appearance through professional lighting and deliver organized, editable portfolio projects.",
+    "core_competencies": [
+      {
+        "title": "Non-Destructive Modeling",
+        "description": "Leverage modifier stacks (Bevel, Mirror, Solidify, Subdivision) for clean topology and editable geometry."
+      },
+      {
+        "title": "Principled PBR Shading",
+        "description": "Master physically plausible materials using the Principled BSDF shader, accurate roughness, metallic, normal, and bump maps."
+      },
+      {
+        "title": "Geometry Nodes Basics",
+        "description": "Understand procedural distribution, points, instancing, and exposed parameters for reusable scene arrangements."
+      },
+      {
+        "title": "Rendering Intelligence",
+        "description": "Compare Cycles path tracing vs EEVEE real-time rendering to optimize sampling, denoising, and render times."
+      },
+      {
+        "title": "Professional Asset Management",
+        "description": "Organize collections, relative texture paths, packed resources, and clean .blend project archives."
+      },
+      {
+        "title": "Practical AI Awareness",
+        "description": "Use AI tools ethically for concept references and moodboards while modeling all assessed geometry by hand."
+      }
     ]
   },
   "why_now": {
-    "industry_shift": "Blender has become an industry powerhouse in game development, indie films, and product design due to its zero licensing fees, rapid feature updates, and thriving community.",
-    "ai_impact": "AI addons and procedural geometry nodes in Blender automate tedious modeling tasks, allowing artists to focus on creative storytelling and visual aesthetics.",
-    "business_demand": "Brands, indie game studios, and marketing agencies actively seek Blender artists for cost-effective 3D product visualizations and social motion assets.",
-    "career_opportunity": "Blender skills provide an immediate pathway into freelance 3D asset creation, game prop modeling, and stylized illustration."
+    "industry_shift": "Brands, e-commerce platforms, packaging design studios and digital agencies are replacing traditional product photography with 3D CGI visuals.",
+    "ai_impact": "While AI generates flat 2D renders, commercial production demands editable 3D mesh assets, precise dimensions, custom textures, and reusable turntable animations.",
+    "business_demand": "High demand for junior 3D artists who can model consumer electronics, cosmetics, packaging, and accessories cleanly and render them under studio lighting.",
+    "career_opportunity": "Blender's zero licensing cost and rapid industry adoption make it the most accessible and commercially viable entry point into professional 3D visual production."
   },
-  "learning_outcomes": [
-    "MODEL: Construct clean low-poly and high-poly 3D models using Blender's Edit Mode and Modifier stack.",
-    "TEXTURE: Build procedural node-based materials and unwrap UVs for realistic PBR surface textures.",
-    "LIGHT: Set up natural 3-point studio lighting and HDRI environments for dramatic scene presentation.",
-    "RENDER: Optimize real-time EEVEE and ray-traced Cycles rendering settings for high-resolution portfolio renders.",
-    "ANIMATE: Create turntable camera animations and simple object keyframing for commercial showcases."
+  "icon": "🏗️",
+  "color": "linear-gradient(135deg, #FF6B00, #004672)",
+  "rating": 4.9,
+  "reviews": 190,
+  "students": 1180,
+  "liveProjects": 3,
+  "projects": 3,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=blender-cert",
+  "tags": [
+    "popular",
+    "blender",
+    "3d-modeling",
+    "cycles",
+    "eevee",
+    "product-visualization",
+    "certification"
   ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1: Interface & Geometry",
-        "focus": "Navigating 3D space, primitive mesh modeling, and viewport transform tools."
-      },
-      {
-        "stage": "Stage 2: Modifiers & Detailing",
-        "focus": "Non-destructive modeling with Array, Mirror, Bevel, and Subdivision Surface."
-      },
-      {
-        "stage": "Stage 3: Materials & Shading",
-        "focus": "Node-based Principled BSDF, roughness/normal maps, and UV unwrapping."
-      },
-      {
-        "stage": "Stage 4: Lighting & Camera Setup",
-        "focus": "Studio lighting, camera focal lengths, and scene composition."
-      },
-      {
-        "stage": "Stage 5: Final Rendering & Export",
-        "focus": "Cycles raytracing, EEVEE real-time engine, and portfolio image delivery."
-      }
+  "featured": true,
+  "category": "3D Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "target_audience": {
+    "ideal_for": [
+      "Beginner 3D artists starting their digital creative journey",
+      "Graphic designers wanting to expand from 2D into 3D product visuals",
+      "Digital illustrators and visual content creators seeking 3D skills",
+      "Product visualization beginners and packaging designers",
+      "Creative freelancers offering 3D mockups and e-commerce renders",
+      "Students exploring professional careers as 3D generalists"
+    ],
+    "who_should_take": [
+      "Anyone wanting structured, practical training in Blender from ground up",
+      "Designers wanting to create original hard-surface models without template dependence",
+      "Creatives seeking to master PBR materials, Cycles and EEVEE rendering"
+    ],
+    "not_designed_for": [
+      "Learners seeking advanced character sculpting and creature design",
+      "Students seeking complex character rigging and organic character animation",
+      "Advanced architectural visualization specialists needing CAD/BIM building walkthroughs"
     ]
   },
+  "prerequisites": {
+    "required": [
+      "Basic computer literacy (keyboard/mouse navigation, folder and file management)",
+      "Ability to save, organize, and open files on Windows, macOS, or Linux"
+    ],
+    "not_required": [
+      "No previous Blender experience required",
+      "No 3D modeling or CAD background required"
+    ],
+    "hardware_software": [
+      "Computer meeting official Blender 5.2 system requirements (64-bit multi-core CPU, 8GB+ RAM, OpenGL 4.3 compatible GPU)",
+      "Legitimate installation of Blender 5.2 LTS (free and open source)",
+      "Adobe Photoshop (or free Krita) for supporting texture prep and image adjustment"
+    ]
+  },
+  "highlights": [
+    "8 Weeks of structured, hands-on Blender training (64 guided learning hours)",
+    "Master Blender 5.2 LTS interface, 3D viewport, navigation, and precision coordinates",
+    "Non-destructive mesh modeling using core tools and modifiers (Bevel, Mirror, Solidify, SubD)",
+    "UV unwrapping, texel density, and photorealistic PBR material creation via Principled BSDF",
+    "Studio lighting techniques (3-point rigs, HDRIs) and camera composition with depth of field",
+    "Cycles path tracing vs EEVEE real-time rendering: sampling, denoising, and colour management (AgX)",
+    "Introductory Geometry Nodes: points, instancing, and reusable procedural asset setups",
+    "3 assessed commercial portfolio deliverables: original product model, visualization scene, and turntable animation"
+  ],
   "hands_on_tech": {
-    "core_tools": [
-      {
-        "tool": "Blender",
-        "purpose": "Free and open-source 3D creation pipeline suite.",
-        "what_student_learns": "3D poly-modeling, modifier stacks, node shading, and rendering.",
-        "what_student_builds": "Stylized 3D prop models and isometric environment renders."
-      }
+    "primary_tool": "Blender 5.2 LTS (3D Viewport, Edit Mode, Modifier Stack, Shader Editor, Compositor)",
+    "built_in_systems": [
+      "Blender Cycles (Path-traced rendering, physical lighting, denoising)",
+      "Blender EEVEE (Interactive real-time previews and rendering)",
+      "Geometry Nodes (Introductory procedural modeling, instancing on points)"
     ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
-  },
-  "industry_workflow": {
-    "overview": "Modern 3D Asset Creation Pipeline in Blender:",
-    "stages": [
-      {
-        "step": 1,
-        "name": "Concept & Reference",
-        "desc": "Gathering reference images and setting up viewport image planes."
-      },
-      {
-        "step": 2,
-        "name": "Blockout & Poly-Modeling",
-        "desc": "Blocking primary shapes and refining geometry in Edit Mode."
-      },
-      {
-        "step": 3,
-        "name": "Modifier Detailing",
-        "desc": "Applying subdivision, bevel, and procedural modifiers non-destructively."
-      },
-      {
-        "step": 4,
-        "name": "UV Unwrapping & Shading",
-        "desc": "Unwrapping seams and configuring PBR material nodes in the Shader Editor."
-      },
-      {
-        "step": 5,
-        "name": "Lighting & Rendering",
-        "desc": "Setting up cameras, HDRI lighting, and outputting final 4K renders in Cycles/EEVEE."
-      }
+    "supporting_tools": [
+      "Adobe Photoshop or Krita (Texture map preparation, reference cleanup)",
+      "PureRef (Reference board organization)"
     ]
   },
-  "business_use_cases": [
+  "tools": [
+    "Blender 5.2 LTS",
+    "Blender Cycles",
+    "Blender EEVEE",
+    "Geometry Nodes",
+    "Photoshop / Krita"
+  ],
+  "curriculum": [
     {
-      "sector": "Indie Game & Product Visualization",
-      "business_problem": "Producing high-quality 3D assets without expensive proprietary software license overhead.",
-      "approach": "Utilize Blender's end-to-end pipeline to model, texture, and render commercial-grade assets.",
-      "toolset": "Blender 4.x (Cycles & EEVEE)",
-      "output": "Production-ready 3D prop assets and photorealistic marketing renders."
+      "module": "Module 01",
+      "title": "Blender & 3D Foundations",
+      "lessons": 8,
+      "hours": 8
+    },
+    {
+      "module": "Module 02",
+      "title": "Precision Mesh Modeling",
+      "lessons": 10,
+      "hours": 12
+    },
+    {
+      "module": "Module 03",
+      "title": "UV Mapping & Materials",
+      "lessons": 10,
+      "hours": 10
+    },
+    {
+      "module": "Module 04",
+      "title": "Lighting, Cameras & Rendering",
+      "lessons": 14,
+      "hours": 12
+    },
+    {
+      "module": "Module 05",
+      "title": "Procedural Modeling & Animation",
+      "lessons": 12,
+      "hours": 10
+    },
+    {
+      "module": "Module 06",
+      "title": "Commercial 3D Portfolio",
+      "lessons": 13,
+      "hours": 12
     }
   ],
-  "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Denoising renders and generating background elements.",
-    "ai_can_automate": "Texture upscaling and basic sky replacements.",
-    "ai_cannot_replace": "Architectural design intent, lighting mood, and spatial composition.",
-    "human_expertise_required": "Ensuring structural accuracy and realistic material properties.",
-    "validation_protocol": "Verify AI-generated elements against actual project specifications.",
-    "responsible_use": "Avoid misleading representations of physical property boundaries."
-  },
-  "best_practices": [
-    "Always work to real-world scale (1 unit = 1cm or 1m).",
-    "Keep poly counts optimized for real-time engine compatibility.",
-    "Use render elements (passes) for flexible post-production."
+  "learning_outcomes": [
+    "Navigate Blender's interface and 3D viewport with confidence.",
+    "Understand 3D coordinates, units and transforms (location, rotation, scale).",
+    "Organize scenes using collections, clean naming conventions and hierarchy.",
+    "Create and edit meshes with vertices, edges and faces.",
+    "Use professional modeling operations (extrude, inset, bevel, loop cut, knife).",
+    "Understand topology, edge flow and surface normals.",
+    "Apply non-destructive modifiers (Bevel, Mirror, Solidify, Subdivision Surface).",
+    "Build introductory hard-surface models with clean bevels and proportions.",
+    "Create and inspect clean UV maps with marked seams and proper unwrapping.",
+    "Understand texel density and maintain texture consistency across models.",
+    "Apply image and procedural textures with correct coordinate mapping.",
+    "Create PBR materials using the Principled BSDF shader.",
+    "Configure metallic, roughness, normal and bump properties accurately.",
+    "Organize material and shader nodes cleanly in the Shader Editor.",
+    "Create professional studio lighting (key, fill, rim/backlight).",
+    "Use HDRI environments appropriately for realistic ambient illumination.",
+    "Compose product shots using cameras with focal length and framing rules.",
+    "Use depth of field effectively to create visual focus and background separation.",
+    "Compare Cycles path tracing and EEVEE real-time rendering accurately.",
+    "Apply colour management (AgX view transform) and suitable render settings.",
+    "Optimize sampling and denoising for clean renders with efficient render times.",
+    "Build introductory Geometry Nodes setups using mesh primitives and points.",
+    "Use instances to create reusable procedural arrangements.",
+    "Animate basic objects and cameras using keyframes.",
+    "Create a smooth 360-degree product turntable animation.",
+    "Prepare client-ready render outputs in standard image and video formats.",
+    "Organize editable .blend projects and package external assets for handover."
   ],
-  "common_mistakes": [
-    {
-      "mistake": "Ignoring real-world material scale and reflectivity.",
-      "why_it_happens": "Rushing the texturing process without reference photos.",
-      "professional_approach": "Always use PBR maps with correct tiling and reflection glossiness."
-    }
-  ],
-  "career_paths": {
-    "entry_roles": "Junior 3D Artist, 3D Generalist",
-    "mid_roles": "3D Environment Artist, 3D Prop Modeler",
-    "specialist_roles": "Blender Shading Specialist, Lighting Artist",
-    "freelance_roles": "Freelance 3D Asset Creator, Isometric Illustrator",
-    "employer_expectations": "Clean topology, solid sense of lighting/composition, and an impressive portfolio of finished renders.",
-    "what_student_demonstrates": "Ability to take a 3D asset from initial mesh blockout to final lit and textured render."
+  "portfolio": {
+    "title": "Blender Product Visualization — Modeling, Rendering & Animation Portfolio",
+    "name": "Blender Product Visualization — Modeling, Rendering & Animation Portfolio",
+    "total_deliverables": 3,
+    "description": "Students develop three coordinated commercial portfolio deliverables based on an original hard-surface product brief, complete with editable .blend files and final renders.",
+    "original_work_rule": "Every assessed deliverable must include original, student-created mesh geometry. Downloaded complete models with only material changes do not satisfy the requirement.",
+    "deliverable_01": {
+      "id": "deliverable-01",
+      "title": "Original Hard-Surface Product Model",
+      "category": "Hard-Surface 3D Modeling & UV Mapping",
+      "examples": [
+        "Perfume bottle with custom cap and label geometry",
+        "Wireless bluetooth speaker with grille details",
+        "Over-ear headphones with headband and ear-cup assemblies",
+        "Cosmetic cream container with threaded lid",
+        "Modern architectural desk lamp with articulated joints",
+        "Consumer electronic accessory or smart wearable"
+      ],
+      "mandatory_skills": [
+        "Original mesh modeling from reference images",
+        "Clean topology appropriate to the asset (quad-dominant, clean edge loops)",
+        "Correct real-world proportions and unit scale",
+        "Suitable modifier use (Bevel, Mirror, Solidify, Subdivision Surface)",
+        "Consistent surface normals and auto-smooth shading",
+        "Clean UV unwrapping with marked seams and minimized stretch",
+        "Organized PBR materials connected via Principled BSDF",
+        "Clear scene hierarchy and collection naming"
+      ],
+      "required_evidence": [
+        "Editable .blend project file with intact modifier stack",
+        "Wireframe viewport screenshots showing quad topology",
+        "Modifier stack configuration screenshots",
+        "UV layout map inspection screenshot",
+        "Material shader node network screenshots",
+        "Clay/ambient occlusion model render",
+        "Brief written explanation of modeling choices"
+      ],
+      "assessment_criteria": [
+        "Modeling accuracy and fidelity to reference",
+        "Topology quality and edge flow smoothness",
+        "Surface quality and absence of pinching/shading artifacts",
+        "Modifier order and non-destructive workflow",
+        "UV unwrapping quality and seam placement",
+        "File organization and scene hierarchy"
+      ]
+    },
+    "deliverable_02": {
+      "id": "deliverable-02",
+      "title": "Premium Product Visualization Scene",
+      "category": "Studio Lighting, PBR Shading & Multi-Camera Rendering",
+      "description": "A professional studio presentation of the product developed in Deliverable 01, featuring realistic materials, studio lighting rigs, camera composition, and colour-managed rendering.",
+      "mandatory_render_evidence": {
+        "camera_compositions": [
+          "1. Product Hero Shot (Primary eye-level or slight low-angle commercial hero view)",
+          "2. Alternate Three-Quarter Shot (Dynamic 3/4 perspective highlighting form and depth)",
+          "3. Product Detail / Close-up Shot (Macro shot demonstrating fine material texture and bevel quality)"
+        ],
+        "lighting_variations": [
+          "Clean Commercial Lighting Variation (High-key or balanced 3-point studio lighting with soft reflections)",
+          "Premium Dramatic Lighting Variation (Mood-driven, high-contrast or dark-background luxury presentation)"
+        ]
+      },
+      "mandatory_skills": [
+        "Realistic PBR materials (dielectric plastics, brushed/polished metals, glass, rubber)",
+        "Controlled studio lighting rigs (key, fill, rim lights, softboxes)",
+        "Subtle HDRI environment reflections where appropriate",
+        "Camera composition (focal length selection, rule of thirds, negative space)",
+        "Controlled depth of field focusing attention on key product features",
+        "Colour-managed output using AgX view transform",
+        "Optimized render settings (samples, noise threshold, OpenImageDenoise)",
+        "EEVEE preview and Cycles final rendering comparison"
+      ],
+      "required_evidence": [
+        "Final high-resolution rendered images (PNG/JPEG)",
+        "Camera setup breakdown (focal lengths, positions)",
+        "Lighting rig breakdown with light positions and powers",
+        "Shader node network screenshots for primary materials",
+        "Side-by-side EEVEE vs Cycles render comparison with notes",
+        "Documented render settings (samples, denoiser, resolution)",
+        "Editable Blender scene file with configured cameras and lights"
+      ],
+      "assessment_criteria": [
+        "Lighting quality, shadow softness, and reflection control",
+        "Product readability and visual appeal",
+        "Composition balance and framing",
+        "Material realism, roughness variation, and colour harmony",
+        "Render clarity, absence of noise artifacts, and colour fidelity"
+      ]
+    },
+    "deliverable_03": {
+      "id": "deliverable-03",
+      "title": "Product Turntable Animation",
+      "category": "3D Animation & Turntable Video Delivery",
+      "duration": "8–15 Seconds",
+      "description": "A smooth 360-degree turntable animation showcasing the 3D product from all angles with stable lighting, smooth keyframe interpolation, and seamless looping.",
+      "mandatory_skills": [
+        "Original keyframe animation applied to product rotation or camera orbit",
+        "Smooth rotation with seamless start/end frame alignment",
+        "Correct rotation center (centered object origin)",
+        "Stable framing with no camera jitter or clipping",
+        "Consistent lighting that flatters the product throughout the full rotation",
+        "Controlled timing (comfortable viewing speed, 24fps or 30fps)",
+        "Image sequence or MP4 video export with proper encoding"
+      ],
+      "required_evidence": [
+        "Final animation video (1080p MP4, H.264)",
+        "Editable Blender project file with animation timeline keyframes",
+        "Graph Editor screenshot showing interpolation curves",
+        "Documented render settings and frame range",
+        "Written animation breakdown explaining rotation speed and camera choice",
+        "Export QA checklist confirming clean playback"
+      ],
+      "assessment_criteria": [
+        "Smoothness of rotational motion without sudden acceleration hitches",
+        "Framing stability and product visibility",
+        "Lighting continuity throughout rotation",
+        "Technical render quality and compression fidelity",
+        "Clean project handover and keyframe structure"
+      ]
+    },
+    "handover_package": [
+      "1. Original hard-surface Blender 3D model (.blend)",
+      "2. Premium product visualization studio scene (.blend)",
+      "3. Three camera composition renders (Hero, 3/4, Detail close-up in 1080p PNG)",
+      "4. Two intentional lighting variations (Commercial clean and Premium dramatic)",
+      "5. Product turntable animation video (1080p MP4, 8–15s)",
+      "6. Complete editable .blend source files with intact modifier and shader nodes",
+      "7. Organized texture and image asset folders with relative path structures",
+      "8. Wireframe and material node screenshots documenting technical construction",
+      "9. Introductory Geometry Nodes exercise project file (.blend)",
+      "10. Documented render settings (samples, denoising, colour management)",
+      "11. Modeling, material, and lighting breakdown document",
+      "12. Project revision log recording changes made during feedback reviews",
+      "13. Final output folder with categorized exports",
+      "14. Client-style handover guide with asset reuse instructions"
+    ]
   },
-  "freelance_applications": {
-    "services_offered": [
-      "Low-Poly & Stylized 3D Game Props",
-      "Commercial 3D Product Renders",
-      "Isometric 3D Illustrations"
+  "skill_boundaries": {
+    "course_focus": "Course 73 is a practical, beginner-to-applied certification in Blender 3D modeling, non-destructive modifiers, PBR materials, studio lighting, Cycles/EEVEE rendering, introductory Geometry Nodes, and product visualization.",
+    "explicit_exclusions": [
+      "Advanced organic sculpting (anatomy, creature sculpting, high-poly digital sculpting)",
+      "Character rigging with complex bone hierarchies, IK/FK systems, or shape keys",
+      "Character animation, walk cycles, or lip-sync facial animation",
+      "Game-ready asset low-poly retopology and baking pipelines (Marmoset/Substance baking)",
+      "Complex physics simulations (cloth dynamics, fluid simulation, smoke/fire simulation, rigid body physics)",
+      "Advanced procedural hair, fur, or complex particle dynamics",
+      "Feature-film VFX compositing and camera tracking",
+      "Large-scale architectural exterior walkthroughs and CAD architectural drafting"
     ],
-    "client_workflow": "Receive Client Brief -> 3D Blockout Approval -> Material & Color Palette -> Final 4K Render Delivery",
-    "portfolio_requirements": "3-5 finished portfolio pieces demonstrating clean mesh topology, realistic/stylized materials, and studio lighting."
+    "progression_path": "Course 73 serves as the foundational 3D modeling and rendering prerequisite before learners progress into advanced architectural visualization, game asset development, or specialized 3D animation."
   },
-  "what_you_will_build": [
-    "Stylized 3D Game Prop (Chest / Weapon / Low-Poly Vehicle)",
-    "Hard-Surface Product Model (Wireless Headphones / Gadget)",
-    "Stylized 3D Isometric Room Environment with Cycles Lighting"
+  "career_paths": [
+    "Junior 3D Artist",
+    "3D Modeling Assistant",
+    "Junior Product Visualization Artist",
+    "3D Content Designer",
+    "Junior Rendering Assistant",
+    "Creative Production Assistant"
   ],
-  "final_deliverables": [
-    "Portfolio of 3 textured and lit 3D assets rendered in 4K resolution.",
-    "Clean Blender project source files (.blend) with organized modifier stacks and node networks."
+  "freelance_applications": [
+    "Original 3D product models for e-commerce and digital catalogs",
+    "High-resolution product renders on white or studio backgrounds for Amazon/Shopify",
+    "Packaging 3D mockups and cosmetic bottle visualizations",
+    "360-degree product turntable animations for web and social marketing",
+    "3D promotional graphics and textured product hero assets for ad campaigns"
   ],
-  "assessment": {
-    "model": "Project-Based Evaluation",
-    "criteria": "Photorealism, modeling accuracy, lighting quality, and material realism."
+  "assessment_model": {
+    "foundations_and_organization": "10%",
+    "mesh_modeling_and_topology": "25%",
+    "uv_mapping_and_pbr_materials": "20%",
+    "lighting_camera_and_rendering": "20%",
+    "geometry_nodes_and_basic_animation": "10%",
+    "final_portfolio_and_handover": "15%",
+    "total": "100%"
   },
-  "certification": {
-    "title": "Certified Blender 3D Practitioner",
-    "criteria": "Completion of all module assignments and final isometric render capstone.",
-    "verification": "Digital verified certificate shareable on LinkedIn."
-  },
-  "not_covered": "Advanced character skeletal rigging, complex cloth/hair simulations, and game engine script programming.",
-  "next_learning_path": {
-    "recommended_next": "3D Animation & VFX Specialization",
-    "related_programs": "Cinema 4D Professional, Motion Graphics Essentials"
-  },
-  "faq": [
-    {
-      "question": "Is Blender completely free to use commercially?",
-      "answer": "Yes. Blender is open-source under the GNU GPL license. You can use it freely for commercial projects, client work, and personal art without any subscription or license fees."
-    },
-    {
-      "question": "Do I need a powerful computer to run Blender?",
-      "answer": "You can learn the fundamentals on most modern laptops or desktops with 8GB RAM. For faster Cycles rendering, a dedicated NVIDIA or AMD graphics card is recommended, though EEVEE runs smoothly on standard hardware."
-    },
-    {
-      "question": "Can Blender assets be exported to game engines like Unreal Engine or Unity?",
-      "answer": "Absolutely. Blender is widely used to model and texture 3D assets, which are then exported as standard FBX or glTF files directly into Unreal Engine, Unity, or Godot."
-    }
-  ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Mesh Modeling & Modifiers",
-      "module_purpose": "Learn the core tools for creating 3D geometry.",
-      "what_you_will_learn": [
-        "Interface navigation",
-        "Edit Mode tools",
-        "Modifier Stack"
-      ],
+      "module_title": "Blender & 3D Foundations",
+      "module_purpose": "Understand the Blender workspace, essential 3D concepts, coordinates, navigation and organized modeling workflows.",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "UI & Navigation",
-          "what_is_taught": "Viewports, outliner, properties.",
-          "why_it_matters": "Essential for speed.",
-          "what_learner_does": "Customizes the workspace.",
-          "expected_outcome": "Familiarity with UI."
+          "lesson_title": "Introduction to 3D Design",
+          "what_is_taught": "2D versus 3D spatial thinking, foundational 3D pipeline stages (modeling, UV mapping, materials, lighting, rendering, animation), commercial 3D applications, and product visualization fundamentals.",
+          "subtopics": [
+            "2D versus 3D spatial concepts",
+            "Core stages of the 3D pipeline",
+            "Modeling, materials, lighting, rendering overview",
+            "Commercial 3D applications in marketing and e-commerce",
+            "Product visualization industry standards"
+          ],
+          "what_learner_does": "Examines commercial product renders to break down the pipeline stages involved in creating them.",
+          "why_it_matters": "Understanding the full pipeline gives context to every tool and operation learned throughout the course.",
+          "expected_outcome": "Clear grasp of 3D terminology, production phases and commercial visualization roles."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "Object & Edit Mode",
-          "what_is_taught": "Transforming objects and editing vertices/edges/faces.",
-          "why_it_matters": "Core modeling workflow.",
-          "what_learner_does": "Models a low-poly prop.",
-          "expected_outcome": "Basic 3D model."
+          "lesson_title": "Blender 5.2 LTS Interface",
+          "what_is_taught": "Navigating Blender 5.2 LTS: default workspaces, 3D Viewport layout, Outliner scene hierarchy, Properties Editor tabs, Timeline, Shader Editor introduction, navigation controls, and essential keyboard shortcuts.",
+          "subtopics": [
+            "Workspaces in Blender 5.2 LTS",
+            "3D Viewport anatomy and overlays",
+            "Outliner panel functionality",
+            "Properties Editor tabs",
+            "Timeline panel basics",
+            "High-frequency hotkeys (G, R, S, Tab, Z)"
+          ],
+          "what_learner_does": "Configures Blender preferences, customizes viewport display options, and practices essential interface shortcuts.",
+          "why_it_matters": "Mastering Blender's hotkey-driven workflow drastically accelerates modeling speed and reduces interface friction.",
+          "expected_outcome": "Fluent navigation of Blender's panels, editors and basic viewport controls."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "The Modifier Stack",
-          "what_is_taught": "Array, Mirror, and Subdivision Surface modifiers.",
-          "why_it_matters": "Non-destructive modeling.",
-          "what_learner_does": "Uses modifiers to build complex shapes.",
-          "expected_outcome": "Procedural geometry."
+          "lesson_title": "Viewport Navigation",
+          "what_is_taught": "3D Viewport navigation controls: Orbit (middle mouse), Pan (Shift+MMB), Zoom (wheel/Ctrl+MMB), Perspective versus Orthographic projection (Numpad 5), standard camera views (Front, Side, Top), Viewport Shading modes (Wireframe, Solid, Material Preview, Rendered).",
+          "subtopics": [
+            "Orbit, Pan, and Zoom controls",
+            "Perspective versus Orthographic views",
+            "Numpad views (Front, Right Side, Top)",
+            "Viewport Shading modes (Z pie menu)",
+            "Inspecting objects in 3D space"
+          ],
+          "what_learner_does": "Navigates around primitive shapes from multiple orthographic and perspective angles using viewport shading modes.",
+          "why_it_matters": "Accurate inspection from all angles is essential to avoid spatial errors and perspective distortion while modeling.",
+          "expected_outcome": "Effortless navigation around 3D objects using keyboard and mouse shortcuts."
+        },
+        {
+          "lesson_number": "1.4",
+          "lesson_title": "Objects & Transforms",
+          "what_is_taught": "Managing mesh objects in Object Mode: Location, Rotation, Scale transforms; transform orientations (Global, Local), applying transforms (Ctrl+A), understanding object origins, and origin point repositioning.",
+          "subtopics": [
+            "Mesh objects in Object Mode",
+            "Transform operators: Location (G), Rotation (R), Scale (S)",
+            "Axis-constrained transforms (X, Y, Z)",
+            "Global versus Local transform orientation",
+            "Applying transforms (Ctrl+A: Rotation & Scale)",
+            "Object origin mechanics and 3D Cursor"
+          ],
+          "what_learner_does": "Transforms multiple primitive objects, repositions object origins to specific vertices, and applies scale transforms.",
+          "why_it_matters": "Unapplied scale causes modifiers and UV unwrapping to calculate incorrectly, leading to distorted geometry and textures.",
+          "expected_outcome": "Precise transformation and origin management with applied scale habits."
+        },
+        {
+          "lesson_number": "1.5",
+          "lesson_title": "Coordinates & Units",
+          "what_is_taught": "3D coordinate systems: X, Y, Z axes, scene unit settings (Metric millimeters/meters), real-world dimensions, precision numeric entry, measuring tools, and product-scale awareness.",
+          "subtopics": [
+            "X, Y, and Z coordinate axes",
+            "Global versus local coordinates",
+            "Scene unit configuration (Metric: Millimeters / Centimeters)",
+            "Dimensions panel in Sidebar (N)",
+            "Precision numeric transformation",
+            "Measuring objects and product-scale discipline"
+          ],
+          "what_learner_does": "Configures Blender scene units to millimeters and models basic primitives to exact real-world product dimensions.",
+          "why_it_matters": "Lighting and subsurface scattering behave physically; modeling at incorrect scale results in unrealistic lighting and depth of field.",
+          "expected_outcome": "Ability to construct assets matching real-world millimeter and centimeter measurements."
+        },
+        {
+          "lesson_number": "1.6",
+          "lesson_title": "Scene Organization",
+          "what_is_taught": "Organizing complex scenes: Collections in the Outliner, naming conventions, parent-child object hierarchies, collection visibility and render toggles, viewport filters, and scene hygiene.",
+          "subtopics": [
+            "Collections architecture in Outliner",
+            "Systematic object naming conventions",
+            "Parent-child hierarchies (Ctrl+P)",
+            "Visibility, selectable and render toggles",
+            "Viewport filtering options",
+            "File cleanup and purging orphan data"
+          ],
+          "what_learner_does": "Organizes a multi-part scene into categorized collections (Product, Lights, Cameras, Backdrop) with clear naming.",
+          "why_it_matters": "Well-organized scenes prevent lost objects, simplify lighting setups, and satisfy commercial handover standards.",
+          "expected_outcome": "Disciplined scene organization habits using collections and clean naming."
+        },
+        {
+          "lesson_number": "1.7",
+          "lesson_title": "3D Modeling Principles",
+          "what_is_taught": "Geometric mesh anatomy: vertices, edges, faces; topology principles, edge flow, quad-dominant modeling, polygon density, non-destructive workflow concepts, and modeling from reference images.",
+          "subtopics": [
+            "Vertices, Edges, and Faces anatomy",
+            "Topology principles and edge flow",
+            "Quad-dominant modeling vs triangles vs n-gons",
+            "Polygon density and detail distribution",
+            "Clean geometry standards",
+            "Setting up reference images in viewport"
+          ],
+          "what_learner_does": "Sets up background reference image planes and analyzes mesh topology across different wireframe models.",
+          "why_it_matters": "Good topology ensures clean shading, predictable modifier behaviour, and easy UV unwrapping.",
+          "expected_outcome": "Solid understanding of mesh anatomy, topology standards, and reference alignment."
+        },
+        {
+          "lesson_number": "1.8",
+          "lesson_title": "Project Setup & Asset Management",
+          "what_is_taught": "Professional project setup: saving `.blend` files, incremental versioning (File_v01, v02), relative file paths, external asset folders (References, Textures, Renders), autosave recovery, and backup routines.",
+          "subtopics": [
+            "Saving `.blend` files properly",
+            "Incremental versioned saves (+ key)",
+            "Relative file paths and directory structures",
+            "Setting up project asset folders",
+            "Autosave and temporary file recovery",
+            "Basic project planning workflow"
+          ],
+          "what_learner_does": "Sets up a standardized project directory with organized folders for assets, references, and versioned Blender files.",
+          "why_it_matters": "Proper file management prevents broken texture links, lost work from crashes, and chaotic project handovers.",
+          "expected_outcome": "Robust file management and version control habits for all 3D work."
         }
       ],
       "key_concepts": [
-        "Edit Mode",
-        "Modifiers"
+        "3D Pipeline Overview (Model, UV, Material, Light, Render)",
+        "Blender 5.2 LTS Workspaces & Navigation Hotkeys",
+        "Perspective vs Orthographic & Viewport Shading Modes",
+        "Object Transforms & Crucial Scale Application (Ctrl+A)",
+        "Metric Scene Units & Precision Dimensions",
+        "Outliner Collections & Scene Hierarchy",
+        "Mesh Anatomy (Verts, Edges, Faces) & Topology Basics",
+        "Project Directory Architecture & Versioned Saves"
       ],
       "tools": [
-        "Blender"
+        "Blender 5.2 LTS",
+        "3D Viewport",
+        "Outliner Panel",
+        "Properties Editor"
       ],
-      "hands_on_practice": "Model a low-poly room.",
-      "assignment": "Submit the Blender model.",
-      "business_application": "Asset creation for games/animation.",
-      "expected_outcome": "Completed 3D model."
+      "hands_on_practice": "Create a simple 3D desktop product composition using basic geometric objects with correct navigation, transforms, precision and collection organization.",
+      "assignment": "Model a simple everyday object from reference and submit the organized Blender file.",
+      "deliverable": "An original basic 3D object with correct transforms, scale and scene organization.",
+      "commercial_application": "3D asset preparation, product mockups and basic visual prototyping."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Materials, Shaders & UV Unwrapping",
-      "module_purpose": "Add color and surface properties to models.",
-      "what_you_will_learn": [
-        "Shader Editor",
-        "Principled BSDF",
-        "UV Mapping"
-      ],
+      "module_title": "Precision Mesh Modeling",
+      "module_purpose": "Develop accurate mesh modeling skills and understand non-destructive hard-surface construction using core tools and modifiers.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "The Shader Editor",
-          "what_is_taught": "Node-based material creation.",
-          "why_it_matters": "Industry standard texturing workflow.",
-          "what_learner_does": "Creates basic procedural materials.",
-          "expected_outcome": "Material node setups."
+          "lesson_title": "Edit Mode Fundamentals",
+          "what_is_taught": "Entering Edit Mode (Tab): Vertex selection (1), Edge selection (2), Face selection (3); selection tools (Box, Circle, Lasso), loop select (Alt+click), ring select (Ctrl+Alt+click), shortest path (Ctrl+click), and hiding/unhiding geometry (H / Alt+H).",
+          "subtopics": [
+            "Edit Mode toggle and workspace layout",
+            "Vertex, Edge, and Face selection modes",
+            "Loop and ring selection shortcuts",
+            "Proportional editing (O) and falloff curves",
+            "Hiding and isolating mesh sections",
+            "Mesh editing hotkeys"
+          ],
+          "what_learner_does": "Navigates complex mesh components using selection shortcuts and proportional editing falloffs.",
+          "why_it_matters": "Fast, accurate component selection is the foundation of productive mesh editing.",
+          "expected_outcome": "Fluency in selecting, transforming and isolating mesh sub-elements in Edit Mode."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "UV Unwrapping",
-          "what_is_taught": "Marking seams and unwrapping.",
-          "why_it_matters": "Required for image textures.",
-          "what_learner_does": "Unwraps the room props.",
-          "expected_outcome": "Clean UV maps."
+          "lesson_title": "Core Modeling Operations",
+          "what_is_taught": "Essential polygon modeling operations: Extrude (E) and Extrude Along Normals (Alt+E), Inset Faces (I), Bevel (Ctrl+B), Loop Cut and Slide (Ctrl+R), Knife tool (K), Merge (M), Subdivide, Bridge Edge Loops, Face Creation (F), and Duplicate (Shift+D).",
+          "subtopics": [
+            "Extrude along axes and normals",
+            "Inset faces with boundary and individual controls",
+            "Beveling edges and vertices with segment control",
+            "Loop cut insertion and edge sliding",
+            "Knife tool precision cutting and vertex snapping",
+            "Merge vertices (At Center, By Distance)",
+            "Bridge Edge Loops and Grid Fill"
+          ],
+          "what_learner_does": "Builds a geometric enclosure using extrusions, insets, bevels, loop cuts, and bridge edge loops.",
+          "why_it_matters": "These core operations represent 90% of polygon modeling work across any hard-surface asset.",
+          "expected_outcome": "Precise execution of all standard polygon modeling operations."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "Applying Textures",
-          "what_is_taught": "Connecting image textures to BSDF inputs.",
-          "why_it_matters": "Creates photorealistic surfaces.",
-          "what_learner_does": "Textures the room with PBR maps.",
-          "expected_outcome": "Fully textured scene."
+          "lesson_title": "Modeling Precision & Snapping",
+          "what_is_taught": "Achieving dimensional accuracy: numeric entry during operations, snapping modes (Increment, Vertex, Edge, Face Project), align tools, symmetry modeling, reference backdrop matching, and proportional scaling.",
+          "subtopics": [
+            "Numeric transform input during modeling operations",
+            "Snapping options (Vertex, Edge, Face Project)",
+            "Aligning vertices along specific axes (S, axis, 0)",
+            "Symmetry and clipping considerations",
+            "Matching orthographic reference silhouettes",
+            "Maintaining proportional accuracy"
+          ],
+          "what_learner_does": "Snaps vertices to precise reference points and aligns curved surfaces using numeric scale snapping.",
+          "why_it_matters": "Consumer products require millimeter accuracy so parts fit together without visual gaps or misalignment.",
+          "expected_outcome": "Ability to construct dimensionally accurate hard-surface meshes matching real references."
+        },
+        {
+          "lesson_number": "2.4",
+          "lesson_title": "Mesh Topology & Edge Flow",
+          "what_is_taught": "Principles of professional topology: quads (4-sided polygons), triangles (3-sided), N-gons (5+ sides) and when they cause shading errors; edge loops, supporting holding edges, topology planning on curved surfaces, and polygon density management.",
+          "subtopics": [
+            "Quads vs Triangles vs N-gons",
+            "Why N-gons cause shading artifacts on curved surfaces",
+            "Edge loops and directional flow",
+            "Supporting edge loops for hard surfaces",
+            "Planning topology before cutting details",
+            "Shading artifact troubleshooting"
+          ],
+          "what_learner_does": "Fixes shading pinching and n-gon artifacts on a curved mesh by rerouting edge loops into clean quad topology.",
+          "why_it_matters": "Clean topology ensures smooth shading, predictable subdivision, and distortion-free UV unwrapping.",
+          "expected_outcome": "Ability to model with clean quad topology and diagnose shading artifacts."
+        },
+        {
+          "lesson_number": "2.5",
+          "lesson_title": "Normals & Smooth Shading",
+          "what_is_taught": "Surface normals mechanics: face orientation (blue vs red overlay), recalculating normals (Shift+N), Flat Shading vs Smooth Shading, Smooth by Angle / Auto Smooth workflows in Blender 5.2, marking sharp edges (Ctrl+E), and weighted normals.",
+          "subtopics": [
+            "Understanding surface normals",
+            "Face orientation display and flipped normals",
+            "Recalculating outside normals (Shift+N)",
+            "Flat Shading versus Smooth Shading",
+            "Smooth by Angle modifier workflow in Blender 5.2",
+            "Marking Sharp edges and weighted normals"
+          ],
+          "what_learner_does": "Audits and corrects inverted normals, applies Smooth by Angle, and configures sharp edge splits on a mechanical model.",
+          "why_it_matters": "Inverted normals cause black shading glitches and invisible faces during rendering.",
+          "expected_outcome": "Total control over surface normals, smooth shading and edge sharpness."
+        },
+        {
+          "lesson_number": "2.6",
+          "lesson_title": "The Modifier Stack",
+          "what_is_taught": "Non-destructive modeling using modifiers: Bevel modifier (limit by angle, weight), Mirror modifier (bisect, clipping), Array modifier (offsets, object offset), Solidify modifier (wall thickness), Subdivision Surface (Catmull-Clark), and modifier stack execution order.",
+          "subtopics": [
+            "Non-destructive modeling philosophy",
+            "Bevel modifier (Angle vs Weight limits)",
+            "Mirror modifier with axis clipping and merging",
+            "Array modifier for repeating patterns",
+            "Solidify modifier for hollow product shells",
+            "Subdivision Surface modifier (Ctrl+1, Ctrl+2)",
+            "Modifier order dependency and execution hierarchy"
+          ],
+          "what_learner_does": "Builds a symmetrical consumer product shell utilizing Mirror, Solidify, Bevel, and Subdivision Surface modifiers in sequence.",
+          "why_it_matters": "Modifiers keep models fully editable, allowing design revisions without destructive remodeling.",
+          "expected_outcome": "Proficiency in constructing non-destructive hard-surface modifier stacks."
+        },
+        {
+          "lesson_number": "2.7",
+          "lesson_title": "Hard-Surface Modeling Workflows",
+          "what_is_taught": "Techniques for consumer product forms: modeling cylindrical bodies (bottles, speakers, caps), handling curvature transitions, inset buttons, parting lines, seam lines, edge bevel refinement, and modeling for close-up macro renders.",
+          "subtopics": [
+            "Cylindrical product modeling techniques",
+            "Creating clean parting lines and recessed seams",
+            "Inset button and port detailing",
+            "Curved surface transitions",
+            "Bevel width consistency for realistic highlights",
+            "Modeling fine details for close-up product renders"
+          ],
+          "what_learner_does": "Models a detailed wireless speaker body with recessed buttons, speaker grille recess, and realistic parting lines.",
+          "why_it_matters": "Real-world industrial products feature subtle bevels and parting lines; sharp computer edges look fake.",
+          "expected_outcome": "Ability to model sophisticated consumer product details with realistic surface transitions."
+        },
+        {
+          "lesson_number": "2.8",
+          "lesson_title": "Boolean Modeling & Topology Cleanup",
+          "what_is_taught": "Boolean operations: Difference, Union, Intersect; using Boolean modifier, Fast vs Exact solver, cutting complex holes/ports into surfaces, managing resulting topology, dissolving unnecessary vertices, and guiding edge loops around cuts.",
+          "subtopics": [
+            "Boolean modifier operations (Difference, Union, Intersect)",
+            "Fast versus Exact solver selection",
+            "Cutting ports, vents, and slots into curved surfaces",
+            "Addressing Boolean topology chaos",
+            "Manual retopology around Boolean cutouts",
+            "Weighted Normal modifier for shading cleanup"
+          ],
+          "what_learner_does": "Cuts a USB-C port and audio jack into a curved product casing using Booleans and cleans the surrounding topology.",
+          "why_it_matters": "Booleans allow complex shape cutouts quickly, but require disciplined topology cleanup to avoid render glitches.",
+          "expected_outcome": "Skill in executing clean Boolean cutouts and repairing surrounding geometry."
+        },
+        {
+          "lesson_number": "2.9",
+          "lesson_title": "Subdivision Surface Modeling",
+          "what_is_taught": "Subdivision modeling principles: Catmull-Clark algorithm, controlling curvature with support loops, holding edge proximity, creasing versus holding loops, preserving silhouette shape, and avoiding excessive polygon counts.",
+          "subtopics": [
+            "Catmull-Clark subdivision math and behaviour",
+            "Support loops and edge proximity rules",
+            "Edge Crease (Shift+E) vs geometric support loops",
+            "Preserving round silhouettes under subdivision",
+            "Controlling pinching at corner intersections",
+            "Balancing polygon density and performance"
+          ],
+          "what_learner_does": "Models an ergonomic cosmetic container lid with tight support loops that subdivide smoothly without surface ripples.",
+          "why_it_matters": "Subdivision modeling creates the silky-smooth curved surfaces required for premium product visualization.",
+          "expected_outcome": "Mastery of support loop placement for clean subdivision surface modeling."
+        },
+        {
+          "lesson_number": "2.10",
+          "lesson_title": "Modeling Quality Assurance",
+          "what_is_taught": "Comprehensive modeling QA checklist: checking for non-manifold geometry, duplicate vertices (Merge by Distance), internal hidden faces, normal direction audit, modifier artifact inspection, scale verification, and mesh cleanup.",
+          "subtopics": [
+            "Non-manifold geometry detection (Select by Trait)",
+            "Duplicate vertex cleanup (Merge by Distance)",
+            "Eliminating internal and overlapping faces",
+            "Checking normal direction and shading consistency",
+            "Auditing modifier stack artifacts",
+            "Confirming applied rotation and scale (1.0, 1.0, 1.0)",
+            "Clean mesh naming and hierarchy preparation"
+          ],
+          "what_learner_does": "Executes a full 7-step quality audit on a finished product model, resolving non-manifold geometry and zeroing transforms.",
+          "why_it_matters": "QA ensures the model is clean and error-free before proceeding to UV unwrapping and texturing.",
+          "expected_outcome": "Flawless technical quality assurance on all completed 3D models."
         }
       ],
       "key_concepts": [
-        "Nodes",
-        "UVs",
-        "PBR"
+        "Edit Mode Selection Hotkeys (1, 2, 3, Loop, Ring)",
+        "Core Modeling: Extrude, Inset, Bevel, Loop Cut, Knife",
+        "Vertex Snapping & Numeric Dimensional Accuracy",
+        "Quad Topology vs N-gons & Shading Pinching",
+        "Surface Normals & Smooth by Angle Workflow in Blender 5.2",
+        "Non-Destructive Modifiers (Bevel, Mirror, Solidify, SubD)",
+        "Consumer Product Details: Parting Lines & Part Seams",
+        "Boolean Cuts & Surrounding Topology Repair",
+        "Subdivision Support Loops & Curvature Control",
+        "7-Step Modeling QA: Non-Manifold, Scale, Normals"
       ],
       "tools": [
-        "Blender"
+        "Blender 5.2 LTS (Edit Mode)",
+        "Modifier Stack (Bevel, Mirror, Solidify, SubD, Boolean)",
+        "Mesh Snapping Tools",
+        "Smooth by Angle Operator"
       ],
-      "hands_on_practice": "Texture the low-poly room.",
-      "assignment": "Submit textured scene.",
-      "business_application": "Look development.",
-      "expected_outcome": "Textured 3D environment."
+      "hands_on_practice": "Create a moderately detailed hard-surface product (e.g. perfume bottle, wireless speaker, headphones, desk lamp or cosmetic container).",
+      "assignment": "Build an original hard-surface product model with organized objects and appropriate modifiers.",
+      "deliverable": "An original product model with clean topology, suitable proportions and professional scene organization.",
+      "commercial_application": "Consumer-product visualization, packaging mockups and 3D marketing assets."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Cycles/EEVEE Rendering & Animation",
-      "module_purpose": "Output final images and animations.",
-      "what_you_will_learn": [
-        "Lighting",
-        "Render Engines",
-        "Keyframe Animation"
-      ],
+      "module_title": "UV Mapping & Materials",
+      "module_purpose": "Prepare clean UV maps and create realistic, organized materials using modern PBR shading and the Principled BSDF shader.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "Lighting the Scene",
-          "what_is_taught": "Point, Spot, Area lights and HDRIs.",
-          "why_it_matters": "Sets the mood and visibility.",
-          "what_learner_does": "Lights the room.",
-          "expected_outcome": "Well-lit scene."
+          "lesson_title": "Material Fundamentals",
+          "what_is_taught": "How computer graphics simulates materials: light reflection, absorption, diffuse colour, surface roughness, microfacets, metallic reflection versus dielectric behavior, transparency, transmission, and refraction index (IOR).",
+          "subtopics": [
+            "What materials simulate in 3D",
+            "Diffuse reflection vs specular reflection",
+            "Surface roughness and microfacet scattering",
+            "Dielectric (insulator) vs Metallic (conductor) properties",
+            "Transparency and transmission concepts",
+            "Index of Refraction (IOR) fundamentals"
+          ],
+          "what_learner_does": "Examines real physical objects (plastic, metal, glass) to categorize their dielectric, metallic and roughness traits.",
+          "why_it_matters": "Understanding physical light behavior is required to create convincing, photorealistic materials in Blender.",
+          "expected_outcome": "Scientific and visual comprehension of surface material properties."
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "Cycles vs EEVEE",
-          "what_is_taught": "Differences between raytracing and rasterization.",
-          "why_it_matters": "Choosing the right tool for the job.",
-          "what_learner_does": "Configures both render engines.",
-          "expected_outcome": "Optimized render settings."
+          "lesson_title": "The Shader Editor",
+          "what_is_taught": "Operating the Shader Editor: node network interface, node sockets (colour, float, vector), Material Output node, Principled BSDF, connecting nodes, reroute points, frames, organizing node graphs, and previewing individual nodes.",
+          "subtopics": [
+            "Shader Editor panel and node navigation",
+            "Input and output socket types (yellow, gray, blue)",
+            "Material Output node roles",
+            "Adding and connecting shader nodes",
+            "Node organization: frames, labels, and clean layout",
+            "Previewing nodes with Node Wrangler addon"
+          ],
+          "what_learner_does": "Builds a modular shader node tree with organized frames, labeled inputs, and clean connector routing.",
+          "why_it_matters": "A clean, well-organized node graph makes complex material adjustments fast and maintainable.",
+          "expected_outcome": "Fluent navigation and construction of shader node networks in the Shader Editor."
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "Basic Animation & Output",
-          "what_is_taught": "Keyframing camera movement and rendering sequences.",
-          "why_it_matters": "Creating motion deliverables.",
-          "what_learner_does": "Animates a camera fly-through.",
-          "expected_outcome": "Final rendered video."
+          "lesson_title": "PBR Material Standards",
+          "what_is_taught": "Physically Based Rendering (PBR) principles: energy conservation (a surface cannot reflect more light than it receives), Base Color (Albedo), Roughness map, Metallic map (binary 0 or 1 rule), Normal map, and Height/Bump map roles.",
+          "subtopics": [
+            "Physically Based Rendering (PBR) principles",
+            "Energy conservation laws in shading",
+            "Base Color / Albedo guidelines (avoiding pure black/white)",
+            "Metallic workflow rules (0 for dielectrics, 1 for metals)",
+            "Roughness map interpretation (black=smooth, white=rough)",
+            "Normal maps (tangent space) vs Bump maps"
+          ],
+          "what_learner_does": "Inspects a set of PBR texture maps and connects each correctly into its respective shader socket.",
+          "why_it_matters": "PBR ensures materials react plausibly under any lighting environment without requiring custom tweaks per shot.",
+          "expected_outcome": "Mastery of PBR shading standards and texture map roles."
+        },
+        {
+          "lesson_number": "3.4",
+          "lesson_title": "Principled BSDF in Blender 5.2",
+          "what_is_taught": "Mastering the updated Principled BSDF shader in Blender 5.2: Base Color, Subsurface scattering awareness, Metallic slider, Roughness control, IOR (1.45 default for plastics, 1.5 for glass), Transmission for glass/liquids, Coat for clear-coat car paint/varnish, and Normal input.",
+          "subtopics": [
+            "Principled BSDF interface in Blender 5.2",
+            "Base Color and subsurface tinting",
+            "Metallic and Roughness calibration",
+            "IOR slider and physical material lookup values",
+            "Transmission slider for transparent glass and acrylic",
+            "Coat layer for multi-layered glossy finishes",
+            "Normal and Bump input connections"
+          ],
+          "what_learner_does": "Configures Principled BSDF shaders to recreate frosted glass, polished chrome, and matte automotive plastic.",
+          "why_it_matters": "The Principled BSDF is the primary all-in-one shader used in modern commercial Blender production.",
+          "expected_outcome": "Complete command of the Principled BSDF shader across all common product surface types."
+        },
+        {
+          "lesson_number": "3.5",
+          "lesson_title": "UV Mapping & Seam Placement",
+          "what_is_taught": "Unwrapping 3D surfaces into 2D UV coordinates: UV Editor workspace, marking seams (Ctrl+E -> Mark Seam), Unwrap (U), UV islands, minimizing texture distortion, Smart UV Project awareness, and packing islands efficiently.",
+          "subtopics": [
+            "UV coordinates and 2D texture projection",
+            "Strategic seam placement along natural product joints",
+            "Mark Seam and Clear Seam workflows",
+            "Unwrap algorithms and angle-based vs conformal",
+            "Inspecting UV stretch with grid overlays",
+            "Packing UV islands with proper margins"
+          ],
+          "what_learner_does": "Places seams along natural product parting lines and unwraps a multi-part product model with zero visible stretch.",
+          "why_it_matters": "Hiding seams along natural seams ensures textures and labels wrap seamlessly without noticeable breaks.",
+          "expected_outcome": "Skill in placing seams, unwrapping complex meshes, and packing clean UV layouts."
+        },
+        {
+          "lesson_number": "3.6",
+          "lesson_title": "Texel Density & Texture Consistency",
+          "what_is_taught": "Texel density fundamentals: pixels per unit of 3D space, ensuring uniform texture resolution across adjacent parts, avoiding blurry close-ups next to sharp sections, UV scale normalization, and texture resolution selection (2K, 4K).",
+          "subtopics": [
+            "Texel density definition (pixels per meter/centimeter)",
+            "Matching UV island scale across different mesh parts",
+            "Avoiding mismatched texture resolution",
+            "Using UV checker textures to verify density",
+            "Choosing appropriate texture map resolutions (2K vs 4K)",
+            "Texture memory considerations during rendering"
+          ],
+          "what_learner_does": "Normalizes texel density across all parts of a product assembly using a standardized checker map.",
+          "why_it_matters": "Inconsistent texel density causes some parts of a product to look blurry while others are sharp, ruining realism.",
+          "expected_outcome": "Uniform texel density across all components of a 3D asset."
+        },
+        {
+          "lesson_number": "3.7",
+          "lesson_title": "Image Textures & Color Spaces",
+          "what_is_taught": "Importing and configuring external image maps: Texture Coordinate node (UV output), Mapping node (scale, rotation, offset), Color Space settings (sRGB for Base Color, Non-Color for Roughness, Normal, Metallic, Height), and missing texture troubleshooting.",
+          "subtopics": [
+            "Image Texture node setup",
+            "Texture Coordinate and Mapping nodes",
+            "Crucial Color Space settings: sRGB vs Non-Color",
+            "Why data maps must be set to Non-Color",
+            "Scaling and rotating textures via Mapping node",
+            "Fixing broken or pink texture paths in Blender"
+          ],
+          "what_learner_does": "Connects a full 4-map PBR material set with correct sRGB and Non-Color color-space assignments.",
+          "why_it_matters": "Setting data maps (Roughness, Normal) to sRGB ruins the linear mathematical values, producing incorrect reflections.",
+          "expected_outcome": "Flawless configuration of external PBR image textures with correct color spaces."
+        },
+        {
+          "lesson_number": "3.8",
+          "lesson_title": "Procedural Textures & Shading",
+          "what_is_taught": "Creating materials without external image files: Noise Texture, Voronoi Texture, ColorRamp node for contrast and value remapping, procedural surface imperfections, subtle bumps, brushed metal streaks, and repeating patterns.",
+          "subtopics": [
+            "Procedural vs image-based textures",
+            "Noise Texture parameters (Scale, Detail, Roughness)",
+            "Voronoi Texture for cellular and stippled patterns",
+            "ColorRamp node for value remapping and thresholding",
+            "Creating subtle procedural fingerprints and micro-scratches",
+            "Procedural brushed metal and anisotropic reflections"
+          ],
+          "what_learner_does": "Builds a procedural brushed metal material with fine anisotropic scratches and micro-roughness variations.",
+          "why_it_matters": "Procedural materials are infinitely scalable, have zero external file dependencies, and render seamlessly at any distance.",
+          "expected_outcome": "Ability to construct realistic procedural shaders with subtle surface imperfections."
+        },
+        {
+          "lesson_number": "3.9",
+          "lesson_title": "Commercial Product Materials",
+          "what_is_taught": "Building specific commercial material categories: injection-molded plastics (matte, glossy, textured), anodized metals, stainless steel, clear glass, frosted cosmetic bottles, silicone rubber, and applying brand labels using alpha masks.",
+          "subtopics": [
+            "Injection-molded plastic shaders (matte, gloss, orange-peel)",
+            "Anodized aluminum and polished chrome shaders",
+            "Glass shaders with realistic absorption and thickness",
+            "Silicone and soft-touch rubber shaders",
+            "Layering graphic logos/labels using Mix Color and Alpha channels",
+            "Creating embossed and debossed brand logos"
+          ],
+          "what_learner_does": "Creates a complete material suite for a product: frosted glass bottle, gold metal pump, and silkscreen printed label.",
+          "why_it_matters": "Accurate recreation of physical commercial materials is the core deliverable in product visualization.",
+          "expected_outcome": "Fluency in producing high-end commercial materials across metal, plastic, glass and rubber."
+        },
+        {
+          "lesson_number": "3.10",
+          "lesson_title": "Material Organization & Asset Hygiene",
+          "what_is_taught": "Managing materials across projects: material naming standards, removing duplicate materials (`.001`, `.002`), fake user (shield) toggle, purging unused material slots, packing external images into `.blend` files, and shader optimization.",
+          "subtopics": [
+            "Systematic material naming conventions",
+            "Eliminating duplicate materials and dead slots",
+            "Fake user flag for preserving unassigned shaders",
+            "Purging unused orphan data in File menu",
+            "File -> External Data -> Pack Resources workflow",
+            "Shader optimization and node simplification"
+          ],
+          "what_learner_does": "Audits a multi-material project, eliminates duplicate shaders, packs texture dependencies, and verifies clean links.",
+          "why_it_matters": "Disorganized materials cause project bloat, missing textures on collaborator systems, and slow viewport rendering.",
+          "expected_outcome": "Clean material libraries, zero duplicate shaders, and robust asset packing habits."
         }
       ],
       "key_concepts": [
-        "Cycles",
-        "EEVEE",
-        "Keyframes"
+        "Physics of Materials: Diffuse, Specular, Roughness, IOR",
+        "Shader Editor Interface: Nodes, Sockets, Node Wrangler",
+        "PBR Principles: Energy Conservation & 0/1 Metallic Rule",
+        "Principled BSDF in Blender 5.2: Base Color, Roughness, Coat, Transmission",
+        "UV Unwrapping: Seam Strategy, Distortion Checks, Packing",
+        "Texel Density Standardization & Resolution Math",
+        "Image Textures: sRGB (Color) vs Non-Color (Data)",
+        "Procedural Shading: Noise, Voronoi, ColorRamp Imperfections",
+        "Commercial Materials: Plastic, Metal, Glass, Silicone, Labels",
+        "Material Hygiene: Packing Resources, Eliminating Duplicate Slots"
       ],
       "tools": [
-        "Blender"
+        "Blender 5.2 LTS (Shader Editor & UV Editor)",
+        "Principled BSDF Shader",
+        "Node Wrangler Addon",
+        "External Data Packing Tool"
       ],
-      "hands_on_practice": "Render a turntable animation of the room.",
-      "assignment": "Submit MP4 animation.",
-      "business_application": "Final content delivery.",
-      "expected_outcome": "Rendered video sequence."
+      "hands_on_practice": "Create realistic PBR materials for the product developed in Module 02, building at least three visually distinct material types.",
+      "assignment": "Submit the textured product with UV evidence and organized shader nodes.",
+      "deliverable": "Original product model with appropriate UV maps and physically plausible materials.",
+      "commercial_application": "Product advertising, material visualization and digital product presentations."
+    },
+    {
+      "module_number": "Module 04",
+      "module_title": "Lighting, Cameras & Rendering",
+      "module_purpose": "Develop commercial product-lighting skills and produce polished rendered visuals using Blender's Cycles and EEVEE rendering engines.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
+      "lessons": [
+        {
+          "lesson_number": "4.1",
+          "lesson_title": "Lighting Fundamentals",
+          "what_is_taught": "Physics and aesthetics of light: light direction, intensity (Watts/Lumens), softness vs hardness based on light source size, shadow falloff, inverse square law, contrast ratios, and reflection highlights for defining product forms.",
+          "subtopics": [
+            "Light direction and visual form sculpting",
+            "Light size vs shadow softness (large=soft, small=hard)",
+            "Inverse square law and light falloff",
+            "Specular reflections as surface definition",
+            "Contrast ratios and tonal range",
+            "Visual readability of product silhouettes"
+          ],
+          "what_learner_does": "Sets up a single light source and adjusts size, power, and angle to observe how shadow softness sculpts surface curvature.",
+          "why_it_matters": "Lighting is what turns flat 3D geometry into a tangible, emotionally compelling product photograph.",
+          "expected_outcome": "Deep comprehension of light physics and its role in revealing 3D forms."
+        },
+        {
+          "lesson_number": "4.2",
+          "lesson_title": "Blender Light Types",
+          "what_is_taught": "The four Blender light types: Point light (omnidirectional), Spot light (focused beam with blend/size), Area light (rectangular, square, disk, ellipse softboxes), Sun light (infinite parallel rays); configuring power, color, and size.",
+          "subtopics": [
+            "Point light characteristics and use cases",
+            "Spot light beam angle and blend feathering",
+            "Area light shapes (Rectangle, Disk, Ellipse) as softboxes",
+            "Sun light angle and parallel ray mechanics",
+            "Power (Watts), Color temperature, and custom hues",
+            "Custom light falloff and shadow toggles"
+          ],
+          "what_learner_does": "Configures rectangular Area lights to simulate photographic softbox diffusers with gradient falloffs.",
+          "why_it_matters": "Area lights are the primary tool for commercial studio product lighting due to their softbox reflection highlights.",
+          "expected_outcome": "Skill in selecting and configuring the appropriate light type for any lighting scenario."
+        },
+        {
+          "lesson_number": "4.3",
+          "lesson_title": "Three-Point Studio Lighting",
+          "what_is_taught": "Classic three-point lighting for products: Key light (primary shape descriptor), Fill light (shadow detail recovery), Rim / Back light (subject separation from backdrop), establishing lighting ratios (e.g. 3:1, 4:1), and bounce light.",
+          "subtopics": [
+            "Key light placement and primary highlight angle",
+            "Fill light positioning and shadow level control",
+            "Rim / Back light for edge separation and rim highlights",
+            "Commercial lighting ratios and contrast management",
+            "Background isolation and subject separation",
+            "Preventing washed-out, flat lighting"
+          ],
+          "what_learner_does": "Builds a classic 3-point studio lighting rig for a consumer product, dialing in ratios for clean commercial separation.",
+          "why_it_matters": "Three-point lighting is the foundational industry standard for commercial product photography and visualization.",
+          "expected_outcome": "Mastery of three-point lighting setups and contrast ratio control."
+        },
+        {
+          "lesson_number": "4.4",
+          "lesson_title": "HDRI Environment Lighting",
+          "what_is_taught": "Image-Based Lighting (IBL) using High Dynamic Range Images (HDRI): World shader setup, Environment Texture node, HDRI rotation via Mapping node, balancing HDRI ambient light with direct Area lights, and licensing.",
+          "subtopics": [
+            "What makes an HDRI image high dynamic range",
+            "World shader setup with Environment Texture",
+            "Rotating and scaling HDRIs with Texture Coordinate & Mapping",
+            "Using studio HDRIs vs outdoor environment HDRIs",
+            "Combining HDRI ambient fill with targeted Area key lights",
+            "Asset sourcing and commercial licensing rules"
+          ],
+          "what_learner_does": "Sets up a studio HDRI environment, rotates the lighting to align specular highlights, and adds a softbox key light.",
+          "why_it_matters": "HDRIs provide complex, natural environmental reflections that single digital lights cannot replicate.",
+          "expected_outcome": "Ability to integrate HDRI lighting seamlessly with targeted studio lamps."
+        },
+        {
+          "lesson_number": "4.5",
+          "lesson_title": "Product Lighting Scenarios",
+          "what_is_taught": "Specialized commercial lighting recipes: lighting reflective metals (using gradient cards), lighting clear glass (dark-field and bright-field lighting), lighting matte packaging, pure white e-commerce backdrops, and luxury dark moody scenes.",
+          "subtopics": [
+            "Lighting reflective chrome and metal using gradient bounce planes",
+            "Dark-field and bright-field lighting for transparent glass",
+            "Soft diffuse lighting for matte cosmetics packaging",
+            "Seamless white e-commerce cyclorama setup",
+            "Premium dark background luxury lighting",
+            "Controlling reflections on curved screens and lenses"
+          ],
+          "what_learner_does": "Lights a transparent glass bottle using black rim cards (dark-field) to define edges against a bright background.",
+          "why_it_matters": "Glass and metal require specific reflection-management techniques rather than direct light blasting.",
+          "expected_outcome": "Skill in lighting challenging surface types including glass, chrome, and matte plastics."
+        },
+        {
+          "lesson_number": "4.6",
+          "lesson_title": "Camera Fundamentals & Lenses",
+          "what_is_taught": "Virtual camera parameters: Focal Length (mm) and Field of View (wide angle vs telephoto product lenses: 50mm, 85mm, 105mm macro), Sensor Size, camera positioning, camera clipping distances, and eliminating perspective distortion.",
+          "subtopics": [
+            "Focal length selection for product visualization (50mm–105mm)",
+            "Why wide lenses (24mm) distort product proportions",
+            "Telephoto compression for elegant product silhouettes",
+            "Sensor size standards (Full Frame 36x24mm)",
+            "Camera clipping planes (Near / Far)",
+            "Locking camera to view (N panel toggle)"
+          ],
+          "what_learner_does": "Compares a product shot at 28mm, 50mm, and 90mm focal lengths to observe edge distortion and compression.",
+          "why_it_matters": "Standard product photography uses 85mm–105mm telephoto lenses to present products with undistorted, accurate proportions.",
+          "expected_outcome": "Selection of appropriate focal lengths to present product geometry faithfully."
+        },
+        {
+          "lesson_number": "4.7",
+          "lesson_title": "Camera Composition & Framing",
+          "what_is_taught": "Visual composition guidelines: Rule of Thirds, Golden Ratio, Golden Spiral overlays in viewport, negative space for commercial copy, eye-level hero shots, dynamic 3/4 perspective angles, macro detail framing, and visual balance.",
+          "subtopics": [
+            "Composition guides in Camera Viewport display (Thirds, Center)",
+            "Rule of Thirds and focal point placement",
+            "Product Hero shot framing (eye-level commercial authority)",
+            "Three-Quarter shot framing (showing front, side, and top depth)",
+            "Macro detail shot composition (highlighting craftsmanship)",
+            "Leaving negative space for marketing text and client logos"
+          ],
+          "what_learner_does": "Composes three distinct camera views (Hero, 3/4, Detail) of the product model using composition guide overlays.",
+          "why_it_matters": "Great lighting on a poorly composed shot fails commercially; composition directs viewer attention.",
+          "expected_outcome": "Competence in composing commercial hero, dynamic 3/4, and macro detail product camera shots."
+        },
+        {
+          "lesson_number": "4.8",
+          "lesson_title": "Depth of Field & Bokeh",
+          "what_is_taught": "Simulating physical optical focus: Depth of Field toggle in Camera settings, Focus on Object vs Focus Distance eyedropper, F-Stop / Aperture size control, creating soft background blur (bokeh), blades and rotation, and avoiding excessive blur.",
+          "subtopics": [
+            "Depth of Field physical principles",
+            "Focus Object linking vs manual Focus Distance",
+            "F-stop values: shallow DoF (f/1.8, f/2.8) vs sharp commercial DoF (f/8, f/11)",
+            "Aperture blades and custom bokeh shapes",
+            "Using shallow DoF to guide eye to product details",
+            "Avoiding over-blurred images where branding is illegible"
+          ],
+          "what_learner_does": "Applies subtle depth of field on a macro detail shot, focusing on the brand logo while softly blurring the background.",
+          "why_it_matters": "Depth of field separates the subject from the backdrop and introduces photographic realism.",
+          "expected_outcome": "Judicious application of depth of field to enhance visual hierarchy."
+        },
+        {
+          "lesson_number": "4.9",
+          "lesson_title": "EEVEE Real-Time Rendering",
+          "what_is_taught": "Blender's real-time rendering engine: EEVEE architecture, real-time shading, ambient occlusion, screen space reflections, shadow buffer resolution, viewport interactive speeds, fast client preview generation, and practical limitations.",
+          "subtopics": [
+            "EEVEE real-time rendering engine architecture",
+            "Interactive viewport rendering workflow",
+            "Raytracing and shadow resolution in EEVEE",
+            "Screen space reflections and refraction caveats",
+            "Rapid preview rendering for fast client approvals",
+            "Use cases where EEVEE excels (stylized, fast turnarounds)"
+          ],
+          "what_learner_does": "Configures EEVEE settings to produce a high-frame-rate interactive preview of the product scene.",
+          "why_it_matters": "EEVEE enables near-instant feedback for lighting adjustments, saving hours of test-render time.",
+          "expected_outcome": "Proficiency in utilizing EEVEE for interactive previews and fast turnarounds."
+        },
+        {
+          "lesson_number": "4.10",
+          "lesson_title": "Cycles Path-Traced Rendering",
+          "what_is_taught": "Physically based path tracing in Cycles: light bounce simulation, direct vs indirect illumination, diffuse, glossy, and transmission light bounces, caustics awareness, noise patterns, GPU rendering (CUDA/OptiX/Metal), and photographic realism.",
+          "subtopics": [
+            "Path tracing principles: shooting light rays from camera",
+            "Light bounces: Total, Diffuse, Glossy, Transmission, Volume",
+            "GPU Compute configuration (OptiX, CUDA, HIP, Metal)",
+            "Noise mechanics: why path tracing creates grain",
+            "Achieving true physical light transport and color bleed",
+            "Cycles photorealism standards for product visualization"
+          ],
+          "what_learner_does": "Enables GPU Cycles rendering, adjusts light bounce limits, and inspects physically accurate light transport.",
+          "why_it_matters": "Cycles calculates genuine light bounces, producing physically accurate reflections, refraction, and contact shadows.",
+          "expected_outcome": "Deep technical command over Cycles path tracing settings."
+        },
+        {
+          "lesson_number": "4.11",
+          "lesson_title": "EEVEE vs Cycles Technical Comparison",
+          "what_is_taught": "Critical comparison between rendering engines: rasterization vs path tracing, hardware resource usage, render times per frame, glass refraction handling, soft contact shadows, choosing the right engine for the task, and avoiding false equivalence.",
+          "subtopics": [
+            "Technical differences: Rasterization vs Path Tracing",
+            "Glass and transmission comparison between engines",
+            "Hardware load, VRAM requirements, and render times",
+            "When EEVEE is appropriate (previews, motion graphics, speed)",
+            "When Cycles is mandatory (photoreal product marketing, complex glass)",
+            "Optimizing scenes to work smoothly in both engines"
+          ],
+          "what_learner_does": "Renders the identical camera angle in both EEVEE and Cycles, creating a detailed comparison matrix of time vs realism.",
+          "why_it_matters": "Professional 3D artists must know which engine to deploy to balance visual quality with client deadlines.",
+          "expected_outcome": "Objective understanding of when to choose EEVEE versus Cycles based on commercial project constraints."
+        },
+        {
+          "lesson_number": "4.12",
+          "lesson_title": "Colour Management & AgX View Transform",
+          "what_is_taught": "Modern color management in Blender 5.2: Color Management panel in Render Properties, AgX view transform (superseding standard sRGB and Filmic), dynamic range handling, highlight clipping preservation, Exposure and Look contrast settings.",
+          "subtopics": [
+            "Color Management architecture in Blender 5.2",
+            "Why standard sRGB clips highlights and shifts hues",
+            "AgX view transform: superior highlight roll-off and color fidelity",
+            "Exposure and Gamma controls",
+            "Look presets (None, Medium Contrast, High Contrast)",
+            "Ensuring color consistency across monitors and delivery displays"
+          ],
+          "what_learner_does": "Compares standard sRGB, Filmic, and AgX on an over-bright highlight to observe AgX's clean color preservation.",
+          "why_it_matters": "AgX prevents bright highlights from washing out into ugly saturated yellow/white clipping, preserving professional photographic contrast.",
+          "expected_outcome": "Flawless colour management setup utilizing the AgX view transform."
+        },
+        {
+          "lesson_number": "4.13",
+          "lesson_title": "Render Optimization & Denoising",
+          "what_is_taught": "Optimizing render times without sacrificing quality: Max Samples and Noise Threshold in Cycles, OpenImageDenoise (OIDN) integration, Denoising data passes, tile size settings, texture downsizing, and eliminating render-time fireflies.",
+          "subtopics": [
+            "Noise Threshold (e.g. 0.01) vs fixed sample counts",
+            "Max Samples tuning for preview vs final delivery",
+            "OpenImageDenoise (OIDN) configuration (Accurate vs Fast)",
+            "Denoising in viewport vs final render compositor",
+            "Clamping indirect light to eliminate fireflies",
+            "Optimizing render times for hardware efficiency"
+          ],
+          "what_learner_does": "Optimizes a noisy 20-minute render down to 3 minutes using adaptive sampling (0.02 threshold) and OpenImageDenoise.",
+          "why_it_matters": "Render optimization allows high-volume production without overheating hardware or missing deadlines.",
+          "expected_outcome": "Ability to achieve clean, noise-free renders with optimized sampling and denoising."
+        },
+        {
+          "lesson_number": "4.14",
+          "lesson_title": "Render Outputs & Export Formats",
+          "what_is_taught": "Exporting final imagery: output resolution (1080p, 2K, 4K), aspect ratios (16:9, 1:1, 4:5 for social), file formats (PNG 16-bit, JPEG, OpenEXR for compositing), RGBA alpha channel transparency for cutout products, and file naming.",
+          "subtopics": [
+            "Output resolution and aspect ratio standards",
+            "Social media framing: 1:1 square and 4:5 vertical",
+            "File format selection: PNG (8/16-bit), JPEG, OpenEXR",
+            "Transparent background rendering (Film -> Transparent toggle)",
+            "Exporting PNGs with alpha channel for graphic design handoffs",
+            "Systematic output file naming and final delivery verification"
+          ],
+          "what_learner_does": "Renders the product on transparent alpha and on studio backgrounds, exporting in 16-bit PNG for marketing use.",
+          "why_it_matters": "Clients need product renders with clean alpha channels to composite into ads, websites, and packaging layouts.",
+          "expected_outcome": "Flawless technical export of high-resolution image assets with transparent alpha channels."
+        }
+      ],
+      "key_concepts": [
+        "Lighting Physics: Direction, Size, Inverse Square Falloff",
+        "Blender Light Types: Area Softboxes, Spots, Sun, Point",
+        "Three-Point Commercial Studio Lighting & Ratios",
+        "HDRI Environment Textures & Ambient Specular Reflections",
+        "Material-Specific Lighting: Glass, Metals, Plastics, Cycloramas",
+        "Camera Focal Length: 85mm–105mm Telephoto Standards",
+        "Camera Composition: Hero, 3/4, Detail Macro Views",
+        "Depth of Field & F-Stop Optical Focus Separation",
+        "EEVEE Real-Time Rasterization vs Cycles Path Tracing",
+        "AgX Colour Management & Highlight Roll-off in Blender 5.2",
+        "Adaptive Sampling, OpenImageDenoise & Optimization",
+        "Transparent RGBA PNG Export for Commercial Handover"
+      ],
+      "tools": [
+        "Blender 5.2 LTS (Cycles & EEVEE)",
+        "Area Light Diffusers",
+        "Camera Viewport Overlays",
+        "OpenImageDenoise (OIDN)",
+        "AgX Color Management Engine"
+      ],
+      "hands_on_practice": "Create a premium studio product scene and render the same product using both EEVEE and Cycles.",
+      "assignment": "Produce three different camera compositions and at least two intentional lighting variations.",
+      "deliverable": "Professional product visualization scene with multiple rendered compositions.",
+      "commercial_application": "Product advertising, e-commerce visuals, marketing campaigns and digital brand presentations."
+    },
+    {
+      "module_number": "Module 05",
+      "module_title": "Procedural Modeling & Animation",
+      "module_purpose": "Introduce efficient procedural design using Geometry Nodes and basic keyframe animation for product turntables and reusable 3D assets.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
+      "lessons": [
+        {
+          "lesson_number": "5.1",
+          "lesson_title": "Procedural vs Manual Modeling",
+          "what_is_taught": "Understanding procedural workflows: non-destructive thinking, procedural generation vs hand-modeling, parameter-driven asset generation, infinite variations, and when to use Geometry Nodes versus manual polygon modeling.",
+          "subtopics": [
+            "Procedural modeling philosophy",
+            "Manual sculpting vs parametric systems",
+            "Benefits of procedural workflows: reusability and speed",
+            "Parameter-driven product variants (sizing, patterns)",
+            "Commercial applications of procedural geometry"
+          ],
+          "what_learner_does": "Compares editing a 100-hole speaker grille manually versus generating it parametrically.",
+          "why_it_matters": "Procedural setups allow instant client-driven dimension and pattern changes without remodeling from scratch.",
+          "expected_outcome": "Clear understanding of procedural design concepts and commercial utility."
+        },
+        {
+          "lesson_number": "5.2",
+          "lesson_title": "Geometry Nodes Workspace",
+          "what_is_taught": "Navigating the Geometry Nodes Editor: node network interface, Group Input and Group Output, modifier stack integration, spreadsheet data inspection, socket types (Geometry, Float, Integer, Vector, Boolean), and node connections.",
+          "subtopics": [
+            "Geometry Nodes Editor interface in Blender 5.2",
+            "Group Input and Group Output nodes",
+            "How Geometry Nodes behaves as a modifier",
+            "Spreadsheet editor for inspecting point and mesh data",
+            "Socket data types and connector color-coding",
+            "Viewer node for inspecting internal node geometry"
+          ],
+          "what_learner_does": "Creates a new Geometry Nodes modifier, connects basic input nodes, and inspects vertex coordinates in the Spreadsheet.",
+          "why_it_matters": "The Spreadsheet and node inspector make procedural data flow visual and debuggable.",
+          "expected_outcome": "Fluency in navigating the Geometry Nodes Editor and inspecting data flow."
+        },
+        {
+          "lesson_number": "5.3",
+          "lesson_title": "Points & Instancing Fundamentals",
+          "what_is_taught": "Core Geometry Nodes operations: Mesh Primitives (Grid, Circle, Cylinder), Distribute Points on Faces (Random vs Poisson Disk), Instance on Points node, instances vs real geometry, and transforming instances.",
+          "subtopics": [
+            "Mesh primitive generation inside nodes",
+            "Distribute Points on Faces (Random vs Poisson Disk)",
+            "Poisson Disk minimum distance for non-overlapping points",
+            "Instance on Points node architecture",
+            "Memory efficiency of 3D instances",
+            "Scale and rotation transforms on instances"
+          ],
+          "what_learner_does": "Distributes screw heads across a product faceplate using Distribute Points on Faces (Poisson Disk) and Instance on Points.",
+          "why_it_matters": "Instancing distributes thousands of detailed components with negligible memory and CPU overhead.",
+          "expected_outcome": "Mastery of point distribution and geometric instancing in Geometry Nodes."
+        },
+        {
+          "lesson_number": "5.4",
+          "lesson_title": "Randomization & Parameter Controls",
+          "what_is_taught": "Controlling variation in procedural assets: Random Value node (Float, Vector, Boolean), Seed parameters, Map Range node for clamping values, Combine XYZ node, and aligning rotation to surface normals.",
+          "subtopics": [
+            "Random Value node utility",
+            "Controlling random scale variation within min/max bounds",
+            "Randomizing rotation around specific axes",
+            "Map Range node for smooth parameter translation",
+            "Combine XYZ for directional transform isolation",
+            "Seed value switching for instant variations"
+          ],
+          "what_learner_does": "Builds a procedural display tray with randomly positioned, rotated cosmetic bottles within specified boundaries.",
+          "why_it_matters": "Subtle controlled randomization prevents procedural arrangements from looking stiff and artificial.",
+          "expected_outcome": "Ability to introduce controlled procedural variation using Random Value and Map Range nodes."
+        },
+        {
+          "lesson_number": "5.5",
+          "lesson_title": "Exposing Parameters & Reusable Assets",
+          "what_is_taught": "Packaging Geometry Nodes setups for non-technical users: connecting node sockets to Group Input, naming exposed parameters in the N panel, setting min/max slider ranges, default values, and tooltips.",
+          "subtopics": [
+            "Connecting internal node sockets to Group Input",
+            "Renaming exposed parameters in the modifier panel",
+            "Configuring slider minimums, maximums, and default values",
+            "Documenting parameter tooltips",
+            "Creating reusable procedural product display stands"
+          ],
+          "what_learner_does": "Packages a procedural pill-bottle array where a user can adjust count, radius, and bottle height from the modifier panel.",
+          "why_it_matters": "Exposed parameters allow clients and junior team members to customize assets without opening node trees.",
+          "expected_outcome": "Creation of clean, client-friendly reusable procedural node assets."
+        },
+        {
+          "lesson_number": "5.6",
+          "lesson_title": "Timeline & Keyframing Basics",
+          "what_is_taught": "Foundations of 3D animation in Blender: Timeline panel, Playhead, current frame, Start/End frame settings, frame rates (24fps, 30fps), inserting keyframes (I key / K hotkey), keying specific channels (Location, Rotation, Scale).",
+          "subtopics": [
+            "Timeline panel navigation and playback (Spacebar)",
+            "Frame rate standards (24fps cinematic, 30fps digital)",
+            "Frame range duration math (seconds × fps = total frames)",
+            "Inserting keyframes on object properties",
+            "Keying specific channels (Location, Rotation, Scale)",
+            "Replacing and deleting keyframes on timeline"
+          ],
+          "what_learner_does": "Sets up a 240-frame timeline at 24fps (10 seconds) and keyframes basic object movement across the floor plane.",
+          "why_it_matters": "Precise keyframe placement is the basis of all 3D object and camera motion.",
+          "expected_outcome": "Fluency in configuring timelines, frame rates and setting foundational keyframes."
+        },
+        {
+          "lesson_number": "5.7",
+          "lesson_title": "The Graph Editor & Animation Curves",
+          "what_is_taught": "Refining animation in the Graph Editor: animation curves (F-curves), handle types (Free, Aligned, Vector, Auto Clamped), interpolation modes (Linear, Bezier, Constant), easing acceleration and deceleration, and smoothing jerky motion.",
+          "subtopics": [
+            "Graph Editor panel layout and F-curve display",
+            "Bezier interpolation and velocity curves",
+            "Easing in and easing out for natural deceleration",
+            "Linear interpolation for continuous mechanical rotation",
+            "Adjusting handle lengths and angles for snappy motion",
+            "Fixing overshooting and erratic speed spikes"
+          ],
+          "what_learner_does": "Adjusts rotation F-curves from ease-in/ease-out to linear interpolation for a constant-speed mechanical turntable.",
+          "why_it_matters": "A turntable must rotate at constant linear velocity so it loops seamlessly without a noticeable speed hitch.",
+          "expected_outcome": "Skill in manipulating F-curve handles and interpolation modes in the Graph Editor."
+        },
+        {
+          "lesson_number": "5.8",
+          "lesson_title": "Object Animation & Reveals",
+          "what_is_taught": "Animating product components: animating parts assembling (displaced exploded view returning to closed state), sliding trays opening, simple lid unscrewing, hierarchy parenting for coordinated motion, and visual reveal pacing.",
+          "subtopics": [
+            "Animating multi-part product assemblies",
+            "Creating simple exploded-view animations",
+            "Parenting sub-parts to master control nulls/empties",
+            "Sequencing component arrivals with staggered timing",
+            "Animating visibility and opacity transitions"
+          ],
+          "what_learner_does": "Animates a cosmetic bottle lid unscrewing, lifting vertically, and revealing the pump dispenser underneath.",
+          "why_it_matters": "Component reveal animations showcase product functionality and internal engineering for marketing videos.",
+          "expected_outcome": "Ability to animate coordinated multi-part product reveals."
+        },
+        {
+          "lesson_number": "5.9",
+          "lesson_title": "Camera Animation & Orbit Paths",
+          "what_is_taught": "Techniques for camera motion: keyframing camera transforms directly, using an Empty as a camera target (Track To constraint), animating camera along a curve path (Follow Path constraint), smooth crane moves, and avoiding motion sickness.",
+          "subtopics": [
+            "Direct camera transform keyframing",
+            "Camera Track To constraint aimed at an Empty target",
+            "Camera orbiting around a centered target",
+            "Following a Bezier curve path for smooth track shots",
+            "Maintaining stable framing and visual horizon",
+            "Eliminating sudden camera acceleration jumps"
+          ],
+          "what_learner_does": "Constrains a camera to track an Empty at the product center, orbiting smoothly along a circular curve path.",
+          "why_it_matters": "Targeted camera constraints guarantee the product stays perfectly centered during complex camera moves.",
+          "expected_outcome": "Competence in animating smooth, stable camera paths around 3D products."
+        },
+        {
+          "lesson_number": "5.10",
+          "lesson_title": "Product Turntable Production",
+          "what_is_taught": "Building the standard 360-degree commercial turntable: rotating the product (Z-axis 0 to 360 degrees) versus orbiting the camera, linear interpolation for seamless loops, stable studio lighting that flatters the product at every angle.",
+          "subtopics": [
+            "Rotating product vs orbiting camera: pros and cons",
+            "Setting 0 to 360 degree rotation keyframes",
+            "Linear F-curve setting for seamless looping",
+            "Preventing duplicate end frame (frame 1 and frame 240 identical)",
+            "Lighting stability: ensuring lighting looks great through all 360 degrees",
+            "Target duration standards (8 to 15 seconds)"
+          ],
+          "what_learner_does": "Configures a 240-frame 360-degree product turntable with linear interpolation and verifies seamless loop playback.",
+          "why_it_matters": "Product turntables are the most ubiquitous commercial 3D asset requested by e-commerce brands.",
+          "expected_outcome": "Flawless execution of a smooth, seamlessly looping 360-degree product turntable."
+        },
+        {
+          "lesson_number": "5.11",
+          "lesson_title": "Animation Rendering & Video Encoding",
+          "what_is_taught": "Rendering animated sequences: rendering to an Image Sequence (PNG) versus direct video file, why rendering directly to MP4 is risky, image sequence playback, compiling image sequences to MP4 (H.264) in Blender's Video Sequencer, and audio sync awareness.",
+          "subtopics": [
+            "Why professional 3D renders to Image Sequences (PNG/EXR)",
+            "Resuming interrupted renders with image sequences",
+            "Output folder setup for sequence frames (`frame_####.png`)",
+            "Compiling image sequences in Blender Video Sequencer (VSE)",
+            "Encoding settings: Container (MPEG-4), Codec (H.264), Quality (Perceptually Lossless)",
+            "Playback quality inspection in external players"
+          ],
+          "what_learner_does": "Renders a 240-frame sequence as PNGs, compiles them in Blender's VSE, and exports a lightweight 1080p MP4 video.",
+          "why_it_matters": "If a computer crashes on frame 230 of an MP4, the whole file corrupts; an image sequence preserves all rendered frames.",
+          "expected_outcome": "Professional rendering of image sequences and reliable encoding into client-ready MP4 video."
+        },
+        {
+          "lesson_number": "5.12",
+          "lesson_title": "Procedural & Animation Scope Boundaries",
+          "what_is_taught": "Recognizing workflow boundaries: keeping procedural setups efficient, avoiding computational bloat, understanding that character rigs, cloth dynamics, and complex particle systems belong to specialized advanced courses.",
+          "subtopics": [
+            "Geometry Nodes performance optimization",
+            "Avoiding heavy boolean operations in real-time node trees",
+            "Identifying when procedural nodes become counter-productive",
+            "Scope boundaries: what belongs in Course 73 vs specialized courses",
+            "Clean node documentation for collaborative workflows"
+          ],
+          "what_learner_does": "Audits a Geometry Nodes tree for performance bottlenecks, caching geometry where necessary.",
+          "why_it_matters": "Overly complex node trees can freeze viewports; efficient design ensures smooth production workflows.",
+          "expected_outcome": "Disciplined understanding of procedural boundaries and performance optimization."
+        }
+      ],
+      "key_concepts": [
+        "Procedural vs Manual Modeling Philosophy",
+        "Geometry Nodes Editor & Spreadsheet Data Inspection",
+        "Point Distribution (Poisson Disk) & Mesh Instancing",
+        "Random Value & Map Range Controlled Variations",
+        "Exposing Parameters to Modifier Panel for Reusable Assets",
+        "Timeline Navigation & Keyframe Insertion (Location, Rotation)",
+        "Graph Editor F-Curves: Bezier Easing vs Linear Turntable Loops",
+        "Coordinated Component Reveals & Parenting Hierarchies",
+        "Camera Track To Constraints & Orbit Path Mechanics",
+        "360-Degree Turntable Standards (Linear Speed, Seamless Loop)",
+        "Image Sequence Rendering (PNG) & MP4/H.264 Video Encoding",
+        "Procedural Performance Limits & Clean Scene Caching"
+      ],
+      "tools": [
+        "Blender 5.2 LTS (Geometry Nodes Editor)",
+        "Timeline & Graph Editor",
+        "Camera Constraints (Track To)",
+        "Blender Video Sequencer (VSE)"
+      ],
+      "hands_on_practice": "Create a simple reusable procedural asset using Geometry Nodes and animate a product turntable using original keyframes.",
+      "assignment": "Submit a basic Geometry Nodes setup and a short turntable animation draft.",
+      "deliverable": "Procedural asset example and functional editable turntable animation.",
+      "commercial_application": "Product showcase animations, procedural product arrangements and basic digital advertising visuals."
+    },
+    {
+      "module_number": "Module 06",
+      "module_title": "Commercial 3D Portfolio",
+      "module_purpose": "Complete an original commercial product visualization portfolio with professional modeling, shading, lighting, rendering and client-ready handover.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
+      "lessons": [
+        {
+          "lesson_number": "6.1",
+          "lesson_title": "Commercial Project Brief",
+          "what_is_taught": "Deconstructing a client 3D product brief: product category selection, target audience demographics, brand aesthetic guidelines, required deliverable checklist, aspect ratio specifications, timeline constraints, and deliverable targets.",
+          "subtopics": [
+            "Deconstructing a commercial product visualization brief",
+            "Selecting a product category (Cosmetics, Audio, Lighting, Packaging)",
+            "Defining target customer and brand personality",
+            "Deliverable checklist: Model, Stills, Turntable, Handover",
+            "Technical delivery constraints (Resolution, Formats, Color Space)"
+          ],
+          "what_learner_does": "Selects a commercial product brief and formulates a production plan covering all 3 required deliverables.",
+          "why_it_matters": "A clear production plan prevents scope creep and ensures every deliverable satisfies commercial standards.",
+          "expected_outcome": "Creation of a structured commercial production plan based on a realistic client brief."
+        },
+        {
+          "lesson_number": "6.2",
+          "lesson_title": "Reference Gathering & Moodboard",
+          "what_is_taught": "Gathering visual references: product orthographics, real-world dimensions, material finish references, studio lighting examples, color palettes, organizing moodboards in PureRef, and ethical asset permissions.",
+          "subtopics": [
+            "Sourcing high-resolution multi-angle product references",
+            "Documenting real-world dimensions and material finishes",
+            "Creating studio lighting and moodboard references in PureRef",
+            "Color palette exploration and brand identity alignment",
+            "Copyright rules and ethical reference usage"
+          ],
+          "what_learner_does": "Compiles a comprehensive PureRef reference board covering modeling blueprints, material swatches, and lighting moods.",
+          "why_it_matters": "Quality 3D production is directly proportional to the quality and thoroughness of reference material gathered.",
+          "expected_outcome": "A professional reference moodboard ready to guide modeling, materials, and lighting."
+        },
+        {
+          "lesson_number": "6.3",
+          "lesson_title": "Modeling Production & Detailing",
+          "what_is_taught": "Executing the hard-surface product model: blocking primary shapes, refining secondary forms, adding tertiary details (parting lines, chamfers, bevels), ensuring quad topology, modifier management, and applied transforms.",
+          "subtopics": [
+            "Primary shape blocking from orthographic references",
+            "Secondary form modeling and proportional refinement",
+            "Tertiary hard-surface detailing (seams, ports, bevels)",
+            "Ensuring quad topology and smooth surface transitions",
+            "Modifier stack fine-tuning and scale zeroing"
+          ],
+          "what_learner_does": "Models the complete original product assembly, ensuring clean topology, real-world scale, and organized objects.",
+          "why_it_matters": "Flawless modeling geometry ensures materials and lighting reflect cleanly without pinching or distortion.",
+          "expected_outcome": "Completion of Deliverable 01: a clean, original hard-surface product model."
+        },
+        {
+          "lesson_number": "6.4",
+          "lesson_title": "Material Development & Shading",
+          "what_is_taught": "UV unwrapping and texturing the product: placing seams, unwrapping UVs, normalizing texel density, building PBR shaders for all product parts, adding subtle procedural roughness variation, and applying brand labels.",
+          "subtopics": [
+            "Seam placement and clean UV layout generation",
+            "Texel density verification across all sub-components",
+            "Configuring PBR materials (plastic, metal, glass, rubber)",
+            "Procedural roughness imperfections for realism",
+            "Applying brand typography and logos via alpha masks"
+          ],
+          "what_learner_does": "Textures the product model with high-fidelity PBR materials, micro-surface imperfections, and crisp brand labels.",
+          "why_it_matters": "Convincing materials bridge the gap between a sterile computer model and a desirable commercial product.",
+          "expected_outcome": "Fully textured product model ready for lighting and scene staging."
+        },
+        {
+          "lesson_number": "6.5",
+          "lesson_title": "Studio Staging & Lighting Variations",
+          "what_is_taught": "Constructing the presentation environment: studio cyclorama backdrop, Area light softbox placement, HDRI ambient fill, and developing two distinct lighting moods: Clean Commercial Lighting and Premium Dramatic Lighting.",
+          "subtopics": [
+            "Studio backdrop cyclorama setup with curved bevel",
+            "Area light softbox placement for key, fill, and rim illumination",
+            "Setting up Variation A: Clean commercial high-key studio lighting",
+            "Setting up Variation B: Premium dramatic/moody low-key lighting",
+            "Controlling specular highlight falloffs on curved surfaces"
+          ],
+          "what_learner_does": "Builds a studio scene and configures two distinct lighting setups, verifying reflection highlights from all angles.",
+          "why_it_matters": "Offering clients multiple lighting moods demonstrates artistic versatility and commercial production capability.",
+          "expected_outcome": "Creation of two distinct, professional lighting setups tailored to the product."
+        },
+        {
+          "lesson_number": "6.6",
+          "lesson_title": "Multi-Camera Setup & Composition",
+          "what_is_taught": "Configuring the 3 required camera compositions: Camera 1 (Hero shot), Camera 2 (Alternate 3/4 perspective), Camera 3 (Macro detail close-up); focal length selection (85mm–105mm), depth of field tuning, and framing balance.",
+          "subtopics": [
+            "Camera 1: Commercial Hero shot composition and framing",
+            "Camera 2: Dynamic Three-Quarter perspective shot",
+            "Camera 3: Macro close-up shot highlighting texture and bevel craft",
+            "Focal length optimization (85mm telephoto standard)",
+            "Depth of field fine-tuning on macro close-up"
+          ],
+          "what_learner_does": "Configures three cameras in the scene, setting individual focal lengths, clipping, and focal targets.",
+          "why_it_matters": "A multi-camera presentation tells a complete product story, highlighting form, function, and detail.",
+          "expected_outcome": "Three distinct, well-composed cameras ready for final rendering."
+        },
+        {
+          "lesson_number": "6.7",
+          "lesson_title": "High-Resolution Render Production",
+          "what_is_taught": "Executing final still renders: EEVEE preview validation, Cycles final production setup, sample counts, adaptive thresholding, OpenImageDenoise configuration, AgX color management verification, and rendering high-resolution stills.",
+          "subtopics": [
+            "Pre-render checklist and viewport cleanup",
+            "Cycles sampling parameters and noise threshold",
+            "OpenImageDenoise pass setup",
+            "AgX contrast look verification",
+            "Rendering high-resolution 1080p / 2K stills across all 3 cameras"
+          ],
+          "what_learner_does": "Renders the 3 camera compositions across both lighting variations using Cycles with optimized denoising.",
+          "why_it_matters": "Executing renders with clean settings ensures pristine portfolio deliverables free of noise and artifacts.",
+          "expected_outcome": "Completion of Deliverable 02: pristine product visualization renders across multiple cameras and lighting setups."
+        },
+        {
+          "lesson_number": "6.8",
+          "lesson_title": "Product Turntable Animation Production",
+          "what_is_taught": "Animating and rendering the product turntable: keyframing linear 360-degree rotation, testing frame rate (24/30fps), checking lighting consistency throughout rotation, rendering PNG image sequence, and compiling to MP4 video.",
+          "subtopics": [
+            "Setting up turntable rotation keyframes (0 to 360 degrees)",
+            "Linear F-curve interpolation for continuous loop",
+            "Auditing lighting highlights across the full 360 rotation",
+            "Rendering PNG image sequence to dedicated output folder",
+            "Compiling image sequence to high-bitrate 1080p MP4 in Blender VSE"
+          ],
+          "what_learner_does": "Renders and encodes a smooth 10-second (240 frame) 360-degree turntable video of the product.",
+          "why_it_matters": "A smooth turntable video provides clients with full interactive awareness of the 3D asset.",
+          "expected_outcome": "Completion of Deliverable 03: a smooth, broadcast-ready 360-degree product turntable animation."
+        },
+        {
+          "lesson_number": "6.9",
+          "lesson_title": "Revision Workflow & Creative Polish",
+          "what_is_taught": "Iterative review process: collecting instructor/peer critique, identifying surface pinching or lighting glare, executing non-destructive adjustments, versioning scene files (`_v02`, `_v03`), and maintaining a project revision log.",
+          "subtopics": [
+            "Conducting a critical self-audit and instructor review",
+            "Fixing minor mesh pinching or material roughness imbalances",
+            "Adjusting light intensity to eliminate blown-out highlights",
+            "Project versioning and archiving previous iterations",
+            "Maintaining a written revision log documenting enhancements"
+          ],
+          "what_learner_does": "Refines the scene based on feedback, creates version 2 of the project, and logs all technical adjustments.",
+          "why_it_matters": "The ability to take feedback and refine work iteratively is a vital professional competency in commercial studios.",
+          "expected_outcome": "Disciplined revision execution and version-controlled project management."
+        },
+        {
+          "lesson_number": "6.10",
+          "lesson_title": "Post-Processing & Presentation Polish",
+          "what_is_taught": "Final 2D image enhancement: opening renders in Photoshop or Krita, subtle curves and contrast adjustments, color grading, clean border cropping, maintaining faithful product colors, and exporting final client formats.",
+          "subtopics": [
+            "Importing 16-bit PNG renders into Photoshop or Krita",
+            "Subtle tonal adjustments using Curves and Levels",
+            "Selective color adjustments while preserving brand accuracy",
+            "Background cleanup and dust/artifact inspection",
+            "Final export optimization for web portfolio display"
+          ],
+          "what_learner_does": "Performs subtle post-production color balance and sharpness checks in Photoshop/Krita on the final renders.",
+          "why_it_matters": "Subtle post-processing adds that final layer of commercial polish without altering physical product proportions.",
+          "expected_outcome": "Polished, commercial-grade portfolio images ready for public presentation."
+        },
+        {
+          "lesson_number": "6.11",
+          "lesson_title": "Project Organization & Asset Packaging",
+          "what_is_taught": "Organizing the complete project archive: clean Outliner collection hierarchy, systematic material and texture names, checking relative asset paths, packing textures where appropriate, and removing unused orphan data.",
+          "subtopics": [
+            "Outliner cleanup: collections, naming, removing hidden test meshes",
+            "Purging unused materials, textures, and node groups",
+            "Verifying relative path structures for external textures",
+            "File -> External Data -> Pack Resources verification",
+            "Creating clean, self-contained project archive zip files"
+          ],
+          "what_learner_does": "Performs a complete project cleanup, packs textures, and packages all project files into an organized zip archive.",
+          "why_it_matters": "An organized project ensures any client or senior artist can open and render the file seamlessly on any system.",
+          "expected_outcome": "Error-free project packaging adhering to commercial studio handover standards."
+        },
+        {
+          "lesson_number": "6.12",
+          "lesson_title": "Client Handover Package & Documentation",
+          "what_is_taught": "Building the 14-item handover package: final high-res images, turntable video, editable `.blend` files, organized textures, render settings documentation, camera notes, revision log, and client usage instructions.",
+          "subtopics": [
+            "Compiling the 14 mandatory handover deliverables",
+            "Drafting technical render settings and camera breakdown notes",
+            "Writing a clear client usage guide for asset reuse",
+            "Final verification of file integrity and archive structure",
+            "Archiving and cloud delivery best practices"
+          ],
+          "what_learner_does": "Assembles the complete 14-item handover package and writes technical documentation for the client.",
+          "why_it_matters": "Professional handover documentation elevates a 3D artist from a hobbyist to a trusted commercial collaborator.",
+          "expected_outcome": "A complete, professionally documented 14-item client handover package."
+        },
+        {
+          "lesson_number": "6.13",
+          "lesson_title": "Portfolio Case Study Presentation",
+          "what_is_taught": "Presenting 3D work effectively: writing a concise case study brief, showcasing wireframe topology, material node breakdowns, lighting setup diagrams, before/after comparisons, turntable video embedding, and client-facing presentation.",
+          "subtopics": [
+            "Structuring a compelling 3D portfolio case study",
+            "Showcasing wireframe topology alongside final beauty renders",
+            "Presenting shader node breakdowns and lighting diagrams",
+            "Displaying turntable video clips and detail macro crops",
+            "Writing clear creative rationale and problem-solving statements"
+          ],
+          "what_learner_does": "Creates a digital presentation case study showcasing the model, wireframe, lighting breakdowns, stills, and turntable.",
+          "why_it_matters": "Recruiters and clients hire artists who can articulate their technical decisions and prove original construction.",
+          "expected_outcome": "A polished portfolio case study demonstrating verifiable 3D modeling, shading, and rendering competence."
+        }
+      ],
+      "key_concepts": [
+        "Commercial Brief Deconstruction & Production Roadmapping",
+        "PureRef Reference Board & Visual Asset Research",
+        "Hard-Surface Modeling Execution (Primary, Secondary, Tertiary)",
+        "UV Unwrapping, Texel Density & PBR Shading Integration",
+        "Dual Lighting Staging: Commercial Clean vs Premium Dramatic",
+        "Multi-Camera Staging: Hero, 3/4 Perspective, Macro Detail",
+        "High-Resolution Cycles Rendering & AgX Color Verification",
+        "360-Degree Turntable Video Rendering & H.264 Encoding",
+        "Iterative Client Revisions & Revision Logging",
+        "Photoshop/Krita Subtle Post-Processing & Image Polish",
+        "Project Hygiene: Outliner Cleanup, Orphan Purge, Packed Assets",
+        "Complete 14-Item Client Handover Documentation",
+        "Professional 3D Portfolio Case Study Presentation"
+      ],
+      "tools": [
+        "Blender 5.2 LTS",
+        "Cycles Path Tracer",
+        "Photoshop or Krita",
+        "PureRef",
+        "Handover Documentation Templates"
+      ],
+      "hands_on_practice": "Complete the coordinated commercial 3D portfolio.",
+      "assignment": "Submit all three assessed deliverables, project files and technical documentation.",
+      "deliverable": "Client-ready product visualization portfolio demonstrating original modeling, materials, lighting and animation.",
+      "commercial_application": "Consumer-product visualization, 3D marketing content, product mockups and digital advertising."
     }
-  ]
+  ],
+  "faq": [
+    {
+      "question": "Is this Blender course suitable for complete beginners?",
+      "answer": "Yes. The course begins with Blender's interface, navigation and 3D fundamentals before progressing to modeling, materials, lighting and rendering."
+    },
+    {
+      "question": "What will I learn?",
+      "answer": "You will learn mesh modeling, modifiers, UV mapping, PBR materials, shader nodes, professional lighting, Cycles, EEVEE, introductory Geometry Nodes and basic animation."
+    },
+    {
+      "question": "Is Blender free?",
+      "answer": "Yes. Blender is free and open-source software. Supporting assets, optional third-party tools or hardware may involve separate costs."
+    },
+    {
+      "question": "What portfolio projects will I create?",
+      "answer": "You will develop an original hard-surface product model, a premium product visualization scene with multiple camera and lighting variations, and a short product turntable animation."
+    },
+    {
+      "question": "Will I learn photorealistic rendering?",
+      "answer": "You will learn practical lighting, PBR materials, Cycles rendering and colour management to create realistic product visuals. Results depend on source assets, scene complexity, hardware and artistic skill."
+    },
+    {
+      "question": "What is the difference between Cycles and EEVEE?",
+      "answer": "Cycles uses physically based path tracing for accurate light simulation, while EEVEE emphasizes faster real-time rendering. Both are useful depending on the project."
+    },
+    {
+      "question": "Will I learn Geometry Nodes?",
+      "answer": "Yes. The course introduces fundamental Geometry Nodes concepts, instancing and reusable procedural assets."
+    },
+    {
+      "question": "Will I learn animation?",
+      "answer": "Yes. You will learn basic keyframes, camera/object animation and product turntable creation. Advanced character animation is outside the scope."
+    },
+    {
+      "question": "Does the course include sculpting and rigging?",
+      "answer": "No. It focuses on modeling, materials, lighting, rendering and introductory animation rather than advanced sculpting or character rigging."
+    },
+    {
+      "question": "Do I need a powerful computer?",
+      "answer": "You need a computer compatible with the supported Blender version. Performance requirements vary by scene complexity and rendering settings."
+    },
+    {
+      "question": "Will I receive editable Blender project files?",
+      "answer": "Students create and submit editable .blend files, organized textures, render settings and final portfolio exports."
+    },
+    {
+      "question": "Can graphic designers join this course?",
+      "answer": "Yes. It is suitable for graphic designers who want to expand into 3D modeling and product visualization."
+    },
+    {
+      "question": "Is AI used in this course?",
+      "answer": "AI may support concept exploration and reference preparation, but assessed 3D models must demonstrate original student-created modeling work."
+    },
+    {
+      "question": "What is the course duration and fee?",
+      "answer": "The course lasts eight weeks, includes 64 guided learning hours and has a listed fee of ₹9,900, subject to Nova Skills' verified pricing and tax policy."
+    }
+  ],
+  "primary_keyword": "Blender 3D modeling course",
+  "secondary_keywords": [
+    "Blender course in India",
+    "Blender 3D course for beginners",
+    "3D modeling course",
+    "Blender rendering course",
+    "Blender product visualization course",
+    "Blender Cycles training",
+    "Blender EEVEE rendering",
+    "Blender Geometry Nodes course",
+    "Blender PBR materials",
+    "Blender hard-surface modeling",
+    "Blender UV mapping",
+    "3D product animation course",
+    "Blender certification course",
+    "3D design course for beginners"
+  ],
+  "keywords": [
+    "Blender 3D modeling course",
+    "Blender course in India",
+    "Blender 3D course for beginners",
+    "3D modeling course",
+    "Blender rendering course",
+    "Blender product visualization course",
+    "Blender Cycles training",
+    "Blender EEVEE rendering",
+    "Blender Geometry Nodes course",
+    "Blender PBR materials",
+    "Blender hard-surface modeling",
+    "Blender UV mapping",
+    "3D product animation course",
+    "Blender certification course",
+    "3D design course for beginners"
+  ],
+  "seo": {
+    "seo_title": "Blender 3D Modeling & Rendering Course | Nova Skills",
+    "meta_title": "Blender 3D Modeling & Rendering Course | Nova Skills",
+    "seo_description": "Learn Blender 3D modeling, PBR materials, lighting, Cycles, EEVEE and Geometry Nodes in 8 weeks (64 hours). Build 3D portfolio projects. Fee ₹9,900.",
+    "meta_description": "Learn Blender 3D modeling, PBR materials, lighting, Cycles, EEVEE and Geometry Nodes in 8 weeks (64 hours). Build 3D portfolio projects. Fee ₹9,900.",
+    "primary_keyword": "Blender 3D modeling course",
+    "secondary_keywords": [
+      "Blender course in India",
+      "Blender 3D course for beginners",
+      "3D modeling course",
+      "Blender rendering course",
+      "Blender product visualization course",
+      "Blender Cycles training",
+      "Blender EEVEE rendering",
+      "Blender Geometry Nodes course",
+      "Blender PBR materials",
+      "Blender hard-surface modeling",
+      "Blender UV mapping",
+      "3D product animation course",
+      "Blender certification course",
+      "3D design course for beginners"
+    ],
+    "canonical_url": "https://novaskills.in/course-detail.html?id=blender-cert"
+  }
 }

@@ -1,10 +1,10 @@
 # Nova Skills: All Finished Courses Production Release Manifest
-**Document Version:** 1.0.0
-**Generated Date:** 2026-10-26T20:07:00+05:30
-**Target Release Branch:** `release/all-finished-courses-production-2026`
-**Target Production Branch:** `main` (`origin/main`)
-**Production Baseline Commit:** `d5b305df54e968aaa9923a713d98d16db6c1f5d3`
-**Source Development Branch:** `transformation/nova-course-redesign` (`56371228c5013583dd6575e7b9c3d21065c4e971`)
+**Document Version:** 1.0.0  
+**Generated Date:** 2026-10-26T20:07:00+05:30  
+**Target Release Branch:** `release/all-finished-courses-production-2026`  
+**Target Production Branch:** `main` (`origin/main`)  
+**Production Baseline Commit:** `d5b305df54e968aaa9923a713d98d16db6c1f5d3`  
+**Source Development Branch:** `transformation/nova-course-redesign` (`56371228c5013583dd6575e7b9c3d21065c4e971`)  
 
 ---
 

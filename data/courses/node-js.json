@@ -1,404 +1,1254 @@
 {
   "course_id": "node-js",
-  "course_name": "Node.js",
+  "id": "node-js",
+  "slug": "node-js",
+  "course_name": "Node.js Backend Development with Express",
+  "title": "Node.js Backend Development with Express",
+  "name": "Node.js Backend Development with Express",
+  "academic_sequence": 58,
+  "course_number": 58,
+  "curriculum_edition": "2027 Professional Edition",
   "academy": "Programming Academy",
   "academy_id": "programming",
-  "course_type": "MICRO",
-  "course_role": "Core Skill",
-  "level": "INTERMEDIATE",
-  "duration": "1 Month",
-  "learning_hours": 40,
-  "future_review_status": "EVOLVING",
-  "target_audience": {
-    "best_for": [
-      "Aspiring professionals aiming to master Node.js and secure industry roles.",
-      "Current developers wanting to upskill using modern Node.js workflows.",
-      "Freelancers looking to offer Node.js services to clients."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in javascript-cert should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Students looking for purely theoretical knowledge without hands-on implementation.",
-      "Individuals unwilling to engage in active problem-solving and coding."
-    ]
+  "academyId": "programming",
+  "academic_positioning": "Server-Side JavaScript, Express REST APIs, PostgreSQL Persistence, Object-Level Authorization & Reliable Backend Testing",
+  "programLevel": "Certification Course",
+  "course_type": "PROFESSIONAL",
+  "courseType": "PROFESSIONAL",
+  "course_role": "Junior Node.js Backend Developer",
+  "level": "Intermediate",
+  "priority": "A+",
+  "duration": "8 Weeks",
+  "durationMonths": 2,
+  "duration_weeks": 8,
+  "learning_hours": 64,
+  "learningHours": 64,
+  "guided_hours": 64,
+  "hours": 64,
+  "weekly_workload": "8 hours per week (4 hours interactive lectures & code-alongs + 4 hours hands-on lab implementation)",
+  "mode": "Interactive Software Labs & Guided Workplace Simulation",
+  "price": 10900,
+  "fee": 10900,
+  "regular_fee": 10900,
+  "originalPrice": 10900,
+  "commercial_notice": "Transparent flat enrollment fee of ₹10,900. No artificial comparison price, no fake countdown timers, and no inflated discounts.",
+  "pricing": {
+    "amount": 10900,
+    "currency": "INR",
+    "display": "₹10,900",
+    "transparent": true,
+    "installment_available": false,
+    "notes": "One-time complete course fee covering all 8 weeks, 64 hours of guided labs, capstone code reviews, and certificate verification."
   },
-  "prerequisites": {
-    "required": "javascript-cert",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
-    "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "Node.js, Git & GitHub, VS Code (student/free tiers sufficient for coursework)"
-    }
+  "tagline": "Build the Backend Systems That Power Real Web Applications.",
+  "hero_headline": "Build the Backend Systems That Power Real Web Applications.",
+  "hero_supporting_heading": "Master Server-Side JavaScript, Express REST APIs, PostgreSQL Integration, Authentication, Object-Level Authorization and Automated Testing.",
+  "hero_supporting_headline": "Learn Node.js backend development with Express, asynchronous JavaScript, databases, authentication, validation, testing and API deployment. Build maintainable server-side applications through practical projects and professional debugging workflows.",
+  "h1": "Node.js Backend Development with Express",
+  "seo_title": "Node.js Backend Course | Express, PostgreSQL | Nova Skills",
+  "meta_title": "Node.js Backend Course | Express, PostgreSQL | Nova Skills",
+  "seo_description": "Learn Node.js, Express, PostgreSQL, authentication, API security and testing. Build a backend project in 8 weeks, 64 hours, for ₹10,900.",
+  "meta_description": "Learn Node.js, Express, PostgreSQL, authentication, API security and testing. Build a backend project in 8 weeks, 64 hours, for ₹10,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=node-js",
+  "hero": {
+    "headline": "Build the Backend Systems That Power Real Web Applications.",
+    "subheadline": "Learn Node.js backend development with Express, asynchronous JavaScript, databases, authentication, validation, testing and API deployment. Build maintainable server-side applications through practical projects and professional debugging workflows.",
+    "primary_cta": "Enroll in Backend Certification",
+    "secondary_cta": "Explore Curriculum"
   },
-  "overview": {
-    "positioning": "Core backend runtime certification.",
-    "short_description": "Comprehensive curriculum covering Node.js, Express.js, MongoDB, Postman to build production-grade projects.",
-    "key_facts": {
-      "level": "INTERMEDIATE",
-      "duration": "1 Month",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "40 Hours",
-      "project_count": "PORTFOLIO",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Node.js Backend Developer"
-    },
-    "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end solutions using Node.js.",
-      "Solve concrete business problems applying Node.js principles.",
-      "Package professional case studies demonstrating verifiable skills."
-    ]
-  },
-  "why_now": {
-    "industry_shift": "The transition toward modern cloud and web ecosystems requires deep expertise in Node.js and related technologies.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can deliver robust Node.js solutions efficiently.",
-    "career_opportunity": "Mastering these tools opens doors to high-paying specialized roles and global freelance opportunities."
-  },
+  "short_description": "Learn Node.js backend development with Express, asynchronous JavaScript, databases, authentication, validation, testing and API deployment. Build maintainable server-side applications through practical projects and professional debugging workflows.",
+  "shortDesc": "Learn Node.js backend development with Express, asynchronous JavaScript, databases, authentication, validation, testing and API deployment. Build maintainable server-side applications through practical projects and professional debugging workflows.",
+  "full_description": "Learn to build practical backend systems using Node.js, Express and PostgreSQL. This hands-on Node.js Backend Development with Express course teaches server-side JavaScript, REST API development, relational database integration, authentication, authorization, testing and backend deployment. Start by understanding how Node.js operates outside the browser, how asynchronous I/O works, and how to use modules, npm, environment variables, filesystem operations and debugging tools. Develop HTTP APIs using Express. Learn routing, middleware, controllers, request and response handling, validation and structured error responses. Connect applications to PostgreSQL using a maintained Node.js database client. Build CRUD operations with parameterized SQL, database constraints, schema migrations, transactions and reliable connection management. Implement user authentication and practical backend security controls, including secure password hashing, session or token concepts, role checks, resource ownership verification, input validation and rate limiting. Develop an understanding of object-level authorization so authenticated users can access only records they are permitted to read or modify. Learn backend reliability through automated unit and integration tests, error handling, structured logging, environment separation, API documentation and debugging workflows. Complete a portfolio-ready business operations REST API featuring a PostgreSQL database, authenticated users, protected CRUD operations, authorization tests and a deployable demonstration. This programme emphasizes maintainable code, correct API behavior, database reliability, security fundamentals and working technical evidence.",
+  "fullDesc": "Learn to build practical backend systems using Node.js, Express and PostgreSQL. This hands-on Node.js Backend Development with Express course teaches server-side JavaScript, REST API development, relational database integration, authentication, authorization, testing and backend deployment. Start by understanding how Node.js operates outside the browser, how asynchronous I/O works, and how to use modules, npm, environment variables, filesystem operations and debugging tools. Develop HTTP APIs using Express. Learn routing, middleware, controllers, request and response handling, validation and structured error responses. Connect applications to PostgreSQL using a maintained Node.js database client. Build CRUD operations with parameterized SQL, database constraints, schema migrations, transactions and reliable connection management. Implement user authentication and practical backend security controls, including secure password hashing, session or token concepts, role checks, resource ownership verification, input validation and rate limiting. Develop an understanding of object-level authorization so authenticated users can access only records they are permitted to read or modify. Learn backend reliability through automated unit and integration tests, error handling, structured logging, environment separation, API documentation and debugging workflows. Complete a portfolio-ready business operations REST API featuring a PostgreSQL database, authenticated users, protected CRUD operations, authorization tests and a deployable demonstration. This programme emphasizes maintainable code, correct API behavior, database reliability, security fundamentals and working technical evidence.",
+  "description": "Learn Node.js backend development with Express, asynchronous JavaScript, databases, authentication, validation, testing and API deployment. Build maintainable server-side applications through practical projects and professional debugging workflows.",
+  "overview": "Node.js Backend Development with Express is an intensive 8-week, 64-hour intermediate certification course engineered to equip developers with production-grade backend engineering competencies. Centered around modern 2027 backend practices, the curriculum establishes rigorous foundations across the Node.js runtime, asynchronous I/O mechanics, Express REST API architecture, and PostgreSQL relational data persistence using parameterized queries and migrations. Students master essential backend security practices—including adaptive password hashing, authentication middleware, role-based access control, and mandatory object-level authorization (preventing OWASP BOLA/IDOR vulnerabilities). The course emphasizes backend reliability through automated unit and integration testing, structured logging, centralized error boundaries, and API documentation, culminating in a fully tested and deployed Business Operations REST API capstone.",
+  "why_now": "Modern web and mobile applications rely on robust, secure, and performant backend APIs. In 2027, companies require backend developers who not only write basic routes, but understand runtime concurrency, protect data with relational constraints and parameterized SQL, enforce strict object-level authorization (preventing OWASP Top 10 vulnerabilities like BOLA/IDOR), validate incoming data schemas, and automate integration tests. Node.js with Express and PostgreSQL remains the most versatile, high-demand backend foundation for commercial web engineering.",
+  "icon": "🟢",
+  "color": "linear-gradient(135deg, #004672, #22c55e)",
+  "rating": 4.9,
+  "reviews": 215,
+  "students": 1480,
+  "liveProjects": 1,
+  "projects": 1,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=node-js",
+  "tags": [
+    "popular",
+    "trending",
+    "nodejs",
+    "express",
+    "postgresql",
+    "rest-api",
+    "sql",
+    "backend",
+    "authentication",
+    "testing",
+    "certification"
+  ],
+  "featured": true,
+  "category": "Programming Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "positioning": "Server-Side JavaScript, Express REST APIs, PostgreSQL Persistence, Object-Level Authorization & Reliable Backend Testing",
+  "target_audience": [
+    "Intermediate JavaScript learners seeking to transition into professional server-side backend engineering.",
+    "Frontend developers and React engineers expanding their skills to build complete, secure backend APIs and manage databases.",
+    "Web application students and freelance developers wanting to build reliable, authenticated multi-user business systems.",
+    "Graduates of Nova Skills Modern JavaScript & TypeScript Foundations or React Frontend Development courses."
+  ],
+  "prerequisites": [
+    "Intermediate JavaScript proficiency: functions, arrays, objects, ES modules (import/export), Promises, async/await, error handling, and basic debugging.",
+    "Fundamental understanding of HTTP and JSON: request/response cycle, status codes, HTTP methods, and JSON payloads.",
+    "SQL Readiness: Introductory SQL is taught just-in-time during the course, with Course 59 (Database Foundation) recommended for deeper study.",
+    "Completion of Course 56 (Modern JavaScript & TypeScript Foundations) or an equivalent technical evaluation."
+  ],
+  "highlights": [
+    "64 hours of guided, practical backend development training across 8 structured weeks.",
+    "Modern backend stack: Node.js (LTS), Express 5, and PostgreSQL with node-postgres (pg).",
+    "Deep persistence engineering: relational schemas, foreign keys, migrations, parameterized queries, and ACID transactions.",
+    "Strict backend security: adaptive password hashing (Argon2id/bcrypt), authentication middleware, and role checks.",
+    "Mandatory object-level authorization (OWASP BOLA/IDOR prevention) with verified cross-user denial tests.",
+    "Schema validation using Zod, rate limiting, and centralized error handling that never leaks secrets.",
+    "Automated integration testing covering CRUD, authentication, and security denial rules.",
+    "Exactly ONE comprehensive Business Operations REST API capstone with Postman documentation and deployable demonstration."
+  ],
+  "hands_on_tech": [
+    "Node.js (Active LTS)",
+    "Express 5",
+    "PostgreSQL",
+    "node-postgres (pg)",
+    "Zod Validation",
+    "Argon2id / bcrypt",
+    "Node Test Runner / Supertest",
+    "Postman",
+    "Git & GitHub",
+    "Hosted Node & PostgreSQL Platform"
+  ],
+  "tools": [
+    "Node.js",
+    "Express",
+    "PostgreSQL",
+    "VS Code",
+    "Postman",
+    "Git & GitHub",
+    "Zod",
+    "Node Test Runner"
+  ],
   "learning_outcomes": [
-    "PLAN: Formulate project architectures utilizing Node.js.",
-    "BUILD: Construct professional deliverables using modern workflows.",
-    "OPTIMIZE: Refine outputs against strict quality metrics."
+    "Master the Node.js runtime architecture, event loop phases, asynchronous non-blocking I/O, ES modules, and environment configuration.",
+    "Architect modular Express REST APIs featuring routers, controllers, request parsing, and centralized error middleware.",
+    "Design and query normalized PostgreSQL relational databases using connection pooling, schema migrations, and parameterized SQL statements.",
+    "Implement multi-statement ACID transactions using consistent client connections with automatic rollback on error.",
+    "Build secure authentication workflows with adaptive password hashing, server-managed sessions, and secure cookie/token policies.",
+    "Enforce robust role-based and object-level authorization ensuring authenticated users can only access and modify permitted records.",
+    "Validate incoming requests using strict Zod schemas and protect public endpoints against brute-force abuse using rate limiting.",
+    "Write automated backend unit and integration test suites, author comprehensive Postman documentation, and deploy to a production runtime."
   ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
-      },
-      {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
-      },
-      {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      }
-    ]
-  },
-  "hands_on_tech": {
-    "core_tools": [
-      {
-        "tool": "Node.js",
-        "purpose": "Core utility for node-js.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
-      },
-      {
-        "tool": "Express.js",
-        "purpose": "Core utility for node-js.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
-      },
-      {
-        "tool": "MongoDB",
-        "purpose": "Core utility for node-js.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
-      },
-      {
-        "tool": "Postman",
-        "purpose": "Core utility for node-js.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
-      }
-    ],
-    "supporting_tools": [
-      {
-        "tool": "Postman",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Docker",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Cursor",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Supabase",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Outdated legacy libraries"
-    ]
-  },
-  "industry_workflow": {
-    "overview": "How leading practitioners implement Node.js in 2026/27:",
-    "stages": [
-      {
-        "step": 1,
-        "name": "Requirements Analysis",
-        "desc": "Deconstruct the business problem and technical constraints."
-      },
-      {
-        "step": 2,
-        "name": "Architecture & Setup",
-        "desc": "Initialize the environment and plan the structure."
-      },
-      {
-        "step": 3,
-        "name": "Implementation",
-        "desc": "Execute core development using standard practices."
-      },
-      {
-        "step": 4,
-        "name": "Testing & Deployment",
-        "desc": "Validate functionality and release to production."
-      }
-    ]
-  },
-  "business_use_cases": [
+  "learning_journey": [
     {
-      "sector": "Startups & SMEs",
-      "business_problem": "Need rapid, scalable digital solutions.",
-      "approach": "Utilize Node.js to quickly iterate and deliver value.",
-      "toolset": "Node.js, Express.js, MongoDB",
-      "output": "Functional Minimum Viable Product (MVP)."
+      "step": "01",
+      "title": "Runtime & Core Concepts",
+      "description": "Understand Node.js runtime mechanics, V8 engine, event loop, asynchronous I/O, ES modules, process.env, and debugging."
+    },
+    {
+      "step": "02",
+      "title": "HTTP Servers & Express",
+      "description": "Build structured REST APIs with Express 5, routing, middleware execution pipelines, controllers, and centralized error handling."
+    },
+    {
+      "step": "03",
+      "title": "Database Integration",
+      "description": "Connect PostgreSQL with pg client, manage connection pools, run schema migrations, write parameterized SQL, and execute ACID transactions."
+    },
+    {
+      "step": "04",
+      "title": "Authentication & Security",
+      "description": "Implement user registration, adaptive password hashing, authentication middleware, role checks, and object-level authorization."
+    },
+    {
+      "step": "05",
+      "title": "Testing & Reliability",
+      "description": "Write automated integration tests, execute cross-user access denial tests, implement structured logging, and document APIs in Postman."
+    },
+    {
+      "step": "06",
+      "title": "Capstone & Deployment",
+      "description": "Integrate, review, and deploy a complete Business Operations REST API with hosted PostgreSQL and verified health checks."
     }
   ],
-  "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
-  },
+  "industry_workflow": [
+    "API Contract Specification: Define resource models, HTTP routes, request/response JSON schemas, and authorization matrices.",
+    "Relational Schema & Migrations: Design normalized tables with foreign keys and constraints, generating reproducible SQL migrations.",
+    "Modular Controller Architecture: Separate routing, business logic, validation, and database queries into distinct architectural layers.",
+    "Defense-in-Depth Security: Apply input validation, authentication guards, role checks, and object-level ownership queries.",
+    "Automated Integration Testing: Validate HTTP status codes, data persistence, and cross-user denial rules in an isolated test database.",
+    "Production Deployment & Monitoring: Configure environment secrets, run migrations against hosted PostgreSQL, and verify health endpoints."
+  ],
+  "business_use_cases": [
+    "Internal Operations Portals: Multi-department workflows managing assignments, service requests, and team records.",
+    "SaaS Backend Engines: Multi-tenant platforms with user accounts, subscription roles, and isolated tenant data access.",
+    "Customer Support Platforms: Ticket management APIs with agent assignments, customer status updates, and audit logging.",
+    "Inventory & Order Management: Transaction-safe stock tracking, order creation, and status dispatch workflows."
+  ],
+  "ai_integration": [
+    "AI as Backend Reviewer: Using AI prompts to audit SQL queries for parameterization and identify unhandled Promise rejections.",
+    "Accelerating Schema & Validator Drafting: Generating Zod schemas and SQL table definitions from business requirement specifications.",
+    "Test Fixture Generation: Creating realistic, diverse mock dataset fixtures for integration test suites.",
+    "Critical Code Ownership: Every student must understand, explain, and debug every route, transaction, and security check without blind AI reliance."
+  ],
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Mandatory SQL Parameterization: Always pass dynamic values as query parameters ($1, $2); never concatenate untrusted strings into SQL.",
+    "Strict Object-Level Authorization: Always verify that the authenticated user owns or has explicit permission to access the requested resource ID.",
+    "Never Store Plaintext Passwords: Use adaptive password hashing (Argon2id or bcrypt with high work factor) with unique salt per user.",
+    "Generic Authentication Errors: Return generic 'Invalid credentials' messages to prevent user enumeration attacks.",
+    "Single Connection for Transactions: Always acquire a dedicated client from the pool for BEGIN, queries, COMMIT, and release it in a finally block.",
+    "Never Leak Implementation Details: Centralized error handlers must sanitize responses, hiding stack traces, SQL errors, and internal paths.",
+    "Input Schema Validation: Validate headers, query parameters, route params, and request bodies with strict schemas before hitting controllers.",
+    "Environment Secrets Hygiene: Keep credentials out of version control, commit only .env.example, and validate process.env on startup."
   ],
   "common_mistakes": [
-    {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
+    "Assuming authentication equals authorization: allowing any logged-in user to view or edit any record simply by guessing an ID (BOLA/IDOR).",
+    "Using string interpolation to build SQL queries, creating critical SQL injection vulnerabilities.",
+    "Using unhandled Promise rejections in async route handlers, causing server hangs or unhandled crashes.",
+    "Executing multi-statement transactions across separate pool.query() calls that use different database connections.",
+    "Trusting client-supplied ownership fields (e.g. reading owner_id from req.body instead of req.user.id).",
+    "Allowing users to elevate their privileges during registration by passing { role: 'admin' } in the request body.",
+    "Returning HTTP 200 OK for error responses or using non-standard status codes.",
+    "Deploying an Express backend to static web hosts (such as GitHub Pages) and expecting it to execute server-side code."
+  ],
+  "career_paths": [
+    "Junior Node.js Backend Developer",
+    "Junior Express.js API Developer",
+    "Server-Side JavaScript Developer",
+    "REST API Developer — Entry Level",
+    "PostgreSQL API Integration Assistant",
+    "Junior Full-Stack Developer (Backend Focus)"
+  ],
+  "freelance_applications": [
+    "Building custom REST APIs and administrative backends for mobile and web applications.",
+    "Integrating PostgreSQL databases with Node.js applications for small and medium enterprises.",
+    "Refactoring insecure backend codebases to implement authentication, Zod validation, and parameterized SQL.",
+    "Creating multi-user booking, scheduling, and business record management services."
+  ],
+  "what_you_will_build": {
+    "overview": "Throughout the course, students build hands-on runtime utilities, Express REST APIs, PostgreSQL database migrations, authentication systems, and automated test suites, culminating in exactly ONE comprehensive commercial-style Business Operations REST API capstone.",
+    "capstone": {
+      "title": "Business Operations REST API — Node.js, Express & PostgreSQL",
+      "description": "A complete, production-structured multi-user business operations backend system featuring user authentication, role-based access control, strict object-level authorization, relational PostgreSQL persistence, ACID transactions, Zod input validation, automated integration test suites, and deployable demonstration.",
+      "key_features": [
+        "Modular Express 5 application architecture with clean separation across routes, controllers, services, repositories, and middleware",
+        "PostgreSQL relational database with normalized schema, primary/foreign keys, constraints, and version-controlled migrations",
+        "Complete CRUD operations for business resources (tasks, projects, or work records) using safe parameterized SQL ($1, $2)",
+        "Secure user authentication with adaptive password hashing, server-managed sessions/tokens, and generic error feedback",
+        "Role-based access control (User vs Manager/Admin) and mandatory object-level authorization preventing cross-user record tampering",
+        "Multi-statement database transactions with guaranteed rollback on failure using dedicated client connection management",
+        "Comprehensive input validation using Zod schemas and rate limiting on sensitive authentication routes",
+        "Automated integration test suite with 10+ security acceptance tests verifying cross-user read/update/delete denial",
+        "Structured JSON logging, sanitized error-handling middleware, and unauthenticated public health check endpoint (/health)",
+        "Complete Postman API collection and comprehensive README documentation with local setup and migration instructions"
+      ]
     },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
-    }
-  ],
-  "career_paths": {
-    "entry_roles": "Node.js Backend Developer",
-    "mid_roles": "Specialist Lead",
-    "specialist_roles": "API Engineer",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "mandatory_specifications": [
+      "Modular Backend Architecture: src/app.js, src/server.js, routes/, controllers/, services/, db/, middleware/, validators/.",
+      "PostgreSQL Persistence: node-postgres (pg) connection pool, schema migrations, and zero string-concatenated SQL queries.",
+      "Object-Level Authorization: Server-enforced resource ownership checks derived strictly from verified authentication context.",
+      "Security Acceptance Tests: Verified passing automated tests proving User A cannot read, update, or delete User B's records.",
+      "Database Transaction: Meaningful multi-step business operation wrapped in BEGIN/COMMIT/ROLLBACK using a single client.",
+      "Input Validation: Strict Zod schemas validating request body, route parameters, and query strings.",
+      "Deployment: Tested deployment on a supported Node.js backend hosting platform with hosted PostgreSQL."
+    ]
   },
-  "freelance_applications": {
-    "services_offered": [
-      "End-to-end Node.js project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
-    ],
-    "client_workflow": "API Contract Design (Swagger) -> Express Route Scaffolding -> Database Modeling -> Postman Integration Testing -> Cloud Deployment",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
-  },
-  "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
-  ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "Exactly ONE complete Business Operations REST API repository with clean modular source code, package.json, and migrations.",
+    "Reproducible PostgreSQL schema migration files and seed scripts for isolated development and test environments.",
+    "Automated test suite using Node.js test runner or equivalent verifying CRUD endpoints and all 10 security acceptance rules.",
+    "Comprehensive Postman collection (.json) documenting all endpoints, headers, request bodies, response schemas, and status codes.",
+    "Detailed README.md documenting project architecture, schema diagram, setup commands, test execution, and deployment verification."
   ],
+  "portfolio": {
+    "title": "Nova Skills Node.js & PostgreSQL Backend Portfolio",
+    "description": "Exactly ONE complete Business Operations REST API capstone demonstrating intermediate backend engineering craftsmanship: modular Express routing, relational PostgreSQL persistence, parameterized SQL, adaptive password hashing, role-based and object-level authorization, automated testing, and cloud deployment.",
+    "deliverables_count": 1,
+    "capstone": {
+      "name": "Business Operations REST API",
+      "scope": "Multi-user business workflow API with PostgreSQL database, authenticated endpoints, role and object-level access controls, transactional updates, input validation, and automated test suite."
+    },
+    "testing_requirements": [
+      "Server Execution: Server boots cleanly in production mode with valid environment configuration and connects to PostgreSQL.",
+      "Migration Execution: Database schema migrations apply cleanly from empty database state to current version.",
+      "Parameterized Queries: Zero SQL injection vulnerabilities; all dynamic queries utilize $1, $2 parameter placeholders.",
+      "Authentication Integrity: Passwords securely hashed with adaptive algorithms; invalid credentials return generic 401 responses.",
+      "Cross-User Access Denial: User A cannot read, modify, or delete User B's private records under any circumstance.",
+      "Privilege Escalation Denial: Users cannot self-assign administrator roles via request payloads during registration or profile update.",
+      "Transaction Rollback: Multi-step transactions execute atomically and roll back completely if any step fails.",
+      "Error Sanitization: Internal server errors return structured JSON without leaking database passwords, stack traces, or SQL text."
+    ],
+    "handover_structure": {
+      "repository_tree": "business-operations-api/ (src/app.js, src/server.js, src/config/, src/db/pool.js, src/db/migrations/, src/routes/, src/controllers/, src/services/, src/middleware/, src/validators/, tests/, docs/, postman/, .env.example, .gitignore, package.json, README.md)"
+    }
+  },
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "structure": "Continuous Practical Software Labs (40%) + Final Business Operations Capstone Evaluation (60%)",
+    "passing_grade": "70% overall score with successful verification of all non-negotiable security and database gates",
+    "review_model": "One-on-one code review, live API demonstration, and architectural defense"
+  },
+  "assessment_rubric": {
+    "total_percentage": 100,
+    "criteria": [
+      {
+        "category": "Node.js & Express API Architecture",
+        "weight": "20%",
+        "description": "Modular application organization, clean separation of routes/controllers/services, proper middleware execution pipeline, correct HTTP status codes, and non-blocking asynchronous I/O."
+      },
+      {
+        "category": "PostgreSQL Integration & Data Reliability",
+        "weight": "20%",
+        "description": "Normalized relational schema with constraints, version-controlled migrations, connection pool management, parameterized SQL queries, and multi-step transaction handling with safe client release."
+      },
+      {
+        "category": "Authentication & Authorization Security",
+        "weight": "25%",
+        "description": "Adaptive password hashing (Argon2id/bcrypt), secure session/token management, role-based access checks, strict object-level authorization (resource ownership), and passing all 10 security acceptance tests."
+      },
+      {
+        "category": "Validation, Error Handling & Reliability",
+        "weight": "15%",
+        "description": "Zod request schema validation, unknown-field rejection, rate limiting on sensitive routes, centralized error middleware, and sanitization of public error responses (zero secret or stack trace leakage)."
+      },
+      {
+        "category": "Automated Testing & Documentation",
+        "weight": "10%",
+        "description": "Automated test suite covering CRUD endpoints, validation failures, and cross-user denial rules against an isolated test database, accompanied by a complete Postman collection."
+      },
+      {
+        "category": "Deployment & Professional Handover",
+        "weight": "10%",
+        "description": "Clean GitHub repository, .env.example without real secrets, comprehensive README setup instructions, and verified deployment to a supported Node.js and PostgreSQL hosting platform."
+      }
+    ],
+    "pass_requirements": [
+      "The Business Operations API must run as a working backend connecting to a real PostgreSQL database instance.",
+      "All database queries must use parameterized SQL; zero string concatenation of untrusted input is permitted.",
+      "Passwords must be hashed using an adaptive algorithm (Argon2id or bcrypt); plaintext passwords result in immediate failure.",
+      "All 10 security acceptance tests must pass, explicitly proving cross-user read/update/delete denial.",
+      "Students must demonstrate independent understanding by explaining their architecture, transactions, and security checks during review."
+    ],
+    "competency_gates": [
+      "SQL Safety Gate: Any presence of unsafe SQL string concatenation results in immediate course failure.",
+      "Plaintext Password Gate: Any storage of plaintext passwords or unsalted fast hashes results in immediate course failure.",
+      "BOLA / IDOR Gate: If a user can read, update, or delete another user's private records without authorization, the project cannot pass.",
+      "Code Ownership Gate: Students must be able to explain their asynchronous flow, middleware pipeline, and SQL logic; unverified AI-generated code is rejected."
+    ]
   },
   "certification": {
-    "title": "Certified Specialist in Node.js",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Nova Skills Certified Node.js Backend Developer",
+    "credential_type": "Professional Industry Certification",
+    "issuing_authority": "Nova Skills Academy",
+    "validation": "Permanent digital credential with verifiable online URL and QR code",
+    "prerequisites_met": "Completion of all 6 modules, 64 guided learning hours, 6 practical labs, and verified completion of the Capstone project with ≥70% score."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
-  "next_learning_path": {
-    "recommended_next": "Advance to sql-basics to specialize further.",
-    "related_programs": "For broader career mastery, compare with fullstack-foundation."
+  "source_code_delivery": {
+    "required_repositories": 1,
+    "repository_standard": "Professional GitHub repository with clear commit progression, feature branches, descriptive commit messages, and no committed secrets or node_modules.",
+    "documentation_standard": "Detailed README.md including project overview, business scenario, database schema diagram, environment setup (.env.example), migration commands, test execution steps, Postman collection, and deployment instructions."
   },
-  "faq": [
-    {
-      "question": "What prior experience do I need for Node.js?",
-      "answer": "javascript-cert"
-    },
-    {
-      "question": "What tools will I learn?",
-      "answer": "You will gain hands-on experience with Node.js, Express.js, MongoDB, Postman."
-    },
-    {
-      "question": "Are the projects practical?",
-      "answer": "Yes, all projects simulate real-world client briefs and business requirements."
-    }
-  ],
+  "skill_boundaries": {
+    "in_scope": [
+      "Node.js LTS runtime fundamentals, event loop, and asynchronous non-blocking I/O",
+      "npm package management, package.json scripts, and ES module architecture",
+      "Express 5 HTTP routing, middleware pipelines, and controller architecture",
+      "RESTful API design conventions, HTTP methods, and status codes",
+      "PostgreSQL relational modeling, table constraints, and schema design",
+      "node-postgres (pg) connection pooling and lifecycle management",
+      "Parameterized SQL statements and SQL injection prevention",
+      "Database schema migrations and seed scripts",
+      "ACID transactions with consistent client acquisition and rollback handling",
+      "Adaptive password hashing (Argon2id / bcrypt) and credential security",
+      "Server-side authentication middleware and session/token context",
+      "Role-based access control (RBAC) and strict object-level authorization (resource ownership)",
+      "Zod schema validation for request bodies, query params, and route parameters",
+      "Rate limiting on authentication endpoints to prevent brute-force abuse",
+      "Centralized error handling middleware and structured JSON logging",
+      "Automated unit and integration testing against a dedicated test database",
+      "API documentation with Postman collections and OpenAPI specifications",
+      "Deployment of Node.js and hosted PostgreSQL to supported platforms"
+    ],
+    "out_of_scope": [
+      "Advanced microservices architecture, service meshes, and distributed tracing",
+      "Kubernetes cluster configuration, complex Docker orchestration, or container scaling",
+      "Enterprise cloud infrastructure (AWS/GCP/Azure multi-region infrastructure provisioning)",
+      "Advanced message brokers (Apache Kafka, RabbitMQ) and event sourcing",
+      "Payment gateway security specialization, PCI DSS compliance certification",
+      "Advanced enterprise OAuth 2.0 / OpenID Connect authorization server construction",
+      "High-throughput WebSocket cluster scaling or WebRTC streaming servers",
+      "Database administration specialization (partitioning, replication, sharding)",
+      "Professional cybersecurity penetration testing certification",
+      "React frontend application development (covered in dedicated Course 57)"
+    ]
+  },
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Node.js Core Modules",
-      "module_purpose": "Build fast I/O applications.",
+      "module_number": 1,
+      "number": 1,
+      "module": "Module 01",
+      "title": "Node.js Runtime & Core Concepts",
+      "module_title": "Node.js Runtime & Core Concepts",
+      "duration": "Week 1",
+      "hours": 8,
+      "lessons_count": 5,
+      "objective": "Understand the Node.js runtime architecture, asynchronous event-driven model, non-blocking I/O mechanics, ES modules, built-in APIs, and backend debugging workflows.",
+      "module_purpose": "Establish strong foundational knowledge of how JavaScript executes server-side outside the browser, how the event loop handles concurrency, and how to structure maintainable Node.js projects.",
       "what_you_will_learn": [
-        "Master the concepts of Node.js Core Modules.",
-        "Apply Node.js effectively.",
-        "Troubleshoot common issues in this domain."
+        "Differences between browser JavaScript and the server-side Node.js runtime.",
+        "Node.js architecture: V8 engine, single thread, call stack, and the libuv event loop.",
+        "Asynchronous programming with Promises and async/await for non-blocking I/O.",
+        "Managing dependencies, npm scripts, and ES modules with package.json.",
+        "Working with built-in modules (fs/promises, path, process) and runtime environment variables.",
+        "Debugging Node.js applications using VS Code breakpoints and inspector flags."
+      ],
+      "key_concepts": [
+        "V8 Engine & Libuv Event Loop",
+        "Non-Blocking Asynchronous I/O",
+        "I/O-Bound vs CPU-Bound Operations",
+        "ES Modules (import/export)",
+        "npm & Dependency Management",
+        "Filesystem API (fs/promises)",
+        "process.env & Secrets Hygiene",
+        "VS Code Backend Debugging"
+      ],
+      "tools": [
+        "Node.js (LTS)",
+        "VS Code",
+        "npm",
+        "Chrome Inspector"
       ],
       "lessons": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "Event Loop",
-          "what_is_taught": "Async I/O.",
-          "why_it_matters": "Performance.",
-          "what_learner_does": "Tests loop.",
-          "expected_outcome": "Understanding."
+          "lesson_number": 1,
+          "title": "Node.js Runtime Architecture & V8",
+          "hours": 1.5,
+          "subtopics": [
+            "Introduction to backend engineering and server-side JavaScript responsibilities",
+            "Key architectural differences between browser DOM APIs and the Node.js runtime",
+            "V8 JavaScript engine compilation, call stack, and memory heap overview",
+            "Single-threaded execution model and how the libuv event loop manages concurrency",
+            "Understanding event loop phases: timers, pending callbacks, poll, check, and close"
+          ]
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "File System",
-          "what_is_taught": "FS module.",
-          "why_it_matters": "Data storage.",
-          "what_learner_does": "Reads files.",
-          "expected_outcome": "File reader."
+          "lesson_number": 2,
+          "title": "Asynchronous Programming & Concurrency",
+          "hours": 2,
+          "subtopics": [
+            "Synchronous blocking operations vs asynchronous non-blocking operations",
+            "Why blocking the event loop halts server responsiveness for all concurrent users",
+            "Mastering Promises and async/await error handling patterns in backend workflows",
+            "Distinguishing I/O-bound operations (file, database, network) from CPU-bound tasks",
+            "Handling unhandled rejections and uncaught exceptions safely in process lifecycles"
+          ]
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "HTTP Module",
-          "what_is_taught": "Basic server.",
-          "why_it_matters": "Networking.",
-          "what_learner_does": "Starts server.",
-          "expected_outcome": "Node server."
+          "lesson_number": 3,
+          "title": "Node Modules & Dependency Management",
+          "hours": 1.5,
+          "subtopics": [
+            "Modern ES module syntax (import/export) and configuration in package.json",
+            "Understanding CommonJS (require/module.exports) and module interoperability",
+            "Package management with npm: dependencies vs devDependencies, and package-lock.json",
+            "Authoring reproducible npm scripts for development, testing, and production startup",
+            "Security hygiene with npm: auditing dependencies with npm audit"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Node Built-in APIs",
+          "hours": 1.5,
+          "subtopics": [
+            "Working with the filesystem using the modern fs/promises module",
+            "Cross-platform file path resolution with the path module (path.join, path.resolve)",
+            "Overview of Node.js streams and buffers for efficient data handling",
+            "The process global object: reading arguments, monitoring uptime, and exit codes",
+            "Graceful process termination awareness: listening for SIGINT and SIGTERM signals"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Environment Configuration & Debugging",
+          "hours": 1.5,
+          "subtopics": [
+            "Runtime configuration via environment variables with process.env",
+            "Secrets management hygiene: keeping credentials out of Git using .gitignore",
+            "Providing a structured .env.example template for development environments",
+            "Configuring VS Code launch.json for interactive Node.js breakpoint debugging",
+            "Inspecting variable state, step-through debugging, and reading call stacks"
+          ]
         }
       ],
-      "key_concepts": [
-        "Industry Standards",
-        "Best Practices",
-        "Core Implementation"
-      ],
-      "tools": [
-        "Node.js",
-        "Express.js",
-        "MongoDB"
-      ],
-      "hands_on_practice": "Guided lab focused on Node.js Core Modules.",
-      "assignment": "Deliverable: Complete implementation of Node.js Core Modules.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "hands_on_practice": "Scaffold a modern Node.js project using ES modules, build an asynchronous file parser and system telemetry utility that reads environment variables, performs non-blocking filesystem operations, handles errors gracefully, and runs via npm scripts.",
+      "assignment": "Construct a modular CLI data processing utility that reads input files asynchronously, processes record batches, logs execution metrics, validates required environment variables, and includes a documented .env.example file.",
+      "business_application": "Understanding the Node.js event loop and asynchronous I/O is vital for building high-concurrency backend services that handle thousands of simultaneous client connections efficiently without crashing.",
+      "expected_outcome": "Students can explain the Node.js runtime model, write robust asynchronous server-side code, manage project dependencies, and debug backend scripts confidently.",
+      "portfolio_contribution": "Establishes the foundational project structure, runtime configuration, and debugging workflows used throughout the entire backend capstone."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Express.js Routing",
-      "module_purpose": "Create structured web servers.",
+      "module_number": 2,
+      "number": 2,
+      "module": "Module 02",
+      "title": "HTTP Servers & Express",
+      "module_title": "HTTP Servers & Express",
+      "duration": "Weeks 2-3",
+      "hours": 10,
+      "lessons_count": 5,
+      "objective": "Build structured, modular REST APIs using Express 5, implementing proper HTTP semantics, middleware pipelines, controllers, and centralized error handling.",
+      "module_purpose": "Transition from core Node.js scripts to professional web application development by learning how Express processes HTTP requests, executes middleware chains, and returns predictable API responses.",
       "what_you_will_learn": [
-        "Master the concepts of Express.js Routing.",
-        "Apply Node.js effectively.",
-        "Troubleshoot common issues in this domain."
-      ],
-      "lessons": [
-        {
-          "lesson_number": "2.1",
-          "lesson_title": "Express Setup",
-          "what_is_taught": "Framework basics.",
-          "why_it_matters": "Speed.",
-          "what_learner_does": "Sets up app.",
-          "expected_outcome": "Express app."
-        },
-        {
-          "lesson_number": "2.2",
-          "lesson_title": "Routing",
-          "what_is_taught": "API endpoints.",
-          "why_it_matters": "Structure.",
-          "what_learner_does": "Adds routes.",
-          "expected_outcome": "API routes."
-        },
-        {
-          "lesson_number": "2.3",
-          "lesson_title": "Middleware",
-          "what_is_taught": "Request handling.",
-          "why_it_matters": "Security.",
-          "what_learner_does": "Adds logger.",
-          "expected_outcome": "Middleware."
-        }
+        "HTTP protocol fundamentals: request/response anatomy, headers, methods, and status codes.",
+        "Scaffolding Express 5 applications with modular routers and controller functions.",
+        "Middleware execution mechanics: application-level, router-level, and custom middleware.",
+        "Parsing JSON request bodies, configuring size limits, and reading URL parameters.",
+        "Centralized error handling middleware and modern async error forwarding in Express 5.",
+        "Designing RESTful endpoints, query filtering, pagination, and testing with Postman."
       ],
       "key_concepts": [
-        "Industry Standards",
-        "Best Practices",
-        "Core Implementation"
+        "HTTP Request/Response Cycle",
+        "HTTP Methods & Idempotency",
+        "HTTP Status Codes (200, 201, 400, 401, 403, 404, 409, 500)",
+        "Express 5 Modular Routers",
+        "Middleware Pipeline & Execution Order",
+        "Controller-Service Separation",
+        "Centralized Error Middleware",
+        "Postman Collections & Environment Variables"
       ],
       "tools": [
         "Node.js",
-        "Express.js",
-        "MongoDB"
+        "Express 5",
+        "Postman",
+        "VS Code"
       ],
-      "hands_on_practice": "Guided lab focused on Express.js Routing.",
-      "assignment": "Deliverable: Complete implementation of Express.js Routing.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "HTTP Protocol & API Semantics",
+          "hours": 2,
+          "subtopics": [
+            "Client/server communication: anatomy of HTTP requests and responses",
+            "HTTP request components: headers, URL paths, query parameters, route params, and body",
+            "HTTP methods semantics: GET, POST, PUT, PATCH, DELETE, and idempotency rules",
+            "Accurate HTTP status codes: 200 OK, 201 Created, 204 No Content, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 409 Conflict, 429 Too Many Requests, and 500 Internal Server Error",
+            "Why returning HTTP 200 for error responses is a major anti-pattern"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "Express Architecture & Routing",
+          "hours": 2,
+          "subtopics": [
+            "Setting up Express 5: application instantiation and server listening",
+            "Organizing project structure: separation of app.js (configuration) from server.js (startup)",
+            "Modular routing with express.Router() to organize domain-specific endpoints",
+            "Controller function architecture: decoupling request parsing from business logic",
+            "Parsing incoming JSON payloads with express.json() and setting body size limits"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Middleware Mechanics & Execution Order",
+          "hours": 2,
+          "subtopics": [
+            "Understanding Express middleware: the (req, res, next) signature and control flow",
+            "Middleware execution pipeline: Parsing -> Validation -> Authentication -> Route -> Response",
+            "Application-level middleware vs router-level middleware vs endpoint-specific middleware",
+            "Building custom logging and request timing middleware",
+            "CORS (Cross-Origin Resource Sharing) fundamentals and configuring allowed origins"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Centralized Error Handling",
+          "hours": 2,
+          "subtopics": [
+            "Express 5 automatic forwarding of rejected Promises from async route handlers",
+            "Authoring centralized error-handling middleware with four parameters: (err, req, res, next)",
+            "Defining structured, consistent API error responses (code, message, details)",
+            "Sanitizing error responses: never leaking database credentials, stack traces, or SQL in production",
+            "Handling 404 Not Found for unmatched routes with a dedicated catch-all middleware"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "REST API Conventions & Postman",
+          "hours": 2,
+          "subtopics": [
+            "RESTful resource naming conventions (plural nouns, hierarchical relationships)",
+            "Implementing collection filtering, sorting, and pagination metadata (page, limit, total)",
+            "Setting up Postman workspaces, environments, and base URL variables",
+            "Organizing Postman collections matching API resource routes",
+            "Creating a public health check endpoint (/health) for monitoring server status"
+          ]
+        }
+      ],
+      "hands_on_practice": "Build a structured Express 5 REST API using an in-memory dataset, featuring modular routers for resources, separated controllers, custom logging middleware, centralized error handling, and a complete Postman collection.",
+      "assignment": "Implement a complete in-memory Business Records API with GET, POST, PATCH, and DELETE endpoints, route parameter validation, standardized JSON error responses, and an exported Postman collection with documented examples.",
+      "business_application": "Structured Express APIs with clear separation of concerns allow cross-functional engineering teams to build maintainable, well-documented backend services that scale with product growth.",
+      "expected_outcome": "Students can architect modular Express REST APIs, configure middleware pipelines, handle errors centrally, and verify endpoints using Postman.",
+      "portfolio_contribution": "Provides the Express routing, controller structure, and error-handling framework utilized in the database-backed capstone."
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Database & Auth",
-      "module_purpose": "Connect DB and secure.",
+      "module_number": 3,
+      "number": 3,
+      "module": "Module 03",
+      "title": "Database Integration",
+      "module_title": "Database Integration",
+      "duration": "Weeks 3-5",
+      "hours": 12,
+      "lessons_count": 5,
+      "objective": "Integrate PostgreSQL into Node.js applications using connection pooling, schema migrations, parameterized SQL queries, relational constraints, and multi-statement ACID transactions.",
+      "module_purpose": "Master relational database persistence in server-side JavaScript, ensuring data integrity, preventing SQL injection vulnerabilities, and managing database connections safely.",
       "what_you_will_learn": [
-        "Master the concepts of Database & Auth.",
-        "Apply Node.js effectively.",
-        "Troubleshoot common issues in this domain."
+        "Relational database modeling: tables, columns, primary keys, foreign keys, and constraints.",
+        "Connecting Node.js to PostgreSQL using node-postgres (pg) and connection pooling.",
+        "Writing safe, parameterized SQL queries ($1, $2) to completely prevent SQL injection.",
+        "Executing CRUD operations with SQL and handling unique constraint conflicts.",
+        "Managing version-controlled database schema migrations and seed scripts.",
+        "Implementing multi-statement ACID transactions with consistent client connections and rollback on error.",
+        "Relational vs document database model comparison (PostgreSQL vs MongoDB)."
+      ],
+      "key_concepts": [
+        "Relational Schema Design & Constraints",
+        "PostgreSQL Data Types & Foreign Keys",
+        "Connection Pooling (pg.Pool)",
+        "Parameterized SQL ($1, $2)",
+        "SQL Injection Prevention",
+        "Schema Migrations & Seed Scripts",
+        "ACID Database Transactions",
+        "BEGIN / COMMIT / ROLLBACK",
+        "PostgreSQL vs MongoDB Comparison"
+      ],
+      "tools": [
+        "PostgreSQL",
+        "node-postgres (pg)",
+        "Node.js",
+        "VS Code"
       ],
       "lessons": [
         {
-          "lesson_number": "3.1",
-          "lesson_title": "MongoDB Connect",
-          "what_is_taught": "Mongoose.",
-          "why_it_matters": "Data persistence.",
-          "what_learner_does": "Connects DB.",
-          "expected_outcome": "Connected app."
+          "lesson_number": 1,
+          "title": "Relational Data Modeling & PostgreSQL",
+          "hours": 2.5,
+          "subtopics": [
+            "Database fundamentals: relational schemas vs document databases",
+            "Why PostgreSQL is the industry standard for relational backend engineering",
+            "Defining tables, columns, and data types (VARCHAR, TEXT, INTEGER, TIMESTAMP, BOOLEAN)",
+            "Primary keys, foreign keys, and referential integrity (ON DELETE CASCADE / RESTRICT)",
+            "Data constraints: NOT NULL, UNIQUE, and CHECK constraints for business rule enforcement",
+            "Conceptual comparison: PostgreSQL relational model vs MongoDB document model"
+          ]
         },
         {
-          "lesson_number": "3.2",
-          "lesson_title": "JWT",
-          "what_is_taught": "Tokens.",
-          "why_it_matters": "Auth.",
-          "what_learner_does": "Adds login.",
-          "expected_outcome": "Secure app."
+          "lesson_number": 2,
+          "title": "Connecting Node.js to PostgreSQL",
+          "hours": 2,
+          "subtopics": [
+            "Using the node-postgres (pg) client library in modern Node.js applications",
+            "Understanding connection pooling: why creating new connections per request harms performance",
+            "Configuring pg.Pool with environment variables (connection string, pool size, timeouts)",
+            "Pool lifecycle management: acquiring clients, query execution, and safe client release",
+            "Testing database connectivity on server startup and handling connection errors"
+          ]
         },
         {
-          "lesson_number": "3.3",
-          "lesson_title": "Deployment",
-          "what_is_taught": "Hosting.",
-          "why_it_matters": "Live access.",
-          "what_learner_does": "Deploys app.",
-          "expected_outcome": "Live API."
+          "lesson_number": 3,
+          "title": "Parameterized Queries & SQL Safety",
+          "hours": 2.5,
+          "subtopics": [
+            "SQL injection anatomy: how string concatenation in queries exposes databases to destruction",
+            "Parameterized queries with node-postgres: passing values safely via $1, $2 placeholders",
+            "Executing SELECT queries with WHERE filters, ORDER BY, and LIMIT/OFFSET pagination",
+            "Executing INSERT, UPDATE, and DELETE statements with RETURNING clauses",
+            "Handling PostgreSQL error codes (e.g. 23505 unique violation, 23503 foreign key violation)"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Schema Migrations & Seeding",
+          "hours": 2.5,
+          "subtopics": [
+            "Why version-controlled migrations are critical for team engineering and deployment",
+            "Structuring migration files: version numbering, UP migrations, and DOWN rollbacks",
+            "Writing reproducible SQL migration scripts to create tables, indexes, and constraints",
+            "Creating seed scripts to populate development and testing databases with fictional records",
+            "Resetting and migrating databases from empty state during automated setup"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Database Transactions & Integrity",
+          "hours": 2.5,
+          "subtopics": [
+            "Understanding ACID transaction properties: Atomicity, Consistency, Isolation, Durability",
+            "Multi-statement business workflows: when multiple database operations must succeed or fail together",
+            "Critical node-postgres rule: acquiring a single dedicated client for transaction blocks",
+            "Executing transactions: BEGIN -> queries -> COMMIT; ROLLBACK in catch block",
+            "Ensuring client release in finally blocks to prevent pool exhaustion leaks",
+            "Writing automated tests to verify transaction rollback behavior on deliberate failures"
+          ]
         }
       ],
+      "hands_on_practice": "Replace the in-memory data store in your Express application with PostgreSQL, implementing connection pooling, running schema migrations, querying with parameterized SQL, and building a multi-step transactional business operation with verified rollback on failure.",
+      "assignment": "Build a PostgreSQL-backed data repository layer with migrations for users and business records, foreign key relationships, parameterized CRUD operations, unique constraint handling, and a transactional multi-step workflow.",
+      "business_application": "Relational integrity, parameterized queries, and ACID transactions are essential for financial, e-commerce, and enterprise applications where data corruption or injection attacks carry catastrophic legal and business costs.",
+      "expected_outcome": "Students can connect Express to PostgreSQL, execute safe parameterized SQL, manage migrations, and implement robust multi-statement transactions.",
+      "portfolio_contribution": "Provides the complete relational database architecture, schema migrations, and persistent data access layer for the capstone API."
+    },
+    {
+      "module_number": 4,
+      "number": 4,
+      "module": "Module 04",
+      "title": "Authentication & Backend Security",
+      "module_title": "Authentication & Backend Security",
+      "duration": "Weeks 5-6",
+      "hours": 12,
+      "lessons_count": 5,
+      "objective": "Master user authentication, adaptive password hashing, role-based authorization, mandatory object-level authorization (resource ownership), Zod input validation, and rate limiting.",
+      "module_purpose": "Equip students with practical backend security engineering skills, moving beyond simple login to enforce strict resource-level access control and protect APIs against OWASP Top 10 vulnerabilities.",
+      "what_you_will_learn": [
+        "The critical difference between authentication ('Who are you?') and authorization ('What are you permitted to do?').",
+        "Secure password handling with adaptive hashing (Argon2id or bcrypt) and timing-safe verification.",
+        "Server-managed session and signed token authentication mechanisms and secure cookie policies.",
+        "Building authentication middleware to establish verified identity context (req.user).",
+        "Role-based access control (RBAC) and mandatory object-level authorization (resource ownership).",
+        "Preventing OWASP Broken Object Level Authorization (BOLA/IDOR) via query scoping.",
+        "Validating request bodies, params, and query strings using strict Zod schemas.",
+        "Implementing rate limiting on sensitive authentication endpoints to prevent brute-force attacks."
+      ],
       "key_concepts": [
-        "Industry Standards",
-        "Best Practices",
-        "Core Implementation"
+        "Authentication vs Authorization",
+        "Adaptive Password Hashing (Argon2id/bcrypt)",
+        "Generic Authentication Error Feedback",
+        "Server-Managed Sessions & Cookies (HttpOnly, Secure, SameSite)",
+        "Authentication Middleware & Identity Context",
+        "Role-Based Access Control (RBAC)",
+        "Object-Level Authorization (Ownership Enforcement)",
+        "OWASP BOLA / IDOR Prevention",
+        "Zod Schema Input Validation",
+        "Rate Limiting (express-rate-limit)"
       ],
       "tools": [
         "Node.js",
-        "Express.js",
-        "MongoDB"
+        "Express",
+        "PostgreSQL",
+        "Zod",
+        "Argon2 / bcrypt",
+        "Postman"
       ],
-      "hands_on_practice": "Guided lab focused on Database & Auth.",
-      "assignment": "Deliverable: Complete implementation of Database & Auth.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "Authentication Fundamentals & Password Security",
+          "hours": 2.5,
+          "subtopics": [
+            "The foundational difference: Authentication (Identity) vs Authorization (Permissions)",
+            "User registration and login workflow mechanics",
+            "Password security principles: why plaintext, reversible encryption, and MD5/SHA256 are dangerous",
+            "Adaptive password hashing with Argon2id or bcrypt: computational cost, memory cost, and unique salts",
+            "Timing-safe password verification and returning generic error responses ('Invalid credentials')",
+            "Strict policy: never logging passwords, tokens, or credentials in application logs"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "Session & Token Authentication Architectures",
+          "hours": 2,
+          "subtopics": [
+            "Server-managed session architecture: session identifiers, session stores, and lifecycle",
+            "Secure browser cookie configuration: HttpOnly (XSS protection), Secure (HTTPS only), SameSite (CSRF mitigation)",
+            "Session expiration, session regeneration on login, and clean invalidation on logout",
+            "Signed token concepts: signature verification, expiration timestamps, and secret management",
+            "Understanding token revocation challenges and comparing sessions vs tokens for business APIs"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Authentication Middleware & Identity Context",
+          "hours": 2,
+          "subtopics": [
+            "Building reusable authentication middleware to guard protected API routes",
+            "Extracting and verifying credentials from sessions or authorization headers",
+            "Attaching verified user identity to the request context (req.user = { id, email, role })",
+            "Rejecting unauthenticated requests with HTTP 401 Unauthorized",
+            "Preventing privilege escalation: ensuring registration endpoints ignore client-submitted role fields"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Role-Based & Object-Level Authorization",
+          "hours": 3,
+          "subtopics": [
+            "Role-Based Access Control (RBAC): restricting endpoints by user role (User, Manager, Admin)",
+            "Why RBAC alone is insufficient: introducing Object-Level Authorization (Resource Ownership)",
+            "Understanding OWASP #1: Broken Object Level Authorization (BOLA / IDOR)",
+            "Enforcing ownership: verifying the authenticated user owns or has rights to the target record ID",
+            "Enforcing ownership in database queries: SELECT * FROM tasks WHERE id = $1 AND owner_id = $2",
+            "Preventing mass assignment vulnerabilities: explicitly allowlisting modifiable fields"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Request Validation & Rate Limiting",
+          "hours": 2.5,
+          "subtopics": [
+            "Input validation principles: validating all untrusted data before it reaches controllers",
+            "Schema definition with Zod: string lengths, email formats, enum values, and positive numbers",
+            "Building validation middleware that strips unexpected fields and returns structured 400 errors",
+            "Rate limiting with express-rate-limit: configuring limits on login and registration routes",
+            "Security headers with Helmet (X-Content-Type-Options, Frameguard, HSTS overview)"
+          ]
+        }
+      ],
+      "hands_on_practice": "Build a Secure User Operations & Authorization module in Express featuring user registration with Argon2id/bcrypt hashing, login/logout endpoints, authentication middleware, role checks, object-level ownership verification, Zod input validation, and rate limiting.",
+      "assignment": "Implement protected CRUD routes where normal users can only read, update, and delete their own business records, managers can access team records, input data is validated with Zod, and brute-force attempts are throttled.",
+      "business_application": "Broken Object Level Authorization (BOLA) is the #1 vulnerability on the OWASP API Security Top 10; enforcing server-side ownership checks protects sensitive corporate and user data from unauthorized access.",
+      "expected_outcome": "Students can implement robust authentication, enforce object-level authorization, validate input schemas with Zod, and protect backend endpoints against common security vulnerabilities.",
+      "portfolio_contribution": "Supplies the core security architecture, authentication middleware, and permission rules protecting all business resources in the capstone."
+    },
+    {
+      "module_number": 5,
+      "number": 5,
+      "module": "Module 05",
+      "title": "Backend Testing & Reliability",
+      "module_title": "Backend Testing & Reliability",
+      "duration": "Weeks 6-7",
+      "hours": 10,
+      "lessons_count": 5,
+      "objective": "Master automated backend unit and integration testing, execute mandatory security acceptance denial tests, implement structured logging, and document APIs using Postman and OpenAPI.",
+      "module_purpose": "Ensure backend APIs meet professional reliability and quality standards by verifying behavior through automated test suites, handling runtime errors gracefully, and publishing clear API contracts.",
+      "what_you_will_learn": [
+        "Backend testing strategy: unit tests vs integration tests vs end-to-end API testing.",
+        "Configuring the Node.js built-in test runner or equivalent with supertest for HTTP testing.",
+        "Setting up dedicated test databases, executing migrations, and managing fixture teardown.",
+        "Writing comprehensive integration tests for CRUD endpoints and validation failures.",
+        "Mandatory execution of all 10 security acceptance tests (cross-user read/update/delete denial).",
+        "Implementing structured JSON logging and unauthenticated health check endpoints (/health).",
+        "Authoring clear API documentation using Postman collections and OpenAPI specifications."
+      ],
+      "key_concepts": [
+        "Unit vs Integration Testing",
+        "Node.js Test Runner / Supertest",
+        "Isolated Test Database & Fixtures",
+        "Testing HTTP Status Codes & Error Payloads",
+        "Cross-User Access Denial Tests",
+        "Security Acceptance Verification",
+        "Structured JSON Logging (No Secret Leaks)",
+        "Health Check Endpoints (/health)",
+        "Postman Documentation & OpenAPI"
+      ],
+      "tools": [
+        "Node.js Test Runner",
+        "Supertest",
+        "PostgreSQL",
+        "Postman",
+        "VS Code"
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "Automated Backend Testing Fundamentals",
+          "hours": 2,
+          "subtopics": [
+            "Why automated testing is indispensable for backend APIs: preventing regressions and verifying contracts",
+            "Testing terminology: unit tests, integration tests, test fixtures, and assertions",
+            "Using the Node.js built-in test runner (node:test, node:assert) or equivalent testing tools",
+            "HTTP integration testing with supertest: making programmatic requests to Express app instances",
+            "Writing your first API test: checking server boot and status code assertions"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "API Integration & Endpoint Testing",
+          "hours": 2,
+          "subtopics": [
+            "Configuring an isolated test database separate from development and production",
+            "Automating schema migration execution before running test suites",
+            "Writing tests for successful CRUD workflows: create record, fetch by ID, update, and delete",
+            "Testing input validation failures: verifying 400 Bad Request and structured error payloads",
+            "Database test cleanup: resetting test records between test suites to ensure test isolation"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Security & Authorization Test Suites",
+          "hours": 2,
+          "subtopics": [
+            "Setting up fictional multi-user test fixtures: User A (Record A), User B (Record B), Manager",
+            "Testing unauthenticated requests: verifying 401 Unauthorized on protected routes",
+            "Testing wrong password and invalid credential handling",
+            "Testing cross-user read denial: verifying User A cannot read Record B (403 or 404)",
+            "Testing cross-user modification denial: User A cannot update or delete Record B",
+            "Testing role elevation denial: verifying regular users cannot access manager endpoints"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Structured Logging & Reliability",
+          "hours": 2,
+          "subtopics": [
+            "Structured logging fundamentals: why formatted JSON logs beat unformatted console.log",
+            "Log levels: error, warn, info, and debug; setting log levels per environment",
+            "Request context in logs: timestamps, HTTP method, URL path, status code, and duration",
+            "Sanitizing log output: strictly preventing passwords, tokens, or personal data from appearing in logs",
+            "Building an unauthenticated health check endpoint (/health) that confirms server and DB connectivity"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "API Documentation & Postman Suites",
+          "hours": 2,
+          "subtopics": [
+            "Why accurate API documentation is essential for frontend integration and client communication",
+            "Documenting endpoints: method, URL path, authentication requirements, and role permissions",
+            "Documenting request schemas, URL parameters, query parameters, and JSON payloads",
+            "Documenting response schemas, success status codes, and error response examples",
+            "Exporting and organizing complete Postman collections and OpenAPI / Swagger specifications"
+          ]
+        }
+      ],
+      "hands_on_practice": "Construct an Automated Backend Test Suite using Node's test runner and supertest against a dedicated PostgreSQL test database, writing integration tests for all CRUD routes, validation failures, and the complete 10-point security acceptance matrix.",
+      "assignment": "Write and execute an automated test suite verifying CRUD operations, transaction rollback, and cross-user authorization denial, producing a passing test report and an exported Postman collection with documented examples.",
+      "business_application": "Automated test suites and clear API contracts give engineering teams the confidence to deploy rapid updates without breaking client applications or introducing security regressions.",
+      "expected_outcome": "Students can write automated integration tests, verify security and authorization rules programmatically, implement structured logging, and document APIs professionally.",
+      "portfolio_contribution": "Supplies the automated test suite, security verification tests, and Postman API documentation required for capstone validation."
+    },
+    {
+      "module_number": 6,
+      "number": 6,
+      "module": "Module 06",
+      "title": "Backend Capstone & Deployment",
+      "module_title": "Backend Capstone & Deployment",
+      "duration": "Weeks 7-8",
+      "hours": 12,
+      "lessons_count": 5,
+      "objective": "Integrate, review, test, document, and deploy a complete Business Operations REST API capstone with PostgreSQL persistence to a supported backend runtime platform.",
+      "module_purpose": "Synthesize all course skills—Node.js runtime, Express routing, PostgreSQL persistence, parameterized SQL, transactions, authentication, object-level authorization, validation, and testing—into a deployable portfolio artifact.",
+      "what_you_will_learn": [
+        "Architecting a multi-user business operations REST API from requirements to deployment.",
+        "Implementing normalized relational schemas, migrations, and seed scripts.",
+        "Integrating authentication, role checks, and object-level ownership authorization.",
+        "Executing multi-statement ACID transactions with rollback testing.",
+        "Running the full automated test suite covering CRUD, validation, and security acceptance rules.",
+        "Deploying the Node.js server and hosted PostgreSQL database to a supported hosting platform.",
+        "Authoring a comprehensive technical README with architecture diagrams and setup instructions."
+      ],
+      "key_concepts": [
+        "Business Operations API Architecture",
+        "Relational ERD & Data Modeling",
+        "Layered Architecture (Routes, Controllers, Services, DB)",
+        "Authentication & Authorization Pipeline",
+        "ACID Transaction Implementation",
+        "Automated Test Suite Verification",
+        "Hosted PostgreSQL Configuration",
+        "Production Node.js Runtime Deployment",
+        "Technical README & Handover"
+      ],
+      "tools": [
+        "Node.js",
+        "Express 5",
+        "PostgreSQL",
+        "Postman",
+        "Git & GitHub",
+        "Supported Cloud Platform"
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "Capstone Architecture & Data Schema",
+          "hours": 2,
+          "subtopics": [
+            "Reviewing Business Operations API specifications: resources, relationships, and user roles",
+            "Designing the relational schema: users, business records/tasks, and workflow activity logs",
+            "Drafting Entity-Relationship Diagrams (ERD) and defining primary/foreign key constraints",
+            "Setting up project folder structure, Git repository, and branch strategy",
+            "Writing reproducible SQL migration files to create database tables and indexes"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "Core CRUD & Business Logic Implementation",
+          "hours": 2.5,
+          "subtopics": [
+            "Implementing database connection pooling with pg.Pool and connection configuration",
+            "Building repository data-access functions using parameterized SQL queries ($1, $2)",
+            "Developing controller and service layers for business record CRUD operations",
+            "Implementing collection pagination (page, limit), text search, and category filtering",
+            "Implementing a multi-statement transaction (e.g. record creation with audit log entry)"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Security, Permissions & Validation Integration",
+          "hours": 2.5,
+          "subtopics": [
+            "Integrating user registration with adaptive password hashing (Argon2id/bcrypt)",
+            "Implementing login, logout, and authentication middleware establishing req.user context",
+            "Enforcing role checks (User vs Manager/Admin) and object-level ownership authorization",
+            "Integrating Zod validation middleware for request bodies, params, and queries",
+            "Applying rate limiting on authentication routes and securing public health endpoint"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Automated Test Execution & Code Quality",
+          "hours": 2.5,
+          "subtopics": [
+            "Running the complete integration test suite against an isolated PostgreSQL test database",
+            "Verifying all 10 security acceptance tests (cross-user read/update/delete denial)",
+            "Verifying transaction rollback behavior when multi-step operations fail",
+            "Code cleanup, linting, removing dead code, and auditing dependencies with npm audit",
+            "Conducting peer review and rubric self-assessment against the 6-factor criteria"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Production Deployment & Verification",
+          "hours": 2.5,
+          "subtopics": [
+            "Selecting a supported deployment platform capable of running Node.js servers and connecting to PostgreSQL",
+            "Configuring hosted PostgreSQL database and executing schema migrations in production",
+            "Configuring production environment variables and secret management (no committed secrets)",
+            "Verifying application boot, health check endpoint (/health), and live API requests via Postman",
+            "Authoring a comprehensive technical README.md with architecture overview, schema, setup, and test steps"
+          ]
+        }
+      ],
+      "hands_on_practice": "Complete, test, and deploy the Business Operations REST API capstone, running the automated test suite to verify all 10 security acceptance rules, configuring hosted PostgreSQL, and publishing comprehensive README and Postman documentation.",
+      "assignment": "Submit your public GitHub repository containing modular source code, schema migrations, passing automated test suite, Postman collection, README documentation, and working deployed demonstration URL (or verified local deployment package).",
+      "business_application": "A fully tested, authenticated, and deployed backend API backed by a relational PostgreSQL database provides compelling technical proof of readiness for professional backend engineering roles.",
+      "expected_outcome": "Students possess a polished, production-style backend API repository with PostgreSQL persistence, robust authorization security, automated tests, and professional documentation.",
+      "portfolio_contribution": "Serves as the primary backend engineering portfolio deliverable demonstrating intermediate REST API development, database persistence, and security competence."
     }
-  ]
+  ],
+  "faq": [
+    {
+      "question": "What is Node.js Backend Development with Express?",
+      "answer": "Node.js Backend Development with Express is an intensive 8-week, 64-hour practical programming certification course that teaches you to build secure, robust server-side applications and REST APIs. You will master the Node.js runtime, asynchronous non-blocking I/O, Express 5 routing and middleware, PostgreSQL relational database integration with parameterized SQL and migrations, user authentication, role-based and object-level authorization, input validation with Zod, automated backend testing, and cloud deployment."
+    },
+    {
+      "question": "Is this course suitable for beginners?",
+      "answer": "This is an intermediate-level course. It is designed for developers who already have working proficiency in JavaScript fundamentals (variables, functions, arrays, objects, ES modules, Promises, and async/await) and basic HTTP concepts. If you are entirely new to programming or JavaScript, we strongly recommend completing Nova Skills Course 56 (Modern JavaScript & TypeScript Foundations) first before taking this backend specialization."
+    },
+    {
+      "question": "What JavaScript knowledge is required?",
+      "answer": "You should be comfortable with modern JavaScript (ES6+): let and const declarations, arrow functions, object and array destructuring, spread/rest operators, array manipulation methods (map, filter, reduce), ES module syntax (import/export), Promises, and async/await syntax. You should also understand how to produce and parse JSON objects and handle basic runtime errors."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course spans 8 weeks with 64 guided learning hours (8 hours per week, consisting of 4 hours of interactive lectures and code-alongs plus 4 hours of hands-on software labs). The course fee is a transparent, flat ₹10,900 with zero hidden charges, covering all lectures, software labs, code reviews, and certificate verification."
+    },
+    {
+      "question": "What is the difference between Node.js and browser JavaScript?",
+      "answer": "While both use the JavaScript language and V8 engine, browser JavaScript runs inside a sandboxed browser environment with access to DOM APIs (window, document) for manipulating user interfaces. Node.js is an open-source, cross-platform runtime environment that executes JavaScript outside the browser on servers, providing access to operating system APIs such as the filesystem (fs), network sockets, environment variables (process.env), and database drivers."
+    },
+    {
+      "question": "What is Express.js?",
+      "answer": "Express.js is the most popular, minimal, and flexible web application framework for Node.js. It provides a robust suite of features for building web and mobile APIs, including an intuitive routing system, middleware pipelines for processing HTTP requests, controller organization, and standardized error handling."
+    },
+    {
+      "question": "Will I learn REST API development?",
+      "answer": "Yes. You will learn how to design and build professional RESTful APIs adhering to standard HTTP semantics. This includes proper resource naming conventions, using HTTP methods (GET, POST, PUT, PATCH, DELETE) correctly, returning standard HTTP status codes (200, 201, 204, 400, 401, 403, 404, 409, 500), and implementing pagination, sorting, and filtering."
+    },
+    {
+      "question": "What are Express middleware and controllers?",
+      "answer": "Middleware functions are functions that have access to the request object (req), response object (res), and the next middleware function in the application’s request-response cycle. They perform tasks such as parsing JSON bodies, validating inputs, checking authentication, and logging. Controllers are specialized functions that receive the validated request, execute business logic (often calling database services), and return the final HTTP response."
+    },
+    {
+      "question": "Which database will I learn?",
+      "answer": "You will learn PostgreSQL, the world's most advanced open-source relational database. You will use the official node-postgres (pg) client library to manage connection pools, execute parameterized queries, implement foreign key relationships, run schema migrations, and manage multi-statement ACID transactions."
+    },
+    {
+      "question": "Why is PostgreSQL the primary database?",
+      "answer": "PostgreSQL is standardized as the primary database because real-world commercial backend systems overwhelmingly rely on relational data integrity, strict schema constraints, foreign key relationships, and ACID transaction guarantees. Learning relational database modeling and SQL provides essential, transferable backend skills demanded by modern employers."
+    },
+    {
+      "question": "Will I also learn MongoDB?",
+      "answer": "MongoDB is included as a brief conceptual comparison in Module 03 to contrast relational schemas with document-oriented NoSQL models and discuss their respective trade-offs. However, all core coursework, labs, and the portfolio capstone are standardized on PostgreSQL to ensure deep, production-grade competence rather than surface-level familiarity."
+    },
+    {
+      "question": "Do I need SQL knowledge before joining?",
+      "answer": "Prior SQL knowledge is helpful but not strictly required. The essential SQL needed to design tables, define foreign keys, write queries, and manage migrations is taught just-in-time during Module 03. For students wanting a comprehensive foundation in advanced database administration and complex querying, Nova Skills Course 59 (Database Foundation) is recommended."
+    },
+    {
+      "question": "Is Course 59 recommended?",
+      "answer": "Yes. Nova Skills Course 59 (Database Foundation) is recommended as a complementary course for students who want a deep, dedicated foundation in advanced relational database design, complex SQL joins, indexing strategies, and database optimization. However, Course 58 teaches all the SQL necessary to build and deploy your backend capstone."
+    },
+    {
+      "question": "Will I learn CRUD operations?",
+      "answer": "Yes. You will master full CRUD (Create, Read, Update, Delete) operations using SQL queries executed from Express controllers. You will learn how to fetch collections, retrieve single records by ID, insert new records with RETURNING clauses, update records with dynamic fields, and delete records while respecting foreign key constraints."
+    },
+    {
+      "question": "What are parameterized SQL queries?",
+      "answer": "Parameterized SQL queries separate the SQL command code from user-supplied data values by using numbered placeholders ($1, $2) rather than concatenating user input directly into SQL strings. The database driver transmits the parameters separately, ensuring that user input can never be interpreted as executable SQL, completely eliminating SQL injection vulnerabilities."
+    },
+    {
+      "question": "Does the course teach database transactions?",
+      "answer": "Yes. You will learn how to manage multi-statement ACID transactions where multiple database updates must either all succeed together or all roll back on error. You will learn how to acquire a single dedicated client connection from the pg.Pool, execute BEGIN, perform queries, execute COMMIT, and ensure ROLLBACK in error handlers with safe client release."
+    },
+    {
+      "question": "Will I learn user authentication?",
+      "answer": "Yes. You will learn how to build complete user authentication systems, including user registration, secure login credential verification, session management with secure cookies (HttpOnly, Secure, SameSite), signed token verification, and logout invalidation, along with authentication middleware to protect private API routes."
+    },
+    {
+      "question": "Does the course cover password hashing?",
+      "answer": "Yes. You will learn modern password security practices adhering to OWASP guidelines. You will use adaptive password hashing algorithms (Argon2id or bcrypt with high work factors) that incorporate unique salt per user and computational work factors, making brute-force and rainbow table attacks infeasible. You will also learn why plaintext passwords or fast hashes like MD5/SHA256 must never be used."
+    },
+    {
+      "question": "What is the difference between authentication and authorization?",
+      "answer": "Authentication verifies identity ('Who are you?'), confirming that a user is who they claim to be through credentials such as email and password. Authorization determines permissions ('What are you allowed to do?'), verifying whether an authenticated user has permission to access, modify, or delete a specific resource or execute an administrative action."
+    },
+    {
+      "question": "Will I learn role-based permissions?",
+      "answer": "Yes. You will implement Role-Based Access Control (RBAC) middleware to restrict specific administrative routes or operations to users with designated roles (e.g., User vs Manager vs Admin). You will also learn why public registration endpoints must never permit users to assign themselves elevated roles via request payloads."
+    },
+    {
+      "question": "What is object-level authorization?",
+      "answer": "Object-level authorization (resource ownership verification) ensures that an authenticated user can only view, edit, or delete records they specifically own or have been granted access to. It prevents Broken Object Level Authorization (BOLA/IDOR)—the #1 API security vulnerability—where an attacker accesses other users' private records simply by changing an ID in the URL."
+    },
+    {
+      "question": "Will I learn secure input validation?",
+      "answer": "Yes. You will learn how to use Zod to define strict validation schemas for request bodies, URL route parameters, and query parameters. Incoming requests that fail schema validation are rejected with structured 400 Bad Request error responses before any business logic or database queries execute, stripping unexpected fields and preventing mass-assignment vulnerabilities."
+    },
+    {
+      "question": "Does the course include rate limiting?",
+      "answer": "Yes. You will learn how to implement rate limiting on public and sensitive endpoints (such as login and registration routes) using middleware like express-rate-limit. Rate limiting restricts the number of requests an IP address can make within a time window, mitigating brute-force password guessing and denial-of-service abuse."
+    },
+    {
+      "question": "Will I learn Postman?",
+      "answer": "Yes. Postman is used extensively throughout the course for manual API testing, environment variable configuration, automated test scripts, and creating shared request collections. You will export a complete Postman collection documenting all capstone endpoints with example requests and responses."
+    },
+    {
+      "question": "Does the course teach automated backend testing?",
+      "answer": "Yes. You will learn how to write automated integration tests using the Node.js built-in test runner or equivalent frameworks combined with supertest. You will test HTTP status codes, JSON response schemas, validation failures, database persistence, and execute mandatory cross-user security denial tests against an isolated test database."
+    },
+    {
+      "question": "Will I learn API documentation?",
+      "answer": "Yes. You will learn how to produce professional API documentation that specifies endpoint paths, HTTP methods, headers, authentication requirements, role permissions, request JSON schemas, response bodies, and error formats using Postman collections and OpenAPI / Swagger standards."
+    },
+    {
+      "question": "Will I build a complete backend project?",
+      "answer": "Yes. You will build exactly ONE comprehensive, production-style Business Operations REST API capstone featuring user authentication, role checks, object-level authorization, PostgreSQL persistence, ACID transactions, Zod input validation, automated integration tests, and cloud deployment."
+    },
+    {
+      "question": "What will the business operations capstone include?",
+      "answer": "The Business Operations REST API capstone includes user registration and login with Argon2id/bcrypt, PostgreSQL database migrations and seed scripts, parameterized CRUD operations for business resources (tasks, projects, or service records), a multi-statement transaction, role and object-level permissions, Zod validation, 10+ passing automated security acceptance tests, and Postman documentation."
+    },
+    {
+      "question": "Will I learn API deployment?",
+      "answer": "Yes. You will learn how to deploy your Express application to a modern cloud hosting platform (such as Render, Railway, or similar platform) and connect it to a hosted PostgreSQL database, managing production environment secrets and verifying health check endpoints."
+    },
+    {
+      "question": "Is GitHub Pages suitable for running Express?",
+      "answer": "No. GitHub Pages is a static file hosting service designed for client-side HTML, CSS, and client JavaScript. It cannot execute Node.js runtime code, run Express servers, or connect to PostgreSQL databases. We teach deployment using platforms specifically built for server-side Node.js runtimes and database hosting."
+    },
+    {
+      "question": "Does this course cover React frontend development?",
+      "answer": "No. This course is dedicated exclusively to server-side backend engineering, databases, and API development. If you wish to learn frontend UI development with React, we offer Course 57 (React.js Frontend Development) which seamlessly connects to the APIs built in this course."
+    },
+    {
+      "question": "Does it include advanced cloud architecture?",
+      "answer": "No. The course focuses on intermediate backend engineering fundamentals (Node runtime, Express, PostgreSQL, authentication, authorization, validation, testing, and deployment). Advanced microservices, Kubernetes, distributed caching clusters, and enterprise multi-region cloud infrastructure are covered in separate advanced programmes."
+    },
+    {
+      "question": "Is it a professional cybersecurity certification?",
+      "answer": "No. While the course teaches essential secure coding practices (OWASP Top 10 awareness, parameterized SQL, password hashing, and object-level authorization), it is a software engineering certification, not an accredited cybersecurity penetration testing credential."
+    },
+    {
+      "question": "Will I receive source code and API documentation?",
+      "answer": "Yes. You will build and retain complete ownership of your backend source code repository on GitHub, including all migrations, seed scripts, automated tests, and Postman API documentation, creating a verifiable portfolio artifact to present to employers."
+    },
+    {
+      "question": "What entry-level backend career opportunities are possible?",
+      "answer": "Graduates are equipped to apply for entry-level and junior backend roles, including Junior Node.js Backend Developer, Express API Developer, Junior Server-Side JavaScript Developer, and Backend Trainee positions, supported by their working GitHub repository and deployed API demonstration."
+    }
+  ],
+  "primary_keyword": "Node.js Backend Development Course",
+  "secondary_keywords": [
+    "Node.js Course in India",
+    "Node.js Express Course",
+    "Express.js Backend Development",
+    "Backend Development Course",
+    "Node.js REST API Course",
+    "Node.js PostgreSQL Course",
+    "Node.js Authentication Course",
+    "Express Middleware Training",
+    "Secure API Development",
+    "Backend API Testing",
+    "PostgreSQL CRUD with Node.js",
+    "JavaScript Backend Development",
+    "Node.js API Deployment",
+    "Node.js Course Fees",
+    "Node.js Course Duration",
+    "Express.js Certification Course",
+    "Node.js Practical Projects",
+    "Backend Developer Portfolio",
+    "Object-Level Authorization",
+    "Node.js Business API Development"
+  ],
+  "keywords": [
+    "Node.js Backend Development Course",
+    "Node.js Course in India",
+    "Node.js Express Course",
+    "Express.js Backend Development",
+    "Backend Development Course",
+    "Node.js REST API Course",
+    "Node.js PostgreSQL Course",
+    "Node.js Authentication Course",
+    "Express Middleware Training",
+    "Secure API Development",
+    "Backend API Testing",
+    "PostgreSQL CRUD with Node.js",
+    "JavaScript Backend Development",
+    "Node.js API Deployment",
+    "Node.js Course Fees",
+    "Node.js Course Duration",
+    "Express.js Certification Course",
+    "Node.js Practical Projects",
+    "Backend Developer Portfolio",
+    "Object-Level Authorization",
+    "Node.js Business API Development"
+  ],
+  "seo": {
+    "meta_title": "Node.js Backend Course | Express, PostgreSQL | Nova Skills",
+    "meta_description": "Learn Node.js, Express, PostgreSQL, authentication, API security and testing. Build a backend project in 8 weeks, 64 hours, for ₹10,900.",
+    "canonical_url": "https://novaskills.in/course-detail.html?id=node-js",
+    "og_title": "Node.js Backend Development with Express | Nova Skills",
+    "og_description": "Build robust, secure backend APIs with Node.js, Express, and PostgreSQL in 8 weeks, 64 hours.",
+    "og_url": "https://novaskills.in/course-detail.html?id=node-js",
+    "og_type": "website",
+    "og_image": "https://novaskills.in/images/courses/node-js.jpg",
+    "twitter_card": "summary_large_image",
+    "robots": "index, follow",
+    "structured_data": {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Node.js Backend Development with Express",
+      "description": "Learn Node.js backend development with Express, asynchronous JavaScript, databases, authentication, validation, testing and API deployment. Build maintainable server-side applications through practical projects and professional debugging workflows.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Nova Skills",
+        "sameAs": "https://novaskills.in"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "10900",
+        "priceCurrency": "INR",
+        "category": "Paid",
+        "availability": "https://schema.org/InStock"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online / Hybrid",
+        "courseWorkload": "PT64H"
+      }
+    }
+  }
 }

@@ -1,15 +1,15 @@
 # Professional Video Editing — Authoritative Academic Specification
 
-**Program Title:** Professional Video Editing
-**Course Identifier:** `video-pro`
-**Academy:** Video & Motion Academy (`video`, Academy ID: `video`)
-**Credential Awarded:** Professional Certificate in Video Editing & Post-Production
-**Academic Governance:** Nova Skills Academic Board | ISO 9001:2015 Standards
-**Duration:** 4 Months (16 Academic Weeks)
-**Guided Instructional Hours:** 160 Guided Hours (10 Hours / Week average)
-**Recommended Independent Practice:** 80–120 Hours (strictly demarcated from guided hours)
-**Target Level:** Beginner to Applied Commercial Professional (zero prerequisites required; progressive ladder from visual grammar to commercial delivery)
-**Authoritative Version:** 1.0.0 (October 2026 Production Standard)
+**Program Title:** Professional Video Editing  
+**Course Identifier:** `video-pro`  
+**Academy:** Video & Motion Academy (`video`, Academy ID: `video`)  
+**Credential Awarded:** Professional Certificate in Video Editing & Post-Production  
+**Academic Governance:** Nova Skills Academic Board | ISO 9001:2015 Standards  
+**Duration:** 4 Months (16 Academic Weeks)  
+**Guided Instructional Hours:** 160 Guided Hours (10 Hours / Week average)  
+**Recommended Independent Practice:** 80–120 Hours (strictly demarcated from guided hours)  
+**Target Level:** Beginner to Applied Commercial Professional (zero prerequisites required; progressive ladder from visual grammar to commercial delivery)  
+**Authoritative Version:** 1.0.0 (October 2026 Production Standard)  
 
 ---
 
@@ -171,9 +171,9 @@ The curriculum spans 4 calendar months (16 academic weeks) with an average caden
 ## 5. Comprehensive Module Competency Blueprint (Modules 01–11)
 
 ### Module 01: Visual Storytelling, Video Grammar & Editing Foundations
-- **Guided Hours:** 12 Hours
-- **Placement:** Month 1, Weeks 1–2
-- **Primary Focus:** Film grammar, narrative psychology, continuity rules, pacing, shot categorization.
+- **Guided Hours:** 12 Hours  
+- **Placement:** Month 1, Weeks 1–2  
+- **Primary Focus:** Film grammar, narrative psychology, continuity rules, pacing, shot categorization.  
 - **Core Philosophy:** Great editing is rooted in narrative psychology and viewer attention, not software keystrokes. Students master the grammar of cinema before launching software.
 
 #### Detailed Topics & Subtopics:
@@ -203,8 +203,8 @@ The curriculum spans 4 calendar months (16 academic weeks) with an average caden
 ---
 
 ### Module 02: Adobe Premiere Pro: Core Editing & Media Workflows
-- **Guided Hours:** 24 Hours
-- **Placement:** Month 1, Weeks 2–4
+- **Guided Hours:** 24 Hours  
+- **Placement:** Month 1, Weeks 2–4  
 - **Primary Focus:** Premiere Pro interface, ingest pipelines, proxy creation, 3-point editing, precision trimming, Lumetri basics.
 
 #### Detailed Topics & Subtopics:
@@ -234,8 +234,8 @@ The curriculum spans 4 calendar months (16 academic weeks) with an average caden
 ---
 
 ### Module 03: Advanced Premiere Pro, Multicam & Efficient Editing
-- **Guided Hours:** 20 Hours
-- **Placement:** Month 2, Weeks 5–6
+- **Guided Hours:** 20 Hours  
+- **Placement:** Month 2, Weeks 5–6  
 - **Primary Focus:** Multi-camera production, time remapping, nested sequences, track mattes, speed optimization.
 
 #### Detailed Topics & Subtopics:
@@ -266,8 +266,8 @@ The curriculum spans 4 calendar months (16 academic weeks) with an average caden
 ---
 
 ### Module 04: Adobe Photoshop for Video Editing & Commercial Graphics
-- **Guided Hours:** 16 Hours
-- **Placement:** Month 2, Weeks 7–8
+- **Guided Hours:** 16 Hours  
+- **Placement:** Month 2, Weeks 7–8  
 - **Primary Focus:** High-CTR YouTube thumbnails, video title plates, transparent overlays, alpha mattes, image cleanup, aspect ratio composition.
 
 #### Detailed Topics & Subtopics:
@@ -297,8 +297,8 @@ The curriculum spans 4 calendar months (16 academic weeks) with an average caden
 ---
 
 ### Module 05: DaVinci Resolve 21: Editing, Colour Correction & Grading
-- **Guided Hours:** 24 Hours
-- **Placement:** Month 3, Weeks 9–11
+- **Guided Hours:** 24 Hours  
+- **Placement:** Month 3, Weeks 9–11  
 - **Primary Focus:** DaVinci Resolve 21 architecture, node-based grading, color wheels, scopes, Log footage conversion, secondary corrections.
 
 #### Detailed Topics & Subtopics:
@@ -333,8 +333,8 @@ The curriculum spans 4 calendar months (16 academic weeks) with an average caden
 ---
 
 ### Module 06: Audio Post-Production, Audition & Fairlight
-- **Guided Hours:** 16 Hours
-- **Placement:** Month 3, Weeks 11–12
+- **Guided Hours:** 16 Hours  
+- **Placement:** Month 3, Weeks 11–12  
 - **Primary Focus:** Audio restoration, dialogue EQ & compression, Foley and SFX layering, loudness standards (LUFS), Audition & Fairlight.
 
 #### Detailed Topics & Subtopics:
@@ -366,8 +366,8 @@ The curriculum spans 4 calendar months (16 academic weeks) with an average caden
 ---
 
 ### Module 07: Commercial Editing, YouTube & High-Retention Social Videos
-- **Guided Hours:** 16 Hours
-- **Placement:** Month 4, Weeks 13–14
+- **Guided Hours:** 16 Hours  
+- **Placement:** Month 4, Weeks 13–14  
 - **Primary Focus:** Audience retention psychology, hook architecture, 9:16 vertical video production, kinetic typography captions, pattern interrupts.
 
 #### Detailed Topics & Subtopics:
@@ -397,8 +397,8 @@ The curriculum spans 4 calendar months (16 academic weeks) with an average caden
 ---
 
 ### Module 08: After Effects Fundamentals & Motion Assets for Editors
-- **Guided Hours:** 10 Hours
-- **Placement:** Month 4, Week 14
+- **Guided Hours:** 10 Hours  
+- **Placement:** Month 4, Week 14  
 - **Primary Focus:** After Effects interface, Premiere Dynamic Link, lower thirds, title callouts, motion tracking, MOGRT customization.
 
 #### Detailed Topics & Subtopics:
@@ -424,8 +424,8 @@ The curriculum spans 4 calendar months (16 academic weeks) with an average caden
 ---
 
 ### Module 09: AI-Assisted Editing & Generative Creative Workflows
-- **Guided Hours:** 8 Hours
-- **Placement:** Month 4, Week 15
+- **Guided Hours:** 8 Hours  
+- **Placement:** Month 4, Week 15  
 - **Primary Focus:** Premiere Pro AI tools, Text-Based Editing, Paper Edit, Enhance Speech, Generative Extend, Resolve IntelliSearch.
 
 #### Detailed Topics & Subtopics:
@@ -455,8 +455,8 @@ The curriculum spans 4 calendar months (16 academic weeks) with an average caden
 ---
 
 ### Module 10: Professional Delivery, Quality Control & Client Workflow
-- **Guided Hours:** 6 Hours
-- **Placement:** Month 4, Week 15
+- **Guided Hours:** 6 Hours  
+- **Placement:** Month 4, Week 15  
 - **Primary Focus:** Codec architecture, bitrate calculation, quality control checklists, client revision cycles, cloud delivery.
 
 #### Detailed Topics & Subtopics:
@@ -484,8 +484,8 @@ The curriculum spans 4 calendar months (16 academic weeks) with an average caden
 ---
 
 ### Module 11: Industry Projects, Portfolio & Final Assessment
-- **Guided Hours:** 8 Hours
-- **Placement:** Month 4, Week 16
+- **Guided Hours:** 8 Hours  
+- **Placement:** Month 4, Week 16  
 - **Primary Focus:** Portfolio integration, project defense, showreel assembly, freelance contracts, final assessment.
 
 #### Detailed Topics & Subtopics:
@@ -529,7 +529,7 @@ graph TD
 ---
 
 ### Project 1: Interview / Mini Documentary
-- **Project Title:** *Craft & Vision: Artisanal Entrepreneur Profile*
+- **Project Title:** *Craft & Vision: Artisanal Entrepreneur Profile*  
 - **Production Brief:** A client-commissioned 2.5 to 3.5 minute mini-documentary profiling an artisanal entrepreneur or tech founder. The narrative must convey passion, business struggle, and triumph without relying on a voiceover narrator.
 - **Raw Footage Inventory:**
   - 4K multi-camera raw rushes (Camera A: Master tight on face; Camera B: 45-degree profile medium).
@@ -553,7 +553,7 @@ graph TD
 ---
 
 ### Project 2: High-Retention Short-Form Editing Package
-- **Project Title:** *Viral Retention Social Suite (3-Asset Multi-Niche Campaign)*
+- **Project Title:** *Viral Retention Social Suite (3-Asset Multi-Niche Campaign)*  
 - **Production Brief:** A social media agency requires three high-converting, vertical short-form video assets (9:16) targeting Gen Z and young millennial audiences across Instagram Reels and YouTube Shorts. Each video must retain over 65% of viewers past the 3-second mark.
 - **Niche Asset Breakdown:**
   1. **Asset A (D2C eCommerce Product):** Fast-paced 30-second problem/solution lifestyle product ad.
@@ -583,7 +583,7 @@ graph TD
 ---
 
 ### Project 3: Branded Commercial Advertisement
-- **Project Title:** *Aura Audio: Premium Wireless Headphones Launch Commercial*
+- **Project Title:** *Aura Audio: Premium Wireless Headphones Launch Commercial*  
 - **Production Brief:** A commercial post-production brief for a premium electronics brand launching high-end noise-canceling headphones. The spot must feel cinematic, aspirational, and broadcast-ready, showcasing product aesthetics, dynamic lifestyle usage, and premium brand identity.
 - **Raw Footage Inventory:**
   - Multi-shot cinema camera rushes shot in Log (Sony S-Log3 / Blackmagic RAW).
@@ -618,8 +618,8 @@ graph TD
 - **Academic Program Role:** Professional Career Certificate Course (Tier 2 in Video & Motion Academy).
 - **Duration:** 4 Months (16 Instructional Weeks).
 - **Guided Instructional Hours:** 160 Guided Hours.
-- **Proposed Regular Fee:** **INR 35,900**
-- **Active Launch-Batch Selling Fee:** **INR 29,900**
+- **Proposed Regular Fee:** **INR 35,900**  
+- **Active Launch-Batch Selling Fee:** **INR 29,900**  
 - **Statutory Taxation:** Applicable Indian Goods & Services Tax (GST @ 18%) applies extra on all transactions.
 - **Transparent Commercial Breakdown:**
   - *Regular Base Fee:* ₹35,900 + 18% GST (₹6,462) = **Total Payable: ₹42,362**

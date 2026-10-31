@@ -1,348 +1,1604 @@
 {
   "course_id": "html-css",
-  "course_name": "HTML & CSS",
+  "id": "html-css",
+  "slug": "html-css",
+  "course_name": "HTML, CSS & Responsive Web Design",
+  "title": "HTML, CSS & Responsive Web Design",
+  "name": "HTML, CSS & Responsive Web Design",
+  "academic_sequence": 55,
+  "course_number": 55,
+  "curriculum_edition": "2027 Standards & Responsive Web Design Edition",
   "academy": "Programming Academy",
   "academy_id": "programming",
-  "course_type": "MODULE",
-  "course_role": "Foundation",
-  "level": "BEGINNER",
-  "duration": "1 Month",
-  "learning_hours": 20,
-  "future_review_status": "EVOLVING",
-  "target_audience": {
-    "best_for": [
-      "Aspiring professionals aiming to master HTML & CSS and secure industry roles.",
-      "Current developers wanting to upskill using modern VS Code workflows.",
-      "Freelancers looking to offer HTML & CSS services to clients."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in None should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Students looking for purely theoretical knowledge without hands-on implementation.",
-      "Individuals unwilling to engage in active problem-solving and coding."
-    ]
+  "academyId": "programming",
+  "academic_positioning": "Semantic HTML, Professional CSS, Responsive Layouts, Accessibility & Website Publishing",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "PROFESSIONAL",
+  "course_role": "Junior Web Design Assistant & Entry-Level HTML/CSS Developer",
+  "level": "Beginner",
+  "priority": "High",
+  "duration": "6 Weeks",
+  "durationMonths": 2,
+  "duration_weeks": 6,
+  "learning_hours": 48,
+  "learningHours": 48,
+  "guided_hours": 48,
+  "hours": 48,
+  "weekly_workload": "8 Hours / Week",
+  "mode": "Interactive Software Labs & Guided Workplace Simulation",
+  "price": 6900,
+  "fee": 6900,
+  "regular_fee": 6900,
+  "originalPrice": 6900,
+  "commercial_notice": "Transparent pricing policy. No fictitious comparison pricing, artificial discounts, or countdown timers.",
+  "pricing": {
+    "currency": "INR",
+    "symbol": "₹",
+    "amount": 6900,
+    "formatted": "₹6,900",
+    "discount": "0%",
+    "discounted": false,
+    "pricing_model": "Flat Tuition Fee"
   },
-  "prerequisites": {
-    "required": "None",
-    "recommended": "Familiarity with modern web browsers and professional digital tools",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
-    "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "HTML & CSS, Git & GitHub, VS Code (student/free tiers sufficient for coursework)"
-    }
+  "tagline": "Build Websites That Look Professional, Load Fast and Work on Every Screen.",
+  "hero_headline": "HTML, CSS & Responsive Web Design",
+  "hero_supporting_heading": "Build Websites That Look Professional, Load Fast and Work on Every Screen.",
+  "hero_supporting_headline": "Learn modern HTML and CSS by building accessible, responsive websites from scratch. Master semantic HTML, Flexbox, Grid, mobile-first layouts, forms, CSS animations and practical deployment with AI-assisted development and human-reviewed code.",
+  "h1": "HTML, CSS & Responsive Web Design",
+  "seo_title": "HTML CSS Course | Responsive Web Design | ₹6,900 | Nova Skills",
+  "seo_description": "Learn HTML, CSS, Flexbox, Grid and responsive design. Build and publish 2 accessible websites in 6 weeks, 48 learning hours, for ₹6,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=html-css",
+  "hero": {
+    "title": "HTML, CSS & Responsive Web Design",
+    "subtitle": "Semantic HTML, Professional CSS, Responsive Layouts, Accessibility & Website Publishing",
+    "hook": "Build Websites That Look Professional, Load Fast and Work on Every Screen.",
+    "secondary_proposition": "From Your First HTML Page to Two Responsive Websites — Master Semantic HTML, Modern CSS, Accessibility and Publishing.",
+    "description": "Learn how to build professional, responsive websites from scratch using HTML and CSS—without requiring previous coding experience. Master semantic HTML, Flexbox, Grid, mobile-first layouts, forms, CSS animations and practical deployment with AI-assisted development and human-reviewed code."
   },
+  "short_description": "Learn modern HTML and CSS by building accessible, responsive websites from scratch. Master semantic HTML, Flexbox, Grid, mobile-first layouts, forms, CSS animations and practical deployment with AI-assisted development and human-reviewed code.",
+  "shortDesc": "Learn modern HTML and CSS by building accessible, responsive websites from scratch. Master semantic HTML, Flexbox, Grid, mobile-first layouts, forms, CSS animations and practical deployment with AI-assisted development and human-reviewed code.",
+  "full_description": "Learn how to build professional, responsive websites from scratch using HTML and CSS—without requiring previous coding experience.\n\nThis practical HTML, CSS & Responsive Web Design course starts with web fundamentals, semantic HTML, page structure, accessible content, links, images, tables and forms.\n\nDevelop professional CSS skills in selectors, the cascade, specificity, typography, spacing, colors, the box model, reusable styles and custom properties.\n\nMaster modern layout techniques using Flexbox, CSS Grid, relative units, responsive images, mobile-first design, media queries and container queries.\n\nLearn to build common website elements such as responsive navigation, hero sections, cards, galleries, buttons, contact forms and footers using clean HTML and CSS.\n\nExplore CSS transitions, carefully controlled animations, keyboard focus indicators and reduced-motion support.\n\nDevelop foundational knowledge of web accessibility, technical SEO, image optimization, Core Web Vitals and page testing.\n\nLearn to translate simple Figma layouts into HTML/CSS, debug websites using Chrome DevTools, organize source files and publish static sites with GitHub Pages.\n\nUse AI tools responsibly to explain code, identify possible CSS issues and review accessibility or responsiveness—while independently testing every suggested change.\n\nBuild two assessed portfolio projects: a responsive business landing page and a multi-page personal or professional portfolio website.\n\nBoth projects must demonstrate responsive layouts, essential keyboard accessibility, organized source code, clear documentation and deployment readiness.\n\nThe programme focuses on real HTML/CSS website development, not JavaScript application logic, React, authentication or backend programming.",
+  "fullDesc": "Learn how to build professional, responsive websites from scratch using HTML and CSS—without requiring previous coding experience.\n\nThis practical HTML, CSS & Responsive Web Design course starts with web fundamentals, semantic HTML, page structure, accessible content, links, images, tables and forms.\n\nDevelop professional CSS skills in selectors, the cascade, specificity, typography, spacing, colors, the box model, reusable styles and custom properties.\n\nMaster modern layout techniques using Flexbox, CSS Grid, relative units, responsive images, mobile-first design, media queries and container queries.\n\nLearn to build common website elements such as responsive navigation, hero sections, cards, galleries, buttons, contact forms and footers using clean HTML and CSS.\n\nExplore CSS transitions, carefully controlled animations, keyboard focus indicators and reduced-motion support.\n\nDevelop foundational knowledge of web accessibility, technical SEO, image optimization, Core Web Vitals and page testing.\n\nLearn to translate simple Figma layouts into HTML/CSS, debug websites using Chrome DevTools, organize source files and publish static sites with GitHub Pages.\n\nUse AI tools responsibly to explain code, identify possible CSS issues and review accessibility or responsiveness—while independently testing every suggested change.\n\nBuild two assessed portfolio projects: a responsive business landing page and a multi-page personal or professional portfolio website.\n\nBoth projects must demonstrate responsive layouts, essential keyboard accessibility, organized source code, clear documentation and deployment readiness.\n\nThe programme focuses on real HTML/CSS website development, not JavaScript application logic, React, authentication or backend programming.",
+  "description": "Learn modern HTML and CSS by building accessible, responsive websites from scratch. Master semantic HTML, Flexbox, Grid, mobile-first layouts, forms, CSS animations and practical deployment with AI-assisted development and human-reviewed code.",
   "overview": {
-    "positioning": "Convert to foundational module inside Full Stack & Frontend.",
-    "short_description": "Comprehensive curriculum covering VS Code, Chrome DevTools, Figma to build production-grade projects.",
+    "positioning": "Independent beginner-entry web development certification focused on Semantic HTML, Professional CSS, Fluid Responsive Layouts, Accessibility, Performance and Real Static Website Publishing.",
+    "short_description": "Comprehensive 6-week, 48-hour hands-on curriculum covering semantic HTML5, modern CSS3, Flexbox, CSS Grid, container queries, DevTools debugging, and GitHub Pages publishing.",
     "key_facts": {
       "level": "BEGINNER",
-      "duration": "1 Month",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "20 Hours",
-      "project_count": "EXERCISE",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Junior Web Assistant"
+      "duration": "6 Weeks",
+      "format": "Interactive Software Labs & Guided Workplace Simulation",
+      "estimated_learning_hours": "48 Hours",
+      "project_count": "2 Assessed Portfolio Websites",
+      "capstone": "Responsive Professional Portfolio Website",
+      "ai_integration": "AI-AUGMENTED (Human-Verified Code)",
+      "career_focus": "Junior Web Design Assistant / Entry-Level HTML & CSS Developer"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end solutions using VS Code.",
-      "Solve concrete business problems applying HTML & CSS principles.",
-      "Package professional case studies demonstrating verifiable skills."
+      "Write clean, standard-compliant semantic HTML documents with logical hierarchy and accessible landmarks.",
+      "Style professional web interfaces with CSS custom properties, fluid typography, and consistent design tokens.",
+      "Architect fluid, mobile-first layouts using CSS Flexbox, CSS Grid, media queries, and container queries.",
+      "Build accessible web components including responsive navigation, interactive cards, and form interfaces with native validation.",
+      "Debug layout issues, overflow bugs, and cascade conflicts using Chrome DevTools.",
+      "Optimize images, evaluate Core Web Vitals metrics, and conduct manual keyboard accessibility checks.",
+      "Manage project source code using Git and GitHub, and publish live static websites via GitHub Pages."
     ]
   },
   "why_now": {
-    "industry_shift": "Modern web interfaces require responsive, accessible, and semantic markup utilizing modern CSS Grid, Flexbox, and custom properties.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can deliver robust HTML & CSS solutions efficiently.",
-    "career_opportunity": "Mastering these tools opens doors to high-paying specialized roles and global freelance opportunities."
+    "industry_shift": "Modern web interfaces in 2027 demand standards-compliant, responsive, accessible, and high-performance HTML/CSS architectures. Businesses and development teams actively seek developers who write clean, semantic code rather than relying on heavy bloated frameworks or generic unmaintainable templates.",
+    "ai_impact": "While AI coding copilots can draft code quickly, production success requires developers who deeply understand semantic HTML, CSS cascade rules, responsive reflow, and accessibility standards to audit, correct, and safely integrate AI suggestions.",
+    "business_demand": "Companies, digital agencies, and startups require fast-loading, SEO-friendly, and mobile-responsive websites that provide accessible experiences across all devices and screen sizes.",
+    "career_opportunity": "Mastering HTML, CSS, and responsive design provides the essential commercial foundation for web design, frontend development, email development, and digital marketing tech roles."
   },
-  "learning_outcomes": [
-    "PLAN: Formulate project architectures utilizing VS Code.",
-    "BUILD: Construct professional deliverables using modern workflows.",
-    "OPTIMIZE: Refine outputs against strict quality metrics."
+  "icon": "💻",
+  "color": "linear-gradient(135deg, #004672, #0599a8)",
+  "rating": 4.9,
+  "reviews": 215,
+  "students": 1280,
+  "liveProjects": 2,
+  "projects": 2,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=html-css",
+  "tags": [
+    "popular",
+    "html5",
+    "css3",
+    "responsive-web-design",
+    "flexbox",
+    "css-grid",
+    "accessibility",
+    "certification"
   ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
-      },
-      {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
-      },
-      {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      }
-    ]
+  "featured": true,
+  "category": "Programming Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "positioning": "Semantic HTML, Professional CSS, Responsive Layouts, Accessibility & Real Website Publishing",
+  "target_audience": [
+    "Complete coding beginners starting their journey into web development",
+    "Students entering computer science, IT, or web development programmes",
+    "Graphic designers and visual creatives transitioning into browser-based website coding",
+    "Figma and UI/UX learners wanting to understand how visual layouts translate into code",
+    "Entrepreneurs and startup founders building or maintaining their own company websites",
+    "Freelancers aiming to offer commercial static website design and landing page services",
+    "Digital marketing learners seeking technical SEO, HTML structure, and landing page skills",
+    "Website content managers and editors managing CMS markup and web layouts",
+    "Career switchers moving into technology and junior web production roles",
+    "School and college students building foundational digital literacy and programming skills",
+    "Working professionals wanting practical, standard-compliant HTML/CSS skills"
+  ],
+  "prerequisites": {
+    "required": [
+      "Basic computer literacy (operating system navigation, file and window management)",
+      "Basic typing skills and comfort working with a keyboard and mouse/trackpad",
+      "Familiarity with everyday web browsing and modern web browsers",
+      "Ability to create, organize, move, and manage files and folders"
+    ],
+    "not_required": [
+      "No previous programming or coding experience required",
+      "No prior knowledge of JavaScript, Python, or backend languages required",
+      "No React, framework, or library experience needed",
+      "No database or server administration knowledge required",
+      "No advanced Figma experience required"
+    ],
+    "recommended": "Curiosity about how websites work and willingness to write and test code actively",
+    "system_requirements": {
+      "hardware": "Standard desktop PC or laptop (Windows, macOS, or Linux) with 4GB+ RAM",
+      "software_accounts": "Modern web browser (Google Chrome recommended), VS Code editor (free), Git (free), GitHub account (free tier)"
+    }
   },
+  "highlights": [
+    "Beginner-Friendly Coding — Zero Prior Experience Required",
+    "Semantic HTML & Accessible Document Architecture",
+    "Professional Modern CSS & Cascade Mastery",
+    "Flexbox & CSS Grid Modern Layout Systems",
+    "Mobile-First Responsive Design Across 5 Screen Widths",
+    "CSS Container Queries for Adaptive Component Architecture",
+    "Accessible Navigation Patterns & Form Interfaces",
+    "Reusable CSS Custom Properties & Design Tokens",
+    "CSS Transitions, Micro-Interactions & Reduced-Motion Support",
+    "Chrome DevTools Layout Inspection & Responsive Debugging",
+    "Website Performance Optimization & Core Web Vitals Basics",
+    "Technical SEO Metadata & Crawlability Fundamentals",
+    "Figma-to-Code Translation Workflows",
+    "Git Version Control & GitHub Repository Management",
+    "Live Static Website Publishing with GitHub Pages",
+    "Two Assessed Portfolio Websites with Complete Source Code"
+  ],
   "hands_on_tech": {
     "core_tools": [
       {
+        "tool": "HTML5",
+        "purpose": "Semantic content architecture, page landmarks, forms, tables, and accessible web structure.",
+        "what_student_learns": "Document structure, semantic tags, heading hierarchies, native forms, validation, and accessibility.",
+        "what_student_builds": "Well-structured, accessible multi-page website foundations."
+      },
+      {
+        "tool": "CSS3",
+        "purpose": "Visual presentation, modern typography, responsive layout systems, custom properties, and animations.",
+        "what_student_learns": "Cascade, specificity, box model, Flexbox, CSS Grid, media queries, container queries, and transitions.",
+        "what_student_builds": "Branded, fluid, mobile-first responsive stylesheets and reusable design tokens."
+      },
+      {
         "tool": "VS Code",
-        "purpose": "Core utility for html-css.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
+        "purpose": "Primary code editing environment, workspace organization, and developer workflow.",
+        "what_student_learns": "Editor setup, workspace navigation, file hierarchy, extensions, formatting, and live previewing.",
+        "what_student_builds": "Organized project repositories with clean indentation and documentation."
       },
       {
         "tool": "Chrome DevTools",
-        "purpose": "Core utility for html-css.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
-      },
-      {
-        "tool": "Figma",
-        "purpose": "Core utility for html-css.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
+        "purpose": "In-browser inspection, responsive emulation, CSS debugging, and performance observation.",
+        "what_student_learns": "DOM inspection, style overriding, box model visualization, responsive device emulation, and console checking.",
+        "what_student_builds": "Troubleshooting logs and responsive QA verification records."
       }
     ],
     "supporting_tools": [
       {
-        "tool": "Postman",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "tool": "Figma",
+        "purpose": "Inspecting layout mockups, extracting design tokens (spacing, typography, color), and Figma-to-code planning."
       },
       {
-        "tool": "Docker",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "tool": "Git & GitHub",
+        "purpose": "Version control, commit history tracking, repository hosting, and project collaboration documentation."
+      },
+      {
+        "tool": "Google Lighthouse",
+        "purpose": "Auditing static web pages for performance, accessibility, best practices, and search engine optimization."
+      },
+      {
+        "tool": "GitHub Pages",
+        "purpose": "Publishing static website repositories to live HTTPS URLs for real-world portfolio demonstration."
       }
     ],
     "emerging_tools": [
       {
-        "tool": "Cursor",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
+        "tool": "CSS Container Queries",
+        "purpose": "Modern CSS component-level responsive sizing using @container rules."
       },
       {
-        "tool": "Supabase",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
+        "tool": "AI Coding Copilots (Optional)",
+        "purpose": "Responsible AI-assisted code review, syntax explanation, and CSS debugging with mandatory human verification."
       }
     ],
     "tools_to_review": [
-      "Outdated legacy libraries"
+      "Obsolete float-based page layout techniques",
+      "Deprecated HTML presentation tags (<font>, <center>)",
+      "Unnecessary heavy CSS frameworks for basic static websites"
+    ]
+  },
+  "tools": [
+    "HTML5",
+    "CSS3",
+    "VS Code",
+    "Chrome DevTools",
+    "Figma",
+    "Git",
+    "GitHub",
+    "Google Lighthouse",
+    "GitHub Pages"
+  ],
+  "learning_outcomes": [
+    "PLAN: Structure multi-page website architectures from design briefs, wireframes, or Figma mockups using standard semantic HTML5 elements.",
+    "STYLE: Implement professional CSS stylesheets using the cascade, box model, custom properties (design tokens), and modern typography scales.",
+    "LAYOUT: Build fluid, mobile-first responsive layouts using CSS Flexbox for 1D components and CSS Grid for 2D page structures.",
+    "ADAPT: Implement media queries and CSS container queries to ensure seamless viewing across compact mobile (320px), mobile (390px), tablet (768px), laptop (1024px), and desktop (1440px) viewports.",
+    "ACCESSIBILITY: Conduct essential manual keyboard navigation audits, enforce visible focus indicators, verify WCAG AA color contrast, and structure accessible form controls.",
+    "PERFORMANCE: Optimize web assets, specify image dimensions, apply native lazy loading appropriately, and evaluate Core Web Vitals (LCP, INP, CLS).",
+    "PUBLISH: Manage project source code with Git and GitHub, write comprehensive README documentation, and deploy live static sites to GitHub Pages."
+  ],
+  "learning_journey": {
+    "stages": [
+      {
+        "stage": "Stage 1: Web Fundamentals & Semantic HTML",
+        "focus": "Internet architecture, VS Code setup, document structure, semantic landmarks, text hierarchy, links, images, tables, and native form elements."
+      },
+      {
+        "stage": "Stage 2: Professional CSS & Styling Systems",
+        "focus": "Selectors, cascade, specificity, box model, sizing, positioning, typography, color theory, custom properties, and design tokens."
+      },
+      {
+        "stage": "Stage 3: Modern Responsive Layouts",
+        "focus": "Mobile-first philosophy, relative units, Flexbox mechanics, CSS Grid architectures, media queries, container queries, and responsive images."
+      },
+      {
+        "stage": "Stage 4: UI Components & Interactions",
+        "focus": "Reusable button variants, accessible navigation, interactive cards, form layouts, CSS transitions, keyframe animations, and prefers-reduced-motion."
+      },
+      {
+        "stage": "Stage 5: Accessibility, Performance & SEO",
+        "focus": "WCAG 2.2 awareness, keyboard operability, focus visibility, contrast checking, Core Web Vitals, image optimization, Lighthouse audits, and technical SEO."
+      },
+      {
+        "stage": "Stage 6: Capstone Integration & Publishing",
+        "focus": "Figma-to-code translation, DevTools debugging, Git version control, GitHub repository management, GitHub Pages publishing, and portfolio presentation."
+      }
     ]
   },
   "industry_workflow": {
-    "overview": "How leading practitioners implement HTML & CSS in 2026/27:",
+    "overview": "How professional web developers build, test, and publish static websites in 2027:",
     "stages": [
       {
         "step": 1,
-        "name": "Requirements Analysis",
-        "desc": "Deconstruct the business problem and technical constraints."
+        "name": "Design Brief & Semantic Planning",
+        "desc": "Analyze the brief or Figma design, identify landmarks, establish heading hierarchy, plan component structures, and write semantic HTML."
       },
       {
         "step": 2,
-        "name": "Architecture & Setup",
-        "desc": "Initialize the environment and plan the structure."
+        "name": "Design Tokens & Base Styling",
+        "desc": "Define CSS custom properties for colors, typography, spacing, and border radii; apply CSS reset and establish base typographic rhythms."
       },
       {
         "step": 3,
-        "name": "Implementation",
-        "desc": "Execute core development using standard practices."
+        "name": "Mobile-First Responsive Layouts",
+        "desc": "Construct mobile layouts first; progressively enhance with Flexbox, CSS Grid, media queries, and container queries for larger screens."
       },
       {
         "step": 4,
-        "name": "Testing & Deployment",
-        "desc": "Validate functionality and release to production."
+        "name": "QA, Accessibility & Performance Audit",
+        "desc": "Test across 5 representative viewports in DevTools, perform manual keyboard tab checks, audit contrast, optimize images, and run Lighthouse."
+      },
+      {
+        "step": 5,
+        "name": "Version Control & Static Deployment",
+        "desc": "Commit structured source files to Git, push to GitHub, configure GitHub Pages, verify live HTTPS asset paths, and write documentation."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Startups & SMEs",
-      "business_problem": "Need rapid, scalable digital solutions.",
-      "approach": "Utilize VS Code to quickly iterate and deliver value.",
-      "toolset": "VS Code, Chrome DevTools, Figma",
-      "output": "Functional Minimum Viable Product (MVP)."
+      "sector": "Local Businesses & Service Providers",
+      "business_problem": "Need fast, professional, mobile-friendly landing pages to establish online presence and showcase contact details without high maintenance overhead.",
+      "approach": "Build clean, static responsive websites using semantic HTML and CSS, ensuring fast loading and high search engine crawlability.",
+      "toolset": "HTML5, CSS3, Flexbox, Chrome DevTools, GitHub Pages",
+      "output": "High-converting, accessible local business landing page deployed on live hosting."
+    },
+    {
+      "sector": "Creative Agencies & Freelancers",
+      "business_problem": "Require bespoke, branded portfolio websites that look polished on smartphones, tablets, and large displays to win client contracts.",
+      "approach": "Architect multi-page static websites with consistent navigation, CSS Grid project showcases, container-adaptive cards, and accessible forms.",
+      "toolset": "HTML5, CSS Grid, Custom Properties, Git, GitHub Pages",
+      "output": "Multi-page personal or professional portfolio with documented source code."
+    },
+    {
+      "sector": "Digital Marketing & Product Teams",
+      "business_problem": "Demand standalone campaign landing pages that achieve strong Core Web Vitals scores and adhere to strict brand design guidelines.",
+      "approach": "Implement lightweight semantic markup, optimized responsive images, and custom CSS design tokens with zero heavy JavaScript overhead.",
+      "toolset": "HTML5, CSS3, Lighthouse, Chrome DevTools",
+      "output": "Fast-loading promotional campaign landing page with verified Lighthouse performance."
     }
   ],
   "ai_integration": {
     "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "ai_can_assist_with": "Explaining unfamiliar HTML elements, diagnosing CSS cascade issues, suggesting alternative responsive layout approaches, identifying duplicate style rules, brainstorming test cases, and drafting initial documentation.",
+    "ai_can_automate": "Generating boilerplate semantic structures, calculating complex clamp() formulas, formatting CSS stylesheets, and drafting initial README outlines.",
+    "ai_cannot_replace": "Human understanding of layout behavior, manual keyboard accessibility verification, visual design judgment, real-world browser testing, and commercial accountability for code quality.",
+    "human_expertise_required": "Every AI-suggested code snippet must be read, understood, tested across multiple screen widths, verified for accessibility, and validated in browser DevTools before inclusion.",
+    "validation_protocol": "Students maintain a CSS Review & Correction Log documenting the original problem, AI suggestion, learner understanding, manual testing steps, and final code implementation.",
+    "responsible_use": "AI tools serve as an educational copilot. Copying entire unreviewed templates or claiming AI-generated code without comprehension is strictly prohibited."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Always choose HTML elements based on their semantic meaning and document hierarchy, never merely for their default browser styling.",
+    "Adopt a mobile-first responsive approach: establish robust baseline styling for small screens before enhancing with min-width media queries.",
+    "Use CSS custom properties for colors, spacing, and typography to maintain a cohesive, maintainable design token system.",
+    "Rely on Flexbox for one-dimensional component alignment and CSS Grid for two-dimensional page layouts; avoid legacy float-based page structures.",
+    "Ensure interactive elements are accessible: maintain visible focus indicators, preserve logical tab order, and test with the keyboard alone.",
+    "Optimize images for the web: provide explicit width and height attributes, use modern formats, and apply lazy loading only to below-the-fold media.",
+    "Maintain clean, organized source repositories with meaningful file naming, relative asset paths, and clear README documentation."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
+      "mistake": "Overusing generic <div> elements ('div soup') instead of semantic landmarks (<header>, <nav>, <main>, <section>, <footer>).",
+      "why_it_happens": "Beginners focus purely on visual layout rather than document meaning and accessibility.",
+      "professional_approach": "Structure documents using semantic HTML landmarks to ensure search engines and assistive technologies understand page structure."
     },
     {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Using fixed pixel widths (e.g., width: 1200px) that cause horizontal scrolling and layout breakage on mobile devices.",
+      "why_it_happens": "Designing exclusively for desktop screens without testing responsive viewport resizing.",
+      "professional_approach": "Use fluid widths (percentages, max-width: 100%, relative units rem/em) and mobile-first media queries to accommodate all screen sizes."
+    },
+    {
+      "mistake": "Removing focus outlines with outline: none without providing an accessible visible replacement.",
+      "why_it_happens": "Viewing default browser focus outlines as visually intrusive without understanding keyboard navigation needs.",
+      "professional_approach": "Style custom, high-contrast focus rings using :focus-visible so keyboard users can easily track their active position."
+    },
+    {
+      "mistake": "Assuming static HTML forms store and email submitted data automatically without a configured backend or service.",
+      "why_it_happens": "Confusing the client-side form interface and browser validation with server-side processing.",
+      "professional_approach": "Clearly recognize the boundary: HTML forms collect and validate input in the browser, but submitting and storing data requires an external handler."
+    },
+    {
+      "mistake": "Blindly pasting AI-generated CSS without understanding cascade specificity or testing intermediate screen widths.",
+      "why_it_happens": "Relying on AI output as a finished solution without verifying cross-browser behavior.",
+      "professional_approach": "Read every line of generated code, inspect computed styles in DevTools, test responsive widths, and refine manually."
     }
   ],
   "career_paths": {
-    "entry_roles": "Junior Web Assistant",
-    "mid_roles": "Specialist Lead",
-    "specialist_roles": "None",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": "Junior Web Design Assistant, Entry-Level HTML/CSS Developer, Static Website Designer, Junior Frontend Production Assistant, Responsive Website Assistant, Website Maintenance Assistant, Landing Page Developer (Entry Level)",
+    "freelance_roles": "Freelance Static Website Creator, Landing Page Specialist, Web Layout Assistant, Email Template Coder",
+    "employer_expectations": "Demonstrable live portfolio proof-of-work showing clean semantic HTML, fluid responsive CSS, keyboard accessibility, DevTools debugging competency, and organized Git repositories.",
+    "what_student_demonstrates": "Ability to take a design brief or Figma mockup and independently build, test, document, and publish a responsive, accessible static website.",
+    "career_disclaimer": "These represent potential entry-level pathways and practical service applications. Nova Skills provides skill training and portfolio preparation; we do not guarantee employment, specific salary figures, or advanced engineering qualifications."
   },
   "freelance_applications": {
     "services_offered": [
-      "End-to-end HTML & CSS project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
+      "Custom responsive landing page development for small businesses, creators, and marketing campaigns.",
+      "Conversion of Figma design mockups into standard-compliant semantic HTML and CSS.",
+      "Mobile-responsiveness audits and layout bug fixes for existing static websites.",
+      "Static multi-page business website creation with GitHub Pages hosting setup.",
+      "Basic accessibility and performance audits including contrast checks and image optimization."
     ],
-    "client_workflow": "Figma Design Audit -> Responsive Semantic Layout Build -> Cross-Browser Testing -> Clean Code Delivery & Asset Package",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "client_workflow": "Client Brief & Wireframe Review -> Semantic HTML Markup -> Branded CSS Layout & Design Tokens -> Multi-Viewport Responsive QA -> Accessibility & Performance Audit -> Git Repository & GitHub Pages Delivery",
+    "portfolio_requirements": "Two complete, live-published websites with accessible source code on GitHub, responsive testing documentation, and clear README setup instructions."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
-  ],
-  "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
-  ],
-  "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
-  },
-  "certification": {
-    "title": "Certified Specialist in HTML & CSS",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
-  },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
-  "next_learning_path": {
-    "recommended_next": "Advance to javascript-cert to specialize further.",
-    "related_programs": "For broader career mastery, compare with fullstack-foundation."
-  },
-  "faq": [
     {
-      "question": "What prior experience do I need for HTML & CSS?",
-      "answer": "None"
+      "project_number": 1,
+      "badge": "Portfolio Deliverable 01 — Commercial Landing Page",
+      "title": "Professional Business Landing Page",
+      "subtitle": "Responsive Business Landing Page with Design Tokens & Container Queries",
+      "client_brief": "Build a responsive, single-page commercial business landing page for a fictional or authorized enterprise (educational institute, professional service, creative agency, or product showcase). The site must feature a structured semantic layout, branded CSS custom properties, fluid Flexbox and CSS Grid layouts, mobile-first media queries, at least one container-query adaptive card component, accessible navigation, an accessible contact form interface with native validation, and zero horizontal overflow across 320px to 1440px viewports.",
+      "deliverables": [
+        "Complete semantic HTML5 markup containing header, nav, hero, benefits, services, about, social proof, CTA, contact form, and footer",
+        "External CSS stylesheet structured with design tokens (colors, typography, spacing scales)",
+        "Fluid responsive layout utilizing Flexbox, CSS Grid, and mobile-first media queries",
+        "At least one container query demonstration (@container) adapting a card layout based on container width",
+        "Accessible keyboard navigation with high-contrast visible focus indicators",
+        "Responsive image handling with srcset/sizes or picture elements and proper alt text",
+        "Responsive testing evidence across 320px, 390px, 768px, 1024px, and 1440px viewports",
+        "W3C HTML validation report and Google Lighthouse audit report",
+        "GitHub repository with structured files and comprehensive README.md",
+        "Live static deployment URL on GitHub Pages"
+      ],
+      "tools": [
+        "HTML5",
+        "CSS3",
+        "VS Code",
+        "Chrome DevTools",
+        "Git",
+        "GitHub Pages",
+        "Google Lighthouse"
+      ],
+      "outcome": "A fully functional, responsive, and published business landing page demonstrating professional semantic structure, modern CSS layout mechanics, and verifiable mobile usability."
     },
     {
-      "question": "What tools will I learn?",
-      "answer": "You will gain hands-on experience with VS Code, Chrome DevTools, Figma."
-    },
-    {
-      "question": "Are the projects practical?",
-      "answer": "Yes, all projects simulate real-world client briefs and business requirements."
+      "project_number": 2,
+      "badge": "Portfolio Deliverable 02 — Multi-Page Capstone",
+      "title": "Responsive Professional Portfolio Website",
+      "subtitle": "Multi-Page Static Portfolio with Shared CSS & Project Showcase",
+      "client_brief": "Design and build a complete multi-page personal or professional portfolio website comprising at least four distinct, linked HTML pages (Home, About, Projects/Work, Contact). The website must demonstrate a shared CSS architecture, consistent site-wide header navigation and footer, responsive grid project galleries, semantic content sections, accessible contact details with a validated form interface, optimized assets, and complete keyboard accessibility.",
+      "deliverables": [
+        "At least four meaningful, interconnected HTML5 pages (index.html, about.html, projects.html, contact.html)",
+        "Unified, modular CSS stylesheet shared across all pages with custom properties and consistent visual rhythm",
+        "Working site-wide internal navigation with active page states and keyboard operability",
+        "Responsive project gallery showcasing sample work using CSS Grid and fluid typography",
+        "Detailed project descriptions, skill summaries, and professional profile sections",
+        "Accessible contact form interface with native HTML5 validation attributes and documented backend disclaimer",
+        "Full keyboard accessibility verification (logical tab order, visible focus rings, zero keyboard traps)",
+        "Image optimization proof (WebP formats, explicit dimensions, responsive scaling)",
+        "W3C HTML validation and Lighthouse performance/accessibility audit reports",
+        "Published GitHub Pages live URL and organized GitHub repository with clean README documentation"
+      ],
+      "tools": [
+        "HTML5",
+        "CSS3",
+        "CSS Grid",
+        "VS Code",
+        "Chrome DevTools",
+        "Git",
+        "GitHub Pages",
+        "Google Lighthouse"
+      ],
+      "outcome": "A complete, published multi-page portfolio website showcasing verifiable HTML/CSS competency, clean source code organization, and independent static website delivery."
     }
   ],
+  "final_deliverables": [
+    "Two fully functional, responsive, and published static websites hosted on GitHub Pages with live public URLs.",
+    "Clean, organized Git repositories on GitHub containing semantic HTML5 documents, modular CSS stylesheets, and optimized assets.",
+    "Comprehensive README.md documentation for each project covering overview, technologies, responsive approach, accessibility features, and setup instructions.",
+    "Responsive QA audit logs demonstrating verified visual reflow across 320px, 390px, 768px, 1024px, and 1440px viewports without horizontal overflow.",
+    "Manual keyboard accessibility test records confirming visible focus indicators, logical tab flow, and zero keyboard traps.",
+    "W3C HTML validator confirmation and Google Lighthouse audit reports for performance, accessibility, best practices, and SEO.",
+    "QR-code verifiable Nova Skills certificate of completion under ISO 9001:2015 educational standards."
+  ],
+  "portfolio": {
+    "title": "Nova Skills HTML & CSS Professional Portfolio",
+    "description": "Two assessed, commercially relevant static website projects demonstrating end-to-end frontend craftsmanship: a responsive business landing page and a multi-page personal/professional portfolio, both published live on GitHub Pages with complete source code.",
+    "deliverables_count": 2,
+    "deliverables": [
+      {
+        "deliverable_number": 1,
+        "title": "Professional Business Landing Page",
+        "focus": "A responsive single-page business site featuring semantic landmarks, CSS design tokens, Flexbox/Grid layouts, container queries, accessible form controls, and mobile-first responsiveness."
+      },
+      {
+        "deliverable_number": 2,
+        "title": "Responsive Professional Portfolio Website",
+        "focus": "A complete multi-page static website (4+ pages: Home, About, Projects, Contact) with shared CSS architecture, persistent navigation, responsive project showcase, and full keyboard operability."
+      }
+    ],
+    "testing_requirements": [
+      "Viewports: 320px (compact mobile stress test), 390px (mobile), 768px (tablet), 1024px (small desktop), 1440px (desktop)",
+      "Pass Conditions: Zero unintended horizontal scrolling, no text clipping, readable typography, preserved image aspect ratios, visible focus indicators, working navigation links",
+      "Manual Keyboard Audit: Full navigation operability using Tab, Shift+Tab, and Enter keys without keyboard traps",
+      "Audits: W3C HTML validator pass and Google Lighthouse performance & accessibility reviews"
+    ],
+    "handover_structure": {
+      "landing_page": "business-landing-page/ (index.html, css/style.css, images/, README.md, .gitignore)",
+      "portfolio": "professional-portfolio/ (index.html, about.html, projects.html, contact.html, css/style.css, images/, README.md, .gitignore)"
+    }
+  },
+  "assessment": {
+    "model": "Practical Portfolio Rubric & Technical Website Quality Checklist (100%)",
+    "criteria": "Evaluation measures semantic HTML validity, professional CSS architecture, fluid responsive adaptation across 5 screen widths, manual keyboard accessibility, performance/SEO fundamentals, and deployment quality."
+  },
+  "assessment_rubric": {
+    "total_percentage": 100,
+    "criteria": [
+      {
+        "category": "Semantic HTML & Code Structure",
+        "weight": "20%",
+        "description": "Valid HTML5 syntax, appropriate semantic landmarks (<header>, <nav>, <main>, <section>, <footer>), logical heading hierarchy (H1-H6), proper link text, correct table markup, and accessible form labels."
+      },
+      {
+        "category": "Professional CSS Styling & Design Tokens",
+        "weight": "15%",
+        "description": "Modular external stylesheet, CSS custom properties for colors/spacing/typography, correct box-sizing, clean visual rhythm, proper cascade and specificity management, and zero unnecessary !important flags."
+      },
+      {
+        "category": "Responsive Layouts (Flexbox, Grid & Container Queries)",
+        "weight": "25%",
+        "description": "Mobile-first responsive architecture, effective Flexbox for 1D components, CSS Grid for 2D card/section layouts, relative units (rem, em, clamp), media queries, container query implementation, and zero horizontal overflow at 320px-1440px."
+      },
+      {
+        "category": "Accessibility & Usability",
+        "weight": "15%",
+        "description": "WCAG 2.2 Level AA awareness, manual keyboard navigability, high-contrast visible focus indicators (:focus-visible), minimum 4.5:1 text contrast, descriptive image alt text, and prefers-reduced-motion support."
+      },
+      {
+        "category": "Performance & Foundational SEO",
+        "weight": "10%",
+        "description": "Optimized responsive images with dimensions, lazy loading below-the-fold media, Core Web Vitals awareness (LCP, INP, CLS), descriptive <title> and <meta name=\"description\"> tags, and Lighthouse audit review."
+      },
+      {
+        "category": "Deployment, Documentation & Source Quality",
+        "weight": "15%",
+        "description": "Organized repository folder structure, relative asset path integrity, Git commit history, comprehensive README.md documentation, and verified live static deployment on GitHub Pages."
+      }
+    ],
+    "pass_requirements": [
+      "Both website projects must contain actual, hand-written HTML and CSS source code (no static screenshot mockups or unedited template copies).",
+      "Both projects must pass responsive testing across all 5 representative widths (320px, 390px, 768px, 1024px, 1440px) without horizontal scrollbar bugs.",
+      "Both projects must be operable via keyboard navigation alone with visible focus indicators.",
+      "HTML documents must pass W3C validation without critical structural errors.",
+      "Repositories must include complete, professional README documentation and live GitHub Pages deployment links.",
+      "Learner must be able to explain their code implementation and CSS layout decisions during the final review."
+    ],
+    "competency_gates": [
+      "Responsive Competency Gate: Static mockups or screenshot submissions without live resizing code will not receive passing credit.",
+      "Accessibility Gate: A visually attractive website with broken keyboard navigation or missing form labels cannot receive full competency credit.",
+      "Code Ownership Gate: Students must demonstrate independent understanding of the code submitted; unverified AI-generated code is not accepted."
+    ]
+  },
+  "certification": {
+    "title": "Certificate of Completion in HTML, CSS & Responsive Web Design",
+    "criteria": "100% completion of hands-on guided exercises, submission of both assessed website projects meeting the 75%+ rubric benchmark, and verified GitHub Pages live deployments.",
+    "verification": "Cryptographically verifiable digital certificate with online QR-code validation under ISO 9001:2015 quality standards.",
+    "notice": "Nova Skills certificates recognize practical technical training and verified project competencies. This is an independent Nova Skills institutional certification; it is not an official endorsement from the W3C, Google, or GitHub."
+  },
+  "source_code_delivery": {
+    "landing_page_structure": [
+      "business-landing-page/",
+      "├── index.html",
+      "├── css/",
+      "│   └── style.css",
+      "├── images/",
+      "│   └── [optimized web assets]",
+      "├── README.md",
+      "└── .gitignore"
+    ],
+    "portfolio_structure": [
+      "professional-portfolio/",
+      "├── index.html",
+      "├── about.html",
+      "├── projects.html",
+      "├── contact.html",
+      "├── css/",
+      "│   └── style.css",
+      "├── images/",
+      "│   └── [optimized web assets]",
+      "├── README.md",
+      "└── .gitignore"
+    ],
+    "code_quality_rules": [
+      "Consistent 2-space indentation and clean formatting across all HTML and CSS files.",
+      "Meaningful, lowercase, hyphen-separated file and directory names (no spaces or special characters).",
+      "All internal links and asset references must use relative paths that function correctly in published GitHub Pages environments.",
+      "No inline styles (<div style=\"...\">) or presentation-only HTML tags.",
+      "No secrets, private keys, or copyrighted assets without appropriate licensing in repositories."
+    ],
+    "readme_requirements": [
+      "1. Project Overview & Commercial Scenario",
+      "2. Technologies Used (HTML5, CSS3, Flexbox, Grid, etc.)",
+      "3. Key Features & Semantic Structure",
+      "4. Responsive Approach & Tested Viewports (320px to 1440px)",
+      "5. Accessibility Implementation & Keyboard Navigation Notes",
+      "6. Local Development & File Inspection Instructions",
+      "7. Live GitHub Pages Deployment URL",
+      "8. Known Limitations & Future Technical Iterations",
+      "9. Author Attribution & Project Context"
+    ]
+  },
+  "skill_boundaries": {
+    "included": [
+      "Semantic HTML5 document structure and landmarks",
+      "Native HTML forms, inputs, and browser validation",
+      "CSS3 syntax, cascade, inheritance, and specificity",
+      "CSS box model, box-sizing, and normal document flow",
+      "Modern CSS typography and 8px spacing scales",
+      "CSS custom properties (variables) as design tokens",
+      "Flexbox one-dimensional layout systems",
+      "CSS Grid two-dimensional layout systems",
+      "Mobile-first responsive design and media queries",
+      "CSS container queries (@container) for component sizing",
+      "Responsive images (srcset, sizes, <picture>, object-fit)",
+      "Accessible navigation patterns and native disclosures (<details>/<summary>)",
+      "CSS transitions, keyframe animations, and prefers-reduced-motion",
+      "Chrome DevTools layout inspection and responsive emulation",
+      "Foundational web accessibility (WCAG 2.2 AA) and keyboard testing",
+      "Web performance basics, image optimization, and Core Web Vitals (LCP, INP, CLS)",
+      "On-page technical SEO metadata, titles, and headings",
+      "Figma-to-code design inspection and token extraction",
+      "Git version control and GitHub repository management",
+      "GitHub Pages static website publishing"
+    ],
+    "excluded": [
+      "JavaScript application logic and DOM manipulation (covered in JavaScript Certification)",
+      "Frontend frameworks such as React, Vue, or Angular (covered in React Certification)",
+      "TypeScript programming and enterprise build pipelines (Webpack, Vite configuration)",
+      "Backend server programming (Node.js, Express, Python, PHP)",
+      "Database design, queries, and management (SQL, PostgreSQL, MongoDB)",
+      "User authentication, sessions, JWTs, and authorization",
+      "RESTful API development and GraphQL services",
+      "Payment gateway integration and server-side e-commerce cart/checkout logic",
+      "Server-side rendering (SSR) and full-stack frameworks (Next.js)",
+      "Legacy float-based primary page layout techniques"
+    ],
+    "related_courses": [
+      {
+        "course_number": 51,
+        "course_id": "figma-ui-design",
+        "title": "Figma UI Design & Responsive Prototyping",
+        "relationship": "Prerequisite design pathway: covers visual UI design, Auto Layout, and design systems in Figma before coding."
+      },
+      {
+        "course_number": 56,
+        "course_id": "javascript-cert",
+        "title": "JavaScript Certification",
+        "relationship": "Recommended next programming step: adds dynamic DOM interaction, event handling, async data fetching, and application logic."
+      },
+      {
+        "course_number": 57,
+        "course_id": "react-cert",
+        "title": "React Certification",
+        "relationship": "Advanced frontend step: builds modern component-based single-page web applications with React."
+      },
+      {
+        "course_number": 55,
+        "course_id": "fullstack-foundation",
+        "title": "AI-Assisted Full Stack Web Development",
+        "relationship": "Broader comprehensive career program: covers end-to-end frontend and backend engineering."
+      }
+    ]
+  },
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Semantic HTML & Accessibility Standards",
-      "module_purpose": "Structure web content logically for screen readers and SEO.",
+      "number": 1,
+      "module": "Module 01",
+      "title": "Web Foundations & Semantic HTML",
+      "module_title": "Web Foundations & Semantic HTML",
+      "duration": "8 Hours",
+      "hours": 8,
+      "lessons_count": 5,
+      "objective": "Teach complete beginners how the web works and how to build well-structured, accessible, and meaningful HTML documents using industry-standard semantic markup.",
+      "module_purpose": "Understand web architecture, set up a professional VS Code development environment, write semantic HTML5 documents, and build accessible, multi-section web structures.",
       "what_you_will_learn": [
-        "Master the concepts of Semantic HTML & Accessibility Standards.",
-        "Apply VS Code effectively.",
-        "Troubleshoot common issues in this domain."
+        "Master the mental model of client-server web architecture, domain names, hosting, and HTTP/HTTPS protocols.",
+        "Set up and configure VS Code with essential web developer tools, workspace settings, and clean folder structures.",
+        "Write standard-compliant HTML5 documents with valid doctype, language attributes, and metadata.",
+        "Structure content logically using heading hierarchies (H1–H6), paragraphs, semantic text formatting, and lists.",
+        "Incorporate hyperlinked navigation, relative and absolute paths, accessible images, and tabular data tables.",
+        "Implement HTML5 semantic landmarks (<header>, <nav>, <main>, <section>, <article>, <aside>, <footer>) instead of generic <div> containers.",
+        "Build accessible native HTML forms with associated labels, validation attributes, and keyboard operability."
+      ],
+      "key_concepts": [
+        "Client-Server Architecture",
+        "Semantic HTML5",
+        "Document Anatomy",
+        "Heading Hierarchy",
+        "Accessible Images (Alt Text)",
+        "Semantic Landmarks",
+        "Native Form Validation",
+        "W3C Standards"
+      ],
+      "tools": [
+        "VS Code",
+        "HTML5",
+        "Chrome Browser",
+        "W3C HTML Validator"
       ],
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "Semantic Tags",
-          "what_is_taught": "HTML5 structural elements.",
-          "why_it_matters": "Accessibility.",
-          "what_learner_does": "Writes HTML.",
-          "expected_outcome": "Valid HTML."
+          "lesson_title": "Web Architecture & Internet Fundamentals",
+          "what_is_taught": "Internet vs World Wide Web, browser rendering mechanics, client-server models, domain names, DNS, web hosting, HTTP/HTTPS, URLs, and static vs dynamic web pages.",
+          "subtopics": [
+            "How the internet works: packets, IP addresses, and domain name servers (DNS)",
+            "Client-server interaction: request-response cycles and HTTP status codes",
+            "Differences between static HTML/CSS sites and dynamic server-rendered applications",
+            "The distinct responsibilities of HTML (structure), CSS (presentation), and JavaScript (behavior)",
+            "Browser engines and how they parse HTML and CSS to create the Document Object Model (DOM)"
+          ],
+          "why_it_matters": "A clear mental model of how browsers load and display web pages prevents fundamental misconceptions about code execution and asset hosting.",
+          "what_learner_does": "Maps out a web request lifecycle in their notes and inspects live network requests in Chrome.",
+          "expected_outcome": "Ability to explain how a browser retrieves and displays a static HTML web page from a web server."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "Forms and Inputs",
-          "what_is_taught": "Web forms.",
-          "why_it_matters": "User data.",
-          "what_learner_does": "Builds a form.",
-          "expected_outcome": "Working form."
+          "lesson_title": "Development Environment Setup & HTML Anatomy",
+          "what_is_taught": "VS Code installation, workspace configuration, file naming conventions, folder hierarchies, relative file paths, and the anatomy of an HTML document.",
+          "subtopics": [
+            "VS Code setup: workspaces, file explorer, settings, and useful web authoring extensions",
+            "File naming standards: lowercase, hyphen-separated filenames without spaces",
+            "Understanding relative paths (./, ../) vs absolute URLs",
+            "HTML document template: <!DOCTYPE html>, <html>, <head>, and <body>",
+            "Essential metadata: <meta charset=\"UTF-8\">, <meta name=\"viewport\">, and descriptive <title> tags"
+          ],
+          "why_it_matters": "Improper file organization and broken relative paths are the most common source of 404 errors for beginner web developers.",
+          "what_learner_does": "Creates a structured project directory in VS Code and writes their first boilerplate HTML5 document from scratch.",
+          "expected_outcome": "A clean, error-free HTML document scaffold that passes browser rendering without console warnings."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "SEO Basics",
-          "what_is_taught": "Meta tags.",
-          "why_it_matters": "Search visibility.",
-          "what_learner_does": "Adds metadata.",
-          "expected_outcome": "SEO-ready page."
+          "lesson_title": "Content Hierarchy, Text Formatting & Navigation",
+          "what_is_taught": "Semantic headings (H1–H6), paragraphs, inline formatting tags, ordered and unordered lists, anchor tags, and internal/external linking strategies.",
+          "subtopics": [
+            "Establishing a strict single-H1 heading hierarchy that outlines document structure",
+            "Paragraphs (<p>), line breaks (<br> use cases and misuses), and horizontal rules (<hr>)",
+            "Semantic text tags: <strong> for importance, <em> for emphasis, <mark>, <small>, <code>",
+            "Unordered (<ul>) and ordered (<ol>) lists for structured grouped content",
+            "Anchor links (<a>): href attributes, relative page links, external links with rel=\"noopener noreferrer\", and in-page anchor IDs"
+          ],
+          "why_it_matters": "Search engine crawlers and screen readers rely on consistent heading levels and descriptive link text to index and navigate web content.",
+          "what_learner_does": "Writes an informational multi-section document with working internal table-of-contents jump links and external reference links.",
+          "expected_outcome": "A structured text document demonstrating logical heading hierarchy, formatted copy, and working anchor navigation."
+        },
+        {
+          "lesson_number": "1.4",
+          "lesson_title": "Media Assets, Tabular Data & Semantic Landmarks",
+          "what_is_taught": "Images (<img>), descriptive vs decorative alt text, <figure> and <figcaption>, tables for tabular data, and HTML5 landmark containers.",
+          "subtopics": [
+            "Image integration: src paths, width/height dimensions, and format considerations (SVG, WebP, PNG, JPG)",
+            "Writing informative alt text for content images vs empty alt=\"\" for purely decorative graphics",
+            "Editorial images with captions using <figure> and <figcaption>",
+            "Tabular data structure: <table>, <thead>, <tbody>, <tr>, <th> with scope attribute, and <td>",
+            "HTML5 landmark elements: <header>, <nav>, <main>, <section>, <article>, <aside>, and <footer>",
+            "Evaluating semantic tags vs generic <div> containers to avoid 'div soup'"
+          ],
+          "why_it_matters": "Appropriate semantic landmarks establish meaningful screen-reader regions and improve technical SEO ranking without extra styling code.",
+          "what_learner_does": "Replaces generic <div> elements with semantic landmarks and constructs an accessible comparison table with scoped headers.",
+          "expected_outcome": "An accessible, semantic HTML document featuring structured landmarks, captioned images, and a clean data table."
+        },
+        {
+          "lesson_number": "1.5",
+          "lesson_title": "Native HTML Forms, Input Validation & Quality QA",
+          "what_is_taught": "Form architecture (<form>), form controls (<input>, <textarea>, <select>, <button>), explicit label associations, native browser validation, and W3C validation.",
+          "subtopics": [
+            "Form container mechanics: action, method, and client-side vs server-side boundaries",
+            "Pairing form labels explicitly using the for and id attributes for accessibility",
+            "Input types: text, email, tel, number, url, password, date, checkbox, and radio groups",
+            "Multi-line input (<textarea>), dropdown options (<select> and <option>), and submit buttons",
+            "Native validation attributes: required, minlength, maxlength, min, max, and pattern",
+            "HTML comments, code indentation standards, and testing markup with the W3C Markup Validation Service"
+          ],
+          "why_it_matters": "Accessible form markup with native validation provides immediate user feedback and allows assistive technologies to announce required inputs correctly.",
+          "what_learner_does": "Constructs an accessible multi-field contact and enquiry form layout and validates their HTML code against the W3C validator.",
+          "expected_outcome": "A fully functional, native-validated HTML form interface that passes W3C validation with zero structural errors."
         }
       ],
-      "key_concepts": [
-        "Industry Standards",
-        "Best Practices",
-        "Core Implementation"
-      ],
-      "tools": [
-        "VS Code",
-        "Chrome DevTools",
-        "Figma"
-      ],
-      "hands_on_practice": "Guided lab focused on Semantic HTML & Accessibility Standards.",
-      "assignment": "Deliverable: Complete implementation of Semantic HTML & Accessibility Standards.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "hands_on_practice": "Build a complete multi-section semantic HTML web page for a local business in VS Code, validating every tag and form element.",
+      "assignment": "Deliverable: Semantic Multi-Section Web Page containing header, navigation, hero, main content, image gallery with accessible alt text, data table, and validated contact form.",
+      "business_application": "Forms the standard-compliant structural foundation required for any commercial website, landing page, or frontend application.",
+      "expected_outcome": "Students can independently construct a clean, accessible, and valid HTML5 web page without relying on code generators.",
+      "portfolio_contribution": "Provides the semantic HTML document architecture that serves as the foundation for Portfolio Project 01."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Advanced CSS Layouts: Flexbox & Grid",
-      "module_purpose": "Design complex, responsive layouts.",
+      "number": 2,
+      "module": "Module 02",
+      "title": "Professional CSS Fundamentals",
+      "module_title": "Professional CSS Fundamentals",
+      "duration": "10 Hours",
+      "hours": 10,
+      "lessons_count": 5,
+      "objective": "Teach students to style web interfaces professionally while mastering the CSS cascade, layout box model, typography hierarchy, and reusable design token architectures.",
+      "module_purpose": "Master CSS selectors, cascade resolution, specificity, box model mechanics, positioning, typography, colors, custom properties, and DevTools inspection.",
       "what_you_will_learn": [
-        "Master the concepts of Advanced CSS Layouts: Flexbox & Grid.",
-        "Apply VS Code effectively.",
-        "Troubleshoot common issues in this domain."
+        "Connect external stylesheets and write clean, maintainable CSS syntax adhering to industry conventions.",
+        "Master CSS selector types: element, class, ID, attribute, combinators, pseudo-classes, and pseudo-elements.",
+        "Understand the CSS cascade, specificity calculations, source order, inheritance, and why to avoid !important.",
+        "Apply the CSS box model, understand box-sizing: border-box, dimension constraints, margin collapsing, and overflow handling.",
+        "Utilize CSS positioning (static, relative, absolute, fixed, sticky) and manage stacking contexts with z-index.",
+        "Establish professional typography systems with web-safe and hosted fonts, font scale ratios, and readable line lengths.",
+        "Architect reusable design tokens using CSS custom properties (:root variables) for colors, spacing, and border radii.",
+        "Inspect and debug CSS properties, computed values, and box models in real time using Chrome DevTools."
+      ],
+      "key_concepts": [
+        "CSS Syntax & Cascade",
+        "Specificity Scoring",
+        "Box Model & box-sizing",
+        "Normal Flow & Positioning",
+        "Typography Rhythms",
+        "CSS Custom Properties",
+        "Design Tokens",
+        "DevTools Inspection"
+      ],
+      "tools": [
+        "CSS3",
+        "VS Code",
+        "Chrome DevTools",
+        "Google Fonts"
       ],
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "CSS Selectors",
-          "what_is_taught": "Advanced targeting.",
-          "why_it_matters": "Clean styling.",
-          "what_learner_does": "Styles page.",
-          "expected_outcome": "Styled page."
+          "lesson_title": "CSS Syntax, Selectors & Cascade Architecture",
+          "what_is_taught": "Linking external stylesheets, CSS rule anatomy, basic and advanced selectors, pseudo-classes, pseudo-elements, the cascade, specificity, and inheritance.",
+          "subtopics": [
+            "Linking stylesheets via <link rel=\"stylesheet\"> vs inline styles and <style> tags",
+            "Selectors: type, class (.), ID (#), attribute ([type=\"...\"]), child (>), and descendant combinators",
+            "Pseudo-classes (:hover, :focus, :active, :first-child, :nth-child) and pseudo-elements (::before, ::after)",
+            "The Cascade: Origin, Specificity calculation (Inline, ID, Class, Type), and Source Order",
+            "Inherited CSS properties vs non-inherited properties, and the hazards of relying on !important",
+            "CSS normalization and universal resetting (* { box-sizing: border-box; margin: 0; padding: 0; })"
+          ],
+          "why_it_matters": "Mastering the cascade and specificity eliminates frustrating styling conflicts and prevents developers from cluttering stylesheets with hacky overrides.",
+          "what_learner_does": "Calculates specificity scores for complex selectors and reorganizes a messy stylesheet to eliminate all !important declarations.",
+          "expected_outcome": "A clean, predictable stylesheet architecture where selectors target elements with minimal, balanced specificity."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "Flexbox Layout",
-          "what_is_taught": "1D layout.",
-          "why_it_matters": "Alignment.",
-          "what_learner_does": "Builds navbar.",
-          "expected_outcome": "Responsive navbar."
+          "lesson_title": "The CSS Box Model, Dimensions & Overflow",
+          "what_is_taught": "The CSS box model layers, content-box vs border-box, width, height, min/max dimensions, margin collapsing, display modes, and overflow handling.",
+          "subtopics": [
+            "Box model layers: content area, padding, border, and margin",
+            "Why universal box-sizing: border-box simplifies responsive layout math",
+            "Width and height sizing: explicit dimensions, min-width, max-width, min-height, and max-height",
+            "Understanding display properties: block, inline, inline-block, and none",
+            "Vertical margin collapsing mechanics and how to prevent unintended spacing gaps",
+            "Controlling container overflow: visible, hidden, scroll, and auto, and diagnosing unintended scrollbars"
+          ],
+          "why_it_matters": "The box model governs how every single HTML element is sized and spaced on a web page; misunderstanding it causes broken layouts.",
+          "what_learner_does": "Builds a series of card containers with exact padding, border, and margin values, inspecting their box models in DevTools.",
+          "expected_outcome": "Ability to accurately predict and control element dimensions and eliminate accidental layout overflows."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "CSS Grid",
-          "what_is_taught": "2D layout.",
-          "why_it_matters": "Complex structures.",
-          "what_learner_does": "Builds gallery.",
-          "expected_outcome": "Grid gallery."
+          "lesson_title": "CSS Positioning, Coordinates & Stacking Contexts",
+          "what_is_taught": "Normal flow vs positioned layout, static, relative, absolute, fixed, and sticky positioning, offset coordinates, z-index, and stacking contexts.",
+          "subtopics": [
+            "Normal document flow and when out-of-flow positioning is genuinely required",
+            "position: relative: self-offsetting and establishing positioning contexts for child elements",
+            "position: absolute: anchoring elements relative to the nearest positioned ancestor",
+            "position: fixed: creating sticky top navigation bars and persistent notification banners",
+            "position: sticky: combining relative and fixed behaviors based on scroll thresholds",
+            "Understanding z-index layering and diagnosing stacking context traps"
+          ],
+          "why_it_matters": "Positioning allows precise placement of badges, sticky navigation, and modal overlays, but misuse can detach elements from natural responsive flow.",
+          "what_learner_does": "Builds a sticky website header and a card component featuring an absolutely positioned promotional badge.",
+          "expected_outcome": "Mastery over CSS positioning mechanics without breaking normal document responsiveness."
+        },
+        {
+          "lesson_number": "2.4",
+          "lesson_title": "Typography Systems, Color Models & Visual Depth",
+          "what_is_taught": "Web typography, hosted fonts (Google Fonts), font-display, font scales, line-height, letter-spacing, HEX/RGB/HSL color models, borders, border-radius, and shadows.",
+          "subtopics": [
+            "Font families: serif, sans-serif, monospace, and system font fallback stacks",
+            "Importing and optimizing Google Fonts with preconnect and font-display: swap",
+            "Establishing a modular typography scale: font-size, font-weight, line-height (1.4–1.6), and letter-spacing",
+            "Enforcing readable body text line lengths (45 to 75 characters per line using max-width: 65ch)",
+            "Color models: HEX (#004672), RGB/RGBA, and HSL/HSLA for intuitive color adjustments",
+            "Visual depth: borders, border-radius curves, subtle box-shadow elevation systems, and background gradients"
+          ],
+          "why_it_matters": "Clean typography and harmonious color contrast define whether a website looks amateurish or polished and authoritative.",
+          "what_learner_does": "Styles a typography specimen sheet featuring balanced heading and body type scales, contrast-verified colors, and elevation cards.",
+          "expected_outcome": "A sophisticated typographic rhythm and cohesive visual styling applied across all core HTML elements."
+        },
+        {
+          "lesson_number": "2.5",
+          "lesson_title": "CSS Custom Properties, Design Tokens & DevTools QA",
+          "what_is_taught": "CSS variables (:root), primitive vs semantic design tokens, mathematical functions (calc(), clamp(), min(), max()), and Chrome DevTools debugging.",
+          "subtopics": [
+            "Declaring and consuming CSS custom properties (--color-brand, var(--color-brand))",
+            "Primitive design values vs semantic tokens (--color-primary vs --color-text-body)",
+            "Establishing consistent design token scales for colors, spacing (8px rhythm), radii, and font sizes",
+            "CSS math functions: calc() for dynamic offsets, clamp() for fluid sizing, min() and max()",
+            "Chrome DevTools Styles panel: inspecting computed properties, toggling declarations, and editing values live",
+            "Debugging selector matching, overridden properties, and box model visualizers in DevTools"
+          ],
+          "why_it_matters": "Custom properties enable rapid site-wide theme adjustments, maintainable codebases, and seamless design token synchronization.",
+          "what_learner_does": "Refactors an entire stylesheet to use a comprehensive design token architecture defined in the :root selector.",
+          "expected_outcome": "A production-grade, token-driven stylesheet where colors, spacing, and typography update globally from single variable definitions."
         }
       ],
+      "hands_on_practice": "Take the unstyled Module 01 semantic web page and style it into a branded, professional business layout using CSS custom properties.",
+      "assignment": "Deliverable: Professional Business Page Styling featuring clean typography, custom property tokens, box-sizing resetting, and zero !important flags.",
+      "business_application": "Forms the modular styling foundation for modern commercial websites and design systems.",
+      "expected_outcome": "Students can independently write modular, organized, and maintainable CSS without relying on external style frameworks.",
+      "portfolio_contribution": "Provides the complete visual presentation and design token architecture for Portfolio Project 01."
+    },
+    {
+      "module_number": "Module 03",
+      "number": 3,
+      "module": "Module 03",
+      "title": "Modern Responsive Layouts",
+      "module_title": "Modern Responsive Layouts",
+      "duration": "10 Hours",
+      "hours": 10,
+      "lessons_count": 5,
+      "objective": "Teach students to build fluid, responsive websites that adapt seamlessly across mobile, tablet, desktop, and intermediate screen widths using modern CSS Flexbox, Grid, and container queries.",
+      "module_purpose": "THIS IS THE CORE TECHNICAL MODULE. Master mobile-first design, fluid relative units, CSS Flexbox (1D), CSS Grid (2D), media queries, container queries, responsive images, and viewport stress testing.",
+      "what_you_will_learn": [
+        "Adopt a strict mobile-first responsive design methodology using fluid relative units (rem, em, %, vw, vh, clamp()).",
+        "Master CSS Flexbox for one-dimensional layouts: flex directions, axis alignments, wrapping, gaps, and flexible item sizing.",
+        "Master CSS Grid for two-dimensional layouts: explicit/implicit tracks, fractional fr units, repeat(), minmax(), and auto-fit/auto-fill.",
+        "Implement mobile-first media queries targeting content-driven breakpoints rather than arbitrary device widths.",
+        "Implement modern CSS container queries (@container) to create self-responsive components that adapt to their container width.",
+        "Deliver responsive images using max-width: 100%, object-fit, srcset, sizes, and <picture> elements.",
+        "Test and debug layouts across 5 representative viewports (320px, 390px, 768px, 1024px, 1440px) ensuring zero horizontal scrollbar bugs."
+      ],
       "key_concepts": [
-        "Industry Standards",
-        "Best Practices",
-        "Core Implementation"
+        "Mobile-First Philosophy",
+        "Relative Units & clamp()",
+        "CSS Flexbox (1D)",
+        "CSS Grid (2D)",
+        "Media Queries",
+        "CSS Container Queries",
+        "Responsive Images",
+        "Viewport QA (320px–1440px)"
       ],
       "tools": [
+        "CSS Flexbox",
+        "CSS Grid",
+        "Chrome DevTools Device Mode",
+        "Responsive Viewer"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "3.1",
+          "lesson_title": "Responsive Principles, Mobile-First & Relative Units",
+          "what_is_taught": "Responsive web design foundations, viewport meta tag, mobile-first vs desktop-first philosophy, relative sizing units (rem, em, %, vw, vh, dvh), and fluid clamp() typography.",
+          "subtopics": [
+            "Why fixed-pixel desktop layouts fail on modern multi-screen devices",
+            "The viewport meta tag and its role in preventing mobile browser zoom emulation",
+            "Mobile-first development: establishing small-screen baseline CSS and progressively enhancing with min-width queries",
+            "Relative units: why rem is preferred for typography and spacing, em for component-relative scaling, and % for fluid widths",
+            "Modern viewport units: vw, vh, vmin, vmax, and dynamic dvh/svh to handle mobile browser address bars",
+            "Fluid typography and spacing formulas using clamp(min, preferred, max)"
+          ],
+          "why_it_matters": "Mobile-first development ensures smaller mobile devices download only necessary styles and render fast, clean interfaces.",
+          "what_learner_does": "Calculates and implements fluid typography and spacing scales that scale smoothly between 320px and 1440px without abrupt jumps.",
+          "expected_outcome": "A fluid layout foundation where font sizes and container padding scale proportionally across all viewport widths."
+        },
+        {
+          "lesson_number": "3.2",
+          "lesson_title": "CSS Flexbox: One-Dimensional Layout Architecture",
+          "what_is_taught": "Flexbox layout engine, main and cross axes, flex container properties, item alignment, multi-line wrapping, gap spacing, and flexible item sizing.",
+          "subtopics": [
+            "Initializing flex containers: display: flex and display: inline-flex",
+            "Understanding main axis vs cross axis orientation with flex-direction (row, column, row-reverse, column-reverse)",
+            "Aligning items along the main axis using justify-content (flex-start, center, space-between, space-around, space-evenly)",
+            "Aligning items along the cross axis using align-items and per-item align-self overrides",
+            "Enabling multi-line wrapping with flex-wrap: wrap and spacing items using gap, row-gap, and column-gap",
+            "Controlling item growth and shrinkage: flex-grow, flex-shrink, flex-basis, and the flex shorthand",
+            "Building responsive navigation bars, centered hero callouts, and aligned button rows"
+          ],
+          "why_it_matters": "Flexbox is the definitive modern standard for 1D component layouts, replacing fragile floats and inline-block hacks.",
+          "what_learner_does": "Builds a flexible header with logo and navigation links that reflows gracefully from a horizontal bar to a stacked mobile menu.",
+          "expected_outcome": "A perfectly aligned, responsive navigation header and button group built entirely with Flexbox."
+        },
+        {
+          "lesson_number": "3.3",
+          "lesson_title": "CSS Grid: Two-Dimensional Page Layouts",
+          "what_is_taught": "CSS Grid architecture, grid tracks, columns, rows, fractional fr units, repeat(), minmax(), auto-fit, auto-fill, grid gaps, and explicit item placement.",
+          "subtopics": [
+            "Initializing grid containers: display: grid and grid-template-columns / grid-template-rows",
+            "The fractional unit (fr) and how it distributes available free space proportionally",
+            "Dynamic track generation using repeat() and flexible sizing bounds with minmax(min, max)",
+            "Building auto-responsive card grids without media queries using repeat(auto-fit, minmax(280px, 1fr))",
+            "Spacing grid cells cleanly using the modern gap property",
+            "Explicit item placement across grid lines using grid-column and grid-row spanning",
+            "Knowing when to use Flexbox (1D content flow) versus CSS Grid (2D structured page layouts)"
+          ],
+          "why_it_matters": "CSS Grid provides native two-dimensional layout power that makes complex card galleries and multi-column web pages trivial to build.",
+          "what_learner_does": "Constructs an auto-responsive product/service card gallery that automatically reflows from 1 column on mobile to 4 columns on widescreen.",
+          "expected_outcome": "A responsive, two-dimensional card grid that adapts dynamically to viewport width without requiring multiple media queries."
+        },
+        {
+          "lesson_number": "3.4",
+          "lesson_title": "Media Queries, Breakpoints & Content Adaptation",
+          "what_is_taught": "Media query syntax, mobile-first min-width query structures, content-driven breakpoint selection, avoiding device-specific traps, and layout reflow.",
+          "subtopics": [
+            "Media query syntax: @media (min-width: 48em) and @media (min-width: 64em) using relative units",
+            "Mobile-first breakpoint progression: base (mobile) -> min-width: 768px (tablet) -> min-width: 1024px (desktop)",
+            "Content-driven breakpoints: introducing a media query when content naturally breaks, not because an iPhone has that width",
+            "Restructuring page sections across breakpoints: converting stacked mobile stacks into side-by-side columns",
+            "Adapting navigation, header heights, and footer multi-column layouts across tablet and desktop viewports",
+            "Diagnosing and eliminating unintended horizontal scrollbars caused by oversized fixed widths"
+          ],
+          "why_it_matters": "Carefully planned media queries ensure content hierarchy remains readable and touch-friendly on small screens while taking advantage of desktop screen real estate.",
+          "what_learner_does": "Implements progressive media queries to reflow a multi-section landing page seamlessly across phone, tablet, and desktop viewports.",
+          "expected_outcome": "A cohesive responsive layout that reflows smoothly without awkward layout jumps or horizontal overflow."
+        },
+        {
+          "lesson_number": "3.5",
+          "lesson_title": "CSS Container Queries, Responsive Images & Viewport QA",
+          "what_is_taught": "Container queries (@container), container-type: inline-size, container-based card reflow, responsive images (srcset, sizes, <picture>), and 5-viewport DevTools QA.",
+          "subtopics": [
+            "The fundamental limitation of viewport media queries for modular, reusable components",
+            "Establishing query containers with container-type: inline-size and optional container-name",
+            "Writing container queries: @container (min-width: 35rem) to adapt card layouts based on parent width",
+            "Responsive images: fluid max-width: 100%, height: auto, and aspect-ratio to prevent layout shift",
+            "Resolution switching with srcset and sizes, and art direction using the <picture> element",
+            "Chrome DevTools Device Mode testing protocol across 5 target widths: 320px, 390px, 768px, 1024px, and 1440px",
+            "Stress-testing layouts with long strings, German words, and 200% browser zoom"
+          ],
+          "why_it_matters": "Container queries represent the biggest modern leap in CSS, allowing components to adapt to their surrounding space anywhere on a page.",
+          "what_learner_does": "Creates a card component that switches from a stacked card to an editorial horizontal card when placed in a wide container, and audits across all 5 test widths.",
+          "expected_outcome": "A modern container-query component and verified responsive page that passes stress-testing at 320px, 390px, 768px, 1024px, and 1440px."
+        }
+      ],
+      "hands_on_practice": "Build a responsive multi-section landing page incorporating Flexbox navigation, an auto-responsive CSS Grid card gallery, a container-query card component, and responsive images.",
+      "assignment": "Deliverable: Responsive Layout System tested across 320px, 390px, 768px, 1024px, and 1440px viewports with zero horizontal scrolling.",
+      "business_application": "Delivers the core technical responsive capability required for all professional client websites and agency frontend projects.",
+      "expected_outcome": "Students can architect and debug truly responsive, modern web layouts that work flawlessly on every screen size.",
+      "portfolio_contribution": "Forms the complete responsive layout architecture for both Portfolio Project 01 and Portfolio Project 02."
+    },
+    {
+      "module_number": "Module 04",
+      "number": 4,
+      "module": "Module 04",
+      "title": "UI Components & Interactions",
+      "module_title": "UI Components & Interactions",
+      "duration": "8 Hours",
+      "hours": 8,
+      "lessons_count": 5,
+      "objective": "Teach students to create reusable, accessible HTML and CSS interface components and lightweight visual micro-interactions with reduced-motion support.",
+      "module_purpose": "Master component thinking without frameworks, interactive button states, accessible navigation, card patterns, accessible form styling, CSS transitions, keyframes, and prefers-reduced-motion.",
+      "what_you_will_learn": [
+        "Adopt component-driven CSS thinking without requiring complex JavaScript frameworks.",
+        "Design accessible button systems distinguishing buttons (<button>) from links (<a>), with hover, focus, active, and disabled states.",
+        "Implement accessible navigation and native disclosure accordions using <details> and <summary> without fragile checkbox hacks.",
+        "Build versatile card components (services, features, testimonials, pricing) with cohesive spacing and typography.",
+        "Style accessible form controls (inputs, textareas, selects, custom checkboxes/radios) with user-invalid feedback states.",
+        "Create smooth CSS transitions and subtle keyframe animations using hardware-accelerated transform and opacity properties.",
+        "Support user accessibility preferences using the @media (prefers-reduced-motion: reduce) media query."
+      ],
+      "key_concepts": [
+        "Component-Driven CSS",
+        "Links vs Buttons",
+        "Interactive States (:hover, :focus-visible)",
+        "Native Disclosures (<details>)",
+        "Card Design Systems",
+        "Accessible Form Controls",
+        "Hardware-Accelerated Transitions",
+        "prefers-reduced-motion"
+      ],
+      "tools": [
+        "HTML5",
+        "CSS3",
+        "VS Code",
+        "Chrome DevTools"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "4.1",
+          "lesson_title": "Component Thinking, Links vs Buttons & State Architecture",
+          "what_is_taught": "Component thinking in vanilla CSS, links (navigation) vs buttons (actions), interactive states (:hover, :focus, :focus-visible, :active, :disabled), and visible focus rings.",
+          "subtopics": [
+            "Component thinking without frameworks: reusable classes, modifiers, and consistent naming",
+            "Crucial semantic distinction: <a> navigates to a new URL/anchor; <button> triggers an action or script",
+            "Styling all interactive states: default, :hover, :focus-visible (keyboard focus), :active (press), and :disabled",
+            "Why outline: none without a custom focus indicator is an accessibility failure",
+            "Designing high-contrast custom focus rings with outline, outline-offset, and box-shadow",
+            "Building primary, secondary, and outline button component variants"
+          ],
+          "why_it_matters": "Using the wrong element for links or buttons breaks keyboard accessibility, screen-reader announcements, and expected browser behavior.",
+          "what_learner_does": "Builds a reusable button component suite and tests all hover and focus states using mouse and keyboard.",
+          "expected_outcome": "A modular button library with accessible keyboard focus indicators and tactile interactive states."
+        },
+        {
+          "lesson_number": "4.2",
+          "lesson_title": "Accessible Navigation & Native Disclosure Accordions",
+          "what_is_taught": "Navigation landmark patterns, accessible disclosure elements (<details> and <summary>), styling disclosure triangles, and limitations of CSS-only mobile menus.",
+          "subtopics": [
+            "Semantic navigation structure: <nav aria-label=\"Main\"> and unordered lists <ul><li><a>",
+            "Desktop horizontal menus vs mobile wrapping navigation patterns",
+            "The limitations of CSS-only hamburger menus and why hidden checkbox hacks are fragile and inaccessible",
+            "Native disclosure elements: <details> and <summary> for accessible FAQ accordions and mobile drawers",
+            "Styling <details[open]> states and animating disclosures smoothly using modern CSS",
+            "Progressive enhancement: understanding when interactive navigation requires JavaScript in production"
+          ],
+          "why_it_matters": "Navigation is the primary way users explore a website; accessible patterns ensure keyboard and screen-reader users can access all sections.",
+          "what_learner_does": "Builds an accessible FAQ accordion and a clean responsive navigation bar using semantic landmarks and native <details>.",
+          "expected_outcome": "An accessible navigation bar and interactive disclosure accordion that operate seamlessly with keyboard navigation."
+        },
+        {
+          "lesson_number": "4.3",
+          "lesson_title": "Modern Card Design Patterns & Content Layouts",
+          "what_is_taught": "Card anatomy, service cards, feature cards, media cards with responsive imagery, testimonial quote cards, pricing table layouts, and elevation depth.",
+          "subtopics": [
+            "Card anatomy: visual media container, content body, metadata tags, and action buttons",
+            "Building service cards with custom icons and concise descriptive copy",
+            "Feature cards with hover elevation transitions using box-shadow and transform: translateY(-4px)",
+            "Testimonial cards featuring <blockquote>, <cite>, and accessible customer attributions",
+            "Pricing card layouts: highlighting featured tiers, displaying billing cadences, and list checks",
+            "Ensuring clickable cards remain accessible without wrapping entire cards in invalid massive anchor tags"
+          ],
+          "why_it_matters": "Cards are the most versatile UI component in modern web design, used across portfolios, e-commerce, and service sites.",
+          "what_learner_does": "Constructs a coordinated set of 3 card layouts (service, testimonial, and pricing) using shared design tokens.",
+          "expected_outcome": "A polished card component collection with consistent padding, typography, hover elevation, and responsive reflow."
+        },
+        {
+          "lesson_number": "4.4",
+          "lesson_title": "Accessible Form Styling & Native User Feedback",
+          "what_is_taught": "Styling form controls, custom focus states, floating labels vs static labels, fieldset/legend grouping, error presentation with :user-invalid, and backend boundaries.",
+          "subtopics": [
+            "Styling text inputs, textareas, and select dropdowns with consistent padding, borders, and typography",
+            "Styling custom checkboxes and radio buttons accessibly using hidden native inputs and peer sibling selectors",
+            "Grouping related controls with <fieldset> and <legend> (e.g., billing address, service preferences)",
+            "Modern validation pseudo-classes: styling error states using :invalid and the modern :user-invalid pseudo-class",
+            "Clear commercial transparency: explaining why static HTML forms require an external handler or server to process submissions",
+            "Designing clear success and error confirmation layouts for client-side forms"
+          ],
+          "why_it_matters": "Poorly styled or unlabelled forms create high friction, causing users to abandon contact or registration flows.",
+          "what_learner_does": "Styles a complete, accessible contact form with custom focus rings and real-time validation error feedback.",
+          "expected_outcome": "A professional, accessible form interface that provides clear visual feedback and guides users through required inputs."
+        },
+        {
+          "lesson_number": "4.5",
+          "lesson_title": "CSS Transitions, Keyframe Animations & Reduced Motion",
+          "what_is_taught": "CSS transitions, timing functions, cubic-bezier, transform and opacity optimization, keyframe animations (@keyframes), and prefers-reduced-motion accessibility.",
+          "subtopics": [
+            "CSS transition properties: transition-property, transition-duration, transition-timing-function (ease, linear, ease-in-out)",
+            "Performance rule: animating only composite-friendly properties (transform and opacity) to prevent layout thrashing",
+            "Keyframe animations: @keyframes rule, animation-name, animation-duration, and animation-iteration-count",
+            "Creating subtle micro-interactions: button pulses, fading in elements, and smooth accordion expansions",
+            "Vestibular accessibility and motion sickness: understanding user sensitivities to continuous motion",
+            "Implementing @media (prefers-reduced-motion: reduce) to disable or soften animations for users who request reduced motion"
+          ],
+          "why_it_matters": "Subtle animations bring interfaces to life, but excessive or non-negotiable motion can cause dizziness and vestibular distress for sensitive users.",
+          "what_learner_does": "Adds smooth hover and card entrance animations, and writes a prefers-reduced-motion media query that safely replaces motion with instant fades.",
+          "expected_outcome": "A set of performant, delightful UI interactions that respect user motion preferences automatically."
+        }
+      ],
+      "hands_on_practice": "Build a coordinated web component collection featuring button variants, an accessible disclosure accordion, interactive cards, and reduced-motion animated elements.",
+      "assignment": "Deliverable: Reusable Website Component Collection featuring accessible navigation, button states, 3 card variants, accessible form interface, and reduced-motion media queries.",
+      "business_application": "Provides the reusable component foundation needed to build fast, consistent multi-page websites and design systems.",
+      "expected_outcome": "Students can design and code accessible, reusable UI components using pure HTML and CSS with attention to interaction details.",
+      "portfolio_contribution": "Directly supplies the interactive components (buttons, cards, navigation, form) used in both portfolio websites."
+    },
+    {
+      "module_number": "Module 05",
+      "number": 5,
+      "module": "Module 05",
+      "title": "Accessibility, Performance & SEO",
+      "module_title": "Accessibility, Performance & SEO",
+      "duration": "6 Hours",
+      "hours": 6,
+      "lessons_count": 5,
+      "objective": "Introduce professional industry standards for accessible, high-performance, discoverable, and thoroughly tested static web pages.",
+      "module_purpose": "Master WCAG 2.2 AA accessibility foundations, manual keyboard audits, color contrast, web performance optimization, image delivery, Core Web Vitals (LCP, INP, CLS), and foundational technical SEO.",
+      "what_you_will_learn": [
+        "Apply WCAG 2.2 Level AA accessibility guidelines: landmarks, headings, descriptive link text, and alternative text.",
+        "Perform manual keyboard navigation audits: verify tab order, visible focus rings, and confirm zero keyboard traps.",
+        "Measure and verify color contrast ratios (minimum 4.5:1 for normal text, 3:1 for large text) using DevTools.",
+        "Optimize web performance: modern image formats (WebP, AVIF), explicit dimensions, and native lazy loading.",
+        "Understand Core Web Vitals: Largest Contentful Paint (LCP), Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS).",
+        "Conduct Google Lighthouse audits in Chrome DevTools and interpret lab reports vs field data.",
+        "Implement foundational technical SEO: unique titles, meta descriptions, canonical URLs, and Open Graph tags."
+      ],
+      "key_concepts": [
+        "WCAG 2.2 Level AA",
+        "Keyboard Navigation Testing",
+        "Color Contrast (4.5:1 / 3:1)",
+        "Image Optimization & Formats",
+        "Core Web Vitals (LCP, INP, CLS)",
+        "Google Lighthouse Auditing",
+        "Technical SEO & Metadata",
+        "Canonical & Open Graph Tags"
+      ],
+      "tools": [
+        "Chrome DevTools Lighthouse",
+        "W3C Validator",
+        "Color Contrast Analyzer",
+        "TinyPNG / Squoosh"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "5.1",
+          "lesson_title": "Web Accessibility Foundations & WCAG 2.2 AA",
+          "what_is_taught": "Web accessibility principles, WCAG 2.2 Level AA guidelines, semantic HTML as accessibility's backbone, ARIA First Rule, heading structure, and accessible link text.",
+          "subtopics": [
+            "Why web accessibility is both an ethical imperative and a commercial necessity for digital products",
+            "WCAG 2.2 principles: Perceivable, Operable, Understandable, and Robust (POUR)",
+            "The First Rule of ARIA: use native HTML5 semantic elements rather than adding ARIA roles to <div> elements",
+            "Validating document outline: ensuring sequential heading hierarchy without skipped heading levels",
+            "Writing meaningful, context-independent link text (eliminating 'click here', 'read more', or naked URLs)",
+            "Appropriate alternative text: informative descriptions vs empty alt=\"\" for decorative background elements"
+          ],
+          "why_it_matters": "Accessible websites reach wider audiences, rank higher in search engines, and comply with global digital accessibility standards.",
+          "what_learner_does": "Audits a sample web page with missing landmarks, skipped headings, and unlabelled links, refactoring it for WCAG AA compliance.",
+          "expected_outcome": "A semantic, accessible document structure that communicates meaning clearly to screen readers and assistive tech."
+        },
+        {
+          "lesson_number": "5.2",
+          "lesson_title": "Keyboard Operability, Focus Visibility & Color Contrast",
+          "what_is_taught": "Manual keyboard testing protocols (Tab, Shift+Tab, Enter, Space), logical tab order, preventing keyboard traps, high-contrast focus indicators, and color contrast calculations.",
+          "subtopics": [
+            "The manual keyboard test: navigating an entire website using only the Tab, Shift+Tab, Enter, and Space keys",
+            "Ensuring a logical DOM focus order that matches the visual layout flow",
+            "Identifying and fixing keyboard traps where focus cannot escape an interactive component",
+            "Styling high-contrast visible focus indicators using :focus-visible across all interactive elements",
+            "WCAG AA contrast requirements: 4.5:1 for normal text (< 18pt), 3:1 for large text (>= 18pt or 14pt bold)",
+            "Using Chrome DevTools color pickers and Color Contrast Analyzers to measure and fix failing color ratios"
+          ],
+          "why_it_matters": "Millions of users navigate websites exclusively via keyboards or switches; if focus disappears or traps occur, the site is unusable.",
+          "what_learner_does": "Performs a complete manual keyboard audit on their portfolio project, logging tab order and verifying focus indicator visibility on every interactive element.",
+          "expected_outcome": "A fully keyboard-navigable website with zero keyboard traps, visible focus rings, and contrast-verified text colors."
+        },
+        {
+          "lesson_number": "5.3",
+          "lesson_title": "Web Performance, Asset Optimization & Loading Behavior",
+          "what_is_taught": "Browser rendering pipeline (DOM, CSSOM, Render Tree, Paint), image optimization, WebP/AVIF formats, explicit image dimensions, native lazy loading, and LCP prioritization.",
+          "subtopics": [
+            "How browsers load web pages: critical rendering path, render-blocking CSS, and layout shifts",
+            "Modern image formats: comparing file size and quality of WebP and AVIF against JPEG and PNG",
+            "Image compression workflows: reducing asset weight by 60–80% without noticeable visual degradation",
+            "Preventing Cumulative Layout Shift (CLS) by always providing width and height or aspect-ratio on images",
+            "Native lazy loading (loading=\"lazy\") for images and iframes below the initial viewport fold",
+            "Crucial performance rule: never lazy-load the primary hero image (Largest Contentful Paint candidate)"
+          ],
+          "why_it_matters": "Slow-loading websites frustrate users, increase bounce rates, and harm conversion and organic search rankings.",
+          "what_learner_does": "Optimizes all raster images in a project to modern WebP format, adds dimension attributes, and applies lazy loading appropriately.",
+          "expected_outcome": "A lightweight web asset bundle with significantly reduced page weight and zero image-induced layout shifts."
+        },
+        {
+          "lesson_number": "5.4",
+          "lesson_title": "Core Web Vitals & Google Lighthouse Auditing",
+          "what_is_taught": "Core Web Vitals metrics (LCP <= 2.5s, INP <= 200ms, CLS <= 0.1), running Google Lighthouse audits in Chrome DevTools, and interpreting lab scores vs field data.",
+          "subtopics": [
+            "Core Web Vitals breakdown: Largest Contentful Paint (loading), Interaction to Next Paint (responsiveness), and Cumulative Layout Shift (stability)",
+            "Current good-experience thresholds: LCP <= 2.5s, INP <= 200ms, CLS <= 0.1",
+            "Running Lighthouse audits in Chrome DevTools under mobile and desktop simulation profiles",
+            "Analyzing Lighthouse audit categories: Performance, Accessibility, Best Practices, and SEO",
+            "Understanding the distinction between synthetic lab audit reports and real-world 75th percentile field data",
+            "Identifying common Lighthouse recommendations: render-blocking stylesheets, uncompressed images, missing meta tags"
+          ],
+          "why_it_matters": "Google uses Core Web Vitals as key ranking signals; understanding them enables developers to build fast, stable user experiences.",
+          "what_learner_does": "Runs a baseline Lighthouse audit on their project, fixes identified performance and accessibility warnings, and documents score improvements.",
+          "expected_outcome": "A verified Lighthouse audit report demonstrating high marks across performance, accessibility, and best practices."
+        },
+        {
+          "lesson_number": "5.5",
+          "lesson_title": "Foundational Technical SEO & Metadata Architecture",
+          "what_is_taught": "On-page SEO fundamentals, search crawler behavior, <title> optimization, meta descriptions, canonical URLs, Open Graph social tags, and mobile usability.",
+          "subtopics": [
+            "How search engine spiders crawl and index static HTML web pages",
+            "Writing effective <title> tags: unique, descriptive, keyword-aligned, within 50–60 characters",
+            "Crafting compelling <meta name=\"description\"> tags: benefit-driven summaries within 140–160 characters",
+            "Declaring canonical URLs (<link rel=\"canonical\" href=\"...\">) to prevent duplicate content issues",
+            "Implementing Open Graph tags (og:title, og:description, og:image, og:url) for rich social media cards",
+            "Robots meta tags (<meta name=\"robots\" content=\"index, follow\">) and validating search discoverability"
+          ],
+          "why_it_matters": "Without proper metadata and clean HTML structure, even the most beautiful website remains invisible to search engines and social platforms.",
+          "what_learner_does": "Adds comprehensive SEO and Open Graph metadata to all HTML pages in their project and previews social sharing snippets.",
+          "expected_outcome": "Fully optimized HTML metadata ready for search engine indexing and rich social sharing previews."
+        }
+      ],
+      "hands_on_practice": "Conduct a full accessibility, performance, and SEO audit on a developing website project, resolving all detected warnings.",
+      "assignment": "Deliverable: Website Accessibility & Performance Audit log documenting keyboard checks, contrast results, image optimizations, and before/after Lighthouse reports.",
+      "business_application": "Ensures commercial client websites meet legal accessibility guidelines, load rapidly on mobile networks, and rank effectively in organic search.",
+      "expected_outcome": "Students can independently audit and optimize static web pages against industry quality, accessibility, and performance benchmarks.",
+      "portfolio_contribution": "Provides the documented QA, accessibility, and performance verification required for both assessed portfolio projects."
+    },
+    {
+      "module_number": "Module 06",
+      "number": 6,
+      "module": "Module 06",
+      "title": "Website Capstone & Publishing",
+      "module_title": "Website Capstone & Publishing",
+      "duration": "6 Hours",
+      "hours": 6,
+      "lessons_count": 5,
+      "objective": "Integrate HTML and CSS knowledge into complete responsive websites, perform final testing, manage source control with Git, and publish static projects to GitHub Pages.",
+      "module_purpose": "Master Figma-to-code translation, Chrome DevTools debugging, Git version control, GitHub repository management, GitHub Pages static publishing, README documentation, and final portfolio presentation.",
+      "what_you_will_learn": [
+        "Deconstruct design mockups in Figma, extract spacing/color/font tokens, and translate Auto Layout frames into semantic HTML/CSS.",
+        "Master Chrome DevTools for layout inspection, CSS debugging, network observation, and responsive device testing.",
+        "Initialize Git repositories, make descriptive atomic commits, and push project code to remote repositories on GitHub.",
+        "Publish static websites to live HTTPS URLs using GitHub Pages with correct relative asset paths.",
+        "Write professional, structured README.md documentation detailing features, responsive design, accessibility, and setup instructions.",
+        "Perform final quality assurance passes: W3C HTML validation, keyboard checks, Lighthouse audits, and multi-width testing.",
+        "Present and explain both completed portfolio projects with full code ownership and technical confidence."
+      ],
+      "key_concepts": [
+        "Figma-to-Code Translation",
+        "Chrome DevTools Debugging",
+        "Git Version Control",
+        "GitHub Repositories",
+        "GitHub Pages Static Hosting",
+        "README Documentation",
+        "W3C & Lighthouse QA",
+        "Portfolio Presentation"
+      ],
+      "tools": [
+        "Figma",
         "VS Code",
         "Chrome DevTools",
-        "Figma"
+        "Git",
+        "GitHub",
+        "GitHub Pages"
       ],
-      "hands_on_practice": "Guided lab focused on Advanced CSS Layouts: Flexbox & Grid.",
-      "assignment": "Deliverable: Complete implementation of Advanced CSS Layouts: Flexbox & Grid.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "lessons": [
+        {
+          "lesson_number": "6.1",
+          "lesson_title": "Figma-to-Code Translation & Implementation Planning",
+          "what_is_taught": "Deconstructing Figma UI designs, inspecting layout dimensions, extracting colors, typography, and spacing tokens, mapping Auto Layout to CSS Flexbox/Grid, and asset export.",
+          "subtopics": [
+            "Navigating Figma's interface and using Dev Mode / Inspect properties to read CSS values",
+            "Extracting visual tokens: measuring margins, padding, font families, font weights, and HEX colors",
+            "Translating Figma Auto Layout frames (hug, fill, fixed) into CSS Flexbox and Grid rules",
+            "Planning semantic HTML architecture from visual frames before writing code",
+            "Exporting optimized SVG vector icons and WebP raster imagery at appropriate display scales",
+            "Understanding boundaries: why Figma code exports are not production-ready and require human coding"
+          ],
+          "why_it_matters": "Real-world web developers regularly receive Figma mockups from UI designers and must accurately translate visual designs into living browser code.",
+          "what_learner_does": "Inspects a provided Figma landing page brief, extracts design tokens, and plans out the semantic HTML structure and CSS custom properties.",
+          "expected_outcome": "A complete HTML/CSS implementation blueprint translated faithfully from a visual Figma design."
+        },
+        {
+          "lesson_number": "6.2",
+          "lesson_title": "Chrome DevTools Layout Inspection & Real-Time Debugging",
+          "what_is_taught": "Mastering Chrome DevTools: Elements panel, Computed styles, Box model visualizer, Network panel, Console warnings, and responsive layout troubleshooting.",
+          "subtopics": [
+            "Elements panel: live editing HTML tags, attributes, and text nodes to test fixes quickly",
+            "Styles panel: toggling CSS declarations, testing new properties, and tracing overridden styles",
+            "Computed styles panel: discovering exactly which rule determined an element's final font size or margin",
+            "Diagnosing mystery horizontal scrolling by identifying elements exceeding container widths",
+            "Network panel: checking asset transfer sizes, load timings, and identifying 404 broken image paths",
+            "Testing layouts with forced pseudo-classes (:hover, :focus, :active) in DevTools"
+          ],
+          "why_it_matters": "DevTools is the professional developer's primary diagnostic tool; mastering it cuts debugging time from hours to minutes.",
+          "what_learner_does": "Diagnoses and resolves three intentional layout bugs (broken z-index, margin collapse overflow, and 404 asset paths) using DevTools.",
+          "expected_outcome": "Fluency in identifying, isolating, and fixing CSS layout bugs directly within browser DevTools."
+        },
+        {
+          "lesson_number": "6.3",
+          "lesson_title": "Git Fundamentals, Repositories & Commit Hygiene",
+          "what_is_taught": "Version control concepts, Git initialization, tracking changes (git add), writing descriptive commit messages (git commit), GitHub repositories, and pushing code.",
+          "subtopics": [
+            "Why version control is essential: tracking project history, safe experimentation, and backup",
+            "Git core workflow: git init, git status, git add, and git commit -m \"...\"",
+            "Writing clear, meaningful commit messages that document what changed and why",
+            "Creating remote repositories on GitHub and linking local Git projects (git remote add origin)",
+            "Pushing code to GitHub (git push -u origin main) and managing .gitignore files",
+            "Reviewing Git commit history (git log --oneline) and inspecting code diffs"
+          ],
+          "why_it_matters": "Git is the universal language of software development; employers and clients expect code to be version-controlled on GitHub.",
+          "what_learner_does": "Initializes a Git repository for their portfolio project, makes structured atomic commits, and pushes the project to GitHub.",
+          "expected_outcome": "A clean, well-maintained GitHub repository with a transparent commit history tracking project development."
+        },
+        {
+          "lesson_number": "6.4",
+          "lesson_title": "GitHub Pages Static Publishing & Hosting Limitations",
+          "what_is_taught": "GitHub Pages static hosting, repository configuration, relative vs absolute asset paths in hosted environments, deployment troubleshooting, and README documentation.",
+          "subtopics": [
+            "How GitHub Pages works: serving static files (HTML, CSS, JS, images) directly from a repository branch",
+            "Configuring GitHub Pages settings: selecting branch (/root or /docs) and obtaining a live HTTPS URL",
+            "The critical relative asset path rule: why /css/style.css breaks on project subpaths and ./css/style.css succeeds",
+            "Case-sensitivity on hosting servers: ensuring image filenames match markup casing exactly",
+            "Static hosting boundaries: why GitHub Pages cannot run Node.js backends, process forms, or query databases",
+            "Crafting a comprehensive README.md: project overview, live URL, features, responsive approach, and setup guide"
+          ],
+          "why_it_matters": "Publishing code to a live public URL transforms local code into a tangible, shareable commercial portfolio asset.",
+          "what_learner_does": "Deploys both website projects to GitHub Pages, verifies live asset loading over HTTPS, and documents the repositories with professional READMEs.",
+          "expected_outcome": "Two live, publicly accessible static websites hosted on GitHub Pages with verified HTTPS URLs and structured README files."
+        },
+        {
+          "lesson_number": "6.5",
+          "lesson_title": "Portfolio Integration, AI Code Review & Final Presentation",
+          "what_is_taught": "Final portfolio review against assessment rubrics, responsible AI-assisted code review, code ownership verification, W3C validation, and portfolio presentation.",
+          "subtopics": [
+            "Reviewing both portfolio websites against the Nova Skills 100% assessment rubric",
+            "Final QA checklist: W3C HTML validator, 5-viewport responsive test, keyboard focus audit, and Lighthouse report",
+            "Responsible AI code review: using AI to explain unfamiliar code, identify redundant CSS, and audit accessibility",
+            "Code ownership check: explaining every layout decision, CSS selector, and responsive breakpoint independently",
+            "Preparing the portfolio presentation package: live URLs, GitHub repositories, and testing screenshots",
+            "Next learning pathways: advancing to JavaScript Certification, React, and Full Stack development"
+          ],
+          "why_it_matters": "Being able to present, explain, and defend code decisions is the hallmark of a confident, employable junior web developer.",
+          "what_learner_does": "Conducts a final review of both portfolio websites, completes their QA checklist, and presents their live published work.",
+          "expected_outcome": "Two complete, published, and verified portfolio websites backed by clean GitHub repositories and confident code ownership."
+        }
+      ],
+      "hands_on_practice": "Initialize Git repositories, push project code to GitHub, deploy live static websites via GitHub Pages, and write comprehensive README documentation.",
+      "assignment": "Deliverable: Two Completed Website Projects Handover containing live GitHub Pages URLs, clean GitHub repositories, responsive QA logs, and README documentation.",
+      "business_application": "Completes the professional workflow required to deliver, document, and publish commercial static websites for clients or employers.",
+      "expected_outcome": "Students can build, debug, document, version-control, and publish static responsive websites independently.",
+      "portfolio_contribution": "Finalizes, deploys, and publishes both Portfolio Project 01 and Portfolio Project 02 as public, verified deliverables."
     }
-  ]
+  ],
+  "faq": [
+    {
+      "question": "What is HTML, CSS & Responsive Web Design?",
+      "answer": "HTML, CSS & Responsive Web Design is a practical, beginner-entry certification course that teaches you to build modern, accessible, and fast-loading websites from scratch. You will learn semantic HTML5 to structure web content, modern CSS3 to style interfaces, and responsive layout techniques (Flexbox, CSS Grid, media queries, and container queries) to ensure websites look professional across mobile, tablet, and desktop screens."
+    },
+    {
+      "question": "Is this course suitable for complete beginners?",
+      "answer": "Yes. The course assumes zero previous programming or web development experience. We start with web fundamentals, how browsers work, and basic HTML before advancing systematically into CSS styling, responsive layouts, accessibility, and real website publishing."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course duration is 6 Weeks, comprising 48 intensive learning hours (8 hours per week across guided software labs and hands-on coding exercises). The flat tuition fee is ₹6,900 with transparent pricing and no hidden costs or artificial comparison markups."
+    },
+    {
+      "question": "Do I need any previous coding experience?",
+      "answer": "No prior coding or programming experience is required. All you need is basic computer literacy (managing files and folders, using a web browser, and basic typing). We teach all code from the ground up."
+    },
+    {
+      "question": "Will I learn HTML5 and modern CSS?",
+      "answer": "Yes. You will learn modern HTML5 standards (semantic tags, landmarks, native forms, audio/video, accessible tables) and modern CSS3 features (custom properties/variables, clamp(), calc(), modern viewport units dvh/svh, box-sizing, and CSS transitions)."
+    },
+    {
+      "question": "What is semantic HTML?",
+      "answer": "Semantic HTML means using HTML elements according to their intended meaning rather than their visual appearance. For example, using <header>, <nav>, <main>, <article>, <section>, and <footer> instead of generic <div> tags, and using <button> for clickable actions and <a> for navigation. This improves website accessibility for screen readers, strengthens technical SEO, and keeps code clean and maintainable."
+    },
+    {
+      "question": "Will I learn Flexbox and CSS Grid?",
+      "answer": "Yes. Flexbox and CSS Grid are the core layout engines taught in this course. You will learn Flexbox for one-dimensional layouts (navbars, button groups, aligned rows) and CSS Grid for two-dimensional layouts (multi-column card galleries, responsive product grids, and complex page layouts)."
+    },
+    {
+      "question": "What is mobile-first responsive design?",
+      "answer": "Mobile-first responsive design is a professional methodology where you write CSS styles for small mobile screens first as the baseline layout, and then progressively introduce min-width media queries to enhance the layout for tablets, laptops, and wide desktop displays. This ensures fast mobile performance and clean layout adaptation."
+    },
+    {
+      "question": "Does the course teach container queries?",
+      "answer": "Yes. The course introduces CSS container queries (@container) as a modern CSS capability. You will learn to set container-type: inline-size and write queries that adapt a component's layout based on the width of its parent container rather than only the entire browser viewport."
+    },
+    {
+      "question": "Will I learn to build responsive navigation?",
+      "answer": "Yes. You will learn to build responsive navigation structures that look clean on desktop screens and reflow gracefully on mobile devices, utilizing semantic <nav> landmarks, wrapping Flexbox patterns, and native <details>/<summary> disclosures without relying on fragile checkbox hacks."
+    },
+    {
+      "question": "Will I learn HTML forms?",
+      "answer": "Yes. You will learn to create accessible web forms using <form>, <label>, <input> types (text, email, tel, number, url, checkbox, radio), <select>, <textarea>, and <button>, along with native HTML5 validation attributes like required, pattern, and minlength."
+    },
+    {
+      "question": "Do HTML forms automatically collect enquiries without a backend?",
+      "answer": "No. HTML forms provide the user interface and browser-side validation in static websites. However, receiving, storing, or emailing submitted user data requires an external form processing service (such as Formspree or Netlify Forms) or an authorized backend server. The course teaches this boundary clearly so you understand the difference between client-side interfaces and backend data processing."
+    },
+    {
+      "question": "Will I learn CSS animations?",
+      "answer": "Yes. You will learn performant CSS transitions (timing functions, durations, hover/focus micro-interactions) and subtle keyframe animations (@keyframes) using hardware-accelerated transform and opacity properties, along with the prefers-reduced-motion media query for accessibility."
+    },
+    {
+      "question": "Does the course cover website accessibility?",
+      "answer": "Yes. Web accessibility (WCAG 2.2 Level AA awareness) is integrated throughout the curriculum, covering semantic HTML, landmark regions, logical heading hierarchies, descriptive link text, image alt text, and minimum color contrast ratios (4.5:1 for normal body text)."
+    },
+    {
+      "question": "Will I learn keyboard accessibility?",
+      "answer": "Yes. You will learn to conduct manual keyboard audits using the Tab and Enter keys, verify logical DOM tab order, eliminate keyboard traps, and design visible, high-contrast focus rings using :focus-visible so keyboard users can navigate your websites effortlessly."
+    },
+    {
+      "question": "Does it include Core Web Vitals and Lighthouse?",
+      "answer": "Yes. You will learn current Google Core Web Vitals metrics—Largest Contentful Paint (LCP <= 2.5s), Interaction to Next Paint (INP <= 200ms), and Cumulative Layout Shift (CLS <= 0.1)—and run Google Lighthouse audits in Chrome DevTools to evaluate performance, accessibility, best practices, and SEO."
+    },
+    {
+      "question": "Will I learn SEO basics?",
+      "answer": "Yes. You will learn foundational technical and on-page SEO: crawlable HTML structures, optimized <title> tags (50–60 characters), <meta name=\"description\"> (140–160 characters), canonical URLs, proper heading hierarchy, descriptive anchor text, and Open Graph social sharing tags."
+    },
+    {
+      "question": "Will I learn Chrome DevTools?",
+      "answer": "Yes. Chrome DevTools is a primary tool in this course. You will learn to inspect the DOM tree, manipulate CSS styles live, examine the computed box model, test device widths in Device Mode, debug unexpected overflow, and check console and network logs."
+    },
+    {
+      "question": "Does the course include Figma-to-code?",
+      "answer": "Yes. You will learn Figma-to-code fundamentals: how to open a simple Figma design brief, inspect dimensions and spacing, extract color palettes and typography values, translate Figma Auto Layout frames into CSS Flexbox/Grid, and export optimized assets."
+    },
+    {
+      "question": "Will I learn Git and GitHub?",
+      "answer": "Yes. You will learn Git version control fundamentals (git init, git add, git commit, git status, git log), how to push repositories to GitHub, manage project files, and write professional README.md project documentation."
+    },
+    {
+      "question": "Will I publish websites using GitHub Pages?",
+      "answer": "Yes. You will learn how to configure GitHub Pages to publish your static website repositories to live public HTTPS URLs that anyone can access, verifying correct relative asset paths and live mobile behavior."
+    },
+    {
+      "question": "How many website projects will I build?",
+      "answer": "You will build two complete, assessed portfolio website projects: a responsive commercial business landing page and a multi-page personal or professional portfolio website. Both are deployed live on GitHub Pages with complete source code."
+    },
+    {
+      "question": "What is included in the portfolio?",
+      "answer": "Your portfolio includes two live published websites with public GitHub repositories, structured source code (HTML, CSS, images), responsive testing evidence across 5 viewports (320px to 1440px), manual keyboard accessibility checklists, W3C validation records, Lighthouse audit reports, and comprehensive README documentation."
+    },
+    {
+      "question": "Will I learn JavaScript and React?",
+      "answer": "No. This course focuses exclusively on mastering HTML, CSS, responsive design, accessibility, and static site publishing. JavaScript application logic, DOM programming, and React component frameworks are specialized subjects taught in their own dedicated certification courses."
+    },
+    {
+      "question": "Can I build a complete e-commerce application after this course?",
+      "answer": "You will be able to build beautiful, responsive e-commerce product landing pages, product card galleries, and shopping cart layouts using HTML and CSS. However, functional shopping cart logic, user accounts, databases, and payment gateway transactions require JavaScript and backend technologies covered in advanced courses."
+    },
+    {
+      "question": "Does the course teach backend development?",
+      "answer": "No. Backend development (Node.js, Python, databases, APIs, authentication) is outside the scope of Course 55. This program is dedicated to static frontend website development with HTML and CSS."
+    },
+    {
+      "question": "Will I receive editable source code?",
+      "answer": "Yes. You build all projects from scratch in your own Git repositories and retain complete ownership of all your HTML, CSS, asset, and documentation source files."
+    },
+    {
+      "question": "Is this course a foundation for full-stack development?",
+      "answer": "Yes. HTML, CSS, and responsive design are the essential foundation of all web development. Whether you progress into JavaScript, React, frontend engineering, or full-stack web development, mastering clean HTML/CSS first makes learning advanced programming much smoother."
+    },
+    {
+      "question": "Is this a government or Google certification?",
+      "answer": "No. This is an independent professional certification issued directly by Nova Skills Education Institute under ISO 9001:2015 educational standards. It includes a cryptographically verifiable QR code to validate your completed coursework and portfolio submissions. It is not an official endorsement from Google, GitHub, or any government body."
+    },
+    {
+      "question": "What beginner-level career opportunities are possible?",
+      "answer": "Graduates can explore entry-level opportunities such as Junior Web Design Assistant, Entry-Level HTML/CSS Developer, Static Website Designer, Junior Frontend Production Assistant, Website Maintenance Assistant, Landing Page Specialist, or freelance static website creator for small businesses. Actual career outcomes depend on individual dedication, portfolio quality, and job market conditions; Nova Skills does not guarantee employment or salary outcomes."
+    }
+  ],
+  "primary_keyword": "HTML CSS Course",
+  "secondary_keywords": [
+    "HTML and CSS Course",
+    "HTML CSS Course for Beginners",
+    "HTML CSS Course in India",
+    "Responsive Web Design Course",
+    "HTML5 CSS3 Training",
+    "Semantic HTML Course",
+    "CSS Flexbox Course",
+    "CSS Grid Course",
+    "Mobile-First Web Design",
+    "CSS Container Queries",
+    "HTML CSS Practical Projects",
+    "Static Website Development Course",
+    "Website Design with HTML and CSS",
+    "HTML CSS Accessibility",
+    "HTML CSS Portfolio Projects",
+    "HTML CSS Course Fees",
+    "HTML CSS Course Duration",
+    "Beginner Frontend Course",
+    "Web Design Coding Course",
+    "GitHub Pages Website Deployment"
+  ],
+  "keywords": [
+    "HTML CSS Course",
+    "HTML and CSS Course",
+    "HTML CSS Course for Beginners",
+    "HTML CSS Course in India",
+    "Responsive Web Design Course",
+    "HTML5 CSS3 Training",
+    "Semantic HTML Course",
+    "CSS Flexbox Course",
+    "CSS Grid Course",
+    "Mobile-First Web Design",
+    "CSS Container Queries",
+    "HTML CSS Practical Projects",
+    "Static Website Development Course",
+    "Website Design with HTML and CSS",
+    "HTML CSS Accessibility",
+    "HTML CSS Portfolio Projects",
+    "HTML CSS Course Fees",
+    "HTML CSS Course Duration",
+    "Beginner Frontend Course",
+    "Web Design Coding Course",
+    "GitHub Pages Website Deployment"
+  ],
+  "seo": {
+    "meta_title": "HTML CSS Course | Responsive Web Design | ₹6,900 | Nova Skills",
+    "meta_description": "Learn HTML, CSS, Flexbox, Grid and responsive design. Build and publish 2 accessible websites in 6 weeks, 48 learning hours, for ₹6,900.",
+    "primary_keyword": "HTML CSS Course",
+    "secondary_keywords": [
+      "HTML and CSS Course",
+      "HTML CSS Course for Beginners",
+      "HTML CSS Course in India",
+      "Responsive Web Design Course",
+      "HTML5 CSS3 Training",
+      "Semantic HTML Course",
+      "CSS Flexbox Course",
+      "CSS Grid Course",
+      "Mobile-First Web Design",
+      "CSS Container Queries",
+      "HTML CSS Practical Projects",
+      "Static Website Development Course",
+      "Website Design with HTML and CSS",
+      "HTML CSS Accessibility",
+      "HTML CSS Portfolio Projects",
+      "HTML CSS Course Fees",
+      "HTML CSS Course Duration",
+      "Beginner Frontend Course",
+      "Web Design Coding Course",
+      "GitHub Pages Website Deployment"
+    ],
+    "canonical_url": "https://novaskills.in/course-detail.html?id=html-css",
+    "h1": "HTML, CSS & Responsive Web Design",
+    "hero_hook": "Build Websites That Look Professional, Load Fast and Work on Every Screen."
+  },
+  "meta_title": "HTML CSS Course | Responsive Web Design | ₹6,900 | Nova Skills",
+  "meta_description": "Learn HTML, CSS, Flexbox, Grid and responsive design. Build and publish 2 accessible websites in 6 weeks, 48 learning hours, for ₹6,900."
 }

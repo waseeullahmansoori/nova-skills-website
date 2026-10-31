@@ -1,417 +1,1419 @@
 {
   "course_id": "v-ray-cert",
-  "course_name": "V-Ray",
+  "id": "v-ray-cert",
+  "slug": "v-ray",
+  "course_name": "V-Ray Photorealistic Rendering & Lighting",
+  "title": "V-Ray Photorealistic Rendering & Lighting",
+  "name": "V-Ray Photorealistic Rendering & Lighting",
+  "academic_sequence": 75,
+  "course_number": 75,
+  "curriculum_edition": "2027",
   "academy": "3D Academy",
   "academy_id": "3d",
-  "course_type": "SPECIALIZATION",
-  "course_role": "Career/Monetization",
-  "level": "BEGINNER+",
-  "duration": "1 Month",
-  "learning_hours": 80,
-  "future_review_status": "STABLE",
-  "target_audience": {
-    "best_for": [
-      "Aspiring Architectural Visualizers seeking mastery in photorealistic rendering.",
-      "Architects wanting to create high-end presentations.",
-      "3D Artists shifting to real-time ArchViz workflows."
-    ],
-    "who_should_take_foundation_first": "Learners without basic spatial awareness or CAD reading skills should complete foundational drafting first.",
-    "not_for": [
-      "Individuals looking for character animation.",
-      "Students wanting theoretical architecture without 3D production."
-    ]
+  "academyId": "3d",
+  "academic_positioning": "Physically Based Architectural Rendering, Advanced Lighting, PBR Materials & VFB Image Finishing",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "Junior Architectural Rendering Artist & Lighting Specialist",
+  "courseRole": "Junior Architectural Rendering Artist & Lighting Specialist",
+  "level": "Intermediate Specialization",
+  "priority": "P0",
+  "positioning": "Photorealistic Architectural Rendering, Physically Based Materials, Lighting & VFB Post-Production",
+  "duration": "6 Weeks",
+  "durationMonths": 1.5,
+  "duration_weeks": 6,
+  "learning_hours": 48,
+  "learningHours": 48,
+  "guided_hours": 48,
+  "hours": 48,
+  "weekly_workload": "8 hours per week (guided render labs, lighting look development, and VFB review sessions)",
+  "mode": "Interactive Software Labs & Guided Architectural Studio Simulation",
+  "price": 8900,
+  "fee": 8900,
+  "regular_fee": 8900,
+  "originalPrice": 8900,
+  "commercial_notice": "Flat, transparent tuition of ₹8,900. No hidden fees or exaggerated comparison claims.",
+  "pricing": {
+    "amount": 8900,
+    "currency": "INR",
+    "display": "₹8,900",
+    "comparison_price": 8900,
+    "discount_percent": 0,
+    "transparent_pricing": true
   },
-  "prerequisites": {
-    "required": "Basic understanding of architectural plans.",
-    "recommended": "Familiarity with digital art tools.",
-    "not_required": "Advanced mathematics or prior coding experience.",
-    "system_requirements": {
-      "hardware": "Modern multi-core CPU, 32GB+ RAM, dedicated GPU (RTX 3070+).",
-      "software_accounts": "3ds Max, V-Ray, Photoshop, Twinmotion, SketchUp."
+  "tagline": "Make 3D Scenes Look Real With Professional Lighting, Materials and Rendering.",
+  "hero_headline": "Make 3D Scenes Look Real With Professional Lighting, Materials and Rendering.",
+  "hero_supporting_heading": "3D ACADEMY / ARCHITECTURAL RENDERING SPECIALIZATION",
+  "hero_supporting_headline": "Control the Light. Perfect the Materials. Deliver Photorealistic Visuals.",
+  "h1": "V-Ray Photorealistic Rendering & Lighting",
+  "seo_title": "V-Ray Rendering & Lighting Course | Nova Skills",
+  "meta_title": "V-Ray Rendering & Lighting Course | Nova Skills",
+  "seo_description": "Learn V-Ray for 3ds Max, photorealistic materials, lighting, GI, LightMix and render optimization in 6 weeks (48h). Build a rendering portfolio. ₹8,900.",
+  "meta_description": "Learn V-Ray for 3ds Max, photorealistic materials, lighting, GI, LightMix and render optimization in 6 weeks (48h). Build a rendering portfolio. ₹8,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=v-ray-cert",
+  "hero": {
+    "eyebrow": "3D ACADEMY / ARCHITECTURAL RENDERING SPECIALIZATION",
+    "h1": "V-Ray Photorealistic Rendering & Lighting",
+    "primary_hook": "Make 3D Scenes Look Real With Professional Lighting, Materials and Rendering.",
+    "short_description": "Master Chaos V-Ray for photorealistic architectural and interior rendering. Develop practical skills in physically based materials, lighting, camera exposure, global illumination, colour management, render optimization and professional image finishing using V-Ray for 3ds Max.",
+    "supporting_value_proposition": "Control the Light. Perfect the Materials. Deliver Photorealistic Visuals.",
+    "quick_info": "6 Weeks | 48 Guided Hours | ₹8,900 | Intermediate Specialization",
+    "primary_software_badge": "Primary: Chaos V-Ray for 3ds Max | Supporting: Chaos Cosmos, Photoshop, Camera Raw",
+    "skill_tags": [
+      "Chaos V-Ray",
+      "3ds Max",
+      "PBR Materials",
+      "Global Illumination",
+      "HDRI Lighting",
+      "V-Ray Camera",
+      "LightMix",
+      "Render Optimization",
+      "VFB",
+      "Architectural Visualization"
+    ],
+    "primary_cta": {
+      "text": "Enroll Now",
+      "action": "openEnrollmentModal"
+    },
+    "secondary_cta": {
+      "text": "Get Course Syllabus",
+      "action": "downloadSyllabus"
     }
   },
+  "short_description": "Master Chaos V-Ray for photorealistic architectural and interior rendering. Develop practical skills in physically based materials, lighting, camera exposure, global illumination, colour management, render optimization and professional image finishing using V-Ray for 3ds Max.",
+  "shortDesc": "Master Chaos V-Ray for photorealistic architectural and interior rendering. Develop practical skills in physically based materials, lighting, camera exposure, global illumination, colour management, render optimization and professional image finishing using V-Ray for 3ds Max.",
+  "full_description": "Learn to transform prepared 3D architectural scenes into convincing visual presentations. Develop practical control over V-Ray materials, realistic daylight and artificial lighting, camera exposure, global illumination and rendering quality. Understand why materials react differently to light, how to develop consistent interior and exterior lighting, how to identify noise and render bottlenecks, and how to improve the final image using V-Ray Frame Buffer and post-production workflows.",
+  "fullDesc": "Learn to transform prepared 3D architectural scenes into convincing visual presentations. Develop practical control over V-Ray materials, realistic daylight and artificial lighting, camera exposure, global illumination and rendering quality. Understand why materials react differently to light, how to develop consistent interior and exterior lighting, how to identify noise and render bottlenecks, and how to improve the final image using V-Ray Frame Buffer and post-production workflows.",
+  "description": "Master Chaos V-Ray for photorealistic architectural and interior rendering. Develop practical skills in physically based materials, lighting, camera exposure, global illumination, colour management, render optimization and professional image finishing using V-Ray for 3ds Max.",
   "overview": {
-    "positioning": "Specialized mastery in photorealistic lighting, physically accurate materials, and production rendering with Chaos V-Ray.",
-    "short_description": "Advanced rendering techniques using V-Ray.",
-    "key_facts": {
-      "level": "INTERMEDIATE",
-      "duration": "1 Month",
-      "format": "Hands-On",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "4 Projects",
-      "capstone": "Photorealistic ArchViz Render",
-      "ai_integration": "NONE",
-      "career_focus": "Lighting TD, Rendering Specialist"
-    },
-    "what_you_will_be_able_to_do": [
-      "Create complex PBR materials.",
-      "Setup realistic lighting rigs using HDRI.",
-      "Control physical camera settings like a photographer.",
-      "Optimize render settings for speed and quality."
+    "section_heading": "What You Will Master",
+    "positioning": "Photorealistic Architectural Rendering, Physically Based Materials, Lighting & VFB Post-Production",
+    "short_description": "Master Chaos V-Ray for photorealistic architectural and interior rendering. Develop practical skills in physically based materials, lighting, camera exposure, global illumination, colour management, render optimization and professional image finishing using V-Ray for 3ds Max.",
+    "expanded_overview": "Learn to transform prepared 3D architectural scenes into convincing visual presentations. Develop practical control over V-Ray materials, realistic daylight and artificial lighting, camera exposure, global illumination and rendering quality. Understand why materials react differently to light, how to develop consistent interior and exterior lighting, how to identify noise and render bottlenecks, and how to improve the final image using V-Ray Frame Buffer and post-production workflows.",
+    "commercial_differentiation": "Beyond Applying Materials and Clicking Render. Learn to Control Photorealism.",
+    "workflow": "Inspect Scene → Develop Materials → Configure Lighting → Set Camera → Preview → Optimize → Render → Finish → Review → Deliver"
+  },
+  "commercial_differentiation": {
+    "headline": "Beyond Applying Materials and Clicking Render. Learn to Control Photorealism.",
+    "supporting_copy": "Professional rendering depends on suitable geometry, physically plausible materials, correct texture scale, realistic lighting, camera exposure, global illumination, appropriate sampling, effective noise management, colour consistency, and reliable output quality. Learn to understand these decisions rather than relying on presets.",
+    "differentiators": [
+      {
+        "title": "1. Physically Based Material Realism",
+        "description": "Learn how surfaces respond to light through correct textures, reflections, refractions, roughness, and normal data rather than guesswork."
+      },
+      {
+        "title": "2. Architectural Lighting Expertise",
+        "description": "Develop realistic daylight (Sun/Sky, HDRI dome), artificial interior illumination, and atmospheric day/night treatments."
+      },
+      {
+        "title": "3. Controlled Rendering Quality",
+        "description": "Master sampling, global illumination (Brute Force, Light Cache), denoising workflows, and technical render optimization without sacrificing quality."
+      },
+      {
+        "title": "4. Portfolio With Technical Evidence",
+        "description": "Complete architectural renders supported by material tests, LightMix evidence, documented rendering settings, and editable source scenes."
+      }
+    ]
+  },
+  "modern_workflow_2027": {
+    "section_title": "Photorealism Through Better Lighting, Smarter Rendering and Professional Control.",
+    "website_copy": "Learn modern V-Ray workflows for architectural realism, material accuracy and efficient image production. Explore interactive rendering, lighting variations and suitable denoising tools while building the technical skills required to evaluate and finish professional architectural visuals.",
+    "core_competencies": [
+      {
+        "title": "Modern Interactive Rendering",
+        "description": "Use GPU/CPU interactive rendering for rapid look development, material feedback, lighting balance, and camera framing adjustments."
+      },
+      {
+        "title": "Integrated Viewport Awareness",
+        "description": "Understand modern real-time viewport workflows with Chaos Vantage (where licensed in V-Ray Collection tiers) while ensuring scenes render reliably in standard V-Ray production."
+      },
+      {
+        "title": "CPU & GPU Workflow Selection",
+        "description": "Distinguish between V-Ray CPU and GPU rendering engines, recognizing memory limits, hardware eligibility, and supported feature nuances."
+      },
+      {
+        "title": "Denoising & Detail Preservation",
+        "description": "Apply V-Ray Denoiser and AI denoiser engines intelligently while manually inspecting edges, textures, and specular reflections for artifact-free delivery."
+      },
+      {
+        "title": "VFB & LightMix Variations",
+        "description": "Leverage V-Ray Frame Buffer layers, LightMix render elements, and non-destructive colour corrections to generate multiple client lighting options from one render."
+      },
+      {
+        "title": "Responsible AI Ideation",
+        "description": "Optionally explore conceptual mood boards and reference analysis (e.g. Chaos Veras where licensed) while verifying all architectural geometries and lighting physics by hand."
+      }
     ]
   },
   "why_now": {
-    "industry_shift": "V-Ray continues to set the benchmark for physically accurate light transport and cinematic photorealism in commercial rendering.",
-    "ai_impact": "V-Ray GPU acceleration and AI-driven denoisers reduce multi-hour render times down to minutes without quality degradation.",
-    "business_demand": "Real estate developers and architecture firms require rapid, photorealistic visual assets for marketing.",
-    "career_opportunity": "Skilled ArchViz artists command premium rates in global freelance markets."
-  },
-  "learning_outcomes": [
-    "MODEL: Construct accurate 3D architectural scenes from 2D plans.",
-    "TEXTURE: Apply physically based rendering (PBR) materials for realism.",
-    "LIGHT: Configure realistic interior and exterior lighting setups.",
-    "RENDER: Optimize render settings for balance between quality and speed.",
-    "ANIMATE: Develop smooth camera paths for real-time walkthroughs."
-  ],
-  "learning_journey": {
-    "stages": [
+    "headline": "Why Master Chaos V-Ray in 2027?",
+    "points": [
       {
-        "stage": "Stage 1: Structural Modeling",
-        "focus": "Translating CAD plans into 3D geometry in 3ds Max."
+        "title": "The Global Standard in ArchViz",
+        "description": "Chaos V-Ray remains the benchmark rendering engine utilized by premier architectural visualization studios and interior design practices worldwide."
       },
       {
-        "stage": "Stage 2: Materiality",
-        "focus": "Creating and applying realistic V-Ray materials."
+        "title": "Shift from Presets to Physics",
+        "description": "Modern production pipelines require artists who understand energy conservation, IOR, roughness, and light transport rather than tweaking arbitrary sliders."
       },
       {
-        "stage": "Stage 3: Illumination",
-        "focus": "Mastering HDRI and artificial lighting setups."
+        "title": "Render Optimization Saves Money",
+        "description": "Studios value rendering specialists who can eliminate noise bottlenecks and optimize memory footprint to deliver high-resolution imagery on schedule."
       },
       {
-        "stage": "Stage 4: Post-Production",
-        "focus": "Enhancing raw renders using Photoshop techniques."
-      },
-      {
-        "stage": "Stage 5: Real-Time Environments",
-        "focus": "Importing scenes into Twinmotion for interactive walkthroughs."
+        "title": "Proof-of-Work Portfolio Advantage",
+        "description": "Employers look for verified technical evidence: material tests, lighting breakdowns, and editable .max project files demonstrating professional proficiency."
       }
     ]
   },
+  "icon": "fa-solid fa-sun",
+  "color": "linear-gradient(135deg, #004672, #EF7F1A)",
+  "rating": 4.9,
+  "reviews": 164,
+  "students": 820,
+  "liveProjects": 1,
+  "projects": 1,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=v-ray-cert",
+  "tags": [
+    "popular",
+    "v-ray",
+    "rendering",
+    "architectural-visualization",
+    "lighting",
+    "materials",
+    "photorealism",
+    "certification"
+  ],
+  "featured": true,
+  "category": "3D Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "target_audience": [
+    "Architectural visualizers and 3D artists seeking photorealistic rendering mastery",
+    "Interior designers wanting to create convincing visual presentations of their designs",
+    "Autodesk 3ds Max modelers and graduates of Course 74 transitioning into rendering specialization",
+    "Junior rendering artists and 3D studio assistants looking to standardize their lighting and material pipeline",
+    "Creative freelancers offering architectural and interior visualization services"
+  ],
+  "prerequisites": {
+    "required": [
+      "Working Autodesk 3ds Max modeling knowledge (viewport navigation, object organization, basic materials, scene scale, opening scenes) OR completion of Course 74 (3ds Max Architectural Modeling & Visualization)",
+      "Basic understanding of digital image resolution, aspect ratios, and file formats"
+    ],
+    "not_required": [
+      "No advanced architectural license or professional drafting degree required",
+      "No prior V-Ray experience required (taught comprehensively from setup)",
+      "Students are NOT required to model scenes from scratch (supplied/previously modeled Course 74 scenes utilized)"
+    ],
+    "hardware_software": [
+      "Windows PC meeting official Autodesk 3ds Max and Chaos V-Ray system requirements (64-bit multi-core CPU, 16GB+ RAM recommended, DirectX 11/12 GPU)",
+      "Autodesk 3ds Max installed (version 2024–2027 supported)",
+      "Chaos V-Ray for 3ds Max installed (stable release v6–v7)",
+      "NVIDIA GPU with CUDA/RTX support if utilizing V-Ray GPU compute features",
+      "Adobe Photoshop / Camera Raw (or compatible image editor) for presentation layouts and post-processing"
+    ]
+  },
+  "highlights": [
+    "6 Weeks of focused photorealistic rendering specialization (48 guided learning hours)",
+    "Master Chaos V-Ray for Autodesk 3ds Max interface, physical materials, and render setup",
+    "Physically based material creation: VRayMtl, roughness, reflections, refractions, bump, and normal maps",
+    "Architectural lighting Mastery: V-Ray Sun/Sky, HDRI dome lights, interior area lights, and IES profiles",
+    "Camera exposure and composition: ISO, shutter speed, f-number, depth of field, and 2-point perspective",
+    "Global illumination (Brute Force, Light Cache), adaptive sampling, and noise diagnosis",
+    "V-Ray Frame Buffer (VFB) layers, LightMix interactive lighting adjustments, and render elements",
+    "Coordinated Architectural Rendering Portfolio: interior scene, exterior scene, 2 lighting treatments, material tests, and technical breakdown"
+  ],
   "hands_on_tech": {
-    "core_tools": [
-      {
-        "tool": "V-Ray",
-        "purpose": "Render Engine.",
-        "what_student_learns": "Materials, Lights, Render Settings.",
-        "what_student_builds": "Photorealistic images."
-      },
-      {
-        "tool": "3ds Max",
-        "purpose": "Host Application.",
-        "what_student_learns": "Scene setup.",
-        "what_student_builds": "Scenes for rendering."
-      }
-    ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
-  },
-  "industry_workflow": {
-    "overview": "Standard ArchViz Production Pipeline:",
-    "stages": [
-      {
-        "step": 1,
-        "name": "CAD Import & Cleanup",
-        "desc": "Preparing 2D plans for 3D modeling."
-      },
-      {
-        "step": 2,
-        "name": "Whitebox Modeling",
-        "desc": "Building the primary structure and testing camera angles."
-      },
-      {
-        "step": 3,
-        "name": "Material & Texture Application",
-        "desc": "Assigning PBR materials to surfaces."
-      },
-      {
-        "step": 4,
-        "name": "Lighting Setup",
-        "desc": "Configuring natural and artificial light sources."
-      },
-      {
-        "step": 5,
-        "name": "Rendering & Post-Production",
-        "desc": "Generating final images and applying adjustments in Photoshop."
-      }
+    "primary_tool": "Chaos V-Ray for Autodesk 3ds Max (VRayMtl, V-Ray Lights, V-Ray Camera, VFB, LightMix)",
+    "host_application": "Autodesk 3ds Max (Scene Management, Slate Material Editor, Asset Tracking)",
+    "supporting_tools": [
+      "Chaos Cosmos (Ready-made materials and architectural assets where licensed)",
+      "Adobe Photoshop (Final presentation layouts, cleanup, and export preparation)",
+      "Adobe Camera Raw (Tonal adjustments, white balance, and contrast refinement)"
     ]
   },
-  "business_use_cases": [
+  "tools": [
+    "Chaos V-Ray for Autodesk 3ds Max",
+    "Autodesk 3ds Max",
+    "Chaos Cosmos",
+    "Adobe Photoshop",
+    "Adobe Camera Raw"
+  ],
+  "curriculum": [
     {
-      "sector": "Real Estate Marketing",
-      "business_problem": "Selling off-plan properties before construction.",
-      "approach": "Create photorealistic visual assets based on architectural plans.",
-      "toolset": "3ds Max, V-Ray, Photoshop",
-      "output": "High-converting marketing brochures and virtual tours."
+      "module": "Module 01",
+      "title": "Rendering Foundations & V-Ray Setup",
+      "lessons": 9,
+      "hours": 6
+    },
+    {
+      "module": "Module 02",
+      "title": "Professional Materials & Textures",
+      "lessons": 12,
+      "hours": 10
+    },
+    {
+      "module": "Module 03",
+      "title": "Architectural Lighting & Cameras",
+      "lessons": 12,
+      "hours": 10
+    },
+    {
+      "module": "Module 04",
+      "title": "Render Quality & Optimization",
+      "lessons": 10,
+      "hours": 8
+    },
+    {
+      "module": "Module 05",
+      "title": "Frame Buffer & Post-Production",
+      "lessons": 8,
+      "hours": 6
+    },
+    {
+      "module": "Module 06",
+      "title": "Photorealistic Rendering Capstone",
+      "lessons": 12,
+      "hours": 8
     }
   ],
-  "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Denoising renders and generating background elements.",
-    "ai_can_automate": "Texture upscaling and basic sky replacements.",
-    "ai_cannot_replace": "Architectural design intent, lighting mood, and spatial composition.",
-    "human_expertise_required": "Ensuring structural accuracy and realistic material properties.",
-    "validation_protocol": "Verify AI-generated elements against actual project specifications.",
-    "responsible_use": "Avoid misleading representations of physical property boundaries."
-  },
-  "best_practices": [
-    "Always work to real-world scale (1 unit = 1cm or 1m).",
-    "Keep poly counts optimized for real-time engine compatibility.",
-    "Use render elements (passes) for flexible post-production."
+  "learning_outcomes": [
+    "Configure V-Ray as the production and interactive renderer in Autodesk 3ds Max.",
+    "Understand physically based rendering principles and light transport mechanics.",
+    "Organize scenes, external asset paths, and texture dependencies cleanly using Asset Tracking.",
+    "Distinguish between V-Ray CPU and GPU workflows, selecting the appropriate engine based on hardware.",
+    "Verify renderer compatibility, memory limitations, and hardware requirements.",
+    "Build realistic V-Ray materials using the VRayMtl shader and Slate Material Editor.",
+    "Control reflections, refractions, roughness, index of refraction (IOR), and Fresnel response accurately.",
+    "Use bump, normal, and introductory displacement maps with proper data interpretation.",
+    "Apply appropriate texture and UV scale to architectural surfaces using UVW Map coordinates.",
+    "Configure V-Ray Sun and Sky systems for realistic architectural daylight scenarios.",
+    "Set up HDRI and dome lighting for accurate environmental reflections and natural illumination.",
+    "Create realistic artificial interior lighting using V-Ray area lights, spheres, and IES photometric profiles.",
+    "Control physical camera exposure using ISO, f-number, shutter speed, and white balance.",
+    "Develop consistent day and night lighting treatments for the same architectural space.",
+    "Understand global illumination (GI) with primary (Brute Force) and secondary (Light Cache) bounces.",
+    "Interpret render noise and sampling behavior to distinguish between shadow, reflection, and GI noise.",
+    "Configure suitable denoising workflows (V-Ray Denoiser, NVIDIA AI) with detail-preservation checks.",
+    "Diagnose and resolve common render problems such as light leaks, color bleeding, and GPU memory limits.",
+    "Work effectively with the V-Ray Frame Buffer (VFB) interface, layers, history, and comparison tools.",
+    "Use LightMix to adjust light intensities, colors, and mood variations interactively without re-rendering.",
+    "Understand render elements (passes) and basic Cryptomatte mask extraction workflows.",
+    "Apply colour-management principles, linear workflows, and display transforms.",
+    "Prepare client-ready render outputs in appropriate bit depths and delivery formats (PNG, JPG, EXR).",
+    "Document rendering settings, optimization observations, and hardware metrics systematically.",
+    "Package editable 3ds Max scene files, materials, and linked assets for seamless studio handover."
   ],
-  "common_mistakes": [
+  "portfolio": {
+    "title": "V-Ray Architectural Rendering — Materials, Lighting & Photorealistic Image Portfolio",
+    "name": "V-Ray Architectural Rendering — Materials, Lighting & Photorealistic Image Portfolio",
+    "total_deliverables": 4,
+    "deliverables_count": 4,
+    "description": "One coordinated assessed architectural rendering portfolio demonstrating an interior scene, an exterior scene, two lighting treatments of one scene, material tests, LightMix evidence, and documented rendering settings.",
+    "deliverable_01": {
+      "name": "Realistic Interior Scene",
+      "type": "Interior Architectural Rendering",
+      "scope": "Rendered residential or commercial interior using supplied or Course 74 model.",
+      "requirements": [
+        "Realistic PBR material assignments (wood, glass, fabric, metal, tiles)",
+        "Accurate texture scale and UVW mapping coordination",
+        "Controlled daylight combined with balanced artificial interior lighting",
+        "Physically accurate camera composition and exposure",
+        "Global illumination with clean noise management and VFB finishing"
+      ],
+      "evidence": [
+        "Final high-resolution interior render",
+        "Material test close-ups",
+        "Lighting setup viewport screenshots",
+        "V-Ray physical camera settings documentation",
+        "Sampling and denoising configuration sheet",
+        "Before-and-after VFB post-production comparison",
+        "Editable .max source scene with modifier stacks"
+      ]
+    },
+    "deliverable_02": {
+      "name": "Architectural Exterior Scene",
+      "type": "Exterior Architectural Rendering",
+      "scope": "Rendered architectural exterior scene demonstrating natural lighting and environmental balance.",
+      "requirements": [
+        "Exterior daylight setup using V-Ray Sun/Sky or high-dynamic-range HDRI dome",
+        "Realistic architectural facade materials (concrete, glass, timber, stone)",
+        "Accurate sun angle, shadow sharpness, and ground plane integration",
+        "Architectural camera composition (eye-level or elevated 2-point perspective)",
+        "Environmental balance and high-fidelity render output"
+      ],
+      "evidence": [
+        "Final high-resolution exterior render",
+        "Lighting and HDRI orientation screenshot",
+        "Facade material setup screenshots",
+        "Camera focal length and exposure parameters",
+        "Render configuration and sampling report",
+        "Editable .max exterior scene file"
+      ]
+    },
+    "deliverable_03": {
+      "name": "Two Lighting Treatments of One Scene",
+      "type": "Lighting Look Development",
+      "scope": "Two distinct lighting treatments applied to the same architectural scene with consistent framing.",
+      "treatment_a": "Daylight / natural-light interpretation emphasizing sun angle, sky contribution, and soft interior bounce.",
+      "treatment_b": "Evening, night, or artificial-light interpretation highlighting architectural fixtures, warm color temperatures, and interior ambience.",
+      "requirements": [
+        "Same core architectural scene and identical camera framing",
+        "Consistent materials across both treatments",
+        "Distinct lighting intention and physical plausibility",
+        "Controlled exposure and shadow/reflection behavior",
+        "LightMix evidence demonstrating layer-based control"
+      ],
+      "evidence": [
+        "Treatment A final render (Daylight)",
+        "Treatment B final render (Evening/Night)",
+        "Lighting setup comparison sheet",
+        "LightMix layer configuration screenshot",
+        "Camera and exposure adjustment notes",
+        "Brief artistic rationale for mood and color temperature"
+      ]
+    },
+    "deliverable_04": {
+      "name": "Technical Rendering Breakdown",
+      "type": "Technical Documentation & Audit",
+      "breakdown_points": [
+        "1. Original supplied model and architectural reference review",
+        "2. V-Ray renderer setup and system unit confirmation",
+        "3. Material test renders with roughness and IOR notes",
+        "4. Lighting progression tests across daylight and artificial sources",
+        "5. Physical camera focal length, shutter speed, f-number, and ISO settings",
+        "6. Render Setup dialogue screenshots and resolution settings",
+        "7. Sampling configuration, noise threshold, and min/max subdivs",
+        "8. Denoising engine selection and detail-preservation validation",
+        "9. CPU vs GPU renderer selection rationale",
+        "10. Hardware compute environment and performance measurements",
+        "11. LightMix render element setup and light grouping",
+        "12. V-Ray Frame Buffer (VFB) layer adjustments (Exposure, White Balance, Curves)",
+        "13. Render elements (passes) configured and Cryptomatte masks where used",
+        "14. Colour-management and display transform approach (sRGB/ACEScg awareness)",
+        "15. Final export format, bit depth, and compression settings",
+        "16. Render optimization observations and bottleneck resolutions",
+        "17. Client revision log tracking visual adjustments"
+      ]
+    },
+    "handover_package": [
+      "1. Final high-resolution interior render outputs (PNG / JPG / EXR)",
+      "2. Final high-resolution exterior render outputs (PNG / JPG / EXR)",
+      "3. Two lighting treatment comparative presentation sheets (Day vs Night)",
+      "4. Material test sheet documenting 6+ architectural shader responses",
+      "5. LightMix layer screenshot and saved .vbl preset configuration",
+      "6. Render optimization report detailing sampling trade-offs and render times",
+      "7. V-Ray Frame Buffer adjustment breakdown and color grading notes",
+      "8. Master editable Autodesk 3ds Max scene files (.max) with preserved lighting",
+      "9. Organized external texture directory with relative file path structure",
+      "10. HDRI asset references and licensed environment map documentation",
+      "11. Saved V-Ray render preset files (.rps) for reproducible settings",
+      "12. External asset dependency checklist (Asset Tracking manifest)",
+      "13. Client revision log with mentor critique notes and modifications",
+      "14. Final delivery checklist verifying scene readiness for client review"
+    ]
+  },
+  "skill_boundaries": {
+    "course_73_blender": "Focuses on Blender hard-surface modeling, Cycles/EEVEE shaders, and product visualization.",
+    "course_74_3dsmax": "Focuses on precision architectural 3D modeling, splines, CAD-to-3D, walls, doors, windows, and furniture assembly.",
+    "course_75_vray": "Specializes in photorealistic architectural rendering, PBR materials, natural/artificial lighting, GI, sampling, VFB, and post-production on prepared scenes.",
+    "course_76_twinmotion": "Focuses on real-time architectural presentation, interactive walkthroughs, animated vegetation, and client visualization experiences.",
+    "explicit_exclusions": [
+      "No complete architectural 3D modeling training (covered in Course 74)",
+      "No architectural CAD drafting or structural design",
+      "No character animation or complex visual effects (VFX)",
+      "No real-time walkthrough executable creation (covered in Course 76)",
+      "No Unreal Engine interactive game engine development",
+      "No architectural licensure or registered building inspection claims"
+    ]
+  },
+  "career_paths": [
     {
-      "mistake": "Ignoring real-world material scale and reflectivity.",
-      "why_it_happens": "Rushing the texturing process without reference photos.",
-      "professional_approach": "Always use PBR maps with correct tiling and reflection glossiness."
+      "role": "Junior Architectural Rendering Artist",
+      "description": "Produce high-fidelity interior and exterior still renders for architectural firms and visualization studios."
+    },
+    {
+      "role": "3D Lighting & Rendering Assistant",
+      "description": "Set up daylight, artificial lighting fixtures, and render passes for senior 3D visualization leads."
+    },
+    {
+      "role": "Interior Visualization Specialist",
+      "description": "Transform interior designer CAD layouts and 3D models into photorealistic presentation visuals for clients."
+    },
+    {
+      "role": "ArchViz Post-Production Specialist",
+      "description": "Fine-tune VFB layers, LightMix variations, and Photoshop finishing for marketing collateral."
     }
   ],
-  "career_paths": {
-    "entry_roles": "Junior ArchViz Artist",
-    "mid_roles": "Senior 3D Visualizer",
-    "specialist_roles": "Lighting TD, Environment Artist",
-    "freelance_roles": "Freelance Architectural Renderer",
-    "employer_expectations": "Strong portfolio of photorealistic renders and fast turnaround times.",
-    "what_student_demonstrates": "Ability to deliver complete ArchViz projects from CAD to final render."
-  },
-  "freelance_applications": {
-    "services_offered": [
-      "Exterior Renders",
-      "Interior Renders",
-      "Real-time Walkthroughs"
+  "freelance_applications": [
+    "Residential interior photorealistic rendering from client-supplied 3D models",
+    "Architectural exterior visualization for real estate marketing and design approvals",
+    "Day-to-night lighting look development for commercial property presentations",
+    "PBR material creation and shader library setup for interior design studios",
+    "Render optimization and troubleshooting for studios facing tight deadlines",
+    "High-resolution still image finishing with VFB and Adobe Camera Raw"
+  ],
+  "assessment_model": {
+    "type": "Continuous Studio Assessment & Technical Portfolio Review",
+    "passing_grade": "70%",
+    "breakdown": [
+      {
+        "area": "Rendering Setup & Scene Readiness",
+        "weight": "10%"
+      },
+      {
+        "area": "Professional Materials & Textures",
+        "weight": "20%"
+      },
+      {
+        "area": "Architectural Lighting & Camera Control",
+        "weight": "25%"
+      },
+      {
+        "area": "Render Quality & Optimization",
+        "weight": "20%"
+      },
+      {
+        "area": "VFB, LightMix & Post-Production",
+        "weight": "10%"
+      },
+      {
+        "area": "Final Portfolio & Handover Package",
+        "weight": "15%"
+      }
     ],
-    "client_workflow": "Receive CAD -> Whitebox Approval -> Texture/Light Approval -> Final Render Delivery",
-    "portfolio_requirements": "3-5 high-quality projects showing various lighting conditions (day/night)."
+    "evaluation_criteria": [
+      "Physically plausible surface reaction and texture scaling",
+      "Daylight and artificial lighting balance without harsh clipping or unnatural bounce",
+      "Accurate 2-point perspective camera composition and exposure settings",
+      "Clean global illumination without blotches, light leaks, or excessive noise",
+      "Effective noise management and detail preservation during denoising",
+      "Reproducible rendering presets and comprehensive 17-point technical breakdown",
+      "Clean file organization with valid asset paths in 3ds Max Asset Tracking"
+    ]
   },
-  "what_you_will_build": [
-    "Modern Residential Exterior Render",
-    "Luxury Interior Living Space Render",
-    "Commercial Building Real-Time Walkthrough"
-  ],
-  "final_deliverables": [
-    "Set of 4K photorealistic architectural renders.",
-    "Playable real-time architectural walkthrough executable."
-  ],
-  "assessment": {
-    "model": "Project-Based Evaluation",
-    "criteria": "Photorealism, modeling accuracy, lighting quality, and material realism."
-  },
-  "certification": {
-    "title": "Certified Architectural Visualizer",
-    "criteria": "Completion of all module projects and capstone presentation.",
-    "verification": "Digital verified certificate."
-  },
-  "not_covered": "Structural engineering analysis and MEP (Mechanical, Electrical, Plumbing) design.",
-  "next_learning_path": {
-    "recommended_next": "Unreal Engine Advanced for ArchViz",
-    "related_programs": "3D Visualisation Professional"
-  },
-  "faq": [
-    {
-      "question": "Do I need to be an architect?",
-      "answer": "No, but you need to learn how to read architectural floor plans."
-    },
-    {
-      "question": "Why learn both V-Ray and Twinmotion?",
-      "answer": "V-Ray is industry standard for high-end static renders, while Twinmotion allows rapid real-time interactive presentations."
-    },
-    {
-      "question": "Can my laptop run 3ds Max and V-Ray?",
-      "answer": "You need a system with a dedicated GPU (like an RTX 3060 or better) for smooth rendering performance."
-    }
-  ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "V-Ray Material Editor & Shaders",
-      "module_purpose": "Create photorealistic surfaces.",
-      "what_you_will_learn": [
-        "V-Ray Mtl",
-        "PBR Maps",
-        "Complex Shaders"
-      ],
+      "module_title": "Rendering Foundations & V-Ray Setup",
+      "module_purpose": "Understand the V-Ray rendering environment, physically based rendering concepts and efficient project preparation.",
+      "hours": 6,
+      "guided_hours": 6,
+      "learning_hours": 6,
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "Slate Material Editor",
-          "what_is_taught": "Navigating the node interface.",
-          "why_it_matters": "Efficient material creation.",
-          "what_learner_does": "Builds basic materials.",
-          "expected_outcome": "Material library."
+          "title": "Architectural Rendering Fundamentals",
+          "topics": [
+            "3D modeling versus rendering workflows",
+            "Photorealistic visualization standards in ArchViz",
+            "Physically based rendering (PBR) and light transport",
+            "Reflections, refractions, and global illumination concepts",
+            "Architectural presentation requirements and client expectations"
+          ]
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "PBR Workflow",
-          "what_is_taught": "Using Roughness/Metalness maps.",
-          "why_it_matters": "Industry standard texturing.",
-          "what_learner_does": "Creates realistic wood and metal.",
-          "expected_outcome": "PBR materials."
+          "title": "3ds Max as Host Application",
+          "topics": [
+            "Opening prepared architectural scenes in 3ds Max",
+            "Verifying metric scene units and display scale",
+            "Geometry inspection and surface normal verification",
+            "Camera positions and scene hierarchy overview",
+            "Identifying missing assets and checking rendering readiness"
+          ]
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "Refraction & SSS",
-          "what_is_taught": "Glass, liquids, and translucent materials.",
-          "why_it_matters": "Realism for complex surfaces.",
-          "what_learner_does": "Creates glass and marble.",
-          "expected_outcome": "Advanced shaders."
+          "title": "V-Ray Installation & Configuration",
+          "topics": [
+            "Supported 3ds Max and V-Ray versions (v6–v7)",
+            "Plugin compatibility and licensing requirements",
+            "Assigning V-Ray in Render Setup (Production and ActiveShade)",
+            "V-Ray toolbar and essential interface components",
+            "Interactive rendering vs production bucket rendering"
+          ]
+        },
+        {
+          "lesson_number": "1.4",
+          "title": "V-Ray CPU Architecture",
+          "topics": [
+            "CPU multi-threaded rendering mechanics",
+            "Memory handling for heavy architectural scenes",
+            "Full feature availability and shading accuracy",
+            "Suitable production use cases and workstation considerations"
+          ]
+        },
+        {
+          "lesson_number": "1.5",
+          "title": "V-Ray GPU Architecture",
+          "topics": [
+            "GPU hardware acceleration and compute pipelines",
+            "CUDA and RTX hardware eligibility and supported backends",
+            "VRAM limits and out-of-core memory considerations",
+            "Renderer selection and performance expectations"
+          ]
+        },
+        {
+          "lesson_number": "1.6",
+          "title": "CPU Versus GPU Comparison",
+          "topics": [
+            "Feature compatibility differences between CPU and GPU",
+            "Performance variances across different scene types",
+            "Memory footprint requirements and texture caching",
+            "Choosing the appropriate rendering engine for specific briefs"
+          ]
+        },
+        {
+          "lesson_number": "1.7",
+          "title": "Render Settings Introduction",
+          "topics": [
+            "Image resolution, pixel aspect ratio, and frame size",
+            "Progressive vs bucket image sampling concepts",
+            "Noise threshold fundamentals and preview configurations",
+            "Specifying render output paths and file types"
+          ]
+        },
+        {
+          "lesson_number": "1.8",
+          "title": "Project Asset Management",
+          "topics": [
+            "Managing textures, HDRI maps, and external linked files",
+            "Using 3ds Max Asset Tracking (Shift+T) to resolve paths",
+            "Chaos Cosmos asset browser integration and licensing awareness",
+            "Organizing structured project directories"
+          ]
+        },
+        {
+          "lesson_number": "1.9",
+          "title": "Initial Scene Validation",
+          "topics": [
+            "Scene geometry integrity audit",
+            "Material compatibility check with V-Ray scene converter",
+            "Camera framing and lighting setup validation",
+            "Generating an initial preview render to establish baseline"
+          ]
         }
       ],
       "key_concepts": [
-        "V-Ray Mtl",
-        "PBR",
-        "SSS"
+        "Physically based rendering",
+        "Light transport",
+        "V-Ray CPU vs GPU",
+        "Asset Tracking",
+        "Render Setup"
       ],
       "tools": [
-        "V-Ray"
+        "Chaos V-Ray",
+        "Autodesk 3ds Max",
+        "Asset Tracking Dialog",
+        "Chaos Cosmos"
       ],
-      "hands_on_practice": "Texture a complex still-life scene.",
-      "assignment": "Submit material test renders.",
-      "business_application": "Product lookdev.",
-      "expected_outcome": "Photorealistic materials."
+      "hands_on_practice": "Open a prepared architectural 3ds Max scene, configure V-Ray as the production renderer, audit all external texture paths, and generate a baseline preview render.",
+      "assignment": "Prepare a V-Ray scene-readiness checklist covering renderer setup, scene assets, metric scale, and render configuration.",
+      "deliverable": "Correctly configured V-Ray architectural scene with documented rendering settings and baseline preview output.",
+      "commercial_application": "Preparing architectural and interior visualization scenes for professional lighting and shading pipelines."
     },
     {
       "module_number": "Module 02",
-      "module_title": "HDRI Lighting & Sun Systems",
-      "module_purpose": "Illuminate scenes with natural light.",
-      "what_you_will_learn": [
-        "V-Ray Sun/Sky",
-        "Dome Light",
-        "HDRI setup"
-      ],
+      "module_title": "Professional Materials & Textures",
+      "module_purpose": "Create physically plausible architectural and interior materials with correct surface response and texture scale.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "V-Ray Sun and Sky",
-          "what_is_taught": "Setting up procedural daylight.",
-          "why_it_matters": "Quick exterior lighting.",
-          "what_learner_does": "Lights an exterior house.",
-          "expected_outcome": "Daylight render."
+          "title": "Material Realism Fundamentals",
+          "topics": [
+            "Surface color, diffuse reflection, and specular response",
+            "Roughness vs glossiness in modern PBR workflows",
+            "Metalness workflow: dielectrics vs conductors",
+            "Index of refraction (IOR) and Fresnel reflections",
+            "Energy conservation and realistic surface response"
+          ]
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "Image Based Lighting (HDRI)",
-          "what_is_taught": "Using V-Ray Dome light with EXR files.",
-          "why_it_matters": "Highest quality lighting and reflections.",
-          "what_learner_does": "Sets up a sunset scene using HDRI.",
-          "expected_outcome": "Atmospheric lighting."
+          "title": "V-Ray Material (VRayMtl) Workflow",
+          "topics": [
+            "VRayMtl parameter hierarchy in Slate Material Editor",
+            "Diffuse, Reflection, Refraction, and Opacity slots",
+            "Material assignment to sub-objects and multi/sub-object materials",
+            "Organizing shaders with clear studio naming conventions"
+          ]
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "Interior Artificial Lighting",
-          "what_is_taught": "V-Ray Light types and IES profiles.",
-          "why_it_matters": "Essential for interior scenes.",
-          "what_learner_does": "Lights an interior room.",
-          "expected_outcome": "Nighttime interior render."
+          "title": "PBR Texture Integration",
+          "topics": [
+            "Base color / albedo map color management (sRGB vs Raw)",
+            "Roughness and metalness map inputs",
+            "Normal maps vs height maps",
+            "Color space interpretation and gamma calibration"
+          ]
+        },
+        {
+          "lesson_number": "2.4",
+          "title": "Reflection & Surface Micro-Detail",
+          "topics": [
+            "Controlling reflection glossiness and anisotropic highlights",
+            "Polished wood, polished stone, and matte surfaces",
+            "Architectural metals: brushed aluminum, brass, and chrome",
+            "Surface imperfections and roughness variation maps"
+          ]
+        },
+        {
+          "lesson_number": "2.5",
+          "title": "Refraction & Transparent Surfaces",
+          "topics": [
+            "Architectural glass: clear, tinted, and frosted variants",
+            "Index of refraction for architectural glass (1.52) and water (1.33)",
+            "Thin glass mode for architectural window panes",
+            "Refraction fog color and depth for colored glassware"
+          ]
+        },
+        {
+          "lesson_number": "2.6",
+          "title": "Bump & Normal Mapping",
+          "topics": [
+            "VRayNormalMap for tangent-space normal interpretation",
+            "Bump mapping for fine surface textures (plaster, subtle weave)",
+            "Controlling map strength without distorting silhouette",
+            "Texture coordinate alignment"
+          ]
+        },
+        {
+          "lesson_number": "2.7",
+          "title": "Displacement Workflows",
+          "topics": [
+            "VRayDisplacementMod modifier for real geometric depth",
+            "2D vs 3D displacement algorithms",
+            "Memory and performance costs of displacement",
+            "When to use displacement vs bump and normal maps"
+          ]
+        },
+        {
+          "lesson_number": "2.8",
+          "title": "Texture Mapping & UV Coordinates",
+          "topics": [
+            "UVW Map modifier projections (Box, Planar, Cylindrical)",
+            "Real-World Map Size vs explicit UV tiling",
+            "Correct texture scale across architectural surfaces",
+            "Eliminating visible texture repetition and stretching"
+          ]
+        },
+        {
+          "lesson_number": "2.9",
+          "title": "Essential Architectural Material Recipes",
+          "topics": [
+            "Painted interior walls with subtle micro-bump",
+            "Hardwood flooring with specular roughness variation",
+            "Polished marble with realistic reflection falloff",
+            "Architectural concrete with staining and roughness maps",
+            "Ceramic wall and floor tiles with grout lines",
+            "Furniture upholstery: linen, velvet, and leather"
+          ]
+        },
+        {
+          "lesson_number": "2.10",
+          "title": "Material Testing in Neutral Environments",
+          "topics": [
+            "Setting up a neutral studio look-dev test scene",
+            "Grey ball and chrome ball reference calibration",
+            "Evaluating shader response under neutral studio lighting",
+            "Surface detail and roughness checks before scene integration"
+          ]
+        },
+        {
+          "lesson_number": "2.11",
+          "title": "Shader Libraries & Asset Ecosystem",
+          "topics": [
+            "Building reusable V-Ray material libraries (.mat)",
+            "Leveraging Chaos Cosmos architectural materials where licensed",
+            "Managing material libraries across team workstations",
+            "Texture licensing and redistribution awareness"
+          ]
+        },
+        {
+          "lesson_number": "2.12",
+          "title": "Material Diagnostics & Troubleshooting",
+          "topics": [
+            "Fixing overly reflective or mirror-like surfaces",
+            "Correcting inverted normal maps and black shading errors",
+            "Resolving incorrect texture gamma and blown highlights",
+            "Identifying and fixing missing texture paths"
+          ]
         }
       ],
       "key_concepts": [
-        "HDRI",
-        "V-Ray Sun",
-        "IES"
+        "VRayMtl",
+        "PBR workflow",
+        "IOR and Fresnel",
+        "Roughness maps",
+        "UVW scaling",
+        "Material testing"
       ],
       "tools": [
-        "V-Ray"
+        "Slate Material Editor",
+        "VRayMtl",
+        "VRayNormalMap",
+        "VRayDisplacementMod",
+        "UVW Map Modifier"
       ],
-      "hands_on_practice": "Light an exterior and interior scene.",
-      "assignment": "Submit lighting tests.",
-      "business_application": "Archviz lighting.",
-      "expected_outcome": "Properly lit scenes."
+      "hands_on_practice": "Construct an architectural material collection featuring 6+ core shaders (wood, marble, glass, painted wall, fabric, metal) in a calibrated look-dev studio scene, verifying correct UVW texture scale.",
+      "assignment": "Apply the custom material collection to a supplied interior scene and produce high-resolution material close-up test renders.",
+      "deliverable": "Organized V-Ray material library (.mat) accompanied by high-resolution material test renders.",
+      "commercial_application": "Developing photorealistic shader libraries for residential, commercial, and product visualization projects."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Physical Camera Settings",
-      "module_purpose": "Control exposure and optical effects.",
-      "what_you_will_learn": [
-        "Exposure Value (EV)",
-        "Depth of Field",
-        "Motion Blur"
-      ],
+      "module_title": "Architectural Lighting & Cameras",
+      "module_purpose": "Develop realistic daylight, evening and artificial lighting using physically meaningful lighting and camera controls.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "Exposure Control",
-          "what_is_taught": "ISO, F-Stop, Shutter Speed.",
-          "why_it_matters": "Balances light realistically.",
-          "what_learner_does": "Adjusts camera for different lighting scenarios.",
-          "expected_outcome": "Correctly exposed shots."
+          "title": "Architectural Lighting Fundamentals",
+          "topics": [
+            "Direct illumination vs indirect environmental bounce",
+            "Natural daylight vs artificial architectural lighting",
+            "Inverse-square law and physical light decay",
+            "Shadow softness, light source size, and penumbra",
+            "Color temperature (Kelvin scale) and emotional tone"
+          ]
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "Depth of Field",
-          "what_is_taught": "Focal distance and aperture settings.",
-          "why_it_matters": "Adds cinematic focus.",
-          "what_learner_does": "Renders a macro shot with DOF.",
-          "expected_outcome": "Cinematic render."
+          "title": "V-Ray Sun & Sky System",
+          "topics": [
+            "VRaySun and VRaySky procedural daylight simulation",
+            "Sun position, elevation angle, and shadow sharpness",
+            "Turbidity, ozone, and atmospheric color effects",
+            "Matching sun orientation to architectural site drawings"
+          ]
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "Motion Blur & Effects",
-          "what_is_taught": "Capturing movement and lens effects (bloom/glare).",
-          "why_it_matters": "Enhances realism.",
-          "what_learner_does": "Adds motion blur to a moving object.",
-          "expected_outcome": "Dynamic render."
+          "title": "Image-Based Lighting with HDRI",
+          "topics": [
+            "High-dynamic-range imaging (HDRI) principles",
+            "VRayLight in Dome mode for 360-degree environment lighting",
+            "HDRI texture rotation, mapping coordinates, and intensity",
+            "Balancing background visibility with interior lighting contribution"
+          ]
+        },
+        {
+          "lesson_number": "3.4",
+          "title": "Natural Interior Daylight Strategies",
+          "topics": [
+            "Direct sunlight entry through windows and glazed facades",
+            "Skylight portals and interior bounce illumination",
+            "Balancing exterior window brightness against interior shadows",
+            "Preventing burnt highlights at window sills"
+          ]
+        },
+        {
+          "lesson_number": "3.5",
+          "title": "Artificial Architectural Lighting",
+          "topics": [
+            "VRayLight types: Plane, Disc, Sphere, Mesh, and Dome",
+            "Cove lighting, recessed downlights, and under-cabinet LED strips",
+            "IES photometric lights for real-world luminaire distribution",
+            "Grouping architectural lights logically for scene management"
+          ]
+        },
+        {
+          "lesson_number": "3.6",
+          "title": "Color Temperature & Mixed Lighting Scenarios",
+          "topics": [
+            "Warm interior fixtures (2700K–3000K) vs cool daylight (6500K)",
+            "Balancing mixed lighting sources naturally",
+            "Setting white balance in camera and post-production",
+            "Creating architectural warmth without yellow cast"
+          ]
+        },
+        {
+          "lesson_number": "3.7",
+          "title": "V-Ray Physical Camera Fundamentals",
+          "topics": [
+            "Physical camera placement, target, and focal length",
+            "Exposure controls: ISO, shutter speed, and f-number",
+            "Automatic exposure vs manual exposure control",
+            "Depth of field (DoF) and bokeh effects for detail shots"
+          ]
+        },
+        {
+          "lesson_number": "3.8",
+          "title": "Interior Camera Composition",
+          "topics": [
+            "Eye-level camera positioning and architectural proportions",
+            "Enabling 2-point perspective to ensure vertical lines stay straight",
+            "Wide-angle lens selection without extreme distortion (24mm–35mm)",
+            "Visual storytelling, focal points, and rule of thirds in ArchViz"
+          ]
+        },
+        {
+          "lesson_number": "3.9",
+          "title": "Exterior Architectural Lighting",
+          "topics": [
+            "Golden hour and mid-day exterior daylight configurations",
+            "Landscape illumination, pathway lights, and facade up-lighting",
+            "Ground plane integration and environment reflections",
+            "Exterior camera composition for architectural elevations"
+          ]
+        },
+        {
+          "lesson_number": "3.10",
+          "title": "Day/Night Lighting Transformation",
+          "topics": [
+            "Reusing scene geometry with distinct lighting setups",
+            "Dimming natural daylight and activating interior/exterior fixtures",
+            "Adjusting camera exposure to match lower ambient light levels",
+            "Maintaining camera framing across day and night comparisons"
+          ]
+        },
+        {
+          "lesson_number": "3.11",
+          "title": "Lighting Diagnostics & Quality Control",
+          "topics": [
+            "Detecting overexposure and clipping using false-color analysis",
+            "Troubleshooting dark interior corners and noise in bounce light",
+            "Eliminating unnatural hot-spots and light leaks",
+            "Scope and histogram inspection in VFB"
+          ]
+        },
+        {
+          "lesson_number": "3.12",
+          "title": "Lighting Review & Presentation Prep",
+          "topics": [
+            "Comparing lighting iterations against architectural mood references",
+            "Balancing technical exposure accuracy with artistic intent",
+            "Preparing multi-lighting sets for client approval reviews"
+          ]
         }
       ],
       "key_concepts": [
-        "F-Stop",
-        "ISO",
-        "DOF"
+        "V-Ray Sun/Sky",
+        "HDRI Dome",
+        "IES lights",
+        "Physical camera exposure",
+        "2-point perspective",
+        "Day vs Night lighting"
       ],
       "tools": [
-        "V-Ray"
+        "VRaySun",
+        "VRayLight",
+        "VRayIES",
+        "V-Ray Physical Camera",
+        "Slate Material Editor"
       ],
-      "hands_on_practice": "Setup cameras for a studio product shot.",
-      "assignment": "Submit DOF render.",
-      "business_application": "Virtual photography.",
-      "expected_outcome": "Photographic control."
+      "hands_on_practice": "Light a supplied residential interior scene for both natural daytime illumination and warm evening lighting, configuring realistic physical camera exposures and vertical perspective alignment.",
+      "assignment": "Create two distinct lighting treatments (Daylight and Evening) of the same interior scene, maintaining identical camera framing.",
+      "deliverable": "Day and evening lighting render comparisons with documented camera exposure parameters and light configurations.",
+      "commercial_application": "Presenting architectural and interior designs under varying natural and artificial lighting conditions for client proposals."
     },
     {
       "module_number": "Module 04",
-      "module_title": "Render Optimization & Denoising",
-      "module_purpose": "Produce clean renders efficiently.",
-      "what_you_will_learn": [
-        "Image Sampler",
-        "GI Engines",
-        "V-Ray Denoiser"
-      ],
+      "module_title": "Render Quality & Optimization",
+      "module_purpose": "Control image quality, identify rendering bottlenecks and choose efficient settings without making unrealistic performance promises.",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
       "lessons": [
         {
           "lesson_number": "4.1",
-          "lesson_title": "Global Illumination (GI)",
-          "what_is_taught": "Brute Force vs Light Cache.",
-          "why_it_matters": "Balancing bounce light accuracy and speed.",
-          "what_learner_does": "Optimizes GI for an interior.",
-          "expected_outcome": "Clean GI solution."
+          "title": "Render Quality Fundamentals",
+          "topics": [
+            "Balancing image resolution, fine detail, and production deadlines",
+            "Understanding noise sources in path-traced rendering",
+            "Sampling quality across reflections, refractions, and shadows",
+            "Production output requirements: client previews vs print delivery"
+          ]
         },
         {
           "lesson_number": "4.2",
-          "lesson_title": "Sampling and Noise",
-          "what_is_taught": "Bucket vs Progressive rendering, Noise Threshold.",
-          "why_it_matters": "Controls final image quality.",
-          "what_learner_does": "Ties sampling settings for final output.",
-          "expected_outcome": "Noise-free render."
+          "title": "Image Sampling Mechanics",
+          "topics": [
+            "Bucket vs Progressive image sampling in V-Ray",
+            "Min / Max Subdivs and adaptive sampling behavior",
+            "Noise threshold: understanding how thresholds control render time",
+            "Determining render completion criteria"
+          ]
         },
         {
           "lesson_number": "4.3",
-          "lesson_title": "Render Elements & Denoising",
-          "what_is_taught": "Setting up passes and applying the Denoiser.",
-          "why_it_matters": "Cuts render times significantly.",
-          "what_learner_does": "Renders out passes with Denoising applied.",
-          "expected_outcome": "Final production render."
+          "title": "Global Illumination Algorithms",
+          "topics": [
+            "Primary bounce: Brute Force mechanics and accuracy",
+            "Secondary bounce: Light Cache calculation and caching",
+            "Light Cache parameters (Subdivs, Sample size, Retrace)",
+            "Diagnosing and eliminating GI blotches and light leaks"
+          ]
+        },
+        {
+          "lesson_number": "4.4",
+          "title": "Noise Diagnosis & Problem Isolation",
+          "topics": [
+            "Distinguishing shadow noise from reflection/specular noise",
+            "Identifying indirect GI noise vs shader-driven noise",
+            "Bright-light fireflies and clamping sub-pixel values",
+            "Diagnosing noise caused by insufficient sampling vs poor lighting"
+          ]
+        },
+        {
+          "lesson_number": "4.5",
+          "title": "Advanced Denoising Workflows",
+          "topics": [
+            "V-Ray Denoiser engine configuration in VFB",
+            "NVIDIA AI Denoiser for rapid interactive look development",
+            "Default V-Ray Denoiser for final production finishing",
+            "Inspecting texture details and fine reflections for denoising artifacts"
+          ]
+        },
+        {
+          "lesson_number": "4.6",
+          "title": "CPU & GPU Compatibility Nuances",
+          "topics": [
+            "Supported materials and lighting features across CPU and GPU",
+            "Memory management: system RAM vs VRAM consumption",
+            "Handling GPU out-of-core rendering for heavy scenes",
+            "Choosing the right engine based on project requirements"
+          ]
+        },
+        {
+          "lesson_number": "4.7",
+          "title": "Render Performance Profiling",
+          "topics": [
+            "Measuring render times and tracking memory utilization",
+            "Impact of high-resolution textures on render speed",
+            "Evaluating displacement cost vs normal map performance",
+            "Light count optimization and unnecessary light reduction"
+          ]
+        },
+        {
+          "lesson_number": "4.8",
+          "title": "Scene Optimization Strategies",
+          "topics": [
+            "Cleaning unused materials, layers, and hidden geometry",
+            "Using V-Ray Proxy (VRayProxy) for high-poly furniture and foliage",
+            "Texture resizing and memory footprint management",
+            "Configuring render regions for rapid localized testing"
+          ]
+        },
+        {
+          "lesson_number": "4.9",
+          "title": "Troubleshooting Render Errors & Crashes",
+          "topics": [
+            "Fixing black renders and missing texture paths",
+            "Resolving GPU out-of-memory (OOM) errors",
+            "Handling plugin incompatibilities and render crashes",
+            "Correcting unintended color shifts and gamma discrepancies"
+          ]
+        },
+        {
+          "lesson_number": "4.10",
+          "title": "Quality Versus Speed Decision Matrix",
+          "topics": [
+            "Setting up draft presets for client work-in-progress previews",
+            "Configuring high-quality production presets for final delivery",
+            "Comparative analysis of render times vs visual quality gains",
+            "Making justified commercial trade-offs"
+          ]
         }
       ],
       "key_concepts": [
-        "Light Cache",
-        "Noise Threshold",
-        "Denoiser"
+        "Bucket vs Progressive",
+        "Noise threshold",
+        "Brute Force & Light Cache",
+        "V-Ray Denoiser",
+        "VRayProxy",
+        "Performance profiling"
       ],
       "tools": [
-        "V-Ray"
+        "V-Ray Render Setup",
+        "VFB Stats Panel",
+        "V-Ray Denoiser",
+        "VRayProxy",
+        "3ds Max Task Manager"
       ],
-      "hands_on_practice": "Optimize and render a complex interior scene.",
-      "assignment": "Submit final high-res render and passes.",
-      "business_application": "Meeting production deadlines.",
-      "expected_outcome": "Optimized final render."
+      "hands_on_practice": "Render the same complex interior scene using two distinct configurations (draft progressive vs high-quality bucket), recording render times, memory usage, and noise metrics.",
+      "assignment": "Prepare a rendering optimization report comparing noise, detail preservation, hardware performance, and render duration between test configurations.",
+      "deliverable": "Technical rendering optimization report with documented settings and comparative test renders.",
+      "commercial_application": "Meeting tight production deadlines and managing hardware resources effectively in commercial ArchViz studios."
+    },
+    {
+      "module_number": "Module 05",
+      "module_title": "Frame Buffer & Post-Production",
+      "module_purpose": "Use V-Ray Frame Buffer and suitable post-production tools to refine rendered images professionally.",
+      "hours": 6,
+      "guided_hours": 6,
+      "learning_hours": 6,
+      "lessons": [
+        {
+          "lesson_number": "5.1",
+          "title": "V-Ray Frame Buffer (VFB) Mastery",
+          "topics": [
+            "VFB interface overview, toolbar, and display controls",
+            "Render history (History tab) for visual comparison and A/B wipes",
+            "Region rendering and test renders directly from VFB",
+            "Managing layer-based non-destructive color adjustments"
+          ]
+        },
+        {
+          "lesson_number": "5.2",
+          "title": "VFB Adjustment Layers",
+          "topics": [
+            "Exposure correction, highlight burn reduction, and contrast",
+            "White balance adjustment and color temperature calibration",
+            "Curves and Levels for fine-tuned tonal distribution",
+            "Lookup Tables (LUT) integration for filmic tone mapping",
+            "Saving and loading VFB layer presets (.vbl)"
+          ]
+        },
+        {
+          "lesson_number": "5.3",
+          "title": "LightMix Interactive Lighting",
+          "topics": [
+            "Setting up VRayLightMix render element in Render Setup",
+            "Grouping lights logically (Environment, Interior Direct, Accent)",
+            "Adjusting light intensity and color interactively after rendering",
+            "LightMix limitations and memory considerations",
+            "Transferring LightMix settings back to the scene ('To Scene' command)"
+          ]
+        },
+        {
+          "lesson_number": "5.4",
+          "title": "Render Elements for Post-Production",
+          "topics": [
+            "Configuring essential render elements: VRayReflection, VRayRefraction",
+            "VRayLighting, VRayGlobalIllumination, and VRaySpecular",
+            "VRayZDepth for depth-of-field and atmospheric fog in post",
+            "Rebuilding beauty pass from elements in Photoshop"
+          ]
+        },
+        {
+          "lesson_number": "5.5",
+          "title": "Cryptomatte Mask Extraction",
+          "topics": [
+            "Purpose of Cryptomatte in architectural visualization",
+            "Setting up VRayCryptomatte element by Node Name or Material",
+            "Multi-channel EXR saving and layer extraction in Photoshop",
+            "Isolating specific furniture, walls, or glass for selective grading"
+          ]
+        },
+        {
+          "lesson_number": "5.6",
+          "title": "Color Management & Linear Workflow",
+          "topics": [
+            "Linear workflow principles and display transform awareness",
+            "sRGB display vs raw render data",
+            "ACEScg color workflow awareness for high-end visualization",
+            "Eliminating washed-out or over-saturated output errors"
+          ]
+        },
+        {
+          "lesson_number": "5.7",
+          "title": "Photoshop & Adobe Camera Raw Finishing",
+          "topics": [
+            "Importing 16-bit/32-bit renders into Photoshop",
+            "Adobe Camera Raw filter for clarity, dehaze, and vignette",
+            "Selective color adjustments using Cryptomatte masks",
+            "Subtle bloom, glare, and lens vignette without artificial look",
+            "Non-destructive image cleanup and final sharpening"
+          ]
+        },
+        {
+          "lesson_number": "5.8",
+          "title": "Client-Ready Export Standards",
+          "topics": [
+            "Export file formats: PNG, JPG, TIFF, and multi-channel EXR",
+            "Color profile embedding (sRGB) for web and client presentation",
+            "Bit depth considerations: 8-bit vs 16-bit deliverables",
+            "Standardized naming conventions for professional delivery"
+          ]
+        }
+      ],
+      "key_concepts": [
+        "V-Ray Frame Buffer",
+        "VFB layers",
+        "LightMix",
+        "Render elements",
+        "Cryptomatte",
+        "Adobe Camera Raw"
+      ],
+      "tools": [
+        "V-Ray Frame Buffer (VFB)",
+        "VRayLightMix",
+        "VRayCryptomatte",
+        "Adobe Photoshop",
+        "Adobe Camera Raw"
+      ],
+      "hands_on_practice": "Refine a raw V-Ray render using VFB adjustment layers, LightMix variations, and Adobe Camera Raw post-processing, saving out comparative before-and-after imagery.",
+      "assignment": "Submit before-and-after renders with a LightMix layer configuration screenshot and documented post-production breakdown.",
+      "deliverable": "Finished architectural render with reproducible VFB layer adjustments and Adobe Camera Raw finishing notes.",
+      "commercial_application": "Delivering client-ready architectural visuals with refined color grading, contrast, and multiple lighting moods without re-rendering."
+    },
+    {
+      "module_number": "Module 06",
+      "module_title": "Photorealistic Rendering Capstone",
+      "module_purpose": "Complete a coordinated architectural rendering portfolio using prepared scenes, professional lighting, material refinement and reliable delivery workflows.",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
+      "lessons": [
+        {
+          "lesson_number": "6.1",
+          "title": "Capstone Client Brief & Project Scope",
+          "topics": [
+            "Reviewing client brief for interior and exterior architectural visuals",
+            "Target audience, design intent, and mood specifications",
+            "Selecting prepared architectural scenes (Course 74 or supplied)",
+            "Establishing the capstone milestone schedule and deliverables"
+          ]
+        },
+        {
+          "lesson_number": "6.2",
+          "title": "Scene Audit & Asset Pre-Flight",
+          "topics": [
+            "Auditing scene geometry, scale, and surface normal alignment",
+            "Checking all external textures and HDRIs via Asset Tracking",
+            "Validating camera views for architectural composition",
+            "Creating baseline test renders to confirm scene readiness"
+          ]
+        },
+        {
+          "lesson_number": "6.3",
+          "title": "Interior Look Development & Shading",
+          "topics": [
+            "Assigning and calibrating PBR architectural materials",
+            "Fine-tuning hardwood flooring, marble, glass, and fabrics",
+            "Verifying UVW texture scale across all surfaces",
+            "Rendering material test close-ups for portfolio evidence"
+          ]
+        },
+        {
+          "lesson_number": "6.4",
+          "title": "Interior Lighting Implementation",
+          "topics": [
+            "Setting up natural daylight with V-Ray Sun or HDRI dome",
+            "Integrating artificial architectural fixtures (downlights, pendants, LEDs)",
+            "Configuring physical camera exposure and 2-point vertical perspective",
+            "Balancing light intensity to eliminate burnout and noise"
+          ]
+        },
+        {
+          "lesson_number": "6.5",
+          "title": "Exterior Lighting & Facade Shading",
+          "topics": [
+            "Configuring exterior daylight with V-Ray Sun/Sky and HDRI",
+            "Developing exterior materials (facade panels, glazing, landscaping)",
+            "Composing architectural exterior viewpoints",
+            "Ensuring environmental reflections and shadow realism"
+          ]
+        },
+        {
+          "lesson_number": "6.6",
+          "title": "Dual Lighting Variations (Day vs Evening)",
+          "topics": [
+            "Implementing Treatment A: Bright natural daylight",
+            "Implementing Treatment B: Atmospheric evening/night lighting",
+            "Using LightMix to manage lighting states efficiently",
+            "Maintaining identical camera framing for direct comparison"
+          ]
+        },
+        {
+          "lesson_number": "6.7",
+          "title": "Final Render Optimization & Execution",
+          "topics": [
+            "Final sampling, noise threshold, and denoiser settings",
+            "Configuring production resolution (high-resolution delivery)",
+            "Monitoring render progress and system resource utilization",
+            "Verifying output quality and inspecting for artifacts"
+          ]
+        },
+        {
+          "lesson_number": "6.8",
+          "title": "VFB & Post-Production Finishing",
+          "topics": [
+            "Applying VFB adjustment layers (Exposure, Curves, LUT)",
+            "Fine-tuning LightMix intensities for final mood balance",
+            "Exporting render passes and Cryptomatte masks",
+            "Final polish in Adobe Camera Raw and Photoshop"
+          ]
+        },
+        {
+          "lesson_number": "6.9",
+          "title": "Critique, Revisions & QA Review",
+          "topics": [
+            "Evaluating renders against the 17-point quality checklist",
+            "Documenting mentor feedback and revision iterations",
+            "Correcting minor specular, reflection, or exposure issues",
+            "Logging changes in the formal project revision log"
+          ]
+        },
+        {
+          "lesson_number": "6.10",
+          "title": "Source Asset Packaging & Archiving",
+          "topics": [
+            "Using 3ds Max Archive utility to bundle .max scene and all maps",
+            "Verifying relative asset path integrity across target workstations",
+            "Documenting external dependencies and licensed assets",
+            "Saving V-Ray render preset files (.rps)"
+          ]
+        },
+        {
+          "lesson_number": "6.11",
+          "title": "Technical Breakdown Documentation",
+          "topics": [
+            "Compiling the 17-point Technical Rendering Breakdown PDF",
+            "Assembling material tests, lighting progressions, and camera data",
+            "Documenting sampling settings, hardware specs, and render times",
+            "Structuring clear before-and-after visual evidence"
+          ]
+        },
+        {
+          "lesson_number": "6.12",
+          "title": "Portfolio Handover & Client Delivery",
+          "topics": [
+            "Organizing the 14-item client handover package",
+            "Exporting high-resolution web and print presentation formats",
+            "Writing the studio handover guide for downstream artists",
+            "Final portfolio defense and graduation review"
+          ]
+        }
+      ],
+      "key_concepts": [
+        "Architectural rendering capstone",
+        "Interior render",
+        "Exterior render",
+        "Day vs Night treatments",
+        "17-point breakdown",
+        "Client handover"
+      ],
+      "tools": [
+        "Chaos V-Ray",
+        "Autodesk 3ds Max",
+        "V-Ray Frame Buffer",
+        "Adobe Photoshop",
+        "Adobe Camera Raw"
+      ],
+      "hands_on_practice": "Complete the entire architectural rendering portfolio including interior, exterior, day/night lighting treatments, 17-point technical breakdown, and 14-item handover package.",
+      "assignment": "Submit all final renders, comparative lighting studies, technical breakdown documentation, and archived .max source project files.",
+      "deliverable": "Comprehensive assessed architectural rendering portfolio with editable 3ds Max scenes and reproducible technical settings.",
+      "commercial_application": "Showcasing commercial-grade architectural rendering proficiency to employers, design firms, and freelance clients."
     }
-  ]
+  ],
+  "faq": [
+    {
+      "question": "Is this V-Ray course suitable for beginners?",
+      "answer": "This is an intermediate specialization. Working 3ds Max knowledge is recommended. Students without that background should complete Course 74 (3ds Max Architectural Modeling & Visualization) first."
+    },
+    {
+      "question": "What will I learn?",
+      "answer": "You will learn V-Ray materials, PBR textures, architectural lighting, cameras, global illumination, sampling, denoising, V-Ray Frame Buffer, LightMix, and professional image finishing."
+    },
+    {
+      "question": "Do I need 3ds Max before learning V-Ray?",
+      "answer": "Yes. The course uses V-Ray for Autodesk 3ds Max, so you should understand basic 3ds Max scene navigation, modeling, and organization."
+    },
+    {
+      "question": "Will I learn photorealistic interior rendering?",
+      "answer": "Yes. You will learn material realism, natural and artificial lighting, camera exposure, GI, and final image finishing for interior scenes."
+    },
+    {
+      "question": "Will I learn exterior rendering?",
+      "answer": "Yes. The course includes architectural exterior visualization with controlled daylight, shadows, materials, and camera composition."
+    },
+    {
+      "question": "What portfolio will I create?",
+      "answer": "You will prepare an interior render, an exterior render, two lighting treatments of one scene, and a technical rendering breakdown containing material tests, LightMix evidence, and render settings."
+    },
+    {
+      "question": "Do I need to model every object?",
+      "answer": "No. This is a rendering specialization. Students may use supplied, previously modeled (Course 74), or properly licensed scenes and assets."
+    },
+    {
+      "question": "Will I learn V-Ray GPU?",
+      "answer": "Yes. The course introduces CPU and GPU rendering, compatibility considerations, hardware requirements, and realistic performance optimization."
+    },
+    {
+      "question": "Does GPU rendering always produce faster results?",
+      "answer": "No. Performance depends on hardware, scene complexity, available memory, settings, and feature support."
+    },
+    {
+      "question": "Will I learn LightMix?",
+      "answer": "Yes. The course teaches V-Ray Frame Buffer, LightMix, and controlled lighting variations without re-rendering."
+    },
+    {
+      "question": "Will I learn V-Ray denoising?",
+      "answer": "Yes. You will learn available denoising workflows, quality checks, and common artifacts. Denoising is not a substitute for correct sampling and lighting."
+    },
+    {
+      "question": "Will I learn real-time V-Ray rendering?",
+      "answer": "The course introduces modern interactive rendering and explains optional integrated real-time viewport workflows where the required software and licensing are available."
+    },
+    {
+      "question": "Is Chaos Vantage included?",
+      "answer": "Chaos Vantage is not included by default unless you possess an active V-Ray Collection or Vantage license. The course teaches Vantage as an optional workflow, while ensuring all core certification projects are fully achievable using standard V-Ray."
+    },
+    {
+      "question": "Is V-Ray free?",
+      "answer": "Chaos V-Ray is commercial software. Student, educational, trial, and commercial subscription access depend on applicable Chaos licensing terms."
+    },
+    {
+      "question": "Does the course include Twinmotion walkthroughs?",
+      "answer": "No. This course focuses on photorealistic rendering and image finishing. Real-time walkthroughs and animated presentations are covered separately in Course 76."
+    },
+    {
+      "question": "Will I receive editable project files?",
+      "answer": "Students are required to prepare editable 3ds Max scenes, organized materials, render settings, final images, and technical handover documentation."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course lasts six weeks, includes 48 guided learning hours, and has a listed fee of ₹8,900, subject to Nova Skills' verified pricing and tax policy."
+    }
+  ],
+  "primary_keyword": "V-Ray rendering course",
+  "secondary_keywords": [
+    "V-Ray course in India",
+    "Chaos V-Ray training",
+    "V-Ray 3ds Max course",
+    "Photorealistic rendering course",
+    "Architectural rendering course",
+    "V-Ray lighting course",
+    "Interior rendering course",
+    "Exterior rendering course",
+    "V-Ray material training",
+    "V-Ray global illumination",
+    "V-Ray GPU rendering",
+    "V-Ray Frame Buffer",
+    "V-Ray LightMix",
+    "Architectural visualization rendering",
+    "V-Ray certification course"
+  ],
+  "keywords": [
+    "V-Ray rendering course",
+    "Chaos V-Ray training",
+    "V-Ray 3ds Max course",
+    "Photorealistic rendering course",
+    "Architectural rendering course",
+    "V-Ray lighting course",
+    "V-Ray LightMix",
+    "V-Ray Frame Buffer",
+    "ArchViz rendering"
+  ],
+  "seo": {
+    "title": "V-Ray Rendering & Lighting Course | Nova Skills",
+    "meta_title": "V-Ray Rendering & Lighting Course | Nova Skills",
+    "description": "Learn V-Ray for 3ds Max, photorealistic materials, lighting, GI, LightMix and render optimization in 6 weeks (48h). Build a rendering portfolio. ₹8,900.",
+    "meta_description": "Learn V-Ray for 3ds Max, photorealistic materials, lighting, GI, LightMix and render optimization in 6 weeks (48h). Build a rendering portfolio. ₹8,900.",
+    "primary_keyword": "V-Ray rendering course",
+    "canonical_url": "https://novaskills.in/course-detail.html?id=v-ray-cert"
+  }
 }

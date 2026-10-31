@@ -1,405 +1,1589 @@
 {
   "course_id": "unreal-engine-basics",
-  "course_name": "Unreal Engine Basics",
+  "id": "unreal-engine-basics",
+  "slug": "unreal-engine-basics",
+  "course_name": "Unreal Engine 5 Real-Time 3D Fundamentals",
+  "title": "Unreal Engine 5 Real-Time 3D Fundamentals",
+  "name": "Unreal Engine 5 Real-Time 3D Fundamentals",
+  "academic_sequence": 78,
+  "course_number": 78,
+  "curriculum_edition": "2027",
   "academy": "3D Academy",
   "academy_id": "3d",
-  "course_type": "SPECIALIZATION",
-  "course_role": "Career/Monetization",
-  "level": "BEGINNER+",
-  "duration": "1 Month",
-  "learning_hours": 80,
-  "future_review_status": "STABLE",
-  "target_audience": {
-    "best_for": [
-      "Aspiring Architectural Visualizers seeking mastery in photorealistic rendering.",
-      "Architects wanting to create high-end presentations.",
-      "3D Artists shifting to real-time ArchViz workflows."
+  "academyId": "3d",
+  "academic_positioning": "Real-Time 3D Environment Design, Lumen Lighting, Nanite Virtualized Geometry, Blueprint Visual Scripting & Interactive Cinematics",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "Junior Real-Time 3D Artist & Unreal Environment Specialist",
+  "courseRole": "Junior Real-Time 3D Artist & Unreal Environment Specialist",
+  "level": "Beginner to Applied 3D",
+  "priority": "P0",
+  "positioning": "Real-Time Environment Design & Beginner Interactivity",
+  "duration": "8 Weeks",
+  "durationMonths": 2,
+  "duration_weeks": 8,
+  "learning_hours": 64,
+  "learningHours": 64,
+  "guided_hours": 64,
+  "hours": 64,
+  "weekly_workload": "8 hours per week (guided studio labs, Blueprint visual scripting exercises, lighting reviews, and real-time optimization)",
+  "mode": "Interactive Software Labs & Guided Real-Time 3D Studio Simulation",
+  "price": 10900,
+  "fee": 10900,
+  "regular_fee": 10900,
+  "originalPrice": 10900,
+  "commercial_notice": "Flat, transparent tuition of ₹10,900. No hidden fees or exaggerated comparison claims.",
+  "pricing": {
+    "amount": 10900,
+    "currency": "INR",
+    "display": "₹10,900",
+    "comparison_price": null,
+    "discount_percent": 0,
+    "transparent_pricing": true
+  },
+  "tagline": "Build Interactive 3D Worlds That People Can Explore.",
+  "hero_headline": "Build Interactive 3D Worlds That People Can Explore.",
+  "hero_supporting_heading": "3D ACADEMY / INTERACTIVE REAL-TIME 3D CERTIFICATION",
+  "hero_supporting_headline": "Create the World. Add Interactivity. Bring Your 3D Ideas to Life.",
+  "h1": "Unreal Engine 5 Real-Time 3D Fundamentals",
+  "seo_title": "Unreal Engine 5 Course | Real-Time 3D & Blueprints | Nova Skills",
+  "meta_title": "Unreal Engine 5 Course | Real-Time 3D & Blueprints | Nova Skills",
+  "seo_description": "Learn Unreal Engine 5, Lumen, Nanite, Blueprints and real-time 3D environments in 8 weeks (64h). Build an interactive portfolio. Fee ₹10,900.",
+  "meta_description": "Learn Unreal Engine 5, Lumen, Nanite, Blueprints and real-time 3D environments in 8 weeks (64h). Build an interactive portfolio. Fee ₹10,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=unreal-engine-basics",
+  "hero": {
+    "eyebrow": "3D ACADEMY / INTERACTIVE REAL-TIME 3D CERTIFICATION",
+    "h1": "Unreal Engine 5 Real-Time 3D Fundamentals",
+    "primary_hook": "Build Interactive 3D Worlds That People Can Explore.",
+    "short_description": "Learn Unreal Engine 5 to create real-time 3D environments, configure realistic lighting, build basic Blueprint interactions and present interactive architectural or virtual scenes. Develop practical skills using modern environment-building and real-time rendering workflows.",
+    "supporting_value_proposition": "Create the World. Add Interactivity. Bring Your 3D Ideas to Life.",
+    "quick_info": "8 Weeks | 64 Guided Hours | ₹10,900 | Beginner to Applied 3D",
+    "primary_software_badge": "Unreal Engine 5 (Validated Stable UE 5.8 or Supported UE5 Release)",
+    "skill_tags": [
+      "Unreal Engine 5",
+      "Real-Time 3D",
+      "Environment Design",
+      "Lumen",
+      "Nanite",
+      "Blueprints",
+      "Materials",
+      "Sequencer",
+      "Interactive Experiences",
+      "Performance Optimization"
     ],
-    "who_should_take_foundation_first": "Learners without basic spatial awareness or CAD reading skills should complete foundational drafting first.",
-    "not_for": [
-      "Individuals looking for character animation.",
-      "Students wanting theoretical architecture without 3D production."
+    "primary_cta": "Enroll Now",
+    "secondary_cta": "Get Course Syllabus"
+  },
+  "short_description": "Learn Unreal Engine 5 to create real-time 3D environments, configure realistic lighting, build basic Blueprint interactions and present interactive architectural or virtual scenes. Develop practical skills using modern environment-building and real-time rendering workflows.",
+  "shortDesc": "Learn Unreal Engine 5 to create real-time 3D environments, configure realistic lighting, build basic Blueprint interactions and present interactive architectural or virtual scenes. Develop practical skills using modern environment-building and real-time rendering workflows.",
+  "full_description": "Learn how to build real-time 3D environments using Unreal Engine 5. Develop practical skills in scene creation, static-mesh importing, materials, lighting, environmental composition and interactive visual scripting. Create immersive architectural or virtual spaces, add functional interactions with Blueprints, animate cinematic cameras and optimize projects for reliable performance. Finish with an editable interactive environment and professional presentation materials.",
+  "fullDesc": "Learn how to build real-time 3D environments using Unreal Engine 5. Develop practical skills in scene creation, static-mesh importing, materials, lighting, environmental composition and interactive visual scripting. Create immersive architectural or virtual spaces, add functional interactions with Blueprints, animate cinematic cameras and optimize projects for reliable performance. Finish with an editable interactive environment and professional presentation materials.",
+  "description": "Learn Unreal Engine 5 to create real-time 3D environments, configure realistic lighting, build basic Blueprint interactions and present interactive architectural or virtual scenes. Develop practical skills using modern environment-building and real-time rendering workflows.",
+  "overview": {
+    "section_heading": "What You Will Master",
+    "positioning": "Real-Time Environment Design & Beginner Interactivity",
+    "short_description": "Learn Unreal Engine 5 to create real-time 3D environments, configure realistic lighting, build basic Blueprint interactions and present interactive architectural or virtual scenes. Develop practical skills using modern environment-building and real-time rendering workflows.",
+    "expanded_overview": "Learn how to build real-time 3D environments using Unreal Engine 5. Develop practical skills in scene creation, static-mesh importing, materials, lighting, environmental composition and interactive visual scripting. Create immersive architectural or virtual spaces, add functional interactions with Blueprints, animate cinematic cameras and optimize projects for reliable performance. Finish with an editable interactive environment and professional presentation materials.",
+    "commercial_differentiation": "Move Beyond Static 3D Scenes. Build Experiences People Can Explore.",
+    "workflow": "Plan → Import Assets → Build Environment → Apply Materials → Light → Add Interactions → Animate Cameras → Optimize → Test → Present"
+  },
+  "commercial_differentiation": {
+    "headline": "From 3D Environments to Interactive Experiences.",
+    "supporting_copy": "Learn to create real-time 3D worlds using Unreal Engine 5. Design immersive environments, develop realistic lighting, add functional Blueprint interactions and present your projects through cinematic walkthroughs and interactive demonstrations.",
+    "differentiators": [
+      {
+        "title": "Real-Time Environment Building",
+        "description": "Build coherent interactive 3D scenes using modern Unreal Engine asset importing, modular environment construction, and material instance workflows."
+      },
+      {
+        "title": "Modern Lighting & Rendering",
+        "description": "Learn Lumen dynamic global illumination, Nanite virtualized geometry fundamentals, Virtual Shadow Maps, and performance-aware rendering settings."
+      },
+      {
+        "title": "Blueprint Interactivity",
+        "description": "Create at least two meaningful, verified interactions (such as physical doors and lighting/material toggles) without writing a single line of C++ code."
+      },
+      {
+        "title": "Portfolio-Ready Experience",
+        "description": "Complete one unified interactive 3D environment featuring working controls, a 30–60s cinematic walkthrough, performance profiling, and editable .uproject source files."
+      }
     ]
   },
-  "prerequisites": {
-    "required": "Basic understanding of architectural plans.",
-    "recommended": "Familiarity with digital art tools.",
-    "not_required": "Advanced mathematics or prior coding experience.",
-    "system_requirements": {
-      "hardware": "Modern multi-core CPU, 32GB+ RAM, dedicated GPU (RTX 3070+).",
-      "software_accounts": "3ds Max, V-Ray, Photoshop, Twinmotion, SketchUp."
-    }
-  },
-  "overview": {
-    "positioning": "Next-generation real-time 3D environments, virtual production, and interactive architectural experiences using Unreal Engine 5.",
-    "short_description": "Master Unreal Engine 5's core tools including Lumen and Nanite.",
-    "key_facts": {
-      "level": "BEGINNER",
-      "duration": "1 Month",
-      "format": "Hands-On",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "4 Projects",
-      "capstone": "Real-time Cinematic Environment",
-      "ai_integration": "NONE",
-      "career_focus": "Environment Artist, Real-time Generalist"
-    },
-    "what_you_will_be_able_to_do": [
-      "Build expansive outdoor environments using Landscape tools.",
-      "Utilize Nanite for high-poly mesh rendering.",
-      "Light scenes dynamically using Lumen.",
-      "Create basic interactions with Blueprint Visual Scripting."
+  "modern_workflow_2027": {
+    "section_title": "Build Real-Time Worlds With Modern Unreal Engine 5 Workflows.",
+    "website_copy": "Learn real-time 3D environment creation using modern Unreal Engine tools. Build scenes with Lumen lighting, Nanite-aware assets and beginner Blueprint interactions, then refine cinematic presentation and performance to deliver interactive experiences.",
+    "core_competencies": [
+      {
+        "competency": "Supported Engine Release",
+        "details": "Built on Unreal Engine 5.8 or validated currently supported stable UE5 releases. Focuses on robust production-ready workflows while avoiding unstable experimental dependencies."
+      },
+      {
+        "competency": "Lumen Dynamic Global Illumination",
+        "details": "Master real-time bounce lighting, indirect reflections, and lighting response across exterior and interior architectural environments, with version-aware Lumen Lite awareness and hardware fallbacks."
+      },
+      {
+        "competency": "Nanite Virtualized Geometry",
+        "details": "Harness Nanite static mesh streaming for dense architectural details and environment props while understanding geometry suitability, memory budgets, and draw-call performance."
+      },
+      {
+        "competency": "Blueprint Visual Scripting",
+        "details": "Build robust node-based interaction graphs using events, variables, functions, triggers, and Timelines without requiring C++ programming."
+      },
+      {
+        "competency": "Sequencer & Movie Render Pipeline",
+        "details": "Choreograph smooth camera reveals with Cine Camera Actors, execute frame-accurate rendering in Movie Render Queue (MRQ), and understand production Movie Render Graph (MRG) concepts."
+      },
+      {
+        "competency": "Procedural Content Generation (PCG) Awareness",
+        "details": "Gain practical awareness of UE5.7/5.8 production PCG graph distribution for props and environmental scattering within structured beginner boundaries."
+      }
     ]
   },
   "why_now": {
-    "industry_shift": "Unreal Engine 5 has unified game development, Hollywood virtual production, and interactive architectural walkthroughs on a single real-time engine.",
-    "ai_impact": "Lumen real-time global illumination and Nanite virtualized geometry allow creators to render billions of polygons without baking lightmaps.",
-    "business_demand": "Real estate developers and architecture firms require rapid, photorealistic visual assets for marketing.",
-    "career_opportunity": "Skilled ArchViz artists command premium rates in global freelance markets."
-  },
-  "learning_outcomes": [
-    "MODEL: Construct accurate 3D architectural scenes from 2D plans.",
-    "TEXTURE: Apply physically based rendering (PBR) materials for realism.",
-    "LIGHT: Configure realistic interior and exterior lighting setups.",
-    "RENDER: Optimize render settings for balance between quality and speed.",
-    "ANIMATE: Develop smooth camera paths for real-time walkthroughs."
-  ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1: Structural Modeling",
-        "focus": "Translating CAD plans into 3D geometry in 3ds Max."
-      },
-      {
-        "stage": "Stage 2: Materiality",
-        "focus": "Creating and applying realistic V-Ray materials."
-      },
-      {
-        "stage": "Stage 3: Illumination",
-        "focus": "Mastering HDRI and artificial lighting setups."
-      },
-      {
-        "stage": "Stage 4: Post-Production",
-        "focus": "Enhancing raw renders using Photoshop techniques."
-      },
-      {
-        "stage": "Stage 5: Real-Time Environments",
-        "focus": "Importing scenes into Twinmotion for interactive walkthroughs."
-      }
+    "headline": "Why Real-Time 3D & Unreal Engine 5 Matter Today",
+    "points": [
+      "Real-time 3D engines have transformed architectural visualization, virtual production, digital twins, and commercial product marketing.",
+      "Lumen and Nanite eliminate traditional offline baking and manual LOD authoring, allowing faster creative iterations with cinematic fidelity.",
+      "Blueprint Visual Scripting enables 3D artists and designers to create functional interactive applications and spatial client walkthroughs without software engineering backgrounds.",
+      "Modern studios demand artists who can bridge the gap between static 3D models and interactive real-time experiences."
     ]
   },
-  "hands_on_tech": {
-    "core_tools": [
-      {
-        "tool": "Unreal Engine 5",
-        "purpose": "Real-time engine.",
-        "what_student_learns": "Environment design, lighting, blueprints.",
-        "what_student_builds": "Interactive real-time scenes."
-      }
-    ]
-  },
-  "industry_workflow": {
-    "overview": "Standard ArchViz Production Pipeline:",
-    "stages": [
-      {
-        "step": 1,
-        "name": "CAD Import & Cleanup",
-        "desc": "Preparing 2D plans for 3D modeling."
-      },
-      {
-        "step": 2,
-        "name": "Whitebox Modeling",
-        "desc": "Building the primary structure and testing camera angles."
-      },
-      {
-        "step": 3,
-        "name": "Material & Texture Application",
-        "desc": "Assigning PBR materials to surfaces."
-      },
-      {
-        "step": 4,
-        "name": "Lighting Setup",
-        "desc": "Configuring natural and artificial light sources."
-      },
-      {
-        "step": 5,
-        "name": "Rendering & Post-Production",
-        "desc": "Generating final images and applying adjustments in Photoshop."
-      }
-    ]
-  },
-  "business_use_cases": [
-    {
-      "sector": "Real Estate Marketing",
-      "business_problem": "Selling off-plan properties before construction.",
-      "approach": "Create photorealistic visual assets based on architectural plans.",
-      "toolset": "3ds Max, V-Ray, Photoshop",
-      "output": "High-converting marketing brochures and virtual tours."
-    }
+  "icon": "fa-solid fa-cube",
+  "color": "linear-gradient(135deg, #004672, #0EA5E9)",
+  "rating": 4.9,
+  "reviews": 146,
+  "students": 860,
+  "liveProjects": 1,
+  "projects": 1,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=unreal-engine-basics",
+  "tags": [
+    "popular",
+    "unreal-engine",
+    "ue5",
+    "real-time-3d",
+    "blueprints",
+    "lumen",
+    "nanite",
+    "environment-design",
+    "certification"
   ],
-  "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Denoising renders and generating background elements.",
-    "ai_can_automate": "Texture upscaling and basic sky replacements.",
-    "ai_cannot_replace": "Architectural design intent, lighting mood, and spatial composition.",
-    "human_expertise_required": "Ensuring structural accuracy and realistic material properties.",
-    "validation_protocol": "Verify AI-generated elements against actual project specifications.",
-    "responsible_use": "Avoid misleading representations of physical property boundaries."
-  },
-  "best_practices": [
-    "Always work to real-world scale (1 unit = 1cm or 1m).",
-    "Keep poly counts optimized for real-time engine compatibility.",
-    "Use render elements (passes) for flexible post-production."
+  "featured": true,
+  "category": "3D Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "target_audience": [
+    "Aspiring real-time environment artists seeking to build portfolio-grade 3D worlds in Unreal Engine 5.",
+    "Architectural visualization and interior designers wanting to upgrade from static renders to navigable real-time walkthroughs.",
+    "Blender and 3ds Max artists transitioning into real-time interactive pipelines, lighting, and materials.",
+    "Virtual experience, showroom, and product visualization creators seeking Blueprint interactivity.",
+    "Creative freelancers offering interactive 3D presentations, cinematic walkthroughs, and spatial prototypes."
   ],
-  "common_mistakes": [
-    {
-      "mistake": "Ignoring real-world material scale and reflectivity.",
-      "why_it_happens": "Rushing the texturing process without reference photos.",
-      "professional_approach": "Always use PBR maps with correct tiling and reflection glossiness."
-    }
-  ],
-  "career_paths": {
-    "entry_roles": "Junior ArchViz Artist",
-    "mid_roles": "Senior 3D Visualizer",
-    "specialist_roles": "Lighting TD, Environment Artist",
-    "freelance_roles": "Freelance Architectural Renderer",
-    "employer_expectations": "Strong portfolio of photorealistic renders and fast turnaround times.",
-    "what_student_demonstrates": "Ability to deliver complete ArchViz projects from CAD to final render."
-  },
-  "freelance_applications": {
-    "services_offered": [
-      "Exterior Renders",
-      "Interior Renders",
-      "Real-time Walkthroughs"
+  "prerequisites": {
+    "required": [
+      "Basic 3D concepts recommended (3D navigation, transforms, materials, lights, cameras, and basic file management)."
     ],
-    "client_workflow": "Receive CAD -> Whitebox Approval -> Texture/Light Approval -> Final Render Delivery",
-    "portfolio_requirements": "3-5 high-quality projects showing various lighting conditions (day/night)."
+    "not_required": [
+      "No C++ or programming experience required (Blueprint Visual Scripting is taught from foundations).",
+      "No mandatory prior 3D modeling experience (supplied high-quality assets and Fab models are provided)."
+    ],
+    "recommended_preparation": "Familiarity with standard PC navigation and spatial coordinate axes (X, Y, Z).",
+    "hardware_software": "PC running Windows 10/11 (or supported OS) with dedicated DirectX 12 capable GPU (NVIDIA RTX or equivalent recommended for Lumen/Nanite hardware acceleration), 16GB+ RAM, and SSD storage."
   },
-  "what_you_will_build": [
-    "Modern Residential Exterior Render",
-    "Luxury Interior Living Space Render",
-    "Commercial Building Real-Time Walkthrough"
+  "highlights": [
+    "8 Weeks of structured real-time 3D training in Unreal Engine 5 (64 guided learning hours)",
+    "Master Unreal Editor navigation, level structure, static mesh importing, and folder organization",
+    "Physically based material design: PBR master graphs, parameter exposures, and reusable material instances",
+    "Modern lighting mastery: Lumen dynamic global illumination, sky atmosphere, reflections, and Post Process Volumes",
+    "Nanite virtualized geometry principles, asset suitability, and Virtual Shadow Maps integration",
+    "Node-based visual scripting: build events, variables, functions, Timelines, triggers, and UI prompts without C++",
+    "Choreograph cinematic walkthroughs with Sequencer, Cine Camera Actors, and Movie Render Queue (MRQ)",
+    "Deliver a complete Interactive 3D Capstone with 2 functional Blueprint interactions, cinematic export, and editable .uproject source files"
   ],
-  "final_deliverables": [
-    "Set of 4K photorealistic architectural renders.",
-    "Playable real-time architectural walkthrough executable."
+  "hands_on_tech": {
+    "primary_tool": "Unreal Engine 5 (Validated Stable UE 5.8 or Supported UE5 Release)",
+    "supporting_tools": [
+      "Fab (Modern asset discovery and library import)",
+      "Blueprint Visual Scripting (Native engine interactive scripting)",
+      "Sequencer & Movie Render Queue (Cinematic camera choreography and video export)",
+      "Blender (Optional modeling support for mesh inspection and export adjustments)",
+      "Datasmith (Optional workflow for architectural model conversion)"
+    ]
+  },
+  "tools": [
+    "Unreal Engine 5",
+    "Fab",
+    "Blueprints",
+    "Sequencer",
+    "Movie Render Queue",
+    "Blender",
+    "Datasmith"
   ],
-  "assessment": {
-    "model": "Project-Based Evaluation",
-    "criteria": "Photorealism, modeling accuracy, lighting quality, and material realism."
-  },
-  "certification": {
-    "title": "Certified Architectural Visualizer",
-    "criteria": "Completion of all module projects and capstone presentation.",
-    "verification": "Digital verified certificate."
-  },
-  "not_covered": "Structural engineering analysis and MEP (Mechanical, Electrical, Plumbing) design.",
-  "next_learning_path": {
-    "recommended_next": "Unreal Engine Advanced for ArchViz",
-    "related_programs": "3D Visualisation Professional"
-  },
-  "faq": [
+  "curriculum": [
     {
-      "question": "Do I need to be an architect?",
-      "answer": "No, but you need to learn how to read architectural floor plans."
+      "module": "Module 01",
+      "title": "Unreal Engine Foundations",
+      "lessons": 11,
+      "hours": 8
     },
     {
-      "question": "Why learn both V-Ray and Twinmotion?",
-      "answer": "V-Ray is industry standard for high-end static renders, while Twinmotion allows rapid real-time interactive presentations."
+      "module": "Module 02",
+      "title": "3D Assets & Environment Building",
+      "lessons": 13,
+      "hours": 10
     },
     {
-      "question": "Can my laptop run 3ds Max and V-Ray?",
-      "answer": "You need a system with a dedicated GPU (like an RTX 3060 or better) for smooth rendering performance."
+      "module": "Module 03",
+      "title": "Lighting, Rendering & Visual Quality",
+      "lessons": 15,
+      "hours": 12
+    },
+    {
+      "module": "Module 04",
+      "title": "Blueprint Visual Scripting",
+      "lessons": 13,
+      "hours": 10
+    },
+    {
+      "module": "Module 05",
+      "title": "Cinematics & Real-Time Optimization",
+      "lessons": 14,
+      "hours": 10
+    },
+    {
+      "module": "Module 06",
+      "title": "Interactive 3D Capstone",
+      "lessons": 14,
+      "hours": 14
     }
   ],
+  "learning_outcomes": [
+    "Navigate the Unreal Engine Editor with fluid viewport control, camera piloting, and transform manipulation.",
+    "Create and configure Unreal Engine projects using appropriate templates, project settings, and target hardware presets.",
+    "Understand levels, Actors, and Components to structure modular and hierarchical real-time environments.",
+    "Organize project assets and directories according to industry standard naming conventions and folder structures.",
+    "Import appropriate 3D meshes with accurate scale, pivots, smoothing groups, and material slot assignments.",
+    "Understand FBX and modern Interchange framework workflows for seamless asset transfer and reimporting.",
+    "Configure physically based materials and parameter-driven material instances for efficient visual reuse.",
+    "Apply texture maps correctly, adhering to appropriate color spaces, channel packing, and resolution budgets.",
+    "Configure simple and complex collision settings to ensure proper spatial navigation and physics boundaries.",
+    "Assemble real-time 3D environments applying core principles of architectural blocking, scale, and visual hierarchy.",
+    "Work with basic landscape tools to sculpt foundational terrain and apply blend materials for environmental context.",
+    "Configure static and dynamic lighting concepts to achieve balanced direct, ambient, and artificial illumination.",
+    "Understand Lumen Global Illumination principles, indirect bounce lighting, and hardware-dependent quality trade-offs.",
+    "Understand Nanite Virtualized Geometry to deploy dense architectural assets while managing memory constraints.",
+    "Use Virtual Shadow Maps where supported to achieve crisp, detailed real-time dynamic contact shadows.",
+    "Configure Post Process Volumes for artistic exposure control, color grading, bloom, and depth-of-field styling.",
+    "Create basic Blueprint Actor logic using node-based Event Graphs to control object behaviors.",
+    "Work with events, variables, and custom functions to manage interactive states and data flow cleanly.",
+    "Implement triggers and collision overlap events to initiate interactive actions based on player proximity.",
+    "Create at least two functional Blueprint interactions (such as an interactive door and a lighting/material toggle).",
+    "Use basic UI controls and UMG widgets where appropriate to display on-screen button prompts and instructions.",
+    "Debug introductory Blueprint logic using compiler error analysis, variable monitoring, and Print String validation.",
+    "Create cinematic camera sequences with Sequencer to showcase environments with planned choreography.",
+    "Animate Cine Camera Actors utilizing focal length adjustments, aperture settings, and smooth motion curves.",
+    "Export high-quality cinematic video presentations using Movie Render Queue (MRQ) and evaluate output quality.",
+    "Understand modern Movie Render Queue and 2027 production Movie Render Graph (MRG) rendering architectures.",
+    "Measure real-time viewport performance using Stat FPS, Stat Unit, and engine profiling diagnostics.",
+    "Identify scene optimization opportunities across mesh density, texture resolutions, material shaders, and lighting costs.",
+    "Test an interactive environment thoroughly through Play In Editor (PIE) and Standalone Game runtime modes.",
+    "Package or demonstrate the interactive project appropriately, documenting build steps or runtime reproduction instructions.",
+    "Organize editable Unreal source files (.uproject, Content, Config) cleanly for client handover and archiving.",
+    "Prepare comprehensive technical project breakdown documentation and presentation media for professional portfolios."
+  ],
+  "portfolio": {
+    "title": "Unreal Engine 5 — Interactive 3D Environment & Cinematic Portfolio",
+    "name": "Interactive 3D Environment & Cinematic Walkthrough Portfolio",
+    "total_deliverables": 5,
+    "deliverables_count": "5 Production-Grade Deliverables",
+    "description": "One unified real-time 3D environment portfolio demonstrating environment construction, Lumen lighting, two functional Blueprint interactions, a cinematic walkthrough, and an interactive demonstration with complete editable project files.",
+    "deliverable_01": {
+      "title": "Deliverable 01: Complete Real-Time 3D Environment",
+      "description": "A thoughtfully assembled, fully realized real-time 3D architectural or virtual environment featuring organized static meshes, PBR material instances, realistic lighting, functional collision boundaries, and performance-aware set dressing.",
+      "evidence": "High-resolution viewport captures, lighting breakdown comparisons (daylight vs. artificial/evening), and scene hierarchy documentation."
+    },
+    "deliverable_02": {
+      "title": "Deliverable 02: Two Functional Blueprint Interactions",
+      "description": "Two distinct, operational Blueprint visual scripting systems: Interaction A (Physical/Spatial e.g., interactive proximity door or trigger reveal) and Interaction B (Environment/UI e.g., lighting toggle or material variant switcher). Both interactions must produce visible, repeatable results with zero runtime errors.",
+      "evidence": "Clean Blueprint Event Graph screenshots, variable setup documentation, and recorded screen video proving functional, repeatable activation."
+    },
+    "deliverable_03": {
+      "title": "Deliverable 03: Cinematic Walkthrough Video",
+      "description": "A 30–60 second cinematic walkthrough video created with Sequencer and Cine Camera Actors, featuring planned camera choreography, smooth focal transitions, dynamic environmental reveals, and exported via Movie Render Queue.",
+      "evidence": "Final exported video file (1080p), Sequencer timeline screenshots, camera setting configurations, and render settings report."
+    },
+    "deliverable_04": {
+      "title": "Deliverable 04: Working Interactive Demonstration",
+      "description": "A verified interactive demonstration of the environment. Option A: Packaged standalone executable where platform and toolchain permit. Option B: Verified runtime recording demonstrated in Play In Editor (PIE) or Standalone mode with clear documentation of packaging limits and reproduction steps.",
+      "evidence": "Working packaged build or verified runtime gameplay video demonstrating free navigation and both Blueprint interactions, accompanied by system requirements."
+    },
+    "deliverable_05": {
+      "title": "Deliverable 05: Technical Project Breakdown & Handover Package",
+      "description": "A 15-point comprehensive technical project breakdown covering project brief, engine version, asset licensing, material and lighting architecture, Blueprint schematics, performance benchmarks, and a clean editable .uproject source package.",
+      "evidence": "Technical breakdown PDF/Markdown document and zipped editable Unreal Engine project folder containing Content and Config directories."
+    }
+  },
+  "skill_boundaries": {
+    "course_73_blender": "Course 73 focuses on open-source 3D polygon modeling, procedural shading, sculpting, and Cycles offline rendering.",
+    "course_74_3dsmax": "Course 74 focuses on precision architectural modeling, Splines, Editable Poly, and CAD-to-3D visualization.",
+    "course_75_vray": "Course 75 focuses on photorealistic offline architectural rendering, physically based lights, and V-Ray Frame Buffer compositing in 3ds Max.",
+    "course_76_twinmotion": "Course 76 focuses on rapid real-time architectural presentation, drag-and-drop asset population, and client walkthrough exports.",
+    "course_78_unreal_engine": "Course 78 focuses on deep real-time 3D environment design, node-based Blueprint visual scripting, Lumen/Nanite engineering, Sequencer cinematics, and interactive application delivery.",
+    "key_differentiation_twinmotion_vs_ue5": "Twinmotion provides streamlined, fast architectural visualization workflows. Unreal Engine 5 delivers comprehensive control over scene construction, custom Blueprint logic, dynamic game-engine features, and extensible interactive applications.",
+    "explicit_exclusions": [
+      "Full AAA game development or complex game combat/inventory mechanics",
+      "C++ programming or source-code compilation pipelines",
+      "Multiplayer networking, server-authoritative logic, and online replication",
+      "Advanced virtual production LED in-camera VFX stages",
+      "Complex character rigging, AI behavior trees, or custom MetaHuman creation",
+      "Large-scale procedural open-world PCG systems beyond introductory awareness",
+      "Commercial VR hardware engineering and console SDK deployment"
+    ]
+  },
+  "career_paths": [
+    {
+      "role": "Junior Real-Time 3D Artist",
+      "description": "Build, assemble, and optimize real-time 3D environments for architectural studios, creative agencies, and visualization firms."
+    },
+    {
+      "role": "Unreal Engine Environment Assistant",
+      "description": "Assist production teams with static mesh importing, PBR material configuration, Lumen lighting, and scene population."
+    },
+    {
+      "role": "Junior Interactive 3D Designer",
+      "description": "Implement introductory Blueprint visual scripting for spatial walkthroughs, product configurators, and interactive showcases."
+    },
+    {
+      "role": "Real-Time Visualization Assistant",
+      "description": "Create cinematic camera sequences in Sequencer and prepare interactive presentations for real estate and design clients."
+    }
+  ],
+  "freelance_applications": [
+    "Interactive real estate and architectural environment walkthroughs",
+    "Real-time 3D virtual showroom and product experience prototypes",
+    "Cinematic 3D camera animations and promotional video sequences",
+    "Blueprint-driven interactive lighting and material configuration systems",
+    "Real-time environment assembly from client-supplied CAD or 3D models",
+    "Virtual exhibition booths and interactive digital experience spaces"
+  ],
+  "assessment_model": {
+    "type": "Practical Portfolio & Technical Rubric Assessment",
+    "passing_grade": "75%",
+    "breakdown": [
+      {
+        "area": "Unreal Engine Foundations & Organization",
+        "weight": "10%"
+      },
+      {
+        "area": "Assets & Environment Construction",
+        "weight": "20%"
+      },
+      {
+        "area": "Lighting, Materials & Visual Quality",
+        "weight": "20%"
+      },
+      {
+        "area": "Blueprint Logic & Interactivity",
+        "weight": "25%"
+      },
+      {
+        "area": "Cinematics & Optimization",
+        "weight": "10%"
+      },
+      {
+        "area": "Final Capstone, QA & Handover",
+        "weight": "15%"
+      }
+    ],
+    "evaluation_criteria": "Evaluation is strictly based on practical scene assembly, material consistency, lighting realism, verified execution of two distinct Blueprint interactions with zero runtime errors, smooth cinematic presentation, performance awareness, and complete editable source-file delivery."
+  },
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Level Design & Landscape Tools",
-      "module_purpose": "Build the foundation of a virtual world.",
-      "what_you_will_learn": [
-        "UE5 Interface",
-        "Landscape Sculpting",
-        "Foliage System"
-      ],
+      "module_number": "01",
+      "module_title": "Unreal Engine Foundations",
+      "module_purpose": "Develop practical familiarity with the Unreal Engine Editor, project structure and fundamental real-time 3D scene-building concepts.",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
       "lessons": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "Unreal Engine 5 UI & Navigation",
-          "what_is_taught": "Content Browser, Viewport, Details panel.",
-          "why_it_matters": "Core navigation.",
-          "what_learner_does": "Creates a new project and navigates.",
-          "expected_outcome": "Familiarity with UE5."
+          "number": "1.1",
+          "title": "Introduction to Unreal Engine",
+          "topics": [
+            "What Unreal Engine is",
+            "Real-time rendering principles",
+            "Interactive 3D concepts",
+            "Game-engine fundamentals",
+            "Architectural visualization applications",
+            "Virtual environments and simulations",
+            "Creative industry opportunities"
+          ]
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "Landscape Sculpting",
-          "what_is_taught": "Creating terrain, sculpting mountains and valleys.",
-          "why_it_matters": "Base for outdoor environments.",
-          "what_learner_does": "Sculpts an island terrain.",
-          "expected_outcome": "3D Terrain."
+          "number": "1.2",
+          "title": "Unreal Engine Project Setup",
+          "topics": [
+            "Epic Games Launcher management",
+            "Supported Unreal Engine installations",
+            "Project creation and templates",
+            "Project naming and disk location",
+            "Project settings configuration",
+            "Blueprint-based project selection"
+          ]
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "Landscape Materials & Foliage",
-          "what_is_taught": "Painting textures and scattering trees.",
-          "why_it_matters": "Brings the environment to life.",
-          "what_learner_does": "Paints grass and populates a forest.",
-          "expected_outcome": "Lush outdoor environment."
+          "number": "1.3",
+          "title": "Unreal Editor Interface",
+          "topics": [
+            "Viewport layout and controls",
+            "Content Drawer and Content Browser",
+            "World Outliner hierarchy",
+            "Details panel properties",
+            "Toolbar shortcuts and modes",
+            "Project Settings and Editor Preferences"
+          ]
+        },
+        {
+          "number": "1.4",
+          "title": "Viewport Navigation",
+          "topics": [
+            "Orbit, pan, and zoom controls",
+            "WASD fly navigation and camera speed",
+            "Focusing on Actors (F key)",
+            "Perspective and orthographic views",
+            "Viewport shading modes (Lit, Unlit, Wireframe)",
+            "Actor selection methods"
+          ]
+        },
+        {
+          "number": "1.5",
+          "title": "Levels & World Hierarchy",
+          "topics": [
+            "Understanding what a Level is",
+            "Creating and saving new Levels",
+            "Configuring default project maps",
+            "Level hierarchy awareness",
+            "Scene structure and World Settings"
+          ]
+        },
+        {
+          "number": "1.6",
+          "title": "Actors and Components",
+          "topics": [
+            "The Actor entity model",
+            "Static Mesh Actors",
+            "Light Actors and Camera Actors",
+            "Blueprint Actor awareness",
+            "Component hierarchy and attachments",
+            "Transform relationships"
+          ]
+        },
+        {
+          "number": "1.7",
+          "title": "Transforms & Spatial Snapping",
+          "topics": [
+            "Location, Rotation, and Scale",
+            "World coordinates vs. Local coordinates",
+            "Grid snapping and rotation angle increments",
+            "Surface snapping and pivot points",
+            "Transform measurement and bounds"
+          ]
+        },
+        {
+          "number": "1.8",
+          "title": "Content Browser Organization",
+          "topics": [
+            "Folder structures and directory conventions",
+            "Managing assets, materials, and textures",
+            "Static meshes and Blueprint storage",
+            "Asset naming conventions (SM_, M_, MI_, BP_)",
+            "Asset references, searching, and filtering"
+          ]
+        },
+        {
+          "number": "1.9",
+          "title": "Scene Planning & Environment Intent",
+          "topics": [
+            "Creative brief and environment purpose",
+            "Target audience and technical constraints",
+            "Reference image curation",
+            "Asset requirements and blockout lists",
+            "Layout planning and camera routes"
+          ]
+        },
+        {
+          "number": "1.10",
+          "title": "Project Organization & Hygiene",
+          "topics": [
+            "Standard folder conventions",
+            "Meaningful asset and Level naming",
+            "Saving strategies and project backups",
+            "Unreal project folder structure on disk",
+            "Engine version compatibility awareness"
+          ]
+        },
+        {
+          "number": "1.11",
+          "title": "Project Reliability & Asset Safety",
+          "topics": [
+            "Configuring autosaves and source backup paths",
+            "Engine version locking and plugin checks",
+            "Project migration awareness",
+            "Preventing accidental asset deletion and broken references"
+          ]
         }
       ],
       "key_concepts": [
-        "Landscape",
-        "Foliage Tool"
+        "Unreal Editor interface",
+        "Levels, Actors, and Components",
+        "Spatial transforms and snapping",
+        "Content Browser asset hygiene",
+        "Scene blockout planning",
+        "Project backup and reliability"
       ],
       "tools": [
-        "Unreal Engine 5"
+        "Unreal Engine 5 Editor",
+        "Content Drawer",
+        "World Outliner",
+        "Details Panel"
       ],
-      "hands_on_practice": "Build a fully landscaped outdoor level.",
-      "assignment": "Submit project screenshots.",
-      "business_application": "Game environments and virtual production.",
-      "expected_outcome": "Completed terrain."
+      "hands_on_practice": "Create a new Unreal Engine project and construct a small architectural blockout using basic geometry, applying correct grid snapping and folder organization.",
+      "assignment": "Submit an organized Unreal Engine project containing a main Level, a functional scene blockout with correct transforms, an established folder hierarchy, and an initial environment design brief.",
+      "deliverable": "Well-organized Unreal Engine project with a functional starter environment blockout.",
+      "commercial_application": "Preparing real-time visualization foundations, scene blockouts, and structured production environments for studios and clients."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Nanite Geometry & Quixel Megascans",
-      "module_purpose": "Utilize film-quality assets in real-time.",
-      "what_you_will_learn": [
-        "Nanite workflow",
-        "Quixel Bridge",
-        "Asset Placement"
-      ],
+      "module_number": "02",
+      "module_title": "3D Assets & Environment Building",
+      "module_purpose": "Build coherent real-time 3D environments using imported assets, materials, collisions and basic environment-design principles.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
       "lessons": [
         {
-          "lesson_number": "2.1",
-          "lesson_title": "Introduction to Nanite",
-          "what_is_taught": "Virtual geometry technology.",
-          "why_it_matters": "Allows millions of polygons without performance loss.",
-          "what_learner_does": "Enables Nanite on high-poly meshes.",
-          "expected_outcome": "Optimized high-poly scene."
+          "number": "2.1",
+          "title": "Static Mesh Fundamentals",
+          "topics": [
+            "Static mesh assets and geometry data",
+            "Mesh instances in the level",
+            "Scale and pivot point verification",
+            "Mesh complexity and polygon budgets",
+            "Precise scene placement and alignment"
+          ]
         },
         {
-          "lesson_number": "2.2",
-          "lesson_title": "Using Quixel Megascans",
-          "what_is_taught": "Importing photogrammetry assets via Bridge.",
-          "why_it_matters": "Instant photorealism.",
-          "what_learner_does": "Imports rocks and ruins.",
-          "expected_outcome": "High-quality assets in scene."
+          "number": "2.2",
+          "title": "Asset Import Workflows",
+          "topics": [
+            "FBX asset importing procedures",
+            "Interchange Framework import pipeline",
+            "Import settings: scale, normals, and materials",
+            "Handling multi-material meshes",
+            "Asset reimport and update workflows"
+          ]
         },
         {
-          "lesson_number": "2.3",
-          "lesson_title": "Set Dressing",
-          "what_is_taught": "Placing assets to create compelling compositions.",
-          "why_it_matters": "Art direction.",
-          "what_learner_does": "Dresses a ruined temple scene.",
-          "expected_outcome": "Detailed environment."
+          "number": "2.3",
+          "title": "Interchange Framework Awareness",
+          "topics": [
+            "Purpose of modern Interchange pipelines",
+            "Supported asset types and file formats",
+            "Version-specific import behaviors",
+            "Import troubleshooting and fallback pipelines"
+          ]
+        },
+        {
+          "number": "2.4",
+          "title": "Asset Sources & Licensing",
+          "topics": [
+            "Blender-created 3D assets",
+            "Supplied studio mesh packages",
+            "Fab marketplace assets",
+            "Official Epic sample assets",
+            "Asset licensing, rights, and attribution"
+          ]
+        },
+        {
+          "number": "2.5",
+          "title": "Fab Workflow & Library Integration",
+          "topics": [
+            "Navigating the contemporary Fab marketplace",
+            "Checking asset version compatibility",
+            "Understanding free vs. commercial content",
+            "Importing Fab assets into active projects",
+            "Managing dependencies and material paths"
+          ]
+        },
+        {
+          "number": "2.6",
+          "title": "PBR Material Graph Fundamentals",
+          "topics": [
+            "Material Editor node graph",
+            "Base Color, Metallic, Roughness, Normal, and Emissive",
+            "Material expression nodes and mathematical operations",
+            "Material assignment to static mesh slots",
+            "Material reuse strategies"
+          ]
+        },
+        {
+          "number": "2.7",
+          "title": "Material Instances & Parameters",
+          "topics": [
+            "Parent master materials",
+            "Scalar and Vector parameters",
+            "Creating Material Instances (MI_)",
+            "Dynamic color and roughness variation",
+            "Efficient shading reuse and performance benefits"
+          ]
+        },
+        {
+          "number": "2.8",
+          "title": "Texture Maps & Resolution Budgets",
+          "topics": [
+            "Albedo/Base Color texture maps",
+            "Roughness, Metallic, and Ambient Occlusion maps",
+            "Normal maps and tangent space directions",
+            "Texture resolutions (1K, 2K, 4K) and mipmaps",
+            "Texture compression settings and memory management"
+          ]
+        },
+        {
+          "number": "2.9",
+          "title": "Collision Settings & Boundaries",
+          "topics": [
+            "Simple collision primitives (boxes, capsules, spheres)",
+            "Complex collision as simple awareness",
+            "Collision presets (BlockAll, OverlapAll, Default)",
+            "Character collision testing and spatial blocking",
+            "Preventing camera and player geometry clipping"
+          ]
+        },
+        {
+          "number": "2.10",
+          "title": "Landscape Foundations & Terrain",
+          "topics": [
+            "Landscape Actor creation and sizing",
+            "Basic terrain sculpting (Sculpt, Smooth, Flatten)",
+            "Landscape material layer blending",
+            "Environmental context and boundaries",
+            "Terrain resolution and performance awareness"
+          ]
+        },
+        {
+          "number": "2.11",
+          "title": "Environment Composition & Visual Hierarchy",
+          "topics": [
+            "Architectural composition and scale verification",
+            "Focal points and primary viewing angles",
+            "Pathways and spatial flow",
+            "Set dressing principles and storytelling props",
+            "Visual hierarchy and balance"
+          ]
+        },
+        {
+          "number": "2.12",
+          "title": "Scene Population & Instancing",
+          "topics": [
+            "Modular architectural asset assembly",
+            "Avoiding repetitive visual patterns",
+            "Instanced static meshes awareness",
+            "Props, furnishings, and environmental details",
+            "Managing scene density and visual clutter"
+          ]
+        },
+        {
+          "number": "2.13",
+          "title": "Hierarchy Cleanup & Outliner Organization",
+          "topics": [
+            "Asset folder structures and naming hygiene",
+            "Outliner folders and Actor categorization",
+            "Logical grouping and layer toggling",
+            "Scene cleanup and resolving missing dependencies"
+          ]
         }
       ],
       "key_concepts": [
-        "Nanite",
-        "Quixel Megascans"
+        "Static mesh importing via FBX/Interchange",
+        "Fab modern asset discovery",
+        "PBR material master graphs and instances",
+        "Texture compression and mipmapping",
+        "Collision primitives and character blocking",
+        "Landscape sculpting and set dressing"
       ],
       "tools": [
-        "Unreal Engine 5"
+        "Unreal Engine 5 Static Mesh Editor",
+        "Material Editor",
+        "Material Instance Editor",
+        "Landscape Mode",
+        "Fab Marketplace"
       ],
-      "hands_on_practice": "Create a high-fidelity ancient ruin environment.",
-      "assignment": "Submit environment screenshots.",
-      "business_application": "Virtual production backgrounds.",
-      "expected_outcome": "Photorealistic scene assembly."
+      "hands_on_practice": "Import a supplied 3D environment asset kit, author master materials and material instances, configure collision, and construct a complete navigable real-time 3D environment.",
+      "assignment": "Create a real-time architectural or virtual scene containing organized static meshes, appropriate PBR materials, correct real-world scale, functional collision, clear spatial layout, and environmental context.",
+      "deliverable": "A coherent, fully navigable 3D environment with verified collision and material instances.",
+      "commercial_application": "Interactive architectural walkthroughs, virtual showrooms, digital product exhibitions, and real-time 3D background environments."
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Lumen Global Illumination & Lighting",
-      "module_purpose": "Master real-time dynamic lighting.",
-      "what_you_will_learn": [
-        "Lumen GI",
-        "Directional Lights",
-        "Post Process Volume"
-      ],
+      "module_number": "03",
+      "module_title": "Lighting, Rendering & Visual Quality",
+      "module_purpose": "Understand modern Unreal Engine real-time lighting and develop visually coherent environments without ignoring hardware and performance constraints.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
       "lessons": [
         {
-          "lesson_number": "3.1",
-          "lesson_title": "Understanding Lumen",
-          "what_is_taught": "Real-time global illumination and reflections.",
-          "why_it_matters": "No more baking lightmaps.",
-          "what_learner_does": "Configures Lumen in project settings.",
-          "expected_outcome": "Dynamic GI active."
+          "number": "3.1",
+          "title": "Real-Time Lighting Fundamentals",
+          "topics": [
+            "Direct lighting vs. indirect bounced lighting",
+            "Dynamic lighting vs. static precomputed lighting",
+            "Reflections, shadows, and contact ambient occlusion",
+            "Lighting intensity, units (Lumens, Lux), and exposure",
+            "Evaluating overall visual lighting quality"
+          ]
         },
         {
-          "lesson_number": "3.2",
-          "lesson_title": "Lighting the Environment",
-          "what_is_taught": "Directional light, Skylight, SkyAtmosphere.",
-          "why_it_matters": "Creates the mood and time of day.",
-          "what_learner_does": "Lights the temple scene for sunset.",
-          "expected_outcome": "Beautifully lit scene."
+          "number": "3.2",
+          "title": "Unreal Engine Light Types",
+          "topics": [
+            "Directional Light (Sun simulation)",
+            "Point Light and Spot Light",
+            "Rect Light for architectural and studio illumination",
+            "Sky Light for ambient environment capture",
+            "Configuring light intensity, color, and temperature (Kelvin)"
+          ]
         },
         {
-          "lesson_number": "3.3",
-          "lesson_title": "Post Processing",
-          "what_is_taught": "Color grading, bloom, and exposure.",
-          "why_it_matters": "Final cinematic polish.",
-          "what_learner_does": "Tweaks the Post Process Volume.",
-          "expected_outcome": "Cinematic visual quality."
+          "number": "3.3",
+          "title": "Environment & Atmosphere Lighting",
+          "topics": [
+            "Sun and Sky positioning systems",
+            "Sky Atmosphere component setup",
+            "Skylight real-time ambient capture",
+            "Volumetric Clouds and atmospheric haze awareness",
+            "Balancing exterior daylight with interior lighting"
+          ]
+        },
+        {
+          "number": "3.4",
+          "title": "Lumen Dynamic Global Illumination",
+          "topics": [
+            "Lumen dynamic bounce lighting fundamentals",
+            "Real-time indirect diffuse illumination",
+            "Lumen reflections and surface interactions",
+            "Real-time scene reaction to lighting modifications",
+            "Lumen performance characteristics and cost"
+          ]
+        },
+        {
+          "number": "3.5",
+          "title": "Lumen Configuration & Reflections",
+          "topics": [
+            "Project Settings for Lumen Global Illumination",
+            "Configuring Lumen reflection modes",
+            "Scene-scale considerations and light bleeding control",
+            "Quality settings and ray update frequency",
+            "Lumen visualization and debugging buffers"
+          ]
+        },
+        {
+          "number": "3.6",
+          "title": "Lumen Compatibility & Hardware Fallbacks",
+          "topics": [
+            "Supported graphics hardware requirements",
+            "Software ray tracing vs. hardware ray tracing",
+            "Platform restrictions and performance limitations",
+            "Alternative rendering configurations for lower-spec systems",
+            "Lumen Lite awareness in Unreal Engine 5.8"
+          ]
+        },
+        {
+          "number": "3.7",
+          "title": "Nanite Virtualized Geometry Principles",
+          "topics": [
+            "What Nanite virtualized geometry is",
+            "Rendering millions of polygons with cluster culling",
+            "Enabling Nanite on static mesh assets",
+            "Visual fidelity without manual LOD authoring",
+            "Nanite geometry streaming and supported mesh types",
+            "Nanite technical limitations and unsupported features"
+          ]
+        },
+        {
+          "number": "3.8",
+          "title": "Nanite Quality & Asset Selection",
+          "topics": [
+            "Selecting appropriate assets for Nanite",
+            "Managing architectural detail and polygon density",
+            "Material considerations and two-sided geometry",
+            "Assessing video memory (VRAM) impact",
+            "Avoiding unnecessary dense geometry where unneeded"
+          ]
+        },
+        {
+          "number": "3.9",
+          "title": "Virtual Shadow Maps (VSM)",
+          "topics": [
+            "Purpose of Virtual Shadow Maps in UE5",
+            "Rendering sharp, detailed dynamic shadows at distance",
+            "Shadow resolution, biasing, and visual quality",
+            "Common shadow artifacts and performance implications",
+            "Optimal light settings for Virtual Shadow Maps"
+          ]
+        },
+        {
+          "number": "3.10",
+          "title": "Camera Exposure & Eye Adaptation",
+          "topics": [
+            "Automatic exposure (Eye Adaptation) mechanics",
+            "Manual exposure configuration for predictable lighting",
+            "Exposure compensation and min/max EV ranges",
+            "Highlight preservation and shadow shadow detail",
+            "Managing transitions between bright exteriors and interiors"
+          ]
+        },
+        {
+          "number": "3.11",
+          "title": "Post Process Volumes & Color Grading",
+          "topics": [
+            "Post Process Volume setup and Infinite Extent bounds",
+            "Exposure overrides and contrast adjustments",
+            "Color grading: temperature, tint, saturation, and curves",
+            "Bloom, lens flares, and Depth of Field controls",
+            "Vignette, chromatic aberration, and camera artifacts"
+          ]
+        },
+        {
+          "number": "3.12",
+          "title": "Real-Time Reflections & Glass",
+          "topics": [
+            "Lumen glossy reflections vs. Screen Space Reflections",
+            "Planar Reflections and reflection capture awareness",
+            "Architectural glass and translucent material limitations",
+            "Roughness response and reflection quality tuning"
+          ]
+        },
+        {
+          "number": "3.13",
+          "title": "Lighting Design & Artistic Storytelling",
+          "topics": [
+            "Establishing mood, atmosphere, and visual drama",
+            "Guiding viewer eye flow with contrast and focal lights",
+            "Highlighting architectural materials and textures",
+            "Color temperature harmony (warm lights vs. cool sky)",
+            "Creating daytime and evening/artificial lighting schemes"
+          ]
+        },
+        {
+          "number": "3.14",
+          "title": "Visual Quality QA & Artifact Remediation",
+          "topics": [
+            "Identifying lighting noise and screen flickering",
+            "Fixing light leaking in interior corners and seams",
+            "Resolving shadow acne and reflection smearing",
+            "Balancing exposure across multi-room environments",
+            "Eliminating blown highlights and crushed blacks"
+          ]
+        },
+        {
+          "number": "3.15",
+          "title": "Viewport Profiling & Performance Trade-offs",
+          "topics": [
+            "Measuring frame times (ms) and GPU overhead",
+            "Draw call counts and rendering passes",
+            "Evaluating scene complexity and scalability settings",
+            "Balancing visual quality against real-time performance"
+          ]
         }
       ],
       "key_concepts": [
-        "Lumen",
-        "Post Process Volume"
+        "Directional, Point, Spot, Rect, and Sky lights",
+        "Lumen Dynamic Global Illumination and reflections",
+        "Nanite virtualized geometry and cluster streaming",
+        "Virtual Shadow Maps and contact shadows",
+        "Post Process Volumes, exposure, and color grading",
+        "Day vs. evening lighting design",
+        "Artifact troubleshooting and performance trade-offs"
       ],
       "tools": [
-        "Unreal Engine 5"
+        "Unreal Engine 5 Lighting System",
+        "Lumen GI Engine",
+        "Nanite Visualization",
+        "Post Process Volume",
+        "Viewport Render Modes"
       ],
-      "hands_on_practice": "Light and grade the ruined temple.",
-      "assignment": "Submit lit scene renders.",
-      "business_application": "Archviz and game lighting.",
-      "expected_outcome": "Fully lit real-time environment."
+      "hands_on_practice": "Design and implement a complete lighting setup for an architectural interior or exterior using Lumen, Sky Atmosphere, and Post Process Volumes, demonstrating both daytime and artificial evening treatments.",
+      "assignment": "Create two lighting treatments (e.g. natural daylight and moody evening) of the environment, document light placement, color temperatures, exposure settings, and record performance metrics.",
+      "deliverable": "Visually coherent real-time environment with documented lighting schemes and performance observations.",
+      "commercial_application": "Architectural real-time visualization, commercial interior lighting design, virtual production previews, and interactive design reviews."
     },
     {
-      "module_number": "Module 04",
-      "module_title": "Blueprint Visual Scripting & Sequencer",
-      "module_purpose": "Add interactivity and render cinematics.",
-      "what_you_will_learn": [
-        "Blueprint Basics",
-        "Triggers",
-        "Sequencer Animation"
-      ],
+      "module_number": "04",
+      "module_title": "Blueprint Visual Scripting",
+      "module_purpose": "Create beginner-level interactive behavior using Unreal Engine Blueprints without requiring C++.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
       "lessons": [
         {
-          "lesson_number": "4.1",
-          "lesson_title": "Intro to Blueprints",
-          "what_is_taught": "Node-based programming.",
-          "why_it_matters": "Logic without writing C++ code.",
-          "what_learner_does": "Creates a simple light toggle blueprint.",
-          "expected_outcome": "Interactive object."
+          "number": "4.1",
+          "title": "Blueprint Fundamentals",
+          "topics": [
+            "What Blueprint Visual Scripting is",
+            "Node-based programming vs. textual code",
+            "Blueprint Actor creation and structure",
+            "Event Graph, Construction Script, and Viewport",
+            "Actor Components and hierarchy",
+            "Visual logic flow and execution wires"
+          ]
         },
         {
-          "lesson_number": "4.2",
-          "lesson_title": "Triggers and Events",
-          "what_is_taught": "Box collisions and overlap events.",
-          "why_it_matters": "Player interaction.",
-          "what_learner_does": "Creates a door that opens when approached.",
-          "expected_outcome": "Interactive environment."
+          "number": "4.2",
+          "title": "Blueprint Editor & Node Graph",
+          "topics": [
+            "Navigating the Blueprint Editor interface",
+            "Nodes, execution pins, and data pins",
+            "Understanding execution flow (white wires)",
+            "Data wire connections and type matching",
+            "Variables, Functions, and Details panel",
+            "Compiling, saving, and verifying Blueprints"
+          ]
         },
         {
-          "lesson_number": "4.3",
-          "lesson_title": "Cinematics with Sequencer",
-          "what_is_taught": "Camera animation and Movie Render Queue.",
-          "why_it_matters": "Exporting high-quality video.",
-          "what_learner_does": "Animates a cinematic flythrough and exports video.",
-          "expected_outcome": "Final cinematic video."
+          "number": "4.3",
+          "title": "Core Events & Triggers",
+          "topics": [
+            "Event BeginPlay for scene initialization",
+            "Event Tick awareness and why to limit its usage",
+            "Actor Begin Overlap and End Overlap events",
+            "Player input events and key presses",
+            "Custom events for clean code triggering",
+            "Event-driven architecture principles"
+          ]
+        },
+        {
+          "number": "4.4",
+          "title": "Variables & Data Types",
+          "topics": [
+            "Boolean (True/False) variables for state toggles",
+            "Integer and Float variables for numerical data",
+            "String and Text variables for UI messages",
+            "Actor and Component object reference variables",
+            "Variable default values and public/editable flags",
+            "State tracking and state preservation"
+          ]
+        },
+        {
+          "number": "4.5",
+          "title": "Flow Control & Timelines",
+          "topics": [
+            "Branch nodes (If / Else condition logic)",
+            "Boolean comparison operators (Equal, Not Equal, Greater)",
+            "DoOnce and FlipFlop nodes for alternating states",
+            "Timelines for smooth interpolation and animation curves",
+            "Lerp (Linear Interpolate) nodes for vectors and rotations"
+          ]
+        },
+        {
+          "number": "4.6",
+          "title": "Functions & Graph Cleanliness",
+          "topics": [
+            "Creating custom Blueprint functions",
+            "Function input parameters and return outputs",
+            "Reusing common logic across multiple events",
+            "Comment boxes (C key) and graph formatting",
+            "Avoiding duplicated code and spaghetti wiring"
+          ]
+        },
+        {
+          "number": "4.7",
+          "title": "Collision & Trigger Volumes",
+          "topics": [
+            "Adding Box Collision and Sphere Collision components",
+            "Configuring collision responses (Overlap only Pawn)",
+            "Trigger volume placement in the environment",
+            "Testing player overlap boundaries",
+            "Ensuring trigger reliability and repeatability"
+          ]
+        },
+        {
+          "number": "4.8",
+          "title": "Interactive Door System",
+          "topics": [
+            "Building an interactive Door Blueprint Actor",
+            "Proximity trigger volume detection",
+            "Timeline curve for smooth door rotation/sliding",
+            "SetRelativeRotation / SetRelativeLocation execution",
+            "Reversing the timeline on player exit",
+            "Collision boundary updates during movement"
+          ]
+        },
+        {
+          "number": "4.9",
+          "title": "Interactive Lighting & Material Switches",
+          "topics": [
+            "Referencing Light Components in Blueprints",
+            "Creating a toggle switch using FlipFlop or Boolean logic",
+            "SetVisibility and SetIntensity nodes for lights",
+            "Creating Dynamic Material Instances at runtime",
+            "Changing material color and emissive glow dynamically",
+            "Testing input triggers (e.g. 'E' key or button press)"
+          ]
+        },
+        {
+          "number": "4.10",
+          "title": "Enhanced Input Handling",
+          "topics": [
+            "Player input concepts in modern Unreal Engine",
+            "Input Actions and Input Mapping Contexts",
+            "Binding keyboard and mouse interactions",
+            "Proximity-based input enablement and disablement",
+            "Displaying contextual interaction prompts"
+          ]
+        },
+        {
+          "number": "4.11",
+          "title": "Basic UI Controls & UMG Widgets",
+          "topics": [
+            "Introduction to UMG (Unreal Motion Graphics) widgets",
+            "Creating basic on-screen interaction prompts ('Press E to Interact')",
+            "Adding buttons and informational text labels",
+            "Adding widgets to viewport and removing on exit",
+            "Connecting widget events to Blueprint Actor logic"
+          ]
+        },
+        {
+          "number": "4.12",
+          "title": "Blueprint Debugging & Error Handling",
+          "topics": [
+            "Using Print String for temporary debug messages",
+            "Setting breakpoints and stepping through node execution",
+            "Watching variable values during runtime",
+            "Fixing Blueprint compiler errors and warnings",
+            "Resolving 'Accessed None' and invalid reference crashes",
+            "Systematic debugging workflows"
+          ]
+        },
+        {
+          "number": "4.13",
+          "title": "Performance-Aware Scripting",
+          "topics": [
+            "Event-driven logic vs. expensive Tick execution",
+            "Avoiding continuous heavy calculations per frame",
+            "Efficient node caching and variable access",
+            "Clean graph organization and self-documenting code"
+          ]
         }
       ],
       "key_concepts": [
+        "Node-based Blueprint visual scripting",
+        "Event Graphs, execution wires, and data flow",
+        "Variables, Branching, and FlipFlops",
+        "Timelines and smooth interpolation (Lerp)",
+        "Proximity triggers and collision overlap events",
+        "Interactive door and lighting toggle systems",
+        "Basic UMG screen interaction prompts",
+        "Debugging, breakpoints, and error elimination"
+      ],
+      "tools": [
+        "Unreal Engine 5 Blueprint Editor",
+        "Event Graph",
+        "Timeline Editor",
+        "UMG UI Designer",
+        "Blueprint Debugger"
+      ],
+      "hands_on_practice": "Build two distinct functional Blueprint systems from scratch: a proximity-activated interactive door with smooth Timeline opening, and a key-activated lighting/material toggle with on-screen prompt.",
+      "assignment": "Implement and test two functional Blueprint interactions within your environment: Interaction A (Physical/Spatial) and Interaction B (Environment/UI). Verify both systems operate repeatedly without runtime errors.",
+      "deliverable": "Interactive Unreal Engine environment with two verified, operational Blueprint systems and documented node graphs.",
+      "commercial_application": "Interactive architectural presentations, virtual product showrooms, interactive kiosks, and real-time client demonstrations."
+    },
+    {
+      "module_number": "05",
+      "module_title": "Cinematics & Real-Time Optimization",
+      "module_purpose": "Create professional camera sequences, export cinematic presentations and understand practical real-time performance optimization.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
+      "lessons": [
+        {
+          "number": "5.1",
+          "title": "Cinematic Fundamentals & Composition",
+          "topics": [
+            "Visual storytelling in real-time environments",
+            "Establishing shots and spatial orientation",
+            "Architectural reveals and hero focal points",
+            "Camera composition rules (rule of thirds, leading lines)",
+            "Choreographing camera movement and speed"
+          ]
+        },
+        {
+          "number": "5.2",
+          "title": "Sequencer Fundamentals",
+          "topics": [
+            "Understanding Level Sequences in UE5",
+            "Creating and saving Sequence assets",
+            "Sequencer timeline, tracks, and playhead",
+            "Adding Actor tracks and transform tracks",
+            "Setting keyframes and adjusting animation curves",
+            "Playback controls and loop settings"
+          ]
+        },
+        {
+          "number": "5.3",
+          "title": "Cine Camera Actor Choreography",
+          "topics": [
+            "Cine Camera Actor vs. standard cameras",
+            "Sensor size and filmback settings",
+            "Focal length (wide angle vs. telephoto lenses)",
+            "Aperture settings and cinematic Depth of Field",
+            "Focus tracking and manual focus distance",
+            "Camera clipping and near clip planes"
+          ]
+        },
+        {
+          "number": "5.4",
+          "title": "Camera Animation & Curve Smoothing",
+          "topics": [
+            "Position and rotation keyframing",
+            "Curve Editor for smooth ease-in and ease-out curves",
+            "Camera Crane and Camera Rail rigs awareness",
+            "Camera cuts and seamless shot transitions",
+            "Eliminating jerky camera motions and sudden speed changes"
+          ]
+        },
+        {
+          "number": "5.5",
+          "title": "Walkthrough Planning & Shot List",
+          "topics": [
+            "Planning an architectural walkthrough sequence",
+            "Starting viewpoint and environmental introduction",
+            "Transitioning through key architectural spaces",
+            "Highlighting materials, lighting, and interactivity",
+            "Ending hero shot and brand title card"
+          ]
+        },
+        {
+          "number": "5.6",
+          "title": "Movie Render Queue (MRQ) Settings",
+          "topics": [
+            "Enabling and configuring Movie Render Queue plugin",
+            "MRQ job configuration and output passes",
+            "Resolution settings (1080p) and frame rates (24/30/60 fps)",
+            "Spatial and temporal anti-aliasing sample counts",
+            "Export formats (Apple ProRes, Avid DNxHR, PNG image sequences)",
+            "Executing clean cinematic renders"
+          ]
+        },
+        {
+          "number": "5.7",
+          "title": "Movie Render Graph (MRG) 2027 Awareness",
+          "topics": [
+            "Movie Render Graph architecture in UE 5.8",
+            "Relationship between MRQ and node-based MRG",
+            "Reusable node-based render pipeline configurations",
+            "Version-specific production availability",
+            "Introductory beginner awareness without complex engineering"
+          ]
+        },
+        {
+          "number": "5.8",
+          "title": "Quick Rendering & Preview Exports",
+          "topics": [
+            "Supported quick preview render workflows",
+            "Exporting rapid animatics for client review",
+            "Evaluating camera timing before final export",
+            "Audio track synchronization awareness"
+          ]
+        },
+        {
+          "number": "5.9",
+          "title": "Real-Time Performance Fundamentals",
+          "topics": [
+            "Frames per second (FPS) vs. frame time (milliseconds)",
+            "Understanding performance budgets (e.g. 60 FPS = 16.6ms)",
+            "Identifying CPU bottlenecks vs. GPU bottlenecks",
+            "Draw call counts and primitive counts",
+            "Shader complexity and texture memory footprints"
+          ]
+        },
+        {
+          "number": "5.10",
+          "title": "Performance Diagnostic Tools",
+          "topics": [
+            "Console commands: 'stat fps' and 'stat unit'",
+            "Stat Unit breakdown (Frame, Game, Draw, GPU)",
+            "GPU Profiler (Ctrl+Shift+,) for rendering pass audit",
+            "Unreal Insights introductory overview",
+            "Viewport optimization view modes (Shader Complexity, Light Complexity)"
+          ]
+        },
+        {
+          "number": "5.11",
+          "title": "Asset Optimization Strategies",
+          "topics": [
+            "Texture resolution budgets and clamping",
+            "Static mesh reuse and instancing",
+            "Simplifying collision geometry",
+            "Nanite suitability checks and polygon reduction",
+            "Material instance parameter reuse",
+            "Removing unnecessary hidden geometry and assets"
+          ]
+        },
+        {
+          "number": "5.12",
+          "title": "Lighting & Scalability Optimization",
+          "topics": [
+            "Managing dynamic light overlap counts and radii",
+            "Virtual Shadow Map resolution and quality settings",
+            "Lumen reflection quality vs. performance cost",
+            "Post-processing effect overhead",
+            "Scalability settings (Low, Medium, High, Epic, Cinematic)",
+            "Hardware-dependent performance tuning"
+          ]
+        },
+        {
+          "number": "5.13",
+          "title": "Output Delivery & Video QA",
+          "topics": [
+            "Video encoding and compression standards (H.264/MP4)",
+            "Framerate consistency and playback smoothness",
+            "Artifact inspection (banding, noise, motion stutter)",
+            "File naming and professional delivery formatting"
+          ]
+        },
+        {
+          "number": "5.14",
+          "title": "Performance Documentation & Reporting",
+          "topics": [
+            "Documenting host hardware specifications",
+            "Recording baseline frame times vs. optimized metrics",
+            "Detailing optimization trade-offs and adjustments",
+            "Target platform performance statements"
+          ]
+        }
+      ],
+      "key_concepts": [
+        "Sequencer timeline and Cine Camera Actor choreography",
+        "Camera animation curves, lens focal lengths, and depth of field",
+        "Movie Render Queue (MRQ) configuration and multi-pass export",
+        "Movie Render Graph (MRG) 2027 production awareness",
+        "Stat FPS, Stat Unit, and GPU profiling",
+        "Asset, texture, and lighting optimization",
+        "Video encoding QA and performance benchmarking"
+      ],
+      "tools": [
+        "Unreal Engine 5 Sequencer",
+        "Cine Camera Actor",
+        "Movie Render Queue (MRQ)",
+        "Movie Render Graph (MRG)",
+        "Stat Unit & GPU Profiler"
+      ],
+      "hands_on_practice": "Create a 30–60 second cinematic walkthrough of your environment using Sequencer and Cine Camera Actors, export via Movie Render Queue, and conduct a real-time performance audit using Stat Unit.",
+      "assignment": "Submit a short cinematic walkthrough video, Sequencer timeline screenshots, export settings report, and a documented performance profiling comparison (baseline vs. optimized frame times).",
+      "deliverable": "Professional cinematic video presentation and performance-benchmarked interactive environment.",
+      "commercial_application": "Architectural marketing films, virtual project pitches, client presentation videos, and interactive real-time demonstrations."
+    },
+    {
+      "module_number": "06",
+      "module_title": "Interactive 3D Capstone",
+      "module_purpose": "Complete one interactive environment demonstrating real-time scene building, lighting, Blueprint interactions, cinematic presentation, technical testing and professional handover.",
+      "hours": 14,
+      "guided_hours": 14,
+      "learning_hours": 14,
+      "lessons": [
+        {
+          "number": "6.1",
+          "title": "Project Brief & Client Requirements",
+          "topics": [
+            "Defining project vision, environment theme, and client goals",
+            "Target platform specification and hardware assumptions",
+            "Determining mandatory Blueprint interactions",
+            "Cinematic walkthrough objectives",
+            "Establishing technical performance budgets"
+          ]
+        },
+        {
+          "number": "6.2",
+          "title": "Environment Planning & Spatial Layout",
+          "topics": [
+            "Floor plans, navigation routes, and boundaries",
+            "Curating reference boards and asset inventories",
+            "Locating interactive objects and trigger zones",
+            "Establishing camera viewpoints and reveal angles"
+          ]
+        },
+        {
+          "number": "6.3",
+          "title": "Scene Assembly & Set Dressing",
+          "topics": [
+            "Assembling modular static meshes with precision transforms",
+            "Applying consistent PBR material instances",
+            "Verifying collision boundaries across all surfaces",
+            "Set dressing props and environmental storytelling",
+            "Outliner hierarchy and folder discipline"
+          ]
+        },
+        {
+          "number": "6.4",
+          "title": "Lighting Design & Visual Refinement",
+          "topics": [
+            "Deploying Directional, Sky, and artificial lights",
+            "Configuring Lumen dynamic global illumination and reflections",
+            "Balancing exposure and Post Process Volume parameters",
+            "Refining color grading, contrast, and atmosphere",
+            "Ensuring visual consistency across day and evening schemes"
+          ]
+        },
+        {
+          "number": "6.5",
+          "title": "Interaction 01: Physical/Spatial System",
+          "topics": [
+            "Building and tuning the physical interaction (e.g. interactive door)",
+            "Trigger volume placement and character overlap logic",
+            "Timeline curve calibration for smooth motion",
+            "Testing collision responses during animation",
+            "Eliminating logic bugs and edge cases"
+          ]
+        },
+        {
+          "number": "6.6",
+          "title": "Interaction 02: Environment/UI System",
+          "topics": [
+            "Building the second interaction (e.g. lighting toggle or material switch)",
+            "Configuring player input handling and on-screen UMG prompt",
+            "Dynamic material parameter or light intensity switching",
+            "Ensuring state toggle reliability and repeatability",
+            "Validating that both interactions have distinct purposes"
+          ]
+        },
+        {
+          "number": "6.7",
+          "title": "Interaction QA & Stress Testing",
+          "topics": [
+            "Rigorous testing of rapid trigger activation",
+            "Testing player entry and exit during active transitions",
+            "Verifying zero runtime Blueprint compiler or access errors",
+            "Confirming intuitive interaction feedback"
+          ]
+        },
+        {
+          "number": "6.8",
+          "title": "Cinematic Walkthrough Production",
+          "topics": [
+            "Setting up Cine Camera choreography in Sequencer",
+            "Polishing camera movement curves and focal transitions",
+            "Configuring Movie Render Queue output at 1080p",
+            "Rendering final 30–60 second cinematic video file",
+            "Performing video quality assurance review"
+          ]
+        },
+        {
+          "number": "6.9",
+          "title": "Performance Profiling & Optimization Audit",
+          "topics": [
+            "Running Stat FPS, Stat Unit, and GPU profiling in runtime mode",
+            "Checking frame times against the target budget",
+            "Applying final texture clamping and mesh optimization",
+            "Verifying scalability settings and smoothness",
+            "Recording final performance metrics"
+          ]
+        },
+        {
+          "number": "6.10",
+          "title": "Technical Quality Assurance Checklist",
+          "topics": [
+            "Auditing broken materials and missing texture references",
+            "Checking character collision across all walkable areas",
+            "Eliminating camera clipping through walls and props",
+            "Checking lighting artifacts, leaking, and shadow errors",
+            "Final verification of project cleanliness"
+          ]
+        },
+        {
+          "number": "6.11",
+          "title": "Packaging Awareness & Platform Build",
+          "topics": [
+            "Understanding packaging prerequisites (Visual Studio, SDKs)",
+            "Configuring Project Settings (Maps & Modes, Description)",
+            "Executing project packaging for supported target platforms",
+            "Testing standalone packaged executable",
+            "Documenting platform limitations where packaging is blocked"
+          ]
+        },
+        {
+          "number": "6.12",
+          "title": "Working Interactive Demonstration",
+          "topics": [
+            "Recording verified runtime gameplay demonstration",
+            "Showcasing free player navigation through the environment",
+            "Demonstrating Interaction A and Interaction B repeatedly",
+            "Documenting playback and reproduction instructions"
+          ]
+        },
+        {
+          "number": "6.13",
+          "title": "Editable Project Handover Package",
+          "topics": [
+            "Structuring clean editable .uproject source package",
+            "Including Content and Config directories",
+            "Documenting required plugins and engine version",
+            "Cleaning temporary intermediate and saved build folders",
+            "Preparing client viewing instructions and asset licenses"
+          ]
+        },
+        {
+          "number": "6.14",
+          "title": "Client & Portfolio Presentation",
+          "topics": [
+            "Compiling the 15-point technical project breakdown",
+            "Preparing high-resolution hero renders and lighting comparisons",
+            "Formatting cinematic video and interaction demonstration",
+            "Packaging files for studio portfolio review and client handover"
+          ]
+        }
+      ],
+      "key_concepts": [
+        "End-to-end interactive real-time 3D environment execution",
+        "Modular scene construction and PBR material instances",
+        "Lumen lighting and Post Process color grading",
+        "Two verified functional Blueprint interaction systems",
+        "Sequencer cinematic choreography and MRQ video export",
+        "Performance optimization and runtime benchmarking",
+        "Packaging build or verified PIE runtime demonstration",
+        "Editable .uproject source handover and 15-point technical dossier"
+      ],
+      "tools": [
+        "Unreal Engine 5",
         "Blueprints",
         "Sequencer",
-        "Movie Render Queue"
+        "Movie Render Queue",
+        "Packaging Tools",
+        "Diagnostic Profiler"
       ],
-      "tools": [
-        "Unreal Engine 5"
-      ],
-      "hands_on_practice": "Create a cinematic flythrough of the interactive temple.",
-      "assignment": "Submit MP4 video file.",
-      "business_application": "Cinematics and trailers.",
-      "expected_outcome": "Completed UE5 project."
+      "hands_on_practice": "Complete the coordinated Interactive 3D Capstone project: build the environment, implement both Blueprint interactions, choreograph and render the cinematic walkthrough, benchmark performance, and assemble the editable handover package.",
+      "assignment": "Submit all required portfolio deliverables: the navigable environment, evidence of two functional Blueprint interactions, 30–60s cinematic walkthrough video, working interactive demonstration (packaged build or recorded runtime demo), editable .uproject source package, and the 15-point technical breakdown.",
+      "deliverable": "Complete Interactive 3D Environment Portfolio with 2 working Blueprint interactions, cinematic walkthrough, working demonstration, and editable source project.",
+      "commercial_application": "Professional interactive architectural presentations, virtual showrooms, digital product exhibitions, creative freelance contracts, and studio portfolio submissions."
     }
-  ]
+  ],
+  "faq": [
+    {
+      "question": "Is this Unreal Engine course suitable for beginners?",
+      "answer": "Yes. The course starts with Unreal Engine fundamentals, asset importing and environment building before progressing into lighting, Blueprints, cinematics and optimization."
+    },
+    {
+      "question": "Do I need programming knowledge?",
+      "answer": "No. The course teaches beginner interaction logic using Blueprint Visual Scripting. C++ programming is not required."
+    },
+    {
+      "question": "What will I learn?",
+      "answer": "You will learn real-time environment design, materials, lighting, Lumen, Nanite, introductory Blueprints, Sequencer, optimization and interactive project delivery."
+    },
+    {
+      "question": "What portfolio project will I create?",
+      "answer": "You will complete one interactive 3D environment containing two functional Blueprint interactions, appropriate lighting, optimized assets, a cinematic walkthrough and a working demonstration."
+    },
+    {
+      "question": "Will I learn Blueprint Visual Scripting?",
+      "answer": "Yes. The course includes events, variables, functions, triggers, basic UI controls, interactions and debugging."
+    },
+    {
+      "question": "Will I build a complete video game?",
+      "answer": "No. This certification focuses on real-time environments and beginner interactivity. Complete game development and gameplay engineering are outside its scope."
+    },
+    {
+      "question": "Will I learn Lumen and Nanite?",
+      "answer": "Yes. The course teaches their fundamentals, practical uses and hardware limitations. Mandatory work can use suitable supported alternatives where advanced hardware features are unavailable."
+    },
+    {
+      "question": "Will I learn Unreal Engine 5.8?",
+      "answer": "The course uses a validated supported Unreal Engine 5 release. Unreal Engine 5.8 features may be taught where available, while core assignments remain focused on stable fundamental workflows."
+    },
+    {
+      "question": "Does the course include procedural content generation?",
+      "answer": "It includes optional introductory PCG awareness. Advanced procedural generation is outside the mandatory 64-hour curriculum."
+    },
+    {
+      "question": "Will I learn camera animation and cinematics?",
+      "answer": "Yes. The curriculum covers Sequencer, Cine Camera Actors, basic camera animation and cinematic export workflows."
+    },
+    {
+      "question": "Will I learn performance optimization?",
+      "answer": "Yes. You will learn basic profiling, frame-time awareness, material/texture budgets, asset efficiency and appropriate rendering-quality decisions."
+    },
+    {
+      "question": "Do I need Blender or 3ds Max?",
+      "answer": "Previous experience is useful but not compulsory. Supplied and appropriately licensed 3D assets may be used for environment creation."
+    },
+    {
+      "question": "Is Unreal Engine free?",
+      "answer": "Unreal Engine is free for eligible educational use and many qualifying uses. Commercial licensing and royalty or seat requirements depend on Epic's applicable terms."
+    },
+    {
+      "question": "Are Fab assets included?",
+      "answer": "Students may use appropriately licensed free or supplied assets. Do not claim every paid Fab asset is included."
+    },
+    {
+      "question": "Will I create a packaged executable?",
+      "answer": "Packaging is taught where the available operating system, tools and target platform permit it. A documented interactive demonstration provides an assessment pathway when packaging is unavailable."
+    },
+    {
+      "question": "Is this different from Twinmotion?",
+      "answer": "Yes. Twinmotion primarily focuses on streamlined architectural presentations, while Unreal Engine provides more control over scene construction, Blueprint interactions and interactive experiences."
+    },
+    {
+      "question": "Will I receive editable project files?",
+      "answer": "Students prepare editable Unreal Engine projects, Blueprint assets, cinematic sequences, final outputs and technical handover documentation."
+    },
+    {
+      "question": "Is Unreal Engine suitable for architectural visualization?",
+      "answer": "Yes. Unreal Engine can be used to build real-time architectural presentations and interactive spaces, provided suitable source assets, hardware and project workflows are available."
+    },
+    {
+      "question": "Does the course include VR development?",
+      "answer": "VR may be discussed as a future application, but full VR application engineering and VR hardware are not mandatory."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course lasts eight weeks, includes 64 guided learning hours and has a listed fee of ₹10,900, subject to Nova Skills' verified pricing and tax policy."
+    }
+  ],
+  "primary_keyword": "Unreal Engine 5 course",
+  "secondary_keywords": [
+    "Unreal Engine 5 course in India",
+    "Unreal Engine course for beginners",
+    "Unreal Engine 5 training",
+    "Unreal Engine Blueprint course",
+    "Real-time 3D course",
+    "Unreal Engine environment design",
+    "Unreal Engine architectural visualization",
+    "Lumen lighting course",
+    "Nanite fundamentals",
+    "Blueprint Visual Scripting training",
+    "Unreal Engine Sequencer course",
+    "Interactive 3D environment course",
+    "Unreal Engine 5.8 training",
+    "Unreal Engine certification course",
+    "Real-time 3D visualization training"
+  ],
+  "keywords": [
+    "Unreal Engine 5 course",
+    "Unreal Engine for beginners",
+    "Real-time 3D environment",
+    "Blueprint visual scripting",
+    "Lumen dynamic global illumination",
+    "Nanite virtualized geometry",
+    "Sequencer cinematic walkthrough",
+    "Interactive 3D certification"
+  ],
+  "seo": {
+    "title": "Unreal Engine 5 Course | Real-Time 3D & Blueprints | Nova Skills",
+    "meta_title": "Unreal Engine 5 Course | Real-Time 3D & Blueprints | Nova Skills",
+    "description": "Learn Unreal Engine 5, Lumen, Nanite, Blueprints and real-time 3D environments in 8 weeks (64h). Build an interactive portfolio. Fee ₹10,900.",
+    "meta_description": "Learn Unreal Engine 5, Lumen, Nanite, Blueprints and real-time 3D environments in 8 weeks (64h). Build an interactive portfolio. Fee ₹10,900.",
+    "primary_keyword": "Unreal Engine 5 course",
+    "canonical_url": "https://novaskills.in/course-detail.html?id=unreal-engine-basics"
+  }
 }
