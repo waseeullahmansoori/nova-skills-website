@@ -1,205 +1,1250 @@
 {
   "course_id": "notion-cert",
-  "course_name": "Notion",
+  "id": "notion-cert",
+  "slug": "notion",
+  "course_name": "Notion — Workspace, Databases & Knowledge Systems",
+  "title": "Notion — Workspace, Databases & Knowledge Systems",
+  "name": "Notion — Workspace, Databases & Knowledge Systems",
+  "academic_sequence": 106,
+  "course_number": 106,
+  "curriculum_edition": "2027 Professional Edition",
   "academy": "Office Productivity Academy",
-  "academy_id": "office-productivity-academy",
-  "course_type": "SPECIALIZATION",
-  "course_role": "Workspace Architect",
-  "level": "Intermediate",
-  "duration": "2 Months",
-  "learning_hours": "60 hrs",
-  "future_review_status": "Needs Review",
-  "target_audience": {
-    "best_for": ["Project Managers", "Operations Teams", "Knowledge Workers"],
-    "not_for": ["Data Scientists requiring big data analytics"],
-    "who_should_take_foundation_first": "Individuals completely new to cloud-based software"
+  "academy_id": "office-productivity",
+  "academyId": "office",
+  "academic_positioning": "A practical workplace systems and knowledge management certification teaching Notion workspace architecture, relational databases, rollups, project trackers, SOP libraries, collaboration governance, and responsible AI assistance for small-business operations.",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "Notion Workspace Architect & Systems Designer",
+  "courseRole": "Notion Workspace Architect & Systems Designer",
+  "level": "Beginner to Applied",
+  "priority": "High Admissions Priority",
+  "positioning": "A practical business-operations course teaching how to organize company knowledge, connect relational databases, track projects and tasks, author standard operating procedures, and manage permissions in Notion without over-complicated aesthetic clutter or paid-plan dependencies.",
+  "duration": "5 Weeks",
+  "durationMonths": 1.25,
+  "duration_weeks": 5,
+  "learning_hours": 40,
+  "learningHours": 40,
+  "guided_hours": 40,
+  "hours": 40,
+  "weekly_workload": "8 Hours/Week (Interactive workspace labs & database engineering assignments)",
+  "mode": "Online Instructor-Led & Applied Systems Lab",
+  "price": 5900,
+  "fee": 5900,
+  "regular_fee": 5900,
+  "originalPrice": 5900,
+  "original_price": 5900,
+  "discount": 0,
+  "commercial_notice": "Flat ₹5,900 transparent certification fee. Zero hidden markups, artificial compare-at pricing, or deceptive discounts.",
+  "pricing": {
+    "amount": 5900,
+    "currency": "INR",
+    "tax_note": "Subject to applicable taxes where required by law",
+    "transparent_fee": true,
+    "no_fake_mrp": true
   },
-  "prerequisites": {
-    "required": "Basic understanding of project or knowledge management needs",
-    "recommended": "Familiarity with spreadsheet basics (for understanding databases)",
-    "system_requirements": {
-      "hardware": "Any PC, Mac, or Tablet with a modern web browser",
-      "software_accounts": "Notion (Free or Plus plan)"
-    },
-    "not_required": "Coding knowledge"
-  },
-  "overview": {
-    "positioning": "Master the all-in-one workspace tool to architect systems that manage your knowledge, projects, and team.",
-    "short_description": "Learn to build complex relational databases, automated workflows, and custom team workspaces in Notion.",
-    "key_facts": {
-      "level": "Intermediate",
-      "duration": "2 Months",
-      "format": "Online",
-      "estimated_learning_hours": "60 hrs",
-      "project_count": 4,
-      "capstone": "Yes",
-      "ai_integration": "Yes",
-      "career_focus": "Workspace Architect"
-    },
-    "what_you_will_be_able_to_do": [
-      "Design intuitive page architectures and team wikis",
-      "Build complex relational databases with rollups and formulas",
-      "Integrate Notion AI to accelerate content creation and summarization",
-      "Automate Notion workflows using its API and native automations"
-    ]
-  },
-  "why_now": {
-    "industry_shift": "Companies are migrating from fragmented tools (Docs, Trello, Jira) into unified workspaces like Notion.",
-    "ai_impact": "Notion AI has embedded generative AI directly into the workspace, fundamentally changing how teams write and summarize.",
-    "business_demand": "High demand for 'Notion Architects' who can build scalable systems for startups and agencies.",
-    "career_opportunity": "Unique niche allowing professionals to consult or act as internal operational leaders."
-  },
-  "learning_outcomes": [
-    "ARCHITECT: Scalable team workspaces and company wikis",
-    "BUILD: Relational databases for project and CRM management",
-    "AUTOMATE: Repetitive tasks using Notion Automations and formulas",
-    "ENHANCE: Content generation and analysis using Notion AI"
+  "tagline": "Organize Knowledge. Connect Projects. Build a Workspace That Actually Works.",
+  "hero_headline": "Organize Knowledge. Connect Projects. Build a Workspace That Actually Works.",
+  "hero_supporting_heading": "Structure Information. Connect Records. Coordinate Work. Share Knowledge.",
+  "hero_supporting_headline": "Structure Information. Connect Records. Coordinate Work. Share Knowledge.",
+  "h1": "Notion — Workspace, Databases & Knowledge Systems",
+  "seo_title": "Notion Workspace & Database Course | Nova Skills",
+  "meta_title": "Notion Workspace & Database Course | Nova Skills",
+  "seo_description": "Learn Notion databases, relations, rollups, project trackers, SOPs and team collaboration in 5 weeks (40h). Build a practical workspace. ₹5,900.",
+  "meta_description": "Learn Notion databases, relations, rollups, project trackers, SOPs and team collaboration in 5 weeks (40h). Build a practical workspace. ₹5,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=notion-cert",
+  "primary_keyword": "Notion course",
+  "secondary_keywords": [
+    "Notion certification course",
+    "Notion workspace training",
+    "Notion database course",
+    "Notion for beginners",
+    "Notion relations and rollups",
+    "Notion project management",
+    "Notion task tracker",
+    "Notion CRM template",
+    "Notion knowledge base",
+    "Notion SOP management",
+    "Notion team collaboration",
+    "Notion automation course",
+    "Notion Forms training",
+    "Notion AI course",
+    "Notion workspace architecture",
+    "Notion for small business",
+    "Notion operations system",
+    "Notion online course India",
+    "Notion project tracker course",
+    "Notion productivity training"
   ],
-  "learning_journey": {
-    "stages": [
-      { "stage": "Fundamentals", "focus": "Blocks, Pages, and Layouts" },
-      { "stage": "Data Structures", "focus": "Databases, Views, and Relations" },
-      { "stage": "Advanced Mechanics", "focus": "Formulas, Rollups, and Automations" },
-      { "stage": "Integration", "focus": "Notion AI and API integrations" }
+  "keywords": [
+    "Notion course",
+    "Notion databases",
+    "Notion relations and rollups",
+    "knowledge management",
+    "SOP library",
+    "project tracker",
+    "Notion AI"
+  ],
+  "hero": {
+    "eyebrow": "OFFICE PRODUCTIVITY ACADEMY / WORKSPACE & KNOWLEDGE MANAGEMENT",
+    "h1": "Notion — Workspace, Databases & Knowledge Systems",
+    "hook": "Organize Knowledge. Connect Projects. Build a Workspace That Actually Works.",
+    "description": "Learn Notion to create structured team workspaces, connected databases, project trackers, knowledge bases and reusable operating systems. Build practical documentation and workflow systems with collaboration, permissions and responsible AI assistance.",
+    "value_proposition": "Structure Information. Connect Records. Coordinate Work. Share Knowledge.",
+    "quick_info": "5 Weeks | 40 Learning Hours | ₹5,900 | Beginner to Applied",
+    "primary_cta": "Enroll Now",
+    "secondary_cta": "Get Course Syllabus",
+    "skill_tags": [
+      "Notion",
+      "Workspace Architecture",
+      "Notion Databases",
+      "Relations & Rollups",
+      "Project Tracking",
+      "Knowledge Base",
+      "SOPs",
+      "Templates",
+      "Notion Forms",
+      "Collaboration",
+      "Notion AI"
+    ],
+    "hero_portfolio_proof": "Client Tracker | Project & Task System | Knowledge Base | SOP Library | Dashboards",
+    "commercial_differentiator": "Learn to Build Connected Work Systems—not Just Aesthetic Notion Pages."
+  },
+  "short_description": "Learn Notion to create structured team workspaces, connected databases, project trackers, knowledge bases and reusable operating systems. Build practical documentation and workflow systems with collaboration, permissions and responsible AI assistance.",
+  "shortDesc": "Learn Notion to create structured team workspaces, connected databases, project trackers, knowledge bases and reusable operating systems. Build practical documentation and workflow systems with collaboration, permissions and responsible AI assistance.",
+  "full_description": "Learn Notion to create structured team workspaces, connected databases, project trackers, knowledge bases and reusable operating systems. Build practical documentation and workflow systems with collaboration, permissions and responsible AI assistance.",
+  "fullDesc": "Learn practical Notion systems: create structured team workspaces, connected relational databases, client & project trackers, knowledge bases, and standard operating procedures with collaboration governance and responsible AI assistance.",
+  "description": "Learn Notion to create structured team workspaces, connected databases, project trackers, knowledge bases and reusable operating systems. Build practical documentation and workflow systems with collaboration, permissions and responsible AI assistance.",
+  "overview": {
+    "heading": "What You Will Learn",
+    "description": "Learn Notion to create structured team workspaces, connected databases, project trackers, knowledge bases and reusable operating systems. Build practical documentation and workflow systems with collaboration, permissions and responsible AI assistance.",
+    "expanded_copy_1": "Learn to organize information in Notion using pages, databases, views, relations and reusable templates. Build practical systems for managing clients, projects, tasks, documentation and recurring business procedures.",
+    "expanded_copy_2": "Create a connected small-business workspace with a client tracker, project and task databases, knowledge base, SOP library and useful dashboards. Practise collaboration, permissions, workflow testing and responsible AI assistance while learning which advanced features require paid plans.",
+    "primary_differentiator": "Learn to Build Connected Work Systems—not Just Aesthetic Notion Pages.",
+    "main_value_proposition": "One Organized Workspace for Knowledge, Projects and Everyday Operations.",
+    "learning_journey": "Information Architecture → Databases → Connected Systems → Collaboration → AI Awareness → Final Workspace",
+    "core_principle": "A Useful Workspace Is Defined by Clarity, Relationships, Reliability and Maintainability—not Decorative Dashboards or Excessive Automation.",
+    "teaching_principles": [
+      "Clarity over complexity.",
+      "Simplicity and maintainability in schema design.",
+      "Single source of truth via relational database modeling.",
+      "Explicit distinction between filtered views and access permissions.",
+      "Reliable data types and validation.",
+      "Practical team workflows and role assignments.",
+      "Standardized, reusable templates for tasks, projects, and SOPs.",
+      "Living documentation with assigned ownership and review dates.",
+      "Cost and tier awareness regarding automations and AI credits."
     ]
   },
-  "hands_on_tech": {
-    "core_tools": [
-      { "tool": "Notion", "purpose": "Workspace creation", "what_student_learns": "Page and database architecture", "what_student_builds": "Company Intranet" },
-      { "tool": "Notion AI", "purpose": "Content enhancement", "what_student_learns": "AI prompting within the workspace", "what_student_builds": "Automated meeting notes" },
-      { "tool": "Notion API", "purpose": "External automation", "what_student_learns": "Connecting Notion to other apps", "what_student_builds": "Automated data syncs" }
+  "commercial_positioning": {
+    "main_heading": "Build an Organized Notion Workspace for Real Team Operations.",
+    "supporting_copy": "Learn to build connected Notion databases, client and project trackers, task dashboards, SOP libraries and searchable knowledge bases. Create a complete small-business workspace with useful views, reliable relations, appropriate access and clear operating instructions.",
+    "four_value_propositions": [
+      {
+        "title": "Practical Workspace Architecture",
+        "description": "Organize information, teamspaces, nested pages, and navigational hubs for actual business operations rather than aesthetic distraction."
+      },
+      {
+        "title": "Connected Relational Databases",
+        "description": "Link clients, projects, and tasks cleanly through relations, rollups, and introductory formulas without redundant data duplication."
+      },
+      {
+        "title": "Reusable Knowledge Systems",
+        "description": "Build searchable knowledge bases, standard operating procedure (SOP) libraries, and standardized templates that streamline onboarding."
+      },
+      {
+        "title": "Safe Team Collaboration",
+        "description": "Understand sharing levels, guest vs member access, form intakes, automation plan limits, and responsible human-supervised AI assistance."
+      }
     ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
+    "commercial_applications": [
+      "Small-business operational hubs and project command centers",
+      "Freelance client management and deliverable tracking systems",
+      "Startup team documentation, product wikis, and SOP repositories",
+      "Agency client-intake and project milestone trackers",
+      "Departmental knowledge bases and employee onboarding manuals",
+      "Consulting delivery tracking and client handover workspaces"
+    ],
+    "avoid_promises": [
+      "Guaranteed freelance income or automatic client acquisition",
+      "Enterprise CRM engineering or complete Salesforce replacements",
+      "Free universal access to paid Notion database automations",
+      "Free unlimited Notion AI credits or autonomous agent development",
+      "Official Notion-issued consultant credentials without verification",
+      "Fully automated company operations without human intervention"
+    ]
   },
-  "industry_workflow": {
-    "overview": "Notion System Design Workflow",
-    "stages": [
-      { "step": 1, "name": "Wireframe", "desc": "Mapping the workspace structure" },
-      { "step": 2, "name": "Database Build", "desc": "Creating backend data tables and relations" },
-      { "step": 3, "name": "Dashboard Design", "desc": "Building frontend dashboards with linked views" },
-      { "step": 4, "name": "Onboarding", "desc": "Creating templates and SOPs for team use" }
+  "icon": "fas fa-cubes",
+  "color": "#004672",
+  "badge": "CERTIFICATION",
+  "rating": 4.9,
+  "reviews": 74,
+  "students": 340,
+  "liveProjects": 1,
+  "projects": [
+    "Small-Business Notion Workspace & Knowledge System (Integrated 14-Component Capstone)"
+  ],
+  "certificate": "Nova Skills Certificate of Completion",
+  "placementSupport": "Portfolio Review & Workspace Architecture Career Guidance",
+  "status": "active",
+  "url": "/course-detail.html?id=notion-cert",
+  "image": "assets/images/courses/notion-cert.svg",
+  "tags": [
+    "Notion",
+    "Workspace Architecture",
+    "Notion Databases",
+    "Relations & Rollups",
+    "Project Tracking",
+    "Knowledge Base",
+    "SOPs",
+    "Templates",
+    "Notion Forms",
+    "Collaboration",
+    "Notion AI"
+  ],
+  "featured": false,
+  "category": "Office Productivity Academy",
+  "future_review_status": "STABLE",
+  "futureReviewStatus": "STABLE",
+  "target_audience": [
+    "Operations coordinators and project managers structuring small-business workflows.",
+    "Freelancers and consultants managing clients, projects, milestones, and deliverables.",
+    "Startup founders and remote team leaders establishing company documentation hubs.",
+    "Administrative professionals and executive assistants organizing team tasks and SOPs.",
+    "Knowledge workers seeking single-source-of-truth documentation systems.",
+    "Students and professionals transitioning away from scattered documents and messy spreadsheets."
+  ],
+  "prerequisites": [
+    "Basic computer literacy (operating browser, file system, and standard keyboard shortcuts).",
+    "Basic experience organizing digital files and documents."
+  ],
+  "not_required": [
+    "Prior coding, JavaScript, or database programming experience.",
+    "Enterprise relational database or SQL knowledge.",
+    "Complex CRM or ERP software background.",
+    "Paid Notion subscription for core classroom certification requirements.",
+    "Paid Notion AI or Custom Agent license.",
+    "Third-party API development or webhook integration skills."
+  ],
+  "highlights": [
+    "5 Weeks of applied workspace architecture and knowledge engineering (40 total hours).",
+    "Master Notion's core building blocks: pages, callouts, columns, toggles, synced blocks, and templates.",
+    "Design robust database schemas: properties, select, multi-select, status, dates, and people.",
+    "Master multi-view workflows: Tables, Kanban Boards, Calendars, Timelines, Lists, and Galleries.",
+    "Engineer relational data structures: connecting Clients, Projects, and Tasks with Relations and Rollups.",
+    "Author introductory Notion formulas for overdue flags, progress calculations, and deadline trackers.",
+    "Build a searchable company Knowledge Base and structured Standard Operating Procedure (SOP) library.",
+    "Deploy Notion Forms for stakeholder requests and client intake with data validation safeguards.",
+    "Understand database button capabilities and paid-plan automation boundaries without vendor lock-in.",
+    "Configure member vs guest permissions, workspace sharing, and least-privilege security controls.",
+    "Explore October 2026 Notion AI and Agent updates, credit models, review modes, and human sign-offs.",
+    "Graduate with 1 comprehensive capstone: Small-Business Notion Workspace & Knowledge System (14 components)."
+  ],
+  "hands_on_tech": [
+    "Notion",
+    "Notion Databases",
+    "Notion Relations & Rollups",
+    "Notion Formulas",
+    "Notion Forms",
+    "CSV Imports & Practice Data",
+    "Notion Buttons & Automations (Plan-Appropriate)",
+    "Notion AI & Agents (Awareness & Governance)"
+  ],
+  "tools": [
+    "Notion",
+    "Notion Databases",
+    "Notion Relations & Rollups",
+    "Notion Formulas",
+    "Notion Forms",
+    "CSV Imports & Practice Data",
+    "Notion Buttons & Automations (Plan-Appropriate)",
+    "Notion AI & Agents (Awareness & Governance)"
+  ],
+  "software": [
+    "Notion (Web, Desktop, and Mobile Apps)"
+  ],
+  "database_and_relations_policy": {
+    "heading": "Connect Information Once. Use It Across the Entire Workspace.",
+    "principles": [
+      "Single Source of Truth: Store data entities (Clients, Projects, Tasks) in dedicated source databases; reference them via Relations rather than duplicating text records.",
+      "Relational Integrity: Establish clean two-way relations (Client → Projects, Project → Tasks); ensure parent-child associations remain unambiguous.",
+      "Rollup Discipline: Use Rollups to summarize connected progress (task completion counts, earliest start dates) without manual spreadsheet calculations.",
+      "Source Database vs Linked View: Understand that editing a linked database view modifies the underlying source record; filters only alter visual presentation, not data storage.",
+      "View Filters Are Not Permissions: Never rely on filtered database views (e.g., 'My Assigned Tasks') to secure confidential records; anyone with source database access can view all rows."
+    ]
+  },
+  "forms_and_automations_boundary": {
+    "heading": "Understand What Is Manual, What Is Automated, and What Requires a Paid Plan",
+    "principles": [
+      "Notion Forms Access: Basic Forms are accessible across standard Notion plans; advanced styling and conditional branching require eligible paid tiers.",
+      "Buttons vs Automations: Interactive database buttons trigger actions upon manual clicks; automated event triggers (status change, date arrival) are primarily paid features.",
+      "Automation Trigger Constraints: Free-plan automations are restricted (e.g., basic Slack alerts); multi-step triggers and cascading automations require paid plans.",
+      "Manual Fallback Requirement: All required course projects can be completed using manual updates, templates, and basic buttons—no student is forced to buy a paid plan to graduate."
+    ]
+  },
+  "notion_ai_and_agents_governance": {
+    "heading": "AI Can Assist Your Workspace. Human Review Must Remain in Control.",
+    "principles": [
+      "Awareness of October 2026 Architecture: Covers Notion Agents, custom agent scoping, MCP connections, and the updated credit model at a practical governance level.",
+      "Credit & Plan Awareness: Educates students on monthly AI credit allocations, transition timelines (October/November 2026), and administrative spending limits.",
+      "Mandatory Human Review: Crucial changes (client statuses, task assignees, contractual terms) must be verified through Agent Review Mode before committing.",
+      "Synthetic Data Policy: No real customer lists, confidential financial records, or PII are permitted in classroom AI prompts; students use synthetic business scenarios exclusively."
+    ]
+  },
+  "knowledge_base_and_sop_standards": {
+    "heading": "Keep Important Knowledge Findable, Reliable, and Easy to Maintain",
+    "principles": [
+      "SOP Structural Standard: Every SOP requires a clear title, business purpose, named owner, preconditions, numbered steps, expected output, quality checks, and review date.",
+      "Searchable Categorization: Knowledge assets must include logical tags, breadcrumb hierarchies, and internal links to ensure rapid retrieval during team operations.",
+      "Maintenance & Deprecation: Stale procedures degrade operational trust; workspaces must include scheduled review cycles and archived legacy documentation."
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Agencies & Startups",
-      "business_problem": "Information silos across different apps slowing down projects",
-      "approach": "Build a unified Company OS in Notion integrating wikis and task tracking",
-      "toolset": "Notion",
-      "output": "Unified Company Operating System"
+      "title": "Small-Business Operations Command Center",
+      "description": "Managing daily business workflows by linking a client database to active project records, breaking projects down into assigned tasks, and tracking deadlines on a central dashboard."
+    },
+    {
+      "title": "Freelance & Agency Client Delivery System",
+      "description": "Onboarding clients through a Notion Form, tracking delivery milestones in a project pipeline, logging billable deliverables, and sharing restricted project views with external client guests."
+    },
+    {
+      "title": "Startup Knowledge Base & Company Wiki",
+      "description": "Organizing company vision, departmental guides, employee onboarding checklists, meeting note repositories, and software tooling directories in a structured knowledge hub."
+    },
+    {
+      "title": "Standard Operating Procedure (SOP) Library",
+      "description": "Authoring standardized operational manuals for recurring tasks, client billing procedures, quality assurance checkpoints, and emergency escalation workflows."
+    },
+    {
+      "title": "Event & Content Production Pipeline",
+      "description": "Planning marketing campaigns, tracking editorial review stages across Kanban boards, managing content calendar release dates, and storing brand assets."
+    },
+    {
+      "title": "Internal Request & Issue Intake Workflow",
+      "description": "Collecting internal IT, facilities, or asset requests via Notion Forms, auto-assigning triage owners, and updating completion statuses with automated timestamp tags."
     }
   ],
-  "ai_integration": {
-    "role_classification": "AI-Enhanced",
-    "ai_can_assist_with": "Drafting policies, summarizing meeting notes, brainstorming",
-    "ai_can_automate": "Action item extraction, document formatting",
-    "ai_cannot_replace": "The architectural design of the workspace systems",
-    "human_expertise_required": "High (for system design)",
-    "validation_protocol": "Reviewing AI-generated text for accuracy",
-    "responsible_use": "Understanding data privacy settings for Notion AI"
-  },
-  "best_practices": [
-    "Always separate backend databases from frontend dashboards",
-    "Use relations instead of duplicating data",
-    "Keep page permissions granular to protect sensitive data"
-  ],
-  "common_mistakes": [
-    { "mistake": "Nesting pages too deeply", "why_it_happens": "Treating Notion like a traditional folder system", "professional_approach": "Use databases and tags instead of deep page hierarchies" }
-  ],
-  "career_paths": {
-    "entry_roles": ["Operations Assistant"],
-    "mid_roles": ["Workspace Administrator", "Operations Manager"],
-    "specialist_roles": ["Notion Certified Consultant"],
-    "freelance_roles": ["Notion Architect", "System Builder"],
-    "employer_expectations": "Ability to streamline information access and project tracking",
-    "what_student_demonstrates": "A portfolio of functional, aesthetically pleasing Notion templates"
-  },
-  "freelance_applications": {
-    "services_offered": ["Custom Template Design", "Workspace Audit", "Team Migration to Notion"],
-    "client_workflow": "Needs Analysis -> System Architecture -> Build -> Training",
-    "portfolio_requirements": "Publicly shared Notion templates demonstrating various use cases"
-  },
-  "what_you_will_build": [
-    "Personal Productivity Dashboard",
-    "Relational CRM System",
-    "Company Wiki / Intranet",
-    "Automated Project Management Tracker"
-  ],
-  "final_deliverables": [
-    "A comprehensive 'Company OS' Notion Template"
-  ],
-  "assessment": {
-    "model": "Project evaluation",
-    "criteria": "System architecture logic, use of relations, and user interface design"
-  },
-  "certification": {
-    "title": "Certified Notion Specialist",
-    "criteria": "Pass the final system build assessment",
-    "verification": "Digital Certificate"
-  },
-  "not_covered": "Custom programming for the API (only no-code automation is covered)",
-  "next_learning_path": {
-    "recommended_next": "Workflow Automation (Zapier)",
-    "related_programs": "Agile Project Management"
-  },
-  "faq": [
-    { "question": "Do I need a paid Notion account?", "answer": "The free plan is sufficient for learning, though we will demonstrate paid features like Notion AI." },
-    { "question": "Is Notion better than Excel for data?", "answer": "Notion is better for qualitative data and text-based project tracking, while Excel remains superior for complex numerical analysis." },
-    { "question": "Can I sell the templates I build?", "answer": "Yes, many Notion creators sell their templates online, which we will briefly discuss." }
+  "curriculum": [
+    {
+      "module_number": 1,
+      "module": "Module 01",
+      "module_title": "Notion Fundamentals & Information Structure",
+      "title": "Notion Fundamentals & Information Structure",
+      "duration": "6 Hours",
+      "hours": 6,
+      "objective": "Understand Notion's page/block structure and design a logical, maintainable workspace.",
+      "lessons_count": 20,
+      "lessons": [
+        "1.1 Introduction to Notion: Core productivity capabilities; Notes, docs, wikis, databases, project coordination, and team workspaces.",
+        "1.2 Workspace Concepts: Personal accounts vs team workspaces; Teamspaces; Private pages vs shared pages; Members and guest distinctions.",
+        "1.3 Notion Interface Mastery: Sidebar navigation; Quick find and search; Breadcrumb paths; Workspace settings awareness; Command palette.",
+        "1.4 Page Management: Creating pages; Renaming, moving, duplicating, archiving, and trashing pages; URL slug customization.",
+        "1.5 Block Architecture: The block foundation; Paragraphs, Headings (H1, H2, H3), bulleted lists, numbered lists, to-do checklists, quotes, and callouts.",
+        "1.6 Advanced Page Organization: Toggle lists and toggle headings; Multi-column layouts; Horizontal dividers; Internal page links; Linked mentions.",
+        "1.7 Nested Pages & Hierarchy: Parent and child page relationships; Constructing clear depth without confusing excessive nesting.",
+        "1.8 Information Architecture: Categorization logic; Primary navigation structures; Naming conventions; Content ownership and lifecycle.",
+        "1.9 Knowledge Organization: Segmenting company knowledge by department, project, client type, and standard procedure.",
+        "1.10 Page Linking & Cross-Referencing: Link to page blocks; Inline @page mentions; Weaving relational documentation webs.",
+        "1.11 Table of Contents: Generating dynamic navigation from heading tags within long-form operational documents.",
+        "1.12 Synced Blocks Awareness: Creating reusable content blocks; Synchronization mechanics across multiple pages; Safe editing practices.",
+        "1.13 Page Templates: Creating repeatable document templates for meeting notes, client briefings, and SOP outlines.",
+        "1.14 Template Quality & Design: Writing clear instructional placeholders, standard headers, and checklist prompts for team consistency.",
+        "1.15 Workspace Navigation Hub: Designing clean operational homepages linking Projects, Clients, Knowledge Base, and SOPs.",
+        "1.16 Information Retrieval Strategies: Search filters; Quick Find shortcuts; Navigation breadcrumbs; Maintaining bookmark hubs.",
+        "1.17 Workspace Usability Standards: Avoiding aesthetic clutter, decorative widgets, and unnecessary nesting; Prioritizing reading clarity.",
+        "1.18 Page Permissions Awareness: Private vs team access; Public web publishing risks; Inherited parent page permissions.",
+        "1.19 Page Version History: Reviewing edit history; Identifying contributor modifications; Restoring prior versions; Plan limitations.",
+        "1.20 Workspace Troubleshooting: Recovering mislaid pages; Resolving broken internal links; Consolidating duplicate documents."
+      ],
+      "hands_on_lab": "Construct a complete fictional small-business workspace homepage with dedicated hubs for Home, Clients, Projects, Tasks, Knowledge Base, SOP Library, and Team Resources.",
+      "deliverable": "Notion Workspace Architecture & Navigation Map",
+      "security_considerations": "Enforce private workspace defaults; prevent accidental public web sharing; establish clean parent-child permission inheritance."
+    },
+    {
+      "module_number": 2,
+      "module": "Module 02",
+      "module_title": "Databases & Views",
+      "title": "Databases & Views",
+      "duration": "8 Hours",
+      "hours": 8,
+      "objective": "Build structured Notion databases with appropriate properties, filters and views for business tracking.",
+      "lessons_count": 24,
+      "lessons": [
+        "2.1 What Is a Notion Database?: Structured records vs freeform pages; Database rows as full Notion pages; Source database concept.",
+        "2.2 Database vs Simple Page: Determining when structured properties are required vs simple text documents; Avoiding database bloat.",
+        "2.3 Creating Databases: Full-page databases vs inline databases; Sourcing data; Configuration settings.",
+        "2.4 Database Properties: Title, Text, Number, Select, Multi-select, Status, Date, Person, Checkbox, URL, Email, Phone, and Files & Media.",
+        "2.5 Database Schema Design: Defining property semantics; Selecting optimal data types; Enforcing required fields; Standardizing property names.",
+        "2.6 Record Consistency & Hygiene: Enforcing status conventions (To Do, In Progress, Done); Date standards; Preventing missing inputs.",
+        "2.7 Table View Mastery: Column reordering, wrapping text, showing/hiding properties, sorting, filtering, and summary calculations.",
+        "2.8 Board View (Kanban): Grouping by status or owner; Managing task workflow stages; Card previews and visible property toggles.",
+        "2.9 Calendar View: Plotting date properties; Visualizing milestones and deadlines; Drag-and-drop rescheduling mechanics.",
+        "2.10 Timeline View: Multi-date project scheduling; Setting start and end dates; Visualizing dependencies (subject to plan availability).",
+        "2.11 List View: Clean, compact displays for document registries, reading lists, and straightforward meeting agendas.",
+        "2.12 Gallery View: Visual card layouts for team directories, portfolio assets, product catalogs, and client showcase cards.",
+        "2.13 Multi-Condition Filters: Constructing AND/OR filter groups; Filtering by status, assignee, priority, and dynamic date boundaries.",
+        "2.14 Sorting Strategies: Multi-level sorting (e.g., Priority descending, then Due Date ascending); Preserving predictable views.",
+        "2.15 Grouping & Sub-Grouping: Grouping boards and tables by status, client, or category; Collapsing empty groups.",
+        "2.16 Linked Database Views: Creating linked views across different pages; Filtering the central source database for local context.",
+        "2.17 Source Database vs Linked View: Single source of truth: confirming that edits in a linked view modify the master record directly.",
+        "2.18 Views Are Not Permissions: The fundamental security rule: filtering out records on a view does NOT prevent users from accessing the source database.",
+        "2.19 Database Templates: Creating reusable record templates with pre-configured properties, checklists, and boilerplate instructions.",
+        "2.20 Recurring Database Templates: Scheduling recurring task creation where supported; Setting automated generation intervals.",
+        "2.21 CSV Data Imports: Preparing structured CSV files; Column header formatting; Data type matching; Mapping imports into Notion.",
+        "2.22 CSV Data Quality Assurance: Eliminating duplicate records, blank required fields, malformed dates, and unmapped property types.",
+        "2.23 Operational Reporting Views: Configuring specialized views for Open Tasks, Overdue Items, High-Priority Blockers, and Next 7 Days.",
+        "2.24 Dashboard Usability & Layout: Combining multiple linked views onto an executive dashboard with clear headers and minimal clutter."
+      ],
+      "hands_on_lab": "Build a comprehensive Task Management Database with 7 core properties. Configure Table, Board, Calendar, 'My Tasks', and Overdue views, demonstrating CSV import mapping and linked view instances.",
+      "deliverable": "Multi-View Task Management Database",
+      "security_considerations": "Demonstrate that linked views inherit source database permissions; do not store confidential compensation or HR records in shared databases without property-level access controls."
+    },
+    {
+      "module_number": 3,
+      "module": "Module 03",
+      "module_title": "Connected Work Systems",
+      "title": "Connected Work Systems",
+      "duration": "10 Hours",
+      "hours": 10,
+      "objective": "Build connected client, project and task systems using relations, rollups, introductory formulas and reusable operational documentation.",
+      "lessons_count": 28,
+      "lessons": [
+        "3.1 Designing Connected Systems: Mapping business entity models; Establishing relational architecture; Eliminating duplicate data entry.",
+        "3.2 Identifying Business Entities: Clients, Projects, Tasks, Team Members, Meetings, and Standard Operating Procedures.",
+        "3.3 Database Cardinality: Understanding one-to-many relationships (One Client → Many Projects; One Project → Many Tasks).",
+        "3.4 Notion Relations: Creating Relation properties; Selecting target databases; Configuring one-way vs two-way relation syncing.",
+        "3.5 Relational Data Integrity: Connecting records accurately; Auditing orphan tasks; Resolving broken relational links.",
+        "3.6 Notion Rollups: Sourcing data across relations; Calculating counts, sums, averages, and displaying related properties.",
+        "3.7 Rollup Applications: Calculating total tasks per project, percentage of completed tasks, and extracting client names into task views.",
+        "3.8 Rollup Boundaries & Limitations: Understanding dependency on relation integrity, property data types, and permission context.",
+        "3.9 Notion Formula Fundamentals: Formula 2.0 architecture; Basic operators, property tokens, text concatenation, and numeric arithmetic.",
+        "3.10 Practical Formula Applications: Writing formulas for Overdue Warnings (if date < today and status != Done), Days Remaining, and Status Badges.",
+        "3.11 Formula Hygiene & Testing: Handling empty properties, testing edge cases, formatting conditional output, and optimizing readability.",
+        "3.12 Client Database Engineering: Creating client records with Client ID, Category, Contact Channel, Pipeline Status, and Account Owner.",
+        "3.13 CRM-Style Pipeline Architecture: Configuring stages: Lead, Qualified, Proposal Sent, Active Project, Retainer, and Closed/Archived.",
+        "3.14 CRM Scope & Boundaries: Operational client tracking vs enterprise CRM; Clarifying lack of native email blast and billing infrastructure.",
+        "3.15 Project Database Engineering: Sourcing Client relations, target delivery dates, project health status, and project owner fields.",
+        "3.16 Task Database Engineering: Linking tasks to parent projects, assigning individual owners, setting hard deadlines, and priority tags.",
+        "3.17 Connected Three-Tier System: Establishing the end-to-end Client → Project → Task relational loop with linked dashboard views.",
+        "3.18 Reusable System Templates: Designing standardized templates for New Client Onboarding, New Project Kickoff, and Meeting Minutes.",
+        "3.19 Standard Operating Procedures (SOPs): Structural requirements: Purpose, Owner, Prerequisites, Numbered Steps, QC, and Review Dates.",
+        "3.20 SOP Documentation Engineering: Writing clear, unambiguous operational procedures in Notion callouts, toggles, and checklists.",
+        "3.21 Searchable Company Knowledge Base: Creating hierarchical wikis, categorization tags, FAQ sections, and policy repositories.",
+        "3.22 Information Findability: Establishing keyword-rich headers, cross-document links, and verified document ownership metadata.",
+        "3.23 Knowledge Base Governance: Establishing review cadences, assigning doc owners, identifying stale SOPs, and archiving legacy pages.",
+        "3.24 Executive Operations Dashboard: Unifying active client pipeline cards, active project timelines, and urgent task lists into one hub.",
+        "3.25 Preventing Relational Bloat: Keeping relations lean; Avoiding redundant cross-linking between unrelated auxiliary databases.",
+        "3.26 Debugging Relations & Rollups: Troubleshooting circular links, blank rollup returns, formula type mismatches, and broken relations.",
+        "3.27 Synthetic Data Validation: Testing connected systems using fictional client companies, simulated projects, and synthetic task lists.",
+        "3.28 Workspace Maintainability: Auditing database performance, keeping property counts reasonable, and documenting system schemas."
+      ],
+      "hands_on_lab": "Engineer a connected small-business work system: build Client, Project, and Task databases linked by Relations and Rollups, implement overdue status formulas, construct an SOP library, and assemble an integrated operational dashboard.",
+      "deliverable": "Connected Small-Business Work System",
+      "security_considerations": "Do not replicate confidential client contracts or real financial data; ensure test relations are populated with synthetic business records exclusively."
+    },
+    {
+      "module_number": 4,
+      "module": "Module 04",
+      "module_title": "Collaboration & Automation",
+      "title": "Collaboration & Automation",
+      "duration": "8 Hours",
+      "hours": 8,
+      "objective": "Configure appropriate collaboration and learn practical, safe workflow enhancements through forms, buttons and plan-dependent automations.",
+      "lessons_count": 28,
+      "lessons": [
+        "4.1 Team Collaboration in Notion: Shared workspace etiquette; Teamspaces; Co-authoring; Asynchronous task coordination.",
+        "4.2 Inline Comments & Discussions: Commenting on specific text blocks; Replying in threads; Resolving discussions; Editing comments.",
+        "4.3 Mentions & Notifications: Using @person to assign accountability; Using @date for reminders; Using @page for inline reference.",
+        "4.4 Members vs Guests: Workspace membership roles; Guest invitations to specific pages; Managing seat limits and guest access bounds.",
+        "4.5 Sharing Modes: Private pages; Internal workspace sharing; Restricting to specific members; External guest access; Public web sharing.",
+        "4.6 Permission Levels: Full Access, Can Edit, Can Edit Content (database specific), Can Comment, and Can View.",
+        "4.7 Least-Privilege Access Management: Granting minimum necessary rights; Restricting Full Access to workspace administrators; Auditing guests.",
+        "4.8 Permission Inheritance Mechanics: Understanding how subpages inherit parent page permissions; Breaking inheritance safely.",
+        "4.9 Database Permissions Governance: Managing access to central source databases vs child pages; Property-level access awareness.",
+        "4.10 Security Myth: Filters vs Access: Reinforcing that database filters NEVER restrict underlying record access for users with database rights.",
+        "4.11 Advanced Access Controls Awareness: Page-level locking, property/column-level access (Business/Enterprise plan awareness).",
+        "4.12 Notion Forms Architecture: Creating intake forms connected directly to databases; Defining question fields; Setting required prompts.",
+        "4.13 Form Privacy & Settings: Anonymous response collection; Restricting form access to internal members vs external respondents.",
+        "4.14 Notion Forms Availability: Free-tier basic form capabilities vs paid-tier advanced customization and conditional question branching.",
+        "4.15 Form-to-Database Intake Workflow: Automatic row insertion upon submission; Routing requests to triage views; Assigning task owners.",
+        "4.16 Notion Buttons Fundamentals: Button blocks on pages vs database buttons; Understanding user-initiated manual trigger actions.",
+        "4.17 Button Plan Availability: Free-plan button actions (adding pages, editing properties) vs paid advanced multi-step actions.",
+        "4.18 Applied Button Exercises: Building 'Mark Complete' buttons, 'Create Meeting Note' buttons, and 'Open Linked Document' buttons.",
+        "4.19 Database Automations Overview: Triggers, conditions, and actions; Event-driven automation vs manual button clicks.",
+        "4.20 Automation Triggers: Page added; Property edited (e.g., Status changed to 'Done'); Date-based recurring triggers.",
+        "4.21 Automation Actions: Auto-updating properties (e.g., setting Completion Date to Today), adding related tasks, sending notifications.",
+        "4.22 Paid Plan Automation Boundaries: Clarifying that full database automations predominantly require Plus, Business, or Enterprise tiers.",
+        "4.23 Automation Limitations & Governance: Recognizing that automations do not natively chain infinitely; Testing action failures.",
+        "4.24 Workflow Testing & Quality Assurance: Testing form inputs, button triggers, permission barriers, and handling duplicate records.",
+        "4.25 Manual Fallback Standard: Designing bulletproof manual fallback procedures (checklists, templates) so systems function without paid automations.",
+        "4.26 Cost & Plan Awareness: Auditing team subscription costs, add-on features, credit limits, and external tool dependencies.",
+        "4.27 Access Auditing & Security Governance: Conducting quarterly guest reviews, revoking stale public links, and isolating confidential records.",
+        "4.28 Version History & Disaster Recovery: Recovering accidentally deleted databases, inspecting revision logs, and restoring previous versions."
+      ],
+      "hands_on_lab": "Build a client intake and task routing workflow: connect a Notion Form to a Client intake database, configure review status tags, implement a 'Complete Task' database button, design a permission matrix for 4 roles, and document manual fallback rules.",
+      "deliverable": "Collaboration, Forms & Workflow Control Pack",
+      "security_considerations": "Paid database automations are never required for course completion; students must verify manual fallback procedures and audit guest sharing boundaries."
+    },
+    {
+      "module_number": 5,
+      "module": "Module 05",
+      "module_title": "Notion AI & Agents",
+      "title": "Notion AI & Agents",
+      "duration": "4 Hours",
+      "hours": 4,
+      "objective": "Understand how Notion AI and AI agents can assist knowledge work while respecting costs, permissions, review and approval requirements.",
+      "lessons_count": 20,
+      "lessons": [
+        "5.1 Notion AI Overview: Capabilities across workspace search, writing assistance, summarization, and automated database properties.",
+        "5.2 AI Architecture & Tiers: Notion Agent, Custom Agents, Q&A workspace search, AI database autofill, and plan-dependent availability.",
+        "5.3 AI Workspace Search: Natural language querying across company documentation; Inspecting cited source pages for factual veracity.",
+        "5.4 AI-Assisted Content Drafting: Drafting SOP outlines, meeting summaries, project kickoff notes, and initial knowledge base articles.",
+        "5.5 AI Database Autofill: Auto-summarizing project pages, generating action-item checklists, and auto-tagging categories in databases.",
+        "5.6 AI Agent Concepts: Autonomous vs assisted agents; Defining goals, contextual scope, available tools, permissions, and human oversight.",
+        "5.7 The Notion Agent: Workspace-wide assistance; Answering contextual questions, drafting documentation, and suggesting next steps.",
+        "5.8 Custom Agents Awareness: Scoping custom agents for specific workflows; Defining data access boundaries and task parameters.",
+        "5.9 October 2026 Agent Updates: Expanded context processing, cross-app connected workflows, MCP support, and Agent Review Mode.",
+        "5.10 Agent Review Mode & Approval Controls: Reviewing proposed database edits before committing; Rejecting erroneous agent actions.",
+        "5.11 Model Context Protocol (MCP) Awareness: External tool connections; Context exchange boundaries; Token consumption and data security.",
+        "5.12 Connection Safety & Access Hygiene: Restricting external tool connections; Limiting permissions to read-only where appropriate.",
+        "5.13 Credit System & Consumption Models: Standard vs Select credits; Monthly credit allowances; Administrative budget caps.",
+        "5.14 October/November 2026 Credit Transition: Rollout timelines (Oct 19 for new eligible workspaces; Nov 2 for existing); Account verification.",
+        "5.15 AI Budgeting & Cost Governance: Monitoring team credit burn rates; Disabling unapproved AI add-ons; Setting workspace spending limits.",
+        "5.16 AI Hallucinations in Operations: Identifying fabricated company policies, false task deadlines, incorrect client statuses, and math errors.",
+        "5.17 Factual Verification Protocol: Cross-referencing AI outputs against primary documentation; Verifying dates, assignees, and financial terms.",
+        "5.18 Sensitive Data Protection: Strict prohibition against pasting non-public enterprise contracts, employee records, or PII into AI prompts.",
+        "5.19 The Human-in-the-Loop Standard: Mandatory rule: AI proposes, human reviews and verifies, authorized user approves and commits.",
+        "5.20 Responsible Classroom AI Labs: Evaluating synthetic AI-generated SOPs, identifying deliberate errors, and executing manual corrections."
+      ],
+      "hands_on_lab": "Conduct a supervised AI output audit on 3 synthetic workplace drafts (an SOP, a client update, and a task prioritization list). Identify hallucinations, correct errors, and document an operational AI governance checklist.",
+      "deliverable": "Responsible Notion AI & Agent Governance Checklist",
+      "security_considerations": "Notion AI is strictly optional; students never purchase AI plans or deploy unsupervised autonomous agents on real organizational data."
+    },
+    {
+      "module_number": 6,
+      "module": "Module 06",
+      "module_title": "Workspace Capstone",
+      "title": "Workspace Capstone",
+      "duration": "4 Hours",
+      "hours": 4,
+      "objective": "Integrate all course skills into a tested, secure and maintainable small-business Notion workspace.",
+      "lessons_count": 16,
+      "lessons": [
+        "6.1 Small-Business Scenario Brief: Reviewing company profile, team roles, service offerings, clients, projects, and operational pain points.",
+        "6.2 Workspace Architecture Construction: Building the central homepage hub, establishing clean teamspace navigation, and organizing subpages.",
+        "6.3 Client Database Implementation: Sourcing client records, pipeline stages, contact channels, and account owners using synthetic data.",
+        "6.4 Project Database Engineering: Configuring project stages, start/target dates, priorities, and two-way relations to the Client database.",
+        "6.5 Task Database Engineering: Creating task records linked to projects, assigning team members, setting due dates, and priority tags.",
+        "6.6 Relations & Rollup Verification: Auditing all cross-database links; Verifying project task counts and completion percentage rollups.",
+        "6.7 Formula Validation & Testing: Verifying overdue status indicators, days-to-deadline calculations, and error-handling on blank dates.",
+        "6.8 Knowledge Base Assembly: Populating core company knowledge pages: Company Overview, Team Directory, FAQs, and Tool Guides.",
+        "6.9 SOP Library Deployment: Writing 3 complete standard operating procedures: Client Onboarding, Project Kickoff, and Project Handover.",
+        "6.10 Operational Dashboard Assembly: Embedding linked views of Active Projects, Urgent Tasks, and Client Pipelines onto the homepage.",
+        "6.11 Intake Form Deployment: Connecting an intake form for client inquiries or internal service requests, routing records to triage.",
+        "6.12 Permission & Sharing Audit: Formulating the workspace permission matrix across Owner, Coordinator, Contributor, and Guest roles.",
+        "6.13 End-to-End System Testing: Simulating a live business cycle: new client intake → project kickoff → task assignment → completion.",
+        "6.14 Error Correction & Schema Optimization: Fixing broken relational links, cleaning up redundant properties, and optimizing view layouts.",
+        "6.15 Professional Handover Documentation: Compiling the Workspace Map, Database Schema Dictionary, User Guide, and Maintenance SOP.",
+        "6.16 Final Capstone Demonstration: Walking through the integrated workspace, defending schema choices, and presenting the verified system."
+      ],
+      "hands_on_lab": "Assemble, validate, and document the complete integrated Small-Business Notion Workspace & Knowledge System incorporating all 14 required portfolio components.",
+      "deliverable": "Small-Business Notion Workspace & Knowledge System — Final Capstone",
+      "security_considerations": "Verify zero public link leaks, confirm least-privilege role matrices, and validate that all test datasets contain synthetic information exclusively."
+    }
   ],
   "modules": [
     {
       "module_number": 1,
-      "module_title": "Notion Architecture & Aesthetics",
-      "module_purpose": "Master page design and basic structural hierarchy",
-      "what_you_will_learn": ["Blocks & Pages", "Formatting", "Navigation"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "The Block Paradigm", "what_is_taught": "Understanding blocks, pages, and basic text formatting", "why_it_matters": "The fundamental building block of Notion", "what_learner_does": "Builds a formatted text document", "expected_outcome": "Basic Notion proficiency" },
-        { "lesson_number": 2, "lesson_title": "Page Architecture and Layouts", "what_is_taught": "Columns, toggles, callouts, and page styling", "why_it_matters": "Improves readability and user experience", "what_learner_does": "Designs a personal dashboard layout", "expected_outcome": "Aesthetic page design skills" },
-        { "lesson_number": 3, "lesson_title": "Navigation and Linking", "what_is_taught": "Sync blocks, page links, and breadcrumbs", "why_it_matters": "Ensures users can find information quickly", "what_learner_does": "Creates an interconnected wiki structure", "expected_outcome": "Understanding of internal navigation" }
-      ],
-      "key_concepts": ["Modularity", "Aesthetics", "Hierarchy"],
-      "tools": ["Notion"],
-      "hands_on_practice": "Designing various page layouts",
-      "assignment": "Personal Life Operating System Dashboard",
-      "business_application": "Creating readable company documentation",
-      "expected_outcome": "Proficient Notion Page Designer"
+      "module": "Module 01",
+      "title": "Notion Fundamentals & Information Structure",
+      "hours": 6,
+      "lessons": 20
     },
     {
       "module_number": 2,
-      "module_title": "Mastering Databases & Relations",
-      "module_purpose": "Build scalable data structures",
-      "what_you_will_learn": ["Database Views", "Properties", "Relations & Rollups"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Database Fundamentals & Views", "what_is_taught": "Tables, boards, calendars, and galleries", "why_it_matters": "Allows visualizing data in multiple ways", "what_learner_does": "Creates a task tracker with multiple views", "expected_outcome": "Database management skills" },
-        { "lesson_number": 2, "lesson_title": "Advanced Properties", "what_is_taught": "Using tags, dates, formulas, and advanced properties", "why_it_matters": "Adds structure to raw data", "what_learner_does": "Configures properties for a CRM", "expected_outcome": "Structured data entry setup" },
-        { "lesson_number": 3, "lesson_title": "Relations and Rollups", "what_is_taught": "Connecting different databases (e.g., Projects to Tasks)", "why_it_matters": "Creates a single source of truth without duplication", "what_learner_does": "Builds a relational Project/Task system", "expected_outcome": "Relational database mastery" }
-      ],
-      "key_concepts": ["Relational Data", "Data Visualization", "Single Source of Truth"],
-      "tools": ["Notion"],
-      "hands_on_practice": "Building interconnected databases",
-      "assignment": "Relational Client CRM and Project Tracker",
-      "business_application": "Managing complex business operations",
-      "expected_outcome": "Notion Database Architect"
+      "module": "Module 02",
+      "title": "Databases & Views",
+      "hours": 8,
+      "lessons": 24
     },
     {
       "module_number": 3,
-      "module_title": "Automation, AI, & Team Collaboration",
-      "module_purpose": "Supercharge the workspace with automation and AI",
-      "what_you_will_learn": ["Notion AI", "Native Automations", "Team Permissions"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Database Templates and Buttons", "what_is_taught": "Creating repeatable templates and action buttons", "why_it_matters": "Standardizes data entry and saves time", "what_learner_does": "Builds a meeting notes template with a generation button", "expected_outcome": "Workflow standardization" },
-        { "lesson_number": 2, "lesson_title": "Integrating Notion AI", "what_is_taught": "Using AI properties and inline AI generation", "why_it_matters": "Automates summarization and drafting", "what_learner_does": "Configures a database to automatically summarize meeting transcripts", "expected_outcome": "AI workspace integration" },
-        { "lesson_number": 3, "lesson_title": "Team Workspaces and Permissions", "what_is_taught": "Managing groups, guests, and page-level security", "why_it_matters": "Protects sensitive company information", "what_learner_does": "Sets up a secure HR portal", "expected_outcome": "Workspace administration skills" }
-      ],
-      "key_concepts": ["Automation", "Security", "AI Augmentation"],
-      "tools": ["Notion", "Notion AI"],
-      "hands_on_practice": "Configuring AI and automation features",
-      "assignment": "Automated Company Intranet",
-      "business_application": "Scaling team operations and communication",
-      "expected_outcome": "Advanced Workspace Administrator"
+      "module": "Module 03",
+      "title": "Connected Work Systems",
+      "hours": 10,
+      "lessons": 28
+    },
+    {
+      "module_number": 4,
+      "module": "Module 04",
+      "title": "Collaboration & Automation",
+      "hours": 8,
+      "lessons": 28
+    },
+    {
+      "module_number": 5,
+      "module": "Module 05",
+      "title": "Notion AI & Agents",
+      "hours": 4,
+      "lessons": 20
+    },
+    {
+      "module_number": 6,
+      "module": "Module 06",
+      "title": "Workspace Capstone",
+      "hours": 4,
+      "lessons": 16
     }
-  ]
+  ],
+  "learning_outcomes": [
+    "Explain Notion's workspace structure, block architecture, and cloud-synced document mechanics.",
+    "Navigate the Notion sidebar, command palette, breadcrumb trails, and search interfaces efficiently.",
+    "Create, structure, rename, duplicate, and archive Notion pages across personal and team spaces.",
+    "Utilize core Notion blocks including headings, callouts, lists, toggles, quotes, and columns.",
+    "Create organized nested pages with clean parent-child hierarchies, avoiding excessive nesting.",
+    "Organize business information logically using standardized naming conventions and clear content ownership.",
+    "Implement internal page links and @mentions to cross-reference related documentation seamlessly.",
+    "Create reusable page templates for recurring operational documents like meeting notes and client briefings.",
+    "Design a scalable information architecture connecting departments, projects, and administrative resources.",
+    "Create Notion databases in full-page and inline configurations tailored to operational tracking.",
+    "Define custom database properties with standardized schemas, naming rules, and data validation types.",
+    "Configure Status, Select, Multi-Select, Date, Person, Number, and Checkbox properties effectively.",
+    "Build customizable Table views with sorted columns, multi-condition filters, and property summaries.",
+    "Build interactive Board views (Kanban) grouped by workflow status or project ownership.",
+    "Build Calendar views based on project milestone dates and operational task deadlines.",
+    "Build Timeline views to visualize project scheduling, durations, and dependency sequences where supported.",
+    "Apply multi-condition AND/OR filter groups and multi-level sorting to surface actionable priorities.",
+    "Create linked database views across team pages to display contextual subsets of master data.",
+    "Distinguish master source databases from linked views, enforcing a single source of truth.",
+    "Connect disparate databases using Notion Relations (e.g., Clients to Projects, Projects to Tasks).",
+    "Create Notion Rollups to calculate progress metrics, aggregate completion counts, and inherit properties.",
+    "Write introductory Notion formulas using operators, property tokens, and conditional logic.",
+    "Build an operational client tracker supporting pipeline stages from lead intake to active retainer.",
+    "Build a project database tracking milestone target dates, project owners, and linked deliverables.",
+    "Build a task database linking action items to parent projects with assignees and due dates.",
+    "Link clients, projects, and tasks into a unified, relational three-tier small-business operational system.",
+    "Author comprehensive Standard Operating Procedures (SOPs) with objectives, steps, checks, and owners.",
+    "Design a searchable company Knowledge Base organizing policies, FAQs, guides, and tooling resources.",
+    "Build reusable database templates to automate the creation of standard tasks, projects, and meeting notes.",
+    "Create clean, functional operations dashboards highlighting active projects, overdue tasks, and client stages.",
+    "Collaborate in Notion using inline comments, threaded discussions, @person tags, and page edits.",
+    "Create and deploy Notion Forms to capture stakeholder requests and route submissions into databases.",
+    "Implement interactive database buttons for rapid manual updates like completing tasks or adding notes.",
+    "Explain database automation limitations, trigger-action mechanics, and paid-tier subscription boundaries.",
+    "Configure workspace sharing, teamspace roles, member permissions, and guest access securely.",
+    "Distinguish filtered database views from actual access-control security to protect sensitive company records.",
+    "Explain Notion AI capabilities, Q&A search, drafting, database autofill, and plan-specific limits.",
+    "Understand autonomous agent concepts, October 2026 updates, credit allocations, and governance controls.",
+    "Test an end-to-end simulated small-business workspace across real operational lifecycles.",
+    "Compile professional workspace handover documentation including schema maps, user guides, and maintenance SOPs."
+  ],
+  "learningOutcomes": [
+    "Explain Notion's workspace structure, block architecture, and cloud-synced document mechanics.",
+    "Navigate the Notion sidebar, command palette, breadcrumb trails, and search interfaces efficiently.",
+    "Create, structure, rename, duplicate, and archive Notion pages across personal and team spaces.",
+    "Utilize core Notion blocks including headings, callouts, lists, toggles, quotes, and columns.",
+    "Create organized nested pages with clean parent-child hierarchies, avoiding excessive nesting.",
+    "Organize business information logically using standardized naming conventions and clear content ownership.",
+    "Implement internal page links and @mentions to cross-reference related documentation seamlessly.",
+    "Create reusable page templates for recurring operational documents like meeting notes and client briefings.",
+    "Design a scalable information architecture connecting departments, projects, and administrative resources.",
+    "Create Notion databases in full-page and inline configurations tailored to operational tracking.",
+    "Define custom database properties with standardized schemas, naming rules, and data validation types.",
+    "Configure Status, Select, Multi-Select, Date, Person, Number, and Checkbox properties effectively.",
+    "Build customizable Table views with sorted columns, multi-condition filters, and property summaries.",
+    "Build interactive Board views (Kanban) grouped by workflow status or project ownership.",
+    "Build Calendar views based on project milestone dates and operational task deadlines.",
+    "Build Timeline views to visualize project scheduling, durations, and dependency sequences where supported.",
+    "Apply multi-condition AND/OR filter groups and multi-level sorting to surface actionable priorities.",
+    "Create linked database views across team pages to display contextual subsets of master data.",
+    "Distinguish master source databases from linked views, enforcing a single source of truth.",
+    "Connect disparate databases using Notion Relations (e.g., Clients to Projects, Projects to Tasks).",
+    "Create Notion Rollups to calculate progress metrics, aggregate completion counts, and inherit properties.",
+    "Write introductory Notion formulas using operators, property tokens, and conditional logic.",
+    "Build an operational client tracker supporting pipeline stages from lead intake to active retainer.",
+    "Build a project database tracking milestone target dates, project owners, and linked deliverables.",
+    "Build a task database linking action items to parent projects with assignees and due dates.",
+    "Link clients, projects, and tasks into a unified, relational three-tier small-business operational system.",
+    "Author comprehensive Standard Operating Procedures (SOPs) with objectives, steps, checks, and owners.",
+    "Design a searchable company Knowledge Base organizing policies, FAQs, guides, and tooling resources.",
+    "Build reusable database templates to automate the creation of standard tasks, projects, and meeting notes.",
+    "Create clean, functional operations dashboards highlighting active projects, overdue tasks, and client stages.",
+    "Collaborate in Notion using inline comments, threaded discussions, @person tags, and page edits.",
+    "Create and deploy Notion Forms to capture stakeholder requests and route submissions into databases.",
+    "Implement interactive database buttons for rapid manual updates like completing tasks or adding notes.",
+    "Explain database automation limitations, trigger-action mechanics, and paid-tier subscription boundaries.",
+    "Configure workspace sharing, teamspace roles, member permissions, and guest access securely.",
+    "Distinguish filtered database views from actual access-control security to protect sensitive company records.",
+    "Explain Notion AI capabilities, Q&A search, drafting, database autofill, and plan-specific limits.",
+    "Understand autonomous agent concepts, October 2026 updates, credit allocations, and governance controls.",
+    "Test an end-to-end simulated small-business workspace across real operational lifecycles.",
+    "Compile professional workspace handover documentation including schema maps, user guides, and maintenance SOPs."
+  ],
+  "portfolio": {
+    "title": "Small-Business Notion Workspace & Knowledge System",
+    "objective": "Engineer one complete, fully operational Notion workspace for a simulated small service business, integrating relational client/project/task databases, an SOP library, a knowledge base, dashboard views, form intake, and permissions documentation.",
+    "totalDeliverables": 1,
+    "countingRule": "One integrated small-business workspace containing 14 operational components demonstrating end-to-end knowledge and workflow management.",
+    "components_count": 14,
+    "deliverables": [
+      {
+        "deliverable_number": 1,
+        "component_number": 1,
+        "title": "Workspace Operational Homepage",
+        "filename": "Notion_Workspace_Home.notion",
+        "scenario": "Construct the central small-business operational command center featuring quick navigation hubs, active project summary cards, urgent task views, and links to SOPs.",
+        "requirements": [
+          "Organized navigation layout with clear branding and breadcrumb hierarchy.",
+          "Embedded linked views of high-priority operational databases.",
+          "Direct access pathways to Clients, Projects, Tasks, Knowledge Base, and SOPs.",
+          "Minimalist, functional design eliminating decorative clutter."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 2,
+        "title": "Client Tracker Database",
+        "filename": "Client_Pipeline_Database.notion",
+        "scenario": "Build a client relationship database tracking client profiles, pipeline stages, contact channels, account managers, and two-way relations to project records.",
+        "requirements": [
+          "Properties: Client Name, Category, Status (Lead, Active, Archived), Account Owner, and Date Added.",
+          "Two-way relation link to the Projects database.",
+          "Table view for complete data management and Board view grouped by pipeline status.",
+          "Populated with realistic synthetic business client records."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 3,
+        "title": "Project Management Database",
+        "filename": "Project_Tracker_Database.notion",
+        "scenario": "Design a project database tracking milestone target dates, progress statuses, project health, and relations to both parent clients and child tasks.",
+        "requirements": [
+          "Properties: Project Name, Status, Priority, Start Date, Target Date, and Owner.",
+          "Two-way relations to Client Database and Task Database.",
+          "Rollups displaying total tasks count and percentage of tasks completed.",
+          "Timeline view (or Gantt alternative) and Board view by project phase."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 4,
+        "title": "Task Management Database",
+        "filename": "Task_Operations_Database.notion",
+        "scenario": "Engineer a granular task database tracking daily action items, due dates, assignees, priorities, and relations to parent projects.",
+        "requirements": [
+          "Properties: Task Name, Status (To Do, In Progress, Done), Assignee, Due Date, and Priority.",
+          "Two-way relation linking each task to its parent project.",
+          "Introductory formula calculating Overdue warnings and Days Remaining.",
+          "Filtered views: 'My Tasks', 'Due This Week', and 'Overdue Items'."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 5,
+        "title": "Working Relations & Rollups Architecture",
+        "filename": "Relational_Schema_Matrix.pdf",
+        "scenario": "Verify and document the two-way relations and rollup calculations connecting Clients, Projects, and Tasks to guarantee single-source-of-truth integrity.",
+        "requirements": [
+          "Client-to-Project two-way relation functioning accurately.",
+          "Project-to-Task two-way relation functioning accurately.",
+          "Minimum 2 verified Rollups (e.g., Task Count, Completion Percentage).",
+          "Minimum 1 working introductory formula property handling edge cases."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 6,
+        "title": "Searchable Knowledge Base",
+        "filename": "Company_Knowledge_Base.notion",
+        "scenario": "Author a centralized knowledge base categorizing organizational resources, team FAQs, company policies, and software tool guides.",
+        "requirements": [
+          "Clear categorization structure (Operations, Team, Tools, Policies).",
+          "Searchable tags and standardized heading structure.",
+          "Cross-referenced links to active project docs and SOPs.",
+          "Document owner and last-reviewed date metadata on every knowledge page."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 7,
+        "title": "Standard Operating Procedure (SOP) Library",
+        "filename": "SOP_Library.notion",
+        "scenario": "Deploy an SOP library containing at least three complete, step-by-step procedures: Client Onboarding, Project Kickoff, and Project Handover.",
+        "requirements": [
+          "Standardized SOP format: Purpose, Owner, Preconditions, Steps, QC Checks, and Review Date.",
+          "Formatted using callouts, toggles, checklists, and visual cues for clarity.",
+          "Direct linkage to relevant project and task database templates.",
+          "Minimum 3 fully authored operational procedures."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 8,
+        "title": "Reusable Operating Templates",
+        "filename": "Notion_Database_Templates.notion",
+        "scenario": "Build pre-configured database templates that standardize the creation of new client records, project briefs, task checklists, and meeting notes.",
+        "requirements": [
+          "New Client template with embedded onboarding checklist.",
+          "New Project template with auto-linked task views.",
+          "Meeting Notes template with agenda, attendee tags, and action items block.",
+          "SOP template enforcing the company's documentation standard."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 9,
+        "title": "Executive Dashboard & Multi-View Hub",
+        "filename": "Executive_Operations_Dashboard.notion",
+        "scenario": "Assemble an operational dashboard embedding linked views of active projects, upcoming deadlines, client pipeline stages, and quick-add actions.",
+        "requirements": [
+          "Linked view of Projects filtered for 'Active' status.",
+          "Linked view of Tasks filtered for 'In Progress' or 'Due Soon'.",
+          "Board view of Client pipeline stages.",
+          "Clean visual layout optimized for daily morning standup reviews."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 10,
+        "title": "Notion Form Request Intake",
+        "filename": "Service_Request_Intake_Form.notion",
+        "scenario": "Deploy a Notion Form for client inquiries or internal service requests, routing incoming responses directly into an intake database with data validation.",
+        "requirements": [
+          "Logical form fields (Requester Name, Organization, Request Type, Urgency, Description).",
+          "Mandatory validation rules on required fields.",
+          "Direct connection to the Client or Task database for automatic row creation.",
+          "Documented manual fallback intake procedure."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 11,
+        "title": "Collaboration & Permission Matrix",
+        "filename": "Workspace_Permission_Matrix.xlsx",
+        "scenario": "Document an explicit permission strategy defining role-based access for Workspace Owners, Operations Coordinators, Team Contributors, and Client Guests.",
+        "requirements": [
+          "Role definitions across 4 tiers: Owner, Member, Contributor, and Guest.",
+          "Page-by-page and database-by-database access permissions mapped out.",
+          "Documented explanation distinguishing filtered views from security boundaries.",
+          "Auditing checklist for external sharing and guest permissions."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 12,
+        "title": "System Testing & Validation Report",
+        "filename": "System_Testing_Validation_Report.pdf",
+        "scenario": "Execute a full simulation testing the entire workspace lifecycle from new client intake through task completion, logging all validation checkpoints.",
+        "requirements": [
+          "Test Record Log: 5 clients, 8 projects, 20 tasks tested.",
+          "Verification of relation linkage and rollup calculation accuracy.",
+          "Testing of overdue formula output under simulated past-due dates.",
+          "Verification of form submission routing and guest permission barriers."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 13,
+        "title": "Professional Workspace Handover Guide",
+        "filename": "Notion_Workspace_Handover_Guide.gdoc",
+        "scenario": "Author an operational handover manual for business stakeholders explaining workspace architecture, maintenance guidelines, and user training rules.",
+        "requirements": [
+          "Visual Workspace Map showing page and database hierarchies.",
+          "Database Schema Dictionary detailing all properties, types, and relations.",
+          "Step-by-step instructions for onboarding new team members into the system.",
+          "Quarterly maintenance checklist for archiving stale data and auditing permissions."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 14,
+        "title": "Responsible AI Governance Checklist",
+        "filename": "Notion_AI_Governance_Checklist.pdf",
+        "scenario": "Compile an operational policy governing the responsible, cost-aware use of Notion AI, agent review controls, and confidential data protection.",
+        "requirements": [
+          "Guidelines for AI-assisted drafting, summarization, and search.",
+          "Human-in-the-loop verification protocol for dates, names, and financial figures.",
+          "Cost and credit management policy explaining plan tiers and spending limits.",
+          "Strict data confidentiality rules prohibiting real PII in prompts."
+        ]
+      }
+    ]
+  },
+  "assessment_model": {
+    "breakdown": [
+      {
+        "area": "Information architecture and navigation",
+        "weight": 15
+      },
+      {
+        "area": "Database design, views and data quality",
+        "weight": 20
+      },
+      {
+        "area": "Relations, rollups, formulas and connected workflows",
+        "weight": 30
+      },
+      {
+        "area": "Knowledge base, SOPs, collaboration and permissions",
+        "weight": 20
+      },
+      {
+        "area": "Capstone testing, AI awareness and handover",
+        "weight": 15
+      }
+    ],
+    "totalWeight": 100,
+    "completionRule": "Students must submit the complete integrated Small-Business Notion Workspace & Knowledge System. A visually elaborate workspace with disconnected databases, broken relations, non-functioning rollups, or insecure permission configurations will not receive passing evaluation."
+  },
+  "faq": [
+    {
+      "id": 1,
+      "question": "What is Notion — Workspace, Databases & Knowledge Systems?",
+      "answer": "A practical course covering Notion workspace design, databases, connected records, team documentation and collaboration."
+    },
+    {
+      "id": 2,
+      "question": "How long is the course?",
+      "answer": "Five weeks with 40 learning hours."
+    },
+    {
+      "id": 3,
+      "question": "What is the fee?",
+      "answer": "₹5,900, subject to verified Nova Skills fee and tax policies."
+    },
+    {
+      "id": 4,
+      "question": "Is Notion suitable for beginners?",
+      "answer": "Yes. The course begins with pages, blocks and workspace organization."
+    },
+    {
+      "id": 5,
+      "question": "Do I need coding experience?",
+      "answer": "No."
+    },
+    {
+      "id": 6,
+      "question": "What is a Notion workspace?",
+      "answer": "A space for organizing pages, databases, documents and team information."
+    },
+    {
+      "id": 7,
+      "question": "What are Notion databases?",
+      "answer": "Structured collections of records with customizable properties and views."
+    },
+    {
+      "id": 8,
+      "question": "Will I learn database views?",
+      "answer": "Yes, including tables, boards, calendars and suitable supported views."
+    },
+    {
+      "id": 9,
+      "question": "What are linked database views?",
+      "answer": "Different views of records maintained in the same underlying source database."
+    },
+    {
+      "id": 10,
+      "question": "What are relations?",
+      "answer": "Properties that connect records across Notion databases."
+    },
+    {
+      "id": 11,
+      "question": "What are rollups?",
+      "answer": "Properties that summarize information from related database records."
+    },
+    {
+      "id": 12,
+      "question": "Will I learn Notion formulas?",
+      "answer": "Yes, at a practical introductory level."
+    },
+    {
+      "id": 13,
+      "question": "Will I create a client tracker?",
+      "answer": "Yes, using fictional or authorized records."
+    },
+    {
+      "id": 14,
+      "question": "Will I build a project tracker?",
+      "answer": "Yes, with a related task database."
+    },
+    {
+      "id": 15,
+      "question": "Is this a complete CRM certification?",
+      "answer": "No. It covers CRM-style tracking, not enterprise CRM implementation."
+    },
+    {
+      "id": 16,
+      "question": "Will I build a knowledge base?",
+      "answer": "Yes, including organized information and reusable documentation."
+    },
+    {
+      "id": 17,
+      "question": "Will I learn SOPs?",
+      "answer": "Yes, including documentation and reusable SOP templates."
+    },
+    {
+      "id": 18,
+      "question": "Are Notion Forms included?",
+      "answer": "Yes, with appropriate privacy safeguards."
+    },
+    {
+      "id": 19,
+      "question": "Are Notion Forms free?",
+      "answer": "Basic Forms are available across plans, while certain advanced capabilities require paid plans."
+    },
+    {
+      "id": 20,
+      "question": "Will I learn buttons?",
+      "answer": "Yes, including available basic actions and plan limitations."
+    },
+    {
+      "id": 21,
+      "question": "Are database automations free?",
+      "answer": "Most full database automation capabilities require paid plans."
+    },
+    {
+      "id": 22,
+      "question": "Will I learn team permissions?",
+      "answer": "Yes, including members, guests, page access and database access awareness."
+    },
+    {
+      "id": 23,
+      "question": "Do filtered database views protect confidential information?",
+      "answer": "Not by themselves. Actual access permissions must be configured appropriately."
+    },
+    {
+      "id": 24,
+      "question": "Will I learn Notion AI?",
+      "answer": "Yes, through responsible AI concepts and optional eligible demonstrations."
+    },
+    {
+      "id": 25,
+      "question": "Are Notion AI agents included?",
+      "answer": "Agent capabilities are covered conceptually, but access depends on plan, permissions and AI credits."
+    },
+    {
+      "id": 26,
+      "question": "Will I build a Custom Agent?",
+      "answer": "No advanced agent development is required."
+    },
+    {
+      "id": 27,
+      "question": "What changed in Notion AI in October 2026?",
+      "answer": "Notion expanded agent capabilities and connected workflows and introduced updated credit-management arrangements."
+    },
+    {
+      "id": 28,
+      "question": "Do I need a paid Notion subscription to complete the portfolio?",
+      "answer": "The core portfolio is designed around accessible functionality and approved instructor demonstrations; premium automations and AI are optional."
+    },
+    {
+      "id": 29,
+      "question": "What portfolio will I build?",
+      "answer": "A complete simulated small-business workspace with client/project/task databases, related records, knowledge base, SOPs, dashboards and permission documentation."
+    },
+    {
+      "id": 30,
+      "question": "Who should enroll?",
+      "answer": "Operations coordinators, freelancers, startups, administrators and professionals who need organized team knowledge and project tracking."
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "What is Notion — Workspace, Databases & Knowledge Systems?",
+      "answer": "A practical course covering Notion workspace design, databases, connected records, team documentation and collaboration."
+    },
+    {
+      "id": 2,
+      "question": "How long is the course?",
+      "answer": "Five weeks with 40 learning hours."
+    },
+    {
+      "id": 3,
+      "question": "What is the fee?",
+      "answer": "₹5,900, subject to verified Nova Skills fee and tax policies."
+    },
+    {
+      "id": 4,
+      "question": "Is Notion suitable for beginners?",
+      "answer": "Yes. The course begins with pages, blocks and workspace organization."
+    },
+    {
+      "id": 5,
+      "question": "Do I need coding experience?",
+      "answer": "No."
+    },
+    {
+      "id": 6,
+      "question": "What is a Notion workspace?",
+      "answer": "A space for organizing pages, databases, documents and team information."
+    },
+    {
+      "id": 7,
+      "question": "What are Notion databases?",
+      "answer": "Structured collections of records with customizable properties and views."
+    },
+    {
+      "id": 8,
+      "question": "Will I learn database views?",
+      "answer": "Yes, including tables, boards, calendars and suitable supported views."
+    },
+    {
+      "id": 9,
+      "question": "What are linked database views?",
+      "answer": "Different views of records maintained in the same underlying source database."
+    },
+    {
+      "id": 10,
+      "question": "What are relations?",
+      "answer": "Properties that connect records across Notion databases."
+    },
+    {
+      "id": 11,
+      "question": "What are rollups?",
+      "answer": "Properties that summarize information from related database records."
+    },
+    {
+      "id": 12,
+      "question": "Will I learn Notion formulas?",
+      "answer": "Yes, at a practical introductory level."
+    },
+    {
+      "id": 13,
+      "question": "Will I create a client tracker?",
+      "answer": "Yes, using fictional or authorized records."
+    },
+    {
+      "id": 14,
+      "question": "Will I build a project tracker?",
+      "answer": "Yes, with a related task database."
+    },
+    {
+      "id": 15,
+      "question": "Is this a complete CRM certification?",
+      "answer": "No. It covers CRM-style tracking, not enterprise CRM implementation."
+    },
+    {
+      "id": 16,
+      "question": "Will I build a knowledge base?",
+      "answer": "Yes, including organized information and reusable documentation."
+    },
+    {
+      "id": 17,
+      "question": "Will I learn SOPs?",
+      "answer": "Yes, including documentation and reusable SOP templates."
+    },
+    {
+      "id": 18,
+      "question": "Are Notion Forms included?",
+      "answer": "Yes, with appropriate privacy safeguards."
+    },
+    {
+      "id": 19,
+      "question": "Are Notion Forms free?",
+      "answer": "Basic Forms are available across plans, while certain advanced capabilities require paid plans."
+    },
+    {
+      "id": 20,
+      "question": "Will I learn buttons?",
+      "answer": "Yes, including available basic actions and plan limitations."
+    },
+    {
+      "id": 21,
+      "question": "Are database automations free?",
+      "answer": "Most full database automation capabilities require paid plans."
+    },
+    {
+      "id": 22,
+      "question": "Will I learn team permissions?",
+      "answer": "Yes, including members, guests, page access and database access awareness."
+    },
+    {
+      "id": 23,
+      "question": "Do filtered database views protect confidential information?",
+      "answer": "Not by themselves. Actual access permissions must be configured appropriately."
+    },
+    {
+      "id": 24,
+      "question": "Will I learn Notion AI?",
+      "answer": "Yes, through responsible AI concepts and optional eligible demonstrations."
+    },
+    {
+      "id": 25,
+      "question": "Are Notion AI agents included?",
+      "answer": "Agent capabilities are covered conceptually, but access depends on plan, permissions and AI credits."
+    },
+    {
+      "id": 26,
+      "question": "Will I build a Custom Agent?",
+      "answer": "No advanced agent development is required."
+    },
+    {
+      "id": 27,
+      "question": "What changed in Notion AI in October 2026?",
+      "answer": "Notion expanded agent capabilities and connected workflows and introduced updated credit-management arrangements."
+    },
+    {
+      "id": 28,
+      "question": "Do I need a paid Notion subscription to complete the portfolio?",
+      "answer": "The core portfolio is designed around accessible functionality and approved instructor demonstrations; premium automations and AI are optional."
+    },
+    {
+      "id": 29,
+      "question": "What portfolio will I build?",
+      "answer": "A complete simulated small-business workspace with client/project/task databases, related records, knowledge base, SOPs, dashboards and permission documentation."
+    },
+    {
+      "id": 30,
+      "question": "Who should enroll?",
+      "answer": "Operations coordinators, freelancers, startups, administrators and professionals who need organized team knowledge and project tracking."
+    }
+  ],
+  "academic_progression": {
+    "prerequisites": "Basic computer and file-organization literacy.",
+    "concurrent_recommendations": "Pairs effectively with Google Workspace (Course 105) for cloud communication, or Microsoft Excel (Course 102) for advanced numeric reporting.",
+    "next_steps": "Business Productivity Mastery (Course 29), Office Productivity Professional (Course 30), or dedicated AI automation pathways."
+  },
+  "seo": {
+    "title": "Notion Workspace & Database Course | Nova Skills",
+    "meta_description": "Learn Notion databases, relations, rollups, project trackers, SOPs and team collaboration in 5 weeks (40h). Build a practical workspace. ₹5,900.",
+    "canonical_url": "https://novaskills.in/course-detail.html?id=notion-cert",
+    "primary_keyword": "Notion course",
+    "secondary_keywords": [
+      "Notion certification course",
+      "Notion workspace training",
+      "Notion database course",
+      "Notion for beginners",
+      "Notion relations and rollups",
+      "Notion project management",
+      "Notion task tracker",
+      "Notion CRM template",
+      "Notion knowledge base",
+      "Notion SOP management",
+      "Notion team collaboration",
+      "Notion automation course",
+      "Notion Forms training",
+      "Notion AI course",
+      "Notion workspace architecture",
+      "Notion for small business",
+      "Notion operations system",
+      "Notion online course India",
+      "Notion project tracker course",
+      "Notion productivity training"
+    ],
+    "schema_type": "Course",
+    "course_name": "Notion — Workspace, Databases & Knowledge Systems",
+    "course_code": "NS-NOT-106",
+    "course_provider": "Nova Skills",
+    "educational_credential_awarded": "Certificate of Completion",
+    "time_required": "P5W",
+    "offers": {
+      "price": 5900,
+      "priceCurrency": "INR",
+      "category": "Paid",
+      "url": "https://novaskills.in/course-detail.html?id=notion-cert"
+    }
+  }
 }

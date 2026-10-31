@@ -1,288 +1,1605 @@
 {
   "course_id": "shopify-cert",
-  "course_name": "Shopify Store Building",
+  "id": "shopify-cert",
+  "slug": "shopify",
+  "course_name": "Shopify Store Design & E-Commerce Operations",
+  "title": "Shopify Store Design & E-Commerce Operations",
+  "name": "Shopify Store Design & E-Commerce Operations",
+  "academic_sequence": 64,
+  "course_number": 64,
+  "curriculum_edition": "2027",
   "academy": "No-Code Web Academy",
   "academy_id": "nocode",
-  "course_type": "MICRO",
-  "course_role": "Career/Monetization",
-  "level": "BEGINNER",
-  "duration": "2 Months",
-  "learning_hours": 80,
-  "future_review_status": "EVOLVING",
-  "target_audience": {
-    "best_for": [
-      "Aspiring D2C brand owners",
-      "Dropshippers"
+  "academyId": "nocode",
+  "academic_positioning": "Practical D2C Store Development & Operations",
+  "programLevel": "Certification Course",
+  "course_type": "PROFESSIONAL",
+  "courseType": "PROFESSIONAL",
+  "course_role": "Shopify Store Developer & D2C Operations Specialist",
+  "level": "Applied E-Commerce Specialization",
+  "priority": "P0",
+  "duration": "8 Weeks",
+  "durationMonths": 2,
+  "duration_weeks": 8,
+  "learning_hours": 64,
+  "learningHours": 64,
+  "guided_hours": 64,
+  "hours": 64,
+  "weekly_workload": "8 hours per week (guided training, practical lab exercises, and store development capstone)",
+  "mode": "Interactive Software Labs & Guided Workplace Simulation",
+  "price": 12900,
+  "fee": 12900,
+  "regular_fee": 12900,
+  "originalPrice": 12900,
+  "commercial_notice": "Flat, transparent tuition of ₹12,900. No artificial comparison pricing or deceptive discount markers.",
+  "pricing": {
+    "amount": 12900,
+    "currency": "INR",
+    "display": "₹12,900",
+    "comparison_price": null,
+    "discount_percent": null,
+    "transparent_pricing": true
+  },
+  "tagline": "Build a Shopify Store That Is Ready for Real Business Operations.",
+  "hero_headline": "Build a Shopify Store That Is Ready for Real Business Operations.",
+  "hero_supporting_heading": "NO-CODE WEB ACADEMY / E-COMMERCE SPECIALIZATION",
+  "hero_supporting_headline": "Learn to design, configure and manage professional Shopify stores for retail and D2C brands. Build product catalogues, collections, responsive storefronts, checkout workflows, inventory systems, shipping configurations and customer-focused shopping experiences.",
+  "h1": "Shopify Store Design & E-Commerce Operations",
+  "seo_title": "Shopify Store Design Course in India | Nova Skills",
+  "meta_title": "Shopify Store Design Course in India | Nova Skills",
+  "seo_description": "Learn Shopify store design, products, checkout, payments, shipping, SEO and operations in 8 weeks (64 hours). Build a 20+ product demo store. Fee ₹12,900.",
+  "meta_description": "Learn Shopify store design, products, checkout, payments, shipping, SEO and operations in 8 weeks (64 hours). Build a 20+ product demo store. Fee ₹12,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=shopify-cert",
+  "hero": {
+    "eyebrow": "NO-CODE WEB ACADEMY / E-COMMERCE SPECIALIZATION",
+    "h1": "Shopify Store Design & E-Commerce Operations",
+    "primary_hook": "Build a Shopify Store That Is Ready for Real Business Operations.",
+    "short_description": "Learn to design, configure and manage professional Shopify stores for retail and D2C brands. Build product catalogues, collections, responsive storefronts, checkout workflows, inventory systems, shipping configurations and customer-focused shopping experiences.",
+    "quick_info": "8 Weeks | 64 Guided Hours | ₹12,900 | Applied E-Commerce Specialization",
+    "skill_tags": [
+      "Shopify",
+      "D2C E-Commerce",
+      "Product Collections",
+      "Theme Editor",
+      "Storefront UX",
+      "Checkout",
+      "Inventory",
+      "Shipping",
+      "Store Analytics"
     ],
-    "who_should_take_foundation_first": "Absolute beginners",
-    "not_for": [
-      "Custom app developers"
+    "primary_cta": "Enroll Now",
+    "secondary_cta": "Get Course Syllabus"
+  },
+  "short_description": "Learn to design, configure and manage professional Shopify stores for retail and D2C brands. Build product catalogues, collections, responsive storefronts, checkout workflows, inventory systems, shipping configurations and customer-focused shopping experiences.",
+  "shortDesc": "Learn to design, configure and manage professional Shopify stores for retail and D2C brands. Build product catalogues, collections, responsive storefronts, checkout workflows, inventory systems, shipping configurations and customer-focused shopping experiences.",
+  "full_description": "Learn how to build, customize, and operate professional D2C e-commerce stores using Shopify. This practical 8-week, 64-hour applied specialization covers the complete e-commerce lifecycle without requiring code. Master product catalog management with variants and SKUs, collections, theme customization with Shopify Theme Editor, checkout configuration, India-compatible payment gateway integrations, shipping profiles, inventory tracking, order fulfillment, refund workflows, SEO, store analytics, and conversion rate optimization (CRO). Complete a comprehensive demonstration store featuring at least 20 products and validated operational test scenarios.",
+  "fullDesc": "Learn how to build, customize, and operate professional D2C e-commerce stores using Shopify. This practical 8-week, 64-hour applied specialization covers the complete e-commerce lifecycle without requiring code. Master product catalog management with variants and SKUs, collections, theme customization with Shopify Theme Editor, checkout configuration, India-compatible payment gateway integrations, shipping profiles, inventory tracking, order fulfillment, refund workflows, SEO, store analytics, and conversion rate optimization (CRO). Complete a comprehensive demonstration store featuring at least 20 products and validated operational test scenarios.",
+  "description": "Learn to design, configure and manage professional Shopify stores for retail and D2C brands. Build product catalogues, collections, responsive storefronts, checkout workflows, inventory systems, shipping configurations and customer-focused shopping experiences.",
+  "overview": {
+    "positioning": "From Product Catalogue to Customer Checkout — Learn the Complete D2C Store Workflow.",
+    "short_description": "Learn to design, configure and manage professional Shopify stores for retail and D2C brands. Build product catalogues, collections, responsive storefronts, checkout workflows, inventory systems, shipping configurations and customer-focused shopping experiences.",
+    "why_it_matters": "Building a commercial D2C storefront requires much more than choosing a theme and uploading products. A functioning store needs accurate products and variants, organized collections, consistent brand presentation, clear product and cart experiences, suitable payment configuration, reliable shipping and fulfilment workflows, inventory control, customer communication, appropriate analytics and responsible launch procedures.",
+    "sales_differentiation": "Don't Just Learn Shopify Navigation. Learn to Build and Operate a D2C Store. This course emphasizes an applied commercial workflow through one complete demonstration-store project. Learners finish with evidence of practical Shopify configuration, customer-journey testing and operational readiness."
+  },
+  "why_now": {
+    "industry_shift": "Direct-to-consumer (D2C) brands require agile, reliable, and high-converting storefronts. Shopify has established itself as the leading cloud commerce platform, demanding specialists who understand not just template styling, but end-to-end order logistics, multi-location inventory, and regional payment integrations.",
+    "ai_impact": "Shopify's native AI features accelerate copywriting and merchandising, but commercial success depends on human expertise in inventory tracking, tax accuracy, checkout friction audits, and client management.",
+    "business_demand": "Thousands of consumer brands, retailers, and entrepreneurs are scaling on Shopify across India and globally, actively seeking operators who can build polished stores and manage daily fulfillment operations.",
+    "career_opportunity": "Shopify operations and storefront design represent one of the most monetizable no-code freelancing and agency skill sets, enabling professionals to offer store setups, catalog maintenance retainers, and conversion rate optimization audits."
+  },
+  "icon": "🛍️",
+  "color": "linear-gradient(135deg, #004672, #95BF47)",
+  "rating": 4.9,
+  "reviews": 210,
+  "students": 1380,
+  "liveProjects": 1,
+  "projects": 1,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=shopify-cert",
+  "tags": [
+    "popular",
+    "shopify",
+    "ecommerce",
+    "d2c",
+    "online-store",
+    "store-operations",
+    "theme-editor",
+    "certification"
+  ],
+  "featured": true,
+  "category": "No-Code Web Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "positioning": "Practical D2C Store Development & Operations",
+  "target_audience": {
+    "ideal_for": [
+      "Retail entrepreneurs launching online stores",
+      "D2C brand founders and consumer product creators",
+      "Small business owners scaling digital commerce",
+      "Aspiring Shopify freelancers and agency specialists",
+      "E-commerce assistants and catalog managers",
+      "Website administrators managing merchant portals",
+      "Store operations staff managing fulfillment and inventory",
+      "Beginners entering no-code e-commerce careers",
+      "Professionals managing product-based commercial businesses"
+    ],
+    "who_should_take": "Anyone seeking practical, no-code skills to plan, design, configure, test, and manage professional Shopify stores with verified checkout, payment, shipping, and fulfillment operations.",
+    "not_designed_for": [
+      "Custom Liquid theme programmers",
+      "Private or custom Shopify app developers",
+      "Headless Shopify engineers (Hydrogen / Oxygen / GraphQL)",
+      "Advanced Shopify Plus enterprise checkout customizers",
+      "Complex multi-warehouse enterprise ERP engineers"
     ]
   },
   "prerequisites": {
-    "required": "Basic internet skills.",
-    "recommended": "Familiarity with online shopping.",
-    "not_required": "Coding knowledge.",
-    "system_requirements": {
-      "hardware": "Any PC/Mac",
-      "software_accounts": "Shopify Partner Account"
-    }
+    "required": "Basic computer knowledge and familiarity with online shopping (browsing products, adding to cart, and digital payments).",
+    "not_required": "No coding, Liquid programming, web development, or prior e-commerce store ownership required.",
+    "hardware_software": "A modern Windows PC or Mac with at least 8 GB RAM, an updated web browser, and an active internet connection."
   },
-  "overview": {
-    "positioning": "Launch a professional e-commerce brand quickly.",
-    "short_description": "Build, customize, and launch direct-to-consumer online stores using Shopify.",
-    "key_facts": {
-      "level": "BEGINNER",
-      "duration": "2 Months",
-      "format": "Project-based",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "1 CORE PROJECT",
-      "capstone": "Live Shopify Store",
-      "ai_integration": "AI generated policies",
-      "career_focus": "Shopify Specialist"
-    },
-    "what_you_will_be_able_to_do": [
-      "Set up a Shopify store from scratch.",
-      "Customize themes using the OS 2.0 editor.",
-      "Manage products, collections, and Shopify Payments."
-    ]
-  },
-  "why_now": {
-    "industry_shift": "Shopify is the dominant platform for modern D2C brands.",
-    "ai_impact": "Shopify Magic AI accelerates store setup.",
-    "business_demand": "Massive ecosystem needing specialized setup talent.",
-    "career_opportunity": "Shopify Experts command high hourly rates."
-  },
-  "learning_outcomes": [
-    "SETUP: Configure store settings and domains.",
-    "DESIGN: Customize storefronts visually.",
-    "OPERATE: Manage orders and fulfillment."
+  "highlights": [
+    "8 Weeks, 64 Guided Hours of hands-on Shopify store design and operational training",
+    "Build a complete demonstration store containing at least 20 products across simple and variant types",
+    "Master the Shopify Theme Editor: sections, blocks, global styles, and responsive mobile UX",
+    "In-depth India payment guidance: third-party provider verification and safe test order workflows",
+    "Configure Indian regional shipping zones, flat-rate, free shipping tiers, and Cash on Delivery rules",
+    "Execute 10 mandatory operational acceptance test scenarios with documented test evidence",
+    "Conduct SEO and conversion-friction audits (CRO) using GA4 and Shopify Analytics",
+    "Deliver a complete Client Store Administration & Handover Handbook with launch checklists",
+    "Flat, transparent tuition of ₹12,900 with zero artificial discounts or comparison pricing"
   ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1: Foundation",
-        "focus": "Store setup and products."
-      },
-      {
-        "stage": "Stage 2: Storefront",
-        "focus": "Theme customization."
-      },
-      {
-        "stage": "Stage 3: Launch",
-        "focus": "Payments and shipping."
-      }
-    ]
-  },
   "hands_on_tech": {
     "core_tools": [
       {
         "tool": "Shopify Admin",
-        "purpose": "Store management",
-        "what_student_learns": "Dashboard operations",
-        "what_student_builds": "E-commerce store"
+        "purpose": "Hosted commerce management dashboard",
+        "what_student_learns": "Products, variants, collections, inventory tracking, shipping profiles, tax settings, order fulfillment, and analytics.",
+        "what_student_builds": "Fully configured and operational backend for a 20+ product demonstration store."
+      },
+      {
+        "tool": "Shopify Theme Editor",
+        "purpose": "Native visual storefront customization engine",
+        "what_student_learns": "Section and block customization, header/footer navigation, global typography, colors, and responsive mobile layouts.",
+        "what_student_builds": "Branded, conversion-focused storefront homepage, collection pages, and product pages."
+      },
+      {
+        "tool": "Shopify Native AI Assistance",
+        "purpose": "Native workflow acceleration tools",
+        "what_student_learns": "Drafting product descriptions, generating FAQ answers, and suggesting merchandising variations with human review.",
+        "what_student_builds": "Polished, human-verified product catalog copy."
+      },
+      {
+        "tool": "Payment Gateway Sandboxes / Bogus Gateway",
+        "purpose": "Safe financial transaction simulation",
+        "what_student_learns": "Test transactions, declined card simulations, order status transitions, and third-party gateway eligibility in India.",
+        "what_student_builds": "Validated transaction workflow without risking real money."
       }
     ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
+    "supporting_tools": [
+      {
+        "tool": "Shopify Analytics",
+        "purpose": "Native commercial performance dashboard",
+        "what_student_learns": "Sales reporting, product performance metrics, returning customer rates, and conversion funnel analysis."
+      },
+      {
+        "tool": "Google Analytics 4 (GA4)",
+        "purpose": "Web and e-commerce event measurement",
+        "what_student_learns": "E-commerce event tracking (view_item, add_to_cart, begin_checkout, purchase) and user acquisition channels."
+      },
+      {
+        "tool": "Google PageSpeed Insights",
+        "purpose": "Store performance and Core Web Vitals audit",
+        "what_student_learns": "Image compression, mobile page loading speed, and theme performance evaluation."
+      },
+      {
+        "tool": "Google Search Console",
+        "purpose": "Search indexing and SEO verification",
+        "what_student_learns": "Shopify sitemap structure (/sitemap.xml) and search engine crawlability."
+      }
+    ],
+    "emerging_tools": [
+      {
+        "tool": "Shopify Metafields",
+        "purpose": "Custom structured product data fields"
+      },
+      {
+        "tool": "Automated Collections",
+        "purpose": "Condition-based dynamic product grouping"
+      }
+    ]
+  },
+  "tools": [
+    "Shopify Admin",
+    "Shopify Theme Editor",
+    "Shopify Analytics",
+    "Google Analytics 4",
+    "Google Search Console",
+    "Google PageSpeed Insights",
+    "Payment Gateway Sandbox",
+    "Shopify Native AI"
+  ],
+  "learning_outcomes": [
+    "Plan a Shopify store for a retail or D2C brand.",
+    "Navigate Shopify Admin and configure core store settings.",
+    "Understand Shopify plans, transaction costs and optional app expenses.",
+    "Structure products, variants, SKUs and collections.",
+    "Configure inventory tracking and merchandising.",
+    "Customize a storefront using Shopify Theme Editor.",
+    "Create responsive homepage, collection and product-page layouts.",
+    "Understand the standard Shopify checkout workflow and available configuration options.",
+    "Verify India-compatible payment providers.",
+    "Configure shipping profiles and delivery settings.",
+    "Test appropriate order and payment scenarios.",
+    "Manage customer orders, fulfilment and return workflows.",
+    "Apply product and collection SEO fundamentals.",
+    "Review Shopify Analytics and introductory GA4 measurement.",
+    "Conduct a basic conversion-friction audit.",
+    "Prepare an operational launch checklist.",
+    "Build a demonstration store containing at least 20 products.",
+    "Deliver the store with documentation and a client walkthrough."
+  ],
+  "learning_journey": {
+    "stages": [
+      {
+        "stage": "Week 1: Platform Foundations & Commercial Planning",
+        "focus": "Shopify ecosystem, hosted commerce concepts, store setup, operating cost estimation (plans, apps, transaction fees), and business blueprinting."
+      },
+      {
+        "stage": "Weeks 2-3: Product Catalogue, Collections & Inventory",
+        "focus": "Structuring 20+ products, variant matrices (size/color), automated collections, metafields, CSV bulk migration, and multi-location inventory."
+      },
+      {
+        "stage": "Week 4: Storefront Design & Theme Editor Mastery",
+        "focus": "Shopify Theme Editor, sections, blocks, global brand styles, high-converting homepage architecture, collection pages, and mobile responsiveness."
+      },
+      {
+        "stage": "Week 5: Checkout, India Payments & Shipping Profiles",
+        "focus": "Checkout workflow, third-party India payment provider verification (Razorpay/Cashfree), test gateway simulations, Indian shipping zones, and Cash on Delivery."
+      },
+      {
+        "stage": "Week 6: Store Operations, Order Fulfillment & CRO",
+        "focus": "Order dashboard lifecycles, fulfillments, returns, refunds, customer notifications, Shopify Analytics, GA4 e-commerce events, and friction audits."
+      },
+      {
+        "stage": "Weeks 7-8: Acceptance Testing, Launch Readiness & Client Handover",
+        "focus": "Executing 10 mandatory operational scenarios, pre-launch security audits, authoring the Client Handover Handbook, and recorded store demonstration."
+      }
+    ]
   },
   "industry_workflow": {
-    "overview": "Shopify launch process",
+    "overview": "Professional 6-stage lifecycle for planning, configuring, designing, testing, and handing over commercial Shopify D2C stores.",
     "stages": [
       {
         "step": 1,
-        "name": "Account Setup",
-        "desc": "Partner dashboard."
+        "name": "Discovery & Commercial Scoping",
+        "desc": "Define product strategy, calculate recurring platform and transaction expenses, map navigation structure, and author store policies."
       },
       {
         "step": 2,
-        "name": "Catalog Build",
-        "desc": "Products and collections."
+        "name": "Catalogue Modeling & Stock Architecture",
+        "desc": "Create 20+ products with variants, configure automated collections, define custom metafields, and establish inventory tracking rules."
       },
       {
         "step": 3,
-        "name": "Theme Design",
-        "desc": "Visual branding."
+        "name": "Storefront UX & Responsive Design",
+        "desc": "Customize native theme sections and blocks, optimize product detail templates, build branded collection grids, and verify mobile UX."
       },
       {
         "step": 4,
-        "name": "Go Live",
-        "desc": "Domain and payments."
+        "name": "Payment, Shipping & Logistics Setup",
+        "desc": "Configure third-party payment gateways for India, set up regional shipping profiles, establish COD rules, and customize customer emails."
+      },
+      {
+        "step": 5,
+        "name": "Operational Testing & Quality Assurance",
+        "desc": "Execute 10 mandatory test scenarios (success, failure, inventory adjustments, cancellations, returns) and run conversion audits."
+      },
+      {
+        "step": 6,
+        "name": "Launch Readiness & Client Handover",
+        "desc": "Perform staff permission minimization, audit domain and SSL readiness, author the Client Maintenance Guide, and deliver walkthrough."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "E-commerce",
-      "business_problem": "Need fast time-to-market",
-      "approach": "Use Shopify SaaS",
-      "toolset": "Shopify",
-      "output": "Live D2C brand"
+      "sector": "D2C Fashion & Apparel Brand",
+      "business_problem": "A boutique streetwear label needs an online store with size/color variants, automated collections for seasonal drops, and mobile checkout.",
+      "approach": "Build a responsive Shopify store using native block sections, automated tag-based collections, visual variant selectors, and Razorpay/Cashfree integration.",
+      "toolset": "Shopify Theme Editor, Variant Options, Automated Collections, Third-Party Gateway",
+      "output": "Modern, high-converting fashion storefront with real-time variant stock tracking."
+    },
+    {
+      "sector": "Organic Food & Packaged Consumer Goods",
+      "business_problem": "A wellness brand needs to display nutritional specifications, calculate flat-rate shipping across Indian states, and support Cash on Delivery.",
+      "approach": "Implement product metafields for nutritional data, configure regional Indian shipping zones with free shipping over ₹999, and establish COD rules.",
+      "toolset": "Shopify Metafields, Shipping Profiles, Cash on Delivery Settings",
+      "output": "Transparent D2C food portal with accurate shipping calculations and trust signals."
+    },
+    {
+      "sector": "Beauty, Skincare & Cosmetics Retailer",
+      "business_problem": "A cosmetics brand with 30+ SKUs needs high-speed mobile navigation, ingredient disclosures, and search engine discoverability.",
+      "approach": "Structure products with SEO-optimized titles and handles, set up automated collections (Serums, Moisturisers), and optimize images for Core Web Vitals.",
+      "toolset": "Shopify Product SEO, WebP Image Compression, GA4 Integration",
+      "output": "Fast-loading mobile beauty store with indexed category collections and conversion tracking."
+    },
+    {
+      "sector": "Specialty Electronics & Gadgets Distributor",
+      "business_problem": "An electronics retailer needs strict SKU inventory management, clear return/warranty policies, and structured staff order processing.",
+      "approach": "Establish systematic SKU codes, configure low-stock alerts, draft transparent warranty and return policies, and configure restricted staff roles.",
+      "toolset": "Shopify Inventory Management, Policy Generator, Staff Permission Controls",
+      "output": "Professional electronics commerce portal with structured fulfillment workflows."
     }
   ],
+  "commercial_differentiation": {
+    "headline": "Build More Than a Beautiful Store. Learn How a D2C Business Operates.",
+    "supporting_copy": "Learn to configure a real-world Shopify shopping journey — from product catalogues and storefront design to checkout testing, inventory, shipping, customer orders and business handover.",
+    "differentiators": [
+      {
+        "title": "Commercial D2C Workflow",
+        "description": "Understand how products move from catalog creation to customer cart, payment verification, fulfillment, and returns."
+      },
+      {
+        "title": "20+ Product Store Portfolio",
+        "description": "Create a complete, functional demonstration store for a commercial D2C brand with simple and variable products."
+      },
+      {
+        "title": "Checkout & Operations Training",
+        "description": "Master safe payment testing, India third-party payment provider verification, regional shipping profiles, and order processing."
+      },
+      {
+        "title": "Client-Ready Documentation",
+        "description": "Finish with a practical store handover handbook, operating cost estimate, launch checklist, and recorded walkthrough."
+      }
+    ]
+  },
+  "course_comparison": {
+    "typical_course": [
+      "Claims Shopify stores are completely free without explaining subscription, domain, app, and transaction fee realities.",
+      "Assumes Shopify Payments is available in India, giving students invalid payment setup instructions.",
+      "Teaches surface-level theme customization without explaining SKU architectures, metafields, or inventory tracking.",
+      "Ignores checkout error handling, failed payment scenarios, order cancellations, and refund workflows.",
+      "Ends at visual design without delivering store cost estimates, launch checklists, or client handover handbooks."
+    ],
+    "novaskills_mastery": [
+      "Provides transparent commercial cost breakdowns covering plans, third-party transaction fees, apps, and domains.",
+      "Accurately reflects India e-commerce conditions by verifying supported third-party providers and sandbox testing.",
+      "Teaches structured catalog modeling with 20+ products, variant combinations, metafields, and automated collections.",
+      "Executes 10 mandatory operational acceptance test scenarios covering payments, stock adjustments, cancellations, and returns.",
+      "Concludes with professional client handover documentation, operating cost projections, and pre-launch QA checklists."
+    ]
+  },
+  "india_specific_requirements": {
+    "payment_availability_notice": "India is not currently listed in Shopify's supported countries for Shopify Payments. Students learn to verify eligible third-party payment providers (such as Razorpay, Cashfree, PayU, and PhonePe) and test transaction flows using Shopify's Bogus test gateway or provider sandbox environments.",
+    "commercial_cost_transparency": "Operating a Shopify store involves legitimate commercial expenses: Shopify plan subscription (Basic, Shopify, or Advanced), payment gateway processing fees, Shopify third-party transaction fees (where applicable), custom domain registration, optional paid apps, shipping fulfillment costs, and applicable taxes (GST).",
+    "operational_adaptations": [
+      "Indian regional shipping zone configuration (Local, Metro, Rest of India)",
+      "Cash on Delivery (COD) configuration and fraud-reduction eligibility rules",
+      "GST tax display and invoice documentation compliance concepts",
+      "INR-based catalog pricing and currency formatting"
+    ]
+  },
   "ai_integration": {
-    "role_classification": "AI-SUPPORTED",
-    "ai_can_assist_with": "Product descriptions via Shopify Magic",
-    "ai_can_automate": "Background removal",
-    "ai_cannot_replace": "Brand strategy",
-    "human_expertise_required": "Quality assurance",
-    "validation_protocol": "Review generated copy",
-    "responsible_use": "Accurate claims"
+    "role_classification": "AI-ASSISTED & VERIFIED",
+    "ai_can_assist_with": "Drafting engaging product descriptions, generating SEO meta titles and descriptions, creating FAQ answers, suggesting collection merchandising groupings, and drafting customer notification templates.",
+    "ai_can_automate": "Generating sample variant product data for CSV imports and structuring initial policy document drafts.",
+    "human_expertise_required": "Verifying pricing and compare-at calculations, auditing inventory tracking numbers, checking shipping rate rules, confirming payment gateway API keys, and testing refund mechanisms.",
+    "validation_protocol": "All AI-generated product content, marketing copy, and store policies must be independently checked for factual accuracy, consumer protection compliance, and brand voice alignment before publishing."
   },
   "best_practices": [
-    "Use automated collections.",
-    "Optimize images before upload."
+    "Verify third-party payment gateway eligibility and transaction fees for India prior to store launch.",
+    "Structure products with unique SKUs and clear variant attributes to ensure accurate fulfillment.",
+    "Use automated collections based on product tags to reduce manual catalog merchandising overhead.",
+    "Test checkout workflows using Bogus Gateway or provider sandboxes before connecting live credentials.",
+    "Configure clear shipping profiles with transparent delivery times to minimize cart abandonment.",
+    "Conduct mobile-first responsive reviews since over 70% of Indian D2C traffic originates on smartphones.",
+    "Audit third-party app installations carefully to avoid slowing down storefront loading speeds.",
+    "Create dedicated staff accounts with restricted permissions rather than sharing master owner logins."
   ],
   "common_mistakes": [
-    {
-      "mistake": "Too many apps",
-      "why_it_happens": "Trying to add every feature",
-      "professional_approach": "Keep apps to a minimum for speed"
-    }
+    "Assuming Shopify Payments is available in India, leading to stalled payment gateway setups.",
+    "Marketing Shopify as completely free without budgeting for subscriptions, transaction fees, and apps.",
+    "Uploading uncompressed multi-megabyte product images that severely harm mobile Core Web Vitals.",
+    "Failing to configure low-stock alerts, causing accidental orders for out-of-stock items.",
+    "Over-installing unnecessary apps that inject conflicting JavaScript and degrade checkout speed.",
+    "Ignoring mobile checkout friction, resulting in high abandonment on small viewports.",
+    "Launching without tested shipping rates, leading to unexpected fulfillment losses on orders.",
+    "Handing over a store to a client without documentation or staff permission minimization."
   ],
   "career_paths": {
-    "entry_roles": "E-commerce Assistant",
-    "mid_roles": "Shopify Developer",
-    "specialist_roles": "CRO Expert",
-    "freelance_roles": "Store Setup Freelancer",
-    "employer_expectations": "Fast execution",
-    "what_student_demonstrates": "Live store"
+    "entry_roles": "Shopify Store Assistant, Junior Shopify Store Administrator, E-Commerce Operations Assistant",
+    "mid_roles": "Shopify Store Developer, D2C Catalog Executive, E-Commerce Merchandising Specialist",
+    "specialist_roles": "Independent Shopify Consultant, D2C Store Operations Specialist"
   },
   "freelance_applications": {
     "services_offered": [
-      "Store Setup",
-      "Theme Tweaks"
-    ],
-    "client_workflow": "Brief -> Build -> Launch",
-    "portfolio_requirements": "Live store links"
+      "Complete Shopify D2C Store Setup & Theme Customization (20+ Products)",
+      "Product Catalog Migration, variant modeling, and automated collection setup",
+      "India Payment Gateway Integration & Sandbox Testing (Razorpay, Cashfree)",
+      "Indian Regional Shipping Zone Setup & Free Shipping Rule Configuration",
+      "E-Commerce SEO Setup & Conversion Rate Optimization (CRO) Audits",
+      "Client Store Handover, staff training, and ongoing store maintenance retainers"
+    ]
   },
   "what_you_will_build": [
-    "Complete E-commerce Brand Store"
-  ],
-  "final_deliverables": [
-    "Password-unlocked live URL"
-  ],
-  "assessment": {
-    "model": "Store Audit",
-    "criteria": "Functionality and design adherence"
-  },
-  "certification": {
-    "title": "Shopify Foundations Certificate",
-    "criteria": "Pass final audit",
-    "verification": "Digital badge"
-  },
-  "not_covered": "Liquid coding, headless commerce.",
-  "next_learning_path": {
-    "recommended_next": "E-Commerce Marketing",
-    "related_programs": "Webflow"
-  },
-  "faq": [
     {
-      "question": "Is Shopify free?",
-      "answer": "No, it requires a monthly subscription, but we use free Partner accounts for learning."
-    },
-    {
-      "question": "Do I need inventory?",
-      "answer": "No, you can build a dropshipping or print-on-demand store."
-    },
-    {
-      "question": "Can I code custom features?",
-      "answer": "This course focuses on no-code theme customization."
+      "title": "Complete Shopify D2C Store — From Store Planning to Operations Handover (Capstone)",
+      "badge": "Commercial Capstone Project",
+      "client_brief": "Design, build, test, and hand over a functioning demonstration Shopify store with at least 20 products for a selected D2C retail category (Fashion, Packaged Food, Cosmetics, or Consumer Electronics).",
+      "business_problem": "A growing consumer brand needs a high-converting, mobile-responsive Shopify storefront with full catalog depth, verified checkout, third-party payment integration, regional shipping rules, inventory tracking, and client operational documentation.",
+      "deliverables": [
+        "Functioning demonstration Shopify store with at least 20 products across simple and variant types",
+        "At least three structured automated collections with merchandising rules",
+        "Branded storefront customized with native Shopify Theme Editor sections and blocks",
+        "Documented 10 mandatory operational acceptance test scenarios",
+        "Verified Indian shipping zone configuration and Cash on Delivery rules",
+        "E-commerce SEO checklist and conversion-friction audit report",
+        "Professional Store Administration Guide & Client Handover Handbook"
+      ]
     }
   ],
+  "final_deliverables": [
+    "Complete Shopify demonstration store featuring 20+ active products",
+    "Evidence of 10 mandatory operational acceptance test scenarios",
+    "Documented third-party payment provider and shipping zone configuration",
+    "Product catalog CSV export file and inventory tracking proof",
+    "Store SEO checklist, PageSpeed report, and conversion-friction audit",
+    "Comprehensive pre-launch quality assurance checklist",
+    "Professional Client Store Administration & Handover Handbook",
+    "Recorded store demonstration and operational walkthrough"
+  ],
+  "portfolio": {
+    "title": "Nova Skills Shopify Store Portfolio",
+    "description": "Exactly ONE complete, functioning Shopify demonstration store featuring at least 20 products and validated operations: catalog modeling, automated collections, theme customization, checkout configuration, third-party India payment verification, regional shipping profiles, inventory controls, order workflows, and comprehensive client handover documentation.",
+    "deliverables_count": 1,
+    "minimum_products": 20,
+    "mandatory_scenarios": [
+      {
+        "test": "Scenario 1: Product Selection",
+        "requirement": "Customer selects a product with specific variant options (e.g., size/color) and adds it to the cart."
+      },
+      {
+        "test": "Scenario 2: Cart Validation",
+        "requirement": "Product price, selected variant, line-item quantity, and subtotal recalculate accurately in the cart."
+      },
+      {
+        "test": "Scenario 3: Shipping Rules",
+        "requirement": "Validate at least two distinct shipping conditions (e.g., standard flat rate vs. free shipping threshold)."
+      },
+      {
+        "test": "Scenario 4: Payment Testing",
+        "requirement": "Demonstrate an approved safe test checkout or explicitly documented simulation in a test environment."
+      },
+      {
+        "test": "Scenario 5: Payment Failure",
+        "requirement": "Demonstrate the expected declined or failed payment behavior in a supported sandbox test."
+      },
+      {
+        "test": "Scenario 6: Inventory Adjustment",
+        "requirement": "Show appropriate stock quantity reduction associated with an eligible customer order."
+      },
+      {
+        "test": "Scenario 7: Order Administration",
+        "requirement": "Demonstrate processing the order, changing fulfillment status, and adding tracking information."
+      },
+      {
+        "test": "Scenario 8: Cancellation / Returns",
+        "requirement": "Document the cancellation, refund, or return workflow without initiating unauthorized financial actions."
+      },
+      {
+        "test": "Scenario 9: Mobile Experience",
+        "requirement": "Validate that the homepage, collections, product pages, and cart operate smoothly on mobile viewports."
+      },
+      {
+        "test": "Scenario 10: Commercial Readiness",
+        "requirement": "Submit a realistic operating cost estimate, required store policy checklist, and launch-readiness report."
+      }
+    ],
+    "acceptance_evidence": [
+      "Store preview link or review access",
+      "Structured product catalog containing at least 20 verified products",
+      "Screenshots of product variants and automated collection rules",
+      "Mobile storefront walkthrough demonstration",
+      "Checkout configuration and test-order execution logs",
+      "Inventory adjustment and order fulfillment evidence",
+      "SEO metadata verification and basic CRO friction audit",
+      "Comprehensive commercial operating cost estimate",
+      "Professional Client Handover & Store Administration Handbook"
+    ]
+  },
+  "portfolio_specs": {
+    "description": "Graduates demonstrate employer-ready proof-of-work showcasing practical D2C e-commerce craftsmanship and operational competence:",
+    "deliverables": [
+      "Demonstration Storefront URL with 20+ Active Products",
+      "Customized Theme Sections & Mobile-Optimized Layouts",
+      "Execution Logs for All 10 Mandatory Operational Scenarios",
+      "Third-Party Payment Provider & Shipping Profile Documentation",
+      "Automated Collection Merchandising & Metafield Definitions",
+      "Shopify Analytics & GA4 Measurement Strategy",
+      "Conversion Rate Optimization (CRO) & PageSpeed Audit",
+      "Professional Client Store Administration & Handover Guide"
+    ],
+    "case_study_structure": [
+      "1. D2C Brand Strategy & E-Commerce Business Requirements",
+      "2. Product Catalogue Information Architecture (20+ SKUs & Variants)",
+      "3. Storefront Visual Hierarchy & Theme Editor Customization",
+      "4. India Payment Gateway Selection & Safe Test Checkout",
+      "5. Shipping Profiles, Regional Zones & COD Rules",
+      "6. Order Administration, Inventory Tracking & Returns Management",
+      "7. SEO, Analytics & Conversion-Friction Audit (CRO)",
+      "8. Operating Cost Projections, Launch Checklist & Client Handover"
+    ]
+  },
+  "assessment": {
+    "model": "100% Practical Competency-Based Store Evaluation",
+    "criteria": "Evaluated across store planning, catalog depth, storefront theme design, transaction and shipping configuration, SEO/analytics audits, and client handover documentation.",
+    "passing_score": "70% overall score with successful completion of all 20 products and 10 mandatory acceptance scenarios."
+  },
+  "assessment_model": {
+    "breakdown": [
+      {
+        "item": "Store Planning & Configuration",
+        "weight": "10%",
+        "desc": "Store brief, policy pages, business settings, currency, and commercial cost estimation."
+      },
+      {
+        "item": "Products, Collections & Inventory",
+        "weight": "20%",
+        "desc": "Catalogue depth of 20+ products, variants, SKUs, automated collections, metafields, and inventory rules."
+      },
+      {
+        "item": "Theme & Storefront Design",
+        "weight": "20%",
+        "desc": "Section and block customization, mobile responsiveness, navigation clarity, and product detail UX."
+      },
+      {
+        "item": "Checkout, Payment & Fulfilment Workflows",
+        "weight": "20%",
+        "desc": "Third-party payment gateway integration, test order execution, shipping profiles, and fulfillment operations."
+      },
+      {
+        "item": "SEO, Analytics & CRO Audit",
+        "weight": "15%",
+        "desc": "Product SEO, collection search listings, Google Analytics 4 tracking concepts, and conversion audit."
+      },
+      {
+        "item": "Final Portfolio & Client Handover",
+        "weight": "15%",
+        "desc": "Execution of 10 mandatory acceptance scenarios, pre-launch checklist, and client maintenance guide."
+      }
+    ]
+  },
+  "assessment_rubric": {
+    "planning_and_configuration": "10%",
+    "products_and_inventory": "20%",
+    "theme_and_storefront_design": "20%",
+    "checkout_payments_fulfilment": "20%",
+    "seo_analytics_cro": "15%",
+    "portfolio_and_handover": "15%",
+    "total": "100%",
+    "passing_threshold": "70%"
+  },
+  "certification": {
+    "title": "Certificate of Completion in Shopify Store Design & E-Commerce Operations",
+    "issuer": "Nova Skills Academy — No-Code Web Academy",
+    "verification": "Digitally verifiable credential featuring unique identification code and public verification URL.",
+    "requirements": "Completion of all 6 curriculum modules, delivery of the 20+ product demonstration store, verification of all 10 acceptance scenarios, and submission of the client handover guide with a minimum score of 70%."
+  },
+  "source_code_delivery": {
+    "platform": "Shopify Store Preview & GitHub Documentation Repository",
+    "requirements": [
+      "Shopify Storefront Preview URL & Staff/Collaborator Access",
+      "Product Catalog Export CSV (20+ products)",
+      "README.md with setup instructions and test credentials",
+      "STORE_ADMIN_GUIDE.md detailing client order processing and catalog management",
+      "TEST_RESULTS.md detailing outcomes of all 10 mandatory acceptance scenarios"
+    ]
+  },
+  "skill_boundaries": {
+    "course_focus": "Course 64 focuses strictly on Shopify no-code store design, catalog management, variant modeling, collections, theme editor customization, checkout configuration, third-party payment integrations, shipping logistics, inventory controls, store analytics, and commercial D2C operations.",
+    "course_62_differentiation": "Course 62 (WordPress Website Design & Management) focuses on general content websites, block themes, and business pages without e-commerce cart/checkout pipelines.",
+    "course_63_differentiation": "Course 63 (WooCommerce Store Development & Operations) focuses on self-hosted e-commerce on WordPress, open-source database ownership, and HPOS architecture.",
+    "course_65_differentiation": "Course 65 (Elementor) focuses on advanced visual page-building workflows on WordPress.",
+    "explicit_exclusions": [
+      "Custom Liquid theme programming from scratch",
+      "Private and custom Shopify app development (Node.js / Remix / GraphQL)",
+      "Headless Shopify architectures (Hydrogen / Oxygen / Storefront API)",
+      "Advanced Shopify Plus checkout extensibility scripting",
+      "Enterprise multi-warehouse distributed ERP custom integrations"
+    ]
+  },
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Products and Collections",
-      "module_purpose": "Build the store database.",
-      "what_you_will_learn": [
-        "Adding products",
-        "Automated collections"
-      ],
+      "module_title": "Shopify Foundations & Store Planning",
+      "module_purpose": "Understand Shopify's commerce ecosystem and create an operational store plan.",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "The Shopify Dashboard",
-          "what_is_taught": "Navigation",
-          "why_it_matters": "Familiarity",
-          "what_learner_does": "Creates partner account",
-          "expected_outcome": "Store created"
+          "lesson_title": "Shopify Platform Fundamentals",
+          "what_is_taught": "The Shopify ecosystem, cloud-hosted commerce concepts, Shopify Admin dashboard navigation, Online Store sales channel, overview of subscription plans (Basic, Shopify, Advanced), and store ownership/collaborator permissions.",
+          "subtopics": [
+            "Shopify ecosystem",
+            "Hosted-commerce concept",
+            "Shopify Admin navigation",
+            "Online store sales channel",
+            "Shopify plan overview",
+            "Store ownership and access"
+          ],
+          "what_learner_does": "Navigates the Shopify Admin dashboard and audits plan features and permissions.",
+          "why_it_matters": "Understanding Shopify's hosted architecture establishes baseline operational literacy.",
+          "expected_outcome": "Familiarity with Shopify Admin and administrative roles."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "Product Creation",
-          "what_is_taught": "Titles, prices, variants",
-          "why_it_matters": "Core data",
-          "what_learner_does": "Adds 5 products",
-          "expected_outcome": "Populated catalog"
+          "lesson_title": "Shopify Costs & Commercial Planning",
+          "what_is_taught": "Subscription fees, payment gateway processing fees, third-party transaction fees where applicable, custom domain expenses, paid theme costs, recurring app subscriptions, and comprehensive cost estimation for merchants.",
+          "subtopics": [
+            "Subscription fees",
+            "Payment processing fees",
+            "Third-party transaction fees",
+            "Domain costs",
+            "Paid themes",
+            "Paid apps",
+            "Recurring operating expenses",
+            "Cost estimation"
+          ],
+          "what_learner_does": "Calculates monthly and annual operating cost estimates for a proposed D2C merchant store.",
+          "why_it_matters": "Prevents commercial surprises and helps merchants choose cost-effective software stacks.",
+          "expected_outcome": "Realistic e-commerce operating budget projection."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "Smart Collections",
-          "what_is_taught": "Rule-based grouping",
-          "why_it_matters": "Saves time",
-          "what_learner_does": "Builds conditions",
-          "expected_outcome": "Organized categories"
+          "lesson_title": "D2C Business Requirements",
+          "what_is_taught": "Target customer profiling, product assortment strategy, brand positioning, catalog scope definition, customer shopping journey mapping, and establishing operational sales goals.",
+          "subtopics": [
+            "Target customer",
+            "Product strategy",
+            "Brand positioning",
+            "Product catalogue scope",
+            "Customer journey",
+            "Operational goals"
+          ],
+          "what_learner_does": "Drafts a commercial store brief and customer journey map for a demonstration D2C brand.",
+          "why_it_matters": "A well-defined business brief guides theme selection and catalog information architecture.",
+          "expected_outcome": "Documented D2C business brief and customer conversion journey."
+        },
+        {
+          "lesson_number": "1.4",
+          "lesson_title": "Store Structure",
+          "what_is_taught": "Homepage information planning, collection hierarchy, product catalog structure, primary and secondary navigation menus, search and filtering strategies, and footer policy links.",
+          "subtopics": [
+            "Homepage planning",
+            "Collection hierarchy",
+            "Product structure",
+            "Navigation menus",
+            "Search and filtering awareness",
+            "Footer information"
+          ],
+          "what_learner_does": "Creates a hierarchical visual sitemap and navigation menu structure in Shopify Admin.",
+          "why_it_matters": "Intuitive navigation menus allow customers to find desired products in minimum clicks.",
+          "expected_outcome": "Organized store sitemap and navigation menu tree."
+        },
+        {
+          "lesson_number": "1.5",
+          "lesson_title": "Store Settings & Policies",
+          "what_is_taught": "Configuring business information, store currency (INR), customer contact details, privacy policies, shipping policies, refund and return policies, terms of service, and transactional customer communications.",
+          "subtopics": [
+            "Business information",
+            "Currency and market settings",
+            "Contact details",
+            "Privacy policy",
+            "Shipping policy",
+            "Refund and return policy",
+            "Terms of service",
+            "Customer communication"
+          ],
+          "what_learner_does": "Configures store settings and customizes core legal and operational policy templates.",
+          "why_it_matters": "Transparent store policies are essential for consumer trust and payment gateway approvals.",
+          "expected_outcome": "Configured business settings and published policy pages."
+        },
+        {
+          "lesson_number": "1.6",
+          "lesson_title": "Safe Development Environment",
+          "what_is_taught": "Available Shopify development store workflows (Shopify Partners), staff permissions, development plan limitations, theme previews, password protection, and development vs. live store differences.",
+          "subtopics": [
+            "Available Shopify development-store workflows",
+            "Permissions",
+            "Plan and testing limitations",
+            "Theme preview",
+            "Development versus live stores"
+          ],
+          "what_learner_does": "Initializes a development store sandbox and verifies administrative access.",
+          "why_it_matters": "Development environments allow safe experimentation without incurring premature subscription fees.",
+          "expected_outcome": "Operational development store sandbox ready for catalog build."
         }
       ],
       "key_concepts": [
-        "Variants",
-        "Conditions"
+        "Shopify Hosted Architecture",
+        "Operating Cost Estimation",
+        "D2C Customer Journeys",
+        "Navigation Hierarchy",
+        "Mandatory Store Policies"
       ],
       "tools": [
-        "Shopify Admin"
+        "Shopify Admin",
+        "Shopify Partners / Sandboxes",
+        "Spreadsheet Cost Calculators"
       ],
-      "hands_on_practice": "Build a catalog of 15 products with 3 collections.",
-      "assignment": "Submit product URLs.",
-      "business_application": "Inventory management.",
-      "expected_outcome": "Structured database."
+      "hands_on_practice": "Create or access an authorized Shopify development environment and prepare a store planning document.",
+      "assignment": "Submit the store brief, navigation plan, product strategy, required policy checklist and basic operating-cost estimate.",
+      "business_application": "Initial store planning, cost consulting, and baseline configuration for D2C clients.",
+      "expected_outcome": "Approved Shopify store blueprint and configuration plan."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Theme Customization & Launch",
-      "module_purpose": "Design the store and go live.",
-      "what_you_will_learn": [
-        "OS 2.0 Customizer",
-        "Payments and Domains"
-      ],
+      "module_title": "Products, Collections & Inventory",
+      "module_purpose": "Build an organized, commercially realistic product catalogue.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "The Theme Editor",
-          "what_is_taught": "Sections and blocks",
-          "why_it_matters": "Visual branding",
-          "what_learner_does": "Designs homepage",
-          "expected_outcome": "Branded storefront"
+          "lesson_title": "Shopify Product Creation",
+          "what_is_taught": "Product titles, engaging descriptions, product media (images, video), pricing, compare-at pricing (sale display), product publishing status, and sales channel availability.",
+          "subtopics": [
+            "Product titles",
+            "Descriptions",
+            "Product media",
+            "Pricing",
+            "Compare-at price",
+            "Product publishing",
+            "Sales channel availability"
+          ],
+          "what_learner_does": "Creates foundational product listings with optimized images and structured pricing.",
+          "why_it_matters": "Clear product listings with high-quality media directly drive purchasing decisions.",
+          "expected_outcome": "Active product listings with optimized media and pricing."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "Navigation and Policies",
-          "what_is_taught": "Menus and legal pages",
-          "why_it_matters": "Usability and compliance",
-          "what_learner_does": "Builds header/footer",
-          "expected_outcome": "Complete navigation"
+          "lesson_title": "Variants & Attributes",
+          "what_is_taught": "Configuring variant options (Size, Color, Material), managing variation combinations, assigning variant-specific prices and images, SKU architecture, barcode awareness, and understanding option limits (100 variants / 3 options).",
+          "subtopics": [
+            "Variant options",
+            "Size and color combinations",
+            "Variant-specific prices",
+            "Variant media",
+            "SKU creation",
+            "Barcode awareness",
+            "Product option limitations"
+          ],
+          "what_learner_does": "Builds complex multi-variant products with distinct SKUs, prices, and variant images.",
+          "why_it_matters": "Proper variant setup ensures customers receive the exact size or color ordered.",
+          "expected_outcome": "Multi-variant products with linked imagery and unique SKUs."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "Checkout and Launch",
-          "what_is_taught": "Shopify Payments, Shipping",
-          "why_it_matters": "Making money",
-          "what_learner_does": "Configures rates and does test order",
-          "expected_outcome": "Live transactional store"
+          "lesson_title": "Collections",
+          "what_is_taught": "Manual collections vs. automated (smart) collections, defining collection conditions (product tags, vendor, price, title), collection merchandising order, and linking collections to main navigation menus.",
+          "subtopics": [
+            "Manual collections",
+            "Automated collections",
+            "Collection conditions",
+            "Collection merchandising",
+            "Product organization",
+            "Collection navigation"
+          ],
+          "what_learner_does": "Configures both manual and automated collections using condition tags.",
+          "why_it_matters": "Automated collections save hours of administrative labor by sorting products dynamically.",
+          "expected_outcome": "Published collections populated dynamically via automated rules."
+        },
+        {
+          "lesson_number": "2.4",
+          "lesson_title": "Shopify Metafields",
+          "what_is_taught": "Metafield concepts, defining custom product data fields (e.g., Fabric Care, Dimensions, Materials), entering metafield values, and connecting metafields to theme blocks dynamically.",
+          "subtopics": [
+            "Metafield concepts",
+            "Appropriate definitions",
+            "Product specifications",
+            "Additional product information",
+            "Theme-supported dynamic content"
+          ],
+          "what_learner_does": "Defines product metafields and links them to dynamic sections in the Theme Editor.",
+          "why_it_matters": "Metafields display structured technical specifications without messy manual formatting.",
+          "expected_outcome": "Structured metafield specifications connected to product templates."
+        },
+        {
+          "lesson_number": "2.5",
+          "lesson_title": "Inventory Management",
+          "what_is_taught": "Inventory tracking settings, managing stock quantities across single or multiple locations, available vs. on-hand stock, out-of-stock handling (continue selling vs. sold out), and manual inventory adjustments.",
+          "subtopics": [
+            "Inventory tracking",
+            "Stock quantities",
+            "Inventory locations",
+            "Available stock",
+            "Out-of-stock handling",
+            "Inventory adjustments",
+            "Basic fulfilment inventory concepts"
+          ],
+          "what_learner_does": "Sets up inventory tracking, adjusts stock levels, and validates out-of-stock behavior.",
+          "why_it_matters": "Accurate inventory tracking prevents overselling and protects brand reputation.",
+          "expected_outcome": "Configured inventory tracking with validated stock thresholds."
+        },
+        {
+          "lesson_number": "2.6",
+          "lesson_title": "Bulk Catalogue Management",
+          "what_is_taught": "Using Shopify's bulk editor, exporting product catalogs via CSV, importing product catalogs via CSV, validating data schemas, preventing duplicate entries, and troubleshooting import errors.",
+          "subtopics": [
+            "Product CSV import",
+            "Product CSV export",
+            "Bulk editor",
+            "Import validation",
+            "Product data quality",
+            "Duplicate prevention"
+          ],
+          "what_learner_does": "Performs bulk price and inventory adjustments using CSV import/export.",
+          "why_it_matters": "Bulk management enables efficient catalog scaling without tedious manual entry.",
+          "expected_outcome": "Successful CSV import/export workflow with verified data integrity."
+        },
+        {
+          "lesson_number": "2.7",
+          "lesson_title": "Merchandising",
+          "what_is_taught": "Product grouping strategies, featured collections on the homepage, complementary product recommendations, discount configuration (percentage, fixed amount, automatic discounts), and promotional sale merchandising.",
+          "subtopics": [
+            "Product grouping",
+            "Featured collections",
+            "Product recommendations",
+            "Discount configuration",
+            "Sale merchandising",
+            "Seasonal merchandising basics"
+          ],
+          "what_learner_does": "Sets up promotional discounts and configures featured collection display grids.",
+          "why_it_matters": "Effective merchandising increases Average Order Value (AOV) and conversion velocity.",
+          "expected_outcome": "Active promotional discount rules and curated merchandising displays."
         }
       ],
       "key_concepts": [
-        "Sections",
-        "Shipping Profiles"
+        "Product & Variant Matrices",
+        "Automated Collections",
+        "Custom Metafield Schemas",
+        "Multi-Location Inventory",
+        "CSV Bulk Catalogue Operations"
       ],
       "tools": [
-        "Shopify Theme Customizer"
+        "Shopify Product Editor",
+        "Shopify Metafields",
+        "CSV Editors / Spreadsheets"
       ],
-      "hands_on_practice": "Complete the store design and run a test order.",
-      "assignment": "Submit live URL and test order screenshot.",
-      "business_application": "Store deployment.",
-      "expected_outcome": "Fully functional live store."
+      "hands_on_practice": "Build a Shopify product catalogue with at least 20 products containing simple, variable, and collection structures.",
+      "assignment": "Perform a controlled product import/export and document inventory changes.",
+      "business_application": "Catalogue construction, variation modeling, and inventory auditing for D2C brands.",
+      "expected_outcome": "A structured, usable 20+ product catalogue."
+    },
+    {
+      "module_number": "Module 03",
+      "module_title": "Shopify Theme & Storefront Design",
+      "module_purpose": "Design a branded, responsive and customer-friendly Shopify storefront using native no-code tools.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
+      "lessons": [
+        {
+          "lesson_number": "3.1",
+          "lesson_title": "Shopify Themes",
+          "what_is_taught": "Exploring the Shopify Theme Store, comparing free themes (Dawn, Refresh, Sense) vs. paid themes, theme selection criteria for specific industries, theme duplication for backups, and safe customization workflows.",
+          "subtopics": [
+            "Shopify Theme Store",
+            "Free versus paid themes",
+            "Theme selection criteria",
+            "Theme compatibility",
+            "Theme backups and duplication",
+            "Safe customization practices"
+          ],
+          "what_learner_does": "Selects, duplicates, and activates an approved native Shopify theme (e.g., Dawn).",
+          "why_it_matters": "Starting with a clean, modern theme ensures high speed and full compatibility with Shopify features.",
+          "expected_outcome": "Duplicated backup and active theme ready for customization."
+        },
+        {
+          "lesson_number": "3.2",
+          "lesson_title": "Shopify Theme Editor",
+          "what_is_taught": "Theme Editor interface navigation, templates (homepage, product, collection, cart), sections and nested blocks, global theme settings (typography, colors, button styles, layout widths), and brand consistency.",
+          "subtopics": [
+            "Theme editor navigation",
+            "Templates",
+            "Sections",
+            "Blocks",
+            "Global theme settings",
+            "Typography",
+            "Colors",
+            "Spacing",
+            "Brand consistency"
+          ],
+          "what_learner_does": "Applies a cohesive brand kit (colors, fonts, button radiuses) across global theme settings.",
+          "why_it_matters": "Global settings maintain visual consistency across every customer touchpoint.",
+          "expected_outcome": "Branded global styling applied to all storefront templates."
+        },
+        {
+          "lesson_number": "3.3",
+          "lesson_title": "Homepage Design",
+          "what_is_taught": "Structuring high-converting homepages: visual hierarchy, hero banner messaging, featured collection grids, promotional callouts, brand storytelling sections, navigation clarity, and primary CTA placement.",
+          "subtopics": [
+            "Visual hierarchy",
+            "Hero messaging",
+            "Featured collections",
+            "Promotional sections",
+            "Brand storytelling",
+            "Navigation clarity",
+            "Call-to-action placement"
+          ],
+          "what_learner_does": "Assembles a conversion-oriented homepage using native sections and promotional banners.",
+          "why_it_matters": "The homepage establishes immediate brand credibility and directs visitors to product collections.",
+          "expected_outcome": "High-impact, structured homepage layout."
+        },
+        {
+          "lesson_number": "3.4",
+          "lesson_title": "Collection Pages",
+          "what_is_taught": "Collection template layouts, product grid styling, collection banner descriptions, filtering and sorting controls (price, availability, tags), product discoverability, and mobile touch usability.",
+          "subtopics": [
+            "Collection layouts",
+            "Product cards",
+            "Filtering and sorting awareness",
+            "Collection descriptions",
+            "Product discoverability",
+            "Mobile usability"
+          ],
+          "what_learner_does": "Customizes collection grid templates and enables native product filtering.",
+          "why_it_matters": "Effective collection filtering allows shoppers to quickly narrow down choices and purchase.",
+          "expected_outcome": "Optimized collection templates with functional product filters."
+        },
+        {
+          "lesson_number": "3.5",
+          "lesson_title": "Product Detail UX",
+          "what_is_taught": "Product media galleries, price visibility, variant swatch selectors, clear product descriptions, delivery estimates, return policy snippets, trust badges, and prominent add-to-cart button placement.",
+          "subtopics": [
+            "Product gallery",
+            "Price visibility",
+            "Variant selection",
+            "Product descriptions",
+            "Delivery information",
+            "Returns information",
+            "Product trust signals",
+            "Add-to-cart experience"
+          ],
+          "what_learner_does": "Designs a high-converting product detail template connecting dynamic metafield specifications.",
+          "why_it_matters": "Transparent product information and clear trust signals overcome customer purchasing hesitation.",
+          "expected_outcome": "Polished single product page template with high conversion ergonomics."
+        },
+        {
+          "lesson_number": "3.6",
+          "lesson_title": "Cart & Shopping Journey",
+          "what_is_taught": "Cart page vs. slide-out cart drawer, line-item quantity adjustments, order subtotal updates, free shipping progress bars, discount code visibility, and seamless transition to checkout.",
+          "subtopics": [
+            "Cart page or cart drawer",
+            "Quantity updates",
+            "Discount visibility",
+            "Shipping information",
+            "Checkout transition",
+            "Avoiding unnecessary friction"
+          ],
+          "what_learner_does": "Configures the cart drawer and tests subtotal recalculations and checkout routing.",
+          "why_it_matters": "A frictionless cart experience reduces drop-offs immediately prior to checkout.",
+          "expected_outcome": "Responsive cart drawer interface with live subtotal calculation."
+        },
+        {
+          "lesson_number": "3.7",
+          "lesson_title": "Responsive Storefront",
+          "what_is_taught": "Auditing layouts across desktop, tablet, and mobile; touch-friendly button sizes, mobile image scaling, text legibility, and basic accessibility standards (color contrast, heading tags).",
+          "subtopics": [
+            "Desktop layout",
+            "Tablet layout",
+            "Mobile layout",
+            "Touch-friendly controls",
+            "Image responsiveness",
+            "Readability",
+            "Basic accessibility"
+          ],
+          "what_learner_does": "Audits and refines storefront pages on mobile viewports for seamless touch usability.",
+          "why_it_matters": "Over 70% of e-commerce traffic is mobile; broken mobile layouts directly destroy revenue.",
+          "expected_outcome": "Fully responsive storefront tested across physical and emulated mobile devices."
+        },
+        {
+          "lesson_number": "3.8",
+          "lesson_title": "Liquid Awareness",
+          "what_is_taught": "Understanding what Shopify Liquid is (template engine: objects, tags, filters), how themes render dynamic content, identifying when a customization requires custom Liquid coding vs. native no-code Theme Editor settings.",
+          "subtopics": [
+            "What Shopify Liquid is",
+            "Themes and templates concept",
+            "When a store requires developer assistance",
+            "Limits of no-code customization"
+          ],
+          "what_learner_does": "Inspects theme file structures to understand how sections and templates reference dynamic data.",
+          "why_it_matters": "Understanding technical boundaries prevents broken theme code and clarifies scope with clients.",
+          "expected_outcome": "Conceptual understanding of Liquid architecture and no-code boundaries."
+        }
+      ],
+      "key_concepts": [
+        "Shopify Sections & Blocks",
+        "Global Brand Style Consistency",
+        "Collection Merchandising UX",
+        "Product Detail Conversion Architecture",
+        "Liquid Technical Boundaries"
+      ],
+      "tools": [
+        "Shopify Theme Editor",
+        "Dawn Theme",
+        "Mobile Viewport Emulators"
+      ],
+      "hands_on_practice": "Customize a Shopify theme to create a complete branded storefront for a demonstration D2C brand.",
+      "assignment": "Produce responsive homepage, collection-page, product-page and cart experiences.",
+      "business_application": "Designing conversion-optimized D2C brand storefronts using native Shopify tools.",
+      "expected_outcome": "Professional Shopify storefront using native theme customization tools."
+    },
+    {
+      "module_number": "Module 04",
+      "module_title": "Checkout, Payments & Fulfilment",
+      "module_purpose": "Configure and validate core transaction, shipping and order-management workflows.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
+      "lessons": [
+        {
+          "lesson_number": "4.1",
+          "lesson_title": "Shopify Checkout Fundamentals",
+          "what_is_taught": "The standard Shopify checkout journey (Information, Shipping, Payment), checkout settings, customer contact options (email vs. phone), address form validation, order summaries, and customer account options.",
+          "subtopics": [
+            "Shopify checkout journey",
+            "Checkout settings",
+            "Customer information",
+            "Delivery address",
+            "Order summary",
+            "Checkout validation",
+            "Customer accounts",
+            "Supported configuration boundaries"
+          ],
+          "what_learner_does": "Configures checkout settings, branding, and customer account preferences in Shopify Admin.",
+          "why_it_matters": "Shopify's standardized checkout offers world-class conversion rates when configured correctly.",
+          "expected_outcome": "Configured checkout settings with clear customer input fields."
+        },
+        {
+          "lesson_number": "4.2",
+          "lesson_title": "India-Compatible Payments",
+          "what_is_taught": "Shopify Payments country availability (India is not listed as supported), understanding third-party payment provider concepts, onboarding requirements, payment provider transaction fees, and platform fees.",
+          "subtopics": [
+            "Shopify Payments supported-country verification",
+            "Third-party payment provider concepts",
+            "Region-specific availability",
+            "Payment provider activation requirements",
+            "Provider fees",
+            "Platform transaction fees",
+            "Refund and settlement awareness"
+          ],
+          "what_learner_does": "Researches and verifies India-eligible payment gateways using official Shopify documentation.",
+          "why_it_matters": "Knowing that Shopify Payments is unavailable in India prevents critical onboarding blunders.",
+          "expected_outcome": "Verified understanding of third-party payment gateway requirements in India."
+        },
+        {
+          "lesson_number": "4.3",
+          "lesson_title": "India Payment Methods",
+          "what_is_taught": "Evaluating payment methods available through eligible Indian third-party providers (Razorpay, Cashfree, PayU, PhonePe): UPI QR/intent, credit/debit cards, net banking, wallets, and Cash on Delivery (COD) setup.",
+          "subtopics": [
+            "Payment method availability",
+            "UPI support where available through an eligible provider",
+            "Card payment methods",
+            "Net banking and wallet availability where supported",
+            "Cash on Delivery",
+            "Provider-specific requirements"
+          ],
+          "what_learner_does": "Configures manual payment methods including Cash on Delivery with verification instructions.",
+          "why_it_matters": "UPI and COD drive the majority of Indian consumer e-commerce transactions.",
+          "expected_outcome": "Configured payment method options suitable for Indian consumers."
+        },
+        {
+          "lesson_number": "4.4",
+          "lesson_title": "Payment Testing",
+          "what_is_taught": "Using Shopify's Bogus Gateway for test orders, provider sandbox environments, simulating successful orders, simulating declined and failed payments, order status transitions, and logging payment errors.",
+          "subtopics": [
+            "Shopify's available test-payment gateway",
+            "Third-party gateway sandbox where supported",
+            "Test orders",
+            "Successful test transactions",
+            "Failed transaction simulations",
+            "Order status verification",
+            "Payment-error documentation"
+          ],
+          "what_learner_does": "Executes test orders with Bogus Gateway, verifying order confirmation and payment capture.",
+          "why_it_matters": "Safe testing validates that orders and transactional records flow correctly without charging real money.",
+          "expected_outcome": "Validated test transaction logs demonstrating success and failure handling."
+        },
+        {
+          "lesson_number": "4.5",
+          "lesson_title": "Shipping Configuration",
+          "what_is_taught": "Creating shipping profiles, defining shipping zones (Local, Regional, National India), setting flat-rate shipping, free shipping conditions (e.g., orders above ₹999), weight-based rates, fulfillment locations, and delivery policies.",
+          "subtopics": [
+            "Shipping profiles",
+            "Shipping zones",
+            "Delivery rates",
+            "Free-shipping conditions",
+            "Weight-based shipping where supported",
+            "Local delivery and pickup where applicable",
+            "Fulfilment location awareness",
+            "Delivery policy communication"
+          ],
+          "what_learner_does": "Configures Indian shipping zones and establishes tiered shipping rates.",
+          "why_it_matters": "Accurate shipping rules prevent merchants from losing money on delivery logistics.",
+          "expected_outcome": "Configured multi-zone shipping profile with verified rate calculations."
+        },
+        {
+          "lesson_number": "4.6",
+          "lesson_title": "Tax Settings",
+          "what_is_taught": "Basic Shopify tax configuration, GST operational concepts for India, tax-inclusive vs. tax-exclusive pricing display, shipping tax calculations, and invoice documentation awareness.",
+          "subtopics": [
+            "Basic Shopify tax configuration",
+            "GST-related operational concepts",
+            "Tax display settings",
+            "Product tax settings",
+            "Invoice documentation awareness",
+            "Location-specific tax considerations"
+          ],
+          "what_learner_does": "Configures tax display settings in Shopify Admin and verifies line-item tax calculations.",
+          "why_it_matters": "Clear tax configuration ensures price transparency and compliance with commercial invoicing.",
+          "expected_outcome": "Configured tax settings with verified price calculations."
+        },
+        {
+          "lesson_number": "4.7",
+          "lesson_title": "Order & Fulfilment Operations",
+          "what_is_taught": "Navigating the order dashboard, payment statuses (Paid, Pending, Authorized), fulfillment workflows, assigning tracking numbers, customer notification emails, order cancellations, and processing returns and refunds.",
+          "subtopics": [
+            "Order dashboard",
+            "Payment status",
+            "Fulfilment status",
+            "Processing orders",
+            "Shipping information",
+            "Tracking number workflow",
+            "Customer notifications",
+            "Cancellation",
+            "Returns and refunds"
+          ],
+          "what_learner_does": "Processes a test order through fulfillment, updates tracking numbers, and executes a simulated refund.",
+          "why_it_matters": "Order fulfillment and return processing represent the day-to-day core of e-commerce operations.",
+          "expected_outcome": "Demonstrated competency in full order lifecycle administration."
+        }
+      ],
+      "key_concepts": [
+        "Shopify Checkout Architecture",
+        "India Third-Party Payment Verification",
+        "Bogus Gateway Testing",
+        "Indian Regional Shipping Zones",
+        "Order Fulfillment & Returns"
+      ],
+      "tools": [
+        "Shopify Checkout",
+        "Shopify Bogus Gateway",
+        "Shopify Shipping Profiles",
+        "Order Management Dashboard"
+      ],
+      "hands_on_practice": "Configure available checkout, payment, and shipping settings in a demo environment and run safe test orders.",
+      "assignment": "Document successful test order, failed payment scenario, shipping rate test, inventory adjustment, and refund workflow.",
+      "business_application": "Setting up commercial transaction processing, delivery logistics, and fulfillment administration.",
+      "expected_outcome": "Validated checkout and fulfilment configuration with documented test evidence."
+    },
+    {
+      "module_number": "Module 05",
+      "module_title": "E-Commerce SEO, Analytics & CRO",
+      "module_purpose": "Understand how to improve product discoverability, measure store performance and identify shopping friction.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
+      "lessons": [
+        {
+          "lesson_number": "5.1",
+          "lesson_title": "Shopify Product SEO",
+          "what_is_taught": "Search intent for e-commerce, optimizing product titles, search engine listing previews, meta descriptions, URL handles, descriptive product copy, image alt text, and internal linking.",
+          "subtopics": [
+            "Search intent",
+            "Product titles",
+            "Search engine listings",
+            "Meta descriptions",
+            "URL handles",
+            "Product descriptions",
+            "Image alt text",
+            "Internal linking"
+          ],
+          "what_learner_does": "Optimizes meta tags, URL handles, and image alt text across product catalog listings.",
+          "why_it_matters": "Proper on-page SEO drives high-intent organic traffic directly to product purchase pages.",
+          "expected_outcome": "Search-optimized product listings with clean metadata."
+        },
+        {
+          "lesson_number": "5.2",
+          "lesson_title": "Collection SEO",
+          "what_is_taught": "Optimizing collection titles, collection descriptions, category relevance, heading tag hierarchy, internal collection navigation, and avoiding duplicate content traps.",
+          "subtopics": [
+            "Collection titles",
+            "Collection descriptions",
+            "Category relevance",
+            "Heading structure",
+            "Navigation",
+            "Content quality",
+            "Duplicate-content awareness"
+          ],
+          "what_learner_does": "Crafts search-friendly collection descriptions and structures category heading hierarchies.",
+          "why_it_matters": "Collection pages frequently rank for broad, high-volume commercial category keywords.",
+          "expected_outcome": "SEO-optimized collection landing pages."
+        },
+        {
+          "lesson_number": "5.3",
+          "lesson_title": "Technical SEO Awareness",
+          "what_is_taught": "Shopify sitemaps (sitemap.xml), robots.txt overview, crawlability, indexability, canonical tags, structured data fundamentals (Product, Offer, BreadcrumbList), and Google Search Console introduction.",
+          "subtopics": [
+            "XML sitemaps",
+            "Crawlability",
+            "Indexability",
+            "Canonical URL awareness",
+            "Structured data fundamentals",
+            "Product availability and pricing accuracy",
+            "Search Console introduction"
+          ],
+          "what_learner_does": "Audits store sitemaps, inspects canonical tags, and verifies structured schema markup.",
+          "why_it_matters": "Technical SEO ensures search engines index store pages and display rich product snippets.",
+          "expected_outcome": "Verified technical SEO checklist and structured data audit."
+        },
+        {
+          "lesson_number": "5.4",
+          "lesson_title": "Shopify Analytics",
+          "what_is_taught": "Navigating the Shopify Analytics dashboard, evaluating sales reports, average order value (AOV), returning customer rates, top-selling products, and traffic sources.",
+          "subtopics": [
+            "Dashboard overview",
+            "Sales reports",
+            "Product performance",
+            "Customer behavior",
+            "Traffic sources",
+            "Conversion reporting",
+            "Data interpretation",
+            "Reporting limitations"
+          ],
+          "what_learner_does": "Analyzes demonstration store sales metrics and compiles an executive summary.",
+          "why_it_matters": "Analytics data reveals which products and marketing channels generate profitable revenue.",
+          "expected_outcome": "Executive store performance and sales analytics report."
+        },
+        {
+          "lesson_number": "5.5",
+          "lesson_title": "Google Analytics 4",
+          "what_is_taught": "GA4 e-commerce fundamentals, Shopify native app integration concepts, e-commerce event tracking (view_item, add_to_cart, begin_checkout, purchase), measurement validation, and user consent considerations.",
+          "subtopics": [
+            "GA4 fundamentals",
+            "Shopify-supported integration concepts",
+            "E-commerce event awareness",
+            "Product views",
+            "Add-to-cart events",
+            "Checkout events",
+            "Purchase events",
+            "Measurement validation",
+            "Consent considerations"
+          ],
+          "what_learner_does": "Maps the customer conversion funnel through GA4 e-commerce event touchpoints.",
+          "why_it_matters": "GA4 integration provides comprehensive visibility into customer acquisition and conversion behavior.",
+          "expected_outcome": "Documented GA4 e-commerce measurement and event tracking strategy."
+        },
+        {
+          "lesson_number": "5.6",
+          "lesson_title": "E-Commerce CRO",
+          "what_is_taught": "Conversion Rate Optimization (CRO) principles: product page clarity, call-to-action prominence, shipping transparency, return policy visibility, trust badges, mobile shopping ergonomics, and removing checkout friction.",
+          "subtopics": [
+            "Product page clarity",
+            "Add-to-cart visibility",
+            "Shipping transparency",
+            "Returns information",
+            "Trust signals",
+            "Mobile shopping experience",
+            "Checkout friction",
+            "Merchandising improvements"
+          ],
+          "what_learner_does": "Conducts a comprehensive heuristic conversion-friction audit of the demonstration storefront.",
+          "why_it_matters": "Eliminating friction points dramatically improves sales without increasing advertising spend.",
+          "expected_outcome": "Prioritized conversion-friction audit report with actionable UX fixes."
+        },
+        {
+          "lesson_number": "5.7",
+          "lesson_title": "Performance Optimization",
+          "what_is_taught": "Image compression best practices, evaluating theme performance, measuring third-party app overhead, Shopify speed reports, Core Web Vitals awareness, and running PageSpeed Insights audits.",
+          "subtopics": [
+            "Image compression",
+            "Theme performance",
+            "App impact",
+            "Shopify performance reports where available",
+            "Core Web Vitals awareness",
+            "PageSpeed Insights",
+            "Mobile performance auditing"
+          ],
+          "what_learner_does": "Audits store speed using PageSpeed Insights and optimizes media assets.",
+          "why_it_matters": "Faster-loading e-commerce stores reduce bounce rates and deliver higher checkout completion.",
+          "expected_outcome": "Documented speed audit report with optimized media footprint."
+        },
+        {
+          "lesson_number": "5.8",
+          "lesson_title": "Responsible AI Assistance",
+          "what_is_taught": "Using AI to draft engaging product descriptions, refining marketing copy, generating FAQ entries, brainstorming merchandising themes, and implementing human verification protocols for factual accuracy.",
+          "subtopics": [
+            "AI-assisted product descriptions",
+            "Content refinement",
+            "Merchandising suggestions",
+            "FAQ drafting",
+            "Human verification",
+            "Copyright and accuracy checks"
+          ],
+          "what_learner_does": "Drafts product descriptions using AI, reviewing every claim for accuracy and brand voice.",
+          "why_it_matters": "AI accelerates catalog production, but human oversight is essential to avoid inaccurate product claims.",
+          "expected_outcome": "Human-verified, AI-accelerated product catalog copy."
+        }
+      ],
+      "key_concepts": [
+        "Product & Collection SEO",
+        "Technical E-Commerce Schemas",
+        "Shopify Analytics & GA4 Funnels",
+        "Conversion Rate Optimization (CRO)",
+        "Store Performance Auditing"
+      ],
+      "tools": [
+        "Shopify Analytics",
+        "Google Analytics 4",
+        "Google PageSpeed Insights",
+        "Google Search Console"
+      ],
+      "hands_on_practice": "Conduct an SEO, usability, and basic conversion audit of the demonstration store.",
+      "assignment": "Prepare a prioritized improvement report based on actual observed issues or clearly labeled demonstration data.",
+      "business_application": "Optimizing organic search discoverability and conversion performance for retail merchants.",
+      "expected_outcome": "Store SEO checklist, basic analytics report and conversion-friction audit."
+    },
+    {
+      "module_number": "Module 06",
+      "module_title": "Store Launch & Client Handover",
+      "module_purpose": "Validate a demonstration Shopify store and prepare it for responsible business launch and client administration.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
+      "lessons": [
+        {
+          "lesson_number": "6.1",
+          "lesson_title": "Store Quality Assurance",
+          "what_is_taught": "Verifying product data across 20+ products, navigation links, mobile viewport testing, variant selection validation, cart calculations, checkout field testing, transactional emails, and broken link auditing.",
+          "subtopics": [
+            "Product data verification",
+            "Navigation checks",
+            "Mobile testing",
+            "Product variant testing",
+            "Cart testing",
+            "Checkout testing",
+            "Customer communication",
+            "Broken-link review"
+          ],
+          "what_learner_does": "Executes an exhaustive cross-device QA audit and logs verified test passes.",
+          "why_it_matters": "Thorough QA prevents embarrassing client-facing defects and broken checkout journeys.",
+          "expected_outcome": "Completed pre-launch quality assurance audit checklist."
+        },
+        {
+          "lesson_number": "6.2",
+          "lesson_title": "Security & Permissions",
+          "what_is_taught": "Staff account administration, principle of least privilege, two-step authentication enforcement, sensitive data handling, authorized collaborator access (Shopify Partners), and app permission auditing.",
+          "subtopics": [
+            "Staff access",
+            "Permission minimization",
+            "Authentication security",
+            "Sensitive data handling",
+            "Authorized collaborator access",
+            "App permission awareness"
+          ],
+          "what_learner_does": "Configures restricted staff roles and implements collaborator access protocols.",
+          "why_it_matters": "Proper role-based security prevents unauthorized store changes and protects customer data.",
+          "expected_outcome": "Hardened administrative permissions and collaborator protocols."
+        },
+        {
+          "lesson_number": "6.3",
+          "lesson_title": "Store Operations Readiness",
+          "what_is_taught": "Inventory reconciliation, daily order management SOPs, fulfillment workflows, shipping policy alignment, returns and refund procedures, and preparing customer support channels.",
+          "subtopics": [
+            "Inventory accuracy",
+            "Order-management checklist",
+            "Fulfilment steps",
+            "Shipping policy consistency",
+            "Returns workflow",
+            "Customer support preparation"
+          ],
+          "what_learner_does": "Compiles standard operating procedures (SOPs) for daily order fulfillment and customer support.",
+          "why_it_matters": "Clear operational procedures ensure the merchant can fulfill orders efficiently from day one.",
+          "expected_outcome": "Standard operating procedures (SOPs) for daily store management."
+        },
+        {
+          "lesson_number": "6.4",
+          "lesson_title": "Commercial Cost Estimate",
+          "what_is_taught": "Compiling a complete cost breakdown for the client: Shopify plan subscription, domain renewal, optional theme and app expenses, payment gateway fees, third-party platform fees, shipping costs, and recurring maintenance.",
+          "subtopics": [
+            "Shopify subscription",
+            "Domain cost",
+            "Optional themes",
+            "Optional apps",
+            "Payment processing",
+            "Shopify third-party transaction fees where applicable",
+            "Shipping and fulfilment expenses",
+            "Recurring maintenance considerations"
+          ],
+          "what_learner_does": "Prepares an itemized commercial cost projection for client budgeting.",
+          "why_it_matters": "Full financial transparency builds high client trust and sets realistic business expectations.",
+          "expected_outcome": "Documented client operating cost estimate."
+        },
+        {
+          "lesson_number": "6.5",
+          "lesson_title": "Launch Checklist",
+          "what_is_taught": "Custom domain connection, SSL verification, payment provider readiness, shipping rates review, tax configuration audit, customer notification emails, mobile QA signoff, inventory check, and password removal.",
+          "subtopics": [
+            "Domain readiness",
+            "Store policies",
+            "Payment availability",
+            "Shipping configuration",
+            "Tax configuration review",
+            "Store email setup",
+            "Mobile QA",
+            "Inventory checks",
+            "Test orders",
+            "Client approval"
+          ],
+          "what_learner_does": "Performs a formal pre-launch signoff review across all operational domains.",
+          "why_it_matters": "A structured launch checklist prevents premature deployment and operational failures.",
+          "expected_outcome": "Completed and signed-off pre-launch readiness document."
+        },
+        {
+          "lesson_number": "6.6",
+          "lesson_title": "Client Handover",
+          "what_is_taught": "Authoring a non-technical Client Handover Handbook: product upload instructions, inventory management guide, order fulfillment steps, refund processing, basic analytics review, and maintenance schedule.",
+          "subtopics": [
+            "Staff permissions",
+            "Product management guide",
+            "Inventory guide",
+            "Order processing guide",
+            "Shipping workflow",
+            "Returns/refund process",
+            "Analytics overview",
+            "Maintenance checklist",
+            "Store cost estimate"
+          ],
+          "what_learner_does": "Compiles the comprehensive Client Store Handover Handbook.",
+          "why_it_matters": "Empowers clients to manage daily orders and inventory safely without breaking store settings.",
+          "expected_outcome": "Professional Client Store Administration & Handover Handbook."
+        },
+        {
+          "lesson_number": "6.7",
+          "lesson_title": "Capstone Presentation",
+          "what_is_taught": "Demonstrating the completed store, presenting catalog architecture, showcasing checkout evidence, reviewing conversion audit findings, and delivering a client walkthrough.",
+          "subtopics": [
+            "Store walkthrough",
+            "Product catalogue demonstration",
+            "Checkout evidence",
+            "Operational testing evidence",
+            "Conversion-audit findings",
+            "Handover documentation"
+          ],
+          "what_learner_does": "Records a 5-minute video walkthrough demonstrating storefront features and client administration.",
+          "why_it_matters": "Demonstrates practical professional competency and communication skills to employers and clients.",
+          "expected_outcome": "Recorded capstone walkthrough video and portfolio case study."
+        }
+      ],
+      "key_concepts": [
+        "Pre-Launch Quality Assurance",
+        "Staff Permission Minimization",
+        "Commercial Cost Projections",
+        "Pre-Launch Signoff Checklists",
+        "Client Operational Handover"
+      ],
+      "tools": [
+        "Shopify Admin",
+        "Screen Recording Software",
+        "Markdown / PDF Handover Tools"
+      ],
+      "hands_on_practice": "Perform a complete demonstration-store acceptance review.",
+      "assignment": "Submit the final store with documentation and a recorded or live client-style walkthrough.",
+      "business_application": "Executing a complete commercial D2C e-commerce delivery and client handover.",
+      "expected_outcome": "Complete Shopify demonstration store and professional handover package."
     }
-  ]
+  ],
+  "faq": [
+    {
+      "question": "What will I learn in the Shopify course?",
+      "answer": "You will learn Shopify store setup, product catalogues, collections, variants, storefront design, checkout configuration, inventory, shipping, order administration, SEO, analytics and client handover."
+    },
+    {
+      "question": "Is coding required to learn Shopify?",
+      "answer": "No. This course primarily uses Shopify Admin and Theme Editor. Basic Liquid awareness is introduced, but programming is not required."
+    },
+    {
+      "question": "Will I create a real Shopify store?",
+      "answer": "You will build a complete demonstration store with at least 20 products, working customer-journey components, configuration evidence, safe test orders where supported and operational documentation."
+    },
+    {
+      "question": "Can I use Shopify Payments in India?",
+      "answer": "Shopify Payments is not currently listed as available for India-based merchants. Students learn how to verify eligible third-party providers and applicable payment options for their store."
+    },
+    {
+      "question": "Will I learn payment gateway integration?",
+      "answer": "You will learn payment-provider selection, configuration concepts and safe checkout testing using available supported test environments. Actual provider activation depends on eligibility and verification."
+    },
+    {
+      "question": "Will I learn product inventory and shipping?",
+      "answer": "Yes. You will work with SKUs, variants, inventory, shipping profiles, delivery rules, order workflows and fulfilment fundamentals."
+    },
+    {
+      "question": "Is Shopify completely free?",
+      "answer": "No. Shopify generally involves subscription costs, and payment providers, domains, themes, apps and other services may incur additional expenses. Available development-store arrangements have their own eligibility and usage limitations."
+    },
+    {
+      "question": "Is this course suitable for business owners?",
+      "answer": "Yes. It is intended for retail founders, D2C entrepreneurs, aspiring freelancers and people responsible for managing online stores."
+    },
+    {
+      "question": "Will I learn SEO and conversion optimization?",
+      "answer": "Yes. The course covers product and collection SEO, analytics fundamentals, store performance and basic conversion-friction audits."
+    },
+    {
+      "question": "What is the difference between Shopify and WooCommerce?",
+      "answer": "Shopify is a hosted commerce platform with integrated store administration tools. WooCommerce is a WordPress-based e-commerce solution. Both support online selling, but their hosting, customization, operations and cost structures differ."
+    },
+    {
+      "question": "Is this a Shopify development or operations course?",
+      "answer": "Both, within a no-code scope. You will learn to configure and design stores and understand essential day-to-day e-commerce operations."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course is eight weeks long, includes 64 guided learning hours and has a listed fee of ₹12,900, subject to Nova Skills' verified pricing and tax policy."
+    }
+  ],
+  "primary_keyword": "Shopify store design course in India",
+  "secondary_keywords": [
+    "Shopify course in India",
+    "Shopify training for beginners",
+    "Shopify e-commerce course",
+    "Shopify store management course",
+    "Shopify store development training",
+    "Shopify course for entrepreneurs",
+    "Shopify D2C store development",
+    "Shopify product and inventory management",
+    "Shopify checkout training",
+    "Shopify SEO course",
+    "Shopify certification course",
+    "Shopify freelance skills"
+  ],
+  "keywords": [
+    "Shopify store design course in India",
+    "Shopify course in India",
+    "Shopify training for beginners",
+    "Shopify e-commerce course",
+    "Shopify store management course",
+    "Shopify store development training",
+    "Shopify course for entrepreneurs",
+    "Shopify D2C store development",
+    "Shopify product and inventory management",
+    "Shopify checkout training",
+    "Shopify SEO course",
+    "Shopify certification course",
+    "Shopify freelance skills"
+  ],
+  "seo": {
+    "seo_title": "Shopify Store Design Course in India | Nova Skills",
+    "meta_title": "Shopify Store Design Course in India | Nova Skills",
+    "seo_description": "Learn Shopify store design, products, checkout, payments, shipping, SEO and operations in 8 weeks (64 hours). Build a 20+ product demo store. Fee ₹12,900.",
+    "meta_description": "Learn Shopify store design, products, checkout, payments, shipping, SEO and operations in 8 weeks (64 hours). Build a 20+ product demo store. Fee ₹12,900.",
+    "primary_keyword": "Shopify store design course in India",
+    "secondary_keywords": [
+      "Shopify course in India",
+      "Shopify training for beginners",
+      "Shopify e-commerce course",
+      "Shopify store management course",
+      "Shopify store development training",
+      "Shopify course for entrepreneurs",
+      "Shopify D2C store development",
+      "Shopify product and inventory management",
+      "Shopify checkout training",
+      "Shopify SEO course",
+      "Shopify certification course",
+      "Shopify freelance skills"
+    ],
+    "canonical_url": "https://novaskills.in/course-detail.html?id=shopify-cert"
+  }
 }

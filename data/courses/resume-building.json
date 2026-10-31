@@ -1,201 +1,1141 @@
 {
-    "course_id": "resume-building",
-    "course_name": "Resume Building",
-    "academy": "Career & Freelancing Academy",
-    "academy_id": "career-freelancing-academy",
-    "course_type": "MODULE",
-    "course_role": "Job Seeker",
-    "level": "Beginner",
-    "duration": "1 Month",
-    "learning_hours": 20,
-    "future_review_status": "Up to date",
-    "target_audience": {
-        "best_for": ["Active job seekers", "Recent graduates", "Professionals updating their profiles"],
-        "not_for": ["Freelancers seeking clients (should take Proposal Writing instead)"],
-        "who_should_take_foundation_first": "None, this is a foundational skill."
-    },
-    "prerequisites": {
-        "required": "A basic work history or educational background.",
-        "recommended": "None.",
-        "system_requirements": {
-            "hardware": "A computer with reliable internet access.",
-            "software_accounts": "Google Docs, Canva."
-        },
-        "not_required": "Prior design experience."
-    },
-    "overview": {
-        "positioning": "Master the technical and narrative elements of creating an ATS-optimized, high-converting resume.",
-        "short_description": "Learn to craft resumes that pass automated scanners and compel recruiters to call.",
-        "key_facts": {
-            "level": "Beginner",
-            "duration": "1 Month",
-            "format": "Online",
-            "estimated_learning_hours": 20,
-            "project_count": 1,
-            "capstone": false,
-            "ai_integration": "Medium",
-            "career_focus": "Application Materials"
-        },
-        "what_you_will_be_able_to_do": [
-            "Design clean, ATS-compliant resume formats.",
-            "Write high-impact, quantified achievement bullet points.",
-            "Tailor resumes rapidly for specific job descriptions.",
-            "Structure effective cover letters."
-        ]
-    },
-    "why_now": {
-        "industry_shift": "The vast majority of large employers now use ATS, making formatting and keyword optimization mandatory.",
-        "ai_impact": "AI screening tools ruthlessly filter out poorly formatted or unoptimized resumes.",
-        "business_demand": "Recruiters spend an average of 7 seconds on a resume; immediate impact is critical.",
-        "career_opportunity": "A strong resume significantly increases interview rates and potential starting salary."
-    },
-    "learning_outcomes": [
-        "FORMAT a resume to pass Applicant Tracking Systems flawlessly.",
-        "WRITE compelling bullet points using the Action-Context-Result framework.",
-        "OPTIMIZE content by integrating keywords from target job descriptions.",
-        "CREATE specialized resumes for career transitions or gaps."
+  "course_id": "resume-building",
+  "id": "resume-building",
+  "slug": "resume-building",
+  "course_name": "ATS-Friendly Resume & Job Application Essentials",
+  "title": "ATS-Friendly Resume & Job Application Essentials",
+  "name": "ATS-Friendly Resume & Job Application Essentials",
+  "academic_sequence": 79,
+  "course_number": 79,
+  "curriculum_edition": "2027",
+  "academy": "Career & Freelancing Academy",
+  "academy_id": "career",
+  "academyId": "career",
+  "academic_positioning": "ATS-Conscious Resume Formatting, Evidence-Based Experience Writing, Role Tailoring, Cover Letters & Responsible AI Review",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "Job Readiness & Application Documentation Specialist",
+  "courseRole": "Job Readiness & Application Documentation Specialist",
+  "level": "Beginner",
+  "priority": "P0",
+  "positioning": "Resume Creation & Job Application Documents",
+  "duration": "2 Weeks",
+  "durationMonths": 1,
+  "duration_weeks": 2,
+  "learning_hours": 16,
+  "learningHours": 16,
+  "guided_hours": 16,
+  "hours": 16,
+  "weekly_workload": "8 hours per week (guided document labs, bullet-point rewriting clinics, job description analysis, and application reviews)",
+  "mode": "Interactive Document Labs & Guided Job Application Studio",
+  "price": 2900,
+  "fee": 2900,
+  "regular_fee": 2900,
+  "originalPrice": 2900,
+  "commercial_notice": "Flat, transparent tuition of ₹2,900. No hidden fees or exaggerated comparison claims.",
+  "pricing": {
+    "amount": 2900,
+    "currency": "INR",
+    "display": "₹2,900",
+    "comparison_price": null,
+    "discount_percent": 0,
+    "transparent_pricing": true
+  },
+  "tagline": "Turn Your Skills and Experience Into a Resume That Communicates Your Value.",
+  "hero_headline": "Turn Your Skills and Experience Into a Resume That Communicates Your Value.",
+  "hero_supporting_heading": "CAREER & FREELANCING ACADEMY / JOB APPLICATION ESSENTIALS",
+  "hero_supporting_headline": "One Strong Resume. Two Targeted Applications. A More Professional Job Search.",
+  "h1": "ATS-Friendly Resume & Job Application Essentials",
+  "seo_title": "ATS-Friendly Resume Writing Course | Nova Skills",
+  "meta_title": "ATS-Friendly Resume Writing Course | Nova Skills",
+  "seo_description": "Learn ATS-friendly resume writing, job-specific tailoring and cover letters in 2 weeks (16h). Build a reviewed application portfolio. Fee ₹2,900.",
+  "meta_description": "Learn ATS-friendly resume writing, job-specific tailoring and cover letters in 2 weeks (16h). Build a reviewed application portfolio. Fee ₹2,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=resume-building",
+  "hero": {
+    "eyebrow": "CAREER & FREELANCING ACADEMY / JOB APPLICATION ESSENTIALS",
+    "h1": "ATS-Friendly Resume & Job Application Essentials",
+    "primary_hook": "Turn Your Skills and Experience Into a Resume That Communicates Your Value.",
+    "short_description": "Learn to create clear, professional, ATS-friendly resumes aligned with real job requirements. Develop accomplishment-focused bullet points, tailor applications, prepare credible cover letters and use AI responsibly to improve clarity without inventing experience.",
+    "supporting_value_proposition": "One Strong Resume. Two Targeted Applications. A More Professional Job Search.",
+    "quick_info": "2 Weeks | 16 Guided Hours | ₹2,900 | Beginner",
+    "primary_software_badge": "Microsoft Word OR Google Docs + Ethical AI Tools",
+    "skill_tags": [
+      "ATS-Friendly Resumes",
+      "Professional Resume Writing",
+      "Job Applications",
+      "Cover Letters",
+      "Microsoft Word",
+      "Google Docs",
+      "AI-Assisted Review"
     ],
-    "learning_journey": {
-        "stages": [
-            {"stage": "Structure", "focus": "Formatting and ATS compliance."},
-            {"stage": "Content", "focus": "Writing impactful bullets and summaries."},
-            {"stage": "Optimization", "focus": "Tailoring for specific roles."}
-        ]
-    },
-    "hands_on_tech": {
-        "core_tools": [
-            {"tool": "Google Docs", "purpose": "Document creation", "what_student_learns": "Using styles and clean formatting.", "what_student_builds": "Master resume template."},
-            {"tool": "ATS Scanners", "purpose": "Validation", "what_student_learns": "Testing keyword match rates.", "what_student_builds": "Optimized document output."}
-        ],
-        "supporting_tools": [
-            {"tool": "Canva", "purpose": "Creative resumes (for specific industries)"}
-        ],
-        "emerging_tools": [
-            {"tool": "AI Resume Builders", "purpose": "Generating bullet variations."}
-        ],
-        "tools_to_review": ["Jobscan"]
-    },
-    "industry_workflow": {
-        "overview": "The resume creation and submission process.",
-        "stages": [
-            {"step": 1, "name": "Audit", "desc": "Compiling all past experience and metrics."},
-            {"step": 2, "name": "Formatting", "desc": "Applying an ATS-friendly layout."},
-            {"step": 3, "name": "Drafting", "desc": "Writing impact-focused bullet points."},
-            {"step": 4, "name": "Tailoring", "desc": "Adjusting keywords for a specific application."}
-        ]
-    },
-    "business_use_cases": [
-        {"sector": "Personal Branding", "business_problem": "Low interview callback rates.", "approach": "Restructuring the resume for ATS compliance and impact.", "toolset": "Google Docs, ATS Scanners", "output": "Higher application conversion rates."}
-    ],
-    "ai_integration": {
-        "role_classification": "AI as a drafting assistant.",
-        "ai_can_assist_with": "Suggesting strong action verbs, rewording bullets for conciseness.",
-        "ai_can_automate": "Keyword matching analysis.",
-        "ai_cannot_replace": "The authenticity of the achievements and the strategic narrative.",
-        "human_expertise_required": "Selecting which experiences to highlight for a specific role.",
-        "validation_protocol": "Ensuring all AI-generated metrics are factually accurate.",
-        "responsible_use": "Never fabricating experience or metrics using AI."
-    },
-    "best_practices": [
-        "Avoid multi-column layouts, tables, and graphics for standard applications.",
-        "Start every bullet point with a strong action verb.",
-        "Quantify results whenever possible (%, $, time saved).",
-        "Keep the resume to one page for early/mid-career professionals."
-    ],
-    "common_mistakes": [
-        {"mistake": "Listing job duties instead of achievements.", "why_it_happens": "Copying and pasting from old job descriptions.", "professional_approach": "Focusing on what was accomplished, not just what was assigned."}
-    ],
-    "career_paths": {
-        "entry_roles": ["N/A - Skill applies to all roles"],
-        "mid_roles": ["N/A"],
-        "specialist_roles": ["N/A"],
-        "freelance_roles": ["Resume Writer (Service Offering)"],
-        "employer_expectations": "Clear, error-free, and relevant professional documentation.",
-        "what_student_demonstrates": "A market-ready professional resume."
-    },
-    "freelance_applications": {
-        "services_offered": ["Resume writing", "Profile optimization"],
-        "client_workflow": "Intake questionnaire -> Draft -> Client Review -> Final Polish",
-        "portfolio_requirements": "Before-and-after resume transformations."
-    },
-    "what_you_will_build": [
-        "A master ATS-friendly resume.",
-        "A tailored version of the resume for a specific job.",
-        "A standard cover letter template."
-    ],
-    "final_deliverables": [
-        "A completed, optimized resume ready for applications."
-    ],
-    "assessment": {
-        "model": "Document review.",
-        "criteria": "Formatting cleanliness, impact of bullet points, and ATS match score."
-    },
-    "certification": {
-        "title": "N/A",
-        "criteria": "N/A",
-        "verification": "N/A"
-    },
-    "not_covered": "Interview techniques.",
-    "next_learning_path": {
-        "recommended_next": "LinkedIn Optimisation",
-        "related_programs": "Interview Preparation"
-    },
-    "faq": [
-        {"question": "Should my resume be one or two pages?", "answer": "Generally, one page for less than 10 years of experience, two pages for extensive, relevant experience."},
-        {"question": "Do I need a visually designed resume?", "answer": "Unless you are in a highly creative field (e.g., Graphic Design), a clean, text-based ATS resume is vastly superior for online applications."},
-        {"question": "How do I handle employment gaps?", "answer": "We cover strategies for formatting and phrasing to address gaps professionally."}
-    ],
-    "modules": [
-        {
-            "module_number": 1,
-            "module_title": "Formatting & ATS Compliance",
-            "module_purpose": "Ensure your resume can be read by automated systems.",
-            "what_you_will_learn": ["ATS functionality.", "Appropriate layouts and fonts.", "Structuring sections correctly."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Understanding the ATS", "what_is_taught": "How tracking systems parse data.", "why_it_matters": "Complex formatting gets scrambled, causing automatic rejection.", "what_learner_does": "Reviews examples of parsed vs. unparsed resumes.", "expected_outcome": "Understanding of ATS rules."},
-                {"lesson_number": 2, "lesson_title": "The Master Template", "what_is_taught": "Setting up a clean, single-column layout.", "why_it_matters": "Provides a robust foundation for all applications.", "what_learner_does": "Builds the shell of their resume in Google Docs.", "expected_outcome": "A formatted blank template."},
-                {"lesson_number": 3, "lesson_title": "Contact Info & Summaries", "what_is_taught": "Crafting the header and professional summary.", "why_it_matters": "The first thing recruiters see.", "what_learner_does": "Writes a targeted 3-line summary.", "expected_outcome": "Completed header and summary."}
-            ],
-            "key_concepts": ["ATS Parsing", "Single-column Layout", "Professional Summary"],
-            "tools": ["Google Docs"],
-            "hands_on_practice": "Create the structural foundation of the resume.",
-            "assignment": "Submit the formatted template shell.",
-            "business_application": "Ensuring technical compliance in applications.",
-            "expected_outcome": "A technically sound resume structure."
-        },
-        {
-            "module_number": 2,
-            "module_title": "High-Impact Content Creation",
-            "module_purpose": "Write bullet points that prove your value.",
-            "what_you_will_learn": ["The Action-Context-Result framework.", "Quantifying soft skills.", "Selecting the right action verbs."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Action Verbs & Impact", "what_is_taught": "Replacing weak verbs (e.g., 'helped', 'responsible for') with strong ones.", "why_it_matters": "Changes the tone from passive to active.", "what_learner_does": "Audits old resume bullets for weak verbs.", "expected_outcome": "A list of upgraded action verbs."},
-                {"lesson_number": 2, "lesson_title": "The XYZ Formula", "what_is_taught": "Accomplished [X] as measured by [Y], by doing [Z].", "why_it_matters": "Provides concrete proof of competence.", "what_learner_does": "Rewrites 5 experience bullets using the formula.", "expected_outcome": "High-impact bullet points."},
-                {"lesson_number": 3, "lesson_title": "Education & Skills Sections", "what_is_taught": "Formatting degrees, certifications, and technical skills.", "why_it_matters": "Crucial for keyword matching.", "what_learner_does": "Populates the skills and education sections.", "expected_outcome": "Completed secondary sections."}
-            ],
-            "key_concepts": ["XYZ Formula", "Action Verbs", "Quantification"],
-            "tools": ["Google Docs"],
-            "hands_on_practice": "Complete the first draft of the experience section.",
-            "assignment": "Submit the draft for review.",
-            "business_application": "Communicating professional value effectively.",
-            "expected_outcome": "A fully drafted master resume."
-        },
-        {
-            "module_number": 3,
-            "module_title": "Tailoring & Cover Letters",
-            "module_purpose": "Customize your assets for specific opportunities.",
-            "what_you_will_learn": ["Keyword optimization.", "Rapid tailoring techniques.", "Cover letter structure."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Keyword Matching", "what_is_taught": "Extracting keywords from job descriptions.", "why_it_matters": "Increases ATS match score.", "what_learner_does": "Analyzes a target job description.", "expected_outcome": "A list of target keywords."},
-                {"lesson_number": 2, "lesson_title": "Rapid Tailoring", "what_is_taught": "Adjusting the master resume efficiently for a specific application.", "why_it_matters": "Saves time while maintaining high quality.", "what_learner_does": "Creates a tailored version of the resume.", "expected_outcome": "A job-specific resume."},
-                {"lesson_number": 3, "lesson_title": "Modern Cover Letters", "what_is_taught": "Writing concise, impactful cover letters.", "why_it_matters": "Provides narrative context to the resume.", "what_learner_does": "Drafts a cover letter template.", "expected_outcome": "A reusable cover letter framework."}
-            ],
-            "key_concepts": ["Keyword Extraction", "Tailoring", "Narrative Context"],
-            "tools": ["ATS Scanners (e.g., Jobscan)"],
-            "hands_on_practice": "Run the tailored resume through an ATS scanner.",
-            "assignment": "Submit the tailored resume, job description, and cover letter.",
-            "business_application": "Deploying targeted applications rapidly.",
-            "expected_outcome": "A finalized, highly competitive application package."
-        }
+    "primary_cta": "Enroll Now",
+    "secondary_cta": "Get Course Syllabus"
+  },
+  "short_description": "Learn to create clear, professional, ATS-friendly resumes aligned with real job requirements. Develop accomplishment-focused bullet points, tailor applications, prepare credible cover letters and use AI responsibly to improve clarity without inventing experience.",
+  "shortDesc": "Learn to create clear, professional, ATS-friendly resumes aligned with real job requirements. Develop accomplishment-focused bullet points, tailor applications, prepare credible cover letters and use AI responsibly to improve clarity without inventing experience.",
+  "full_description": "Learn to organize your education, skills, experience and project achievements into a clear, professional resume. Understand how applicant-tracking systems are used, choose readable formatting and present your qualifications with accurate, relevant language. Practice analyzing real job descriptions, developing accomplishment-focused bullet points and preparing targeted applications. Use AI responsibly for language refinement while verifying every claim. Complete the course with a master resume, two tailored versions, a personalized cover letter and a requirements-matching worksheet.",
+  "fullDesc": "Learn to organize your education, skills, experience and project achievements into a clear, professional resume. Understand how applicant-tracking systems are used, choose readable formatting and present your qualifications with accurate, relevant language. Practice analyzing real job descriptions, developing accomplishment-focused bullet points and preparing targeted applications. Use AI responsibly for language refinement while verifying every claim. Complete the course with a master resume, two tailored versions, a personalized cover letter and a requirements-matching worksheet.",
+  "description": "Learn to create clear, professional, ATS-friendly resumes aligned with real job requirements. Develop accomplishment-focused bullet points, tailor applications, prepare credible cover letters and use AI responsibly to improve clarity without inventing experience.",
+  "overview": {
+    "section_heading": "What You Will Master",
+    "positioning": "Resume Creation & Job Application Documents",
+    "short_description": "Learn to create clear, professional, ATS-friendly resumes aligned with real job requirements. Develop accomplishment-focused bullet points, tailor applications, prepare credible cover letters and use AI responsibly to improve clarity without inventing experience.",
+    "expanded_overview": "Learn to organize your education, skills, experience and project achievements into a clear, professional resume. Understand how applicant-tracking systems are used, choose readable formatting and present your qualifications with accurate, relevant language. Practice analyzing real job descriptions, developing accomplishment-focused bullet points and preparing targeted applications. Use AI responsibly for language refinement while verifying every claim. Complete the course with a master resume, two tailored versions, a personalized cover letter and a requirements-matching worksheet.",
+    "commercial_differentiation": "Beyond Resume Templates. Learn to Present Real Skills for Real Opportunities.",
+    "workflow": "Identify Target Role → Gather Evidence → Build Master Resume → Analyze Job Description → Tailor Content → Review Accuracy → Export → Apply"
+  },
+  "commercial_differentiation": {
+    "headline": "Your Skills Deserve a Resume That Explains Their Value.",
+    "supporting_copy": "Learn to create professional resumes and tailored job applications using clear formatting, genuine achievements and role-specific evidence. Complete the course with reviewed documents you can adapt for real opportunities.",
+    "differentiators": [
+      {
+        "title": "Clear Resume Writing",
+        "description": "Learn professional document structure, single-column readable layouts, and evidence-based communication without relying on unverified template tricks."
+      },
+      {
+        "title": "Real Job-Description Matching",
+        "description": "Practice analyzing genuine employer job postings and tailoring resumes to highlight the qualifications, tools, and project evidence you actually possess."
+      },
+      {
+        "title": "Responsible AI Assistance",
+        "description": "Use accessible AI tools (ChatGPT/Gemini) to improve clarity, grammar, and phrasing while maintaining strict human fact verification and zero fabrication."
+      },
+      {
+        "title": "Ready-to-Use Application Portfolio",
+        "description": "Finish with one master resume, two meaningfully tailored role versions, one personalized cover letter, and a comprehensive job-requirements matching worksheet."
+      }
     ]
+  },
+  "modern_workflow_2027": {
+    "section_title": "Build a Resume That Is Readable, Relevant and Truthful.",
+    "website_copy": "Learn ATS-conscious formatting and practical resume writing without relying on misleading scanner scores. Create clear documents using standard headings, honest qualifications and evidence-based experience statements. Tailor each application to the employer's requirements while keeping every claim accurate.",
+    "core_competencies": [
+      {
+        "competency": "Realistic ATS Understanding",
+        "details": "Understand how modern ATS parsers, recruiter searches, and human screening workflows actually function. Recognize that ATS software varies by employer and vendor, and that no universal scoring algorithm exists."
+      },
+      {
+        "competency": "Single-Column Document Architecture",
+        "details": "Design clean, accessible single-column resumes in Microsoft Word or Google Docs using standard headings, standard fonts, and consistent date hierarchies that parse reliably."
+      },
+      {
+        "competency": "Accomplishment-Driven Bullet Authoring",
+        "details": "Apply the Action + Relevant Context + Verifiable Result formula to craft compelling, truthful bullet points for employment, internships, academic projects, or freelance work."
+      },
+      {
+        "competency": "Targeted Job Description Analysis",
+        "details": "Extract essential and preferred qualifications from genuine job postings to ethically align terminology and prioritize demonstrable candidate evidence."
+      },
+      {
+        "competency": "Ethical AI Refinement & Fact Checking",
+        "details": "Leverage AI for vocabulary variety, conciseness, and readability checks while maintaining a zero-tolerance policy for hallucinated metrics, fake roles, or invented tools."
+      },
+      {
+        "competency": "Multi-Format Export & Submission Hygiene",
+        "details": "Master proper DOCX styling and searchable text-based PDF exports with professional file-naming conventions and employer-specific submission compliance."
+      }
+    ]
+  },
+  "why_now": {
+    "headline": "Why Honest, ATS-Conscious Resume Writing Matters in 2027",
+    "points": [
+      "Recruiters and automated parsing systems receive hundreds of AI-generated generic applications; clear, truthful, evidence-backed resumes stand out immediately.",
+      "Overly complex multi-column design templates frequently cause parsing errors in corporate applicant tracking systems.",
+      "Generic mass-application blasts yield low response rates; targeted tailoring to genuine job requirements dramatically improves relevance.",
+      "Employers increasingly verify claims; learning how to present real skills with integrity protects candidate reputation and interview credibility."
+    ]
+  },
+  "icon": "fa-solid fa-file-lines",
+  "color": "linear-gradient(135deg, #011731, #2563EB)",
+  "rating": 4.9,
+  "reviews": 168,
+  "students": 1140,
+  "liveProjects": 1,
+  "projects": 1,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=resume-building",
+  "tags": [
+    "popular",
+    "resume-writing",
+    "ats-resume",
+    "job-application",
+    "cover-letter",
+    "career-development",
+    "word",
+    "google-docs",
+    "certification"
+  ],
+  "featured": true,
+  "category": "Career & Freelancing Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "target_audience": [
+    "College students and fresh graduates preparing entry-level resumes based on academic projects, internships, and coursework.",
+    "Early-career job seekers seeking to modernize outdated resumes for modern Applicant Tracking Systems.",
+    "Career switchers and professionals re-entering the workforce who need transparent presentation of career transitions or gaps.",
+    "Freelancers and independent creatives seeking to translate client projects into structured resumes for full-time opportunities.",
+    "Applicants tired of generic Canva templates who want clean, readable, recruiter-approved documents."
+  ],
+  "prerequisites": {
+    "required": [
+      "Basic computer literacy (operating a web browser, typing, and managing files)."
+    ],
+    "not_required": [
+      "No prior work experience required (freshers use academic projects, coursework, and practical exercises).",
+      "No paid software subscriptions required (free Google Docs or Microsoft Word may be used)."
+    ],
+    "recommended_preparation": "Gather information about your education, projects, skills, training, certifications, and any past work or volunteer activities.",
+    "hardware_software": "A computer or laptop with internet access, a web browser, and access to either Microsoft Word or free Google Docs."
+  },
+  "highlights": [
+    "2 Weeks of structured resume writing and application document training (16 guided learning hours)",
+    "Master single-column ATS-friendly layouts in Microsoft Word OR Google Docs",
+    "Transform weak responsibilities into accomplishment-focused bullet points using Action + Context + Result",
+    "Analyze real job descriptions to identify essential requirements and genuine matching keywords",
+    "Create two role-tailored resume versions demonstrating meaningful adaptation for different job opportunities",
+    "Write a personalized, evidence-based cover letter aligned with a specific target position",
+    "Use AI tools (ChatGPT/Gemini) safely for phrasing and grammar refinement with mandatory human verification",
+    "Complete a reviewed 5-component Job Application Portfolio with editable source files and clean PDF/DOCX exports"
+  ],
+  "hands_on_tech": {
+    "primary_tool": "Microsoft Word OR Google Docs (Word processing and document design)",
+    "supporting_tools": [
+      "ChatGPT / Gemini (Ethical AI drafting, clarity review, and grammar checks)",
+      "PDF Readers (Verifying text selection, layout integrity, and parsing order)",
+      "Genuine Job Descriptions (Role targeting, keyword analysis, and evidence mapping)",
+      "Spreadsheet Tool (Optional for job requirements matching worksheets)"
+    ]
+  },
+  "tools": [
+    "Microsoft Word",
+    "Google Docs",
+    "ChatGPT",
+    "Gemini",
+    "PDF Reader"
+  ],
+  "curriculum": [
+    {
+      "module": "Module 01",
+      "title": "Resume Fundamentals",
+      "lessons": 10,
+      "hours": 3
+    },
+    {
+      "module": "Module 02",
+      "title": "Professional Resume Writing",
+      "lessons": 15,
+      "hours": 5
+    },
+    {
+      "module": "Module 03",
+      "title": "Job-Specific Applications",
+      "lessons": 12,
+      "hours": 4
+    },
+    {
+      "module": "Module 04",
+      "title": "AI Review & Final Portfolio",
+      "lessons": 14,
+      "hours": 4
+    }
+  ],
+  "learning_outcomes": [
+    "Explain what Applicant Tracking Systems do and how employers use application management workflows.",
+    "Understand that ATS capabilities vary by employer and vendor, debunking universal scoring myths.",
+    "Choose simple, readable resume structures optimized for both automated parsing and human recruiters.",
+    "Use a suitable reverse-chronological or combination format based on individual career stage.",
+    "Create a professional, cleanly styled resume using either Microsoft Word or Google Docs.",
+    "Prepare standard resume sections including contact details, summary, experience, projects, education, and skills.",
+    "Identify genuine personal competencies, technical tools, and transferable skills through structured inventorying.",
+    "Present educational credentials, degrees, and professional certifications accurately and honestly.",
+    "Include meaningful academic, course, or personal projects as defensible evidence for entry-level applications.",
+    "Write clear, impactful accomplishment-focused bullets using strong action verbs and contextual details.",
+    "Use genuine, verifiable metrics where available while strictly avoiding fabricated numbers or results.",
+    "Avoid fabricated achievements, inflated job titles, or unsupported claims that compromise credibility.",
+    "Analyze real job descriptions to distinguish essential qualifications from preferred nice-to-have criteria.",
+    "Identify genuine role-specific keywords and technical terminology relevant to the applicant's real skills.",
+    "Match candidate skills and project evidence with specific job requirements using structured worksheets.",
+    "Create two role-tailored resume versions that demonstrate meaningful adaptation for distinct job postings.",
+    "Present career gaps and career transitions transparently without defensive or misleading explanations.",
+    "Write a personalized, concise cover letter that connects genuine qualifications to an employer's needs.",
+    "Use AI tools (ChatGPT/Gemini) responsibly for drafting assistance, language refinement, and clarity feedback.",
+    "Verify AI-generated wording against actual candidate facts, eliminating hallucinations and exaggerated claims.",
+    "Check document formatting, visual hierarchy, line spacing, and margin consistency for effortless readability.",
+    "Export clean DOCX files and text-based searchable PDF documents that preserve styling and selectable text.",
+    "Follow employer-specific file submission instructions, naming conventions, and format requirements.",
+    "Review and proofread the complete application package prior to genuine submission to eliminate errors."
+  ],
+  "portfolio": {
+    "title": "Professional Resume & Job Application Portfolio",
+    "name": "Job Application Documents Portfolio",
+    "total_deliverables": 5,
+    "deliverables_count": "5 Coordinated Application Documents",
+    "description": "One unified job-application portfolio containing a comprehensive master resume, two distinct role-tailored resumes based on genuine job descriptions, a personalized cover letter, and a structured requirements-matching worksheet.",
+    "deliverable_01": {
+      "title": "Component 01: Master Resume",
+      "description": "A complete, editable master resume documenting all genuine education, technical skills, coursework, academic or practical projects, certifications, and work experience using a clean, single-column ATS-conscious format.",
+      "evidence": "Editable Word/Google Docs source file, DOCX export, and searchable PDF export with complete section hierarchy."
+    },
+    "deliverable_02": {
+      "title": "Component 02: Tailored Resume A",
+      "description": "A targeted resume customized for a genuine, verified Job Description A. Features an adapted professional summary, prioritized relevant project evidence, and contextual skill matching while remaining factually consistent with the master resume.",
+      "evidence": "Tailored Resume A document, recorded source Job Description A, and tailoring rationale notes."
+    },
+    "deliverable_03": {
+      "title": "Component 03: Tailored Resume B",
+      "description": "A second targeted resume customized for a different genuine Job Description B (representing a different role or employer requirement set), demonstrating meaningful adaptation rather than superficial company-name swapping.",
+      "evidence": "Tailored Resume B document, recorded source Job Description B, and comparative adaptation notes."
+    },
+    "deliverable_04": {
+      "title": "Component 04: Personalized Cover Letter",
+      "description": "A professionally written, targeted cover letter addressing either Job Description A or B. Connects the applicant's genuine background and project achievements directly to the employer's needs in a concise, professional tone.",
+      "evidence": "Completed cover letter in editable and PDF format, addressing specific role requirements with evidence."
+    },
+    "deliverable_05": {
+      "title": "Component 05: Job Requirements Matching Worksheet",
+      "description": "A detailed analytical worksheet comparing the applicant's real qualifications against both selected job descriptions. Documents required skills, candidate evidence, match status (Meets / Partially Meets / Gap), and resulting resume adjustments.",
+      "evidence": "Structured matching worksheet document (spreadsheet or structured document table) with factual verification notes."
+    }
+  },
+  "skill_boundaries": {
+    "course_79_resume_essentials": "Course 79 focuses specifically on resume structure, ATS awareness, accomplishment writing, job-specific tailoring, cover letters, and document delivery.",
+    "linkedin_optimization_course": "LinkedIn profile optimization (headlines, about sections, featured media, recruiter networking, and algorithm visibility) is taught in a separate dedicated course.",
+    "interview_preparation_course": "Interview preparation (behavioral questions, STAR method responses, mock interviews, and compensation discussions) is taught in a separate dedicated course.",
+    "career_launch_program": "Comprehensive career launch and job-search strategy is taught in the broader multi-week Career Launch Professional program.",
+    "explicit_exclusions": [
+      "Universal ATS score guarantees or claims of '100% ATS pass'",
+      "Tricks such as white-text keyword stuffing or hidden font manipulation",
+      "Fabricating employment history, credentials, metrics, or client outcomes",
+      "Compulsory paid ATS scanner subscriptions or commercial software purchases",
+      "Guaranteed recruiter selection, interview callbacks, or job placement promises",
+      "Complete LinkedIn profile overhauls or mock interview coaching within this course"
+    ]
+  },
+  "career_paths": [
+    {
+      "role": "Entry-Level Professional / Fresher",
+      "description": "Apply confidently to graduate trainee, junior specialist, and entry-level corporate or agency roles with evidence-backed resumes."
+    },
+    {
+      "role": "Career Transitioner / Switcher",
+      "description": "Target new industries by framing transferable skills, coursework, and practical projects clearly for hiring managers."
+    },
+    {
+      "role": "Internship & Apprenticeship Applicant",
+      "description": "Stand out in competitive internship pools by showcasing verifiable academic projects and structured skill competencies."
+    },
+    {
+      "role": "Freelancer Seeking In-House Opportunities",
+      "description": "Package diverse freelance engagements and client outcomes into structured, professional corporate application documents."
+    }
+  ],
+  "freelance_applications": [
+    "Applying to remote contract roles requiring professional resumes and customized cover letters",
+    "Submitting formal proposals to corporate clients that require agency team resumes and credential verification",
+    "Translating freelance portfolio work into clear, evidence-based project entries for corporate contracts",
+    "Preparing structured documentation for international remote work and talent platforms"
+  ],
+  "assessment_model": {
+    "type": "Document Portfolio & Technical Rubric Assessment",
+    "passing_grade": "75%",
+    "breakdown": [
+      {
+        "area": "Resume Structure & Readability",
+        "weight": "20%"
+      },
+      {
+        "area": "Evidence-Based Resume Writing",
+        "weight": "25%"
+      },
+      {
+        "area": "Job-Description Analysis & Tailoring",
+        "weight": "25%"
+      },
+      {
+        "area": "Personalized Cover Letter",
+        "weight": "10%"
+      },
+      {
+        "area": "Responsible AI Review & Fact-Checking",
+        "weight": "10%"
+      },
+      {
+        "area": "Final Formatting & Portfolio Handover",
+        "weight": "10%"
+      }
+    ],
+    "evaluation_criteria": "Evaluation is strictly based on document readability, standard section architecture, factual integrity, accomplishment-oriented bullet writing, meaningful tailoring across two genuine job postings, cover letter specificity, and clean PDF/DOCX file hygiene. Proprietary ATS scanner scores or recruiter interview callbacks are never used as grading criteria."
+  },
+  "modules": [
+    {
+      "module_number": "01",
+      "module_title": "Resume Fundamentals",
+      "module_purpose": "Understand modern resume structures and create a professional, readable foundation for job applications.",
+      "hours": 3,
+      "guided_hours": 3,
+      "learning_hours": 3,
+      "lessons": [
+        {
+          "number": "1.1",
+          "title": "Purpose of a Professional Resume",
+          "topics": [
+            "What a resume communicates to employers",
+            "Resume versus curriculum vitae (CV) versus portfolio",
+            "How recruiters scan documents in 6–10 seconds",
+            "Communicating candidate qualifications clearly",
+            "Relevance to specific job requirements"
+          ]
+        },
+        {
+          "number": "1.2",
+          "title": "Introduction to Applicant Tracking Systems",
+          "topics": [
+            "What an Applicant Tracking System (ATS) is",
+            "Why employers use application-management software",
+            "Resume parsing and text extraction mechanics",
+            "Candidate information indexing and storage",
+            "Recruiter keyword searching and filtering",
+            "Differences among ATS vendors (Workday, Taleo, Greenhouse, Lever)"
+          ]
+        },
+        {
+          "number": "1.3",
+          "title": "ATS Misconceptions & Reality",
+          "topics": [
+            "Debunking the 'universal ATS score' myth",
+            "Why no tool can guarantee a '100% ATS pass'",
+            "Why formatting alone rarely causes automatic rejection",
+            "Understanding that screening logic varies by employer",
+            "Proprietary scanner scores vs. official hiring decisions",
+            "Why attempting to 'trick' algorithms harms candidates"
+          ]
+        },
+        {
+          "number": "1.4",
+          "title": "Resume Formats & Architecture",
+          "topics": [
+            "Reverse-chronological format (industry gold standard)",
+            "Combination / hybrid format for skilled career switchers",
+            "Why pure functional formats trigger recruiter skepticism",
+            "Selecting the appropriate format for your career stage",
+            "Fresher structures vs. experienced professional structures"
+          ]
+        },
+        {
+          "number": "1.5",
+          "title": "Professional Resume Sections",
+          "topics": [
+            "Contact header and location conventions",
+            "Professional summary vs. outdated objective statements",
+            "Work experience and employment history",
+            "Academic and practical project experience",
+            "Education, degrees, and academic coursework",
+            "Technical tools and categorized skills",
+            "Certifications, awards, and portfolio links"
+          ]
+        },
+        {
+          "number": "1.6",
+          "title": "ATS-Compatible Formatting",
+          "topics": [
+            "Single-column layout advantages",
+            "Standard section headings (Experience, Education, Skills)",
+            "System-safe fonts (Calibri, Arial, Helvetica, Georgia, Garamond)",
+            "Consistent text alignment and margin spacing (0.5 to 1 inch)",
+            "Readable font sizing (10–12pt body, 14–16pt headings)",
+            "Simple circular bullet points and clean hierarchy"
+          ]
+        },
+        {
+          "number": "1.7",
+          "title": "Common Formatting Risks",
+          "topics": [
+            "Why complex multi-column tables cause parsing jumble",
+            "Text boxes and floating layout elements",
+            "Decorative graphics, skill bars, and rating stars",
+            "Icons, emojis, and unusual typographic symbols",
+            "Placing critical contact details inside headers or footers",
+            "Scanned or image-only PDF extraction failures",
+            "Inconsistent date formats (prefer Month Year or MM/YYYY)"
+          ]
+        },
+        {
+          "number": "1.8",
+          "title": "Contact Information Best Practices",
+          "topics": [
+            "Full legal name and professional email address",
+            "Phone number with country/area code",
+            "City and state location (no full street address needed)",
+            "Professional portfolio and GitHub/LinkedIn links",
+            "Omitting sensitive personal data (Aadhaar, PAN, marital status, photo, DOB)"
+          ]
+        },
+        {
+          "number": "1.9",
+          "title": "Resume Length & Compression Rules",
+          "topics": [
+            "One-page guideline for freshers and early-career applicants",
+            "When a two-page resume is justified by relevant experience",
+            "Avoiding arbitrary one-page cramming that damages readability",
+            "Prioritizing relevance and breathing room over forced compression"
+          ]
+        },
+        {
+          "number": "1.10",
+          "title": "Creating the Master Document",
+          "topics": [
+            "Setting up Microsoft Word styles and margins",
+            "Setting up Google Docs layout and typography",
+            "Establishing clean heading styles (Heading 1, Heading 2)",
+            "Setting tab stops and consistent alignment",
+            "File saving, cloud backups, and versioning hygiene"
+          ]
+        }
+      ],
+      "key_concepts": [
+        "Resume purpose and recruiter readability",
+        "Realistic ATS parsing workflows",
+        "Single-column ATS-conscious formatting",
+        "Standard section architecture",
+        "Formatting risks (tables, text boxes, headers)",
+        "Contact privacy and document setup in Word/Docs"
+      ],
+      "tools": [
+        "Microsoft Word",
+        "Google Docs",
+        "Document Style Inspector"
+      ],
+      "hands_on_practice": "Create a clean, single-column resume document structure in Microsoft Word or Google Docs, establishing proper margins, standard headings, and system-safe typography.",
+      "assignment": "Develop an ATS-conscious master resume skeleton containing verified contact details, standard section headers, clean spacing, and proper font hierarchy.",
+      "deliverable": "ATS-conscious master resume foundation ready for accurate content population.",
+      "commercial_application": "Prepares readable, structured job applications that parse cleanly across diverse corporate and agency applicant tracking systems."
+    },
+    {
+      "module_number": "02",
+      "module_title": "Professional Resume Writing",
+      "module_purpose": "Turn genuine education, skills, experience and projects into compelling, evidence-based resume content.",
+      "hours": 5,
+      "guided_hours": 5,
+      "learning_hours": 5,
+      "lessons": [
+        {
+          "number": "2.1",
+          "title": "Personal Skills Inventory",
+          "topics": [
+            "Auditing technical software and digital tools",
+            "Identifying domain-specific and industry skills",
+            "Recognizing transferable soft skills (collaboration, communication)",
+            "Categorizing skills logically (Tools, Languages, Core Competencies)",
+            "Honest self-assessment of proficiency levels"
+          ]
+        },
+        {
+          "number": "2.2",
+          "title": "Experience Inventory",
+          "topics": [
+            "Documenting full-time and part-time employment",
+            "Capturing internships, apprenticeships, and trainee roles",
+            "Listing academic coursework and capstone projects",
+            "Documenting freelance client work and volunteer activities",
+            "Gathering tangible artifacts, briefs, and deliverables"
+          ]
+        },
+        {
+          "number": "2.3",
+          "title": "Experience Verification & Integrity",
+          "topics": [
+            "Verifying what was completed independently vs. in a team",
+            "Identifying exact tools, software versions, and frameworks used",
+            "Confirming accurate start and end dates",
+            "Clarifying personal ownership vs. organizational output",
+            "Distinguishing genuine achievements from exaggerated claims"
+          ]
+        },
+        {
+          "number": "2.4",
+          "title": "Writing Experience Bullets",
+          "topics": [
+            "Leading with high-impact active verbs (Engineered, Orchestrated, Built)",
+            "Avoiding passive phrasing ('Responsible for', 'Helped with', 'Worked on')",
+            "Structuring bullets for immediate comprehension",
+            "Balancing technical precision with business context",
+            "Keeping bullets concise (1–2 lines maximum)"
+          ]
+        },
+        {
+          "number": "2.5",
+          "title": "The Action–Impact Formula",
+          "topics": [
+            "The standard formula: Action Verb + Context/Task + Verifiable Result",
+            "Alternative structure: Accomplished [X] through [Y], demonstrated by [Z]",
+            "Why not every bullet requires a numerical statistic",
+            "Framing qualitative outcomes with strong professional context"
+          ]
+        },
+        {
+          "number": "2.6",
+          "title": "Rewriting Weak Resume Statements",
+          "topics": [
+            "Analyzing common weak bullet examples",
+            "Transforming task lists into accomplishment narratives",
+            "Illustrative before-and-after case studies across disciplines",
+            "Ensuring examples reflect individual student facts, not copied claims"
+          ]
+        },
+        {
+          "number": "2.7",
+          "title": "Quantifying Achievements Honestly",
+          "topics": [
+            "Quantifying work volume (number of designs, pages, data rows)",
+            "Documenting time saved, turnaround speed, or project frequency",
+            "Capturing project scope, team sizes, and asset counts",
+            "Using numbers only when verifiable evidence exists",
+            "Strict prohibition against fabricated revenue, growth, or client statistics"
+          ]
+        },
+        {
+          "number": "2.8",
+          "title": "Project Evidence for Freshers",
+          "topics": [
+            "Structuring academic projects as practical work equivalents",
+            "Framing course capstones and independent portfolio builds",
+            "Defining the problem statement, tools utilized, and final outcome",
+            "Linking live demo URLs, GitHub repositories, or PDF portfolio decks"
+          ]
+        },
+        {
+          "number": "2.9",
+          "title": "Work Experience Section Crafting",
+          "topics": [
+            "Standard job entry structure: Title, Company, City, Dates",
+            "Crafting 3–5 bullet points per relevant position",
+            "Prioritizing recent and relevant roles",
+            "Maintaining consistent chronological timeline"
+          ]
+        },
+        {
+          "number": "2.10",
+          "title": "Education Section Best Practices",
+          "topics": [
+            "Listing degrees, majors, and academic institutions",
+            "Graduation year / expected graduation date",
+            "When to include GPA or academic honors (freshers only)",
+            "Highlighting relevant coursework for entry-level alignment",
+            "Honest representation of ongoing or incomplete studies"
+          ]
+        },
+        {
+          "number": "2.11",
+          "title": "Certifications & Credentials",
+          "topics": [
+            "Accurate certificate title and issuing organization",
+            "Issue dates, validity periods, and credential IDs",
+            "Linking verifiable credential URLs where available",
+            "Strict rule against claiming unawarded certifications"
+          ]
+        },
+        {
+          "number": "2.12",
+          "title": "Technical Skills Formatting",
+          "topics": [
+            "Organizing skills into clean, scannable subcategories",
+            "Avoiding meaningless proficiency percentages or rating bars",
+            "Listing tools and methodologies relevant to target job families",
+            "Eliminating unrelated filler skills"
+          ]
+        },
+        {
+          "number": "2.13",
+          "title": "Professional Summary Development",
+          "topics": [
+            "Purpose of a 3–4 sentence professional summary",
+            "Highlighting core value proposition, key tools, and career focus",
+            "Tailoring the summary for entry-level vs. experienced applicants",
+            "Eliminating buzzwords, clichés, and unsubstantiated self-praise"
+          ]
+        },
+        {
+          "number": "2.14",
+          "title": "Career Gaps & Transitions",
+          "topics": [
+            "Transparent and honest timeline presentation",
+            "Framing intentional gaps (further study, caregiving, freelancing)",
+            "Highlighting skill development and courses taken during transitions",
+            "Constructing a positive, truthful transition narrative",
+            "Never fabricating employer names or job dates to conceal gaps"
+          ]
+        },
+        {
+          "number": "2.15",
+          "title": "Resume Writing Quality & Proofreading",
+          "topics": [
+            "Grammar, spelling, and tense rules (past tense for past roles)",
+            "Consistency in punctuation and bullet capitalization",
+            "Active voice enforcement and jargon elimination",
+            "Multi-pass proofreading checklist"
+          ]
+        }
+      ],
+      "key_concepts": [
+        "Skills and experience inventorying",
+        "Action–Impact formula (Action + Context + Result)",
+        "Rewriting passive task descriptions",
+        "Honest quantification of scope and output",
+        "Project framing for freshers without employment history",
+        "Transparent career-gap communication",
+        "Grammar, tense, and proofreading rigor"
+      ],
+      "tools": [
+        "Microsoft Word",
+        "Google Docs",
+        "Accomplishment Formula Worksheet"
+      ],
+      "hands_on_practice": "Conduct a comprehensive skills inventory and rewrite at least five weak, passive bullet points into impactful, evidence-based statements using the Action–Impact formula.",
+      "assignment": "Draft and submit a complete master resume containing accurate education, skills, project evidence, accomplishment-oriented bullets, and a tailored professional summary.",
+      "deliverable": "Portfolio Component 01 — Master Resume (complete editable document).",
+      "commercial_application": "Enables job seekers to communicate their real capabilities and qualifications persuasively to recruiters and hiring managers."
+    },
+    {
+      "module_number": "03",
+      "module_title": "Job-Specific Applications",
+      "module_purpose": "Analyze real job requirements and prepare truthful, role-specific resumes and personalized cover letters.",
+      "hours": 4,
+      "guided_hours": 4,
+      "learning_hours": 4,
+      "lessons": [
+        {
+          "number": "3.1",
+          "title": "Understanding Job Descriptions",
+          "topics": [
+            "Deconstructing employer job postings and postings anatomy",
+            "Job title nuances across companies",
+            "Role overview and primary responsibilities",
+            "Required qualifications vs. preferred qualifications",
+            "Technical skill requirements and tooling stacks",
+            "Location, work mode (remote, hybrid, on-site), and eligibility"
+          ]
+        },
+        {
+          "number": "3.2",
+          "title": "Identifying Critical Requirements",
+          "topics": [
+            "Isolating core non-negotiable requirements",
+            "Recognizing secondary desirable skills",
+            "Highlighting recurring industry terminology",
+            "Understanding employer pain points and team needs",
+            "Assessing genuine personal qualification fit"
+          ]
+        },
+        {
+          "number": "3.3",
+          "title": "Ethical Keyword Matching",
+          "topics": [
+            "How recruiters and parsers search for specific skills",
+            "Natural integration of standard industry terminology",
+            "Matching phrasing when you legitimately possess the skill",
+            "Contextual skill usage vs. meaningless keyword stuffing",
+            "Why keyword spamming harms candidate credibility during interviews"
+          ]
+        },
+        {
+          "number": "3.4",
+          "title": "Evidence-Based Matching",
+          "topics": [
+            "Connecting each job requirement to verifiable evidence",
+            "Mapping coursework, projects, or employment to criteria",
+            "Evaluating evidence strength (strong, moderate, gap)",
+            "Deciding which qualifications to emphasize"
+          ]
+        },
+        {
+          "number": "3.5",
+          "title": "Job Requirements Matching Worksheet",
+          "topics": [
+            "Structure and purpose of the matching matrix",
+            "Recording role title, employer, posting source, and date",
+            "Listing employer requirements side-by-side with candidate evidence",
+            "Assigning match status: Meets / Partially Meets / Gap",
+            "Documenting specific tailoring actions and resume locations"
+          ]
+        },
+        {
+          "number": "3.6",
+          "title": "Tailoring the Master Resume",
+          "topics": [
+            "Why tailoring is not rewriting facts",
+            "Selecting and prioritizing the most relevant accomplishments",
+            "Reordering bullet points to surface direct role matches",
+            "Refining the professional summary for role alignment",
+            "Removing irrelevant background clutter to improve focus"
+          ]
+        },
+        {
+          "number": "3.7",
+          "title": "Developing Two Tailored Versions",
+          "topics": [
+            "Analyzing Job Description A and building Tailored Resume A",
+            "Analyzing Job Description B and building Tailored Resume B",
+            "Ensuring meaningful distinctions between both tailored versions",
+            "Maintaining 100% factual consistency across all versions"
+          ]
+        },
+        {
+          "number": "3.8",
+          "title": "Handling Career Transitions & Gaps in Tailored Resumes",
+          "topics": [
+            "Framing transferable skills for the target industry",
+            "Highlighting self-study, certifications, and portfolio work",
+            "Addressing career changes transparently without defensiveness",
+            "Aligning previous non-direct experience with target role competencies"
+          ]
+        },
+        {
+          "number": "3.9",
+          "title": "Cover Letter Structure & Purpose",
+          "topics": [
+            "Why personalized cover letters add human context to applications",
+            "Standard business letter formatting and contact header",
+            "Compelling opening: role applied for and mutual connection",
+            "Body paragraphs: connecting specific evidence to employer challenges",
+            "Professional closing and call to action"
+          ]
+        },
+        {
+          "number": "3.10",
+          "title": "Personalized Cover Letters vs. Generic Templates",
+          "topics": [
+            "Why generic 'insert company name' letters are ignored",
+            "Demonstrating genuine employer research",
+            "Highlighting 1–2 standout accomplishments that match the posting",
+            "Maintaining concise, respectful, and authentic tone (under 350 words)"
+          ]
+        },
+        {
+          "number": "3.11",
+          "title": "Application Submission Hygiene",
+          "topics": [
+            "Carefully reading specific employer submission instructions",
+            "Selecting the correct requested file format (PDF vs. DOCX)",
+            "Professional file naming (e.g., Firstname_Lastname_Resume.pdf)",
+            "Verifying contact details and testing clickable portfolio links",
+            "Double-checking email attachments and form uploads"
+          ]
+        },
+        {
+          "number": "3.12",
+          "title": "Application Integrity & Ethics",
+          "topics": [
+            "Strict policy against fabricated employers or fake references",
+            "Zero tolerance for inflated dates or false certifications",
+            "Why background verification easily discovers dishonest resumes",
+            "Protecting your long-term professional reputation"
+          ]
+        }
+      ],
+      "key_concepts": [
+        "Deconstructing real job descriptions",
+        "Ethical keyword matching and natural integration",
+        "Job Requirements Matching Worksheet methodology",
+        "Tailoring master content without altering facts",
+        "Developing two meaningfully differentiated resume versions",
+        "Personalized cover letter architecture",
+        "Submission hygiene and professional file naming"
+      ],
+      "tools": [
+        "Microsoft Word",
+        "Google Docs",
+        "Job Requirements Matching Worksheet",
+        "Verified Job Postings"
+      ],
+      "hands_on_practice": "Analyze two genuine job postings, complete a structured requirements-matching worksheet, customize two targeted resume versions, and draft a personalized cover letter for one chosen role.",
+      "assignment": "Submit Job Description A and B sources, Tailored Resume A, Tailored Resume B, the completed Requirements Matching Worksheet, and a Personalized Cover Letter.",
+      "deliverable": "Portfolio Components 02, 03, 04, and 05 (Tailored Resume A, Tailored Resume B, Personalized Cover Letter, and Matching Worksheet).",
+      "commercial_application": "Equips candidates to submit targeted, highly relevant applications that demonstrate clear qualification fit for specific open roles."
+    },
+    {
+      "module_number": "04",
+      "module_title": "AI Review & Final Portfolio",
+      "module_purpose": "Use AI and document-quality checks responsibly to refine, verify, export and present a complete application package.",
+      "hours": 4,
+      "guided_hours": 4,
+      "learning_hours": 4,
+      "lessons": [
+        {
+          "number": "4.1",
+          "title": "Responsible AI Assistance in Resume Writing",
+          "topics": [
+            "How large language models can assist career documentation",
+            "Using AI for vocabulary expansion, conciseness, and grammar",
+            "Comparing resume drafts against job descriptions",
+            "Why AI must serve as an editor, never the primary author",
+            "The essential role of mandatory human review"
+          ]
+        },
+        {
+          "number": "4.2",
+          "title": "Accessible AI Tool Options",
+          "topics": [
+            "Using free ChatGPT or Google Gemini for document refinement",
+            "Why paid AI subscriptions are not required for quality results",
+            "Understanding token limitations and prompt boundaries",
+            "Selecting accessible, privacy-conscious tools"
+          ]
+        },
+        {
+          "number": "4.3",
+          "title": "Effective AI Prompting for Resumes",
+          "topics": [
+            "Structuring constraint-driven prompts",
+            "Providing relevant factual context and bullet drafts",
+            "Instructing AI to suggest revisions without inventing experience",
+            "Requesting alternative action verbs and active phrasing",
+            "Iterative refinement prompts"
+          ]
+        },
+        {
+          "number": "4.4",
+          "title": "Safe & Ethical AI Prompt Framework",
+          "topics": [
+            "Reviewing standard safe prompt templates",
+            "Specifying strict boundaries: 'Use only provided facts'",
+            "Explicit instructions: 'Do not invent metrics, tools, or dates'",
+            "Requesting the AI to flag unsupported claims"
+          ]
+        },
+        {
+          "number": "4.5",
+          "title": "AI Hallucination & Exaggeration Risks",
+          "topics": [
+            "How AI invents false percentages, revenue gains, and team sizes",
+            "Recognizing overly flowery, artificial corporate buzzwords",
+            "Identifying generic sentences that fail to reflect candidate reality",
+            "Eliminating synthetic AI language from final drafts"
+          ]
+        },
+        {
+          "number": "4.6",
+          "title": "Rigorous AI Fact-Checking",
+          "topics": [
+            "Comparing AI suggestions against your original notes and records",
+            "Verifying technical tool names, versions, and frameworks",
+            "Checking dates, degrees, and institution names",
+            "Ensuring every single statement can be defended in an interview"
+          ]
+        },
+        {
+          "number": "4.7",
+          "title": "Privacy, Anonymization & Data Safety",
+          "topics": [
+            "Anonymizing personal data before pasting into AI tools",
+            "Removing phone numbers, email addresses, and full names",
+            "Avoiding the upload of confidential company projects or data",
+            "Adhering to institutional and international privacy guidelines"
+          ]
+        },
+        {
+          "number": "4.8",
+          "title": "Final Resume Quality Review",
+          "topics": [
+            "Multi-point quality assurance checklist",
+            "Auditing consistent bullet indentation and line spacing",
+            "Checking date alignments and chronological consistency",
+            "Verifying that all hyperlinks resolve to active, professional pages",
+            "Ensuring zero grammatical or spelling errors"
+          ]
+        },
+        {
+          "number": "4.9",
+          "title": "ATS-Conscious Document Format Checks",
+          "topics": [
+            "Verifying strict single-column layout architecture",
+            "Confirming standard section headers are recognized",
+            "Ensuring no vital text resides in floating text boxes or graphics",
+            "Checking font readability and contrast against white background"
+          ]
+        },
+        {
+          "number": "4.10",
+          "title": "The Plain-Text Readability Test",
+          "topics": [
+            "Copying resume text from Word/PDF and pasting into Notepad",
+            "Evaluating plain-text extraction and reading flow",
+            "Checking if section headers and bullet points parse in logical order",
+            "Understanding plain-text tests as practical indicators, not absolute scores"
+          ]
+        },
+        {
+          "number": "4.11",
+          "title": "DOCX and Searchable PDF Exports",
+          "topics": [
+            "Saving clean master DOCX files with embedded styles",
+            "Exporting text-based searchable PDF files (never scanned images)",
+            "Checking PDF metadata and file properties",
+            "Testing text selectability and copy-paste accuracy in PDF viewers"
+          ]
+        },
+        {
+          "number": "4.12",
+          "title": "Employer-Specific Submission Compliance",
+          "topics": [
+            "When to submit PDF vs. when employers request DOCX",
+            "Complying with email application subject lines and cover notes",
+            "Attaching correctly named files",
+            "Avoiding file size bloat (keeping resumes under 2MB)"
+          ]
+        },
+        {
+          "number": "4.13",
+          "title": "Final Application Portfolio Assembly",
+          "topics": [
+            "Organizing the five required portfolio document components",
+            "Compiling the two genuine job description source records",
+            "Completing the factual verification and proofreading checklist",
+            "Preparing a clean client/instructor handover package"
+          ]
+        },
+        {
+          "number": "4.14",
+          "title": "Final Assessment & Application Readiness",
+          "topics": [
+            "Comprehensive review against the course assessment rubric",
+            "Verifying document truthfulness, clarity, and tailoring",
+            "Self-audit of job application readiness",
+            "Preparing for real-world job applications"
+          ]
+        }
+      ],
+      "key_concepts": [
+        "Responsible AI assistance and prompt boundaries",
+        "AI hallucination awareness and fact-checking",
+        "Personal data privacy and anonymization",
+        "Plain-text readability testing",
+        "Searchable PDF and DOCX export standards",
+        "Submission compliance and file hygiene",
+        "Complete 5-component portfolio verification"
+      ],
+      "tools": [
+        "Microsoft Word",
+        "Google Docs",
+        "ChatGPT / Gemini",
+        "PDF Viewer",
+        "Plain-Text Editor (Notepad)"
+      ],
+      "hands_on_practice": "Use an AI tool with safe prompting to refine resume bullet phrasing, perform plain-text extraction checks, verify fact accuracy, and export final DOCX and searchable PDF documents.",
+      "assignment": "Submit the finalized 5-component Job Application Portfolio with verified job postings, fact-checking checklist, and proofreading notes.",
+      "deliverable": "Completed, professionally reviewed Job Application Documents Portfolio (Master Resume, Tailored Resumes A & B, Cover Letter, and Matching Worksheet).",
+      "commercial_application": "Gives candidates fully verified, polished application packages ready for immediate use in genuine job searches."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is an ATS-friendly resume?",
+      "answer": "An ATS-friendly resume uses clear formatting, standard headings, readable text and relevant information that can be interpreted by many applicant-tracking systems. There is no universal formatting guarantee for every employer."
+    },
+    {
+      "question": "Does an ATS-friendly resume guarantee shortlisting?",
+      "answer": "No. Hiring outcomes depend on qualifications, job requirements, screening processes and recruiter decisions."
+    },
+    {
+      "question": "Is this course suitable for freshers?",
+      "answer": "Yes. Freshers can highlight education, academic projects, internships, training and genuine technical skills."
+    },
+    {
+      "question": "Will I learn Microsoft Word?",
+      "answer": "Yes. You may create your resume in Microsoft Word or Google Docs. Both are suitable for the course's core document-writing tasks."
+    },
+    {
+      "question": "What documents will I complete?",
+      "answer": "You will create one master resume, two job-specific versions, one personalized cover letter and a job-requirements matching worksheet."
+    },
+    {
+      "question": "Will I learn how to tailor my resume?",
+      "answer": "Yes. You will analyze two genuine job descriptions and adjust your resume to highlight qualifications you actually possess."
+    },
+    {
+      "question": "Will I learn AI resume writing?",
+      "answer": "Yes. AI is used for assisted drafting and review, with mandatory manual verification of all claims."
+    },
+    {
+      "question": "Can AI invent achievements for my resume?",
+      "answer": "No. AI-generated claims must be checked against real evidence. Students must not include fabricated skills, numbers, roles or credentials."
+    },
+    {
+      "question": "Will you teach ATS scores?",
+      "answer": "You will learn ATS principles and document-quality checks. Proprietary scanner scores are not treated as guarantees of employer screening outcomes."
+    },
+    {
+      "question": "Should I submit a PDF or DOCX resume?",
+      "answer": "Follow the employer's instructions. Both can be appropriate. The course teaches you to prepare and check both formats."
+    },
+    {
+      "question": "Will I learn to write a cover letter?",
+      "answer": "Yes. You will write a personalized cover letter aligned with one of your chosen job descriptions."
+    },
+    {
+      "question": "What if I have an employment gap?",
+      "answer": "The course teaches transparent ways to present genuine career gaps, transitions and relevant learning without fabricating work experience."
+    },
+    {
+      "question": "Is LinkedIn optimization included?",
+      "answer": "No. This certification focuses on resumes and application documents. LinkedIn profile optimization is a separate learning track."
+    },
+    {
+      "question": "Is interview preparation included?",
+      "answer": "No. Interview coaching is covered separately in relevant career-readiness programs."
+    },
+    {
+      "question": "Do I need previous work experience?",
+      "answer": "No. You can develop an effective entry-level application using genuine education, projects, training and transferable skills."
+    },
+    {
+      "question": "Will I get an interview after completing this course?",
+      "answer": "Interview invitations cannot be guaranteed. The course helps you prepare clearer, more relevant and professionally presented application documents."
+    },
+    {
+      "question": "Is a paid AI subscription required?",
+      "answer": "No. Students can use an accessible AI assistant for supported review tasks. Paid features are not mandatory."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course lasts two weeks, includes 16 guided hours and has a listed fee of ₹2,900, subject to Nova Skills' verified pricing and tax policy."
+    }
+  ],
+  "primary_keyword": "ATS-friendly resume writing course",
+  "secondary_keywords": [
+    "ATS resume course",
+    "Resume writing course in India",
+    "Resume building course for freshers",
+    "Professional resume writing training",
+    "ATS-friendly resume format",
+    "Job application course",
+    "Resume tailoring course",
+    "Resume writing using ChatGPT",
+    "Google Docs resume course",
+    "Microsoft Word resume training",
+    "Cover letter writing course",
+    "Resume course for job seekers",
+    "AI resume review course",
+    "Resume writing certification course"
+  ],
+  "keywords": [
+    "ATS-friendly resume writing course",
+    "ATS resume format",
+    "Resume writing for freshers",
+    "Resume tailoring",
+    "Cover letter writing",
+    "AI resume review",
+    "Job application documents",
+    "Career certification"
+  ],
+  "seo": {
+    "title": "ATS-Friendly Resume Writing Course | Nova Skills",
+    "meta_title": "ATS-Friendly Resume Writing Course | Nova Skills",
+    "description": "Learn ATS-friendly resume writing, job-specific tailoring and cover letters in 2 weeks (16h). Build a reviewed application portfolio. Fee ₹2,900.",
+    "meta_description": "Learn ATS-friendly resume writing, job-specific tailoring and cover letters in 2 weeks (16h). Build a reviewed application portfolio. Fee ₹2,900.",
+    "primary_keyword": "ATS-friendly resume writing course",
+    "canonical_url": "https://novaskills.in/course-detail.html?id=resume-building"
+  }
 }

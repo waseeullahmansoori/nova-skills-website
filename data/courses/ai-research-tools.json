@@ -1,400 +1,1256 @@
 {
   "course_id": "ai-research-tools",
-  "course_name": "AI Research Tools",
+  "id": "ai-research-tools",
+  "slug": "ai-research-tools",
+  "course_name": "AI Research & Evidence Verification",
+  "title": "AI Research & Evidence Verification",
+  "name": "AI Research & Evidence Verification",
+  "academic_sequence": 47,
+  "curriculum_edition": "2027 Edition",
   "academy": "AI Academy",
   "academy_id": "ai",
-  "course_type": "MODULE",
-  "course_role": "Career/Monetization",
-  "level": "INTERMEDIATE",
-  "duration": "1 Month",
-  "learning_hours": 30,
-  "future_review_status": "FAST-CHANGING",
+  "academyId": "ai",
+  "academic_positioning": "AI-Assisted Research, Evidence Evaluation & Professional Reporting",
+  "specialization": "AI-Assisted Research, Evidence Evaluation & Professional Reporting",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "AI-Assisted Research Executive & Evidence Verification Specialist",
+  "level": "Beginner to Applied",
+  "priority": "High Admission Priority",
+  "duration": "5 Weeks",
+  "durationMonths": 1.25,
+  "duration_weeks": 5,
+  "learning_hours": 40,
+  "learningHours": 40,
+  "guided_hours": 40,
+  "hours": 40,
+  "weekly_workload": "8 Hours / Week (4 Hours Live Technical Instruction + 4 Hours Supervised Research Studio Lab)",
+  "mode": "Online Interactive Labs & Guided Research Simulation",
+  "price": 5900,
+  "fee": "INR 5,900 + applicable GST",
+  "regular_fee": 5900,
+  "originalPrice": 5900,
+  "commercial_notice": "Transparent institutional tuition: INR 5,900 + applicable taxes. Truth in Pricing with zero artificial countdown discounts, inflated strike-throughs or fake retail offers.",
+  "pricing": {
+    "regular_fee": 5900,
+    "gst_percentage": "18%",
+    "gst_amount": 1062,
+    "total_fee_with_gst": 6962,
+    "discount": "0%",
+    "currency": "INR",
+    "pricing_model": "Truth in Pricing — Transparent institutional fee with zero fake countdown discounts.",
+    "installments": "One-time payment of ₹5,900 or split across 2 installments of ₹2,950."
+  },
+  "tagline": "Research Faster. Verify Better. Turn Information Into Trustworthy Insights.",
+  "hero_headline": "Research Faster. Verify Better. Turn Information Into Trustworthy Insights.",
+  "hero_supporting_heading": "From AI-Assisted Discovery to Verified Evidence — Learn Market Research, Academic Literature Analysis and Professional Reporting.",
+  "hero_supporting_headline": "From AI-Assisted Discovery to Verified Evidence — Learn Market Research, Academic Literature Analysis and Professional Reporting.",
+  "h1": "AI Research & Evidence Verification",
+  "hero": {
+    "hook": "Research Faster. Verify Better. Turn Information Into Trustworthy Insights.",
+    "subheading": "From AI-Assisted Discovery to Verified Evidence — Learn Market Research, Academic Literature Analysis and Professional Reporting.",
+    "target_role": "Junior Market Research Assistant, Business Intelligence Executive, Academic Research Support",
+    "badge": "2027 Professional Research Edition — Applied Evidence Verification & Reporting"
+  },
+  "short_description": "Learn AI-assisted market, business and academic research using modern research platforms. Master source discovery, evidence verification, document comparison, citation tracing and professional research reporting.",
+  "shortDesc": "Learn AI-assisted market, business and academic research using modern research platforms. Master source discovery, evidence verification, document comparison, citation tracing and professional research reporting.",
+  "full_description": "Learn how to conduct more structured, efficient and trustworthy research using AI-assisted discovery tools, academic search platforms and source-grounded document analysis.\n\nThis practical AI Research & Evidence Verification course teaches research question design, search strategies, market and competitor intelligence, academic literature discovery, source credibility assessment and evidence-based reporting.\n\nDevelop hands-on experience with Perplexity, Gemini Notebook, Google Scholar and either Consensus or Elicit as the cohort's principal academic AI research platform.\n\nExplore ChatGPT or Gemini Deep Research, Semantic Scholar, Google Sheets and citation management tools as relevant supporting resources.\n\nLearn how to distinguish original evidence from secondary reporting, assess research methodology, check factual claims, trace citations, identify conflicting findings and record uncertainty.\n\nWork with PDFs and multiple sources to extract information, compare documents and develop transparent evidence matrices.\n\nBuild two professional research reports: a market and competitive intelligence report with actionable business recommendations, and an academic or industry literature review demonstrating study comparison, source-quality assessment and properly traceable references.\n\nThe programme focuses on responsible research discovery, evaluation, synthesis and professional communication—not advanced statistics, formal systematic-review certification or replacing qualified researchers.",
+  "fullDesc": "Learn how to conduct more structured, efficient and trustworthy research using AI-assisted discovery tools, academic search platforms and source-grounded document analysis.\n\nThis practical AI Research & Evidence Verification course teaches research question design, search strategies, market and competitor intelligence, academic literature discovery, source credibility assessment and evidence-based reporting.\n\nDevelop hands-on experience with Perplexity, Gemini Notebook, Google Scholar and either Consensus or Elicit as the cohort's principal academic AI research platform.\n\nExplore ChatGPT or Gemini Deep Research, Semantic Scholar, Google Sheets and citation management tools as relevant supporting resources.\n\nLearn how to distinguish original evidence from secondary reporting, assess research methodology, check factual claims, trace citations, identify conflicting findings and record uncertainty.\n\nWork with PDFs and multiple sources to extract information, compare documents and develop transparent evidence matrices.\n\nBuild two professional research reports: a market and competitive intelligence report with actionable business recommendations, and an academic or industry literature review demonstrating study comparison, source-quality assessment and properly traceable references.\n\nThe programme focuses on responsible research discovery, evaluation, synthesis and professional communication—not advanced statistics, formal systematic-review certification or replacing qualified researchers.",
+  "description": "Learn AI-assisted market, business and academic research using modern research platforms. Master source discovery, evidence verification, document comparison, citation tracing and professional research reporting.",
+  "overview": {
+    "positioning": "AI-Assisted Research, Evidence Evaluation & Professional Reporting",
+    "core_philosophy": "Research Faster. Verify Better. Turn Information Into Trustworthy Insights.",
+    "key_facts": {
+      "level": "Beginner to Applied",
+      "duration": "5 Weeks",
+      "format": "Online Interactive Labs & Guided Research Simulation",
+      "estimated_learning_hours": "40 Hours (5 Weeks × 8 Hours/Week)",
+      "project_count": "2 Assessed Research Reports",
+      "capstone": "Two Assessed Research Reports (Market & Competitive Intelligence Report + Academic/Industry Literature Review)",
+      "ai_integration": "Practical Research Platforms (Perplexity, Gemini Notebook, Google Scholar, Semantic Scholar, Consensus/Elicit, Deep Research)",
+      "career_focus": "Market Research Assistant, Business Intelligence Executive, Academic Literature Support Coordinator"
+    },
+    "what_you_will_be_able_to_do": [
+      "Formulate precise research questions, define scope, and develop structured Boolean and keyword search strategies.",
+      "Execute market and competitor intelligence research using Perplexity, filtering marketing claims from verified data.",
+      "Search and screen scholarly publications using Google Scholar, Semantic Scholar, and Consensus or Elicit.",
+      "Assess research credibility, study design limitations, sample sizes, and distinguish correlation from causation.",
+      "Ingest documents into Gemini Notebook, trace in-text citations to source text, and verify evidence accuracy.",
+      "Construct comprehensive evidence matrices and study comparison tables in Google Sheets linking claims to verifiable sources.",
+      "Identify contradictory evidence, document research gaps, and clearly articulate methodological limitations and uncertainty.",
+      "Author professional, executive-ready market intelligence reports with data visualization and actionable recommendations.",
+      "Write structured academic or industry literature reviews featuring properly formatted and traceable bibliographies.",
+      "Apply research ethics, copyright respect, and human-in-the-loop verification to prevent AI hallucinations and fabricated citations."
+    ]
+  },
   "target_audience": {
     "best_for": [
-      "Professionals looking to master AI Research Tools.",
-      "Forward-thinking individuals aiming to integrate AI tools into their workflows.",
-      "Tech enthusiasts looking to build practical, deployable AI projects."
+      "Students, academic learners, and educators seeking disciplined AI-assisted research and literature discovery workflows.",
+      "Business analysts, market research assistants, and marketing executives preparing competitor briefs and market evaluations.",
+      "Content researchers, writers, and consultants needing to substantiate reports with primary evidence and verified citations.",
+      "Entrepreneurs and business owners conducting feasibility studies, customer research, and industry trend analysis.",
+      "Knowledge workers and professionals aiming to transition from casual AI search prompts to evidence-grounded research reporting."
     ],
-    "who_should_take_foundation_first": "Beginners lacking basic digital literacy should take foundation courses first.",
+    "who_should_take_foundation_first": "Learners without basic computer literacy or unfamiliar with basic web search and document navigation should complete basic digital literacy foundations first.",
     "not_for": [
-      "Those looking for abstract theory without hands-on practice.",
-      "Individuals expecting overnight success without building real projects."
+      "Post-doctoral scholars seeking advanced biometric, clinical trial, or publication-grade meta-analysis instruction.",
+      "Data scientists seeking Python/R statistical modeling, econometric regressions, or algorithmic pipeline development.",
+      "Individuals looking for automated research generation without human verification, source reading, or critical evaluation."
     ]
   },
   "prerequisites": {
-    "required": "Basic computer literacy and understanding of web applications.",
-    "recommended": "Familiarity with the domain relevant to the tools.",
+    "required": "Basic computer literacy, familiarity with standard web search, and basic document and spreadsheet skills.",
+    "recommended": "Experience reading business reports or articles, basic understanding of credible sources and citations, and ability to formulate clear research questions.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with internet connection",
-      "software_accounts": "Perplexity, NotebookLM, Consensus, Elicit"
+      "hardware": "Modern laptop or desktop computer with reliable internet access",
+      "software_accounts": "Standard free accounts on Perplexity, Google (for Scholar and Gemini Notebook), Semantic Scholar, and Consensus or Elicit"
     },
-    "not_required": "Advanced programming degrees"
+    "not_required": "Computer programming, advanced mathematics, formal statistics degrees, or prior professional research qualifications."
   },
-  "overview": {
-    "positioning": "Deep scientific and market research using Perplexity, NotebookLM, Consensus, and academic AI search engines.",
-    "short_description": "Learn to leverage Perplexity, NotebookLM, Consensus to solve real problems.",
-    "key_facts": {
-      "level": "INTERMEDIATE",
-      "duration": "1 Month",
-      "format": "Hands-On Projects",
-      "estimated_learning_hours": "30 Hours",
-      "project_count": "3 Projects",
-      "capstone": "Final Delivery Project",
-      "ai_integration": "AI-CRITICAL",
-      "career_focus": "AI Practitioner"
-    },
-    "what_you_will_be_able_to_do": [
-      "Implement AI-driven workflows.",
-      "Master tools like Perplexity, NotebookLM.",
-      "Deploy functional projects to production."
-    ]
+  "potential_career_applications": {
+    "pathway_overview": "Skills acquired in this course enhance daily productivity across contemporary market research, competitive intelligence, academic support, and business analysis roles. Presented as workplace competencies, not guaranteed employment promises.",
+    "entry_roles": "Junior Market Research Assistant, Competitive Intelligence Research Assistant, Business Research Executive",
+    "mid_roles": "AI-Assisted Research Coordinator, Research Documentation Assistant, Academic Literature Research Assistant",
+    "specialist_roles": "Content Research Executive, Insights and Reporting Assistant, Knowledge Research Support Specialist",
+    "freelance_roles": "Freelance Research Support Specialist, Market Research Consultant, Secondary Research Analyst",
+    "employer_expectations": "Demonstrated ability to discover authoritative sources, verify AI citations against primary texts, synthesize conflicting evidence, and author client-ready research reports.",
+    "what_student_demonstrates": "Two assessed, evidence-verified research reports (Market & Competitive Intelligence Report and Academic Literature Review) with traceable reference matrices."
   },
-  "why_now": {
-    "industry_shift": "Traditional search engines are clogged with SEO spam; researchers and analysts rely on cited AI answer engines for source-grounded facts.",
-    "ai_impact": "AI research synthesis extracts verified citations and grounded insights from hundreds of research papers in seconds.",
-    "business_demand": "Companies are actively seeking practitioners skilled in modern AI tools.",
-    "career_opportunity": "Early adopters can secure high-leverage roles."
+  "career_paths": {
+    "entry_roles": "Junior Market Research Assistant, Competitive Intelligence Research Assistant, Business Research Executive",
+    "mid_roles": "AI-Assisted Research Coordinator, Research Documentation Assistant, Academic Literature Research Assistant",
+    "specialist_roles": "Content Research Executive, Insights and Reporting Assistant, Knowledge Research Support Specialist",
+    "freelance_roles": "Freelance Research Support Specialist, Market Research Consultant, Secondary Research Analyst",
+    "employer_expectations": "Demonstrated ability to discover authoritative sources, verify AI citations against primary texts, synthesize conflicting evidence, and author client-ready research reports.",
+    "what_student_demonstrates": "Two assessed, evidence-verified research reports (Market & Competitive Intelligence Report and Academic Literature Review) with traceable reference matrices."
   },
-  "learning_outcomes": [
-    "DESIGN architectures utilizing Perplexity.",
-    "BUILD practical solutions for business needs.",
-    "DEPLOY projects adhering to best practices."
+  "key_course_highlights": [
+    "Research Question Design & Scope Blueprinting",
+    "AI-Powered Web & Market Research with Perplexity",
+    "Gemini Notebook Document-Grounded Synthesis",
+    "Google Scholar & Semantic Scholar Discovery",
+    "Consensus & Elicit Academic AI Research",
+    "Deep Research Workflows & Limitations Awareness",
+    "10-Step Evidence Verification System",
+    "Citation Tracing & Primary Source Mapping",
+    "Study Screening & Inclusion/Exclusion Criteria",
+    "Evidence Matrices & Comparison Spreadsheets",
+    "Contradictory Evidence & Uncertainty Reporting",
+    "Research Ethics & Plagiarism Prevention",
+    "Two Comprehensive Assessed Research Reports",
+    "Quarterly Research Platform Review Maintainability"
   ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1",
-        "focus": "Modern Search with Perplexity"
-      },
-      {
-        "stage": "Stage 2",
-        "focus": "Academic & Scientific Research"
-      },
-      {
-        "stage": "Stage 3",
-        "focus": "Deep Document Analysis"
-      }
-    ]
-  },
+  "tools": [
+    "Perplexity",
+    "Gemini Notebook",
+    "Google Scholar",
+    "Semantic Scholar",
+    "Consensus",
+    "Elicit",
+    "Google Sheets",
+    "Zotero"
+  ],
   "hands_on_tech": {
-    "core_tools": [
+    "primary_tools": [
       {
         "tool": "Perplexity",
-        "purpose": "Essential for AI Research Tools.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "purpose": "AI-assisted web discovery, conversational research, market intelligence, competitor tracking, and preliminary source identification.",
+        "what_student_learns": "Multi-stage questioning, search operator integration, source link inspection, and filtering promotional claims from verified evidence.",
+        "what_student_builds": "Market and competitor discovery query logs and initial source registries."
       },
       {
-        "tool": "NotebookLM",
-        "purpose": "Essential for AI Research Tools.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "Gemini Notebook",
+        "purpose": "Document-grounded research, PDF knowledge compilation, in-text citation navigation, and cross-document evidence synthesis.",
+        "what_student_learns": "Document ingestion, source-grounded querying, locating exact supporting passages, and verifying citations directly against uploaded texts.",
+        "what_student_builds": "Document-grounded research notebooks with mapped citation links."
       },
       {
-        "tool": "Consensus",
-        "purpose": "Essential for AI Research Tools.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "Google Scholar",
+        "purpose": "Scholarly literature discovery, author/topic tracking, citation graph exploration, and identifying open-access full-text publications.",
+        "what_student_learns": "Search syntax, date filtering, 'cited by' exploration, related article tracking, and legal open-access full-text retrieval.",
+        "what_student_builds": "Academic paper shortlists and citation tracking logs."
       },
       {
-        "tool": "Elicit",
-        "purpose": "Essential for AI Research Tools.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "Consensus or Elicit",
+        "purpose": "Specialist AI research engines for question-based paper discovery, study screening, and structured information extraction.",
+        "what_student_learns": "Research question matching, title/abstract screening, study design identification, and structured extraction of findings and sample sizes.",
+        "what_student_builds": "Study comparison matrices and literature screening logs."
       }
     ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
-  },
-  "industry_workflow": {
-    "overview": "Standard operations:",
-    "stages": [
+    "supporting_tools": [
       {
-        "step": 1,
-        "name": "Discovery",
-        "desc": "Identify the problem."
+        "tool": "Semantic Scholar",
+        "purpose": "Semantic paper search, citation influence graph analysis, author tracking, and academic metadata verification.",
+        "what_student_learns": "Navigating paper metadata, DOIs, citation intent, and highly influential citations.",
+        "what_student_builds": "Paper metadata records and citation network maps."
       },
       {
-        "step": 2,
-        "name": "Tool Selection",
-        "desc": "Choose the right AI stack."
+        "tool": "ChatGPT / Gemini Deep Research",
+        "purpose": "Multi-step autonomous research synthesis and comprehensive report exploration (demonstrated with plan availability caveats).",
+        "what_student_learns": "Understanding query decomposition, multi-source compilation, plan quotas, and manual citation audit protocols.",
+        "what_student_builds": "Deep research comparison briefs with verified claim checks."
       },
       {
-        "step": 3,
-        "name": "Implementation",
-        "desc": "Build the workflow."
+        "tool": "Google Sheets",
+        "purpose": "Constructing transparent evidence matrices, source inventories, competitor comparison scorecards, and verification audit sheets.",
+        "what_student_learns": "Structured matrix design, claim tracking, status tagging (Verified, Partially Supported, Unsupported), and quality scoring.",
+        "what_student_builds": "Evidence Matrix and Study Comparison Matrix spreadsheets."
       },
       {
-        "step": 4,
-        "name": "Deployment",
-        "desc": "Launch and monitor."
+        "tool": "Zotero / Citation Management Tools",
+        "purpose": "Bibliography organization, reference metadata curation, and standardized citation formatting (APA, Harvard, Chicago).",
+        "what_student_learns": "Reference capture, DOI resolution, bibliography generation, and citation style consistency.",
+        "what_student_builds": "Structured reference libraries and annotated bibliographies."
       }
-    ]
-  },
-  "business_use_cases": [
-    {
-      "sector": "Technology",
-      "business_problem": "Inefficient processes",
-      "approach": "AI automation",
-      "toolset": "Perplexity",
-      "output": "Optimized workflow"
-    }
-  ],
-  "ai_integration": {
-    "role_classification": "AI-CRITICAL",
-    "ai_can_assist_with": "Ideation and drafting.",
-    "ai_can_automate": "Repetitive execution.",
-    "ai_cannot_replace": "Strategic decision making.",
-    "human_expertise_required": "Quality assurance.",
-    "validation_protocol": "Manual review of outputs.",
-    "responsible_use": "Adherence to data privacy."
-  },
-  "best_practices": [
-    "Iterate rapidly.",
-    "Verify all AI outputs.",
-    "Maintain organized project files."
-  ],
-  "common_mistakes": [
-    {
-      "mistake": "Trusting AI blindly.",
-      "why_it_happens": "Overconfidence.",
-      "professional_approach": "Always verify output."
-    }
-  ],
-  "career_paths": {
-    "entry_roles": "AI Specialist",
-    "mid_roles": "AI Architect",
-    "specialist_roles": "Automation Consultant",
-    "freelance_roles": "AI Freelancer",
-    "employer_expectations": "Proven ability to deploy AI solutions.",
-    "what_student_demonstrates": "Portfolio of working projects."
-  },
-  "freelance_applications": {
-    "services_offered": [
-      "AI Integration",
-      "Workflow Automation"
     ],
-    "client_workflow": "Consult -> Build -> Deploy -> Maintain",
-    "portfolio_requirements": "Working prototypes."
+    "software_access_policy": "The mandatory curriculum is fully achievable using free tiers, accessible educational platforms, instructor demonstrations, and sample research datasets. No student is required to purchase paid subscriptions (such as Perplexity Pro, Consensus Pro, or commercial reference managers)."
   },
-  "what_you_will_build": [
-    "Project focused on Modern Search with Perplexity",
-    "Project focused on Academic & Scientific Research",
-    "Project focused on Deep Document Analysis"
-  ],
-  "final_deliverables": [
-    "Code repository or live app",
-    "Documentation"
-  ],
-  "assessment": {
-    "model": "Project-based evaluation",
-    "criteria": "Functionality and clean execution."
-  },
-  "certification": {
-    "title": "Certified AI Research Tools Professional",
-    "criteria": "Completion of all projects.",
-    "verification": "Online portal."
-  },
-  "not_covered": "Theoretical machine learning math.",
-  "next_learning_path": {
-    "recommended_next": "Advanced AI Architecture",
-    "related_programs": "Other AI Academy courses."
-  },
-  "faq": [
-    {
-      "question": "Is AI Research Tools for beginners?",
-      "answer": "Check the prerequisites, but generally we start from practical basics."
-    },
-    {
-      "question": "Will I build real projects?",
-      "answer": "Yes, every module includes hands-on builds."
-    },
-    {
-      "question": "Are the tools free?",
-      "answer": "Most tools have free tiers sufficient for learning."
-    }
-  ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Modern Search with Perplexity",
-      "module_purpose": "Replace traditional search with AI-powered discovery.",
-      "what_you_will_learn": [
-        "Learn Perplexity Pro Features",
-        "Learn Structuring Complex Queries",
-        "Learn Curating Collections",
-        "Learn Verifying Citations"
+      "module_title": "Research Foundations & Question Design",
+      "duration": "8 Hours",
+      "hours": 8,
+      "module_purpose": "Master the fundamentals of professional research, question formulation, search strategy design, evidence hierarchies, and ethical AI-assisted research documentation.",
+      "learning_objectives": [
+        "Differentiate professional evidence-based research from superficial conversational web searching.",
+        "Formulate precise research questions, problem statements, and scope boundaries for business or academic inquiry.",
+        "Design multi-stage search strategies using Boolean operators, keywords, synonyms, and search filters.",
+        "Evaluate source credibility, primary versus secondary evidence, and apply discipline-specific evidence hierarchies.",
+        "Establish reproducible research documentation, citation ethics, and responsible AI-assistance guidelines."
       ],
-      "lessons": [
-        {
-          "lesson_number": "1.1",
-          "lesson_title": "Perplexity Pro Features",
-          "what_is_taught": "Fundamentals of Perplexity Pro Features",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Perplexity Pro Features in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.2",
-          "lesson_title": "Structuring Complex Queries",
-          "what_is_taught": "Fundamentals of Structuring Complex Queries",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Structuring Complex Queries in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.3",
-          "lesson_title": "Curating Collections",
-          "what_is_taught": "Fundamentals of Curating Collections",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Curating Collections in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.4",
-          "lesson_title": "Verifying Citations",
-          "what_is_taught": "Fundamentals of Verifying Citations",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Verifying Citations in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "topics_covered": [
+        "Introduction to professional research",
+        "Research versus general information searching",
+        "Business research fundamentals",
+        "Market research fundamentals",
+        "Academic research fundamentals",
+        "Research objectives",
+        "Research problem statements",
+        "Defining research scope",
+        "Formulating research questions",
+        "Exploratory versus descriptive research awareness",
+        "Research hypotheses as a foundational concept",
+        "Research assumptions",
+        "Research limitations",
+        "Research methodology awareness",
+        "Search strategy development",
+        "Keyword identification",
+        "Search synonyms",
+        "Search operators",
+        "Boolean search fundamentals",
+        "Exact phrase searches",
+        "Date and source filters",
+        "Source selection",
+        "Primary versus secondary sources",
+        "Tertiary sources",
+        "Research evidence hierarchies",
+        "Study design awareness",
+        "Official statistics",
+        "Company and institutional reports",
+        "Peer-reviewed publications",
+        "Preprints and working papers",
+        "Credibility and source authority",
+        "Publication dates",
+        "Conflicts of interest",
+        "Research ethics",
+        "Plagiarism awareness",
+        "Appropriate citation practices",
+        "Copyright and access considerations",
+        "Research documentation",
+        "Research reproducibility fundamentals",
+        "Responsible AI assistance"
       ],
-      "key_concepts": [
-        "Perplexity Pro Features",
-        "Structuring Complex Queries",
-        "Curating Collections",
-        "Verifying Citations"
+      "hands_on_exercises": [
+        "Question Refinement Lab: Transform 3 vague business problems into structured, scoped research questions with measurable parameters.",
+        "Search Strategy Blueprinting: Construct Boolean and keyword search strings across 3 research domains using advanced search operators.",
+        "Source Credibility Audit: Evaluate 4 disparate information sources (press release, government statistic, blog post, peer-reviewed paper) using a standardized credibility matrix."
       ],
-      "tools": [
-        "Perplexity",
-        "NotebookLM",
-        "Consensus"
-      ],
-      "hands_on_practice": "Lab focused on Modern Search with Perplexity",
-      "assignment": "Module 1 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "practical_assignment": {
+        "title": "Research Question & Search Strategy Blueprint",
+        "scenario": "Select a focused business or academic research topic, develop a comprehensive research plan defining problem statements, inclusion/exclusion criteria, keyword search trees, source categories, and an ethical verification checklist.",
+        "deliverables": [
+          "Research topic, problem statement, and primary research question",
+          "Supporting research sub-questions and scope boundaries",
+          "Target audience and stakeholder value definition",
+          "Inclusion and exclusion criteria for source selection",
+          "Search query dictionary (keywords, synonyms, Boolean strings)",
+          "Source category map (official statistics, reports, scholarly articles)",
+          "Evidence quality checklist and conflict-of-interest evaluation rubric",
+          "Ethical considerations, copyright rules, and research limitations notes",
+          "Reproducible research tracking log template"
+        ],
+        "expected_competency": "Students can transform an ambiguous research idea into a rigorous, well-scoped, evidence-oriented, and reproducible research plan."
+      },
+      "assessment_criteria": "Clarity of research questions, thoroughness of search query design, rigor of source evaluation criteria, and transparency of limitation definitions."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Academic & Scientific Research",
-      "module_purpose": "Use specialized AI for academic literature.",
-      "what_you_will_learn": [
-        "Learn Using Consensus for Papers",
-        "Learn Elicit Data Extraction",
-        "Learn Synthesizing Findings",
-        "Learn Avoiding Hallucinated Sources"
+      "module_title": "AI-Powered Web & Market Research",
+      "duration": "8 Hours",
+      "hours": 8,
+      "module_purpose": "Conduct structured market intelligence and competitor research using Perplexity and AI search tools, verify claims against primary sources, and build transparent tracking sheets.",
+      "learning_objectives": [
+        "Navigate Perplexity and AI answer engines for structured web discovery and question refinement.",
+        "Execute rigorous market and competitor intelligence research across business models, positioning, and products.",
+        "Inspect citation links, trace quoted claims directly to primary sources, and check publication dates.",
+        "Differentiate promotional marketing claims from independent verified evidence.",
+        "Evaluate Deep Research capabilities, acknowledge quotas and limits, and compile structured evidence tracking spreadsheets."
       ],
-      "lessons": [
-        {
-          "lesson_number": "2.1",
-          "lesson_title": "Using Consensus for Papers",
-          "what_is_taught": "Fundamentals of Using Consensus for Papers",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Using Consensus for Papers in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.2",
-          "lesson_title": "Elicit Data Extraction",
-          "what_is_taught": "Fundamentals of Elicit Data Extraction",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Elicit Data Extraction in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.3",
-          "lesson_title": "Synthesizing Findings",
-          "what_is_taught": "Fundamentals of Synthesizing Findings",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Synthesizing Findings in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.4",
-          "lesson_title": "Avoiding Hallucinated Sources",
-          "what_is_taught": "Fundamentals of Avoiding Hallucinated Sources",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Avoiding Hallucinated Sources in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "topics_covered": [
+        "AI-assisted web research fundamentals",
+        "Search engines versus AI answer engines",
+        "Perplexity interface and research workflows",
+        "AI-supported question refinement",
+        "Multi-stage research questions",
+        "Search result interpretation",
+        "Following source links",
+        "Citation inspection",
+        "Checking quoted claims",
+        "Primary-source discovery",
+        "Company research",
+        "Market intelligence",
+        "Industry trend research",
+        "Competitor analysis",
+        "Product and service comparisons",
+        "Business model research",
+        "Market segmentation fundamentals",
+        "Target customer research",
+        "Public financial information awareness",
+        "Official and institutional statistics",
+        "Competitive positioning",
+        "Product claim verification",
+        "Comparing competing information",
+        "Differentiating advertising from evidence",
+        "Evaluating sponsored or promotional claims",
+        "Research recency",
+        "Source provenance",
+        "Search-supported AI limitations",
+        "ChatGPT Deep Research awareness",
+        "Gemini Deep Research awareness",
+        "Research plans",
+        "Reviewing research reports",
+        "Checking report citations",
+        "Claim-to-source mapping",
+        "Research tracking spreadsheets",
+        "Evidence gaps",
+        "Confidence and uncertainty",
+        "Business recommendations",
+        "Research presentation",
+        "Research quality control"
       ],
-      "key_concepts": [
-        "Using Consensus for Papers",
-        "Elicit Data Extraction",
-        "Synthesizing Findings",
-        "Avoiding Hallucinated Sources"
+      "hands_on_exercises": [
+        "Perplexity Query & Audit Lab: Conduct a multi-stage market investigation in Perplexity, extract 5 key claims, and trace them to original source links.",
+        "Promotional Claim Deconstruction: Analyze a SaaS competitor's marketing claims and verify them against public regulatory filings and third-party benchmark data.",
+        "Evidence Tracking Spreadsheet Build: Construct an automated Google Sheets tracker mapping claim IDs, source URLs, publication dates, and verification tags."
       ],
-      "tools": [
-        "Perplexity",
-        "NotebookLM",
-        "Consensus"
-      ],
-      "hands_on_practice": "Lab focused on Academic & Scientific Research",
-      "assignment": "Module 2 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "practical_assignment": {
+        "title": "Market & Competitor Intelligence Research Lab",
+        "scenario": "Execute a structured market intelligence study on a chosen business sector (e.g., Training Institutes, SaaS, E-commerce, or Local Services), profile key competitors, verify product claims against primary evidence, and compile an executive findings brief.",
+        "deliverables": [
+          "Market research objective and scoping parameters",
+          "Curated competitor list and competitive positioning matrix",
+          "Comprehensive search queries and Perplexity discovery logs",
+          "Primary and secondary source inventory with publication dates",
+          "Competitor feature, pricing, and business model comparison table",
+          "Claim verification sheet proving or disproving marketing claims",
+          "Documented evidence gaps, uncertainties, and data recency notes",
+          "Executive market summary with actionable business recommendations"
+        ],
+        "expected_competency": "Students can conduct structured market research, audit citations, and distinguish evidence-backed findings from marketing puffery and unsupported AI assertions."
+      },
+      "assessment_criteria": "Depth of competitor profiling, rigor of citation inspection, accuracy of claim verification, and practicality of strategic recommendations."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Deep Document Analysis",
-      "module_purpose": "Chat with large local knowledge bases.",
-      "what_you_will_learn": [
-        "Learn NotebookLM Workflows",
-        "Learn Comparing Multiple Documents",
-        "Learn Extracting Key Themes",
-        "Learn Automating Literature Reviews"
+      "module_title": "Academic Research Tools",
+      "duration": "8 Hours",
+      "hours": 8,
+      "module_purpose": "Discover, screen, and compare academic literature using Google Scholar, Semantic Scholar, and Consensus or Elicit, assessing study methodology and evidence quality responsibly.",
+      "learning_objectives": [
+        "Navigate Google Scholar and Semantic Scholar to locate relevant peer-reviewed papers, preprints, and citation networks.",
+        "Utilize Consensus or Elicit for question-based paper discovery, study screening, and structured metadata extraction.",
+        "Apply inclusion and exclusion criteria to screen titles, abstracts, and accessible full-text studies.",
+        "Identify basic study designs, interpret sample sizes, and distinguish correlation from causation.",
+        "Assess research quality, identify methodological limitations and retractions, and build structured study comparison matrices."
       ],
-      "lessons": [
-        {
-          "lesson_number": "3.1",
-          "lesson_title": "NotebookLM Workflows",
-          "what_is_taught": "Fundamentals of NotebookLM Workflows",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice NotebookLM Workflows in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.2",
-          "lesson_title": "Comparing Multiple Documents",
-          "what_is_taught": "Fundamentals of Comparing Multiple Documents",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Comparing Multiple Documents in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.3",
-          "lesson_title": "Extracting Key Themes",
-          "what_is_taught": "Fundamentals of Extracting Key Themes",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Extracting Key Themes in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.4",
-          "lesson_title": "Automating Literature Reviews",
-          "what_is_taught": "Fundamentals of Automating Literature Reviews",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Automating Literature Reviews in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "topics_covered": [
+        "Academic research ecosystem",
+        "Scholarly search fundamentals",
+        "Google Scholar",
+        "Search by topic",
+        "Search by paper title",
+        "Search by author",
+        "Date filters",
+        "Citation tracking",
+        "Related articles",
+        "Cited-by networks",
+        "Finding full-text sources",
+        "Open-access articles",
+        "Paywalled articles and legal access",
+        "Semantic Scholar",
+        "Semantic academic search",
+        "Paper metadata",
+        "Citation relationships",
+        "Author and publication information",
+        "DOI fundamentals",
+        "Journal and conference papers",
+        "Preprints versus peer-reviewed papers",
+        "Consensus fundamentals",
+        "Elicit fundamentals",
+        "Selecting Consensus or Elicit for primary practical work",
+        "AI-assisted paper discovery",
+        "Research question matching",
+        "Study screening",
+        "Inclusion/exclusion criteria",
+        "Title and abstract review",
+        "Full-text review where accessible",
+        "Study design identification",
+        "Qualitative versus quantitative research awareness",
+        "Observational versus experimental studies",
+        "Sample size interpretation basics",
+        "Population and context relevance",
+        "Methodological limitations",
+        "Research bias",
+        "Confounding factors awareness",
+        "Correlation versus causation",
+        "Statistical significance awareness",
+        "Effect-size interpretation awareness",
+        "Comparing study findings",
+        "Conflicting findings",
+        "Retractions and corrections",
+        "Research quality assessment",
+        "Structured literature comparison",
+        "Reference management",
+        "Avoiding fabricated papers",
+        "Academic integrity",
+        "Human review of AI synthesis"
       ],
-      "key_concepts": [
-        "NotebookLM Workflows",
-        "Comparing Multiple Documents",
-        "Extracting Key Themes",
-        "Automating Literature Reviews"
+      "hands_on_exercises": [
+        "Google Scholar & Semantic Scholar Discovery: Track a landmark academic paper, map its 'cited by' network, and locate open-access PDFs.",
+        "Consensus / Elicit Paper Screening: Use Consensus or Elicit to screen 10 papers answering a specific research question, logging study designs and sample sizes.",
+        "Methodology Audit Exercise: Evaluate 2 empirical studies on the same topic with conflicting results and identify methodological differences."
       ],
-      "tools": [
-        "Perplexity",
-        "NotebookLM",
-        "Consensus"
+      "practical_assignment": {
+        "title": "Academic Literature Discovery & Study Comparison",
+        "scenario": "Select a focused academic or industry research question, execute paper discovery across Google Scholar, Semantic Scholar, and Consensus or Elicit, screen studies against formal inclusion criteria, and build a structured study comparison matrix.",
+        "deliverables": [
+          "Research question and defined academic scope statement",
+          "Search log across Google Scholar, Semantic Scholar, and Consensus/Elicit",
+          "Shortlist of 6-8 relevant studies with metadata and stable DOIs",
+          "Inclusion and exclusion screening rationale log",
+          "Methodological summary for each study (design, sample, population)",
+          "Structured study comparison matrix comparing findings and effect directions",
+          "Identified study limitations, confounding factors, and conflicting evidence",
+          "Annotated bibliography confirming publication authenticity and non-retraction"
+        ],
+        "expected_competency": "Students can discover relevant academic literature, screen studies systematically, and compare findings without overclaiming scientific certainty."
+      },
+      "assessment_criteria": "Precision of search strategies, rigor of study screening, accuracy of extracted study metadata, and balanced synthesis of conflicting findings."
+    },
+    {
+      "module_number": "Module 04",
+      "module_title": "Document-Grounded Research",
+      "duration": "8 Hours",
+      "hours": 8,
+      "module_purpose": "Ingest authorized documents into Gemini Notebook, trace in-text citations to original source passages, verify numerical data, and synthesize multi-document findings into evidence matrices.",
+      "learning_objectives": [
+        "Ingest authorized business and research documents into Gemini Notebook and manage source libraries.",
+        "Execute source-grounded queries and extract key factual statements, numerical tables, and quotations.",
+        "Navigate in-text citations directly to original source passages to verify exact textual support.",
+        "Detect hallucinated inferences, missing information, and numerical discrepancies across uploaded sources.",
+        "Synthesize multi-document perspectives into transparent evidence matrices with verification status tagging."
       ],
-      "hands_on_practice": "Lab focused on Deep Document Analysis",
-      "assignment": "Module 3 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "topics_covered": [
+        "Document-grounded research fundamentals",
+        "Gemini Notebook",
+        "Legacy NotebookLM terminology awareness",
+        "Research notebooks",
+        "Uploading authorized documents",
+        "PDF analysis",
+        "Supported source formats",
+        "Source organization",
+        "Working with multiple documents",
+        "Document summarization",
+        "Source-grounded questions",
+        "Extracting key statements",
+        "Data and fact extraction",
+        "Table extraction awareness",
+        "Identifying source passages",
+        "In-text citation navigation",
+        "Citation tracing",
+        "Direct versus indirect support",
+        "Source mapping",
+        "Claim-to-source relationships",
+        "Cross-document comparison",
+        "Contradictory evidence",
+        "Identifying missing information",
+        "Recognizing unsupported inferences",
+        "Checking numerical extraction",
+        "Checking dates and names",
+        "Checking direct quotations",
+        "Context preservation",
+        "Research synthesis",
+        "Thematic analysis fundamentals",
+        "Evidence matrix preparation",
+        "Document version differences",
+        "Source freshness",
+        "Research source limitations",
+        "Hallucination awareness",
+        "Human verification",
+        "Privacy and confidentiality",
+        "Copyright permissions",
+        "Data access restrictions",
+        "Exporting verified findings"
+      ],
+      "hands_on_exercises": [
+        "Notebook Grounding & Ingestion Lab: Upload 3 lengthy policy or research PDFs into Gemini Notebook, configure thematic notes, and execute grounded queries.",
+        "Citation Tracing Audit: Trace 10 AI-generated citation anchors to exact document page paragraphs and confirm verbatim agreement.",
+        "Multi-Document Synthesis Matrix: Cross-examine conflicting forecasts across 2 market research reports and construct an evidence resolution matrix."
+      ],
+      "practical_assignment": {
+        "title": "Multi-Document Evidence Synthesis",
+        "scenario": "Analyze an authorized or synthetic collection of research documents (industry report, statistics bulletin, and research paper). Ingest files into Gemini Notebook, trace citations, identify conflicting claims, and compile an evidence synthesis brief.",
+        "deliverables": [
+          "Gemini Notebook structure with organized source inventory",
+          "Executive summaries for each ingested document",
+          "Claim-to-source mapping matrix detailing exact page and paragraph references",
+          "Citation verification log tagging claims (Verified, Partially Supported, Unsupported)",
+          "Numerical accuracy audit verifying extracted statistics, tables, and dates",
+          "Cross-document comparison identifying consensus and contradictions",
+          "Missing-information audit highlighting questions unanswered by sources",
+          "Final evidence synthesis brief ready for stakeholder review"
+        ],
+        "expected_competency": "Students can analyze multiple documents, trace claims back to original passages, detect AI omissions, and produce a transparent evidence synthesis."
+      },
+      "assessment_criteria": "Completeness of source mapping, 100% citation verification accuracy, rigor of numerical checks, and clarity of synthesis."
+    },
+    {
+      "module_number": "Module 05",
+      "module_title": "Research Reporting & Capstone",
+      "duration": "8 Hours",
+      "hours": 8,
+      "module_purpose": "Structure, write, visualize, and defend professional, evidence-based research reports with complete audit trails, annotated bibliographies, and clear limitation statements.",
+      "learning_objectives": [
+        "Structure professional research reports including executive summaries, methodologies, findings, and recommendations.",
+        "Incorporate evidence matrices and study comparison tables to provide transparent audit trails for all assertions.",
+        "Format consistent, traceable citations using reference management tools (Zotero or equivalent).",
+        "Articulate research limitations, confidence intervals, and distinguish empirical facts from strategic interpretations.",
+        "Complete and defend the two capstone portfolio reports (Market Intelligence Report & Literature Review)."
+      ],
+      "topics_covered": [
+        "Professional research reporting",
+        "Research report structure",
+        "Executive summaries",
+        "Research objectives",
+        "Methodology descriptions",
+        "Source documentation",
+        "Search strategy reporting",
+        "Evidence matrices",
+        "Claim-to-source mapping",
+        "Annotated bibliographies",
+        "Study comparison tables",
+        "Evidence quality scoring",
+        "Research synthesis",
+        "Quantitative evidence interpretation basics",
+        "Qualitative theme identification",
+        "Data visualization",
+        "Selecting appropriate charts",
+        "Source-based statistics",
+        "Proper citation formatting",
+        "Citation-management tools",
+        "Consistent reference styles",
+        "Citation verification",
+        "Research limitations",
+        "Uncertainty statements",
+        "Missing evidence",
+        "Conflicting findings",
+        "Evidence strength",
+        "Implications",
+        "Business recommendations",
+        "Research conclusions",
+        "Distinguishing facts from recommendations",
+        "AI-assisted writing transparency",
+        "Research ethics",
+        "Plagiarism prevention",
+        "Human editorial review",
+        "Research presentation",
+        "Stakeholder communication",
+        "Portfolio defense",
+        "Final quality assessment",
+        "Research improvement recommendations"
+      ],
+      "hands_on_exercises": [
+        "Executive Summary Drafting Workshop: Convert a 20-page research synthesis into a punchy, 2-page executive brief with clear takeaway callouts.",
+        "Data Visualization & Chart Selection: Create 2 clean, accessible charts visualizing verified survey or market data in Google Sheets.",
+        "Pre-Flight Capstone Quality Audit: Apply the 10-step verification protocol to audit both capstone reports before final submission."
+      ],
+      "practical_assignment": {
+        "title": "Two Assessed Research Capstone Reports",
+        "scenario": "Finalize and present the two mandatory assessed research reports: (1) Market & Competitive Intelligence Report and (2) Academic or Industry Literature Review, complete with evidence matrices, traceable citations, and documented limitations.",
+        "deliverables": [
+          "Report 01: Evidence-Verified Market & Competitive Intelligence Report with business recommendations",
+          "Report 02: Evidence-Based Literature Review & Study Comparison with study methodology matrix",
+          "Comprehensive Evidence Matrices linking every claim to original sources and verification tags",
+          "Annotated Bibliographies formatted in standard citation style (APA/Harvard)",
+          "Methodology and Search Strategy documentation for both reports",
+          "Transparent statements of research limitations, uncertainties, and data gaps",
+          "Signed verification checklist confirming 100% human source review"
+        ],
+        "expected_competency": "Students can prepare professional, evidence-backed research reports with traceable citations, transparent limitations, and defensible business or academic conclusions."
+      },
+      "assessment_criteria": "Methodological transparency, 100% citation traceability, clarity of executive summaries, separation of facts from inferences, and professional presentation."
+    }
+  ],
+  "portfolio": {
+    "title": "Two Assessed Research Reports",
+    "description": "Two comprehensive, professionally verified research deliverables demonstrating market intelligence analysis, academic study screening, evidence matrices, and traceable reporting.",
+    "deliverables": [
+      {
+        "deliverable_number": 1,
+        "title": "Market & Competitive Intelligence Report",
+        "project_title": "Evidence-Verified Market & Competitive Intelligence Report",
+        "category": "Market & Business Intelligence",
+        "description": "A structured business research report investigating an industry, market opportunity, or competitive landscape. Features market definitions, competitor profiling, product claim verification, evidence matrices, and practical business recommendations.",
+        "included_artifacts": [
+          "Business research objective and defined market scope",
+          "Comprehensive search queries and Perplexity discovery logs",
+          "Competitor profile matrix comparing features, pricing, and positioning",
+          "Evidence Matrix mapping claim IDs, source URLs, publication dates, and verification tags",
+          "Verification notes distinguishing independent data from promotional claims",
+          "Visual charts illustrating market trends and competitor share",
+          "Executive summary and actionable business recommendations",
+          "Complete list of verified primary and secondary citations"
+        ]
+      },
+      {
+        "deliverable_number": 2,
+        "title": "Academic or Industry Literature Review",
+        "project_title": "Evidence-Based Literature Review & Study Comparison",
+        "category": "Academic & Scholarly Research",
+        "description": "A disciplined literature review evaluating current empirical evidence on a focused academic or industry question. Features scholarly search strategies, study screening logs, study comparison matrices, limitation analyses, and traceable bibliographies.",
+        "included_artifacts": [
+          "Literature review objective and primary research question",
+          "Search logs across Google Scholar, Semantic Scholar, and Consensus/Elicit",
+          "Inclusion and exclusion screening rationale log",
+          "Study shortlist (6-8 empirical papers) with DOIs and metadata",
+          "Study Comparison Matrix detailing methodologies, sample sizes, and main findings",
+          "Analysis of conflicting findings, research gaps, and confounding variables",
+          "Annotated bibliography formatted in consistent academic citation style",
+          "Synthesis brief with explicit statements of research limitations and confidence"
+        ]
+      }
+    ],
+    "overall_requirements": [
+      "Every deliverable clearly distinguishes between original evidence, AI-generated drafts, verified findings, student interpretations, and recommendations.",
+      "All factual assertions must trace directly to existing, accessible sources; zero fabricated citations or hallucinated statistics are permitted.",
+      "Every finding in both reports must be cross-referenced within an Evidence Matrix or Study Comparison Matrix.",
+      "All claims must be audited using the 10-step Research Verification Protocol prior to final evaluation.",
+      "Both reports are compiled into a professional research portfolio suitable for presentation to corporate stakeholders, clients, or academic advisors."
+    ]
+  },
+  "verification_system": {
+    "protocol_name": "10-Step Evidence Verification Protocol",
+    "description": "A rigorous, systematic verification methodology applied to all research findings prior to inclusion in client or stakeholder deliverables.",
+    "steps": [
+      {
+        "step": 1,
+        "name": "Source Existence",
+        "action": "Confirm that the cited publication, website, or document actually exists in the real world."
+      },
+      {
+        "step": 2,
+        "name": "Source Identity",
+        "action": "Verify title, author, publisher, publication date, DOI/URL, and ensure the correct version is referenced."
+      },
+      {
+        "step": 3,
+        "name": "Source Content",
+        "action": "Open and inspect the original source document or authorized accessible full text directly."
+      },
+      {
+        "step": 4,
+        "name": "Claim Support",
+        "action": "Locate the exact passage, paragraph, table, figure, or statistic supporting the assertion."
+      },
+      {
+        "step": 5,
+        "name": "Context Review",
+        "action": "Evaluate whether the evidence is quoted, summarized, or paraphrased fairly without cherry-picking."
+      },
+      {
+        "step": 6,
+        "name": "Source Quality",
+        "action": "Assess author credibility, peer-review status, sample size, methodology, conflicts of interest, and retractions."
+      },
+      {
+        "step": 7,
+        "name": "Cross-Check",
+        "action": "Seek independent corroborating evidence across competing sources to evaluate consensus."
+      },
+      {
+        "step": 8,
+        "name": "Classification",
+        "action": "Categorize claim: Verified, Partially Supported, Unsupported, Contradicted, or Unverifiable With Available Access."
+      },
+      {
+        "step": 9,
+        "name": "Reporting",
+        "action": "Present claims with appropriate epistemic qualifiers; eliminate unsupported claims or explicitly document uncertainty."
+      },
+      {
+        "step": 10,
+        "name": "Audit Trail",
+        "action": "Maintain a comprehensive research log and Evidence Matrix documenting all verification steps."
+      }
+    ]
+  },
+  "modernization_and_review": {
+    "cadence": "Quarterly (Every 3 Months)",
+    "core_modernization_rules": [
+      "Strictly reject claims that AI research tools produce 100% verified citations or eliminate the need to read sources.",
+      "Acknowledge that AI search engines may misinterpret text, omit negative findings, or prioritize SEO-indexed materials.",
+      "Adopt current product name Gemini Notebook (explaining NotebookLM only as historical context).",
+      "Ensure research workflows are achievable on free/accessible tiers without compulsory Perplexity Pro or Consensus Pro subscriptions.",
+      "Emphasize that AI citation discovery is the starting point for verification, never the proof of truth."
+    ],
+    "quarterly_review_checklist": [
+      "1. Verify Perplexity features, citation display formats, and free vs Pro tier boundaries.",
+      "2. Audit Gemini Notebook capabilities, source upload limits, and in-text citation mechanisms.",
+      "3. Review Google Scholar search syntax, citation metrics, and export functionality.",
+      "4. Review Semantic Scholar features, metadata APIs, and citation influence graphs.",
+      "5. Inspect Consensus features, search quotas, and study summarization accuracy.",
+      "6. Inspect Elicit features, screening workflows, and free vs paid systematic-review limits.",
+      "7. Review ChatGPT Deep Research availability, multi-step synthesis performance, and source coverage.",
+      "8. Review Gemini Deep Research availability and integration with Google Workspace.",
+      "9. Audit academic research interfaces, DOI resolvers, and open-access search repositories.",
+      "10. Verify citation management tool plugins (Zotero) and metadata capture accuracy.",
+      "11. Review data privacy, intellectual property, and copyright guidelines for uploaded papers.",
+      "12. Identify deprecated research features and update practical lab instructions.",
+      "13. Review institutional academic integrity policies and generative AI disclosure standards.",
+      "14. Document all quarterly review findings and preserve curriculum alignment with industry best practice."
+    ]
+  },
+  "official_references": [
+    {
+      "topic": "Google Gemini Notebook",
+      "url": "https://support.google.com/gemininotebook/answer/16164461",
+      "note": "Official documentation on Gemini Notebook source upload and analysis."
+    },
+    {
+      "topic": "Gemini Notebook Citations",
+      "url": "https://support.google.com/gemininotebook/answer/16179559",
+      "note": "Official guide on in-text citation navigation and verifying grounded claims."
+    },
+    {
+      "topic": "Google Scholar Help",
+      "url": "https://scholar.google.com/intl/us/scholar/help.html",
+      "note": "Search operators, citation tracking, and author profile navigation."
+    },
+    {
+      "topic": "Semantic Scholar",
+      "url": "https://www.semanticscholar.org/",
+      "note": "Semantic academic search engine and paper influence graphing."
+    },
+    {
+      "topic": "Consensus — How It Works",
+      "url": "https://help.consensus.app/en/articles/9922673-how-consensus-works",
+      "note": "Methodology behind consensus scoring and study summarization."
+    },
+    {
+      "topic": "Consensus Search Best Practices",
+      "url": "https://help.consensus.app/en/articles/9922660-how-to-search-best-practices",
+      "note": "Query formulation and research question matching guidelines."
+    },
+    {
+      "topic": "Elicit — Systematic Reviews & Limits",
+      "url": "https://support.elicit.com/en/articles/14759154-systematic-reviews-in-elicit",
+      "note": "Guidance on study screening, information extraction, and platform limits."
+    },
+    {
+      "topic": "Elicit — Evaluation & Accuracy",
+      "url": "https://support.elicit.com/en/articles/14758226-evaluating-elicit",
+      "note": "Official documentation on error rates, extraction fidelity, and human review."
+    },
+    {
+      "topic": "Perplexity Research Best Practices",
+      "url": "https://www.perplexity.ai/en-GB/hub/blog/ai-research",
+      "note": "Effective research queries, domain filtering, and citation verification."
+    },
+    {
+      "topic": "ChatGPT Deep Research",
+      "url": "https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt",
+      "note": "Multi-step research reasoning, query decomposition, and source coverage."
+    }
+  ],
+  "skill_boundaries": {
+    "included": [
+      "Research question design, problem statements, and scope definition",
+      "Boolean search strategies, keyword trees, and advanced search operators",
+      "AI-assisted web research, competitor profiling, and market intelligence (Perplexity)",
+      "Scholarly literature search and study screening (Google Scholar, Semantic Scholar)",
+      "AI paper discovery and structured extraction (Consensus or Elicit)",
+      "Document-grounded analysis and in-text citation tracing (Gemini Notebook)",
+      "Evidence matrix construction, claim mapping, and verification tagging (Google Sheets)",
+      "Methodological limitation analysis, conflicting evidence synthesis, and research ethics",
+      "Professional report authoring (Executive Summaries, Market Briefs, Literature Reviews)"
+    ],
+    "excluded": [
+      "Full academic research-methods degree or formal post-graduate thesis qualification",
+      "PRISMA-compliant publication-grade systematic review certification or meta-analysis",
+      "Advanced econometric, biostatistical, or clinical trial modeling",
+      "Complex R or Python statistical programming and custom regression pipelines",
+      "Database engineering, SQL pipelines, or enterprise ETL data architectures",
+      "Custom AI agent development, Python SDK coding, or autonomous bot deployment",
+      "Scraping restricted databases, paywall circumvention, or copyright infringement"
+    ],
+    "course_differentiation": {
+      "vs_prompt_engineering": "Course 41 (Prompt Engineering) covers foundational prompt mechanics across multiple LLM providers. Course 47 teaches disciplined research methodology, scholarly discovery, and empirical evidence verification.",
+      "vs_chatgpt_mastery": "Course 44 (ChatGPT for Work) focuses on workplace writing, Canvas workflows, and Python data analysis. Course 47 specializes in multi-platform research discovery, academic screening, and evidence verification.",
+      "vs_gemini_mastery": "Course 45 (Gemini & Workspace AI) teaches Google Workspace productivity (Gmail, Docs, Sheets, Slides). Course 47 utilizes Gemini Notebook specifically for citation verification, alongside Perplexity, Scholar, and Consensus/Elicit.",
+      "vs_claude_productivity": "Course 46 (Claude for Productivity) focuses on document synthesis, Claude Projects, Skills, and Artifacts. Course 47 focuses on cross-source evidence evaluation, literature reviews, and market intelligence across specialized research engines."
+    }
+  },
+  "certification": {
+    "title": "Nova Skills Certified AI Research & Evidence Verification Specialist",
+    "issuing_body": "Nova Skills School of Artificial Intelligence & Applied Technology",
+    "credential_level": "Applied Skill Certification",
+    "assessment_model": "100% Practical Portfolio Evaluation & Evidence Verification Audit",
+    "criteria": "Successful submission and verification of both assessed research reports (Market Intelligence Report and Literature Review) with 100% citation traceability, complete evidence matrices, and signed verification logs.",
+    "verification_method": "Digital credential verification with unique portfolio verification URL and QR code on novaskills.in portal.",
+    "institutional_disclaimer": "This is an independent industry skill certification issued by Nova Skills upon rigorous practical evaluation. It is not an official certification issued directly by Perplexity, Google, Consensus, or Elicit."
+  },
+  "faq": [
+    {
+      "question": "What is AI Research & Evidence Verification?",
+      "answer": "AI Research & Evidence Verification is a comprehensive 5-week, 40-hour practical certification course teaching professionals and students how to conduct disciplined market, business, and academic research using modern AI research tools, verify claims against primary sources, and author trustworthy reports."
+    },
+    {
+      "question": "Is this course suitable for beginners?",
+      "answer": "Yes. The course begins with foundational research question design, search operators, and evidence hierarchies before progressing to specialized AI tools, document grounding, and literature comparison. Anyone with basic computer and document literacy can succeed."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course runs for 5 Weeks with 40 instructional hours (8 hours per week: 4 hours live technical instruction plus 4 hours supervised studio lab). The tuition fee is exactly ₹5,900 plus applicable 18% GST (totaling ₹6,962), adhering to our transparent Truth in Pricing policy."
+    },
+    {
+      "question": "Which AI research tools will I learn?",
+      "answer": "You will master Perplexity for web and market intelligence, Gemini Notebook for document-grounded research, Google Scholar and Semantic Scholar for scholarly discovery, and Consensus or Elicit for academic evidence synthesis."
+    },
+    {
+      "question": "Will I learn Perplexity?",
+      "answer": "Yes. Module 02 provides dedicated training in Perplexity workflows, multi-stage query formulation, citation inspection, claim tracing, and separating marketing claims from verified business data."
+    },
+    {
+      "question": "Does the course include Gemini Notebook?",
+      "answer": "Yes. Module 04 covers Gemini Notebook (formerly NotebookLM), focusing on uploading PDFs, navigating in-text citations, verifying factual statements directly in source text, and cross-document comparison."
+    },
+    {
+      "question": "Will I learn Google Scholar and Semantic Scholar?",
+      "answer": "Yes. Module 03 teaches you how to search scholarly publications, track citation networks, filter by date and author, navigate DOIs, and access open-access full-text research papers."
+    },
+    {
+      "question": "Does the course teach Consensus or Elicit?",
+      "answer": "Yes. Module 03 covers question-based academic paper discovery, study screening, sample size evaluation, and structured information extraction using Consensus or Elicit."
+    },
+    {
+      "question": "Do I need paid research software?",
+      "answer": "No. All core learning outcomes and mandatory portfolio projects are fully achievable using free accounts, accessible educational platforms, instructor demonstrations, and sample datasets. No paid subscriptions are required."
+    },
+    {
+      "question": "What is source verification?",
+      "answer": "Source verification is the systematic process of confirming that an AI-cited document actually exists, opening the original text, locating the exact supporting passage, checking its context, and evaluating the author's credibility."
+    },
+    {
+      "question": "Can AI-generated citations be incorrect?",
+      "answer": "Yes. AI answer engines can hallucinate non-existent papers, misattribute claims, misquote numbers, or cite legitimate papers that do not actually support the assertion. That is why independent human verification is a mandatory skill taught in this course."
+    },
+    {
+      "question": "Will I learn academic literature research?",
+      "answer": "Yes. You will learn how to screen academic studies against inclusion/exclusion criteria, evaluate study designs, interpret sample relevance, and synthesize findings across multiple papers."
+    },
+    {
+      "question": "Does the course cover market and competitor intelligence?",
+      "answer": "Yes. Module 02 focuses extensively on industry trend research, competitor benchmarking, business model analysis, customer research, and auditing product claims."
+    },
+    {
+      "question": "Will I learn how to compare research studies?",
+      "answer": "Yes. You will learn to construct structured study comparison matrices that contrast sample sizes, methodologies, geographic contexts, and identify contradictory or inconclusive findings."
+    },
+    {
+      "question": "What is an evidence matrix?",
+      "answer": "An evidence matrix is a structured table (built in Google Sheets) that maps every factual claim to its source title, URL, publication date, exact supporting passage, verification status, and quality rating."
+    },
+    {
+      "question": "How many portfolio projects will I complete?",
+      "answer": "You will complete exactly two primary assessed research reports: (1) an Evidence-Verified Market & Competitive Intelligence Report, and (2) an Evidence-Based Academic or Industry Literature Review."
+    },
+    {
+      "question": "Will I learn to write professional research reports?",
+      "answer": "Yes. Module 05 teaches professional report architecture, executive summaries, methodology documentation, data visualization, and transparent statements of limitations and uncertainty."
+    },
+    {
+      "question": "Does this qualify me to conduct formal systematic reviews?",
+      "answer": "No. The course teaches foundational literature screening and comparative synthesis. It does not qualify you to conduct formal publication-grade PRISMA systematic reviews or statistical meta-analyses."
+    },
+    {
+      "question": "Does the course include advanced statistics?",
+      "answer": "No. Advanced statistical programming (R/Python), econometric regressions, and complex biostatistical modeling are excluded. The focus is on qualitative synthesis, evidence evaluation, and reporting."
+    },
+    {
+      "question": "Is this an official certification from a research platform?",
+      "answer": "No. This is an independent professional skill certification issued by Nova Skills based on practical portfolio evaluation. Nova Skills is an independent educational institution."
+    },
+    {
+      "question": "What career applications are possible?",
+      "answer": "Graduates apply these skills in roles such as Junior Market Research Assistant, Competitive Intelligence Research Assistant, Business Research Executive, Academic Research Support Coordinator, and Freelance Research Specialist."
+    },
+    {
+      "question": "How is this different from the ChatGPT, Gemini and Claude productivity courses?",
+      "answer": "While Courses 44, 45, and 46 teach general workplace productivity within individual AI ecosystems, Course 47 specializes in multi-platform research discovery, academic study screening, evidence verification, and citation traceability."
+    }
+  ],
+  "seo": {
+    "meta_title": "AI Research Course | 5 Weeks, ₹5,900 | Nova Skills",
+    "meta_description": "Learn AI-assisted research, Perplexity, Gemini Notebook, scholarly search and citation verification. Build 2 assessed reports in 5 weeks, 40 hours, for ₹5,900.",
+    "primary_keyword": "AI Research Course",
+    "secondary_keywords": [
+      "AI Research Course in India",
+      "AI Research Tools Training",
+      "AI Research & Evidence Verification",
+      "AI-Assisted Research Course",
+      "Perplexity AI Research Course",
+      "Gemini Notebook Course",
+      "Google Scholar Training",
+      "Academic Research with AI",
+      "AI Market Research Course",
+      "AI Competitive Intelligence Course",
+      "Literature Review with AI",
+      "Consensus AI Training",
+      "Elicit AI Research",
+      "AI Citation Verification",
+      "Research Report Writing Course",
+      "AI Research Course Fees",
+      "AI Research Course Duration",
+      "AI Research for Beginners"
+    ],
+    "canonical_url": "https://novaskills.in/course-detail.html?id=ai-research-tools",
+    "h1": "AI Research & Evidence Verification",
+    "hero_hook": "Research Faster. Verify Better. Turn Information Into Trustworthy Insights."
+  },
+  "icon": "🔍",
+  "color": "linear-gradient(135deg, #0599a8, #75d766)",
+  "category": "AI Academy",
+  "status": "active",
+  "url": "/course-detail.html?id=ai-research-tools",
+  "rating": 4.9,
+  "reviews": 118,
+  "students": 620,
+  "liveProjects": 2,
+  "projects": 2,
+  "certificate": true,
+  "placementSupport": false,
+  "futureReviewStatus": "STABLE_2027",
+  "tags": [
+    "popular",
+    "research",
+    "evidence-verification",
+    "perplexity",
+    "academic-search",
+    "certification"
+  ],
+  "curriculum": [
+    {
+      "module": "Module 01",
+      "title": "Research Foundations & Question Design",
+      "lessons": 40,
+      "duration": "8 Hours",
+      "topics": [
+        "Introduction to professional research",
+        "Research versus general information searching",
+        "Business research fundamentals",
+        "Market research fundamentals",
+        "Academic research fundamentals",
+        "Research objectives",
+        "Research problem statements",
+        "Defining research scope",
+        "Formulating research questions",
+        "Exploratory versus descriptive research awareness",
+        "Research hypotheses as a foundational concept",
+        "Research assumptions",
+        "Research limitations",
+        "Research methodology awareness",
+        "Search strategy development",
+        "Keyword identification",
+        "Search synonyms",
+        "Search operators",
+        "Boolean search fundamentals",
+        "Exact phrase searches",
+        "Date and source filters",
+        "Source selection",
+        "Primary versus secondary sources",
+        "Tertiary sources",
+        "Research evidence hierarchies",
+        "Study design awareness",
+        "Official statistics",
+        "Company and institutional reports",
+        "Peer-reviewed publications",
+        "Preprints and working papers",
+        "Credibility and source authority",
+        "Publication dates",
+        "Conflicts of interest",
+        "Research ethics",
+        "Plagiarism awareness",
+        "Appropriate citation practices",
+        "Copyright and access considerations",
+        "Research documentation",
+        "Research reproducibility fundamentals",
+        "Responsible AI assistance"
+      ]
+    },
+    {
+      "module": "Module 02",
+      "title": "AI-Powered Web & Market Research",
+      "lessons": 40,
+      "duration": "8 Hours",
+      "topics": [
+        "AI-assisted web research fundamentals",
+        "Search engines versus AI answer engines",
+        "Perplexity interface and research workflows",
+        "AI-supported question refinement",
+        "Multi-stage research questions",
+        "Search result interpretation",
+        "Following source links",
+        "Citation inspection",
+        "Checking quoted claims",
+        "Primary-source discovery",
+        "Company research",
+        "Market intelligence",
+        "Industry trend research",
+        "Competitor analysis",
+        "Product and service comparisons",
+        "Business model research",
+        "Market segmentation fundamentals",
+        "Target customer research",
+        "Public financial information awareness",
+        "Official and institutional statistics",
+        "Competitive positioning",
+        "Product claim verification",
+        "Comparing competing information",
+        "Differentiating advertising from evidence",
+        "Evaluating sponsored or promotional claims",
+        "Research recency",
+        "Source provenance",
+        "Search-supported AI limitations",
+        "ChatGPT Deep Research awareness",
+        "Gemini Deep Research awareness",
+        "Research plans",
+        "Reviewing research reports",
+        "Checking report citations",
+        "Claim-to-source mapping",
+        "Research tracking spreadsheets",
+        "Evidence gaps",
+        "Confidence and uncertainty",
+        "Business recommendations",
+        "Research presentation",
+        "Research quality control"
+      ]
+    },
+    {
+      "module": "Module 03",
+      "title": "Academic Research Tools",
+      "lessons": 50,
+      "duration": "8 Hours",
+      "topics": [
+        "Academic research ecosystem",
+        "Scholarly search fundamentals",
+        "Google Scholar",
+        "Search by topic",
+        "Search by paper title",
+        "Search by author",
+        "Date filters",
+        "Citation tracking",
+        "Related articles",
+        "Cited-by networks",
+        "Finding full-text sources",
+        "Open-access articles",
+        "Paywalled articles and legal access",
+        "Semantic Scholar",
+        "Semantic academic search",
+        "Paper metadata",
+        "Citation relationships",
+        "Author and publication information",
+        "DOI fundamentals",
+        "Journal and conference papers",
+        "Preprints versus peer-reviewed papers",
+        "Consensus fundamentals",
+        "Elicit fundamentals",
+        "Selecting Consensus or Elicit for primary practical work",
+        "AI-assisted paper discovery",
+        "Research question matching",
+        "Study screening",
+        "Inclusion/exclusion criteria",
+        "Title and abstract review",
+        "Full-text review where accessible",
+        "Study design identification",
+        "Qualitative versus quantitative research awareness",
+        "Observational versus experimental studies",
+        "Sample size interpretation basics",
+        "Population and context relevance",
+        "Methodological limitations",
+        "Research bias",
+        "Confounding factors awareness",
+        "Correlation versus causation",
+        "Statistical significance awareness",
+        "Effect-size interpretation awareness",
+        "Comparing study findings",
+        "Conflicting findings",
+        "Retractions and corrections",
+        "Research quality assessment",
+        "Structured literature comparison",
+        "Reference management",
+        "Avoiding fabricated papers",
+        "Academic integrity",
+        "Human review of AI synthesis"
+      ]
+    },
+    {
+      "module": "Module 04",
+      "title": "Document-Grounded Research",
+      "lessons": 40,
+      "duration": "8 Hours",
+      "topics": [
+        "Document-grounded research fundamentals",
+        "Gemini Notebook",
+        "Legacy NotebookLM terminology awareness",
+        "Research notebooks",
+        "Uploading authorized documents",
+        "PDF analysis",
+        "Supported source formats",
+        "Source organization",
+        "Working with multiple documents",
+        "Document summarization",
+        "Source-grounded questions",
+        "Extracting key statements",
+        "Data and fact extraction",
+        "Table extraction awareness",
+        "Identifying source passages",
+        "In-text citation navigation",
+        "Citation tracing",
+        "Direct versus indirect support",
+        "Source mapping",
+        "Claim-to-source relationships",
+        "Cross-document comparison",
+        "Contradictory evidence",
+        "Identifying missing information",
+        "Recognizing unsupported inferences",
+        "Checking numerical extraction",
+        "Checking dates and names",
+        "Checking direct quotations",
+        "Context preservation",
+        "Research synthesis",
+        "Thematic analysis fundamentals",
+        "Evidence matrix preparation",
+        "Document version differences",
+        "Source freshness",
+        "Research source limitations",
+        "Hallucination awareness",
+        "Human verification",
+        "Privacy and confidentiality",
+        "Copyright permissions",
+        "Data access restrictions",
+        "Exporting verified findings"
+      ]
+    },
+    {
+      "module": "Module 05",
+      "title": "Research Reporting & Capstone",
+      "lessons": 40,
+      "duration": "8 Hours",
+      "topics": [
+        "Professional research reporting",
+        "Research report structure",
+        "Executive summaries",
+        "Research objectives",
+        "Methodology descriptions",
+        "Source documentation",
+        "Search strategy reporting",
+        "Evidence matrices",
+        "Claim-to-source mapping",
+        "Annotated bibliographies",
+        "Study comparison tables",
+        "Evidence quality scoring",
+        "Research synthesis",
+        "Quantitative evidence interpretation basics",
+        "Qualitative theme identification",
+        "Data visualization",
+        "Selecting appropriate charts",
+        "Source-based statistics",
+        "Proper citation formatting",
+        "Citation-management tools",
+        "Consistent reference styles",
+        "Citation verification",
+        "Research limitations",
+        "Uncertainty statements",
+        "Missing evidence",
+        "Conflicting findings",
+        "Evidence strength",
+        "Implications",
+        "Business recommendations",
+        "Research conclusions",
+        "Distinguishing facts from recommendations",
+        "AI-assisted writing transparency",
+        "Research ethics",
+        "Plagiarism prevention",
+        "Human editorial review",
+        "Research presentation",
+        "Stakeholder communication",
+        "Portfolio defense",
+        "Final quality assessment",
+        "Research improvement recommendations"
+      ]
+    }
+  ],
+  "seo_title": "AI Research Course | 5 Weeks, ₹5,900 | Nova Skills",
+  "meta_title": "AI Research Course | 5 Weeks, ₹5,900 | Nova Skills",
+  "seo_description": "Learn AI-assisted research, Perplexity, Gemini Notebook, scholarly search and citation verification. Build 2 assessed reports in 5 weeks, 40 hours, for ₹5,900.",
+  "meta_description": "Learn AI-assisted research, Perplexity, Gemini Notebook, scholarly search and citation verification. Build 2 assessed reports in 5 weeks, 40 hours, for ₹5,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=ai-research-tools",
+  "what_you_will_build": [
+    {
+      "deliverable_number": 1,
+      "title": "Market & Competitive Intelligence Report",
+      "project_title": "Evidence-Verified Market & Competitive Intelligence Report",
+      "category": "Market & Business Intelligence",
+      "description": "A structured business research report investigating an industry, market opportunity, or competitive landscape. Features market definitions, competitor profiling, product claim verification, evidence matrices, and practical business recommendations.",
+      "included_artifacts": [
+        "Business research objective and defined market scope",
+        "Comprehensive search queries and Perplexity discovery logs",
+        "Competitor profile matrix comparing features, pricing, and positioning",
+        "Evidence Matrix mapping claim IDs, source URLs, publication dates, and verification tags",
+        "Verification notes distinguishing independent data from promotional claims",
+        "Visual charts illustrating market trends and competitor share",
+        "Executive summary and actionable business recommendations",
+        "Complete list of verified primary and secondary citations"
+      ]
+    },
+    {
+      "deliverable_number": 2,
+      "title": "Academic or Industry Literature Review",
+      "project_title": "Evidence-Based Literature Review & Study Comparison",
+      "category": "Academic & Scholarly Research",
+      "description": "A disciplined literature review evaluating current empirical evidence on a focused academic or industry question. Features scholarly search strategies, study screening logs, study comparison matrices, limitation analyses, and traceable bibliographies.",
+      "included_artifacts": [
+        "Literature review objective and primary research question",
+        "Search logs across Google Scholar, Semantic Scholar, and Consensus/Elicit",
+        "Inclusion and exclusion screening rationale log",
+        "Study shortlist (6-8 empirical papers) with DOIs and metadata",
+        "Study Comparison Matrix detailing methodologies, sample sizes, and main findings",
+        "Analysis of conflicting findings, research gaps, and confounding variables",
+        "Annotated bibliography formatted in consistent academic citation style",
+        "Synthesis brief with explicit statements of research limitations and confidence"
+      ]
     }
   ]
 }

@@ -1,471 +1,1125 @@
 {
   "course_id": "ai-automation-n8n",
-  "course_name": "AI Automation with n8n",
+  "id": "ai-automation-n8n",
+  "slug": "ai-automation-n8n",
+  "course_name": "AI Automation with n8n & Business Workflows",
+  "title": "AI Automation with n8n & Business Workflows",
+  "name": "AI Automation with n8n & Business Workflows",
+  "academic_sequence": 42,
+  "curriculum_edition": "2027 Edition",
   "academy": "AI Academy",
   "academy_id": "ai",
-  "course_type": "SPECIALIZATION",
-  "course_role": "Career/Monetization",
-  "level": "INTERMEDIATE",
-  "duration": "2 Months",
-  "learning_hours": 80,
-  "future_review_status": "FAST-CHANGING",
-  "target_audience": {
-    "best_for": [
-      "Professionals looking to master AI Automation with n8n.",
-      "Forward-thinking individuals aiming to integrate AI tools into their workflows.",
-      "Tech enthusiasts looking to build practical, deployable AI projects."
-    ],
-    "who_should_take_foundation_first": "Beginners lacking basic digital literacy should take foundation courses first.",
-    "not_for": [
-      "Those looking for abstract theory without hands-on practice.",
-      "Individuals expecting overnight success without building real projects."
-    ]
+  "academyId": "ai",
+  "academic_positioning": "Low-Code AI Automation, Visual Workflow Engineering & Business Process Integration",
+  "specialization": "Low-Code AI Automation & Business Workflow Development",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "Junior AI Automation Specialist & n8n Workflow Developer",
+  "level": "Intermediate",
+  "priority": "Highest Commercial Priority",
+  "duration": "8 Weeks",
+  "durationMonths": 2,
+  "duration_weeks": 8,
+  "learning_hours": 64,
+  "learningHours": 64,
+  "guided_hours": 64,
+  "hours": 64,
+  "weekly_workload": "8 Hours / Week (4 Hours Live Technical Instruction + 4 Hours Supervised Workflow Studio Lab)",
+  "mode": "Online Interactive Labs & Guided Automation Studio",
+  "price": 9900,
+  "fee": "INR 9900 + applicable GST",
+  "regular_fee": 9900,
+  "originalPrice": 9900,
+  "commercial_notice": "Transparent institutional tuition: INR 9,900 + applicable taxes. Truth in Pricing with zero artificial countdown discounts, inflated strike-throughs or fake retail offers.",
+  "pricing": {
+    "regular_fee": 9900,
+    "gst_percentage": "18%",
+    "gst_amount": 1782,
+    "total_fee_with_gst": 11682,
+    "discount": "0%",
+    "currency": "INR",
+    "pricing_model": "Truth in Pricing — Transparent institutional fee with zero fake countdown discounts.",
+    "installments": "One-time payment of ₹9,900 or split across 2 monthly installments of ₹4,950."
   },
-  "prerequisites": {
-    "required": "Basic computer literacy and understanding of web applications.",
-    "recommended": "Familiarity with the domain relevant to the tools.",
-    "system_requirements": {
-      "hardware": "Standard laptop/PC with internet connection",
-      "software_accounts": "n8n, OpenAI API, Google Sheets, Slack, Airtable"
-    },
-    "not_required": "Advanced programming degrees"
+  "tagline": "Stop Repeating Tasks. Start Building AI-Powered Business Workflows.",
+  "hero_headline": "Stop Repeating Tasks. Start Building AI-Powered Business Workflows.",
+  "hero_supporting_heading": "From Your First n8n Workflow to Four Working Business Automations — Learn Integrations, AI, APIs and Reliable Delivery.",
+  "hero_supporting_headline": "From Your First n8n Workflow to Four Working Business Automations — Learn Integrations, AI, APIs and Reliable Delivery.",
+  "h1": "AI Automation with n8n & Business Workflows",
+  "hero": {
+    "hook": "Stop Repeating Tasks. Start Building AI-Powered Business Workflows.",
+    "subheading": "From Your First n8n Workflow to Four Working Business Automations — Learn Integrations, AI, APIs and Reliable Delivery.",
+    "target_role": "Junior AI Automation Specialist & Low-Code Workflow Developer",
+    "badge": "Highest Commercial Priority — Practical 2027 Workflow Curriculum"
   },
+  "short_description": "Learn practical AI automation with n8n, APIs, webhooks, Google Workspace and connected business tools. Build, test and troubleshoot real-world workflows for lead management, email operations, document processing and business reporting.",
+  "shortDesc": "Learn practical AI automation with n8n, APIs, webhooks, Google Workspace and connected business tools. Build, test and troubleshoot real-world workflows for lead management, email operations, document processing and business reporting.",
+  "full_description": "Learn how to automate repetitive business tasks using n8n, connected applications, REST APIs, webhooks and AI-powered workflow components.\n\nThis practical AI Automation with n8n & Business Workflows course teaches business process mapping, workflow design, event triggers, conditional logic, JSON data handling, API integration and reliable automation development.\n\nGain hands-on experience connecting Google Sheets, Gmail, Google Drive, Google Forms or equivalent form sources, basic CRM systems and AI models using n8n's visual workflow environment.\n\nLearn to develop lead-management workflows, AI-assisted email classification, structured document processing and scheduled business reporting.\n\nUnderstand how to use AI models responsibly for classification, information extraction and decision support while applying human approval, output validation and controlled error handling.\n\nBuild professional skills in debugging, retries, duplicate prevention, credential security, workflow documentation, testing and basic business ROI estimation.\n\nComplete four working, tested automation workflows that demonstrate practical business value and are suitable for a professional portfolio.\n\nThe programme focuses on building dependable, maintainable low-code automation solutions rather than complex custom software, enterprise infrastructure or autonomous multi-agent systems.",
+  "fullDesc": "Learn how to automate repetitive business tasks using n8n, connected applications, REST APIs, webhooks and AI-powered workflow components.\n\nThis practical AI Automation with n8n & Business Workflows course teaches business process mapping, workflow design, event triggers, conditional logic, JSON data handling, API integration and reliable automation development.\n\nGain hands-on experience connecting Google Sheets, Gmail, Google Drive, Google Forms or equivalent form sources, basic CRM systems and AI models using n8n's visual workflow environment.\n\nLearn to develop lead-management workflows, AI-assisted email classification, structured document processing and scheduled business reporting.\n\nUnderstand how to use AI models responsibly for classification, information extraction and decision support while applying human approval, output validation and controlled error handling.\n\nBuild professional skills in debugging, retries, duplicate prevention, credential security, workflow documentation, testing and basic business ROI estimation.\n\nComplete four working, tested automation workflows that demonstrate practical business value and are suitable for a professional portfolio.\n\nThe programme focuses on building dependable, maintainable low-code automation solutions rather than complex custom software, enterprise infrastructure or autonomous multi-agent systems.",
+  "description": "Learn practical AI automation with n8n, APIs, webhooks, Google Workspace and connected business tools. Build, test and troubleshoot real-world workflows for lead management, email operations, document processing and business reporting.",
   "overview": {
-    "positioning": "Building self-hosted, enterprise-grade AI automation pipelines and webhook orchestrations using n8n and LLM APIs.",
-    "short_description": "Learn to leverage n8n, OpenAI API, Google Sheets to solve real problems.",
+    "positioning": "Practical Low-Code AI Automation & Dependable Business Workflow Engineering",
+    "core_philosophy": "Stop Repeating Tasks. Start Building AI-Powered Business Workflows.",
     "key_facts": {
-      "level": "INTERMEDIATE",
-      "duration": "2 Months",
-      "format": "Hands-On Projects",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "4 Projects",
-      "capstone": "Final Delivery Project",
-      "ai_integration": "AI-CRITICAL",
-      "career_focus": "AI Practitioner"
+      "level": "Intermediate",
+      "duration": "8 Weeks",
+      "format": "Online Interactive Labs & Guided Automation Studio",
+      "estimated_learning_hours": "64 Hours (8 Weeks × 8 Hours/Week)",
+      "project_count": "4 Working Portfolio Workflows",
+      "capstone": "Four Business Automation Workflows with Human Review & Error Recovery",
+      "ai_integration": "Practical AI Workflow Components (Classification, Extraction, Structured JSON)",
+      "career_focus": "Junior AI Automation Specialist, n8n Workflow Developer, Business Process Executive"
     },
     "what_you_will_be_able_to_do": [
-      "Implement AI-driven workflows.",
-      "Master tools like n8n, OpenAI API.",
-      "Deploy functional projects to production."
+      "Map manual business processes into structured, logic-driven automation blueprints.",
+      "Build multi-step low-code workflows in n8n using triggers, actions, and conditional IF/Switch routing.",
+      "Integrate Google Sheets, Gmail, Google Drive, and form endpoints with bi-directional data synchronization.",
+      "Connect external REST APIs using HTTP Request nodes, query parameters, headers, and OAuth/API key authentication.",
+      "Embed OpenAI and Gemini models for text classification, entity extraction, and structured JSON generation.",
+      "Implement human-in-the-loop approval gates before sensitive actions (such as customer-facing email dispatch).",
+      "Safeguard workflows against duplicate submissions and replay errors using idempotency keys and upsert logic.",
+      "Build resilient error triggers, retry strategies with exponential backoff, and failure notification fallbacks.",
+      "Deliver four fully documented, tested business automations accompanied by runbooks, test logs, and ROI estimates."
     ]
   },
-  "why_now": {
-    "industry_shift": "Organizations are ditching expensive per-task SaaS tools like Zapier in favor of open-source, cost-efficient n8n automation infrastructure.",
-    "ai_impact": "n8n AI agent nodes enable complex autonomous routing, document parsing, and database synchronizations without coding backend servers.",
-    "business_demand": "Companies are actively seeking practitioners skilled in modern AI tools.",
-    "career_opportunity": "Early adopters can secure high-leverage roles."
+  "why_now": "In 2027, modern businesses no longer rely on brittle manual data entry or complex custom-coded integrations for standard operations. Low-code automation platforms like n8n, combined with AI capabilities, empower professionals to build scalable, observable, and intelligent business workflows in hours rather than months. Organizations urgently require specialists who understand workflow logic, API authentication, error handling, and responsible human approval.",
+  "icon": "🤖",
+  "color": "linear-gradient(135deg, #0599a8, #FF6B00)",
+  "rating": 4.9,
+  "reviews": 188,
+  "students": 940,
+  "liveProjects": 4,
+  "projects": 4,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=ai-automation-n8n",
+  "tags": [
+    "trending",
+    "high-priority",
+    "automation",
+    "n8n"
+  ],
+  "featured": false,
+  "future_review_status": "FAST-CHANGING",
+  "target_audience": [
+    "Students interested in AI automation and low-code engineering",
+    "Digital marketing professionals seeking to automate campaign reporting and lead capture",
+    "Freelancers expanding their services to include workflow automation for clients",
+    "Business owners and operators aiming to eliminate repetitive manual admin tasks",
+    "Office and operations professionals managing multi-tool administrative processes",
+    "CRM and lead-management executives handling inbound lead qualification",
+    "Marketing operations assistants managing newsletters and customer notifications",
+    "Entrepreneurs building lean, automated business infrastructure",
+    "Agency professionals handling client reporting, onboarding, and asset workflows",
+    "No-code and low-code enthusiasts wanting deep visual orchestration skills",
+    "Professionals automating repetitive business tasks across Google Workspace and APIs"
+  ],
+  "prerequisites": "Basic computer and web-application familiarity. Learners should understand general workplace tools (such as spreadsheets, forms, and email) and be comfortable navigating visual software interfaces. No prior coding, Python, or engineering background is required; all JSON, REST API, webhook, and logic concepts are taught step-by-step from foundational principles.",
+  "highlights": [
+    "n8n Visual Workflow Development",
+    "Business Process Mapping & Blueprints",
+    "Google Workspace Bi-Directional Integrations",
+    "REST APIs, Webhooks & JSON Data Mapping",
+    "AI-Powered Data Classification & Extraction",
+    "Lead Management & Qualification Pipelines",
+    "AI Email Drafting with Human Approval Gates",
+    "Document Processing & Structured Data Parsing",
+    "Scheduled Reporting & Metric Calculations",
+    "Error Handling, Retries & Failure Routing",
+    "Credential Security & Idempotency Safeguards",
+    "Four Working Portfolio Workflows with Test Logs",
+    "Client Handover Documentation & ROI Estimation"
+  ],
+  "tools": [
+    "n8n",
+    "Google Sheets",
+    "Google Workspace",
+    "Gmail",
+    "Google Drive",
+    "Google Forms",
+    "REST APIs",
+    "OpenAI API",
+    "Gemini API",
+    "Postman",
+    "Webhook.site",
+    "CRM Sandbox"
+  ],
+  "tools_taxonomy": {
+    "primary_platform": "n8n (Visual Canvas, Nodes, Connections, Triggers, Execution Engine, Expressions)",
+    "workspace_integrations": "Google Sheets, Google Workspace, Gmail, Google Drive, Google Forms",
+    "api_and_data_utilities": "REST APIs (GET/POST/PUT/PATCH/DELETE), JSON Mapping, Webhook.site, Postman",
+    "ai_models": "OpenAI API (GPT-4o), Google Gemini API (Gemini 1.5 Pro) for classification, extraction, and structured JSON",
+    "crm_and_operations": "Simulated CRM Sandbox, Lead Qualification Records, Webhook Listeners"
   },
+  "licensing_notice": "n8n is a source-available, fair-code licensed workflow automation platform with cloud and self-hosted options, subject to applicable licensing terms. The self-hosted Community edition is governed by n8n's Sustainable Use License. Nova Skills teaches practical workflow development, cloud/self-hosted deployment differences, and commercial licensing boundaries for client projects.",
+  "hands_on_tech": [
+    "n8n Visual Canvas & Execution History",
+    "Webhook Triggers (Test vs Production)",
+    "Schedule & Manual Event Triggers",
+    "JSON Data Transformation & Expressions",
+    "IF & Switch Conditional Routing Nodes",
+    "Google Sheets Read/Write/Update Nodes",
+    "Gmail Message Parsing & Draft Creation",
+    "Google Drive File Uploads & Permissions",
+    "HTTP Request Node with Header/Query Config",
+    "Basic AI Agent & LLM Chain Nodes",
+    "Human Approval Checkpoints",
+    "Error Trigger & Fallback Notification Nodes"
+  ],
   "learning_outcomes": [
-    "DESIGN architectures utilizing n8n.",
-    "BUILD practical solutions for business needs.",
-    "DEPLOY projects adhering to best practices."
+    "Map manual business workflows into structured automation blueprints with clear triggers, inputs, actions, and decision trees.",
+    "Build, test, and troubleshoot multi-step workflows on the n8n canvas using current node configurations and execution data.",
+    "Manipulate JSON item arrays, write expressions to transform fields, and route records dynamically using IF and Switch logic.",
+    "Integrate Google Sheets, Gmail, Google Drive, and form endpoints for reliable bi-directional record creation and updates.",
+    "Connect external REST APIs using HTTP Request nodes with proper authentication headers, query parameters, and error handling.",
+    "Incorporate OpenAI and Gemini API nodes to perform text classification, entity extraction, and structured JSON generation.",
+    "Implement human-in-the-loop review checkpoints to ensure sensitive communications (like client emails) require manual sign-off.",
+    "Design robust error-handling pipelines with Error Triggers, automatic retries with backoff, and alert notifications.",
+    "Prevent duplicate actions and webhook replay hazards using unique idempotency identifiers and upsert operations.",
+    "Adhere to credential security standards, managing API secrets safely without exposing them in exported JSON files.",
+    "Develop four fully functional, tested business automation workflows accompanied by empirical test logs and recovery demos.",
+    "Package workflows for client delivery with executive runbooks, cost monitoring estimates, and realistic automation ROI analyses."
   ],
-  "learning_journey": {
-    "stages": [
+  "course_boundaries": {
+    "included": [
+      "Business process mapping and repetitive task analysis",
+      "n8n canvas navigation, node connections, and execution history",
+      "Schedule, webhook, and app-based triggers",
+      "JSON data structures, expressions, and field transformations",
+      "Conditional routing with IF and Switch nodes",
+      "Google Workspace integrations (Sheets, Gmail, Drive, Forms)",
+      "REST API communication (GET, POST, PUT, PATCH, DELETE) via HTTP Request node",
+      "API key and OAuth credential management",
+      "AI text classification, lead scoring, and information extraction",
+      "Structured JSON generation and schema validation fundamentals",
+      "Basic AI Agent node concepts and tool restrictions",
+      "Human-in-the-loop approval workflows",
+      "Error handling, Error Triggers, and failure notifications",
+      "Retry strategies, backoff concepts, and idempotency safeguards",
+      "Credential security, secret masking, and data privacy",
+      "API usage cost monitoring and execution volume forecasting",
+      "Client handover documentation, runbooks, and ROI estimation"
+    ],
+    "excluded": [
+      "Advanced Python, JavaScript, or custom node development",
+      "Full-stack software engineering or backend application coding",
+      "Database schema architecture, raw SQL engineering, or indexing",
+      "Vector database setup (Pinecone, Weaviate, Qdrant, Chroma)",
+      "Enterprise Retrieval-Augmented Generation (RAG) architecture",
+      "Complex multi-agent orchestration (CrewAI, AutoGen, LangGraph)",
+      "Autonomous self-governing multi-agent systems",
+      "Enterprise Kubernetes clustering and high-availability hosting",
+      "Production-scale AI observability pipelines",
+      "Enterprise CRM administrative provisioning (Salesforce Admin)"
+    ],
+    "course_relationships": [
       {
-        "stage": "Stage 1",
-        "focus": "n8n Workspace Setup & Basics"
+        "course": "Course 41: Prompt Engineering & AI Output Evaluation",
+        "distinction": "Focuses on prompt design, context engineering, schema-constrained LLM outputs, and empirical cross-model evaluation. Course 42 focuses on integrating these AI outputs into multi-step low-code workflows and business systems."
       },
       {
-        "stage": "Stage 2",
-        "focus": "Connecting APIs & Data Manipulation"
+        "course": "Course 42: AI Automation with n8n & Business Workflows",
+        "distinction": "Focuses on visual workflow building, low-code API integrations, Google Workspace connectivity, reliability, testing, and practical business automation."
       },
       {
-        "stage": "Stage 3",
-        "focus": "Integrating OpenAI & Logic"
+        "course": "AI Productivity Professional",
+        "distinction": "Covers broad workplace productivity with desktop and web AI applications, whereas Course 42 builds automated backend workflows."
       },
       {
-        "stage": "Stage 4",
-        "focus": "Multi-Step Workflows & Deployment"
+        "course": "AI for Business Professional",
+        "distinction": "Focuses on strategic business AI planning, roadmap development, and management decisions rather than hands-on node workflow construction."
+      },
+      {
+        "course": "AI Solutions Engineering & Agentic AI Mastery",
+        "distinction": "Covers advanced Python AI engineering, custom API development, multi-agent frameworks, vector search, and production infrastructure."
       }
     ]
   },
-  "hands_on_tech": {
-    "core_tools": [
-      {
-        "tool": "n8n",
-        "purpose": "Essential for AI Automation with n8n.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
-      },
-      {
-        "tool": "OpenAI API",
-        "purpose": "Essential for AI Automation with n8n.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
-      },
-      {
-        "tool": "Google Sheets",
-        "purpose": "Essential for AI Automation with n8n.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
-      },
-      {
-        "tool": "Slack",
-        "purpose": "Essential for AI Automation with n8n.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
-      },
-      {
-        "tool": "Airtable",
-        "purpose": "Essential for AI Automation with n8n.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
-      }
-    ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
-  },
-  "industry_workflow": {
-    "overview": "Standard operations:",
-    "stages": [
-      {
-        "step": 1,
-        "name": "Discovery",
-        "desc": "Identify the problem."
-      },
-      {
-        "step": 2,
-        "name": "Tool Selection",
-        "desc": "Choose the right AI stack."
-      },
-      {
-        "step": 3,
-        "name": "Implementation",
-        "desc": "Build the workflow."
-      },
-      {
-        "step": 4,
-        "name": "Deployment",
-        "desc": "Launch and monitor."
-      }
-    ]
-  },
-  "business_use_cases": [
+  "not_covered": [
+    "Custom Python coding or backend server development",
+    "Vector databases and enterprise RAG pipelines",
+    "Multi-agent autonomous orchestration frameworks (CrewAI, LangGraph)",
+    "Enterprise Kubernetes clustering and self-hosted high-availability n8n architecture",
+    "Production-scale database engineering and complex SQL optimization",
+    "Official n8n software certifications or unverified third-party accreditations"
+  ],
+  "career_paths": [
     {
-      "sector": "Technology",
-      "business_problem": "Inefficient processes",
-      "approach": "AI automation",
-      "toolset": "n8n",
-      "output": "Optimized workflow"
+      "role": "Junior AI Automation Specialist",
+      "domain": "AI & Low-Code Engineering",
+      "description": "Design, build, and maintain automated workflows connecting business apps, webhooks, and AI model endpoints."
+    },
+    {
+      "role": "n8n Workflow Developer",
+      "domain": "Operations & Integration",
+      "description": "Develop visual automation pipelines in n8n, integrating spreadsheets, databases, CRMs, and email systems."
+    },
+    {
+      "role": "Business Automation Executive",
+      "domain": "Process Optimization",
+      "description": "Analyze manual company workflows, identify automation opportunities, and deploy low-code solutions."
+    },
+    {
+      "role": "Low-Code Automation Specialist",
+      "domain": "Digital Transformation",
+      "description": "Bridge business operations and digital tools by connecting disparate SaaS platforms without custom code."
+    },
+    {
+      "role": "Marketing Automation Assistant",
+      "domain": "Growth & Marketing Ops",
+      "description": "Automate inbound lead capture, CRM qualification, email drafting, and weekly performance reporting."
+    },
+    {
+      "role": "Workflow Integration Executive",
+      "domain": "IT & Systems Operations",
+      "description": "Connect cloud tools via REST APIs and webhooks, monitoring execution logs and debugging error triggers."
+    },
+    {
+      "role": "Business Process Automation Assistant",
+      "domain": "Enterprise Operations",
+      "description": "Map administrative procedures, implement automated document processing, and track time-saving metrics."
+    },
+    {
+      "role": "AI Workflow Support Executive",
+      "domain": "Technical Support & QA",
+      "description": "Monitor running workflows, inspect failed executions, verify AI outputs, and maintain operational runbooks."
+    },
+    {
+      "role": "Freelance Automation Consultant — Entry Level",
+      "domain": "Independent Consulting",
+      "description": "Deliver practical, small-business automations for client lead routing, customer onboarding, and reporting."
     }
   ],
-  "ai_integration": {
-    "role_classification": "AI-CRITICAL",
-    "ai_can_assist_with": "Ideation and drafting.",
-    "ai_can_automate": "Repetitive execution.",
-    "ai_cannot_replace": "Strategic decision making.",
-    "human_expertise_required": "Quality assurance.",
-    "validation_protocol": "Manual review of outputs.",
-    "responsible_use": "Adherence to data privacy."
-  },
-  "best_practices": [
-    "Iterate rapidly.",
-    "Verify all AI outputs.",
-    "Maintain organized project files."
-  ],
-  "common_mistakes": [
-    {
-      "mistake": "Trusting AI blindly.",
-      "why_it_happens": "Overconfidence.",
-      "professional_approach": "Always verify output."
-    }
-  ],
-  "career_paths": {
-    "entry_roles": "AI Specialist",
-    "mid_roles": "AI Architect",
-    "specialist_roles": "Automation Consultant",
-    "freelance_roles": "AI Freelancer",
-    "employer_expectations": "Proven ability to deploy AI solutions.",
-    "what_student_demonstrates": "Portfolio of working projects."
-  },
-  "freelance_applications": {
-    "services_offered": [
-      "AI Integration",
-      "Workflow Automation"
-    ],
-    "client_workflow": "Consult -> Build -> Deploy -> Maintain",
-    "portfolio_requirements": "Working prototypes."
-  },
-  "what_you_will_build": [
-    "Project focused on n8n Workspace Setup & Basics",
-    "Project focused on Connecting APIs & Data Manipulation",
-    "Project focused on Integrating OpenAI & Logic",
-    "Project focused on Multi-Step Workflows & Deployment"
-  ],
-  "final_deliverables": [
-    "Code repository or live app",
-    "Documentation"
-  ],
-  "assessment": {
-    "model": "Project-based evaluation",
-    "criteria": "Functionality and clean execution."
-  },
   "certification": {
-    "title": "Certified AI Automation with n8n Professional",
-    "criteria": "Completion of all projects.",
-    "verification": "Online portal."
+    "type": "Institution-Issued Course Completion Certificate",
+    "issuer": "Nova Skills",
+    "title": "Certificate of Completion in AI Automation with n8n & Business Workflows",
+    "description": "Awarded upon successful completion of all six curriculum modules, supervised laboratory assessments, and verified submission of four working, tested business automation workflows.",
+    "disclaimer": "This credential is an institutional certificate of completion issued by Nova Skills. It is not an official certification issued or endorsed by n8n, OpenAI, or Google. Course completion does not guarantee employment, freelance client acquisition, or specific commercial revenue."
   },
-  "not_covered": "Theoretical machine learning math.",
-  "next_learning_path": {
-    "recommended_next": "Advanced AI Architecture",
-    "related_programs": "Other AI Academy courses."
-  },
-  "faq": [
-    {
-      "question": "Is AI Automation with n8n for beginners?",
-      "answer": "Check the prerequisites, but generally we start from practical basics."
-    },
-    {
-      "question": "Will I build real projects?",
-      "answer": "Yes, every module includes hands-on builds."
-    },
-    {
-      "question": "Are the tools free?",
-      "answer": "Most tools have free tiers sufficient for learning."
-    }
-  ],
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "n8n Workspace Setup & Basics",
-      "module_purpose": "Install and navigate the n8n environment.",
-      "what_you_will_learn": [
-        "Learn Self-hosting vs Cloud",
-        "Learn Interface Navigation",
-        "Learn Core Nodes Overview",
-        "Learn Credential Management"
+      "module_number": 1,
+      "module": "Module 01",
+      "number": "01",
+      "title": "Business Process & Automation Fundamentals",
+      "duration": "8 Hours",
+      "hours": 8,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Understand business automation principles, evaluate manual workflows for automation suitability, map end-to-end data flows, and establish n8n deployment and licensing foundations.",
+      "topics": [
+        "Introduction to business automation",
+        "Manual versus automated processes",
+        "Workflow automation versus AI automation",
+        "Business process identification",
+        "Repetitive task analysis",
+        "Process mapping",
+        "Workflow diagrams",
+        "Process inputs and outputs",
+        "Triggers and actions",
+        "Events and schedules",
+        "Conditional decisions",
+        "Business rules",
+        "Data-flow planning",
+        "Process owners",
+        "Human responsibilities",
+        "Automation suitability assessment",
+        "High-volume versus low-volume tasks",
+        "Repetitive versus judgment-intensive tasks",
+        "Identifying automation risks",
+        "Automation feasibility",
+        "Workflow complexity estimation",
+        "Basic return-on-investment thinking",
+        "Time-saving estimation",
+        "Selecting automation opportunities",
+        "Human-in-the-loop workflows",
+        "Basic privacy considerations",
+        "Low-code versus custom software",
+        "Introduction to n8n and its use cases",
+        "n8n Cloud versus self-hosted options",
+        "n8n licensing fundamentals"
       ],
-      "lessons": [
-        {
-          "lesson_number": "1.1",
-          "lesson_title": "Self-hosting vs Cloud",
-          "what_is_taught": "Fundamentals of Self-hosting vs Cloud",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Self-hosting vs Cloud in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.2",
-          "lesson_title": "Interface Navigation",
-          "what_is_taught": "Fundamentals of Interface Navigation",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Interface Navigation in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.3",
-          "lesson_title": "Core Nodes Overview",
-          "what_is_taught": "Fundamentals of Core Nodes Overview",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Core Nodes Overview in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.4",
-          "lesson_title": "Credential Management",
-          "what_is_taught": "Fundamentals of Credential Management",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Credential Management in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "hands_on_tools": [
+        "Process Flowcharting Tools",
+        "Spreadsheet ROI Calculators",
+        "n8n Cloud / Community Environment"
       ],
-      "key_concepts": [
-        "Self-hosting vs Cloud",
-        "Interface Navigation",
-        "Core Nodes Overview",
-        "Credential Management"
+      "hands_on_practice": "Analyze a multi-step manual customer inquiry process, construct a visual flowchart with clear decision points, and calculate estimated monthly operational time savings.",
+      "assignment": {
+        "title": "Business Process Automation Blueprint",
+        "description": "Select one realistic business process (e.g., lead capture, invoice routing, or customer onboarding) and produce a complete blueprint specifying the manual problem, inputs, outputs, decision rules, human checkpoints, potential failure points, and time-saving feasibility."
+      },
+      "competencies": [
+        "Ability to analyze manual workflows and determine whether automation is feasible and cost-effective",
+        "Proficiency in drafting structured process flowcharts with defined triggers, actions, and conditional paths",
+        "Accurate understanding of n8n deployment models (Cloud vs Self-Hosted) and fair-code licensing terms"
       ],
-      "tools": [
-        "n8n",
-        "OpenAI API",
-        "Google Sheets"
-      ],
-      "hands_on_practice": "Lab focused on n8n Workspace Setup & Basics",
-      "assignment": "Module 1 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "assessment_criteria": "Assessment evaluates process mapping clarity, logic accuracy, realistic risk identification, and valid time-saving estimation."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Connecting APIs & Data Manipulation",
-      "module_purpose": "Fetch, parse, and transform data.",
-      "what_you_will_learn": [
-        "Learn HTTP Request Node",
-        "Learn JSON & Data Parsing",
-        "Learn Transforming Arrays",
-        "Learn Conditional Logic (Switch/If)"
+      "module_number": 2,
+      "module": "Module 02",
+      "number": "02",
+      "title": "n8n Workflow Building",
+      "duration": "10 Hours",
+      "hours": 10,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Master the n8n canvas, configure trigger and action nodes, manipulate JSON data structures, apply conditional IF and Switch logic, and execute rigorous manual testing.",
+      "topics": [
+        "n8n platform overview",
+        "n8n Cloud and self-hosted environments",
+        "Workspace navigation",
+        "Workflow canvas",
+        "Nodes and connections",
+        "Trigger nodes",
+        "Action nodes",
+        "Manual triggers",
+        "Schedule triggers",
+        "Webhook triggers",
+        "Test versus production webhook concepts",
+        "Webhook URLs and request methods",
+        "Input and output data",
+        "n8n item structure",
+        "JSON basics",
+        "JSON objects and arrays",
+        "Data mapping",
+        "Expressions",
+        "Referencing node outputs",
+        "Editing and transforming fields",
+        "IF node",
+        "Switch node",
+        "Conditional routing",
+        "Merge operations",
+        "Item splitting and batching concepts",
+        "Loop and batch processing fundamentals",
+        "Filtering records",
+        "Date and time transformations",
+        "Workflow execution",
+        "Manual testing",
+        "Pinning sample data",
+        "Workflow execution order",
+        "Workflow activation",
+        "Naming conventions",
+        "Workflow organization",
+        "Workflow documentation",
+        "Import/export fundamentals",
+        "Basic versioning and change management"
       ],
-      "lessons": [
-        {
-          "lesson_number": "2.1",
-          "lesson_title": "HTTP Request Node",
-          "what_is_taught": "Fundamentals of HTTP Request Node",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice HTTP Request Node in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.2",
-          "lesson_title": "JSON & Data Parsing",
-          "what_is_taught": "Fundamentals of JSON & Data Parsing",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice JSON & Data Parsing in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.3",
-          "lesson_title": "Transforming Arrays",
-          "what_is_taught": "Fundamentals of Transforming Arrays",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Transforming Arrays in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.4",
-          "lesson_title": "Conditional Logic (Switch/If)",
-          "what_is_taught": "Fundamentals of Conditional Logic (Switch/If)",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Conditional Logic (Switch/If) in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "hands_on_tools": [
+        "n8n Visual Editor",
+        "JSONLint",
+        "Test Webhook Trigger"
       ],
-      "key_concepts": [
-        "HTTP Request Node",
-        "JSON & Data Parsing",
-        "Transforming Arrays",
-        "Conditional Logic (Switch/If)"
+      "hands_on_practice": "Construct a multi-step n8n workflow from a webhook trigger that parses incoming JSON, routes data using an IF condition, transforms date fields, and outputs clean structured records.",
+      "assignment": {
+        "title": "Multi-Step n8n Workflow Build",
+        "description": "Build an end-to-end n8n workflow that receives structured webhook data, transforms attributes using expressions, routes records via IF/Switch nodes, handles batch items, and produces validated output logs with all secrets removed."
+      },
+      "competencies": [
+        "Mastery of the n8n visual workspace, node configuration panels, and data flow indicators",
+        "Ability to parse, map, and transform JSON items using n8n expressions and field editing nodes",
+        "Proficiency in conditional branching, data pinning for reproducible tests, and workflow JSON export"
       ],
-      "tools": [
-        "n8n",
-        "OpenAI API",
-        "Google Sheets"
-      ],
-      "hands_on_practice": "Lab focused on Connecting APIs & Data Manipulation",
-      "assignment": "Module 2 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "assessment_criteria": "Verified functional execution, correct conditional routing, zero syntax errors in expressions, and clean JSON export."
     },
     {
-      "module_number": "Module 03",
-      "module_title": "Integrating OpenAI & Logic",
-      "module_purpose": "Embed LLM intelligence into workflows.",
-      "what_you_will_learn": [
-        "Learn Calling OpenAI API",
-        "Learn Generating Dynamic Prompts",
-        "Learn Structuring LLM Output",
-        "Learn Building a Q&A Bot"
+      "module_number": 3,
+      "module": "Module 03",
+      "number": "03",
+      "title": "Business Integrations & APIs",
+      "duration": "12 Hours",
+      "hours": 12,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Connect n8n with essential business applications including Google Workspace and CRMs, master REST API fundamentals, and handle HTTP Request nodes with secure credential management.",
+      "topics": [
+        "Application integration fundamentals",
+        "Native n8n integration nodes",
+        "Google Sheets integration",
+        "Reading spreadsheet records",
+        "Creating and updating records",
+        "Duplicate record prevention concepts",
+        "Gmail integration",
+        "Reading relevant messages",
+        "Drafting emails",
+        "Sending notifications in authorized test environments",
+        "Google Drive integration",
+        "File and folder operations",
+        "Google Forms response workflows",
+        "Supported form-to-workflow connection methods",
+        "CRM integration fundamentals",
+        "Contact and lead data concepts",
+        "CRM field mapping",
+        "Create versus update operations",
+        "HTTP fundamentals",
+        "REST API concepts",
+        "HTTP methods: GET, POST, PUT, PATCH and DELETE",
+        "API endpoints",
+        "Request headers",
+        "Query parameters",
+        "Request bodies",
+        "JSON request and response formats",
+        "HTTP status codes",
+        "Authentication fundamentals",
+        "API keys",
+        "OAuth 2.0 concepts",
+        "Credentials management",
+        "Least-privilege permissions",
+        "API rate limits",
+        "Basic pagination concepts",
+        "Webhook.site for testing",
+        "Postman basics",
+        "HTTP Request node",
+        "API response inspection",
+        "Common integration errors",
+        "Integration documentation"
       ],
-      "lessons": [
-        {
-          "lesson_number": "3.1",
-          "lesson_title": "Calling OpenAI API",
-          "what_is_taught": "Fundamentals of Calling OpenAI API",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Calling OpenAI API in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.2",
-          "lesson_title": "Generating Dynamic Prompts",
-          "what_is_taught": "Fundamentals of Generating Dynamic Prompts",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Generating Dynamic Prompts in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.3",
-          "lesson_title": "Structuring LLM Output",
-          "what_is_taught": "Fundamentals of Structuring LLM Output",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Structuring LLM Output in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.4",
-          "lesson_title": "Building a Q&A Bot",
-          "what_is_taught": "Fundamentals of Building a Q&A Bot",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Building a Q&A Bot in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "hands_on_tools": [
+        "Google Sheets",
+        "Gmail Test Account",
+        "Google Drive",
+        "Postman",
+        "Webhook.site",
+        "n8n HTTP Request Node"
       ],
-      "key_concepts": [
-        "Calling OpenAI API",
-        "Generating Dynamic Prompts",
-        "Structuring LLM Output",
-        "Building a Q&A Bot"
+      "hands_on_practice": "Configure an n8n integration connecting Google Forms/Sheets to a simulated CRM sandbox via an authenticated HTTP Request node, with header verification and duplicate checks.",
+      "assignment": {
+        "title": "Connected Business Application Workflow",
+        "description": "Create an authorized multi-application workflow connecting Google Sheets, Gmail/Drive, and an external REST endpoint. Include credential documentation, field mapping tables, Postman test collections, and an integration troubleshooting checklist."
+      },
+      "competencies": [
+        "Ability to integrate Google Workspace nodes (Sheets, Gmail, Drive) for bi-directional data flow",
+        "Deep comprehension of REST API fundamentals, HTTP methods, status codes, and JSON payloads",
+        "Strict adherence to credential security standards, least-privilege scopes, and secret protection"
       ],
-      "tools": [
-        "n8n",
-        "OpenAI API",
-        "Google Sheets"
-      ],
-      "hands_on_practice": "Lab focused on Integrating OpenAI & Logic",
-      "assignment": "Module 3 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "assessment_criteria": "Assessment checks API connection stability, accurate status code handling, field mapping precision, and zero exposed credentials."
     },
     {
-      "module_number": "Module 04",
-      "module_title": "Multi-Step Workflows & Deployment",
-      "module_purpose": "Build complex, error-resistant production flows.",
-      "what_you_will_learn": [
-        "Learn Error Handling Nodes",
-        "Learn Sub-workflows",
-        "Learn Webhook Triggers",
-        "Learn Final Deployment & Monitoring"
+      "module_number": 4,
+      "module": "Module 04",
+      "number": "04",
+      "title": "AI-Powered Workflow Development",
+      "duration": "12 Hours",
+      "hours": 12,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Incorporate OpenAI and Gemini LLMs into business workflows for text classification, extraction, and structured outputs, with human approval gates and token cost management.",
+      "topics": [
+        "AI automation fundamentals",
+        "Rules-based versus AI-assisted automation",
+        "AI model connections",
+        "OpenAI API fundamentals",
+        "Gemini API fundamentals",
+        "API-based model invocation",
+        "Model selection",
+        "Prompt instructions inside workflows",
+        "Context and input mapping",
+        "Text classification",
+        "Lead classification",
+        "Customer enquiry categorization",
+        "Information extraction",
+        "Document summarization",
+        "Structured outputs",
+        "JSON output formats",
+        "Schema validation concepts",
+        "AI output parsing",
+        "Handling missing or incorrect AI fields",
+        "Document processing workflows",
+        "File submission and extraction",
+        "Basic document-type handling",
+        "AI-assisted email drafting",
+        "Human review and approval",
+        "Approval and rejection branches",
+        "AI model error handling",
+        "Basic AI Agent node concepts",
+        "Agent versus deterministic workflow",
+        "Tool selection fundamentals",
+        "Tool-use restrictions",
+        "Prompt injection awareness",
+        "Untrusted document and email content",
+        "AI hallucination limitations",
+        "Output confidence and verification concepts",
+        "AI task evaluation fundamentals",
+        "Test input/output datasets",
+        "Model usage costs",
+        "Token and execution cost awareness",
+        "Avoiding unnecessary AI calls",
+        "Responsible AI automation"
       ],
-      "lessons": [
-        {
-          "lesson_number": "4.1",
-          "lesson_title": "Error Handling Nodes",
-          "what_is_taught": "Fundamentals of Error Handling Nodes",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Error Handling Nodes in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "4.2",
-          "lesson_title": "Sub-workflows",
-          "what_is_taught": "Fundamentals of Sub-workflows",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Sub-workflows in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "4.3",
-          "lesson_title": "Webhook Triggers",
-          "what_is_taught": "Fundamentals of Webhook Triggers",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Webhook Triggers in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "4.4",
-          "lesson_title": "Final Deployment & Monitoring",
-          "what_is_taught": "Fundamentals of Final Deployment & Monitoring",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Final Deployment & Monitoring in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "hands_on_tools": [
+        "OpenAI API (GPT-4o)",
+        "Google Gemini API",
+        "n8n AI / LLM Nodes",
+        "JSON Schema Validator"
       ],
-      "key_concepts": [
-        "Error Handling Nodes",
-        "Sub-workflows",
-        "Webhook Triggers",
-        "Final Deployment & Monitoring"
+      "hands_on_practice": "Design an AI classification pipeline in n8n that routes incoming customer emails, extracts urgency and topic attributes into rigid JSON, and routes low-confidence items to human review.",
+      "assignment": {
+        "title": "AI-Assisted Business Workflow Build",
+        "description": "Build an automated workflow that receives unstructured business text, sends it to an LLM node with structured prompt instructions, enforces schema-valid JSON output, routes approved items, and triggers a human approval alert for sensitive drafts."
+      },
+      "competencies": [
+        "Ability to integrate LLM API nodes into deterministic workflows without unnecessary agent overhead",
+        "Proficiency in enforcing structured JSON outputs and implementing defensive schema validation",
+        "Skill in constructing human-in-the-loop review branches to prevent automated hallucinations from reaching clients"
       ],
-      "tools": [
-        "n8n",
-        "OpenAI API",
-        "Google Sheets"
+      "assessment_criteria": "Evaluated on prompt structure, schema validation resilience, human review trigger accuracy, and token efficiency."
+    },
+    {
+      "module_number": 5,
+      "module": "Module 05",
+      "number": "05",
+      "title": "Reliability, Security & Debugging",
+      "duration": "10 Hours",
+      "hours": 10,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Build resilient workflows that withstand network failures, API rate limits, and bad inputs through Error Triggers, retry strategies, idempotency keys, and security audits.",
+      "topics": [
+        "Workflow reliability fundamentals",
+        "Execution history",
+        "Execution status analysis",
+        "Inspecting node input and output",
+        "Debugging failed executions",
+        "Common node configuration errors",
+        "HTTP/API errors",
+        "Authentication failures",
+        "Rate-limit errors",
+        "Retry strategies",
+        "Retry timing and backoff concepts",
+        "Retry safety",
+        "Error workflows",
+        "Error Trigger",
+        "Stop and Error node concepts",
+        "Failure notifications",
+        "Graceful fallback",
+        "Partial workflow failures",
+        "Data validation",
+        "Required-field validation",
+        "Type and format checking",
+        "Missing-data handling",
+        "Invalid AI output handling",
+        "Duplicate submissions",
+        "Idempotency fundamentals",
+        "Idempotency keys and unique record identifiers",
+        "Safe create-versus-update operations",
+        "Webhook replay risks",
+        "Preventing duplicate emails",
+        "Preventing duplicate CRM records",
+        "Credential protection",
+        "OAuth scopes and permissions",
+        "API key security",
+        "Secret handling",
+        "Webhook authentication",
+        "Sensitive data minimization",
+        "Retention and execution-log privacy",
+        "Prompt-injection awareness",
+        "AI output sanitization and review",
+        "Workflow cost monitoring",
+        "API usage monitoring",
+        "Execution-volume estimates",
+        "Workflow recovery",
+        "Change documentation",
+        "Maintenance and ownership",
+        "Basic operational handover"
       ],
-      "hands_on_practice": "Lab focused on Multi-Step Workflows & Deployment",
-      "assignment": "Module 4 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "hands_on_tools": [
+        "n8n Execution History",
+        "Error Trigger Node",
+        "Postman Error Injection",
+        "Idempotency Validator"
+      ],
+      "hands_on_practice": "Simulate a live API outage and duplicate webhook submissions in a test workflow; configure exponential backoff retries, dedicated Error Trigger alerts, and idempotency key checks.",
+      "assignment": {
+        "title": "Workflow Reliability & Recovery Lab",
+        "description": "Submit a comprehensive reliability audit of an intentionally degraded workflow demonstrating: missing field handling, API error capture, idempotency duplicate prevention, error notification dispatch, and successful re-execution with root cause documentation."
+      },
+      "competencies": [
+        "Mastery of n8n execution inspection, error diagnosis, and root-cause debugging across complex multi-node flows",
+        "Proficiency in configuring Error Trigger workflows and safe exponential backoff retry mechanisms",
+        "Deep understanding of idempotency, duplicate prevention, and sensitive credential protection"
+      ],
+      "assessment_criteria": "Tested on proper failure notification capture, verified duplicate action suppression, and clear recovery documentation."
+    },
+    {
+      "module_number": 6,
+      "module": "Module 06",
+      "number": "06",
+      "title": "Business Projects & Client Delivery",
+      "duration": "12 Hours",
+      "hours": 12,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Gather business requirements, architect production-ready automations, conduct user acceptance testing, author operational runbooks, and package four tested portfolio deliverables.",
+      "topics": [
+        "Client requirement gathering",
+        "Business process discovery",
+        "Stakeholder interviews",
+        "Automation opportunity assessment",
+        "Workflow scope definition",
+        "Inputs and outputs",
+        "Process diagrams",
+        "Tool selection",
+        "Technical feasibility",
+        "Data access requirements",
+        "Workflow architecture",
+        "Test case preparation",
+        "End-to-end implementation",
+        "Integration validation",
+        "Error handling",
+        "Human approval design",
+        "Workflow reliability tests",
+        "User acceptance testing",
+        "Workflow documentation",
+        "Workflow export and handover",
+        "Access and credential handover concepts",
+        "Runbooks",
+        "Support and maintenance expectations",
+        "Cost estimation",
+        "Execution-volume forecasting",
+        "API usage estimation",
+        "Manual time saved",
+        "ROI estimation",
+        "Risk and assumption documentation",
+        "Client demonstrations",
+        "Responsible commercial delivery",
+        "n8n licensing considerations",
+        "Client-facing reporting",
+        "Portfolio case study preparation"
+      ],
+      "hands_on_tools": [
+        "n8n Production Canvas",
+        "Runbook Templates",
+        "Client Demo Environment",
+        "ROI Calculation Sheets"
+      ],
+      "hands_on_practice": "Conduct a mock client discovery session, draft an operational runbook with credential handover checklists, and execute end-to-end user acceptance testing across the four student capstone workflows.",
+      "assignment": {
+        "title": "Four Working Business Automation Capstones & Client Delivery Package",
+        "description": "Finalize, test, and document the four mandatory portfolio workflows (Lead Management, Email Classification with Human Approval, Document Processing, and Scheduled Reporting), including test logs, runbooks, and client handover packages."
+      },
+      "competencies": [
+        "Ability to translate stakeholder business requirements into robust, maintainable low-code automation workflows",
+        "Proficiency in compiling professional operational runbooks, credential handover protocols, and ROI estimates",
+        "Excellence in presenting tested, verified automation systems suitable for client delivery and professional portfolios"
+      ],
+      "assessment_criteria": "Comprehensive evaluation across workflow functionality, test log completeness, error recovery proof, documentation quality, and presentation clarity."
     }
+  ],
+  "what_you_will_build": [
+    {
+      "project_number": 1,
+      "badge": "Portfolio Project 01 — Commercial Inbound Automation",
+      "title": "AI Lead Management Automation",
+      "subtitle": "Enquiry Capture, Qualification & CRM Workflow",
+      "process": "Enquiry Capture → Data Validation → Lead Qualification → Spreadsheet/CRM Record → Notification",
+      "client_brief": "A training institute and high-ticket service provider receives inbound inquiries across web forms and landing pages. Manual handling leads to delayed response times and lost sales opportunities. The client requires an automated workflow to capture leads instantly, validate contact information, score lead intent using AI classification, update a central spreadsheet/CRM, prevent duplicate entries, and alert sales representatives via Slack/Email.",
+      "business_scenario": "Inbound sales and admissions automation for a growing enterprise. Eliminates hours of manual lead copy-pasting, standardizes customer data formatting, and speeds up first-contact response time to under two minutes.",
+      "deliverables": [
+        "Webhook/Form trigger capturing lead name, email, phone, company, and project requirements",
+        "Data validation node verifying email formatting and non-empty mandatory fields",
+        "AI-assisted lead qualification classifying intent (High/Medium/Low priority) and extracting budget category",
+        "Google Sheets integration with conditional create/update logic (upsert) to prevent duplicate leads",
+        "CRM contact and deal record mapping in an authorized sandbox environment",
+        "Automated notification to sales representatives with full lead context and qualification score",
+        "Error Trigger workflow alerting administrators if CRM or spreadsheet API calls fail",
+        "Reproducible n8n workflow JSON export with all credentials safely removed"
+      ],
+      "tools": [
+        "n8n",
+        "Google Sheets",
+        "REST API / CRM Sandbox",
+        "OpenAI API",
+        "Webhook.site"
+      ],
+      "expected_output": "A fully functioning, tested workflow that captures inbound inquiries, scores and qualifies them via LLM extraction, synchronizes clean records to Google Sheets/CRM without duplicates, and delivers instant sales alerts.",
+      "error_handling_and_recovery": {
+        "error_scenarios": "Invalid email syntax, missing phone numbers, CRM API rate-limiting (429), or spreadsheet update timeout.",
+        "recovery_mechanism": "Dedicated Error Trigger captures failed payload, writes error details to a fallback 'Failed Leads' sheet, and sends an urgent notification to the operations team for manual follow-up."
+      },
+      "data_validation_and_security": {
+        "validation_checklist": [
+          "Email regex syntax verification",
+          "Required field presence check (Name, Contact, Inquired Service)",
+          "Unique lead identifier (email hash) used as idempotency key to prevent duplicate entries",
+          "All API keys and webhooks secured within n8n credential store with zero secrets in exports"
+        ]
+      },
+      "test_log": [
+        {
+          "test_id": "TC-LM-01",
+          "scenario": "Normal Successful Execution with Qualified Lead",
+          "input": "{ name: 'Rahul Sharma', email: 'rahul.s@techcorp.in', phone: '+91 9876543210', requirement: 'Enterprise AI training for 25 engineers with budget > ₹2L' }",
+          "expected_result": "Lead validated, classified as 'High Priority Enterprise', record appended to Google Sheets, CRM deal created, Slack notification dispatched.",
+          "actual_result": "Record #1042 created in Sheets; CRM deal ID 9821 returned; Slack alert sent in 1.4s.",
+          "status": "PASS",
+          "error_observed": "None",
+          "corrective_action": "None required",
+          "retest_result": "Verified identical behavior on re-run"
+        },
+        {
+          "test_id": "TC-LM-02",
+          "scenario": "Invalid Input — Malformed Email & Missing Phone",
+          "input": "{ name: 'Anonymous', email: 'bad-email-format', phone: '', requirement: 'test' }",
+          "expected_result": "Validation node rejects record before calling AI or CRM; routes to validation exception branch.",
+          "actual_result": "Validation filter stopped flow at Node 2; error logged with code ERR_INVALID_INPUT.",
+          "status": "PASS",
+          "error_observed": "Malformed email detected",
+          "corrective_action": "Handled gracefully by validation branch without calling downstream paid APIs",
+          "retest_result": "Exception branch verified"
+        },
+        {
+          "test_id": "TC-LM-03",
+          "scenario": "Duplicate Submission Hazard / Replay Attack",
+          "input": "Identical payload from Rahul Sharma submitted twice within 30 seconds",
+          "expected_result": "Idempotency check identifies existing email hash in sheet; updates existing record timestamp without creating duplicate row.",
+          "actual_result": "Row #1042 updated with 'Duplicate Inquiry - Re-contact'; zero duplicate rows created.",
+          "status": "PASS",
+          "error_observed": "Potential duplicate detected",
+          "corrective_action": "Upsert logic activated as designed",
+          "retest_result": "Verified duplicate prevention"
+        }
+      ],
+      "handover_documentation": "Includes complete node topology diagram, step-by-step setup guide for Google Sheets service account, CRM webhook configuration instructions, and environment variable documentation.",
+      "business_value_roi": "Reduces lead response latency from 4 hours to 90 seconds. Saves an estimated 15 hours of manual data entry per week for an active admissions or sales department."
+    },
+    {
+      "project_number": 2,
+      "badge": "Portfolio Project 02 — Controlled AI Communication",
+      "title": "AI Email Classification & Human Approval",
+      "subtitle": "Incoming Email Classification & Draft Response Workflow",
+      "process": "Incoming Email → AI Classification → Draft Response → Human Approval → Approved Next Action",
+      "client_brief": "A customer support and account management department receives hundreds of daily client emails ranging from routine billing questions to urgent technical escalation. The organization wants to use AI to categorize emails and prepare draft responses, but company policy strictly forbids sending automated AI replies without human verification. The client needs a safe workflow that drafts responses, queues them for human approval, and executes next actions only upon explicit sign-off.",
+      "business_scenario": "Safe, human-in-the-loop AI assistance for corporate communication. Eliminates writer's block and routine drafting while guaranteeing 100% human oversight for customer-facing messages.",
+      "deliverables": [
+        "Authorized test inbox trigger reading incoming unread emails",
+        "Text preprocessing node cleaning email threads and extracting sender metadata",
+        "LLM classification node categorizing topic (Billing, Technical Support, General Inquiry, Escalation) and sentiment",
+        "AI response drafting node generating professional, empathetic draft replies using few-shot guidelines",
+        "Human approval request dispatch (via interactive Slack message or email approval link) displaying original inquiry and proposed draft",
+        "Approval/Rejection decision routing: approved drafts move to Gmail draft folder / dispatch; rejected drafts trigger human revision alerts",
+        "Execution audit log recording classification tag, reviewer action, and turnaround latency",
+        "Strict safety isolation ensuring no customer email is ever dispatched automatically without approval"
+      ],
+      "tools": [
+        "n8n",
+        "Gmail Integration",
+        "OpenAI API (GPT-4o)",
+        "Google Sheets (Audit Log)",
+        "Slack / Webhook Notification"
+      ],
+      "expected_output": "A reliable AI-assisted email management system that classifies incoming messages, generates context-aware draft responses, and holds all customer-facing communications in a human approval queue until verified.",
+      "error_handling_and_recovery": {
+        "error_scenarios": "Unintelligible email body, AI hallucinated policy claims, or approval link timeout.",
+        "recovery_mechanism": "If AI classification confidence falls below threshold or JSON parsing fails, the workflow routes the raw email directly to the senior support queue tagged as 'Manual Review Required'."
+      },
+      "data_validation_and_security": {
+        "validation_checklist": [
+          "Removal of internal tracking markers from outbound drafts",
+          "Verification of recipient email against authorized test domain",
+          "Human approval cryptographic token validation before message state changes",
+          "Zero hardcoded API secrets or personal access tokens in exported workflow"
+        ]
+      },
+      "test_log": [
+        {
+          "test_id": "TC-EC-01",
+          "scenario": "Normal Routine Billing Inquiry with Human Approval",
+          "input": "Subject: 'Invoice Copy Request for March 2026', Body: 'Hi team, please send the tax invoice for order #8491.'",
+          "expected_result": "Classified as 'Billing - Invoice Request'; draft generated with invoice retrieval instructions; human approval requested; upon 'Approve', draft saved to Gmail.",
+          "actual_result": "Draft created in Gmail Drafts folder in 2.1s; approval callback received; audit log updated.",
+          "status": "PASS",
+          "error_observed": "None",
+          "corrective_action": "None required",
+          "retest_result": "Verified human sign-off loop"
+        },
+        {
+          "test_id": "TC-EC-02",
+          "scenario": "Urgent Escalation with Negative Sentiment",
+          "input": "Subject: 'URGENT: Portal Down and Data Lost!', Body: 'We cannot access our portal since this morning! Immediate fix needed.'",
+          "expected_result": "Classified as 'High Severity Technical Escalation'; draft expresses empathy; human reviewer notified with high-priority alert banner.",
+          "actual_result": "Priority tag 'P1-ESCALATION' assigned; Slack alert fired with '@channel' tag; human review initiated.",
+          "status": "PASS",
+          "error_observed": "None",
+          "corrective_action": "Validated urgency routing",
+          "retest_result": "Verified escalation pathway"
+        },
+        {
+          "test_id": "TC-EC-03",
+          "scenario": "Rejection of Inappropriate AI Draft",
+          "input": "Customer asks for an unannounced product release date; AI drafts an unverified launch estimate.",
+          "expected_result": "Human reviewer clicks 'Reject' with comment 'Do not speculate on launch dates'; draft discarded; notification routed to product lead.",
+          "actual_result": "Draft deleted from queue; rejection reason logged to audit sheet; zero outbound emails sent.",
+          "status": "PASS",
+          "error_observed": "AI drafted unverified information",
+          "corrective_action": "Successfully intercepted by human gate as designed",
+          "retest_result": "Verified rejection safety branch"
+        }
+      ],
+      "handover_documentation": "Includes email classification taxonomy guide, approval notification template configuration, human reviewer operational guidelines, and fallback escalation runbooks.",
+      "business_value_roi": "Cuts support response drafting time by 60%. Protects brand reputation by ensuring zero hallucinated or unapproved AI text reaches customers."
+    },
+    {
+      "project_number": 3,
+      "badge": "Portfolio Project 03 — Structured Data Extraction",
+      "title": "Document Processing & Structured Extraction",
+      "subtitle": "File Submission, Data Extraction & Record Creation",
+      "process": "Form/File Submission → Document Processing → Structured Extraction → Validation → Record Creation → Exception Handling",
+      "client_brief": "An operations team handles vendor invoices, work orders, and application documents submitted as PDF and image attachments via web forms or shared Google Drive folders. Staff spend 20+ hours each week manually extracting vendor names, dates, line items, tax IDs, and total amounts into operational spreadsheets. The client requires an automated pipeline to extract document text, transform unstructured content into schema-valid JSON, validate mathematical totals, update records, and route exceptions to human operators.",
+      "business_scenario": "Back-office document extraction and accounting data-entry automation. Converts messy PDFs and scanned forms into structured database rows with mathematical validation.",
+      "deliverables": [
+        "Google Drive or form webhook trigger listening for newly uploaded synthetic business documents",
+        "Document ingestion node extracting text and structural content from PDFs and text files",
+        "LLM extraction node configured with strict JSON schema instructions to output vendor, date, line items, GSTIN, and totals",
+        "Field-level validation node checking: (1) valid date format, (2) non-empty vendor name, (3) mathematical equality: Subtotal + Tax = Total",
+        "Google Sheets integration writing validated line items and header records into structured master tables",
+        "Exception handling branch isolating unreadable scans, mathematical mismatches, or missing tax IDs",
+        "Human review notification with direct link to original document and highlighted discrepancies",
+        "Test execution log demonstrating extraction accuracy and controlled failure recovery"
+      ],
+      "tools": [
+        "n8n",
+        "Google Drive",
+        "Google Sheets",
+        "OpenAI API / Gemini API",
+        "JSON Schema Validator"
+      ],
+      "expected_output": "A functional document processing pipeline that parses uploaded files, extracts structured entity data into validated JSON, verifies mathematical integrity, updates spreadsheets, and flags discrepancies for human intervention.",
+      "error_handling_and_recovery": {
+        "error_scenarios": "Corrupt PDF attachment, unreadable low-resolution scan, mathematical discrepancy (e.g. Subtotal + Tax != Total), or missing tax number.",
+        "recovery_mechanism": "Workflow flags record as 'NEEDS_REVIEW', moves file to a 'Pending Inspection' Drive folder, and posts a Slack message with the specific field mismatch for human auditor review."
+      },
+      "data_validation_and_security": {
+        "validation_checklist": [
+          "JSON Schema conformance check against formal schema definition",
+          "Mathematical verification rule: abs((subtotal + tax) - total) < 0.01",
+          "Date format standardization to ISO-8601 (YYYY-MM-DD)",
+          "Exclusion of sensitive personal identification documents; strict use of synthetic test invoices"
+        ]
+      },
+      "test_log": [
+        {
+          "test_id": "TC-DP-01",
+          "scenario": "Standard Vendor Invoice with Clean Values",
+          "input": "Synthetic PDF: 'Invoice_ApexSolutions_482.pdf' (Subtotal: ₹10,000, Tax: ₹1,800, Total: ₹11,800, GSTIN: '29ABCDE1234F1Z5')",
+          "expected_result": "Text extracted, JSON validated, math check passed (10000 + 1800 = 11800), row inserted into Master Invoice Sheet, status 'PROCESSED'.",
+          "actual_result": "Extracted in 3.4s; all 6 fields matched; record inserted into row #89; status 'PROCESSED'.",
+          "status": "PASS",
+          "error_observed": "None",
+          "corrective_action": "None required",
+          "retest_result": "Verified mathematical accuracy"
+        },
+        {
+          "test_id": "TC-DP-02",
+          "scenario": "Mathematical Mismatch / Calculation Error",
+          "input": "Synthetic Invoice where Subtotal is ₹5,000, Tax is ₹900, but Total is mistakenly listed as ₹6,500",
+          "expected_result": "Math validation fails (5000 + 900 != 6500); routes to exception branch; file moved to 'Flagged' folder.",
+          "actual_result": "Node 'Math Check' failed assertion; status set to 'MISMATCH_ERROR'; alert sent to finance channel.",
+          "status": "PASS",
+          "error_observed": "Calculation discrepancy flagged",
+          "corrective_action": "Handled by validation logic; prevents bad financial data entry",
+          "retest_result": "Verified exception handling"
+        },
+        {
+          "test_id": "TC-DP-03",
+          "scenario": "Missing Mandatory Tax Number",
+          "input": "Invoice without GSTIN/Tax ID field",
+          "expected_result": "Schema validator flags missing required field 'tax_id'; prompts human review with missing field highlight.",
+          "actual_result": "Validation node caught missing property; row added to 'Pending Resolution' queue.",
+          "status": "PASS",
+          "error_observed": "Missing mandatory schema field",
+          "corrective_action": "Human notification triggered",
+          "retest_result": "Verified schema rule enforcement"
+        }
+      ],
+      "handover_documentation": "Includes JSON schema specification file, document ingestion setup guide, math validation expression reference, and financial exception resolution runbook.",
+      "business_value_roi": "Eliminates 85% of manual invoice data entry time. Prevents costly accounting errors through automated mathematical and tax-format verification."
+    },
+    {
+      "project_number": 4,
+      "badge": "Portfolio Project 04 — Executive Observability",
+      "title": "Scheduled Business Reporting Automation",
+      "subtitle": "Automated Business KPI Reporting & Notifications",
+      "process": "Scheduled Trigger → Data Collection → Data Validation → Summary → Stakeholder Notification",
+      "client_brief": "A digital marketing agency and e-commerce business requires a consolidated Monday morning performance report delivered to stakeholders. Previously, team members worked on Sunday evenings pulling data from multiple spreadsheets, calculating conversion rates, summarizing progress, and drafting emails. The client needs an automated, scheduled n8n workflow that triggers every Monday at 8:00 AM, pulls raw metrics, computes week-over-week KPIs, generates executive AI commentary, formats an HTML email/Slack report, and notifies executives reliably.",
+      "business_scenario": "Executive decision-support and team alignment automation. Delivers consistent, error-free operational metrics every week without manual weekend preparation.",
+      "deliverables": [
+        "Cron/Schedule trigger configured for recurring Monday 08:00 AM execution",
+        "Google Sheets data collection node reading weekly leads, sales, spend, and conversion records",
+        "Data validation node checking for missing dates, incomplete rows, or zero-division hazards",
+        "Calculation node computing week-over-week growth (WoW %), Cost per Lead (CPL), and Conversion Rates",
+        "AI summarization node synthesizing key performance highlights, notable anomalies, and recommendations into concise executive bullet points",
+        "Structured HTML email formatter and Slack Block Kit notification dispatching the executive brief",
+        "Execution failure notification routing to workflow administrator if source data is missing or inaccessible",
+        "Detailed cost and execution volume forecast showing low-code operational expense breakdown"
+      ],
+      "tools": [
+        "n8n",
+        "Google Sheets",
+        "Gmail Integration",
+        "OpenAI API / Gemini API",
+        "Slack Webhook"
+      ],
+      "expected_output": "A production-tested scheduled reporting automation that aggregates metrics, computes financial and marketing KPIs, generates insightful executive commentary, and delivers professional email and Slack briefings on a recurring schedule.",
+      "error_handling_and_recovery": {
+        "error_scenarios": "Source spreadsheet unavailable, missing data for the current week, or email dispatch failure.",
+        "recovery_mechanism": "Workflow verifies data completeness before computing KPIs; if records are missing, it sends a warning alert to the operations team ('Reporting Alert: Week 14 data incomplete') and reschedules check after 2 hours."
+      },
+      "data_validation_and_security": {
+        "validation_checklist": [
+          "Verification of non-zero denominator before division (avoids NaN / Infinity errors in conversion calculations)",
+          "Date boundary validation ensuring data belongs to the intended reporting period",
+          "Sanitization of AI summary text to prevent HTML injection in outbound emails",
+          "Secure scheduling configuration with execution timeout limits"
+        ]
+      },
+      "test_log": [
+        {
+          "test_id": "TC-SR-01",
+          "scenario": "Normal Scheduled Monday Morning Execution",
+          "input": "Weekly data: 240 Leads, ₹48,000 Ad Spend, 36 Conversions. Previous week: 200 Leads, ₹45,000 Spend, 30 Conversions.",
+          "expected_result": "Calculates CPL = ₹200 (vs ₹225, -11.1%), Conversion Rate = 15.0%, Leads WoW = +20%; AI generates clean commentary; HTML report emailed.",
+          "actual_result": "KPIs calculated in 0.8s; HTML email delivered to test executive inbox; Slack digest posted in #leadership.",
+          "status": "PASS",
+          "error_observed": "None",
+          "corrective_action": "None required",
+          "retest_result": "Verified automated scheduled delivery"
+        },
+        {
+          "test_id": "TC-SR-02",
+          "scenario": "Missing Weekly Data / Incomplete Rows",
+          "input": "Spreadsheet contains zero rows for the target week due to delayed data entry.",
+          "expected_result": "Validation node catches zero row count; stops calculation; fires admin alert 'Weekly Data Incomplete - Report Postponed'.",
+          "actual_result": "Admin notification triggered; zero emails sent with empty metrics; execution paused safely.",
+          "status": "PASS",
+          "error_observed": "Data absence handled safely",
+          "corrective_action": "Postponement logic functioned as designed",
+          "retest_result": "Verified data absence safety"
+        },
+        {
+          "test_id": "TC-SR-03",
+          "scenario": "Zero Division Hazard Check",
+          "input": "Zero conversions reported for a pilot campaign (Total Spend: ₹5,000, Conversions: 0).",
+          "expected_result": "Node guards against dividing by zero; outputs Cost per Conversion as 'N/A' rather than throwing JavaScript error.",
+          "actual_result": "Field evaluated to 'N/A'; workflow completed successfully without crashing.",
+          "status": "PASS",
+          "error_observed": "Zero division caught by expression guard",
+          "corrective_action": "Guard expression prevented node crash",
+          "retest_result": "Verified mathematical guardrails"
+        }
+      ],
+      "handover_documentation": "Includes KPI mathematical formula reference, cron schedule modification instructions, HTML email template styling guide, and cost monitoring spreadsheet.",
+      "business_value_roi": "Saves 3 hours of manual reporting per week (150+ hours/year). Guarantees consistent executive visibility with zero human reporting delays."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is AI Automation with n8n & Business Workflows?",
+      "answer": "AI Automation with n8n & Business Workflows is a practical, industry-aligned certification course that teaches you how to map manual business processes, build visual low-code automation workflows in n8n, connect business applications (like Google Workspace and CRMs), integrate REST APIs and webhooks, and embed AI capabilities (OpenAI and Gemini) for classification, extraction, and decision support with robust error handling and human approval gates."
+    },
+    {
+      "question": "Is the course suitable for beginners?",
+      "answer": "Yes. The course is designed for beginners to intermediate learners who have basic computer and web-application familiarity. You do not need any background in programming, computer science, or Python. All workflow concepts, JSON data structures, API integrations, and n8n visual nodes are taught step-by-step from foundational principles through hands-on laboratory exercises."
+    },
+    {
+      "question": "What is the course duration and fee?",
+      "answer": "The course spans 8 Weeks (2 Months) with 64 total instructional hours (8 hours per week: 4 hours of interactive technical instruction plus 4 hours of supervised studio lab). The transparent institutional fee is exactly ₹9,900 (+ applicable GST), with zero artificial countdown markups or fake retail discounts. Flexible two-part installment options are also available."
+    },
+    {
+      "question": "What is n8n?",
+      "answer": "n8n is a powerful, source-available, visual workflow automation platform that enables users to connect different web applications, databases, APIs, and AI models into automated pipelines. It offers an intuitive node-based canvas, rich data transformation capabilities using expressions, deep self-hosting and cloud options, and native integration with hundreds of business tools."
+    },
+    {
+      "question": "Is n8n open source or fair-code licensed?",
+      "answer": "n8n is a source-available, fair-code licensed workflow automation platform governed by n8n's Sustainable Use License (for self-hosted Community editions) and distinct cloud subscription terms. It is not unrestricted OSI-approved open source. The curriculum explicitly covers licensing boundaries, clarifying what is permitted for internal organizational use, freelance client delivery, and hosted commercial services."
+    },
+    {
+      "question": "Will I learn n8n practically?",
+      "answer": "Yes, absolutely. The course is completely hands-on. Every conceptual lesson is paired with practical laboratory exercises on the n8n canvas. You will configure real triggers, map JSON variables, test HTTP requests in Postman and Webhook.site, connect live Google Sheets and Gmail test accounts, and build four fully functioning, verified business automation capstones."
+    },
+    {
+      "question": "Do I need coding knowledge?",
+      "answer": "No programming or software engineering knowledge is required. You will learn to build workflows visually using n8n's low-code canvas. We teach you the foundational concepts of JSON objects, arrays, and n8n expressions needed to manipulate fields, but you do not need to write complex code, JavaScript frameworks, or Python scripts."
+    },
+    {
+      "question": "Will I learn webhooks and APIs?",
+      "answer": "Yes. You will learn REST API fundamentals, HTTP methods (GET, POST, PUT, PATCH, DELETE), status codes, request headers, query parameters, and JSON payloads. You will also learn how to configure both test and production webhook triggers in n8n, inspect incoming payloads, and test endpoints using Postman and Webhook.site."
+    },
+    {
+      "question": "Does the course teach Google Sheets and Gmail automation?",
+      "answer": "Yes. Google Workspace integration is a core pillar of the course. You will learn bi-directional data synchronization with Google Sheets (reading, appending, and updating records with duplicate checks), drafting and managing emails in Gmail, file operations in Google Drive, and connecting form responses to automated workflows."
+    },
+    {
+      "question": "Will I learn OpenAI and Gemini API integrations?",
+      "answer": "Yes. You will learn how to connect both OpenAI API (GPT-4o) and Google Gemini API within n8n workflows. You will master using LLMs for practical business tasks such as customer inquiry classification, entity extraction, document summarization, and schema-constrained JSON generation."
+    },
+    {
+      "question": "Are paid API accounts required?",
+      "answer": "No. You are not required to maintain expensive enterprise API subscriptions. We demonstrate how to work within free or minimal test credits, utilize provider sandbox environments, and practice with simulated data. Consumer ChatGPT Plus or Gemini Advanced subscriptions do not provide API access, so we teach budget-controlled API key management and token cost forecasting."
+    },
+    {
+      "question": "How many working projects will I build?",
+      "answer": "You will build four complete, tested, and documented business automation workflows for your professional portfolio: (1) AI Lead Management Automation, (2) AI Email Classification & Human Approval Workflow, (3) Document Processing & Structured Extraction Pipeline, and (4) Scheduled Business KPI Reporting & Notification System."
+    },
+    {
+      "question": "Will I learn AI-powered email workflows?",
+      "answer": "Yes. In Portfolio Project 02, you will build an end-to-end incoming email classification and draft generation system. Crucially, we teach you how to embed human-in-the-loop approval checkpoints so that AI-drafted responses are never dispatched to customers without explicit verification and sign-off."
+    },
+    {
+      "question": "Does the course include CRM integrations?",
+      "answer": "Yes. You will learn core CRM concepts including contact creation, deal mapping, lead qualification scoring, duplicate record prevention, and status updates using simulated CRM environments and REST API endpoints."
+    },
+    {
+      "question": "Will I learn error handling and debugging?",
+      "answer": "Yes, workflow reliability is a major focus (Module 05). You will learn how to inspect execution histories, diagnose node failures, configure dedicated Error Trigger workflows, implement automated retry strategies with exponential backoff, prevent duplicate actions using idempotency keys, and author incident recovery runbooks."
+    },
+    {
+      "question": "Can I use n8n for freelance client work?",
+      "answer": "Yes. Freelancers can build, configure, and maintain n8n workflows for clients under applicable licensing conditions. The course teaches client requirement discovery, workflow scoping, credential handover protocols, runbook preparation, and ROI estimation so you can deliver dependable automation services professionally."
+    },
+    {
+      "question": "Does the course include advanced AI agents?",
+      "answer": "The course introduces basic n8n AI Agent nodes and tool-calling concepts to show how language models can invoke specific functions. However, complex autonomous agent orchestration, multi-agent frameworks (CrewAI, LangGraph), and vector database/RAG engineering are advanced topics reserved for dedicated AI engineering programmes."
+    },
+    {
+      "question": "Does the course require my own server?",
+      "answer": "No. You do not need to purchase or manage a virtual private server (VPS). You can complete all course exercises using n8n Cloud trial environments or local desktop installations. We explain the architectural and cost differences between cloud and self-hosted environments so you understand both deployment models."
+    },
+    {
+      "question": "Will I receive an official n8n certification?",
+      "answer": "Upon successful completion of all coursework and project assessments, Nova Skills awards an institutional Certificate of Completion in AI Automation with n8n & Business Workflows. This is an institution-issued credential verifying your practical training and portfolio deliverables; it is not an official certification issued or endorsed by n8n, OpenAI, or Google."
+    },
+    {
+      "question": "What career opportunities can I explore?",
+      "answer": "Graduates are equipped to explore roles such as Junior AI Automation Specialist, n8n Workflow Developer, Business Automation Executive, Low-Code Automation Specialist, Marketing Automation Assistant, Workflow Integration Executive, and entry-level Freelance Automation Consultant across modern agencies, startups, and operational teams."
+    }
+  ],
+  "seo_title": "n8n AI Automation Course | 8 Weeks, ₹9,900 | Nova Skills",
+  "meta_title": "n8n AI Automation Course | 8 Weeks, ₹9,900 | Nova Skills",
+  "seo_description": "Learn n8n, APIs, webhooks, AI integrations and business automation. Build 4 working workflows in 8 weeks. 64 practical hours at ₹9,900.",
+  "meta_description": "Learn n8n, APIs, webhooks, AI integrations and business automation. Build 4 working workflows in 8 weeks. 64 practical hours at ₹9,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=ai-automation-n8n",
+  "keywords": [
+    "n8n Automation Course",
+    "n8n Course in India",
+    "AI Automation Course",
+    "n8n Training",
+    "n8n Workflow Automation Course",
+    "AI Business Automation Course",
+    "n8n Certification Course",
+    "n8n Course Fees",
+    "n8n Course Duration",
+    "n8n API Integration Course",
+    "n8n Webhook Training",
+    "AI Workflow Automation Training",
+    "Low-Code Automation Course",
+    "n8n for Beginners",
+    "Business Workflow Automation Training",
+    "n8n Course with Practical Projects",
+    "AI Automation with Google Sheets",
+    "AI Automation for Freelancers"
   ]
 }

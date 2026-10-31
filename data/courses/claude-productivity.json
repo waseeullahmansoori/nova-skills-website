@@ -1,400 +1,1113 @@
 {
   "course_id": "claude-productivity",
-  "course_name": "Claude for Productivity",
+  "id": "claude-productivity",
+  "slug": "claude-productivity",
+  "course_name": "Claude for Productivity, Skills & Artifacts",
+  "title": "Claude for Productivity, Skills & Artifacts",
+  "name": "Claude for Productivity, Skills & Artifacts",
+  "academic_sequence": 46,
+  "curriculum_edition": "2027 Edition",
   "academy": "AI Academy",
   "academy_id": "ai",
-  "course_type": "MERGE",
-  "course_role": "Career/Monetization",
-  "level": "BEGINNER",
-  "duration": "1 Month",
-  "learning_hours": 30,
-  "future_review_status": "FAST-CHANGING",
+  "academyId": "ai",
+  "academic_positioning": "Claude-Assisted Knowledge Work, Long-Document Analysis & Professional Deliverables",
+  "specialization": "Claude-Assisted Knowledge Work & Professional Deliverables",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "AI-Assisted Knowledge Worker & Professional Deliverables Specialist",
+  "level": "Beginner to Applied",
+  "priority": "High Admission Priority",
+  "duration": "4 Weeks",
+  "durationMonths": 1,
+  "duration_weeks": 4,
+  "learning_hours": 32,
+  "learningHours": 32,
+  "guided_hours": 32,
+  "hours": 32,
+  "weekly_workload": "8 Hours / Week (4 Hours Live Technical Instruction + 4 Hours Supervised Productivity Studio Lab)",
+  "mode": "Online Interactive Labs & Guided Knowledge Work Simulation",
+  "price": 4900,
+  "fee": "INR 4,900 + applicable GST",
+  "regular_fee": 4900,
+  "originalPrice": 4900,
+  "commercial_notice": "Transparent institutional tuition: INR 4,900 + applicable taxes. Truth in Pricing with zero artificial countdown discounts, inflated strike-throughs or fake retail offers.",
+  "pricing": {
+    "regular_fee": 4900,
+    "gst_percentage": "18%",
+    "gst_amount": 882,
+    "total_fee_with_gst": 5782,
+    "discount": "0%",
+    "currency": "INR",
+    "pricing_model": "Truth in Pricing — Transparent institutional fee with zero fake countdown discounts.",
+    "installments": "One-time payment of ₹4,900 or split across 2 installments of ₹2,450."
+  },
+  "tagline": "Turn Complex Documents and Ideas Into Professional Deliverables With Claude.",
+  "hero_headline": "Turn Complex Documents and Ideas Into Professional Deliverables With Claude.",
+  "hero_supporting_heading": "From Complex Documents to Polished Reports, Reusable Skills and Interactive Artifacts — Learn Claude Through Practical Business Projects.",
+  "hero_supporting_headline": "From Complex Documents to Polished Reports, Reusable Skills and Interactive Artifacts — Learn Claude Through Practical Business Projects.",
+  "h1": "Claude for Productivity, Skills & Artifacts",
+  "hero": {
+    "hook": "Turn Complex Documents and Ideas Into Professional Deliverables With Claude.",
+    "subheading": "From Complex Documents to Polished Reports, Reusable Skills and Interactive Artifacts — Learn Claude Through Practical Business Projects.",
+    "target_role": "AI-Assisted Knowledge Worker & Business Documentation Specialist",
+    "badge": "2027 Professional Workplace Edition — Applied Claude Skills & Artifacts"
+  },
+  "short_description": "Learn Claude for professional writing, complex document analysis, research, business reporting, reusable Skills and Artifacts. Create reliable, reviewable deliverables through practical workflows.",
+  "shortDesc": "Learn Claude for professional writing, complex document analysis, research, business reporting, reusable Skills and Artifacts. Create reliable, reviewable deliverables through practical workflows.",
+  "full_description": "Learn how to turn complex documents, research material and business ideas into professional deliverables using Claude.\n\nThis practical Claude for Productivity, Skills & Artifacts course teaches effective prompting, long-document analysis, business writing, document comparison, structured reporting and knowledge organization.\n\nDevelop hands-on experience in creating professional reports, proposals, executive summaries, requirements documents and research-informed communication.\n\nLearn how Claude Projects can help organize relevant documents, instructions and contextual information for recurring knowledge-work tasks.\n\nExplore Claude Artifacts to create and refine documents, presentations, simple dashboards and lightweight interactive deliverables, according to supported platform capabilities.\n\nLearn how reusable Claude Skills package task procedures, instructions and supporting resources to improve consistency across repeated business activities.\n\nUnderstand how to review AI-generated outputs, verify source information, preserve confidentiality and maintain human approval over important work.\n\nExplore Claude Cowork and its evolving integration with Claude's unified task experience where available, without requiring advanced autonomous workflows or paid premium capabilities.\n\nBuild a professional portfolio containing a long-document analysis, a business report, a reusable task Skill and an interactive or document-based Artifact.\n\nThe programme emphasizes practical productivity, source-grounded analysis, repeatable procedures, responsible AI usage and high-quality professional deliverables.",
+  "fullDesc": "Learn how to turn complex documents, research material and business ideas into professional deliverables using Claude.\n\nThis practical Claude for Productivity, Skills & Artifacts course teaches effective prompting, long-document analysis, business writing, document comparison, structured reporting and knowledge organization.\n\nDevelop hands-on experience in creating professional reports, proposals, executive summaries, requirements documents and research-informed communication.\n\nLearn how Claude Projects can help organize relevant documents, instructions and contextual information for recurring knowledge-work tasks.\n\nExplore Claude Artifacts to create and refine documents, presentations, simple dashboards and lightweight interactive deliverables, according to supported platform capabilities.\n\nLearn how reusable Claude Skills package task procedures, instructions and supporting resources to improve consistency across repeated business activities.\n\nUnderstand how to review AI-generated outputs, verify source information, preserve confidentiality and maintain human approval over important work.\n\nExplore Claude Cowork and its evolving integration with Claude's unified task experience where available, without requiring advanced autonomous workflows or paid premium capabilities.\n\nBuild a professional portfolio containing a long-document analysis, a business report, a reusable task Skill and an interactive or document-based Artifact.\n\nThe programme emphasizes practical productivity, source-grounded analysis, repeatable procedures, responsible AI usage and high-quality professional deliverables.",
+  "description": "Learn Claude for professional writing, complex document analysis, research, business reporting, reusable Skills and Artifacts. Create reliable, reviewable deliverables through practical workflows.",
+  "overview": {
+    "positioning": "Claude-Assisted Knowledge Work, Long-Document Analysis & Professional Deliverables",
+    "core_philosophy": "Turn Complex Documents and Ideas Into Professional Deliverables With Claude.",
+    "key_facts": {
+      "level": "Beginner to Applied",
+      "duration": "4 Weeks",
+      "format": "Online Interactive Labs & Guided Knowledge Work Simulation",
+      "estimated_learning_hours": "32 Hours (4 Weeks × 8 Hours/Week)",
+      "project_count": "4 Deliverable Groups (Claude Professional Deliverables Pack)",
+      "capstone": "Claude Professional Deliverables Pack (Long-Document Analysis, Business Report, Reusable Task Skill, Professional Artifact)",
+      "ai_integration": "Practical Claude Capabilities (Projects, Skills, Artifacts, Cowork Awareness)",
+      "career_focus": "AI-Assisted Business Documentation, Research Support Assistant, Knowledge Management Coordinator"
+    },
+    "what_you_will_be_able_to_do": [
+      "Craft structured, context-rich task instructions for Claude specifying exact objective, audience, constraints, and output schemas.",
+      "Analyze long PDFs, contracts, manuals, and policy documents, identifying key facts, extraction requirements, and operational gaps.",
+      "Execute multi-document comparisons, detecting discrepancies, contradictory evidence, and omissions across competing sources.",
+      "Draft polished executive summaries, comprehensive business reports, and commercial proposals adhering to brand voice.",
+      "Organize persistent reference knowledge and project-specific instructions within Claude Projects for recurring business initiatives.",
+      "Query project knowledge bases to produce source-grounded answers with verifiable references rather than generic assertions.",
+      "Create, edit, and refine standalone Claude Artifacts including business documents, presentations, simple dashboards, and lightweight tools.",
+      "Package reusable Claude Skills featuring task procedures, input specifications, templates, and quality-control rubrics.",
+      "Apply rigorous fact-checking, citation verification, and confidentiality protocols to safeguard sensitive organizational data.",
+      "Implement human-in-the-loop review gates ensuring all critical business deliverables are independently verified before stakeholder release."
+    ]
+  },
   "target_audience": {
     "best_for": [
-      "Professionals looking to master Claude for Productivity.",
-      "Forward-thinking individuals aiming to integrate AI tools into their workflows.",
-      "Tech enthusiasts looking to build practical, deployable AI projects."
+      "Professionals and executives working with complex documents, lengthy PDFs, research materials, and policy files.",
+      "Project coordinators, business analysts, and researchers responsible for comprehensive documentation and reporting.",
+      "Writers, marketers, and content professionals seeking nuanced, voice-consistent drafting and structural editing.",
+      "Entrepreneurs, business owners, and consultants needing reusable operating procedures and client proposals.",
+      "Educators, trainers, and knowledge managers organizing institutional resources and reference libraries."
     ],
-    "who_should_take_foundation_first": "Beginners lacking basic digital literacy should take foundation courses first.",
+    "who_should_take_foundation_first": "Learners without basic computer literacy or unfamiliar with basic document navigation should complete basic digital literacy foundations first.",
     "not_for": [
-      "Those looking for abstract theory without hands-on practice.",
-      "Individuals expecting overnight success without building real projects."
+      "Software developers seeking advanced Claude API programming, Python SDK engineering, or Claude Code development.",
+      "Machine learning engineers looking for neural network architecture, model weights, or algorithm training.",
+      "Individuals seeking fully autonomous multi-agent orchestration or enterprise automated bot pipelines."
     ]
   },
   "prerequisites": {
-    "required": "Basic computer literacy and understanding of web applications.",
-    "recommended": "Familiarity with the domain relevant to the tools.",
+    "required": "Basic computer literacy, standard web browser navigation, familiarity with professional documents and basic web application experience.",
+    "recommended": "Understanding of effective AI instructions, familiarity with PDFs and business reports, and basic document organization skills.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with internet connection",
-      "software_accounts": "Claude, Claude API, Artifacts, Projects"
+      "hardware": "Modern laptop or desktop computer with reliable internet access",
+      "software_accounts": "Standard Claude account (Free tier or eligible subscription); access to Claude web interface, Projects, and Artifacts"
     },
-    "not_required": "Advanced programming degrees"
+    "not_required": "Computer programming, coding degrees, software engineering, or prior Claude API development experience."
   },
-  "overview": {
-    "positioning": "Leveraging Anthropic Claude: Artifacts, Projects, complex reasoning, nuance, and clean code generation.",
-    "short_description": "Learn to leverage Claude, Claude API, Artifacts to solve real problems.",
-    "key_facts": {
-      "level": "BEGINNER",
-      "duration": "1 Month",
-      "format": "Hands-On Projects",
-      "estimated_learning_hours": "30 Hours",
-      "project_count": "3 Projects",
-      "capstone": "Final Delivery Project",
-      "ai_integration": "AI-CRITICAL",
-      "career_focus": "AI Practitioner"
-    },
-    "what_you_will_be_able_to_do": [
-      "Implement AI-driven workflows.",
-      "Master tools like Claude, Claude API.",
-      "Deploy functional projects to production."
-    ]
+  "potential_career_applications": {
+    "pathway_overview": "Skills acquired in this course enhance daily productivity across contemporary knowledge-work, research, reporting, and operational roles. Presented as workplace competencies, not guaranteed employment promises.",
+    "entry_roles": "AI-Assisted Business Documentation Specialist, Research Support Assistant, Junior Reporting Assistant",
+    "mid_roles": "Business Reporting Coordinator, Knowledge Management Assistant, Proposal Writing Assistant",
+    "specialist_roles": "Requirements Documentation Assistant, Professional Content Coordinator, AI-Assisted Administrative Specialist",
+    "freelance_roles": "Knowledge Work Freelancer, Executive Documentation Consultant, Proposal Specialist",
+    "employer_expectations": "Demonstrated ability to synthesize complex documents, audit source evidence, author polished reports, and organize reusable task procedures.",
+    "what_student_demonstrates": "A verified Claude Professional Deliverables Pack containing four tangible, quality-checked deliverables."
   },
-  "why_now": {
-    "industry_shift": "Software developers, writers, and analysts heavily favor Claude for its superior coding precision, nuanced writing tone, and Artifacts UI.",
-    "ai_impact": "Claude Artifacts allow live rendering of React components, interactive SVG diagrams, and working web apps in real time.",
-    "business_demand": "Companies are actively seeking practitioners skilled in modern AI tools.",
-    "career_opportunity": "Early adopters can secure high-leverage roles."
+  "career_paths": {
+    "entry_roles": "AI-Assisted Business Documentation Specialist, Research Support Assistant",
+    "mid_roles": "Business Reporting Coordinator, Knowledge Management Assistant, Proposal Writing Assistant",
+    "specialist_roles": "Requirements Documentation Assistant, Professional Content Coordinator, AI-Assisted Administrative Specialist",
+    "freelance_roles": "Knowledge Work Freelancer, Executive Documentation Consultant, Proposal Specialist",
+    "employer_expectations": "Demonstrated ability to synthesize complex documents, audit source evidence, author polished reports, and organize reusable task procedures.",
+    "what_student_demonstrates": "A verified Claude Professional Deliverables Pack containing four tangible, quality-checked deliverables."
   },
-  "learning_outcomes": [
-    "DESIGN architectures utilizing Claude.",
-    "BUILD practical solutions for business needs.",
-    "DEPLOY projects adhering to best practices."
+  "key_course_highlights": [
+    "Practical Claude Training & Context Engineering",
+    "Professional Task Prompting & Model Selection",
+    "Long-Document Analysis & Large-File Handling",
+    "Executive Reports & Commercial Proposals",
+    "Multi-Document Comparison & Gap Analysis",
+    "Business Requirements Extraction",
+    "Claude Projects & Knowledge Base Management",
+    "Source-Grounded Prompting & Attribution",
+    "Claude Artifacts: Documents & Slide Outlines",
+    "Simple Dashboards & KPI Data Presentation",
+    "Lightweight Interactive Artifacts",
+    "Claude Skills: Reusable Task Procedures",
+    "Claude Cowork & Unified Task Experience Awareness",
+    "Human Editorial Review & Verification Rubrics",
+    "4 Integrated Professional Portfolio Deliverables",
+    "Quarterly Feature Review Maintainability"
   ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1",
-        "focus": "Claude Interface & Tone"
-      },
-      {
-        "stage": "Stage 2",
-        "focus": "Working with Claude Artifacts"
-      },
-      {
-        "stage": "Stage 3",
-        "focus": "Claude Projects & Organization"
-      }
-    ]
-  },
+  "tools": [
+    "Claude",
+    "Claude Projects",
+    "Claude Skills",
+    "Claude Artifacts",
+    "PDF Documents",
+    "Business Documents"
+  ],
   "hands_on_tech": {
-    "core_tools": [
+    "primary_tools": [
       {
         "tool": "Claude",
-        "purpose": "Essential for Claude for Productivity.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "purpose": "Primary conversational and task-oriented AI assistant for nuanced business writing, complex document interpretation, and structured reasoning.",
+        "what_student_learns": "Instruction drafting, context engineering, long-document extraction, comparative analysis, and hallucination mitigation.",
+        "what_student_builds": "Task instruction suites, comparative analysis memos, and executive summaries."
       },
       {
-        "tool": "Claude API",
-        "purpose": "Essential for Claude for Productivity.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "Claude Projects",
+        "purpose": "Contextual project workspaces for organizing persistent instructions, reference documents, and source-grounded knowledge bases.",
+        "what_student_learns": "Project creation, custom instructions configuration, reference file curation, and closed-domain query answering.",
+        "what_student_builds": "Structured Business Knowledge Project with curated synthetic business collateral."
       },
       {
-        "tool": "Artifacts",
-        "purpose": "Essential for Claude for Productivity.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "Claude Skills",
+        "purpose": "Reusable packages of task instructions, operating procedures, templates, and resources for recurring business workflows.",
+        "what_student_learns": "Procedure design, input/output specifications, trigger definitions, and testing instruction-based custom Skills.",
+        "what_student_builds": "Reusable Claude Task Skill for repeatable business operations."
       },
       {
-        "tool": "Projects",
-        "purpose": "Essential for Claude for Productivity.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "Claude Artifacts",
+        "purpose": "Self-contained editable and interactive deliverables (documents, slide presentations, simple dashboards, and lightweight tools) rendered alongside chat.",
+        "what_student_learns": "Artifact generation, visual layout hierarchy, iterative editing, version tracking, and interaction testing.",
+        "what_student_builds": "Professional business document, presentation slide deck, dashboard, or interactive tool artifact."
       }
     ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
-  },
-  "industry_workflow": {
-    "overview": "Standard operations:",
-    "stages": [
+    "supporting_tools": [
       {
-        "step": 1,
-        "name": "Discovery",
-        "desc": "Identify the problem."
+        "tool": "Claude Cowork / Unified Task Experience",
+        "purpose": "Awareness of evolving unified multi-step task handling and connected workspace tools (conceptual demonstration).",
+        "what_student_learns": "Understanding multi-step task planning, review gates, permissions, and limitations across supported environments.",
+        "what_student_builds": "Task planning outline and human approval protocol."
       },
       {
-        "step": 2,
-        "name": "Tool Selection",
-        "desc": "Choose the right AI stack."
-      },
-      {
-        "step": 3,
-        "name": "Implementation",
-        "desc": "Build the workflow."
-      },
-      {
-        "step": 4,
-        "name": "Deployment",
-        "desc": "Launch and monitor."
+        "tool": "Business Document Collateral",
+        "purpose": "Synthetic and authorized business documentation (requirements specs, proposals, minutes, policy manuals).",
+        "what_student_learns": "Document structure analysis, requirements categorization, and cross-source evidence verification.",
+        "what_student_builds": "Document inventory and discrepancy audit matrix."
       }
-    ]
-  },
-  "business_use_cases": [
-    {
-      "sector": "Technology",
-      "business_problem": "Inefficient processes",
-      "approach": "AI automation",
-      "toolset": "Claude",
-      "output": "Optimized workflow"
-    }
-  ],
-  "ai_integration": {
-    "role_classification": "AI-CRITICAL",
-    "ai_can_assist_with": "Ideation and drafting.",
-    "ai_can_automate": "Repetitive execution.",
-    "ai_cannot_replace": "Strategic decision making.",
-    "human_expertise_required": "Quality assurance.",
-    "validation_protocol": "Manual review of outputs.",
-    "responsible_use": "Adherence to data privacy."
-  },
-  "best_practices": [
-    "Iterate rapidly.",
-    "Verify all AI outputs.",
-    "Maintain organized project files."
-  ],
-  "common_mistakes": [
-    {
-      "mistake": "Trusting AI blindly.",
-      "why_it_happens": "Overconfidence.",
-      "professional_approach": "Always verify output."
-    }
-  ],
-  "career_paths": {
-    "entry_roles": "AI Specialist",
-    "mid_roles": "AI Architect",
-    "specialist_roles": "Automation Consultant",
-    "freelance_roles": "AI Freelancer",
-    "employer_expectations": "Proven ability to deploy AI solutions.",
-    "what_student_demonstrates": "Portfolio of working projects."
-  },
-  "freelance_applications": {
-    "services_offered": [
-      "AI Integration",
-      "Workflow Automation"
     ],
-    "client_workflow": "Consult -> Build -> Deploy -> Maintain",
-    "portfolio_requirements": "Working prototypes."
+    "software_access_policy": "The core curriculum is fully achievable using standard Claude access and free/tier-accessible features. Equivalent documented procedures and document-based alternatives are provided for any premium, beta, or account-restricted features."
   },
-  "what_you_will_build": [
-    "Project focused on Claude Interface & Tone",
-    "Project focused on Working with Claude Artifacts",
-    "Project focused on Claude Projects & Organization"
-  ],
-  "final_deliverables": [
-    "Code repository or live app",
-    "Documentation"
-  ],
-  "assessment": {
-    "model": "Project-based evaluation",
-    "criteria": "Functionality and clean execution."
-  },
-  "certification": {
-    "title": "Certified Claude for Productivity Professional",
-    "criteria": "Completion of all projects.",
-    "verification": "Online portal."
-  },
-  "not_covered": "Theoretical machine learning math.",
-  "next_learning_path": {
-    "recommended_next": "Advanced AI Architecture",
-    "related_programs": "Other AI Academy courses."
-  },
-  "faq": [
-    {
-      "question": "Is Claude for Productivity for beginners?",
-      "answer": "Check the prerequisites, but generally we start from practical basics."
-    },
-    {
-      "question": "Will I build real projects?",
-      "answer": "Yes, every module includes hands-on builds."
-    },
-    {
-      "question": "Are the tools free?",
-      "answer": "Most tools have free tiers sufficient for learning."
-    }
-  ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Claude Interface & Tone",
-      "module_purpose": "Master Claude's unique writing and reasoning style.",
-      "what_you_will_learn": [
-        "Learn Claude vs Other LLMs",
-        "Learn Managing Context Windows",
-        "Learn Uploading Large Documents",
-        "Learn Prompting for Nuance"
+      "module_title": "Claude Fundamentals & Prompting",
+      "duration": "6 Hours",
+      "hours": 6,
+      "module_purpose": "Master the Claude interface, Anthropic's product ecosystem, context engineering principles, effective prompting, and responsible verification protocols without fixed model locks.",
+      "learning_objectives": [
+        "Navigate the Claude interface and understand Anthropic's conversational and task-oriented ecosystem.",
+        "Craft explicit, context-rich task instructions specifying role, objective, constraints, and output formatting.",
+        "Apply context engineering fundamentals to handle large documents and file upload constraints effectively.",
+        "Identify model output variability, hallucinations, and unsupported claims through structured verification.",
+        "Enforce personal and business data privacy rules, safe file sharing, and mandatory human review."
       ],
-      "lessons": [
-        {
-          "lesson_number": "1.1",
-          "lesson_title": "Claude vs Other LLMs",
-          "what_is_taught": "Fundamentals of Claude vs Other LLMs",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Claude vs Other LLMs in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.2",
-          "lesson_title": "Managing Context Windows",
-          "what_is_taught": "Fundamentals of Managing Context Windows",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Managing Context Windows in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.3",
-          "lesson_title": "Uploading Large Documents",
-          "what_is_taught": "Fundamentals of Uploading Large Documents",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Uploading Large Documents in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.4",
-          "lesson_title": "Prompting for Nuance",
-          "what_is_taught": "Fundamentals of Prompting for Nuance",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Prompting for Nuance in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "topics_covered": [
+        "Introduction to Claude",
+        "Anthropic's AI product ecosystem",
+        "Claude interface fundamentals",
+        "Conversation-based workflows",
+        "Supported models and model selection",
+        "Chat and task-oriented capabilities",
+        "Effective task instructions",
+        "Defining objectives",
+        "Target audience and context",
+        "Input and output specifications",
+        "Clear formatting instructions",
+        "Example-based prompting",
+        "Prompt iteration",
+        "Appropriate task decomposition",
+        "Context engineering fundamentals",
+        "Understanding context windows",
+        "Long-document handling",
+        "Large-file processing considerations",
+        "File upload limitations",
+        "Model output variability",
+        "Hallucinations and unsupported claims",
+        "Source verification",
+        "Model limitations",
+        "Responsible AI usage",
+        "Personal and business privacy",
+        "Safe file handling",
+        "Confidential information",
+        "Human review and approval",
+        "Appropriate tool selection",
+        "Feature and plan availability"
       ],
-      "key_concepts": [
-        "Claude vs Other LLMs",
-        "Managing Context Windows",
-        "Uploading Large Documents",
-        "Prompting for Nuance"
+      "hands_on_exercises": [
+        "Prompt Construction Lab: Author 4 specialized business instructions with explicit constraints and schemas.",
+        "Context Engineering Sandbox: Test upload limits and prompt chunking across multi-page document extracts.",
+        "Hallucination Auditing Exercise: Identify unsupported factual claims in an AI-generated briefing and correct them."
       ],
-      "tools": [
-        "Claude",
-        "Claude API",
-        "Artifacts"
-      ],
-      "hands_on_practice": "Lab focused on Claude Interface & Tone",
-      "assignment": "Module 1 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "practical_assignment": {
+        "title": "Professional Claude Prompting & Verification Lab",
+        "scenario": "Complete four practical workplace tasks (professional business summary, document question-answering, structured response design, and business task analysis), documenting prompt iterations, verification checks, and final corrected deliverables.",
+        "deliverables": [
+          "Task objective statement and target audience definition",
+          "Input context and source material specifications",
+          "Engineered prompt templates with constraints and schemas",
+          "Initial AI responses log",
+          "Verification checklist auditing factual fidelity and completeness",
+          "Documented prompt refinements and corrections",
+          "Approved final outputs ready for professional deployment"
+        ],
+        "expected_competency": "Students can use Claude professionally, prepare clear and reliable instructions, and evaluate AI-generated outputs responsibly."
+      },
+      "assessment_criteria": "Instruction clarity, precision of formatting schemas, rigor of verification checklist, and adherence to privacy boundaries."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Working with Claude Artifacts",
-      "module_purpose": "Generate and iterate on code, dashboards, and SVGs.",
-      "what_you_will_learn": [
-        "Learn Activating Artifacts",
-        "Learn Iterative Code Generation",
-        "Learn Building React Components",
-        "Learn Creating Visual Diagrams"
+      "module_title": "Advanced Writing & Analysis",
+      "duration": "8 Hours",
+      "hours": 8,
+      "module_purpose": "Analyze complex business documents, extract requirements, execute multi-document comparative audits, and author polished, research-informed reports and proposals.",
+      "learning_objectives": [
+        "Synthesize complex long-form business documents, manuals, and policy files into executive summaries.",
+        "Extract functional and non-functional requirements from unstructured business documents.",
+        "Perform multi-document comparisons, identifying discrepancies, contradictions, and information gaps.",
+        "Draft formal business proposals, client recommendations, and management reports with consistent tone.",
+        "Apply editorial revisions, fact-checking protocols, and human editorial quality assurance."
       ],
-      "lessons": [
-        {
-          "lesson_number": "2.1",
-          "lesson_title": "Activating Artifacts",
-          "what_is_taught": "Fundamentals of Activating Artifacts",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Activating Artifacts in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.2",
-          "lesson_title": "Iterative Code Generation",
-          "what_is_taught": "Fundamentals of Iterative Code Generation",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Iterative Code Generation in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.3",
-          "lesson_title": "Building React Components",
-          "what_is_taught": "Fundamentals of Building React Components",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Building React Components in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.4",
-          "lesson_title": "Creating Visual Diagrams",
-          "what_is_taught": "Fundamentals of Creating Visual Diagrams",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Creating Visual Diagrams in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "topics_covered": [
+        "Professional business writing",
+        "Business communication objectives",
+        "Identifying target readers",
+        "Research-informed writing",
+        "Evidence collection",
+        "Source credibility",
+        "Document structure",
+        "Executive summaries",
+        "Business reports",
+        "Management reports",
+        "Business proposals",
+        "Client proposals",
+        "Requirements documents",
+        "Requirements extraction",
+        "Functional versus nonfunctional requirements awareness",
+        "Complex document understanding",
+        "Long PDF analysis",
+        "Multi-document comparison",
+        "Identifying differences",
+        "Identifying conflicting information",
+        "Gap analysis",
+        "Information synthesis",
+        "Building structured outlines",
+        "Editorial revision",
+        "Tone and brand voice",
+        "Clarity and conciseness",
+        "Fact-checking",
+        "Citation and source verification",
+        "Avoiding fabricated references",
+        "Document version comparisons",
+        "Summarizing meeting notes",
+        "Identifying action items",
+        "Preparing stakeholder communication",
+        "Reviewing sensitive claims",
+        "Human editorial approval",
+        "Final deliverable quality assurance"
       ],
-      "key_concepts": [
-        "Activating Artifacts",
-        "Iterative Code Generation",
-        "Building React Components",
-        "Creating Visual Diagrams"
+      "hands_on_exercises": [
+        "Long PDF Deconstruction: Ingest a 25-page synthetic business specification and extract key operational parameters.",
+        "Multi-Document Gap Analysis: Compare a vendor proposal against an RFP to isolate unfulfilled requirements.",
+        "Executive Report Drafting: Structure and polish a 4-page management report with executive summary and recommendations."
       ],
-      "tools": [
-        "Claude",
-        "Claude API",
-        "Artifacts"
-      ],
-      "hands_on_practice": "Lab focused on Working with Claude Artifacts",
-      "assignment": "Module 2 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "practical_assignment": {
+        "title": "Complex Document Analysis & Business Writing",
+        "scenario": "Analyze a synthetic collection of business documents (requirements spec, service proposal, meeting minutes, and policy guidelines). Extract requirements, compare conflicting clauses, and author an executive summary and comprehensive business report.",
+        "deliverables": [
+          "Source document inventory and scope statement",
+          "Structured document summary highlighting core parameters",
+          "Categorized requirements matrix (functional vs non-functional)",
+          "Cross-document comparison identifying agreements and discrepancies",
+          "Gap and risk analysis memo",
+          "Polished executive summary suitable for leadership review",
+          "Comprehensive professional business report with clear recommendations",
+          "Verification notes linking conclusions to primary source passages"
+        ],
+        "expected_competency": "Students can analyze complex documents, identify relevant information, cross-examine multiple sources, and produce professional, source-checked business reports."
+      },
+      "assessment_criteria": "Depth of document extraction, accuracy of cross-document comparison, professional tone, and thoroughness of source verification."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Claude Projects & Organization",
-      "module_purpose": "Use Projects to maintain ongoing context.",
-      "what_you_will_learn": [
-        "Learn Setting up a Project",
-        "Learn Curating Project Knowledge",
-        "Learn Custom Instructions per Project",
-        "Learn Team Collaboration Basics"
+      "module_title": "Claude Projects & Knowledge",
+      "duration": "6 Hours",
+      "hours": 6,
+      "module_purpose": "Build and manage persistent Claude Projects, curate project knowledge bases, author custom instructions, and query grounded reference files with source attribution.",
+      "learning_objectives": [
+        "Organize recurring knowledge-work workflows within dedicated Claude Projects.",
+        "Define tailored project instructions, operational personas, and constraint boundaries.",
+        "Upload and curate approved reference collateral, managing context freshness and limits.",
+        "Execute document-grounded prompting and extract source-attributed answers.",
+        "Detect missing knowledge, identify contradictions, and maintain knowledge-base quality."
       ],
-      "lessons": [
-        {
-          "lesson_number": "3.1",
-          "lesson_title": "Setting up a Project",
-          "what_is_taught": "Fundamentals of Setting up a Project",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Setting up a Project in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.2",
-          "lesson_title": "Curating Project Knowledge",
-          "what_is_taught": "Fundamentals of Curating Project Knowledge",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Curating Project Knowledge in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.3",
-          "lesson_title": "Custom Instructions per Project",
-          "what_is_taught": "Fundamentals of Custom Instructions per Project",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Custom Instructions per Project in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.4",
-          "lesson_title": "Team Collaboration Basics",
-          "what_is_taught": "Fundamentals of Team Collaboration Basics",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Team Collaboration Basics in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "topics_covered": [
+        "Claude Projects fundamentals",
+        "Organizing related knowledge work",
+        "Project creation",
+        "Project naming and objectives",
+        "Project instructions",
+        "Reference documents",
+        "Project knowledge",
+        "Uploading approved files",
+        "Organizing context",
+        "Maintaining relevant information",
+        "Document-grounded prompting",
+        "Retrieving information from project knowledge",
+        "Source relevance",
+        "Source attribution",
+        "Cross-document questions",
+        "Detecting missing information",
+        "Conflicting information",
+        "Context limits",
+        "Knowledge freshness",
+        "Updating project reference information",
+        "Project-specific working procedures",
+        "Sharing and collaboration concepts",
+        "Permission boundaries",
+        "Personal versus organizational workspace considerations",
+        "Source privacy",
+        "Knowledge-base quality assurance",
+        "Project reuse",
+        "Long-running work continuity concepts",
+        "Project documentation",
+        "Human verification of grounded answers"
       ],
-      "key_concepts": [
-        "Setting up a Project",
-        "Curating Project Knowledge",
-        "Custom Instructions per Project",
-        "Team Collaboration Basics"
+      "hands_on_exercises": [
+        "Project Setup & Instruction Architecture: Configure a Claude Project with strict tone guidelines and scope boundaries.",
+        "Knowledge Ingestion & Indexing: Ingest synthetic company policies and contracts into Project Knowledge.",
+        "Grounded Query & Stress-Testing: Query the project on edge cases and verify that Claude cites ingested documents or flags missing info."
       ],
-      "tools": [
-        "Claude",
-        "Claude API",
-        "Artifacts"
+      "practical_assignment": {
+        "title": "Business Knowledge Project",
+        "scenario": "Construct a complete Claude Project (or equivalent documented project knowledge workflow) using approved synthetic business collateral for an ongoing operational initiative. Test source-grounded answering and document maintenance procedures.",
+        "deliverables": [
+          "Project objective statement and target use-case definition",
+          "Engineered project instructions defining persona, constraints, and schemas",
+          "Curated reference document library (minimum 3 synthetic business files)",
+          "Source inventory documenting document versions and authority",
+          "Five complex research and operational query scenarios",
+          "Document-grounded responses featuring explicit source attribution",
+          "Source verification checklist validating claims against source passages",
+          "Missing-information test demonstrating that Claude refuses to invent unprovided facts",
+          "Project maintenance and update guidelines"
+        ],
+        "expected_competency": "Students can structure persistent business knowledge within Claude Projects and produce reliable, source-aware responses for recurring work."
+      },
+      "assessment_criteria": "Precision of project instructions, quality of reference file curation, accuracy of source citations, and adherence to knowledge boundaries."
+    },
+    {
+      "module_number": "Module 04",
+      "module_title": "Claude Artifacts",
+      "duration": "6 Hours",
+      "hours": 6,
+      "module_purpose": "Create, iterate, test, and polish standalone Claude Artifacts including professional business documents, presentation decks, simple dashboards, and lightweight interactive tools.",
+      "learning_objectives": [
+        "Differentiate self-contained Artifacts from standard conversational responses.",
+        "Author clear requirement briefs to generate structured document and presentation Artifacts.",
+        "Design simple business dashboard Artifacts with clear visual hierarchy, KPIs, and charts.",
+        "Build and test lightweight interactive tool Artifacts with input handling and validation.",
+        "Execute iterative revisions, manage version changes, and verify data correctness and security."
       ],
-      "hands_on_practice": "Lab focused on Claude Projects & Organization",
-      "assignment": "Module 3 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "topics_covered": [
+        "Claude Artifacts fundamentals",
+        "Understanding self-contained deliverables",
+        "Artifacts versus ordinary chat responses",
+        "Artifact creation",
+        "Supported artifact types",
+        "Document artifacts",
+        "Professional business documents",
+        "Presentation artifacts",
+        "Slide outlines and editable presentations",
+        "Simple dashboard concepts",
+        "Data presentation",
+        "Static charts and KPI displays",
+        "Interactive artifact fundamentals",
+        "Lightweight interactive tools",
+        "Visual hierarchy",
+        "Typography and readability",
+        "Business design consistency",
+        "Artifact instructions",
+        "Requirement briefs",
+        "Iterative revisions",
+        "Reviewing generated artifacts",
+        "Editing content",
+        "Version and change awareness",
+        "Testing interactive behavior",
+        "Data correctness",
+        "Export and sharing",
+        "Permissions and visibility",
+        "Avoiding confidential data exposure",
+        "Feature and plan limitations",
+        "Final artifact quality assurance"
+      ],
+      "hands_on_exercises": [
+        "Document Artifact Lab: Generate and refine a multi-section business policy document artifact with visual callouts.",
+        "Presentation Artifact Workshop: Create a 6-slide presentation artifact with executive structure and data points.",
+        "Interactive Tool / Dashboard Build: Build and test a lightweight business ROI calculator or KPI dashboard artifact."
+      ],
+      "practical_assignment": {
+        "title": "Professional Claude Artifact",
+        "scenario": "Develop a portfolio-ready Claude Artifact selecting from Option A (Business Report Artifact), Option B (Presentation Artifact), Option C (Simple Business Dashboard), or Option D (Lightweight Interactive Artifact). Test functionality, verify data, and document revisions.",
+        "deliverables": [
+          "Artifact objective and target audience specification",
+          "Detailed functional or editorial requirement brief",
+          "Original initial artifact draft generated by Claude",
+          "Iterative revision log documenting prompt modifications and edits",
+          "Final polished deliverable (document, presentation, dashboard, or tool)",
+          "Data correctness and calculation verification sheet",
+          "User testing notes validating interactive behavior (if interactive)",
+          "Export, sharing, and confidentiality compliance documentation"
+        ],
+        "expected_competency": "Students can create, revise, test, and present professional Claude Artifacts suitable for business and knowledge-work applications."
+      },
+      "assessment_criteria": "Deliverable usability, visual hierarchy, clarity of requirement prompts, data accuracy, and user testing rigor."
+    },
+    {
+      "module_number": "Module 05",
+      "module_title": "Skills, Reusable Workflows & Portfolio",
+      "duration": "6 Hours",
+      "hours": 6,
+      "module_purpose": "Build reusable Claude Skills, standardize recurring operating procedures, evaluate multi-step Cowork workflows, and compile the final Claude Professional Deliverables Pack.",
+      "learning_objectives": [
+        "Map repetitive knowledge-work tasks into standardized, reusable procedures.",
+        "Author instruction-based custom Claude Skills with input/output schemas and quality rubrics.",
+        "Understand Claude Skills architecture, trigger mechanisms, and supporting resources.",
+        "Evaluate Claude Cowork and unified task capabilities with awareness of permissions and limits.",
+        "Assemble, audit, and finalize the 4-component Claude Professional Deliverables Pack."
+      ],
+      "topics_covered": [
+        "Reusable AI procedures",
+        "Identifying repetitive knowledge-work tasks",
+        "Procedure design",
+        "Standard operating procedures",
+        "Claude Skills fundamentals",
+        "Anthropic-provided Skills",
+        "Custom Skills",
+        "Skill instructions",
+        "Task-specific procedures",
+        "Reusable templates",
+        "Skill descriptions and activation concepts",
+        "Skill documentation",
+        "Input specifications",
+        "Output specifications",
+        "Quality-control requirements",
+        "Reference documents",
+        "Supporting resources",
+        "Skill testing",
+        "Revising task procedures",
+        "Maintaining consistent brand voice",
+        "Reusable report templates",
+        "Reusable proposal templates",
+        "Document analysis workflows",
+        "Versioning procedures",
+        "Human approval",
+        "Privacy and permissions",
+        "Skill access and availability",
+        "Claude Cowork awareness",
+        "Multi-step knowledge-work tasks",
+        "Supported plugins and connected tools awareness",
+        "Final portfolio preparation",
+        "Reusable workflow handover"
+      ],
+      "hands_on_exercises": [
+        "SOP Procedure Mapping: Map an editorial review process into a formalized step-by-step procedure.",
+        "Custom Skill Construction: Author an instruction-based Claude Skill for reviewing commercial proposals against compliance checklists.",
+        "Multi-Scenario Skill Testing: Execute the custom Skill across 3 distinct test scenarios and evaluate consistency."
+      ],
+      "practical_assignment": {
+        "title": "Reusable Professional Task Skill",
+        "scenario": "Create a reusable custom Claude Skill (or equivalent documented task procedure) for a high-frequency business task (e.g., proposal review, requirements extraction, meeting-notes-to-action-plan, or research brief). Test across 3 scenarios and author handover documentation.",
+        "deliverables": [
+          "Skill name, purpose, and target user profile",
+          "Trigger description and activation criteria",
+          "Input specification and required parameters",
+          "Step-by-step procedure instructions",
+          "Standardized output template",
+          "Supporting reference checklist and quality rules",
+          "Mandatory human approval protocol before consequential actions",
+          "Three test scenario datasets with input variations",
+          "Evaluation outcomes and output consistency analysis",
+          "Revision log and reuse handover instructions"
+        ],
+        "expected_competency": "Students can develop reusable Claude-based task procedures, author instruction-based Skills, and ensure consistent, quality-controlled business outputs."
+      },
+      "assessment_criteria": "Repeatability of procedure, completeness of quality rubrics, robustness of test evaluations, and clarity of handover documentation."
+    }
+  ],
+  "portfolio": {
+    "title": "Claude Professional Deliverables Pack",
+    "description": "A comprehensive, professionally verified portfolio of 4 deliverable groups demonstrating advanced Claude-assisted analysis, reporting, reusable Skills, and interactive Artifacts.",
+    "deliverables": [
+      {
+        "deliverable_number": 1,
+        "title": "Complex Document Analysis & Evidence Review",
+        "category": "Long-Document Analysis",
+        "description": "A thorough, evidence-grounded deconstruction of an authorized or synthetic long business document (spec, contract, or policy). Features structured summaries, extracted functional/non-functional requirements, risk analysis, and documented source references.",
+        "included_artifacts": [
+          "Source document inventory and scope parameters",
+          "Structured document summary with key operational facts",
+          "Extracted business and technical requirements matrix",
+          "Identified risks, gaps, and contradictory clauses",
+          "Evidence verification notes linking assertions to specific document sections"
+        ]
+      },
+      {
+        "deliverable_number": 2,
+        "title": "Research-Informed Professional Business Report",
+        "category": "Business Report",
+        "description": "A polished, executive-ready management report or commercial proposal synthesizing multi-source findings. Features an executive summary, detailed comparative analysis, strategic recommendations, and a complete editorial revision log.",
+        "included_artifacts": [
+          "Business brief outlining objectives and target audience",
+          "Executive summary highlighting critical takeaways",
+          "Detailed findings with multi-source comparative analysis",
+          "Strategic business recommendations and action items",
+          "Human editorial polish checklist and source citation audit"
+        ]
+      },
+      {
+        "deliverable_number": 3,
+        "title": "Claude Skill for Repeatable Business Work",
+        "category": "Reusable Task Skill",
+        "description": "A standardized, reusable custom Claude Skill (or documented task procedure) designed for high-frequency business tasks. Features parameter inputs, step-by-step instructions, quality rubrics, and testing results across 3 scenarios.",
+        "included_artifacts": [
+          "Skill definition, purpose, and trigger criteria",
+          "Input/output specifications and standardized deliverable templates",
+          "Step-by-step task procedure instructions and quality-control rubrics",
+          "Three test scenario evaluations demonstrating consistency",
+          "Human approval protocol and reuse runbook"
+        ]
+      },
+      {
+        "deliverable_number": 4,
+        "title": "Claude Artifact for Business Productivity",
+        "category": "Professional Claude Artifact",
+        "description": "A portfolio-ready, self-contained deliverable created and iterated using Claude Artifacts. May be a formal business document, an executive presentation deck, a simple business KPI dashboard, or a lightweight interactive tool.",
+        "included_artifacts": [
+          "Artifact requirement brief and target audience definition",
+          "Initial AI-generated artifact draft and prompt history",
+          "Iterative revision log documenting structural and visual enhancements",
+          "Final polished deliverable (document, presentation, dashboard, or tool)",
+          "Verification notes confirming data correctness and user testing"
+        ]
+      }
+    ],
+    "overall_requirements": [
+      "Every deliverable clearly distinguishes source inputs, AI drafts, student edits, and final verified outputs.",
+      "All factual assertions must be verified against primary sources; zero fabricated citations or hallucinated figures are permitted.",
+      "All interactive artifacts must be tested for functional reliability; zero mockups presented as live systems.",
+      "All procedures must include human-in-the-loop review gates prior to stakeholder distribution.",
+      "All artifacts are assembled into an executive portfolio ready for presentation to employers, clients, or leadership."
+    ]
+  },
+  "modernization_and_review": {
+    "cadence": "Quarterly (Every 3 Months)",
+    "core_modernization_rules": [
+      "Strictly eliminate obsolete Claude 3.5 Sonnet locks and universal long-context promises.",
+      "Eliminate compulsory Claude API programming, Claude Code development, and production software deployment.",
+      "Incorporate modern Claude Projects for organizing persistent knowledge and custom instructions.",
+      "Teach modern Claude Artifacts (documents, presentations, simple dashboards, lightweight interactive tools) with tier caveats.",
+      "Teach instruction-based Claude Skills as reusable task procedures without requiring coding or executable scripts.",
+      "Introduce Claude Cowork and unified task capabilities conceptually while acknowledging account-specific rollout differences."
+    ],
+    "claude_cowork_positioning": {
+      "overview": "Anthropic's ongoing unification of Claude chat and Cowork provides multi-step task handling and connected tools where supported.",
+      "teaching_approach": "Cover multi-step task planning, review gates, and permission management conceptually. Cowork is maintained as an optional demonstration rather than a mandatory capstone requirement."
+    },
+    "quarterly_review_checklist": [
+      "1. Verify active Claude foundation model names, capabilities, and availability.",
+      "2. Check model selection availability and plan-specific features.",
+      "3. Audit supported context windows, document processing limits, and file upload boundaries.",
+      "4. Review Claude Projects features, sharing permissions, and knowledge base limits.",
+      "5. Review Claude Skills architecture, custom Skill creation access, and import/export formats.",
+      "6. Track official Anthropic agent skills documentation and feature releases.",
+      "7. Inspect supported Claude Artifact types (documents, presentations, designs, dashboards).",
+      "8. Review interactive Artifact capabilities, sandbox constraints, and rendering rules.",
+      "9. Track Claude Cowork rollout and unified task experience availability across accounts.",
+      "10. Verify supported connectors, plugins, and third-party integration permissions.",
+      "11. Audit plan boundaries across Free, Pro, Team, and Enterprise subscriptions.",
+      "12. Review administrative controls, organizational workspace policies, and data retention settings.",
+      "13. Audit data privacy standards, training opt-out policies, and enterprise compliance.",
+      "14. Verify regional and language availability for advanced Claude capabilities.",
+      "15. Identify deprecated features and promptly update curriculum documentation.",
+      "16. Review official Claude UI changes and update student lab walkthrough instructions.",
+      "17. Confirm equivalent alternative lab exercises for any restricted or beta features."
+    ]
+  },
+  "official_references": [
+    {
+      "topic": "Claude Skills",
+      "url": "https://support.claude.com/en/articles/12512176-what-are-skills",
+      "note": "Official documentation on what Skills are and how they package reusable procedures."
+    },
+    {
+      "topic": "Agent Skills Overview",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "note": "Technical reference on agent skills and modular instruction packages."
+    },
+    {
+      "topic": "Claude Projects",
+      "url": "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects",
+      "note": "Official guide on project creation, knowledge bases, and custom instructions."
+    },
+    {
+      "topic": "Claude Artifacts",
+      "url": "https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them",
+      "note": "Official documentation on creating, editing, and using Artifacts."
+    },
+    {
+      "topic": "Claude Cowork Announcement",
+      "url": "https://claude.com/blog/cowork-is-now-claude",
+      "note": "Official blog detailing the unification of chat and Cowork task experiences."
+    },
+    {
+      "topic": "Cowork Availability",
+      "url": "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile",
+      "note": "Device, plan, and platform support guidelines for Cowork."
+    },
+    {
+      "topic": "Claude Product Overview",
+      "url": "https://claude.com/",
+      "note": "Core Anthropic product interface and capability portal."
+    }
+  ],
+  "skill_boundaries": {
+    "included": [
+      "Claude conversational interface and task-oriented prompt design",
+      "Long-document analysis, requirements extraction, and gap identification",
+      "Professional business writing, executive summaries, reports, and proposals",
+      "Claude Projects knowledge management and source-grounded querying",
+      "Claude Artifacts creation (documents, presentations, simple dashboards, lightweight tools)",
+      "Instruction-based Claude Skills for repeatable business operations",
+      "Conceptual awareness of Claude Cowork and multi-step task planning",
+      "Quality assurance, fact-checking, citation audits, and data privacy"
+    ],
+    "excluded": [
+      "Claude API programming, Python SDK development, or REST endpoint coding",
+      "Claude Code software engineering or local terminal tool development",
+      "Complex programming, full-stack web development, or production React engineering",
+      "Production database integrations, backend APIs, or enterprise app deployment",
+      "Enterprise agent orchestration, multi-agent frameworks, or autonomous loops",
+      "Advanced RAG engineering, vector database pipelines, or custom embedding models",
+      "Full n8n workflow deployment, MCP server engineering, or machine learning math"
+    ],
+    "course_differentiation": {
+      "vs_chatgpt_mastery": "Course 44 (ChatGPT for Work) focuses on OpenAI's ChatGPT, Advanced Data Analysis (Python execution environment), Canvas, and custom GPTs. Course 46 focuses specifically on Anthropic's Claude, nuanced long-document analysis, Claude Projects, Claude Skills, and Claude Artifacts.",
+      "vs_gemini_mastery": "Course 45 (Gemini & Google Workspace AI) focuses on native Google Workspace integrations (Gmail, Docs, Sheets, Slides, Drive) and Gemini Notebook. Course 46 focuses on document synthesis, requirements analysis, and Anthropic's Artifact/Skill ecosystem.",
+      "vs_prompt_engineering": "Course 41 (Prompt Engineering) covers foundational prompt mechanics across multiple LLM providers. Course 46 applies advanced prompting specifically to knowledge work, long documents, and professional deliverables in Claude.",
+      "vs_ai_agents_fundamentals": "Course 43 (AI Agents Fundamentals) focuses on multi-step tool-calling agent loops and autonomous decision architectures. Course 46 focuses on human-in-the-loop professional productivity."
+    }
+  },
+  "certification": {
+    "title": "Nova Skills Certified Claude Productivity, Skills & Artifacts Professional",
+    "issuing_body": "Nova Skills School of Artificial Intelligence & Applied Technology",
+    "credential_level": "Applied Skill Certification",
+    "assessment_model": "100% Practical Portfolio Evaluation & Verification Audit",
+    "criteria": "Successful submission and verification of all 4 Claude Professional Deliverables Pack deliverables with 100% citation accuracy, verified data, and signed human-review checklists.",
+    "verification_method": "Digital credential verification with unique portfolio verification URL and QR code on novaskills.in portal.",
+    "institutional_disclaimer": "This is an independent industry skill certification issued by Nova Skills upon rigorous practical evaluation. It is not an official certification issued directly by Anthropic PBC."
+  },
+  "faq": [
+    {
+      "question": "What is Claude for Productivity, Skills & Artifacts?",
+      "answer": "Claude for Productivity, Skills & Artifacts is a 4-week, 32-hour practical certification course teaching professionals how to use Anthropic's Claude for complex document analysis, executive writing, Claude Projects, reusable Skills, and standalone Artifacts."
+    },
+    {
+      "question": "Is this course suitable for beginners?",
+      "answer": "Yes. The course begins with foundational prompting principles and clear instruction design before progressing to complex document extraction, Projects, and Artifacts. Anyone with basic computer and document literacy can succeed."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course spans 4 Weeks with 32 instructional hours (8 hours per week: 4 hours live technical instruction plus 4 hours supervised studio lab). The tuition fee is exactly ₹4,900 plus applicable 18% GST (totaling ₹5,782), under our Truth in Pricing policy."
+    },
+    {
+      "question": "Do I need coding knowledge?",
+      "answer": "No. The core course requires zero programming, coding, or software engineering experience. It focuses on end-user productivity, business prompt design, document synthesis, and native Claude capabilities."
+    },
+    {
+      "question": "Will I learn complex document analysis?",
+      "answer": "Yes. Module 02 provides dedicated training in ingesting, analyzing, and synthesizing long PDFs, business contracts, policy manuals, and technical specifications, identifying risks, gaps, and operational requirements."
+    },
+    {
+      "question": "Does the course include business reports and proposals?",
+      "answer": "Yes. You will learn to draft executive summaries, detailed management reports, commercial client proposals, and requirements documents adhering to professional structure and brand tone."
+    },
+    {
+      "question": "Will I learn Claude Projects?",
+      "answer": "Yes. Module 03 covers creating and managing Claude Projects, configuring tailored project instructions, curating reference knowledge bases, and executing document-grounded queries."
+    },
+    {
+      "question": "What are Claude Skills?",
+      "answer": "Claude Skills are Anthropic's framework for packaging reusable task instructions, operating procedures, supporting resources, and templates to execute recurring business tasks with high consistency."
+    },
+    {
+      "question": "Can I create reusable Claude Skills without coding?",
+      "answer": "Yes. In this course, you will build instruction-based custom Skills featuring defined triggers, input/output schemas, task instructions, and quality-control checklists without writing code."
+    },
+    {
+      "question": "What are Claude Artifacts?",
+      "answer": "Claude Artifacts are self-contained, editable, and interactive deliverables—such as formatted documents, slide outlines, simple dashboards, and lightweight tools—rendered in a dedicated panel alongside the chat."
+    },
+    {
+      "question": "Will I learn to create documents and presentations?",
+      "answer": "Yes. Module 04 teaches you how to generate and refine polished document artifacts and executive presentation slide decks with clear visual hierarchy and data callouts."
+    },
+    {
+      "question": "Does the course include interactive Artifacts?",
+      "answer": "Yes. You will learn how to design, test, and iterate lightweight interactive Artifacts (such as simple business calculators or KPI dashboards), subject to supported platform capabilities."
+    },
+    {
+      "question": "Can Claude help compare long documents?",
+      "answer": "Yes. You will learn systematic workflows to compare multiple versions of documents, analyze vendor proposals against RFPs, and detect contradictions or omissions across competing sources."
+    },
+    {
+      "question": "Will I learn source verification?",
+      "answer": "Yes. Independent verification is a core pillar of the course. You will learn rigorous fact-checking protocols, inline citation verification, and hallucination detection to ensure every claim is grounded."
+    },
+    {
+      "question": "Does the course include Claude Cowork?",
+      "answer": "Yes. Module 05 provides conceptual awareness of Claude Cowork and Anthropic's unified task experience, exploring multi-step planning, human review gates, and workspace permissions."
+    },
+    {
+      "question": "Do I need a paid Claude plan?",
+      "answer": "No. Standard free Claude accounts or accessible tiers are fully sufficient for all core learning outcomes. We provide equivalent documented alternatives for any plan-restricted features."
+    },
+    {
+      "question": "What practical portfolio will I build?",
+      "answer": "You will build the 4-component Claude Professional Deliverables Pack: (1) Complex Document Analysis & Evidence Review, (2) Research-Informed Business Report, (3) Reusable Claude Task Skill, and (4) Professional Claude Artifact."
+    },
+    {
+      "question": "Does this course teach Claude API development?",
+      "answer": "No. Claude API engineering, Python SDK scripting, and endpoint coding are excluded. The course is dedicated to end-user productivity, business operations, and knowledge work."
+    },
+    {
+      "question": "Does it include Claude Code programming?",
+      "answer": "No. Claude Code terminal development and software engineering are deliberately excluded to focus on business documentation, analysis, and professional deliverables."
+    },
+    {
+      "question": "Is this an official Anthropic certification?",
+      "answer": "No. This is an independent professional skill certification issued by Nova Skills based on practical portfolio evaluation. Nova Skills is an independent educational institution."
+    },
+    {
+      "question": "How is this different from ChatGPT or Gemini productivity courses?",
+      "answer": "While Courses 44 and 45 focus on ChatGPT (Canvas, Python data analysis) and Gemini (Google Workspace native apps), Course 46 focuses specifically on Claude's nuanced long-document analysis, Claude Projects, Claude Skills, and Claude Artifacts."
+    },
+    {
+      "question": "What career applications can I explore?",
+      "answer": "Graduates apply these skills in roles such as AI-Assisted Business Documentation Specialist, Research Support Assistant, Business Reporting Coordinator, Knowledge Management Assistant, and Proposal Writing Specialist."
+    }
+  ],
+  "seo": {
+    "meta_title": "Claude AI Course | Skills & Artifacts | ₹4,900 | Nova Skills",
+    "meta_description": "Learn Claude for documents, research, reports, Projects, Skills and Artifacts. Build 4 portfolio deliverables in 4 weeks, 32 hours, for ₹4,900.",
+    "primary_keyword": "Claude AI Course",
+    "secondary_keywords": [
+      "Claude AI Course in India",
+      "Claude AI Training",
+      "Claude for Productivity",
+      "Claude for Business",
+      "Claude Projects Course",
+      "Claude Skills Training",
+      "Claude Artifacts Course",
+      "Claude Document Analysis",
+      "Claude AI Writing Course",
+      "Claude for Research",
+      "Claude Business Reports",
+      "Claude Presentation Creation",
+      "Claude AI Course Fees",
+      "Claude AI Course Duration",
+      "Claude AI for Beginners",
+      "Claude Knowledge Work Training",
+      "Claude AI Practical Course"
+    ],
+    "canonical_url": "https://novaskills.in/course-detail.html?id=claude-productivity",
+    "h1": "Claude for Productivity, Skills & Artifacts",
+    "hero_hook": "Turn Complex Documents and Ideas Into Professional Deliverables With Claude."
+  },
+  "icon": "🤖",
+  "color": "linear-gradient(135deg, #0599a8, #F59E0B)",
+  "category": "AI Academy",
+  "status": "active",
+  "url": "/course-detail.html?id=claude-productivity",
+  "rating": 4.9,
+  "reviews": 140,
+  "students": 890,
+  "liveProjects": 4,
+  "projects": 4,
+  "certificate": true,
+  "placementSupport": false,
+  "futureReviewStatus": "STABLE_2027",
+  "tags": [
+    "popular",
+    "claude",
+    "artifacts",
+    "skills",
+    "productivity",
+    "certification"
+  ],
+  "curriculum": [
+    {
+      "module": "Module 01",
+      "title": "Claude Fundamentals & Prompting",
+      "lessons": 30,
+      "duration": "6 Hours",
+      "topics": [
+        "Introduction to Claude",
+        "Anthropic's AI product ecosystem",
+        "Claude interface fundamentals",
+        "Conversation-based workflows",
+        "Supported models and model selection",
+        "Chat and task-oriented capabilities",
+        "Effective task instructions",
+        "Defining objectives",
+        "Target audience and context",
+        "Input and output specifications",
+        "Clear formatting instructions",
+        "Example-based prompting",
+        "Prompt iteration",
+        "Appropriate task decomposition",
+        "Context engineering fundamentals",
+        "Understanding context windows",
+        "Long-document handling",
+        "Large-file processing considerations",
+        "File upload limitations",
+        "Model output variability",
+        "Hallucinations and unsupported claims",
+        "Source verification",
+        "Model limitations",
+        "Responsible AI usage",
+        "Personal and business privacy",
+        "Safe file handling",
+        "Confidential information",
+        "Human review and approval",
+        "Appropriate tool selection",
+        "Feature and plan availability"
+      ]
+    },
+    {
+      "module": "Module 02",
+      "title": "Advanced Writing & Analysis",
+      "lessons": 36,
+      "duration": "8 Hours",
+      "topics": [
+        "Professional business writing",
+        "Business communication objectives",
+        "Identifying target readers",
+        "Research-informed writing",
+        "Evidence collection",
+        "Source credibility",
+        "Document structure",
+        "Executive summaries",
+        "Business reports",
+        "Management reports",
+        "Business proposals",
+        "Client proposals",
+        "Requirements documents",
+        "Requirements extraction",
+        "Functional versus nonfunctional requirements awareness",
+        "Complex document understanding",
+        "Long PDF analysis",
+        "Multi-document comparison",
+        "Identifying differences",
+        "Identifying conflicting information",
+        "Gap analysis",
+        "Information synthesis",
+        "Building structured outlines",
+        "Editorial revision",
+        "Tone and brand voice",
+        "Clarity and conciseness",
+        "Fact-checking",
+        "Citation and source verification",
+        "Avoiding fabricated references",
+        "Document version comparisons",
+        "Summarizing meeting notes",
+        "Identifying action items",
+        "Preparing stakeholder communication",
+        "Reviewing sensitive claims",
+        "Human editorial approval",
+        "Final deliverable quality assurance"
+      ]
+    },
+    {
+      "module": "Module 03",
+      "title": "Claude Projects & Knowledge",
+      "lessons": 30,
+      "duration": "6 Hours",
+      "topics": [
+        "Claude Projects fundamentals",
+        "Organizing related knowledge work",
+        "Project creation",
+        "Project naming and objectives",
+        "Project instructions",
+        "Reference documents",
+        "Project knowledge",
+        "Uploading approved files",
+        "Organizing context",
+        "Maintaining relevant information",
+        "Document-grounded prompting",
+        "Retrieving information from project knowledge",
+        "Source relevance",
+        "Source attribution",
+        "Cross-document questions",
+        "Detecting missing information",
+        "Conflicting information",
+        "Context limits",
+        "Knowledge freshness",
+        "Updating project reference information",
+        "Project-specific working procedures",
+        "Sharing and collaboration concepts",
+        "Permission boundaries",
+        "Personal versus organizational workspace considerations",
+        "Source privacy",
+        "Knowledge-base quality assurance",
+        "Project reuse",
+        "Long-running work continuity concepts",
+        "Project documentation",
+        "Human verification of grounded answers"
+      ]
+    },
+    {
+      "module": "Module 04",
+      "title": "Claude Artifacts",
+      "lessons": 30,
+      "duration": "6 Hours",
+      "topics": [
+        "Claude Artifacts fundamentals",
+        "Understanding self-contained deliverables",
+        "Artifacts versus ordinary chat responses",
+        "Artifact creation",
+        "Supported artifact types",
+        "Document artifacts",
+        "Professional business documents",
+        "Presentation artifacts",
+        "Slide outlines and editable presentations",
+        "Simple dashboard concepts",
+        "Data presentation",
+        "Static charts and KPI displays",
+        "Interactive artifact fundamentals",
+        "Lightweight interactive tools",
+        "Visual hierarchy",
+        "Typography and readability",
+        "Business design consistency",
+        "Artifact instructions",
+        "Requirement briefs",
+        "Iterative revisions",
+        "Reviewing generated artifacts",
+        "Editing content",
+        "Version and change awareness",
+        "Testing interactive behavior",
+        "Data correctness",
+        "Export and sharing",
+        "Permissions and visibility",
+        "Avoiding confidential data exposure",
+        "Feature and plan limitations",
+        "Final artifact quality assurance"
+      ]
+    },
+    {
+      "module": "Module 05",
+      "title": "Skills, Reusable Workflows & Portfolio",
+      "lessons": 32,
+      "duration": "6 Hours",
+      "topics": [
+        "Reusable AI procedures",
+        "Identifying repetitive knowledge-work tasks",
+        "Procedure design",
+        "Standard operating procedures",
+        "Claude Skills fundamentals",
+        "Anthropic-provided Skills",
+        "Custom Skills",
+        "Skill instructions",
+        "Task-specific procedures",
+        "Reusable templates",
+        "Skill descriptions and activation concepts",
+        "Skill documentation",
+        "Input specifications",
+        "Output specifications",
+        "Quality-control requirements",
+        "Reference documents",
+        "Supporting resources",
+        "Skill testing",
+        "Revising task procedures",
+        "Maintaining consistent brand voice",
+        "Reusable report templates",
+        "Reusable proposal templates",
+        "Document analysis workflows",
+        "Versioning procedures",
+        "Human approval",
+        "Privacy and permissions",
+        "Skill access and availability",
+        "Claude Cowork awareness",
+        "Multi-step knowledge-work tasks",
+        "Supported plugins and connected tools awareness",
+        "Final portfolio preparation",
+        "Reusable workflow handover"
+      ]
+    }
+  ],
+  "seo_title": "Claude AI Course | Skills & Artifacts | ₹4,900 | Nova Skills",
+  "meta_title": "Claude AI Course | Skills & Artifacts | ₹4,900 | Nova Skills",
+  "seo_description": "Learn Claude for documents, research, reports, Projects, Skills and Artifacts. Build 4 portfolio deliverables in 4 weeks, 32 hours, for ₹4,900.",
+  "meta_description": "Learn Claude for documents, research, reports, Projects, Skills and Artifacts. Build 4 portfolio deliverables in 4 weeks, 32 hours, for ₹4,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=claude-productivity",
+  "what_you_will_build": [
+    {
+      "deliverable_number": 1,
+      "title": "Complex Document Analysis & Evidence Review",
+      "category": "Long-Document Analysis",
+      "description": "A thorough, evidence-grounded deconstruction of an authorized or synthetic long business document (spec, contract, or policy). Features structured summaries, extracted functional/non-functional requirements, risk analysis, and documented source references.",
+      "included_artifacts": [
+        "Source document inventory and scope parameters",
+        "Structured document summary with key operational facts",
+        "Extracted business and technical requirements matrix",
+        "Identified risks, gaps, and contradictory clauses",
+        "Evidence verification notes linking assertions to specific document sections"
+      ]
+    },
+    {
+      "deliverable_number": 2,
+      "title": "Research-Informed Professional Business Report",
+      "category": "Business Report",
+      "description": "A polished, executive-ready management report or commercial proposal synthesizing multi-source findings. Features an executive summary, detailed comparative analysis, strategic recommendations, and a complete editorial revision log.",
+      "included_artifacts": [
+        "Business brief outlining objectives and target audience",
+        "Executive summary highlighting critical takeaways",
+        "Detailed findings with multi-source comparative analysis",
+        "Strategic business recommendations and action items",
+        "Human editorial polish checklist and source citation audit"
+      ]
+    },
+    {
+      "deliverable_number": 3,
+      "title": "Claude Skill for Repeatable Business Work",
+      "category": "Reusable Task Skill",
+      "description": "A standardized, reusable custom Claude Skill (or documented task procedure) designed for high-frequency business tasks. Features parameter inputs, step-by-step instructions, quality rubrics, and testing results across 3 scenarios.",
+      "included_artifacts": [
+        "Skill definition, purpose, and trigger criteria",
+        "Input/output specifications and standardized deliverable templates",
+        "Step-by-step task procedure instructions and quality-control rubrics",
+        "Three test scenario evaluations demonstrating consistency",
+        "Human approval protocol and reuse runbook"
+      ]
+    },
+    {
+      "deliverable_number": 4,
+      "title": "Claude Artifact for Business Productivity",
+      "category": "Professional Claude Artifact",
+      "description": "A portfolio-ready, self-contained deliverable created and iterated using Claude Artifacts. May be a formal business document, an executive presentation deck, a simple business KPI dashboard, or a lightweight interactive tool.",
+      "included_artifacts": [
+        "Artifact requirement brief and target audience definition",
+        "Initial AI-generated artifact draft and prompt history",
+        "Iterative revision log documenting structural and visual enhancements",
+        "Final polished deliverable (document, presentation, dashboard, or tool)",
+        "Verification notes confirming data correctness and user testing"
+      ]
     }
   ]
 }

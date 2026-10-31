@@ -1,202 +1,1833 @@
 {
-    "course_id": "interview-preparation",
-    "course_name": "Interview Preparation",
-    "academy": "Career & Freelancing Academy",
-    "academy_id": "career-freelancing-academy",
-    "course_type": "MODULE",
-    "course_role": "Job Seeker",
-    "level": "Intermediate",
-    "duration": "1 Month",
-    "learning_hours": 30,
-    "future_review_status": "Up to date",
-    "target_audience": {
-        "best_for": ["Active job seekers", "Professionals preparing for promotion interviews", "Recent graduates"],
-        "not_for": ["Freelancers (unless applying for long-term contract roles)"],
-        "who_should_take_foundation_first": "Those without a finalized resume should take Resume Building first."
-    },
-    "prerequisites": {
-        "required": "A defined target role or industry.",
-        "recommended": "A completed resume.",
-        "system_requirements": {
-            "hardware": "A computer with a webcam and microphone for mock interviews.",
-            "software_accounts": "Zoom, Google Meet, Loom."
-        },
-        "not_required": "Prior interview experience."
-    },
-    "overview": {
-        "positioning": "Transform interview anxiety into confidence through structured preparation and proven behavioral frameworks.",
-        "short_description": "Master the art of interviewing, from the initial HR screen to the final executive round.",
-        "key_facts": {
-            "level": "Intermediate",
-            "duration": "1 Month",
-            "format": "Online",
-            "estimated_learning_hours": 30,
-            "project_count": 2,
-            "capstone": false,
-            "ai_integration": "Medium",
-            "career_focus": "Corporate Employment"
-        },
-        "what_you_will_be_able_to_do": [
-            "Deliver a compelling 'Tell me about yourself' elevator pitch.",
-            "Answer complex behavioral questions using the STAR method.",
-            "Navigate difficult questions regarding employment gaps or weaknesses.",
-            "Conduct structured follow-ups that leave a lasting impression."
-        ]
-    },
-    "why_now": {
-        "industry_shift": "Interviews have largely shifted to remote video formats, requiring new techniques for building rapport.",
-        "ai_impact": "Some initial screening is now done via automated asynchronous video interviews (e.g., HireVue).",
-        "business_demand": "Employers are placing higher emphasis on cultural fit and behavioral competencies over pure technical skills.",
-        "career_opportunity": "Strong interview skills directly correlate with higher starting salaries and better job placements."
-    },
-    "learning_outcomes": [
-        "STRUCTURE concise and impactful responses to common interview questions.",
-        "DEMONSTRATE problem-solving skills through behavioral storytelling.",
-        "EVALUATE company culture and role alignment by asking strategic questions.",
-        "PERFORM confidently in both live video and asynchronous interview formats."
+  "course_id": "interview-preparation",
+  "id": "interview-preparation",
+  "slug": "interview-preparation",
+  "course_name": "Interview Preparation & Professional Communication",
+  "title": "Interview Preparation & Professional Communication",
+  "name": "Interview Preparation & Professional Communication",
+  "academic_sequence": 81,
+  "course_number": 81,
+  "curriculum_edition": "2027",
+  "academy": "Career & Freelancing Academy",
+  "academy_id": "career",
+  "academyId": "career",
+  "academic_positioning": "Interview Preparation, Professional Introductions, Behavioural Storytelling (STAR/CAR), Project Explanations, Video Interviews, Mock Simulations & Structured Feedback",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "Interview Readiness & Professional Communication Specialist",
+  "courseRole": "Interview Readiness & Professional Communication Specialist",
+  "level": "Beginner to Applied",
+  "priority": "P0",
+  "positioning": "Interview Readiness & Professional Communication",
+  "duration": "4 Weeks",
+  "durationMonths": 1,
+  "duration_weeks": 4,
+  "learning_hours": 32,
+  "learningHours": 32,
+  "guided_hours": 32,
+  "hours": 32,
+  "weekly_workload": "8 hours per week (guided communication labs, behavioural storytelling clinics, mock interview simulations, and dossier reviews)",
+  "mode": "Interactive Interview Studio & Assessed Simulation Labs",
+  "price": 4900,
+  "fee": 4900,
+  "regular_fee": 4900,
+  "originalPrice": 4900,
+  "commercial_notice": "Flat, transparent tuition of ₹4,900. No hidden fees or exaggerated comparison claims.",
+  "pricing": {
+    "amount": 4900,
+    "currency": "INR",
+    "display": "₹4,900",
+    "comparison_price": null,
+    "discount_percent": 0,
+    "transparent_pricing": true
+  },
+  "tagline": "Prepare With Evidence. Answer With Clarity. Present Your Skills Confidently.",
+  "hero_headline": "Prepare With Evidence. Answer With Clarity. Present Your Skills Confidently.",
+  "hero_supporting_heading": "CAREER & FREELANCING ACADEMY / INTERVIEW READINESS",
+  "hero_supporting_headline": "Practice Real Questions. Communicate Genuine Strengths. Improve Through Feedback.",
+  "h1": "Interview Preparation & Professional Communication",
+  "seo_title": "Interview Preparation & Communication Course | Nova Skills",
+  "meta_title": "Interview Preparation & Communication Course | Nova Skills",
+  "seo_description": "Practise STAR interviews, professional introductions, video interviews and mock interviews in 4 weeks (32h). Build a reviewed portfolio. Fee ₹4,900.",
+  "meta_description": "Practise STAR interviews, professional introductions, video interviews and mock interviews in 4 weeks (32h). Build a reviewed portfolio. Fee ₹4,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=interview-preparation",
+  "hero": {
+    "eyebrow": "CAREER & FREELANCING ACADEMY / INTERVIEW READINESS",
+    "h1": "Interview Preparation & Professional Communication",
+    "primary_hook": "Prepare With Evidence. Answer With Clarity. Present Your Skills Confidently.",
+    "short_description": "Develop practical interview skills through structured preparation, realistic mock interviews, behavioural storytelling, role-specific questions and professional communication. Learn to present genuine strengths, explain projects and respond effectively in in-person, video and AI-assisted interview settings.",
+    "supporting_value_proposition": "Practice Real Questions. Communicate Genuine Strengths. Improve Through Feedback.",
+    "quick_info": "4 Weeks | 32 Guided Hours | ₹4,900 | Beginner to Applied",
+    "primary_software_badge": "Google Meet OR Zoom, Google Docs, Consent-Based Recording",
+    "skill_tags": [
+      "Interview Preparation",
+      "Professional Communication",
+      "STAR Method",
+      "Behavioural Interviews",
+      "Mock Interviews",
+      "Video Interviews",
+      "Project Explanation",
+      "AI Practice",
+      "Interview Feedback"
     ],
-    "learning_journey": {
-        "stages": [
-            {"stage": "Foundations", "focus": "The elevator pitch and interview mindset."},
-            {"stage": "Behavioral", "focus": "Mastering the STAR method."},
-            {"stage": "Advanced", "focus": "Handling difficult questions and video dynamics."}
-        ]
-    },
-    "hands_on_tech": {
-        "core_tools": [
-            {"tool": "Zoom", "purpose": "Live mock interviews", "what_student_learns": "Virtual presence and eye contact.", "what_student_builds": "Video interview confidence."},
-            {"tool": "Loom", "purpose": "Asynchronous practice", "what_student_learns": "Self-review of body language and tone.", "what_student_builds": "Recorded response library."}
-        ],
-        "supporting_tools": [
-            {"tool": "Google Docs", "purpose": "Scripting stories"}
-        ],
-        "emerging_tools": [
-            {"tool": "AI Interview Bots", "purpose": "Practicing randomized questions."}
-        ],
-        "tools_to_review": ["HireVue", "Pramp"]
-    },
-    "industry_workflow": {
-        "overview": "The standard corporate interview pipeline.",
-        "stages": [
-            {"step": 1, "name": "HR Screen", "desc": "Brief phone call confirming basic qualifications and salary expectations."},
-            {"step": 2, "name": "Hiring Manager", "desc": "Deep dive into experience, cultural fit, and specific role requirements."},
-            {"step": 3, "name": "Panel/Technical", "desc": "Assessing hard skills or team dynamics with multiple stakeholders."},
-            {"step": 4, "name": "Executive Round", "desc": "Final alignment check with senior leadership."}
-        ]
-    },
-    "business_use_cases": [
-        {"sector": "Career Transition", "business_problem": "Getting interviews but failing to receive offers.", "approach": "Implementing structured behavioral storytelling.", "toolset": "Loom, Zoom", "output": "Higher offer conversion rates."}
-    ],
-    "ai_integration": {
-        "role_classification": "AI as a practice partner.",
-        "ai_can_assist_with": "Generating role-specific mock questions, analyzing speech patterns.",
-        "ai_can_automate": "Scheduling practice sessions.",
-        "ai_cannot_replace": "Authentic enthusiasm and genuine human connection.",
-        "human_expertise_required": "Reading the interviewer's body language and adjusting tone.",
-        "validation_protocol": "Human review of recorded mock interviews.",
-        "responsible_use": "Do not read AI-generated scripts verbatim during live interviews."
-    },
-    "best_practices": [
-        "Always research the company and the specific interviewers beforehand.",
-        "Have 5 core STAR stories prepared that can be adapted to multiple questions.",
-        "Look at the camera, not the screen, during video interviews.",
-        "Send a personalized thank-you note within 24 hours."
-    ],
-    "common_mistakes": [
-        {"mistake": "Rambling without a clear point.", "why_it_happens": "Nervousness and lack of structured preparation.", "professional_approach": "Using the STAR method to keep answers concise (under 2 minutes)."}
-    ],
-    "career_paths": {
-        "entry_roles": ["N/A - Skill applies to all roles"],
-        "mid_roles": ["N/A"],
-        "specialist_roles": ["N/A"],
-        "freelance_roles": ["Interview Coach (Service Offering)"],
-        "employer_expectations": "Articulate communication, self-awareness, and professionalism.",
-        "what_student_demonstrates": "The ability to confidently navigate high-pressure conversations."
-    },
-    "freelance_applications": {
-        "services_offered": ["Mock interview coaching"],
-        "client_workflow": "Intake -> Live Mock Interview -> Detailed Feedback Session",
-        "portfolio_requirements": "Testimonials from clients who landed jobs."
-    },
-    "what_you_will_build": [
-        "A customized 'Tell me about yourself' pitch.",
-        "A library of 5 versatile STAR stories.",
-        "A prepared list of questions to ask employers.",
-        "Recorded mock interview self-assessments."
-    ],
-    "final_deliverables": [
-        "A complete interview preparation portfolio."
-    ],
-    "assessment": {
-        "model": "Mock interview evaluation.",
-        "criteria": "Clarity of answers, body language, and effective use of the STAR framework."
-    },
-    "certification": {
-        "title": "N/A",
-        "criteria": "N/A",
-        "verification": "N/A"
-    },
-    "not_covered": "Highly specific technical coding challenges (e.g., LeetCode).",
-    "next_learning_path": {
-        "recommended_next": "Career Launch Program",
-        "related_programs": "Client Communication"
-    },
-    "faq": [
-        {"question": "How do I prepare for a video interview versus in-person?", "answer": "We cover specific techniques for video, including lighting, camera angle, and digital eye contact."},
-        {"question": "What if I don't have experience for a behavioral question?", "answer": "We teach you how to draw from academic, volunteer, or parallel experiences to answer effectively."},
-        {"question": "How do I answer 'What is your biggest weakness?'", "answer": "You will learn the framework for providing a genuine weakness along with the actionable steps you are taking to overcome it."}
-    ],
-    "modules": [
-        {
-            "module_number": 1,
-            "module_title": "The Fundamentals & The Elevator Pitch",
-            "module_purpose": "Master the critical first 5 minutes of any interview.",
-            "what_you_will_learn": ["Researching the company.", "Structuring the 'Tell me about yourself' pitch.", "Setting up for video interviews."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Pre-Interview Intelligence", "what_is_taught": "How to research the company, role, and interviewers.", "why_it_matters": "Demonstrates proactive interest and allows for tailored answers.", "what_learner_does": "Completes a research worksheet for a target company.", "expected_outcome": "A company dossier."},
-                {"lesson_number": 2, "lesson_title": "The Perfect Elevator Pitch", "what_is_taught": "The Present-Past-Future framework for introducing yourself.", "why_it_matters": "Sets the tone for the entire interview.", "what_learner_does": "Scripts their elevator pitch.", "expected_outcome": "A 90-second introduction script."},
-                {"lesson_number": 3, "lesson_title": "Virtual Presence Setup", "what_is_taught": "Lighting, audio, camera framing, and digital eye contact.", "why_it_matters": "Poor video quality distracts from your qualifications.", "what_learner_does": "Records a test video in Loom.", "expected_outcome": "An optimized video interview environment."}
-            ],
-            "key_concepts": ["Present-Past-Future Framework", "Digital Presence", "Company Intelligence"],
-            "tools": ["Loom", "Google Docs"],
-            "hands_on_practice": "Record the elevator pitch on video.",
-            "assignment": "Submit the Loom link of the elevator pitch for review.",
-            "business_application": "Making a strong, immediate professional impression.",
-            "expected_outcome": "Confidence in opening the interview."
-        },
-        {
-            "module_number": 2,
-            "module_title": "Behavioral Interviewing & The STAR Method",
-            "module_purpose": "Provide concrete proof of your skills through storytelling.",
-            "what_you_will_learn": ["The STAR framework.", "Identifying core competencies.", "Adapting stories to different questions."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Deconstructing STAR", "what_is_taught": "Situation, Task, Action, Result.", "why_it_matters": "Keeps answers concise, structured, and focused on your specific contribution.", "what_learner_does": "Breaks down a past project into STAR format.", "expected_outcome": "Understanding of the framework."},
-                {"lesson_number": 2, "lesson_title": "Building Your Story Library", "what_is_taught": "Developing 5 stories that cover leadership, failure, conflict, success, and teamwork.", "why_it_matters": "Prepares you for 90% of behavioral questions.", "what_learner_does": "Scripts 5 core STAR stories.", "expected_outcome": "A behavioral story library."},
-                {"lesson_number": 3, "lesson_title": "Adapting on the Fly", "what_is_taught": "Pivoting a prepared story to fit a slightly different question.", "why_it_matters": "Prevents sounding overly rehearsed.", "what_learner_does": "Practices answering randomized questions.", "expected_outcome": "Flexibility in storytelling."}
-            ],
-            "key_concepts": ["STAR Method", "Behavioral Competencies", "Narrative Agility"],
-            "tools": ["Loom"],
-            "hands_on_practice": "Record responses to 3 common behavioral questions.",
-            "assignment": "Submit the written story library and one video response.",
-            "business_application": "Proving competence through past performance.",
-            "expected_outcome": "Mastery of behavioral interview answers."
-        },
-        {
-            "module_number": 3,
-            "module_title": "Difficult Questions & Closing Strongly",
-            "module_purpose": "Navigate tricky topics and leave a lasting impression.",
-            "what_you_will_learn": ["Handling the 'weakness' question.", "Addressing employment gaps.", "Asking strategic questions.", "Post-interview follow-up."],
-            "lessons": [
-                {"lesson_number": 1, "lesson_title": "Navigating Red Flags", "what_is_taught": "Discussing weaknesses, gaps, or being fired professionally.", "why_it_matters": "Turns potential disqualifiers into demonstrations of maturity.", "what_learner_does": "Scripts responses to their specific 'weak spots'.", "expected_outcome": "Prepared answers for difficult topics."},
-                {"lesson_number": 2, "lesson_title": "Flipping the Interview", "what_is_taught": "Formulating insightful questions to ask the interviewer.", "why_it_matters": "Shows critical thinking and helps you evaluate the company.", "what_learner_does": "Drafts 5 questions to ask.", "expected_outcome": "A custom question bank."},
-                {"lesson_number": 3, "lesson_title": "The Follow-Up Strategy", "what_is_taught": "Writing thank-you notes and managing post-interview communication.", "why_it_matters": "Demonstrates professionalism and keeps you top-of-mind.", "what_learner_does": "Creates a thank-you email template.", "expected_outcome": "A follow-up protocol."}
-            ],
-            "key_concepts": ["Reframing Weaknesses", "Strategic Inquiry", "Professional Follow-up"],
-            "tools": ["Google Docs"],
-            "hands_on_practice": "Conduct a full 30-minute mock interview with a peer or mentor.",
-            "assignment": "Submit the strategic questions and follow-up template.",
-            "business_application": "Closing the deal and evaluating employer fit.",
-            "expected_outcome": "Complete end-to-end interview readiness."
-        }
+    "primary_cta": "Enroll Now",
+    "secondary_cta": "Get Course Syllabus"
+  },
+  "short_description": "Develop practical interview skills through structured preparation, realistic mock interviews, behavioural storytelling, role-specific questions and professional communication. Learn to present genuine strengths, explain projects and respond effectively in in-person, video and AI-assisted interview settings.",
+  "shortDesc": "Develop practical interview skills through structured preparation, realistic mock interviews, behavioural storytelling, role-specific questions and professional communication. Learn to present genuine strengths, explain projects and respond effectively in in-person, video and AI-assisted interview settings.",
+  "full_description": "Learn how to prepare for interviews with a clear understanding of the role, employer expectations and your own professional evidence. Develop structured answers, explain your projects, communicate your strengths and handle common behavioural and situational questions. Practice in-person and digital interview formats, improve your professional introduction and learn to respond thoughtfully to questions about teamwork, challenges, achievements and career goals. Complete two assessed mock interviews and use structured feedback to strengthen your performance.",
+  "fullDesc": "Learn how to prepare for interviews with a clear understanding of the role, employer expectations and your own professional evidence. Develop structured answers, explain your projects, communicate your strengths and handle common behavioural and situational questions. Practice in-person and digital interview formats, improve your professional introduction and learn to respond thoughtfully to questions about teamwork, challenges, achievements and career goals. Complete two assessed mock interviews and use structured feedback to strengthen your performance.",
+  "description": "Develop practical interview skills through structured preparation, realistic mock interviews, behavioural storytelling, role-specific questions and professional communication. Learn to present genuine strengths, explain projects and respond effectively in in-person, video and AI-assisted interview settings.",
+  "overview": {
+    "section_heading": "What You Will Master",
+    "positioning": "Interview Readiness & Professional Communication",
+    "short_description": "Develop practical interview skills through structured preparation, realistic mock interviews, behavioural storytelling, role-specific questions and professional communication. Learn to present genuine strengths, explain projects and respond effectively in in-person, video and AI-assisted interview settings.",
+    "expanded_overview": "Learn how to prepare for interviews with a clear understanding of the role, employer expectations and your own professional evidence. Develop structured answers, explain your projects, communicate your strengths and handle common behavioural and situational questions. Practice in-person and digital interview formats, improve your professional introduction and learn to respond thoughtfully to questions about teamwork, challenges, achievements and career goals. Complete two assessed mock interviews and use structured feedback to strengthen your performance.",
+    "commercial_differentiation": "Don't Just Memorise Interview Answers. Learn to Explain Your Actual Skills and Experience.",
+    "workflow": "Select Role → Research Employer → Map Skills → Prepare Stories → Rehearse Answers → Practise Interviews → Review Feedback → Improve"
+  },
+  "commercial_differentiation": {
+    "headline": "Know Your Skills. Explain Your Work. Prepare for Real Interviews.",
+    "supporting_copy": "Learn to prepare for interviews through role research, professional introductions, evidence-based answers and realistic practice. Build five genuine behavioural stories, explain your projects clearly and improve through two assessed mock interviews with structured feedback.",
+    "main_commercial_message": "Preparation You Can Demonstrate — Not Just Interview Advice You Can Read.",
+    "differentiators": [
+      {
+        "title": "Role-Specific Preparation",
+        "description": "Understand real job requirements and prepare relevant answers rather than generic interview responses."
+      },
+      {
+        "title": "Evidence-Based Communication",
+        "description": "Use actual achievements, academic projects, and real workflows to demonstrate demonstrable strengths."
+      },
+      {
+        "title": "Practical Interview Simulation",
+        "description": "Complete two realistic mock interviews with rubric evaluations rather than relying on passive reading alone."
+      },
+      {
+        "title": "Individual Feedback & Improvement",
+        "description": "Review communication quality, refine responses, compare baseline against final, and build a sustainable practice plan."
+      }
     ]
+  },
+  "modern_workflow_2027": {
+    "heading": "Professional Preparation Workflow",
+    "stages": [
+      {
+        "step": 1,
+        "name": "Select Role",
+        "desc": "Choose a realistic target position and deconstruct the job description."
+      },
+      {
+        "step": 2,
+        "name": "Research Employer",
+        "desc": "Verify company information, products, mission, and interview stages responsibly."
+      },
+      {
+        "step": 3,
+        "name": "Map Skills",
+        "desc": "Connect personal experiences, projects, and coursework to specific role competencies."
+      },
+      {
+        "step": 4,
+        "name": "Prepare Stories",
+        "desc": "Draft 5 verified stories using STAR and CAR frameworks grounded in genuine evidence."
+      },
+      {
+        "step": 5,
+        "name": "Rehearse Answers",
+        "desc": "Practise introductions, project explanations, and difficult questions ethically with optional AI aids."
+      },
+      {
+        "step": 6,
+        "name": "Practise Interviews",
+        "desc": "Participate in live or consent-recorded video mock interviews covering diverse question types."
+      },
+      {
+        "step": 7,
+        "name": "Review Feedback",
+        "desc": "Analyze rubric scores, evaluator critique, listening cues, and delivery habits."
+      },
+      {
+        "step": 8,
+        "name": "Improve",
+        "desc": "Revise answers, conduct final assessment, and formalize a pre-interview readiness plan."
+      }
+    ]
+  },
+  "why_now": {
+    "industry_shift": "Hiring processes increasingly evaluate structured problem-solving, genuine project ownership, and concise communication over rehearsed textbook scripts.",
+    "ai_impact": "Automated screening and video screening tools require candidates to understand digital formats, speak with clarity, and use AI ethically for rehearsal rather than real-time deception.",
+    "business_demand": "Employers place high value on candidates who listen actively, explain trade-offs clearly, and provide verifiable evidence of their skills and collaboration.",
+    "career_opportunity": "Mastering interview communication empowers candidates across tech, design, business, and marketing to represent their true qualifications with confidence."
+  },
+  "ai_interview_practice": {
+    "heading": "Practise With AI. Interview With Integrity.",
+    "copy": "Use modern AI tools to rehearse interview questions, review answer clarity and identify areas for improvement. Learn to evaluate AI feedback critically, communicate your own experiences and respect employer rules during real assessments.",
+    "permitted_uses": [
+      "Job-description analysis and skills breakdown",
+      "Employer research planning and question ideation",
+      "Interview question generation tailored to specific roles",
+      "STAR and CAR answer structure review",
+      "Spoken-answer rehearsal and language refinement",
+      "Simulated mock interview question drills",
+      "Feedback summarization and practice checklists"
+    ],
+    "ai_limitations": [
+      "Can misinterpret spoken nuance or context",
+      "May misjudge an answer's true technical or domain relevance",
+      "Cannot verify personal authenticity or genuine experience",
+      "May generate inconsistent or biased scores",
+      "Overlooks individual communication styles and accessibility needs"
+    ],
+    "prohibited_uses": [
+      "Secret real-time live-answer generators during assessments",
+      "Presenting AI-authored answers as spontaneous personal experiences",
+      "Fabricating skills, metrics, or employment history",
+      "Impersonating another candidate or bypassing assessment rules"
+    ],
+    "responsible_prompt": "Act as a mock interviewer for the following job role. Ask me one question at a time. After I answer, give feedback on clarity, relevance, structure and supporting evidence. Do not invent achievements or assume skills I have not mentioned. Ask follow-up questions when my answer lacks specific evidence."
+  },
+  "digital_safeguards": {
+    "heading": "Professional Practice With Consent, Privacy and Accessibility.",
+    "platforms": "Google Meet OR Zoom (access to one suitable live meeting platform is required)",
+    "recording_consent": "Recording is strictly voluntary. A live assessed interview with documented evaluator notes is a fully valid alternative. Explicit informed consent is mandatory prior to any recording.",
+    "sensitive_data_protection": "No collection of confidential employer documents, identity cards, compensation slips, or private candidate data.",
+    "accessibility": "Accommodates diverse communication needs, hearing/speech differences, and camera preferences without penalty."
+  },
+  "icon": "fa-solid fa-user-tie",
+  "color": "linear-gradient(135deg, #011731, #8B5CF6)",
+  "rating": 4.9,
+  "reviews": 142,
+  "students": 920,
+  "liveProjects": 2,
+  "projects": 2,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=interview-preparation",
+  "tags": [
+    "interview-preparation",
+    "job-interview",
+    "star-method",
+    "behavioural-interview",
+    "mock-interview",
+    "professional-communication",
+    "career-development",
+    "certification"
+  ],
+  "featured": false,
+  "category": "Career & Freelancing Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "target_audience": {
+    "ideal_for": [
+      "Fresh graduates and final-year college students",
+      "Internship applicants and entry-level job seekers",
+      "Career switchers transitioning into tech, creative, or business domains",
+      "Technical and creative course graduates preparing for project discussions",
+      "Working professionals preparing for promotion or lateral role interviews"
+    ],
+    "not_for": [
+      "Candidates seeking guaranteed job placement without merit evaluation",
+      "Students seeking competitive programming (DSA) coding test coaching exclusively"
+    ],
+    "who_should_take_foundation_first": "Students needing structured resume documentation will benefit from Course 79 (ATS-Friendly Resume Essentials), though it is not a compulsory prerequisite."
+  },
+  "prerequisites": {
+    "required": "A defined target job role OR a realistic role chosen during the course.",
+    "recommended": "Basic background information regarding your education, projects, skills, or prior work experience. A completed resume is helpful but not mandatory.",
+    "hardware": "A computer or laptop with working microphone and camera for live meeting simulations.",
+    "software_accounts": "Access to Google Meet or Zoom, Google Docs, and an optional AI assistant (ChatGPT / Gemini)."
+  },
+  "highlights": [
+    "4 Weeks of practical interview readiness and professional communication training (32 guided hours)",
+    "Master the adaptable 90-Second Professional Introduction framework (Present → Relevant Evidence → Future Direction)",
+    "Craft and refine Five Verified Behavioural Stories using proven STAR and CAR frameworks rooted in genuine experience",
+    "Build a comprehensive Role-Specific Interview Preparation Dossier tailored to an authentic target job description",
+    "Explain technical and creative projects clearly using the Problem → Approach → Contribution → Outcome → Learning model",
+    "Master Google Meet and Zoom video setup, professional audio/lighting, digital etiquette, and asynchronous interview dynamics",
+    "Complete Two Assessed Mock Interviews (Baseline + Final) with objective rubric scoring and detailed evaluator notes",
+    "Develop an ongoing Personal Practice Plan with structured feedback reports, revised answer scripts, and pre-interview checklists"
+  ],
+  "hands_on_tech": {
+    "primary_tools": [
+      {
+        "tool": "Google Meet OR Zoom",
+        "purpose": "Live mock interviews, remote speaking practice, video setup checks, and professional digital communication.",
+        "what_student_learns": "Virtual presence, digital communication etiquette, audio/video configuration, and interview composure.",
+        "what_student_builds": "Two completed mock interview assessments."
+      },
+      {
+        "tool": "Google Docs",
+        "purpose": "Interview dossier, behavioural story library, introduction outline, question bank, feedback forms, and practice plan.",
+        "what_student_learns": "Structured documentation, story scripting, requirements mapping, and feedback tracking.",
+        "what_student_builds": "A complete Role-Specific Interview Preparation Dossier."
+      },
+      {
+        "tool": "Consent-Based Recording Method",
+        "purpose": "Optional recording tool (platform feature, device recording, or local audio/video) strictly subject to informed participant consent.",
+        "what_student_learns": "Self-review of pacing, body language, and verbal clarity; ethical recording and privacy practices.",
+        "what_student_builds": "Optional practice recordings for self-reflection."
+      }
+    ],
+    "supporting_tools": [
+      "AI Interview Practice Tools (ChatGPT / Gemini - optional question generation, simulated follow-ups, and answer review)",
+      "Presentation Slides (Optional project explanation and portfolio presentation practice)",
+      "Role-Specific Question Bank (Curated common, behavioural, job-specific, and candidate questions)"
+    ],
+    "removed_from_mandatory_toolchain": [
+      "Loom (no mandatory recording links or public video submissions)",
+      "Paid AI interview bots or proprietary readiness scanners",
+      "LinkedIn Premium subscriptions",
+      "Paid video recording subscriptions",
+      "Advanced coding platforms or DSA test software",
+      "Automated interview-answering tools"
+    ]
+  },
+  "tools": [
+    "Google Meet OR Zoom",
+    "Google Docs",
+    "Consent-Based Recording",
+    "ChatGPT / Gemini (Optional AI Practice)",
+    "Presentation Slides",
+    "Role-Specific Question Bank"
+  ],
+  "software": [
+    "Google Meet OR Zoom",
+    "Google Docs",
+    "Consent-Based Recording",
+    "ChatGPT / Gemini",
+    "Presentation Slides"
+  ],
+  "curriculum": [
+    {
+      "module": "Module 01",
+      "title": "Role & Company Preparation",
+      "lessons": 10,
+      "hours": 5
+    },
+    {
+      "module": "Module 02",
+      "title": "Introductions & Communication",
+      "lessons": 12,
+      "hours": 6
+    },
+    {
+      "module": "Module 03",
+      "title": "Behavioural & Situational Interviews",
+      "lessons": 17,
+      "hours": 8
+    },
+    {
+      "module": "Module 04",
+      "title": "Job-Specific & Digital Interviews",
+      "lessons": 16,
+      "hours": 7
+    },
+    {
+      "module": "Module 05",
+      "title": "Mock Interviews & Feedback",
+      "lessons": 10,
+      "hours": 6
+    }
+  ],
+  "learning_outcomes": [
+    "Identify a realistic target role.",
+    "Analyze an authentic job description.",
+    "Research employer information responsibly.",
+    "Understand common interview stages.",
+    "Prepare a role-specific question bank.",
+    "Map actual skills to role requirements.",
+    "Write and deliver a professional introduction.",
+    "Respond concisely to common interview questions.",
+    "Demonstrate active listening.",
+    "Explain relevant technical or creative projects.",
+    "Structure behavioural answers using STAR.",
+    "Use CAR when a shorter response is suitable.",
+    "Describe individual contribution accurately.",
+    "Discuss teamwork and conflict constructively.",
+    "Explain failures and lessons learned honestly.",
+    "Respond to situational and ethical questions.",
+    "Communicate clearly in video interviews.",
+    "Prepare an appropriate virtual interview setup.",
+    "Understand asynchronous and AI-assisted interviews.",
+    "Distinguish permitted and prohibited AI assistance.",
+    "Ask informed questions about a role.",
+    "Understand basic compensation discussion etiquette.",
+    "Participate in two realistic mock interviews.",
+    "Receive and interpret structured feedback.",
+    "Identify improvement priorities.",
+    "Develop a final practice plan."
+  ],
+  "portfolio": {
+    "title": "Professional Interview Readiness & Communication Portfolio",
+    "name": "Professional Interview Readiness & Communication Portfolio",
+    "total_deliverables": 5,
+    "deliverables_count": "5 Coordinated Portfolio Components",
+    "description": "An assessed interview-readiness portfolio containing five verified behavioural stories, one role-specific interview preparation dossier, one 90-second professional introduction, two assessed mock interviews, and individual feedback reports with a final practice plan.",
+    "deliverable_01": {
+      "title": "Component 01: Five Verified Behavioural Stories",
+      "description": "Five genuine stories drawn from authentic academic, professional, project or volunteer experiences, structured using STAR/CAR frameworks.",
+      "coverage": [
+        "Story A: Teamwork and collaboration",
+        "Story B: Challenge, setback or conflict resolution",
+        "Story C: Problem-solving or initiative",
+        "Story D: Meaningful achievement or project success",
+        "Story E: Learning, adaptation or responsible ethical judgment"
+      ],
+      "required_elements": [
+        "Target competency",
+        "Situation and context",
+        "Task and responsibility",
+        "Individual action taken",
+        "Actual result and key learning",
+        "Supporting evidence",
+        "Anticipated follow-up questions"
+      ],
+      "authenticity_rule": "Stories must reflect actual experiences. No fabricated metrics or invented employment history."
+    },
+    "deliverable_02": {
+      "title": "Component 02: Role-Specific Interview Preparation Dossier",
+      "description": "A comprehensive, structured interview-preparation dossier based on a real job description or realistic instructor-approved target role.",
+      "required_sections": [
+        "Target job title",
+        "Actual job description or approved realistic role",
+        "Employer research overview",
+        "Core role requirements",
+        "Skills-to-evidence mapping table",
+        "Relevant projects inventory",
+        "Core interview question bank",
+        "Behavioural competencies mapping",
+        "Personal introduction outline",
+        "Project explanation script (Problem → Approach → Contribution → Outcome → Learning)",
+        "Common difficult-question preparation",
+        "Five strategic questions to ask the interviewer",
+        "Video interview setup checklist",
+        "Asynchronous/AI interview awareness notes",
+        "Ethical AI-use policy checklist",
+        "Final pre-interview preparation schedule"
+      ],
+      "integrity_standard": "No invented company facts or hiring policies. All illustrative assumptions clearly labeled."
+    },
+    "deliverable_03": {
+      "title": "Component 03: 90-Second Professional Introduction",
+      "description": "A clear, concise, role-aligned professional introduction following the Present → Relevant Evidence → Future Direction framework.",
+      "requirements": [
+        "Clear, engaging opening statement",
+        "Educational and professional background summary",
+        "Relevant skills overview",
+        "Selected project or experience evidence",
+        "Career direction and target-role relevance",
+        "Professional delivery with natural pacing"
+      ],
+      "evidence": "Written outline plus live assessed delivery OR consent-based recording, accompanied by self-assessment and instructor review notes.",
+      "assessment_criteria": "Clarity, accuracy, conciseness, role relevance, natural communication, and appropriate pace."
+    },
+    "deliverable_04": {
+      "title": "Component 04: Two Assessed Mock Interviews",
+      "description": "Baseline and final interview practice sessions assessed against an objective rubric, conducted live or recorded with informed consent.",
+      "mock_01_baseline": {
+        "focus": "Baseline Assessment (15–25 mins simulation + feedback)",
+        "evaluates": [
+          "Introduction",
+          "Role understanding",
+          "Behavioural responses",
+          "Project explanation",
+          "Listening comprehension",
+          "Professional composure"
+        ]
+      },
+      "mock_02_final": {
+        "focus": "Final Assessment (20–30 mins simulation + feedback)",
+        "evaluates": [
+          "Revised introduction",
+          "Structured STAR/CAR answers",
+          "Role-specific reasoning",
+          "Situational responses",
+          "Project evidence depth",
+          "Candidate questions",
+          "Communication quality"
+        ]
+      },
+      "evidence_documentation": [
+        "Session identifier and date",
+        "Selected job role",
+        "Interview format",
+        "Questions covered",
+        "Rubric scoring breakdown",
+        "Evaluator notes on strengths and improvement areas"
+      ],
+      "recording_policy": "Live assessment with documented evaluator notes is fully acceptable. Recording is optional and requires explicit informed consent."
+    },
+    "deliverable_05": {
+      "title": "Component 05: Feedback & Improvement Reports",
+      "description": "Structured comparison and reflection reports documenting measurable performance growth from baseline to final mock interview, paired with an ongoing practice plan.",
+      "required_elements": [
+        "Mock 01 feedback report",
+        "Mock 02 feedback report",
+        "Baseline-to-final comparative analysis",
+        "Revised answer examples addressing evaluator critique",
+        "Personal reflection notes on strengths and remaining difficulties",
+        "Final actionable practice plan with pre-interview checklist"
+      ],
+      "comparison_areas": [
+        "Answer clarity and precision",
+        "Story structure (STAR/CAR)",
+        "Evidence quality and relevance",
+        "Role alignment",
+        "Active listening",
+        "Professionalism and poise",
+        "Adaptability under pressure"
+      ]
+    }
+  },
+  "skill_boundaries": {
+    "course_81_interview_preparation": "Course 81 focuses on interview research, professional introductions, communication fundamentals, behavioural storytelling (STAR/CAR), project explanations, digital and video interviews, two assessed mock interviews, structured feedback, and practice planning.",
+    "course_79_resume_essentials": "Course 79 focuses on ATS-friendly resume structure, job-specific application tailoring, cover letters, and document-level evidence formatting.",
+    "course_80_linkedin_branding": "Course 80 focuses on LinkedIn profile architecture, professional online presence, portfolio showcasing, ethical networking, and job discovery.",
+    "longer_career_programs": "Course 81 serves as a standalone certification or an optional companion to longer technical programs. It is not automatically embedded as a mandatory module across the site.",
+    "explicit_exclusions": [
+      "Detailed DSA preparation or competitive programming",
+      "Coding-test mastery or live algorithm examinations",
+      "Full system-design interviews",
+      "Advanced case-interview specialization",
+      "Advanced UX design examinations",
+      "Role-specific professional licensing examinations (medical, legal)",
+      "Guaranteed job placement or recruiter selection",
+      "Guaranteed salary negotiation outcomes"
+    ]
+  },
+  "career_paths": {
+    "entry_roles": [
+      "Entry-Level Specialist",
+      "Junior Associate",
+      "Graduate Trainee",
+      "Intern"
+    ],
+    "mid_roles": [
+      "Team Lead",
+      "Senior Specialist",
+      "Mid-Level Professional"
+    ],
+    "specialist_roles": [
+      "Cross-Industry Domain Roles across Tech, Design, Marketing & Business"
+    ],
+    "employer_expectations": "Clear verbal communication, structured reasoning (STAR/CAR), active listening, authentic evidence, and professional composure.",
+    "what_student_demonstrates": "Ability to research employers, introduce themselves compellingly in 90 seconds, articulate project trade-offs, and handle behavioural scrutiny with integrity."
+  },
+  "assessment_model": {
+    "type": "Practical Mock Interview & Document Portfolio Rubric Assessment",
+    "passing_grade": "75%",
+    "course_rubric": [
+      {
+        "area": "Role research and preparation dossier",
+        "weight": "15%"
+      },
+      {
+        "area": "Professional introduction and communication",
+        "weight": "15%"
+      },
+      {
+        "area": "Five verified behavioural stories",
+        "weight": "25%"
+      },
+      {
+        "area": "Job-specific and digital interview readiness",
+        "weight": "15%"
+      },
+      {
+        "area": "Two assessed mock interviews",
+        "weight": "20%"
+      },
+      {
+        "area": "Feedback, reflection and practice plan",
+        "weight": "10%"
+      }
+    ],
+    "mock_interview_rubric": [
+      {
+        "criterion": "Role and employer preparation",
+        "weight": "15%"
+      },
+      {
+        "criterion": "Professional introduction and communication",
+        "weight": "20%"
+      },
+      {
+        "criterion": "Behavioural storytelling and genuine evidence",
+        "weight": "25%"
+      },
+      {
+        "criterion": "Role-specific / project explanation",
+        "weight": "20%"
+      },
+      {
+        "criterion": "Listening, adaptability and professionalism",
+        "weight": "10%"
+      },
+      {
+        "criterion": "Candidate questions and closing",
+        "weight": "10%"
+      }
+    ],
+    "standards": "Evaluation is based on observable communication clarity, structured answers, genuine evidence, active listening, and demonstrated improvement. No scoring of accents, personal identity, or proprietary AI emotion algorithms."
+  },
+  "modules": [
+    {
+      "module_number": 1,
+      "moduleNumber": 1,
+      "title": "Role & Company Preparation",
+      "module_title": "Role & Company Preparation",
+      "name": "Role & Company Preparation",
+      "hours": 5,
+      "guided_hours": 5,
+      "learning_hours": 5,
+      "module_purpose": "Understand the target position, employer expectations, interview process and personal preparation requirements.",
+      "objective": "Understand the target position, employer expectations, interview process and personal preparation requirements.",
+      "lessons_count": 10,
+      "lessons": [
+        {
+          "number": "1.1",
+          "lesson_number": 1,
+          "title": "Introduction to Interview Readiness",
+          "lesson_title": "Introduction to Interview Readiness",
+          "what_is_taught": "Purpose of interviews, candidate evaluation, role fit, skills demonstration, professional communication, and interview preparation versus memorization.",
+          "topics": [
+            "Purpose of interviews",
+            "Candidate evaluation",
+            "Role fit",
+            "Skills demonstration",
+            "Professional communication",
+            "Interview preparation versus memorization"
+          ]
+        },
+        {
+          "number": "1.2",
+          "lesson_number": 2,
+          "title": "Choosing a Target Role",
+          "lesson_title": "Choosing a Target Role",
+          "what_is_taught": "Job titles, job families, internship roles, entry-level positions, career transition opportunities, relevant industries, and realistic eligibility.",
+          "topics": [
+            "Job titles",
+            "Job families",
+            "Internship roles",
+            "Entry-level positions",
+            "Career transition opportunities",
+            "Relevant industries",
+            "Realistic eligibility"
+          ]
+        },
+        {
+          "number": "1.3",
+          "lesson_number": 3,
+          "title": "Job Description Analysis",
+          "lesson_title": "Job Description Analysis",
+          "what_is_taught": "Deconstructing job responsibilities, required skills, preferred skills, software/tools, experience requirements, education requirements, behavioural competencies, and work arrangements.",
+          "topics": [
+            "Job responsibilities",
+            "Required skills",
+            "Preferred skills",
+            "Software/tools",
+            "Experience requirements",
+            "Education requirements",
+            "Behavioural competencies",
+            "Work arrangements"
+          ]
+        },
+        {
+          "number": "1.4",
+          "lesson_number": 4,
+          "title": "Job Requirements Mapping",
+          "lesson_title": "Job Requirements Mapping",
+          "what_is_taught": "Mapping candidate skills, relevant projects, academic evidence, work experience, transferable competencies, skills gaps, and areas requiring preparation.",
+          "topics": [
+            "Candidate skills",
+            "Relevant projects",
+            "Academic evidence",
+            "Work experience",
+            "Transferable competencies",
+            "Skills gaps",
+            "Areas requiring preparation"
+          ]
+        },
+        {
+          "number": "1.5",
+          "lesson_number": 5,
+          "title": "Employer Research",
+          "lesson_title": "Employer Research",
+          "what_is_taught": "Researching official company websites, products and services, company mission, relevant projects, company news, publicly available role information, and professional credibility checks.",
+          "topics": [
+            "Official company website",
+            "Products and services",
+            "Company mission",
+            "Relevant projects",
+            "Company news",
+            "Publicly available role information",
+            "Professional credibility checks"
+          ]
+        },
+        {
+          "number": "1.6",
+          "lesson_number": 6,
+          "title": "Source Verification",
+          "lesson_title": "Source Verification",
+          "what_is_taught": "Verifying genuine job postings, official employer information, avoiding outdated company facts, identifying unverified claims, checking role legitimacy, and avoiding recruitment scams.",
+          "topics": [
+            "Genuine job postings",
+            "Official employer information",
+            "Avoiding outdated company facts",
+            "Identifying unverified claims",
+            "Checking role legitimacy",
+            "Avoiding recruitment scams"
+          ]
+        },
+        {
+          "number": "1.7",
+          "lesson_number": 7,
+          "title": "Understanding Interview Stages",
+          "lesson_title": "Understanding Interview Stages",
+          "what_is_taught": "Recruiter screening, HR interview, hiring manager round, behavioural interview, technical/project discussion, panel interview, final-stage discussion, and role-dependent variation.",
+          "topics": [
+            "Recruiter screening",
+            "HR interview",
+            "Hiring manager round",
+            "Behavioural interview",
+            "Technical/project discussion",
+            "Panel interview",
+            "Final-stage discussion",
+            "Role-dependent variation"
+          ]
+        },
+        {
+          "number": "1.8",
+          "lesson_number": 8,
+          "title": "Interview Formats",
+          "lesson_title": "Interview Formats",
+          "what_is_taught": "In-person interviews, phone interviews, live video calls, asynchronous recorded interviews, AI-assisted screening, and assessment-centre awareness.",
+          "topics": [
+            "In-person",
+            "Phone",
+            "Live video",
+            "Asynchronous recorded interview",
+            "AI-assisted screening",
+            "Assessment-centre awareness"
+          ]
+        },
+        {
+          "number": "1.9",
+          "lesson_number": 9,
+          "title": "Preparation Planning",
+          "lesson_title": "Preparation Planning",
+          "what_is_taught": "Establishing interview timelines, required documents, role research, skill refresh, project selection, question bank, and practice schedule.",
+          "topics": [
+            "Interview timeline",
+            "Required documents",
+            "Role research",
+            "Skill refresh",
+            "Project selection",
+            "Question bank",
+            "Practice schedule"
+          ]
+        },
+        {
+          "number": "1.10",
+          "lesson_number": 10,
+          "title": "Preparation Ethics",
+          "lesson_title": "Preparation Ethics",
+          "what_is_taught": "Genuine qualifications, honest work history, accurate certificates, legitimate project ownership, no invented accomplishments, and no false employer information.",
+          "topics": [
+            "Genuine qualifications",
+            "Honest work history",
+            "Accurate certificates",
+            "Legitimate project ownership",
+            "No invented accomplishments",
+            "No false employer information"
+          ]
+        }
+      ],
+      "hands_on_lab": "Choose a real job description or a realistic instructor-approved role. Research the role and employer using credible information.",
+      "practical_assignment": "Prepare the first version of a role-specific interview dossier containing: Target job role, Job-description source, Employer overview, Core requirements, Skills-to-evidence mapping, Anticipated interview stages, and Initial preparation checklist.",
+      "expected_deliverable": "Role-Specific Interview Preparation Dossier — Draft 1",
+      "career_application": "Supports focused preparation for genuine employment and internship opportunities."
+    },
+    {
+      "module_number": 2,
+      "moduleNumber": 2,
+      "title": "Introductions & Communication",
+      "module_title": "Introductions & Communication",
+      "name": "Introductions & Communication",
+      "hours": 6,
+      "guided_hours": 6,
+      "learning_hours": 6,
+      "module_purpose": "Develop clear professional introductions, effective verbal responses, active listening and appropriate interview communication.",
+      "objective": "Develop clear professional introductions, effective verbal responses, active listening and appropriate interview communication.",
+      "lessons_count": 12,
+      "lessons": [
+        {
+          "number": "2.1",
+          "lesson_number": 1,
+          "title": "Professional Communication Fundamentals",
+          "lesson_title": "Professional Communication Fundamentals",
+          "what_is_taught": "Clarity, relevance, conciseness, listening, appropriate tone, respectful language, and professional courtesy.",
+          "topics": [
+            "Clarity",
+            "Relevance",
+            "Conciseness",
+            "Listening",
+            "Appropriate tone",
+            "Respectful language",
+            "Professional courtesy"
+          ]
+        },
+        {
+          "number": "2.2",
+          "lesson_number": 2,
+          "title": "Tell Me About Yourself",
+          "lesson_title": "Tell Me About Yourself",
+          "what_is_taught": "Purpose of the question, career relevance, appropriate answer length, current background, relevant past experience, career direction, and connection to target role.",
+          "topics": [
+            "Purpose of the question",
+            "Career relevance",
+            "Appropriate answer length",
+            "Current background",
+            "Relevant past experience",
+            "Career direction",
+            "Connection to target role"
+          ]
+        },
+        {
+          "number": "2.3",
+          "lesson_number": 3,
+          "title": "Professional Introduction Framework",
+          "lesson_title": "Professional Introduction Framework",
+          "what_is_taught": "Teaching adaptable structures: Present → Relevant Evidence → Future Direction, or Who I Am → What I Have Done → Why This Role without rigid memorization.",
+          "topics": [
+            "Present → Relevant Evidence → Future Direction framework",
+            "Who I Am → What I Have Done → Why This Role structure",
+            "Adaptability without script rigidity",
+            "Authentic personal voice"
+          ]
+        },
+        {
+          "number": "2.4",
+          "lesson_number": 4,
+          "title": "The 90-Second Introduction",
+          "lesson_title": "The 90-Second Introduction",
+          "what_is_taught": "Crafting the opening, educational/professional background, relevant skills, selected project evidence, career goal, natural closing, and suitable pacing.",
+          "topics": [
+            "Opening hook",
+            "Educational and professional background",
+            "Relevant skills overview",
+            "Selected project evidence",
+            "Career goal alignment",
+            "Natural closing transition",
+            "Suitable pacing"
+          ]
+        },
+        {
+          "number": "2.5",
+          "lesson_number": 5,
+          "title": "Verbal Clarity",
+          "lesson_title": "Verbal Clarity",
+          "what_is_taught": "Speaking pace, pronunciation, suitable volume, sentence structure, avoiding unnecessary jargon, explaining unfamiliar terms, and clear transitions without accent discrimination.",
+          "topics": [
+            "Speaking pace and rhythm",
+            "Pronunciation and articulation",
+            "Suitable volume and projection",
+            "Sentence structure",
+            "Avoiding unnecessary jargon",
+            "Explaining unfamiliar terms",
+            "Clear transitions"
+          ]
+        },
+        {
+          "number": "2.6",
+          "lesson_number": 6,
+          "title": "Concise Answers",
+          "lesson_title": "Concise Answers",
+          "what_is_taught": "Answering the actual question, clear opening sentence, supporting example, relevant detail, appropriate conclusion, and avoiding unrelated information.",
+          "topics": [
+            "Answering the actual question asked",
+            "Clear opening statement",
+            "Supporting concise example",
+            "Relevant concrete detail",
+            "Appropriate conclusion",
+            "Filtering unrelated information"
+          ]
+        },
+        {
+          "number": "2.7",
+          "lesson_number": 7,
+          "title": "Active Listening",
+          "lesson_title": "Active Listening",
+          "what_is_taught": "Listening without interrupting, understanding the core question, clarifying unclear wording, paraphrasing when appropriate, responding to follow-ups, and processing interviewer cues.",
+          "topics": [
+            "Listening without interrupting",
+            "Understanding the question depth",
+            "Clarifying unclear wording",
+            "Paraphrasing when appropriate",
+            "Responding to follow-up questions",
+            "Processing interview feedback"
+          ]
+        },
+        {
+          "number": "2.8",
+          "lesson_number": 8,
+          "title": "Non-Verbal Communication",
+          "lesson_title": "Non-Verbal Communication",
+          "what_is_taught": "Comfortable posture, natural facial expression, appropriate gestures, professional attentiveness, camera awareness, cultural differences, and accessibility considerations.",
+          "topics": [
+            "Comfortable professional posture",
+            "Natural facial expressions",
+            "Appropriate hand gestures",
+            "Professional attentiveness",
+            "Camera awareness",
+            "Cultural differences",
+            "Accessibility considerations"
+          ]
+        },
+        {
+          "number": "2.9",
+          "lesson_number": 9,
+          "title": "Managing Difficult Moments",
+          "lesson_title": "Managing Difficult Moments",
+          "what_is_taught": "Pausing to think, asking for clarification, admitting uncertainty, correcting an answer gracefully, managing interruptions, and maintaining professional composure.",
+          "topics": [
+            "Pausing thoughtfully before answering",
+            "Asking for clarification",
+            "Admitting uncertainty professionally",
+            "Correcting an answer gracefully",
+            "Managing sudden interruptions",
+            "Maintaining professionalism under pressure"
+          ]
+        },
+        {
+          "number": "2.10",
+          "lesson_number": 10,
+          "title": "Common Introductory Questions",
+          "lesson_title": "Common Introductory Questions",
+          "what_is_taught": "Navigating Tell me about yourself, Why this role?, Why this company?, What are your strengths?, What are you learning?, What interests you?, and Describe a project you are proud of.",
+          "topics": [
+            "Tell me about yourself",
+            "Why this role?",
+            "Why this company?",
+            "What are your strengths?",
+            "What are you currently learning?",
+            "What interests you about the position?",
+            "Describe a project you are proud of"
+          ]
+        },
+        {
+          "number": "2.11",
+          "lesson_number": 11,
+          "title": "Communication in Different Formats",
+          "lesson_title": "Communication in Different Formats",
+          "what_is_taught": "Communicating across face-to-face interviews, phone screenings, live video calls, panel conversations, and short preliminary recruiter screenings.",
+          "topics": [
+            "Face-to-face interviews",
+            "Phone screenings",
+            "Video calls",
+            "Panel conversations",
+            "Short preliminary screenings"
+          ]
+        },
+        {
+          "number": "2.12",
+          "lesson_number": 12,
+          "title": "Communication Review",
+          "lesson_title": "Communication Review",
+          "what_is_taught": "Evaluating communication on clarity, accuracy, relevance, natural delivery, listening comprehension, answer length, and professional tone.",
+          "topics": [
+            "Clarity and precision",
+            "Factual accuracy",
+            "Relevance to the job",
+            "Natural conversational delivery",
+            "Listening skills",
+            "Answer timing and conciseness",
+            "Professional tone"
+          ]
+        }
+      ],
+      "hands_on_lab": "Prepare and deliver a 90-second professional introduction. Practice answering common introductory questions with peer or mentor feedback.",
+      "practical_assignment": "Submit written introduction outline, 90-second live delivery or consent-based recording, self-assessment, instructor feedback, and revised introduction.",
+      "expected_deliverable": "90-Second Professional Introduction",
+      "career_application": "Job interviews, internship interviews, professional introductions and promotion discussions."
+    },
+    {
+      "module_number": 3,
+      "moduleNumber": 3,
+      "title": "Behavioural & Situational Interviews",
+      "module_title": "Behavioural & Situational Interviews",
+      "name": "Behavioural & Situational Interviews",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
+      "module_purpose": "Learn structured evidence-based storytelling for behavioural, situational and competency-focused interview questions.",
+      "objective": "Learn structured evidence-based storytelling for behavioural, situational and competency-focused interview questions.",
+      "lessons_count": 17,
+      "lessons": [
+        {
+          "number": "3.1",
+          "lesson_number": 1,
+          "title": "Behavioural Interview Fundamentals",
+          "lesson_title": "Behavioural Interview Fundamentals",
+          "what_is_taught": "Purpose of behavioural questions, competency evaluation, evidence of past actions, real experiences, individual contribution, and lessons learned.",
+          "topics": [
+            "Purpose of behavioural questions",
+            "Competency evaluation",
+            "Evidence of past actions",
+            "Real experiences",
+            "Individual contribution",
+            "Lessons learned"
+          ]
+        },
+        {
+          "number": "3.2",
+          "lesson_number": 2,
+          "title": "STAR Framework",
+          "lesson_title": "STAR Framework",
+          "what_is_taught": "Deconstructing Situation, Task, Action, Result, relevance to the question, clear structure, and appropriate answer length.",
+          "topics": [
+            "Situation: Context and background",
+            "Task: Responsibility and challenge",
+            "Action: Specific individual steps taken",
+            "Result: Outcome, metrics, and learning",
+            "Relevance to the question",
+            "Maintaining concise answer length"
+          ]
+        },
+        {
+          "number": "3.3",
+          "lesson_number": 3,
+          "title": "CAR Framework",
+          "lesson_title": "CAR Framework",
+          "what_is_taught": "Context/Challenge, Action, Result; appropriate short-form use and comparison with STAR for fast-paced rounds.",
+          "topics": [
+            "Context/Challenge definition",
+            "Action execution",
+            "Result and takeaway",
+            "Short-form situational use",
+            "Comparing STAR vs CAR"
+          ]
+        },
+        {
+          "number": "3.4",
+          "lesson_number": 4,
+          "title": "Evidence-Based Storytelling",
+          "lesson_title": "Evidence-Based Storytelling",
+          "what_is_taught": "Choosing real events, setting concise context, explaining personal responsibility, describing personal action, communicating outcomes, and reflecting honestly.",
+          "topics": [
+            "Choosing real events",
+            "Setting context without rambling",
+            "Explaining personal responsibility",
+            "Describing personal action",
+            "Communicating outcome",
+            "Reflecting honestly"
+          ]
+        },
+        {
+          "number": "3.5",
+          "lesson_number": 5,
+          "title": "Building a Behavioural Story Library",
+          "lesson_title": "Building a Behavioural Story Library",
+          "what_is_taught": "Developing five verified stories covering teamwork, challenge/conflict, problem-solving, achievement, and learning/adaptation using actual experiences.",
+          "topics": [
+            "Story 1: Teamwork and collaboration",
+            "Story 2: Challenge, setback or conflict",
+            "Story 3: Problem-solving or initiative",
+            "Story 4: Achievement or project success",
+            "Story 5: Learning, adaptation or responsible judgment",
+            "Selecting authentic experiences"
+          ]
+        },
+        {
+          "number": "3.6",
+          "lesson_number": 6,
+          "title": "Teamwork Questions",
+          "lesson_title": "Teamwork Questions",
+          "what_is_taught": "Working with others, shared goals, team responsibilities, communication, individual contribution, and collaboration outcomes.",
+          "topics": [
+            "Working with others",
+            "Shared goals",
+            "Team responsibilities",
+            "Communication dynamics",
+            "Individual contribution",
+            "Collaboration outcomes"
+          ]
+        },
+        {
+          "number": "3.7",
+          "lesson_number": 7,
+          "title": "Conflict Questions",
+          "lesson_title": "Conflict Questions",
+          "what_is_taught": "Navigating disagreements, active listening, professional response, problem resolution, mutual respect, and lessons learned.",
+          "topics": [
+            "Disagreements in projects",
+            "Listening to opposing viewpoints",
+            "Professional response",
+            "Constructive problem resolution",
+            "Maintaining respect",
+            "Lessons learned"
+          ]
+        },
+        {
+          "number": "3.8",
+          "lesson_number": 8,
+          "title": "Failure & Learning",
+          "lesson_title": "Failure & Learning",
+          "what_is_taught": "Discussing mistakes, setbacks, personal accountability, corrective actions, honest reflection, and subsequent skill development.",
+          "topics": [
+            "Mistakes and miscalculations",
+            "Navigating setbacks",
+            "Personal accountability",
+            "Corrective actions taken",
+            "Reflection and growth",
+            "Subsequent skill development"
+          ]
+        },
+        {
+          "number": "3.9",
+          "lesson_number": 9,
+          "title": "Achievements",
+          "lesson_title": "Achievements",
+          "what_is_taught": "Framing problems addressed, work performed, personal contribution, genuine outcomes, credible evidence, and avoiding inflated metrics.",
+          "topics": [
+            "Problem addressed",
+            "Work performed",
+            "Personal contribution",
+            "Genuine outcome",
+            "Credible evidence",
+            "Avoiding inflated metrics"
+          ]
+        },
+        {
+          "number": "3.10",
+          "lesson_number": 10,
+          "title": "Leadership & Initiative",
+          "lesson_title": "Leadership & Initiative",
+          "what_is_taught": "Taking responsibility, organizing work, helping team members, making thoughtful decisions, supporting others, outcomes, and acknowledging limitations.",
+          "topics": [
+            "Taking responsibility",
+            "Organizing work workflows",
+            "Helping a team succeed",
+            "Making decisions under ambiguity",
+            "Supporting others",
+            "Outcomes and realistic limitations"
+          ]
+        },
+        {
+          "number": "3.11",
+          "lesson_number": 11,
+          "title": "Situational Questions",
+          "lesson_title": "Situational Questions",
+          "what_is_taught": "Handling \"What would you do if...?\", hypothetical work scenarios, practical judgment, stating assumptions, decision processes, and professional communication.",
+          "topics": [
+            "Navigating \"What would you do if…?\"",
+            "Hypothetical work scenarios",
+            "Applying practical judgment",
+            "Clarifying assumptions",
+            "Structuring the decision process",
+            "Professional communication"
+          ]
+        },
+        {
+          "number": "3.12",
+          "lesson_number": 12,
+          "title": "Ethical Situations",
+          "lesson_title": "Ethical Situations",
+          "what_is_taught": "Confidentiality, academic honesty, workplace integrity, conflicts of interest, responsible reporting, professional boundaries, and distinguishing hypothetical exercises from genuine past experiences.",
+          "topics": [
+            "Confidentiality and non-disclosure",
+            "Academic and professional honesty",
+            "Workplace integrity",
+            "Conflicts of interest",
+            "Responsible reporting",
+            "Professional boundaries"
+          ]
+        },
+        {
+          "number": "3.13",
+          "lesson_number": 13,
+          "title": "Explaining Career Gaps",
+          "lesson_title": "Explaining Career Gaps",
+          "what_is_taught": "Presenting honest timelines, relevant education, genuine projects, career transitions, appropriate disclosure, and avoiding fabricated employment.",
+          "topics": [
+            "Honest timelines",
+            "Relevant education and upskilling",
+            "Genuine projects during gaps",
+            "Career transitions and pivots",
+            "Appropriate disclosure",
+            "Avoiding fabricated employment"
+          ]
+        },
+        {
+          "number": "3.14",
+          "lesson_number": 14,
+          "title": "Strengths & Weaknesses",
+          "lesson_title": "Strengths & Weaknesses",
+          "what_is_taught": "Articulating real strengths with evidence, identifying genuine development areas, demonstrating improvement actions, and avoiding cliché self-presentation.",
+          "topics": [
+            "Real strengths backed by proof",
+            "Evidence-based self-awareness",
+            "Genuine development areas",
+            "Actionable improvement steps",
+            "Avoiding cliché self-presentation"
+          ]
+        },
+        {
+          "number": "3.15",
+          "lesson_number": 15,
+          "title": "Adapting Stories",
+          "lesson_title": "Adapting Stories",
+          "what_is_taught": "Selecting relevant examples on the fly, matching core competencies, adjusting emphasis, maintaining factual consistency, and avoiding mechanical recitation.",
+          "topics": [
+            "Selecting a relevant example on the fly",
+            "Matching the interviewer competency",
+            "Adjusting emphasis and detail",
+            "Maintaining strict factual consistency",
+            "Avoiding mechanical recitation"
+          ]
+        },
+        {
+          "number": "3.16",
+          "lesson_number": 16,
+          "title": "Behavioural Follow-Ups",
+          "lesson_title": "Behavioural Follow-Ups",
+          "what_is_taught": "Handling probing questions: What was your exact role?, Why did you choose that action?, What was the result?, What would you change?, and What evidence supports the outcome?",
+          "topics": [
+            "What was your exact role?",
+            "Why did you choose that action?",
+            "What was the specific result?",
+            "What would you do differently today?",
+            "What evidence supports the outcome?"
+          ]
+        },
+        {
+          "number": "3.17",
+          "lesson_number": 17,
+          "title": "Behavioural Practice",
+          "lesson_title": "Behavioural Practice",
+          "what_is_taught": "Practicing randomized questions, time-limited answers, peer review, instructor feedback, and structured answer revision.",
+          "topics": [
+            "Randomized question drills",
+            "Time-limited answer delivery (under 2 minutes)",
+            "Peer review sessions",
+            "Instructor feedback",
+            "Iterative revision"
+          ]
+        }
+      ],
+      "hands_on_lab": "Develop five genuine STAR/CAR stories and practise responding to varied questions.",
+      "practical_assignment": "Submit a five-story behavioural evidence library covering: question/competency, context, actual responsibility, individual action, genuine result or learning, supporting evidence, and possible follow-up questions.",
+      "expected_deliverable": "Five Verified Behavioural Stories",
+      "career_application": "Behavioural interviews, HR rounds, hiring-manager discussions and competency-based screening."
+    },
+    {
+      "module_number": 4,
+      "moduleNumber": 4,
+      "title": "Job-Specific & Digital Interviews",
+      "module_title": "Job-Specific & Digital Interviews",
+      "name": "Job-Specific & Digital Interviews",
+      "hours": 7,
+      "guided_hours": 7,
+      "learning_hours": 7,
+      "module_purpose": "Prepare students to explain job-relevant work, participate in digital interview formats and respond to practical professional questions.",
+      "objective": "Prepare students to explain job-relevant work, participate in digital interview formats and respond to practical professional questions.",
+      "lessons_count": 16,
+      "lessons": [
+        {
+          "number": "4.1",
+          "lesson_number": 1,
+          "title": "Role-Specific Interview Preparation",
+          "lesson_title": "Role-Specific Interview Preparation",
+          "what_is_taught": "Targeting relevant job requirements, industry technical vocabulary, skills evidence, role responsibilities, common professional scenarios, and question-bank development.",
+          "topics": [
+            "Relevant job requirements",
+            "Technical vocabulary",
+            "Skills evidence",
+            "Role responsibilities",
+            "Common professional scenarios",
+            "Question-bank development"
+          ]
+        },
+        {
+          "number": "4.2",
+          "lesson_number": 2,
+          "title": "Explaining Projects",
+          "lesson_title": "Explaining Projects",
+          "what_is_taught": "Clarifying project purpose, problem addressed, tools used, workflow, personal contribution, challenges encountered, decisions made, results, and lessons learned.",
+          "topics": [
+            "Project purpose",
+            "Problem addressed",
+            "Tools used",
+            "Workflow",
+            "Personal contribution",
+            "Challenges",
+            "Decisions",
+            "Results",
+            "Lessons learned"
+          ]
+        },
+        {
+          "number": "4.3",
+          "lesson_number": 3,
+          "title": "Project Explanation Framework",
+          "lesson_title": "Project Explanation Framework",
+          "what_is_taught": "Mastering the framework: Problem → Approach → My Contribution → Outcome → Learning with adaptations for role complexity.",
+          "topics": [
+            "Problem identification",
+            "Approach and strategy",
+            "My specific contribution",
+            "Outcome and impact",
+            "Learning and retrospective"
+          ]
+        },
+        {
+          "number": "4.4",
+          "lesson_number": 4,
+          "title": "Technical Questions — General Principles",
+          "lesson_title": "Technical Questions — General Principles",
+          "what_is_taught": "Understanding technical questions, clarifying assumptions, explaining reasoning aloud, describing workflows, discussing trade-offs, admitting knowledge gaps, and avoiding unsupported claims.",
+          "topics": [
+            "Understanding the question depth",
+            "Clarifying constraints and assumptions",
+            "Explaining technical reasoning",
+            "Describing workflow steps",
+            "Discussing technical trade-offs",
+            "Admitting knowledge gaps honestly",
+            "Avoiding unsupported claims"
+          ]
+        },
+        {
+          "number": "4.5",
+          "lesson_number": 5,
+          "title": "Technical-Case Discussion",
+          "lesson_title": "Technical-Case Discussion",
+          "what_is_taught": "Reading problem briefs, identifying real-world constraints, breaking down problems, explaining approaches, considering alternatives, and communicating decisions clearly.",
+          "topics": [
+            "Reading the brief",
+            "Identifying constraints",
+            "Breaking down the problem",
+            "Explaining an approach",
+            "Considering alternatives",
+            "Communicating decisions"
+          ]
+        },
+        {
+          "number": "4.6",
+          "lesson_number": 6,
+          "title": "Portfolio-Based Interviews",
+          "lesson_title": "Portfolio-Based Interviews",
+          "what_is_taught": "Selecting relevant work samples, presenting projects dynamically, describing technical decisions, articulating individual versus team contributions, proving quality, accepting critique gracefully, and explaining improvements.",
+          "topics": [
+            "Selecting relevant work",
+            "Presenting a project live",
+            "Describing design and technical decisions",
+            "Individual versus team contribution",
+            "Evidence of quality",
+            "Accepting critique gracefully",
+            "Explaining improvements"
+          ]
+        },
+        {
+          "number": "4.7",
+          "lesson_number": 7,
+          "title": "Live Video Interviews",
+          "lesson_title": "Live Video Interviews",
+          "what_is_taught": "Configuring Google Meet and Zoom, camera positioning, three-point lighting principles, microphone selection and audio checks, neutral background, stable internet, device testing, notifications management, and screen-sharing awareness.",
+          "topics": [
+            "Google Meet setup",
+            "Zoom setup",
+            "Camera positioning at eye level",
+            "Lighting and face visibility",
+            "Microphone and audio clarity",
+            "Neutral background",
+            "Internet connection and speed testing",
+            "Device testing and notifications muting",
+            "Screen-sharing awareness"
+          ]
+        },
+        {
+          "number": "4.8",
+          "lesson_number": 8,
+          "title": "Video Interview Etiquette",
+          "lesson_title": "Video Interview Etiquette",
+          "what_is_taught": "Joining on time, confirming audio/video reception, active listening on video, speaking clearly into the mic, managing digital lag, handling sudden connection failures professionally, and professional closing.",
+          "topics": [
+            "Joining punctually",
+            "Confirming audio and video",
+            "Attentive listening on call",
+            "Speaking clearly with natural cadence",
+            "Managing audio delay and lag",
+            "Handling connection failures professionally",
+            "Professional meeting closing"
+          ]
+        },
+        {
+          "number": "4.9",
+          "lesson_number": 9,
+          "title": "Asynchronous Interviews",
+          "lesson_title": "Asynchronous Interviews",
+          "what_is_taught": "Understanding recorded one-way interview invitations, reading prompt instructions, response preparation, managing on-screen timers, taking practice trials, technical device checks, and final submission review.",
+          "topics": [
+            "Recorded interview invitations",
+            "Reading prompt instructions",
+            "Response preparation techniques",
+            "Managing on-screen time limits",
+            "Practice trial opportunities",
+            "Technical audio/video checks",
+            "Submission review"
+          ]
+        },
+        {
+          "number": "4.10",
+          "lesson_number": 10,
+          "title": "AI-Assisted Screening Awareness",
+          "lesson_title": "AI-Assisted Screening Awareness",
+          "what_is_taught": "Understanding AI-generated interview questions, audio/video screening pipelines, automated transcription, AI-generated candidate summaries, automated rating limits, employer review stages, privacy implications, and algorithmic accuracy limitations.",
+          "topics": [
+            "AI-generated interview questions",
+            "Audio and video screening pipelines",
+            "Automated speech-to-text transcription",
+            "AI-generated candidate summaries",
+            "Automated rating limits",
+            "Employer human review stages",
+            "Privacy implications",
+            "Accuracy limitations"
+          ]
+        },
+        {
+          "number": "4.11",
+          "lesson_number": 11,
+          "title": "Responsible AI Preparation",
+          "lesson_title": "Responsible AI Preparation",
+          "what_is_taught": "Generating role-specific questions with AI, conducting conversational mock practice, reviewing written answer structure, improving language clarity, simulating follow-ups, and validating with human judgment.",
+          "topics": [
+            "Role-specific question generation",
+            "Mock interview rehearsal",
+            "Writing structure feedback",
+            "Answer clarity review",
+            "Language refinement",
+            "Follow-up simulation",
+            "Human verification requirement"
+          ]
+        },
+        {
+          "number": "4.12",
+          "lesson_number": 12,
+          "title": "AI Use During Real Interviews",
+          "lesson_title": "AI Use During Real Interviews",
+          "what_is_taught": "Following employer rules strictly, asking about permitted assistance, avoiding secret answer-generation systems, never impersonating candidates, refusing to falsify technical competence, and avoiding concealed prohibited tools.",
+          "topics": [
+            "Adhering to employer assessment policies",
+            "Inquiring about permitted tools",
+            "Prohibition of secret live-answer generators",
+            "Candidate identity integrity",
+            "Avoiding falsified technical competence",
+            "Disclosing assistance where required"
+          ]
+        },
+        {
+          "number": "4.13",
+          "lesson_number": 13,
+          "title": "Candidate Questions",
+          "lesson_title": "Candidate Questions",
+          "what_is_taught": "Formulating strategic questions on role responsibilities, team structure, learning opportunities, success expectations, project priorities, support and onboarding, and evaluation criteria.",
+          "topics": [
+            "Role responsibilities and daily workflow",
+            "Team structure and collaboration",
+            "Learning and mentorship opportunities",
+            "Success expectations in first 90 days",
+            "Project priorities",
+            "Support and onboarding",
+            "Evaluation criteria"
+          ]
+        },
+        {
+          "number": "4.14",
+          "lesson_number": 14,
+          "title": "Salary & Compensation Discussion",
+          "lesson_title": "Salary & Compensation Discussion",
+          "what_is_taught": "Conducting basic salary research, articulating compensation expectations, understanding CTC versus take-home pay structures, asking about benefits, professional negotiation etiquette, and avoiding false competing offers.",
+          "topics": [
+            "Basic market salary research",
+            "Compensation expectations",
+            "CTC vs take-home pay awareness",
+            "Compensation structure and benefits",
+            "Professional negotiation principles",
+            "Respectful communication",
+            "Avoiding false competing offers"
+          ]
+        },
+        {
+          "number": "4.15",
+          "lesson_number": 15,
+          "title": "Offer & Follow-Up Etiquette",
+          "lesson_title": "Offer & Follow-Up Etiquette",
+          "what_is_taught": "Sending post-interview thank-you communications, clarifying next recruitment steps, conducting reasonable follow-ups, reviewing written offers, and avoiding high-pressure tactics.",
+          "topics": [
+            "Thank-you note communication",
+            "Clarifying next steps",
+            "Reasonable follow-up timelines",
+            "Reviewing offer letters",
+            "Asking for written clarification",
+            "Avoiding high-pressure tactics"
+          ]
+        },
+        {
+          "number": "4.16",
+          "lesson_number": 16,
+          "title": "Digital Interview Accessibility",
+          "lesson_title": "Digital Interview Accessibility",
+          "what_is_taught": "Requesting appropriate accommodations, exploring alternative interview formats where available, using closed captioning, respecting communication styles, and ensuring equitable assessment.",
+          "topics": [
+            "Appropriate accommodation requests",
+            "Alternative interview formats",
+            "Live captioning tools",
+            "Communication preferences",
+            "Respectful equitable assessment"
+          ]
+        }
+      ],
+      "hands_on_lab": "Explain a real project and complete a simulated video interview segment. Prepare five thoughtful candidate questions for the selected target role.",
+      "practical_assignment": "Finalize the interview-preparation dossier with: role-specific question bank, project explanation, video interview checklist, asynchronous interview readiness, AI-use policy checklist, candidate questions, and compensation discussion notes.",
+      "expected_deliverable": "Completed Role-Specific Interview Preparation Dossier",
+      "career_application": "Technical-role discussions, professional interviews, online interviews and digital recruitment processes."
+    },
+    {
+      "module_number": 5,
+      "moduleNumber": 5,
+      "title": "Mock Interviews & Feedback",
+      "module_title": "Mock Interviews & Feedback",
+      "name": "Mock Interviews & Feedback",
+      "hours": 6,
+      "guided_hours": 6,
+      "learning_hours": 6,
+      "module_purpose": "Demonstrate interview readiness through two assessed mock interviews, structured feedback and visible improvement.",
+      "objective": "Demonstrate interview readiness through two assessed mock interviews, structured feedback and visible improvement.",
+      "lessons_count": 10,
+      "lessons": [
+        {
+          "number": "5.1",
+          "lesson_number": 1,
+          "title": "Mock Interview Purpose",
+          "lesson_title": "Mock Interview Purpose",
+          "what_is_taught": "Understanding realistic simulation, applying preparation, adapting to question variation, objective communication assessment, and receiving professional feedback.",
+          "topics": [
+            "Realistic interview simulation",
+            "Application of preparation",
+            "Handling question variation",
+            "Communication assessment",
+            "Professional feedback reception"
+          ]
+        },
+        {
+          "number": "5.2",
+          "lesson_number": 2,
+          "title": "Assessment Rubric Introduction",
+          "lesson_title": "Assessment Rubric Introduction",
+          "what_is_taught": "Understanding evaluation criteria: preparation, clarity, relevance, evidence, listening, structured answers, professionalism, and adaptability.",
+          "topics": [
+            "Preparation and role research",
+            "Communication clarity",
+            "Relevance to job specifications",
+            "Concrete evidence usage",
+            "Active listening",
+            "Structured answer frameworks",
+            "Professional composure",
+            "Adaptability under pressure"
+          ]
+        },
+        {
+          "number": "5.3",
+          "lesson_number": 3,
+          "title": "Mock Interview 01 — Baseline Assessment",
+          "lesson_title": "Mock Interview 01 — Baseline Assessment",
+          "what_is_taught": "Conducting initial baseline mock interview: opening introduction, role-specific questions, behavioural questions, project discussion, follow-up questions, candidate questions, and closing.",
+          "topics": [
+            "Opening introduction delivery",
+            "Role-specific questions",
+            "Behavioural STAR/CAR questions",
+            "Project discussion",
+            "Follow-up probing questions",
+            "Candidate questions to interviewer",
+            "Professional interview closing"
+          ]
+        },
+        {
+          "number": "5.4",
+          "lesson_number": 4,
+          "title": "First Interview Review",
+          "lesson_title": "First Interview Review",
+          "what_is_taught": "Analyzing strengths, missing evidence, unclear answers, excessive detail, weak answer structures, listening gaps, and role alignment.",
+          "topics": [
+            "Recognizing core strengths",
+            "Identifying missing evidence",
+            "Pinpointing unclear answers",
+            "Addressing excessive rambling",
+            "Strengthening answer structures",
+            "Addressing listening gaps",
+            "Ensuring role alignment"
+          ]
+        },
+        {
+          "number": "5.5",
+          "lesson_number": 5,
+          "title": "Structured Feedback",
+          "lesson_title": "Structured Feedback",
+          "what_is_taught": "Receiving specific observations, evidence from responses, rubric scores, improvement priorities, and practice recommendations.",
+          "topics": [
+            "Specific behavioral observations",
+            "Response evidence analysis",
+            "Rubric scoring breakdown",
+            "Prioritized improvement targets",
+            "Actionable practice recommendations"
+          ]
+        },
+        {
+          "number": "5.6",
+          "lesson_number": 6,
+          "title": "Targeted Improvement",
+          "lesson_title": "Targeted Improvement",
+          "what_is_taught": "Rewriting unclear answer outlines, refining STAR/CAR stories, improving project explanations, reducing unrelated detail, polishing introductions, and practicing follow-up handling.",
+          "topics": [
+            "Rewriting unclear answer outlines",
+            "Refining STAR/CAR stories",
+            "Improving project explanations",
+            "Eliminating unrelated detail",
+            "Polishing the professional introduction",
+            "Practicing follow-up questions"
+          ]
+        },
+        {
+          "number": "5.7",
+          "lesson_number": 7,
+          "title": "Mock Interview 02 — Final Assessment",
+          "lesson_title": "Mock Interview 02 — Final Assessment",
+          "what_is_taught": "Delivering revised professional introduction, new or adapted behavioural questions, role-specific questions, project explanation, situational response, candidate questions, and professional closing.",
+          "topics": [
+            "Revised professional introduction",
+            "New and adapted behavioural questions",
+            "Role-specific inquiry",
+            "Project explanation refinement",
+            "Situational response",
+            "Candidate questions",
+            "Professional closing"
+          ]
+        },
+        {
+          "number": "5.8",
+          "lesson_number": 8,
+          "title": "Comparing Performance",
+          "lesson_title": "Comparing Performance",
+          "what_is_taught": "Analyzing baseline versus final performance across communication clarity, evidence quality, structured answering, role relevance, listening, and professional behaviour.",
+          "topics": [
+            "Baseline versus final comparison",
+            "Communication clarity improvement",
+            "Evidence quality enhancement",
+            "Structured answering discipline",
+            "Role relevance and alignment",
+            "Active listening demonstrated",
+            "Professional poise"
+          ]
+        },
+        {
+          "number": "5.9",
+          "lesson_number": 9,
+          "title": "Reflection",
+          "lesson_title": "Reflection",
+          "what_is_taught": "Reflecting on what improved, what remains difficult, which answers need refinement, how to prepare independently, and future practice priorities.",
+          "topics": [
+            "Identifying concrete improvements",
+            "Assessing remaining challenges",
+            "Targeting answers needing refinement",
+            "Independent preparation strategies",
+            "Future practice priorities"
+          ]
+        },
+        {
+          "number": "5.10",
+          "lesson_number": 10,
+          "title": "Final Practice Plan",
+          "lesson_title": "Final Practice Plan",
+          "what_is_taught": "Consolidating key strengths, improvement areas, target role specifications, story refresh schedule, question practice routines, project revision, video/phone readiness, and final pre-interview checklist.",
+          "topics": [
+            "Consolidated key strengths",
+            "Documented improvement areas",
+            "Target role refresh schedule",
+            "Question practice routines",
+            "Project revision notes",
+            "Video and phone readiness checks",
+            "Final pre-interview checklist"
+          ]
+        }
+      ],
+      "hands_on_lab": "Complete TWO assessed mock interviews: Mock 01 Baseline (15–25 mins simulation + feedback) and Mock 02 Final (20–30 mins simulation + feedback). May be conducted live or recorded with consent.",
+      "practical_assignment": "Submit: Two mock interview assessment records, feedback for Mock 01, feedback for Mock 02, revised answer examples, comparison of performance, final reflection, and final practice plan.",
+      "expected_deliverables": "Two Assessed Mock Interviews + Individual Feedback & Improvement Reports",
+      "career_application": "Realistic interview practice, professional communication and independent preparation."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is this interview preparation course suitable for beginners?",
+      "question": "Is this interview preparation course suitable for beginners?",
+      "a": "Yes. The course begins with role research and communication fundamentals before progressing to behavioural questions, digital interviews and assessed mock interviews.",
+      "answer": "Yes. The course begins with role research and communication fundamentals before progressing to behavioural questions, digital interviews and assessed mock interviews."
+    },
+    {
+      "q": "What will I learn?",
+      "question": "What will I learn?",
+      "a": "You will learn interview preparation, professional introductions, STAR/CAR storytelling, project explanation, role-specific questions, video interview techniques and practical mock interview skills.",
+      "answer": "You will learn interview preparation, professional introductions, STAR/CAR storytelling, project explanation, role-specific questions, video interview techniques and practical mock interview skills."
+    },
+    {
+      "q": "Do I need a job interview scheduled before joining?",
+      "question": "Do I need a job interview scheduled before joining?",
+      "a": "No. You can select a realistic target role during the course and practise using relevant job requirements.",
+      "answer": "No. You can select a realistic target role during the course and practise using relevant job requirements."
+    },
+    {
+      "q": "What is the STAR method?",
+      "question": "What is the STAR method?",
+      "a": "STAR stands for Situation, Task, Action and Result. It helps structure an answer around a genuine experience and the candidate's contribution.",
+      "answer": "STAR stands for Situation, Task, Action and Result. It helps structure an answer around a genuine experience and the candidate's contribution."
+    },
+    {
+      "q": "What is the CAR framework?",
+      "question": "What is the CAR framework?",
+      "a": "CAR uses Context or Challenge, Action and Result. It is a concise structure for explaining relevant past experiences.",
+      "answer": "CAR uses Context or Challenge, Action and Result. It is a concise structure for explaining relevant past experiences."
+    },
+    {
+      "q": "How many behavioural stories will I prepare?",
+      "question": "How many behavioural stories will I prepare?",
+      "a": "You will prepare five verified stories based on actual academic, professional, project or personal experiences.",
+      "answer": "You will prepare five verified stories based on actual academic, professional, project or personal experiences."
+    },
+    {
+      "q": "What if I have no work experience?",
+      "question": "What if I have no work experience?",
+      "a": "You may use genuine academic projects, internships, volunteer activities, training assignments or other relevant experiences.",
+      "answer": "You may use genuine academic projects, internships, volunteer activities, training assignments or other relevant experiences."
+    },
+    {
+      "q": "Will I learn to answer \"Tell me about yourself\"?",
+      "question": "Will I learn to answer \"Tell me about yourself\"?",
+      "a": "Yes. You will prepare and deliver a professional introduction of approximately 90 seconds.",
+      "answer": "Yes. You will prepare and deliver a professional introduction of approximately 90 seconds."
+    },
+    {
+      "q": "Will I learn technical interview preparation?",
+      "question": "Will I learn technical interview preparation?",
+      "a": "You will learn to explain projects, discuss technical decisions and communicate problem-solving approaches. Detailed coding tests, DSA and specialized examinations are not included.",
+      "answer": "You will learn to explain projects, discuss technical decisions and communicate problem-solving approaches. Detailed coding tests, DSA and specialized examinations are not included."
+    },
+    {
+      "q": "Will the course cover online interviews?",
+      "question": "Will the course cover online interviews?",
+      "a": "Yes. The curriculum includes Google Meet or Zoom, camera and audio setup, remote interview etiquette and asynchronous interview awareness.",
+      "answer": "Yes. The curriculum includes Google Meet or Zoom, camera and audio setup, remote interview etiquette and asynchronous interview awareness."
+    },
+    {
+      "q": "Are AI interviews covered?",
+      "question": "Are AI interviews covered?",
+      "a": "Yes. Students learn about AI-assisted screening and may use AI tools for practice where available.",
+      "answer": "Yes. Students learn about AI-assisted screening and may use AI tools for practice where available."
+    },
+    {
+      "q": "Can I use AI during a real interview?",
+      "question": "Can I use AI during a real interview?",
+      "a": "Only when the employer explicitly permits it. AI-assisted rehearsal is different from secretly obtaining answers during a restricted assessment.",
+      "answer": "Only when the employer explicitly permits it. AI-assisted rehearsal is different from secretly obtaining answers during a restricted assessment."
+    },
+    {
+      "q": "How many mock interviews will I complete?",
+      "question": "How many mock interviews will I complete?",
+      "a": "Two assessed mock interviews, with structured feedback and improvement reports.",
+      "answer": "Two assessed mock interviews, with structured feedback and improvement reports."
+    },
+    {
+      "q": "Do I have to record myself?",
+      "question": "Do I have to record myself?",
+      "a": "No. A live assessed interview with documented feedback is an acceptable alternative when recording is unavailable or consent is not provided.",
+      "answer": "No. A live assessed interview with documented feedback is an acceptable alternative when recording is unavailable or consent is not provided."
+    },
+    {
+      "q": "Will I receive personal feedback?",
+      "question": "Will I receive personal feedback?",
+      "a": "The curriculum includes structured assessment feedback for both mock interviews. Do not promise a specific mentor-to-student ratio or one-to-one arrangement unless verified.",
+      "answer": "The curriculum includes structured assessment feedback for both mock interviews. Do not promise a specific mentor-to-student ratio or one-to-one arrangement unless verified."
+    },
+    {
+      "q": "Will I learn salary negotiation?",
+      "question": "Will I learn salary negotiation?",
+      "a": "The course includes basic compensation discussion etiquette, salary-research principles and professional negotiation awareness.",
+      "answer": "The course includes basic compensation discussion etiquette, salary-research principles and professional negotiation awareness."
+    },
+    {
+      "q": "Is the course suitable for technical-course graduates?",
+      "question": "Is the course suitable for technical-course graduates?",
+      "a": "Yes. It is designed to complement technical training by helping students communicate their real skills and project work more clearly.",
+      "answer": "Yes. It is designed to complement technical training by helping students communicate their real skills and project work more clearly."
+    },
+    {
+      "q": "Does this course guarantee a job?",
+      "question": "Does this course guarantee a job?",
+      "a": "No. Job offers depend on role requirements, candidate qualifications, employer decisions and other factors.",
+      "answer": "No. Job offers depend on role requirements, candidate qualifications, employer decisions and other factors."
+    },
+    {
+      "q": "Can I join without completing Course 79 or Course 80?",
+      "question": "Can I join without completing Course 79 or Course 80?",
+      "a": "Yes. Both courses are helpful related learning opportunities but are not mandatory prerequisites.",
+      "answer": "Yes. Both courses are helpful related learning opportunities but are not mandatory prerequisites."
+    },
+    {
+      "q": "What portfolio will I complete?",
+      "question": "What portfolio will I complete?",
+      "a": "You will complete five verified behavioural stories, a role-specific preparation dossier, a 90-second introduction and two assessed mock interviews with feedback and a final practice plan.",
+      "answer": "You will complete five verified behavioural stories, a role-specific preparation dossier, a 90-second introduction and two assessed mock interviews with feedback and a final practice plan."
+    },
+    {
+      "q": "What is the duration and fee?",
+      "question": "What is the duration and fee?",
+      "a": "The course lasts four weeks, includes 32 guided learning hours and has a listed fee of ₹4,900, subject to Nova Skills' verified pricing and tax policy.",
+      "answer": "The course lasts four weeks, includes 32 guided learning hours and has a listed fee of ₹4,900, subject to Nova Skills' verified pricing and tax policy."
+    }
+  ],
+  "primary_keyword": "Interview preparation course",
+  "secondary_keywords": [
+    "Interview preparation course in India",
+    "Job interview training",
+    "Professional interview skills",
+    "Interview communication course",
+    "STAR method interview training",
+    "Behavioural interview preparation",
+    "Mock interview course",
+    "Interview preparation for freshers",
+    "Video interview preparation",
+    "AI interview practice",
+    "Interview confidence training",
+    "Tell me about yourself interview preparation",
+    "Professional communication training",
+    "Job interview coaching course",
+    "Interview preparation certification"
+  ],
+  "keywords": [
+    "Interview preparation course",
+    "Job interview training",
+    "STAR method",
+    "Behavioural interviews",
+    "Mock interviews",
+    "Professional communication",
+    "Video interviews"
+  ],
+  "seo": {
+    "title": "Interview Preparation & Communication Course | Nova Skills",
+    "description": "Practise STAR interviews, professional introductions, video interviews and mock interviews in 4 weeks (32h). Build a reviewed portfolio. Fee ₹4,900.",
+    "primary_keyword": "Interview preparation course",
+    "canonical": "https://novaskills.in/course-detail.html?id=interview-preparation"
+  }
 }

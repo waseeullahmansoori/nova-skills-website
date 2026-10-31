@@ -1,400 +1,1170 @@
 {
   "course_id": "gemini-mastery",
-  "course_name": "Gemini Mastery",
+  "id": "gemini-mastery",
+  "slug": "gemini-mastery",
+  "course_name": "Gemini & Google Workspace AI",
+  "title": "Gemini & Google Workspace AI",
+  "name": "Gemini & Google Workspace AI",
+  "academic_sequence": 45,
+  "curriculum_edition": "2027 Edition",
   "academy": "AI Academy",
   "academy_id": "ai",
-  "course_type": "MERGE",
-  "course_role": "Career/Monetization",
-  "level": "BEGINNER",
-  "duration": "1 Month",
-  "learning_hours": 40,
-  "future_review_status": "FAST-CHANGING",
+  "academyId": "ai",
+  "academic_positioning": "Gemini-Assisted Google Workspace Productivity & Business Operations",
+  "specialization": "Gemini-Assisted Google Workspace Productivity",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "Google Workspace AI Productivity Assistant & Operations Specialist",
+  "level": "Beginner to Applied",
+  "priority": "High Admission Priority",
+  "duration": "4 Weeks",
+  "durationMonths": 1,
+  "duration_weeks": 4,
+  "learning_hours": 32,
+  "learningHours": 32,
+  "guided_hours": 32,
+  "hours": 32,
+  "weekly_workload": "8 Hours / Week (4 Hours Live Technical Instruction + 4 Hours Supervised Productivity Studio Lab)",
+  "mode": "Online Interactive Labs & Guided Workspace Simulation",
+  "price": 4900,
+  "fee": "INR 4,900 + applicable GST",
+  "regular_fee": 4900,
+  "originalPrice": 4900,
+  "commercial_notice": "Transparent institutional tuition: INR 4,900 + applicable taxes. Truth in Pricing with zero artificial countdown discounts, inflated strike-throughs or fake retail offers.",
+  "pricing": {
+    "regular_fee": 4900,
+    "gst_percentage": "18%",
+    "gst_amount": 882,
+    "total_fee_with_gst": 5782,
+    "discount": "0%",
+    "currency": "INR",
+    "pricing_model": "Truth in Pricing — Transparent institutional fee with zero fake countdown discounts.",
+    "installments": "One-time payment of ₹4,900 or split across 2 installments of ₹2,450."
+  },
+  "tagline": "Work Smarter Across Gmail, Docs, Sheets, Slides and Google AI.",
+  "hero_headline": "Work Smarter Across Gmail, Docs, Sheets, Slides and Google AI.",
+  "hero_supporting_heading": "From Smart Emails to Verified Business Reports — Learn Gemini-Powered Productivity Through Practical Google Workspace Projects.",
+  "hero_supporting_headline": "From Smart Emails to Verified Business Reports — Learn Gemini-Powered Productivity Through Practical Google Workspace Projects.",
+  "h1": "Gemini & Google Workspace AI",
+  "hero": {
+    "hook": "Work Smarter Across Gmail, Docs, Sheets, Slides and Google AI.",
+    "subheading": "From Smart Emails to Verified Business Reports — Learn Gemini-Powered Productivity Through Practical Google Workspace Projects.",
+    "target_role": "Google Workspace AI Productivity Assistant & Research Coordinator",
+    "badge": "2027 Professional Workplace Edition — Applied Gemini & Google Workspace AI"
+  },
+  "short_description": "Learn Gemini-powered workplace productivity across Gmail, Docs, Sheets, Slides and Drive. Build practical skills in AI-assisted writing, spreadsheet analysis, presentations, research and reusable workflows.",
+  "shortDesc": "Learn Gemini-powered workplace productivity across Gmail, Docs, Sheets, Slides and Drive. Build practical skills in AI-assisted writing, spreadsheet analysis, presentations, research and reusable workflows.",
+  "full_description": "Learn how to use Gemini and Google Workspace together to improve everyday professional work.\n\nThis practical Gemini & Google Workspace AI course teaches effective AI instructions, multimodal inputs, professional email communication, document drafting, spreadsheet analysis, presentation creation and information research.\n\nDevelop hands-on experience using Gemini with Gmail, Google Docs, Google Sheets, Google Slides and Google Drive.\n\nLearn to draft and review emails, create structured business documents, understand files, prepare spreadsheet formulas, interpret datasets, build charts and develop professional presentations.\n\nExplore Gemini Deep Research, Gemini Notebook, document-grounded answers, source verification and cross-document comparison.\n\nLearn how reusable instructions and Gemini Skills can support consistent business tasks, subject to verified feature availability.\n\nUnderstand data permissions, AI limitations, safe file handling and human verification requirements.\n\nBuild a professional Google Workspace AI Productivity Suite containing an analyzed spreadsheet, a business presentation, a professional document, an email workflow and a cited research briefing.\n\nThe programme emphasizes practical workplace skills, reliable outputs, privacy-aware collaboration and reusable processes rather than outdated model specifications or advanced API engineering.",
+  "fullDesc": "Learn how to use Gemini and Google Workspace together to improve everyday professional work.\n\nThis practical Gemini & Google Workspace AI course teaches effective AI instructions, multimodal inputs, professional email communication, document drafting, spreadsheet analysis, presentation creation and information research.\n\nDevelop hands-on experience using Gemini with Gmail, Google Docs, Google Sheets, Google Slides and Google Drive.\n\nLearn to draft and review emails, create structured business documents, understand files, prepare spreadsheet formulas, interpret datasets, build charts and develop professional presentations.\n\nExplore Gemini Deep Research, Gemini Notebook, document-grounded answers, source verification and cross-document comparison.\n\nLearn how reusable instructions and Gemini Skills can support consistent business tasks, subject to verified feature availability.\n\nUnderstand data permissions, AI limitations, safe file handling and human verification requirements.\n\nBuild a professional Google Workspace AI Productivity Suite containing an analyzed spreadsheet, a business presentation, a professional document, an email workflow and a cited research briefing.\n\nThe programme emphasizes practical workplace skills, reliable outputs, privacy-aware collaboration and reusable processes rather than outdated model specifications or advanced API engineering.",
+  "description": "Learn Gemini-powered workplace productivity across Gmail, Docs, Sheets, Slides and Drive. Build practical skills in AI-assisted writing, spreadsheet analysis, presentations, research and reusable workflows.",
+  "overview": {
+    "positioning": "Gemini-Assisted Google Workspace Productivity & Business Operations",
+    "core_philosophy": "Work Smarter Across Gmail, Docs, Sheets, Slides and Google AI.",
+    "key_facts": {
+      "level": "Beginner to Applied",
+      "duration": "4 Weeks",
+      "format": "Online Interactive Labs & Guided Workspace Simulation",
+      "estimated_learning_hours": "32 Hours (4 Weeks × 8 Hours/Week)",
+      "project_count": "5 Integrated Deliverables (Google Workspace AI Productivity Suite)",
+      "capstone": "Google Workspace AI Productivity Suite (Spreadsheet Analysis, Presentation Deck, Executive Document, Email Workflow, Cited Research Brief)",
+      "ai_integration": "Practical Google Workspace AI Capabilities (Gmail, Docs, Sheets, Slides, Drive, Gemini Notebook, Gemini Skills)",
+      "career_focus": "AI-Assisted Office Productivity, Google Workspace Productivity Assistant, Business Documentation Assistant"
+    },
+    "what_you_will_be_able_to_do": [
+      "Craft clear, context-rich task instructions and multimodal prompts for Google Gemini without relying on memorized specs.",
+      "Draft, polish, rewrite, and summarize professional communications in Gmail with verified recipient context and human approval.",
+      "Create well-structured business proposals, executive summaries, and reports in Google Docs using iterative AI editing.",
+      "Organize, retrieve, and synthesize files across Google Drive with clear access controls, version tracking, and confidentiality awareness.",
+      "Analyze business performance datasets in Google Sheets, generating accurate formulas and calculating conversion rates and KPIs.",
+      "Conduct rigorous independent formula and calculation audits to verify spreadsheet numbers rather than blindly trusting AI outputs.",
+      "Design polished, executive-ready presentation slide decks in Google Slides, translating complex data into compelling visual stories.",
+      "Conduct deep business research using Gemini and Gemini Notebook with document-grounded answers and checked inline citations.",
+      "Compare conflicting source documents, detect omissions, and prepare evidence-based business research briefs.",
+      "Package reusable business workflows and Gemini Skills with quality-control checklists and human-in-the-loop sign-offs."
+    ]
+  },
   "target_audience": {
     "best_for": [
-      "Professionals looking to master Gemini Mastery.",
-      "Forward-thinking individuals aiming to integrate AI tools into their workflows.",
-      "Tech enthusiasts looking to build practical, deployable AI projects."
+      "Office executives, administrative professionals, and operations managers using Google Workspace daily.",
+      "Digital marketers, marketing coordinators, and sales teams needing rapid reporting and high-impact presentations.",
+      "Business owners, entrepreneurs, and freelancers seeking to streamline business documentation and client correspondence.",
+      "Educators, trainers, and research coordinators managing document-intensive knowledge workflows.",
+      "Professionals seeking practical AI productivity skills across Google tools without software engineering or coding."
     ],
-    "who_should_take_foundation_first": "Beginners lacking basic digital literacy should take foundation courses first.",
+    "who_should_take_foundation_first": "Learners without basic computer literacy or unfamiliar with basic email, documents, and spreadsheet navigation should complete basic digital literacy foundations first.",
     "not_for": [
-      "Those looking for abstract theory without hands-on practice.",
-      "Individuals expecting overnight success without building real projects."
+      "Developers seeking advanced Gemini API programming, Python SDK integration, or custom model fine-tuning.",
+      "Machine learning engineers looking for algorithmic architecture, mathematical foundations, or model training.",
+      "Individuals expecting automated end-to-end execution without human review, editing, and verification."
     ]
   },
   "prerequisites": {
-    "required": "Basic computer literacy and understanding of web applications.",
-    "recommended": "Familiarity with the domain relevant to the tools.",
+    "required": "Basic computer literacy, standard web browser navigation, email familiarity, and basic document/spreadsheet understanding.",
+    "recommended": "Familiarity with Gmail and Google Drive; basic familiarity with elementary spreadsheet formulas and chart types.",
     "system_requirements": {
-      "hardware": "Standard laptop/PC with internet connection",
-      "software_accounts": "Google Gemini, Gemini API, Google AI Studio, NotebookLM"
+      "hardware": "Modern laptop or desktop computer with reliable internet access",
+      "software_accounts": "Standard Google Account (Personal or Google Workspace); access to Gemini, Gmail, Docs, Sheets, Slides, and Drive"
     },
-    "not_required": "Advanced programming degrees"
+    "not_required": "Computer programming, coding degrees, advanced mathematics, or prior AI development experience."
   },
-  "overview": {
-    "positioning": "Mastery of Google Gemini: 2-million-token long-context analysis, Google Workspace integration, and multimodal reasoning.",
-    "short_description": "Learn to leverage Google Gemini, Gemini API, Google AI Studio to solve real problems.",
-    "key_facts": {
-      "level": "BEGINNER",
-      "duration": "1 Month",
-      "format": "Hands-On Projects",
-      "estimated_learning_hours": "40 Hours",
-      "project_count": "3 Projects",
-      "capstone": "Final Delivery Project",
-      "ai_integration": "AI-CRITICAL",
-      "career_focus": "AI Practitioner"
-    },
-    "what_you_will_be_able_to_do": [
-      "Implement AI-driven workflows.",
-      "Master tools like Google Gemini, Gemini API.",
-      "Deploy functional projects to production."
-    ]
+  "potential_career_applications": {
+    "pathway_overview": "Skills acquired in this course enhance daily productivity across contemporary administrative, marketing, sales, operational, and research roles. Presented as workplace competencies, not guaranteed employment promises.",
+    "entry_roles": "AI-Assisted Office Productivity Specialist, Google Workspace Assistant, Junior Operations Assistant",
+    "mid_roles": "Business Documentation Assistant, Workspace Operations Coordinator, Marketing Reporting Assistant",
+    "specialist_roles": "AI Productivity Freelancer, AI-Assisted Research Coordinator, Business Presentation Specialist",
+    "freelance_roles": "Google Workspace AI Consultant, Executive Productivity Specialist, Business Research Freelancer",
+    "employer_expectations": "Demonstrated ability to produce verified business documents, audit spreadsheet figures, build professional presentations, and organize reusable workflows.",
+    "what_student_demonstrates": "A verified Google Workspace AI Productivity Suite containing five tangible, quality-checked deliverables."
   },
-  "why_now": {
-    "industry_shift": "Google Gemini 1.5 Pro has redefined document and video analysis by processing hours of video and entire codebases in a single prompt.",
-    "ai_impact": "Massive context windows eliminate the need for complex chunking architectures on large corporate research and compliance tasks.",
-    "business_demand": "Companies are actively seeking practitioners skilled in modern AI tools.",
-    "career_opportunity": "Early adopters can secure high-leverage roles."
+  "career_paths": {
+    "entry_roles": "AI-Assisted Office Productivity Specialist, Google Workspace Assistant",
+    "mid_roles": "Business Documentation Assistant, Workspace Operations Coordinator, Marketing Reporting Assistant",
+    "specialist_roles": "AI Productivity Freelancer, AI-Assisted Research Coordinator, Business Presentation Specialist",
+    "freelance_roles": "Google Workspace AI Consultant, Executive Productivity Specialist, Business Research Freelancer",
+    "employer_expectations": "Demonstrated ability to produce verified business documents, audit spreadsheet figures, build professional presentations, and organize reusable workflows.",
+    "what_student_demonstrates": "A verified Google Workspace AI Productivity Suite containing five tangible, quality-checked deliverables."
   },
-  "learning_outcomes": [
-    "DESIGN architectures utilizing Google Gemini.",
-    "BUILD practical solutions for business needs.",
-    "DEPLOY projects adhering to best practices."
+  "key_course_highlights": [
+    "Gemini Fundamentals & Multimodal Inputs",
+    "Gmail AI Productivity & Tone Adjustment",
+    "Google Docs AI Writing & Editorial Review",
+    "Google Drive File Retrieval & Context Search",
+    "Google Sheets AI Analysis & Formula Generation",
+    "KPI Calculations & Independent Verification",
+    "Google Slides AI Presentations & Data Storytelling",
+    "Gemini Deep Research & Fact Verification",
+    "Gemini Notebook & Grounded Citations",
+    "Reusable Gemini Skills & Workflow Mapping",
+    "Workspace Permissions & Sensitive Data Handling",
+    "Human Approval & Quality Control Sign-Offs",
+    "5 Integrated Portfolio Deliverables",
+    "Quarterly Feature Review Maintainability"
   ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1",
-        "focus": "Google Gemini Ecosystem"
-      },
-      {
-        "stage": "Stage 2",
-        "focus": "Google AI Studio & API"
-      },
-      {
-        "stage": "Stage 3",
-        "focus": "NotebookLM & Research"
-      }
-    ]
-  },
+  "tools": [
+    "Google Gemini",
+    "Google Gmail",
+    "Google Docs",
+    "Google Sheets",
+    "Google Slides",
+    "Google Drive",
+    "Gemini Notebook",
+    "Google AI Studio"
+  ],
   "hands_on_tech": {
-    "core_tools": [
+    "primary_tools": [
       {
         "tool": "Google Gemini",
-        "purpose": "Essential for Gemini Mastery.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "purpose": "Conversational AI assistant for text synthesis, structured problem-solving, multimodal understanding, and task instruction drafting.",
+        "what_student_learns": "Instruction drafting, context specification, iterative refinement, multimodal input handling, and hallucination detection.",
+        "what_student_builds": "Task instruction templates and structured problem briefs across modules."
       },
       {
-        "tool": "Gemini API",
-        "purpose": "Essential for Gemini Mastery.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "tool": "Google Gmail",
+        "purpose": "Gemini-assisted email drafting, thread summarization, tone refinement, and responsive follow-up communication.",
+        "what_student_learns": "Thread summarization, professional tone calibration, recipient context review, and mandatory human sign-off before sending.",
+        "what_student_builds": "Professional business email sequence and customer enquiry communication workflows."
+      },
+      {
+        "tool": "Google Docs",
+        "purpose": "AI-supported document drafting, structural outlining, executive report preparation, and editorial polishing.",
+        "what_student_learns": "Iterative document drafting, heading hierarchy, executive summary formatting, voice consistency, and human editorial review.",
+        "what_student_builds": "Executive business document, commercial proposal, and editorial quality checklist."
+      },
+      {
+        "tool": "Google Sheets",
+        "purpose": "AI-assisted spreadsheet structuring, formula generation (SUM, AVERAGE, COUNT, conditional logic), KPI calculation, and visual chart creation.",
+        "what_student_learns": "Formula generation, duplicate detection, missing-value handling, conversion rate calculations, chart selection, and rigorous calculation verification.",
+        "what_student_builds": "Sales & Customer Enquiry Performance workbook with verified formulas, KPI tables, and charts."
+      },
+      {
+        "tool": "Google Slides",
+        "purpose": "Gemini-assisted presentation planning, slide content structuring, data storytelling, and executive slide deck creation.",
+        "what_student_learns": "Converting reports into slide outlines, visual hierarchy, speaker notes development, chart embedding, and audience-tailored narrative design.",
+        "what_student_builds": "Executive presentation deck communicating performance insights and strategic recommendations."
+      },
+      {
+        "tool": "Google Drive",
+        "purpose": "Contextual file search, cross-document information retrieval, permissions management, and source-aware document summarization.",
+        "what_student_learns": "Drive search syntax, folder organization, file access controls, document version awareness, and confidentiality safeguards.",
+        "what_student_builds": "Document organization and permissions audit checklist."
+      }
+    ],
+    "supporting_tools": [
+      {
+        "tool": "Gemini Notebook",
+        "purpose": "Document-grounded research, knowledge compilation, and verified inline citation analysis across uploaded source materials.",
+        "what_student_learns": "Source document ingestion, knowledge graph queries, source-grounded answers, inline citation audits, and cross-source synthesis.",
+        "what_student_builds": "Source-verified business research brief with verified citations."
       },
       {
         "tool": "Google AI Studio",
-        "purpose": "Essential for Gemini Mastery.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
-      },
-      {
-        "tool": "NotebookLM",
-        "purpose": "Essential for Gemini Mastery.",
-        "what_student_learns": "Core mechanics and advanced features.",
-        "what_student_builds": "Course projects"
+        "purpose": "Limited conceptual demonstration of model parameters (temperature, safety filters, system instructions) without code development.",
+        "what_student_learns": "Conceptual understanding of system instructions and parameter behavior in a controlled sandbox.",
+        "what_student_builds": "Conceptual parameter observation notes (strictly non-coding demonstration)."
       }
     ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
+    "software_access_policy": "Standard free or institutional Google Workspace accounts are fully sufficient for all core learning objectives. The course teaches transferable workflows with equivalent manual alternatives where account-specific features differ."
   },
-  "industry_workflow": {
-    "overview": "Standard operations:",
-    "stages": [
-      {
-        "step": 1,
-        "name": "Discovery",
-        "desc": "Identify the problem."
-      },
-      {
-        "step": 2,
-        "name": "Tool Selection",
-        "desc": "Choose the right AI stack."
-      },
-      {
-        "step": 3,
-        "name": "Implementation",
-        "desc": "Build the workflow."
-      },
-      {
-        "step": 4,
-        "name": "Deployment",
-        "desc": "Launch and monitor."
-      }
-    ]
-  },
-  "business_use_cases": [
-    {
-      "sector": "Technology",
-      "business_problem": "Inefficient processes",
-      "approach": "AI automation",
-      "toolset": "Google Gemini",
-      "output": "Optimized workflow"
-    }
-  ],
-  "ai_integration": {
-    "role_classification": "AI-CRITICAL",
-    "ai_can_assist_with": "Ideation and drafting.",
-    "ai_can_automate": "Repetitive execution.",
-    "ai_cannot_replace": "Strategic decision making.",
-    "human_expertise_required": "Quality assurance.",
-    "validation_protocol": "Manual review of outputs.",
-    "responsible_use": "Adherence to data privacy."
-  },
-  "best_practices": [
-    "Iterate rapidly.",
-    "Verify all AI outputs.",
-    "Maintain organized project files."
-  ],
-  "common_mistakes": [
-    {
-      "mistake": "Trusting AI blindly.",
-      "why_it_happens": "Overconfidence.",
-      "professional_approach": "Always verify output."
-    }
-  ],
-  "career_paths": {
-    "entry_roles": "AI Specialist",
-    "mid_roles": "AI Architect",
-    "specialist_roles": "Automation Consultant",
-    "freelance_roles": "AI Freelancer",
-    "employer_expectations": "Proven ability to deploy AI solutions.",
-    "what_student_demonstrates": "Portfolio of working projects."
-  },
-  "freelance_applications": {
-    "services_offered": [
-      "AI Integration",
-      "Workflow Automation"
-    ],
-    "client_workflow": "Consult -> Build -> Deploy -> Maintain",
-    "portfolio_requirements": "Working prototypes."
-  },
-  "what_you_will_build": [
-    "Project focused on Google Gemini Ecosystem",
-    "Project focused on Google AI Studio & API",
-    "Project focused on NotebookLM & Research"
-  ],
-  "final_deliverables": [
-    "Code repository or live app",
-    "Documentation"
-  ],
-  "assessment": {
-    "model": "Project-based evaluation",
-    "criteria": "Functionality and clean execution."
-  },
-  "certification": {
-    "title": "Certified Gemini Mastery Professional",
-    "criteria": "Completion of all projects.",
-    "verification": "Online portal."
-  },
-  "not_covered": "Theoretical machine learning math.",
-  "next_learning_path": {
-    "recommended_next": "Advanced AI Architecture",
-    "related_programs": "Other AI Academy courses."
-  },
-  "faq": [
-    {
-      "question": "Is Gemini Mastery for beginners?",
-      "answer": "Check the prerequisites, but generally we start from practical basics."
-    },
-    {
-      "question": "Will I build real projects?",
-      "answer": "Yes, every module includes hands-on builds."
-    },
-    {
-      "question": "Are the tools free?",
-      "answer": "Most tools have free tiers sufficient for learning."
-    }
-  ],
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Google Gemini Ecosystem",
-      "module_purpose": "Navigate Google's AI offerings.",
-      "what_you_will_learn": [
-        "Learn Gemini Advanced Interface",
-        "Learn Workspace Integration (Docs/Sheets)",
-        "Learn Multimodal Inputs in Gemini",
-        "Learn Limitations & Safety"
+      "module_title": "Gemini Fundamentals",
+      "duration": "6 Hours",
+      "hours": 6,
+      "module_purpose": "Master core generative AI principles, the Gemini ecosystem, multimodal prompting, responsible AI practices, and output verification without relying on fixed model specs.",
+      "learning_objectives": [
+        "Navigate the Gemini app interface and understand the Google Workspace AI ecosystem.",
+        "Craft explicit, context-rich task instructions specifying objective, constraints, and output formats.",
+        "Process multimodal inputs (text, images, documents) responsibly and identify file handling limits.",
+        "Detect model hallucinations, output variability, and implement systematic fact-checking procedures.",
+        "Apply Google account privacy controls, data sharing boundaries, and human-in-the-loop oversight."
       ],
-      "lessons": [
-        {
-          "lesson_number": "1.1",
-          "lesson_title": "Gemini Advanced Interface",
-          "what_is_taught": "Fundamentals of Gemini Advanced Interface",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Gemini Advanced Interface in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.2",
-          "lesson_title": "Workspace Integration (Docs/Sheets)",
-          "what_is_taught": "Fundamentals of Workspace Integration (Docs/Sheets)",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Workspace Integration (Docs/Sheets) in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.3",
-          "lesson_title": "Multimodal Inputs in Gemini",
-          "what_is_taught": "Fundamentals of Multimodal Inputs in Gemini",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Multimodal Inputs in Gemini in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "1.4",
-          "lesson_title": "Limitations & Safety",
-          "what_is_taught": "Fundamentals of Limitations & Safety",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Limitations & Safety in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "topics_covered": [
+        "Introduction to generative AI principles and foundational LLM concepts",
+        "Google Gemini ecosystem overview: apps, integrations, and workspace services",
+        "Gemini app fundamentals, conversational interface navigation, and session management",
+        "Google Workspace AI fundamentals and integrated side-panel concepts",
+        "Gemini capabilities and operational boundaries in business environments",
+        "Current model selection concepts and understanding feature differences",
+        "Why model architectures evolve and avoiding rigid specification memorization",
+        "Principles of effective business prompting: role, task, context, and format",
+        "Clear task instruction drafting: eliminating ambiguity in operational prompts",
+        "Providing relevant organizational context without breaching information boundaries",
+        "Input and output specifications: defining exact schemas, tables, and structures",
+        "Iterative prompt refinement: diagnosing subpar answers and steering responses",
+        "Working with text: summarization, synthesis, tone modulation, and extraction",
+        "Image understanding: interpreting diagrams, receipts, whiteboard notes, and UI layouts",
+        "Multimodal input concepts: combining visual artifacts with structured text queries",
+        "Document input and interpretation: uploading PDFs, Docs, and text transcripts",
+        "File processing limitations: file size boundaries, parsing quirks, and format constraints",
+        "Understanding model hallucinations: why LLMs generate plausible untruths",
+        "Output variability and temperature considerations in repeatable business tasks",
+        "Source verification protocols: confirming claims against external primary references",
+        "Responsible AI use: ethical standards, bias awareness, and fair representation",
+        "Personal data and privacy: handling PII, GDPR/DPDP alignment, and consent",
+        "Google account and Workspace permissions: personal vs organizational boundaries",
+        "Safe file sharing and data leakage prevention when using AI tools",
+        "Protecting sensitive business information, trade secrets, and internal memos",
+        "Human oversight as a mandatory business gate before acting on AI outputs",
+        "Appropriate AI task selection: determining when AI adds value vs when manual rules win",
+        "Feature availability, tier differences, and subscription plan caveats"
       ],
-      "key_concepts": [
-        "Gemini Advanced Interface",
-        "Workspace Integration (Docs/Sheets)",
-        "Multimodal Inputs in Gemini",
-        "Limitations & Safety"
+      "hands_on_exercises": [
+        "Prompt Engineering Sandbox: Draft 5 business task instructions with explicit constraints and verify outputs.",
+        "Multimodal Interpretation Lab: Upload a business chart or invoice image, extract data points, and verify numerical accuracy.",
+        "Hallucination Detection Exercise: Identify 3 subtle factual errors in an AI-generated briefing and correct them."
       ],
-      "tools": [
-        "Google Gemini",
-        "Gemini API",
-        "Google AI Studio"
-      ],
-      "hands_on_practice": "Lab focused on Google Gemini Ecosystem",
-      "assignment": "Module 1 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "practical_assignment": {
+        "title": "Gemini Fundamentals & Responsible Use Lab",
+        "scenario": "Develop a structured operational prompt suite for an internal business department, test it across multimodal inputs, and perform a rigorous fact-checking and privacy audit.",
+        "deliverables": [
+          "Task objective statement defining business scope and target user",
+          "Input dataset and multimodal source artifacts",
+          "Engineered prompt templates with context and output schemas",
+          "Model and tool record noting configuration settings",
+          "Raw AI-generated results log",
+          "Verification checklist documenting factual assertions tested",
+          "Corrected, approved final output ready for business distribution"
+        ],
+        "expected_competency": "Students can use Gemini responsibly, select suitable workplace tasks, and independently evaluate and correct AI-generated results."
+      },
+      "assessment_criteria": "Precision of prompt constraints, completeness of verification checklist, adherence to privacy rules, and accuracy of final corrected deliverable."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Google AI Studio & API",
-      "module_purpose": "Build with the Gemini API.",
-      "what_you_will_learn": [
-        "Learn AI Studio Interface",
-        "Learn Tuning Models",
-        "Learn Using the Gemini API",
-        "Learn Function Calling in Gemini"
+      "module_title": "Gmail, Docs & Drive",
+      "duration": "6 Hours",
+      "hours": 6,
+      "module_purpose": "Leverage Gemini within Gmail, Google Docs, and Google Drive to draft professional communications, author structured business reports, and organize files securely.",
+      "learning_objectives": [
+        "Draft, rewrite, adjust tone, and summarize professional correspondence in Gmail.",
+        "Review long email threads, extract action items, and draft contextual follow-up messages.",
+        "Create structured business proposals, executive summaries, and formal reports in Google Docs.",
+        "Execute iterative editorial polish, document comparison, and formatting alignment in Docs.",
+        "Utilize Google Drive search and contextual retrieval while maintaining strict permissions and access controls."
       ],
-      "lessons": [
-        {
-          "lesson_number": "2.1",
-          "lesson_title": "AI Studio Interface",
-          "what_is_taught": "Fundamentals of AI Studio Interface",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice AI Studio Interface in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.2",
-          "lesson_title": "Tuning Models",
-          "what_is_taught": "Fundamentals of Tuning Models",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Tuning Models in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.3",
-          "lesson_title": "Using the Gemini API",
-          "what_is_taught": "Fundamentals of Using the Gemini API",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Using the Gemini API in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "2.4",
-          "lesson_title": "Function Calling in Gemini",
-          "what_is_taught": "Fundamentals of Function Calling in Gemini",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Function Calling in Gemini in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "topics_covered": [
+        "Gemini in Google Workspace: architectural overview and interface access points",
+        "Gmail productivity fundamentals: email side-panel, draft generation, and smart replies",
+        "Professional email drafting: client updates, formal announcements, and inquiry responses",
+        "Email rewriting: shortening, expanding, professionalizing, and improving clarity",
+        "Tone adjustment: transitioning between formal, cordial, urgent, and collaborative tones",
+        "Email summarization: distilling 20+ message email chains into bulleted executive briefs",
+        "Email-thread understanding: identifying commitments, questions, deadlines, and owners",
+        "Follow-up email preparation: crafting respectful, persuasive re-engagement messages",
+        "Customer communication: addressing complaints, support inquiries, and feedback empathetically",
+        "Email approval protocol: human review of recipients, attachments, and confidential details",
+        "Gemini in Google Docs: 'Help me write' interface, inline prompts, and side-panel integration",
+        "Creating professional documents: establishing purpose, tone, audience, and scope",
+        "Document outlines: generating logical heading hierarchies and document skeletons",
+        "Report writing: drafting multi-section business evaluations and operational reviews",
+        "Business proposals: drafting project scopes, deliverables, timelines, and terms",
+        "Rewriting and editing: active voice conversion, jargon reduction, and sentence flow",
+        "Document summaries: producing concise executive abstracts from lengthy documents",
+        "Document comparison: identifying nuances, revisions, and conflicting statements across drafts",
+        "Human editorial review: applying stylistic guidelines and institutional formatting standards",
+        "Gemini in Google Drive: conversational file search and semantic document retrieval",
+        "File organization: tagging, folder structures, and metadata management",
+        "Drive search syntax and finding buried contracts, presentations, and memos",
+        "Understanding supported file types: PDFs, Docs, Sheets, text, and presentation files",
+        "Source-aware summaries: synthesizing insights from multiple files in Google Drive",
+        "File sharing and collaboration: managing viewer, commenter, and editor permissions",
+        "Permissions and access controls: preventing unintended folder and document exposure",
+        "Document version awareness: tracking change histories and managing revision branches",
+        "Confidentiality and sensitive-data handling within shared cloud drives",
+        "Final document quality assurance checklist and sign-off workflow",
+        "Practical workflow: Business Brief -> Gemini Draft -> Human Edit -> Source Review -> Final Document"
       ],
-      "key_concepts": [
-        "AI Studio Interface",
-        "Tuning Models",
-        "Using the Gemini API",
-        "Function Calling in Gemini"
+      "hands_on_exercises": [
+        "Email Thread Distillation: Summarize a complex client issue thread into key facts, action items, and owners.",
+        "Executive Proposal Draft: Use Google Docs AI to generate an outline, expand sections, and edit for executive tone.",
+        "Drive Context Retrieval: Query Google Drive to locate specific policy clauses and synthesize a cross-document answer."
       ],
-      "tools": [
-        "Google Gemini",
-        "Gemini API",
-        "Google AI Studio"
-      ],
-      "hands_on_practice": "Lab focused on Google AI Studio & API",
-      "assignment": "Module 2 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "practical_assignment": {
+        "title": "AI-Assisted Business Communication & Documentation",
+        "scenario": "Act as an Operations Coordinator handling a major client onboarding: draft the initial email, prepare a formal onboarding document in Google Docs, review permissions in Google Drive, and draft a follow-up.",
+        "deliverables": [
+          "Professional client email with tailored tone and verified specifics",
+          "Contextual email follow-up addressing open client questions",
+          "Structured business document (onboarding proposal or SOP) in Google Docs",
+          "Document revision log showing human edits vs AI initial drafts",
+          "Google Drive file organization plan with verified access permissions",
+          "Accuracy and confidentiality review sign-off"
+        ],
+        "expected_competency": "Students can create, edit, and review professional workplace communications and structured documents using supported Gemini Workspace features."
+      },
+      "assessment_criteria": "Professional tone, clarity of structure, editorial quality of human corrections, and thoroughness of permissions audit."
     },
     {
       "module_number": "Module 03",
-      "module_title": "NotebookLM & Research",
-      "module_purpose": "Use NotebookLM for deep document analysis.",
-      "what_you_will_learn": [
-        "Learn Importing Sources",
-        "Learn Querying the Knowledge Graph",
-        "Learn Audio Overview Generation",
-        "Learn Synthesizing Research"
+      "module_title": "Sheets & Slides Workflows",
+      "duration": "8 Hours",
+      "hours": 8,
+      "module_purpose": "Build, clean, analyze, and independently verify business spreadsheets in Google Sheets, and translate quantitative insights into executive presentations in Google Slides.",
+      "learning_objectives": [
+        "Structure business spreadsheets, tables, headers, and records using AI assistance in Google Sheets.",
+        "Generate and audit spreadsheet formulas (SUM, AVERAGE, COUNT, IF, LOOKUP concepts).",
+        "Clean messy data, detect duplicate entries, handle missing records, and calculate business KPIs.",
+        "Perform rigorous independent formula and calculation audits without blindly trusting AI figures.",
+        "Translate spreadsheet findings into polished Google Slides presentations with clear visual hierarchy."
       ],
-      "lessons": [
-        {
-          "lesson_number": "3.1",
-          "lesson_title": "Importing Sources",
-          "what_is_taught": "Fundamentals of Importing Sources",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Importing Sources in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.2",
-          "lesson_title": "Querying the Knowledge Graph",
-          "what_is_taught": "Fundamentals of Querying the Knowledge Graph",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Querying the Knowledge Graph in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.3",
-          "lesson_title": "Audio Overview Generation",
-          "what_is_taught": "Fundamentals of Audio Overview Generation",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Audio Overview Generation in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        },
-        {
-          "lesson_number": "3.4",
-          "lesson_title": "Synthesizing Research",
-          "what_is_taught": "Fundamentals of Synthesizing Research",
-          "why_it_matters": "Crucial for real-world application.",
-          "what_learner_does": "Practice Synthesizing Research in a sandbox.",
-          "expected_outcome": "Completed lesson exercise."
-        }
+      "topics_covered": [
+        "Google Sheets fundamentals",
+        "Gemini in Google Sheets",
+        "Spreadsheet structure",
+        "Tables, headers and records",
+        "AI-assisted spreadsheet creation",
+        "Spreadsheet organization",
+        "Formula generation",
+        "Reviewing formulas",
+        "SUM, AVERAGE and COUNT concepts",
+        "Conditional formulas",
+        "Lookup and text functions at an appropriate foundation level",
+        "Data cleaning",
+        "Duplicate detection",
+        "Missing-value handling",
+        "Sorting and filtering",
+        "Business KPI calculations",
+        "Percentage and growth calculations",
+        "Data summaries",
+        "Business trend analysis",
+        "Chart selection",
+        "Bar and line charts",
+        "Chart interpretation",
+        "Basic dashboard concepts",
+        "Data visualization quality",
+        "Formula error checking",
+        "Independent calculation verification",
+        "AI-generated insight validation",
+        "Limitations of spreadsheet AI",
+        "Google Slides fundamentals",
+        "Gemini-assisted presentation development",
+        "Presentation outlines",
+        "Slide content planning",
+        "Creating editable slide decks where supported",
+        "Converting documents into presentation structures",
+        "Visual hierarchy",
+        "Data storytelling",
+        "Charts in presentations",
+        "Speaker notes",
+        "Brand consistency",
+        "Presentation review and revision",
+        "Source attribution",
+        "Final stakeholder presentation"
       ],
-      "key_concepts": [
-        "Importing Sources",
-        "Querying the Knowledge Graph",
-        "Audio Overview Generation",
-        "Synthesizing Research"
+      "hands_on_exercises": [
+        "Spreadsheet Cleaning & Audit Lab: Import the synthetic 'Sales & Customer Enquiry Performance' dataset, clean anomalies, and compute conversion rates.",
+        "Formula Verification Exercise: Audit 5 AI-suggested formulas against manual calculations to detect incorrect range references.",
+        "Slide Storytelling Workshop: Convert a 3-page business brief into a 6-slide executive presentation with linked charts and speaker notes."
       ],
-      "tools": [
-        "Google Gemini",
-        "Gemini API",
-        "Google AI Studio"
+      "practical_assignment": {
+        "title": "Business Analytics & Presentation Project",
+        "scenario": "Analyze the synthetic 'Sales & Customer Enquiry Performance' dataset (containing Date, Product/Service, Lead Source, Enquiries, Qualified Leads, Sales, Revenue, Region, Month). Calculate conversion rates and revenue metrics in Google Sheets, verify calculations independently, and deliver an executive presentation in Google Slides.",
+        "deliverables": [
+          "Deliverable A (Analyzed Google Sheet): Cleaned dataset, verified formulas, KPI summary table (total leads, qualification rate, sales conversion rate, revenue by category, regional performance), and 2 business charts.",
+          "Deliverable B (Business Presentation): 6-8 slide executive Google Slides presentation containing executive summary, visual charts, trend findings, business recommendations, speaker notes, and source attribution.",
+          "Formula & Calculation Audit Sheet: Documented check of raw vs AI-calculated figures proving 100% calculation accuracy."
+        ],
+        "expected_competency": "Students can analyze business spreadsheets, verify formulas independently, and communicate data-driven insights through polished Google Slides presentations."
+      },
+      "assessment_criteria": "100% formula accuracy, rigorous independent verification, clarity of visual charts, executive slide design, and clear strategic recommendations."
+    },
+    {
+      "module_number": "Module 04",
+      "module_title": "Gemini Research & Context",
+      "duration": "6 Hours",
+      "hours": 6,
+      "module_purpose": "Conduct structured, evidence-based business research using Gemini and Gemini Notebook, verify inline citations, cross-compare source documents, and compile professional briefs.",
+      "learning_objectives": [
+        "Formulate precise research questions and structure multi-step research investigations.",
+        "Utilize Gemini Deep Research capabilities where supported for complex topical inquiries.",
+        "Ingest and manage diverse source documents inside Gemini Notebook.",
+        "Verify inline citations directly against primary source text to ensure factual fidelity.",
+        "Synthesize multi-source findings, identify conflicting evidence, and draft verified research briefs."
       ],
-      "hands_on_practice": "Lab focused on NotebookLM & Research",
-      "assignment": "Module 3 Capstone",
-      "business_application": "Improves operational efficiency.",
-      "expected_outcome": "Working module prototype."
+      "topics_covered": [
+        "Introduction to AI-assisted business research",
+        "Formulating structured research questions",
+        "Gemini research capabilities",
+        "Gemini Deep Research",
+        "Understanding Deep Research availability",
+        "Alternative research methodologies",
+        "Gemini Notebook product fundamentals",
+        "Historical terminology context: clarifying NotebookLM as historical naming",
+        "Gemini Notebook availability across personal and Workspace accounts",
+        "Source document ingestion: PDFs, Docs, web links, audio transcripts and text files",
+        "Source document quality evaluation: authority, freshness and objectivity",
+        "Querying the notebook knowledge graph",
+        "Document-grounded responses and reduced hallucination",
+        "Inline citations and direct quotation anchors",
+        "Checking citations against source text",
+        "Cross-document comparisons and synthesis",
+        "Source selection and curation",
+        "Missing-source limitations",
+        "Research synthesis: combining disparate data points",
+        "Extracting useful findings: opportunities, risks and moves",
+        "Knowledge organization: tagging, mind maps and takeaways",
+        "Research brief writing: executive summaries and methodology",
+        "Research privacy and confidentiality",
+        "Source permissions and copyright",
+        "Hallucination detection in research",
+        "Final research quality control protocol",
+        "Structured research workflow: Question -> Source Collection -> Source Review -> Analysis -> Verification -> Comparison -> Brief",
+        "Providing equivalent source-based research exercises if Gemini Notebook is restricted",
+        "Synthesizing qualitative customer feedback and industry benchmark data",
+        "Final research brief compilation and presentation to stakeholders"
+      ],
+      "hands_on_exercises": [
+        "Source Ingestion & Grounding Lab: Ingest 3 industry whitepapers into Gemini Notebook and test source-grounded question answering.",
+        "Citation Verification Audit: Audit 10 inline citations generated by Gemini Notebook, verifying that claims exactly match underlying page paragraphs.",
+        "Cross-Source Comparison Exercise: Compare two market reports with conflicting projections and document the underlying assumptions."
+      ],
+      "practical_assignment": {
+        "title": "Verified Business Research Brief",
+        "scenario": "Conduct a comprehensive research investigation on a chosen scenario (Market Opportunity Research, Competitor Landscape, Industry Trend Analysis, or Business Technology Comparison), ingest sources into Gemini Notebook, verify citations, and prepare an executive research brief.",
+        "deliverables": [
+          "Research question and defined scope statement",
+          "Structured research plan outlining methodology",
+          "Curated source library (minimum 3 authoritative sources)",
+          "Source quality and credibility review",
+          "Document-grounded analysis notes from Gemini Notebook",
+          "Cross-source comparison identifying agreements and discrepancies",
+          "Citation verification matrix linking claims to exact page references",
+          "Summary of research limitations and unverified claims",
+          "Actionable business recommendations based strictly on verified findings"
+        ],
+        "expected_competency": "Students can conduct disciplined, source-grounded business research, audit inline citations, and author credible, evidence-based business research briefs."
+      },
+      "assessment_criteria": "Authoritativeness of sources, 100% citation accuracy, depth of cross-source synthesis, and clarity of business recommendations."
+    },
+    {
+      "module_number": "Module 05",
+      "module_title": "Reusable Gemini Workflows & Portfolio",
+      "duration": "6 Hours",
+      "hours": 6,
+      "module_purpose": "Build repeatable business productivity workflows, transition from legacy Gems to modern Gemini Skills, coordinate multi-app Workspace processes, and assemble the capstone portfolio.",
+      "learning_objectives": [
+        "Map recurring business operations into repeatable, standardized AI-assisted workflows.",
+        "Author reusable prompt templates, custom instructions, and modular task runbooks.",
+        "Understand the Gems-to-Skills migration schedule and build Gemini Skills where supported.",
+        "Coordinate multi-application Workspace tasks across Gmail, Docs, Sheets, and Drive.",
+        "Assemble, audit, and finalize the 5-component Google Workspace AI Productivity Suite portfolio."
+      ],
+      "topics_covered": [
+        "Reusable AI productivity workflows: moving from one-off prompts to institutional operating systems",
+        "Identifying recurring business tasks: reporting, customer correspondence, and document prep",
+        "Workflow mapping: defining triggers, inputs, AI-assisted phases, human checks, and outputs",
+        "Standardizing task instructions: crafting parameter-driven prompt frameworks",
+        "Reusable prompt templates: building team libraries for standardized documents and emails",
+        "Custom instructions: configuring persona, output preferences, and operational constraints",
+        "Gemini Skills: concept of specialized, modular, reusable AI instructions within Google",
+        "Historical Gems concepts and transition: understanding Google's migration from Gems to Skills",
+        "Official transition roadmap awareness: personal accounts (late 2026), business (early 2027), education (mid 2027)",
+        "Skill creation where supported: defining skill names, descriptions, instructions, and reference files",
+        "Skill invocation where supported: calling skills within conversations and Workspace panels",
+        "Combining reusable instructions with context files in Google Drive",
+        "Google Workspace task coordination: passing insights seamlessly from Sheets to Docs to Slides to Gmail",
+        "Gmail and Drive context usage: grounding team workflows in real project collateral",
+        "Document-to-presentation workflows: accelerating deck drafting from finalized reports",
+        "Spreadsheet-to-report workflows: translating raw calculations into narrative Docs summaries",
+        "Cross-app productivity concepts: eliminating context switching through Workspace sidebars",
+        "Google Calendar and Tasks awareness: scheduling follow-ups and tracking AI-assisted milestones",
+        "Workspace permissions and admin controls: authorization for connected services and tools",
+        "Connected-app authorization: managing third-party extensions and data-sharing scopes",
+        "AI-assisted task management: maintaining accountability across delegated action items",
+        "Human approval as an immutable rule before sending emails, publishing files, or committing data",
+        "Automation awareness: understanding where human-in-the-loop is mandatory vs assistive automation",
+        "Workflow limitations: identifying points of fragility in multi-step AI tasks",
+        "AI output verification protocols: checklists, four-eye reviews, and audit trails",
+        "Document versioning and revision management in collaborative environments",
+        "Reusable deliverable templates: standardizing business proposals, agendas, and briefs",
+        "Quality-control checklists: pre-flight checks before executive distribution",
+        "Workflow documentation: authoring clear SOPs so colleagues can execute the same AI workflows",
+        "Productivity measurement: quantifying time saved, output velocity, and accuracy gains",
+        "Portfolio assembly: integrating all 5 course deliverables into an executive portfolio suite",
+        "Final capstone presentation: defending portfolio artifacts and methodology before peers"
+      ],
+      "hands_on_exercises": [
+        "SOP Workflow Mapping: Diagram a monthly business reporting workflow connecting Sheets, Docs, Slides, and Gmail.",
+        "Gemini Skill / Reusable Prompt Authoring: Build a reusable prompt template (or Gemini Skill where supported) for executive memo drafting with strict constraints.",
+        "Capstone Quality Review: Run a complete pre-flight quality audit on all 5 portfolio deliverables using a formal rubric."
+      ],
+      "practical_assignment": {
+        "title": "Google Workspace AI Productivity Workflow (Monthly Business Reporting)",
+        "scenario": "Construct a complete, repeatable operational workflow that ingests monthly sales and enquiry data, conducts verified spreadsheet analysis in Sheets, compiles an executive report in Docs, builds a presentation in Slides, drafts stakeholder communication in Gmail, and documents the reusable runbook.",
+        "deliverables": [
+          "Workflow objective statement and operational trigger definition",
+          "Input data requirements and synthetic dataset specifications",
+          "Reusable instructions or supported Gemini Skill configuration",
+          "Tool-selection rationale across the Workspace suite",
+          "Step-by-step workflow stages with inputs, AI prompts, and human review gates",
+          "Output examples for each stage (Sheet, Doc, Slide, Email)",
+          "Human verification check sheet and error-trapping log",
+          "Workspace permissions and security compliance checklist",
+          "Reusable execution runbook for team members",
+          "Final video or slide demonstration walk-through"
+        ],
+        "expected_competency": "Students can organize repeatable, quality-controlled Gemini-assisted business tasks while maintaining strict data governance, human approvals, and output fidelity."
+      },
+      "assessment_criteria": "Repeatability of workflow documentation, robustness of human verification gates, adherence to permission security, and seamless multi-app coordination."
+    }
+  ],
+  "portfolio": {
+    "title": "Google Workspace AI Productivity Suite",
+    "description": "A comprehensive, professionally verified suite of 5 tangible workplace deliverables demonstrating end-to-end Gemini and Google Workspace productivity.",
+    "deliverables": [
+      {
+        "deliverable_number": 1,
+        "title": "AI-Assisted Business Spreadsheet Analysis",
+        "tool": "Google Sheets",
+        "description": "An operational spreadsheet analysis built upon the synthetic 'Sales & Customer Enquiry Performance' dataset. Features cleaned data records, verified formulas (SUM, AVERAGE, COUNTIF, conversion rates), high-impact business charts, and a rigorous formula verification checklist.",
+        "included_artifacts": [
+          "Cleaned synthetic dataset (enquiries, qualified leads, sales, revenue)",
+          "Formula and KPI calculation tables (lead qualification rate, sales conversion rate)",
+          "Monthly sales trajectory and regional comparison charts",
+          "Formula calculation verification checklist signed off by the student",
+          "Written summary of business performance findings and recommendations"
+        ]
+      },
+      {
+        "deliverable_number": 2,
+        "title": "Gemini-Assisted Business Presentation",
+        "tool": "Google Slides",
+        "description": "A polished 6-8 slide executive presentation translating quantitative spreadsheet findings into a compelling executive narrative. Features native editable slide components, linked charts, speaker notes, and clear strategic takeaways.",
+        "included_artifacts": [
+          "Slide deck structure with executive summary and key findings",
+          "Visual data slides with embedded Google Sheets charts",
+          "Strategic recommendation and action item slides",
+          "Detailed speaker notes with supporting context and anticipated Q&A",
+          "Source attribution and calculation assumption documentation"
+        ]
+      },
+      {
+        "deliverable_number": 3,
+        "title": "Business Document & Editorial Review",
+        "tool": "Google Docs",
+        "description": "A formal executive business document (operational proposal or SOP) drafted with Gemini assistance and refined through human editorial review. Demonstrates heading hierarchy, executive tone, and a complete editorial revision log.",
+        "included_artifacts": [
+          "Initial business brief and prompt outline",
+          "AI-assisted initial draft showcasing structured sections",
+          "Edited final document with human revisions and stylistic polish",
+          "Editorial review checklist confirming voice, accuracy, and brand alignment",
+          "Document formatting and heading hierarchy validation"
+        ]
+      },
+      {
+        "deliverable_number": 4,
+        "title": "Professional Gmail Communication Workflow",
+        "tool": "Google Gmail",
+        "description": "A documented business communication workflow featuring an initial client email, a follow-up inquiry, tone calibration notes, privacy checks, and a mandatory human approval protocol prior to sending.",
+        "included_artifacts": [
+          "Audience definition and communication objective brief",
+          "Initial professional client email draft and polished final version",
+          "Context-aware follow-up email addressing pending decisions",
+          "Tone adjustment comparison (formal vs collaborative vs urgent)",
+          "Privacy and recipient verification checklist",
+          "Reusable email prompt template for ongoing team deployment"
+        ]
+      },
+      {
+        "deliverable_number": 5,
+        "title": "Source-Verified Business Research",
+        "tool": "Gemini Notebook / Deep Research",
+        "description": "An evidence-based research brief on a selected business topic (market opportunity, competitor analysis, or tech comparison) compiled using Gemini Notebook. Features 100% verified inline citations matched against primary source texts.",
+        "included_artifacts": [
+          "Research question, scope definition, and research plan",
+          "Curated source library with 3+ authoritative reference documents",
+          "Document-grounded analysis notes from Gemini Notebook",
+          "Citation verification matrix linking assertions to exact page passages",
+          "Cross-source comparison identifying discrepancies and consensus",
+          "Executive research brief with documented limitations and recommendations"
+        ]
+      }
+    ],
+    "overall_requirements": [
+      "Every deliverable clearly documents the original input, the AI-assisted draft, the human verification process, and the final output.",
+      "All numerical data is audited independently against manual formulas; zero unverified calculations are permitted.",
+      "All research claims must cite specific source passages; zero hallucinated citations are tolerated.",
+      "All communication artifacts must incorporate a human-in-the-loop approval gate before external release.",
+      "All artifacts are assembled into an executive portfolio ready for presentation to employers, clients, or leadership."
+    ]
+  },
+  "modernization_and_review": {
+    "cadence": "Quarterly (Every 3 Months)",
+    "core_modernization_rules": [
+      "Strictly eliminate obsolete Gemini 1.5 Pro promises and universal 2-million-token context claims.",
+      "Acknowledge that supported models, context limits, and multimodal tools vary across personal and Workspace tiers.",
+      "Eliminate compulsory Gemini API programming, model fine-tuning, and production app deployment.",
+      "Use current official terminology: 'Gemini Notebook' (clarifying NotebookLM as historical terminology).",
+      "Address Gems-to-Skills transition: explain Skills where supported with fallback to documented reusable instructions."
+    ],
+    "gems_to_skills_transition": {
+      "overview": "Google is transitioning Gems to Skills across Google accounts, with different rollout schedules across account tiers.",
+      "transition_schedule": {
+        "personal_accounts": "November–December 2026 (Rollout window)",
+        "workspace_business_enterprise": "March 2027 (Rollout window)",
+        "workspace_education": "June 2027 (Rollout window)"
+      },
+      "teaching_approach": "Teach the timeless principles of reusable AI instructions, custom personas, and parameter constraints. Where Skills UI is enabled, demonstrate native creation; where not yet rolled out, implement equivalent documented instructions."
+    },
+    "quarterly_review_checklist": [
+      "1. Verify active Gemini model names, capabilities, and availability across regions.",
+      "2. Audit supported context/input limits and file upload boundaries.",
+      "3. Review Gmail AI features (Help me write, thread summaries, side-panel tools).",
+      "4. Review Google Docs AI features (outlines, inline drafting, editorial sidebars).",
+      "5. Review Google Sheets AI capabilities (table generation, formula assistance, chart tools).",
+      "6. Review Google Slides AI presentation features (outline generation, editable slide layouts).",
+      "7. Review Google Drive integrations and contextual cross-file search features.",
+      "8. Audit Gemini Deep Research availability and multi-step reasoning performance.",
+      "9. Audit Gemini Notebook features, source file support, and citation mechanisms.",
+      "10. Track Gemini Skills rollout and Gems retirement status across personal, business, and education accounts.",
+      "11. Verify Google Workspace subscription plan requirements and tier boundaries.",
+      "12. Review Google Workspace administrative controls, permissions, and security policies.",
+      "13. Audit regional and language availability updates for Workspace AI features.",
+      "14. Inspect Google AI Studio demonstration interfaces and parameter controls.",
+      "15. Re-check data handling, privacy compliance (GDPR/DPDP), and training opt-out settings.",
+      "16. Identify deprecated features and promptly update curriculum documentation.",
+      "17. Review official Google UI changes and refresh lab walkthrough instructions."
+    ]
+  },
+  "official_references": [
+    {
+      "topic": "Gemini Skills",
+      "url": "https://support.google.com/gemini/answer/16301323",
+      "note": "Official guide on creating and managing Gemini Skills."
+    },
+    {
+      "topic": "Gems to Skills Transition",
+      "url": "https://support.google.com/gemini/answer/16301324",
+      "note": "Official schedule and migration details from Gems to Skills."
+    },
+    {
+      "topic": "Gemini Deep Research",
+      "url": "https://support.google.com/gemini/answer/16182180",
+      "note": "Multi-step research and query decomposition documentation."
+    },
+    {
+      "topic": "Gemini Notebook Overview",
+      "url": "https://support.google.com/notebooklm/answer/14002626",
+      "note": "Source-grounded notebook architecture and document ingestion."
+    },
+    {
+      "topic": "Notebook Chat & Citations",
+      "url": "https://support.google.com/notebooklm/answer/14002628",
+      "note": "Interacting with sources and auditing inline citation anchors."
+    },
+    {
+      "topic": "Gemini in Google Sheets",
+      "url": "https://support.google.com/docs/answer/13963499",
+      "note": "AI table generation, formula assistance, and spreadsheet analysis."
+    },
+    {
+      "topic": "Google Workspace Releases",
+      "url": "https://workspaceupdates.googleblog.com/",
+      "note": "Official blog tracking bi-weekly Workspace feature launches."
+    },
+    {
+      "topic": "Workspace AI Product Updates",
+      "url": "https://support.google.com/a/answer/13853303",
+      "note": "Administrative controls and feature rollout stages for Workspace AI."
+    },
+    {
+      "topic": "Google AI Studio",
+      "url": "https://ai.google.dev/aistudio",
+      "note": "Developer sandbox used exclusively for conceptual parameter demonstrations."
+    },
+    {
+      "topic": "Google AI Developers Documentation",
+      "url": "https://ai.google.dev/docs",
+      "note": "Reference specifications for underlying Google AI foundation models."
+    }
+  ],
+  "skill_boundaries": {
+    "included": [
+      "Gemini web application and conversational problem solving",
+      "Gemini in Google Workspace (Gmail, Docs, Sheets, Slides, Drive)",
+      "Multimodal input handling (text, images, PDFs, structured documents)",
+      "Spreadsheet structuring, formula generation, KPI calculation, and independent verification",
+      "Executive presentation design, slide storytelling, and linked chart embedding in Slides",
+      "Source-grounded research in Gemini Notebook with audited inline citations",
+      "Reusable prompt engineering, task templates, and Gemini Skills where supported",
+      "Workspace privacy, document permissions, data security, and human oversight"
+    ],
+    "excluded": [
+      "Gemini API programming, Python SDK scripting, or REST endpoint coding",
+      "Advanced model fine-tuning, LoRA adapters, or custom model training",
+      "Function-calling programming, tool invocation coding, or schema definitions",
+      "Production web application development or cloud deployment engineering",
+      "Complex automation engineering, enterprise ETL pipelines, or n8n workflow servers",
+      "Advanced Google Apps Script programming, SQL database queries, or Power BI / DAX"
+    ],
+    "course_differentiation": {
+      "vs_chatgpt_mastery": "Course 44 (ChatGPT for Work) focuses on the OpenAI ecosystem, ChatGPT Projects, Canvas writing workflows, Advanced Data Analysis (Python execution environment), and custom GPTs. Course 45 focuses specifically on Google Gemini, Google Workspace native integrations (Gmail, Docs, Sheets, Slides, Drive), Gemini Notebook, and Gemini Skills.",
+      "vs_prompt_engineering": "Course 41 (Prompt Engineering) covers foundational LLM prompt design across multiple providers. Course 45 applies prompt principles specifically to Google Workspace business operations.",
+      "vs_ai_agents_fundamentals": "Course 43 (AI Agents Fundamentals) focuses on multi-step autonomous tool use, reasoning loops, and agent architectures. Course 45 focuses on human-in-the-loop workplace productivity."
+    }
+  },
+  "certification": {
+    "title": "Nova Skills Certified Gemini & Google Workspace AI Professional",
+    "issuing_body": "Nova Skills School of Artificial Intelligence & Applied Technology",
+    "credential_level": "Applied Skill Certification",
+    "assessment_model": "100% Practical Portfolio Evaluation & Verification Audit",
+    "criteria": "Successful submission and verification of all 5 Google Workspace AI Productivity Suite deliverables with 100% calculation accuracy and verified citations.",
+    "verification_method": "Digital credential verification with unique portfolio verification URL and QR code on novaskills.in portal.",
+    "institutional_disclaimer": "This is an independent industry skill certification issued by Nova Skills upon rigorous practical evaluation. It is not an official certification issued directly by Google LLC."
+  },
+  "faq": [
+    {
+      "question": "What is Gemini & Google Workspace AI?",
+      "answer": "Gemini & Google Workspace AI is a comprehensive 4-week, 32-hour practical certification course teaching professionals how to leverage Google Gemini across Gmail, Docs, Sheets, Slides, and Drive. It focuses on writing, spreadsheet analysis, executive presentations, source-grounded research, and reusable business workflows."
+    },
+    {
+      "question": "Is this course suitable for beginners?",
+      "answer": "Yes. The course starts from foundational generative AI concepts and clear prompt drafting before advancing into spreadsheet analysis and multi-app workflows. Anyone with basic computer and internet literacy can succeed."
+    },
+    {
+      "question": "What is the course duration and fee?",
+      "answer": "The course runs for 4 Weeks with 32 instructional hours (8 hours per week: 4 hours live interactive instruction plus 4 hours supervised studio lab). The tuition fee is exactly ₹4,900 plus applicable 18% GST (totaling ₹5,782), adhering to our transparent Truth in Pricing policy."
+    },
+    {
+      "question": "Do I need programming knowledge?",
+      "answer": "No. The course requires absolutely zero programming, coding, or technical engineering knowledge. It focuses on end-user productivity, business prompt engineering, and native Google Workspace features."
+    },
+    {
+      "question": "Will I learn Gemini for Gmail?",
+      "answer": "Yes. Module 02 covers drafting client emails, refining tone, summarizing lengthy email threads, extracting action items, and drafting follow-ups, with a mandatory human sign-off protocol before sending."
+    },
+    {
+      "question": "Does the course cover Google Docs and Drive?",
+      "answer": "Yes. You will learn to draft executive reports, proposals, and SOPs in Google Docs, and use Gemini in Google Drive to search files semantically, synthesize cross-document insights, and audit access permissions."
+    },
+    {
+      "question": "Will I learn AI-assisted spreadsheets?",
+      "answer": "Yes. Module 03 teaches you how to structure tables, generate formulas, clean messy records, and calculate business KPIs in Google Sheets using the synthetic 'Sales & Customer Enquiry Performance' dataset."
+    },
+    {
+      "question": "Does it include formulas and business charts?",
+      "answer": "Yes. You will learn SUM, AVERAGE, COUNT, conditional logic (IF, COUNTIF), and business KPI calculations, alongside building bar and line charts to visualize trends."
+    },
+    {
+      "question": "Will I learn to create Google Slides presentations?",
+      "answer": "Yes. You will learn to translate business reports into structured presentation outlines, format native editable slides, embed linked Google Sheets charts, and author executive speaker notes in Google Slides."
+    },
+    {
+      "question": "What is Gemini Notebook?",
+      "answer": "Gemini Notebook is Google's source-grounded research notebook (historically known as NotebookLM). It allows you to upload PDFs, Docs, web links, and transcripts to generate document-grounded answers with verifiable inline citations."
+    },
+    {
+      "question": "Does the course include Deep Research?",
+      "answer": "Yes. The course covers the principles and multi-step investigation methodologies of Gemini Deep Research, subject to feature availability across different account tiers, with equivalent structured research methods provided."
+    },
+    {
+      "question": "What are Gemini Skills?",
+      "answer": "Gemini Skills are Google's framework for specialized, reusable AI instructions and custom workflows tailored to recurring workplace tasks, such as executive memo drafting or monthly data summarization."
+    },
+    {
+      "question": "Are Gems being replaced by Skills?",
+      "answer": "Yes. Google is transitioning Gems to Skills across account tiers: personal Google accounts in late 2026, Workspace business/enterprise accounts in March 2027, and education accounts in June 2027. We teach both the transition and timeless prompt frameworks."
+    },
+    {
+      "question": "Do I need a paid Google AI or Workspace plan?",
+      "answer": "No. Standard free Google accounts or standard organizational Google Workspace accounts are fully sufficient for all mandatory coursework. We provide equivalent workflows for any advanced feature with tier restrictions."
+    },
+    {
+      "question": "Can Gemini access all my Drive files and Gmail messages?",
+      "answer": "No. Gemini only accesses files and messages that the signed-in user has explicit permission to view, governed by Google Workspace administrative settings, connected service authorizations, and user privacy controls."
+    },
+    {
+      "question": "Will I learn AI output verification?",
+      "answer": "Yes. Independent verification is a cornerstone of this course. You will learn rigorous formula auditing in Sheets, fact-checking protocols, inline citation verification in Gemini Notebook, and hallucination detection."
+    },
+    {
+      "question": "What practical portfolio projects are included?",
+      "answer": "You will build the 5-component Google Workspace AI Productivity Suite: (1) AI-Assisted Business Spreadsheet, (2) Gemini-Assisted Business Presentation, (3) Business Document & Editorial Review, (4) Professional Gmail Email Workflow, and (5) Source-Verified Business Research Brief."
+    },
+    {
+      "question": "Does the course teach Gemini API programming?",
+      "answer": "No. Gemini API programming, Python scripting, function calling, and model fine-tuning are deliberately excluded. This course is strictly designed for business productivity and office operations."
+    },
+    {
+      "question": "Is this an official Google certification?",
+      "answer": "No. This is an independent professional certification issued by Nova Skills based on rigorous, practical portfolio evaluation. Nova Skills is an independent educational institution."
+    },
+    {
+      "question": "How is this different from the ChatGPT for Work course?",
+      "answer": "Course 44 (ChatGPT for Work) focuses on OpenAI's ChatGPT, Advanced Data Analysis (Python execution), Canvas, and custom GPTs. Course 45 focuses specifically on Google Gemini, native Google Workspace apps (Gmail, Docs, Sheets, Slides, Drive), Gemini Notebook, and Gemini Skills."
+    },
+    {
+      "question": "What career applications can I explore?",
+      "answer": "Graduates apply these practical skills in roles such as AI-Assisted Office Productivity Specialist, Google Workspace Assistant, Business Documentation Assistant, Marketing Reporting Coordinator, and AI Productivity Freelancer."
+    }
+  ],
+  "seo": {
+    "meta_title": "Gemini & Workspace AI Course | 4 Weeks, ₹4,900 | Nova Skills",
+    "meta_description": "Learn Gemini for Gmail, Docs, Sheets, Slides, Drive and research. Build 5 practical portfolio deliverables in 4 weeks, 32 hours, for ₹4,900.",
+    "primary_keyword": "Gemini AI Course",
+    "secondary_keywords": [
+      "Google Gemini Course",
+      "Gemini AI Course in India",
+      "Gemini for Google Workspace",
+      "Google Workspace AI Course",
+      "Gemini Training for Beginners",
+      "Gemini for Gmail",
+      "Gemini for Google Docs",
+      "Gemini for Google Sheets",
+      "Gemini for Google Slides",
+      "Gemini Notebook Training",
+      "Gemini Deep Research Course",
+      "Google Workspace AI Productivity",
+      "Gemini AI Course Fees",
+      "Gemini AI Course Duration",
+      "AI Productivity with Google Workspace",
+      "Gemini Skills Training"
+    ],
+    "canonical_url": "https://novaskills.in/course-detail.html?id=gemini-mastery",
+    "h1": "Gemini & Google Workspace AI",
+    "hero_hook": "Work Smarter Across Gmail, Docs, Sheets, Slides and Google AI."
+  },
+  "icon": "🤖",
+  "color": "linear-gradient(135deg, #0599a8, #2563EB)",
+  "category": "AI Academy",
+  "status": "active",
+  "url": "/course-detail.html?id=gemini-mastery",
+  "rating": 4.8,
+  "reviews": 112,
+  "students": 640,
+  "liveProjects": 5,
+  "projects": 5,
+  "certificate": true,
+  "placementSupport": false,
+  "futureReviewStatus": "STABLE_2027",
+  "tags": [
+    "Google Gemini",
+    "Google Workspace AI",
+    "Gmail AI",
+    "Google Docs AI",
+    "Google Sheets AI",
+    "Google Slides AI",
+    "Gemini Notebook",
+    "Gemini Skills"
+  ],
+  "curriculum": [
+    {
+      "module": "Module 01",
+      "title": "Gemini Fundamentals",
+      "lessons": 28,
+      "duration": "6 Hours",
+      "topics": [
+        "Generative AI principles",
+        "Gemini ecosystem overview",
+        "Gemini app fundamentals",
+        "Google Workspace AI fundamentals",
+        "Gemini capabilities and limitations",
+        "Model selection concepts",
+        "Effective prompting",
+        "Clear task instructions",
+        "Relevant context framing",
+        "Input and output specifications",
+        "Prompt refinement",
+        "Working with text",
+        "Image understanding",
+        "Multimodal input concepts",
+        "Document input and interpretation",
+        "File processing limitations",
+        "Model hallucinations",
+        "Output variability",
+        "Source verification",
+        "Responsible AI use",
+        "Personal data and privacy",
+        "Google account and Workspace permissions",
+        "Safe file sharing",
+        "Sensitive business information",
+        "Human oversight",
+        "Appropriate AI task selection",
+        "Feature availability and subscription differences",
+        "Lab: Gemini Fundamentals & Responsible Use"
+      ]
+    },
+    {
+      "module": "Module 02",
+      "title": "Gmail, Docs & Drive",
+      "lessons": 30,
+      "duration": "6 Hours",
+      "topics": [
+        "Gemini in Google Workspace",
+        "Gmail productivity fundamentals",
+        "Professional email drafting",
+        "Email rewriting",
+        "Tone adjustment",
+        "Email summarization",
+        "Email-thread understanding",
+        "Follow-up email preparation",
+        "Customer communication",
+        "Email approval before sending",
+        "Gemini in Google Docs",
+        "Creating professional documents",
+        "Document outlines",
+        "Report writing",
+        "Business proposals",
+        "Rewriting and editing",
+        "Document summaries",
+        "Document comparison",
+        "Human editing",
+        "Gemini in Google Drive",
+        "File organization",
+        "Drive search and information retrieval",
+        "Finding relevant documents",
+        "Understanding supported files",
+        "Source-aware summaries",
+        "File sharing and collaboration",
+        "Permissions and access controls",
+        "Document version awareness",
+        "Confidentiality and sensitive-data handling",
+        "Lab: AI-Assisted Business Communication & Documentation"
+      ]
+    },
+    {
+      "module": "Module 03",
+      "title": "Sheets & Slides Workflows",
+      "lessons": 42,
+      "duration": "8 Hours",
+      "topics": [
+        "Google Sheets fundamentals",
+        "Gemini in Google Sheets",
+        "Spreadsheet structure",
+        "Tables, headers and records",
+        "AI-assisted spreadsheet creation",
+        "Spreadsheet organization",
+        "Formula generation",
+        "Reviewing formulas",
+        "SUM, AVERAGE and COUNT concepts",
+        "Conditional formulas",
+        "Lookup and text functions",
+        "Data cleaning",
+        "Duplicate detection",
+        "Missing-value handling",
+        "Sorting and filtering",
+        "Business KPI calculations",
+        "Percentage and growth calculations",
+        "Data summaries",
+        "Business trend analysis",
+        "Chart selection",
+        "Bar and line charts",
+        "Chart interpretation",
+        "Basic dashboard concepts",
+        "Data visualization quality",
+        "Formula error checking",
+        "Independent calculation verification",
+        "AI-generated insight validation",
+        "Limitations of spreadsheet AI",
+        "Google Slides fundamentals",
+        "Gemini-assisted presentation development",
+        "Presentation outlines",
+        "Slide content planning",
+        "Creating editable slide decks",
+        "Converting documents into presentation structures",
+        "Visual hierarchy",
+        "Data storytelling",
+        "Charts in presentations",
+        "Speaker notes",
+        "Brand consistency",
+        "Presentation review and revision",
+        "Source attribution",
+        "Lab: Business Analytics & Presentation Project"
+      ]
+    },
+    {
+      "module": "Module 04",
+      "title": "Gemini Research & Context",
+      "lessons": 30,
+      "duration": "6 Hours",
+      "topics": [
+        "Foundations of AI research",
+        "Formulating research questions",
+        "Gemini research capabilities",
+        "Gemini Deep Research",
+        "Deep Research availability",
+        "Alternative research methodologies",
+        "Gemini Notebook fundamentals",
+        "Historical terminology context",
+        "Gemini Notebook availability",
+        "Source document ingestion",
+        "Source document quality evaluation",
+        "Querying the notebook knowledge graph",
+        "Document-grounded responses",
+        "Inline citations",
+        "Checking citations against source text",
+        "Cross-document comparisons",
+        "Source selection and curation",
+        "Missing-source limitations",
+        "Research synthesis",
+        "Extracting useful findings",
+        "Knowledge organization",
+        "Research brief writing",
+        "Research privacy and confidentiality",
+        "Source permissions and copyright",
+        "Hallucination detection in research",
+        "Final research quality control protocol",
+        "Structured research workflow",
+        "Equivalent research exercises",
+        "Qualitative and benchmark synthesis",
+        "Lab: Verified Business Research Brief"
+      ]
+    },
+    {
+      "module": "Module 05",
+      "title": "Reusable Gemini Workflows & Portfolio",
+      "lessons": 32,
+      "duration": "6 Hours",
+      "topics": [
+        "Reusable AI productivity workflows",
+        "Identifying recurring business tasks",
+        "Workflow mapping",
+        "Standardizing task instructions",
+        "Reusable prompt templates",
+        "Custom instructions",
+        "Gemini Skills",
+        "Historical Gems concepts and transition",
+        "Skill creation where supported",
+        "Skill invocation where supported",
+        "Combining reusable instructions",
+        "Source files and contextual information",
+        "Google Workspace task coordination",
+        "Gmail and Drive context usage",
+        "Document-to-presentation workflows",
+        "Spreadsheet-to-report workflows",
+        "Cross-app productivity concepts",
+        "Google Calendar and Tasks awareness",
+        "Workspace permissions",
+        "Connected-app authorization",
+        "AI-assisted task management",
+        "Human approval before consequential actions",
+        "Automation awareness",
+        "Workflow limitations",
+        "AI output verification protocols",
+        "Document versioning and revision management",
+        "Reusable deliverable templates",
+        "Quality-control checklists",
+        "Workflow documentation",
+        "Productivity measurement",
+        "Portfolio assembly",
+        "Lab: Monthly Business Reporting & Communication Capstone"
+      ]
+    }
+  ],
+  "seo_title": "Gemini & Workspace AI Course | 4 Weeks, ₹4,900 | Nova Skills",
+  "meta_title": "Gemini & Workspace AI Course | 4 Weeks, ₹4,900 | Nova Skills",
+  "seo_description": "Learn Gemini for Gmail, Docs, Sheets, Slides, Drive and research. Build 5 practical portfolio deliverables in 4 weeks, 32 hours, for ₹4,900.",
+  "meta_description": "Learn Gemini for Gmail, Docs, Sheets, Slides, Drive and research. Build 5 practical portfolio deliverables in 4 weeks, 32 hours, for ₹4,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=gemini-mastery",
+  "what_you_will_build": [
+    {
+      "deliverable_number": 1,
+      "title": "AI-Assisted Business Spreadsheet Analysis",
+      "tool": "Google Sheets",
+      "description": "An operational spreadsheet analysis built upon the synthetic 'Sales & Customer Enquiry Performance' dataset. Features cleaned data records, verified formulas (SUM, AVERAGE, COUNTIF, conversion rates), high-impact business charts, and a rigorous formula verification checklist.",
+      "included_artifacts": [
+        "Cleaned synthetic dataset (enquiries, qualified leads, sales, revenue)",
+        "Formula and KPI calculation tables (lead qualification rate, sales conversion rate)",
+        "Monthly sales trajectory and regional comparison charts",
+        "Formula calculation verification checklist signed off by the student",
+        "Written summary of business performance findings and recommendations"
+      ]
+    },
+    {
+      "deliverable_number": 2,
+      "title": "Gemini-Assisted Business Presentation",
+      "tool": "Google Slides",
+      "description": "A polished 6-8 slide executive presentation translating quantitative spreadsheet findings into a compelling executive narrative. Features native editable slide components, linked charts, speaker notes, and clear strategic takeaways.",
+      "included_artifacts": [
+        "Slide deck structure with executive summary and key findings",
+        "Visual data slides with embedded Google Sheets charts",
+        "Strategic recommendation and action item slides",
+        "Detailed speaker notes with supporting context and anticipated Q&A",
+        "Source attribution and calculation assumption documentation"
+      ]
+    },
+    {
+      "deliverable_number": 3,
+      "title": "Business Document & Editorial Review",
+      "tool": "Google Docs",
+      "description": "A formal executive business document (operational proposal or SOP) drafted with Gemini assistance and refined through human editorial review. Demonstrates heading hierarchy, executive tone, and a complete editorial revision log.",
+      "included_artifacts": [
+        "Initial business brief and prompt outline",
+        "AI-assisted initial draft showcasing structured sections",
+        "Edited final document with human revisions and stylistic polish",
+        "Editorial review checklist confirming voice, accuracy, and brand alignment",
+        "Document formatting and heading hierarchy validation"
+      ]
+    },
+    {
+      "deliverable_number": 4,
+      "title": "Professional Gmail Communication Workflow",
+      "tool": "Google Gmail",
+      "description": "A documented business communication workflow featuring an initial client email, a follow-up inquiry, tone calibration notes, privacy checks, and a mandatory human approval protocol prior to sending.",
+      "included_artifacts": [
+        "Audience definition and communication objective brief",
+        "Initial professional client email draft and polished final version",
+        "Context-aware follow-up email addressing pending decisions",
+        "Tone adjustment comparison (formal vs collaborative vs urgent)",
+        "Privacy and recipient verification checklist",
+        "Reusable email prompt template for ongoing team deployment"
+      ]
+    },
+    {
+      "deliverable_number": 5,
+      "title": "Source-Verified Business Research",
+      "tool": "Gemini Notebook / Deep Research",
+      "description": "An evidence-based research brief on a selected business topic (market opportunity, competitor analysis, or tech comparison) compiled using Gemini Notebook. Features 100% verified inline citations matched against primary source texts.",
+      "included_artifacts": [
+        "Research question, scope definition, and research plan",
+        "Curated source library with 3+ authoritative reference documents",
+        "Document-grounded analysis notes from Gemini Notebook",
+        "Citation verification matrix linking assertions to exact page passages",
+        "Cross-source comparison identifying discrepancies and consensus",
+        "Executive research brief with documented limitations and recommendations"
+      ]
     }
   ]
 }

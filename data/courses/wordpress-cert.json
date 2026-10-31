@@ -1,353 +1,1268 @@
 {
   "course_id": "wordpress-cert",
-  "course_name": "WordPress Site Development",
+  "id": "wordpress-cert",
+  "slug": "wordpress",
+  "course_name": "WordPress Website Design & Management",
+  "title": "WordPress Website Design & Management",
+  "name": "WordPress Website Design & Management",
+  "academic_sequence": 62,
+  "course_number": 62,
+  "curriculum_edition": "2027",
   "academy": "No-Code Web Academy",
   "academy_id": "nocode",
-  "course_type": "REPOSITION",
-  "course_role": "Career/Monetization",
-  "level": "BEGINNER",
-  "duration": "2 Months",
-  "learning_hours": 80,
-  "future_review_status": "EVOLVING",
-  "target_audience": {
-    "best_for": [
-      "Content creators",
-      "Small business owners",
-      "Aspiring web developers"
+  "academyId": "nocode",
+  "academic_positioning": "Best Beginner Entry",
+  "programLevel": "Certification Course",
+  "course_type": "PROFESSIONAL",
+  "courseType": "PROFESSIONAL",
+  "course_role": "WordPress Website Assistant & Administrator",
+  "level": "Beginner to Applied",
+  "priority": "P0",
+  "duration": "6 Weeks",
+  "durationMonths": 1.5,
+  "duration_weeks": 6,
+  "learning_hours": 48,
+  "learningHours": 48,
+  "guided_hours": 48,
+  "hours": 48,
+  "weekly_workload": "8 hours per week (guided instruction, hands-on lab exercises, and capstone project build)",
+  "mode": "Interactive Labs & Guided Workplace Simulation",
+  "price": 6900,
+  "fee": 6900,
+  "regular_fee": 6900,
+  "originalPrice": 6900,
+  "commercial_notice": "Flat, transparent tuition of ₹6,900. No artificial comparison pricing or deceptive discount markers.",
+  "pricing": {
+    "amount": 6900,
+    "currency": "INR",
+    "display": "₹6,900",
+    "comparison_price": null,
+    "discount_percent": null,
+    "transparent_pricing": true
+  },
+  "tagline": "Build Professional Business Websites. Manage Them With Confidence.",
+  "hero_headline": "Build Professional Business Websites. Manage Them With Confidence.",
+  "hero_supporting_heading": "NO-CODE WEB ACADEMY / BEGINNER CERTIFICATION",
+  "hero_supporting_headline": "Learn to design, build, publish and maintain professional WordPress websites without advanced coding. Master Gutenberg, modern block themes, responsive design, essential SEO, website security and client handover through practical training.",
+  "h1": "WordPress Website Design & Management",
+  "seo_title": "WordPress Website Design Course (6 Weeks) | Nova Skills",
+  "meta_title": "WordPress Website Design Course (6 Weeks) | Nova Skills",
+  "seo_description": "Learn WordPress, Gutenberg, block themes, SEO, security and website management in 6 weeks (48 hours). Build a 5-page business website. Fee ₹6,900.",
+  "meta_description": "Learn WordPress, Gutenberg, block themes, SEO, security and website management in 6 weeks (48 hours). Build a 5-page business website. Fee ₹6,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=wordpress-cert",
+  "hero": {
+    "eyebrow": "NO-CODE WEB ACADEMY / BEGINNER CERTIFICATION",
+    "h1": "WordPress Website Design & Management",
+    "primary_hook": "Build Professional Business Websites. Manage Them With Confidence.",
+    "short_description": "Learn to design, build, publish and maintain professional WordPress websites without advanced coding. Master Gutenberg, modern block themes, responsive design, essential SEO, website security and client handover through practical training.",
+    "quick_info": "6 Weeks | 48 Guided Hours | ₹6,900 | Beginner to Applied",
+    "skill_tags": [
+      "WordPress",
+      "Gutenberg",
+      "Block Themes",
+      "Responsive Design",
+      "Website SEO",
+      "Security",
+      "Maintenance"
     ],
-    "who_should_take_foundation_first": "Absolute beginners",
-    "not_for": [
-      "Advanced PHP developers"
+    "primary_cta": "Enroll Now",
+    "secondary_cta": "Get Course Syllabus"
+  },
+  "short_description": "Learn to design, build, publish and maintain professional WordPress websites without advanced coding. Master Gutenberg, modern block themes, responsive design, essential SEO, website security and client handover through practical training.",
+  "shortDesc": "Learn to design, build, publish and maintain professional WordPress websites without advanced coding. Master Gutenberg, modern block themes, responsive design, essential SEO, website security and client handover through practical training.",
+  "full_description": "Learn to build, customize, publish and maintain professional WordPress websites without advanced coding. Master modern block themes, Gutenberg, responsive layouts, content management, security, SEO and client handover through practical website projects. Go beyond simply building pages. Learn the complete website lifecycle — planning, installation, design, launch, optimization, maintenance and professional client handover. This 6-week certification course covers modern block-based WordPress design, content administration, contact forms, foundational SEO, performance optimization, backup scheduling, website security and structured client handovers, concluding with an assessed 5-page functional business website.",
+  "fullDesc": "Learn to build, customize, publish and maintain professional WordPress websites without advanced coding. Master modern block themes, Gutenberg, responsive layouts, content management, security, SEO and client handover through practical website projects. Go beyond simply building pages. Learn the complete website lifecycle — planning, installation, design, launch, optimization, maintenance and professional client handover. This 6-week certification course covers modern block-based WordPress design, content administration, contact forms, foundational SEO, performance optimization, backup scheduling, website security and structured client handovers, concluding with an assessed 5-page functional business website.",
+  "description": "Learn to design, build, publish and maintain professional WordPress websites without advanced coding. Master Gutenberg, modern block themes, responsive design, essential SEO, website security and client handover through practical training.",
+  "overview": {
+    "positioning": "Build Professional Business Websites. Manage Them With Confidence.",
+    "short_description": "Learn to build, customize, publish and maintain professional WordPress websites without advanced coding. Master modern block themes, Gutenberg, responsive layouts, content management, security, SEO and client handover through practical website projects. Go beyond simply building pages. Learn the complete website lifecycle — planning, installation, design, launch, optimization, maintenance and professional client handover.",
+    "why_it_matters": "WordPress powers over 40% of the world's websites. Organizations and small businesses need professionals who can not only build attractive pages, but also responsibly administer, secure, update, optimize and maintain websites after launch."
+  },
+  "why_now": {
+    "industry_shift": "WordPress has evolved into a modern block-based publishing platform with Full Site Editing (FSE) and native block themes. Businesses require responsive, secure websites that remain manageable without bloated plugins or fragile custom code.",
+    "ai_impact": "Responsible AI writing tools accelerate content structuring, outline creation, and maintenance documentation, but human judgment remains essential for security hardening, design hierarchy, and QA.",
+    "business_demand": "Small businesses, agencies, and entrepreneurs constantly seek reliable website administrators who can deliver clean business websites and provide ongoing maintenance support.",
+    "career_opportunity": "Mastering modern WordPress administration opens practical career paths as website assistants, content managers, and freelance website creators with recurring maintenance retainers."
+  },
+  "icon": "🌐",
+  "color": "linear-gradient(135deg, #004672, #21759B)",
+  "rating": 4.8,
+  "reviews": 195,
+  "students": 1320,
+  "liveProjects": 1,
+  "projects": 1,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=wordpress-cert",
+  "tags": [
+    "popular",
+    "wordpress",
+    "gutenberg",
+    "block-themes",
+    "nocode",
+    "website-design",
+    "cms",
+    "certification"
+  ],
+  "featured": true,
+  "category": "No-Code Web Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "positioning": "Best Beginner Entry",
+  "target_audience": {
+    "ideal_for": [
+      "Beginners entering website design",
+      "Small business owners",
+      "Entrepreneurs",
+      "Content publishers",
+      "Freelancers",
+      "Website administrators",
+      "Professionals responsible for updating business websites"
+    ],
+    "who_should_take": "Anyone seeking practical skills to plan, create, publish, secure, and maintain professional WordPress business websites without advanced coding.",
+    "not_designed_for": [
+      "Advanced PHP development",
+      "Custom WordPress plugin programming",
+      "Custom theme programming",
+      "Advanced WooCommerce store engineering",
+      "Advanced Elementor specialization"
     ]
   },
   "prerequisites": {
-    "required": "Basic internet skills.",
-    "recommended": "Understanding of domains/hosting.",
-    "not_required": "Coding knowledge.",
-    "system_requirements": {
-      "hardware": "Any PC/Mac",
-      "software_accounts": "LocalWP or basic web host"
-    }
+    "required": "Basic computer and internet skills (operating system navigation, file management, and web browsing).",
+    "not_required": "No advanced coding, PHP, or prior web development experience required.",
+    "hardware_software": "Any modern Mac or Windows PC with at least 8 GB RAM, a reliable internet connection, and administrative access to install LocalWP."
   },
-  "overview": {
-    "positioning": "Master the world's most popular CMS.",
-    "short_description": "Learn to build, secure, and manage WordPress websites from scratch.",
-    "key_facts": {
-      "level": "BEGINNER",
-      "duration": "2 Months",
-      "format": "Project-based",
-      "estimated_learning_hours": "80 Hours",
-      "project_count": "2 PROJECTS",
-      "capstone": "Complete Business Website",
-      "ai_integration": "AI Content Generation",
-      "career_focus": "WordPress Administrator"
-    },
-    "what_you_will_be_able_to_do": [
-      "Install and configure WordPress.",
-      "Manage themes and plugins.",
-      "Optimize for speed and SEO.",
-      "Secure the site against attacks."
+  "highlights": [
+    "6 Weeks, 48 Guided Hours of practical website planning, design, and management training",
+    "100% focused on modern WordPress: Gutenberg core blocks, Site Editor, and block themes",
+    "Hands-on local development environment using LocalWP for safe, offline experimentation",
+    "One comprehensive capstone: Build, audit, optimize, and hand over a 5-page business website",
+    "Covers complete lifecycle: Sitemaps, design, forms, SEO, performance, security, and client handovers",
+    "No inflated comparison prices or deceptive discounts: Transparent ₹6,900 enrollment fee"
+  ],
+  "hands_on_tech": {
+    "core_tools": [
+      {
+        "tool": "WordPress CMS",
+        "purpose": "Industry-standard open-source content management system",
+        "what_student_learns": "Self-hosted installation, administration, settings, user roles, permalinks, and media management.",
+        "what_student_builds": "Fully configured and administered business website."
+      },
+      {
+        "tool": "Gutenberg / Block Editor",
+        "purpose": "Native WordPress block-based visual layout and content editor",
+        "what_student_learns": "Core blocks, layout containers, group blocks, spacing, typography, and responsive arrangement.",
+        "what_student_builds": "Responsive page layouts across all 5 business website pages."
+      },
+      {
+        "tool": "WordPress Site Editor",
+        "purpose": "Modern full-site editing engine for block themes",
+        "what_student_learns": "Global styles, theme variations, templates, template parts, headers, and footers.",
+        "what_student_builds": "Customized block theme styling and global site architecture."
+      },
+      {
+        "tool": "Modern Block Themes",
+        "purpose": "Lightweight, standards-compliant WordPress themes",
+        "what_student_learns": "Theme selection, block pattern integration, and brand styling without page-builder bloat.",
+        "what_student_builds": "Cohesive brand visual kit and theme template system."
+      }
+    ],
+    "supporting_tools": [
+      {
+        "tool": "LocalWP",
+        "purpose": "Local development and staging sandbox",
+        "what_student_learns": "Safe offline testing, database creation, and staging-to-production workflows."
+      },
+      {
+        "tool": "Google PageSpeed Insights",
+        "purpose": "Website speed and Core Web Vitals audit",
+        "what_student_learns": "Asset weight analysis, caching verification, and mobile responsiveness optimization."
+      },
+      {
+        "tool": "Google Search Console",
+        "purpose": "Search indexing and webmaster verification",
+        "what_student_learns": "XML sitemap submission, crawl status verification, and search readiness."
+      },
+      {
+        "tool": "UpdraftPlus (or reputable backup solution)",
+        "purpose": "Scheduled automated backup and restoration",
+        "what_student_learns": "Database backups, file system backups, cloud storage integration, and disaster recovery."
+      },
+      {
+        "tool": "AI Writing Assistance",
+        "purpose": "Responsible drafting of copy and documentation",
+        "what_student_learns": "Drafting initial page copy, blog outlines, meta descriptions, and client handover guides with human review."
+      }
+    ],
+    "emerging_tools": [
+      {
+        "tool": "Block Patterns & Synced Patterns",
+        "purpose": "Reusable design components within native WordPress"
+      },
+      {
+        "tool": "WebP / Modern Image Formats",
+        "purpose": "Next-gen image delivery for Core Web Vitals compliance"
+      }
     ]
   },
-  "why_now": {
-    "industry_shift": "WordPress powers over 40% of the web.",
-    "ai_impact": "AI plugins drastically speed up content creation.",
-    "business_demand": "Every small business needs a website.",
-    "career_opportunity": "Huge freelance market for WP maintenance."
-  },
+  "tools": [
+    "WordPress",
+    "Gutenberg",
+    "WordPress Site Editor",
+    "LocalWP",
+    "Google PageSpeed Insights",
+    "Google Search Console",
+    "UpdraftPlus",
+    "AI Writing Tools"
+  ],
   "learning_outcomes": [
-    "SETUP: Install WordPress on local and live servers.",
-    "DESIGN: Customize themes visually.",
-    "EXTEND: Use plugins for added functionality.",
-    "SECURE: Implement backups and firewalls."
+    "Interpret a business website brief and plan website structure.",
+    "Understand domains, DNS, hosting and SSL fundamentals.",
+    "Install and configure a self-hosted WordPress website.",
+    "Manage users, settings, permalinks, themes and plugins.",
+    "Create responsive pages using Gutenberg and the Site Editor.",
+    "Customize block themes, templates, patterns and global styles.",
+    "Organize blog content, media, categories and navigation.",
+    "Configure contact forms and essential business features.",
+    "Implement foundational on-page SEO and website indexing checks.",
+    "Perform basic performance, security and backup maintenance.",
+    "Test a website across devices and launch it responsibly.",
+    "Prepare documentation and hand over a website to a client."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Core Setup",
-        "focus": "Installation and dashboard."
+        "stage": "Week 1: Website Planning & Technical Foundations",
+        "focus": "Client brief analysis, business requirements, information architecture, sitemap planning, domain, DNS, and hosting fundamentals."
       },
       {
-        "stage": "Stage 2: Content & Themes",
-        "focus": "Pages, posts, and design."
+        "stage": "Week 2: WordPress Setup & Administration",
+        "focus": "LocalWP staging environment, self-hosted installation, core configuration, permalinks, user roles, and plugin selection hygiene."
       },
       {
-        "stage": "Stage 3: Plugins & Optimization",
-        "focus": "Functionality and speed."
+        "stage": "Week 3: Block Editor & Modern Site Design",
+        "focus": "Mastering Gutenberg core blocks, Full Site Editing, block theme styling, templates, reusable patterns, and responsive layout hierarchy."
+      },
+      {
+        "stage": "Week 4: Content Management & Business Features",
+        "focus": "Pages vs. posts, media library optimization, contact form setup, spam protection, blog publishing, and responsible AI drafting."
+      },
+      {
+        "stage": "Week 5: SEO, Performance & Website Security",
+        "focus": "On-page SEO, XML sitemaps, PageSpeed audits, image compression, caching, user security, automated backups, and recovery testing."
+      },
+      {
+        "stage": "Week 6: Production Launch & Client Handover",
+        "focus": "Cross-device responsive QA, launch checklist execution, client credentials setup, maintenance documentation, and final portfolio walkthrough."
       }
     ]
   },
-  "hands_on_tech": {
-    "core_tools": [
-      {
-        "tool": "WordPress",
-        "purpose": "CMS",
-        "what_student_learns": "Admin interface.",
-        "what_student_builds": "Business site."
-      },
-      {
-        "tool": "Elementor",
-        "purpose": "Page Builder",
-        "what_student_learns": "Visual design.",
-        "what_student_builds": "Custom layouts."
-      },
-      {
-        "tool": "Yoast SEO",
-        "purpose": "Search optimization",
-        "what_student_learns": "On-page SEO.",
-        "what_student_builds": "Optimized content."
-      }
-    ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
-  },
   "industry_workflow": {
-    "overview": "Standard WP build process.",
+    "overview": "Professional 6-stage lifecycle for designing, launching, and managing commercial WordPress websites.",
     "stages": [
       {
         "step": 1,
-        "name": "Hosting Setup",
-        "desc": "Server config."
+        "name": "Discovery & Site Planning",
+        "desc": "Analyze client brief, define target audience, map information architecture, and create structured sitemap."
       },
       {
         "step": 2,
-        "name": "Theme Install",
-        "desc": "Visual foundation."
+        "name": "Environment & Core Configuration",
+        "desc": "Configure staging in LocalWP, verify database connectivity, set permalinks, and configure administrative security."
       },
       {
         "step": 3,
-        "name": "Content Loading",
-        "desc": "Adding pages."
+        "name": "Block Theme & Visual Architecture",
+        "desc": "Apply global styles, configure typography and palette, customize header/footer template parts, and build responsive layouts."
       },
       {
         "step": 4,
-        "name": "Optimization",
-        "desc": "Caching and SEO."
+        "name": "Content Loading & Feature Integration",
+        "desc": "Publish 5 core business pages, format blog articles, integrate contact forms with notification routing and anti-spam protection."
+      },
+      {
+        "step": 5,
+        "name": "Audit, Speed & Security Hardening",
+        "desc": "Run PageSpeed audits, optimize images, configure caching, establish automated remote backups, and harden login security."
+      },
+      {
+        "step": 6,
+        "name": "QA Testing, Launch & Client Handover",
+        "desc": "Execute multi-device QA checklist, verify SSL and sitemaps, establish client editor roles, and author a maintenance handbook."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "SME",
-      "business_problem": "No online presence.",
-      "approach": "Build a 5-page WP site.",
-      "toolset": "WordPress",
-      "output": "Lead generation site."
+      "sector": "Local Service Business",
+      "business_problem": "A local dental clinic has an outdated website that looks broken on smartphones and cannot collect appointment inquiries.",
+      "approach": "Build a responsive 5-page WordPress site using modern block themes with clear service listings and an accessible appointment contact form.",
+      "toolset": "WordPress, Gutenberg, Site Editor, Contact Form Plugin, LocalWP",
+      "output": "Modern, fast-loading, mobile-friendly clinic website with working inquiry notifications."
+    },
+    {
+      "sector": "B2B Consulting Practice",
+      "business_problem": "A boutique financial consultancy needs to publish thought leadership articles and establish trust with prospective corporate clients.",
+      "approach": "Design a clean corporate website with a structured blog catalog, team bio pages, foundational on-page SEO, and SSL encryption.",
+      "toolset": "WordPress, Block Themes, XML Sitemaps, Google Search Console",
+      "output": "Professional corporate portal with indexed blog articles and executive consultation inquiry forms."
+    },
+    {
+      "sector": "Creative Agency / Freelance Portfolio",
+      "business_problem": "An interior design studio needs a visually compelling website to display project photography without slowing down page load times.",
+      "approach": "Implement modern media block galleries, WebP image compression, caching, and clean typographic styling in Gutenberg.",
+      "toolset": "WordPress, Gutenberg, PageSpeed Insights, Image Optimization",
+      "output": "High-performance visual portfolio passing Core Web Vitals checks on desktop and mobile."
+    },
+    {
+      "sector": "Community Non-Profit Organization",
+      "business_problem": "A regional environmental NGO needs an easily maintainable website where non-technical staff can post updates safely.",
+      "approach": "Configure WordPress with restricted user permissions (Editor/Author), reusable block patterns, and scheduled automated backups.",
+      "toolset": "WordPress, User Role Management, UpdraftPlus, Block Patterns",
+      "output": "Tamper-resistant, easily updated non-profit website with documented staff editing guidelines."
     }
   ],
+  "commercial_differentiation": {
+    "headline": "More Than Website Building. Learn Website Ownership & Management.",
+    "supporting_copy": "Many beginners learn to create WordPress pages. This course teaches you to plan a complete business website, publish it responsibly, maintain its essential functionality and prepare a professional client handover.",
+    "differentiators": [
+      {
+        "title": "Modern Block-Based WordPress Design",
+        "description": "Master native Gutenberg blocks, Full Site Editing, and block themes without depending on heavy third-party page builders or recurring software licenses."
+      },
+      {
+        "title": "Practical Business Website Delivery",
+        "description": "Construct a complete 5-page commercial website (Home, About, Services, Blog, Contact) designed to generate inquiries and establish business credibility."
+      },
+      {
+        "title": "SEO, Security & Maintenance Fundamentals",
+        "description": "Learn search indexing, image compression, caching hygiene, user access controls, and automated backup scheduling to keep sites fast and safe."
+      },
+      {
+        "title": "Professional Documentation & Client Handover",
+        "description": "Graduate with real-world agency skills: authoring client maintenance guides, setting user permissions, and conducting structured project handovers."
+      }
+    ]
+  },
+  "course_comparison": {
+    "typical_course": [
+      "Focuses exclusively on dragging elements in Elementor without teaching core CMS architecture.",
+      "Teaches building single landing pages without sitemap planning or information hierarchy.",
+      "Ignores website performance, image optimization, and mobile Core Web Vitals.",
+      "Overlooks user access roles, credential security, and scheduled backup recovery.",
+      "Ends when the page is designed, with zero client handover or maintenance training."
+    ],
+    "novaskills_mastery": [
+      "Prioritizes modern native Gutenberg, Site Editor, and standard block themes for clean, lightweight websites.",
+      "Teaches complete 5-page commercial site planning, information architecture, and navigation flow.",
+      "Integrates PageSpeed auditing, image compression, and caching best practices from the start.",
+      "Covers security hardening, user permission tiers, and automated multi-location backup workflows.",
+      "Concludes with professional documentation, quality assurance checklists, and structured client handovers."
+    ]
+  },
   "ai_integration": {
-    "role_classification": "AI-SUPPORTED",
-    "ai_can_assist_with": "Drafting blog posts.",
-    "ai_can_automate": "Image alt tags.",
-    "ai_cannot_replace": "Plugin conflict resolution.",
-    "human_expertise_required": "Security auditing.",
-    "validation_protocol": "Check site speed after AI plugin installs.",
-    "responsible_use": "Avoid spam content generation."
+    "role_classification": "AI-ASSISTED & VERIFIED",
+    "ai_can_assist_with": "Drafting initial website brief outlines, creating first-draft page copy, generating blog topic variations, drafting meta descriptions, and structuring client handover documentation templates.",
+    "ai_can_automate": "Preliminary text generation, formatting boilerplate documentation tables, and suggesting SEO keyword placement ideas.",
+    "human_expertise_required": "Validating factual accuracy of business claims, reviewing visual design hierarchy and responsive layouts, configuring security plugins and user permissions, testing form notification routing, and ensuring copyright compliance.",
+    "validation_protocol": "All AI-generated content must be independently verified by the student for factual accuracy, client voice alignment, copyright permissions, accessibility standards, and production safety before publication."
   },
   "best_practices": [
-    "Keep everything updated.",
-    "Always have remote backups."
+    "Plan site structure, sitemap, and content hierarchy before opening the WordPress editor.",
+    "Use native Gutenberg core blocks and block themes for fast, clean, maintainable websites.",
+    "Optimize and compress all images before uploading to maintain fast page load times.",
+    "Enforce strong passwords and limit administrator privileges to essential users only.",
+    "Configure automated, off-site backups before updating WordPress core, themes, or plugins.",
+    "Test website navigation, forms, and readability on real mobile devices before launch.",
+    "Create dedicated Editor accounts for clients rather than sharing master Administrator access.",
+    "Document maintenance procedures, update schedules, and support contacts in a client guide."
   ],
   "common_mistakes": [
-    {
-      "mistake": "Installing too many plugins.",
-      "why_it_happens": "Shiny object syndrome.",
-      "professional_approach": "Only use essential, vetted plugins."
-    }
+    "Installing dozens of overlapping plugins that slow down site speed and introduce security vulnerabilities.",
+    "Using heavy legacy page builders when native block themes can achieve clean layouts with superior performance.",
+    "Uploading multi-megabyte uncompressed images directly from cameras or stock photo websites.",
+    "Ignoring mobile responsiveness and only checking page designs on widescreen desktop monitors.",
+    "Failing to configure automated backups, risking complete data loss during server or update crashes.",
+    "Leaving default 'admin' usernames, weak passwords, and insecure login endpoints exposed.",
+    "Changing URLs after launch without redirects, resulting in broken links and 404 indexing errors.",
+    "Handing over a website to a client without documentation or instructions on how to edit content safely."
   ],
   "career_paths": {
-    "entry_roles": "WP Content Manager",
-    "mid_roles": "Freelance Web Designer",
-    "specialist_roles": "WP Security Specialist",
-    "freelance_roles": "Maintenance Retainer provider",
-    "employer_expectations": "Fast, secure sites.",
-    "what_student_demonstrates": "Live secure website."
+    "entry_roles": "WordPress Website Assistant, Junior Website Administrator, Content Management Specialist",
+    "mid_roles": "Website Operations Coordinator, Small Business Digital Marketing Assistant",
+    "specialist_roles": "Independent WordPress Consultant, Website Maintenance Specialist"
   },
   "freelance_applications": {
     "services_offered": [
-      "Site builds",
-      "Hacked site recovery"
-    ],
-    "client_workflow": "Audit -> Build -> Launch",
-    "portfolio_requirements": "2 live sites with GTMetrix reports."
+      "5-Page Business Website Setup & Customization using modern block themes",
+      "WordPress Content Administration, blog publishing, and media updates",
+      "Website Speed Audit & Image Optimization for local businesses",
+      "Scheduled Website Maintenance Retainers (backups, updates, and security checks)",
+      "Basic On-Page SEO Configuration and Google Search Console indexing setup",
+      "Client Website Handover, documentation authoring, and editor training"
+    ]
   },
   "what_you_will_build": [
-    "Personal Blog",
-    "Local Business Website"
-  ],
-  "final_deliverables": [
-    "Live website with 90+ Pagespeed score."
-  ],
-  "assessment": {
-    "model": "Technical audit of submitted site.",
-    "criteria": "Security headers, caching, responsive design."
-  },
-  "certification": {
-    "title": "WordPress Site Specialist",
-    "criteria": "Pass final site audit.",
-    "verification": "Digital certificate."
-  },
-  "not_covered": "Custom theme PHP development.",
-  "next_learning_path": {
-    "recommended_next": "Elementor Mastery",
-    "related_programs": "WooCommerce"
-  },
-  "faq": [
     {
-      "question": "Is WordPress free?",
-      "answer": "The software is, but hosting costs money."
-    },
-    {
-      "question": "Do I need to code?",
-      "answer": "No, we use visual builders."
-    },
-    {
-      "question": "Is it secure?",
-      "answer": "Yes, if you follow our security module."
+      "title": "Five-Page Business Website & Client Handover Package (Comprehensive Capstone)",
+      "badge": "Core Portfolio Capstone",
+      "client_brief": "Design, build, optimize, and hand over a complete 5-page responsive WordPress business website (Home, About, Services, Blog, Contact) for a selected business domain (Local Clinic, Consulting Firm, or Creative Studio).",
+      "business_problem": "A growing business requires an attractive, modern, and easily maintainable digital presence that loads quickly on smartphones, captures client inquiries reliably, and can be maintained safely by staff without ongoing developer intervention.",
+      "deliverables": [
+        "Functional 5-page responsive WordPress website built with native Gutenberg and modern block themes",
+        "Working inquiry contact form with email notifications and anti-spam protection",
+        "Configured on-page SEO metadata, XML sitemap, and Google Search Console verification checklist",
+        "Automated backup schedule evidence and security hardening verification",
+        "Comprehensive 10-point website QA testing checklist",
+        "Professional Client Maintenance & Editing Guide (PDF / Markdown)"
+      ]
     }
   ],
+  "final_deliverables": [
+    "Functional 5-page responsive WordPress website",
+    "Working inquiry contact form with email routing",
+    "On-page SEO metadata and XML sitemap configuration",
+    "Automated backup schedule evidence",
+    "Cross-device QA testing checklist",
+    "Professional Client Maintenance & Editing Guide",
+    "Recorded client walkthrough and project demonstration"
+  ],
+  "portfolio": {
+    "title": "Nova Skills WordPress Website Portfolio",
+    "description": "Exactly ONE complete, functional five-page business website demonstrating end-to-end website craftsmanship: brief analysis, block theme customization, responsive page layout, content management, on-page SEO, speed optimization, backup scheduling, security hardening, and client handover documentation.",
+    "deliverables_count": 1,
+    "capstone_pages": [
+      {
+        "page": "Home",
+        "purpose": "Hero value proposition, featured services preview, social proof, and clear call-to-action buttons."
+      },
+      {
+        "page": "About",
+        "purpose": "Company mission, team background, business credentials, and trust-building story."
+      },
+      {
+        "page": "Services",
+        "purpose": "Structured service offerings, pricing tiers or scope descriptions, and inquiry prompts."
+      },
+      {
+        "page": "Blog",
+        "purpose": "Industry insights, formatted business articles, category navigation, and featured images."
+      },
+      {
+        "page": "Contact",
+        "purpose": "Working contact form, business location details, operating hours, and map integration."
+      }
+    ],
+    "acceptance_evidence": [
+      "Functional website running on local staging or live hosting",
+      "Working contact form with verified email delivery",
+      "Fully responsive page layouts verified across mobile, tablet, and desktop",
+      "Intuitive navigation menu and consistent header/footer template parts",
+      "Basic on-page SEO with unique page titles and meta descriptions",
+      "XML sitemap generated and indexing readiness verified",
+      "Scheduled automated backup evidence with restore verification",
+      "Completed cross-browser and cross-device QA checklist",
+      "Comprehensive Client Maintenance Guide detailing content editing and update procedures",
+      "Final website walkthrough demonstration presented to mentors"
+    ]
+  },
+  "portfolio_specs": {
+    "description": "Graduates present an employer-ready proof-of-work portfolio demonstrating practical website craftsmanship and administrative reliability:",
+    "deliverables": [
+      "Live or Staging WordPress URL with 5 complete business pages",
+      "Working Contact Form with notification testing evidence",
+      "Responsive Layout Screenshots (Mobile, Tablet, Desktop)",
+      "PageSpeed Insights Performance Audit Report",
+      "Google Search Console / XML Sitemap Submission Verification",
+      "Automated Backup Archive & Recovery Verification Log",
+      "10-Point Pre-Launch Quality Assurance Audit Checklist",
+      "Professional Client Handover & Maintenance Handbook"
+    ],
+    "case_study_structure": [
+      "1. Client Brief & Business Objectives",
+      "2. Information Architecture & Sitemap Planning",
+      "3. Block Theme Selection & Visual Brand Styling",
+      "4. Five-Page Content & Layout Construction",
+      "5. Functional Feature & Form Integration",
+      "6. Performance, SEO & Security Hardening",
+      "7. Multi-Device Quality Assurance Testing",
+      "8. Client Handover & Ongoing Maintenance Protocol"
+    ]
+  },
+  "assessment": {
+    "model": "100% Practical Competency-Based Evaluation",
+    "criteria": "Evaluated across website planning, administrative configuration, block-based design craftsmanship, functional integrations, SEO/performance hygiene, and professional client handover documentation.",
+    "passing_score": "70% overall score with successful completion of all 5 business pages and handover guide."
+  },
+  "assessment_model": {
+    "breakdown": [
+      {
+        "item": "Planning & Website Structure",
+        "weight": "15%",
+        "desc": "Clarity of website brief analysis, information architecture, page hierarchy, and sitemap planning."
+      },
+      {
+        "item": "WordPress Setup & Administration",
+        "weight": "15%",
+        "desc": "Proper local/live installation, permalink structure, user roles and permissions, and safe plugin selection."
+      },
+      {
+        "item": "Block-Based Design & Responsive Implementation",
+        "weight": "25%",
+        "desc": "Mastery of Gutenberg core blocks, Site Editor templates, global styles, and responsive cross-device layout."
+      },
+      {
+        "item": "Content, Navigation & Functional Integrations",
+        "weight": "15%",
+        "desc": "Quality of content hierarchy, media library management, working navigation, and contact form integration."
+      },
+      {
+        "item": "SEO, Performance, Security & Backups",
+        "weight": "15%",
+        "desc": "On-page SEO fundamentals, image optimization, PageSpeed hygiene, login security, and scheduled backups."
+      },
+      {
+        "item": "Final QA, Documentation & Client Handover",
+        "weight": "15%",
+        "desc": "Rigorous cross-device QA testing, pre-launch checklist completion, and comprehensive client maintenance guide."
+      }
+    ]
+  },
+  "assessment_rubric": {
+    "planning_and_structure": "15%",
+    "setup_and_administration": "15%",
+    "block_design_and_responsiveness": "25%",
+    "content_and_features": "15%",
+    "seo_security_performance_backups": "15%",
+    "qa_and_client_handover": "15%",
+    "total": "100%",
+    "passing_threshold": "70%"
+  },
+  "certification": {
+    "title": "Certificate of Completion in WordPress Website Design & Management",
+    "issuer": "Nova Skills Academy — No-Code Web Academy",
+    "verification": "Digitally verifiable credential featuring unique identification code and public verification URL.",
+    "requirements": "Completion of all 6 curriculum modules, delivery of the 5-page business website, and submission of the client handover maintenance guide with a minimum score of 70%."
+  },
+  "source_code_delivery": {
+    "platform": "LocalWP Staging Export & GitHub Documentation Repository",
+    "requirements": [
+      "WordPress Site Export (WPRESS / SQL dump / Duplicator package)",
+      "README.md with installation, credentials, and configuration instructions",
+      "CLIENT_GUIDE.md detailing client content editing and maintenance procedures",
+      "QA_CHECKLIST.md with cross-browser and mobile verification evidence"
+    ]
+  },
+  "skill_boundaries": {
+    "course_focus": "Course 62 focuses strictly on WordPress website planning, design, publishing, content administration, basic SEO, performance, security, maintenance, and client handover using Gutenberg and modern block themes.",
+    "course_63_differentiation": "Course 63 (WooCommerce) focuses specifically on e-commerce store architecture, product catalogs, shopping cart, checkout gateways, shipping methods, and online store operations.",
+    "course_65_differentiation": "Course 65 (Elementor) focuses on advanced visual drag-and-drop page building workflows, theme builder templates, and Elementor-specific styling modules.",
+    "explicit_exclusions": [
+      "Advanced PHP programming",
+      "Custom WordPress plugin development",
+      "Custom PHP theme programming from scratch",
+      "Complex multi-vendor WooCommerce store architecture",
+      "Advanced Elementor Pro specialized development"
+    ]
+  },
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Installation and Core Concepts",
-      "module_purpose": "Get WP running securely.",
-      "what_you_will_learn": [
-        "Hosting, databases, WP dashboard."
-      ],
+      "module_title": "Website Planning & Foundations",
+      "module_purpose": "Understand the essential business and technical foundations of a professional website.",
+      "hours": 6,
+      "guided_hours": 6,
+      "learning_hours": 6,
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "Domains & Hosting",
-          "what_is_taught": "DNS and cPanel.",
-          "why_it_matters": "The foundation of the web.",
-          "what_learner_does": "Points a domain to a host.",
-          "expected_outcome": "Live server."
+          "lesson_title": "Website Project Planning",
+          "what_is_taught": "Client brief analysis, website goals, target audience definition, business requirements, and website success criteria.",
+          "subtopics": [
+            "Client brief analysis",
+            "Website goals",
+            "Target audience",
+            "Business requirements",
+            "Website success criteria"
+          ],
+          "what_learner_does": "Analyzes a real-world client brief and extracts functional website requirements.",
+          "why_it_matters": "Prevents project scope creep and aligns technical delivery with business objectives.",
+          "expected_outcome": "Documented project scope and functional requirements specification."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "Installing WordPress",
-          "what_is_taught": "1-click installs vs manual.",
-          "why_it_matters": "Understanding the database connection.",
-          "what_learner_does": "Installs WP.",
-          "expected_outcome": "Fresh WP install."
+          "lesson_title": "Domain, DNS & Hosting Foundations",
+          "what_is_taught": "Domain name registration, DNS records (A, CNAME, MX), hosting architectures, SSL/HTTPS certificates, and hosting control panels.",
+          "subtopics": [
+            "Domain names",
+            "DNS fundamentals",
+            "Hosting types (shared, VPS, managed WordPress)",
+            "SSL / HTTPS encryption",
+            "Basic hosting control panels"
+          ],
+          "what_learner_does": "Maps domain names to hosting nameservers and validates SSL certificate provisioning.",
+          "why_it_matters": "A website cannot function securely or reliably without proper domain and hosting infrastructure.",
+          "expected_outcome": "Verified hosting environment with active SSL encryption."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "The Dashboard",
-          "what_is_taught": "Settings, permalinks, users.",
-          "why_it_matters": "Correct configuration prevents SEO issues later.",
-          "what_learner_does": "Configures core settings.",
-          "expected_outcome": "Optimized base setup."
+          "lesson_title": "Website Structure & Navigation",
+          "what_is_taught": "Sitemap planning, information architecture, main navigation menus, page hierarchy, and user conversion journeys.",
+          "subtopics": [
+            "Sitemap planning",
+            "Information architecture",
+            "Main navigation",
+            "Page hierarchy",
+            "User journeys"
+          ],
+          "what_learner_does": "Creates a hierarchical visual sitemap and navigation schema for a 5-page business website.",
+          "why_it_matters": "Intuitive site architecture improves user retention and ensures search engine crawlability.",
+          "expected_outcome": "5-page structured website sitemap and navigation tree."
+        },
+        {
+          "lesson_number": "1.4",
+          "lesson_title": "Design Planning",
+          "what_is_taught": "Content-first planning, visual hierarchy, layout wireframing, typography fundamentals, and mobile-first responsive considerations.",
+          "subtopics": [
+            "Content-first planning",
+            "Visual hierarchy",
+            "Layout planning",
+            "Typography fundamentals",
+            "Mobile-first considerations"
+          ],
+          "what_learner_does": "Drafts wireframe sketches for Home, About, Services, Blog, and Contact pages.",
+          "why_it_matters": "Planning layout and content first eliminates costly redesigns during development.",
+          "expected_outcome": "Wireframe layout sketches with clear mobile-first breakpoints."
         }
       ],
       "key_concepts": [
-        "DNS",
-        "Database",
-        "Permalinks"
+        "Sitemap Planning",
+        "Information Architecture",
+        "Domain & DNS",
+        "SSL / HTTPS",
+        "Visual Hierarchy"
       ],
       "tools": [
         "LocalWP",
-        "cPanel"
+        "Figma / Wireframing Tools",
+        "Sitemap Generators"
       ],
-      "hands_on_practice": "Setup local and live environments.",
-      "assignment": "Provide live URL of fresh install.",
-      "business_application": "Client site initialization.",
-      "expected_outcome": "Working empty site."
+      "hands_on_practice": "Create a website plan and sitemap for a local business.",
+      "assignment": "Prepare a five-page website planning document.",
+      "business_application": "Professional website discovery, scoping and client alignment.",
+      "expected_outcome": "Approved website brief, sitemap and initial page outline."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Content and Themes",
-      "module_purpose": "Make the site look good.",
-      "what_you_will_learn": [
-        "Theme customization, block editor."
-      ],
+      "module_title": "WordPress Setup & Administration",
+      "module_purpose": "Install, configure and administer a WordPress website safely.",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "Posts vs Pages",
-          "what_is_taught": "Content hierarchy.",
-          "why_it_matters": "Organizes site architecture.",
-          "what_learner_does": "Creates foundational pages.",
-          "expected_outcome": "Site skeleton."
+          "lesson_title": "WordPress Fundamentals",
+          "what_is_taught": "WordPress CMS architecture, self-hosted WordPress (WordPress.org) versus hosted services (WordPress.com), dashboard overview, and content administration fundamentals.",
+          "subtopics": [
+            "WordPress CMS architecture",
+            "Self-hosted WordPress versus hosted WordPress services",
+            "Dashboard overview",
+            "Content administration fundamentals"
+          ],
+          "what_learner_does": "Navigates the WordPress admin dashboard and analyzes core system requirements.",
+          "why_it_matters": "Understanding self-hosted architecture gives you complete ownership and control over the site.",
+          "expected_outcome": "Familiarity with the WordPress dashboard and core system components."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "The Block Editor (Gutenberg)",
-          "what_is_taught": "Native page building.",
-          "why_it_matters": "Fastest way to build content.",
-          "what_learner_does": "Builds a blog post layout.",
-          "expected_outcome": "Rich media post."
+          "lesson_title": "Installation & Environment",
+          "what_is_taught": "Setting up LocalWP for offline staging development, web host one-click installations, MySQL database fundamentals, and staging vs. production concepts.",
+          "subtopics": [
+            "LocalWP development environment",
+            "Hosting installation",
+            "Database fundamentals",
+            "Staging versus production"
+          ],
+          "what_learner_does": "Installs WordPress locally using LocalWP and verifies PHP and database configurations.",
+          "why_it_matters": "Local staging environments allow you to build, test, and break things safely without affecting live users.",
+          "expected_outcome": "Fully functioning local WordPress staging installation."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "Theme Customizer",
-          "what_is_taught": "Colors, fonts, headers.",
-          "why_it_matters": "Global branding.",
-          "what_learner_does": "Applies brand kit.",
-          "expected_outcome": "Branded site."
+          "lesson_title": "WordPress Administration",
+          "what_is_taught": "General settings, reading and discussion settings, search-engine-friendly permalink structures, user roles and permissions (Administrator, Editor, Author, Contributor, Subscriber), and media library settings.",
+          "subtopics": [
+            "General settings",
+            "Reading and discussion settings",
+            "Permalinks",
+            "User roles and permissions",
+            "Media settings"
+          ],
+          "what_learner_does": "Configures clean URL permalinks, creates role-restricted user accounts, and adjusts media dimensions.",
+          "why_it_matters": "Proper initial configuration prevents indexing glitches, broken links, and unauthorized access.",
+          "expected_outcome": "Securely configured WordPress administrative baseline."
+        },
+        {
+          "lesson_number": "2.4",
+          "lesson_title": "Themes, Plugins & Updates",
+          "what_is_taught": "Selecting reputable themes, plugin evaluation criteria, active install counts, compatibility considerations, safe update sequences, and version awareness.",
+          "subtopics": [
+            "Selecting reputable themes",
+            "Plugin selection criteria",
+            "Basic compatibility considerations",
+            "Safe updating sequences",
+            "Version and backup awareness"
+          ],
+          "what_learner_does": "Evaluates and activates an approved modern block theme and essential utility plugins.",
+          "why_it_matters": "Careful plugin selection prevents site crashes, security backdoors, and performance degradation.",
+          "expected_outcome": "Curated, minimal plugin stack installed on an active block theme."
+        },
+        {
+          "lesson_number": "2.5",
+          "lesson_title": "Safe Administration Workflow",
+          "what_is_taught": "Staging modifications before deploying to production, basic troubleshooting of common errors, maintaining recovery access, and emergency restoration planning.",
+          "subtopics": [
+            "Staging changes",
+            "Basic troubleshooting",
+            "Maintaining administrative access",
+            "Recovery planning"
+          ],
+          "what_learner_does": "Executes a simulated update rollback and documents recovery procedures.",
+          "why_it_matters": "Ensures business continuity and prevents permanent site downtime during administrative updates.",
+          "expected_outcome": "Documented safe administrative operating procedure."
         }
       ],
       "key_concepts": [
-        "Hierarchy",
-        "Blocks",
-        "Branding"
+        "Self-Hosted WordPress",
+        "LocalWP Sandbox",
+        "Clean Permalinks",
+        "User Role Hierarchy",
+        "Safe Update Sequences"
       ],
       "tools": [
-        "Gutenberg"
+        "LocalWP",
+        "WordPress Admin",
+        "PHPMyAdmin / Database Tools"
       ],
-      "hands_on_practice": "Build a 5-page site.",
-      "assignment": "Submit branded site.",
-      "business_application": "Delivering marketing sites.",
-      "expected_outcome": "Visually complete site."
+      "hands_on_practice": "Install WordPress and configure a development website.",
+      "assignment": "Create an administration checklist with essential settings.",
+      "business_application": "Client site initialization and secure administrative onboarding.",
+      "expected_outcome": "Properly configured WordPress installation."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Plugins, Security & Optimization",
-      "module_purpose": "Make the site fast and bulletproof.",
-      "what_you_will_learn": [
-        "Caching, firewalls, backups."
-      ],
+      "module_title": "Block Editor & Modern Site Design",
+      "module_purpose": "Design responsive business websites using native WordPress editing tools.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "Essential Plugins",
-          "what_is_taught": "Forms, SEO, Analytics.",
-          "why_it_matters": "Extends functionality.",
-          "what_learner_does": "Installs and configures core stack.",
-          "expected_outcome": "Functional forms and tracking."
+          "lesson_title": "Gutenberg / Block Editor",
+          "what_is_taught": "Core blocks (Paragraph, Heading, List, Quote), layout blocks (Columns, Group, Row, Stack), spacing controls (padding, margin, block gap), typography settings, and media blocks (Image, Gallery, Cover).",
+          "subtopics": [
+            "Core blocks",
+            "Layout blocks (Columns, Group, Row, Stack)",
+            "Containers and groups",
+            "Spacing (padding, margin, gap)",
+            "Typography and media blocks"
+          ],
+          "what_learner_does": "Builds complex multi-column content sections using nested group and column blocks.",
+          "why_it_matters": "Gutenberg provides native, fast, lightweight page building without bulky external page-builder plugins.",
+          "expected_outcome": "Clean, standards-compliant Gutenberg block layouts."
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "Security & Backups",
-          "what_is_taught": "Wordfence, UpdraftPlus.",
-          "why_it_matters": "Prevents catastrophic data loss.",
-          "what_learner_does": "Sets up automated remote backups.",
-          "expected_outcome": "Secure site."
+          "lesson_title": "Modern Block Themes",
+          "what_is_taught": "Block theme concepts, Site Editor navigation, global styles (colors, typography, layout dimensions), theme style variations, and establishing a consistent brand identity.",
+          "subtopics": [
+            "Block theme concepts",
+            "Site Editor navigation",
+            "Global styles",
+            "Theme variations",
+            "Brand styling"
+          ],
+          "what_learner_does": "Customizes global color palettes, font pairings, and button styles in the WordPress Site Editor.",
+          "why_it_matters": "Global styles guarantee design consistency across every page of the website from a single control center.",
+          "expected_outcome": "Unified brand styling applied across the entire block theme."
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "Speed Optimization",
-          "what_is_taught": "Caching, image compression.",
-          "why_it_matters": "Crucial for SEO and UX.",
-          "what_learner_does": "Configures caching plugin.",
-          "expected_outcome": "Sub-2 second load time."
+          "lesson_title": "Templates & Patterns",
+          "what_is_taught": "Page templates (Index, Single, Page, 404), template parts (Headers, Footers, Sidebars), Navigation block configuration, and creating reusable design patterns.",
+          "subtopics": [
+            "Page templates",
+            "Template parts",
+            "Headers and footers",
+            "Navigation blocks",
+            "Patterns and reusable design sections"
+          ],
+          "what_learner_does": "Assembles custom header and footer template parts and builds reusable call-to-action patterns.",
+          "why_it_matters": "Template parts and patterns drastically speed up development while ensuring structural integrity.",
+          "expected_outcome": "Custom header, footer, and reusable conversion section patterns."
+        },
+        {
+          "lesson_number": "3.4",
+          "lesson_title": "Responsive Website Design",
+          "what_is_taught": "Mobile-friendly layouts, content stacking order, responsive image scaling, typography readability on small viewports, and foundational web accessibility (contrast, semantic headings).",
+          "subtopics": [
+            "Mobile-friendly layouts",
+            "Content hierarchy",
+            "Image responsiveness",
+            "Readability",
+            "Basic accessibility considerations"
+          ],
+          "what_learner_does": "Audits and adjusts column stacking, font sizes, and button tap targets on mobile viewports.",
+          "why_it_matters": "Over 60% of website traffic originates from mobile devices; broken mobile layouts cost clients money.",
+          "expected_outcome": "Fully responsive layouts verified across mobile, tablet, and desktop screens."
+        },
+        {
+          "lesson_number": "3.5",
+          "lesson_title": "Practical Business Page Creation",
+          "what_is_taught": "Structuring high-converting business pages: Homepage hero sections and social proof, About page credibility storytelling, Services offerings breakdown, and prominent calls to action.",
+          "subtopics": [
+            "Homepage structure",
+            "About page",
+            "Services page",
+            "Calls to action",
+            "Consistent styling"
+          ],
+          "what_learner_does": "Builds complete layouts for Home, About, and Services pages with consistent brand styling.",
+          "why_it_matters": "Transforms theoretical design knowledge into practical commercial assets ready for client review.",
+          "expected_outcome": "High-fidelity Home, About, and Services responsive page layouts."
         }
       ],
       "key_concepts": [
-        "Caching",
-        "Firewall",
-        "Optimization"
+        "Gutenberg Core Blocks",
+        "Full Site Editing (FSE)",
+        "Global Styles",
+        "Header/Footer Template Parts",
+        "Mobile-First Responsive Layouts"
       ],
       "tools": [
-        "Wordfence",
-        "WP Rocket",
-        "UpdraftPlus"
+        "WordPress Site Editor",
+        "Gutenberg Block Editor",
+        "Twenty Twenty-Four Block Theme",
+        "Browser Responsive DevTools"
       ],
-      "hands_on_practice": "Audit and optimize the capstone site.",
-      "assignment": "Deliver GTMetrix report.",
-      "business_application": "Offering maintenance retainers.",
-      "expected_outcome": "Fast, secure production site."
+      "hands_on_practice": "Build the visual foundation of the five-page business website.",
+      "assignment": "Submit responsive page designs and shared header/footer structure.",
+      "business_application": "Customizing commercial client websites with native block themes without expensive recurring builder fees.",
+      "expected_outcome": "Branded responsive WordPress page layouts."
+    },
+    {
+      "module_number": "Module 04",
+      "module_title": "Content & Business Features",
+      "module_purpose": "Configure business-ready website content and functionality.",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
+      "lessons": [
+        {
+          "lesson_number": "4.1",
+          "lesson_title": "WordPress Content Management",
+          "what_is_taught": "Architectural differences between pages and posts, organizing taxonomies (categories vs. tags), media library organization, content publishing workflows, and updating existing content.",
+          "subtopics": [
+            "Pages versus posts",
+            "Categories",
+            "Tags",
+            "Media library",
+            "Publishing workflow",
+            "Content updates"
+          ],
+          "what_learner_does": "Sets up structured categories, tags, and media folders for business marketing content.",
+          "why_it_matters": "Clear content architecture enables smooth content expansion and effortless client updates.",
+          "expected_outcome": "Organized taxonomy structure and populated media library."
+        },
+        {
+          "lesson_number": "4.2",
+          "lesson_title": "Business Website Features",
+          "what_is_taught": "Contact form plugins, input field configuration, inquiry email notification routing, business contact details, Google Maps embed, and anti-spam protection (Honeypot/reCAPTCHA).",
+          "subtopics": [
+            "Contact forms",
+            "Contact information",
+            "Navigation menus",
+            "Business calls to action",
+            "Basic spam prevention"
+          ],
+          "what_learner_does": "Creates and tests an inquiry contact form with email notifications and spam filtering.",
+          "why_it_matters": "A business website must reliably capture and deliver sales inquiries to the business owner.",
+          "expected_outcome": "Functional, spam-protected inquiry form on the Contact page."
+        },
+        {
+          "lesson_number": "4.3",
+          "lesson_title": "Blog Management",
+          "what_is_taught": "Blog listing page configuration, post formatting, featured images, excerpts, author bio boxes, related post links, and internal linking strategies.",
+          "subtopics": [
+            "Blog structure",
+            "Blog listing pages",
+            "Post formatting",
+            "Featured images",
+            "Internal linking"
+          ],
+          "what_learner_does": "Publishes 3 formatted business blog articles with featured images, excerpts, and category tags.",
+          "why_it_matters": "Regular blog publishing establishes industry authority and drives organic search traffic.",
+          "expected_outcome": "Active blog section with formatted posts and clean archive listings."
+        },
+        {
+          "lesson_number": "4.4",
+          "lesson_title": "Essential Integrations",
+          "what_is_taught": "Basic web analytics setup, social media profile links, transactional email routing principles (SMTP awareness), and plugin selection hygiene for third-party integrations.",
+          "subtopics": [
+            "Basic analytics introduction",
+            "Email/contact workflow",
+            "Appropriate third-party tools",
+            "Plugin selection and maintenance considerations"
+          ],
+          "what_learner_does": "Connects social media links, checks email routing reliability, and audits active plugins.",
+          "why_it_matters": "Proper integrations ensure business marketing tools communicate smoothly with the website.",
+          "expected_outcome": "Integrated contact routing and social channel connectivity."
+        },
+        {
+          "lesson_number": "4.5",
+          "lesson_title": "Responsible AI-Assisted Content",
+          "what_is_taught": "Using AI to draft website copy, editing AI drafts for human voice and clarity, rigorous fact-checking, copyright and originality checks, and avoiding hallucinated business details.",
+          "subtopics": [
+            "Drafting website content using AI",
+            "Editing for clarity",
+            "Human fact-checking",
+            "Originality",
+            "Brand voice",
+            "Avoiding fabricated information"
+          ],
+          "what_learner_does": "Drafts page copy using AI, then edits and verifies every claim against the business brief.",
+          "why_it_matters": "AI accelerates drafting, but human review is non-negotiable for credibility and legal safety.",
+          "expected_outcome": "Polished, human-verified copy for all 5 business pages."
+        }
+      ],
+      "key_concepts": [
+        "Content Taxonomies",
+        "Inquiry Form Routing",
+        "Spam Prevention",
+        "Blog Publishing Workflow",
+        "Human-Verified AI Drafting"
+      ],
+      "tools": [
+        "Contact Form Plugins (e.g., Fluent Forms / WPForms)",
+        "WordPress Media Library",
+        "AI Writing Assistants"
+      ],
+      "hands_on_practice": "Add complete business content and test the contact form.",
+      "assignment": "Publish a sample business blog post and connect the site navigation.",
+      "business_application": "Populating client websites with engaging, search-friendly, inquiry-generating content.",
+      "expected_outcome": "Content-complete business website with functional essential features."
+    },
+    {
+      "module_number": "Module 05",
+      "module_title": "SEO, Performance & Security",
+      "module_purpose": "Apply foundational search optimization, speed improvement and website protection.",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
+      "lessons": [
+        {
+          "lesson_number": "5.1",
+          "lesson_title": "WordPress SEO Fundamentals",
+          "what_is_taught": "Search intent, unique page titles and meta descriptions, strict heading hierarchy (one H1 per page, sequential H2/H3), clean URL slugs, internal linking, and descriptive image alt text.",
+          "subtopics": [
+            "Search intent",
+            "Page titles and meta descriptions",
+            "Heading hierarchy",
+            "Clean URLs",
+            "Internal linking",
+            "Image alt text"
+          ],
+          "what_learner_does": "Optimizes meta tags, headings, and image alt attributes across all 5 business pages.",
+          "why_it_matters": "Solid on-page SEO ensures the website can be properly understood and indexed by search engines.",
+          "expected_outcome": "Fully optimized on-page SEO metadata across all website pages."
+        },
+        {
+          "lesson_number": "5.2",
+          "lesson_title": "Search Indexing Basics",
+          "what_is_taught": "XML sitemap generation, search engine indexability checks (disallowing 'discourage search engines' setting), robots.txt overview, and Google Search Console submission basics.",
+          "subtopics": [
+            "XML sitemaps",
+            "Indexability settings",
+            "Google Search Console introduction",
+            "Basic indexing checks"
+          ],
+          "what_learner_does": "Verifies the XML sitemap URL and runs pre-launch search indexing readiness checks.",
+          "why_it_matters": "Accidental noindex settings or missing sitemaps prevent websites from ever ranking on Google.",
+          "expected_outcome": "Verified XML sitemap ready for search engine submission."
+        },
+        {
+          "lesson_number": "5.3",
+          "lesson_title": "Website Performance",
+          "what_is_taught": "Image optimization (WebP format, compression, correct dimensions), caching fundamentals, eliminating unnecessary plugins, and auditing with Google PageSpeed Insights and Lighthouse.",
+          "subtopics": [
+            "Image optimization",
+            "Suitable image formats",
+            "Caching fundamentals",
+            "Avoiding unnecessary plugins",
+            "PageSpeed Insights",
+            "Lighthouse basics"
+          ],
+          "what_learner_does": "Compresses all media assets, activates page caching, and conducts before/after PageSpeed tests.",
+          "why_it_matters": "Fast-loading websites deliver superior user experiences and rank higher in search results.",
+          "expected_outcome": "Optimized website asset footprint with documented PageSpeed improvements."
+        },
+        {
+          "lesson_number": "5.4",
+          "lesson_title": "Website Security",
+          "what_is_taught": "Enforcing strong administrative passwords, principle of least privilege for user accounts, plugin and theme update hygiene, basic login hardening, and automated backup scheduling.",
+          "subtopics": [
+            "Strong authentication",
+            "User access controls",
+            "Plugin update hygiene",
+            "Basic website hardening",
+            "Backup planning",
+            "Restore awareness"
+          ],
+          "what_learner_does": "Hardens admin login credentials, removes dormant themes/plugins, and sets up an automated backup schedule.",
+          "why_it_matters": "WordPress sites are frequent targets of brute-force attacks; basic hardening prevents compromise.",
+          "expected_outcome": "Security-hardened WordPress setup with active remote backups."
+        },
+        {
+          "lesson_number": "5.5",
+          "lesson_title": "Maintenance & Quality Checks",
+          "what_is_taught": "Verifying backup archives, creating a pre-update testing checklist, running functional link and form checks, responsive viewport testing, and basic accessibility auditing.",
+          "subtopics": [
+            "Backup verification",
+            "Update checklist",
+            "Functional checks",
+            "Responsive testing",
+            "Basic accessibility review"
+          ],
+          "what_learner_does": "Executes a comprehensive 10-point maintenance and quality assurance audit.",
+          "why_it_matters": "Regular maintenance routines prevent unexpected website downtime and data loss.",
+          "expected_outcome": "Completed pre-launch quality assurance audit report."
+        }
+      ],
+      "key_concepts": [
+        "On-Page SEO Hierarchy",
+        "XML Sitemaps",
+        "Image Compression & Caching",
+        "Login Security Hardening",
+        "Automated Backup Scheduling"
+      ],
+      "tools": [
+        "Google PageSpeed Insights",
+        "Google Search Console",
+        "UpdraftPlus / Backup Solutions",
+        "SEO Plugins (e.g., Rank Math / Yoast SEO)"
+      ],
+      "hands_on_practice": "Audit and improve the capstone website.",
+      "assignment": "Submit an SEO, performance, backup and security checklist with evidence.",
+      "business_application": "Providing website optimization and ongoing maintenance retainers for clients.",
+      "expected_outcome": "Audited business website with documented maintenance controls."
+    },
+    {
+      "module_number": "Module 06",
+      "module_title": "Client Website & Handover",
+      "module_purpose": "Deliver and hand over a complete working WordPress business website.",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
+      "lessons": [
+        {
+          "lesson_number": "6.1",
+          "lesson_title": "Final Website Assembly",
+          "what_is_taught": "Final review and assembly of all 5 business pages (Home, About, Services, Blog, Contact), content consistency, link verification, and visual polish.",
+          "subtopics": [
+            "Home page final polish",
+            "About page",
+            "Services page",
+            "Blog section",
+            "Contact page and forms"
+          ],
+          "what_learner_does": "Conducts an end-to-end review of all 5 website pages to ensure commercial visual standards.",
+          "why_it_matters": "Delivers a unified, professional website that fulfills all client brief requirements.",
+          "expected_outcome": "Polished, complete 5-page commercial business website."
+        },
+        {
+          "lesson_number": "6.2",
+          "lesson_title": "Responsive Quality Assurance",
+          "what_is_taught": "Mobile testing on physical devices, tablet viewport checks, desktop browser testing (Chrome, Safari, Firefox, Edge), navigation functionality, and contact form submission verification.",
+          "subtopics": [
+            "Mobile testing",
+            "Tablet testing",
+            "Desktop testing",
+            "Navigation checks",
+            "Contact form checks"
+          ],
+          "what_learner_does": "Tests the website across 3 different physical device viewports and records test outcomes.",
+          "why_it_matters": "Catches layout defects and broken forms before the client or public ever sees them.",
+          "expected_outcome": "Cross-device QA verification log with zero critical defects."
+        },
+        {
+          "lesson_number": "6.3",
+          "lesson_title": "Launch Workflow",
+          "what_is_taught": "Domain name readiness, SSL certificate verification, database export/import, pre-launch checklist execution, and post-launch verification tests.",
+          "subtopics": [
+            "Domain readiness",
+            "SSL verification",
+            "Deployment preparation",
+            "Basic launch checklist",
+            "Post-launch verification"
+          ],
+          "what_learner_does": "Executes a formal pre-launch checklist and tests live site connectivity.",
+          "why_it_matters": "A structured launch sequence prevents broken links, SSL warnings, and server misconfigurations.",
+          "expected_outcome": "Successful website launch with verified SSL and working links."
+        },
+        {
+          "lesson_number": "6.4",
+          "lesson_title": "Website Handover",
+          "what_is_taught": "Setting up client user access with appropriate permissions (Editor role), compiling backup documentation, creating a plugin update checklist, writing simple content editing instructions, and defining ongoing maintenance responsibilities.",
+          "subtopics": [
+            "Client access",
+            "Roles and permissions",
+            "Backup documentation",
+            "Plugin/update checklist",
+            "Content editing instructions",
+            "Maintenance responsibilities"
+          ],
+          "what_learner_does": "Authors a comprehensive Client Maintenance & Editing Handbook for non-technical users.",
+          "why_it_matters": "Empowers clients to edit text safely while safeguarding administrative and security settings.",
+          "expected_outcome": "Professional Client Maintenance Guide and restricted client user account."
+        },
+        {
+          "lesson_number": "6.5",
+          "lesson_title": "Final Presentation",
+          "what_is_taught": "Website demonstration techniques, conducting a client walkthrough meeting, organizing project deliverables, and showcasing the completed project in a professional portfolio.",
+          "subtopics": [
+            "Website demonstration",
+            "Client walkthrough",
+            "Project documentation",
+            "Portfolio presentation"
+          ],
+          "what_learner_does": "Records a 5-minute video walkthrough demonstrating website features and client editing workflow.",
+          "why_it_matters": "Demonstrates practical professional competency and communication skills to employers and freelance clients.",
+          "expected_outcome": "Recorded project walkthrough video and portfolio case study."
+        }
+      ],
+      "key_concepts": [
+        "Five-Page Business Site Assembly",
+        "Cross-Device QA Testing",
+        "Pre-Launch Verification",
+        "Client Editor Onboarding",
+        "Client Maintenance Handbook"
+      ],
+      "tools": [
+        "LocalWP / Live Hosting",
+        "Mobile & Desktop Browsers",
+        "Screen Recording Tools",
+        "Markdown / PDF Documentation"
+      ],
+      "hands_on_practice": "Complete final acceptance testing and client walkthrough.",
+      "assignment": "Submit the functional website with handover documents.",
+      "business_application": "Executing a complete commercial agency client handover.",
+      "expected_outcome": "Final professional WordPress business website and maintenance guide."
     }
-  ]
+  ],
+  "faq": [
+    {
+      "question": "Can beginners learn WordPress without coding?",
+      "answer": "Yes. This course starts with website planning and WordPress fundamentals, then teaches practical website creation using Gutenberg and modern block themes. Advanced programming is not required."
+    },
+    {
+      "question": "What will I build during the course?",
+      "answer": "You will complete a five-page business website containing Home, About, Services, Blog and Contact pages, along with essential functionality, basic SEO and client handover documentation."
+    },
+    {
+      "question": "Is Elementor included?",
+      "answer": "The course focuses primarily on WordPress Gutenberg and the Site Editor. Advanced Elementor page building belongs to the separate Elementor specialization."
+    },
+    {
+      "question": "Will I learn WooCommerce?",
+      "answer": "No. This course covers general WordPress website design and management. WooCommerce store creation is covered separately in Course 63."
+    },
+    {
+      "question": "Will I learn WordPress SEO and security?",
+      "answer": "Yes. You will learn foundational SEO, website performance checks, access security, backups and essential maintenance practices."
+    },
+    {
+      "question": "Can I use these skills for freelance projects?",
+      "answer": "The course teaches practical capabilities applicable to beginner-level business website projects and website maintenance services. Client acquisition and income are not guaranteed."
+    },
+    {
+      "question": "What is the duration and course fee?",
+      "answer": "The course includes 48 guided learning hours delivered over six weeks. The listed course fee is ₹6,900, subject to the website's verified pricing and tax policy."
+    },
+    {
+      "question": "What is the difference between WordPress and Elementor?",
+      "answer": "WordPress is the content management system used to manage websites. Elementor is a visual page-building tool used with WordPress. This course prioritizes native block-based WordPress design; advanced Elementor workflows are taught separately."
+    },
+    {
+      "question": "What computer software or hardware do I need to get started?",
+      "answer": "You need a computer running Windows, macOS, or Linux with at least 8 GB of RAM and an active internet connection. We use LocalWP, a free and reliable local staging environment, so you do not even need to purchase hosting immediately to start learning."
+    },
+    {
+      "question": "What is the difference between WordPress.com and WordPress.org?",
+      "answer": "WordPress.org provides the free, open-source WordPress software that you install on your own web hosting or local environment, giving you complete ownership, freedom, and administrative control. WordPress.com is a hosted commercial service with plan restrictions. This course focuses entirely on self-hosted WordPress (WordPress.org standards)."
+    },
+    {
+      "question": "Why does Nova Skills focus on Gutenberg and modern block themes rather than classic themes?",
+      "answer": "WordPress has transitioned to Full Site Editing (FSE) and native block themes (such as Twenty Twenty-Four). Block themes are faster, cleaner, more accessible, and adhere directly to modern web standards without requiring bloated external page-builder plugins or paid annual licenses."
+    },
+    {
+      "question": "How will I learn to handle website backups and disaster recovery?",
+      "answer": "In Module 05, you will configure automated scheduled backups using industry-standard tools like UpdraftPlus. You will practice creating full backups of both the database and file system, storing them in external cloud storage, and testing backup restoration."
+    },
+    {
+      "question": "How does AI fit into this WordPress course?",
+      "answer": "AI tools can assist with drafting initial text, structuring sitemaps, generating meta descriptions, and outlining client documentation. However, you will learn strict human verification protocols to ensure factual accuracy, brand voice alignment, design hierarchy, and security before publishing."
+    },
+    {
+      "question": "What is included in the Client Handover deliverable?",
+      "answer": "The client handover package includes creating restricted user accounts (Editor roles) for the client, compiling a step-by-step maintenance handbook, providing backup schedule documentation, detailing recommended plugin update procedures, and conducting a recorded walkthrough demonstration."
+    },
+    {
+      "question": "Will I receive a certificate upon completing the program?",
+      "answer": "Yes. Upon completing all six curriculum modules, successfully building and testing the five-page business website, and submitting the client handover documentation with a passing score of at least 70%, you receive the verified Nova Skills Certificate of Completion in WordPress Website Design & Management."
+    }
+  ],
+  "primary_keyword": "WordPress website design course",
+  "secondary_keywords": [
+    "WordPress course for beginners",
+    "WordPress website management training",
+    "Gutenberg WordPress course",
+    "WordPress certification course",
+    "WordPress website design training",
+    "WordPress SEO and security basics",
+    "Learn WordPress without coding",
+    "WordPress business website course"
+  ],
+  "keywords": [
+    "WordPress website design course",
+    "WordPress course for beginners",
+    "WordPress website management training",
+    "Gutenberg WordPress course",
+    "WordPress certification course",
+    "WordPress website design training",
+    "WordPress SEO and security basics",
+    "Learn WordPress without coding",
+    "WordPress business website course"
+  ],
+  "seo": {
+    "seo_title": "WordPress Website Design Course (6 Weeks) | Nova Skills",
+    "meta_title": "WordPress Website Design Course (6 Weeks) | Nova Skills",
+    "seo_description": "Learn WordPress, Gutenberg, block themes, SEO, security and website management in 6 weeks (48 hours). Build a 5-page business website. Fee ₹6,900.",
+    "meta_description": "Learn WordPress, Gutenberg, block themes, SEO, security and website management in 6 weeks (48 hours). Build a 5-page business website. Fee ₹6,900.",
+    "primary_keyword": "WordPress website design course",
+    "secondary_keywords": [
+      "WordPress course for beginners",
+      "WordPress website management training",
+      "Gutenberg WordPress course",
+      "WordPress certification course",
+      "WordPress website design training",
+      "WordPress SEO and security basics",
+      "Learn WordPress without coding",
+      "WordPress business website course"
+    ],
+    "canonical_url": "https://novaskills.in/course-detail.html?id=wordpress-cert"
+  }
 }

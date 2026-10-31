@@ -1,343 +1,1463 @@
 {
   "course_id": "woocommerce-cert",
-  "course_name": "WooCommerce Mastery",
+  "id": "woocommerce-cert",
+  "slug": "woocommerce",
+  "course_name": "WooCommerce Store Development & Operations",
+  "title": "WooCommerce Store Development & Operations",
+  "name": "WooCommerce Store Development & Operations",
+  "academic_sequence": 63,
+  "course_number": 63,
+  "curriculum_edition": "2027",
   "academy": "No-Code Web Academy",
   "academy_id": "nocode",
-  "course_type": "MERGE",
-  "course_role": "Career/Monetization",
-  "level": "INTERMEDIATE",
-  "duration": "2 Months",
-  "learning_hours": 60,
-  "future_review_status": "EVOLVING",
-  "target_audience": {
-    "best_for": [
-      "WordPress users wanting to sell online",
-      "Freelancers moving into e-commerce"
+  "academyId": "nocode",
+  "academic_positioning": "Applied E-Commerce Specialization",
+  "programLevel": "Certification Course",
+  "course_type": "PROFESSIONAL",
+  "courseType": "PROFESSIONAL",
+  "course_role": "WooCommerce Store Developer & Operations Specialist",
+  "level": "Applied E-Commerce Specialization",
+  "priority": "P0",
+  "duration": "8 Weeks",
+  "durationMonths": 2,
+  "duration_weeks": 8,
+  "learning_hours": 64,
+  "learningHours": 64,
+  "guided_hours": 64,
+  "hours": 64,
+  "weekly_workload": "8 hours per week (guided training, practical lab exercises, and store development capstone)",
+  "mode": "Interactive Software Labs & Guided Workplace Simulation",
+  "price": 9900,
+  "fee": 9900,
+  "regular_fee": 9900,
+  "originalPrice": 9900,
+  "commercial_notice": "Flat, transparent tuition of ₹9,900. No artificial comparison pricing or deceptive discount markers.",
+  "pricing": {
+    "amount": 9900,
+    "currency": "INR",
+    "display": "₹9,900",
+    "comparison_price": null,
+    "discount_percent": null,
+    "transparent_pricing": true
+  },
+  "tagline": "Build Online Stores You Can Control—from Products to Checkout.",
+  "hero_headline": "Build Online Stores You Can Control—from Products to Checkout.",
+  "hero_supporting_heading": "NO-CODE WEB ACADEMY / E-COMMERCE SPECIALIZATION",
+  "hero_supporting_headline": "Learn to build, configure and manage WooCommerce stores on WordPress. Master product catalogues, variations, shopping carts, payments, taxes, shipping, inventory, order workflows and e-commerce reporting through a practical store-development project.",
+  "h1": "WooCommerce Store Development & Operations",
+  "seo_title": "WooCommerce Course in India (8 Weeks) | Nova Skills",
+  "meta_title": "WooCommerce Course in India (8 Weeks) | Nova Skills",
+  "seo_description": "Learn WooCommerce store setup, products, checkout, payments, shipping and inventory in 8 weeks (64h). Build a 15+ product demo store. Fee ₹9,900.",
+  "meta_description": "Learn WooCommerce store setup, products, checkout, payments, shipping and inventory in 8 weeks (64h). Build a 15+ product demo store. Fee ₹9,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=woocommerce-cert",
+  "hero": {
+    "eyebrow": "NO-CODE WEB ACADEMY / E-COMMERCE SPECIALIZATION",
+    "h1": "WooCommerce Store Development & Operations",
+    "primary_hook": "Build Online Stores You Can Control—from Products to Checkout.",
+    "short_description": "Learn to build, configure and manage WooCommerce stores on WordPress. Master product catalogues, variations, shopping carts, payments, taxes, shipping, inventory, order workflows and e-commerce reporting through a practical store-development project.",
+    "quick_info": "8 Weeks | 64 Guided Hours | ₹9,900 | Applied E-Commerce Specialization",
+    "skill_tags": [
+      "WooCommerce",
+      "WordPress",
+      "Product Management",
+      "Checkout",
+      "Payment Integration",
+      "Inventory",
+      "Shipping",
+      "Store Operations"
     ],
-    "who_should_take_foundation_first": "Absolute beginners without WordPress knowledge",
-    "not_for": [
-      "Shopify developers"
+    "primary_cta": "Enroll Now",
+    "secondary_cta": "Get Course Syllabus"
+  },
+  "short_description": "Learn to build, configure and manage WooCommerce stores on WordPress. Master product catalogues, variations, shopping carts, payments, taxes, shipping, inventory, order workflows and e-commerce reporting through a practical store-development project.",
+  "shortDesc": "Learn to build, configure and manage WooCommerce stores on WordPress. Master product catalogues, variations, shopping carts, payments, taxes, shipping, inventory, order workflows and e-commerce reporting through a practical store-development project.",
+  "full_description": "Learn how to build, operate, and maintain professional e-commerce stores using WordPress and WooCommerce. This practical 8-week, 64-hour applied specialization focuses on real-world e-commerce operations. Master product catalogue construction with variations and SKUs, modern block-based cart and checkout UX, safe payment gateway sandbox testing, Indian shipping zones and rates, coupons, order fulfillment workflows, refunds, High-Performance Order Storage (HPOS), store analytics, and security maintenance. Complete a comprehensive demonstration store featuring at least 15 products and verified end-to-end checkout scenarios.",
+  "fullDesc": "Learn how to build, operate, and maintain professional e-commerce stores using WordPress and WooCommerce. This practical 8-week, 64-hour applied specialization focuses on real-world e-commerce operations. Master product catalogue construction with variations and SKUs, modern block-based cart and checkout UX, safe payment gateway sandbox testing, Indian shipping zones and rates, coupons, order fulfillment workflows, refunds, High-Performance Order Storage (HPOS), store analytics, and security maintenance. Complete a comprehensive demonstration store featuring at least 15 products and verified end-to-end checkout scenarios.",
+  "description": "Learn to build, configure and manage WooCommerce stores on WordPress. Master product catalogues, variations, shopping carts, payments, taxes, shipping, inventory, order workflows and e-commerce reporting through a practical store-development project.",
+  "overview": {
+    "positioning": "Build a Real Store. Test Every Order Flow. Learn to Operate It.",
+    "short_description": "Learn to create and manage WooCommerce stores on WordPress. Set up product catalogues, variations, shopping carts, payments, taxes, shipping, inventory, order workflows and e-commerce reporting through a practical store-development project. Go beyond attractive product pages. Learn how an online store works from product listing and checkout to payment handling, shipping configuration, inventory updates, refunds and daily administration.",
+    "additional_positioning": "This practical specialization focuses on the operational side of online commerce. Students develop a working demonstration store, configure its essential settings and test realistic purchase scenarios before completing a professional store handover.",
+    "why_it_matters": "WooCommerce allows businesses to build and operate online stores using WordPress. A properly configured store requires more than visual design. It also needs reliable checkout workflows, accurate product and stock data, appropriate payment methods, shipping rules, customer communication and order administration."
+  },
+  "why_now": {
+    "industry_shift": "Modern e-commerce requires full ownership over customer data, transaction workflows, and order architectures. With High-Performance Order Storage (HPOS) and block-based checkout, WooCommerce delivers scalable commerce on independent infrastructure.",
+    "ai_impact": "AI tools accelerate product catalogue drafting and customer service template creation, but human operational rigor is essential for inventory reconciliation, tax accuracy, and payment security.",
+    "business_demand": "Direct-to-consumer (D2C) brands, retailers, and small businesses need professionals who can not only set up product pages, but also configure shipping rules, resolve payment exceptions, and handle daily order logistics.",
+    "career_opportunity": "WooCommerce specialists possess tangible operational skills that translate into high-demand roles as store managers, e-commerce assistants, and freelance store developers with recurring operational retainers."
+  },
+  "icon": "🛍️",
+  "color": "linear-gradient(135deg, #004672, #7F54B3)",
+  "rating": 4.8,
+  "reviews": 135,
+  "students": 890,
+  "liveProjects": 1,
+  "projects": 1,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=woocommerce-cert",
+  "tags": [
+    "popular",
+    "woocommerce",
+    "ecommerce",
+    "wordpress",
+    "online-store",
+    "store-operations",
+    "payments",
+    "certification"
+  ],
+  "featured": true,
+  "category": "No-Code Web Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "positioning": "Applied E-Commerce Specialization",
+  "target_audience": {
+    "ideal_for": [
+      "WordPress learners expanding into e-commerce",
+      "Aspiring WooCommerce store developers",
+      "E-commerce entrepreneurs and brand founders",
+      "Small business owners moving online",
+      "Freelancers offering online store creation",
+      "Website administrators managing merchant portals",
+      "Professionals managing daily online store operations"
+    ],
+    "who_should_take": "Anyone seeking practical skills to build, configure, test, and administer functioning WooCommerce stores with reliable checkout, payments, shipping, and order management.",
+    "not_designed_for": [
+      "Advanced PHP plugin developers",
+      "Headless commerce engineers",
+      "Enterprise infrastructure architects",
+      "Large-scale fulfilment systems engineers",
+      "Developers building custom commerce engines"
     ]
   },
   "prerequisites": {
-    "required": "Basic WordPress knowledge.",
-    "recommended": "Understanding of web hosting.",
-    "not_required": "PHP programming.",
-    "system_requirements": {
-      "hardware": "PC/Mac",
-      "software_accounts": "WordPress hosting"
-    }
+    "required": "Basic WordPress knowledge (dashboard navigation, posts vs. pages, media library, and basic settings).",
+    "recommended_pathway": "Students without prior WordPress experience should complete Course 62 — WordPress Website Design & Management (https://novaskills.in/course-detail.html?id=wordpress-cert) before enrolling.",
+    "not_required": "No advanced programming, PHP coding, or prior e-commerce store ownership required.",
+    "hardware_software": "Computer with at least 8 GB RAM, internet access, and administrative capability to run LocalWP or a staging server."
   },
-  "overview": {
-    "positioning": "Turn any WordPress site into a powerful e-commerce store.",
-    "short_description": "Master WooCommerce to build flexible, commission-free online stores with WordPress.",
-    "key_facts": {
-      "level": "INTERMEDIATE",
-      "duration": "2 Months",
-      "format": "Project-based",
-      "estimated_learning_hours": "60 Hours",
-      "project_count": "2 PROJECTS",
-      "capstone": "Live WooCommerce Store",
-      "ai_integration": "AI Product Descriptions",
-      "career_focus": "E-Commerce Web Developer"
-    },
-    "what_you_will_be_able_to_do": [
-      "Configure WooCommerce settings and payment gateways like Stripe.",
-      "Manage complex product variations and inventory.",
-      "Customize checkout flows and transactional emails."
+  "highlights": [
+    "8 Weeks, 64 Guided Hours of applied store development and operational administration",
+    "Construct a working demo store with at least 15 products across simple, variable, and digital types",
+    "Hands-on configuration of modern WooCommerce Cart and Checkout blocks",
+    "Safe payment gateway sandbox testing with verified success and declined-payment simulations",
+    "Indian shipping zones, flat-rate, free shipping thresholds, and GST-aware tax setup",
+    "High-Performance Order Storage (HPOS) architecture and extension compatibility checks",
+    "End-to-end operational testing: order placement, cancellations, refunds, and inventory updates",
+    "Flat, transparent tuition of ₹9,900 with no deceptive comparison prices"
+  ],
+  "hands_on_tech": {
+    "core_tools": [
+      {
+        "tool": "WordPress",
+        "purpose": "Core content management foundation",
+        "what_student_learns": "CMS configuration, user permissions, page hierarchy, and permalinks.",
+        "what_student_builds": "Store host environment and administrative base."
+      },
+      {
+        "tool": "WooCommerce",
+        "purpose": "Open-source e-commerce engine",
+        "what_student_learns": "Store configuration, product types, attributes, cart, checkout, orders, and HPOS.",
+        "what_student_builds": "Complete functional 15+ product demonstration store."
+      },
+      {
+        "tool": "WooCommerce Blocks",
+        "purpose": "Modern block-based shopping cart and checkout architecture",
+        "what_student_learns": "Cart block customization, checkout fields, and extension compatibility checks.",
+        "what_student_builds": "Responsive, frictionless checkout experience."
+      },
+      {
+        "tool": "Payment Gateway Sandbox",
+        "purpose": "Safe financial transaction simulation",
+        "what_student_learns": "Test mode credentials, webhook event handling, order status transitions, and failure handling.",
+        "what_student_builds": "Validated transaction processing pipeline without risking real funds."
+      }
+    ],
+    "supporting_tools": [
+      {
+        "tool": "LocalWP / Staging Environment",
+        "purpose": "Isolated development sandbox",
+        "what_student_learns": "Safe offline testing, database verification, and staging-to-production workflows."
+      },
+      {
+        "tool": "Google Analytics 4 (E-Commerce)",
+        "purpose": "Measurement and conversion funnel tracking",
+        "what_student_learns": "E-commerce event tracking, purchase funnel diagnostics, and privacy consent."
+      },
+      {
+        "tool": "Google PageSpeed Insights",
+        "purpose": "Store speed and Core Web Vitals optimization",
+        "what_student_learns": "Product image compression, checkout caching exclusions, and mobile responsiveness."
+      },
+      {
+        "tool": "UpdraftPlus / Staging Backup Tools",
+        "purpose": "Automated database and file system protection",
+        "what_student_learns": "Scheduled store backups, disaster recovery, and pre-update restore checkpoints."
+      }
+    ],
+    "emerging_tools": [
+      {
+        "tool": "High-Performance Order Storage (HPOS)",
+        "purpose": "Dedicated custom database tables for scalable order processing"
+      },
+      {
+        "tool": "WooCommerce Analytics",
+        "purpose": "Native dashboard for revenue, refunds, coupons, and stock telemetry"
+      }
     ]
   },
-  "why_now": {
-    "industry_shift": "Businesses want ownership of their data and avoid high SaaS fees.",
-    "ai_impact": "AI tools can now populate massive WooCommerce databases instantly.",
-    "business_demand": "High demand for open-source e-commerce solutions.",
-    "career_opportunity": "Lucrative freelance opportunities building bespoke stores."
-  },
+  "tools": [
+    "WordPress",
+    "WooCommerce",
+    "Gutenberg",
+    "WooCommerce Blocks",
+    "Payment Gateway Sandbox",
+    "Google Analytics 4",
+    "Google PageSpeed Insights",
+    "LocalWP"
+  ],
   "learning_outcomes": [
-    "CONFIGURE: Set up tax, shipping, and payment logic.",
-    "MANAGE: Create and maintain a product catalog.",
-    "OPTIMIZE: Improve cart conversion rates."
+    "Plan a small-business WooCommerce store.",
+    "Install and configure WooCommerce on WordPress.",
+    "Select suitable compatible themes and essential extensions.",
+    "Create and manage product categories, attributes, SKUs and variations.",
+    "Configure inventory, stock thresholds and product availability.",
+    "Import and export product catalogues using CSV.",
+    "Build responsive storefront, product, cart and checkout pages.",
+    "Configure supported payment methods in a safe test environment.",
+    "Set up shipping zones, rates and delivery information.",
+    "Configure coupons, introductory tax settings and customer emails.",
+    "Manage order statuses, cancellations and refund workflows.",
+    "Understand HPOS and relevant extension compatibility.",
+    "Review essential store reports and basic analytics.",
+    "Perform backup, security and performance checks.",
+    "Test successful and failed purchase scenarios.",
+    "Deliver a working demo store with operational documentation."
   ],
   "learning_journey": {
     "stages": [
       {
-        "stage": "Stage 1: Core Configuration",
-        "focus": "Plugin setup and store settings."
+        "stage": "Week 1: Store Planning & WooCommerce Foundations",
+        "focus": "E-commerce architecture, WordPress prerequisites, installation setup wizard, store currency, and base page structure."
       },
       {
-        "stage": "Stage 2: Product Management",
-        "focus": "Physical, digital, and variable products."
+        "stage": "Weeks 2-3: Product Catalogue & Inventory Management",
+        "focus": "Simple, variable, and downloadable products, attributes, SKUs, stock thresholds, CSV import/export, and image optimization."
       },
       {
-        "stage": "Stage 3: Advanced Checkout",
-        "focus": "Payments, taxes, and shipping."
+        "stage": "Week 4: Storefront & Modern Block Checkout UX",
+        "focus": "Storefront design, product page UX, cart experience, modern Cart & Checkout blocks, and mobile conversion friction reduction."
+      },
+      {
+        "stage": "Week 5: Payments, Taxes & Shipping Configuration",
+        "focus": "Gateway sandbox setup, simulated test orders, Cash on Delivery, Indian shipping zones, coupon rules, and GST-aware tax display."
+      },
+      {
+        "stage": "Week 6: Store Administration, HPOS & Analytics",
+        "focus": "Order status transitions, cancellation and refund workflows, stock updates, HPOS architecture, WooCommerce Analytics, and caching exclusions."
+      },
+      {
+        "stage": "Weeks 7-8: End-to-End Testing, Launch Readiness & Client Handover",
+        "focus": "7 mandatory test scenarios, cross-device QA, pre-launch security checklist, store administration guide, and client walkthrough."
       }
     ]
   },
-  "hands_on_tech": {
-    "core_tools": [
-      {
-        "tool": "WooCommerce",
-        "purpose": "E-commerce engine",
-        "what_student_learns": "Store management",
-        "what_student_builds": "E-commerce site"
-      },
-      {
-        "tool": "Stripe",
-        "purpose": "Payment gateway",
-        "what_student_learns": "API integration",
-        "what_student_builds": "Checkout system"
-      }
-    ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
-  },
   "industry_workflow": {
-    "overview": "WooCommerce development pipeline",
+    "overview": "Professional 6-stage lifecycle for designing, building, validating, and administering commercial WooCommerce stores.",
     "stages": [
       {
         "step": 1,
-        "name": "WordPress Prep",
-        "desc": "Securing the WP install."
+        "name": "Discovery & Store Architecture",
+        "desc": "Define product taxonomy, customer journeys, checkout requirements, payment options, and shipping fulfillment logistics."
       },
       {
         "step": 2,
-        "name": "WooCommerce Install",
-        "desc": "Running the setup wizard."
+        "name": "Catalogue Modeling & Stock Setup",
+        "desc": "Create simple and variable products, define attributes, assign SKUs, configure stock alerts, and test CSV batch imports."
       },
       {
         "step": 3,
-        "name": "Data Entry",
-        "desc": "Importing products."
+        "name": "Storefront Design & Block Checkout",
+        "desc": "Implement responsive storefront layouts, optimize product pages, configure modern Cart and Checkout blocks, and verify mobile UX."
       },
       {
         "step": 4,
-        "name": "Gateway Testing",
-        "desc": "Simulating transactions."
+        "name": "Transaction & Logistics Integration",
+        "desc": "Configure payment sandbox, set up Indian shipping zones, establish discount rules, and configure transactional customer emails."
+      },
+      {
+        "step": 5,
+        "name": "Operational Hardening & Testing",
+        "desc": "Execute 7 mandatory test scenarios (success, failure, inventory decrement, cancellation, refund), enable HPOS, and set caching rules."
+      },
+      {
+        "step": 6,
+        "name": "Launch Readiness & Client Handover",
+        "desc": "Perform cross-browser QA, audit SSL and security, compile the Client Maintenance Guide, and conduct a recorded operational walkthrough."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Retail",
-      "business_problem": "High Shopify fees",
-      "approach": "Migrate to WooCommerce",
-      "toolset": "WooCommerce",
-      "output": "Self-hosted store"
+      "sector": "Apparel & Fashion Retail",
+      "business_problem": "A boutique clothing brand struggles to sell online because customer orders get mixed up across different colors and sizes.",
+      "approach": "Build a WooCommerce store with variable products, visual attribute swatches, real-time stock reduction by variation, and shipping zones.",
+      "toolset": "WooCommerce, Variable Products, Block Checkout, Indian Shipping Zones",
+      "output": "Flawless variation ordering system with automatic stock decrements per size/color."
+    },
+    {
+      "sector": "Packaged Specialty Food & Beverage",
+      "business_problem": "An artisanal coffee roaster needs to calculate weight-based delivery rates across Indian states and offer promotional coupons.",
+      "approach": "Implement flat-rate and weight-based shipping classes, free shipping over ₹999, and promotional coupon codes with usage limits.",
+      "toolset": "WooCommerce Shipping Classes, Coupon Engine, Payment Sandbox",
+      "output": "Accurate regional shipping calculation with automated discount rules and invoice generation."
+    },
+    {
+      "sector": "Digital Publishing & Software",
+      "business_problem": "A technical author needs to sell downloadable e-books and templates securely without paying 30% marketplace fees.",
+      "approach": "Configure virtual and downloadable products with restricted download counts, expiration windows, and instant digital delivery.",
+      "toolset": "WooCommerce Digital Products, Customer My Account Portal, Razorpay/Stripe Sandbox",
+      "output": "Fully automated digital download fulfillment portal with direct merchant payout."
+    },
+    {
+      "sector": "B2B Wholesale / Local Distributor",
+      "business_problem": "A regional supplier needs to support Cash on Delivery (COD) with verification, while keeping track of high-volume order statuses.",
+      "approach": "Configure COD eligibility rules, order status pipelines (Processing, On Hold, Completed), and HPOS for high-order throughput.",
+      "toolset": "WooCommerce COD Rules, Order Workflow Dashboard, HPOS Tables",
+      "output": "Streamlined wholesale order administration with clear cancellation and fulfillment tracking."
     }
   ],
+  "commercial_differentiation": {
+    "headline": "Not Just a Storefront. A Working E-Commerce System.",
+    "supporting_copy": "Learn the difference between designing a product page and operating an online store. Build a complete WooCommerce demonstration store, test the customer checkout journey, manage products and orders, and prepare documentation for real business operations.",
+    "differentiators": [
+      {
+        "title": "Real Product Catalogue",
+        "description": "Build a structured catalogue containing at least 15 products with variations, attributes, SKUs, and stock quantities."
+      },
+      {
+        "title": "Tested Checkout",
+        "description": "Demonstrate successful and failed purchase scenarios in a safe sandbox environment to verify error handling and notifications."
+      },
+      {
+        "title": "Operations-Ready Learning",
+        "description": "Understand orders, inventory decrements, Indian shipping zones, cancellations, refunds, customer emails, and HPOS."
+      },
+      {
+        "title": "Professional Handover",
+        "description": "Document store administration and day-to-day management workflows with a comprehensive client maintenance guide."
+      }
+    ]
+  },
+  "course_comparison": {
+    "typical_course": [
+      "Claims WooCommerce stores are 100% free without explaining hosting, domain, payment gateway, and extension costs.",
+      "Teaches designing single product pages with legacy shortcodes that break modern checkout workflows.",
+      "Ignores payment gateway testing, error recovery, and failed transaction handling.",
+      "Fails to cover order status transitions, cancellations, refunds, or inventory reconciliation.",
+      "Stops at visual appearance without teaching High-Performance Order Storage (HPOS) or client handovers."
+    ],
+    "novaskills_mastery": [
+      "Provides transparent operational cost breakdowns covering core software, hosting, gateways, and commercial extensions.",
+      "Prioritizes modern native WooCommerce Cart & Checkout blocks with extension compatibility checks.",
+      "Executes comprehensive payment sandbox simulations covering both successful and declined checkout scenarios.",
+      "Provides practical operational training in order processing, stock adjustments, refunds, and customer emails.",
+      "Integrates High-Performance Order Storage (HPOS), performance auditing, and professional client handover guides."
+    ]
+  },
+  "cost_transparency": {
+    "overview": "WooCommerce core software is free, but operating a real business store involves legitimate commercial infrastructure costs:",
+    "cost_elements": [
+      {
+        "item": "WooCommerce Core",
+        "cost": "Free & Open Source",
+        "notes": "No platform percentage taken by Automattic/WooCommerce."
+      },
+      {
+        "item": "Web Hosting & Domain",
+        "cost": "Commercial Expense",
+        "notes": "Requires reliable hosting with SSL and adequate PHP memory."
+      },
+      {
+        "item": "Payment Gateway Fees",
+        "cost": "Transaction Based",
+        "notes": "Gateways (Razorpay, Stripe, Cashfree) charge per-transaction fees (typically 2%)."
+      },
+      {
+        "item": "Premium Extensions",
+        "cost": "Optional Paid Addons",
+        "notes": "Advanced shipping, subscriptions, or memberships may require paid annual licenses."
+      },
+      {
+        "item": "SSL & Security",
+        "cost": "Essential Operation",
+        "notes": "Mandatory for encrypted checkout and customer trust."
+      }
+    ]
+  },
   "ai_integration": {
-    "role_classification": "AI-SUPPORTED",
-    "ai_can_assist_with": "SEO metadata",
-    "ai_can_automate": "Image compression",
-    "ai_cannot_replace": "Tax configuration",
-    "human_expertise_required": "Legal compliance",
-    "validation_protocol": "Test orders",
-    "responsible_use": "Accurate product representation"
+    "role_classification": "AI-ASSISTED & VERIFIED",
+    "ai_can_assist_with": "Drafting product specifications, writing engaging marketing descriptions, generating SEO meta tags, creating email notification templates, and outlining store policy drafts.",
+    "ai_can_automate": "Generating CSV seed product variations, structuring boilerplate documentation, and suggesting catalog taxonomy categories.",
+    "human_expertise_required": "Validating pricing accuracy, setting correct tax rates and GST classes, configuring payment gateway API keys, checking shipping rate calculations, and testing refund mechanisms.",
+    "validation_protocol": "All AI-drafted product information, policies, and documentation must be independently reviewed for commercial accuracy, tax compliance, and consumer trust before publishing."
   },
   "best_practices": [
-    "Always use staging environments for updates.",
-    "Implement object caching."
+    "Use modern block-based Cart and Checkout for higher conversion rates and cleaner code.",
+    "Verify extension compatibility before upgrading WooCommerce or enabling High-Performance Order Storage (HPOS).",
+    "Always test payment gateways in sandbox or staging mode before accepting real customer cards.",
+    "Assign unique SKUs to every product variation to prevent inventory tracking errors.",
+    "Configure automated off-site backups prior to updating core plugins or database tables.",
+    "Exclude Cart, Checkout, and My Account pages from aggressive server and browser caching.",
+    "Set clear shipping rates, delivery timelines, and return policies to minimize customer disputes.",
+    "Create a dedicated Shop Manager role for store operators rather than sharing master Administrator access."
   ],
   "common_mistakes": [
-    {
-      "mistake": "Ignoring security",
-      "why_it_happens": "Focusing only on design",
-      "professional_approach": "Use firewalls and 2FA"
-    }
+    "Claiming a WooCommerce store is completely free while hiding hosting, domain, and gateway fee realities.",
+    "Using outdated checkout shortcodes with conflicting plugins that cause checkout errors.",
+    "Testing payments on a live store with real money instead of using sandbox credentials.",
+    "Failing to configure low-stock alerts, resulting in customer orders for out-of-stock items.",
+    "Caching checkout pages, causing customer cart data to mix up or display empty carts.",
+    "Ignoring mobile checkout usability, leading to high cart abandonment on smartphones.",
+    "Updating WooCommerce without verifying theme and payment plugin compatibility.",
+    "Failing to document refund procedures and store administration for non-technical clients."
   ],
   "career_paths": {
-    "entry_roles": "Store Administrator",
-    "mid_roles": "WooCommerce Developer",
-    "specialist_roles": "E-Commerce Consultant",
-    "freelance_roles": "Freelance Store Builder",
-    "employer_expectations": "Secure transaction processing",
-    "what_student_demonstrates": "Live functional store"
+    "entry_roles": "WooCommerce Store Administrator, E-Commerce Operations Assistant, Online Product Coordinator",
+    "mid_roles": "WooCommerce Store Developer, E-Commerce Account Manager, D2C Operations Specialist",
+    "specialist_roles": "Independent WooCommerce Consultant, E-Commerce Maintenance Specialist"
   },
   "freelance_applications": {
     "services_offered": [
-      "Store Setup",
-      "Payment Integration"
-    ],
-    "client_workflow": "Discovery -> Build -> Test -> Launch",
-    "portfolio_requirements": "Working demo stores"
+      "Complete WooCommerce Store Setup & Product Catalogue Construction (15+ products)",
+      "Payment Gateway Sandbox Configuration & Live Deployment (Razorpay / Stripe)",
+      "Indian Regional Shipping Setup & Weight-Based Class Configuration",
+      "Cart & Checkout Conversion Optimization using modern block templates",
+      "Store Maintenance Retainers (updates, backups, HPOS compatibility, and speed audits)",
+      "Store Administration Handover, product upload training, and client handbook authoring"
+    ]
   },
   "what_you_will_build": [
-    "Digital Goods Store",
-    "Physical Products E-commerce Site"
-  ],
-  "final_deliverables": [
-    "Live WooCommerce Store URL"
-  ],
-  "assessment": {
-    "model": "Test Transaction Validation",
-    "criteria": "Successful checkout flow and email delivery"
-  },
-  "certification": {
-    "title": "Certified WooCommerce Administrator",
-    "criteria": "Pass final test order",
-    "verification": "Digital badge"
-  },
-  "not_covered": "Custom PHP plugin development.",
-  "next_learning_path": {
-    "recommended_next": "Elementor E-commerce Design",
-    "related_programs": "WordPress Security"
-  },
-  "faq": [
     {
-      "question": "Do I need to pay for WooCommerce?",
-      "answer": "The plugin is free, but hosting and premium extensions cost money."
-    },
-    {
-      "question": "Can I sell digital downloads?",
-      "answer": "Yes, WooCommerce handles digital file delivery natively."
-    },
-    {
-      "question": "How do I take credit cards?",
-      "answer": "You will learn to integrate Stripe and PayPal."
+      "title": "Complete WooCommerce Store — Build, Checkout, Operate & Handover (Capstone)",
+      "badge": "Commercial Capstone Project",
+      "client_brief": "Design, build, test, and hand over a functioning demonstration WooCommerce store with at least 15 products for a commercial domain (Apparel, Specialty Food, Electronics, or Digital Goods).",
+      "business_problem": "A growing retail merchant needs an online store with full data control, reliable checkout, automated shipping rules, verified payment handling, inventory management, and structured operational documentation.",
+      "deliverables": [
+        "Functioning WooCommerce demonstration store with at least 15 products (simple, variable, virtual/downloadable)",
+        "Configured modern Cart and Checkout blocks with verified customer purchase flows",
+        "Configured payment gateway sandbox with successful and failed transaction simulations",
+        "Indian shipping zones, flat-rate, and free shipping threshold rules",
+        "Verified inventory management with automatic stock reduction and restoration on cancellation",
+        "Documented refund and order status transition workflow evidence",
+        "Comprehensive Store Administration Guide & Client Handover Handbook"
+      ]
     }
   ],
+  "final_deliverables": [
+    "Functioning 15+ product demonstration WooCommerce store",
+    "Evidence of 7 mandatory operational test scenarios",
+    "Configured shipping zones, rates, and coupon discount rules",
+    "Payment gateway sandbox test transaction logs",
+    "Inventory adjustment and refund workflow documentation",
+    "Pre-launch quality assurance and security checklist",
+    "Professional Store Administration & Client Handover Guide",
+    "Recorded store demonstration and operational walkthrough"
+  ],
+  "portfolio": {
+    "title": "Nova Skills WooCommerce Store Portfolio",
+    "description": "Exactly ONE complete, functioning WooCommerce demonstration store featuring at least 15 products and verified operations: product catalogue modeling, modern block checkout, payment gateway sandbox testing, Indian shipping rules, inventory controls, order processing, and comprehensive client handover documentation.",
+    "deliverables_count": 1,
+    "minimum_products": 15,
+    "mandatory_scenarios": [
+      {
+        "test": "Test 1 — Successful Purchase",
+        "requirement": "Demonstrate a complete order placed successfully with expected order status ('Processing' or 'Completed')."
+      },
+      {
+        "test": "Test 2 — Payment Failure",
+        "requirement": "Demonstrate a failed or declined payment in a safe sandbox environment and document error handling."
+      },
+      {
+        "test": "Test 3 — Inventory Change",
+        "requirement": "Verify that stock quantity decrements correctly after an eligible customer order."
+      },
+      {
+        "test": "Test 4 — Cancellation",
+        "requirement": "Demonstrate safe order cancellation and verify configured stock restoration."
+      },
+      {
+        "test": "Test 5 — Refund",
+        "requirement": "Demonstrate appropriate refund workflow, distinguishing between recording a refund and gateway-processed refunds."
+      },
+      {
+        "test": "Test 6 — Customer Notification",
+        "requirement": "Verify email notification triggers (New Order, Processing, Completed) without sending to real customers."
+      },
+      {
+        "test": "Test 7 — Shipping & Coupon Rules",
+        "requirement": "Verify shipping rates and coupon discounts under at least two different controlled cart conditions."
+      }
+    ],
+    "acceptance_evidence": [
+      "Live or staging store access or recorded walkthrough",
+      "Structured product catalogue with at least 15 verified products",
+      "Checkout test results across desktop and mobile viewports",
+      "Payment failure test simulation evidence",
+      "Inventory decrement and restock verification log",
+      "Cancellation and refund operational workflow documentation",
+      "Sample WooCommerce Analytics operational report",
+      "Comprehensive Pre-Launch Quality Assurance & Security Checklist",
+      "Professional Client Handover & Store Administration Guide"
+    ]
+  },
+  "portfolio_specs": {
+    "description": "Graduates demonstrate employer-ready proof-of-work showcasing practical e-commerce craftsmanship and administrative competence:",
+    "deliverables": [
+      "Functioning Storefront URL with 15+ Active Products",
+      "Modern Block-Based Cart and Checkout Implementation",
+      "Documented 7 Mandatory Order & Payment Test Scenarios",
+      "Indian Shipping Zone and Rate Calculation Matrix",
+      "Coupon Configuration and Discount Application Proof",
+      "High-Performance Order Storage (HPOS) Compatibility Verification",
+      "WooCommerce Analytics Performance & Revenue Report",
+      "Professional Store Administration & Handover Handbook"
+    ],
+    "case_study_structure": [
+      "1. Store Scoping & E-Commerce Business Requirements",
+      "2. Product Catalogue Information Architecture (15+ SKUs)",
+      "3. Modern Storefront, Cart & Checkout UX Implementation",
+      "4. Payment Gateway Sandbox & Failed Transaction Handling",
+      "5. Shipping Logistics, Regional Zones & Tax Configuration",
+      "6. Order Administration, Inventory Tracking & Refund Operations",
+      "7. HPOS Migration & Store Performance Optimization",
+      "8. Client Handover, Training Documentation & Launch Checklist"
+    ]
+  },
+  "assessment": {
+    "model": "100% Practical Competency-Based Store Evaluation",
+    "criteria": "Evaluated across store architecture, catalogue depth, checkout UX, transaction/shipping configuration, operational administration, and professional client handover.",
+    "passing_score": "70% overall score with successful completion of all 15 products and 7 mandatory test scenarios."
+  },
+  "assessment_model": {
+    "breakdown": [
+      {
+        "item": "WooCommerce Setup & Architecture",
+        "weight": "10%",
+        "desc": "Correct installation, currency settings, store location, permalinks, and compatible theme selection."
+      },
+      {
+        "item": "Product Catalogue & Inventory",
+        "weight": "20%",
+        "desc": "Quality of 15+ products, variation structures, attributes, SKUs, pricing accuracy, and stock settings."
+      },
+      {
+        "item": "Storefront & Checkout UX",
+        "weight": "15%",
+        "desc": "Responsiveness of shop and product pages, cart experience, and modern block checkout optimization."
+      },
+      {
+        "item": "Payments, Taxes & Shipping",
+        "weight": "20%",
+        "desc": "Gateway sandbox integration, payment test scenarios, Indian shipping zones, and GST-aware tax configuration."
+      },
+      {
+        "item": "Store Administration & Reliability",
+        "weight": "15%",
+        "desc": "Order processing, cancellation/refund handling, inventory updates, HPOS awareness, and analytics."
+      },
+      {
+        "item": "End-to-End Capstone & Handover",
+        "weight": "20%",
+        "desc": "Execution of 7 mandatory test scenarios, pre-launch checklist completion, and client handover handbook."
+      }
+    ]
+  },
+  "assessment_rubric": {
+    "setup_and_architecture": "10%",
+    "catalogue_and_inventory": "20%",
+    "storefront_and_checkout_ux": "15%",
+    "payments_taxes_shipping": "20%",
+    "store_admin_and_reliability": "15%",
+    "capstone_and_handover": "20%",
+    "total": "100%",
+    "passing_threshold": "70%"
+  },
+  "certification": {
+    "title": "Certificate of Completion in WooCommerce Store Development & Operations",
+    "issuer": "Nova Skills Academy — No-Code Web Academy",
+    "verification": "Digitally verifiable credential featuring unique identification code and public verification URL.",
+    "requirements": "Completion of all 6 curriculum modules, delivery of the 15+ product demonstration store, verification of all 7 test scenarios, and submission of the client handover guide with a minimum score of 70%."
+  },
+  "source_code_delivery": {
+    "platform": "LocalWP Staging Export & GitHub Documentation Repository",
+    "requirements": [
+      "WooCommerce Site Export / WPRESS file",
+      "Product Catalogue Export CSV (15+ products)",
+      "README.md with setup instructions and test credentials",
+      "STORE_ADMIN_GUIDE.md detailing client order processing and maintenance procedures",
+      "TEST_RESULTS.md detailing outcomes of all 7 mandatory test scenarios"
+    ]
+  },
+  "skill_boundaries": {
+    "course_focus": "Course 63 focuses specifically on WooCommerce store development, product catalogue modeling, modern block checkout, payment gateway integration, shipping logistics, inventory controls, order workflows, and daily operational administration.",
+    "course_62_differentiation": "Course 62 (WordPress Website Design & Management) focuses on general business websites, content management, block theme design, and basic site maintenance without e-commerce cart/checkout workflows.",
+    "course_64_differentiation": "Course 64 (Shopify) focuses on Shopify's proprietary hosted e-commerce ecosystem, Liquid themes, and Shopify admin operations.",
+    "course_65_differentiation": "Course 65 (Elementor) focuses on advanced visual drag-and-drop page building workflows.",
+    "explicit_exclusions": [
+      "Custom PHP plugin development",
+      "Custom WooCommerce PHP extensions from scratch",
+      "Headless commerce architectures (Next.js / GraphQL commerce)",
+      "Enterprise multi-warehouse distributed ERP integrations",
+      "Advanced server infrastructure clustering and custom database sharding"
+    ]
+  },
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "Store Setup & Configuration",
-      "module_purpose": "Initialize the WooCommerce environment.",
-      "what_you_will_learn": [
-        "Running the setup wizard",
-        "Configuring currencies and regions"
-      ],
+      "module_title": "WooCommerce Foundations",
+      "module_purpose": "Understand WooCommerce architecture and prepare a functional e-commerce development environment.",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "Installation and Wizard",
-          "what_is_taught": "Base settings",
-          "why_it_matters": "Foundational configuration",
-          "what_learner_does": "Installs plugin",
-          "expected_outcome": "Store pages generated"
+          "lesson_title": "E-Commerce Store Planning",
+          "what_is_taught": "E-commerce business models (B2C, B2B, D2C), customer journey mapping, store requirements scoping, product catalogue planning, checkout and fulfilment requirements, and store structure and navigation.",
+          "subtopics": [
+            "E-commerce business models",
+            "Customer journeys",
+            "Store requirements",
+            "Product catalogue planning",
+            "Checkout and fulfilment requirements",
+            "Store structure and navigation"
+          ],
+          "what_learner_does": "Creates an e-commerce store blueprint and customer journey map for a demonstration business.",
+          "why_it_matters": "Careful architecture planning prevents costly re-platforming and broken order workflows later.",
+          "expected_outcome": "Documented store planning specification and site navigation tree."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "General Settings",
-          "what_is_taught": "Location and currency",
-          "why_it_matters": "Dictates tax and shipping",
-          "what_learner_does": "Configures region",
-          "expected_outcome": "Localized store"
+          "lesson_title": "WordPress Prerequisites",
+          "what_is_taught": "WordPress dashboard overview, pages, user roles (Administrator vs. Shop Manager), theme and plugin basics, permalink configuration, HTTPS requirements, and suitable hosting concepts.",
+          "subtopics": [
+            "WordPress dashboard overview",
+            "Pages, users and roles",
+            "Theme and plugin basics",
+            "Permalinks and HTTPS",
+            "Suitable hosting concepts"
+          ],
+          "what_learner_does": "Verifies WordPress hosting environment requirements, activates SSL, and configures post-name permalinks.",
+          "why_it_matters": "WooCommerce requires secure HTTPS and clean permalinks to handle cart sessions and checkout endpoints.",
+          "expected_outcome": "Verified WordPress baseline environment configured for e-commerce."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "Tax Configuration",
-          "what_is_taught": "Standard vs reduced rates",
-          "why_it_matters": "Legal compliance",
-          "what_learner_does": "Sets up tax tables",
-          "expected_outcome": "Accurate tax calculation"
+          "lesson_title": "WooCommerce Installation",
+          "what_is_taught": "Installing the WooCommerce plugin, running the setup wizard, configuring store location, currency settings (INR), core store settings, and initial product and checkout configuration.",
+          "subtopics": [
+            "Plugin installation",
+            "Setup workflow",
+            "Store location",
+            "Currency configuration",
+            "Store settings",
+            "Initial product and checkout configuration"
+          ],
+          "what_learner_does": "Installs WooCommerce, configures Indian regional settings, and verifies default store pages.",
+          "why_it_matters": "Proper baseline installation establishes correct currency symbols, decimal points, and operational regions.",
+          "expected_outcome": "Activated WooCommerce installation with verified regional settings."
+        },
+        {
+          "lesson_number": "1.4",
+          "lesson_title": "Storefront Architecture",
+          "what_is_taught": "Understanding core e-commerce pages: Shop page, Product category archives, Single product detail pages, Shopping cart, Checkout, and My Account customer portal.",
+          "subtopics": [
+            "Shop page",
+            "Product category pages",
+            "Product detail pages",
+            "Cart",
+            "Checkout",
+            "My Account"
+          ],
+          "what_learner_does": "Audits default WooCommerce page assignments and verifies template rendering.",
+          "why_it_matters": "Each core page plays an indispensable role in customer navigation, purchasing, and order history.",
+          "expected_outcome": "Fully mapped storefront page hierarchy with operational endpoints."
+        },
+        {
+          "lesson_number": "1.5",
+          "lesson_title": "Theme and Plugin Selection",
+          "what_is_taught": "Selecting compatible WooCommerce themes, block-based store design principles, assessing plugin necessity, compatibility awareness, and avoiding unnecessary extensions that degrade performance.",
+          "subtopics": [
+            "Compatible themes",
+            "Block-based store design",
+            "Plugin necessity assessment",
+            "Compatibility awareness",
+            "Avoiding unnecessary extensions"
+          ],
+          "what_learner_does": "Evaluates and activates a lightweight, block-compatible WooCommerce theme.",
+          "why_it_matters": "Heavy, bloated themes slow down store speed and trigger plugin conflicts during checkout.",
+          "expected_outcome": "Clean, block-compatible theme active on the store staging environment."
         }
       ],
       "key_concepts": [
-        "Localization",
-        "Tax Matrix"
+        "WooCommerce Core Architecture",
+        "E-Commerce Customer Journeys",
+        "Currency & Location Setup",
+        "Core Store Pages",
+        "Block-Compatible Themes"
       ],
       "tools": [
-        "WooCommerce Admin"
+        "WordPress",
+        "WooCommerce",
+        "LocalWP",
+        "Block Themes"
       ],
-      "hands_on_practice": "Configure a store for a specific country.",
-      "assignment": "Submit config screenshots.",
-      "business_application": "Merchant compliance.",
-      "expected_outcome": "Configured backend."
+      "hands_on_practice": "Install and configure a WooCommerce store in a local or staging environment.",
+      "assignment": "Prepare a store architecture diagram, configuration checklist and development environment.",
+      "business_application": "Initial store provisioning and infrastructure setup for e-commerce clients.",
+      "expected_outcome": "Functional WooCommerce development setup."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Product Catalogs",
-      "module_purpose": "Build and manage the inventory database.",
-      "what_you_will_learn": [
-        "Simple vs Variable products",
-        "Categories and Tags"
-      ],
+      "module_title": "Product Catalogue & Inventory",
+      "module_purpose": "Build and maintain a structured product catalogue with functional inventory controls.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "Simple & Digital Products",
-          "what_is_taught": "Pricing, inventory, downloads",
-          "why_it_matters": "Core revenue drivers",
-          "what_learner_does": "Creates 5 products",
-          "expected_outcome": "Populated shop page"
+          "lesson_title": "Product Types",
+          "what_is_taught": "Understanding product types in WooCommerce: Simple products, Variable products, Virtual products, Downloadable products, and making the correct product type selection for business needs.",
+          "subtopics": [
+            "Simple products",
+            "Variable products",
+            "Virtual products",
+            "Downloadable products",
+            "Product type selection"
+          ],
+          "what_learner_does": "Creates simple, variable, and downloadable product entries in the store.",
+          "why_it_matters": "Different goods (physical merchandise vs. digital downloads) require different delivery and checkout rules.",
+          "expected_outcome": "Working sample products representing physical, variable, and digital types."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "Variable Products",
-          "what_is_taught": "Attributes and variations",
-          "why_it_matters": "For clothing/sizes",
-          "what_learner_does": "Creates a t-shirt with sizes/colors",
-          "expected_outcome": "Functional variant selector"
+          "lesson_title": "Product Information Architecture",
+          "what_is_taught": "Configuring product categories, product tags, global product attributes (e.g., Size, Color), variation combinations, product titles, descriptions, and product image galleries.",
+          "subtopics": [
+            "Product categories",
+            "Tags",
+            "Product attributes",
+            "Variation combinations",
+            "Product titles and descriptions",
+            "Product images and galleries"
+          ],
+          "what_learner_does": "Configures global attributes and builds multi-attribute variable products with image galleries.",
+          "why_it_matters": "A structured taxonomy makes it easy for customers to find, filter, and select products.",
+          "expected_outcome": "Multi-level category hierarchy and configured variation matrices."
         },
         {
           "lesson_number": "2.3",
+          "lesson_title": "SKU and Pricing Management",
+          "what_is_taught": "Designing consistent SKU (Stock Keeping Unit) structures, regular pricing, sale pricing, scheduling sales, pricing accuracy, product visibility settings, and stock keeping principles.",
+          "subtopics": [
+            "SKU structures",
+            "Regular pricing",
+            "Sale pricing",
+            "Pricing accuracy",
+            "Product visibility",
+            "Stock keeping principles"
+          ],
+          "what_learner_does": "Establishes a systematic SKU convention and sets regular and scheduled sale prices.",
+          "why_it_matters": "Precise SKUs are essential for warehouse management, order fulfillment, and multi-channel synchronization.",
+          "expected_outcome": "Standardized SKU assignments and validated pricing across all products."
+        },
+        {
+          "lesson_number": "2.4",
           "lesson_title": "Inventory Management",
-          "what_is_taught": "Stock levels and backorders",
-          "why_it_matters": "Prevents overselling",
-          "what_learner_does": "Configures stock thresholds",
-          "expected_outcome": "Automated out-of-stock handling"
+          "what_is_taught": "Stock management settings, stock quantities at product and variation level, low-stock threshold notifications, out-of-stock visibility behavior, backorder awareness, and inventory updates after orders.",
+          "subtopics": [
+            "Stock management settings",
+            "Stock quantities",
+            "Low-stock notifications",
+            "Out-of-stock behavior",
+            "Backorder awareness",
+            "Inventory updates after orders"
+          ],
+          "what_learner_does": "Configures global inventory rules, assigns stock quantities, and sets up low-stock email alerts.",
+          "why_it_matters": "Accurate inventory tracking prevents overselling, stockouts, and dissatisfied customers.",
+          "expected_outcome": "Active inventory tracking system with functional threshold notifications."
+        },
+        {
+          "lesson_number": "2.5",
+          "lesson_title": "Catalogue Operations",
+          "what_is_taught": "Bulk editing product data, exporting product catalogues via CSV, importing product catalogues via CSV, data schema validation, handling common import formatting problems, and mapping columns.",
+          "subtopics": [
+            "Bulk editing",
+            "Product CSV import",
+            "Product CSV export",
+            "Data validation",
+            "Common import problems"
+          ],
+          "what_learner_does": "Prepares a CSV spreadsheet, imports a batch of products, and audits data accuracy.",
+          "why_it_matters": "Bulk import/export is the industry-standard method for managing large product catalogues efficiently.",
+          "expected_outcome": "Verified CSV import/export workflow with zero data corruption."
+        },
+        {
+          "lesson_number": "2.6",
+          "lesson_title": "Product Content Quality",
+          "what_is_taught": "Writing clear technical specifications, communicating accurate availability, product image compression and WebP formatting, product SEO fundamentals (schema, meta), and ethical AI-assisted copywriting with human verification.",
+          "subtopics": [
+            "Clear product specifications",
+            "Accurate availability",
+            "Image optimization",
+            "Product SEO fundamentals",
+            "Ethical AI-assisted descriptions with human verification"
+          ],
+          "what_learner_does": "Optimizes product imagery and crafts search-optimized, human-verified product descriptions.",
+          "why_it_matters": "High-quality product pages increase search rankings, conversion rates, and reduce return rates.",
+          "expected_outcome": "Polished, search-ready product listings with optimized media."
         }
       ],
       "key_concepts": [
-        "SKU",
-        "Attributes",
-        "Variations"
+        "Product Taxonomies & Types",
+        "Variable Attributes & Combinations",
+        "SKU Architecture",
+        "Stock Thresholds & Backorders",
+        "CSV Catalogue Migration"
       ],
       "tools": [
-        "WordPress Editor"
+        "WooCommerce Product Editor",
+        "CSV Spreadsheet Editor",
+        "Image Compression Tools"
       ],
-      "hands_on_practice": "Create a 10-product catalog.",
-      "assignment": "Submit shop URL.",
-      "business_application": "Inventory digitization.",
-      "expected_outcome": "Live product grid."
+      "hands_on_practice": "Create a catalogue of at least 15 demonstration products containing simple, variable, and digital types.",
+      "assignment": "Export and re-import a controlled subset of product data, verifying data integrity.",
+      "business_application": "Catalogue construction, pricing updates, and inventory auditing for merchant stores.",
+      "expected_outcome": "Structured 15+ product catalogue with working inventory management."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Checkout & Logistics",
-      "module_purpose": "Process payments and deliver goods.",
-      "what_you_will_learn": [
-        "Payment gateways",
-        "Shipping zones"
-      ],
+      "module_title": "Storefront & Checkout UX",
+      "module_purpose": "Build a responsive store experience and functional customer purchase journey.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "Stripe Integration",
-          "what_is_taught": "API keys and webhooks",
-          "why_it_matters": "Captures credit cards",
-          "what_learner_does": "Connects Stripe test mode",
-          "expected_outcome": "Working credit card form"
+          "lesson_title": "WooCommerce Storefront Design",
+          "what_is_taught": "Store homepage architecture, product listing grids, category navigation filters, featured product carousels, product detail page layouts, and mobile storefront display patterns.",
+          "subtopics": [
+            "Store homepage structure",
+            "Product listing layouts",
+            "Product category navigation",
+            "Product detail layouts",
+            "Mobile storefront patterns"
+          ],
+          "what_learner_does": "Designs a responsive store homepage featuring category banners, search, and product grids.",
+          "why_it_matters": "An attractive, intuitive storefront engages visitors and guides them directly to relevant products.",
+          "expected_outcome": "Visually cohesive, responsive storefront homepage and product catalog pages."
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "Shipping Zones",
-          "what_is_taught": "Flat rate vs free shipping",
-          "why_it_matters": "Fulfillment logistics",
-          "what_learner_does": "Configures domestic/international rates",
-          "expected_outcome": "Dynamic shipping calculation"
+          "lesson_title": "Product Page UX",
+          "what_is_taught": "Product gallery zooming and thumbnails, clear price displays, attribute variation dropdowns and swatches, real-time stock messaging, add-to-cart button placement, and trust badges.",
+          "subtopics": [
+            "Product images",
+            "Descriptions",
+            "Price visibility",
+            "Variation selection",
+            "Stock messaging",
+            "Add-to-cart interaction",
+            "Trust information"
+          ],
+          "what_learner_does": "Configures product single templates to ensure high readability, clear pricing, and prominent add-to-cart actions.",
+          "why_it_matters": "The product page is the ultimate decision point; poor UX causes immediate abandonment.",
+          "expected_outcome": "High-converting single product page layout tested across device sizes."
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "Order Management",
-          "what_is_taught": "Processing, completing, refunding",
-          "why_it_matters": "Customer service",
-          "what_learner_does": "Runs a test order and refunds it",
-          "expected_outcome": "Completed order lifecycle"
+          "lesson_title": "Cart Experience",
+          "what_is_taught": "Cart page functionality, line-item quantity adjustments, subtotal and shipping calculations, empty-cart states, coupon application fields, and cart error messaging.",
+          "subtopics": [
+            "Cart functionality",
+            "Cart totals",
+            "Quantity changes",
+            "Empty-cart states",
+            "Coupon application",
+            "Cart error messaging"
+          ],
+          "what_learner_does": "Configures and tests the cart flow, verifying coupon calculations and quantity updates.",
+          "why_it_matters": "A smooth cart page gives customers confidence in their order totals before entering checkout.",
+          "expected_outcome": "Reliable, transparent cart interface with dynamic subtotal recalculation."
+        },
+        {
+          "lesson_number": "3.4",
+          "lesson_title": "Checkout Configuration",
+          "what_is_taught": "Modern WooCommerce Checkout blocks, billing address fields, shipping address selection, order summary preview, payment method selection, form validation, customer account creation, and guest checkout options.",
+          "subtopics": [
+            "Checkout blocks",
+            "Billing information",
+            "Shipping information",
+            "Order summary",
+            "Payment method selection",
+            "Checkout validation",
+            "Customer account and guest checkout options"
+          ],
+          "what_learner_does": "Builds a modern block-based checkout page and tests both guest and registered user checkout.",
+          "why_it_matters": "Block-based checkout provides a faster, one-page experience with reduced friction and higher conversion rates.",
+          "expected_outcome": "Streamlined modern block checkout page with field validation."
+        },
+        {
+          "lesson_number": "3.5",
+          "lesson_title": "Conversion Fundamentals",
+          "what_is_taught": "Clear call-to-action styling, upfront price transparency, eliminating hidden shipping surprises, mobile usability, form field minimization, avoiding false urgency tricks, and eliminating checkout friction.",
+          "subtopics": [
+            "Clear calls to action",
+            "Price transparency",
+            "Shipping clarity",
+            "Mobile usability",
+            "Form simplicity",
+            "Avoiding misleading urgency",
+            "Reducing unnecessary checkout friction"
+          ],
+          "what_learner_does": "Conducts a mobile checkout friction audit and simplifies checkout form fields.",
+          "why_it_matters": "Transparent pricing and simple forms build long-term customer trust and maximize conversions.",
+          "expected_outcome": "Optimized mobile purchase flow with minimal friction points."
+        },
+        {
+          "lesson_number": "3.6",
+          "lesson_title": "Compatibility Awareness",
+          "what_is_taught": "Understanding Cart/Checkout block compatibility with legacy extensions, theme compatibility testing, payment gateway block support, and safe testing procedures before pushing changes to production.",
+          "subtopics": [
+            "Cart/Checkout block compatibility",
+            "Theme compatibility",
+            "Payment gateway compatibility",
+            "Testing extensions before production use"
+          ],
+          "what_learner_does": "Audits active plugins for block checkout compatibility and verifies fallback shortcode options where required.",
+          "why_it_matters": "Some legacy payment or shipping plugins do not support block checkout, risking broken orders.",
+          "expected_outcome": "Documented extension compatibility audit report."
         }
       ],
       "key_concepts": [
-        "Webhooks",
-        "Shipping Zones",
-        "Order Status"
+        "Storefront Information Design",
+        "Product Page Conversion Architecture",
+        "Cart Dynamic Calculations",
+        "Modern Block Checkout",
+        "Extension Compatibility Auditing"
       ],
       "tools": [
-        "Stripe Dashboard"
+        "WooCommerce Blocks",
+        "WordPress Site Editor",
+        "Mobile Viewport Emulators"
       ],
-      "hands_on_practice": "Execute an end-to-end purchase.",
-      "assignment": "Submit test transaction ID.",
-      "business_application": "Revenue collection.",
-      "expected_outcome": "Fully transactional store."
+      "hands_on_practice": "Build and test the complete customer purchase journey from catalog to thank-you page.",
+      "assignment": "Document usability issues identified in desktop and mobile checkout testing.",
+      "business_application": "Designing conversion-optimized e-commerce storefronts for merchants.",
+      "expected_outcome": "Responsive storefront with functional product, cart and checkout flows."
+    },
+    {
+      "module_number": "Module 04",
+      "module_title": "Payments, Taxes & Shipping",
+      "module_purpose": "Configure essential checkout transaction settings and fulfilment rules safely.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
+      "lessons": [
+        {
+          "lesson_number": "4.1",
+          "lesson_title": "Payment Methods",
+          "what_is_taught": "Payment gateway architecture, available regional gateways (Razorpay, Cashfree, Stripe, PayPal), merchant onboarding overview, processing fee realities, sandbox vs. live mode, and secure API key management.",
+          "subtopics": [
+            "Payment gateway fundamentals",
+            "Available regional gateways",
+            "Payment provider onboarding overview",
+            "Payment processing fees",
+            "Sandbox versus live mode",
+            "Gateway credentials and secure handling"
+          ],
+          "what_learner_does": "Configures payment gateway sandbox credentials and verifies test API communication.",
+          "why_it_matters": "Understanding payment security and fee structures is critical for commercial store operations.",
+          "expected_outcome": "Connected payment gateway sandbox ready for test transactions."
+        },
+        {
+          "lesson_number": "4.2",
+          "lesson_title": "Safe Payment Testing",
+          "what_is_taught": "Executing test transactions, simulating successful payments, simulating declined and failed card payments, handling pending authorizations, monitoring order status transitions, and troubleshooting webhook failures.",
+          "subtopics": [
+            "Test transactions",
+            "Successful payment simulation",
+            "Failed payment simulation",
+            "Pending payments",
+            "Order status transitions",
+            "Payment troubleshooting"
+          ],
+          "what_learner_does": "Runs both successful and deliberately failed payment simulations, logging resulting order statuses.",
+          "why_it_matters": "Stores must handle payment failures gracefully to prevent customer frustration and lost revenue.",
+          "expected_outcome": "Verified transaction test log documenting success and failure handling."
+        },
+        {
+          "lesson_number": "4.3",
+          "lesson_title": "Cash on Delivery",
+          "what_is_taught": "Cash on Delivery (COD) configuration, setting eligibility rules (e.g., minimum cart value, specific shipping methods), order confirmation workflows, and managing operational return/fraud risks.",
+          "subtopics": [
+            "COD setup",
+            "COD eligibility",
+            "Order confirmation",
+            "Operational limitations"
+          ],
+          "what_learner_does": "Configures COD with conditional restrictions and tests COD checkout placement.",
+          "why_it_matters": "COD remains a vital payment method in India but requires strict operational rules to manage risk.",
+          "expected_outcome": "Configured COD payment workflow with defined eligibility constraints."
+        },
+        {
+          "lesson_number": "4.4",
+          "lesson_title": "Indian Shipping Configuration",
+          "what_is_taught": "Configuring shipping zones (Local, State, National), postal-code filters, flat-rate shipping, free shipping conditions (coupons, minimum spend), local pickup, shipping classes (e.g., Heavy, Fragile), and clear delivery policy communication.",
+          "subtopics": [
+            "Shipping zones",
+            "State and postal-code considerations",
+            "Flat-rate shipping",
+            "Free shipping conditions",
+            "Local pickup where appropriate",
+            "Shipping classes",
+            "Delivery policy communication"
+          ],
+          "what_learner_does": "Sets up Indian regional shipping zones, flat-rate pricing, and free shipping thresholds.",
+          "why_it_matters": "Clear shipping calculation prevents cart abandonment and ensures delivery costs are covered.",
+          "expected_outcome": "Configured multi-tier shipping zone system with tested delivery rates."
+        },
+        {
+          "lesson_number": "4.5",
+          "lesson_title": "Coupons and Discounts",
+          "what_is_taught": "Creating percentage discounts, fixed cart discounts, fixed product discounts, setting coupon restrictions (minimum spend, excluded sale items), usage limits (per coupon, per user), and testing promotional rules.",
+          "subtopics": [
+            "Fixed-cart coupons",
+            "Fixed-product coupons",
+            "Percentage discounts",
+            "Coupon restrictions",
+            "Usage limits",
+            "Discount testing"
+          ],
+          "what_learner_does": "Creates promotional coupons and tests application across eligible and restricted carts.",
+          "why_it_matters": "Promotional campaigns drive sales but require strict limits to safeguard profit margins.",
+          "expected_outcome": "Configured discount rules with validated restriction controls."
+        },
+        {
+          "lesson_number": "4.6",
+          "lesson_title": "Tax Configuration",
+          "what_is_taught": "Basic WooCommerce tax settings, standard and custom tax classes, tax-inclusive vs. tax-exclusive pricing display, shipping tax calculations, Indian GST configuration principles, and invoice plugin selection.",
+          "subtopics": [
+            "Basic WooCommerce tax settings",
+            "Tax classes and rates",
+            "Tax-inclusive versus tax-exclusive display",
+            "Shipping tax awareness",
+            "GST-related configuration concepts",
+            "Invoice/plugin selection considerations"
+          ],
+          "what_learner_does": "Configures standard tax rates and verifies tax display on product and cart pages.",
+          "why_it_matters": "Proper operational tax display ensures transparency and compliance with tax laws.",
+          "expected_outcome": "Documented tax configuration with verified line-item tax calculations."
+        },
+        {
+          "lesson_number": "4.7",
+          "lesson_title": "Customer Notifications",
+          "what_is_taught": "Configuring WooCommerce transactional emails: New Order (admin), Processing Order (customer), Completed Order, and Cancellation/Refund alerts; SMTP setup, email deliverability testing, and troubleshooting.",
+          "subtopics": [
+            "New order emails",
+            "Processing order notifications",
+            "Completed order emails",
+            "Cancellation/refund communications",
+            "Email configuration and safe testing",
+            "Delivery troubleshooting"
+          ],
+          "what_learner_does": "Customizes email notification branding and tests delivery using a safe mail logger.",
+          "why_it_matters": "Automated, reliable transactional emails are vital for customer reassurance and order tracking.",
+          "expected_outcome": "Branded, fully tested transactional notification pipeline."
+        }
+      ],
+      "key_concepts": [
+        "Payment Gateway Sandboxes",
+        "Transaction Status Transitions",
+        "Regional Shipping Zones & Classes",
+        "Indian GST Display Configuration",
+        "Transactional Email Deliverability"
+      ],
+      "tools": [
+        "Payment Sandbox (Razorpay / Stripe)",
+        "WooCommerce Shipping Engine",
+        "Mail Logging / SMTP Tools"
+      ],
+      "hands_on_practice": "Configure a test payment gateway sandbox and set up multi-tier shipping zones.",
+      "assignment": "Test checkout using different shipping addresses, coupons, payment states and order values.",
+      "business_application": "Setting up commercial payment processing, shipping logistics, and customer communications.",
+      "expected_outcome": "Documented payment, tax, shipping and notification configuration."
+    },
+    {
+      "module_number": "Module 05",
+      "module_title": "Store Administration & Reliability",
+      "module_purpose": "Operate WooCommerce safely and identify common store reliability issues.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
+      "lessons": [
+        {
+          "lesson_number": "5.1",
+          "lesson_title": "Order Administration",
+          "what_is_taught": "Navigating the WooCommerce order dashboard, moving orders through statuses (Pending, Processing, On Hold, Completed, Cancelled, Refunded), adding customer notes, tracking shipments, and handling refunds.",
+          "subtopics": [
+            "Order dashboard",
+            "Processing orders",
+            "Order status changes",
+            "Fulfilment information",
+            "Cancellation workflows",
+            "Refund handling",
+            "Customer communication"
+          ],
+          "what_learner_does": "Processes an incoming order from 'Processing' to 'Completed', adds private notes, and sends customer updates.",
+          "why_it_matters": "Efficient order management ensures accurate fulfillment and prompt customer communication.",
+          "expected_outcome": "Demonstrated competency in full order lifecycle administration."
+        },
+        {
+          "lesson_number": "5.2",
+          "lesson_title": "Inventory Operations",
+          "what_is_taught": "Observing automated stock reduction upon order placement, restock behavior upon order cancellation, tracking low-stock notifications, manual stock adjustments, and inventory reconciliation principles.",
+          "subtopics": [
+            "Stock reduction after orders",
+            "Restock behavior",
+            "Order cancellation effects",
+            "Low-stock monitoring",
+            "Inventory reconciliation basics"
+          ],
+          "what_learner_does": "Places an order, verifies stock reduction, cancels the order, and confirms automated stock restoration.",
+          "why_it_matters": "Accurate real-time inventory synchronization is the backbone of reliable e-commerce fulfillment.",
+          "expected_outcome": "Validated inventory decrement and restoration test evidence."
+        },
+        {
+          "lesson_number": "5.3",
+          "lesson_title": "High-Performance Order Storage (HPOS)",
+          "what_is_taught": "Understanding HPOS architecture (dedicated custom order tables vs. legacy WordPress posts table), database scalability benefits, checking extension and theme compatibility, safe testing before enabling, and rollback awareness.",
+          "subtopics": [
+            "HPOS fundamentals",
+            "Order data architecture awareness",
+            "HPOS compatibility",
+            "Extension compatibility checks",
+            "Safe testing during updates",
+            "Backup and rollback awareness"
+          ],
+          "what_learner_does": "Audits store extensions for HPOS compatibility and reviews order table architecture.",
+          "why_it_matters": "HPOS represents the modern standard for WooCommerce, boosting database query speed during peak sales.",
+          "expected_outcome": "Documented HPOS compatibility evaluation and architecture report."
+        },
+        {
+          "lesson_number": "5.4",
+          "lesson_title": "Website Maintenance",
+          "what_is_taught": "Safe update routines for WordPress core, WooCommerce, and extensions; staging site workflows, backup scheduling, restoration testing, user privilege controls, and basic store security hardening.",
+          "subtopics": [
+            "WordPress and WooCommerce updates",
+            "Plugin update reviews",
+            "Backup scheduling",
+            "Restoration awareness",
+            "Administrative access management",
+            "Security fundamentals"
+          ],
+          "what_learner_does": "Creates a pre-update store backup, tests updates on staging, and documents maintenance routines.",
+          "why_it_matters": "Unplanned live updates can corrupt customer orders or break payment gateway processing.",
+          "expected_outcome": "Established store maintenance checklist and automated backup schedule."
+        },
+        {
+          "lesson_number": "5.5",
+          "lesson_title": "Store Analytics",
+          "what_is_taught": "Using WooCommerce Analytics (Revenue, Orders, Products, Categories, Coupons, Taxes, Downloads, Stock), GA4 e-commerce measurement concepts, privacy/consent compliance, and conversion drop-off diagnostics.",
+          "subtopics": [
+            "WooCommerce Analytics",
+            "Sales reporting",
+            "Order reporting",
+            "Product performance",
+            "Inventory reporting",
+            "GA4 e-commerce measurement introduction",
+            "Consent and privacy considerations",
+            "Basic conversion diagnostics"
+          ],
+          "what_learner_does": "Analyzes store sales reports, identifies top-performing products, and reviews inventory valuation.",
+          "why_it_matters": "Data-driven analytics empower merchants to identify profitable products and improve marketing ROI.",
+          "expected_outcome": "Compiled store performance report with key sales and inventory metrics."
+        },
+        {
+          "lesson_number": "5.6",
+          "lesson_title": "Performance and Troubleshooting",
+          "what_is_taught": "Auditing store speed using Google PageSpeed Insights and Lighthouse, image optimization, caching strategies, mandatory caching exclusions (Cart, Checkout, My Account), mobile speed, plugin conflict resolution, and inspecting error logs.",
+          "subtopics": [
+            "PageSpeed Insights",
+            "Lighthouse basics",
+            "Image loading",
+            "Caching considerations",
+            "Checkout caching exclusions",
+            "Mobile performance",
+            "Plugin conflicts",
+            "Error logs and diagnostics introduction"
+          ],
+          "what_learner_does": "Configures caching exclusion rules and inspects WooCommerce system status error logs.",
+          "why_it_matters": "Proper caching exclusions ensure customers always see their own updated carts and personal order details.",
+          "expected_outcome": "Optimized store configuration with verified caching exclusions and clean error logs."
+        }
+      ],
+      "key_concepts": [
+        "Order Lifecycle Administration",
+        "Inventory Restocking Mechanics",
+        "High-Performance Order Storage (HPOS)",
+        "Staging Update Protocols",
+        "Checkout Caching Exclusions"
+      ],
+      "tools": [
+        "WooCommerce Analytics",
+        "PageSpeed Insights",
+        "System Status Diagnostics",
+        "Backup & Staging Tools"
+      ],
+      "hands_on_practice": "Simulate an order cancellation, a refund scenario, and inventory reconciliation.",
+      "assignment": "Create a store maintenance and incident-response checklist.",
+      "business_application": "Managing daily store operations, resolving transaction issues, and maintaining uptime.",
+      "expected_outcome": "Order administration documentation, analytics evidence and store reliability checklist."
+    },
+    {
+      "module_number": "Module 06",
+      "module_title": "E-Commerce Capstone",
+      "module_purpose": "Deliver a complete demonstration store with validated operations and professional handover.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
+      "lessons": [
+        {
+          "lesson_number": "6.1",
+          "lesson_title": "Final Store Assembly",
+          "what_is_taught": "Final catalogue review (at least 15 active products), homepage polish, shop and product pages consistency, cart and checkout flow, customer account access, and verifying payment and shipping settings.",
+          "subtopics": [
+            "Catalogue review",
+            "Homepage",
+            "Shop and product pages",
+            "Cart and checkout",
+            "Customer account flow",
+            "Shipping and payment settings"
+          ],
+          "what_learner_does": "Assembles and reviews the complete demonstration store to verify commercial visual and functional polish.",
+          "why_it_matters": "Ensures every aspect of the store operates as a unified, professional commercial ecosystem.",
+          "expected_outcome": "Complete, cohesive 15+ product demonstration store ready for acceptance testing."
+        },
+        {
+          "lesson_number": "6.2",
+          "lesson_title": "End-to-End Order Testing",
+          "what_is_taught": "Executing the 7 mandatory test scenarios: successful purchase, payment failure simulation, pending payment handling, order cancellation, refund processing, stock updates, and customer transactional emails.",
+          "subtopics": [
+            "Successful order placement",
+            "Failed payment",
+            "Pending payment",
+            "Order cancellation",
+            "Refund handling",
+            "Stock updates",
+            "Customer emails"
+          ],
+          "what_learner_does": "Runs and documents all 7 mandatory testing scenarios with screenshots and transaction logs.",
+          "why_it_matters": "Validates that the store handles both ideal purchases and edge-case exceptions reliably.",
+          "expected_outcome": "Comprehensive test execution report covering all 7 mandatory operational scenarios."
+        },
+        {
+          "lesson_number": "6.3",
+          "lesson_title": "Quality Assurance",
+          "what_is_taught": "Mobile testing, desktop cross-browser validation (Chrome, Safari, Firefox, Edge), form field validation, cart calculation accuracy, checkout reliability, variation selection checks, and broken link testing.",
+          "subtopics": [
+            "Mobile testing",
+            "Desktop testing",
+            "Form validation",
+            "Cart accuracy",
+            "Checkout reliability",
+            "Variation selection",
+            "Broken link testing",
+            "Safe test-data handling"
+          ],
+          "what_learner_does": "Conducts a rigorous cross-device QA audit and logs verified test passes.",
+          "why_it_matters": "Prevents embarrassing customer-facing bugs and checkout drop-offs prior to public launch.",
+          "expected_outcome": "Completed pre-launch quality assurance audit checklist."
+        },
+        {
+          "lesson_number": "6.4",
+          "lesson_title": "Reporting",
+          "what_is_taught": "Extracting product sales reports, order summary reports, inventory stock level reports, summarizing test results, and recording basic store performance observations.",
+          "subtopics": [
+            "Product reports",
+            "Sales and order reports",
+            "Inventory report",
+            "Test results summary",
+            "Basic store performance observations"
+          ],
+          "what_learner_does": "Generates an executive operational summary report from the completed test orders.",
+          "why_it_matters": "Demonstrates practical analytical competence in interpreting store performance data.",
+          "expected_outcome": "Executive store operations and analytics report."
+        },
+        {
+          "lesson_number": "6.5",
+          "lesson_title": "Launch Readiness",
+          "what_is_taught": "Domain and SSL checklist, production payment gateway requirements, shipping policy review, tax configuration audit, backup verification, security checks, and operational documentation.",
+          "subtopics": [
+            "Domain and SSL checklist",
+            "Production gateway requirements",
+            "Shipping policy review",
+            "Tax configuration review",
+            "Backup readiness",
+            "Security checks",
+            "Customer email readiness",
+            "Operational documentation"
+          ],
+          "what_learner_does": "Conducts a comprehensive pre-launch audit to verify production readiness.",
+          "why_it_matters": "A formal launch checklist prevents premature deployment and operational oversights.",
+          "expected_outcome": "Validated pre-launch readiness audit document."
+        },
+        {
+          "lesson_number": "6.6",
+          "lesson_title": "Client Handover",
+          "what_is_taught": "Authoring a store administration guide, product upload instructions, order processing handbook, refund workflow guide, maintenance checklist, and conducting a client walkthrough.",
+          "subtopics": [
+            "Store administration guide",
+            "Product upload guide",
+            "Order processing guide",
+            "Refund workflow guide",
+            "Maintenance checklist",
+            "Client training walkthrough"
+          ],
+          "what_learner_does": "Compiles a comprehensive Client Store Handover Guide and records a demonstration walkthrough.",
+          "why_it_matters": "Empowers clients to manage daily orders and inventory safely without breaking store configuration.",
+          "expected_outcome": "Professional Client Store Administration & Handover Handbook."
+        }
+      ],
+      "key_concepts": [
+        "15+ Product Storefront Assembly",
+        "7 Mandatory Operational Test Scenarios",
+        "Cross-Browser E-Commerce QA",
+        "Pre-Launch Verification Auditing",
+        "Client Operational Handover"
+      ],
+      "tools": [
+        "WooCommerce Storefront",
+        "Testing Sandboxes",
+        "Documentation / Markdown",
+        "Screen Recording"
+      ],
+      "hands_on_practice": "Perform a documented end-to-end operational acceptance test of the complete demo store.",
+      "assignment": "Deliver the functioning demonstration store with at least 15 products and comprehensive operational documentation.",
+      "business_application": "Executing a complete commercial e-commerce delivery and client handover.",
+      "expected_outcome": "A functioning demonstration WooCommerce store with at least 15 products and comprehensive operational documentation."
     }
-  ]
+  ],
+  "faq": [
+    {
+      "question": "What will I learn in this WooCommerce course?",
+      "answer": "You will learn to create and manage WooCommerce stores using WordPress, including products, inventory, cart and checkout, payment testing, shipping, taxes, orders, refunds and essential reporting."
+    },
+    {
+      "question": "Do I need WordPress knowledge before joining?",
+      "answer": "Yes, basic WordPress knowledge is recommended. Beginners can complete Course 62 or demonstrate equivalent skills through a readiness assessment."
+    },
+    {
+      "question": "Is WooCommerce completely free?",
+      "answer": "The WooCommerce core plugin is free, but hosting, domains, payment processing and optional premium extensions may have additional costs."
+    },
+    {
+      "question": "Will I learn payment gateway integration?",
+      "answer": "Yes. You will learn payment configuration and safe testing using a suitable region-supported sandbox or simulated payment workflow."
+    },
+    {
+      "question": "Will I build an actual working store?",
+      "answer": "You will build a functional demonstration store with at least 15 products, product variations, cart and checkout workflows, shipping rules, test orders and operational documentation."
+    },
+    {
+      "question": "Does the course include inventory management?",
+      "answer": "Yes. You will learn product stock settings, SKU management, stock updates and basic inventory administration."
+    },
+    {
+      "question": "Will I learn shipping and tax settings for Indian stores?",
+      "answer": "The course introduces relevant WooCommerce shipping and tax configuration workflows, including Indian shipping zones and GST-related concepts. Business-specific legal compliance requires separate verification."
+    },
+    {
+      "question": "What is HPOS in WooCommerce?",
+      "answer": "High-Performance Order Storage is WooCommerce's dedicated order-storage architecture. The course introduces its purpose and the importance of compatible themes, plugins and integrations."
+    },
+    {
+      "question": "Can I start offering WooCommerce freelance services?",
+      "answer": "The course develops practical skills applicable to beginner-level WooCommerce store setup and administration. Freelance income and client acquisition are not guaranteed."
+    },
+    {
+      "question": "How long is the course and what is the fee?",
+      "answer": "The course lasts eight weeks, includes 64 guided training hours and has a listed fee of ₹9,900, subject to the website's verified pricing and tax policy."
+    },
+    {
+      "question": "Why does the course prioritize block checkout over shortcodes?",
+      "answer": "Modern WooCommerce Cart and Checkout blocks provide faster page loads, fewer form fields, and a seamless one-page mobile checkout experience. We teach block checkout as the modern default, while also auditing extension compatibility."
+    },
+    {
+      "question": "How are payment test scenarios conducted without real credit cards?",
+      "answer": "All payment testing is conducted strictly in sandbox mode using authorized test credentials (such as Razorpay or Stripe test cards) or safe simulated checkout methods. Students never use real money or expose live card details."
+    },
+    {
+      "question": "What test scenarios must I prove for my portfolio project?",
+      "answer": "You must demonstrate 7 operational scenarios: successful order placement, declined payment handling, automatic inventory reduction, order cancellation with restock, refund processing, transactional email trigger, and conditional shipping/coupon calculations."
+    },
+    {
+      "question": "What is included in the Client Store Handover deliverable?",
+      "answer": "The client handover package includes a non-technical Store Administration Guide, product upload instructions, order fulfillment steps, refund workflow procedures, and a recorded walkthrough demonstration."
+    },
+    {
+      "question": "Will I receive a verifiable certificate upon completion?",
+      "answer": "Yes. Students who complete all six curriculum modules, deliver the 15+ product demonstration store, verify all 7 test scenarios, and pass the evaluation with at least 70% earn the verified Nova Skills Certificate of Completion in WooCommerce Store Development & Operations."
+    }
+  ],
+  "primary_keyword": "WooCommerce course in India",
+  "secondary_keywords": [
+    "WooCommerce training",
+    "WooCommerce course for beginners",
+    "WooCommerce store development course",
+    "WooCommerce certification course",
+    "WordPress e-commerce course",
+    "WooCommerce payment gateway training",
+    "WooCommerce inventory management",
+    "WooCommerce checkout setup",
+    "WooCommerce store management",
+    "Learn WooCommerce online"
+  ],
+  "keywords": [
+    "WooCommerce course in India",
+    "WooCommerce training",
+    "WooCommerce course for beginners",
+    "WooCommerce store development course",
+    "WooCommerce certification course",
+    "WordPress e-commerce course",
+    "WooCommerce payment gateway training",
+    "WooCommerce inventory management",
+    "WooCommerce checkout setup",
+    "WooCommerce store management",
+    "Learn WooCommerce online"
+  ],
+  "seo": {
+    "seo_title": "WooCommerce Course in India (8 Weeks) | Nova Skills",
+    "meta_title": "WooCommerce Course in India (8 Weeks) | Nova Skills",
+    "seo_description": "Learn WooCommerce store setup, products, checkout, payments, shipping and inventory in 8 weeks (64h). Build a 15+ product demo store. Fee ₹9,900.",
+    "meta_description": "Learn WooCommerce store setup, products, checkout, payments, shipping and inventory in 8 weeks (64h). Build a 15+ product demo store. Fee ₹9,900.",
+    "primary_keyword": "WooCommerce course in India",
+    "secondary_keywords": [
+      "WooCommerce training",
+      "WooCommerce course for beginners",
+      "WooCommerce store development course",
+      "WooCommerce certification course",
+      "WordPress e-commerce course",
+      "WooCommerce payment gateway training",
+      "WooCommerce inventory management",
+      "WooCommerce checkout setup",
+      "WooCommerce store management",
+      "Learn WooCommerce online"
+    ],
+    "canonical_url": "https://novaskills.in/course-detail.html?id=woocommerce-cert"
+  }
 }

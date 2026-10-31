@@ -1,398 +1,1621 @@
 {
   "course_id": "javascript-cert",
-  "course_name": "JavaScript",
+  "id": "javascript-cert",
+  "slug": "javascript-cert",
+  "course_name": "Modern JavaScript & TypeScript Foundations",
+  "title": "Modern JavaScript & TypeScript Foundations",
+  "name": "Modern JavaScript & TypeScript Foundations",
+  "academic_sequence": 56,
+  "course_number": 56,
+  "curriculum_edition": "2027 Standards & TypeScript Foundations Edition",
   "academy": "Programming Academy",
   "academy_id": "programming",
-  "course_type": "MICRO",
-  "course_role": "Core Skill",
-  "level": "BEGINNER",
-  "duration": "1 Month",
-  "learning_hours": 40,
-  "future_review_status": "EVOLVING",
-  "target_audience": {
-    "best_for": [
-      "Aspiring professionals aiming to master JavaScript and secure industry roles.",
-      "Current developers wanting to upskill using modern VS Code workflows.",
-      "Freelancers looking to offer JavaScript services to clients."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in html-css should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Students looking for purely theoretical knowledge without hands-on implementation.",
-      "Individuals unwilling to engage in active problem-solving and coding."
-    ]
+  "academyId": "programming",
+  "academic_positioning": "JavaScript Language Core, DOM Browser Interactions, Asynchronous APIs & TypeScript Foundations",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "PROFESSIONAL",
+  "course_role": "Junior JavaScript & TypeScript Application Developer",
+  "level": "Beginner to Intermediate",
+  "priority": "High",
+  "duration": "8 Weeks",
+  "durationMonths": 2,
+  "duration_weeks": 8,
+  "learning_hours": 64,
+  "learningHours": 64,
+  "guided_hours": 64,
+  "hours": 64,
+  "weekly_workload": "8 Hours / Week",
+  "mode": "Interactive Software Labs & Guided Workplace Simulation",
+  "price": 9900,
+  "fee": 9900,
+  "regular_fee": 9900,
+  "originalPrice": 9900,
+  "commercial_notice": "Transparent pricing policy. No fictitious comparison pricing, artificial discounts, or countdown timers.",
+  "pricing": {
+    "currency": "INR",
+    "symbol": "₹",
+    "amount": 9900,
+    "formatted": "₹9,900",
+    "discount": "0%",
+    "discounted": false,
+    "pricing_model": "Flat Tuition Fee"
   },
-  "prerequisites": {
-    "required": "html-css",
-    "recommended": "Basic domain workflow understanding",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
-    "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "JavaScript, Git & GitHub, VS Code (student/free tiers sufficient for coursework)"
-    }
+  "tagline": "Turn Static Websites Into Interactive Applications With Modern JavaScript.",
+  "hero_headline": "Modern JavaScript & TypeScript Foundations",
+  "hero_supporting_heading": "Turn Static Websites Into Interactive Applications With Modern JavaScript.",
+  "hero_supporting_headline": "Master JavaScript programming through practical exercises, browser interactions, asynchronous workflows, API integration and TypeScript foundations. Build working applications, debug code confidently and develop the programming skills needed for React and Node.js.",
+  "h1": "Modern JavaScript & TypeScript Foundations",
+  "seo_title": "JavaScript & TypeScript Course | 8 Weeks, ₹9,900 | Nova Skills",
+  "meta_title": "JavaScript & TypeScript Course | 8 Weeks, ₹9,900 | Nova Skills",
+  "seo_description": "Learn JavaScript, DOM, APIs, TypeScript and Vite. Build two working browser applications in 8 weeks, 64 learning hours, for ₹9,900.",
+  "meta_description": "Learn JavaScript, DOM, APIs, TypeScript and Vite. Build two working browser applications in 8 weeks, 64 learning hours, for ₹9,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=javascript-cert",
+  "hero": {
+    "title": "Modern JavaScript & TypeScript Foundations",
+    "subtitle": "JavaScript Core, DOM Manipulation, Asynchronous APIs & TypeScript Foundations",
+    "hook": "Turn Static Websites Into Interactive Applications With Modern JavaScript.",
+    "secondary_proposition": "From Programming Fundamentals to Working Browser Apps — Learn JavaScript, APIs, TypeScript and Modern Development Tools Through Real Projects.",
+    "description": "Learn how to transform static HTML and CSS websites into functional, interactive browser applications using modern JavaScript and introductory TypeScript. Build practical coding logic, asynchronous data workflows, and typed interfaces backed by real application repositories."
   },
+  "short_description": "Master JavaScript programming through practical exercises, browser interactions, asynchronous workflows, API integration and TypeScript foundations. Build working applications, debug code confidently and develop the programming skills needed for React and Node.js.",
+  "shortDesc": "Master JavaScript programming through practical exercises, browser interactions, asynchronous workflows, API integration and TypeScript foundations. Build working applications, debug code confidently and develop the programming skills needed for React and Node.js.",
+  "full_description": "Learn how to transform static HTML and CSS websites into functional, interactive browser applications using modern JavaScript and introductory TypeScript.\n\nThis practical Modern JavaScript & TypeScript Foundations course develops strong programming fundamentals before introducing advanced browser interactions, asynchronous programming and professional development tools.\n\nStart with variables, data types, conditions, loops, functions and logical problem-solving. Learn to work confidently with arrays, objects, destructuring, spread and rest syntax, scope, callbacks, closures and JavaScript modules.\n\nBuild interactive website features using the DOM, event listeners, accessible forms, validation, UI state and local browser storage.\n\nMaster asynchronous JavaScript fundamentals through Promises, async/await, Fetch API, JSON, HTTP requests, network errors and API response handling.\n\nLearn introductory TypeScript skills including type annotations, interfaces, unions, type narrowing, basic generics and type-safe application code.\n\nExplore professional development workflows using VS Code, browser DevTools, npm, Vite, ESLint, Vitest and Git/GitHub.\n\nBuild two complete portfolio applications: an interactive business application featuring forms, search/filters and local persistence, and an API-powered application with properly designed loading, empty, success and error states.\n\nDevelop the confidence to explain, debug, test and maintain your code while preparing for more advanced React and Node.js learning.\n\nThe programme focuses on practical JavaScript programming, working browser applications and introductory TypeScript—not advanced React architecture, server-side Node.js or full-stack development.",
+  "fullDesc": "Learn how to transform static HTML and CSS websites into functional, interactive browser applications using modern JavaScript and introductory TypeScript.\n\nThis practical Modern JavaScript & TypeScript Foundations course develops strong programming fundamentals before introducing advanced browser interactions, asynchronous programming and professional development tools.\n\nStart with variables, data types, conditions, loops, functions and logical problem-solving. Learn to work confidently with arrays, objects, destructuring, spread and rest syntax, scope, callbacks, closures and JavaScript modules.\n\nBuild interactive website features using the DOM, event listeners, accessible forms, validation, UI state and local browser storage.\n\nMaster asynchronous JavaScript fundamentals through Promises, async/await, Fetch API, JSON, HTTP requests, network errors and API response handling.\n\nLearn introductory TypeScript skills including type annotations, interfaces, unions, type narrowing, basic generics and type-safe application code.\n\nExplore professional development workflows using VS Code, browser DevTools, npm, Vite, ESLint, Vitest and Git/GitHub.\n\nBuild two complete portfolio applications: an interactive business application featuring forms, search/filters and local persistence, and an API-powered application with properly designed loading, empty, success and error states.\n\nDevelop the confidence to explain, debug, test and maintain your code while preparing for more advanced React and Node.js learning.\n\nThe programme focuses on practical JavaScript programming, working browser applications and introductory TypeScript—not advanced React architecture, server-side Node.js or full-stack development.",
+  "description": "Master JavaScript programming through practical exercises, browser interactions, asynchronous workflows, API integration and TypeScript foundations. Build working applications, debug code confidently and develop the programming skills needed for React and Node.js.",
   "overview": {
-    "positioning": "Keep as standalone language certification.",
-    "short_description": "Comprehensive curriculum covering VS Code, Node.js, Chrome DevTools to build production-grade projects.",
+    "positioning": "Independent JavaScript-first, TypeScript-enabled certification developing core programming logic, DOM browser interactions, asynchronous API handling, and tested application delivery.",
+    "short_description": "Comprehensive 8-week, 64-hour practical curriculum mastering modern JavaScript (ES6+), DOM APIs, async/await, Fetch, introductory TypeScript, Vite, ESLint, and Vitest testing.",
     "key_facts": {
-      "level": "BEGINNER",
-      "duration": "1 Month",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "40 Hours",
-      "project_count": "PRACTICAL",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Junior JavaScript Developer"
+      "level": "BEGINNER TO INTERMEDIATE",
+      "duration": "8 Weeks",
+      "format": "Interactive Software Labs & Guided Workplace Simulation",
+      "estimated_learning_hours": "64 Hours",
+      "project_count": "2 Working Browser Applications",
+      "capstone": "API-Powered Browser Application (with TypeScript & Vitest)",
+      "ai_integration": "AI-AUGMENTED (Human-Verified Code)",
+      "career_focus": "Junior JavaScript Developer / Frontend Development Trainee"
     },
     "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end solutions using VS Code.",
-      "Solve concrete business problems applying JavaScript principles.",
-      "Package professional case studies demonstrating verifiable skills."
+      "Write standard, modern JavaScript (ES6+) utilizing clean variables, control flow, functions, and algorithmic thinking.",
+      "Manipulate structured data with arrays, objects, destructuring, spread syntax, higher-order methods, and pure functions.",
+      "Transform static HTML pages into dynamic browser applications using DOM selection, event delegation, and accessible forms.",
+      "Implement local browser persistence using localStorage with serialization, storage limits, and error handling.",
+      "Fetch and display remote data asynchronously using Promises, async/await, JSON parsing, and resilient HTTP error boundaries.",
+      "Add TypeScript type safety to browser applications with annotations, interfaces, union types, type narrowing, and basic generics.",
+      "Utilize modern developer toolchains: VS Code, Chrome DevTools breakpoints, npm, Vite dev server, ESLint, and Vitest unit testing.",
+      "Version-control projects with Git and publish deployable static application builds to GitHub Pages."
     ]
   },
   "why_now": {
-    "industry_shift": "JavaScript powers the modern interactive web, single-page applications, and serverless architectures as the world's most ubiquitous programming language.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can deliver robust JavaScript solutions efficiently.",
-    "career_opportunity": "Mastering these tools opens doors to high-paying specialized roles and global freelance opportunities."
+    "industry_shift": "JavaScript remains the foundational programming language of the web. In 2027, frontend development teams demand developers who write robust vanilla JavaScript, understand asynchronous execution and the event loop, and write type-safe TypeScript before jumping into heavy application frameworks.",
+    "ai_impact": "While AI code generators produce quick snippets, production stability requires developers who understand closures, scope, reference mutation, and asynchronous race conditions to debug and audit AI code safely.",
+    "business_demand": "Modern web interfaces, single-page applications, and interactive portals require responsive, error-resilient client-side logic that handles network latency, empty states, and local persistence smoothly.",
+    "career_opportunity": "Mastering JavaScript programming and TypeScript foundations is the mandatory prerequisite for advancing into specialized React engineering, Node.js backend development, and high-paying frontend engineering roles."
   },
-  "learning_outcomes": [
-    "PLAN: Formulate project architectures utilizing VS Code.",
-    "BUILD: Construct professional deliverables using modern workflows.",
-    "OPTIMIZE: Refine outputs against strict quality metrics."
+  "icon": "💻",
+  "color": "linear-gradient(135deg, #004672, #0599a8)",
+  "rating": 4.9,
+  "reviews": 245,
+  "students": 1560,
+  "liveProjects": 2,
+  "projects": 2,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=javascript-cert",
+  "tags": [
+    "popular",
+    "trending",
+    "javascript",
+    "typescript",
+    "es6",
+    "dom",
+    "async-await",
+    "fetch-api",
+    "vite",
+    "vitest",
+    "certification"
   ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
-      },
-      {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
-      },
-      {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      }
-    ]
+  "featured": true,
+  "category": "Programming Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "positioning": "JavaScript Language Core, DOM Browser Interactions, Asynchronous APIs & TypeScript Foundations",
+  "target_audience": [
+    "HTML and CSS learners seeking to add real programming logic and interactivity to their websites",
+    "Complete programming beginners looking for a disciplined, JavaScript-first learning foundation",
+    "Students preparing for advanced frontend engineering, React certifications, and Node.js programmes",
+    "Graphic and web designers transitioning from static layouts into frontend interaction programming",
+    "Figma-to-code learners who want to make their browser prototypes fully functional",
+    "Aspiring frontend developers and software engineering students building an employable GitHub portfolio",
+    "Freelancers aiming to build custom client-side web applications, calculators, and interactive forms",
+    "Career switchers moving into technology roles requiring practical JavaScript and TypeScript skills",
+    "Digital marketers and technical SEO practitioners needing to understand browser DOM execution and API requests"
+  ],
+  "prerequisites": {
+    "required": [
+      "Basic working knowledge of HTML and CSS (document structure, semantic elements, classes, IDs, forms, buttons)",
+      "Completion of Course 55 (HTML, CSS & Responsive Web Design) or an equivalent foundational background",
+      "Familiarity with web browsers, browser developer inspection tools, and file/folder management"
+    ],
+    "not_required": [
+      "No previous programming or scripting experience in JavaScript or other languages required",
+      "No prior knowledge of TypeScript required (taught systematically starting in Module 05)",
+      "No React, Vue, Angular, or backend Node.js server experience needed",
+      "No advanced mathematics or computer science degree required"
+    ],
+    "recommended": "Curiosity about programming logic and willingness to write, test, and debug code hands-on in VS Code and Chrome DevTools",
+    "system_requirements": {
+      "hardware": "Standard laptop or desktop PC (Windows, macOS, or Linux) with 8GB+ RAM recommended",
+      "software_accounts": "Modern web browser (Google Chrome), VS Code editor (free), Node.js LTS (for local tooling/npm), Git (free), GitHub account"
+    }
   },
+  "highlights": [
+    "Understand JavaScript First — Pure Programming Logic Before Frameworks",
+    "Modern ES6+ Syntax: let/const, Template Literals, Destructuring & Spread",
+    "Deep Language Concepts: Scope, Lexical Environments, Closures & Callbacks",
+    "Array & Object Data Transformations (map, filter, reduce, find, sort)",
+    "Safe DOM Manipulation & Event Delegation Architecture",
+    "Accessible Form Handling, Client-Side Validation & Dynamic UI State",
+    "Local Browser Persistence Using localStorage & JSON Serialization",
+    "Asynchronous Mastery: Promises, async/await, and Fetch API Integration",
+    "Robust HTTP Error Boundaries: Loading, Empty, Success & Error States",
+    "Introductory TypeScript: Type Annotations, Interfaces, Unions & Narrowing",
+    "Modern Tooling Workflow: VS Code, Chrome DevTools Breakpoints, npm & Vite",
+    "Code Quality & Testing: ESLint Configuration & Vitest Unit Test Suites",
+    "Security Hygiene: Safe DOM Text Injection & Securing Frontend API Keys",
+    "Git Version Control, Commit Hygiene & GitHub Repository Management",
+    "Static Web Application Deployment via GitHub Pages",
+    "Two Assessed Working Applications With Source Code & Live Demonstrations"
+  ],
   "hands_on_tech": {
     "core_tools": [
       {
+        "tool": "JavaScript (ES6+)",
+        "purpose": "Primary programming language for application logic, DOM interactions, data structures, and asynchronous workflows.",
+        "what_student_learns": "Variables, control flow, functions, arrays, objects, closures, ES modules, Promises, async/await, and Fetch API.",
+        "what_student_builds": "Working browser application logic, state controllers, and data processors."
+      },
+      {
+        "tool": "TypeScript",
+        "purpose": "Type-safe superset of JavaScript providing compile-time type checking, interfaces, and developer productivity tooling.",
+        "what_student_learns": "Type annotations, interfaces, type aliases, union types, type narrowing, and basic generics.",
+        "what_student_builds": "Type-safe utility modules, typed API models, and refactored application components."
+      },
+      {
         "tool": "VS Code",
-        "purpose": "Core utility for javascript-cert.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
+        "purpose": "Industry-standard code editor with rich JavaScript/TypeScript language server support.",
+        "what_student_learns": "Code navigation, IntelliSense, integrated terminal, ESLint integration, and multi-file project organization.",
+        "what_student_builds": "Clean, modular codebases adhering to standard formatting and linting rules."
       },
       {
-        "tool": "Node.js",
-        "purpose": "Core utility for javascript-cert.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
+        "tool": "Browser DevTools",
+        "purpose": "In-browser runtime inspection, JavaScript console, debugging breakpoints, call stack analysis, and network request monitoring.",
+        "what_student_learns": "Console methods, sources breakpoint debugging, step-over/step-into execution, watch expressions, and network panel inspection.",
+        "what_student_builds": "Debugging logs, network failure reproductions, and error-handling verification records."
       },
       {
-        "tool": "Chrome DevTools",
-        "purpose": "Core utility for javascript-cert.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
+        "tool": "Vite",
+        "purpose": "Next-generation frontend tooling providing lightning-fast development server and optimized static production builds.",
+        "what_student_learns": "Project scaffolding, npm scripts, development server execution, hot module replacement, and production bundling.",
+        "what_student_builds": "Optimized, deployable static browser application artifacts."
       }
     ],
     "supporting_tools": [
       {
-        "tool": "Postman",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "tool": "Node.js (Tooling Runtime)",
+        "purpose": "Local development runtime for executing npm package management, Vite build tools, and test runners (not server-side programming)."
       },
       {
-        "tool": "Docker",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+        "tool": "Git & GitHub",
+        "purpose": "Version control, commit history management, source code repository hosting, and project documentation."
+      },
+      {
+        "tool": "Vitest",
+        "purpose": "Fast, modern unit testing framework for validating pure JavaScript and TypeScript calculation, validation, and filter functions."
+      },
+      {
+        "tool": "ESLint",
+        "purpose": "Static code analysis tool for detecting syntax flaws, dead code, styling inconsistencies, and common programming errors."
       }
     ],
     "emerging_tools": [
       {
-        "tool": "Cursor",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Supabase",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
+        "tool": "AI Coding Copilots (Optional)",
+        "purpose": "Responsible AI-assisted code review, syntax explanation, and test case brainstorming with mandatory human comprehension."
       }
     ],
     "tools_to_review": [
-      "Outdated legacy libraries"
+      "Legacy var scoping declarations",
+      "Synchronous XMLHttpRequest (XHR) data fetching",
+      "Unsafe innerHTML string injection without sanitization"
+    ]
+  },
+  "tools": [
+    "JavaScript",
+    "TypeScript",
+    "VS Code",
+    "Chrome DevTools",
+    "Vite",
+    "Node.js",
+    "Git",
+    "GitHub",
+    "Vitest",
+    "ESLint"
+  ],
+  "learning_outcomes": [
+    "LOGIC: Formulate computational solutions to business problems using variables, conditional branching, loops, and modular functions.",
+    "DATA: Structure, query, and transform complex business datasets using arrays, objects, destructuring, spread syntax, and higher-order array methods (map, filter, reduce).",
+    "BROWSER: Manipulate the Document Object Model (DOM) dynamically, attach event listeners with event delegation, and manage form validation and UI state safely.",
+    "PERSISTENCE: Serialize and persist client-side application state using browser localStorage with error handling for quota and privacy restrictions.",
+    "ASYNC: Execute remote data requests using Promises, async/await, and the Fetch API, building resilient UI states for loading, empty results, network errors, and retries.",
+    "TYPESCRIPT: Introduce static typing to JavaScript codebases using type annotations, custom interfaces, union types, type narrowing, and basic generics.",
+    "TOOLING & QA: Configure modern development workflows with Vite, run static analysis with ESLint, write automated unit tests with Vitest, and debug code using DevTools breakpoints.",
+    "DELIVERY: Version-control applications using Git, write comprehensive README documentation, and deploy working static web applications to live hosting."
+  ],
+  "learning_journey": {
+    "stages": [
+      {
+        "stage": "Stage 1: Computational Logic & JavaScript Core",
+        "focus": "Variables, let/const, primitive data types, arithmetic/logical operators, conditionals, loops, functions, and console debugging."
+      },
+      {
+        "stage": "Stage 2: Structured Data & Advanced Language Concepts",
+        "focus": "Arrays, objects, destructuring, rest/spread, scope, closures, callbacks, higher-order methods, and ES modules."
+      },
+      {
+        "stage": "Stage 3: DOM Interactions & State Persistence",
+        "focus": "Element selection, DOM manipulation, event delegation, form handling, validation feedback, UI state, and localStorage persistence."
+      },
+      {
+        "stage": "Stage 4: Asynchronous JavaScript & REST APIs",
+        "focus": "Event loop model, Promises, async/await, Fetch API, JSON parsing, error boundaries, loading states, and network debugging."
+      },
+      {
+        "stage": "Stage 5: TypeScript & Professional Development Tooling",
+        "focus": "TypeScript types, interfaces, unions, narrowing, generics, npm, Vite project scaffolding, ESLint, and Vitest unit testing."
+      },
+      {
+        "stage": "Stage 6: Applied Application Delivery & Capstone Handover",
+        "focus": "Refining, testing, documenting, and publishing the Business Records Application and API Data Explorer to GitHub and static hosting."
+      }
     ]
   },
   "industry_workflow": {
-    "overview": "How leading practitioners implement JavaScript in 2026/27:",
+    "overview": "How professional frontend engineers develop, test, and ship browser applications in 2027:",
     "stages": [
       {
         "step": 1,
-        "name": "Requirements Analysis",
-        "desc": "Deconstruct the business problem and technical constraints."
+        "name": "Specification & Data Architecture",
+        "desc": "Analyze application requirements, map out data models (arrays of objects), define TypeScript interfaces, and plan UI state transitions."
       },
       {
         "step": 2,
-        "name": "Architecture & Setup",
-        "desc": "Initialize the environment and plan the structure."
+        "name": "Modular Logic & Unit Testing",
+        "desc": "Write pure utility functions for calculations, filters, and validation in ES modules; verify logic with Vitest unit test suites."
       },
       {
         "step": 3,
-        "name": "Implementation",
-        "desc": "Execute core development using standard practices."
+        "name": "DOM Binding & Accessible Interactions",
+        "desc": "Construct semantic HTML, bind event listeners using event delegation, manage UI state, and render views using safe DOM methods."
       },
       {
         "step": 4,
-        "name": "Testing & Deployment",
-        "desc": "Validate functionality and release to production."
+        "name": "Asynchronous Integration & Error Handling",
+        "desc": "Fetch remote data using async/await, validate response payloads, and render four explicit UI states: Loading, Success, Empty, and Error."
+      },
+      {
+        "step": 5,
+        "name": "Code Quality, Build & Deployment",
+        "desc": "Run ESLint checks, verify TypeScript compilation, execute production build in Vite, push commits to GitHub, and deploy to live static hosting."
       }
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Startups & SMEs",
-      "business_problem": "Need rapid, scalable digital solutions.",
-      "approach": "Utilize VS Code to quickly iterate and deliver value.",
-      "toolset": "VS Code, Node.js, Chrome DevTools",
-      "output": "Functional Minimum Viable Product (MVP)."
+      "sector": "Small Businesses & Service Operations",
+      "business_problem": "Need interactive browser-based tools—such as service price estimators, customer enquiry logs, and appointment schedulers—without the complexity of expensive enterprise software.",
+      "approach": "Build lightweight, responsive single-page web applications using vanilla JavaScript and localStorage, providing immediate user feedback and offline data persistence.",
+      "toolset": "JavaScript (ES6+), DOM APIs, localStorage, Vite",
+      "output": "Client-side interactive business portal with local record persistence and real-time validation."
+    },
+    {
+      "sector": "E-Commerce & Digital Catalogs",
+      "business_problem": "Require dynamic product browsing experiences with instant keyword search, category filtering, multi-criteria sorting, and responsive cart summaries.",
+      "approach": "Implement client-side data filtering using higher-order array methods (filter, map, sort) coupled with efficient DOM updating routines.",
+      "toolset": "JavaScript, ES Modules, CSS Flexbox/Grid, Vitest",
+      "output": "Fast, responsive product catalog with zero-delay search, multi-faceted filtering, and unit-tested sorting algorithms."
+    },
+    {
+      "sector": "Media, Research & Content Platforms",
+      "business_problem": "Demand real-time data visualizers and information lookup tools that fetch public data streams without crashing on network dropouts.",
+      "approach": "Construct resilient API-powered applications using async/await and Fetch, complete with skeleton loading states, empty search messaging, and graceful error handling.",
+      "toolset": "JavaScript, TypeScript, Fetch API, Public REST APIs",
+      "output": "API-powered data explorer with verified loading, success, empty, and network-failure state boundaries."
     }
   ],
   "ai_integration": {
     "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
+    "ai_can_assist_with": "Explaining complex JavaScript concepts (closures, event loop, Promise chaining), identifying syntax and runtime bugs, suggesting edge-case unit test scenarios, translating vanilla functions into typed TypeScript interfaces, and reviewing code formatting.",
+    "ai_can_automate": "Scaffolding boilerplate unit test structures, generating mock API response datasets, and drafting initial README outlines.",
+    "ai_cannot_replace": "Algorithmic problem-solving ability, debugging real browser DOM events, understanding runtime asynchronous race conditions, verifying manual accessibility, and code comprehension.",
+    "human_expertise_required": "Every line of AI-suggested JavaScript or TypeScript code must be thoroughly understood, traced through the call stack, tested in browser DevTools, and validated against unexpected inputs before inclusion in a project.",
+    "validation_protocol": "Students maintain a Code Review & Debugging Log documenting problem statements, AI suggestions or reference documentation consulted, their own conceptual explanation of the fix, and verified test execution.",
+    "responsible_use": "Submitting one-prompt AI-generated applications without complete understanding or claiming AI code as original work is strictly prohibited."
   },
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Always default to const for variable declarations; use let only when reassignment is genuinely required; never use var in modern codebases.",
+    "Strict equality (===) and inequality (!==) must always be preferred over loose equality to prevent unexpected type coercion bugs.",
+    "Treat arrays and objects immutably in application state: use non-mutating methods (map, filter, slice, spread) rather than mutating shared references in place.",
+    "Never inject unvetted user input via innerHTML; use textContent or createElement to guard against Cross-Site Scripting (XSS) vulnerabilities.",
+    "Always provide four distinct UI states for asynchronous API requests: Loading, Success with results, Empty results, and Error/Failure with retry.",
+    "Remember that TypeScript checks types at compile time; always implement defensive runtime validation when parsing external user or API data.",
+    "Keep functions pure, focused, and small: separate business calculations and data transformations from DOM rendering and side effects."
   ],
   "common_mistakes": [
     {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
+      "mistake": "Believing that fetch() automatically rejects when an HTTP server returns a 404 or 500 error code.",
+      "why_it_happens": "Beginners assume HTTP error codes trigger the Promise catch() block.",
+      "professional_approach": "Always explicitly verify response.ok before parsing response data, and throw an error manually if response.ok is false."
     },
     {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+      "mistake": "Treating localStorage as a secure backend database and storing sensitive user data or API keys.",
+      "why_it_happens": "Misunderstanding browser storage boundaries and client-side inspection capabilities.",
+      "professional_approach": "Use localStorage strictly for non-sensitive UI preferences and mock demo records; never store credentials, tokens, or private secrets in browser storage."
+    },
+    {
+      "mistake": "Directly mutating arrays or objects in shared application state and wondering why UI updates fail or create subtle bugs.",
+      "why_it_happens": "Not understanding reference vs value behavior in JavaScript data structures.",
+      "professional_approach": "Create fresh shallow copies using spread syntax or array methods like map/filter before updating state."
+    },
+    {
+      "mistake": "Relying on TypeScript type annotations as a substitute for runtime data validation.",
+      "why_it_happens": "Assuming compile-time interface definitions guarantee that incoming server data will match that shape.",
+      "professional_approach": "Combine TypeScript types for compile-time safety with defensive runtime checks for missing or malformed API fields."
+    },
+    {
+      "mistake": "Writing monolithic 500-line script files where DOM rendering, calculation, storage, and API calls are tightly coupled.",
+      "why_it_happens": "Starting coding without modular architecture planning.",
+      "professional_approach": "Deconstruct applications into focused ES modules: separate data models, validation functions, storage helpers, and UI controllers."
     }
   ],
   "career_paths": {
-    "entry_roles": "Junior JavaScript Developer",
-    "mid_roles": "Specialist Lead",
-    "specialist_roles": "Frontend Trainee",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+    "entry_roles": "Junior JavaScript Developer, Frontend Development Trainee, Browser UI Developer (Entry Level), Web Interaction Developer, Junior Web Application Developer, Frontend Production Assistant, Website Functionality Developer",
+    "freelance_roles": "Freelance Interactive Website Developer, Client-Side Form & Calculator Developer, Web Scripting Assistant",
+    "employer_expectations": "Demonstrable live portfolio proof-of-work showing clean JavaScript ES6+ code, solid understanding of functions, arrays, objects, and DOM events, resilient asynchronous API handling, basic TypeScript competence, unit testing, and organized Git repositories.",
+    "what_student_demonstrates": "Ability to take application specifications or API documentation and independently engineer, debug, test, and deploy a functioning browser application without relying on bloated frameworks.",
+    "career_disclaimer": "These represent potential entry-level pathways and practical service applications. Nova Skills provides foundational skill training and portfolio preparation; we do not guarantee employment, specific salary figures, or advanced engineering positions."
   },
   "freelance_applications": {
     "services_offered": [
-      "End-to-end JavaScript project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
+      "Custom interactive website features (interactive pricing calculators, dynamic multi-step forms, filterable product catalogs).",
+      "Public REST API integration and dynamic data visualizers for content and business websites.",
+      "Client-side data persistence solutions using localStorage for offline-friendly tools.",
+      "Refactoring legacy JavaScript codebases into modern ES modules and adding TypeScript type definitions.",
+      "Frontend bug fixing, DevTools debugging, and unit test suite creation for client-side scripts."
     ],
-    "client_workflow": "Feature Logic Scope -> Modular ES6+ Scripting -> Interactive UI/API Integration -> Performance Testing & Code Review",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "client_workflow": "Requirements & Data Modeling -> Modular ES6+ Scripting -> Accessible DOM & Event Binding -> Asynchronous API Integration & Error States -> Vitest Unit Testing -> Git Repository & Live Static Deployment",
+    "portfolio_requirements": "Two working browser applications hosted on live URLs with publicly accessible GitHub repositories, comprehensive README documentation, and verified test suites."
   },
   "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
-  ],
-  "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
-  ],
-  "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
-  },
-  "certification": {
-    "title": "Certified Specialist in JavaScript",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
-  },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
-  "next_learning_path": {
-    "recommended_next": "Advance to react-cert to specialize further.",
-    "related_programs": "For broader career mastery, compare with fullstack-foundation."
-  },
-  "faq": [
     {
-      "question": "What prior experience do I need for JavaScript?",
-      "answer": "html-css"
+      "project_number": 1,
+      "badge": "Portfolio Deliverable 01 — Interactive Application",
+      "title": "Business Records & Workflow Application",
+      "subtitle": "Interactive Browser Application with Forms, Filtering & localStorage Persistence",
+      "client_brief": "Design and build a client-side business workflow application for managing records (such as customer enquiries, product inventory, project tasks, or expense logs) using fictional business data. The application must feature an accessible data entry form with client-side validation, live record rendering, real-time search, at least two filter or sort combinations, edit and delete capabilities with user confirmation, empty state messaging, and persistent storage using browser localStorage so data survives browser refreshes.",
+      "deliverables": [
+        "Complete, functioning browser application built with HTML, CSS, and modular modern JavaScript (ES6+)",
+        "Accessible data entry form with explicit label associations and client-side validation",
+        "Dynamic record list rendering with real-time text search and multi-criteria category filtering",
+        "Record update/edit workflow and delete capability with confirmation modal/dialog",
+        "Robust localStorage persistence: records successfully persist across additions, edits, deletions, and page reloads",
+        "Empty state display when no records exist or when search criteria return zero matches",
+        "ES module architecture separating data logic, validation, storage management, and DOM rendering",
+        "Vitest unit test suite covering validation algorithms and data transformation functions",
+        "GitHub repository with structured files, descriptive commit history, and comprehensive README.md",
+        "Working live static deployment URL on GitHub Pages"
+      ],
+      "tools": [
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS3",
+        "VS Code",
+        "Chrome DevTools",
+        "localStorage",
+        "Vitest",
+        "Git",
+        "GitHub Pages"
+      ],
+      "outcome": "A fully functional, interactive business application demonstrating mastery over JavaScript data structures, DOM event handling, form validation, and local state persistence."
     },
     {
-      "question": "What tools will I learn?",
-      "answer": "You will gain hands-on experience with VS Code, Node.js, Chrome DevTools."
-    },
-    {
-      "question": "Are the projects practical?",
-      "answer": "Yes, all projects simulate real-world client briefs and business requirements."
+      "project_number": 2,
+      "badge": "Portfolio Deliverable 02 — API Application",
+      "title": "JavaScript API Data Explorer",
+      "subtitle": "Asynchronous REST API Application with TypeScript Foundations & Error Boundaries",
+      "client_brief": "Build a responsive, API-powered browser application that fetches, validates, and displays remote data from a documented public REST API (such as public weather, publications, geographical datasets, or open knowledge bases). The application must use async/await and the Fetch API, include keyword search or parameter filtering, securely manage public access without exposing private credentials, and implement all four mandatory UI states: Loading indicator, Valid results display, Empty results feedback, and Error/Network failure handling with an optional user retry mechanism.",
+      "deliverables": [
+        "Working browser application integrating a real public REST API via async/await and Fetch API",
+        "Explicit response validation verifying response.ok and checking expected JSON payload structures",
+        "Interactive search input or filter controls passing dynamic query parameters to the API request",
+        "Four verified UI states: Loading spinner/indicator, Valid data cards, Empty search results message, and Network/HTTP error alert with Retry button",
+        "TypeScript type annotations and interfaces defining expected API response shapes and component data models",
+        "Clean ES module structure separating API fetching, state management, and DOM rendering routines",
+        "Vitest unit tests verifying query parameter builders, data normalization functions, and error decision logic",
+        "Zero exposed private API keys or secrets in client-side code (strictly public-safe endpoints)",
+        "GitHub repository with structured source files, tsconfig.json, Vite build configuration, and comprehensive README.md",
+        "Live static deployment URL on GitHub Pages with verified HTTPS asset resolution"
+      ],
+      "tools": [
+        "JavaScript",
+        "TypeScript",
+        "Fetch API",
+        "Vite",
+        "Chrome DevTools",
+        "Vitest",
+        "ESLint",
+        "Git",
+        "GitHub Pages"
+      ],
+      "outcome": "A robust, production-grade API-driven browser application demonstrating asynchronous JavaScript control flow, defensive data handling, TypeScript typing, and professional error recovery."
     }
   ],
+  "final_deliverables": [
+    "Two fully functional, responsive, and deployed browser applications hosted on GitHub Pages with live public URLs.",
+    "Two clean, modular Git repositories on GitHub featuring descriptive commit histories, organized ES modules/TypeScript files, and zero hardcoded secrets.",
+    "Comprehensive README.md documentation for each application detailing project overview, technologies, prerequisites, setup instructions, test commands, and live deployment links.",
+    "Vitest automated unit test suites validating core validation, calculation, and data transformation functions.",
+    "Verified demonstration of localStorage persistence across page reloads (Business Records App).",
+    "Verified demonstration of all 6 state conditions: Loading, Valid Results, Empty Results, HTTP Error, Network Failure, and Incomplete Data (API Data Explorer).",
+    "QR-code verifiable Nova Skills certificate of completion under ISO 9001:2015 educational standards."
+  ],
+  "portfolio": {
+    "title": "Nova Skills JavaScript & TypeScript Developer Portfolio",
+    "description": "Two assessed, working browser applications demonstrating end-to-end frontend programming craftsmanship: an interactive business workflow application with localStorage persistence, and an asynchronous API-powered data explorer with TypeScript foundations, both published on live URLs with source repositories.",
+    "deliverables_count": 2,
+    "deliverables": [
+      {
+        "deliverable_number": 1,
+        "title": "Business Records & Workflow Application",
+        "focus": "A client-side interactive application featuring accessible forms, client-side validation, multi-criteria filtering, search, update/delete workflows, and verified localStorage persistence."
+      },
+      {
+        "deliverable_number": 2,
+        "title": "JavaScript API Data Explorer",
+        "focus": "An asynchronous REST API application built with async/await, Fetch, and TypeScript, featuring explicit handling for loading, empty results, network errors, and user retries."
+      }
+    ],
+    "testing_requirements": [
+      "Application Functionality: Both applications must execute smoothly without unhandled console errors or runtime crashes.",
+      "Persistence Verification: Adding, editing, and deleting records in the Business App must persist accurately after full page reloads.",
+      "State Boundary Testing: The API Explorer must explicitly demonstrate Loading, Valid Results, Empty Results, HTTP Error, Network Disconnection, and Invalid Field handling.",
+      "Code Quality & Testing: Source code must pass ESLint analysis and pass Vitest unit test suites for pure logic functions.",
+      "Security Verification: Zero private API secrets, tokens, or unescaped innerHTML injections in any submitted code."
+    ],
+    "handover_structure": {
+      "business_app": "business-records-app/ (index.html, src/main.js, src/data.js, src/validation.js, src/storage.js, src/ui.js, styles/style.css, tests/validation.test.js, package.json, README.md, .gitignore)",
+      "api_explorer": "api-data-explorer/ (index.html, src/main.ts, src/api.ts, src/types.ts, src/render.ts, src/utils.ts, tests/utils.test.ts, package.json, tsconfig.json, vite.config.ts, README.md, .gitignore)"
+    }
+  },
+  "assessment": {
+    "model": "Practical Application Rubric & Technical Code Quality Rubric (100%)",
+    "criteria": "Evaluation measures JavaScript language fundamentals, DOM manipulation and event delegation, asynchronous control flow and error boundaries, TypeScript typing quality, unit testing and debugging, and documentation/deployment quality."
+  },
+  "assessment_rubric": {
+    "total_percentage": 100,
+    "criteria": [
+      {
+        "category": "JavaScript Fundamentals & Programming Logic",
+        "weight": "20%",
+        "description": "Clean modern syntax (const/let), appropriate use of primitive and reference types, algorithmic problem-solving, structured array/object transformations, functions, closures, and modular ES code organization."
+      },
+      {
+        "category": "DOM Interaction, State Management & Persistence",
+        "weight": "20%",
+        "description": "Safe element selection, efficient event delegation, accessible form validation, separation of UI state from DOM rendering, and verified localStorage persistence across reloads."
+      },
+      {
+        "category": "Asynchronous APIs & Resilient Error Handling",
+        "weight": "20%",
+        "description": "Correct async/await control flow, proper response.ok verification, JSON parsing, explicit loading states, empty-result handling, network failure recovery, and zero exposed private API keys."
+      },
+      {
+        "category": "TypeScript Foundations & Code Quality",
+        "weight": "15%",
+        "description": "Appropriate type annotations, custom interfaces, union types, type narrowing, understanding compile-time vs runtime validation boundaries, and clean modular project structure."
+      },
+      {
+        "category": "Testing, Debugging & Web Accessibility",
+        "weight": "15%",
+        "description": "Vitest automated unit tests for core logic, DevTools breakpoint debugging logs, keyboard accessibility, accessible status feedback, and ESLint rule compliance."
+      },
+      {
+        "category": "Source Documentation, Git & Live Deployment",
+        "weight": "10%",
+        "description": "Clean GitHub repositories, disciplined commit messages, comprehensive README.md instructions, Vite build configuration, and live working static deployment."
+      }
+    ],
+    "pass_requirements": [
+      "Both applications must run as working browser applications (static mockups or screenshot-only submissions will receive zero credit).",
+      "The Business Application must prove that added, edited, and deleted records survive page reloads via localStorage.",
+      "The API Application must demonstrate working Fetch API integration with explicit loading, empty, and error state transitions.",
+      "Both codebases must include Vitest unit tests covering core utility and validation functions.",
+      "Zero private API keys or unescaped user-supplied innerHTML strings are allowed in any repository.",
+      "Students must demonstrate independent understanding by explaining their code and architecture during review."
+    ],
+    "competency_gates": [
+      "Functional Application Gate: Submitting static mockups, non-running scripts, or non-functional templates results in immediate failure.",
+      "Asynchronous Error Gate: An API application that crashes, freezes indefinitely on error, or fails to check response.ok cannot pass.",
+      "Code Ownership Gate: Students must be able to explain their functions, scope, and asynchronous flow independently; unverified AI-generated code is rejected."
+    ]
+  },
+  "certification": {
+    "title": "Certificate of Completion in Modern JavaScript & TypeScript Foundations",
+    "criteria": "100% completion of hands-on coding labs, submission of both working portfolio applications meeting the 75%+ rubric benchmark, and verified live GitHub Pages deployments.",
+    "verification": "Cryptographically verifiable digital credential with online QR-code validation under ISO 9001:2015 educational standards.",
+    "notice": "Nova Skills certificates recognize practical technical training and verified project competencies. This is an independent Nova Skills institutional certification; it is not an official endorsement from the ECMA standards body, Microsoft Corporation, or the Node.js Foundation."
+  },
+  "source_code_delivery": {
+    "business_app_structure": [
+      "business-records-app/",
+      "├── index.html",
+      "├── src/",
+      "│   ├── main.js",
+      "│   ├── data.js",
+      "│   ├── validation.js",
+      "│   ├── storage.js",
+      "│   └── ui.js",
+      "├── styles/",
+      "│   └── style.css",
+      "├── tests/",
+      "│   └── validation.test.js",
+      "├── package.json",
+      "├── README.md",
+      "└── .gitignore"
+    ],
+    "api_explorer_structure": [
+      "api-data-explorer/",
+      "├── index.html",
+      "├── src/",
+      "│   ├── main.ts",
+      "│   ├── api.ts",
+      "│   ├── types.ts",
+      "│   ├── render.ts",
+      "│   └── utils.ts",
+      "├── tests/",
+      "│   └── utils.test.ts",
+      "├── package.json",
+      "├── tsconfig.json",
+      "├── vite.config.ts",
+      "├── README.md",
+      "└── .gitignore"
+    ],
+    "code_quality_rules": [
+      "Strict use of const and let; zero occurrences of legacy var declarations.",
+      "Consistent 2-space indentation, semicolons/formatting enforced via ESLint.",
+      "Meaningful, descriptive variable and function names describing business intent.",
+      "All external input treated defensively with input validation and safe textContent DOM updates.",
+      "No secrets, private keys, or copyrighted assets stored in client-side repositories."
+    ],
+    "readme_requirements": [
+      "1. Project Overview & Application Architecture",
+      "2. Core Technologies Used (JavaScript, TypeScript, Vite, Vitest, etc.)",
+      "3. Key Features & User Workflows",
+      "4. Local Installation & Development Commands (npm install, npm run dev)",
+      "5. Build & Production Preview Commands (npm run build, npm run preview)",
+      "6. Automated Testing Instructions (npm run test / npx vitest)",
+      "7. Live Deployment Link & Static Hosting Configuration",
+      "8. API Sources, Terms & Security Handling (if applicable)",
+      "9. Known Limitations & Future Technical Milestones",
+      "10. Author Attribution & Course Context"
+    ]
+  },
+  "skill_boundaries": {
+    "included": [
+      "Modern JavaScript programming (ES6+) syntax and algorithms",
+      "Variables, data types, operators, conditionals, and loops",
+      "Functions, parameters, return values, arrow functions, and closures",
+      "Arrays, objects, destructuring, spread/rest, and higher-order methods",
+      "ES modules (import/export) and modular code architecture",
+      "Document Object Model (DOM) selection, mutation, and event delegation",
+      "Form handling, client-side input validation, and UI state management",
+      "Browser storage via localStorage with JSON serialization",
+      "Asynchronous JavaScript: Event loop fundamentals, Promises, and async/await",
+      "Fetch API, HTTP status verification (response.ok), and JSON parsing",
+      "Four essential asynchronous UI states: Loading, Success, Empty, and Error",
+      "Defensive response validation and public REST API query handling",
+      "Introductory TypeScript: types, interfaces, unions, narrowing, and basic generics",
+      "Compile-time type safety vs runtime validation boundaries",
+      "VS Code developer workflows and Chrome DevTools breakpoint debugging",
+      "npm package management and Vite frontend build tooling",
+      "Code linting with ESLint and automated unit testing with Vitest",
+      "Git version control, GitHub repositories, and GitHub Pages deployment"
+    ],
+    "excluded": [
+      "React component architecture, JSX, hooks, and Context API (covered in React Certification)",
+      "Next.js, server-side rendering (SSR), and full-stack React frameworks",
+      "Server-side backend programming with Node.js and Express (covered in Backend courses)",
+      "Database design, SQL queries, PostgreSQL, and MongoDB databases",
+      "User authentication systems, JWT tokens, cookies, and OAuth workflows",
+      "Payment gateway integrations and server-side e-commerce transaction logic",
+      "Docker containers, Kubernetes, and backend cloud infrastructure",
+      "Advanced TypeScript metaprogramming, complex mapped/conditional types, and compiler AST transforms",
+      "End-to-end browser automation testing frameworks (Cypress, Playwright)"
+    ],
+    "related_courses": [
+      {
+        "course_number": 55,
+        "course_id": "html-css",
+        "title": "HTML, CSS & Responsive Web Design",
+        "relationship": "Essential prerequisite foundation: provides the static semantic markup and responsive CSS required before learning JavaScript."
+      },
+      {
+        "course_number": 57,
+        "course_id": "react-cert",
+        "title": "React Certification",
+        "relationship": "Recommended next frontend step: advances from vanilla DOM manipulation into modern component-based single-page application development."
+      },
+      {
+        "course_number": 58,
+        "course_id": "node-js",
+        "title": "Node.js Backend Development",
+        "relationship": "Recommended backend step: applies JavaScript to server-side APIs, file systems, databases, and authentication."
+      },
+      {
+        "course_number": 55,
+        "course_id": "fullstack-foundation",
+        "title": "AI-Assisted Full Stack Web Development",
+        "relationship": "Broader career programme: integrates frontend, backend, databases, and deployment into full-stack engineering."
+      }
+    ]
+  },
   "modules": [
     {
       "module_number": "Module 01",
-      "module_title": "JavaScript Fundamentals: Variables & Control Flow",
-      "module_purpose": "Understand core JS syntax.",
+      "number": 1,
+      "module": "Module 01",
+      "title": "Programming Fundamentals",
+      "module_title": "Programming Fundamentals",
+      "duration": "8 Hours",
+      "hours": 8,
+      "lessons_count": 5,
+      "objective": "Develop computational thinking and practical confidence with JavaScript's core syntax, data types, operators, conditionals, loops, and modular functions.",
+      "module_purpose": "Build the foundational mental model of browser JavaScript execution, set up VS Code and the browser console, master let/const, control flow, functions, and error diagnosis.",
       "what_you_will_learn": [
-        "Master the concepts of JavaScript Fundamentals: Variables & Control Flow.",
-        "Apply VS Code effectively.",
-        "Troubleshoot common issues in this domain."
+        "Understand the browser JavaScript runtime, script execution flow, and how HTML, CSS, and JS interact.",
+        "Set up VS Code, link external scripts, and master the browser console for runtime logging and error inspection.",
+        "Declare variables using modern let and const keywords, and understand the hazards of legacy var.",
+        "Work with primitive data types (string, number, boolean, null, undefined) and understand type conversion.",
+        "Apply arithmetic, comparison (strict equality ===), and logical operators with truthy and falsy awareness.",
+        "Construct branching decision logic using if/else, switch statements, and ternary conditional expressions.",
+        "Execute iterative data processing using for, while, and for...of loop constructs.",
+        "Write modular, reusable functions with parameters, return values, function expressions, and arrow functions.",
+        "Debug syntax and logical errors methodically by reading error stack traces and writing pseudocode."
+      ],
+      "key_concepts": [
+        "Browser JS Runtime",
+        "let vs const",
+        "Primitive Data Types",
+        "Strict Equality (===)",
+        "Truthy & Falsy",
+        "Conditional Logic",
+        "Loops (for, while, for...of)",
+        "Functions & Return Values",
+        "Console Debugging"
+      ],
+      "tools": [
+        "JavaScript (ES6+)",
+        "VS Code",
+        "Chrome DevTools Console",
+        "Node.js"
       ],
       "lessons": [
         {
           "lesson_number": "1.1",
-          "lesson_title": "Variables",
-          "what_is_taught": "Let and const.",
-          "why_it_matters": "Data storage.",
-          "what_learner_does": "Declares variables.",
-          "expected_outcome": "Basic script."
+          "lesson_title": "JavaScript in the Browser & Execution Environment",
+          "what_is_taught": "The web runtime, JavaScript engines (V8), the roles of HTML, CSS, and JavaScript, script loading via <script src=\"...\" defer>, strict mode ('use strict'), statements, expressions, and the browser console.",
+          "subtopics": [
+            "How browsers parse HTML and execute JavaScript: render blocking vs the defer attribute",
+            "The JavaScript engine: parsing, compilation, and the runtime call stack",
+            "Enabling strict mode ('use strict') to catch silent errors and prevent accidental global variables",
+            "Statements vs expressions: understanding what produces a value in JavaScript",
+            "Browser console mastery: console.log(), console.warn(), console.error(), and console.table()"
+          ],
+          "why_it_matters": "Understanding how browsers parse and execute scripts prevents race conditions and sets up reliable debugging habits from day one.",
+          "what_learner_does": "Configures an external script linked to an HTML document in VS Code and verifies execution in the Chrome console.",
+          "expected_outcome": "A clean, error-free script execution pipeline logging diagnostics to the browser console."
         },
         {
           "lesson_number": "1.2",
-          "lesson_title": "Loops",
-          "what_is_taught": "For and while loops.",
-          "why_it_matters": "Iteration.",
-          "what_learner_does": "Processes arrays.",
-          "expected_outcome": "Loop script."
+          "lesson_title": "Variables, Primitive Data Types & Type Conversion",
+          "what_is_taught": "Variable declarations (let vs const vs historical var), primitive types (string, number, boolean, null, undefined), type coercion, explicit conversion, and template literals.",
+          "subtopics": [
+            "Why modern codebases enforce const by default and use let only for reassignment",
+            "The temporal dead zone and scope differences between let/const and legacy var",
+            "Primitive types: strings, numbers (integers, floats, NaN), booleans, null, and undefined",
+            "Type conversion: explicit parsing (Number(), String(), Boolean(), parseInt()) vs implicit coercion bugs",
+            "Template literals (${expression}) for multiline strings and dynamic value interpolation"
+          ],
+          "why_it_matters": "Misunderstanding type coercion and variable reassignment is the most common cause of calculation and logic bugs in JavaScript.",
+          "what_learner_does": "Builds an invoice calculator script that parses string inputs into numeric values and outputs formatted summaries using template literals.",
+          "expected_outcome": "Accurate variable scoping and predictable type conversion without accidental string concatenation."
         },
         {
           "lesson_number": "1.3",
-          "lesson_title": "Conditionals",
-          "what_is_taught": "If/else.",
-          "why_it_matters": "Logic.",
-          "what_learner_does": "Writes logic.",
-          "expected_outcome": "Conditional logic."
+          "lesson_title": "Operators, Truthy/Falsy & Conditional Branching",
+          "what_is_taught": "Arithmetic operators, comparison operators, strict equality (===), logical operators (&&, ||, !), truthy and falsy evaluations, if/else statements, switch statements, and ternary expressions.",
+          "subtopics": [
+            "Arithmetic operators (+, -, *, /, %, **) and assignment operators (+=, -=)",
+            "Strict equality (===) vs loose equality (==): why loose equality creates unpredictable coercion bugs",
+            "Truthy and falsy values: false, 0, '', null, undefined, and NaN",
+            "Logical operators: AND (&&), OR (||), and NOT (!) short-circuit evaluation mechanics",
+            "Branching logic: if, else if, else, multi-case switch statements, and concise ternary operators"
+          ],
+          "why_it_matters": "Every interactive application relies on conditional logic to enforce business rules, authenticate permissions, and handle varied user inputs.",
+          "what_learner_does": "Constructs a discount and shipping-fee calculator enforcing tiered business rules based on cart totals and user membership.",
+          "expected_outcome": "Robust decision-making scripts executing predictable branches across all boundary conditions."
+        },
+        {
+          "lesson_number": "1.4",
+          "lesson_title": "Iteration & Loops (for, while, for...of)",
+          "what_is_taught": "Loop fundamentals, for loops, while loops, for...of iteration over iterable collections, break and continue statements, and preventing infinite loops.",
+          "subtopics": [
+            "Standard for loop anatomy: initialization, condition check, and increment/decrement step",
+            "While and do...while loops: iterating based on dynamic conditions",
+            "Modern for...of loop: clean, index-free iteration over strings and arrays",
+            "Controlling loop execution: early termination with break and skipping iterations with continue",
+            "Diagnosing and terminating accidental infinite loops in the browser runtime"
+          ],
+          "why_it_matters": "Loops allow automated processing of repetitive tasks, large data sets, and dynamic collections without manual code duplication.",
+          "what_learner_does": "Writes loop algorithms to calculate running totals, filter numerical lists, and generate formatted text tables.",
+          "expected_outcome": "Predictable iterative logic executing over defined boundaries without performance stalls."
+        },
+        {
+          "lesson_number": "1.5",
+          "lesson_title": "Functions, Scope Introduction & Error Diagnosis",
+          "what_is_taught": "Function declarations, function expressions, arrow function syntax, parameters, default parameters, return values, basic scope, reading error messages, and pseudocode.",
+          "subtopics": [
+            "Defining reusable procedures: function declarations vs function expressions",
+            "Arrow function syntax: concise implicit returns vs block bodies",
+            "Parameters, arguments, default parameter fallbacks, and the explicit return statement",
+            "Introduction to function scope: why variables declared inside functions are private",
+            "Deconstructing programming problems: writing pseudocode before writing JavaScript",
+            "Reading JavaScript error messages: SyntaxError, TypeError, and ReferenceError call stacks"
+          ],
+          "why_it_matters": "Functions are the core building blocks of JavaScript applications, enabling modularity, testability, and code reuse.",
+          "what_learner_does": "Refactors previous calculation scripts into a clean library of pure, reusable functions with descriptive return values.",
+          "expected_outcome": "A modular collection of functions taking input arguments and returning deterministic output values."
         }
       ],
-      "key_concepts": [
-        "Industry Standards",
-        "Best Practices",
-        "Core Implementation"
-      ],
-      "tools": [
-        "VS Code",
-        "Node.js",
-        "Chrome DevTools"
-      ],
-      "hands_on_practice": "Guided lab focused on JavaScript Fundamentals: Variables & Control Flow.",
-      "assignment": "Deliverable: Complete implementation of JavaScript Fundamentals: Variables & Control Flow.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "hands_on_practice": "Complete a laboratory suite of 8 algorithmic exercises (discount calculator, grade evaluator, unit converter, number classifier) in VS Code.",
+      "assignment": "Deliverable: JavaScript Fundamentals Exercise Set containing tested, documented scripts demonstrating variables, conditionals, loops, functions, and console verification.",
+      "business_application": "Establishes the core programming syntax and computational thinking necessary for all subsequent web and application development.",
+      "expected_outcome": "Students can independently write, explain, and debug small JavaScript programs using modern language features.",
+      "portfolio_contribution": "Provides the foundational algorithms and calculation routines used in both upcoming application projects."
     },
     {
       "module_number": "Module 02",
-      "module_title": "Functions, Scope, and Closures",
-      "module_purpose": "Master functional programming.",
+      "number": 2,
+      "module": "Module 02",
+      "title": "Data Structures & Language Fundamentals",
+      "module_title": "Data Structures & Language Fundamentals",
+      "duration": "12 Hours",
+      "hours": 12,
+      "lessons_count": 5,
+      "objective": "Teach students to manipulate structured data, build reusable functions, and master advanced language mechanics including closures, scope, callbacks, and ES modules.",
+      "module_purpose": "Master arrays, objects, destructuring, spread/rest syntax, scope, closures, callbacks, higher-order methods (map, filter, reduce), and ES module architecture.",
       "what_you_will_learn": [
-        "Master the concepts of Functions, Scope, and Closures.",
-        "Apply VS Code effectively.",
-        "Troubleshoot common issues in this domain."
+        "Create, access, and manipulate arrays using mutating and non-mutating methods.",
+        "Transform complex data collections using higher-order array methods: forEach, map, filter, find, some, every, reduce, and sort.",
+        "Model real-world business entities using JavaScript objects, properties, dot/bracket notation, and nested structures.",
+        "Apply modern destructuring syntax to arrays and objects, and utilize spread (...) and rest operators.",
+        "Handle missing or optional data safely using optional chaining (?.) and nullish coalescing (??).",
+        "Understand lexical environments, scope chains (global, function, block), and how closures preserve variable state.",
+        "Write pure functions without side effects and understand reference vs value behavior in JavaScript data structures.",
+        "Organize codebases into reusable, maintainable ES modules using export and import syntax."
+      ],
+      "key_concepts": [
+        "Arrays & Iteration",
+        "Higher-Order Methods (map, filter, reduce)",
+        "Objects & Nested Data",
+        "Destructuring & Spread/Rest",
+        "Optional Chaining (?.)",
+        "Scope & Lexical Environments",
+        "Closures & Callbacks",
+        "Pure Functions vs Side Effects",
+        "ES Modules (import/export)"
+      ],
+      "tools": [
+        "JavaScript (ES6+)",
+        "VS Code",
+        "Chrome DevTools Sources Panel",
+        "Node.js"
       ],
       "lessons": [
         {
           "lesson_number": "2.1",
-          "lesson_title": "Arrow Functions",
-          "what_is_taught": "Modern syntax.",
-          "why_it_matters": "Conciseness.",
-          "what_learner_does": "Refactors code.",
-          "expected_outcome": "Arrow functions."
+          "lesson_title": "Arrays, Mutating Methods & Higher-Order Transformations",
+          "what_is_taught": "Array indexing, length property, mutating methods (push, pop, shift, unshift, splice), non-mutating operations (slice, concat), iteration with forEach, map, filter, find, some, and every.",
+          "subtopics": [
+            "Array data structures: zero-indexed elements, dynamic resizing, and accessing items",
+            "Mutating methods vs immutable data practices: why mutating arrays can trigger bugs in modern UIs",
+            "Transforming data with map(): converting an array of raw items into formatted outputs",
+            "Filtering collections with filter(): extracting subsets matching business criteria",
+            "Locating elements with find(), findIndex(), some(), and every()",
+            "Sorting arrays safely with sort() and custom comparator functions for strings and numbers"
+          ],
+          "why_it_matters": "Modern web applications deal almost exclusively with arrays of data (products, comments, users, search results); transforming them is a daily developer task.",
+          "what_learner_does": "Filters and maps a dataset of 50 customer orders to calculate totals, extract customer emails, and isolate high-value purchases.",
+          "expected_outcome": "Proficiency in extracting, transforming, and querying array datasets without mutating original data."
         },
         {
           "lesson_number": "2.2",
-          "lesson_title": "Scope",
-          "what_is_taught": "Lexical scope.",
-          "why_it_matters": "Variable access.",
-          "what_learner_does": "Fixes bugs.",
-          "expected_outcome": "Correct scope."
+          "lesson_title": "Objects, Nested Data & Modern Syntax Shortcuts",
+          "what_is_taught": "Objects as key-value stores, dot and bracket notation, object methods, arrays of objects, destructuring, spread syntax (...), rest parameters, optional chaining (?.) and nullish coalescing (??).",
+          "subtopics": [
+            "Modeling business records with objects: properties, data types, and method definitions",
+            "Dynamic property access using bracket notation (object[dynamicKey])",
+            "Destructuring arrays and objects to extract values cleanly with default fallbacks",
+            "The spread operator (...): shallow cloning objects and merging property overrides",
+            "Rest parameters (...args): collecting variable numbers of function arguments into an array",
+            "Safe property navigation using optional chaining (user?.profile?.address) and nullish coalescing (value ?? 'fallback')"
+          ],
+          "why_it_matters": "Real API payloads are heavily nested objects; destructuring, optional chaining, and spread syntax make data extraction clean and crash-proof.",
+          "what_learner_does": "Constructs an e-commerce product model, clones and updates records with spread syntax, and extracts nested properties safely.",
+          "expected_outcome": "Ability to navigate, update, and destructure complex multi-level object data structures."
         },
         {
           "lesson_number": "2.3",
-          "lesson_title": "Closures",
-          "what_is_taught": "Data privacy.",
-          "why_it_matters": "Advanced patterns.",
-          "what_learner_does": "Builds counter.",
-          "expected_outcome": "Closure pattern."
+          "lesson_title": "Scope, Lexical Environments & Closures",
+          "what_is_taught": "Global scope, function scope, block scope, the scope chain, lexical environments, closures in JavaScript, practical closure use cases, and data encapsulation.",
+          "subtopics": [
+            "How JavaScript resolves variable names: the scope chain and lexical environment",
+            "Block scope (let/const) vs function scope and the global window/globalThis object",
+            "The mechanics of a closure: how an inner function retains access to its parent's variables after the parent returns",
+            "Practical closure use cases: function factories, private counters, and state encapsulation",
+            "Debugging closures in Chrome DevTools: inspecting the Closure scope in the Sources panel",
+            "Common closure pitfalls: memory leaks and loop variable capture"
+          ],
+          "why_it_matters": "Closures power modern JavaScript libraries, state management, event listeners, and private modules; mastering them separates novices from professionals.",
+          "what_learner_does": "Builds a stateful counter and an ID-generator factory utilizing closures to encapsulate private variables.",
+          "expected_outcome": "Clear comprehension of how variable lifetime and scope chains operate in JavaScript execution."
+        },
+        {
+          "lesson_number": "2.4",
+          "lesson_title": "Callbacks, Higher-Order Functions & Immutability",
+          "what_is_taught": "Functions as first-class citizens, callback functions, higher-order functions, pure functions, side effects, reference vs value behavior, and shallow vs deep copies.",
+          "subtopics": [
+            "First-class functions: passing functions as arguments and returning functions from functions",
+            "Callback patterns: synchronous callbacks in array utilities vs asynchronous callback foundations",
+            "Understanding reference equality: why {} === {} evaluates to false",
+            "Shallow copying with spread syntax vs deep copying caveats (structuredClone())",
+            "Pure functions: predictable output given identical inputs with zero observable side effects",
+            "Advanced reduction: using reduce() to accumulate totals, group records by category, and flatten arrays"
+          ],
+          "why_it_matters": "Writing pure functions and respecting immutability prevents subtle state bugs that corrupt data across large applications.",
+          "what_learner_does": "Writes custom higher-order utility functions and transforms a raw transaction list into a categorized summary report using reduce().",
+          "expected_outcome": "Ability to write clean, side-effect-free data transformation functions."
+        },
+        {
+          "lesson_number": "2.5",
+          "lesson_title": "ES Modules, Code Organization & DevTools Call Stack",
+          "what_is_taught": "ES module syntax (import and export), named exports, default exports, organizing multi-file codebases, browser module loading (type=\"module\"), and reading the DevTools call stack.",
+          "subtopics": [
+            "Why modern web development organizes code into focused, single-responsibility ES modules",
+            "Named exports (export { fn }) vs default exports (export default fn) and import syntax",
+            "Configuring HTML documents to load ES modules via <script type=\"module\" src=\"...\">",
+            "Circular dependencies and how to structure module directories cleanly",
+            "Chrome DevTools Sources panel: setting breakpoints, stepping into/over code, and reading the call stack",
+            "Handling errors with try...catch blocks and throwing informative Error objects"
+          ],
+          "why_it_matters": "Real-world frontend development requires architecting applications across dozens of files; ES modules provide native, standards-compliant modularity.",
+          "what_learner_does": "Breaks a monolithic data-processing script into three distinct modules (data.js, math.js, formatter.js) and debugs execution in DevTools.",
+          "expected_outcome": "A clean, modular JavaScript architecture importing and exporting functions across files without polluting global scope."
         }
       ],
-      "key_concepts": [
-        "Industry Standards",
-        "Best Practices",
-        "Core Implementation"
-      ],
-      "tools": [
-        "VS Code",
-        "Node.js",
-        "Chrome DevTools"
-      ],
-      "hands_on_practice": "Guided lab focused on Functions, Scope, and Closures.",
-      "assignment": "Deliverable: Complete implementation of Functions, Scope, and Closures.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "hands_on_practice": "Process a complex business dataset of products and sales records across multiple ES modules, implementing filtering, sorting, and summary metrics.",
+      "assignment": "Deliverables: Lab A (Business Dataset Processing) and Lab B (Modular JavaScript Utilities) demonstrating array transformations, object destructuring, closures, and ES modules.",
+      "business_application": "Forms the standard data-processing and modular code foundation required for real-world frontend applications and e-commerce catalogs.",
+      "expected_outcome": "Students can structure and query complex business data and organize clean multi-file JavaScript projects.",
+      "portfolio_contribution": "Directly provides the data-processing, filtering, and modular utility layer used in Portfolio Project 01."
     },
     {
       "module_number": "Module 03",
-      "module_title": "Asynchronous JavaScript",
-      "module_purpose": "Handle async tasks.",
+      "number": 3,
+      "module": "Module 03",
+      "title": "DOM & Browser Programming",
+      "module_title": "DOM & Browser Programming",
+      "duration": "10 Hours",
+      "hours": 10,
+      "lessons_count": 5,
+      "objective": "Teach students to transform static web pages into interactive browser interfaces using DOM manipulation, event delegation, accessible form handling, and local persistence.",
+      "module_purpose": "Master DOM element selection, dynamic rendering, safe text injection, event listeners, form validation, UI state architecture, and localStorage persistence.",
       "what_you_will_learn": [
-        "Master the concepts of Asynchronous JavaScript.",
-        "Apply VS Code effectively.",
-        "Troubleshoot common issues in this domain."
+        "Select and traverse DOM elements using modern querySelector and querySelectorAll methods.",
+        "Modify element content, classes (classList), and attributes dynamically while adhering to safe DOM practices (textContent).",
+        "Create, append, and remove DOM nodes programmatically to render dynamic data lists.",
+        "Handle user interactions via event listeners (click, input, change, submit, keydown) and event objects.",
+        "Implement event delegation on parent containers to handle dynamic child elements efficiently.",
+        "Process form data, implement client-side validation, prevent default submissions, and display accessible error messages.",
+        "Manage UI state and render views deterministically from state objects rather than scraping values from the DOM.",
+        "Persist and retrieve client-side data using browser localStorage with JSON serialization and error handling."
+      ],
+      "key_concepts": [
+        "DOM Tree & Selection",
+        "Safe Rendering (textContent vs innerHTML)",
+        "classList & Attributes",
+        "Event Listeners & Event Objects",
+        "Event Delegation",
+        "Client-Side Form Validation",
+        "UI State Architecture",
+        "localStorage & JSON Serialization"
+      ],
+      "tools": [
+        "DOM APIs",
+        "HTML5 / CSS3",
+        "Chrome DevTools Elements & Sources",
+        "localStorage"
       ],
       "lessons": [
         {
           "lesson_number": "3.1",
-          "lesson_title": "Promises",
-          "what_is_taught": "Promise API.",
-          "why_it_matters": "Async control.",
-          "what_learner_does": "Chains promises.",
-          "expected_outcome": "Promise chain."
+          "lesson_title": "DOM Tree Architecture, Selection & Safe Modification",
+          "what_is_taught": "The Document Object Model tree, selecting nodes with querySelector/querySelectorAll, reading/writing textContent, manipulating attributes, classList methods (add, remove, toggle, contains), and XSS prevention.",
+          "subtopics": [
+            "The DOM representation of HTML documents: nodes, elements, and the document object",
+            "Targeting elements with CSS selectors via document.querySelector() and querySelectorAll()",
+            "Safe content rendering: why textContent is safe for untrusted data and innerHTML introduces XSS risks",
+            "Manipulating element styling and state using element.classList.add(), remove(), toggle(), and contains()",
+            "Reading and modifying attributes (getAttribute, setAttribute, dataset for custom data attributes)"
+          ],
+          "why_it_matters": "Direct DOM manipulation is the foundational skill behind every interactive web interface and UI library.",
+          "what_learner_does": "Builds an interactive theme switcher and dynamic accordion that inspects and alters DOM classes and attributes safely.",
+          "expected_outcome": "Confident selection and modification of DOM elements without security vulnerabilities."
         },
         {
           "lesson_number": "3.2",
-          "lesson_title": "Async/Await",
-          "what_is_taught": "Modern async.",
-          "why_it_matters": "Readability.",
-          "what_learner_does": "Refactors to async.",
-          "expected_outcome": "Async function."
+          "lesson_title": "Dynamic Element Creation & List Rendering",
+          "what_is_taught": "Creating elements with document.createElement(), configuring text and attributes, appending nodes with appendChild() and append(), removing elements, DocumentFragments, and template elements.",
+          "subtopics": [
+            "Creating elements programmatically: document.createElement('div')",
+            "Building component trees: appending children, setting classes, and attaching data attributes",
+            "Batch DOM insertion: optimizing render performance using DocumentFragment",
+            "Removing elements cleanly with element.remove() and clearing container contents",
+            "Using HTML5 <template> tags for cloning structured component markup"
+          ],
+          "why_it_matters": "Dynamic lists (catalogs, search results, message feeds) require generating DOM nodes on the fly as data changes.",
+          "what_learner_does": "Renders an array of 20 product cards into a container element dynamically from JavaScript data.",
+          "expected_outcome": "Ability to generate, structure, and render dynamic lists of DOM elements from data collections."
         },
         {
           "lesson_number": "3.3",
-          "lesson_title": "Fetch API",
-          "what_is_taught": "Network requests.",
-          "why_it_matters": "Data fetching.",
-          "what_learner_does": "Fetches JSON.",
-          "expected_outcome": "Data display."
+          "lesson_title": "Events, Propagation & Event Delegation",
+          "what_is_taught": "Event listeners (addEventListener), common events (click, input, change, keydown), event objects (event.target, event.currentTarget), preventDefault(), event bubbling, and event delegation.",
+          "subtopics": [
+            "Attaching event handlers via element.addEventListener(type, handler)",
+            "The Event object: identifying clicked elements (event.target) and intercepting forms (event.preventDefault())",
+            "Understanding event propagation: capturing phase, target phase, and event bubbling up the DOM tree",
+            "Event delegation pattern: attaching a single listener to a parent container to manage dozens of dynamic child buttons",
+            "Keyboard interactions: listening for keydown events (Escape to close modals, Enter to submit)"
+          ],
+          "why_it_matters": "Event delegation reduces memory overhead, simplifies dynamic lists, and ensures newly created elements respond to user actions immediately.",
+          "what_learner_does": "Builds a dynamic task list where items can be checked or deleted using a single delegated event listener on the parent <ul>.",
+          "expected_outcome": "Clean, efficient event handling across dynamic interfaces using modern event delegation."
+        },
+        {
+          "lesson_number": "3.4",
+          "lesson_title": "Accessible Form Handling & Client-Side Validation",
+          "what_is_taught": "Form submit events, FormData API, extracting input values, client-side validation logic, accessible error messaging, focus management, and distinguishing UI from backend processing.",
+          "subtopics": [
+            "Intercepting form submissions with submit event listeners and event.preventDefault()",
+            "Extracting form data: reading input.value and utilizing the modern FormData API",
+            "Writing client-side validation rules for required fields, email formats, and number ranges",
+            "Accessible error presentation: displaying visible error text paired with aria-describedby and focus management",
+            "Real-time feedback: validating inputs on blur and input events without frustrating the user",
+            "Clarifying boundaries: client-side validation guides the user, but cannot replace server validation"
+          ],
+          "why_it_matters": "Forms are where users complete purchases, register accounts, and send messages; accessible validation prevents errors and improves conversion.",
+          "what_learner_does": "Builds an accessible registration and booking form with real-time field validation, error indicators, and focus redirection.",
+          "expected_outcome": "An accessible, validated form interface providing immediate feedback and reliable data collection."
+        },
+        {
+          "lesson_number": "3.5",
+          "lesson_title": "UI State Architecture & localStorage Persistence",
+          "what_is_taught": "Separating state from DOM representation, rendering views deterministically from state arrays, empty states, browser localStorage API, JSON serialization, storage limits, and error handling.",
+          "subtopics": [
+            "The UI State mental model: state is the single source of truth; the DOM is merely a reflection of state",
+            "Building a render(state) function that updates the interface whenever state changes",
+            "Designing empty states when lists contain zero items or filter criteria match nothing",
+            "Browser storage fundamentals: localStorage origin isolation, string-only storage, and 5MB quotas",
+            "Serializing and deserializing state using JSON.stringify() and JSON.parse()",
+            "Defensive storage coding: handling quota exceptions and corrupt data gracefully with try...catch",
+            "Privacy and security: why passwords, tokens, and personal secrets must never be placed in localStorage"
+          ],
+          "why_it_matters": "Managing UI through state rather than directly reading values from HTML elements is the core architecture behind all modern web applications.",
+          "what_learner_does": "Connects their task application to localStorage, verifying that records survive browser refreshes and deletions update storage accurately.",
+          "expected_outcome": "A state-driven interactive web application that persists data across sessions using localStorage."
         }
       ],
+      "hands_on_practice": "Build a state-driven Business Records Interface in VS Code containing an add-record form, live filtering, and localStorage persistence.",
+      "assignment": "Deliverable: Interactive Business Records Interface featuring form validation, dynamic DOM rendering, search/filters, delete confirmation, empty state, and verified localStorage persistence.",
+      "business_application": "Delivers the core interactive frontend capability required for commercial client portals, dashboard tools, and offline-capable forms.",
+      "expected_outcome": "Students can construct interactive browser applications that respond to user actions and retain client data accurately.",
+      "portfolio_contribution": "Directly produces Portfolio Project 01 (Business Records & Workflow Application)."
+    },
+    {
+      "module_number": "Module 04",
+      "number": 4,
+      "module": "Module 04",
+      "title": "Asynchronous JavaScript & APIs",
+      "module_title": "Asynchronous JavaScript & APIs",
+      "duration": "12 Hours",
+      "hours": 12,
+      "lessons_count": 5,
+      "objective": "Teach students to request, process, and display external remote data reliably using asynchronous JavaScript, Promises, async/await, and the Fetch API.",
+      "module_purpose": "Master the JavaScript event loop, Promises, async/await, HTTP protocols, Fetch API, JSON parsing, error boundaries, loading/empty/error states, and secure API integration.",
+      "what_you_will_learn": [
+        "Understand the difference between synchronous execution and asynchronous non-blocking I/O in the JavaScript runtime.",
+        "Master the Promise lifecycle (pending, fulfilled, rejected) and handle asynchronous workflows using modern async/await syntax.",
+        "Understand HTTP protocols, request-response lifecycles, HTTP methods (GET, POST), headers, and status codes.",
+        "Fetch remote data using the Fetch API (fetch()) and parse JSON payloads with proper response.ok status verification.",
+        "Recognize that fetch() does not reject on 404 or 500 status codes, and implement explicit error-throwing boundaries.",
+        "Implement the four mandatory asynchronous UI states: Loading indicator, Valid results display, Empty results feedback, and Error/Network failure with retry.",
+        "Handle network disconnects, timeouts with AbortController, and malformed API payloads defensively.",
+        "Adhere to frontend security boundaries: never expose private API keys in client-side code and understand CORS restrictions."
+      ],
       "key_concepts": [
-        "Industry Standards",
-        "Best Practices",
-        "Core Implementation"
+        "Asynchronous Execution & Event Loop",
+        "Promises & Promise States",
+        "async / await Syntax",
+        "HTTP Methods & Status Codes",
+        "Fetch API & response.ok",
+        "JSON Parsing",
+        "4 Asynchronous UI States",
+        "Error Boundaries & Retries",
+        "Frontend API Security"
       ],
       "tools": [
-        "VS Code",
-        "Node.js",
-        "Chrome DevTools"
+        "Fetch API",
+        "Public REST APIs",
+        "Chrome DevTools Network Panel",
+        "Postman (Demonstration Only)"
       ],
-      "hands_on_practice": "Guided lab focused on Asynchronous JavaScript.",
-      "assignment": "Deliverable: Complete implementation of Asynchronous JavaScript.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "lessons": [
+        {
+          "lesson_number": "4.1",
+          "lesson_title": "Asynchronous Execution, Event Loop & Promises",
+          "what_is_taught": "Synchronous blocking vs asynchronous non-blocking execution, call stack, task queue, microtask queue, the browser event loop, callback hell, Promises, and Promise chaining.",
+          "subtopics": [
+            "Why long-running tasks must not block the browser's single main thread",
+            "The event loop mental model: Call Stack, Web APIs, Task Queue, and Microtask Queue",
+            "The evolution of asynchronous JavaScript: callbacks, callback hell, and the Promise abstraction",
+            "Promise states: pending, fulfilled (resolved), and rejected",
+            "Consuming Promises using .then(), .catch(), and .finally() chaining"
+          ],
+          "why_it_matters": "A clear mental model of the event loop prevents fundamental mistakes regarding when asynchronous code runs relative to synchronous statements.",
+          "what_learner_does": "Predicts and logs the execution order of synchronous code, setTimeout timers, and Promise microtasks in the browser console.",
+          "expected_outcome": "Mastery over the asynchronous execution order in the JavaScript runtime."
+        },
+        {
+          "lesson_number": "4.2",
+          "lesson_title": "async/await & Error Propagation with try...catch",
+          "what_is_taught": "The async keyword, await expressions, refactoring Promise chains to async/await, error handling with try...catch, error propagation, and finally cleanup blocks.",
+          "subtopics": [
+            "Writing asynchronous code that reads like synchronous procedures using async and await",
+            "How async functions automatically wrap return values in a Promise",
+            "Catching asynchronous rejections using standard try...catch blocks",
+            "Error propagation: handling errors locally vs bubbling them up to caller functions",
+            "Executing guaranteed cleanup logic (such as hiding loading spinners) using finally blocks"
+          ],
+          "why_it_matters": "async/await is the modern industry standard for managing asynchronous operations, drastically improving code readability and error management.",
+          "what_learner_does": "Refactors legacy Promise chains into clean async/await functions wrapped in robust try...catch...finally blocks.",
+          "expected_outcome": "Clean, readable asynchronous control flow with predictable error capture."
+        },
+        {
+          "lesson_number": "4.3",
+          "lesson_title": "HTTP Fundamentals, REST APIs & The Fetch API",
+          "what_is_taught": "HTTP request-response cycle, HTTP methods (GET, POST), status codes (200, 201, 400, 401, 403, 404, 500), JSON format, fetch() syntax, response objects, and parsing JSON.",
+          "subtopics": [
+            "How client applications communicate with remote servers: HTTP requests, headers, and payloads",
+            "HTTP status codes: 2xx success, 4xx client errors, and 5xx server failures",
+            "JSON (JavaScript Object Notation): parsing with JSON.parse() and formatting with JSON.stringify()",
+            "The Fetch API: calling fetch(url, options) to retrieve remote resources",
+            "Parsing response bodies asynchronously using response.json() and response.text()",
+            "Inspecting live HTTP requests, status codes, and response payloads in the Chrome DevTools Network panel"
+          ],
+          "why_it_matters": "Connecting browser applications to external REST APIs is how modern websites access live data, products, news, and services.",
+          "what_learner_does": "Fetches a collection of public records using fetch(), inspects headers in DevTools Network tab, and extracts parsed JSON data.",
+          "expected_outcome": "Successful transmission and receipt of remote data payloads using the Fetch API."
+        },
+        {
+          "lesson_number": "4.4",
+          "lesson_title": "Critical Error Boundaries & The 4 Asynchronous UI States",
+          "what_is_taught": "The fetch() response.ok trap, network errors vs HTTP failures, designing the 4 UI states (Loading, Success, Empty, Error), timeout handling with AbortController, and retry mechanisms.",
+          "subtopics": [
+            "The critical Fetch principle: fetch() rejects ONLY on network failures; 404 and 500 errors resolve with response.ok === false",
+            "Writing defensive status guards: if (!response.ok) throw new Error(`HTTP ${response.status}`)",
+            "The 4 mandatory UI states: 1. Loading spinner, 2. Success with results, 3. Success with empty results, 4. Error banner",
+            "Handling network dropouts and simulating offline conditions in Chrome DevTools",
+            "Implementing user-triggered retry mechanisms for transient network hiccups",
+            "Managing request timeouts and cancellation using AbortController"
+          ],
+          "why_it_matters": "A fragile app crashes or hangs on a loading spinner when the network fails; a professional app handles errors gracefully and informs the user.",
+          "what_learner_does": "Builds an asynchronous UI controller that explicitly displays loading spinners, data cards, empty search notifications, and error alerts with retry buttons.",
+          "expected_outcome": "An error-resilient browser interface that handles every possible network and data outcome gracefully."
+        },
+        {
+          "lesson_number": "4.5",
+          "lesson_title": "Search Queries, Public APIs & Frontend Security Boundaries",
+          "what_is_taught": "Passing query parameters (URLSearchParams), debouncing search input, CORS headers, frontend security limits, why private API keys must never be committed to client code, and public API consumption.",
+          "subtopics": [
+            "Constructing dynamic search query strings using the URLSearchParams browser API",
+            "Input optimization: introducing basic debouncing concepts so API calls don't fire on every keystroke",
+            "Cross-Origin Resource Sharing (CORS): understanding browser origin restrictions and CORS preflight",
+            "Frontend security rule: Vite client-side bundles are publicly inspectable; never place private secret keys in frontend code",
+            "Selecting safe, public educational REST APIs with permissive CORS headers",
+            "Handling concurrent requests and avoiding stale responses when searching rapidly"
+          ],
+          "why_it_matters": "Leaking private API keys in client-side JavaScript repositories can lead to compromised accounts, security breaches, and massive billing charges.",
+          "what_learner_does": "Connects a public search API to an interactive text input using URLSearchParams, verifying secure keyless access in DevTools.",
+          "expected_outcome": "A secure, searchable API integration respecting browser CORS boundaries and client-side credential limitations."
+        }
+      ],
+      "hands_on_practice": "Build an API Data Explorer in VS Code that requests public data, displays loading feedback, renders results, and handles HTTP/network errors.",
+      "assignment": "Deliverable: API Data Explorer application demonstrating fetch(), async/await, response.ok checks, all 4 UI states, search/filter controls, and zero exposed private credentials.",
+      "business_application": "Provides the essential asynchronous API integration capability required for all modern frontend web applications and dashboards.",
+      "expected_outcome": "Students can build robust, error-resilient browser interfaces powered by remote REST APIs.",
+      "portfolio_contribution": "Directly produces Portfolio Project 02 (JavaScript API Data Explorer)."
+    },
+    {
+      "module_number": "Module 05",
+      "number": 5,
+      "module": "Module 05",
+      "title": "TypeScript & Development Quality",
+      "module_title": "TypeScript & Development Quality",
+      "duration": "10 Hours",
+      "hours": 10,
+      "lessons_count": 5,
+      "objective": "Introduce TypeScript to enhance code clarity, catch type errors at compile time, and integrate modern development tooling including Vite, ESLint, and Vitest testing.",
+      "module_purpose": "Master TypeScript types, interfaces, unions, narrowing, basic generics, npm package management, Vite build tooling, ESLint code analysis, and Vitest unit testing.",
+      "what_you_will_learn": [
+        "Understand why TypeScript exists as a typed superset of JavaScript and how compile-time checking differs from runtime execution.",
+        "Apply basic type annotations (string, number, boolean, array, object, function signatures) and understand type inference.",
+        "Model application data structures using custom type aliases and interfaces with optional properties.",
+        "Work with union types and implement safe type narrowing using typeof, equality checks, and null checks.",
+        "Write basic generic functions and understand type-safe collections.",
+        "Recognize the critical boundary: TypeScript checks compile-time types, but does not automatically validate external API data at runtime.",
+        "Scaffold modern frontend projects using npm, package.json, and the Vite development server and build tool.",
+        "Configure ESLint for code consistency and write automated unit test suites using Vitest."
+      ],
+      "key_concepts": [
+        "JavaScript vs TypeScript",
+        "Compile-Time vs Runtime",
+        "Type Annotations & Inference",
+        "Interfaces & Type Aliases",
+        "Union Types & Narrowing",
+        "Basic Generics",
+        "npm & package.json",
+        "Vite Development Workflow",
+        "ESLint & Code Quality",
+        "Vitest Unit Testing"
+      ],
+      "tools": [
+        "TypeScript",
+        "Vite",
+        "Node.js (Tooling)",
+        "ESLint",
+        "Vitest",
+        "npm"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "5.1",
+          "lesson_title": "Why TypeScript? Types, Annotations & Inference",
+          "what_is_taught": "The rationale for TypeScript, typed superset concepts, compile-time type checking vs runtime behavior, type inference, explicit primitive annotations, and function type signatures.",
+          "subtopics": [
+            "Why development teams adopt TypeScript: catching bugs during authoring rather than in production",
+            "Compilation/transpilation: how TypeScript strips types to emit standard JavaScript for the browser",
+            "Type inference: when TypeScript can deduce types automatically without manual annotations",
+            "Explicit annotations: string, number, boolean, array types (number[], Array<string>), and any (and why to avoid it)",
+            "Typing function parameters and return types: (a: number, b: number): number"
+          ],
+          "why_it_matters": "TypeScript provides immediate editor feedback (IntelliSense) and prevents passing incorrect argument types across complex codebases.",
+          "what_learner_does": "Configures a TypeScript environment in VS Code and converts a set of JavaScript calculation functions to typed TypeScript signatures.",
+          "expected_outcome": "Immediate compile-time error detection when calling functions with incompatible argument types."
+        },
+        {
+          "lesson_number": "5.2",
+          "lesson_title": "Interfaces, Type Aliases, Unions & Type Narrowing",
+          "what_is_taught": "Defining object models with type aliases and interface, optional properties (?), readonly fields, union types (A | B), type narrowing with typeof, and nullish guards.",
+          "subtopics": [
+            "Defining structured object models using interface and type aliases",
+            "Optional properties (id?: string) and readonly immutability markers",
+            "Union types: allowing a variable or parameter to hold one of several types (string | number)",
+            "Type narrowing: using typeof guards, equality checks, and in operators to narrow unions safely",
+            "Handling null and undefined: strict null checking and eliminating 'cannot read properties of undefined'",
+            "Basic generics introduction: writing reusable functions with type parameters (function getFirst<T>(arr: T[]): T)"
+          ],
+          "why_it_matters": "Interfaces and union types allow developers to accurately model complex application domain models and catch invalid data shapes early.",
+          "what_learner_does": "Defines comprehensive interfaces for an API response model and implements narrowing logic to handle multiple data variations.",
+          "expected_outcome": "Clean, type-safe data models that guide application logic and prevent undefined property access."
+        },
+        {
+          "lesson_number": "5.3",
+          "lesson_title": "Compile-Time vs Runtime Safety & DOM Element Typing",
+          "what_is_taught": "The crucial distinction between compile-time checking and runtime validation, typing DOM elements (HTMLElement, HTMLInputElement), safe type assertions, and defensive API checks.",
+          "subtopics": [
+            "The fundamental truth: TypeScript types evaporate at runtime; an interface does not validate incoming API responses",
+            "Defensive coding: pairing compile-time interfaces with runtime field checks",
+            "Typing DOM elements: HTMLInputElement vs HTMLElement and accessing .value safely",
+            "Handling DOM querySelector nullability: (element as HTMLButtonElement | null)",
+            "The unknown type vs any: why unknown enforces type checks before property access"
+          ],
+          "why_it_matters": "Believing TypeScript eliminates the need for runtime validation leads to disastrous crashes when real external APIs return unexpected data.",
+          "what_learner_does": "Types DOM form elements in TypeScript, handles potential null querySelector returns, and validates an unknown API response safely.",
+          "expected_outcome": "Realistic, safe TypeScript code that accounts for runtime uncertainty and DOM element nullability."
+        },
+        {
+          "lesson_number": "5.4",
+          "lesson_title": "Modern Tooling: npm, package.json & Vite Scaffolding",
+          "what_is_taught": "Node.js for local tooling, npm fundamentals, package.json dependencies vs devDependencies, package-lock.json, scaffolding projects with Vite, dev server, and production builds.",
+          "subtopics": [
+            "The role of Node.js: running local development CLI tools and compilers (not backend servers)",
+            "npm package management: npm init, installing packages, and scripts in package.json",
+            "Dependencies vs devDependencies: understanding what goes into production vs local authoring tools",
+            "Vite frontend tooling: initializing a vanilla TypeScript project (npm create vite@latest)",
+            "Running the Vite development server (npm run dev) with instant Hot Module Replacement (HMR)",
+            "Building deployable static production assets (npm run build) and previewing output (npm run preview)"
+          ],
+          "why_it_matters": "Vite is the modern industry standard for bundling web applications, providing unmatched speed compared to legacy bundlers like Webpack.",
+          "what_learner_does": "Initializes a Vite TypeScript project from scratch, installs dependencies, runs the local dev server, and creates a production build.",
+          "expected_outcome": "A configured, fast-loading modern frontend project scaffold ready for application development."
+        },
+        {
+          "lesson_number": "5.5",
+          "lesson_title": "Code Quality with ESLint & Unit Testing with Vitest",
+          "what_is_taught": "Static code analysis with ESLint, configuring rules, automated unit testing with Vitest, test structure (describe, it, expect), testing pure functions, and boundary cases.",
+          "subtopics": [
+            "Code quality with ESLint: identifying unused variables, syntax problems, and formatting inconsistencies",
+            "Introduction to automated testing: why manual browser clicking is insufficient for critical logic",
+            "Setting up Vitest in a Vite project and running tests via npm run test",
+            "Writing test suites: grouping with describe(), defining tests with it() / test(), and assertions with expect()",
+            "Testing business logic: positive cases, boundary conditions, and negative error cases",
+            "Refactoring with confidence: running automated tests to ensure code changes cause zero regressions"
+          ],
+          "why_it_matters": "Automated unit tests ensure that calculations, filters, and validation rules remain completely reliable as applications grow.",
+          "what_learner_does": "Configures ESLint, writes a suite of 10 Vitest unit tests for validation and calculation utilities, and confirms all tests pass.",
+          "expected_outcome": "A linted codebase backed by an automated Vitest test suite proving code reliability."
+        }
+      ],
+      "hands_on_practice": "Refactor a JavaScript utility module to typed TypeScript, set up a Vite project, configure ESLint, and write Vitest unit tests.",
+      "assignment": "Deliverable: JavaScript-to-TypeScript Refactoring & Testing Lab with verified type compilation, ESLint check, and Vitest test execution evidence.",
+      "business_application": "Introduces the industry-standard code quality, typing, and testing workflows expected by professional software engineering teams.",
+      "expected_outcome": "Students can introduce TypeScript and automated testing to JavaScript projects without losing their language fundamentals.",
+      "portfolio_contribution": "Establishes the TypeScript interfaces, Vite build pipeline, and Vitest test suites used in Portfolio Project 02."
+    },
+    {
+      "module_number": "Module 06",
+      "number": 6,
+      "module": "Module 06",
+      "title": "Applied JavaScript Projects",
+      "module_title": "Applied JavaScript Projects",
+      "duration": "12 Hours",
+      "hours": 12,
+      "lessons_count": 5,
+      "objective": "Integrate JavaScript programming, browser APIs, introductory TypeScript, DevTools debugging, Vitest testing, and Git workflows into two complete working applications.",
+      "module_purpose": "Complete, test, refine, document, and publish both assessed portfolio applications: the Business Records App and the API Data Explorer, preparing for production review.",
+      "what_you_will_learn": [
+        "Plan application architectures from functional requirements, user tasks, and data models.",
+        "Integrate modular JavaScript and TypeScript files into cohesive, responsive browser applications.",
+        "Perform systematic Chrome DevTools debugging: isolate logic errors with breakpoints and trace network requests.",
+        "Execute automated unit test suites with Vitest to verify core validation, calculation, and data transformation routines.",
+        "Conduct web accessibility audits: verify keyboard operability, logical tab order, and accessible form labels.",
+        "Apply version control best practices: atomic Git commits, descriptive commit messages, and clean repository structures.",
+        "Configure Vite production builds and deploy static browser applications to live URLs using GitHub Pages.",
+        "Write professional README.md documentation and present working applications with complete code ownership."
+      ],
+      "key_concepts": [
+        "Application Architecture",
+        "Integration & State Flow",
+        "Chrome DevTools Breakpoint Debugging",
+        "Automated Test Execution",
+        "Web Accessibility QA",
+        "Git Commit Discipline",
+        "GitHub Pages Deployment",
+        "README Documentation",
+        "Code Ownership & Presentation"
+      ],
+      "tools": [
+        "JavaScript",
+        "TypeScript",
+        "Vite",
+        "Chrome DevTools",
+        "Vitest",
+        "Git",
+        "GitHub Pages"
+      ],
+      "lessons": [
+        {
+          "lesson_number": "6.1",
+          "lesson_title": "Application Architecture & State Flow Integration",
+          "what_is_taught": "Deconstructing application specifications, establishing file hierarchies, connecting ES modules, planning state transitions, and reviewing HTML/CSS templates.",
+          "subtopics": [
+            "Deconstructing user task workflows into data models, state objects, and UI events",
+            "Establishing clean project directory structures (src/, tests/, styles/)",
+            "Connecting modules: ensuring clean data flow from inputs -> state -> storage/API -> view rendering",
+            "Auditing HTML and CSS layout foundations before adding JavaScript interaction",
+            "Avoiding common architectural traps: separating DOM rendering from underlying business data"
+          ],
+          "why_it_matters": "A clear architectural plan prevents spaghetti code where UI updates, data fetching, and calculations become hopelessly tangled.",
+          "what_learner_does": "Reviews and refines the modular architecture of both portfolio applications, verifying clean separation of concerns.",
+          "expected_outcome": "A structured, modular application codebase with clear data flow and predictable state management."
+        },
+        {
+          "lesson_number": "6.2",
+          "lesson_title": "Advanced DevTools Breakpoint Debugging & Network QA",
+          "what_is_taught": "Systematic debugging with Chrome DevTools Sources panel, setting conditional breakpoints, step-into/step-over execution, inspecting the call stack, and network throttling.",
+          "subtopics": [
+            "Moving beyond console.log: setting breakpoints directly in source code",
+            "Using conditional breakpoints to pause execution only when specific error criteria occur",
+            "Stepping through code execution: step over, step into, and step out of functions",
+            "Inspecting variable scope and closure variables in real time in the DevTools Scope panel",
+            "Simulating slow 3G network conditions and offline states in the Network panel to test async error recovery",
+            "Diagnosing and resolving unexpected undefined values, broken query selectors, and storage quota limits"
+          ],
+          "why_it_matters": "Professional developers spend significant time debugging; mastering browser DevTools makes troubleshooting fast, systematic, and confident.",
+          "what_learner_does": "Steps through an asynchronous data fetch and a localStorage update using DevTools breakpoints, logging call stack states.",
+          "expected_outcome": "Fluency in identifying, isolating, and resolving runtime JavaScript bugs using DevTools."
+        },
+        {
+          "lesson_number": "6.3",
+          "lesson_title": "Unit Testing & Accessibility Verification",
+          "what_is_taught": "Running full Vitest test suites, testing boundary conditions, keyboard navigation testing (Tab, Enter, Escape), focus rings, accessible form validation messages, and ESLint audits.",
+          "subtopics": [
+            "Running comprehensive Vitest test suites across all validation, calculation, and filtering modules",
+            "Testing boundary conditions: empty inputs, zero values, special characters, and malformed strings",
+            "Conducting the manual keyboard test: verifying all application features work using Tab, Enter, Space, and Escape",
+            "Ensuring visible, high-contrast focus rings (:focus-visible) on all interactive controls",
+            "Validating that error messages are announced to assistive technologies using aria-live and aria-describedby",
+            "Executing ESLint passes and fixing any code formatting or unused variable warnings"
+          ],
+          "why_it_matters": "Applications must work reliably for all users, including keyboard users and screen-reader users, and pass automated tests.",
+          "what_learner_does": "Runs their Vitest test suite, conducts a manual keyboard accessibility audit, and logs zero keyboard traps.",
+          "expected_outcome": "A fully tested and accessible application passing automated unit tests and manual keyboard checks."
+        },
+        {
+          "lesson_number": "6.4",
+          "lesson_title": "Vite Production Build & GitHub Pages Deployment",
+          "what_is_taught": "Configuring Vite production builds (vite build), configuring base paths (base: './'), inspecting the dist/ output, publishing static apps to GitHub Pages, and deployment troubleshooting.",
+          "subtopics": [
+            "Running the Vite production build: compiling TypeScript, bundling modules, and minifying assets",
+            "Configuring base paths in vite.config.ts (base: './' or repo path) for GitHub Pages hosting",
+            "Inspecting the generated dist/ directory: verifying relative asset paths in index.html",
+            "Deploying to GitHub Pages: publishing via branch or GitHub Actions static deployment",
+            "Troubleshooting deployment 404s: verifying casing consistency and resolving asset path mismatches",
+            "Hosting boundaries: understanding that GitHub Pages is static hosting and cannot run server-side code"
+          ],
+          "why_it_matters": "Publishing applications to live HTTPS URLs transforms local code into public portfolio proof-of-work that employers and clients can explore.",
+          "what_learner_does": "Builds both applications using Vite, deploys them to GitHub Pages, and validates live URLs across desktop and mobile browsers.",
+          "expected_outcome": "Two live, publicly accessible web applications deployed on GitHub Pages with verified asset resolution."
+        },
+        {
+          "lesson_number": "6.5",
+          "lesson_title": "Documentation, Code Walkthrough & Portfolio Presentation",
+          "what_is_taught": "Writing comprehensive README documentation, code ownership evaluation, explaining architectural decisions, preparing demonstration videos or walkthroughs, and next learning steps.",
+          "subtopics": [
+            "Crafting a professional README.md: architecture overview, features, setup commands, test instructions, and live links",
+            "Code ownership checklist: explaining every function, scope boundary, and async call independently",
+            "Demonstrating all required project states: add/edit/delete persistence and the 4 API states (loading/empty/error/success)",
+            "Documenting known limitations, trade-offs, and future technical iterations",
+            "Reviewing next learning milestones: advancing to Course 57 (React Certification) and Course 58 (Node.js Backend)"
+          ],
+          "why_it_matters": "Being able to clearly explain technical trade-offs, state management, and code architecture is what hiring managers evaluate in junior developer interviews.",
+          "what_learner_does": "Finalizes README documentation for both repositories and conducts a technical walkthrough demonstrating working features and test passes.",
+          "expected_outcome": "Two complete, documented, and published portfolio applications backed by confident code ownership."
+        }
+      ],
+      "hands_on_practice": "Execute final testing, linting, production build, GitHub Pages deployment, and documentation for both portfolio applications.",
+      "assignment": "Deliverables: Two Completed Working Applications Handover containing live deployment URLs, GitHub repository links, passing Vitest test suites, and comprehensive README documentation.",
+      "business_application": "Completes the professional engineering workflow required to build, test, document, and deploy production-ready frontend browser applications.",
+      "expected_outcome": "Students can build, debug, test, version-control, and deploy working browser applications with complete technical independence.",
+      "portfolio_contribution": "Finalizes and publishes both Portfolio Project 01 and Portfolio Project 02 as verified, live commercial portfolio assets."
     }
-  ]
+  ],
+  "faq": [
+    {
+      "question": "What is Modern JavaScript & TypeScript Foundations?",
+      "answer": "Modern JavaScript & TypeScript Foundations is an intensive 8-week, 64-hour practical programming certification course that teaches you to build interactive, functional browser applications from scratch. You will master core programming logic, modern JavaScript (ES6+), DOM manipulation, asynchronous programming with async/await and Fetch, introductory TypeScript, and modern developer tooling (VS Code, Chrome DevTools, Vite, ESLint, and Vitest)."
+    },
+    {
+      "question": "Is this course suitable for beginners?",
+      "answer": "Yes, it is designed for beginners to programming. We teach programming logic, variables, control flow, and functions from the ground up. However, students are expected to have a basic working knowledge of HTML and CSS, as JavaScript interacts directly with web pages."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course duration is 8 Weeks, comprising 64 intensive learning hours (8 hours per week across software labs, coding exercises, and project development). The flat tuition fee is ₹9,900 with transparent pricing and zero artificial countdown markups or hidden fees."
+    },
+    {
+      "question": "Do I need HTML/CSS knowledge?",
+      "answer": "Yes. Basic familiarity with HTML (documents, semantic tags, forms, buttons) and CSS (selectors, classes, IDs, basic layout) is required because JavaScript interacts directly with the HTML DOM and modifies CSS classes. If you lack HTML/CSS experience, we recommend completing Course 55 (HTML, CSS & Responsive Web Design) first."
+    },
+    {
+      "question": "Is there a readiness assessment?",
+      "answer": "Yes. Learners who have not completed Course 55 can take a brief self-assessment covering basic HTML structure, CSS selectors, and file organization to confirm readiness before enrolling."
+    },
+    {
+      "question": "Will I learn JavaScript from scratch?",
+      "answer": "Yes. We start with absolute programming fundamentals: what programming is, how the browser executes scripts, variables, data types, operators, conditional branching, loops, and functions. You do not need any prior programming background in any language."
+    },
+    {
+      "question": "What is the difference between JavaScript and TypeScript?",
+      "answer": "JavaScript is the native programming language executed by web browsers. TypeScript is a typed superset of JavaScript developed by Microsoft that adds optional static type checking, interfaces, and compile-time tooling. TypeScript code is transpiled into standard JavaScript before running in the browser."
+    },
+    {
+      "question": "Why learn JavaScript before TypeScript?",
+      "answer": "TypeScript is fundamentally JavaScript with types. If you do not understand JavaScript's runtime behavior—such as scope, closures, truthy/falsy evaluation, reference mutation, and the event loop—adding TypeScript only creates confusion. We teach JavaScript thoroughly first, and then introduce TypeScript as an empowering quality tool."
+    },
+    {
+      "question": "Does the course cover arrays and objects?",
+      "answer": "Yes. Module 02 is deeply dedicated to structured data. You will master array methods (push, pop, slice, splice), higher-order transformation methods (map, filter, reduce, find, sort), object properties, dot/bracket notation, nested data, destructuring, and spread/rest operators."
+    },
+    {
+      "question": "Will I learn functions and closures?",
+      "answer": "Yes. You will learn function declarations, expressions, arrow functions, parameters, return values, pure functions, higher-order functions, callbacks, lexical scope, and how closures preserve private state."
+    },
+    {
+      "question": "Will I learn DOM manipulation?",
+      "answer": "Yes. Module 03 covers selecting elements with querySelector, creating elements dynamically, modifying attributes and classes, event listeners (click, input, submit, keydown), event bubbling, and event delegation."
+    },
+    {
+      "question": "Does it include form validation?",
+      "answer": "Yes. You will learn client-side form handling: intercepting submit events with event.preventDefault(), reading input values, validating formats and required fields, and presenting accessible error messages with proper ARIA attributes."
+    },
+    {
+      "question": "Will I learn localStorage?",
+      "answer": "Yes. You will learn how to persist client-side application state across browser sessions using localStorage, serialize data with JSON.stringify(), deserialize with JSON.parse(), and handle quota limitations and storage errors defensively."
+    },
+    {
+      "question": "Does the course cover async/await?",
+      "answer": "Yes. Asynchronous JavaScript is a core focus in Module 04. You will master the event loop model, Promises, .then()/.catch() chains, modern async/await syntax, and error propagation using try...catch blocks."
+    },
+    {
+      "question": "Will I learn Fetch API integration?",
+      "answer": "Yes. You will learn how to make HTTP GET requests using fetch(), inspect response headers, verify response.ok, parse JSON payloads, and monitor network requests in Chrome DevTools."
+    },
+    {
+      "question": "Will I build API-powered applications?",
+      "answer": "Yes. Portfolio Project 02 is a complete API-powered browser application that fetches real remote data from a documented public REST API and dynamically renders search results and filtered views."
+    },
+    {
+      "question": "Does TypeScript prevent all runtime errors?",
+      "answer": "No. TypeScript performs compile-time checking during development, but types disappear once transpiled to JavaScript. TypeScript does not automatically validate external runtime data (such as user inputs or remote API responses). The course teaches defensive runtime checks alongside TypeScript types."
+    },
+    {
+      "question": "Will I learn npm and Vite?",
+      "answer": "Yes. You will learn npm package management (package.json, dependencies, scripts) and use Vite as your primary development server and production build tool for fast bundling and hot module replacement."
+    },
+    {
+      "question": "Does the course include ESLint?",
+      "answer": "Yes. You will learn how to use ESLint to analyze your code for common bugs, dead code, syntax errors, and formatting inconsistencies."
+    },
+    {
+      "question": "Will I learn unit testing with Vitest?",
+      "answer": "Yes. You will learn unit testing fundamentals using Vitest: writing test suites (describe, it, expect), testing pure calculation, validation, and data transformation functions across positive, boundary, and negative scenarios."
+    },
+    {
+      "question": "How many projects will I build?",
+      "answer": "You will build two complete, assessed browser application projects: an interactive Business Records & Workflow Application with localStorage persistence, and an API Data Explorer application with TypeScript foundations and robust error boundaries."
+    },
+    {
+      "question": "Will I receive source code repositories?",
+      "answer": "Yes. You will author and maintain your own Git repositories on GitHub containing all modular source code, tests, configuration files, and documentation."
+    },
+    {
+      "question": "Does the course teach React?",
+      "answer": "No. This course focuses on mastering core JavaScript, DOM browser APIs, asynchronous programming, and TypeScript. Learning these fundamentals first prepares you to excel in Course 57 (React Certification) without struggling with basic language concepts."
+    },
+    {
+      "question": "Does the course teach server-side Node.js?",
+      "answer": "No. Node.js is utilized strictly as a local development toolchain to run npm, Vite, ESLint, and Vitest. Backend server programming, Express, and databases are taught in Course 58 (Node.js Backend Development)."
+    },
+    {
+      "question": "Will I learn database development?",
+      "answer": "No. Database engineering (SQL, PostgreSQL, MongoDB) is part of backend and full-stack programmes. In this course, client-side data persistence is handled via browser localStorage."
+    },
+    {
+      "question": "Are API subscriptions required?",
+      "answer": "No. All API assignments and projects utilize free, publicly available, keyless educational REST APIs that do not require paid subscriptions or credit cards."
+    },
+    {
+      "question": "Will I learn Git/GitHub?",
+      "answer": "Yes. You will learn essential Git commands (init, status, add, commit, log), manage remote GitHub repositories, push code, and write professional README documentation."
+    },
+    {
+      "question": "Will I deploy the applications?",
+      "answer": "Yes. You will configure Vite production builds and publish both applications to live, shareable HTTPS URLs using GitHub Pages static hosting."
+    },
+    {
+      "question": "Is this a foundation for React and Node.js?",
+      "answer": "Yes. Modern JavaScript (ES6+), async/await, array transformations, and TypeScript are the exact foundations required to learn React component development and Node.js backend engineering effectively."
+    },
+    {
+      "question": "What beginner-level career opportunities are possible?",
+      "answer": "Graduates can explore entry-level opportunities such as Junior JavaScript Developer, Frontend Development Trainee, Browser UI Developer (Entry Level), Web Interaction Developer, or Junior Web Application Assistant. Actual career outcomes depend on individual dedication, portfolio quality, and job market conditions; Nova Skills does not guarantee employment or salary figures."
+    }
+  ],
+  "primary_keyword": "JavaScript Course",
+  "secondary_keywords": [
+    "JavaScript TypeScript Course",
+    "Modern JavaScript Course",
+    "JavaScript Course for Beginners",
+    "JavaScript Course in India",
+    "TypeScript Foundations Course",
+    "Learn JavaScript and TypeScript",
+    "JavaScript DOM Course",
+    "JavaScript API Integration",
+    "Async Await JavaScript",
+    "JavaScript Fetch API",
+    "JavaScript Projects Course",
+    "Vite JavaScript Training",
+    "TypeScript for Beginners",
+    "JavaScript Programming Course",
+    "JavaScript Course Fees",
+    "JavaScript Course Duration",
+    "JavaScript Practical Training",
+    "Frontend Programming Foundations",
+    "JavaScript Developer Portfolio"
+  ],
+  "keywords": [
+    "JavaScript Course",
+    "JavaScript TypeScript Course",
+    "Modern JavaScript Course",
+    "JavaScript Course for Beginners",
+    "JavaScript Course in India",
+    "TypeScript Foundations Course",
+    "Learn JavaScript and TypeScript",
+    "JavaScript DOM Course",
+    "JavaScript API Integration",
+    "Async Await JavaScript",
+    "JavaScript Fetch API",
+    "JavaScript Projects Course",
+    "Vite JavaScript Training",
+    "TypeScript for Beginners",
+    "JavaScript Programming Course",
+    "JavaScript Course Fees",
+    "JavaScript Course Duration",
+    "JavaScript Practical Training",
+    "Frontend Programming Foundations",
+    "JavaScript Developer Portfolio"
+  ],
+  "seo": {
+    "meta_title": "JavaScript & TypeScript Course | 8 Weeks, ₹9,900 | Nova Skills",
+    "meta_description": "Learn JavaScript, DOM, APIs, TypeScript and Vite. Build two working browser applications in 8 weeks, 64 learning hours, for ₹9,900.",
+    "primary_keyword": "JavaScript Course",
+    "secondary_keywords": [
+      "JavaScript TypeScript Course",
+      "Modern JavaScript Course",
+      "JavaScript Course for Beginners",
+      "JavaScript Course in India",
+      "TypeScript Foundations Course",
+      "Learn JavaScript and TypeScript",
+      "JavaScript DOM Course",
+      "JavaScript API Integration",
+      "Async Await JavaScript",
+      "JavaScript Fetch API",
+      "JavaScript Projects Course",
+      "Vite JavaScript Training",
+      "TypeScript for Beginners",
+      "JavaScript Programming Course",
+      "JavaScript Course Fees",
+      "JavaScript Course Duration",
+      "JavaScript Practical Training",
+      "Frontend Programming Foundations",
+      "JavaScript Developer Portfolio"
+    ],
+    "canonical_url": "https://novaskills.in/course-detail.html?id=javascript-cert",
+    "h1": "Modern JavaScript & TypeScript Foundations",
+    "hero_hook": "Turn Static Websites Into Interactive Applications With Modern JavaScript."
+  }
 }

@@ -1,183 +1,1221 @@
 {
   "course_id": "clickup-cert",
-  "course_name": "ClickUp",
+  "id": "clickup-cert",
+  "slug": "clickup",
+  "course_name": "ClickUp — Project Management & Workflow Automation",
+  "title": "ClickUp — Project Management & Workflow Automation",
+  "name": "ClickUp — Project Management & Workflow Automation",
+  "academic_sequence": 107,
+  "course_number": 107,
+  "curriculum_edition": "2027 Professional Edition",
   "academy": "Office Productivity Academy",
-  "academy_id": "office-productivity-academy",
-  "course_type": "MICRO",
-  "course_role": "Project Coordinator",
-  "level": "Beginner",
-  "duration": "1 Month",
-  "learning_hours": "40 hrs",
-  "future_review_status": "Needs Review",
-  "target_audience": {
-    "best_for": ["Project Managers", "Scrum Masters", "Team Leads"],
-    "not_for": ["Individuals looking for simple personal to-do lists"],
-    "who_should_take_foundation_first": "Those unfamiliar with basic project management concepts"
+  "academy_id": "office-productivity",
+  "academyId": "office",
+  "academic_positioning": "A practical project operations and workflow management certification teaching ClickUp workspace hierarchies, task dependencies, multi-view scheduling (List, Board, Calendar, Gantt), custom fields, KPI dashboards, and plan-aware automation for modern collaborative teams.",
+  "programLevel": "Certification Course",
+  "course_type": "CERTIFICATION",
+  "courseType": "CERTIFICATION",
+  "course_role": "Project Operations Specialist & ClickUp Workspace Architect",
+  "courseRole": "Project Operations Specialist & ClickUp Workspace Architect",
+  "level": "Beginner to Applied",
+  "priority": "High Admissions Priority",
+  "positioning": "A practical project coordination course teaching how to break down deliverables, assign responsibilities, manage task dependencies, monitor project health on dashboards, and automate recurring workflows in ClickUp without enterprise PMO overhead.",
+  "duration": "5 Weeks",
+  "durationMonths": 1.25,
+  "duration_weeks": 5,
+  "learning_hours": 40,
+  "learningHours": 40,
+  "guided_hours": 40,
+  "hours": 40,
+  "weekly_workload": "8 Hours/Week (Interactive project workspace labs & automation testing assignments)",
+  "mode": "Online Instructor-Led & Applied Project Lab",
+  "price": 5900,
+  "fee": 5900,
+  "regular_fee": 5900,
+  "originalPrice": 5900,
+  "original_price": 5900,
+  "discount": 0,
+  "commercial_notice": "Flat ₹5,900 transparent certification fee. Zero hidden markups, artificial compare-at pricing, or deceptive discounts.",
+  "pricing": {
+    "amount": 5900,
+    "currency": "INR",
+    "tax_note": "Subject to applicable taxes where required by law",
+    "transparent_fee": true,
+    "no_fake_mrp": true
   },
-  "prerequisites": {
-    "required": "Understanding of basic task management",
-    "recommended": "Familiarity with Agile or standard project workflows",
-    "system_requirements": {
-      "hardware": "Standard PC or Mac",
-      "software_accounts": "ClickUp account (Free tier is sufficient)"
-    },
-    "not_required": "Coding knowledge"
-  },
-  "overview": {
-    "positioning": "Master the 'One App to Replace Them All' for comprehensive project and task management.",
-    "short_description": "Learn to structure, track, and automate complex projects using ClickUp's powerful hierarchy and views.",
-    "key_facts": {
-      "level": "Beginner to Intermediate",
-      "duration": "1 Month",
-      "format": "Online",
-      "estimated_learning_hours": "40 hrs",
-      "project_count": 2,
-      "capstone": "Yes",
-      "ai_integration": "Yes",
-      "career_focus": "Project Coordinator"
-    },
-    "what_you_will_be_able_to_do": [
-      "Architect a scalable ClickUp workspace using Spaces, Folders, and Lists",
-      "Utilize diverse views (List, Board, Gantt, Calendar) to manage workflows",
-      "Create custom fields and statuses tailored to specific business processes",
-      "Set up native ClickUp Automations to reduce manual task updates"
-    ]
-  },
-  "why_now": {
-    "industry_shift": "Teams are consolidating tools; project management, docs, and goals are converging.",
-    "ai_impact": "ClickUp Brain is introducing AI directly into project management, automating updates.",
-    "business_demand": "High demand for administrators who can configure tools to match specific company workflows.",
-    "career_opportunity": "Essential skill for modern remote and hybrid project management roles."
-  },
-  "learning_outcomes": [
-    "STRUCTURE: Workspaces correctly to prevent clutter and confusion",
-    "MANAGE: Tasks, subtasks, and dependencies efficiently",
-    "REPORT: On team progress using Dashboards",
-    "AUTOMATE: Routine project handoffs and status updates"
+  "tagline": "Plan Projects. Assign Work. Track Progress. Reduce Repetitive Tasks.",
+  "hero_headline": "Plan Projects. Assign Work. Track Progress. Reduce Repetitive Tasks.",
+  "hero_supporting_heading": "Plan Clearly. Assign Responsibly. Track Dependencies. Improve Delivery.",
+  "hero_supporting_headline": "Plan Clearly. Assign Responsibly. Track Dependencies. Improve Delivery.",
+  "h1": "ClickUp — Project Management & Workflow Automation",
+  "seo_title": "ClickUp Project Management & Automation Course | Nova Skills",
+  "meta_title": "ClickUp Project Management & Automation Course | Nova Skills",
+  "seo_description": "Learn ClickUp task management, dependencies, Gantt, dashboards and automations in 5 weeks (40h). Build a 25-task project portfolio. ₹5,900.",
+  "meta_description": "Learn ClickUp task management, dependencies, Gantt, dashboards and automations in 5 weeks (40h). Build a 25-task project portfolio. ₹5,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=clickup-cert",
+  "primary_keyword": "ClickUp course",
+  "secondary_keywords": [
+    "ClickUp certification course",
+    "ClickUp project management training",
+    "ClickUp for beginners",
+    "ClickUp task management",
+    "ClickUp workflow automation",
+    "ClickUp Gantt chart course",
+    "ClickUp dependencies",
+    "ClickUp dashboard training",
+    "ClickUp Custom Fields",
+    "ClickUp Kanban boards",
+    "ClickUp project planning",
+    "ClickUp Docs",
+    "ClickUp Forms",
+    "ClickUp Brain2",
+    "ClickUp Super Agents",
+    "ClickUp course India",
+    "Project coordinator skills",
+    "Marketing project management",
+    "Agency workflow management",
+    "ClickUp automation training"
   ],
-  "learning_journey": {
-    "stages": [
-      { "stage": "Hierarchy", "focus": "Understanding Spaces and Lists" },
-      { "stage": "Execution", "focus": "Tasks, Views, and Custom Fields" },
-      { "stage": "Optimization", "focus": "Dashboards and Automations" }
+  "keywords": [
+    "ClickUp course",
+    "ClickUp project management",
+    "task dependencies",
+    "ClickUp automations",
+    "ClickUp dashboards",
+    "project coordinator certification",
+    "Gantt chart training"
+  ],
+  "hero": {
+    "eyebrow": "OFFICE PRODUCTIVITY ACADEMY / PROJECT OPERATIONS & WORKFLOW MANAGEMENT",
+    "h1": "ClickUp — Project Management & Workflow Automation",
+    "hook": "Plan Projects. Assign Work. Track Progress. Reduce Repetitive Tasks.",
+    "description": "Learn to manage projects using ClickUp through task hierarchies, team workflows, custom fields, views, timelines, dashboards and introductory automation. Build practical systems for tracking deadlines, responsibilities and delivery quality.",
+    "value_proposition": "Plan Clearly. Assign Responsibly. Track Dependencies. Improve Delivery.",
+    "quick_info": "5 Weeks | 40 Learning Hours | ₹5,900 | Beginner to Applied",
+    "primary_cta": "Enroll Now",
+    "secondary_cta": "Get Course Syllabus",
+    "skill_tags": [
+      "ClickUp",
+      "Project Planning",
+      "Work Breakdown Structure",
+      "Task Dependencies",
+      "Gantt Charts",
+      "Kanban",
+      "Custom Fields",
+      "Dashboards",
+      "ClickUp Automations",
+      "Team Coordination",
+      "Project Reporting"
+    ],
+    "hero_portfolio_proof": "25+ Tasks | Owners & Deadlines | Dependencies | Dashboard | Working Automation",
+    "commercial_differentiator": "Learn How to Coordinate a Project From Planning to Handover—not Just Create Tasks in an App."
+  },
+  "short_description": "Learn to manage projects using ClickUp through task hierarchies, team workflows, custom fields, views, timelines, dashboards and introductory automation. Build practical systems for tracking deadlines, responsibilities and delivery quality.",
+  "shortDesc": "Learn to manage projects using ClickUp through task hierarchies, team workflows, custom fields, views, timelines, dashboards and introductory automation. Build practical systems for tracking deadlines, responsibilities and delivery quality.",
+  "full_description": "Learn to manage projects using ClickUp through task hierarchies, team workflows, custom fields, views, timelines, dashboards and introductory automation. Build practical systems for tracking deadlines, responsibilities and delivery quality.",
+  "fullDesc": "Learn practical project management in ClickUp: organize tasks into hierarchical spaces and lists, manage multi-step task dependencies, configure custom fields and KPI dashboards, and deploy verified workflow automations with comprehensive handover documentation.",
+  "description": "Learn to manage projects using ClickUp through task hierarchies, team workflows, custom fields, views, timelines, dashboards and introductory automation. Build practical systems for tracking deadlines, responsibilities and delivery quality.",
+  "overview": {
+    "heading": "What You Will Learn",
+    "description": "Learn to organize real projects in ClickUp, define tasks and responsibilities, track deadlines, manage dependencies and understand how teams coordinate delivery. Build useful List, Board, Calendar and Gantt views while applying practical project-management concepts.",
+    "expanded_copy_1": "Learn to organize real projects in ClickUp, define tasks and responsibilities, track deadlines, manage dependencies and understand how teams coordinate delivery. Build useful List, Board, Calendar and Gantt views while applying practical project-management concepts.",
+    "expanded_copy_2": "Develop a complete project workspace with realistic tasks, milestones, Custom Fields, management reporting and an approved automation. Practise interpreting project progress, documenting risks and preparing a professional client or team handover.",
+    "primary_differentiator": "Learn How to Coordinate a Project From Planning to Handover—not Just Create Tasks in an App.",
+    "main_value_proposition": "Define the Outcome → Break Down Work → Assign Responsibilities → Set Dependencies → Schedule → Coordinate → Measure → Improve → Handover",
+    "core_promise": "Students learn how to manage actual collaborative project workflows: explaining how work is structured, what is overdue, who owns each task, what is blocked, and what happens next.",
+    "teaching_principles": [
+      "Rigorous Work Breakdown Structures (WBS) over vague to-do lists.",
+      "Explicit single-owner task accountability.",
+      "True task dependencies (blocking vs waiting on) rather than loose associations.",
+      "Plan-aware Custom Field design serving real management decisions.",
+      "Actionable management dashboards displaying live progress KPIs.",
+      "Verified, functioning automations with active test evidence and failure handling.",
+      "Responsible AI governance (Brain² and Super Agents) with mandatory human review.",
+      "Professional client and stakeholder handover documentation."
     ]
   },
-  "hands_on_tech": {
-    "core_tools": [
-      { "tool": "ClickUp", "purpose": "Project Management", "what_student_learns": "Complete platform usage", "what_student_builds": "Project Workspaces" },
-      { "tool": "ClickUp Automations", "purpose": "Workflow automation", "what_student_learns": "Triggers and actions", "what_student_builds": "Automated task pipelines" }
+  "commercial_positioning": {
+    "main_heading": "Bring Tasks, Teams and Deadlines Into One Organized Project Workflow.",
+    "supporting_copy": "Learn to structure projects in ClickUp, assign tasks, manage dependencies, track milestones and create useful management dashboards. Build a realistic project workspace with twenty-five or more tasks and one tested automation.",
+    "four_commercial_differentiators": [
+      {
+        "title": "Structured Project Planning",
+        "description": "Turn broad business objectives into concrete deliverables, work packages, and actionable task hierarchies."
+      },
+      {
+        "title": "Clear Team Accountability",
+        "description": "Assign responsibilities, deadlines, priority levels, and quality sign-off checkpoints to eliminate delivery ambiguity."
+      },
+      {
+        "title": "End-to-End Progress Visibility",
+        "description": "Use List, Kanban Board, Calendar, and Gantt views alongside KPI dashboards to identify bottlenecks and overdue tasks early."
+      },
+      {
+        "title": "Practical Workflow Automation",
+        "description": "Configure and test a functioning, reliable automation within actual account limits, backed by robust manual fallback rules."
+      }
     ],
-    "supporting_tools": [],
-    "emerging_tools": [],
-    "tools_to_review": []
+    "commercial_applications": [
+      "Project coordinators managing marketing, IT, and creative client projects",
+      "Agency operations managers tracking multi-client retainers and milestone deliveries",
+      "Marketing teams executing product launch campaigns across multiple channels",
+      "Small business owners and startup operators establishing central operations hubs",
+      "Freelance project managers providing transparent client progress reporting",
+      "Departmental leads seeking clear task delegation, capacity tracking, and SOP handovers"
+    ],
+    "avoid_promises": [
+      "Guaranteed PMP, PMI, or Certified ScrumMaster credentials",
+      "Guaranteed job placement or specific salary outcomes",
+      "Claims that ClickUp completely replaces specialized enterprise software (ERP, full CRM)",
+      "Free universal access to unlimited Gantt, Dashboards, or Automations on Free accounts",
+      "Unlimited ClickUp Brain² or free Super Agent autonomous deployment",
+      "Fully automated company operations without human oversight"
+    ]
   },
-  "industry_workflow": {
-    "overview": "Agile Project Workflow in ClickUp",
-    "stages": [
-      { "step": 1, "name": "Planning", "desc": "Setting up the sprint backlog in a List view" },
-      { "step": 2, "name": "Execution", "desc": "Moving tasks through a Kanban Board" },
-      { "step": 3, "name": "Tracking", "desc": "Monitoring dependencies on a Gantt chart" },
-      { "step": 4, "name": "Reporting", "desc": "Reviewing sprint performance on a Dashboard" }
+  "icon": "fas fa-tasks",
+  "color": "#004672",
+  "badge": "CERTIFICATION",
+  "rating": 4.9,
+  "reviews": 71,
+  "students": 325,
+  "liveProjects": 1,
+  "projects": [
+    "ClickUp Project Operations Workspace (25+ Tasks, Dependencies, Dashboard & Working Automation)"
+  ],
+  "certificate": "Nova Skills Certificate of Completion",
+  "placementSupport": "Portfolio Review & Project Operations Career Guidance",
+  "status": "active",
+  "url": "/course-detail.html?id=clickup-cert",
+  "image": "assets/images/courses/clickup-cert.svg",
+  "tags": [
+    "ClickUp",
+    "Project Planning",
+    "Work Breakdown Structure",
+    "Task Dependencies",
+    "Gantt Charts",
+    "Kanban",
+    "Custom Fields",
+    "Dashboards",
+    "ClickUp Automations",
+    "Team Coordination",
+    "Project Reporting"
+  ],
+  "featured": false,
+  "category": "Office Productivity Academy",
+  "future_review_status": "STABLE",
+  "futureReviewStatus": "STABLE",
+  "target_audience": [
+    "Project coordinators and operations associates managing business deliverables.",
+    "Agency operations staff coordinating creative, marketing, and web design projects.",
+    "Team leaders and department managers tracking multi-stakeholder initiatives.",
+    "Small business owners and startup founders setting up scalable task systems.",
+    "Freelance project managers providing structured status updates to clients.",
+    "Administrative professionals and executive assistants organizing cross-team schedules.",
+    "Students and career starters aiming for project coordinator and operations roles."
+  ],
+  "prerequisites": [
+    "Basic computer literacy and task-management familiarity.",
+    "No advanced project management certifications (PMP/Scrum) or coding skills required."
+  ],
+  "not_required": [
+    "Prior PMP, CAPM, or Scrum Master certification.",
+    "Coding, JavaScript, or API development experience.",
+    "Enterprise PMO or ITIL service management background.",
+    "Paid ClickUp subscription for core classroom certification completion.",
+    "Paid ClickUp Brain² or Super Agent license.",
+    "Complex database engineering background."
+  ],
+  "highlights": [
+    "5 Weeks of intensive, practical project operations training (40 total hours).",
+    "Master ClickUp's hierarchy: Workspace, Spaces, Folders, Lists, Tasks, and Subtasks.",
+    "Design actionable tasks with single-owner accountability, start/due dates, and acceptance criteria.",
+    "Configure custom statuses (To Do, In Progress, Review, Blocked, Complete) and priority matrices.",
+    "Establish multi-step task dependencies (blocking vs waiting on) and identify critical delivery sequences.",
+    "Build multi-view workflows: List View, Kanban Board View, Calendar View, and plan-aware Gantt charts.",
+    "Deploy practical Custom Fields: deliverable type, channel, estimated effort, approval status, and risk level.",
+    "Create a real-time management dashboard with task KPIs, completion tracking, and blocked-work cards.",
+    "Implement and rigorously test ONE approved functioning ClickUp automation with recorded test evidence.",
+    "Deploy basic ClickUp Forms for stakeholder request intake and automated task creation.",
+    "Explore ClickUp Brain² and Super Agent governance, credit consumption, and mandatory human reviews.",
+    "Graduate with 1 comprehensive capstone: Project Operations Workspace (25+ tasks, dependencies, dashboard & automation)."
+  ],
+  "hands_on_tech": [
+    "ClickUp",
+    "ClickUp Tasks & Subtasks",
+    "ClickUp Dependencies",
+    "ClickUp Views (List, Board, Calendar, Gantt)",
+    "ClickUp Custom Fields",
+    "ClickUp Dashboards",
+    "ClickUp Forms",
+    "ClickUp Automations (Approved Rule Testing)",
+    "ClickUp Docs",
+    "ClickUp Brain² & Super Agents (Awareness & Governance)"
+  ],
+  "tools": [
+    "ClickUp",
+    "ClickUp Tasks & Subtasks",
+    "ClickUp Dependencies",
+    "ClickUp Views (List, Board, Calendar, Gantt)",
+    "ClickUp Custom Fields",
+    "ClickUp Dashboards",
+    "ClickUp Forms",
+    "ClickUp Automations (Approved Rule Testing)",
+    "ClickUp Docs",
+    "ClickUp Brain² & Super Agents (Awareness & Governance)"
+  ],
+  "software": [
+    "ClickUp (Web, Desktop, and Mobile Apps)"
+  ],
+  "hierarchy_and_architecture_policy": {
+    "heading": "Organize Projects at the Right Level of the ClickUp Hierarchy",
+    "principles": [
+      "Hierarchy Integrity: Workspace (Organization) → Spaces (Departments/Workflows) → Folders (Optional Project Containers) → Lists (Actionable Work) → Tasks → Subtasks.",
+      "List vs List View: A List is a container for tasks; List View is a display mode. Views present information without altering underlying structure.",
+      "Avoid Structural Bloat: Do not create a new Space for every tiny deliverable; keep Spaces lean (reflecting Free Forever 5-Space limits) and use Folders and Lists effectively.",
+      "Single-Owner Accountability: While multiple assignees can be technically configured, best practice dictates a single accountable owner per task to eliminate delivery ambiguity."
+    ]
+  },
+  "dependencies_and_scheduling_policy": {
+    "heading": "Know What Must Happen Before the Next Task Can Start",
+    "principles": [
+      "True Dependencies: Use 'Waiting On' and 'Blocking' exclusively when hard technical, design, or approval prerequisites exist, not for vague topical associations.",
+      "Plan Awareness on Gantt: Free Forever accounts offer limited Gantt uses; scheduling must be taught in tandem with List and Calendar deadline planning.",
+      "Milestone Verification: Designate major phase completion points (Brief Approved, Creative Approved, QA Complete) as formal Milestones.",
+      "Duration vs Availability: Do not confuse calendar duration with employee work capacity; always verify team availability before setting hard deadlines."
+    ]
+  },
+  "automations_and_limits_policy": {
+    "heading": "Automate Small, Reliable Workflows Before Attempting Complex Systems",
+    "principles": [
+      "Functioning Automation Requirement: The student must configure and successfully test ONE approved, non-destructive automation rule (e.g. status changes to 'Ready for Review' → post internal review comment).",
+      "Plan Limits Transparency: Free Forever provides up to 5 active automations and 100 actions/month; automation quotas must be verified before testing.",
+      "Loop Prevention & Error Handling: Avoid circular trigger-action loops; test baseline state, trigger event, expected outcome, and failure behavior.",
+      "Mandatory Manual Fallback: Operational workflows must have documented manual fallback checklists so project delivery never halts if quotas are exhausted."
+    ]
+  },
+  "ai_and_governance_policy": {
+    "heading": "Use AI for Project Assistance With Controlled Access and Human Approval",
+    "principles": [
+      "Brain² & Super Agent Scoping: Covers project summaries, task drafting, and agent capabilities at an operational governance level without requiring paid licenses.",
+      "Credit Consumption Awareness: Super Agent runs consume AI Credits even when producing simple responses; administrative budgets must be monitored.",
+      "Mandatory Factual Verification: Never share AI-generated status updates without cross-referencing task completion evidence, assigned owners, and verified comments.",
+      "Synthetic Data Requirement: Real client credentials, confidential contracts, or employee salaries must never be entered into classroom prompts or practice tasks."
     ]
   },
   "business_use_cases": [
     {
-      "sector": "Marketing & Development",
-      "business_problem": "Lack of visibility into cross-functional team progress",
-      "approach": "Centralize all tasks in ClickUp with customized departmental views",
-      "toolset": "ClickUp",
-      "output": "Unified Executive Dashboard"
+      "title": "Multi-Channel Marketing Campaign Operations",
+      "description": "Planning and coordinating an end-to-end marketing campaign across strategy, copywriting, design production, review/approvals, and launch deployment with hard dependencies."
+    },
+    {
+      "title": "Commercial Website Launch Project",
+      "description": "Managing website launch phases including requirements gathering, sitemap, content authoring, UI design, staging development, QA testing, and DNS deployment."
+    },
+    {
+      "title": "Small-Business Operations Improvement Project",
+      "description": "Executing an internal process transformation: workflow assessment, process mapping, procedure drafting, software implementation, staff training, and handover."
+    },
+    {
+      "title": "Creative Agency Client Retainer Delivery",
+      "description": "Tracking client deliverables, design feedback rounds, milestone approvals, and task hours across multi-client retainer boards with guest permissions."
+    },
+    {
+      "title": "Internal Request & Issue Intake Pipeline",
+      "description": "Routing client or internal requests via ClickUp Forms into a dedicated triage List, auto-assigning coordinators, and updating statuses via automation."
+    },
+    {
+      "title": "Product Sprint & Release Coordination",
+      "description": "Organizing feature backlogs, managing sprint Kanban boards, tracking bug resolution stages, and reviewing sprint velocity dashboards."
     }
   ],
-  "ai_integration": {
-    "role_classification": "AI-Enhanced",
-    "ai_can_assist_with": "Drafting task descriptions, summarizing comment threads",
-    "ai_can_automate": "Subtask generation",
-    "ai_cannot_replace": "Project planning and resource allocation",
-    "human_expertise_required": "High",
-    "validation_protocol": "Reviewing AI-generated task lists for completeness",
-    "responsible_use": "N/A"
-  },
-  "best_practices": [
-    "Keep the Workspace Hierarchy as flat as possible",
-    "Use custom statuses only when standard ones don't fit",
-    "Leverage recurring tasks for administrative duties"
-  ],
-  "common_mistakes": [
-    { "mistake": "Overusing Custom Fields", "why_it_happens": "Trying to track too much metadata", "professional_approach": "Only create fields that directly impact reporting or workflows" }
-  ],
-  "career_paths": {
-    "entry_roles": ["Project Coordinator", "Administrative Assistant"],
-    "mid_roles": ["Project Manager", "Scrum Master"],
-    "specialist_roles": ["ClickUp Consultant", "Operations Director"],
-    "freelance_roles": ["Virtual Assistant", "Systems Implementer"],
-    "employer_expectations": "Ability to keep projects on track and teams aligned",
-    "what_student_demonstrates": "A fully functional, automated project workspace"
-  },
-  "freelance_applications": {
-    "services_offered": ["Workspace Setup", "Workflow Automation", "Team Training"],
-    "client_workflow": "Process Mapping -> Workspace Configuration -> Onboarding",
-    "portfolio_requirements": "Screenshots/Templates of customized spaces"
-  },
-  "what_you_will_build": [
-    "A Marketing Campaign Workspace",
-    "An Automated Ticketing System"
-  ],
-  "final_deliverables": [
-    "A fully configured ClickUp Workspace tailored for a specific business scenario"
-  ],
-  "assessment": {
-    "model": "Practical configuration tasks",
-    "criteria": "Correct use of hierarchy, views, and successful automation execution"
-  },
-  "certification": {
-    "title": "ClickUp Proficiency Certificate",
-    "criteria": "Complete the final workspace project",
-    "verification": "Digital Certificate"
-  },
-  "not_covered": "Advanced API programming",
-  "next_learning_path": {
-    "recommended_next": "Agile Methodologies (Scrum/Kanban)",
-    "related_programs": "Advanced Workspace Architecture (Notion)"
-  },
-  "faq": [
-    { "question": "Is ClickUp better than Asana or Monday?", "answer": "ClickUp offers more customization and hierarchy levels, which we cover extensively. It is often preferred for complex workflows." },
-    { "question": "Do I need the paid version?", "answer": "The free version is very robust and sufficient for the course." }
+  "curriculum": [
+    {
+      "module_number": 1,
+      "module": "Module 01",
+      "module_title": "Project Management & ClickUp Setup",
+      "title": "Project Management & ClickUp Setup",
+      "duration": "6 Hours",
+      "hours": 6,
+      "objective": "Understand foundational project-management concepts and configure an organized ClickUp environment.",
+      "lessons_count": 20,
+      "lessons": [
+        "1.1 What Is a Project?: Project vs ongoing operations; Defined business outcomes; Scope boundaries; Key deliverables; Timelines.",
+        "1.2 The Project Life Cycle: Initiation, Planning, Execution, Monitoring & Controlling, and Project Closure.",
+        "1.3 Project Roles & Responsibilities: Project Owner, Coordinator, Task Owner, Reviewer, Stakeholder, and Final Approver.",
+        "1.4 Project Success Criteria: Delivering agreed scope on time, within budget, and meeting stakeholder quality expectations.",
+        "1.5 Introduction to ClickUp: Workspace overview; Navigation layout; Key capabilities; Core business use cases.",
+        "1.6 The ClickUp Hierarchy: Workspace → Spaces → Folders → Subfolders → Lists → Tasks → Subtasks.",
+        "1.7 Workspace vs Space: Organization-level container vs team/departmental workflows; Designing scalable structures.",
+        "1.8 Folders as Project Containers: Organizing related work; Grouping multiple project Lists; Folder-level settings.",
+        "1.9 Designing Executable Lists: Structuring Lists for execution; Task container design; Avoiding fragmented List clutter.",
+        "1.10 Actionable Task Architecture: Writing clear, action-oriented task names; Structuring descriptions; Ownership and dates.",
+        "1.11 Subtasks & Work Decomposition: Breaking work into manageable units; Parent-child relationships; Preventing over-nesting.",
+        "1.12 Statuses & Workflow Stages: Custom statuses (To Do, In Progress, Ready for Review, Blocked, Complete); Defining 'Done'.",
+        "1.13 Workspace Roles & User Seats: Workspace Owner, Admin, Member, Limited Member, and Guest distinctions.",
+        "1.14 Sharing & Permissions Governance: Private Spaces vs shared folders; Inviting team members; Inherited permission rules.",
+        "1.15 Task Description Standards: Defining objectives, input resources, expected outputs, and acceptance criteria in task descriptions.",
+        "1.16 Project Charter & Scope Documentation: Documenting project briefs, scope limits, key assumptions, resources, and constraints.",
+        "1.17 ClickUp Docs for Operations: Authoring project briefs, meeting minutes, and SOPs directly within the ClickUp workspace.",
+        "1.18 Quality Standards for Workspace Setup: Clean navigation; Logical hierarchy; Eliminating unnecessary folder depth.",
+        "1.19 Account Plans & Feature Availability: Free Forever vs Unlimited, Business, and Enterprise tiers; Recognizing feature limits.",
+        "1.20 Setting Up a Safe Practice Workspace: Creating an isolated practice environment with synthetic data; Avoiding live client data."
+      ],
+      "hands_on_lab": "Construct a simulated small-business project workspace featuring a designated Space, project Folder, structured Lists, custom workflow statuses, a project brief in ClickUp Docs, initial tasks, and an access-control plan.",
+      "deliverable": "ClickUp Project Structure & Setup Pack",
+      "security_considerations": "Enforce private space boundaries; verify guest access limitations; never use real client or employee personal data."
+    },
+    {
+      "module_number": 2,
+      "module": "Module 02",
+      "module_title": "Tasks, Dependencies & Views",
+      "title": "Tasks, Dependencies & Views",
+      "duration": "10 Hours",
+      "hours": 10,
+      "objective": "Manage individual tasks, dependencies, scheduling and multiple views within ClickUp.",
+      "lessons_count": 25,
+      "lessons": [
+        "2.1 Effective Task Design: Action-oriented verb-noun naming; Assigning single accountable owners; Explicit acceptance checklists.",
+        "2.2 Task Status Progression: Transitioning tasks through stages; Managing the 'Blocked' state; Establishing sign-off criteria for 'Done'.",
+        "2.3 Assignees & Accountability: Managing single vs multiple assignees; Designating primary accountability; Avoiding unassigned tasks.",
+        "2.4 Priority Levels in Business: Urgent, High, Normal, and Low priorities; Aligning priority flags with business impact.",
+        "2.5 Scheduling Start & Due Dates: Setting realistic delivery dates; Estimating task durations; Date consistency across subtasks.",
+        "2.6 Subtasks in Practice: Breaking complex deliverables into sequential subtasks; Assigning subtask owners and separate deadlines.",
+        "2.7 Checklists vs Subtasks: When to use simple completion checklists vs formal subtasks requiring separate metadata.",
+        "2.8 Custom Fields Fundamentals: Dropdown, Number, Text, Date, Checkbox, URL, and Currency property types.",
+        "2.9 Practical Operational Custom Fields: Creating fields for Deliverable Type, Department, Estimated Effort, Approval Status, and Risk Rating.",
+        "2.10 Custom Field Quality & Hygiene: Standardizing field definitions; Enforcing controlled dropdown values; Avoiding field sprawl.",
+        "2.11 Recurring Tasks: Scheduling weekly status reviews, monthly reporting, and routine audits; Configuring recurrence parameters.",
+        "2.12 Task Dependencies in Action: Understanding 'Waiting On' (prerequisites) and 'Blocking' (dependents); Impact on schedules.",
+        "2.13 Dependencies vs Relationships: Distinguishing sequential execution dependencies from general informational task relationships.",
+        "2.14 Multi-Step Dependency Chains: Mapping dependencies: Research → Strategy → Copywriting → Design → Client Review → Launch.",
+        "2.15 List View Mastery: Configuring column visibility, group-by status, sorting by due date, and inline task editing.",
+        "2.16 Board View (Kanban): Visualizing task flow across columns; Managing work-in-progress (WIP); Identifying bottlenecks.",
+        "2.17 Calendar View Scheduling: Visualizing monthly and weekly deadlines; Rescheduling via drag-and-drop; Spotting deadline clustering.",
+        "2.18 Gantt View Visualization: Visualizing task timelines, dependency connecting lines, critical milestones, and delivery delays.",
+        "2.19 Gantt View Plan Availability: Understanding plan-dependent usage limits; Navigating Free Forever Gantt restrictions.",
+        "2.20 Timeline View Awareness: Time-based resource scheduling; Comparing timeline views to Gantt charts across project types.",
+        "2.21 Practical Filtered Views: Creating saved views: 'My Tasks', 'Overdue Deliverables', 'High Priority Blockers', and 'Pending Review'.",
+        "2.22 View Personalization & Saving: Saving view settings for personal use vs saving shared views for team-wide alignment.",
+        "2.23 Views and Security Boundaries: Reinforcing that filtered views only alter visual display; Security depends on location permissions.",
+        "2.24 Dependency Schedule Testing: Shifting prerequisite dates and observing impacts on dependent tasks and final milestones.",
+        "2.25 Task Hygiene Auditing: Identifying missing assignees, expired deadlines, ambiguous statuses, and duplicate records."
+      ],
+      "hands_on_lab": "Populate and structure 15+ operational tasks featuring assignees, deadlines, statuses, priorities, Custom Fields, subtasks, and at least 5 dependencies. Configure List, Board, Calendar, and Gantt views.",
+      "deliverable": "Project Task & Dependency Management Pack",
+      "security_considerations": "Dependencies reflect logical task order; do not expose internal confidential reviewer notes in public view configurations."
+    },
+    {
+      "module_number": 3,
+      "module": "Module 03",
+      "module_title": "Project Planning & Coordination",
+      "title": "Project Planning & Coordination",
+      "duration": "8 Hours",
+      "hours": 8,
+      "objective": "Translate a project objective into realistic schedules, milestones, responsibilities and coordinated team workflows.",
+      "lessons_count": 23,
+      "lessons": [
+        "3.1 Defining Project Scope: Outlining project deliverables, boundary constraints, foundational assumptions, and explicit exclusions.",
+        "3.2 Stakeholder Requirements Gathering: Analyzing client briefs; Defining operational acceptance criteria and required approval gates.",
+        "3.3 Work Breakdown Structure (WBS): Decomposing broad deliverables into work packages, executable tasks, and discrete subtasks.",
+        "3.4 Task Estimation Principles: Estimating effort hours vs calendar duration; Factoring in dependencies and review buffer periods.",
+        "3.5 Resource Planning Fundamentals: Assessing team skill sets, available working hours, competing projects, and scheduling constraints.",
+        "3.6 Capacity & Workload Awareness: Detecting task pile-ups and overlapping deadlines; Preventing team burnout and bottlenecks.",
+        "3.7 Workload Views Awareness: Understanding capacity planning features in ClickUp; Recognizing plan-tier requirements.",
+        "3.8 Designating Project Milestones: Identifying critical phase transitions: Brief Approved, Design Signed Off, QA Passed, Launch Ready.",
+        "3.9 Dependency Mapping & Risk Analysis: Mapping critical handoffs; Pinpointing single points of failure in delivery sequences.",
+        "3.10 Gantt Chart Planning in Action: Establishing baseline delivery schedules; Aligning dependencies with target launch dates.",
+        "3.11 Agile Framework Fundamentals: Iterative sprints, continuous feedback loops, backlog grooming, and adapting plans dynamically.",
+        "3.12 Kanban Principles in Project Coordination: Visualizing workflow, limiting work-in-progress, managing flow, and resolving blockages.",
+        "3.13 Scrum Awareness: Understanding sprint backlogs, daily standups, sprint reviews, and retrospectives (conceptual grounding).",
+        "3.14 Team Communication Protocols: Using @mentions in task comments, threading discussions, and posting asynchronous project updates.",
+        "3.15 ClickUp Docs for Project Documentation: Linking project briefs, scope charters, meeting minutes, and SOPs to relevant task Lists.",
+        "3.16 Meeting Coordination & Action Tracking: Structuring meeting agendas in Docs; Converting meeting decisions directly into ClickUp tasks.",
+        "3.17 Project Risk Management: Creating a basic risk register: identifying risks, assessing probability and impact, and assigning owners.",
+        "3.18 Issue Escalation & Resolution: Tracking blocked deliverables; Establishing clear escalation pathways for team roadblocks.",
+        "3.19 Change Request Governance: Managing scope creep; Assessing deadline and budget impacts of client change requests.",
+        "3.20 Quality Control & Verification Checkpoints: Establishing formal review stages; Building quality audit checklists before client release.",
+        "3.21 Stakeholder Approval Workflows: Documenting client sign-offs; Tracking revision rounds; Securing formal written acceptance.",
+        "3.22 Weekly Project Status Updates: Structuring updates: Highlights, Work in Progress, Overdue Items, Risks/Blockers, and Next Steps.",
+        "3.23 Project Closure & Retrospectives: Conducting post-project reviews; Documenting lessons learned; Archiving completed project Lists."
+      ],
+      "hands_on_lab": "Draft a comprehensive project delivery framework for a chosen business scenario: WBS phases, 25 tasks, team responsibilities, milestones, dependency matrix, risk register, and quality sign-off checkpoints.",
+      "deliverable": "Project Plan, Milestone & Coordination Framework",
+      "security_considerations": "Ensure risk logs contain synthetic operational data; verify that client approval records do not disclose sensitive vendor costs."
+    },
+    {
+      "module_number": 4,
+      "module": "Module 04",
+      "module_title": "Dashboards & Automation",
+      "title": "Dashboards & Automation",
+      "duration": "8 Hours",
+      "hours": 8,
+      "objective": "Develop meaningful management reporting, intake workflows and one reliable, approved ClickUp automation.",
+      "lessons_count": 28,
+      "lessons": [
+        "4.1 What Is a Management Dashboard?: Executive visibility; Monitoring health, progress, velocity, team workload, and delivery blockers.",
+        "4.2 Key Project Performance Indicators (KPIs): Total tasks, completed tasks, completion %, overdue tasks, blocked tasks, and milestone status.",
+        "4.3 Defining Rigorous Metrics: Formulating exact KPI definitions, numerators, denominators, reporting timeframes, and data sources.",
+        "4.4 Building ClickUp Dashboards: Creating dashboards; Adding widgets/cards; Sourcing data from specific Spaces, Folders, or Lists.",
+        "4.5 Essential Dashboard Cards: Task list cards, status pie/bar charts, calculation cards, and priority breakdowns.",
+        "4.6 Dashboard Plan Availability & Limits: Understanding Free Forever usage limits (viewing/editing limits); Operating within plan quotas.",
+        "4.7 Dashboard Data Integrity: Setting correct source locations, applying precise filters, and avoiding misleading completion percentages.",
+        "4.8 Executive Progress Reporting: Synthesizing dashboard cards into concise written reports for management and client stakeholders.",
+        "4.9 Evaluating Project Health: Combining schedule metrics, blocked dependencies, risk registers, and scope changes into health scores.",
+        "4.10 ClickUp Forms for Intake: Creating Form Views; Connecting form inputs directly to task properties in a designated intake List.",
+        "4.11 Form Availability & Plan Rules: Free-tier single-form support vs paid-tier advanced styling, conditional logic, and custom branding.",
+        "4.12 Request Intake Workflow: Client request submission → Task creation → Triage review → Priority assignment → Execution.",
+        "4.13 ClickUp Automation Architecture: Understanding the core automation syntax: WHEN (Trigger) → IF (Condition) → THEN (Action).",
+        "4.14 Practical Operational Automations: Status change updates, automatic task assignments, review notifications, and reminder comments.",
+        "4.15 The Automation ClickApp: Enabling automations in workspace settings; Admin permissions; Managing active rules across Folders/Lists.",
+        "4.16 Automation Triggers: Status changes, task created, due date arrives, priority changed, and Custom Field updated.",
+        "4.17 Automation Conditions: Adding optional filters (e.g., ONLY IF Priority is Urgent); Plan requirements for conditional logic.",
+        "4.18 Automation Actions: Posting comments, changing status, reassigning owners, moving tasks, and setting Custom Field values.",
+        "4.19 Automation Scope: Designing rules at List level vs Folder level vs Space level; Assessing impact across child tasks.",
+        "4.20 Automation Quotas & Limits: Tracking monthly action allowances (e.g., 100 actions/mo on Free); Managing active automation limits.",
+        "4.21 Operating Safely on Free Forever: Building high-impact automations within the 5 active rules and 100 actions monthly cap.",
+        "4.22 Debugging Automation Errors: Troubleshooting non-firing triggers, permission failures, quota exhaustion, and incorrect target fields.",
+        "4.23 Preventing Automation Loops: Avoiding cascading recursive triggers; Testing rules with simple, non-destructive actions.",
+        "4.24 Rigorous Automation Testing Protocol: Baseline verification → Trigger execution → Action validation → Activity log audit.",
+        "4.25 Reviewing Automation Activity Logs: Inspecting execution timestamps, action counts, success states, and error messages.",
+        "4.26 Dashboard + Automation Synergy: Ensuring automated status transitions feed real-time dashboard calculations accurately.",
+        "4.27 Documenting Operational Automations: Recording purpose, trigger event, action behavior, owner, and failure escalation SOPs.",
+        "4.28 Automation Governance: Establishing approval rules before deploying new automations; Restricting external email actions."
+      ],
+      "hands_on_lab": "Assemble an executive management dashboard featuring 5 core project cards. Configure and rigorously test ONE approved automation rule (e.g. When status changes to 'Ready for Review' → add internal review checklist comment), documenting execution evidence and action quotas.",
+      "deliverable": "ClickUp Management Dashboard & Tested Automation Pack",
+      "security_considerations": "Strict requirement: verify that automation runs within active account action quotas; never configure automated external client notifications without explicit consent."
+    },
+    {
+      "module_number": 5,
+      "module": "Module 05",
+      "module_title": "ClickUp AI & Governance",
+      "title": "ClickUp AI & Governance",
+      "duration": "4 Hours",
+      "hours": 4,
+      "objective": "Develop practical awareness of ClickUp Brain² and Super Agents while understanding permissions, review, approval, privacy and AI usage costs.",
+      "lessons_count": 20,
+      "lessons": [
+        "5.1 AI in Modern Project Operations: Using AI for summarization, task generation, update drafting, and knowledge retrieval.",
+        "5.2 ClickUp Brain² Architecture: Workspace-wide contextual AI; Q&A search across tasks and Docs; Writing assistance; Auto-summaries.",
+        "5.3 Brain² Plan Availability & Tiers: Understanding add-on subscription requirements, model tiering, and administrative toggles.",
+        "5.4 Model Usage Limits: Standard vs premium model allocations; Fair-use policies; Reset schedules across billing cycles.",
+        "5.5 AI-Assisted Task Drafting: Generating task descriptions, acceptance criteria checklists, and subtask breakdowns from briefs.",
+        "5.6 Drafting Project Updates with AI: Synthesizing task activity comments into executive weekly status drafts; Human editing.",
+        "5.7 AI Agent Concepts in ClickUp: Autonomous vs assisted agents; Defining operational scope, available tools, and human guardrails.",
+        "5.8 ClickUp Super Agents Overview: Agent capabilities in monitoring task progress, answering status queries, and routine assistance.",
+        "5.9 Super Agent Governance: Defining data access permissions, limiting agent actions to internal tasks, and requiring human approvals.",
+        "5.10 AI Credit Consumption Mechanics: How AI Credits are deducted; Feature-specific costs; Monitoring workspace credit balances.",
+        "5.11 Brain Usage vs AI Credits: Differentiating Brain model usage allowances from transactional AI Credit consumption for agent actions.",
+        "5.12 Cost Awareness in Super Agent Runs: Understanding that agent runs consume credits even when producing simple read responses.",
+        "5.13 Recognizing AI Hallucinations: Spotting fabricated deadlines, false completion claims, invented blockers, and incorrect owners.",
+        "5.14 Factual Verification Protocols: Cross-checking every AI statement against actual task status, verified comments, and source files.",
+        "5.15 Human Approval Checkpoints: Mandatory sign-off: project updates, deadline changes, and client communications require human approval.",
+        "5.16 Access Controls & Data Privacy: Restricting AI queries to authorized project spaces; Preventing exposure of private project data.",
+        "5.17 Protecting Confidential Assets: Strict rules against uploading non-public client contracts, employee records, or PII into AI tools.",
+        "5.18 Testing AI Responses Safely: Conducting evaluation exercises using synthetic project datasets to assess accuracy and bias.",
+        "5.19 Workspace AI Cost Monitoring: Setting administrative credit limits; Tracking monthly credit burn rates; Disabling costly features.",
+        "5.20 Zero-Cost Classroom Alternative: Completing all certification requirements using standard ClickUp tools and sample AI outputs."
+      ],
+      "hands_on_lab": "Audit an AI-generated weekly status update containing 5 deliberate hallucinations (wrong dates, false completions, missing dependencies). Execute factual corrections and draft a project AI governance SOP.",
+      "deliverable": "ClickUp AI Governance & Project Update Verification Checklist",
+      "security_considerations": "ClickUp Brain² is optional and not a mandatory purchase; all classroom AI evaluation exercises operate on synthetic data exclusively."
+    },
+    {
+      "module_number": 6,
+      "module": "Module 06",
+      "module_title": "Project Operations Capstone",
+      "title": "Project Operations Capstone",
+      "duration": "4 Hours",
+      "hours": 4,
+      "objective": "Create and demonstrate a complete project-operations workspace that coordinates work from initial planning to professional handover.",
+      "lessons_count": 16,
+      "lessons": [
+        "6.1 Capstone Scenario Selection: Choosing between Marketing Campaign Operations, Website Launch, or Business Operations Improvement.",
+        "6.2 Workspace Hierarchy Setup: Building the dedicated Space, project Folder, Lists, and documentation hub in ClickUp Docs.",
+        "6.3 Work Breakdown Structure Assembly: Decomposing project deliverables into sequential phases, work packages, and subtasks.",
+        "6.4 Fulfilling the 25-Task Mandate: Authoring at least 25 actionable tasks with descriptions, assignees, dates, statuses, and priorities.",
+        "6.5 Deploying Custom Fields: Configuring fields for Deliverable Type, Department/Channel, Estimated Hours, Approval Status, and Risk.",
+        "6.6 Engineering Dependencies & Milestones: Mapping at least 5 meaningful dependencies and designating key phase milestones.",
+        "6.7 Multi-View Operational Setup: Establishing List View, Kanban Board View, Calendar View, and plan-aware Gantt/Timeline displays.",
+        "6.8 Building the Management Dashboard: Assembling cards for Total Tasks, Completion Rate, Overdue Items, Blocked Tasks, and Milestones.",
+        "6.9 Deploying the Approved Automation: Configuring and activating ONE functioning, tested automation rule with verified action quotas.",
+        "6.10 Project Status Reporting: Drafting an executive progress report summarizing project health, upcoming deliverables, and risks.",
+        "6.11 Operational Documentation: Authoring task execution instructions, quality sign-off checklists, and communication protocols in Docs.",
+        "6.12 Role & Permission Matrix Audit: Defining access levels across Workspace Owner, Coordinator, Contributor, Reviewer, and Guest.",
+        "6.13 End-to-End System Testing: Simulating a project lifecycle: intake → scheduling → status progression → dependency unblocking → sign-off.",
+        "6.14 Client & Stakeholder Handover Package: Compiling the Workspace Map, Update Guide, Automation SOP, and Maintenance Checklist.",
+        "6.15 Final Capstone Demonstration: Walking through the integrated workspace, presenting live dashboard data, and testing the automation.",
+        "6.16 Post-Demonstration Refinements: Resolving broken links, correcting task metadata discrepancies, and finalizing documentation."
+      ],
+      "hands_on_lab": "Assemble, validate, and document the complete integrated ClickUp Project Operations Workspace containing at least 25 tasks, 5 dependencies, 1 functioning automation, a live dashboard, and a handover package.",
+      "deliverable": "ClickUp Project Operations Capstone + Professional Handover",
+      "security_considerations": "Verify zero public link leaks, confirm least-privilege role matrices, and validate that all test datasets contain synthetic information exclusively."
+    }
   ],
   "modules": [
     {
       "module_number": 1,
-      "module_title": "Hierarchy & Task Management",
-      "module_purpose": "Understand the core structure of ClickUp",
-      "what_you_will_learn": ["Workspace Hierarchy", "Task Creation", "Views"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "The ClickUp Hierarchy", "what_is_taught": "Workspaces, Spaces, Folders, and Lists", "why_it_matters": "Proper setup prevents future organizational chaos", "what_learner_does": "Sets up a departmental structure", "expected_outcome": "Workspace architecture understanding" },
-        { "lesson_number": 2, "lesson_title": "Task Mastery", "what_is_taught": "Tasks, subtasks, checklists, and assignees", "why_it_matters": "The core of getting work done", "what_learner_does": "Creates a detailed task breakdown for a project", "expected_outcome": "Proficient task management" },
-        { "lesson_number": 3, "lesson_title": "Working with Views", "what_is_taught": "List, Board, and Calendar views", "why_it_matters": "Different roles need to see data differently", "what_learner_does": "Configures specific views for managers vs. makers", "expected_outcome": "Ability to visualize work effectively" }
-      ],
-      "key_concepts": ["Structure", "Visibility"],
-      "tools": ["ClickUp"],
-      "hands_on_practice": "Structuring a basic project workspace",
-      "assignment": "Marketing Campaign Setup",
-      "business_application": "Organizing team initiatives",
-      "expected_outcome": "Solid foundation in ClickUp usage"
+      "module": "Module 01",
+      "title": "Project Management & ClickUp Setup",
+      "hours": 6,
+      "lessons": 20
     },
     {
       "module_number": 2,
-      "module_title": "Customization & Automation",
-      "module_purpose": "Adapt ClickUp to specific business workflows",
-      "what_you_will_learn": ["Custom Fields", "Automations", "Dashboards"],
-      "lessons": [
-        { "lesson_number": 1, "lesson_title": "Custom Fields and Statuses", "what_is_taught": "Tailoring task metadata and workflows", "why_it_matters": "Makes the tool fit the business, not vice versa", "what_learner_does": "Builds a customized bug tracking workflow", "expected_outcome": "Workflow customization skills" },
-        { "lesson_number": 2, "lesson_title": "ClickUp Automations", "what_is_taught": "When/Then automation rules", "why_it_matters": "Reduces manual clicks and errors", "what_learner_does": "Automates task assignment based on status changes", "expected_outcome": "Basic automation proficiency" },
-        { "lesson_number": 3, "lesson_title": "Reporting with Dashboards", "what_is_taught": "Building visual reporting dashboards", "why_it_matters": "Provides high-level project health overviews", "what_learner_does": "Creates a sprint performance dashboard", "expected_outcome": "Reporting and analytics skills" }
-      ],
-      "key_concepts": ["Adaptability", "Efficiency", "Analytics"],
-      "tools": ["ClickUp Automations"],
-      "hands_on_practice": "Building automated workflows and reports",
-      "assignment": "Automated IT Ticketing System",
-      "business_application": "Streamlining operational processes",
-      "expected_outcome": "Advanced ClickUp Administrator"
+      "module": "Module 02",
+      "title": "Tasks, Dependencies & Views",
+      "hours": 10,
+      "lessons": 25
+    },
+    {
+      "module_number": 3,
+      "module": "Module 03",
+      "title": "Project Planning & Coordination",
+      "hours": 8,
+      "lessons": 23
+    },
+    {
+      "module_number": 4,
+      "module": "Module 04",
+      "title": "Dashboards & Automation",
+      "hours": 8,
+      "lessons": 28
+    },
+    {
+      "module_number": 5,
+      "module": "Module 05",
+      "title": "ClickUp AI & Governance",
+      "hours": 4,
+      "lessons": 20
+    },
+    {
+      "module_number": 6,
+      "module": "Module 06",
+      "title": "Project Operations Capstone",
+      "hours": 4,
+      "lessons": 16
     }
-  ]
+  ],
+  "learning_outcomes": [
+    "Explain the foundational project management life cycle: initiation, planning, execution, monitoring, and closure.",
+    "Identify project objectives, core deliverables, boundary constraints, and stakeholder acceptance criteria.",
+    "Create and configure a scalable ClickUp workspace structure aligned with organizational operations.",
+    "Understand and navigate the ClickUp hierarchy: Workspace, Spaces, Folders, Lists, Tasks, and Subtasks.",
+    "Configure custom workflow statuses that reflect real operational stages from intake to final sign-off.",
+    "Create actionable, well-structured tasks with clear objectives, acceptance criteria, and input resources.",
+    "Decompose complex work packages into manageable subtasks while avoiding unnecessary nesting clutter.",
+    "Assign single-owner task accountability to eliminate delivery ambiguity in collaborative teams.",
+    "Set and manage business priority levels (Urgent, High, Normal, Low) aligned with project impact.",
+    "Establish start and due dates to create realistic delivery timelines across project phases.",
+    "Configure recurring tasks for routine operational reviews, weekly meetings, and compliance audits.",
+    "Configure meaningful Custom Fields (dropdowns, numbers, text, dates) to support operational reporting.",
+    "Create task dependencies ('Waiting On' and 'Blocking') to establish logical execution sequences.",
+    "Identify blocked deliverables rapidly and manage critical dependency handoffs between team members.",
+    "Utilize List views with customized column visibility, sorting, and grouping to manage daily task details.",
+    "Build interactive Kanban Board views to visualize work-in-progress, spot bottlenecks, and manage flow.",
+    "Utilize Calendar views to monitor deadline distribution and prevent milestone clustering.",
+    "Interpret and navigate Gantt charts to track project timelines, dependencies, and delivery milestones.",
+    "Build a hierarchical Work Breakdown Structure (WBS) decomposing deliverables into executable tasks.",
+    "Identify and track critical project milestones indicating major review, approval, and launch gates.",
+    "Apply foundational Agile and Kanban principles to manage iterative project execution and task flow.",
+    "Plan realistic task sequences that account for team capacity, dependencies, and delivery buffers.",
+    "Understand team workload and capacity limitations to prevent deadline over-allocation.",
+    "Document operational decisions, meeting outcomes, and scope changes in centralized ClickUp Docs.",
+    "Communicate project progress asynchronously using threaded task comments, @mentions, and status updates.",
+    "Author structured project briefs, meeting minutes, and SOPs directly within ClickUp Docs.",
+    "Build management dashboards featuring KPI summary cards, status charts, and blocked-work widgets.",
+    "Create ClickUp Forms to capture stakeholder requests and automatically route them into task lists.",
+    "Design logical workflow automations using WHEN (Trigger) → IF (Condition) → THEN (Action) architecture.",
+    "Configure and successfully test ONE approved, non-destructive ClickUp automation with recorded evidence.",
+    "Diagnose and resolve common automation errors, non-firing triggers, and action quota limits.",
+    "Understand ClickUp automation action quotas and manage active rules within plan allowances.",
+    "Explain ClickUp Brain² capabilities across task drafting, summarization, and contextual workspace Q&A.",
+    "Understand Super Agent governance, scope limitations, human approval gates, and AI Credit costs.",
+    "Configure role-based workspace permissions across Owners, Admins, Members, and external Guests.",
+    "Protect confidential project records, financial terms, and employee data using least-privilege security.",
+    "Build an integrated project operations workspace populated with at least 25 realistic, linked tasks.",
+    "Interpret overall project health combining schedule status, blocker logs, and risk assessments.",
+    "Present structured weekly progress reports highlighting completed work, roadblocks, and next actions.",
+    "Compile a comprehensive project handover package including workspace maps, SOPs, and maintenance guides."
+  ],
+  "learningOutcomes": [
+    "Explain the foundational project management life cycle: initiation, planning, execution, monitoring, and closure.",
+    "Identify project objectives, core deliverables, boundary constraints, and stakeholder acceptance criteria.",
+    "Create and configure a scalable ClickUp workspace structure aligned with organizational operations.",
+    "Understand and navigate the ClickUp hierarchy: Workspace, Spaces, Folders, Lists, Tasks, and Subtasks.",
+    "Configure custom workflow statuses that reflect real operational stages from intake to final sign-off.",
+    "Create actionable, well-structured tasks with clear objectives, acceptance criteria, and input resources.",
+    "Decompose complex work packages into manageable subtasks while avoiding unnecessary nesting clutter.",
+    "Assign single-owner task accountability to eliminate delivery ambiguity in collaborative teams.",
+    "Set and manage business priority levels (Urgent, High, Normal, Low) aligned with project impact.",
+    "Establish start and due dates to create realistic delivery timelines across project phases.",
+    "Configure recurring tasks for routine operational reviews, weekly meetings, and compliance audits.",
+    "Configure meaningful Custom Fields (dropdowns, numbers, text, dates) to support operational reporting.",
+    "Create task dependencies ('Waiting On' and 'Blocking') to establish logical execution sequences.",
+    "Identify blocked deliverables rapidly and manage critical dependency handoffs between team members.",
+    "Utilize List views with customized column visibility, sorting, and grouping to manage daily task details.",
+    "Build interactive Kanban Board views to visualize work-in-progress, spot bottlenecks, and manage flow.",
+    "Utilize Calendar views to monitor deadline distribution and prevent milestone clustering.",
+    "Interpret and navigate Gantt charts to track project timelines, dependencies, and delivery milestones.",
+    "Build a hierarchical Work Breakdown Structure (WBS) decomposing deliverables into executable tasks.",
+    "Identify and track critical project milestones indicating major review, approval, and launch gates.",
+    "Apply foundational Agile and Kanban principles to manage iterative project execution and task flow.",
+    "Plan realistic task sequences that account for team capacity, dependencies, and delivery buffers.",
+    "Understand team workload and capacity limitations to prevent deadline over-allocation.",
+    "Document operational decisions, meeting outcomes, and scope changes in centralized ClickUp Docs.",
+    "Communicate project progress asynchronously using threaded task comments, @mentions, and status updates.",
+    "Author structured project briefs, meeting minutes, and SOPs directly within ClickUp Docs.",
+    "Build management dashboards featuring KPI summary cards, status charts, and blocked-work widgets.",
+    "Create ClickUp Forms to capture stakeholder requests and automatically route them into task lists.",
+    "Design logical workflow automations using WHEN (Trigger) → IF (Condition) → THEN (Action) architecture.",
+    "Configure and successfully test ONE approved, non-destructive ClickUp automation with recorded evidence.",
+    "Diagnose and resolve common automation errors, non-firing triggers, and action quota limits.",
+    "Understand ClickUp automation action quotas and manage active rules within plan allowances.",
+    "Explain ClickUp Brain² capabilities across task drafting, summarization, and contextual workspace Q&A.",
+    "Understand Super Agent governance, scope limitations, human approval gates, and AI Credit costs.",
+    "Configure role-based workspace permissions across Owners, Admins, Members, and external Guests.",
+    "Protect confidential project records, financial terms, and employee data using least-privilege security.",
+    "Build an integrated project operations workspace populated with at least 25 realistic, linked tasks.",
+    "Interpret overall project health combining schedule status, blocker logs, and risk assessments.",
+    "Present structured weekly progress reports highlighting completed work, roadblocks, and next actions.",
+    "Compile a comprehensive project handover package including workspace maps, SOPs, and maintenance guides."
+  ],
+  "portfolio": {
+    "title": "ClickUp Project Operations Workspace",
+    "objective": "Construct and demonstrate one comprehensive ClickUp project operations workspace based on a realistic simulated scenario (Marketing Campaign, Website Launch, or Operations Improvement) featuring at least 25 tasks, 5 dependencies, Custom Fields, an executive dashboard, one tested automation, and complete handover documentation.",
+    "totalDeliverables": 1,
+    "countingRule": "One integrated project operations workspace containing 12 cohesive components demonstrating end-to-end collaborative project delivery.",
+    "components_count": 12,
+    "deliverables": [
+      {
+        "deliverable_number": 1,
+        "component_number": 1,
+        "title": "Project Brief & Charter in ClickUp Docs",
+        "filename": "Project_Charter_and_Scope.clickup_doc",
+        "scenario": "Author the foundational project charter in ClickUp Docs outlining business goals, project scope boundaries, core deliverables, key assumptions, and acceptance criteria.",
+        "requirements": [
+          "Documented business objective and background scenario.",
+          "Clear scope definition specifying deliverables and exclusions.",
+          "Stakeholder directory mapping project roles and responsibilities.",
+          "Documented success metrics and formal acceptance criteria."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 2,
+        "title": "Workspace Hierarchy & List Architecture",
+        "filename": "Workspace_Hierarchy_Architecture.pdf",
+        "scenario": "Design a clean, scalable ClickUp hierarchy (Space, project Folder, and dedicated Lists) establishing a logical home for all operational work packages.",
+        "requirements": [
+          "Appropriate Space setup adhering to Free Forever 5-space boundaries.",
+          "Project Folder container grouping execution Lists.",
+          "Lists organized by project phase or workstream.",
+          "Standardized naming and navigation layout."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 3,
+        "title": "Minimum 25 Realistic Project Tasks",
+        "filename": "Task_Inventory_25_Records.xlsx",
+        "scenario": "Populate the workspace with at least 25 actionable, non-trivial tasks across all project phases, assigning accountable owners, deadlines, custom statuses, and priorities.",
+        "requirements": [
+          "Exactly 25 or more actionable tasks (not mere checklist items).",
+          "Single accountable assignee for every core task.",
+          "Clear start and due dates establishing a realistic timeline.",
+          "Priority flags (Urgent, High, Normal, Low) and custom statuses applied."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 4,
+        "title": "Multi-Step Task Dependency Network",
+        "filename": "Dependency_Network_Matrix.pdf",
+        "scenario": "Establish a verified network of at least 5 meaningful dependencies (Waiting On / Blocking) demonstrating sequential delivery handoffs and blocker identification.",
+        "requirements": [
+          "Minimum 5 verified task dependencies.",
+          "At least one multi-step dependency chain (3+ connected tasks).",
+          "Clear evidence of blocked tasks waiting on prerequisite completion.",
+          "Elimination of arbitrary or circular dependencies."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 5,
+        "title": "Custom Fields System",
+        "filename": "Custom_Fields_Dictionary.pdf",
+        "scenario": "Deploy practical Custom Fields that enrich task data and power management reporting without exceeding account plan allowances.",
+        "requirements": [
+          "Fields for Deliverable Type (dropdown) and Workstream/Department.",
+          "Fields for Estimated Hours (number) and Approval Status (dropdown).",
+          "Field for Risk Level (dropdown: Low, Medium, High).",
+          "Standardized field definitions applied consistently across lists."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 6,
+        "title": "Project Milestones Schedule",
+        "filename": "Project_Milestones_Schedule.pdf",
+        "scenario": "Designate and track critical project completion points as formal ClickUp Milestones to anchor the delivery schedule.",
+        "requirements": [
+          "At least 3 designated Milestones (e.g., Brief Approved, Build Complete, QA Passed).",
+          "Milestones linked to prerequisite dependency chains.",
+          "Clear target dates and sign-off accountability."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 7,
+        "title": "Multi-View Workflow Suite",
+        "filename": "Multi_View_Configurations.pdf",
+        "scenario": "Configure a comprehensive suite of project views providing different stakeholders with tailored visual perspectives on project progress.",
+        "requirements": [
+          "List View with customized column visibility and due-date sorting.",
+          "Kanban Board View grouped by workflow status columns.",
+          "Calendar View showing deadline distribution across weeks.",
+          "Gantt View demonstration showing dependency lines and milestone diamonds."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 8,
+        "title": "Executive Management Dashboard",
+        "filename": "Executive_Project_Dashboard.pdf",
+        "scenario": "Construct a real-time management dashboard with essential cards displaying task KPIs, progress calculations, and blocked-work alerts.",
+        "requirements": [
+          "KPI cards for Total Tasks, Completed Tasks, and Overdue Tasks.",
+          "Status breakdown chart visualizing work distribution.",
+          "Urgent/Blocked tasks alert card for immediate triage.",
+          "Accurate data source filters matching the project folder."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 9,
+        "title": "Tested & Functioning ClickUp Automation",
+        "filename": "Automation_Execution_Evidence.pdf",
+        "scenario": "Implement and rigorously test ONE approved, non-destructive automation rule, documenting successful trigger-action execution and quota consumption.",
+        "requirements": [
+          "Approved rule (e.g., Status changed to 'Ready for Review' → Post review checklist comment).",
+          "Successful execution evidence verifying the action fired correctly.",
+          "Verification of active automation limits and monthly action usage.",
+          "Documented manual fallback SOP if automation pauses."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 10,
+        "title": "Coordination & Status Report",
+        "filename": "Weekly_Project_Status_Report.pdf",
+        "scenario": "Draft an executive weekly status report synthesizing dashboard data into clear business progress, risk mitigations, and upcoming milestones.",
+        "requirements": [
+          "Structured report: Completed Work, Work in Progress, Blockers, and Next Steps.",
+          "Risk log review with mitigation strategies and assigned owners.",
+          "Cross-referenced task IDs and verified milestone completion dates."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 11,
+        "title": "Role & Permission Matrix",
+        "filename": "Workspace_Permission_Matrix.xlsx",
+        "scenario": "Document an explicit permission strategy mapping access rights across Workspace Owner, Coordinator, Contributors, Reviewers, and external Guests.",
+        "requirements": [
+          "Role definitions across 5 tiers: Owner, Admin, Member, Contributor, Guest.",
+          "Location-by-location permission levels (Full, Edit, Comment, View).",
+          "Guest access restrictions protecting internal documentation.",
+          "Quarterly access auditing protocol."
+        ]
+      },
+      {
+        "deliverable_number": 1,
+        "component_number": 12,
+        "title": "Client & Team Handover Guide",
+        "filename": "ClickUp_Project_Handover_Manual.clickup_doc",
+        "scenario": "Author an operational handover manual in ClickUp Docs guiding stakeholders on how to navigate the workspace, update tasks, monitor dashboards, and maintain the system.",
+        "requirements": [
+          "Visual Workspace Map showing Spaces, Folders, and Lists.",
+          "Task lifecycle guide explaining status definitions and 'Done' criteria.",
+          "Dashboard reading instructions and automation maintenance guide.",
+          "Documented plan limitations and update responsibilities."
+        ]
+      }
+    ]
+  },
+  "assessment_model": {
+    "breakdown": [
+      {
+        "area": "Workspace setup and hierarchy",
+        "weight": 15
+      },
+      {
+        "area": "Task management, views and dependencies",
+        "weight": 25
+      },
+      {
+        "area": "Project planning and coordination",
+        "weight": 20
+      },
+      {
+        "area": "Dashboard and functioning automation",
+        "weight": 25
+      },
+      {
+        "area": "Governance, QA and capstone handover",
+        "weight": 15
+      }
+    ],
+    "totalWeight": 100,
+    "completionRule": "Students must submit the complete ClickUp Project Operations Workspace containing at least 25 tasks, 5 dependencies, an accurate dashboard, and ONE functioning tested automation with recorded evidence. A workspace with fewer than 25 tasks, broken dependencies, or an untested/hypothetical automation will not receive passing evaluation."
+  },
+  "faq": [
+    {
+      "id": 1,
+      "question": "What is ClickUp — Project Management & Workflow Automation?",
+      "answer": "A practical certification covering project planning, task organization, dependencies, dashboards and introductory workflow automation."
+    },
+    {
+      "id": 2,
+      "question": "How long is the course?",
+      "answer": "Five weeks with 40 learning hours."
+    },
+    {
+      "id": 3,
+      "question": "What is the course fee?",
+      "answer": "₹5,900, subject to verified Nova Skills pricing and tax policies."
+    },
+    {
+      "id": 4,
+      "question": "Is it suitable for beginners?",
+      "answer": "Yes. Basic task-management familiarity is recommended."
+    },
+    {
+      "id": 5,
+      "question": "Is coding required?",
+      "answer": "No. The required workflows use ClickUp's interface and supported features."
+    },
+    {
+      "id": 6,
+      "question": "What is ClickUp's hierarchy?",
+      "answer": "Workspace, Spaces, optional Folders/Subfolders, Lists, tasks and subtasks."
+    },
+    {
+      "id": 7,
+      "question": "What is a Work Breakdown Structure?",
+      "answer": "A method of dividing project deliverables into manageable work components."
+    },
+    {
+      "id": 8,
+      "question": "Will I learn task dependencies?",
+      "answer": "Yes. The course teaches how tasks block or depend on other tasks."
+    },
+    {
+      "id": 9,
+      "question": "Will I learn Gantt charts?",
+      "answer": "Yes, including suitable project scheduling and plan-aware availability."
+    },
+    {
+      "id": 10,
+      "question": "Is Gantt available on the free plan?",
+      "answer": "It is currently available with usage limits; learners must check their workspace allowance."
+    },
+    {
+      "id": 11,
+      "question": "Will I learn Kanban?",
+      "answer": "Yes. The course covers Board View and introductory Kanban practices."
+    },
+    {
+      "id": 12,
+      "question": "Will I learn Custom Fields?",
+      "answer": "Yes, with current plan and usage limitations."
+    },
+    {
+      "id": 13,
+      "question": "Will I learn recurring tasks?",
+      "answer": "Yes, including suitable operational use and feature considerations."
+    },
+    {
+      "id": 14,
+      "question": "Will I build a dashboard?",
+      "answer": "Yes. A management dashboard is part of the portfolio."
+    },
+    {
+      "id": 15,
+      "question": "Are dashboards unlimited on ClickUp Free?",
+      "answer": "No. Current free-plan dashboard usage is limited."
+    },
+    {
+      "id": 16,
+      "question": "Will I learn ClickUp Forms?",
+      "answer": "Yes, including basic intake workflow concepts and plan limitations."
+    },
+    {
+      "id": 17,
+      "question": "What is ClickUp Automation?",
+      "answer": "A feature that performs supported actions when defined trigger events occur."
+    },
+    {
+      "id": 18,
+      "question": "Does the course require a working automation?",
+      "answer": "Yes. The capstone includes one approved, successfully tested automation."
+    },
+    {
+      "id": 19,
+      "question": "Are ClickUp Automations free?",
+      "answer": "Basic automation capabilities are available on Free Forever within usage limits; advanced features depend on plan."
+    },
+    {
+      "id": 20,
+      "question": "What happens when automation limits are reached?",
+      "answer": "Automation actions may pause until the applicable usage reset or plan/allowance change."
+    },
+    {
+      "id": 21,
+      "question": "Will I learn ClickUp Brain²?",
+      "answer": "Yes, at an introductory applied awareness level, with optional eligible demonstrations."
+    },
+    {
+      "id": 22,
+      "question": "Will I learn Super Agents?",
+      "answer": "The course explains their capabilities, permissions, approval controls and AI-credit costs."
+    },
+    {
+      "id": 23,
+      "question": "Is paid AI required?",
+      "answer": "No. Paid AI and agent deployment are not compulsory."
+    },
+    {
+      "id": 24,
+      "question": "Can ClickUp manage marketing campaigns?",
+      "answer": "Yes. Marketing campaigns are one suitable capstone scenario."
+    },
+    {
+      "id": 25,
+      "question": "Can I build a website-launch project tracker?",
+      "answer": "Yes. Website launch coordination is another suitable scenario."
+    },
+    {
+      "id": 26,
+      "question": "How many tasks must I create?",
+      "answer": "At least twenty-five realistic project tasks."
+    },
+    {
+      "id": 27,
+      "question": "What must the portfolio contain?",
+      "answer": "Task ownership, deadlines, dependencies, Custom Fields, project views, a dashboard, working automation and handover documents."
+    },
+    {
+      "id": 28,
+      "question": "Is this a PMP certification?",
+      "answer": "No. It is a ClickUp-specific applied operations certification."
+    },
+    {
+      "id": 29,
+      "question": "Will I receive an official ClickUp certification?",
+      "answer": "The course provides a Nova Skills credential under verified institute policy; an official ClickUp-issued credential should not be claimed without evidence."
+    },
+    {
+      "id": 30,
+      "question": "Who should enroll?",
+      "answer": "Project coordinators, agency staff, team leaders, freelancers and businesses using structured collaborative workflows."
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "What is ClickUp — Project Management & Workflow Automation?",
+      "answer": "A practical certification covering project planning, task organization, dependencies, dashboards and introductory workflow automation."
+    },
+    {
+      "id": 2,
+      "question": "How long is the course?",
+      "answer": "Five weeks with 40 learning hours."
+    },
+    {
+      "id": 3,
+      "question": "What is the course fee?",
+      "answer": "₹5,900, subject to verified Nova Skills pricing and tax policies."
+    },
+    {
+      "id": 4,
+      "question": "Is it suitable for beginners?",
+      "answer": "Yes. Basic task-management familiarity is recommended."
+    },
+    {
+      "id": 5,
+      "question": "Is coding required?",
+      "answer": "No. The required workflows use ClickUp's interface and supported features."
+    },
+    {
+      "id": 6,
+      "question": "What is ClickUp's hierarchy?",
+      "answer": "Workspace, Spaces, optional Folders/Subfolders, Lists, tasks and subtasks."
+    },
+    {
+      "id": 7,
+      "question": "What is a Work Breakdown Structure?",
+      "answer": "A method of dividing project deliverables into manageable work components."
+    },
+    {
+      "id": 8,
+      "question": "Will I learn task dependencies?",
+      "answer": "Yes. The course teaches how tasks block or depend on other tasks."
+    },
+    {
+      "id": 9,
+      "question": "Will I learn Gantt charts?",
+      "answer": "Yes, including suitable project scheduling and plan-aware availability."
+    },
+    {
+      "id": 10,
+      "question": "Is Gantt available on the free plan?",
+      "answer": "It is currently available with usage limits; learners must check their workspace allowance."
+    },
+    {
+      "id": 11,
+      "question": "Will I learn Kanban?",
+      "answer": "Yes. The course covers Board View and introductory Kanban practices."
+    },
+    {
+      "id": 12,
+      "question": "Will I learn Custom Fields?",
+      "answer": "Yes, with current plan and usage limitations."
+    },
+    {
+      "id": 13,
+      "question": "Will I learn recurring tasks?",
+      "answer": "Yes, including suitable operational use and feature considerations."
+    },
+    {
+      "id": 14,
+      "question": "Will I build a dashboard?",
+      "answer": "Yes. A management dashboard is part of the portfolio."
+    },
+    {
+      "id": 15,
+      "question": "Are dashboards unlimited on ClickUp Free?",
+      "answer": "No. Current free-plan dashboard usage is limited."
+    },
+    {
+      "id": 16,
+      "question": "Will I learn ClickUp Forms?",
+      "answer": "Yes, including basic intake workflow concepts and plan limitations."
+    },
+    {
+      "id": 17,
+      "question": "What is ClickUp Automation?",
+      "answer": "A feature that performs supported actions when defined trigger events occur."
+    },
+    {
+      "id": 18,
+      "question": "Does the course require a working automation?",
+      "answer": "Yes. The capstone includes one approved, successfully tested automation."
+    },
+    {
+      "id": 19,
+      "question": "Are ClickUp Automations free?",
+      "answer": "Basic automation capabilities are available on Free Forever within usage limits; advanced features depend on plan."
+    },
+    {
+      "id": 20,
+      "question": "What happens when automation limits are reached?",
+      "answer": "Automation actions may pause until the applicable usage reset or plan/allowance change."
+    },
+    {
+      "id": 21,
+      "question": "Will I learn ClickUp Brain²?",
+      "answer": "Yes, at an introductory applied awareness level, with optional eligible demonstrations."
+    },
+    {
+      "id": 22,
+      "question": "Will I learn Super Agents?",
+      "answer": "The course explains their capabilities, permissions, approval controls and AI-credit costs."
+    },
+    {
+      "id": 23,
+      "question": "Is paid AI required?",
+      "answer": "No. Paid AI and agent deployment are not compulsory."
+    },
+    {
+      "id": 24,
+      "question": "Can ClickUp manage marketing campaigns?",
+      "answer": "Yes. Marketing campaigns are one suitable capstone scenario."
+    },
+    {
+      "id": 25,
+      "question": "Can I build a website-launch project tracker?",
+      "answer": "Yes. Website launch coordination is another suitable scenario."
+    },
+    {
+      "id": 26,
+      "question": "How many tasks must I create?",
+      "answer": "At least twenty-five realistic project tasks."
+    },
+    {
+      "id": 27,
+      "question": "What must the portfolio contain?",
+      "answer": "Task ownership, deadlines, dependencies, Custom Fields, project views, a dashboard, working automation and handover documents."
+    },
+    {
+      "id": 28,
+      "question": "Is this a PMP certification?",
+      "answer": "No. It is a ClickUp-specific applied operations certification."
+    },
+    {
+      "id": 29,
+      "question": "Will I receive an official ClickUp certification?",
+      "answer": "The course provides a Nova Skills credential under verified institute policy; an official ClickUp-issued credential should not be claimed without evidence."
+    },
+    {
+      "id": 30,
+      "question": "Who should enroll?",
+      "answer": "Project coordinators, agency staff, team leaders, freelancers and businesses using structured collaborative workflows."
+    }
+  ],
+  "academic_progression": {
+    "prerequisites": "Basic computer and task-management literacy.",
+    "concurrent_recommendations": "Pairs effectively with Notion (Course 106) for company knowledge systems, or Google Workspace (Course 105) for cloud communication.",
+    "next_steps": "Business Productivity Mastery (Course 29), Office Productivity Professional (Course 30), or dedicated AI automation certifications."
+  },
+  "seo": {
+    "title": "ClickUp Project Management & Automation Course | Nova Skills",
+    "meta_description": "Learn ClickUp task management, dependencies, Gantt, dashboards and automations in 5 weeks (40h). Build a 25-task project portfolio. ₹5,900.",
+    "canonical_url": "https://novaskills.in/course-detail.html?id=clickup-cert",
+    "primary_keyword": "ClickUp course",
+    "secondary_keywords": [
+      "ClickUp certification course",
+      "ClickUp project management training",
+      "ClickUp for beginners",
+      "ClickUp task management",
+      "ClickUp workflow automation",
+      "ClickUp Gantt chart course",
+      "ClickUp dependencies",
+      "ClickUp dashboard training",
+      "ClickUp Custom Fields",
+      "ClickUp Kanban boards",
+      "ClickUp project planning",
+      "ClickUp Docs",
+      "ClickUp Forms",
+      "ClickUp Brain2",
+      "ClickUp Super Agents",
+      "ClickUp course India",
+      "Project coordinator skills",
+      "Marketing project management",
+      "Agency workflow management",
+      "ClickUp automation training"
+    ],
+    "schema_type": "Course",
+    "course_name": "ClickUp — Project Management & Workflow Automation",
+    "course_code": "NS-CLK-107",
+    "course_provider": "Nova Skills",
+    "educational_credential_awarded": "Certificate of Completion",
+    "time_required": "P5W",
+    "offers": {
+      "price": 5900,
+      "priceCurrency": "INR",
+      "category": "Paid",
+      "url": "https://novaskills.in/course-detail.html?id=clickup-cert"
+    }
+  }
 }

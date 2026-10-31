@@ -1,348 +1,1269 @@
 {
   "course_id": "sql-basics",
-  "course_name": "SQL Basics",
+  "id": "sql-basics",
+  "slug": "sql-basics",
+  "course_name": "SQL & Relational Database Fundamentals",
+  "title": "SQL & Relational Database Fundamentals",
+  "name": "SQL & Relational Database Fundamentals",
+  "academic_sequence": 59,
+  "course_number": 59,
+  "curriculum_edition": "2027 Professional Edition",
   "academy": "Programming Academy",
   "academy_id": "programming",
-  "course_type": "MICRO",
-  "course_role": "Supporting Skill",
-  "level": "BEGINNER",
-  "duration": "3-4 Weeks",
+  "academyId": "programming",
+  "academic_positioning": "Relational Database Concepts, SQL Querying, Multi-Table Joins, Business Reporting & Data Integrity",
+  "programLevel": "Certification Course",
+  "course_type": "PROFESSIONAL",
+  "courseType": "PROFESSIONAL",
+  "course_role": "Junior SQL & Database Reporting Assistant",
+  "level": "Beginner to Applied",
+  "priority": "A+",
+  "duration": "5 Weeks",
+  "durationMonths": 1.25,
+  "duration_weeks": 5,
   "learning_hours": 40,
-  "future_review_status": "EVOLVING",
-  "target_audience": {
-    "best_for": [
-      "Aspiring professionals aiming to master SQL Basics and secure industry roles.",
-      "Current developers wanting to upskill using modern MySQL workflows.",
-      "Freelancers looking to offer SQL Basics services to clients."
-    ],
-    "who_should_take_foundation_first": "Learners lacking foundational proficiency in None should complete the prerequisite foundation before enrolling.",
-    "not_for": [
-      "Students looking for purely theoretical knowledge without hands-on implementation.",
-      "Individuals unwilling to engage in active problem-solving and coding."
-    ]
+  "learningHours": 40,
+  "guided_hours": 40,
+  "hours": 40,
+  "weekly_workload": "8 hours per week (4 hours interactive lectures & code-alongs + 4 hours hands-on lab implementation)",
+  "mode": "Interactive Software Labs & Guided Workplace Simulation",
+  "price": 5900,
+  "fee": 5900,
+  "regular_fee": 5900,
+  "originalPrice": 5900,
+  "commercial_notice": "Transparent flat enrollment fee of ₹5,900. No artificial comparison price, no fake countdown timers, and no inflated discounts.",
+  "pricing": {
+    "amount": 5900,
+    "currency": "INR",
+    "display": "₹5,900",
+    "transparent": true,
+    "installment_available": false,
+    "notes": "One-time complete course fee covering all 5 weeks, 40 hours of guided labs, capstone code reviews, and certificate verification."
   },
-  "prerequisites": {
-    "required": "None",
-    "recommended": "Familiarity with modern web browsers and professional digital tools",
-    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
-    "system_requirements": {
-      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
-      "software_accounts": "SQL Basics, Git & GitHub, VS Code (student/free tiers sufficient for coursework)"
-    }
+  "tagline": "Learn to Query, Organize and Understand the Data Behind Modern Applications.",
+  "hero_headline": "Learn to Query, Organize and Understand the Data Behind Modern Applications.",
+  "hero_supporting_heading": "Master Relational Databases, PostgreSQL, SQL Queries, Multi-Table Joins, Business Reporting, Data Integrity and Transactions.",
+  "hero_supporting_headline": "Build practical SQL skills using PostgreSQL. Learn to design relational tables, query business data, combine datasets, summarize results and perform reliable database operations through hands-on exercises.",
+  "h1": "SQL & Relational Database Fundamentals",
+  "seo_title": "SQL & PostgreSQL Course | 5 Weeks, ₹5,900 | Nova Skills",
+  "meta_title": "SQL & PostgreSQL Course | 5 Weeks, ₹5,900 | Nova Skills",
+  "seo_description": "Learn PostgreSQL, SQL queries, joins, reporting and transactions. Build a business database with 20+ queries in 5 weeks, 40 hours, for ₹5,900.",
+  "meta_description": "Learn PostgreSQL, SQL queries, joins, reporting and transactions. Build a business database with 20+ queries in 5 weeks, 40 hours, for ₹5,900.",
+  "canonical_url": "https://novaskills.in/course-detail.html?id=sql-basics",
+  "hero": {
+    "headline": "Learn to Query, Organize and Understand the Data Behind Modern Applications.",
+    "subheadline": "Build practical SQL skills using PostgreSQL. Learn to design relational tables, query business data, combine datasets, summarize results and perform reliable database operations through hands-on exercises.",
+    "primary_cta": "Enroll in SQL Certification",
+    "secondary_cta": "Explore Curriculum"
   },
-  "overview": {
-    "positioning": "Durable foundational skill used in programming and office data.",
-    "short_description": "Comprehensive curriculum covering MySQL, PostgreSQL, DBeaver to build production-grade projects.",
-    "key_facts": {
-      "level": "BEGINNER",
-      "duration": "3-4 Weeks",
-      "format": "Practical Hands-On Studio / Interactive Live Labs",
-      "estimated_learning_hours": "40 Hours",
-      "project_count": "PRACTICAL",
-      "capstone": "Practical Production Artifact",
-      "ai_integration": "AI-AUGMENTED",
-      "career_focus": "Database Administrator Associate, SQL Query Writer"
-    },
-    "what_you_will_be_able_to_do": [
-      "Architect and execute end-to-end solutions using MySQL.",
-      "Solve concrete business problems applying SQL Basics principles.",
-      "Package professional case studies demonstrating verifiable skills."
-    ]
-  },
-  "why_now": {
-    "industry_shift": "The transition toward modern cloud and web ecosystems requires deep expertise in MySQL and related technologies.",
-    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
-    "business_demand": "Businesses actively seek talent who can deliver robust SQL Basics solutions efficiently.",
-    "career_opportunity": "Mastering these tools opens doors to high-paying specialized roles and global freelance opportunities."
-  },
+  "short_description": "Build practical SQL skills using PostgreSQL. Learn to design relational tables, query business data, combine datasets, summarize results and perform reliable database operations through hands-on exercises.",
+  "shortDesc": "Build practical SQL skills using PostgreSQL. Learn to design relational tables, query business data, combine datasets, summarize results and perform reliable database operations through hands-on exercises.",
+  "full_description": "Learn how to organize, query and analyze structured business data using SQL and PostgreSQL—without requiring previous programming experience. This practical SQL & Relational Database Fundamentals course introduces relational database concepts, tables, data types, primary keys, foreign keys and SQL query development. Start by learning to retrieve and filter data using SELECT, WHERE, ORDER BY, DISTINCT, LIMIT and conditional expressions. Develop confidence in combining information across related tables with INNER JOIN, LEFT JOIN and multi-table queries. Learn to produce business reports using aggregate functions, GROUP BY, HAVING, CASE expressions, subqueries and Common Table Expressions. Explore introductory window functions for ranking and comparing records without losing individual row detail. Build reliable relational databases using CREATE TABLE, ALTER TABLE, constraints and safe INSERT, UPDATE and DELETE operations. Understand transaction fundamentals, database integrity, indexing awareness and the importance of parameterized queries when SQL is used inside applications. Use PostgreSQL with DBeaver or pgAdmin to work on realistic admissions, retail sales or inventory datasets. Complete a portfolio-ready relational database project containing a documented schema, sample data, at least 20 meaningful SQL queries, a data-quality checklist and a business reporting summary. The programme emphasizes practical SQL reasoning, reliable query results, data relationships and business interpretation—not simply memorizing SQL commands.",
+  "fullDesc": "Learn how to organize, query and analyze structured business data using SQL and PostgreSQL—without requiring previous programming experience. This practical SQL & Relational Database Fundamentals course introduces relational database concepts, tables, data types, primary keys, foreign keys and SQL query development. Start by learning to retrieve and filter data using SELECT, WHERE, ORDER BY, DISTINCT, LIMIT and conditional expressions. Develop confidence in combining information across related tables with INNER JOIN, LEFT JOIN and multi-table queries. Learn to produce business reports using aggregate functions, GROUP BY, HAVING, CASE expressions, subqueries and Common Table Expressions. Explore introductory window functions for ranking and comparing records without losing individual row detail. Build reliable relational databases using CREATE TABLE, ALTER TABLE, constraints and safe INSERT, UPDATE and DELETE operations. Understand transaction fundamentals, database integrity, indexing awareness and the importance of parameterized queries when SQL is used inside applications. Use PostgreSQL with DBeaver or pgAdmin to work on realistic admissions, retail sales or inventory datasets. Complete a portfolio-ready relational database project containing a documented schema, sample data, at least 20 meaningful SQL queries, a data-quality checklist and a business reporting summary. The programme emphasizes practical SQL reasoning, reliable query results, data relationships and business interpretation—not simply memorizing SQL commands.",
+  "description": "Build practical SQL skills using PostgreSQL. Learn to design relational tables, query business data, combine datasets, summarize results and perform reliable database operations through hands-on exercises.",
+  "overview": "SQL & Relational Database Fundamentals is an intensive 5-week, 40-hour beginner-friendly certification designed to build practical database and querying proficiency using industry-standard PostgreSQL. Built around modern 2027 data standards, this course teaches complete beginners—without requiring any prior coding experience—to model relational entities, write precise SQL queries, join related datasets, produce actionable business reports, and enforce relational data integrity. Students work with real-world business scenarios (such as student admissions, retail commerce, and warehouse inventory) using professional GUI tools like DBeaver or pgAdmin. The course culminates in an assessed relational database capstone featuring a documented schema, realistic sample data, at least 20 verified SQL queries, a 10-point data quality audit, and a business reporting summary.",
+  "why_now": "In 2027, data is the foundation of every modern business decision and software application. Whether you are an aspiring software engineer, a business analyst, a marketer, or an administrative professional, the ability to query relational databases directly with SQL is an essential, high-leverage skill. Rather than relying on static spreadsheets or slow reporting requests, learning SQL empowers you to extract answers, join customer and transaction data, discover trends, and ensure data integrity independently.",
+  "icon": "🗄️",
+  "color": "linear-gradient(135deg, #004672, #336791)",
+  "rating": 4.8,
+  "reviews": 185,
+  "students": 1240,
+  "liveProjects": 1,
+  "projects": 1,
+  "certificate": true,
+  "placementSupport": false,
+  "status": "active",
+  "url": "/course-detail.html?id=sql-basics",
+  "tags": [
+    "popular",
+    "trending",
+    "sql",
+    "postgresql",
+    "database",
+    "relational-database",
+    "dbeaver",
+    "pgadmin",
+    "data-analysis",
+    "reporting",
+    "certification"
+  ],
+  "featured": true,
+  "category": "Programming Academy",
+  "future_review_status": "STABLE_2027",
+  "futureReviewStatus": "STABLE_2027",
+  "positioning": "Relational Database Concepts, SQL Querying, Multi-Table Joins, Business Reporting & Data Integrity",
+  "target_audience": [
+    "Complete SQL and database beginners seeking practical, job-ready data querying and reporting skills.",
+    "Aspiring backend, full-stack, and web developers needing a strong relational database foundation before taking Node.js or Python.",
+    "Business analysts, marketing specialists, and office professionals wanting to query company databases directly without relying on spreadsheets.",
+    "Admissions, retail, and inventory operations staff looking to automate structured reports and improve data accuracy."
+  ],
+  "prerequisites": [
+    "Basic computer literacy: managing files, using desktop software, and internet navigation.",
+    "Comfortable working with structured information (rows and columns in basic spreadsheets).",
+    "No previous programming experience, JavaScript, Python, or command-line knowledge required."
+  ],
+  "highlights": [
+    "40 hours of practical SQL and relational database training across 5 structured weeks.",
+    "Standardized 100% on PostgreSQL, the world's most advanced open-source relational database.",
+    "Hands-on database exploration using professional GUI tools: DBeaver or pgAdmin.",
+    "Master foundational to advanced queries: SELECT, WHERE, ORDER BY, DISTINCT, and NULL handling.",
+    "Combine complex datasets accurately using INNER JOIN, LEFT JOIN, and multi-table relationships.",
+    "Produce executive business summaries with GROUP BY, HAVING, CASE, subqueries, and CTEs.",
+    "Explore modern analytic SQL with introductory window functions (ROW_NUMBER, RANK, running totals).",
+    "Learn relational schema design, table constraints (PK/FK/CHECK), safe UPDATE/DELETE, and transactions.",
+    "Build a portfolio capstone with at least 20 verified SQL queries, a data quality audit, and reporting summary."
+  ],
+  "hands_on_tech": [
+    "PostgreSQL (Active LTS)",
+    "SQL (Structured Query Language)",
+    "DBeaver Community Edition",
+    "pgAdmin 4",
+    "VS Code (SQL Editor)",
+    "Git & GitHub (Portfolio Submission)"
+  ],
+  "tools": [
+    "PostgreSQL",
+    "SQL",
+    "DBeaver",
+    "pgAdmin",
+    "VS Code",
+    "Git & GitHub"
+  ],
   "learning_outcomes": [
-    "PLAN: Formulate project architectures utilizing MySQL.",
-    "BUILD: Construct professional deliverables using modern workflows.",
-    "OPTIMIZE: Refine outputs against strict quality metrics."
+    "Understand relational database architecture, tables, schemas, and select appropriate PostgreSQL data types for business entities.",
+    "Write accurate SQL queries to retrieve, filter, sort, and project structured data using SELECT, WHERE, ORDER BY, LIMIT, and DISTINCT.",
+    "Handle NULL values correctly using IS NULL, IS NOT NULL, and COALESCE functions within three-valued logic rules.",
+    "Model entities and combine datasets across multiple tables using Primary Keys, Foreign Keys, INNER JOIN, and LEFT JOIN without row duplication.",
+    "Aggregate and analyze business records using COUNT, SUM, AVG, MIN, MAX, GROUP BY, and HAVING to produce summary reports.",
+    "Implement conditional business logic with CASE expressions and construct readable multi-step queries using subqueries and CTEs (WITH).",
+    "Apply introductory window functions (ROW_NUMBER, RANK, running totals) to rank business records while preserving row detail.",
+    "Create and modify relational schemas using CREATE/ALTER TABLE with constraints, perform safe data modifications, and execute ACID transactions."
   ],
-  "learning_journey": {
-    "stages": [
-      {
-        "stage": "Stage 1: Mental Model & Environment",
-        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
-      },
-      {
-        "stage": "Stage 2: Core Mechanics & Best Practices",
-        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
-      },
-      {
-        "stage": "Stage 3: Guided Production Labs",
-        "focus": "Hands-on guided walkthroughs replicating real client briefs."
-      },
-      {
-        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
-        "focus": "Edge cases, performance optimization, security, and quality assurance."
-      },
-      {
-        "stage": "Stage 5: Portfolio Project Execution",
-        "focus": "Independent unguided project build matching commercial specifications."
-      }
-    ]
-  },
-  "hands_on_tech": {
-    "core_tools": [
-      {
-        "tool": "MySQL",
-        "purpose": "Core utility for sql-basics.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
-      },
-      {
-        "tool": "PostgreSQL",
-        "purpose": "Core utility for sql-basics.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
-      },
-      {
-        "tool": "DBeaver",
-        "purpose": "Core utility for sql-basics.",
-        "what_student_learns": "Best practices.",
-        "what_student_builds": "Project components."
-      }
-    ],
-    "supporting_tools": [
-      {
-        "tool": "Postman",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      },
-      {
-        "tool": "Docker",
-        "purpose": "Workflow accelerator, asset library, or collaboration utility."
-      }
-    ],
-    "emerging_tools": [
-      {
-        "tool": "Cursor",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      },
-      {
-        "tool": "Supabase",
-        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
-      }
-    ],
-    "tools_to_review": [
-      "Outdated legacy libraries"
-    ]
-  },
-  "industry_workflow": {
-    "overview": "How leading practitioners implement SQL Basics in 2026/27:",
-    "stages": [
-      {
-        "step": 1,
-        "name": "Requirements Analysis",
-        "desc": "Deconstruct the business problem and technical constraints."
-      },
-      {
-        "step": 2,
-        "name": "Architecture & Setup",
-        "desc": "Initialize the environment and plan the structure."
-      },
-      {
-        "step": 3,
-        "name": "Implementation",
-        "desc": "Execute core development using standard practices."
-      },
-      {
-        "step": 4,
-        "name": "Testing & Deployment",
-        "desc": "Validate functionality and release to production."
-      }
-    ]
-  },
-  "business_use_cases": [
+  "learning_journey": [
     {
-      "sector": "Startups & SMEs",
-      "business_problem": "Need rapid, scalable digital solutions.",
-      "approach": "Utilize MySQL to quickly iterate and deliver value.",
-      "toolset": "MySQL, PostgreSQL, DBeaver",
-      "output": "Functional Minimum Viable Product (MVP)."
+      "step": "01",
+      "title": "Database & SQL Foundations",
+      "description": "Understand relational concepts, tables, columns, PostgreSQL data types, and set up your local database with DBeaver or pgAdmin."
+    },
+    {
+      "step": "02",
+      "title": "Data Querying & Filtering",
+      "description": "Master SELECT queries, column aliases, WHERE filtering conditions, sorting with ORDER BY, and safe NULL value handling."
+    },
+    {
+      "step": "03",
+      "title": "Joins & Relationships",
+      "description": "Model relationships with Primary and Foreign Keys, combine tables with INNER and LEFT JOINs, and prevent accidental Cartesian products."
+    },
+    {
+      "step": "04",
+      "title": "Business SQL Analysis",
+      "description": "Aggregate data with GROUP BY and HAVING, classify records with CASE expressions, and build CTEs and introductory window functions."
+    },
+    {
+      "step": "05",
+      "title": "Data Integrity & Transactions",
+      "description": "Define schemas with constraints, perform safe INSERT/UPDATE/DELETE operations, execute transactions, and understand SQL injection awareness."
+    },
+    {
+      "step": "06",
+      "title": "Capstone & Handover",
+      "description": "Finalize a 4+ table relational database, execute 20 verified SQL queries, audit data quality, and submit business findings."
     }
   ],
-  "ai_integration": {
-    "role_classification": "AI-AUGMENTED",
-    "ai_can_assist_with": "Rapid brainstorming, drafting variations, error diagnostics, and preliminary formatting.",
-    "ai_can_automate": "Repetitive boilerplate generation, routine data parsing, syntax linting, and asset scaling.",
-    "ai_cannot_replace": "High-level architectural judgment, strategic positioning, commercial brand taste, and ethical accountability.",
-    "human_expertise_required": "Domain problem framing, edge-case evaluation, client emotional rapport, and final sign-off.",
-    "validation_protocol": "Every AI-generated code snippet, copy variation, or asset must undergo manual verification against security and brand guidelines.",
-    "responsible_use": "Respect intellectual property rights, data privacy regulations, and disclosure standards."
-  },
+  "industry_workflow": [
+    "Business Question Decomposition: Translate operational questions into precise relational data requirements.",
+    "Schema Inspection & ERD Navigation: Inspect primary/foreign key relationships to identify correct tables and join keys.",
+    "Incremental Query Construction: Build queries step-by-step (FROM -> JOIN -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY).",
+    "Result Grain & Count Verification: Verify output row counts against raw data to detect accidental row multiplication or filtering errors.",
+    "Data Quality Auditing: Check for orphaned records, unexpected NULLs, duplicate business keys, and constraint violations.",
+    "Reporting & Handover: Export reproducible SQL script files, document assumptions, and present business insights with supporting query evidence."
+  ],
+  "business_use_cases": [
+    "Student Admissions Analytics: Tracking applications, enrollment statuses, course fill rates, and pending tuition balances.",
+    "Retail Sales Reporting: Calculating daily/monthly revenue, top-selling product categories, average order values, and customer repurchase rates.",
+    "Warehouse Inventory Management: Identifying low-stock items, stock reorder alerts, inventory valuation, and supplier fulfillment times.",
+    "Customer Support Monitoring: Measuring ticket resolution times, agent caseloads, open issue counts, and service tier distribution."
+  ],
+  "ai_integration": [
+    "AI as SQL Explainer: Using AI assistants to break down complex multi-table queries, explain error messages, and review JOIN logic.",
+    "Query Optimization Review: Asking AI to suggest alternative query structures or identify missing indexes.",
+    "Mock Data Generation: Generating diverse, realistic fictional business datasets for local testing.",
+    "Strict Human Validation: Every student must execute their queries in PostgreSQL, verify row counts against raw records, and understand every clause; unverified AI-generated SQL is rejected."
+  ],
   "best_practices": [
-    "Maintain rigorous file naming conventions, version control, and modular architecture.",
-    "Prioritize performance optimization, accessibility standards, and clean documentation.",
-    "Test across realistic edge cases rather than only ideal laboratory conditions."
+    "Explicit Column Selection: Avoid SELECT * in production and reporting queries; explicitly project only the columns required.",
+    "Correct NULL Testing: Never use = NULL or != NULL; always test for missing values using IS NULL or IS NOT NULL.",
+    "Verify Join Grain: When joining one-to-many tables, understand that parent rows duplicate; reconcile aggregate sums before and after joins.",
+    "Safe Modification Workflows: Always test UPDATE and DELETE operations using a SELECT query with the identical WHERE clause before modifying records.",
+    "Use Transactions for Multi-Step Updates: Wrap related modifications in BEGIN ... COMMIT blocks, ensuring automatic ROLLBACK on failure.",
+    "Enforce Constraints at the Database Level: Use PRIMARY KEY, FOREIGN KEY, NOT NULL, UNIQUE, and CHECK constraints rather than relying solely on applications.",
+    "Consistent SQL Formatting: Format SQL with uppercase keywords, clear indentation, table aliases, and descriptive comments for maintainability.",
+    "Parameterized SQL Awareness: Never concatenate untrusted user input directly into SQL strings in application code; use parameterized query APIs."
   ],
   "common_mistakes": [
-    {
-      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
-      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
-      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
-    },
-    {
-      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
-      "why_it_happens": "Learning tools in isolation from commercial contexts.",
-      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
-    }
+    "Using = NULL instead of IS NULL, resulting in false comparison results due to three-valued logic.",
+    "Accidental Cartesian products (missing ON clause or join condition), multiplying row counts exponentially.",
+    "Using WHERE instead of HAVING to filter aggregated metrics, causing syntax errors.",
+    "Double-counting metrics by joining multiple child tables without grouping at the appropriate grain.",
+    "Executing UPDATE or DELETE statements without a WHERE clause, inadvertently wiping out entire tables.",
+    "Assuming an executed query with zero errors is mathematically correct without reconciling output against raw data.",
+    "Using floating-point types (FLOAT/REAL) for monetary values instead of NUMERIC/DECIMAL, introducing rounding errors.",
+    "Submitting screenshots instead of executable SQL source files, making work impossible to reproduce and audit."
   ],
-  "career_paths": {
-    "entry_roles": "Database Administrator Associate",
-    "mid_roles": " SQL Query Writer",
-    "specialist_roles": "Backend Associate",
-    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
-    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
-    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
-  },
-  "freelance_applications": {
-    "services_offered": [
-      "End-to-end SQL Basics project delivery for international SMEs and agencies.",
-      "Audit, troubleshooting, and optimization of existing client assets.",
-      "Monthly recurring maintenance and performance scaling retainers."
+  "career_paths": [
+    "Junior SQL & Database Reporting Assistant",
+    "Junior Business Data Analyst",
+    "Data Operations Assistant",
+    "Database Support Trainee",
+    "Admissions & Operations Data Coordinator",
+    "Junior Backend Development Trainee"
+  ],
+  "freelance_applications": [
+    "Writing custom SQL queries and business reports for small businesses using PostgreSQL or MySQL.",
+    "Cleaning and auditing messy operational datasets to identify duplicate records and data errors.",
+    "Designing small relational databases and schemas for business workflows, e-commerce, or CRM systems.",
+    "Migrating and structuring data from disorganized spreadsheets into normalized relational tables."
+  ],
+  "what_you_will_build": {
+    "overview": "Throughout the course, students build hands-on database tables, write targeted query workbooks, combine multi-table datasets, and author executive reports, culminating in exactly ONE comprehensive commercial-style Relational Database Portfolio project.",
+    "capstone_options": [
+      {
+        "option": "Option A",
+        "title": "Student Admissions & Enrollment Database",
+        "description": "A relational database managing student profiles, course offerings, enrollment registrations, and tuition payment tracking.",
+        "core_entities": [
+          "Students",
+          "Courses",
+          "Enrollments",
+          "Payments"
+        ],
+        "sample_reports": [
+          "Enrollment counts and revenue per course",
+          "Monthly admission trends and enrollment velocity",
+          "Pending balance reports for partially paid enrollments",
+          "Courses with zero enrollments or low capacity utilization",
+          "Top courses ranked by student enrollment volume"
+        ]
+      },
+      {
+        "option": "Option B",
+        "title": "Retail Sales & Order Management Database",
+        "description": "A relational e-commerce database managing customers, product categories, products, customer orders, and line-item details.",
+        "core_entities": [
+          "Customers",
+          "Categories",
+          "Products",
+          "Orders",
+          "Order_Items"
+        ],
+        "sample_reports": [
+          "Total revenue and average order value by month",
+          "Top-selling products and highest-revenue categories",
+          "Customers with repeat purchases vs single-order buyers",
+          "Products that have never been purchased",
+          "Ranking products by revenue within each category"
+        ]
+      },
+      {
+        "option": "Option C",
+        "title": "Warehouse Inventory & Stock Management Database",
+        "description": "A relational warehouse database tracking suppliers, product categories, warehouse locations, product stock levels, and inventory transactions.",
+        "core_entities": [
+          "Suppliers",
+          "Categories",
+          "Products",
+          "Warehouses",
+          "Stock_Transactions"
+        ],
+        "sample_reports": [
+          "Current inventory valuation by category and warehouse",
+          "Low-stock alert list for items below reorder thresholds",
+          "Suppliers with the highest volume of restocked items",
+          "Dormant products with zero inbound or outbound transactions",
+          "Monthly stock consumption and shipment trends"
+        ]
+      }
     ],
-    "client_workflow": "Database Schema Discovery -> Relational Data Modeling -> Query Optimization Audit -> Stored Procedure Delivery & Documentation",
-    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+    "mandatory_specifications": [
+      "Relational Schema: At least 4 meaningful related tables with Primary Keys, Foreign Keys, and appropriate data constraints.",
+      "Sample Dataset: Realistic fictional business records (50-150 rows) providing sufficient variation to test queries and edge cases.",
+      "20 Meaningful SQL Queries: Covering all 20 required query categories with verified outputs and business explanations.",
+      "Data Quality Audit: 10-point checklist verifying key integrity, missing values, duplicate checks, and grain reconciliation.",
+      "Transaction Demonstration: Multi-step transaction demonstrating successful COMMIT and verified ROLLBACK on failure.",
+      "Source Code Handover: Reproducible SQL files (create_tables.sql, insert_sample_data.sql, queries_01_20.sql, etc.) and README."
+    ]
   },
-  "what_you_will_build": [
-    "Production Project 1: Foundational client asset built to professional specifications.",
-    "Production Project 2: Advanced commercial scenario with multi-tool integration."
-  ],
   "final_deliverables": [
-    "Production-ready digital assets, code repository, or live published URL.",
-    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
-    "QR-code verifiable Nova Skills certificate of completion."
+    "Exactly ONE complete Relational Business Database project (Option A: Admissions, Option B: Retail, or Option C: Inventory).",
+    "Executable SQL schema script (create_tables.sql) with table definitions, data types, primary keys, foreign keys, and constraints.",
+    "Sample data insertion script (insert_sample_data.sql) populating 50-150 realistic fictional business records.",
+    "Documented SQL Query Workbook (queries_01_20.sql) containing at least 20 working, verified queries answering business questions.",
+    "10-point Data Quality Audit Checklist verifying primary/foreign keys, duplicate checks, NULL handling, and aggregation reconciliation.",
+    "Transaction Demonstration Script (transaction_demo.sql) proving atomic COMMIT and ROLLBACK behavior.",
+    "Business Reporting Summary document and comprehensive README.md with database setup instructions."
   ],
+  "portfolio": {
+    "title": "Nova Skills SQL & Relational Database Portfolio",
+    "description": "Exactly ONE complete Relational Business Database capstone demonstrating practical SQL craftsmanship: relational schema design, 4+ related tables, realistic sample data, 20+ verified business queries, data quality audit, transaction demonstration, and executive reporting summary.",
+    "deliverables_count": 1,
+    "capstone_options": [
+      {
+        "option": "Option A",
+        "name": "Student Admissions Database",
+        "scope": "Students, Courses, Enrollments, Payments; enrollment velocity, revenue by course, pending balances, and student ranking."
+      },
+      {
+        "option": "Option B",
+        "name": "Retail Sales Database",
+        "scope": "Customers, Categories, Products, Orders, Order_Items; revenue trends, top-selling items, repeat buyers, and category ranking."
+      },
+      {
+        "option": "Option C",
+        "name": "Inventory Management Database",
+        "scope": "Suppliers, Categories, Products, Warehouses, Stock_Transactions; stock valuation, reorder alerts, supplier trends, and inventory movement."
+      }
+    ],
+    "testing_requirements": [
+      "Reproducibility: A reviewer can execute create_tables.sql, run insert_sample_data.sql, and reproduce all query outputs cleanly.",
+      "Query Coverage: At least 20 distinct, meaningful SQL queries executing without syntax errors and covering all 20 required categories.",
+      "Relational Integrity: Schema enforces Primary Keys, Foreign Keys, NOT NULL, and appropriate CHECK/UNIQUE constraints.",
+      "Join Accuracy: Joins between parent and child tables are validated to confirm row counts and prevent unintended Cartesian multiplication.",
+      "Transaction Verification: Demonstrated atomic transaction execution with verified rollback upon intentional failure.",
+      "No Fabricated Results: Every documented result must match the exact output produced by executing the SQL against the sample data."
+    ],
+    "handover_structure": {
+      "repository_tree": "sql-business-capstone/ (README.md, 01_business_brief/brief.md, 02_schema/create_tables.sql, 02_schema/erd_diagram.png, 03_sample_data/insert_sample_data.sql, 04_queries/queries_01_20.sql, 05_data_quality/data_quality_checks.sql, 06_transactions/transaction_demo.sql, 07_reports/business_report.md)"
+    }
+  },
   "assessment": {
-    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
-    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+    "structure": "Continuous Practical Query Labs (40%) + Final Relational Database Capstone Evaluation (60%)",
+    "passing_grade": "70% overall score with successful completion of all core schema and query verification gates",
+    "review_model": "One-on-one query review, result reconciliation demonstration, and schema explanation"
+  },
+  "assessment_rubric": {
+    "total_percentage": 100,
+    "criteria": [
+      {
+        "category": "Relational Schema & Data Modeling",
+        "weight": "20%",
+        "description": "Logical entity-relationship modeling, appropriate selection of PostgreSQL data types, correct primary/foreign key definitions, and business rule enforcement via constraints (NOT NULL, UNIQUE, CHECK)."
+      },
+      {
+        "category": "SQL Querying & Filtering",
+        "weight": "20%",
+        "description": "Accurate column projection, proper WHERE clause filtering, compound boolean conditions (AND/OR/NOT), sorting with ORDER BY, LIMIT, DISTINCT, and accurate NULL value handling with IS NULL and COALESCE."
+      },
+      {
+        "category": "Joins & Multi-Table Accuracy",
+        "weight": "20%",
+        "description": "Correct application of INNER JOIN and LEFT JOIN across 3+ related tables, proper join conditions, avoidance of Cartesian products, and understanding of row multiplication across one-to-many relationships."
+      },
+      {
+        "category": "Business Analysis & Reporting",
+        "weight": "20%",
+        "description": "Proficient use of aggregate functions (COUNT, SUM, AVG), GROUP BY, HAVING, conditional CASE expressions, subqueries, Common Table Expressions (WITH), and introductory window functions (ROW_NUMBER, RANK)."
+      },
+      {
+        "category": "Data Integrity & Transactions",
+        "weight": "10%",
+        "description": "Implementation of safe record modifications (INSERT, UPDATE, DELETE with WHERE filters), demonstrated multi-step transaction with COMMIT and ROLLBACK, basic index creation, and SQL injection awareness."
+      },
+      {
+        "category": "Documentation & Reproducibility",
+        "weight": "10%",
+        "description": "Complete, organized SQL source files, 10-point data quality checklist, reproducible setup instructions in README, and well-reasoned business reporting summary with verified query results."
+      }
+    ],
+    "pass_requirements": [
+      "The student's capstone database must contain at least 4 meaningful related tables created with valid DDL SQL.",
+      "The project must include at least 20 working, distinct SQL queries executing without errors against the sample dataset.",
+      "All 20 mandatory query categories must be represented and accompanied by documented business explanations.",
+      "The student must submit executable SQL script files, not merely screenshots of GUI query tools.",
+      "Students must demonstrate independent understanding by explaining their joins, grouping logic, and transactions during review."
+    ],
+    "competency_gates": [
+      "Missing Relationships Gate: Schemas with disconnected single tables or missing foreign keys cannot pass.",
+      "Invalid NULL Gate: Using = NULL instead of IS NULL in documented query solutions results in immediate revision.",
+      "Reproducibility Gate: If the provided SQL scripts fail to execute or produce different results than documented, the capstone fails.",
+      "Query Ownership Gate: Students must be able to explain their query logic and business conclusions independently; unverified copied code is rejected."
+    ]
   },
   "certification": {
-    "title": "Certified Specialist in SQL Basics",
-    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
-    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+    "title": "Nova Skills Certified SQL & Relational Database Associate",
+    "credential_type": "Professional Industry Certification",
+    "issuing_authority": "Nova Skills Academy",
+    "validation": "Permanent digital credential with verifiable online URL and QR code",
+    "prerequisites_met": "Completion of all 6 modules, 40 guided learning hours, 6 practical labs, and verified completion of the Capstone project with ≥70% score."
   },
-  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
-  "next_learning_path": {
-    "recommended_next": "Advance to node-js to specialize further.",
-    "related_programs": "For broader career mastery, compare with data analytics courses."
+  "source_code_delivery": {
+    "required_repositories": 1,
+    "repository_standard": "Clean project repository or organized script folder containing executable .sql files, schema diagram, sample data, and documented query workbook.",
+    "documentation_standard": "Comprehensive README.md documenting scenario overview, table relationships, environment setup steps, query catalog, data-quality audit findings, and business analysis summary."
   },
-  "faq": [
-    {
-      "question": "What prior experience do I need for SQL Basics?",
-      "answer": "None"
-    },
-    {
-      "question": "What tools will I learn?",
-      "answer": "You will gain hands-on experience with MySQL, PostgreSQL, DBeaver."
-    },
-    {
-      "question": "Are the projects practical?",
-      "answer": "Yes, all projects simulate real-world client briefs and business requirements."
-    }
-  ],
+  "skill_boundaries": {
+    "in_scope": [
+      "Relational database principles, tables, columns, rows, and schemas",
+      "PostgreSQL database setup and management via DBeaver or pgAdmin",
+      "PostgreSQL data types: INTEGER, NUMERIC/DECIMAL, VARCHAR, TEXT, BOOLEAN, DATE, TIMESTAMP",
+      "Core query commands: SELECT, FROM, WHERE, ORDER BY, LIMIT, DISTINCT, column/table aliases",
+      "Comparison operators, logical operators (AND, OR, NOT), IN, BETWEEN, LIKE, ILIKE",
+      "NULL value semantics, three-valued logic, IS NULL, IS NOT NULL, and COALESCE",
+      "Calculated columns, arithmetic expressions, string and date filtering",
+      "Relational design: Primary Keys, Foreign Keys, one-to-one, one-to-many, and many-to-many relationships",
+      "Table joins: INNER JOIN, LEFT JOIN, multi-table joins (3+ tables), and join condition validation",
+      "Aggregations: COUNT, SUM, AVG, MIN, MAX, GROUP BY, and HAVING",
+      "Conditional business logic using CASE expressions and conditional aggregations",
+      "Subqueries (scalar and IN-based) and Common Table Expressions (WITH clauses)",
+      "Introductory window functions: OVER, PARTITION BY, ORDER BY, ROW_NUMBER, RANK, running totals",
+      "Data definition: CREATE TABLE, ALTER TABLE, constraints (PK, FK, NOT NULL, UNIQUE, CHECK, DEFAULT)",
+      "Data manipulation: INSERT, UPDATE, DELETE with safe WHERE clauses and RETURNING",
+      "Database transactions: BEGIN, COMMIT, ROLLBACK, and multi-step data consistency",
+      "Basic indexing awareness (CREATE INDEX) and query performance tradeoffs",
+      "SQL injection vulnerability awareness and parameterized query principles",
+      "Data quality verification, duplicate detection, and grain reconciliation",
+      "Business reporting interpretation and reproducible SQL script documentation"
+    ],
+    "out_of_scope": [
+      "Advanced PostgreSQL administration, WAL configuration, replication, and failover clustering",
+      "Enterprise database clustering, sharding, distributed SQL, and connection pooler tuning (PgBouncer)",
+      "Advanced query optimization, execution plan deep dives (EXPLAIN ANALYZE tuning), and cost optimizer internals",
+      "NoSQL database engineering (MongoDB, Cassandra, DynamoDB, Redis) beyond a brief conceptual comparison",
+      "Data warehouse architecture (Snowflake, BigQuery, Redshift) and columnar storage design",
+      "ETL data pipeline orchestration (Airflow, dbt, Spark) and streaming ingestion (Kafka)",
+      "Application programming languages (Node.js, Express, Python) and ORMs (Prisma, TypeORM, SQLAlchemy)",
+      "Enterprise cybersecurity penetration testing, database auditing compliance, or PCI DSS certification"
+    ]
+  },
   "modules": [
     {
-      "module_number": "Module 01",
-      "module_title": "Relational Data Concepts & Basic Queries",
-      "module_purpose": "Understand tables and queries.",
+      "module_number": 1,
+      "number": 1,
+      "module": "Module 01",
+      "title": "Database & SQL Foundations",
+      "module_title": "Database & SQL Foundations",
+      "duration": "Week 1",
+      "hours": 6,
+      "lessons_count": 5,
+      "objective": "Understand relational database architecture, PostgreSQL setup, SQL language fundamentals, data types, and interface navigation using DBeaver or pgAdmin.",
+      "module_purpose": "Establish solid conceptual and hands-on foundations in relational databases, distinguishing the database engine from the query language and GUI tools, and creating initial tables safely.",
       "what_you_will_learn": [
-        "Master the concepts of Relational Data Concepts & Basic Queries.",
-        "Apply MySQL effectively.",
-        "Troubleshoot common issues in this domain."
+        "What data is: structured relational tables versus unstructured files and spreadsheets.",
+        "RDBMS concepts: entities, tables, rows, columns, and database schemas.",
+        "Understanding SQL as the universal relational query language and PostgreSQL as the engine.",
+        "Choosing appropriate PostgreSQL data types: INTEGER, NUMERIC/DECIMAL, VARCHAR, TEXT, BOOLEAN, DATE.",
+        "Setting up PostgreSQL and connecting through DBeaver or pgAdmin.",
+        "Executing DDL and DML commands, inspecting result grids, and saving SQL scripts."
+      ],
+      "key_concepts": [
+        "Database vs Spreadsheet",
+        "RDBMS Principles",
+        "SQL vs PostgreSQL Engine",
+        "PostgreSQL Data Types",
+        "NUMERIC vs Floating Point",
+        "Primary Keys & Foreign Keys",
+        "DBeaver / pgAdmin Setup",
+        "DDL, DML & DQL Categories"
+      ],
+      "tools": [
+        "PostgreSQL",
+        "SQL",
+        "DBeaver",
+        "pgAdmin"
       ],
       "lessons": [
         {
-          "lesson_number": "1.1",
-          "lesson_title": "Tables & Types",
-          "what_is_taught": "Schemas.",
-          "why_it_matters": "Structure.",
-          "what_learner_does": "Creates tables.",
-          "expected_outcome": "Database schema."
+          "lesson_number": 1,
+          "title": "Data Concepts & Relational Architecture",
+          "hours": 1.25,
+          "subtopics": [
+            "What is data: structured vs semi-structured vs unstructured information",
+            "Why databases replace spreadsheets: concurrency, data volume, integrity, and security",
+            "Relational Database Management Systems (RDBMS) architecture overview",
+            "The role of PostgreSQL: history, enterprise adoption, and open-source standards",
+            "Understanding the distinction between SQL (the query language) and PostgreSQL (the DBMS engine)"
+          ]
         },
         {
-          "lesson_number": "1.2",
-          "lesson_title": "SELECT Queries",
-          "what_is_taught": "Data retrieval.",
-          "why_it_matters": "Analysis.",
-          "what_learner_does": "Queries data.",
-          "expected_outcome": "Dataset."
+          "lesson_number": 2,
+          "title": "Relational Tables & Data Types",
+          "hours": 1.25,
+          "subtopics": [
+            "Anatomy of a relational table: entities, attributes, rows (records), and columns (fields)",
+            "PostgreSQL data types: INTEGER, BIGINT, VARCHAR(n), TEXT, and BOOLEAN",
+            "Handling numbers accurately: why NUMERIC/DECIMAL is required for currency instead of FLOAT",
+            "Date and time data types: DATE, TIME, and TIMESTAMP WITH TIME ZONE overview",
+            "Introduction to Primary Keys as unique entity identifiers and Foreign Keys as relational links"
+          ]
         },
         {
-          "lesson_number": "1.3",
-          "lesson_title": "Filtering",
-          "what_is_taught": "WHERE clause.",
-          "why_it_matters": "Precision.",
-          "what_learner_does": "Filters data.",
-          "expected_outcome": "Specific dataset."
+          "lesson_number": 3,
+          "title": "PostgreSQL & Tooling Setup",
+          "hours": 1.25,
+          "subtopics": [
+            "Installing PostgreSQL on your local machine and verifying the background service",
+            "Overview of database client interfaces: DBeaver Community Edition and pgAdmin 4",
+            "Configuring a new database connection: localhost, port 5432, user, and credentials",
+            "Navigating the database object hierarchy: databases, schemas, tables, and views",
+            "The SQL Query Editor: writing code, execution shortcuts, and viewing tabular results"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "SQL Language Categories & DDL/DML",
+          "hours": 1.25,
+          "subtopics": [
+            "SQL command categories: DDL (Definition), DML (Manipulation), DQL (Query), DCL/TCL overview",
+            "Creating your first table with CREATE TABLE and column definitions",
+            "Inserting initial records with INSERT INTO ... VALUES",
+            "Running your first query with SELECT * FROM table_name",
+            "Reading result grids: inspecting column headers, data types, row counts, and execution times"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Query Safety & Database Hygiene",
+          "hours": 1,
+          "subtopics": [
+            "Saving and organizing SQL scripts (.sql files) for reproducible workflows",
+            "Reading and troubleshooting beginner SQL syntax error messages",
+            "Working safely with dedicated local training databases",
+            "Data privacy ethics: using fictional business datasets rather than sensitive personal records",
+            "Safe SQL workflow checklist before running queries"
+          ]
         }
       ],
-      "key_concepts": [
-        "Industry Standards",
-        "Best Practices",
-        "Core Implementation"
-      ],
-      "tools": [
-        "MySQL",
-        "PostgreSQL",
-        "DBeaver"
-      ],
-      "hands_on_practice": "Guided lab focused on Relational Data Concepts & Basic Queries.",
-      "assignment": "Deliverable: Complete implementation of Relational Data Concepts & Basic Queries.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "hands_on_practice": "Install PostgreSQL, connect with DBeaver or pgAdmin, create a local training database, write a DDL script defining two related business tables with appropriate data types, insert sample records, execute SELECT queries, and save the .sql script.",
+      "assignment": "Submit an executable SQL setup script that creates a two-table training schema (e.g., Departments and Employees), inserts 10 sample records, runs verification SELECT queries, and documents the connection parameters.",
+      "business_application": "Organizations rely on relational databases to store mission-critical operational records; choosing proper data types and schemas prevents data corruption and calculation errors across business systems.",
+      "expected_outcome": "Students can set up PostgreSQL, connect via DBeaver or pgAdmin, author basic DDL and DML scripts, and navigate database tables with confidence.",
+      "portfolio_contribution": "Establishes the PostgreSQL database environment, GUI workflow, and script organization used for the capstone project."
     },
     {
-      "module_number": "Module 02",
-      "module_title": "Joins, Aggregations & Subqueries",
-      "module_purpose": "Combine and analyze data.",
+      "module_number": 2,
+      "number": 2,
+      "module": "Module 02",
+      "title": "Data Querying",
+      "module_title": "Data Querying",
+      "duration": "Weeks 1-2",
+      "hours": 8,
+      "lessons_count": 5,
+      "objective": "Master data retrieval, projection, compound filtering, sorting, limiting, expressions, and accurate handling of NULL values and missing data.",
+      "module_purpose": "Learn how to query relational tables with precision, extracting exactly the records and attributes required to answer operational business questions.",
       "what_you_will_learn": [
-        "Master the concepts of Joins, Aggregations & Subqueries.",
-        "Apply MySQL effectively.",
-        "Troubleshoot common issues in this domain."
+        "Retrieving and projecting data with SELECT, FROM, and column/table aliases.",
+        "Filtering rows using comparison operators (=, !=, <>, <, >, <=, >=) and logical operators (AND, OR, NOT).",
+        "Advanced filtering with IN, BETWEEN, LIKE, and PostgreSQL ILIKE pattern matching.",
+        "Sorting records with ORDER BY (ASC/DESC) and controlling output volume with LIMIT and OFFSET.",
+        "Creating calculated fields using arithmetic expressions, string functions, and date math.",
+        "Mastering NULL values, three-valued logic, IS NULL, IS NOT NULL, and COALESCE."
+      ],
+      "key_concepts": [
+        "SELECT & Explicit Column Projection",
+        "Column Aliases (AS) & Formatting",
+        "WHERE Filtering Conditions",
+        "Boolean Logic & Parentheses",
+        "Pattern Matching (LIKE, ILIKE)",
+        "ORDER BY Sorting & LIMIT",
+        "Eliminating Duplicates (DISTINCT)",
+        "NULL Semantics & IS NULL",
+        "COALESCE Fallback Function"
+      ],
+      "tools": [
+        "PostgreSQL",
+        "SQL",
+        "DBeaver / pgAdmin"
       ],
       "lessons": [
         {
-          "lesson_number": "2.1",
-          "lesson_title": "JOINs",
-          "what_is_taught": "INNER/OUTER joins.",
-          "why_it_matters": "Relations.",
-          "what_learner_does": "Joins tables.",
-          "expected_outcome": "Combined data."
+          "lesson_number": 1,
+          "title": "Basic Data Retrieval & Aliases",
+          "hours": 1.5,
+          "subtopics": [
+            "The SELECT and FROM statement: the cornerstone of relational querying",
+            "Why explicit column projection is preferred over SELECT * in reporting",
+            "Assigning readable column aliases with the AS keyword",
+            "Assigning table aliases to simplify references",
+            "Formatting SQL for readability: uppercase keywords, indentation, and comments (-- and /* */)"
+          ]
         },
         {
-          "lesson_number": "2.2",
-          "lesson_title": "Aggregations",
-          "what_is_taught": "GROUP BY.",
-          "why_it_matters": "Summaries.",
-          "what_learner_does": "Counts data.",
-          "expected_outcome": "Summary report."
+          "lesson_number": 2,
+          "title": "Filtering Rows with WHERE",
+          "hours": 2,
+          "subtopics": [
+            "The WHERE clause: evaluating row-level conditions before returning results",
+            "Comparison operators: =, !=, <>, <, >, <=, and >=",
+            "Combining conditions with logical operators: AND, OR, and NOT",
+            "Operator precedence rules and using parentheses () to avoid logical filter bugs",
+            "Filtering with IN and NOT IN for set membership",
+            "Range filtering with BETWEEN ... AND ...",
+            "Text pattern matching: LIKE wildcards (% and _) and PostgreSQL case-insensitive ILIKE"
+          ]
         },
         {
-          "lesson_number": "2.3",
-          "lesson_title": "Subqueries",
-          "what_is_taught": "Nested queries.",
-          "why_it_matters": "Complex logic.",
-          "what_learner_does": "Writes subquery.",
-          "expected_outcome": "Advanced dataset."
+          "lesson_number": 3,
+          "title": "Sorting, Limiting & Distinct Records",
+          "hours": 1.5,
+          "subtopics": [
+            "Sorting output rows using ORDER BY: ascending (ASC) vs descending (DESC)",
+            "Multi-column sorting: primary sort and secondary tie-breaker columns",
+            "Restricting result set size with LIMIT to find top records",
+            "Pagination concepts: combining LIMIT and OFFSET",
+            "Eliminating duplicate result rows using SELECT DISTINCT"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Expressions & Calculated Columns",
+          "hours": 1.5,
+          "subtopics": [
+            "Creating calculated fields: arithmetic operations (+, -, *, /) on numeric columns",
+            "String operations: concatenation with ||, UPPER, LOWER, and TRIM functions",
+            "Date filtering: comparing dates, extracting date parts, and date intervals",
+            "Interpreting calculated results in business contexts (e.g., total_revenue = quantity * price)",
+            "Checking query row counts to verify filter accuracy"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Mastering NULL Values & Missing Data",
+          "hours": 1.5,
+          "subtopics": [
+            "Understanding NULL: the representation of unknown, absent, or unrecorded data",
+            "Three-valued logic in SQL: TRUE, FALSE, and UNKNOWN",
+            "Critical rule: why = NULL and != NULL fail and always evaluate to UNKNOWN",
+            "Testing for missing data accurately using IS NULL and IS NOT NULL",
+            "Providing default fallback values with the COALESCE(column, default) function",
+            "How NULL affects arithmetic calculations and comparisons"
+          ]
         }
       ],
+      "hands_on_practice": "Write a comprehensive SQL query workbook against a business dataset (retail sales or student records) executing explicit column selections, multi-criteria WHERE filters, ILIKE search, sorting, LIMIT, calculated columns, and verified NULL filtering.",
+      "assignment": "Create a documented SQL script answering 8 distinct business questions using compound boolean conditions, date filtering, calculated fields, and COALESCE fallback logic, documenting expected vs actual row counts.",
+      "business_application": "Accurate querying and filtering ensure business reports reflect exact customer segments, active accounts, and financial periods without including irrelevant or duplicate data.",
+      "expected_outcome": "Students can write precise SQL queries, filter complex conditions with boolean logic, sort results, calculate derived fields, and handle NULL values accurately.",
+      "portfolio_contribution": "Provides the core single-table querying and filtering competencies required for Queries 01 through 07 in the capstone portfolio."
+    },
+    {
+      "module_number": 3,
+      "number": 3,
+      "module": "Module 03",
+      "title": "Joins & Relationships",
+      "module_title": "Joins & Relationships",
+      "duration": "Weeks 2-3",
+      "hours": 8,
+      "lessons_count": 5,
+      "objective": "Model relational database relationships and write accurate multi-table queries using Primary Keys, Foreign Keys, INNER JOIN, and LEFT JOIN without data corruption.",
+      "module_purpose": "Understand how relational databases connect information across entities, combine related tables, handle unmatched records, and avoid row-multiplication errors.",
+      "what_you_will_learn": [
+        "Relational database design principles: entities, attributes, and relationships.",
+        "Primary Keys, Foreign Keys, and referential integrity rules.",
+        "Relationship types: one-to-one, one-to-many, and many-to-many with junction tables.",
+        "Writing INNER JOIN queries to combine matching records across tables.",
+        "Writing LEFT OUTER JOIN queries to retain unmatched records.",
+        "Joining three or more tables across relational hierarchies.",
+        "Understanding query grain and preventing accidental Cartesian products."
+      ],
       "key_concepts": [
-        "Industry Standards",
-        "Best Practices",
-        "Core Implementation"
+        "Entity-Relationship Modeling (ERD)",
+        "Primary Keys & Foreign Keys",
+        "One-to-Many Relationships",
+        "Many-to-Many Junction Tables",
+        "INNER JOIN & ON Predicates",
+        "LEFT JOIN & Unmatched Records",
+        "Table Aliases & Ambiguity Resolution",
+        "Multi-Table Query Chains",
+        "Query Grain & Row Multiplication"
       ],
       "tools": [
-        "MySQL",
         "PostgreSQL",
-        "DBeaver"
+        "SQL",
+        "DBeaver / pgAdmin"
       ],
-      "hands_on_practice": "Guided lab focused on Joins, Aggregations & Subqueries.",
-      "assignment": "Deliverable: Complete implementation of Joins, Aggregations & Subqueries.",
-      "business_application": "Directly applicable to industry standard requirements.",
-      "expected_outcome": "Verified functional artifact."
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "Relational Modeling & Key Constraints",
+          "hours": 1.5,
+          "subtopics": [
+            "Relational modeling concepts: decomposing flat spreadsheets into normalized tables",
+            "Primary Keys: uniqueness, non-nullability, and natural vs surrogate keys",
+            "Foreign Keys: establishing links between parent and child tables",
+            "Cardinality: one-to-one, one-to-many (parent/child), and many-to-many relationships",
+            "Modeling many-to-many relationships using junction / associative tables (e.g. Enrollments)",
+            "Reading and drawing simple Entity-Relationship Diagrams (ERD)"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "INNER JOIN & Matching Relational Data",
+          "hours": 2,
+          "subtopics": [
+            "The purpose of JOINs: combining columns from two or more tables based on related keys",
+            "INNER JOIN syntax: SELECT ... FROM table_a INNER JOIN table_b ON table_a.id = table_b.a_id",
+            "Using table aliases to qualify columns and resolve ambiguous column name errors",
+            "Understanding the result: only rows with matching keys in BOTH tables are returned",
+            "Filtering joined data with WHERE clauses and ordering joined outputs"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "LEFT JOIN & Handling Unmatched Rows",
+          "hours": 1.5,
+          "subtopics": [
+            "The LEFT OUTER JOIN: preserving all records from the left table regardless of matches",
+            "How PostgreSQL populates missing child columns with NULL in outer joins",
+            "Identifying orphan or inactive records: using LEFT JOIN ... WHERE child.id IS NULL",
+            "Deciding when to use INNER JOIN vs LEFT JOIN for business reporting accuracy",
+            "Conceptual overview of RIGHT JOIN and FULL OUTER JOIN"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Multi-Table Joins & Complex Queries",
+          "hours": 1.5,
+          "subtopics": [
+            "Joining three or more tables: navigating relationship paths (e.g. Students -> Enrollments -> Courses)",
+            "Chaining multiple JOIN clauses in a single SELECT query",
+            "Mixing INNER JOIN and LEFT JOIN clauses within the same query",
+            "Selecting fields across all joined tables and providing clean column aliases",
+            "Writing business queries combining customers, orders, order items, and products"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Join Accuracy & Row Multiplication",
+          "hours": 1.5,
+          "subtopics": [
+            "Understanding query grain: what single real-world entity does one output row represent?",
+            "Why one-to-many joins multiply parent rows (e.g. one order with 3 items produces 3 rows)",
+            "The danger of accidental Cartesian products (CROSS JOIN) caused by missing ON clauses",
+            "Techniques for verifying row counts before and after joining",
+            "Documenting table relationships and join assumptions in project notes"
+          ]
+        }
+      ],
+      "hands_on_practice": "Construct multi-table queries on a database with at least 3 related tables (e.g. Students, Courses, Enrollments, Payments), writing INNER JOINs to find active records, LEFT JOINs to find students without enrollments, and multi-table joins to produce comprehensive business reports.",
+      "assignment": "Author a documented SQL script containing 5 relational join queries, contrasting INNER vs LEFT JOIN results, demonstrating row count verification, and including an Entity-Relationship Diagram of the tables.",
+      "business_application": "Real-world business data is distributed across multiple relational tables; knowing how to join them accurately is required to generate customer order histories, student transcripts, and sales invoices.",
+      "expected_outcome": "Students can model relationships, join multiple tables accurately using INNER and LEFT JOINs, prevent row-multiplication errors, and identify unmatched records.",
+      "portfolio_contribution": "Provides the relational join competencies required for Queries 08, 09, and 10 in the capstone portfolio."
+    },
+    {
+      "module_number": 4,
+      "number": 4,
+      "module": "Module 04",
+      "title": "Business SQL Analysis",
+      "module_title": "Business SQL Analysis",
+      "duration": "Weeks 3-4",
+      "hours": 8,
+      "lessons_count": 5,
+      "objective": "Transform relational records into business intelligence reports using aggregate functions, GROUP BY, HAVING, CASE expressions, subqueries, CTEs, and introductory window functions.",
+      "module_purpose": "Learn how to summarize operational data, compute key business metrics, apply conditional logic, structure complex multi-step queries, and rank records without losing row details.",
+      "what_you_will_learn": [
+        "Computing summary statistics with aggregate functions: COUNT, SUM, AVG, MIN, MAX.",
+        "Grouping data by business dimensions using GROUP BY across single and multiple columns.",
+        "Filtering aggregated groups using HAVING and understanding the difference from WHERE.",
+        "Applying conditional business logic and status tagging with CASE expressions.",
+        "Authoring scalar and IN-based subqueries to solve dependent data questions.",
+        "Structuring readable, modular queries using Common Table Expressions (WITH clauses).",
+        "Applying introductory window functions (OVER, PARTITION BY, ROW_NUMBER, RANK, running totals)."
+      ],
+      "key_concepts": [
+        "Aggregate Functions & Summary Grain",
+        "COUNT(*) vs COUNT(column)",
+        "GROUP BY Single & Multi-Column",
+        "HAVING vs WHERE Filter Timing",
+        "Conditional CASE Expressions",
+        "Scalar & List Subqueries",
+        "Common Table Expressions (CTEs / WITH)",
+        "Window Functions (OVER, PARTITION BY)",
+        "ROW_NUMBER & RANK",
+        "Introductory Running Totals"
+      ],
+      "tools": [
+        "PostgreSQL",
+        "SQL",
+        "DBeaver / pgAdmin"
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "Aggregate Functions & Reporting Grain",
+          "hours": 1.5,
+          "subtopics": [
+            "Introduction to business reporting: summarizing thousands of rows into actionable metrics",
+            "SQL aggregate functions: COUNT, SUM, AVG, MIN, and MAX",
+            "Critical difference: COUNT(*) (counts all rows) vs COUNT(column) (ignores NULLs)",
+            "Using DISTINCT inside aggregate functions: COUNT(DISTINCT customer_id)",
+            "Understanding NULL behavior: how aggregates ignore NULLs in numeric calculations"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "Grouping Data with GROUP BY & HAVING",
+          "hours": 2,
+          "subtopics": [
+            "The GROUP BY clause: collapsing rows into summary groups based on shared column values",
+            "Grouping by multiple columns: sales by category and year",
+            "Rules of grouping: why every non-aggregated column in SELECT must be in GROUP BY",
+            "The HAVING clause: filtering summary groups after aggregation",
+            "Critical distinction: WHERE filters rows before grouping; HAVING filters groups after aggregation",
+            "Combining JOINs with GROUP BY and HAVING to report on related entities"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Conditional Logic with CASE Expressions",
+          "hours": 1.5,
+          "subtopics": [
+            "The CASE expression: bringing IF-THEN-ELSE business logic into SQL queries",
+            "Syntax: CASE WHEN condition THEN result ELSE fallback END",
+            "Categorizing data: assigning status labels (e.g. 'High Value', 'Standard', 'Low')",
+            "Conditional aggregation: summing or counting specific subsets (e.g. SUM(CASE WHEN status = 'paid' THEN amount ELSE 0 END))",
+            "Handling missing values and edge cases with CASE"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Subqueries & Intermediate Querying",
+          "hours": 1.5,
+          "subtopics": [
+            "What is a subquery: nesting a SELECT query inside another query",
+            "Scalar subqueries: returning a single value to compare against in WHERE or SELECT",
+            "List subqueries: using IN with a subquery (e.g. WHERE course_id IN (SELECT id FROM ...))",
+            "Correlated subqueries and the EXISTS operator conceptual overview",
+            "When to use subqueries vs when to use JOINs or CTEs"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "CTEs & Introductory Window Functions",
+          "hours": 1.5,
+          "subtopics": [
+            "Common Table Expressions (CTEs): creating temporary named result sets with the WITH clause",
+            "Why CTEs make complex, multi-stage business reporting queries readable and maintainable",
+            "Introduction to window functions: computing aggregates without collapsing output rows",
+            "The OVER clause, PARTITION BY, and ORDER BY inside window definitions",
+            "Ranking records with ROW_NUMBER() and RANK() to find top items per category",
+            "Calculating a simple running total across dates with SUM() OVER (ORDER BY date)"
+          ]
+        }
+      ],
+      "hands_on_practice": "Build a Business SQL Reporting Pack containing aggregate summaries by category, HAVING filters for high-volume groups, CASE status tagging, a subquery comparing records to an overall average, a CTE structuring multi-step analysis, and a window function ranking products or courses.",
+      "assignment": "Submit an executable SQL reporting script demonstrating GROUP BY with HAVING, a conditional CASE expression, a CTE, and a window function ranking records within categories, accompanied by written business interpretations.",
+      "business_application": "Business stakeholders rely on aggregated KPIs, monthly summaries, and rankings to evaluate product performance, course popularity, and operational revenue trends.",
+      "expected_outcome": "Students can aggregate business data, filter groups with HAVING, apply conditional logic, structure readable CTEs, and use introductory window functions.",
+      "portfolio_contribution": "Supplies the advanced analytical querying skills required for Queries 11 through 18 in the capstone portfolio."
+    },
+    {
+      "module_number": 5,
+      "number": 5,
+      "module": "Module 05",
+      "title": "Data Integrity & Transactions",
+      "module_title": "Data Integrity & Transactions",
+      "duration": "Weeks 4-5",
+      "hours": 6,
+      "lessons_count": 5,
+      "objective": "Master relational schema creation and alteration, safe data modification workflows, table constraints, ACID transactions with rollback, basic indexing, and SQL injection awareness.",
+      "module_purpose": "Learn how to protect data integrity, prevent accidental data corruption, execute safe updates and deletes, enforce constraints at the database level, and understand transaction boundaries.",
+      "what_you_will_learn": [
+        "Creating and altering tables with CREATE TABLE and ALTER TABLE.",
+        "Enforcing data integrity with constraints: PRIMARY KEY, FOREIGN KEY, NOT NULL, UNIQUE, CHECK, DEFAULT.",
+        "Executing safe INSERT, UPDATE, and DELETE operations with verified WHERE clauses.",
+        "ACID transaction properties and managing transactions with BEGIN, COMMIT, and ROLLBACK.",
+        "Demonstrating transaction rollback on error to prevent inconsistent state.",
+        "Understanding basic indexing concepts (CREATE INDEX) and query performance tradeoffs.",
+        "SQL injection vulnerability mechanisms and the critical importance of parameterized queries."
+      ],
+      "key_concepts": [
+        "Data Definition (CREATE / ALTER TABLE)",
+        "Constraints (PK, FK, NOT NULL, UNIQUE, CHECK)",
+        "Safe UPDATE & DELETE Protocols",
+        "Previewing Changes with SELECT",
+        "RETURNING Clause",
+        "ACID Transaction Properties",
+        "BEGIN, COMMIT & ROLLBACK",
+        "Basic Indexing Tradeoffs",
+        "SQL Injection Awareness & Parameterization"
+      ],
+      "tools": [
+        "PostgreSQL",
+        "SQL",
+        "DBeaver / pgAdmin"
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "Defining Schemas with CREATE & ALTER TABLE",
+          "hours": 1.25,
+          "subtopics": [
+            "Writing production-grade CREATE TABLE statements with full column definitions",
+            "Table-level constraints vs column-level constraints",
+            "Applying constraints: PRIMARY KEY, NOT NULL, UNIQUE, and DEFAULT values",
+            "Enforcing business rules with CHECK constraints (e.g. CHECK (price >= 0), CHECK (quantity >= 0))",
+            "Modifying existing tables with ALTER TABLE: adding columns, dropping columns, and adding constraints",
+            "DROP TABLE awareness and the importance of CASCADE warnings"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "Safe Record Modifications",
+          "hours": 1.25,
+          "subtopics": [
+            "Inserting data: single-row inserts and efficient multi-row INSERT INTO ... VALUES",
+            "Updating records with UPDATE: modifying specific columns with a WHERE clause",
+            "Deleting records with DELETE FROM: removing specific rows matching a WHERE condition",
+            "The disaster of omitted WHERE clauses: why unconstrained UPDATE/DELETE wipes out entire tables",
+            "The mandatory safe modification protocol: run a SELECT with the identical WHERE clause first",
+            "Using the RETURNING clause in PostgreSQL to immediately inspect inserted, updated, or deleted rows"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Database Transactions & ACID Principles",
+          "hours": 1.25,
+          "subtopics": [
+            "Why transactions are necessary: maintaining consistency across multi-step business operations",
+            "Understanding ACID properties: Atomicity (all-or-nothing), Consistency (rules enforced), Isolation (concurrency), Durability (persisted)",
+            "Transaction commands: BEGIN starts a transaction block; COMMIT saves all changes permanently",
+            "ROLLBACK: discarding all changes made within the transaction block if an error occurs",
+            "Practical transaction scenario: creating a sale and updating warehouse stock atomically"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Transaction Rollback & Data Safety",
+          "hours": 1.25,
+          "subtopics": [
+            "Executing a transaction with deliberate error to verify automatic or manual ROLLBACK",
+            "Confirming that uncommitted changes are completely invisible to other connections and reversed on rollback",
+            "Understanding transaction boundaries: why external actions (like emails) are not reversed by SQL rollback",
+            "Data safety checklist: verifying database environment, running backups, and checking row counts"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Basic Indexing & SQL Injection Awareness",
+          "hours": 1,
+          "subtopics": [
+            "What is a database index: B-tree index concepts and how indexes accelerate WHERE/JOIN lookups",
+            "Creating indexes with CREATE INDEX index_name ON table(column)",
+            "The cost of indexes: storage overhead and slower INSERT/UPDATE/DELETE write performance",
+            "SQL injection vulnerability awareness: how concatenating user input into SQL creates security breaches",
+            "Why application developers must use parameterized queries ($1, $2 or ?) rather than raw string building"
+          ]
+        }
+      ],
+      "hands_on_practice": "Create a schema with primary keys, foreign keys, and CHECK constraints, attempt invalid insertions to verify constraint rejection, execute safe updates and deletes, demonstrate a multi-step transaction with verified COMMIT and ROLLBACK on failure, and create a basic index.",
+      "assignment": "Submit a Data Integrity & Safe SQL script demonstrating constraint definitions, rejected invalid inserts, safe modification protocols with RETURNING, and a documented transaction commit and rollback demonstration.",
+      "business_application": "Database constraints and ACID transactions prevent data corruption, negative inventory counts, and financial discrepancies, ensuring the database remains a reliable single source of truth.",
+      "expected_outcome": "Students can define constrained schemas, safely insert, update, and delete records, execute atomic transactions with rollback, and understand indexing and injection risks.",
+      "portfolio_contribution": "Supplies the schema creation DDL, constraint tests, and transaction demonstration script for the capstone portfolio."
+    },
+    {
+      "module_number": 6,
+      "number": 6,
+      "module": "Module 06",
+      "title": "SQL Capstone",
+      "module_title": "SQL Capstone",
+      "duration": "Week 5",
+      "hours": 4,
+      "lessons_count": 5,
+      "objective": "Complete, verify, document, and present an applied Relational Business Database project featuring 4+ related tables, realistic sample data, 20 verified SQL queries, a data quality audit, and a business reporting summary.",
+      "module_purpose": "Synthesize all course skills—database design, DDL, constraints, querying, filtering, multi-table joins, aggregations, CASE expressions, subqueries, CTEs, window functions, and transactions—into an assessed, reproducible portfolio artifact.",
+      "what_you_will_learn": [
+        "Finalizing a 4+ table relational database schema with full constraints and documentation.",
+        "Seeding 50-150 realistic fictional business records across related tables.",
+        "Executing and verifying all 20 required query categories answering practical business questions.",
+        "Auditing data quality with a 10-point checklist (key integrity, orphan records, NULLs, duplicate checks).",
+        "Drafting a business reporting summary explaining findings and insights derived from query outputs.",
+        "Packaging reproducible .sql source files and authoring a comprehensive project README."
+      ],
+      "key_concepts": [
+        "Relational Capstone Integration",
+        "4+ Related Tables Schema",
+        "Fictional Business Dataset (50-150 rows)",
+        "20-Query Specification Execution",
+        "10-Point Data Quality Audit",
+        "Business Reporting Summary",
+        "Transaction Demonstration Script",
+        "Reproducible SQL Source Files",
+        "Technical README & Handover"
+      ],
+      "tools": [
+        "PostgreSQL",
+        "SQL",
+        "DBeaver / pgAdmin",
+        "VS Code",
+        "Git & GitHub"
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "Capstone Scenario & Schema Finalization",
+          "hours": 0.75,
+          "subtopics": [
+            "Selecting your capstone scenario: Option A (Admissions), Option B (Retail), or Option C (Inventory)",
+            "Reviewing business requirements and finalizing the Entity-Relationship Diagram (ERD)",
+            "Verifying table structures: at least 4 related tables with PK, FK, and CHECK constraints",
+            "Drafting create_tables.sql with clean DDL syntax and reproducible drop-and-create blocks"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "Sample Data Seeding & Integrity Review",
+          "hours": 0.75,
+          "subtopics": [
+            "Drafting insert_sample_data.sql with realistic fictional business records (50-150 rows)",
+            "Populating parent tables before child tables to satisfy foreign key constraints",
+            "Ensuring dataset includes variation: multiple categories, dates, statuses, and unmatched rows",
+            "Verifying row counts and foreign key referential integrity after seeding"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Executing the 20-Query Specification",
+          "hours": 1,
+          "subtopics": [
+            "Executing and verifying all 20 required query categories in queries_01_20.sql",
+            "Ensuring each query answers a meaningful, documented business question",
+            "Checking output column aliases, formatting, and row count accuracy",
+            "Reconciling aggregate metrics against raw tables to verify that joins did not duplicate totals"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Data Quality Audit & Reporting Summary",
+          "hours": 0.75,
+          "subtopics": [
+            "Executing data_quality_checks.sql to audit primary keys, foreign keys, duplicate risks, and NULLs",
+            "Drafting business_report.md summarizing operational findings from query outputs",
+            "Explaining business implications, identifying low-stock items or revenue drivers, and noting data limitations"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Portfolio Packaging & Presentation",
+          "hours": 0.75,
+          "subtopics": [
+            "Structuring project folder: README.md, schema scripts, sample data, queries, and reports",
+            "Authoring README.md with database setup instructions, ERD image, and query catalog",
+            "Conducting self-assessment against the 6-factor assessment rubric (100% total)",
+            "Preparing for project review and oral defense of schema design and query logic"
+          ]
+        }
+      ],
+      "hands_on_practice": "Finalize your chosen Relational Business Database capstone, execute all 20 required queries in DBeaver or pgAdmin, complete the 10-point data quality checklist, run the transaction demo, write the business reporting summary, and package all executable .sql source files.",
+      "assignment": "Submit your complete SQL capstone package containing create_tables.sql, insert_sample_data.sql, queries_01_20.sql, data_quality_checks.sql, transaction_demo.sql, business_report.md, and README.md.",
+      "business_application": "A documented, reproducible relational database portfolio demonstrating verified SQL queries, data modeling, and business insights provides compelling evidence of analytical and database readiness for employers.",
+      "expected_outcome": "Students possess a complete, verified relational database project with reproducible SQL scripts, 20 working business queries, a data quality audit, and professional documentation.",
+      "portfolio_contribution": "Serves as the primary capstone artifact proving practical SQL querying, database modeling, and business reporting competence."
     }
-  ]
+  ],
+  "faq": [
+    {
+      "question": "What is SQL & Relational Database Fundamentals?",
+      "answer": "SQL & Relational Database Fundamentals is an intensive 5-week, 40-hour practical programming certification course that teaches you to organize, query, and analyze business data using SQL and PostgreSQL. You will learn relational database concepts, table creation, data types, primary and foreign keys, filtering, multi-table joins, aggregations, CASE expressions, subqueries, CTEs, introductory window functions, data integrity, and transactions."
+    },
+    {
+      "question": "Is this SQL course suitable for beginners?",
+      "answer": "Yes, this course is designed specifically for complete beginners. No prior programming knowledge, computer science degree, or database experience is required. We start with basic data concepts and build step-by-step into writing confident, multi-table SQL queries."
+    },
+    {
+      "question": "Do I need programming knowledge?",
+      "answer": "No. You do not need to know JavaScript, Python, React, or any other programming language. SQL is a declarative query language that reads similarly to English, making it accessible to anyone with basic computer literacy."
+    },
+    {
+      "question": "What is the duration and course fee?",
+      "answer": "The course spans 5 weeks with 40 guided learning hours (8 hours per week, consisting of 4 hours of interactive lectures and code-alongs plus 4 hours of hands-on software labs). The course fee is a transparent flat ₹5,900 with zero hidden charges, covering all lectures, labs, code reviews, and certificate verification."
+    },
+    {
+      "question": "Which database will I learn?",
+      "answer": "You will learn PostgreSQL, the world's most advanced, widely adopted open-source relational database management system. PostgreSQL is the industry standard for production web applications, enterprise systems, and data analytics."
+    },
+    {
+      "question": "What is the difference between SQL and PostgreSQL?",
+      "answer": "SQL (Structured Query Language) is the standard language used to communicate with, query, and manage relational databases. PostgreSQL is the actual relational database management system (the software engine) that stores the data, enforces constraints, and executes SQL commands."
+    },
+    {
+      "question": "Will I learn DBeaver or pgAdmin?",
+      "answer": "Yes. You will learn how to connect to PostgreSQL, explore database schemas, write and execute SQL queries, and inspect tabular result grids using professional GUI tools—primarily DBeaver Community Edition and pgAdmin 4."
+    },
+    {
+      "question": "Does the course cover table creation?",
+      "answer": "Yes. You will learn Data Definition Language (DDL) commands, including CREATE TABLE and ALTER TABLE, selecting appropriate data types (INTEGER, NUMERIC, VARCHAR, TEXT, BOOLEAN, DATE), and defining constraints such as PRIMARY KEY, FOREIGN KEY, NOT NULL, UNIQUE, and CHECK."
+    },
+    {
+      "question": "Will I learn SQL filtering and sorting?",
+      "answer": "Yes. You will master the WHERE clause using comparison operators (=, !=, <, >, <=, >=), logical operators (AND, OR, NOT), IN, BETWEEN, LIKE, and PostgreSQL ILIKE for pattern matching, as well as sorting output with ORDER BY and restricting rows with LIMIT."
+    },
+    {
+      "question": "Will I learn INNER and LEFT JOIN?",
+      "answer": "Yes. Combining related tables is a core focus of the course. You will master INNER JOIN to combine matching records and LEFT OUTER JOIN to retain records from the primary table even when no child match exists, understanding how to qualify columns and avoid ambiguous column errors."
+    },
+    {
+      "question": "What are primary and foreign keys?",
+      "answer": "A Primary Key is a column (or combination of columns) that uniquely identifies each row in a database table. A Foreign Key is a column in a child table that references the Primary Key of a parent table, establishing relationships between entities and enforcing referential integrity."
+    },
+    {
+      "question": "Does the course teach relational database design?",
+      "answer": "Yes. You will learn fundamental relational modeling: identifying entities and attributes, decomposing unstructured spreadsheets into normalized tables, establishing one-to-one, one-to-many, and many-to-many relationships (with junction tables), and reading Entity-Relationship Diagrams (ERDs)."
+    },
+    {
+      "question": "Will I learn GROUP BY and HAVING?",
+      "answer": "Yes. You will learn how to aggregate business records using COUNT, SUM, AVG, MIN, and MAX, group summaries by categories or dates using GROUP BY, and filter grouped metrics using the HAVING clause, understanding how it differs from row-level WHERE filtering."
+    },
+    {
+      "question": "Will I learn subqueries and CTEs?",
+      "answer": "Yes. You will learn how to write scalar and list subqueries, as well as Common Table Expressions (CTEs) using the WITH clause. CTEs allow you to break complex, multi-stage business analysis queries into clean, readable, modular blocks."
+    },
+    {
+      "question": "Does the course include window functions?",
+      "answer": "Yes. You will explore introductory SQL window functions using the OVER clause, PARTITION BY, and ORDER BY. You will use ROW_NUMBER() and RANK() to rank business items and calculate running totals across dates while preserving individual output rows."
+    },
+    {
+      "question": "Will I learn SQL business reporting?",
+      "answer": "Yes. The course emphasizes practical business analysis: calculating monthly revenue, analyzing customer enrollment velocity, finding low-stock inventory, identifying dormant accounts, and translating business questions into reproducible SQL reports."
+    },
+    {
+      "question": "Will I learn INSERT, UPDATE and DELETE?",
+      "answer": "Yes. You will learn Data Manipulation Language (DML) commands to add new rows (INSERT), modify existing records (UPDATE), and remove records (DELETE). Crucially, you will learn the safe modification protocol: testing with SELECT first to avoid accidental data loss."
+    },
+    {
+      "question": "What are database transactions?",
+      "answer": "A transaction is a unit of work that bundles multiple SQL operations into an all-or-nothing block. You will learn how BEGIN, COMMIT, and ROLLBACK guarantee ACID properties, ensuring that if any operation in a multi-step update fails, all changes are safely reversed."
+    },
+    {
+      "question": "Will I learn database constraints?",
+      "answer": "Yes. You will learn how to enforce business rules directly at the database level using PRIMARY KEY, FOREIGN KEY, NOT NULL, UNIQUE, DEFAULT, and CHECK constraints (such as preventing negative prices or quantities)."
+    },
+    {
+      "question": "Does the course cover SQL injection awareness?",
+      "answer": "Yes. You will learn what SQL injection vulnerabilities are, why concatenating untrusted user input directly into SQL strings creates severe security risks, and why software developers must use parameterized queries when connecting databases to applications."
+    },
+    {
+      "question": "Will I learn advanced PostgreSQL administration?",
+      "answer": "No. Advanced database administration (DBA) topics—such as replication, failover clustering, WAL archiving, multi-node sharding, and deep kernel performance tuning—are specialized topics outside the scope of this foundational certification."
+    },
+    {
+      "question": "How many SQL queries will I write?",
+      "answer": "Throughout the course and capstone, you will write dozens of hands-on queries, culminating in a mandatory portfolio requirement of at least 20 distinct, verified business SQL queries covering 20 specific analytical categories."
+    },
+    {
+      "question": "What portfolio project will I create?",
+      "answer": "You will build the Relational Business Database & SQL Reporting Portfolio—a complete small relational database featuring at least 4 related tables, realistic sample data, 20 verified SQL queries, a 10-point data quality checklist, and an executive business reporting summary."
+    },
+    {
+      "question": "Will I create an admissions, retail or inventory database?",
+      "answer": "You can choose ONE of three approved business scenarios for your capstone project: Option A (Student Admissions & Enrollment Database), Option B (Retail Sales & Order Management Database), or Option C (Warehouse Inventory Management Database)."
+    },
+    {
+      "question": "Will I receive SQL source files?",
+      "answer": "Yes. You will author and retain complete ownership of all executable .sql source files (create_tables.sql, insert_sample_data.sql, queries_01_20.sql, etc.) along with your README documentation, which you can publish to GitHub as a permanent portfolio."
+    },
+    {
+      "question": "Is this course useful before Node.js backend development?",
+      "answer": "Yes, it is highly recommended. Understanding relational database schemas, foreign keys, SQL joins, and transactions in Course 59 makes learning database integration in Course 58 (Node.js Backend Development with Express) much faster and more intuitive."
+    },
+    {
+      "question": "Is MySQL also taught?",
+      "answer": "The course is standardized 100% on PostgreSQL to provide deep, cohesive mastery. MySQL is discussed briefly as an alternative relational database, but all hands-on exercises, queries, and capstone requirements use PostgreSQL."
+    },
+    {
+      "question": "Does the course include data engineering?",
+      "answer": "No. Large-scale data engineering (Apache Spark, Kafka, Airflow, Snowflake, cloud data lakes) is an advanced discipline outside this foundational course. Course 59 focuses specifically on relational SQL, database design, and business data querying."
+    },
+    {
+      "question": "Is this an official PostgreSQL certification?",
+      "answer": "This is a Nova Skills institutional certification: 'Nova Skills Certified SQL & Relational Database Associate'. It is not issued directly by the PostgreSQL Global Development Group, which does not administer vendor certifications."
+    },
+    {
+      "question": "What entry-level career opportunities are possible?",
+      "answer": "Graduates are equipped for entry-level and junior roles requiring SQL querying, including Junior SQL Assistant, Junior Data Reporting Assistant, Business Data Assistant, Operations Coordinator, and Backend Development Trainee."
+    }
+  ],
+  "primary_keyword": "SQL Course",
+  "secondary_keywords": [
+    "SQL Course for Beginners",
+    "SQL Course in India",
+    "PostgreSQL Course",
+    "SQL and Database Fundamentals",
+    "Relational Database Course",
+    "PostgreSQL Training for Beginners",
+    "SQL Query Writing Course",
+    "SQL Joins Course",
+    "SQL Business Reporting",
+    "Database Design Course",
+    "SQL Aggregate Functions",
+    "SQL CTEs for Beginners",
+    "SQL Window Functions Basics",
+    "SQL Practical Projects",
+    "SQL Portfolio Project",
+    "SQL Course Fees",
+    "SQL Course Duration",
+    "PostgreSQL Certification Course",
+    "Business Data Querying",
+    "SQL for Backend Development"
+  ],
+  "keywords": [
+    "SQL Course",
+    "SQL Course for Beginners",
+    "SQL Course in India",
+    "PostgreSQL Course",
+    "SQL and Database Fundamentals",
+    "Relational Database Course",
+    "PostgreSQL Training for Beginners",
+    "SQL Query Writing Course",
+    "SQL Joins Course",
+    "SQL Business Reporting",
+    "Database Design Course",
+    "SQL Aggregate Functions",
+    "SQL CTEs for Beginners",
+    "SQL Window Functions Basics",
+    "SQL Practical Projects",
+    "SQL Portfolio Project",
+    "SQL Course Fees",
+    "SQL Course Duration",
+    "PostgreSQL Certification Course",
+    "Business Data Querying",
+    "SQL for Backend Development"
+  ],
+  "seo": {
+    "meta_title": "SQL & PostgreSQL Course | 5 Weeks, ₹5,900 | Nova Skills",
+    "meta_description": "Learn PostgreSQL, SQL queries, joins, reporting and transactions. Build a business database with 20+ queries in 5 weeks, 40 hours, for ₹5,900.",
+    "canonical_url": "https://novaskills.in/course-detail.html?id=sql-basics",
+    "og_title": "SQL & Relational Database Fundamentals | Nova Skills",
+    "og_description": "Learn to query, organize and understand relational data using PostgreSQL, SQL queries, joins, aggregations, CTEs and window functions in 5 weeks.",
+    "og_url": "https://novaskills.in/course-detail.html?id=sql-basics",
+    "og_type": "website",
+    "og_image": "https://novaskills.in/images/courses/sql-basics.jpg",
+    "twitter_card": "summary_large_image",
+    "robots": "index, follow",
+    "structured_data": {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "SQL & Relational Database Fundamentals",
+      "description": "Build practical SQL skills using PostgreSQL. Learn to design relational tables, query business data, combine datasets, summarize results and perform reliable database operations through hands-on exercises.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Nova Skills",
+        "sameAs": "https://novaskills.in"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "5900",
+        "priceCurrency": "INR",
+        "category": "Paid",
+        "availability": "https://schema.org/InStock"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online / Hybrid",
+        "courseWorkload": "PT40H"
+      }
+    }
+  }
 }
