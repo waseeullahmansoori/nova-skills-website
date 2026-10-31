@@ -2731,18 +2731,59 @@
       <!-- MAIN COURSES AREA -->
       <div class="courses-main">
 
-        <!-- Active filter chips -->
+                <!-- MOBILE COURSES FILTER & SORT CONTROLS -->
+        <div class="mobile-courses-controls" id="mobile-courses-controls">
+          <!-- Filter & Sort Toolbar -->
+          <div class="mobile-filter-sort-bar" id="mobile-filter-bar">
+            <!-- Filter CTA Button -->
+            <button type="button" class="mobile-filter-btn" id="open-mobile-filters" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobile-filter-sheet">
+              <span class="mobile-filter-btn-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                </svg>
+              </span>
+              <span class="mobile-filter-btn-label">Filters</span>
+              <span class="mobile-filter-badge" id="mobile-filter-count-badge" style="display:none;">0</span>
+            </button>
+
+            <!-- Sort Control -->
+            <div class="mobile-sort-control">
+              <label for="mobile-sort-select" class="sr-only">Sort programs by</label>
+              <div class="mobile-sort-select-wrapper">
+                <select id="mobile-sort-select" class="mobile-sort-select" aria-label="Sort courses">
+                  <option value="popular">Sort: Most Popular</option>
+                  <option value="latest">Sort: Latest</option>
+                  <option value="price-asc">Sort: Price: Low to High</option>
+                  <option value="price-desc">Sort: Price: High to Low</option>
+                  <option value="rating">Sort: Top Rated</option>
+                </select>
+                <span class="mobile-sort-chevron" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Results Count & Clear All -->
+          <div class="mobile-results-meta" id="mobile-results-meta">
+            <div class="mobile-results-count">
+              <span id="mobile-results-number">109</span> Programs
+            </div>
+            <button type="button" class="mobile-clear-all-btn" id="mobile-clear-all" style="display:none;" aria-label="Clear all applied filters">Clear All</button>
+          </div>
+
+          <!-- Selected Filter Chips -->
+          <div class="mobile-active-chips" id="mobile-active-chips" style="display:none;" role="region" aria-label="Active filters"></div>
+        </div>
+
+        <!-- Desktop Active Filter Chips -->
         <div class="active-filters" id="active-filters-bar" hidden></div>
 
-        <!-- Toolbar: count, mobile toggle, sort, view toggle -->
-        <div class="courses-toolbar">
-          <div style="display:flex; align-items:center; gap:12px;">
-            <button class="mobile-filter-toggle" id="open-mobile-filters" type="button">
-              <span>⚡ Filters</span>
-              <span class="filter-count-badge" id="filter-count-badge" hidden>0</span>
-            </button>
-            <div class="courses-count">Showing <strong id="courses-showing-count">109</strong> programs</div>
-          </div>
+        <!-- Desktop Toolbar -->
+        <div class="courses-toolbar" id="desktop-courses-toolbar">
+          <div class="courses-count">Showing <strong id="courses-showing-count">109</strong> programs</div>
 
           <div class="courses-sort">
             <label for="sort-select">Sort By:</label>
@@ -7260,14 +7301,154 @@
     </section>
   </main>
 
-  <!-- Mobile Filter Drawer -->
-  <div class="filters-drawer-backdrop" id="drawer-backdrop"></div>
-  <div class="filters-drawer" id="mobile-drawer">
-    <div class="filters-drawer-header">
-      <h3>Filter Courses</h3>
-      <button class="filters-drawer-close" id="close-mobile-filters">✕</button>
+    <!-- Mobile Filter Bottom Sheet -->
+  <div class="mobile-sheet-backdrop" id="mobile-sheet-backdrop" aria-hidden="true"></div>
+  <div class="mobile-filter-sheet" id="mobile-filter-sheet" role="dialog" aria-modal="true" aria-labelledby="mobile-sheet-title" aria-hidden="true">
+    <!-- Drag Handle -->
+    <div class="mobile-sheet-handle-bar" aria-hidden="true">
+      <span class="mobile-sheet-handle"></span>
     </div>
-    <div id="mobile-filters-slot" style="padding: 20px 24px;"></div>
+
+    <!-- Sheet Header -->
+    <div class="mobile-sheet-header">
+      <div class="mobile-sheet-header-text">
+        <h2 id="mobile-sheet-title" class="mobile-sheet-title">Filter Courses</h2>
+        <p class="mobile-sheet-subtitle">Find the right program for your goals.</p>
+      </div>
+      <button type="button" class="mobile-sheet-close-btn" id="close-mobile-filters" aria-label="Close filters panel">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Sheet Scrollable Content -->
+    <div class="mobile-sheet-content" id="mobile-sheet-scrollable">
+      <!-- Search Inside Sheet -->
+      <div class="sheet-filter-group">
+        <label for="sheet-search-input" class="sheet-group-title">Search Programs</label>
+        <div class="sheet-search-input-wrap">
+          <span class="sheet-search-icon" aria-hidden="true">🔍</span>
+          <input type="text" id="sheet-search-input" class="sheet-search-input" placeholder="Search by name, tool, or keyword..." />
+          <button type="button" id="sheet-search-clear" class="sheet-search-clear" style="display:none;" aria-label="Clear search input">✕</button>
+        </div>
+      </div>
+
+      <!-- Section 1: Academy Category -->
+      <div class="sheet-filter-group">
+        <div class="sheet-group-title">Academy Category</div>
+        <div class="sheet-academy-grid" id="sheet-academy-options">
+          <!-- Dynamically populated from NS_ACADEMIES with icons and counts -->
+        </div>
+      </div>
+
+      <!-- Section 2: Program Type -->
+      <div class="sheet-filter-group">
+        <div class="sheet-group-title">Program Type</div>
+        <div class="sheet-pill-group">
+          <label class="sheet-choice-pill">
+            <input type="checkbox" name="sheet-programLevel" value="Career Program" />
+            <span class="pill-box">
+              <span class="pill-name">Career Mastery</span>
+              <span class="pill-desc">6–12 Months</span>
+            </span>
+          </label>
+          <label class="sheet-choice-pill">
+            <input type="checkbox" name="sheet-programLevel" value="Professional Program" />
+            <span class="pill-box">
+              <span class="pill-name">Professional</span>
+              <span class="pill-desc">3–6 Months</span>
+            </span>
+          </label>
+          <label class="sheet-choice-pill">
+            <input type="checkbox" name="sheet-programLevel" value="Certification Course" />
+            <span class="pill-box">
+              <span class="pill-name">Certifications</span>
+              <span class="pill-desc">1–2 Months</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Section 3: Skill Level -->
+      <div class="sheet-filter-group">
+        <div class="sheet-group-title">Skill Level</div>
+        <div class="sheet-tags-group">
+          <label class="sheet-tag-item">
+            <input type="checkbox" name="sheet-level" value="Beginner" />
+            <span class="tag-box">Beginner</span>
+          </label>
+          <label class="sheet-tag-item">
+            <input type="checkbox" name="sheet-level" value="Intermediate" />
+            <span class="tag-box">Intermediate</span>
+          </label>
+          <label class="sheet-tag-item">
+            <input type="checkbox" name="sheet-level" value="Advanced" />
+            <span class="tag-box">Advanced / Career</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Section 4: Duration -->
+      <div class="sheet-filter-group">
+        <div class="sheet-group-title">Duration</div>
+        <div class="sheet-tags-group">
+          <label class="sheet-tag-item">
+            <input type="checkbox" name="sheet-duration" value="1-2" />
+            <span class="tag-box">1–2 Months</span>
+          </label>
+          <label class="sheet-tag-item">
+            <input type="checkbox" name="sheet-duration" value="3-6" />
+            <span class="tag-box">3–6 Months</span>
+          </label>
+          <label class="sheet-tag-item">
+            <input type="checkbox" name="sheet-duration" value="6-12" />
+            <span class="tag-box">6–12 Months</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Section 5: Maximum Fee Range -->
+      <div class="sheet-filter-group">
+        <div class="sheet-group-header-row">
+          <span class="sheet-group-title">Maximum Fee</span>
+          <span class="sheet-price-badge" id="sheet-price-badge">Up to ₹90,000+</span>
+        </div>
+        <div class="sheet-price-slider-wrap">
+          <input type="range" id="sheet-price-range" min="3900" max="90000" step="1000" value="90000" aria-label="Maximum fee in rupees" />
+          <div class="sheet-price-range-labels">
+            <span>₹3,900</span>
+            <span>₹90,000+</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 6: Program Features & Support -->
+      <div class="sheet-filter-group">
+        <div class="sheet-group-title">Features & Support</div>
+        <div class="sheet-checkbox-list">
+          <label class="sheet-feature-checkbox">
+            <input type="checkbox" id="sheet-placement-support" />
+            <span class="feature-checkbox-box"></span>
+            <span class="feature-label">🎯 Placement Support Included</span>
+          </label>
+          <label class="sheet-feature-checkbox">
+            <input type="checkbox" id="sheet-verified-certificate" checked />
+            <span class="feature-checkbox-box"></span>
+            <span class="feature-label">📜 Verified Certificate & Capstone</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sheet Sticky Action Footer -->
+    <div class="mobile-sheet-footer">
+      <button type="button" class="sheet-reset-btn" id="sheet-reset-btn">Reset</button>
+      <button type="button" class="sheet-apply-btn" id="sheet-apply-btn">
+        Show <span id="sheet-preview-count">109</span> Programs
+      </button>
+    </div>
   </div>
 
   <!-- Injected Footer -->
