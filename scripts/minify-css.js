@@ -2,28 +2,35 @@ const fs = require('fs');
 const path = require('path');
 
 const baseDir = path.join(__dirname, '..');
-const mainCssPath = path.join(baseDir, 'css', 'main.css');
-const stylesMinPath = path.join(baseDir, 'css', 'styles.min.css');
 
-if (!fs.existsSync(mainCssPath)) {
-  console.error('❌ main.css does not exist at:', mainCssPath);
-  process.exit(1);
+function minify(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s*\{\s*/g, '{')
+    .replace(/\s*\}\s*/g, '}')
+    .replace(/\s*;\s*/g, ';')
+    .replace(/\s*:\s*/g, ':')
+    .replace(/\s*,\s*/g, ',')
+    .trim();
 }
 
-const mainCss = fs.readFileSync(mainCssPath, 'utf8');
+// 1. Minify css/main.css -> css/styles.min.css
+const mainCssPath = path.join(baseDir, 'css', 'main.css');
+const cssStylesMinPath = path.join(baseDir, 'css', 'styles.min.css');
+if (fs.existsSync(mainCssPath)) {
+  const mainCss = fs.readFileSync(mainCssPath, 'utf8');
+  const minified = minify(mainCss);
+  fs.writeFileSync(cssStylesMinPath, minified, 'utf8');
+  console.log('✅ Successfully minified css/main.css -> css/styles.min.css');
+}
 
-// Safe minification: remove comments and collapse extra spaces around symbols
-let minified = mainCss
-  .replace(/\/\*[\s\S]*?\*\//g, '')
-  .replace(/\s+/g, ' ')
-  .replace(/\s*\{ \s*/g, '{')
-  .replace(/\s*\} \s*/g, '}')
-  .replace(/\s*; \s*/g, ';')
-  .replace(/\s*: \s*/g, ':')
-  .replace(/\s*, \s*/g, ',')
-  .trim();
-
-fs.writeFileSync(stylesMinPath, minified, 'utf8');
-console.log('✅ Successfully minified css/main.css -> css/styles.min.css');
-console.log('   Original size:', mainCss.length, 'bytes');
-console.log('   Minified size:', minified.length, 'bytes');
+// 2. Minify styles.css -> styles.min.css
+const stylesPath = path.join(baseDir, 'styles.css');
+const stylesMinPath = path.join(baseDir, 'styles.min.css');
+if (fs.existsSync(stylesPath)) {
+  const stylesCss = fs.readFileSync(stylesPath, 'utf8');
+  const minified = minify(stylesCss);
+  fs.writeFileSync(stylesMinPath, minified, 'utf8');
+  console.log('✅ Successfully minified styles.css -> styles.min.css');
+}

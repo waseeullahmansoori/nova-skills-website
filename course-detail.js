@@ -365,9 +365,7 @@ function populateCourseDetail(course) {
 
   const emiEl = document.getElementById('detail-emi');
   if (emiEl) {
-    emiEl.innerHTML = durationMonths > 1
-      ? `💳 Flexible monthly installment options starting at <strong>₹${monthlyInstallment.toLocaleString('en-IN')}/month</strong> · 18% GST included`
-      : `💳 Flexible payment options available · 18% GST included`;
+    emiEl.innerHTML = `💳 Flexible monthly installment options available · 18% GST included`;
   }
 
   // Mobile sticky price

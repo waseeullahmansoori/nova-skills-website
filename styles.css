@@ -2692,7 +2692,51 @@ h1, h2, h3, h4, h5, h6 {
   .nav-actions {
     display: none;
   }
+
+  .mobile-drawer-action-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+    padding-top: 18px !important;
+    border-top: 1px solid rgba(5, 153, 168, 0.15) !important;
+    box-sizing: border-box !important;
+  }
+
+  .mobile-drawer-action-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 44px !important;
+    padding: 10px 16px !important;
+    border-radius: var(--radius-full) !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .mobile-drawer-login {
+    background: rgba(5, 153, 168, 0.08) !important;
+    color: var(--teal) !important;
+    border: 1.5px solid rgba(5, 153, 168, 0.3) !important;
+  }
+
+  .mobile-drawer-call {
+    background: var(--grad-teal-green) !important;
+    color: #ffffff !important;
+    box-shadow: var(--shadow-sm) !important;
+  }
+
 }
+
+/* Mobile Navigation Drawer Action Group (Hidden on Desktop) */
+.mobile-drawer-action-group {
+  display: none;
+}
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {

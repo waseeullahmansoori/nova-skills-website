@@ -301,7 +301,8 @@ function generateStaticCourseHtml(courseId, templateHtml) {
 
   // Compute pricing values
   const priceFormatted = `₹${(baseCourse.price || 0).toLocaleString('en-IN')}`;
-  const origPriceFormatted = baseCourse.originalPrice ? `₹${baseCourse.originalPrice.toLocaleString('en-IN')}` : '';
+  const hasDiscount = (typeof baseCourse.originalPrice === 'number' && baseCourse.originalPrice > baseCourse.price);
+  const origPriceFormatted = hasDiscount ? `₹${baseCourse.originalPrice.toLocaleString('en-IN')}` : '';
   const discountPct = (baseCourse.originalPrice && baseCourse.originalPrice > baseCourse.price)
     ? `${Math.round(((baseCourse.originalPrice - baseCourse.price) / baseCourse.originalPrice) * 100)}% OFF`
     : '';
@@ -312,9 +313,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   const gstAmount = (baseCourse.price || 0) * 0.18;
   const totalWithGST = (baseCourse.price || 0) + gstAmount;
   const monthlyInstallment = Math.round(totalWithGST / durationMonths);
-  const emiText = durationMonths > 1
-    ? `💳 Flexible monthly installment options starting at <strong>₹${monthlyInstallment.toLocaleString('en-IN')}/month</strong> · 18% GST included`
-    : `💳 Flexible payment options available · 18% GST included`;
+  const emiText = `💳 Flexible monthly installment options available · 18% GST included`;
 
   const acadSlug = getAcademySlug(baseCourse.academyId);
   const acadUrl = acadSlug ? `/academies/${acadSlug}/` : '/academies/';
@@ -828,13 +827,15 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   html = html.replace(/<div\s+class="course-card-thumb"\s+id="detail-card-thumb">[\s\S]*?<\/div>/i, `<div class="course-card-thumb" id="detail-card-thumb" style="background:${baseCourse.color || 'var(--grad-hero)'};">\n            ${thumbHtml}\n          </div>`);
 
   // Enroll Card Pricing
-  html = html.replace(/<span\s+class="enroll-price"\s+id="detail-price">[\s\S]*?<\/span>/i, `<span class="enroll-price" id="detail-price">${priceFormatted}</span>`);
-  if (origPriceFormatted) {
-    html = html.replace(/<span\s+class="enroll-original"\s+id="detail-original-price"[\s\S]*?<\/span>/i, `<span class="enroll-original" id="detail-original-price">${origPriceFormatted}</span>`);
-  }
-  if (discountPct) {
-    html = html.replace(/<span\s+class="enroll-discount"\s+id="detail-discount"[\s\S]*?<\/span>/i, `<span class="enroll-discount" id="detail-discount">${discountPct}</span>`);
-  }
+  const origPriceHtml = origPriceFormatted
+    ? `<span class="enroll-original" id="detail-original-price">${origPriceFormatted}</span>`
+    : `<span class="enroll-original" id="detail-original-price" style="display:none;"></span>`;
+  const discountHtml = discountPct
+    ? `<span class="enroll-discount" id="detail-discount">${discountPct}</span>`
+    : `<span class="enroll-discount" id="detail-discount" style="display:none;"></span>`;
+
+  const pricingBlockHtml = `<div class="course-card-pricing">\n              <span class="enroll-price" id="detail-price">${priceFormatted}</span>\n              ${origPriceHtml}\n              ${discountHtml}\n            </div>`;
+  html = html.replace(/<div\s+class="course-card-pricing">[\s\S]*?<\/div>/i, pricingBlockHtml);
   html = html.replace(/<p\s+class="enroll-emi"\s+id="detail-emi">[\s\S]*?<\/p>/i, `<p class="enroll-emi" id="detail-emi">${emiText}</p>`);
 
   // Advisory Banner
