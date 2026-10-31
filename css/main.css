@@ -6193,14 +6193,24 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
   will-change: transform, opacity;
 }
 
-/* Floating Widgets Toggle Class */
+/* ============================================================
+   GLOBAL ENROLLMENT MODAL SYSTEM (MOBILE-FIRST 2027 REDESIGN)
+   ============================================================ */
+
+/* Floating Widgets Toggle Class (Ensure complete hide during modal) */
 body.modal-open-hide-widgets .nova-ai-float-btn,
+body.modal-open-hide-widgets .nova-ai-launcher,
+body.modal-open-hide-widgets #nova-ai-launcher,
+body.modal-open-hide-widgets #nova-ai-widget-container,
 body.modal-open-hide-widgets .nova-ai-panel,
 body.modal-open-hide-widgets .whatsapp-float,
-body.modal-open-hide-widgets #whatsapp-btn {
+body.modal-open-hide-widgets #whatsapp-btn,
+body.modal-open-hide-widgets .sticky-enroll-bar,
+body.modal-open-hide-widgets #sticky-mobile-bar {
   display: none !important;
   opacity: 0 !important;
   pointer-events: none !important;
+  visibility: hidden !important;
 }
 
 /* Enrollment Modal Backdrop */
@@ -6208,16 +6218,17 @@ body.modal-open-hide-widgets #whatsapp-btn {
   position: fixed;
   inset: 0;
   z-index: 999999;
-  background: rgba(1, 23, 49, 0.86);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(1, 23, 49, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px 16px;
+  padding: 20px;
+  box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.35s ease, visibility 0.35s ease;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
 .enroll-modal-backdrop.open {
@@ -6225,110 +6236,133 @@ body.modal-open-hide-widgets #whatsapp-btn {
   visibility: visible;
 }
 
+/* Modal Dialog */
 .enroll-modal-dialog {
   background: #011731;
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  background: linear-gradient(180deg, #011c38 0%, #011731 100%);
+  border: 1.5px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05);
   border-radius: 24px;
   width: 100%;
-  max-width: 940px;
-  max-height: 90vh;
-  overflow-y: auto;
-  padding: 36px;
+  max-width: 920px;
+  max-height: 88vh;
   position: relative;
-  color: white;
-  transform: translateY(24px) scale(0.96);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  font-family: var(--font-primary, 'Inter', sans-serif);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: var(--font-primary, 'Plus Jakarta Sans', sans-serif);
+  box-sizing: border-box;
+  transform: translateY(20px) scale(0.98);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .enroll-modal-backdrop.open .enroll-modal-dialog {
   transform: translateY(0) scale(1);
 }
 
-/* Desktop Two-Panel Split Layout */
-.enroll-modal-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 36px;
-  align-items: start;
-}
-
-.enroll-modal-left {
-  display: flex;
-  flex-direction: column;
-}
-
-.enroll-modal-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 /* Close Button */
 .enroll-modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 38px;
-  height: 38px;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: white;
-  font-size: 1.15rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
+  z-index: 30;
   transition: all 0.2s ease;
 }
 
 .enroll-modal-close:hover {
   background: #ef4444;
   border-color: #ef4444;
+  color: #ffffff;
   transform: rotate(90deg);
 }
 
-/* Header */
+/* Internal Layout Container */
+.enroll-modal-container {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 32px;
+  padding: 32px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(56, 189, 248, 0.25) transparent;
+}
+
+.enroll-modal-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.enroll-modal-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.enroll-modal-container::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.25);
+  border-radius: 9999px;
+}
+
+.enroll-modal-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.45);
+}
+
+/* Summary Column (Left on Desktop) */
+.enroll-modal-summary-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .enroll-modal-badge {
   display: inline-block;
-  background: rgba(5, 153, 168, 0.18);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(5, 153, 168, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.35);
   color: #38bdf8;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 800;
   padding: 4px 12px;
-  border-radius: 50px;
+  border-radius: 9999px;
   margin-bottom: 12px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
 }
 
 .enroll-modal-title {
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   font-weight: 800;
   line-height: 1.25;
-  margin-bottom: 10px;
-  color: white;
+  margin-bottom: 8px;
+  color: #ffffff;
   letter-spacing: -0.02em;
 }
 
 .enroll-modal-subtitle {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 24px;
-  line-height: 1.6;
+  color: #94a3b8;
+  margin-bottom: 20px;
+  line-height: 1.55;
 }
 
 /* Selected Course Card */
 .selected-course-card {
-  background: linear-gradient(135deg, rgba(5, 153, 168, 0.15), rgba(1, 23, 49, 0.8));
+  background: linear-gradient(135deg, rgba(5, 153, 168, 0.15) 0%, rgba(1, 23, 49, 0.75) 100%);
   border: 1.5px solid rgba(56, 189, 248, 0.35);
   border-radius: 16px;
-  padding: 20px 22px;
-  margin-bottom: 24px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .selected-course-tag {
@@ -6340,90 +6374,109 @@ body.modal-open-hide-widgets #whatsapp-btn {
 }
 
 .selected-course-name {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: #ffffff;
+  line-height: 1.3;
   margin-bottom: 4px;
 }
 
 .selected-course-academy {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.825rem;
+  color: #94a3b8;
   font-weight: 600;
 }
 
 .selected-course-meta {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   flex-wrap: wrap;
 }
 
 .selected-course-meta .meta-item {
   font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: #e2e8f0;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   font-weight: 600;
 }
 
 .card-fee-highlight {
   color: #75d766;
   font-weight: 800;
-  font-size: 0.925rem;
+  font-size: 0.95rem;
 }
 
-/* Trust Badges */
-.enroll-trust-bar {
+/* Trust Box */
+.enroll-trust-box {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
-.trust-badge-item {
+.trust-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
+  color: #cbd5e1;
   background: rgba(255, 255, 255, 0.04);
-  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 9px 14px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.trust-badge-item .check-icon {
+.trust-check {
   color: #75d766;
   font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
 }
 
-/* Form Controls */
-.enroll-form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* Form Column (Right on Desktop) */
+.enroll-modal-form-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.enroll-form-fields {
+  display: flex;
+  flex-direction: column;
   gap: 14px;
 }
 
-.form-group.full-width {
-  grid-column: span 2;
-}
-
-.form-group.half-width {
-  grid-column: span 1;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .form-label {
-  display: block;
-  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.825rem;
   font-weight: 600;
   color: #cbd5e1;
   margin-bottom: 6px;
+}
+
+.form-label .req {
+  color: #f87171;
+  font-weight: 800;
+}
+
+.form-label .opt {
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 0.775rem;
+  margin-left: 2px;
 }
 
 .form-input {
@@ -6431,57 +6484,92 @@ body.modal-open-hide-widgets #whatsapp-btn {
   height: 48px;
   padding: 0 16px;
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.16);
   border-radius: 12px;
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-family: inherit;
   outline: none;
-  transition: all 0.2s ease;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
   box-sizing: border-box;
 }
 
-textarea.form-input {
-  height: auto;
-  min-height: 80px;
-  padding: 12px 16px;
-}
-
-.form-input:hover {
-  border-color: rgba(56, 189, 248, 0.4);
-  background: rgba(255, 255, 255, 0.09);
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .form-input:focus {
   border-color: #38bdf8;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
 }
 
-select.form-input {
-  cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-  padding-right: 40px;
+.form-input.has-error {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.08) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
 }
 
-select.form-input option {
-  background: #011731;
-  color: white;
-  padding: 10px;
+/* Phone prefix wrapper */
+.phone-input-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
 }
 
-/* Single Primary CTA Action Area (Cancel Removed) */
+.phone-prefix {
+  position: absolute;
+  left: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #38bdf8;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.form-input.phone-input {
+  padding-left: 52px;
+  letter-spacing: 0.03em;
+}
+
+.form-textarea {
+  height: auto;
+  min-height: 72px;
+  padding: 12px 16px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.field-error {
+  display: block;
+  font-size: 0.775rem;
+  color: #fca5a5;
+  margin-top: 4px;
+  font-weight: 600;
+  min-height: 0;
+}
+
+.enroll-error-msg {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* Modal Actions (Submit CTA) */
 .enroll-modal-actions {
-  margin-top: 20px;
+  margin-top: 18px;
   width: 100%;
 }
 
 .btn-submit-enroll {
   width: 100% !important;
-  height: 52px !important;
+  min-height: 50px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -6490,120 +6578,170 @@ select.form-input option {
   font-weight: 800 !important;
   background: linear-gradient(135deg, #0599a8 0%, #75d766 100%) !important;
   border: none !important;
-  border-radius: 12px !important;
+  border-radius: 14px !important;
   color: #ffffff !important;
-  box-shadow: 0 6px 20px rgba(5, 153, 168, 0.45) !important;
-  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 18px rgba(5, 153, 168, 0.4) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
   cursor: pointer;
+  letter-spacing: 0.01em;
 }
 
 .btn-submit-enroll:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(5, 153, 168, 0.65) !important;
+  box-shadow: 0 8px 26px rgba(5, 153, 168, 0.55) !important;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 900px) {
-  .enroll-modal-dialog {
-    max-width: 100%;
-    padding: 28px 20px;
-    border-radius: 20px;
-  }
-
-  .enroll-modal-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
+.btn-submit-enroll:active {
+  transform: scale(0.98);
 }
 
-@media (max-width: 768px) {
-  .enroll-form-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .form-group.half-width {
-    grid-column: span 1 !important;
-  }
-  .form-group.mobile-hide-field {
-    display: none !important;
-  }
-  .enroll-modal-dialog {
-    padding: 24px 16px;
-  }
-  .enroll-modal-title {
-    font-size: 1.4rem;
-  }
-}
-
-.enroll-trust-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 18px;
-  font-size: 0.775rem;
-  color: rgba(255, 255, 255, 0.65);
-  font-weight: 500;
-}
-
-.enroll-trust-bar .dot {
-  color: var(--teal, #0599a8);
+.enroll-privacy-notice {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.45;
 }
 
 /* Success View */
 .enroll-success-view {
   text-align: center;
   padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .success-icon-badge {
   font-size: 3.5rem;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  line-height: 1;
 }
 
 .success-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .success-desc {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.925rem;
+  color: #cbd5e1;
   line-height: 1.6;
-  max-width: 480px;
-  margin: 0 auto 28px;
+  max-width: 440px;
+  margin-bottom: 24px;
 }
 
 .success-actions {
   display: flex;
-  align-items: center;
+  gap: 12px;
   justify-content: center;
-  gap: 14px;
   flex-wrap: wrap;
 }
 
-.enroll-error-msg {
-  background: rgba(239, 68, 68, 0.15);
-  border: 1px solid #ef4444;
-  color: #fca5a5;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  margin-top: 16px;
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES (MOBILE FULL-HEIGHT BOTTOM SHEET)
+   ============================================================ */
+@media (max-width: 860px) {
+  .enroll-modal-backdrop {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .enroll-modal-dialog {
+    width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    border-radius: 20px 20px 0 0;
+    border-bottom: none;
+    transform: translateY(100%);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .enroll-modal-backdrop.open .enroll-modal-dialog {
+    transform: translateY(0);
+  }
+
+  .enroll-modal-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px 18px 24px;
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .enroll-modal-close {
+    top: 12px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  .enroll-modal-title {
+    font-size: 1.35rem;
+    padding-right: 48px;
+  }
+
+  .enroll-modal-subtitle {
+    font-size: 0.8125rem;
+    margin-bottom: 14px;
+  }
+
+  .selected-course-card {
+    padding: 14px 16px;
+    margin-bottom: 14px;
+  }
+
+  .selected-course-name {
+    font-size: 1.05rem;
+  }
+
+  .enroll-trust-box {
+    margin-bottom: 8px;
+  }
+
+  /* One column fields on all mobile viewports */
+  .enroll-form-fields {
+    gap: 12px;
+  }
+
+  .form-input {
+    font-size: 16px !important; /* Prevents auto-zoom in iOS Safari */
+    height: 48px;
+  }
+
+  /* Sticky Action Bar inside the mobile sheet */
+  .enroll-modal-actions {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(1, 23, 49, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 12px 18px calc(14px + env(safe-area-inset-bottom, 0px));
+    margin: 16px -18px -24px -18px;
+    z-index: 10;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.5);
+  }
 }
 
-.enroll-success-msg {
-  background: rgba(117, 215, 102, 0.15);
-  border: 1px solid #75d766;
-  color: #86efac;
-  padding: 16px;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-top: 16px;
-  text-align: center;
+@media (max-width: 360px) {
+  .enroll-modal-container {
+    padding: 16px 14px 20px;
+  }
+  .enroll-modal-actions {
+    padding: 10px 14px calc(12px + env(safe-area-inset-bottom, 0px));
+    margin: 14px -14px -20px -14px;
+  }
+  .enroll-modal-title {
+    font-size: 1.2rem;
+  }
 }
 
 /* ============================================================
