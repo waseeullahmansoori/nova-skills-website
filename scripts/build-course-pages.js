@@ -641,9 +641,22 @@ function generateStaticCourseHtml(courseId, templateHtml) {
 
   // Projects
   let projectsHtml = '';
-  if (detailData && detailData.what_you_will_build) {
-    const builds = detailData.what_you_will_build || [];
-    const deliverables = detailData.final_deliverables || [];
+  let builds = [];
+  if (detailData) {
+    if (Array.isArray(detailData.what_you_will_build)) {
+      builds = detailData.what_you_will_build;
+    } else if (detailData.what_you_will_build && Array.isArray(detailData.what_you_will_build.capstone_options)) {
+      builds = detailData.what_you_will_build.capstone_options;
+    } else if (Array.isArray(detailData.portfolio)) {
+      builds = detailData.portfolio;
+    } else if (Array.isArray(detailData.portfolio_projects)) {
+      builds = detailData.portfolio_projects;
+    } else if (Array.isArray(detailData.core_projects)) {
+      builds = detailData.core_projects;
+    }
+  }
+  if (builds.length > 0) {
+    const deliverables = (detailData && detailData.final_deliverables) || [];
     projectsHtml = `
       <div class="projects-suite-grid">
         ${builds.map((b, bIdx) => {
@@ -710,9 +723,12 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   // FAQs
   let faqHtml = '';
   if (detailData && detailData.faq && Array.isArray(detailData.faq)) {
-    const builds = detailData.what_you_will_build || [];
+    let buildsArray = [];
+    if (Array.isArray(detailData.what_you_will_build)) buildsArray = detailData.what_you_will_build;
+    else if (detailData.what_you_will_build && Array.isArray(detailData.what_you_will_build.capstone_options)) buildsArray = detailData.what_you_will_build.capstone_options;
+    else if (Array.isArray(detailData.portfolio)) buildsArray = detailData.portfolio;
+    const buildTitles = buildsArray.map(b => (typeof b === 'object' && b !== null) ? (b.title || b.name || '') : String(b));
     faqHtml = detailData.faq.map((item, fIdx) => {
-      const buildTitles = builds.map(b => (typeof b === 'object' && b !== null) ? (b.title || b.name || '') : String(b));
       let answer = item.answer || (buildTitles.length > 0 ? `You will build production-grade projects: ${buildTitles.slice(0, 2).join(' and ')}, resulting in portfolio-ready case studies.` : '');
       return `
         <div class="faq-item">

@@ -73,7 +73,7 @@ function buildCourseCardHTML(course) {
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹${(course.price || 0).toLocaleString('en-IN')}</span>
-              <span class="price-original">₹${(course.originalPrice || 0).toLocaleString('en-IN')}</span>
+              ${course.originalPrice > course.price ? `<span class="price-original">₹${(course.originalPrice || 0).toLocaleString('en-IN')}</span>` : ''}
             </div>
             ${course.originalPrice > course.price ? `<span class="price-off">${Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100)}% OFF</span>` : ''}
           </div>

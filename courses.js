@@ -165,7 +165,7 @@ function buildCourseCardHTML(course) {
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹${course.price.toLocaleString('en-IN')}</span>
-              <span class="price-original">₹${course.originalPrice.toLocaleString('en-IN')}</span>
+              ${(course.originalPrice && course.originalPrice > course.price) ? `${(course.originalPrice && course.originalPrice > course.price) ? `<span class="price-original">₹${course.originalPrice.toLocaleString('en-IN')}</span>` : ''}` : ''}
             </div>
             ${course.originalPrice > course.price ? `<span class="price-off">${Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100)}% OFF</span>` : ''}
           </div>
@@ -222,17 +222,43 @@ function filterAndSortCourses() {
     // Mode filter
     if (selectedModes.length > 0 && !selectedModes.includes(c.mode)) return false;
 
-    // Skill Level filter
-    if (selectedLevels.length > 0 && !selectedLevels.includes(c.level)) return false;
+    // Skill Level filter (robust semantic matching)
+    if (selectedLevels.length > 0) {
+      const courseLevelLower = (c.level || '').toLowerCase();
+      const matchSkill = selectedLevels.some(lvl => {
+        const selLower = lvl.toLowerCase();
+        if (selLower.includes('begin')) {
+          return courseLevelLower.includes('begin') || courseLevelLower.includes('found') || courseLevelLower.includes('basic') || courseLevelLower.includes('junior');
+        }
+        if (selLower.includes('inter')) {
+          return courseLevelLower.includes('inter') || courseLevelLower.includes('applied') || courseLevelLower.includes('specialist');
+        }
+        if (selLower.includes('adv')) {
+          return courseLevelLower.includes('adv') || courseLevelLower.includes('pro') || courseLevelLower.includes('master') || courseLevelLower.includes('career');
+        }
+        return courseLevelLower.includes(selLower);
+      });
+      if (!matchSkill) return false;
+    }
 
-    // Duration filter
+    // Duration filter (normalized across weeks and months)
     if (selectedDurations.length > 0) {
-      const dur = Math.round(c.durationMonths || 3);
+      const weeks = c.duration_weeks || (c.durationMonths ? Math.round(c.durationMonths * 4.33) : 4);
+      const months = c.durationMonths || Math.round(weeks / 4.33);
       const matchDur = selectedDurations.some(val => {
-        if (val === '1-2' || val === '2') return dur <= 2;
-        if (val === '3-6' || val === '3') return dur >= 3 && dur <= 6;
-        if (val === '6-12' || val === '6') return dur >= 6;
-        return parseInt(val, 10) === dur;
+        if (val === '1-2' || val === '2') {
+          // Up to 10 weeks or <= 2 months
+          return weeks <= 10 || months <= 2;
+        }
+        if (val === '3-6' || val === '3') {
+          // 8-26 weeks or 2-6 months
+          return (weeks >= 8 && weeks <= 26) || (months >= 2 && months <= 6);
+        }
+        if (val === '6-12' || val === '6') {
+          // 24+ weeks or >= 6 months
+          return weeks >= 24 || months >= 6;
+        }
+        return parseInt(val, 10) === months;
       });
       if (!matchDur) return false;
     }
