@@ -1,3 +1,13 @@
+function escapeHTML(str) {
+  if (typeof str !== 'string') return String(str || '');
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 /**
  * Enhanced Static HTML Generator for All 12 Nova Skills Academies
  * Pre-renders full course cards, links, accurate counts, and SEO schemas.
@@ -149,13 +159,24 @@ function normalizeProgramLevel(level) {
 function buildCourseCardHTML(course, extraClass = '') {
   const safeName = (course.name || '').replace(/'/g, "\\'");
   const safeAcademy = (course.academy || '').replace(/'/g, "\\'");
-  const origPrice = course.originalPrice ? `₹${course.originalPrice.toLocaleString('en-IN')}` : '';
+  const safeDuration = course.duration || '';
+  const safePrice = `₹${(course.price || 0).toLocaleString('en-IN')}`;
+  const safeId = course.id;
   const isFeatured = course.featured || (course.tags && course.tags.includes('popular'));
   const liveProj = course.liveProjects || 2;
   const rating = course.rating || 4.8;
   const reviews = course.reviews || 120;
   const normLevel = normalizeProgramLevel(course.programLevel || course.level);
   const courseUrl = `/course-detail.html?id=${course.id}`;
+
+  let trackClass = 'track-cert';
+  const progLevel = course.programLevel || normLevel || 'Certification Course';
+  if (progLevel.includes('Career')) trackClass = 'track-career';
+  else if (progLevel.includes('Professional')) trackClass = 'track-pro';
+
+  const toolsHTML = (course.tools && course.tools.length > 0)
+    ? `<div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list">${course.tools.slice(0, 3).map(t => `<span class="tool-tag">${t}</span>`).join(' ')}</div></div>`
+    : '';
 
   return `
     <div class="course-card ${extraClass}" data-category="${course.academyId}" data-level="${normLevel}" data-title="${(course.name || '').replace(/"/g, '&quot;')}" data-desc="${(course.shortDesc || '').replace(/"/g, '&quot;')}">
@@ -170,28 +191,34 @@ function buildCourseCardHTML(course, extraClass = '') {
         <div class="course-duration-badge">⏱️ ${course.duration || 'Flexible'}</div>
       </div>
       <div class="course-body">
-        <div class="course-academy-tag">${course.icon || '🎓'} ${course.academy || ''}</div>
+        <div class="course-meta-header">
+          <div class="course-academy-tag">${course.icon || '🎓'} ${course.academy || ''}</div>
+          <span class="course-track-pill ${trackClass}">${progLevel}</span>
+        </div>
         <h3 class="course-title"><a href="${courseUrl}">${course.name}</a></h3>
         <p class="course-desc">${course.shortDesc || course.description || ''}</p>
+        ${toolsHTML}
         <div class="course-features">
           <span class="feature-item">💻 ${liveProj}+ Live Projects</span>
-          <span class="feature-item">📜 ISO Certificate</span>
-          ${course.placementSupport ? '<span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>' : ''}
+          <span class="feature-item">📜 Verified Certificate</span>
+          ${course.placementSupport ? '<span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>' : '<span class="feature-item">💼 Capstone Portfolio</span>'}
           <span class="feature-item">⭐ ${rating} (${reviews})</span>
         </div>
-        <div class="course-footer" style="flex-direction:column; gap:12px; align-items:stretch;">
-          <div class="course-pricing" style="display:flex; justify-content:space-between; align-items:baseline;">
-            <span class="price-current">₹${course.price ? course.price.toLocaleString('en-IN') : 'Free'}</span>
-            ${origPrice ? `<span class="price-original">${origPrice}</span>` : ''}
+        <div class="course-footer course-footer-stack">
+          <div class="course-pricing course-pricing-row">
+            <div>
+              <span class="price-current">₹${(course.price || 0).toLocaleString('en-IN')}</span>
+              ${(course.originalPrice && course.originalPrice > course.price) ? `<span class="price-original">₹${(course.originalPrice || 0).toLocaleString('en-IN')}</span>` : ''}
+            </div>
+            ${(course.originalPrice && course.originalPrice > course.price) ? `<span class="price-off">${Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100)}% OFF</span>` : ''}
           </div>
-          <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
-            <a href="${courseUrl}" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
-            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('${safeName}', '${safeAcademy}')">Enroll Now →</button>
+          <div class="course-card-actions">
+            <a href="${courseUrl}" class="btn btn-outline btn-sm">View Syllabus</a>
+            <button type="button" class="btn btn-primary btn-sm" onclick="openEnrollmentModal('${safeName}', '${safeAcademy}', '${safeDuration}', '${safePrice}', '${safeId}')">Enroll Now →</button>
           </div>
         </div>
       </div>
-    </div>
-  `;
+    </div>`;
 }
 
 function getSmartRelatedAcademies(currentSlug) {

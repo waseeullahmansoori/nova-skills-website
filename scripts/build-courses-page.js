@@ -1,3 +1,13 @@
+function escapeHTML(str) {
+  if (typeof str !== 'string') return String(str || '');
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 /**
  * Build Static Pre-rendered Course Catalog for courses.html
  * 
@@ -34,7 +44,7 @@ function buildCourseCardHTML(course) {
   else if (progLevel.includes('Professional')) trackClass = 'track-pro';
 
   const toolsHTML = (course.tools && course.tools.length > 0)
-    ? `<div class="course-tools-preview"><span class="tools-label">Key Tools:</span> ${course.tools.slice(0, 3).map(t => `<span class="tool-tag">${t}</span>`).join('')}</div>`
+    ? `<div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list">${course.tools.slice(0, 3).map(t => `<span class="tool-tag">${t}</span>`).join(' ')}</div></div>`
     : '';
 
   const safeName = (course.name || '').replace(/'/g, "\\'");
@@ -56,8 +66,8 @@ function buildCourseCardHTML(course) {
         <div class="course-duration-badge">⏱️ ${course.duration}</div>
       </div>
       <div class="course-body">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; gap:8px;">
-          <div class="course-academy-tag" style="margin-bottom:0;">${course.icon} ${course.academy}</div>
+        <div class="course-meta-header">
+          <div class="course-academy-tag">${course.icon} ${course.academy}</div>
           <span class="course-track-pill ${trackClass}">${progLevel}</span>
         </div>
         <h3 class="course-title"><a href="${courseUrl}">${course.name}</a></h3>
@@ -73,9 +83,9 @@ function buildCourseCardHTML(course) {
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹${(course.price || 0).toLocaleString('en-IN')}</span>
-              ${course.originalPrice > course.price ? `<span class="price-original">₹${(course.originalPrice || 0).toLocaleString('en-IN')}</span>` : ''}
+              ${(course.originalPrice && course.originalPrice > course.price) ? `<span class="price-original">₹${(course.originalPrice || 0).toLocaleString('en-IN')}</span>` : ''}
             </div>
-            ${course.originalPrice > course.price ? `<span class="price-off">${Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100)}% OFF</span>` : ''}
+            ${(course.originalPrice && course.originalPrice > course.price) ? `<span class="price-off">${Math.round(((course.originalPrice - course.price) / course.originalPrice) * 100)}% OFF</span>` : ''}
           </div>
           <div class="course-card-actions">
             <a href="${courseUrl}" class="btn btn-outline btn-sm">View Syllabus</a>

@@ -745,26 +745,47 @@ function generateStaticCourseHtml(courseId, templateHtml) {
 
   // Related Courses (3 courses)
   const relatedCourses = NS_COURSES.filter(c => c.id !== baseCourse.id && c.academyId === baseCourse.academyId).slice(0, 3);
-  let relatedHtml = relatedCourses.map(c => `
-    <div class="course-card">
+  let relatedHtml = relatedCourses.map(c => {
+    const relSafeName = (c.name || '').replace(/'/g, "\\'");
+    const relSafeAcademy = (c.academy || '').replace(/'/g, "\\'");
+    const relSafeDuration = c.duration || '';
+    const relSafePrice = `₹${(c.price || 0).toLocaleString('en-IN')}`;
+    const relToolsHtml = (c.tools && c.tools.length > 0)
+      ? `<div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list">${c.tools.slice(0, 3).map(t => `<span class="tool-tag">${escapeHTML(t)}</span>`).join(' ')}</div></div>`
+      : '';
+
+    return `
+    <div class="course-card" data-category="${c.academyId}">
       <div class="course-thumbnail" style="height:150px;">
         <div class="course-thumb-bg" style="background:${c.color || 'var(--grad-hero)'}">
           <span style="font-size:3rem;">${c.icon || '🎓'}</span>
         </div>
         <div class="course-badge-overlay"><span class="course-level-badge">${c.level || 'All Levels'}</span></div>
+        <div class="course-duration-badge">⏱️ ${c.duration}</div>
       </div>
       <div class="course-body">
+        <div class="course-meta-header">
+          <div class="course-academy-tag">${c.icon || '🎓'} ${escapeHTML(c.academy)}</div>
+          <span class="course-track-pill">${escapeHTML(c.programLevel || 'Certification Course')}</span>
+        </div>
         <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:8px;">
           <a href="/course-detail.html?id=${c.id}">${escapeHTML(c.name)}</a>
         </h4>
-        <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">${escapeHTML(c.shortDesc || '')}</p>
-        <div class="course-footer" style="padding-top:12px; border-top:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
-          <span style="font-weight:700; color:var(--navy);">₹${(c.price || 0).toLocaleString('en-IN')}</span>
-          <a href="/course-detail.html?id=${c.id}" class="btn btn-outline btn-sm">View Program →</a>
+        <p class="course-desc">${escapeHTML(c.shortDesc || '')}</p>
+        ${relToolsHtml}
+        <div class="course-card-footer">
+          <div class="course-price-wrap">
+            <span class="price-current">₹${(c.price || 0).toLocaleString('en-IN')}</span>
+            ${(c.originalPrice && c.originalPrice > c.price) ? `<span class="price-original">₹${c.originalPrice.toLocaleString('en-IN')}</span>` : ''}
+          </div>
+          <div class="course-card-actions">
+            <a href="/course-detail.html?id=${c.id}" class="btn btn-outline btn-sm">View Syllabus</a>
+            <button type="button" class="btn btn-primary btn-sm" onclick="openEnrollmentModal('${relSafeName}', '${relSafeAcademy}', '${relSafeDuration}', '${relSafePrice}', '${c.id}')">Enroll Now →</button>
+          </div>
         </div>
       </div>
-    </div>
-  `).join('').trim();
+    </div>`;
+  }).join('').trim();
 
   // Build JSON-LD Schema
   const schemaObj = buildCourseSchema(baseCourse, canonicalUrl, detailData);
@@ -950,7 +971,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
 
   // Sticky Mobile Bar
   html = html.replace(
-    /<div\s+class="sticky-enroll-bar"\s+id="sticky-mobile-bar">[\s\S]*?<\/div>/i,
+    /<div\s+class="sticky-enroll-bar"\s+id="sticky-mobile-bar">[\s\S]*?<\/button>\s*<\/div>/i,
     `<div class="sticky-enroll-bar" id="sticky-mobile-bar">\n    <div class="price-group">\n      <span class="price-current" id="mobile-price">${priceFormatted}</span>\n      ${origPriceFormatted ? `<span class="price-original" id="mobile-orig-price">${origPriceFormatted}</span>` : '<span class="price-original" id="mobile-orig-price" style="display:none;"></span>'}\n    </div>\n    <button class="btn btn-primary" onclick="openEnrollmentModal('${safeName}', '${safeAcademy}', '${safeDuration}', '${safePrice}', '${safeId}')">Enroll Now →</button>\n  </div>`
   );
 
@@ -982,7 +1003,7 @@ function generateNotFoundHtml(templateHtml) {
       </div>
     </main>
   `);
-  html = html.replace(/<div class="sticky-enroll-bar"[\s\S]*?<\/div>/i, '');
+  html = html.replace(/<div\s+class="sticky-enroll-bar"[\s\S]*?<\/button>\s*<\/div>/i, '');
   return html;
 }
 

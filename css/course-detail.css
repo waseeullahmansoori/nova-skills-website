@@ -973,19 +973,47 @@
 }
 
 /* Sticky Mobile Enrollment CTA & Floating Elements Safe Area Support */
+.sticky-enroll-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid rgba(5, 153, 168, 0.15);
+  padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px)) !important;
+  z-index: 1050;
+  box-shadow: 0 -8px 32px rgba(1, 23, 49, 0.12);
+  align-items: center;
+  gap: 16px;
+  box-sizing: border-box;
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
 @media (max-width: 1024px) {
   .sticky-enroll-bar {
-    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)) !important;
-    box-sizing: border-box;
+    display: flex;
   }
-  #course-detail-main {
+  .sticky-enroll-bar.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  body.sticky-bar-active #course-detail-main {
     padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
   }
-  .whatsapp-float {
+  body.sticky-bar-active .whatsapp-float,
+  body.sticky-bar-active #whatsapp-btn {
     bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
     right: 16px !important;
   }
-  .nova-ai-float-btn {
+  body.sticky-bar-active .nova-ai-float-btn,
+  body.sticky-bar-active .nova-ai-launcher,
+  body.sticky-bar-active #nova-ai-launcher,
+  body.sticky-bar-active #nova-ai-widget-container {
     bottom: calc(140px + env(safe-area-inset-bottom, 0px)) !important;
     right: 16px !important;
   }
