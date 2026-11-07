@@ -1,3 +1,16 @@
+
+/* Accessible Screen-Reader-Only Utility */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 /* ============================================================
    NOVA SKILLS – Premium Education Institute CSS
    2026 | Modern • Premium • Responsive
@@ -6493,58 +6506,63 @@ body.modal-open-hide-widgets #sticky-mobile-bar {
 
 /* 1. Mobile Filter & Sort Toolbar */
 .mobile-filter-sort-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 14px;
-  background: rgba(255, 255, 255, 0.97);
+  display: grid !important;
+  grid-template-columns: 1fr 1.15fr !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 8px !important;
+  background: rgba(255, 255, 255, 0.98) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-radius: var(--radius-xl, 24px);
-  border: 1px solid rgba(0, 70, 114, 0.1);
-  box-shadow: 0 4px 18px rgba(1, 23, 49, 0.05);
-  position: sticky;
-  top: 72px;
-  z-index: 85;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(0, 70, 114, 0.12) !important;
+  box-shadow: 0 4px 18px rgba(1, 23, 49, 0.06) !important;
+  position: sticky !important;
+  top: 72px !important;
+  z-index: 85 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
   transition: all var(--transition-base, 0.25s ease);
 }
 
 /* Left: Filter CTA Button */
 .mobile-filter-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 44px;
-  padding: 0 18px;
-  border-radius: 9999px;
-  background: linear-gradient(135deg, #004672 0%, #0599a8 100%);
-  color: #ffffff;
-  font-family: var(--font-primary, sans-serif);
-  font-size: 0.9375rem;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 70, 114, 0.28);
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  min-height: 42px !important;
+  padding: 0 10px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  border-radius: 9999px !important;
+  background: linear-gradient(135deg, #004672 0%, #0599a8 100%) !important;
+  color: #ffffff !important;
+  font-family: var(--font-primary, sans-serif) !important;
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  border: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(0, 70, 114, 0.28) !important;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-  flex-shrink: 0;
   -webkit-tap-highlight-color: transparent;
 }
 
 .mobile-filter-btn:hover {
-  box-shadow: 0 6px 18px rgba(0, 70, 114, 0.38);
+  box-shadow: 0 6px 18px rgba(0, 70, 114, 0.38) !important;
 }
 
 .mobile-filter-btn:active {
-  transform: scale(0.97);
+  transform: scale(0.97) !important;
 }
 
 .mobile-filter-btn-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
 }
 
 .mobile-filter-btn-label {
@@ -6552,71 +6570,74 @@ body.modal-open-hide-widgets #sticky-mobile-bar {
 }
 
 .mobile-filter-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 20px;
-  height: 20px;
-  padding: 0 6px;
-  border-radius: 9999px;
-  background: #ffffff;
-  color: #004672;
-  font-size: 0.75rem;
-  font-weight: 800;
-  line-height: 1;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 20px !important;
+  height: 20px !important;
+  padding: 0 6px !important;
+  border-radius: 9999px !important;
+  background: #ffffff !important;
+  color: #004672 !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* Right: Sort Control */
 .mobile-sort-control {
-  position: relative;
-  flex: 1;
-  max-width: 220px;
-  min-width: 140px;
+  position: relative !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
 }
 
 .mobile-sort-select-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .mobile-sort-select {
-  width: 100%;
-  min-height: 44px;
-  padding: 0 32px 0 14px;
-  border-radius: 9999px;
-  border: 1.5px solid rgba(0, 70, 114, 0.16);
-  background: #ffffff;
-  color: #012B46;
-  font-family: var(--font-primary, sans-serif);
-  font-size: 0.84375rem;
-  font-weight: 600;
-  cursor: pointer;
-  outline: none;
-  box-shadow: 0 2px 6px rgba(1, 23, 49, 0.03);
+  width: 100% !important;
+  min-height: 42px !important;
+  padding: 0 24px 0 10px !important;
+  border-radius: 9999px !important;
+  border: 1.5px solid rgba(0, 70, 114, 0.16) !important;
+  background: #ffffff !important;
+  color: #012B46 !important;
+  font-family: var(--font-primary, sans-serif) !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(1, 23, 49, 0.03) !important;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
-  appearance: none;
-  -webkit-appearance: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
 }
 
 .mobile-sort-select:focus {
-  border-color: #0599a8;
-  box-shadow: 0 0 0 3px rgba(5, 153, 168, 0.15);
+  border-color: #0599a8 !important;
+  box-shadow: 0 0 0 3px rgba(5, 153, 168, 0.15) !important;
 }
 
 .mobile-sort-chevron {
-  position: absolute;
-  right: 12px;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #64748B;
+  position: absolute !important;
+  right: 8px !important;
+  pointer-events: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #64748B !important;
   transition: transform 0.15s ease;
 }
 
@@ -7204,5 +7225,32 @@ body.filter-sheet-open #nova-ai-widget-container {
 @media (max-width: 768px) {
   .courses-grid-page {
     padding-bottom: 80px;
+  }
+}
+/* Mobile Floating Widgets Scaling & Clearance */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 12px !important;
+    width: 48px !important;
+    height: 48px !important;
+    z-index: 80 !important;
+  }
+  .whatsapp-float svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .nova-ai-float-btn,
+  #nova-ai-float-btn {
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 12px !important;
+    padding: 8px 12px !important;
+    font-size: 0.8rem !important;
+    z-index: 80 !important;
+  }
+}
+@media (max-width: 768px) {
+  .courses-grid-page {
+    padding-bottom: 96px !important;
   }
 }
