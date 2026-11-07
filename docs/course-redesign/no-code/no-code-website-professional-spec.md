@@ -8,7 +8,7 @@
 **Duration:** 3 Months (12 Academic Weeks)
 **Guided Instructional Hours:** 120 Guided Hours (10 Hours / Week)
 **Recommended Independent Lab Practice:** 60–90 Hours (strictly demarcated from guided hours)
-**Working Commercial Baseline:** INR 12,999 (Current Selling Fee; 18% GST: INR 2,340; Total Payable: INR 15,339)
+**Working Commercial Baseline:** INR 19,900 (Approved Selling Fee; 18% GST: INR 3,582; Total Payable: INR 23,482 - USER_CONFIRMED_2026-11-07)
 **Commercial Revision Status:** Recommended New Selling Fee: INR 24,900 (PENDING EXPLICIT BUSINESS APPROVAL — NOT APPLIED)
 *Commercial Guardrail: Zero artificial discount inflation, zero unapproved strikethroughs, zero unverified EMI or subscription inclusion claims.*
 **Authoritative Version:** 2.0.0 (October 2026 Academic Planning Specification)
@@ -41,8 +41,8 @@ graph TD
 ```
 
 ### 1.2 Commercial Baseline & Transition Policy
-* **Current Working Selling Price:** INR 12,999 (preserves existing active selling rate until explicit business sign-off).
-* **Statutory Indian GST (18%):** INR 2,339.82 (Total payable: INR 15,338.82 on active ₹12,999 fee).
+* **Current Working Selling Price:** INR 19,900 (explicitly confirmed by business owner USER_CONFIRMED_2026-11-07).
+* **Statutory Indian GST (18%):** INR 3,582 (Total payable: INR 23,482 on active ₹19,900 fee).
 * **Proposed Business Owner Price (Pending Approval):** INR 24,900 (reflects 120-hour multi-platform parity; 18% GST = INR 4,482; Total = INR 29,382).
 * **Strict Policy:** The proposed INR 24,900 price remains strictly a planning recommendation in this document. It will NOT be written to `data.js`, `data/courses/nocode-web-pro.json`, or minified runtime files until explicit owner authorization is provided.
 * **Discount Policy:** The obsolete `originalPrice: 34999` in `data.js` (creating a fake 63% discount) is flagged for neutralization during implementation (`originalPrice = price`, `discount = 0`).

@@ -121,6 +121,24 @@ assert(officeHtml.includes('TallyPrime — Accounting & GST Compliance'), `Offic
 assert(officeHtml.includes('₹9,900'), `Office academy page contains TallyPrime price ₹9,900`);
 assert(officeHtml.includes('Microsoft 365 Copilot — AI Workplace Productivity'), `Office academy page contains Copilot updated title`);
 
+// 8. Validate Course #15 (nocode-web-pro) Latest Approved Sync (USER_CONFIRMED_2026-11-07)
+const c15 = NS_COURSES.find(item => item.id === 'nocode-web-pro');
+assert(!!c15, 'Course #15 (nocode-web-pro) exists in NS_COURSES');
+assert(c15?.name === 'No-Code Website Professional', 'Course #15 name is "No-Code Website Professional"');
+assert(c15?.price === 19900, `Course #15 price is ₹19,900 (got ${c15?.price})`);
+assert(c15?.originalPrice === 19900, `Course #15 originalPrice is ₹19,900 with zero fake discount (got ${c15?.originalPrice})`);
+assert(c15?.fee === 19900, `Course #15 fee is 19900 (got ${c15?.fee})`);
+assert(c15?.duration === '3 Months', `Course #15 duration is "3 Months" (got ${c15?.duration})`);
+
+const noCodeAcademyHtml = fs.readFileSync(path.join(rootDir, 'academies', 'no-code-web', 'index.html'), 'utf8');
+assert(noCodeAcademyHtml.includes('₹19,900'), 'No-Code Web Academy page displays approved fee ₹19,900');
+assert(noCodeAcademyHtml.includes("openEnrollmentModal('No-Code Website Professional', 'No-Code Web Academy', '3 Months', '₹19,900', 'nocode-web-pro')"), 'No-Code Web Academy enroll modal binds ₹19,900');
+
+const c15RenderedHtml = fs.readFileSync(path.join(rootDir, '_rendered_courses', 'nocode-web-pro.html'), 'utf8');
+assert(c15RenderedHtml.includes('₹19,900'), '_rendered_courses/nocode-web-pro.html displays approved fee ₹19,900');
+assert(c15RenderedHtml.includes('USER_CONFIRMED_2026-11-07'), '_rendered_courses/nocode-web-pro.html contains confirmation reference USER_CONFIRMED_2026-11-07');
+assert(edgeBundle.includes("openEnrollmentModal('No-Code Website Professional', 'No-Code Web Academy', '3 Months', '₹19,900', 'nocode-web-pro')"), 'Edge bundle correctly binds ₹19,900 for Course #15');
+
 console.log('\n========================================');
 console.log(`TOTAL TESTS: ${totalTests}`);
 console.log(`PASSED: ${passedTests}`);

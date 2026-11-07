@@ -1980,7 +1980,7 @@ function injectEnrollmentModalHTML() {
 }
 
 const COURSE_CATALOG_METADATA = {
-  'No-Code Website Professional': { academy: 'No-Code Web Academy', duration: '3 Months', fee: '₹12,999', category: 'no-code' },
+  'No-Code Website Professional': { academy: 'No-Code Web Academy', duration: '3 Months', fee: '₹19,900', category: 'no-code' },
   'E-Commerce Website Mastery': { academy: 'No-Code Web Academy', duration: '6 Months', fee: '₹49,900', category: 'no-code' },
   'Professional Video Editing': { academy: 'Video & Motion Academy', duration: '4 Months', fee: '₹29,900', category: 'video' },
   'AI-Integrated Video Editing & Motion Graphics Professional': { academy: 'Video & Motion Academy', duration: '8 Months', fee: '₹69,900', category: 'video' },
