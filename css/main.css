@@ -6337,6 +6337,7 @@ body.modal-open-hide-widgets #sticky-mobile-bar {
 .enroll-modal-summary-col {
   display: flex;
   flex-direction: column;
+  align-self: start;
 }
 
 .enroll-modal-badge {
@@ -6374,7 +6375,7 @@ body.modal-open-hide-widgets #sticky-mobile-bar {
   border: 1.5px solid rgba(56, 189, 248, 0.35);
   border-radius: 16px;
   padding: 18px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
@@ -6425,32 +6426,6 @@ body.modal-open-hide-widgets #sticky-mobile-bar {
   font-size: 0.95rem;
 }
 
-/* Trust Box */
-.enroll-trust-box {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 4px;
-}
-
-.trust-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.8125rem;
-  color: #cbd5e1;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 9px 14px;
-  border-radius: 10px;
-}
-
-.trust-check {
-  color: #75d766;
-  font-weight: 800;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-}
 
 /* Form Column (Right on Desktop) */
 .enroll-modal-form-col {
@@ -6706,15 +6681,11 @@ body.modal-open-hide-widgets #sticky-mobile-bar {
 
   .selected-course-card {
     padding: 14px 16px;
-    margin-bottom: 14px;
+    margin-bottom: 0;
   }
 
   .selected-course-name {
     font-size: 1.05rem;
-  }
-
-  .enroll-trust-box {
-    margin-bottom: 8px;
   }
 
   /* One column fields on all mobile viewports */

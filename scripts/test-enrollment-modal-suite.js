@@ -20,6 +20,7 @@ console.log('=== STARTING GLOBAL ENROLLMENT MODAL TEST SUITE ===\n');
 // 1. Verify components.js code
 console.log('--- 1. Testing Enrollment Modal Implementation in components.js ---');
 const compCode = fs.readFileSync(path.join(rootDir, 'components.js'), 'utf8');
+const minCompCode = fs.readFileSync(path.join(rootDir, 'js', 'components.min.js'), 'utf8');
 
 assert(compCode.includes("modal.id = 'course-enrollment-modal'") || compCode.includes('id="course-enrollment-modal"'), 'Modal container #course-enrollment-modal exists');
 assert(compCode.includes('id="enroll-modal-close"'), 'Close button #enroll-modal-close exists');
@@ -34,6 +35,34 @@ assert(compCode.includes('class="phone-prefix">+91<'), 'Phone prefix +91 is rend
 assert(compCode.includes('Email Address <span class="opt">(Optional)</span>'), 'Email is explicitly marked optional');
 assert(compCode.includes('Additional Message <span class="opt">(Optional)</span>'), 'Message is explicitly marked optional');
 assert(compCode.includes('id="enroll-success-container"'), 'Success view container exists');
+assert(compCode.includes('class="enroll-privacy-notice"'), 'Privacy disclosure notice preserved');
+
+// Verification of Trust Badges Removal
+assert(!compCode.includes('1-on-1 Academic Counselling'), 'REMOVED: "1-on-1 Academic Counselling" badge absent from components.js');
+assert(!compCode.includes('Hands-on Live Training'), 'REMOVED: "Hands-on Live Training" badge absent from components.js');
+assert(!compCode.includes('100% Privacy Protected'), 'REMOVED: "100% Privacy Protected" badge absent from components.js');
+assert(!compCode.includes('enroll-trust-box'), 'REMOVED: enroll-trust-box container absent from components.js');
+
+assert(!minCompCode.includes('1-on-1 Academic Counselling'), 'REMOVED: "1-on-1 Academic Counselling" absent from js/components.min.js');
+assert(!minCompCode.includes('Hands-on Live Training'), 'REMOVED: "Hands-on Live Training" absent from js/components.min.js');
+assert(!minCompCode.includes('100% Privacy Protected'), 'REMOVED: "100% Privacy Protected" absent from js/components.min.js');
+assert(!minCompCode.includes('enroll-trust-box'), 'REMOVED: enroll-trust-box absent from js/components.min.js');
+
+// Verification of Mobile Structure Order (Course Summary -> Student Details -> Submit Enquiry)
+const idxCard = compCode.indexOf('id="selected-course-card"');
+const idxName = compCode.indexOf('id="enroll-name"');
+const idxPhone = compCode.indexOf('id="enroll-phone"');
+const idxEmail = compCode.indexOf('id="enroll-email"');
+const idxCity = compCode.indexOf('id="enroll-city"');
+const idxMessage = compCode.indexOf('id="enroll-message"');
+const idxSubmit = compCode.indexOf('id="enroll-submit-btn"');
+
+assert(idxCard !== -1 && idxName !== -1 && idxCard < idxName, 'ORDER: Course summary card appears before Full Name field');
+assert(idxName < idxPhone, 'ORDER: Full Name appears before Mobile Number');
+assert(idxPhone < idxEmail, 'ORDER: Mobile Number appears before Email Address');
+assert(idxEmail < idxCity, 'ORDER: Email Address appears before City');
+assert(idxCity < idxMessage, 'ORDER: City appears before Additional Message');
+assert(idxMessage < idxSubmit, 'ORDER: Additional Message appears before Submit CTA');
 
 // 2. CSS Rules verification
 console.log('\n--- 2. Testing CSS Stylesheets (styles.css & css/main.css) ---');
