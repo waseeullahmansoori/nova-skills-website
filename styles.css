@@ -1337,11 +1337,17 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-.course-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.course-footer,
+.course-footer-stack,
+.course-card-footer {
+  display: flex !important;
+  flex-direction: column !important;
   gap: 12px;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  width: 100%;
+  margin-top: auto;
+  box-sizing: border-box;
 }
 
 .course-pricing {
@@ -1459,19 +1465,43 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.course-card-actions {
-  display: flex;
-  gap: 10px;
-  width: 100%;
+.course-pricing-row,
+.course-price-wrap {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: baseline !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  flex-wrap: wrap !important;
+  gap: 6px 12px !important;
+  box-sizing: border-box !important;
 }
 
-.course-card-actions .btn {
-  flex: 1;
-  justify-content: center;
-  text-align: center;
-  padding: 10px 14px;
-  font-size: 0.875rem;
-  white-space: nowrap;
+.course-card-actions {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.course-card-actions .btn,
+.course-card-actions > * {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  height: 42px !important;
+  padding: 8px clamp(6px, 1.8vw, 14px) !important;
+  font-size: clamp(0.75rem, 2.2vw, 0.875rem) !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  border-radius: var(--radius-sm, 8px) !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 .course-card-actions .btn-outline {
@@ -1483,15 +1513,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .course-card-actions .btn-outline:hover {
   background: var(--navy);
-  color: white;
+  color: #ffffff;
   border-color: var(--navy);
 }
 
 .course-card-actions .btn-primary {
   background: var(--grad-teal-green);
-  color: white;
+  color: #ffffff;
   font-weight: 700;
   box-shadow: 0 4px 12px rgba(5, 153, 168, 0.25);
+  border: none;
 }
 
 .course-card-actions .btn-primary:hover {
@@ -1499,11 +1530,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
-@media (max-width: 340px) {
-  .course-card-actions {
-    flex-direction: column;
-  }
-}
+/* Mobile <=340px: Maintain side-by-side CTA buttons with responsive typography */
 
 
 /* ===== WHY SECTION ===== */

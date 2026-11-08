@@ -240,14 +240,17 @@ class CareerSnapshot {
           ${c.tools.slice(0, 4).map(t => `<span class="spot-tool-pill">${t}</span>`).join('')}
         </div>
 
-        <div class="spotlight-footer">
-          <div class="spotlight-price">
-            <span class="spot-current">₹${c.price.toLocaleString('en-IN')}</span>
-            <span class="spot-orig">₹${c.originalPrice.toLocaleString('en-IN')}</span>
+        <div class="course-footer course-footer-stack">
+          <div class="course-pricing course-pricing-row">
+            <div>
+              <span class="price-current">₹${(c.price || 0).toLocaleString('en-IN')}</span>
+              ${(c.originalPrice && c.originalPrice > c.price) ? `<span class="price-original">₹${c.originalPrice.toLocaleString('en-IN')}</span>` : ''}
+            </div>
+            ${(c.originalPrice && c.originalPrice > c.price) ? `<span class="price-off">${Math.round(((c.originalPrice - c.price) / c.originalPrice) * 100)}% OFF</span>` : ''}
           </div>
-          <div style="display:flex; gap:8px;">
-            <a href="/course-detail.html?id=${c.id}" class="btn btn-outline btn-sm">Full Syllabus</a>
-            <button onclick="openConsultationPopup()" class="btn btn-primary btn-sm">Enroll Now →</button>
+          <div class="course-card-actions">
+            <a href="/course-detail.html?id=${c.id}" class="btn btn-outline btn-sm">View Syllabus</a>
+            <button type="button" class="btn btn-primary btn-sm" onclick="openEnrollmentModal('${(c.name || '').replace(/'/g, "\\'")}', '${(c.academy || '').replace(/'/g, "\\'")}', '${c.duration || ''}', '₹${(c.price || 0).toLocaleString('en-IN')}', '${c.id}')">Enroll Now →</button>
           </div>
         </div>
       `;

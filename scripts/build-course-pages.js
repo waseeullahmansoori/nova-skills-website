@@ -773,10 +773,13 @@ function generateStaticCourseHtml(courseId, templateHtml) {
         </h4>
         <p class="course-desc">${escapeHTML(c.shortDesc || '')}</p>
         ${relToolsHtml}
-        <div class="course-card-footer">
-          <div class="course-price-wrap">
-            <span class="price-current">₹${(c.price || 0).toLocaleString('en-IN')}</span>
-            ${(c.originalPrice && c.originalPrice > c.price) ? `<span class="price-original">₹${c.originalPrice.toLocaleString('en-IN')}</span>` : ''}
+        <div class="course-footer course-footer-stack">
+          <div class="course-pricing course-pricing-row">
+            <div>
+              <span class="price-current">₹${(c.price || 0).toLocaleString('en-IN')}</span>
+              ${(c.originalPrice && c.originalPrice > c.price) ? `<span class="price-original">₹${c.originalPrice.toLocaleString('en-IN')}</span>` : ''}
+            </div>
+            ${(c.originalPrice && c.originalPrice > c.price) ? `<span class="price-off">${Math.round(((c.originalPrice - c.price) / c.originalPrice) * 100)}% OFF</span>` : ''}
           </div>
           <div class="course-card-actions">
             <a href="/course-detail.html?id=${c.id}" class="btn btn-outline btn-sm">View Syllabus</a>
