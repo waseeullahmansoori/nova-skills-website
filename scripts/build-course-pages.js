@@ -775,6 +775,12 @@ function generateStaticCourseHtml(courseId, templateHtml) {
         <p class="course-desc">${escapeHTML(c.shortDesc || '')}</p>
         ${relToolsHtml}
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'${c.id}', courseName:'${relSafeName}', academyName:'${relSafeAcademy}'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹${(c.price || 0).toLocaleString('en-IN')}</span>
@@ -966,6 +972,11 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   html = html.replace(
     /<button\s+class="btn\s+btn-primary\s+btn-enroll-full"[^>]*>[\s\S]*?<\/button>/i,
     `<button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('${safeName}', '${safeAcademy}', '${safeDuration}', '${safePrice}', '${safeId}')">Enroll Now — Book Seat →</button>`
+  );
+
+  html = html.replace(
+    /<button\s+type="button"\s+class="btn-book-demo-secondary"\s+id="btn-detail-book-demo"[^>]*>[\s\S]*?<\/button>/i,
+    `<button type="button" class="btn-book-demo-secondary" id="btn-detail-book-demo" onclick="openDemoModal({courseId:'${safeId}',courseName:'${safeName}',academyName:'${safeAcademy}'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg> Book Free Demo</button>`
   );
 
   html = html.replace(

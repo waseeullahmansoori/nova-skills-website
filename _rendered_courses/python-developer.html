@@ -440,8 +440,27 @@
             </div>
 
             <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options available · 18% GST included</p>
+            <!-- Compact Demo & 1:1 Benefits Area -->
+            <div class="detail-demo-benefit-box" id="detail-demo-box">
+              <div class="demo-benefit-item">
+                <svg class="demo-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+                <div class="demo-benefit-text">
+                  <strong>2 Days Free Demo Classes</strong>
+                  <span>Experience our teaching approach before enrolling.</span>
+                </div>
+              </div>
+              <div class="demo-benefit-item" id="detail-1to1-item">
+                <svg class="demo-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg>
+                <div class="demo-benefit-text">
+                  <strong>1:1 Live Online Classes</strong>
+                  <span>Personalized online instruction available.</span>
+                </div>
+              </div>
+            </div>
 
             <button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('Python Developer Professional', 'Programming Academy', '3 Months', '₹19,999', 'python-developer')">Enroll Now — Book Seat →</button>
+
+            <button type="button" class="btn-book-demo-secondary" id="btn-detail-book-demo" onclick="openDemoModal({courseId:'python-developer',courseName:'Python Developer Professional',academyName:'Programming Academy'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg> Book Free Demo</button>
 
             <button class="btn-consult-full" onclick="openConsultationPopup('Python Developer Professional')">📞 Request Callback / Syllabus</button>
 
@@ -2934,6 +2953,12 @@ CMD [&#39;uvicorn&#39;, &#39;src.main:app&#39;, &#39;--host&#39;, &#39;0.0.0.0&#
         <p class="course-desc">A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">HTML5</span> <span class="tool-tag">CSS3</span> <span class="tool-tag">JavaScript</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'fullstack-foundation', courseName:'Full Stack Programming Foundation', academyName:'Programming Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹39,999</span>
@@ -2967,6 +2992,12 @@ CMD [&#39;uvicorn&#39;, &#39;src.main:app&#39;, &#39;--host&#39;, &#39;0.0.0.0&#
         <p class="course-desc">This flagship 8-month, 320-guided-hour professional program combines 300 hours of rigorous core full-stack web development with 20 hours of focused commercial specialization. Students build 6 production-grade portfolio projects under the direct mentorship of senior practitioners.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">HTML5</span> <span class="tool-tag">CSS3</span> <span class="tool-tag">JavaScript</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'ai-assisted-full-stack-web-development', courseName:'AI-Assisted Full Stack Web Development', academyName:'Programming Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹64,900</span>
@@ -3000,6 +3031,12 @@ CMD [&#39;uvicorn&#39;, &#39;src.main:app&#39;, &#39;--host&#39;, &#39;0.0.0.0&#
         <p class="course-desc">Learn modern HTML and CSS by building accessible, responsive websites from scratch. Master semantic HTML, Flexbox, Grid, mobile-first layouts, forms, CSS animations and practical deployment with AI-assisted development and human-reviewed code.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">HTML5</span> <span class="tool-tag">CSS3</span> <span class="tool-tag">VS Code</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'html-css', courseName:'HTML, CSS & Responsive Web Design', academyName:'Programming Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹6,900</span>

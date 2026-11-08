@@ -516,6 +516,7 @@ async function submitNovaForm({
         (formId === 'counselling-form' ? 'counselling_form' :
          formId === 'popup-form' ? 'consultation_popup' :
          formId === 'course-enrollment-form' ? 'course_enrollment' :
+         formId === 'demo-booking-form' ? 'demo_booking' :
          formId === 'contact-enquiry-form' ? 'contact_enquiry' :
          (formId || 'counselling_form'));
 
@@ -523,6 +524,7 @@ async function submitNovaForm({
         (formId === 'counselling-form' ? 'inline_counselling_form' :
          formId === 'popup-form' ? 'consultation_popup_modal' :
          formId === 'course-enrollment-form' ? 'enrollment_modal' :
+         formId === 'demo-booking-form' ? 'demo_modal' :
          formId === 'contact-enquiry-form' ? 'contact_page_form' :
          'web_form');
 
@@ -769,6 +771,12 @@ function buildHeaderHTML(page) {
           <a href="/assessment.html" class="announcement-cta">Start Assessment →</a>
         </div>
 
+        <!-- Slide 6 (Free Demo Offer) -->
+        <div class="announcement-slide" data-index="5">
+          <span class="announcement-text">✨ <strong>2 Days Free Demo Classes</strong> • Experience the Learning Before You Enroll.</span>
+          <a href="#demo" onclick="if(typeof openDemoModal==='function'){openDemoModal();} return false;" class="announcement-cta">Book Free Demo →</a>
+        </div>
+
       </div>
 
       <!-- Next Control Button -->
@@ -781,6 +789,7 @@ function buildHeaderHTML(page) {
         <span class="dot" data-slide="2"></span>
         <span class="dot" data-slide="3"></span>
         <span class="dot" data-slide="4"></span>
+        <span class="dot" data-slide="5"></span>
       </div>
 
       <!-- Close Button -->
@@ -887,6 +896,7 @@ function buildFooterHTML() {
               <ul class="footer-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/courses.html">All Courses</a></li>
+                <li><a href="#demo" onclick="if(typeof openDemoModal==='function'){openDemoModal();} return false;">Book a Free Demo</a></li>
                 <li><a href="/blog.html">Blog</a></li>
                 <li><a href="/#placements">Placements</a></li>
                 <li><a href="/#mentors">Our Mentors</a></li>
@@ -2374,6 +2384,508 @@ function showEnrollError(msg) {
    MOBILE-ONLY REUSABLE SLIDER SYSTEM (≤768px)
    For Expert Faculty (.mentors-grid) & Student Stories (.testimonials-grid)
 ───────────────────────────────────────────── */
+
+/* ─────────────────────────────────────────────
+   GLOBAL 2-DAY FREE DEMO BOOKING SYSTEM
+   Provides shared modal, eligibility checking, CRM dispatch and zero-PII tracking.
+───────────────────────────────────────────── */
+
+function isCourseDemoEligible(course) {
+  if (!course) return false;
+  if (typeof course.demo_available === 'boolean') return course.demo_available;
+  const type = (course.course_type || course.type || course.programLevel || '').toUpperCase();
+  if (['MASTER', 'PROFESSIONAL', 'SPECIALIZATION', 'FOUNDATION', 'CAREER'].some(t => type.includes(t))) {
+    return true;
+  }
+  const price = typeof course.price === 'number' ? course.price : parseInt(String(course.price || '').replace(/\D/g, ''), 10) || 0;
+  if (price >= 12000) return true;
+  return false;
+}
+window.isCourseDemoEligible = isCourseDemoEligible;
+
+function injectDemoModalHTML() {
+  if (document.getElementById('demo-booking-modal')) return;
+
+  const modal = document.createElement('div');
+  modal.id = 'demo-booking-modal';
+  modal.className = 'demo-modal-backdrop';
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-labelledby', 'demo-modal-title');
+  modal.hidden = true;
+
+  modal.innerHTML = `
+    <div class="demo-modal-dialog" role="document">
+      <button type="button" class="demo-modal-close" id="demo-modal-close" aria-label="Close modal">✕</button>
+
+      <div class="demo-modal-content">
+        <!-- Header -->
+        <div class="demo-modal-header">
+          <span class="demo-modal-badge">02 DAYS • 100% FREE</span>
+          <h2 id="demo-modal-title" class="demo-modal-title">
+            Book Your <span class="gradient-text">2-Day Free Demo</span>
+          </h2>
+          <p class="demo-modal-subtitle">
+            Experience our practical teaching approach, syllabus depth, and live interactive classes before you enroll.
+          </p>
+        </div>
+
+        <!-- Selected Context Banner (Shows if pre-selected) -->
+        <div id="demo-selected-context" class="demo-context-pill" style="display:none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>
+            <strong>Selected: </strong><span id="demo-context-text">Program</span>
+          </div>
+        </div>
+
+        <!-- Form View Container -->
+        <div id="demo-form-container">
+          <form id="demo-booking-form" class="demo-form" novalidate>
+            <input type="hidden" id="demo-course-id" name="courseId" value="" />
+            <input type="hidden" id="demo-course-name" name="courseName" value="" />
+            <input type="hidden" id="demo-academy-id" name="academyId" value="" />
+            <input type="hidden" id="demo-academy-name" name="academyName" value="" />
+
+            <div class="demo-form-fields">
+              <!-- Full Name (Required) -->
+              <div class="form-group" id="group-demo-name">
+                <label class="form-label" for="demo-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="demo-name" class="form-input" placeholder="Enter your full name" autocomplete="name" required />
+                <span class="field-error" id="demo-name-error" role="alert"></span>
+              </div>
+
+              <!-- Mobile Number (Required) -->
+              <div class="form-group" id="group-demo-phone">
+                <label class="form-label" for="demo-phone">Mobile Number <span class="req">*</span></label>
+                <div class="phone-input-wrap">
+                  <span class="phone-prefix">+91</span>
+                  <input type="tel" id="demo-phone" class="form-input phone-input" placeholder="10-digit mobile number" inputmode="numeric" maxlength="10" autocomplete="tel-national" required />
+                </div>
+                <span class="field-error" id="demo-phone-error" role="alert"></span>
+              </div>
+
+              <!-- Course Selection (Required) -->
+              <div class="form-group" id="group-demo-course">
+                <label class="form-label" for="demo-course-select">Select Course for Free Demo <span class="req">*</span></label>
+                <select id="demo-course-select" class="form-input form-select" required>
+                  <option value="">-- Choose a Course --</option>
+                </select>
+                <span class="field-error" id="demo-course-error" role="alert"></span>
+              </div>
+
+              <!-- Preferred Session / Time Slot (Optional) -->
+              <div class="form-group" id="group-demo-slot">
+                <label class="form-label" for="demo-slot-select">Preferred Demo Slot <span class="opt">(Optional)</span></label>
+                <select id="demo-slot-select" class="form-input form-select">
+                  <option value="Flexible / Any Slot">Flexible / Any Available Slot</option>
+                  <option value="Morning Batch (10:00 AM - 1:00 PM)">Morning Batch (10:00 AM – 1:00 PM)</option>
+                  <option value="Afternoon Batch (2:00 PM - 5:00 PM)">Afternoon Batch (2:00 PM – 5:00 PM)</option>
+                  <option value="Evening Batch (6:00 PM - 9:00 PM)">Evening Batch (6:00 PM – 9:00 PM)</option>
+                  <option value="Weekend Special Batch">Weekend Special Batch</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="demo-form-error" class="enroll-error-msg" hidden role="alert"></div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-submit-demo" id="demo-submit-btn">
+              <span id="demo-btn-text">Request Free Demo →</span>
+            </button>
+
+            <p class="enroll-privacy-notice" style="margin-top:12px; font-size:0.75rem; color:rgba(255,255,255,0.65); text-align:center;">
+              🔒 Your details are kept confidential and used solely by admissions to schedule your free demo sessions.
+            </p>
+          </form>
+        </div>
+
+        <!-- Success View Container -->
+        <div id="demo-success-container" class="demo-success-view" hidden>
+          <div class="success-icon-badge">🎓</div>
+          <h3 class="success-title">Your Free Demo Request Has Been Submitted</h3>
+          <p class="success-desc">
+            Our admissions team will contact you with available session details, schedule timings, and syllabus materials.
+          </p>
+          <div class="success-actions">
+            <a href="/courses.html" class="btn btn-primary btn-lg">Browse More Courses</a>
+            <button type="button" class="btn btn-outline btn-lg" id="demo-success-close-btn" style="color:white; border-color:rgba(255,255,255,0.4);">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  // Bind close handlers
+  document.getElementById('demo-modal-close')?.addEventListener('click', closeDemoModal);
+  document.getElementById('demo-success-close-btn')?.addEventListener('click', closeDemoModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeDemoModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) {
+      closeDemoModal();
+    }
+  });
+
+  // Clear errors dynamically on input
+  ['demo-name', 'demo-phone', 'demo-course-select'].forEach(id => {
+    const el = document.getElementById(id);
+    el?.addEventListener('input', () => {
+      el.classList.remove('has-error');
+      el.removeAttribute('aria-invalid');
+      const errSpan = document.getElementById(id.replace('-select', '') + '-error');
+      if (errSpan) errSpan.textContent = '';
+    });
+    el?.addEventListener('change', () => {
+      el.classList.remove('has-error');
+      el.removeAttribute('aria-invalid');
+      const errSpan = document.getElementById(id.replace('-select', '') + '-error');
+      if (errSpan) errSpan.textContent = '';
+    });
+  });
+
+  // Bind form submit
+  document.getElementById('demo-booking-form')?.addEventListener('submit', handleDemoSubmit);
+}
+window.injectDemoModalHTML = injectDemoModalHTML;
+
+function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselectedCourseName) {
+  const select = document.getElementById('demo-course-select');
+  if (!select) return;
+
+  const coursesList = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+    ? NS_COURSES
+    : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []);
+
+  select.innerHTML = '<option value="">-- Choose a Course --</option>';
+
+  // Group by academy
+  const grouped = {};
+  coursesList.forEach(c => {
+    const acadName = c.academy || 'Nova Skills Academy';
+    const acadId = c.academyId || '';
+    if (filterAcademyId && acadId !== filterAcademyId) {
+      return;
+    }
+    if (!grouped[acadName]) grouped[acadName] = [];
+    grouped[acadName].push(c);
+  });
+
+  // If filtered but empty, fallback to all courses
+  if (Object.keys(grouped).length === 0) {
+    coursesList.forEach(c => {
+      const acadName = c.academy || 'Nova Skills Academy';
+      if (!grouped[acadName]) grouped[acadName] = [];
+      grouped[acadName].push(c);
+    });
+  }
+
+  let foundMatch = false;
+  Object.keys(grouped).forEach(acad => {
+    const optgroup = document.createElement('optgroup');
+    optgroup.label = acad;
+    grouped[acad].forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c.name;
+      opt.dataset.id = c.id;
+      opt.dataset.academy = c.academy;
+      opt.dataset.academyId = c.academyId;
+      opt.textContent = c.name + (isCourseDemoEligible(c) ? ' ★' : '');
+      if (preselectedCourseId && (c.id === preselectedCourseId || c.slug === preselectedCourseId)) {
+        opt.selected = true;
+        foundMatch = true;
+      } else if (!foundMatch && preselectedCourseName && c.name.toLowerCase() === preselectedCourseName.toLowerCase()) {
+        opt.selected = true;
+        foundMatch = true;
+      }
+      optgroup.appendChild(opt);
+    });
+    select.appendChild(optgroup);
+  });
+
+  // If explicit course wasn't in list but name is provided, add it
+  if (!foundMatch && preselectedCourseName) {
+    const opt = document.createElement('option');
+    opt.value = preselectedCourseName;
+    opt.dataset.id = preselectedCourseId || '';
+    opt.textContent = preselectedCourseName;
+    opt.selected = true;
+    select.prepend(opt);
+  }
+}
+
+function openDemoModal(arg1, arg2, arg3) {
+  injectDemoModalHTML();
+
+  window._lastActiveDemoTrigger = document.activeElement;
+
+  let courseId = '';
+  let courseName = '';
+  let academyId = '';
+  let academyName = '';
+
+  if (typeof arg1 === 'object' && arg1 !== null) {
+    courseId = arg1.courseId || arg1.id || '';
+    courseName = arg1.courseName || arg1.name || arg1.title || '';
+    academyId = arg1.academyId || '';
+    academyName = arg1.academyName || arg1.academy || '';
+  } else {
+    courseName = typeof arg1 === 'string' ? arg1 : '';
+    academyName = typeof arg2 === 'string' ? arg2 : '';
+    courseId = typeof arg3 === 'string' ? arg3 : '';
+  }
+
+  const modal = document.getElementById('demo-booking-modal');
+  const contextDiv = document.getElementById('demo-selected-context');
+  const contextText = document.getElementById('demo-context-text');
+  const courseIdInput = document.getElementById('demo-course-id');
+  const courseNameInput = document.getElementById('demo-course-name');
+  const academyIdInput = document.getElementById('demo-academy-id');
+  const academyNameInput = document.getElementById('demo-academy-name');
+  const formContainer = document.getElementById('demo-form-container');
+  const successContainer = document.getElementById('demo-success-container');
+  const errDiv = document.getElementById('demo-form-error');
+
+  // Populate course dropdown with relevant context
+  populateDemoCourseSelect(academyId, courseId, courseName);
+
+  if (courseIdInput) courseIdInput.value = courseId;
+  if (courseNameInput) courseNameInput.value = courseName;
+  if (academyIdInput) academyIdInput.value = academyId;
+  if (academyNameInput) academyNameInput.value = academyName;
+
+  // Show context badge if course or academy specified
+  if (contextDiv && contextText) {
+    if (courseName) {
+      contextText.textContent = courseName + (academyName ? ' (' + academyName + ')' : '');
+      contextDiv.style.display = 'flex';
+    } else if (academyName) {
+      contextText.textContent = academyName + ' (Select a program below)';
+      contextDiv.style.display = 'flex';
+    } else {
+      contextDiv.style.display = 'none';
+    }
+  }
+
+  // Clear errors and reset view
+  clearAllDemoFieldErrors();
+  if (errDiv) {
+    errDiv.textContent = '';
+    errDiv.setAttribute('hidden', '');
+  }
+  if (formContainer) formContainer.removeAttribute('hidden');
+  if (successContainer) successContainer.setAttribute('hidden', '');
+
+  // Reset inputs
+  const nameInput = document.getElementById('demo-name');
+  const phoneInput = document.getElementById('demo-phone');
+  if (nameInput) nameInput.value = '';
+  if (phoneInput) phoneInput.value = '';
+
+  // Fire GA4 Event: demo_form_open (zero PII)
+  sendGA4Event('demo_form_open', {
+    course_name: courseName || 'General',
+    academy_name: academyName || 'General',
+    page_path: window.location.pathname
+  });
+
+  // Hide floating widgets
+  document.body.classList.add('modal-open-hide-widgets');
+
+  if (modal) {
+    modal.hidden = false;
+    requestAnimationFrame(() => modal.classList.add('open'));
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      document.getElementById('demo-name')?.focus();
+    }, 60);
+  }
+}
+window.openDemoModal = openDemoModal;
+window.openFreeDemoModal = openDemoModal;
+
+function closeDemoModal() {
+  const modal = document.getElementById('demo-booking-modal');
+  document.body.classList.remove('modal-open-hide-widgets');
+
+  if (modal) {
+    modal.classList.remove('open');
+    setTimeout(() => {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (window._lastActiveDemoTrigger && typeof window._lastActiveDemoTrigger.focus === 'function') {
+        window._lastActiveDemoTrigger.focus();
+      }
+    }, 280);
+  }
+}
+window.closeDemoModal = closeDemoModal;
+
+function showDemoFieldError(fieldId, errorMsg) {
+  const input = document.getElementById(fieldId);
+  const errSpan = document.getElementById(fieldId.replace('-select', '') + '-error');
+  if (input) {
+    input.classList.add('has-error');
+    input.setAttribute('aria-invalid', 'true');
+  }
+  if (errSpan) {
+    errSpan.textContent = errorMsg;
+  }
+}
+
+function clearAllDemoFieldErrors() {
+  document.querySelectorAll('.demo-modal-dialog .form-input').forEach(input => {
+    input.classList.remove('has-error');
+    input.removeAttribute('aria-invalid');
+  });
+  document.querySelectorAll('.demo-modal-dialog .field-error').forEach(span => {
+    span.textContent = '';
+  });
+}
+
+async function handleDemoSubmit(e) {
+  e.preventDefault();
+
+  const form = document.getElementById('demo-booking-form');
+  const errDiv = document.getElementById('demo-form-error');
+  const formContainer = document.getElementById('demo-form-container');
+  const successContainer = document.getElementById('demo-success-container');
+  const submitBtn = document.getElementById('demo-submit-btn');
+
+  clearAllDemoFieldErrors();
+  if (errDiv) {
+    errDiv.textContent = '';
+    errDiv.setAttribute('hidden', '');
+  }
+
+  const nameInput = document.getElementById('demo-name');
+  const phoneInput = document.getElementById('demo-phone');
+  const courseSelect = document.getElementById('demo-course-select');
+  const slotSelect = document.getElementById('demo-slot-select');
+
+  const name = nameInput?.value.trim() || '';
+  const rawPhone = phoneInput?.value.trim() || '';
+  const selectedCourse = courseSelect?.value.trim() || '';
+  const preferredSlot = slotSelect?.value || 'Flexible';
+
+  let hasError = false;
+
+  // 1. Full Name validation (Required, min 2 chars)
+  if (!name || name.length < 2) {
+    showDemoFieldError('demo-name', 'Please enter your full name.');
+    hasError = true;
+  }
+
+  // 2. Mobile validation (Required Indian 10-digit number)
+  let cleanPhone = rawPhone.replace(/\D/g, '');
+  if (cleanPhone.length === 12 && cleanPhone.startsWith('91')) {
+    cleanPhone = cleanPhone.slice(2);
+  } else if (cleanPhone.length === 11 && cleanPhone.startsWith('0')) {
+    cleanPhone = cleanPhone.slice(1);
+  }
+
+  if (!cleanPhone || !/^[6-9]\d{9}$/.test(cleanPhone)) {
+    showDemoFieldError('demo-phone', 'Please enter a valid 10-digit Indian mobile number.');
+    hasError = true;
+  }
+
+  // 3. Course selection validation (Required)
+  if (!selectedCourse) {
+    showDemoFieldError('demo-course-select', 'Please select a course for your free demo.');
+    hasError = true;
+  }
+
+  if (hasError) {
+    // Fire GA4 error event (zero PII)
+    sendGA4Event('demo_form_error', {
+      error_type: 'validation_error',
+      page_path: window.location.pathname
+    });
+    const firstInvalid = form.querySelector('.form-input.has-error');
+    if (firstInvalid) firstInvalid.focus();
+    return;
+  }
+
+  // Fire GA4 submit event (zero PII)
+  sendGA4Event('demo_form_submit', {
+    course_name: selectedCourse,
+    preferred_slot: preferredSlot,
+    page_path: window.location.pathname
+  });
+
+  const selectedOpt = courseSelect?.selectedOptions?.[0];
+  const academyName = selectedOpt?.dataset?.academy || document.getElementById('demo-academy-name')?.value || '';
+  const courseId = selectedOpt?.dataset?.id || document.getElementById('demo-course-id')?.value || '';
+
+  const demoNotes = [
+    'LEAD TYPE: 2-Day Free Demo Request',
+    `Preferred Slot: ${preferredSlot}`,
+    academyName ? `Academy: ${academyName}` : '',
+    courseId ? `Course ID: ${courseId}` : ''
+  ].filter(Boolean).join(' | ');
+
+  const success = await submitNovaForm({
+    form,
+    submitBtn,
+    loadingText: 'Requesting Demo...',
+    formName: 'demo_booking',
+    submissionMethod: 'demo_modal',
+    data: {
+      name,
+      mobile: cleanPhone,
+      phone: cleanPhone,
+      course: `[FREE DEMO] ${selectedCourse}`,
+      message: demoNotes
+    },
+    onSuccessCallback: () => {
+      // Store in local CRM demo queue
+      const leadData = {
+        action: '2-Day Free Demo Request',
+        leadType: 'demo_booking',
+        timestamp: new Date().toISOString(),
+        name,
+        phone: cleanPhone,
+        course: selectedCourse,
+        courseId,
+        academyName,
+        preferredSlot,
+        message: demoNotes
+      };
+      try {
+        const existing = JSON.parse(localStorage.getItem('novaskills_demo_requests') || '[]');
+        existing.unshift(leadData);
+        localStorage.setItem('novaskills_demo_requests', JSON.stringify(existing));
+      } catch (err) {
+        console.warn('[Demo CRM LocalStorage Warning]:', err);
+      }
+
+      // Fire GA4 success event (zero PII)
+      sendGA4Event('demo_form_success', {
+        course_name: selectedCourse,
+        preferred_slot: preferredSlot,
+        lead_type: 'demo_booking',
+        page_path: window.location.pathname
+      });
+
+      // Show success view
+      if (formContainer) formContainer.setAttribute('hidden', '');
+      if (successContainer) successContainer.removeAttribute('hidden');
+    }
+  });
+
+  if (!success) {
+    if (errDiv) {
+      errDiv.textContent = 'Unable to submit demo request right now. Please check your network or call admissions directly.';
+      errDiv.removeAttribute('hidden');
+    }
+  }
+}
+
 function createMobileSlider(trackEl) {
   if (!trackEl || trackEl.dataset.sliderInitialized === 'true') return;
   const cards = Array.from(trackEl.children);

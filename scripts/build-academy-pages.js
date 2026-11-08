@@ -1,3 +1,16 @@
+
+function isCourseDemoEligible(course) {
+  if (!course) return false;
+  if (typeof course.demo_available === 'boolean') return course.demo_available;
+  const type = (course.course_type || course.type || course.programLevel || '').toUpperCase();
+  if (['MASTER', 'PROFESSIONAL', 'SPECIALIZATION', 'FOUNDATION', 'CAREER'].some(t => type.includes(t))) {
+    return true;
+  }
+  const price = typeof course.price === 'number' ? course.price : parseInt(String(course.price || '').replace(/\D/g, ''), 10) || 0;
+  if (price >= 12000) return true;
+  return false;
+}
+
 function escapeHTML(str) {
   if (typeof str !== 'string') return String(str || '');
   return str
@@ -206,6 +219,13 @@ function buildCourseCardHTML(course, extraClass = '') {
           <span class="feature-item">⭐ ${rating} (${reviews})</span>
         </div>
         <div class="course-footer course-footer-stack">
+          ${isCourseDemoEligible(course) ? `
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'${safeId}', courseName:'${safeName}', academyName:'${safeAcademy}'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>` : ''}
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹${(course.price || 0).toLocaleString('en-IN')}</span>
@@ -827,6 +847,41 @@ ${JSON.stringify(schemaGraph, null, 2)}
         <div class="academy-actions" style="display:flex; gap:12px; flex-wrap:wrap;">
           <button id="btn-enroll-now" class="btn btn-primary btn-lg" onclick="openEnrollmentModal('', '${(acad.name || '').replace(/'/g, "\\'")}')">Enroll Now →</button>
           <button id="btn-free-consultation" class="btn btn-outline btn-lg" style="color:white; border-color:rgba(255,255,255,0.4);" onclick="openConsultationPopup()">Free Consultation</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compact Promotional Band: 2-Day Free Demo & 1:1 Live Online Classes -->
+    <section class="academy-demo-strip" aria-label="Free Demo and Personalized Online Classes">
+      <div class="container academy-demo-strip-container">
+        <div class="academy-demo-lead">
+          <span class="academy-demo-badge">Experience Before You Enroll</span>
+          <h2 class="academy-demo-heading">Experience the Learning Before You Enroll.</h2>
+        </div>
+        <div class="academy-demo-benefits">
+          <div class="academy-demo-benefit">
+            <div class="academy-demo-benefit-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+            </div>
+            <div class="academy-demo-benefit-text">
+              <strong>2 Days Free Demo Classes</strong>
+              <span>Live mentor sessions • 100% Free</span>
+            </div>
+          </div>
+          <div class="academy-demo-benefit">
+            <div class="academy-demo-benefit-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg>
+            </div>
+            <div class="academy-demo-benefit-text">
+              <strong>1:1 Live Online Classes</strong>
+              <span>Where available • Focused attention</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="academy-demo-btn" onclick="if(typeof openDemoModal==='function'){openDemoModal({academyId:'${slug}', academyName:'${(acad.name || '').replace(/'/g, "\\'")}'});}">
+            Book Your Free Demo →
+          </button>
         </div>
       </div>
     </section>

@@ -428,6 +428,13 @@ function buildCourseCardHTML(course, extraClass = '') {
           <span class="feature-item">⭐ ${rating} (${reviews})</span>
         </div>
         <div class="course-footer course-footer-stack">
+          ${(typeof isCourseDemoEligible === 'function' ? isCourseDemoEligible(course) : true) ? `
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'${safeId}', courseName:'${safeName}', academyName:'${safeAcademy}'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>` : ''}
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹${(course.price || 0).toLocaleString('en-IN')}</span>

@@ -481,8 +481,27 @@
             </div>
 
             <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options available · 18% GST included</p>
+            <!-- Compact Demo & 1:1 Benefits Area -->
+            <div class="detail-demo-benefit-box" id="detail-demo-box">
+              <div class="demo-benefit-item">
+                <svg class="demo-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+                <div class="demo-benefit-text">
+                  <strong>2 Days Free Demo Classes</strong>
+                  <span>Experience our teaching approach before enrolling.</span>
+                </div>
+              </div>
+              <div class="demo-benefit-item" id="detail-1to1-item">
+                <svg class="demo-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg>
+                <div class="demo-benefit-text">
+                  <strong>1:1 Live Online Classes</strong>
+                  <span>Personalized online instruction available.</span>
+                </div>
+              </div>
+            </div>
 
             <button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('Notion — Workspace, Databases & Knowledge Systems', 'Office Productivity Academy', '5 Weeks', '₹5,900', 'notion-cert')">Enroll Now — Book Seat →</button>
+
+            <button type="button" class="btn-book-demo-secondary" id="btn-detail-book-demo" onclick="openDemoModal({courseId:'notion-cert',courseName:'Notion — Workspace, Databases & Knowledge Systems',academyName:'Office Productivity Academy'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg> Book Free Demo</button>
 
             <button class="btn-consult-full" onclick="openConsultationPopup('Notion — Workspace, Databases & Knowledge Systems')">📞 Request Callback / Syllabus</button>
 
@@ -1559,6 +1578,12 @@
         <p class="course-desc">Develop professional MIS and business intelligence skills using Advanced Excel, Power Query, SQL, Power BI, DAX, reporting automation and executive business presentations. Learn to clean operational data, define KPIs, build accurate dashboards, automate recurring reporting and communicate decision-ready insights. Advanced AI and governed MCP workflows are introduced where compatible access and institutional security controls are available.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">Microsoft Excel for Microsoft 365</span> <span class="tool-tag">Power Query</span> <span class="tool-tag">Power Pivot</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'biz-productivity', courseName:'MIS & Business Intelligence Professional', academyName:'Office Productivity Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹29,900</span>
@@ -1592,6 +1617,12 @@
         <p class="course-desc">Develop practical digital workplace skills with Microsoft Word, Excel, PowerPoint, Outlook, Teams, OneDrive and Google Workspace. Learn to create professional documents, build accurate spreadsheet reports, design presentations, manage emails and schedules, coordinate meetings and collaborate securely. Explore responsible AI-assisted productivity while demonstrating independent software skills through a complete Office Administration Toolkit.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">Microsoft Excel for Microsoft 365</span> <span class="tool-tag">Microsoft Word for Microsoft 365</span> <span class="tool-tag">Microsoft PowerPoint</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'office-pro', courseName:'Office Productivity Professional', academyName:'Office Productivity Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹15,900</span>
@@ -1625,6 +1656,12 @@
         <p class="course-desc">Learn Microsoft Excel through real business tasks, formulas, data cleaning, PivotTables, charts and practical reporting. Build professional spreadsheets for sales, attendance, inventory and expense analysis while developing accuracy, troubleshooting and responsible AI-assisted working habits.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">Microsoft Excel for Microsoft 365</span> <span class="tool-tag">Power Query (Introductory)</span> <span class="tool-tag">Microsoft Copilot in Excel (Optional)</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'microsoft-excel', courseName:'Microsoft Excel — Business Reporting & Data Analysis', academyName:'Office Productivity Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹6,900</span>

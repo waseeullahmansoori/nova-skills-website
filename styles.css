@@ -7554,3 +7554,459 @@ body.filter-sheet-open #nova-ai-widget-container {
     padding-bottom: 96px !important;
   }
 }
+
+
+/* ─────────────────────────────────────────────
+   GLOBAL FREE DEMO & 1:1 ONLINE LEARNING SYSTEM
+───────────────────────────────────────────── */
+
+/* 1. Shared Free Demo Modal */
+.demo-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: rgba(1, 23, 49, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.demo-modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.demo-modal-dialog {
+  background: #011731;
+  border: 1px solid rgba(5, 153, 168, 0.35);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65), 0 0 40px rgba(5, 153, 168, 0.15);
+  position: relative;
+  color: #FFFFFF;
+  padding: 32px 28px;
+  box-sizing: border-box;
+  transform: translateY(20px) scale(0.98);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.demo-modal-backdrop.open .demo-modal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.demo-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.demo-modal-close:hover,
+.demo-modal-close:focus-visible {
+  background: rgba(239, 127, 26, 0.3);
+  border-color: #EF7F1A;
+  transform: rotate(90deg);
+  outline: none;
+}
+
+.demo-modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(117, 215, 102, 0.15);
+  border: 1px solid rgba(117, 215, 102, 0.35);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #75d766;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.demo-modal-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+}
+
+.demo-modal-subtitle {
+  font-size: 0.9rem;
+  color: rgba(234, 243, 248, 0.85);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.demo-context-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(5, 153, 168, 0.12);
+  border: 1px solid rgba(5, 153, 168, 0.3);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+}
+
+.demo-context-pill strong {
+  color: #75d766;
+}
+
+.demo-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.demo-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.demo-form .form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #EAF3F8;
+}
+
+.demo-form .form-label .req {
+  color: #FF6B00;
+}
+
+.demo-form .form-label .opt {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.78rem;
+}
+
+.demo-form .form-input {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.demo-form .form-input:focus {
+  border-color: #0599a8;
+  box-shadow: 0 0 0 3px rgba(5, 153, 168, 0.25);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.demo-form .form-select option {
+  background: #011731;
+  color: #FFFFFF;
+}
+
+.demo-form .form-input.has-error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25);
+}
+
+.demo-form .field-error {
+  color: #f87171;
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
+.btn-submit-demo {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0599a8 0%, #75d766 100%);
+  color: #011731;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-submit-demo:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+}
+
+.demo-success-view {
+  text-align: center;
+  padding: 24px 12px;
+}
+
+.demo-success-view .success-icon-badge {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.demo-success-view .success-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.demo-success-view .success-desc {
+  font-size: 0.95rem;
+  color: rgba(234, 243, 248, 0.85);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.demo-success-view .success-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 2. Catalogue Card Demo Indicator */
+.course-demo-indicator {
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.course-demo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(5, 153, 168, 0.08);
+  border: 1px solid rgba(5, 153, 168, 0.25);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #004672;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  line-height: 1.3;
+}
+
+.course-demo-chip:hover,
+.course-demo-chip:focus-visible {
+  background: rgba(5, 153, 168, 0.16);
+  border-color: #0599a8;
+  color: #012B46;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.course-demo-chip svg {
+  color: #0599a8;
+  flex-shrink: 0;
+}
+
+/* 3. Academy Landing Page Promotional Band */
+.academy-demo-strip {
+  background: linear-gradient(135deg, #EAF3F8 0%, #FFFFFF 100%);
+  border-bottom: 1px solid #d0e2ee;
+  border-top: 1px solid rgba(5, 153, 168, 0.2);
+  padding: 24px 0;
+  color: #011731;
+}
+
+.academy-demo-strip-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.academy-demo-lead {
+  max-width: 420px;
+}
+
+.academy-demo-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #004672;
+  background: rgba(0, 70, 114, 0.08);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.academy-demo-heading {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #012B46;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.academy-demo-benefits {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.academy-demo-benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.academy-demo-benefit-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(5, 153, 168, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0599a8;
+  flex-shrink: 0;
+}
+
+.academy-demo-benefit-text strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #011731;
+  line-height: 1.2;
+}
+
+.academy-demo-benefit-text span {
+  font-size: 0.75rem;
+  color: #475569;
+  line-height: 1.2;
+}
+
+.academy-demo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #012B46 0%, #004672 100%);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.academy-demo-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(1, 43, 70, 0.25);
+}
+
+/* 4. Course Detail Page Demo Box */
+.detail-demo-benefit-box {
+  background: rgba(234, 243, 248, 0.7);
+  border: 1px solid rgba(5, 153, 168, 0.25);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.demo-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.demo-benefit-icon {
+  width: 22px;
+  height: 22px;
+  color: #0599a8;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.demo-benefit-text strong {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #012B46;
+  line-height: 1.25;
+}
+
+.demo-benefit-text span {
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.3;
+}
+
+.btn-book-demo-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px;
+  background: transparent;
+  color: #004672;
+  border: 1.5px solid #004672;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-book-demo-secondary:hover {
+  background: rgba(0, 70, 114, 0.08);
+  border-color: #012B46;
+  color: #012B46;
+}
+
+@media (max-width: 768px) {
+  .academy-demo-strip-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .academy-demo-benefits {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+  .academy-demo-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

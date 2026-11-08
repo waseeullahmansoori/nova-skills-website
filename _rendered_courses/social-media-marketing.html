@@ -345,8 +345,27 @@
             </div>
 
             <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options available · 18% GST included</p>
+            <!-- Compact Demo & 1:1 Benefits Area -->
+            <div class="detail-demo-benefit-box" id="detail-demo-box">
+              <div class="demo-benefit-item">
+                <svg class="demo-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+                <div class="demo-benefit-text">
+                  <strong>2 Days Free Demo Classes</strong>
+                  <span>Experience our teaching approach before enrolling.</span>
+                </div>
+              </div>
+              <div class="demo-benefit-item" id="detail-1to1-item">
+                <svg class="demo-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg>
+                <div class="demo-benefit-text">
+                  <strong>1:1 Live Online Classes</strong>
+                  <span>Personalized online instruction available.</span>
+                </div>
+              </div>
+            </div>
 
             <button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('Social Media Marketing & Growth', 'Digital Marketing Academy', '6 Weeks', '₹6,900', 'social-media-marketing')">Enroll Now — Book Seat →</button>
+
+            <button type="button" class="btn-book-demo-secondary" id="btn-detail-book-demo" onclick="openDemoModal({courseId:'social-media-marketing',courseName:'Social Media Marketing & Growth',academyName:'Digital Marketing Academy'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg> Book Free Demo</button>
 
             <button class="btn-consult-full" onclick="openConsultationPopup('Social Media Marketing & Growth')">📞 Request Callback / Syllabus</button>
 
@@ -1729,6 +1748,12 @@
         <p class="course-desc">Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">Google Ads</span> <span class="tool-tag">Meta Ads Manager</span> <span class="tool-tag">Google Analytics 4</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'dm-mastery', courseName:'AI Digital Marketing Strategist', academyName:'Digital Marketing Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹44,900</span>
@@ -1762,6 +1787,12 @@
         <p class="course-desc">Intensive 3-month program focused on independent execution of foundational digital marketing campaigns across search, social, web, and analytics using appropriate AI assistance.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">Google Ads</span> <span class="tool-tag">Meta Ads Manager</span> <span class="tool-tag">Google Analytics 4</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'dm-professional', courseName:'AI Digital Marketing Specialist', academyName:'Digital Marketing Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹24,900</span>
@@ -1795,6 +1826,12 @@
         <p class="course-desc">Specialized 4-month practical training in Google Ads, Meta Ads, conversion measurement, tracking engineering, campaign optimization, and data-driven acquisition.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">Google Ads</span> <span class="tool-tag">Google Ads Editor</span> <span class="tool-tag">Google Ads Data Manager</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'performance-marketing-specialist', courseName:'Performance Marketing Specialist', academyName:'Digital Marketing Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹34,900</span>

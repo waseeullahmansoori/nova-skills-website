@@ -540,8 +540,27 @@
             </div>
 
             <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options available · 18% GST included</p>
+            <!-- Compact Demo & 1:1 Benefits Area -->
+            <div class="detail-demo-benefit-box" id="detail-demo-box">
+              <div class="demo-benefit-item">
+                <svg class="demo-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+                <div class="demo-benefit-text">
+                  <strong>2 Days Free Demo Classes</strong>
+                  <span>Experience our teaching approach before enrolling.</span>
+                </div>
+              </div>
+              <div class="demo-benefit-item" id="detail-1to1-item">
+                <svg class="demo-benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg>
+                <div class="demo-benefit-text">
+                  <strong>1:1 Live Online Classes</strong>
+                  <span>Personalized online instruction available.</span>
+                </div>
+              </div>
+            </div>
 
             <button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('Business English & Personality Development', 'Communication Academy', '6 Months', '₹29,900', 'business-english')">Enroll Now — Book Seat →</button>
+
+            <button type="button" class="btn-book-demo-secondary" id="btn-detail-book-demo" onclick="openDemoModal({courseId:'business-english',courseName:'Business English & Personality Development',academyName:'Communication Academy'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg> Book Free Demo</button>
 
             <button class="btn-consult-full" onclick="openConsultationPopup('Business English & Personality Development')">📞 Request Callback / Syllabus</button>
 
@@ -4453,6 +4472,12 @@
         <p class="course-desc">A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">ChatGPT Voice</span> <span class="tool-tag">British Council LearnEnglish</span> <span class="tool-tag">Cambridge Dictionary</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'spoken-english-pro', courseName:'Professional Spoken English', academyName:'Communication Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹12,900</span>
@@ -4486,6 +4511,12 @@
         <p class="course-desc">Develop essential spoken English through interactive conversations, practical vocabulary, sentence construction, listening and pronunciation exercises. Practise real-life situations, receive personalized feedback and build a strong foundation for further English communication training.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">British Council LearnEnglish</span> <span class="tool-tag">Cambridge Dictionary</span> <span class="tool-tag">Voice Recorder (Smartphone / PC)</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'spoken-english-cert', courseName:'Spoken English Foundations & Everyday Conversation', academyName:'Communication Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹3,900</span>
@@ -4519,6 +4550,12 @@
         <p class="course-desc">Learn effective workplace communication through professional email writing, business messages, meeting participation, reports, stakeholder updates and appropriate use of AI writing assistance. Develop clear, concise and accurate communication skills for modern office and business environments.</p>
         <div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list"><span class="tool-tag">Google Docs / Microsoft Word</span> <span class="tool-tag">Gmail / Microsoft Outlook</span> <span class="tool-tag">Microsoft Teams / Google Meet</span></div></div>
         <div class="course-footer course-footer-stack">
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'business-communication', courseName:'Business Communication & Workplace Writing', academyName:'Communication Academy'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹4,900</span>

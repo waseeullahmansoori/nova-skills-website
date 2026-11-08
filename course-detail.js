@@ -476,6 +476,20 @@ function bindCourseCtas(course) {
     };
   }
 
+  const demoBtn = document.querySelector('#btn-detail-book-demo');
+  if (demoBtn) {
+    demoBtn.onclick = () => {
+      if (typeof openDemoModal === 'function') {
+        openDemoModal({
+          courseId: course.id,
+          courseName: course.name,
+          academyName: course.academy,
+          academyId: course.academyId
+        });
+      }
+    };
+  }
+
   const consultBtn = document.querySelector('.btn-consult-full');
   if (consultBtn) {
     consultBtn.onclick = () => {
@@ -1811,6 +1825,13 @@ function renderRelatedCourses(currentCourse) {
         <p class="course-desc">${escapeHTML(c.shortDesc || '')}</p>
         ${relToolsHtml}
         <div class="course-footer course-footer-stack">
+          ${(typeof isCourseDemoEligible === 'function' ? isCourseDemoEligible(c) : true) ? `
+          <div class="course-demo-indicator">
+            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'${c.id}', courseName:'${relSafeName}', academyName:'${relSafeAcademy}'});}">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              2-Day Free Demo Available
+            </button>
+          </div>` : ''}
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹${(c.price || 0).toLocaleString('en-IN')}</span>
