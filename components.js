@@ -1986,16 +1986,74 @@ const COURSE_CATALOG_METADATA = {
   'AI Digital Marketing Mastery': { academy: 'Digital Marketing Academy', duration: '6 Months', fee: '₹44,999', category: 'digital-marketing' }
 };
 
-function openEnrollmentModal(courseName, academyName, optionalDuration, optionalFee, optionalId) {
+const COURSE_ID_ALIASES = {
+  'digital-marketing-pro': 'ecommerce-growth-marketing-specialist',
+  'perf-marketing-pro': 'performance-marketing-specialist',
+  'dm-master': 'dm-mastery',
+  'full-stack': 'fullstack-foundation',
+  'design-mastery': 'creative-design',
+  'video-editing': 'video-pro',
+  'digital-marketing': 'dm-mastery',
+  'ai-master': 'ai-mastery',
+  'python-dev': 'python-developer',
+  'ai-web-dev-pro': 'ai-assisted-full-stack-web-development',
+  'prompt-engineering-mastery': 'prompt-engineering',
+  'freelance-agency-master': 'agency-building',
+  'freelance-agency-mastery': 'agency-building',
+  'freelance-mastery': 'freelancing-client-acquisition-professional',
+  'freelancing-mastery': 'freelancing-client-acquisition-professional',
+  'career-launch': 'career-launch-placement-readiness-professional',
+  'career-launch-program': 'career-launch-placement-readiness-professional',
+  'motion-mastery': 'ai-integrated-video-editing-motion-graphics-professional',
+  'ai-video-pro': 'generative-ai-video-production-professional'
+};
+
+function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
   injectEnrollmentModalHTML();
 
   // Save the currently active trigger element to restore focus on close
   window._lastActiveEnrollTrigger = document.activeElement;
 
-  const options = (typeof optionalDuration === 'object' && optionalDuration !== null) ? optionalDuration : {};
-  const explicitDuration = (typeof optionalDuration === 'string') ? optionalDuration : options.duration;
-  const explicitFee = optionalFee || options.fee;
-  const explicitId = optionalId || options.courseId;
+  let courseName = '';
+  let academyName = '';
+  let explicitDuration = '';
+  let explicitFee = '';
+  let explicitId = '';
+  let options = {};
+
+  if (typeof arg1 === 'object' && arg1 !== null) {
+    options = arg1;
+    explicitId = arg1.courseId || arg1.id || arg1.slug || '';
+    courseName = arg1.courseName || arg1.name || arg1.title || '';
+    academyName = arg1.academyName || arg1.academy || '';
+    explicitDuration = arg1.duration || '';
+    explicitFee = arg1.fee || arg1.price || '';
+  } else {
+    courseName = typeof arg1 === 'string' ? arg1 : '';
+    academyName = typeof arg2 === 'string' ? arg2 : '';
+    if (typeof arg3 === 'object' && arg3 !== null) {
+      options = arg3;
+      explicitDuration = arg3.duration || '';
+      explicitFee = arg3.fee || '';
+      explicitId = arg3.courseId || arg3.id || '';
+    } else {
+      explicitDuration = typeof arg3 === 'string' ? arg3 : '';
+      explicitFee = typeof arg4 === 'string' ? arg4 : '';
+      explicitId = typeof arg5 === 'string' ? arg5 : '';
+    }
+  }
+
+  // Resolve ID aliases
+  if (explicitId && COURSE_ID_ALIASES[explicitId]) {
+    explicitId = COURSE_ID_ALIASES[explicitId];
+  }
+
+  if (!explicitId && courseName) {
+    const rawTrimmed = String(courseName).toLowerCase().trim();
+    if (COURSE_ID_ALIASES[rawTrimmed]) {
+      explicitId = COURSE_ID_ALIASES[rawTrimmed];
+    }
+  }
 
   const modal = document.getElementById('course-enrollment-modal');
   const titleSpan = document.getElementById('enroll-course-title-span');
@@ -2013,6 +2071,7 @@ function openEnrollmentModal(courseName, academyName, optionalDuration, optional
   const errDiv = document.getElementById('enroll-form-error');
   const formContainer = document.getElementById('enroll-form-container');
   const successContainer = document.getElementById('enroll-success-container');
+  const submitBtn = document.getElementById('enroll-submit-btn');
 
   // Dynamic course resolution from authoritative NS_COURSES
   let found = null;
@@ -2022,11 +2081,11 @@ function openEnrollmentModal(courseName, academyName, optionalDuration, optional
 
   if (coursesList.length > 0) {
     if (explicitId) {
-      found = coursesList.find(c => c.id === explicitId);
+      found = coursesList.find(c => c.id === explicitId || c.slug === explicitId);
     }
     if (!found && courseName) {
       const cLower = String(courseName).toLowerCase().trim();
-      found = coursesList.find(c => (c.name && c.name.toLowerCase() === cLower) || c.id === cLower || c.slug === cLower);
+      found = coursesList.find(c => c.id === cLower || c.slug === cLower || (c.name && c.name.toLowerCase() === cLower));
     }
     if (!found && courseName) {
       // Clean em-dash / hyphen normalization
@@ -2041,8 +2100,8 @@ function openEnrollmentModal(courseName, academyName, optionalDuration, optional
   const meta = COURSE_CATALOG_METADATA[courseName] || {};
   const finalCourse = (found ? found.name : courseName) || 'Selected Course';
   const finalAcademy = (found ? found.academy : (academyName || meta.academy)) || 'Nova Skills Academy';
-  const finalDuration = explicitDuration || (found ? found.duration : (meta.duration || 'Flexible Duration'));
-  const finalFee = explicitFee || (found ? ('₹' + (found.price || 0).toLocaleString('en-IN')) : (meta.fee || 'Enquire for Fee'));
+  const finalDuration = (found ? found.duration : (explicitDuration || meta.duration)) || 'Flexible Duration';
+  const finalFee = (found ? ('₹' + (found.price || 0).toLocaleString('en-IN')) : (explicitFee || meta.fee)) || 'Enquire for Fee';
   const finalCategory = (found ? found.academyId : null) || meta.category || 'general';
 
   if (titleSpan) titleSpan.textContent = finalCourse;
@@ -2079,6 +2138,18 @@ function openEnrollmentModal(courseName, academyName, optionalDuration, optional
   if (durationInput) durationInput.value = finalDuration;
   if (feeInput) feeInput.value = finalFee;
 
+  // Reset input values to pristine state
+  const nameInput = document.getElementById('enroll-name');
+  const phoneInput = document.getElementById('enroll-phone');
+  const emailInput = document.getElementById('enroll-email');
+  const cityInput = document.getElementById('enroll-city');
+  const msgInput = document.getElementById('enroll-message');
+  if (nameInput) nameInput.value = '';
+  if (phoneInput) phoneInput.value = '';
+  if (emailInput) emailInput.value = '';
+  if (cityInput) cityInput.value = '';
+  if (msgInput) msgInput.value = '';
+
   clearAllFieldErrors();
   if (errDiv) {
     errDiv.textContent = '';
@@ -2086,6 +2157,11 @@ function openEnrollmentModal(courseName, academyName, optionalDuration, optional
   }
   if (formContainer) formContainer.removeAttribute('hidden');
   if (successContainer) successContainer.setAttribute('hidden', '');
+  if (submitBtn) {
+    submitBtn.removeAttribute('disabled');
+    const btnText = document.getElementById('enroll-btn-text');
+    if (btnText) btnText.textContent = 'Submit Enquiry →';
+  }
 
   // Hide floating widgets while modal is open
   document.body.classList.add('modal-open-hide-widgets');
@@ -2100,6 +2176,8 @@ function openEnrollmentModal(courseName, academyName, optionalDuration, optional
   }
 }
 window.openEnrollmentModal = openEnrollmentModal;
+window.openCourseEnrollModal = openEnrollmentModal;
+window.openCourseEnrollment = openEnrollmentModal;
 
 function closeEnrollmentModal() {
   const modal = document.getElementById('course-enrollment-modal');

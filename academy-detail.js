@@ -423,7 +423,7 @@ function buildCourseCardHTML(course, extraClass = '') {
           </div>
           <div style="display:flex; gap:10px; width:100%; margin-top:8px;">
             <a href="/course-detail.html?id=${course.id}" class="btn btn-outline btn-sm" style="flex:1; text-align:center; justify-content:center;">View Details</a>
-            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('${safeName}', '${safeAcademy}')">Enroll Now →</button>
+            <button type="button" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;" onclick="openEnrollmentModal('${safeName}', '${safeAcademy}', '${safeDuration}', '${safePrice}', '${safeId}')">Enroll Now →</button>
           </div>
         </div>
       </div>

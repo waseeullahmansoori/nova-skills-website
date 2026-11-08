@@ -131,7 +131,7 @@
 
             <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options available · 18% GST included</p>
 
-            <button class="btn btn-primary btn-enroll-full" onclick="openConsultationPopup()">
+            <button class="btn btn-primary btn-enroll-full" onclick="if(typeof openEnrollmentModal==='function'){const c=(typeof currentCourse!=='undefined'&&currentCourse)?currentCourse:(typeof course!=='undefined'?course:null);if(c)openEnrollmentModal(c.name,c.academy,c.duration,'₹'+(c.price?c.price.toLocaleString('en-IN'):''),c.id);else openEnrollmentModal();}">
               Enroll Now — Book Seat →
             </button>
 
@@ -508,7 +508,7 @@
       <span class="price-current" id="mobile-price"><span class="course-skeleton-dark" style="width:70px;">₹--,--</span></span>
       <span class="price-original" id="mobile-orig-price" style="display:none;"></span>
     </div>
-    <button class="btn btn-primary" onclick="openConsultationPopup()">Enroll Now →</button>
+    <button class="btn btn-primary" onclick="if(typeof openEnrollmentModal==='function'){const c=(typeof currentCourse!=='undefined'&&currentCourse)?currentCourse:(typeof course!=='undefined'?course:null);if(c)openEnrollmentModal(c.name,c.academy,c.duration,'₹'+(c.price?c.price.toLocaleString('en-IN'):''),c.id);else openEnrollmentModal();}">Enroll Now →</button>
   </div>
 
   <!-- Injected Footer -->

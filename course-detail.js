@@ -461,6 +461,7 @@ function hydratePrerenderedCourse(course) {
 
 /* Bind High-Conversion CTAs to pre-fill enrollment modal with course & academy */
 function bindCourseCtas(course) {
+  window.currentCourse = course;
   const safeFee = '₹' + (course.price ? course.price.toLocaleString('en-IN') : '');
   const enrollBtn = document.querySelector('.btn-enroll-full');
   if (enrollBtn) {
@@ -841,9 +842,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
 
         document.getElementById('btn-enroll-selected-path')?.addEventListener('click', (e) => {
           e.preventDefault();
-          if (typeof handleCourseEnrollment === 'function') {
-            handleCourseEnrollment();
-          } else if (typeof openEnrollmentModal === 'function') {
+          if (typeof openEnrollmentModal === 'function') {
             openEnrollmentModal(baseCourse.name, baseCourse.academy, {
               selectedPath: window.novaSelectedSpecialization,
               pathTitle: pathTitleMap[window.novaSelectedSpecialization] || '',
