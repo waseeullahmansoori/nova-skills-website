@@ -394,12 +394,20 @@ function buildCourseCardHTML(course, extraClass = '') {
   const reviews = course.reviews || 120;
   const normLevel = normalizeProgramLevel(course.programLevel || course.level);
 
+  const bannerIconHtml = (typeof NovaIcons !== 'undefined' && NovaIcons.renderCourseIcon)
+    ? NovaIcons.renderCourseIcon(course.icon || course)
+    : `<span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">${course.icon || '🎓'}</span>`;
+
+  const academyTagHtml = (typeof NovaIcons !== 'undefined' && NovaIcons.renderAcademyTagHtml)
+    ? NovaIcons.renderAcademyTagHtml(course.academyId || course.academy)
+    : `${course.academy || 'Academy'}`;
+
   return `
     <div class="course-card ${extraClass}" data-category="${course.academyId}" data-level="${normLevel}" data-title="${(course.name || '').replace(/"/g, '&quot;')}" data-desc="${(course.shortDesc || '').replace(/"/g, '&quot;')}">
       ${isFeatured ? '<span class="course-hot-tag">🔥 Popular</span>' : ''}
       <div class="course-thumbnail">
         <div class="course-thumb-bg" style="background:${course.color || 'linear-gradient(135deg, #0599a8, #011731)'}">
-          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">${course.icon || '🎓'}</span>
+          ${bannerIconHtml}
         </div>
         <div class="course-badge-overlay">
           <span class="course-level-badge">${normLevel || course.level || 'All Levels'}</span>
@@ -407,7 +415,10 @@ function buildCourseCardHTML(course, extraClass = '') {
         <div class="course-duration-badge">⏱️ ${course.duration || 'Flexible'}</div>
       </div>
       <div class="course-body">
-        <div class="course-academy-tag">${course.icon || '🎓'} ${course.academy || ''}</div>
+        <div class="course-meta-header">
+          <div class="course-academy-tag">${academyTagHtml}</div>
+          <span class="course-track-pill ${trackClass}">${progLevel}</span>
+        </div>
         <h3 class="course-title"><a href="/course-detail.html?id=${course.id}">${course.name}</a></h3>
         <p class="course-desc">${course.shortDesc || course.description || ''}</p>
         <div class="course-features">

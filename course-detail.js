@@ -295,7 +295,8 @@ function populateCourseDetail(course) {
 
   const tag = document.getElementById('detail-academy-tag');
   if (tag) {
-    tag.innerHTML = `<a href="${acadUrl}" style="color:inherit; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">${course.icon || '🎓'} ${course.academy || 'Academy'}</a>`;
+    const acadTagHtml = (typeof NovaIcons !== 'undefined' && NovaIcons.renderAcademyTagHtml) ? NovaIcons.renderAcademyTagHtml(course.academyId || course.academy) : `${course.academy || 'Academy'}`;
+    tag.innerHTML = `<a href="${acadUrl}" style="color:inherit; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">${acadTagHtml}</a>`;
   }
 
   const title = document.getElementById('detail-title');
@@ -333,7 +334,8 @@ function populateCourseDetail(course) {
   const thumb = document.getElementById('detail-card-thumb');
   if (thumb) {
     thumb.style.background = course.color || 'var(--grad-hero)';
-    thumb.innerHTML = `<span style="font-size:4rem; filter:drop-shadow(0 10px 20px rgba(0,0,0,0.3));">${course.icon || '🎓'}</span>`;
+    const bannerHtml = (typeof NovaIcons !== 'undefined' && NovaIcons.renderCourseIcon) ? NovaIcons.renderCourseIcon(course.icon || course, { fontSize: '4rem', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.3))' }) : `<span style="font-size:4rem; filter:drop-shadow(0 10px 20px rgba(0,0,0,0.3));">${course.icon || '🎓'}</span>`;
+    thumb.innerHTML = bannerHtml;
   }
 
   const price = document.getElementById('detail-price');
@@ -1793,14 +1795,14 @@ function renderRelatedCourses(currentCourse) {
     <div class="course-card" data-category="${c.academyId}">
       <div class="course-thumbnail" style="height:150px;">
         <div class="course-thumb-bg" style="background:${c.color || 'var(--grad-hero)'}">
-          <span style="font-size:3rem;">${c.icon || '🎓'}</span>
+          ${(typeof NovaIcons !== 'undefined' && NovaIcons.renderCourseIcon) ? NovaIcons.renderCourseIcon(c.icon || c, { fontSize: '3rem' }) : `<span style="font-size:3rem;">${c.icon || '🎓'}</span>`}
         </div>
         <div class="course-badge-overlay"><span class="course-level-badge">${c.level || 'All Levels'}</span></div>
         <div class="course-duration-badge">⏱️ ${c.duration}</div>
       </div>
       <div class="course-body">
         <div class="course-meta-header">
-          <div class="course-academy-tag">${c.icon || '🎓'} ${escapeHTML(c.academy)}</div>
+          <div class="course-academy-tag">${(typeof NovaIcons !== 'undefined' && NovaIcons.renderAcademyTagHtml) ? NovaIcons.renderAcademyTagHtml(c.academyId || c.academy) : escapeHTML(c.academy)}</div>
           <span class="course-track-pill">${escapeHTML(c.programLevel || 'Certification Course')}</span>
         </div>
         <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:8px;">

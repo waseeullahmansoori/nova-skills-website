@@ -35,3 +35,12 @@ files.forEach(f => {
   fs.writeFileSync(outPath, minified, 'utf8');
   console.log(`✅ Built js/${f.replace('.js', '.min.js')} (${(minified.length/1024).toFixed(1)} KB)`);
 });
+
+// Also minify js/icon-system.js
+const iconSysSrc = path.join(JS_DIR, 'icon-system.js');
+if (fs.existsSync(iconSysSrc)) {
+  const iconContent = fs.readFileSync(iconSysSrc, 'utf8');
+  const minified = simpleJsMinify(iconContent);
+  fs.writeFileSync(path.join(JS_DIR, 'icon-system.min.js'), minified, 'utf8');
+  console.log(`✅ Built js/icon-system.min.js (${(minified.length/1024).toFixed(1)} KB)`);
+}

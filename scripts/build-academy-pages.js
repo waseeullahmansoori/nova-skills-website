@@ -19,6 +19,7 @@ const path = require('path');
 const vm = require('vm');
 
 const rootDir = path.resolve(__dirname, '..');
+const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(rootDir, 'js', 'icon-system.js'));
 const dataJs = fs.readFileSync(path.join(rootDir, 'data.js'), 'utf8');
 vm.runInThisContext(dataJs);
 
@@ -183,7 +184,7 @@ function buildCourseCardHTML(course, extraClass = '') {
       ${isFeatured ? '<span class="course-hot-tag">🔥 Popular</span>' : ''}
       <div class="course-thumbnail">
         <div class="course-thumb-bg" style="background:${course.color || 'linear-gradient(135deg, #0599a8, #011731)'}">
-          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">${course.icon || '🎓'}</span>
+          ${renderCourseIcon(course.icon || course)}
         </div>
         <div class="course-badge-overlay">
           <span class="course-level-badge">${normLevel || course.level || 'All Levels'}</span>
@@ -192,7 +193,7 @@ function buildCourseCardHTML(course, extraClass = '') {
       </div>
       <div class="course-body">
         <div class="course-meta-header">
-          <div class="course-academy-tag">${course.icon || '🎓'} ${course.academy || ''}</div>
+          <div class="course-academy-tag">${renderAcademyTagHtml(course.academyId || course.academy || acad.name)}</div>
           <span class="course-track-pill ${trackClass}">${progLevel}</span>
         </div>
         <h3 class="course-title"><a href="${courseUrl}">${course.name}</a></h3>
@@ -847,6 +848,7 @@ ${sectionsContent}
   <script src="/js/data.min.js" defer></script>
   <script src="/js/components.min.js" defer></script>
   <script src="/nova-ai-widget.js?v=3.0" defer></script>
+  <script src="/js/icon-system.js" defer></script>
   <script src="/academy-detail.js" defer></script>
 </body>
 </html>

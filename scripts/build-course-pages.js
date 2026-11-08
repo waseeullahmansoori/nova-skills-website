@@ -21,6 +21,7 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
+const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(ROOT_DIR, 'js', 'icon-system.js'));
 
 // 1. Load data.js (NS_COURSES, NS_ACADEMIES)
 const dataJs = fs.readFileSync(path.join(ROOT_DIR, 'data.js'), 'utf8');
@@ -341,7 +342,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   `.trim();
 
   // Render Thumb
-  const thumbHtml = `<span style="font-size:4rem; filter:drop-shadow(0 10px 20px rgba(0,0,0,0.3));">${baseCourse.icon || '🎓'}</span>`;
+  const thumbHtml = renderCourseIcon(baseCourse.icon || baseCourse, { fontSize: '4rem', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.3))' });
 
   // Advisory Banner (MERGE notice)
   let advisoryHtml = '';
@@ -758,14 +759,14 @@ function generateStaticCourseHtml(courseId, templateHtml) {
     <div class="course-card" data-category="${c.academyId}">
       <div class="course-thumbnail" style="height:150px;">
         <div class="course-thumb-bg" style="background:${c.color || 'var(--grad-hero)'}">
-          <span style="font-size:3rem;">${c.icon || '🎓'}</span>
+          ${renderCourseIcon(c.icon || c, { fontSize: '3rem' })}
         </div>
         <div class="course-badge-overlay"><span class="course-level-badge">${c.level || 'All Levels'}</span></div>
         <div class="course-duration-badge">⏱️ ${c.duration}</div>
       </div>
       <div class="course-body">
         <div class="course-meta-header">
-          <div class="course-academy-tag">${c.icon || '🎓'} ${escapeHTML(c.academy)}</div>
+          <div class="course-academy-tag">${renderAcademyTagHtml(c.academyId || c.academy)}</div>
           <span class="course-track-pill">${escapeHTML(c.programLevel || 'Certification Course')}</span>
         </div>
         <h4 style="font-size:1.05rem; font-weight:700; margin-bottom:8px;">
@@ -833,7 +834,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   html = html.replace(/<span\s+id="breadcrumb-course-name">[\s\S]*?<\/span>/i, `<span id="breadcrumb-course-name">${escapeHTML(baseCourse.name)}</span>`);
 
   // Academy Tag
-  html = html.replace(/<div\s+class="course-detail-academy-tag"\s+id="detail-academy-tag">[\s\S]*?<\/div>/i, `<div class="course-detail-academy-tag" id="detail-academy-tag">\n            <a href="${acadUrl}" style="color:inherit; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">${baseCourse.icon || '🎓'} ${escapeHTML(baseCourse.academy)}</a>\n          </div>`);
+  html = html.replace(/<div\s+class="course-detail-academy-tag"\s+id="detail-academy-tag">[\s\S]*?<\/div>/i, `<div class="course-detail-academy-tag" id="detail-academy-tag">\n            <a href="${acadUrl}" style="color:inherit; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">${renderAcademyTagHtml(baseCourse.academyId || baseCourse.academy)}</a>\n          </div>`);
 
   // Detail Title (H1)
   html = html.replace(/<h1\s+class="course-detail-title"\s+id="detail-title">[\s\S]*?<\/h1>/i, `<h1 class="course-detail-title" id="detail-title">${escapeHTML(baseCourse.name)}</h1>`);

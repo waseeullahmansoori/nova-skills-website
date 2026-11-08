@@ -1285,6 +1285,38 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 
+/* Nova Skills Standardized Icon System */
+.course-banner-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+}
+
+.course-icon-svg {
+  width: 56px;
+  height: 56px;
+  stroke: #ffffff;
+  color: #ffffff;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
+}
+
+.course-banner-emoji {
+  display: inline-block;
+  line-height: 1;
+}
+
+.academy-tag-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
 .course-badge-overlay {
   position: absolute;
   bottom: 12px;

@@ -23,6 +23,7 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
+const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(ROOT_DIR, 'js', 'icon-system.js'));
 
 // 1. Load data.js
 const dataJs = fs.readFileSync(path.join(ROOT_DIR, 'data.js'), 'utf8');
@@ -58,7 +59,7 @@ function buildCourseCardHTML(course) {
       ${course.featured ? '<span class="course-hot-tag">🔥 Popular</span>' : ''}
       <div class="course-thumbnail">
         <div class="course-thumb-bg" style="background:${course.color}">
-          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">${course.icon}</span>
+          ${renderCourseIcon(course.icon || course)}
         </div>
         <div class="course-badge-overlay">
           <span class="course-level-badge">${course.level}</span>
@@ -67,7 +68,7 @@ function buildCourseCardHTML(course) {
       </div>
       <div class="course-body">
         <div class="course-meta-header">
-          <div class="course-academy-tag">${course.icon} ${course.academy}</div>
+          <div class="course-academy-tag">${renderAcademyTagHtml(course.academyId || course.academy)}</div>
           <span class="course-track-pill ${trackClass}">${progLevel}</span>
         </div>
         <h3 class="course-title"><a href="${courseUrl}">${course.name}</a></h3>
@@ -191,6 +192,9 @@ function updateCoursesPage() {
   }
 
   html = html.replace(gridRegex, replacementGrid);
+  if (!html.includes('/js/icon-system.js')) {
+    html = html.replace('<script src="/js/courses.min.js', '<script src="/js/icon-system.js?v=2.2.0" defer></script>\n  <script src="/js/courses.min.js');
+  }
 
   fs.writeFileSync(coursesPath, html, 'utf8');
   console.log(`✅ Successfully updated courses.html with ${NS_COURSES.length} pre-rendered course cards, clean canonical & CollectionPage schema.`);

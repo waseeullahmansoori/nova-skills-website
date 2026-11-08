@@ -166,12 +166,20 @@ function buildCourseCardHTML(course) {
   const safePrice = `₹${(course.price || 0).toLocaleString('en-IN')}`;
   const safeId = course.id;
 
+  const bannerIconHtml = (typeof NovaIcons !== 'undefined' && NovaIcons.renderCourseIcon)
+    ? NovaIcons.renderCourseIcon(course.icon || course)
+    : `<span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">${course.icon || '🎓'}</span>`;
+
+  const academyTagHtml = (typeof NovaIcons !== 'undefined' && NovaIcons.renderAcademyTagHtml)
+    ? NovaIcons.renderAcademyTagHtml(course.academyId || course.academy)
+    : `${course.academy || 'Academy'}`;
+
   return `
     <div class="course-card" data-category="${course.academyId}">
       ${course.featured ? '<span class="course-hot-tag">🔥 Popular</span>' : ''}
       <div class="course-thumbnail">
         <div class="course-thumb-bg" style="background:${course.color}">
-          <span style="font-size:3.5rem; filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));">${course.icon}</span>
+          ${bannerIconHtml}
         </div>
         <div class="course-badge-overlay">
           <span class="course-level-badge">${course.level}</span>
@@ -180,7 +188,7 @@ function buildCourseCardHTML(course) {
       </div>
       <div class="course-body">
         <div class="course-meta-header">
-          <div class="course-academy-tag">${course.icon} ${course.academy}</div>
+          <div class="course-academy-tag">${academyTagHtml}</div>
           <span class="course-track-pill ${trackClass}">${progLevel}</span>
         </div>
         <h3 class="course-title"><a href="${courseUrl}">${course.name}</a></h3>
