@@ -1,6 +1,6 @@
 /**
  * Nova Skills Nationwide Learning Locations Directory Client Script
- * Phase 03 — Fast Search, State Filtering, Live Count & Modal Integration
+ * Phase 08 — Fast Search, State Filtering, Live Count, Modal Integration & GA4 Analytics
  */
 
 'use strict';
@@ -21,11 +21,18 @@
 
     if (!citiesGrid) return;
 
+    // Track directory page view
+    if (typeof window.sendGA4Event === 'function') {
+      window.sendGA4Event('locations_directory_view', {
+        page_type: 'branches_directory'
+      });
+    }
+
     const cards = Array.from(citiesGrid.querySelectorAll('.loc-city-card'));
     const totalCities = cards.length;
 
     // Filter state handler
-    function filterLocations() {
+    function filterLocations(sourceType = 'user_action') {
       const query = (searchInput ? searchInput.value : '').trim().toLowerCase();
       const selectedState = (stateSelect ? stateSelect.value : 'all').trim().toLowerCase();
 
@@ -76,17 +83,30 @@
       }
     }
 
-    // Debounced search
+    // Debounced search with non-PII GA4 event
     let debounceTimer = null;
+    let lastTrackedQuery = '';
     if (searchInput) {
       searchInput.addEventListener('input', () => {
         clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(filterLocations, 100);
+        debounceTimer = setTimeout(() => {
+          filterLocations('search');
+          const q = searchInput.value.trim();
+          if (q.length >= 2 && q !== lastTrackedQuery) {
+            lastTrackedQuery = q;
+            if (typeof window.sendGA4Event === 'function') {
+              window.sendGA4Event('location_city_search', {
+                search_term_length: q.length,
+                has_results: (countBadge ? parseInt(countBadge.textContent, 10) : 0) > 0
+              });
+            }
+          }
+        }, 200);
       });
       searchInput.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
           searchInput.value = '';
-          filterLocations();
+          filterLocations('clear');
         }
       });
     }
@@ -95,18 +115,25 @@
       clearSearchBtn.addEventListener('click', () => {
         if (searchInput) searchInput.value = '';
         if (searchInput) searchInput.focus();
-        filterLocations();
+        filterLocations('clear');
       });
     }
 
     if (stateSelect) {
-      stateSelect.addEventListener('change', filterLocations);
+      stateSelect.addEventListener('change', () => {
+        filterLocations('filter');
+        if (typeof window.sendGA4Event === 'function') {
+          window.sendGA4Event('location_city_filter', {
+            selected_state: stateSelect.value
+          });
+        }
+      });
     }
 
     function resetAllFilters() {
       if (searchInput) searchInput.value = '';
       if (stateSelect) stateSelect.value = 'all';
-      filterLocations();
+      filterLocations('reset');
       if (searchInput) searchInput.focus();
     }
 
@@ -140,8 +167,18 @@
       sessionStorage.setItem('nova_last_city_name', cityName || '');
     } catch (e) {}
 
+    // Track demo modal open
+    if (typeof window.sendGA4Event === 'function') {
+      window.sendGA4Event('location_demo_open', {
+        location_slug: citySlug || '',
+        cta_placement: 'directory_card'
+      });
+    }
+
     if (typeof window.openFreeDemoModal === 'function') {
       window.openFreeDemoModal();
+    } else if (typeof window.openDemoModal === 'function') {
+      window.openDemoModal();
     } else {
       const demoModal = document.getElementById('demo-booking-modal') || document.querySelector('.free-demo-modal');
       if (demoModal) {
@@ -160,12 +197,23 @@
       sessionStorage.setItem('nova_last_city_name', cityName || '');
     } catch (e) {}
 
-    if (typeof window.openConsultationModal === 'function') {
+    // Track consultation open
+    if (typeof window.sendGA4Event === 'function') {
+      window.sendGA4Event('location_consultation_open', {
+        location_slug: citySlug || '',
+        cta_placement: 'directory_card'
+      });
+    }
+
+    if (typeof window.openConsultationPopup === 'function') {
+      window.openConsultationPopup();
+    } else if (typeof window.openConsultationModal === 'function') {
       window.openConsultationModal();
     } else {
-      const consultModal = document.getElementById('consultation-popup') || document.querySelector('.consultation-modal');
+      const consultModal = document.getElementById('popup-overlay') || document.getElementById('consultation-popup') || document.querySelector('.consultation-modal');
       if (consultModal) {
-        consultModal.classList.add('active');
+        consultModal.removeAttribute('hidden');
+        consultModal.classList.add('visible');
       } else {
         window.location.href = '/contact.html';
       }
