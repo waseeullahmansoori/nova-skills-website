@@ -10,7 +10,7 @@ const ACADEMIES_DATA = {
     h1: 'Digital Marketing Academy: Job-Ready Training & Certification',
     faqs: [
       { q: 'What is covered in the Digital Marketing Course?', a: 'The course covers Search Engine Optimization (SEO), Generative Engine Optimization (GEO), Google Ads, Meta Ads Manager, GA4 Analytics, Content Marketing, and AI marketing workflows.' },
-      { q: 'Are classes available online for students outside Siddharth Nagar?', a: 'Yes! We offer live interactive online batches with dedicated doubt-clearing sessions and portfolio reviews for students across Mumbai, Delhi, and Pan-India.' },
+      { q: 'Are classes available online for students outside Siddharth Nagar?', a: 'Yes! We offer live interactive online batches with dedicated doubt-clearing sessions and portfolio reviews for students across Delhi and Pan-India.' },
       { q: 'Do you provide placement assistance?', a: 'Yes, our career and professional programs include 100% placement assistance, resume preparation, mock interviews, and direct employer hiring connections.' },
       { q: 'Will I receive an industry-recognized certificate?', a: 'Yes, upon completing your live projects and practical assessments, you will receive an official certification from Nova Skills Education Institute.' }
     ]
@@ -152,7 +152,7 @@ Object.entries(ACADEMIES_DATA).forEach(([slug, data]) => {
   html = html.replace(/<h1 id=["']academy-name-display["'][^>]*>([\s\S]*?)<\/h1>/i, `<h1 id="academy-name-display" class="academy-hero-title">${data.h1}</h1>`);
 
   // 6. Update Static Hero Description with Delivery Badge
-  const deliveryBadgeHtml = `<span class="badge-delivery" style="display:inline-block; background:rgba(117,215,102,0.15); color:#75d766; border:1px solid rgba(117,215,102,0.3); padding:4px 12px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px;">📍 Classroom in Siddharth Nagar • 💻 Live Interactive Online (Pan-India & Mumbai)</span><br>`;
+  const deliveryBadgeHtml = `<span class="badge-delivery" style="display:inline-block; background:rgba(117,215,102,0.15); color:#75d766; border:1px solid rgba(117,215,102,0.3); padding:4px 12px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px;">📍 Classroom in Siddharth Nagar • 💻 Live Interactive Online (Pan-India)</span><br>`;
   
   // If delivery badge not already present in static desc
   if (!html.includes('badge-delivery')) {

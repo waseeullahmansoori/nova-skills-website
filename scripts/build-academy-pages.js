@@ -46,7 +46,7 @@ const ACADEMIES_DATA = {
     h1: 'Digital Marketing Academy: Job-Ready Training & Certification',
     faqs: [
       { q: 'What is covered in the Digital Marketing Course?', a: 'The curriculum covers Search Engine Optimization (SEO), Generative Engine Optimization (GEO), Google Ads, Meta Ads Manager, GA4 Analytics, Content Marketing, and AI marketing workflows.' },
-      { q: 'Are classes available online for students outside Siddharth Nagar?', a: 'Yes! We offer live interactive online batches with dedicated doubt-clearing sessions and portfolio reviews for students across Pan-India and Mumbai.' },
+      { q: 'Are classes available online for students outside Siddharth Nagar?', a: 'Yes! We offer live interactive online batches with dedicated doubt-clearing sessions and portfolio reviews for students across Pan-India.' },
       { q: 'Do you provide placement assistance?', a: 'Yes, our career and professional programs include dedicated placement assistance, resume preparation, mock interviews, and industry hiring connections.' },
       { q: 'Will I receive an industry-recognized certificate?', a: 'Yes, upon completing your live projects and practical assessments, you will receive an official certification from Nova Skills Education Institute.' }
     ]
@@ -1268,7 +1268,7 @@ ${JSON.stringify(schemaGraph, null, 2)}
         <div id="academy-icon-display" class="academy-icon-badge" style="font-size: 3rem; margin-bottom: 12px;">${acad.icon || '🎓'}</div>
         <h1 id="academy-name-display" class="academy-hero-title">${heroH1}</h1>
         <p id="academy-desc-display" class="academy-hero-desc">
-          <span class="badge-delivery" style="display:inline-block; background:rgba(117,215,102,0.15); color:#75d766; border:1px solid rgba(117,215,102,0.3); padding:4px 12px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px;">📍 Classroom in Siddharth Nagar • 💻 Live Interactive Online (Pan-India & Mumbai)</span><br>
+          <span class="badge-delivery" style="display:inline-block; background:rgba(117,215,102,0.15); color:#75d766; border:1px solid rgba(117,215,102,0.3); padding:4px 12px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px;">📍 Classroom in Siddharth Nagar • 💻 Live Interactive Online (Pan-India)</span><br>
           ${acad.description}
         </p>
 
@@ -1343,7 +1343,7 @@ ${sectionsContent}
   <script src="/js/components.min.js?v=2.7.0" defer></script>
   <script src="/nova-ai-widget.js?v=3.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
-  <script src="/js/academy-detail.min.js?v=2.7.0" defer></script>
+  <script src="/js/academy-detail.min.js?v=2.7.1" defer></script>
 </body>
 </html>
 `;
