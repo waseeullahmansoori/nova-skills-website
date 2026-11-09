@@ -149,8 +149,8 @@ async function navigateAndWait(cdp, url) {
   console.log(`Navigating to ${url}...`);
   await cdp.send('Page.navigate', { url });
   
-  for (let i = 0; i < 40; i++) {
-    await new Promise(r => setTimeout(r, 250));
+  for (let i = 0; i < 30; i++) {
+    await new Promise(r => setTimeout(r, 1000));
     try {
       const ready = await cdp.evaluate(`
         (() => {
@@ -158,12 +158,12 @@ async function navigateAndWait(cdp, url) {
         })()
       `);
       if (ready) {
-        console.log(`  Page scripts fully ready after ${(i + 1) * 250}ms.`);
+        console.log(`  Page scripts fully ready after ${i + 1}s.`);
         return;
       }
     } catch (e) {}
   }
-  console.warn('Timed out waiting for openDemoModal, proceeding...');
+  throw new Error(`Timed out waiting for openDemoModal on ${url}`);
 }
 
 async function runLiveVerification() {
@@ -366,7 +366,7 @@ async function runLiveVerification() {
     // 3. LIVE COURSE DETAIL PAGE (Eligible vs Ineligible)
     // -------------------------------------------------------------
     console.log('\n--- 3. Live Course Detail Pages (Eligible vs Ineligible) ---');
-    await navigateAndWait(cdp, 'https://novaskills.in/courses/dm-professional/');
+    await navigateAndWait(cdp, 'https://novaskills.in/course-detail.html?id=dm-professional');
 
     const liveCdpEligible = await cdp.evaluate(`
       (async () => {
@@ -389,7 +389,7 @@ async function runLiveVerification() {
     await new Promise(r => setTimeout(r, 400));
 
     // Ineligible course: html-css
-    await navigateAndWait(cdp, 'https://novaskills.in/courses/html-css/');
+    await navigateAndWait(cdp, 'https://novaskills.in/course-detail.html?id=html-css');
     const liveCdpIneligible = await cdp.evaluate(`
       (() => {
         const btn = document.getElementById('btn-detail-book-demo');
