@@ -8,6 +8,7 @@
  * - Pre-rendered Academy Directory URLs (/academies/.../)
  * - Canonical Static Blog Article URLs (/blog/.../)
  * - Legal & Contact Directory URLs (/privacy-policy/, etc.)
+ * - Branches & 36 Online Learning Locations (/branches/, /branches/.../)
  */
 
 const fs = require('fs');
@@ -148,6 +149,31 @@ function generateSitemap() {
       lastmod: coursePageDate
     });
   });
+
+  // 7. Nationwide Branches Directory & 36 City Learning Locations
+  const dirIndexPath = path.join(ROOT_DIR, 'branches', 'index.html');
+  if (fs.existsSync(dirIndexPath)) {
+    urlEntries.push({
+      loc: `${DOMAIN}/branches/`,
+      lastmod: getFormattedDate(dirIndexPath)
+    });
+  }
+
+  try {
+    const locationsRegistry = require('../lib/locations');
+    const allLocs = locationsRegistry.getAllLocations();
+    allLocs.forEach((loc) => {
+      const cityIndexPath = path.join(ROOT_DIR, 'branches', loc.slug, 'index.html');
+      if (fs.existsSync(cityIndexPath)) {
+        urlEntries.push({
+          loc: `${DOMAIN}/branches/${loc.slug}/`,
+          lastmod: getFormattedDate(cityIndexPath)
+        });
+      }
+    });
+  } catch (err) {
+    console.error('Error loading locations for sitemap:', err);
+  }
 
   // Deduplicate and build XML string
   const uniqueMap = new Map();

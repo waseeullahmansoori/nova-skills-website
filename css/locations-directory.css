@@ -1,0 +1,1148 @@
+/**
+ * Nova Skills Nationwide Branches & Online Learning Locations Directory
+ * Phase 03 — Scoped Design System & Responsive Styles
+ * Brand Palette: Primary Blue #004672, Deep Navy #012B46, Ice Blue #EAF3F8, Orange #EF7F1A, White #FFFFFF
+ */
+
+:root {
+  --loc-primary: #004672;
+  --loc-navy: #012B46;
+  --loc-ice: #EAF3F8;
+  --loc-orange: #EF7F1A;
+  --loc-orange-hover: #D96B0E;
+  --loc-white: #FFFFFF;
+  --loc-surface: #F8FAFC;
+  --loc-surface-subtle: #F1F5F9;
+  --loc-border: #E2E8F0;
+  --loc-border-focus: #004672;
+  --loc-text: #1E293B;
+  --loc-text-muted: #64748B;
+  --loc-text-light: #94A3B8;
+  --loc-radius-sm: 8px;
+  --loc-radius-md: 12px;
+  --loc-radius-lg: 16px;
+  --loc-radius-xl: 24px;
+  --loc-shadow-sm: 0 2px 8px rgba(1, 43, 70, 0.04);
+  --loc-shadow-md: 0 8px 24px rgba(1, 43, 70, 0.08);
+  --loc-shadow-lg: 0 16px 40px rgba(1, 43, 70, 0.12);
+  --loc-font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --loc-font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Base Directory Page Scope */
+.loc-directory-main {
+  font-family: var(--loc-font-body);
+  color: var(--loc-text);
+  background-color: var(--loc-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.loc-directory-main *,
+.loc-directory-main *::before,
+.loc-directory-main *::after {
+  box-sizing: border-box;
+}
+
+.loc-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 640px) {
+  .loc-container {
+    padding: 0 16px;
+  }
+}
+
+/* ============================================================
+   1. EDITORIAL HERO SECTION
+   ============================================================ */
+.loc-hero-section {
+  background: linear-gradient(135deg, #012B46 0%, #004672 65%, #013759 100%);
+  color: var(--loc-white);
+  padding: 80px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loc-hero-section::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(239, 127, 26, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.loc-hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(234, 243, 248, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.loc-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loc-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(234, 243, 248, 0.12);
+  border: 1px solid rgba(234, 243, 248, 0.25);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #F8FAFC;
+  margin-bottom: 24px;
+}
+
+.loc-hero-title {
+  font-family: var(--loc-font-heading);
+  font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 20px;
+  color: var(--loc-white);
+}
+
+.loc-hero-title-accent {
+  background: linear-gradient(135deg, #FFFFFF 0%, #EAF3F8 60%, #EF7F1A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loc-hero-subtitle {
+  font-size: clamp(1.0625rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: #E2E8F0;
+  margin: 0 auto 32px;
+  max-width: 760px;
+}
+
+.loc-hero-metrics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.loc-metric-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(1, 43, 70, 0.5);
+  border: 1px solid rgba(234, 243, 248, 0.2);
+  padding: 8px 16px;
+  border-radius: var(--loc-radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.loc-metric-pill strong {
+  color: var(--loc-orange);
+  font-weight: 800;
+}
+
+.loc-hero-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.loc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--loc-font-heading);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border-radius: var(--loc-radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  min-height: 48px;
+}
+
+.loc-btn:focus-visible {
+  outline: 3px solid #EF7F1A;
+  outline-offset: 3px;
+}
+
+.loc-btn-primary {
+  background: var(--loc-orange);
+  color: var(--loc-white);
+  box-shadow: 0 4px 14px rgba(239, 127, 26, 0.4);
+}
+
+.loc-btn-primary:hover {
+  background: var(--loc-orange-hover);
+  transform: translateY(-1px);
+}
+
+.loc-btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--loc-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.loc-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--loc-white);
+  transform: translateY(-1px);
+}
+
+.loc-hero-trust-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(1, 43, 70, 0.7);
+  border: 1px solid rgba(234, 243, 248, 0.15);
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 0.8125rem;
+  color: #CBD5E1;
+  max-width: 100%;
+}
+
+.loc-hero-trust-strip span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ============================================================
+   2. INTELLIGENT CITY EXPLORER SECTION
+   ============================================================ */
+.loc-explorer-section {
+  padding: 70px 0 80px;
+  background-color: var(--loc-surface);
+  position: relative;
+}
+
+.loc-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.loc-section-tag {
+  display: inline-block;
+  font-family: var(--loc-font-heading);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--loc-primary);
+  margin-bottom: 10px;
+}
+
+.loc-section-title {
+  font-family: var(--loc-font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--loc-navy);
+  margin: 0 0 14px;
+}
+
+.loc-section-subtitle {
+  font-size: 1.0625rem;
+  color: var(--loc-text-muted);
+  margin: 0;
+}
+
+/* Filter Bar Controls */
+.loc-filter-card {
+  background: var(--loc-white);
+  border: 1px solid var(--loc-border);
+  border-radius: var(--loc-radius-lg);
+  padding: 24px;
+  box-shadow: var(--loc-shadow-md);
+  margin-bottom: 32px;
+}
+
+.loc-filter-controls-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.loc-search-box {
+  flex: 1 1 320px;
+  position: relative;
+}
+
+.loc-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--loc-text-muted);
+  font-size: 1.125rem;
+  pointer-events: none;
+}
+
+.loc-search-input {
+  width: 100%;
+  height: 52px;
+  padding: 12px 44px 12px 48px;
+  font-family: var(--loc-font-body);
+  font-size: 0.9375rem;
+  border: 1px solid var(--loc-border);
+  border-radius: var(--loc-radius-sm);
+  background: var(--loc-surface);
+  color: var(--loc-text);
+  transition: all 0.2s ease;
+}
+
+.loc-search-input:focus {
+  outline: none;
+  border-color: var(--loc-primary);
+  background: var(--loc-white);
+  box-shadow: 0 0 0 3px rgba(0, 70, 114, 0.15);
+}
+
+.loc-search-clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--loc-text-muted);
+  cursor: pointer;
+  padding: 6px;
+  display: none;
+  line-height: 1;
+}
+
+.loc-search-clear-btn:hover {
+  color: var(--loc-navy);
+}
+
+.loc-select-box {
+  flex: 0 1 280px;
+  position: relative;
+}
+
+.loc-select-input {
+  width: 100%;
+  height: 52px;
+  padding: 12px 36px 12px 16px;
+  font-family: var(--loc-font-body);
+  font-size: 0.9375rem;
+  border: 1px solid var(--loc-border);
+  border-radius: var(--loc-radius-sm);
+  background: var(--loc-surface);
+  color: var(--loc-text);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23004672' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  transition: all 0.2s ease;
+}
+
+.loc-select-input:focus {
+  outline: none;
+  border-color: var(--loc-primary);
+  background-color: var(--loc-white);
+  box-shadow: 0 0 0 3px rgba(0, 70, 114, 0.15);
+}
+
+.loc-reset-filter-btn {
+  height: 52px;
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid var(--loc-border);
+  border-radius: var(--loc-radius-sm);
+  font-family: var(--loc-font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--loc-text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.loc-reset-filter-btn:hover {
+  border-color: var(--loc-primary);
+  color: var(--loc-primary);
+  background: var(--loc-ice);
+}
+
+.loc-filter-status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--loc-border);
+  font-size: 0.875rem;
+  color: var(--loc-text-muted);
+}
+
+.loc-result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--loc-navy);
+}
+
+.loc-result-badge strong {
+  color: var(--loc-primary);
+}
+
+/* ============================================================
+   3. 36 CITY CARDS GRID
+   ============================================================ */
+.loc-cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .loc-cities-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.loc-city-card {
+  background: var(--loc-white);
+  border: 1px solid var(--loc-border);
+  border-radius: var(--loc-radius-md);
+  padding: 24px;
+  box-shadow: var(--loc-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.loc-city-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--loc-shadow-md);
+  border-color: #CBD5E1;
+}
+
+.loc-city-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.loc-city-title-group {
+  flex: 1;
+}
+
+.loc-city-name {
+  font-family: var(--loc-font-heading);
+  font-size: 1.3125rem;
+  font-weight: 800;
+  color: var(--loc-navy);
+  margin: 0 0 4px;
+  line-height: 1.25;
+}
+
+.loc-city-state {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--loc-text-muted);
+}
+
+.loc-city-mode-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--loc-ice);
+  color: var(--loc-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.loc-city-divider {
+  height: 1px;
+  background: var(--loc-border);
+  margin: 16px 0;
+}
+
+.loc-city-courses-block {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.loc-courses-label {
+  font-family: var(--loc-font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--loc-primary);
+  margin-bottom: 8px;
+}
+
+.loc-core-programs-list {
+  font-size: 0.875rem;
+  color: var(--loc-text);
+  font-weight: 600;
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.loc-additional-pathways-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.loc-pathway-tag {
+  display: inline-block;
+  background: var(--loc-surface-subtle);
+  border: 1px solid var(--loc-border);
+  color: var(--loc-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--loc-radius-sm);
+}
+
+.loc-city-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.loc-card-btn-explore {
+  flex: 1;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--loc-surface);
+  border: 1px solid var(--loc-border);
+  color: var(--loc-navy);
+  font-family: var(--loc-font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  border-radius: var(--loc-radius-sm);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.loc-card-btn-explore:hover {
+  background: var(--loc-ice);
+  border-color: var(--loc-primary);
+  color: var(--loc-primary);
+}
+
+.loc-card-btn-demo {
+  flex: 1;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--loc-orange);
+  border: none;
+  color: var(--loc-white);
+  font-family: var(--loc-font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  border-radius: var(--loc-radius-sm);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.loc-card-btn-demo:hover {
+  background: var(--loc-orange-hover);
+}
+
+/* Empty State */
+.loc-empty-state {
+  display: none;
+  background: var(--loc-white);
+  border: 1px dashed var(--loc-border);
+  border-radius: var(--loc-radius-lg);
+  padding: 60px 24px;
+  text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.loc-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  color: var(--loc-text-muted);
+}
+
+.loc-empty-title {
+  font-family: var(--loc-font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--loc-navy);
+  margin: 0 0 8px;
+}
+
+.loc-empty-desc {
+  font-size: 0.9375rem;
+  color: var(--loc-text-muted);
+  margin: 0 0 20px;
+}
+
+/* ============================================================
+   4. FOUR CORE PROFESSIONAL PATHWAYS SECTION
+   ============================================================ */
+.loc-pathways-section {
+  padding: 80px 0;
+  background-color: var(--loc-white);
+}
+
+.loc-pathways-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.loc-pathway-card {
+  background: var(--loc-surface);
+  border: 1px solid var(--loc-border);
+  border-radius: var(--loc-radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.loc-pathway-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--loc-shadow-md);
+  border-color: #CBD5E1;
+}
+
+.loc-pathway-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--loc-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  background: var(--loc-ice);
+  color: var(--loc-primary);
+}
+
+.loc-pathway-title {
+  font-family: var(--loc-font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--loc-navy);
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.loc-pathway-desc {
+  font-size: 0.875rem;
+  color: var(--loc-text-muted);
+  margin: 0 0 20px;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.loc-pathway-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--loc-border);
+  border-bottom: 1px solid var(--loc-border);
+  margin-bottom: 20px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--loc-text);
+}
+
+.loc-pathway-specs span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.loc-pathway-fee-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.loc-pathway-fee-label {
+  font-size: 0.8125rem;
+  color: var(--loc-text-muted);
+}
+
+.loc-pathway-fee-val {
+  font-family: var(--loc-font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--loc-primary);
+}
+
+.loc-pathway-link-btn {
+  width: 100%;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--loc-primary);
+  color: var(--loc-white);
+  border-radius: var(--loc-radius-sm);
+  font-family: var(--loc-font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.loc-pathway-link-btn:hover {
+  background: var(--loc-navy);
+  color: var(--loc-white);
+}
+
+/* ============================================================
+   5. CAREER DISCOVERY SECTION
+   ============================================================ */
+.loc-discovery-section {
+  padding: 80px 0;
+  background-color: var(--loc-surface);
+}
+
+.loc-discovery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.loc-discovery-card {
+  background: var(--loc-white);
+  border: 1px solid var(--loc-border);
+  border-radius: var(--loc-radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.loc-discovery-card-header {
+  font-family: var(--loc-font-heading);
+  font-size: 1.1875rem;
+  font-weight: 800;
+  color: var(--loc-navy);
+  margin-bottom: 12px;
+}
+
+.loc-discovery-card-body {
+  font-size: 0.875rem;
+  color: var(--loc-text-muted);
+  line-height: 1.55;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.loc-discovery-tags-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.loc-discovery-tag-item {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--loc-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loc-discovery-tag-item::before {
+  content: '→';
+  color: var(--loc-primary);
+  font-weight: 800;
+}
+
+.loc-discovery-card-action {
+  font-family: var(--loc-font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--loc-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+}
+
+.loc-discovery-card-action:hover {
+  gap: 10px;
+  color: var(--loc-navy);
+}
+
+/* ============================================================
+   6. HOW LIVE ONLINE LEARNING WORKS
+   ============================================================ */
+.loc-how-section {
+  padding: 80px 0;
+  background-color: var(--loc-white);
+}
+
+.loc-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+  position: relative;
+}
+
+.loc-step-card {
+  background: var(--loc-surface);
+  border: 1px solid var(--loc-border);
+  border-radius: var(--loc-radius-md);
+  padding: 24px;
+  position: relative;
+}
+
+.loc-step-num {
+  font-family: var(--loc-font-heading);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--loc-orange);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.loc-step-title {
+  font-family: var(--loc-font-heading);
+  font-size: 1.0625rem;
+  font-weight: 800;
+  color: var(--loc-navy);
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.loc-step-desc {
+  font-size: 0.875rem;
+  color: var(--loc-text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ============================================================
+   7. PHYSICAL CAMPUS VS ONLINE LOCATIONS
+   ============================================================ */
+.loc-campus-vs-online-section {
+  padding: 80px 0;
+  background-color: var(--loc-surface);
+}
+
+.loc-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.loc-comparison-card {
+  background: var(--loc-white);
+  border: 1px solid var(--loc-border);
+  border-radius: var(--loc-radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.loc-comparison-card.highlight-campus {
+  border-top: 4px solid var(--loc-primary);
+}
+
+.loc-comparison-card.highlight-online {
+  border-top: 4px solid var(--loc-orange);
+}
+
+.loc-comparison-badge {
+  display: inline-block;
+  font-family: var(--loc-font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+
+.loc-comparison-card.highlight-campus .loc-comparison-badge {
+  background: var(--loc-ice);
+  color: var(--loc-primary);
+}
+
+.loc-comparison-card.highlight-online .loc-comparison-badge {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+.loc-comparison-title {
+  font-family: var(--loc-font-heading);
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--loc-navy);
+  margin: 0 0 12px;
+}
+
+.loc-comparison-desc {
+  font-size: 0.9375rem;
+  color: var(--loc-text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.loc-comparison-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.loc-comparison-feature-item {
+  font-size: 0.875rem;
+  color: var(--loc-text);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.loc-comparison-feature-item svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--loc-primary);
+}
+
+.loc-transparency-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: var(--loc-radius-md);
+  padding: 20px 24px;
+  margin-top: 36px;
+  font-size: 0.875rem;
+  color: #92400E;
+  line-height: 1.6;
+}
+
+.loc-transparency-box strong {
+  color: #78350F;
+}
+
+/* ============================================================
+   8. CONVERSION SECTION
+   ============================================================ */
+.loc-conversion-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #012B46 0%, #004672 100%);
+  color: var(--loc-white);
+  text-align: center;
+}
+
+.loc-conversion-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.loc-conversion-title {
+  font-family: var(--loc-font-heading);
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 16px;
+  color: var(--loc-white);
+}
+
+.loc-conversion-subtitle {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #E2E8F0;
+  margin: 0 auto 36px;
+  max-width: 640px;
+}
+
+.loc-conversion-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   9. FAQ ACCORDION SECTION
+   ============================================================ */
+.loc-faq-section {
+  padding: 80px 0;
+  background-color: var(--loc-white);
+}
+
+.loc-faq-wrap {
+  max-width: 840px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loc-faq-item {
+  border: 1px solid var(--loc-border);
+  border-radius: var(--loc-radius-md);
+  background: var(--loc-white);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.loc-faq-item[open] {
+  border-color: var(--loc-primary);
+  box-shadow: var(--loc-shadow-sm);
+}
+
+.loc-faq-question {
+  padding: 20px 24px;
+  font-family: var(--loc-font-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--loc-navy);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  list-style: none;
+}
+
+.loc-faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.loc-faq-chevron {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  color: var(--loc-primary);
+}
+
+.loc-faq-item[open] .loc-faq-chevron {
+  transform: rotate(180deg);
+}
+
+.loc-faq-answer {
+  padding: 0 24px 20px;
+  font-size: 0.9375rem;
+  color: var(--loc-text-muted);
+  line-height: 1.65;
+}
+
+.loc-faq-answer p {
+  margin: 0;
+}
+
+.loc-faq-answer a {
+  color: var(--loc-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   10. MOBILE & NARROW SCREEN REFINEMENTS (320px - 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .loc-hero-section {
+    padding: 50px 0 40px;
+  }
+
+  .loc-hero-metrics {
+    gap: 8px;
+  }
+
+  .loc-metric-pill {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .loc-hero-ctas,
+  .loc-conversion-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .loc-btn {
+    width: 100%;
+  }
+
+  .loc-filter-card {
+    padding: 16px;
+  }
+
+  .loc-select-box,
+  .loc-search-box {
+    flex: 1 1 100%;
+  }
+
+  .loc-city-card {
+    padding: 18px;
+  }
+
+  .loc-pathway-card,
+  .loc-discovery-card,
+  .loc-comparison-card {
+    padding: 20px;
+  }
+}

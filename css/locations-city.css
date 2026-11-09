@@ -1,0 +1,845 @@
+/**
+ * Nova Skills Nationwide Learning Locations — City Page Design System
+ * Phase 04 — Scoped Stylesheet for Pilot City Pages (Indore, Jaipur, Rajkot, Patna)
+ * Brand Palette: Deep Navy #012B46, Primary Blue #004672, Ice Blue #EAF3F8, Orange #EF7F1A, White #FFFFFF
+ */
+
+:root {
+  --city-primary: #004672;
+  --city-primary-hover: #003657;
+  --city-navy: #012B46;
+  --city-ice: #EAF3F8;
+  --city-orange: #EF7F1A;
+  --city-orange-hover: #D96B0E;
+  --city-white: #FFFFFF;
+  --city-surface: #F8FAFC;
+  --city-surface-subtle: #F1F5F9;
+  --city-border: #E2E8F0;
+  --city-border-light: #F1F5F9;
+  --city-text: #1E293B;
+  --city-text-muted: #64748B;
+  --city-text-light: #94A3B8;
+  --city-radius-sm: 8px;
+  --city-radius-md: 12px;
+  --city-radius-lg: 16px;
+  --city-radius-xl: 24px;
+  --city-shadow-sm: 0 2px 8px rgba(1, 43, 70, 0.04);
+  --city-shadow-md: 0 8px 24px rgba(1, 43, 70, 0.08);
+  --city-shadow-lg: 0 16px 40px rgba(1, 43, 70, 0.12);
+  --city-font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --city-font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.city-page-main {
+  font-family: var(--city-font-body);
+  color: var(--city-text);
+  background-color: var(--city-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.city-page-main *,
+.city-page-main *::before,
+.city-page-main *::after {
+  box-sizing: border-box;
+}
+
+.city-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 640px) {
+  .city-container {
+    padding: 0 16px;
+  }
+}
+
+/* ============================================================
+   1. BREADCRUMBS
+   ============================================================ */
+.city-breadcrumb-wrap {
+  background: var(--city-surface);
+  border-bottom: 1px solid var(--city-border);
+  padding: 12px 0;
+  font-size: 0.8125rem;
+}
+
+.city-breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.city-breadcrumb-item a {
+  color: var(--city-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.city-breadcrumb-item a:hover {
+  color: var(--city-primary);
+}
+
+.city-breadcrumb-sep {
+  color: var(--city-text-light);
+}
+
+.city-breadcrumb-current {
+  color: var(--city-navy);
+  font-weight: 600;
+}
+
+/* ============================================================
+   2. HERO SECTION
+   ============================================================ */
+.city-hero-section {
+  background: linear-gradient(135deg, #012B46 0%, #004672 70%, #013759 100%);
+  color: var(--city-white);
+  padding: 70px 0 65px;
+  position: relative;
+  overflow: hidden;
+}
+
+.city-hero-section::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  right: -8%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(239, 127, 26, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.city-hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(234, 243, 248, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.city-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.city-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(234, 243, 248, 0.14);
+  border: 1px solid rgba(234, 243, 248, 0.28);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #F8FAFC;
+  margin-bottom: 20px;
+}
+
+.city-hero-title {
+  font-family: var(--city-font-heading);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 20px;
+  color: var(--city-white);
+}
+
+.city-hero-title-accent {
+  background: linear-gradient(135deg, #FFFFFF 0%, #EAF3F8 60%, #EF7F1A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.city-hero-subtitle {
+  font-size: clamp(1.0625rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: #E2E8F0;
+  margin: 0 0 32px;
+  max-width: 780px;
+}
+
+/* Two Hero CTAs on Single Horizontal Row */
+.city-hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: nowrap;
+  margin-bottom: 28px;
+}
+
+.city-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 24px;
+  font-family: var(--city-font-heading);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border-radius: var(--city-radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  min-height: 48px;
+  white-space: nowrap;
+}
+
+.city-btn:focus-visible {
+  outline: 3px solid #EF7F1A;
+  outline-offset: 3px;
+}
+
+.city-btn-primary {
+  background: var(--city-orange);
+  color: var(--city-white);
+  box-shadow: 0 4px 14px rgba(239, 127, 26, 0.4);
+}
+
+.city-btn-primary:hover {
+  background: var(--city-orange-hover);
+  transform: translateY(-1px);
+}
+
+.city-btn-secondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--city-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.city-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--city-white);
+  transform: translateY(-1px);
+}
+
+.city-hero-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(1, 43, 70, 0.6);
+  border: 1px solid rgba(234, 243, 248, 0.18);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.8125rem;
+  color: #CBD5E1;
+  max-width: 100%;
+}
+
+/* ============================================================
+   3. DIRECT ANSWER SUMMARY BOX (AEO / GEO / VSO)
+   ============================================================ */
+.city-answer-section {
+  padding: 40px 0 20px;
+  background-color: var(--city-white);
+}
+
+.city-direct-answer-card {
+  background: var(--city-surface);
+  border: 1px solid #CBD5E1;
+  border-left: 5px solid var(--city-primary);
+  border-radius: var(--city-radius-md);
+  padding: 24px 28px;
+  box-shadow: var(--city-shadow-sm);
+}
+
+.city-answer-heading {
+  font-family: var(--city-font-heading);
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--city-navy);
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.city-answer-text {
+  font-size: 0.9375rem;
+  color: var(--city-text);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   4. SECTION HEADERS & GENERAL CARD LAYOUTS
+   ============================================================ */
+.city-section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.city-section-tag {
+  display: inline-block;
+  font-family: var(--city-font-heading);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--city-primary);
+  margin-bottom: 8px;
+}
+
+.city-section-title {
+  font-family: var(--city-font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 2.375rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--city-navy);
+  margin: 0 0 12px;
+}
+
+.city-section-subtitle {
+  font-size: 1.0625rem;
+  color: var(--city-text-muted);
+  margin: 0;
+}
+
+/* Courses Grid */
+.city-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.city-course-card {
+  background: var(--city-white);
+  border: 1px solid var(--city-border);
+  border-radius: var(--city-radius-lg);
+  padding: 24px;
+  box-shadow: var(--city-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.city-course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--city-shadow-md);
+  border-color: #CBD5E1;
+}
+
+.city-card-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.city-badge-academy {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--city-primary);
+  background: var(--city-ice);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.city-badge-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--city-text-muted);
+}
+
+.city-card-title {
+  font-family: var(--city-font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--city-navy);
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.city-card-desc {
+  font-size: 0.875rem;
+  color: var(--city-text-muted);
+  line-height: 1.55;
+  margin: 0 0 18px;
+  flex: 1;
+}
+
+.city-card-specs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid var(--city-border);
+  border-bottom: 1px solid var(--city-border);
+  margin-bottom: 16px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--city-text);
+}
+
+.city-card-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 18px;
+}
+
+.city-price-label {
+  font-size: 0.8125rem;
+  color: var(--city-text-muted);
+}
+
+.city-price-current {
+  font-family: var(--city-font-heading);
+  font-size: 1.3125rem;
+  font-weight: 800;
+  color: var(--city-primary);
+}
+
+.city-price-original {
+  font-size: 0.875rem;
+  color: var(--city-text-light);
+  text-decoration: line-through;
+  margin-right: 6px;
+}
+
+.city-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.city-card-btn-syllabus {
+  flex: 1;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--city-surface);
+  border: 1px solid var(--city-border);
+  color: var(--city-navy);
+  font-family: var(--city-font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  border-radius: var(--city-radius-sm);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.city-card-btn-syllabus:hover {
+  background: var(--city-ice);
+  border-color: var(--city-primary);
+  color: var(--city-primary);
+}
+
+.city-card-btn-demo {
+  flex: 1;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--city-orange);
+  border: none;
+  color: var(--city-white);
+  font-family: var(--city-font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  border-radius: var(--city-radius-sm);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.city-card-btn-demo:hover {
+  background: var(--city-orange-hover);
+}
+
+/* ============================================================
+   5. UNIQUE DECISION-SUPPORT MODULE (GATES 05 - 08)
+   ============================================================ */
+.city-decision-section {
+  padding: 80px 0;
+  background: var(--city-surface);
+}
+
+.city-decision-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.city-decision-tab-btn {
+  padding: 12px 24px;
+  background: var(--city-white);
+  border: 1px solid var(--city-border);
+  border-radius: var(--city-radius-md);
+  font-family: var(--city-font-heading);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--city-navy);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.city-decision-tab-btn:hover {
+  border-color: var(--city-primary);
+  color: var(--city-primary);
+}
+
+.city-decision-tab-btn.active {
+  background: var(--city-primary);
+  color: var(--city-white);
+  border-color: var(--city-primary);
+  box-shadow: 0 4px 12px rgba(0, 70, 114, 0.25);
+}
+
+.city-decision-panel {
+  display: none;
+  background: var(--city-white);
+  border: 1px solid var(--city-border);
+  border-radius: var(--city-radius-lg);
+  padding: 36px;
+  box-shadow: var(--city-shadow-md);
+}
+
+.city-decision-panel.active {
+  display: block;
+}
+
+.city-panel-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .city-panel-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.city-panel-title {
+  font-family: var(--city-font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--city-navy);
+  margin: 0 0 12px;
+}
+
+.city-panel-desc {
+  font-size: 0.9375rem;
+  color: var(--city-text-muted);
+  line-height: 1.65;
+  margin: 0 0 20px;
+}
+
+.city-panel-specs-box {
+  background: var(--city-surface);
+  border: 1px solid var(--city-border);
+  border-radius: var(--city-radius-md);
+  padding: 20px;
+}
+
+.city-panel-spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #E2E8F0;
+  font-size: 0.875rem;
+}
+
+.city-panel-spec-row:last-child {
+  border-bottom: none;
+}
+
+.city-panel-spec-label {
+  color: var(--city-text-muted);
+  font-weight: 600;
+}
+
+.city-panel-spec-val {
+  color: var(--city-navy);
+  font-weight: 700;
+}
+
+/* ============================================================
+   6. COMPARISON TABLE
+   ============================================================ */
+.city-comparison-section {
+  padding: 80px 0;
+  background-color: var(--city-white);
+}
+
+.city-table-responsive-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--city-border);
+  border-radius: var(--city-radius-lg);
+  box-shadow: var(--city-shadow-sm);
+}
+
+.city-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.city-comparison-table th {
+  background: var(--city-surface);
+  color: var(--city-navy);
+  font-family: var(--city-font-heading);
+  font-weight: 800;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--city-border);
+  white-space: nowrap;
+}
+
+.city-comparison-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--city-border);
+  color: var(--city-text);
+  vertical-align: middle;
+}
+
+.city-comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.city-comparison-table tr:hover td {
+  background: #F8FAFC;
+}
+
+.city-table-course-title {
+  font-weight: 700;
+  color: var(--city-navy);
+  display: block;
+}
+
+/* ============================================================
+   7. PROJECT & TOOLS HIGHLIGHTS
+   ============================================================ */
+.city-tools-section {
+  padding: 80px 0;
+  background: var(--city-surface);
+}
+
+.city-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.city-tool-card {
+  background: var(--city-white);
+  border: 1px solid var(--city-border);
+  border-radius: var(--city-radius-md);
+  padding: 24px;
+}
+
+.city-tool-header {
+  font-family: var(--city-font-heading);
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--city-navy);
+  margin-bottom: 12px;
+}
+
+.city-tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.city-tool-pill {
+  background: var(--city-surface-subtle);
+  border: 1px solid var(--city-border);
+  color: var(--city-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* ============================================================
+   8. METHODOLOGY & TRUST
+   ============================================================ */
+.city-trust-section {
+  padding: 80px 0;
+  background-color: var(--city-white);
+}
+
+.city-trust-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: var(--city-radius-md);
+  padding: 24px;
+  margin-top: 32px;
+  font-size: 0.875rem;
+  color: #92400E;
+  line-height: 1.6;
+}
+
+.city-trust-box strong {
+  color: #78350F;
+}
+
+/* ============================================================
+   9. FAQS SECTION
+   ============================================================ */
+.city-faq-section {
+  padding: 80px 0;
+  background-color: var(--city-surface);
+}
+
+.city-faq-wrap {
+  max-width: 820px;
+  margin: 36px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.city-faq-item {
+  border: 1px solid var(--city-border);
+  border-radius: var(--city-radius-md);
+  background: var(--city-white);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.city-faq-item[open] {
+  border-color: var(--city-primary);
+  box-shadow: var(--city-shadow-sm);
+}
+
+.city-faq-question {
+  padding: 18px 24px;
+  font-family: var(--city-font-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--city-navy);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  list-style: none;
+}
+
+.city-faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.city-faq-chevron {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  color: var(--city-primary);
+}
+
+.city-faq-item[open] .city-faq-chevron {
+  transform: rotate(180deg);
+}
+
+.city-faq-answer {
+  padding: 0 24px 20px;
+  font-size: 0.9375rem;
+  color: var(--city-text-muted);
+  line-height: 1.65;
+}
+
+.city-faq-answer p {
+  margin: 0;
+}
+
+/* ============================================================
+   10. CONVERSION SECTION
+   ============================================================ */
+.city-conversion-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #012B46 0%, #004672 100%);
+  color: var(--city-white);
+  text-align: center;
+}
+
+.city-conversion-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.city-conversion-title {
+  font-family: var(--city-font-heading);
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 16px;
+  color: var(--city-white);
+}
+
+.city-conversion-subtitle {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #E2E8F0;
+  margin: 0 auto 32px;
+}
+
+.city-conversion-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   11. MOBILE REFINEMENTS (320px - 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .city-hero-section {
+    padding: 50px 0 40px;
+  }
+
+  .city-hero-cta-row {
+    flex-direction: row;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .city-hero-cta-row .city-btn {
+    flex: 1 1 50%;
+    padding: 12px 10px;
+    font-size: 0.8125rem;
+    min-height: 44px;
+  }
+
+  .city-decision-panel {
+    padding: 20px;
+  }
+
+  .city-conversion-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .city-conversion-ctas .city-btn {
+    width: 100%;
+  }
+}
