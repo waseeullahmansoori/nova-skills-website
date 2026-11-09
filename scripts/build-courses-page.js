@@ -229,7 +229,7 @@ function updateCoursesPage() {
 
   html = html.replace(gridRegex, replacementGrid);
   if (!html.includes('/js/icon-system.js')) {
-    html = html.replace('<script src="/js/courses.min.js', '<script src="/js/icon-system.js?v=2.2.0" defer></script>\n  <script src="/js/courses.min.js');
+    html = html.replace('<script src="/js/courses.min.js?v=2.7.0', '<script src="/js/icon-system.js?v=2.2.0" defer></script>\n  <script src="/js/courses.min.js?v=2.7.0');
   }
 
   fs.writeFileSync(coursesPath, html, 'utf8');
