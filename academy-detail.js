@@ -40,8 +40,8 @@ function normalizeProgramLevel(level) {
   if (!level) return '';
   const str = String(level).trim().toLowerCase();
   if (str.includes('career')) return 'Career Program';
-  if (str.includes('professional')) return 'Professional Program';
   if (str.includes('cert')) return 'Certification Course';
+  if (str.includes('professional') || str.includes('pro')) return 'Professional Program';
   return level;
 }
 
@@ -387,12 +387,20 @@ function initAcademyPage() {
 function buildCourseCardHTML(course, extraClass = '') {
   const safeName = (course.name || '').replace(/'/g, "\\'");
   const safeAcademy = (course.academy || '').replace(/'/g, "\\'");
+  const safeDuration = course.duration || '';
+  const safePrice = `₹${(course.price || 0).toLocaleString('en-IN')}`;
+  const safeId = course.id;
   const origPrice = course.originalPrice ? `₹${course.originalPrice.toLocaleString('en-IN')}` : '';
   const isFeatured = course.featured || (course.tags && course.tags.includes('popular'));
   const liveProj = course.liveProjects || 2;
   const rating = course.rating || 4.8;
   const reviews = course.reviews || 120;
   const normLevel = normalizeProgramLevel(course.programLevel || course.level);
+
+  let trackClass = 'track-cert';
+  const progLevel = course.programLevel || normLevel || 'Certification Course';
+  if (progLevel.includes('Career')) trackClass = 'track-career';
+  else if (progLevel.includes('Professional')) trackClass = 'track-pro';
 
   const bannerIconHtml = (typeof NovaIcons !== 'undefined' && NovaIcons.renderCourseIcon)
     ? NovaIcons.renderCourseIcon(course.icon || course)

@@ -165,8 +165,8 @@ function normalizeProgramLevel(level) {
   if (!level) return '';
   const str = String(level).trim().toLowerCase();
   if (str.includes('career')) return 'Career Program';
-  if (str.includes('professional') || str.includes('pro')) return 'Professional Program';
   if (str.includes('cert')) return 'Certification Course';
+  if (str.includes('professional') || str.includes('pro')) return 'Professional Program';
   return level;
 }
 

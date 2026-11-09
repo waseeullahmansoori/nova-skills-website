@@ -14,7 +14,7 @@ const NS_ACADEMIES = [
         "slug": "ai-digital-marketing-master",
         "academy": "Digital Marketing Academy",
         "academyId": "digital-marketing",
-        "programLevel": "Certification Course",
+        "programLevel": "Career Program",
         "icon": "📊",
         "color": "linear-gradient(135deg, #FF6B00, #8B5CF6)",
         "name": "AI Digital Marketing Strategist",
@@ -112,7 +112,8 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 240,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Industry-oriented, project-based digital marketing career mastery."
+        "positioning": "Industry-oriented, project-based digital marketing career mastery.",
+        "course_type": "Career Program"
       },
       {
         "id": "dm-professional",
@@ -201,14 +202,15 @@ const NS_ACADEMIES = [
         "courseRole": "Professional Skill",
         "learningHours": 120,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Entry-level, AI-assisted digital marketing execution program for career-track agency and in-house roles."
+        "positioning": "Entry-level, AI-assisted digital marketing execution program for career-track agency and in-house roles.",
+        "course_type": "Professional Program"
       },
       {
         "id": "performance-marketing-specialist",
         "slug": "performance-marketing-specialist",
         "academy": "Digital Marketing Academy",
         "academyId": "digital-marketing",
-        "programLevel": "Certification Course",
+        "programLevel": "Professional Program",
         "icon": "📊",
         "color": "linear-gradient(135deg, #FF6B00, #EF4444)",
         "name": "Performance Marketing Specialist",
@@ -295,14 +297,15 @@ const NS_ACADEMIES = [
         "courseRole": "Advanced Skill",
         "learningHours": 160,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Position as high-value post-foundation specialization."
+        "positioning": "Position as high-value post-foundation specialization.",
+        "course_type": "Professional Program"
       },
       {
         "id": "ecommerce-growth-marketing-specialist",
         "slug": "ecommerce-growth-marketing-specialist",
         "academy": "Digital Marketing Academy",
         "academyId": "digital-marketing",
-        "programLevel": "Certification Course",
+        "programLevel": "Professional Program",
         "icon": "🛍️",
         "color": "linear-gradient(135deg, #10B981, #059669)",
         "name": "E-Commerce & Growth Marketing Specialist",
@@ -395,7 +398,8 @@ const NS_ACADEMIES = [
         "courseRole": "Professional Specialization",
         "learningHours": 160,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "E-Commerce & Growth Marketing Specialization"
+        "positioning": "E-Commerce & Growth Marketing Specialization",
+        "course_type": "Professional Program"
       },
       {
         "id": "google-ads",
@@ -488,7 +492,8 @@ const NS_ACADEMIES = [
         "hours": 64,
         "guidedHours": 64,
         "regularPrice": 9900,
-        "launchBatchFee": 9900
+        "launchBatchFee": 9900,
+        "course_type": "Certification Course"
       },
       {
         "id": "meta-ads",
@@ -582,7 +587,8 @@ const NS_ACADEMIES = [
         "hours": 64,
         "guidedHours": 64,
         "regularPrice": 9900,
-        "launchBatchFee": 9900
+        "launchBatchFee": 9900,
+        "course_type": "Certification Course"
       },
       {
         "id": "seo-geo",
@@ -677,7 +683,8 @@ const NS_ACADEMIES = [
         "hours": 80,
         "guidedHours": 80,
         "regularPrice": 12900,
-        "launchBatchFee": 12900
+        "launchBatchFee": 12900,
+        "course_type": "Certification Course"
       },
       {
         "id": "social-media-marketing",
@@ -772,7 +779,8 @@ const NS_ACADEMIES = [
         "hours": 48,
         "guidedHours": 48,
         "regularPrice": 6900,
-        "launchBatchFee": 6900
+        "launchBatchFee": 6900,
+        "course_type": "Certification Course"
       },
       {
         "id": "content-marketing",
@@ -867,7 +875,8 @@ const NS_ACADEMIES = [
         "hours": 48,
         "guidedHours": 48,
         "regularPrice": 6900,
-        "launchBatchFee": 6900
+        "launchBatchFee": 6900,
+        "course_type": "Certification Course"
       },
       {
         "id": "email-marketing",
@@ -957,7 +966,8 @@ const NS_ACADEMIES = [
         "hours": 40,
         "guidedHours": 40,
         "regularPrice": 5900,
-        "launchBatchFee": 5900
+        "launchBatchFee": 5900,
+        "course_type": "Certification Course"
       },
       {
         "id": "google-analytics-ga4",
@@ -1053,7 +1063,8 @@ const NS_ACADEMIES = [
         "hours": 48,
         "guidedHours": 48,
         "regularPrice": 7900,
-        "launchBatchFee": 7900
+        "launchBatchFee": 7900,
+        "course_type": "Certification Course"
       },
       {
         "id": "google-search-console",
@@ -1143,7 +1154,8 @@ const NS_ACADEMIES = [
         "hours": 24,
         "guidedHours": 24,
         "regularPrice": 3900,
-        "launchBatchFee": 3900
+        "launchBatchFee": 3900,
+        "course_type": "Certification Course"
       },
       {
         "id": "local-seo",
@@ -1233,7 +1245,8 @@ const NS_ACADEMIES = [
         "hours": 40,
         "guidedHours": 40,
         "regularPrice": 5900,
-        "launchBatchFee": 5900
+        "launchBatchFee": 5900,
+        "course_type": "Certification Course"
       },
       {
         "id": "youtube-marketing",
@@ -1329,7 +1342,8 @@ const NS_ACADEMIES = [
         "hours": 48,
         "guidedHours": 48,
         "regularPrice": 6900,
-        "launchBatchFee": 6900
+        "launchBatchFee": 6900,
+        "course_type": "Certification Course"
       }
     ]
   },
@@ -1347,7 +1361,7 @@ const NS_ACADEMIES = [
         "slug": "ai-mastery-program",
         "academy": "AI Academy",
         "academyId": "ai",
-        "programLevel": "Certification Course",
+        "programLevel": "Career Program",
         "icon": "🤖",
         "color": "linear-gradient(135deg, #0599a8, #75d766)",
         "name": "AI Solutions Engineering & Agentic AI Mastery",
@@ -1461,7 +1475,8 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 360,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Flagship applied AI engineering and agentic AI career program."
+        "positioning": "Flagship applied AI engineering and agentic AI career program.",
+        "course_type": "Career Program"
       },
       {
         "id": "ai-productivity",
@@ -1557,14 +1572,15 @@ const NS_ACADEMIES = [
         "courseRole": "Professional Skill",
         "learningHours": 120,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Professional Certificate in Workplace AI Productivity & Connected Workflows."
+        "positioning": "Professional Certificate in Workplace AI Productivity & Connected Workflows.",
+        "course_type": "Professional Program"
       },
       {
         "id": "ai-for-business-pro",
         "slug": "ai-for-business-professional",
         "academy": "AI Academy",
         "academyId": "ai",
-        "programLevel": "Certification Course",
+        "programLevel": "Professional Program",
         "icon": "🤖",
         "color": "linear-gradient(135deg, #0599a8, #2563EB)",
         "name": "AI for Business Professional",
@@ -1655,7 +1671,8 @@ const NS_ACADEMIES = [
         "courseRole": "Professional Skill",
         "learningHours": 160,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Professional Diploma in Business AI Implementation & Workflow Automation."
+        "positioning": "Professional Diploma in Business AI Implementation & Workflow Automation.",
+        "course_type": "Professional Program"
       },
       {
         "id": "prompt-engineering",
@@ -1724,7 +1741,8 @@ const NS_ACADEMIES = [
         "courseRole": "Foundation",
         "learningHours": 60,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Foundational shared module for all academies."
+        "positioning": "Foundational shared module for all academies.",
+        "course_type": "Certification Course"
       },
       {
         "id": "ai-automation-n8n",
@@ -1792,7 +1810,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 80,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Top high-growth freelance specialization."
+        "positioning": "Top high-growth freelance specialization.",
+        "course_type": "Certification Course"
       },
       {
         "id": "ai-agents-fundamentals",
@@ -1860,7 +1879,8 @@ const NS_ACADEMIES = [
         "courseRole": "Advanced Skill",
         "learningHours": 80,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Elite modern 2026 specialization track."
+        "positioning": "Elite modern 2026 specialization track.",
+        "course_type": "Certification Course"
       },
       {
         "id": "chatgpt-mastery",
@@ -1923,7 +1943,8 @@ const NS_ACADEMIES = [
         "courseRole": "Foundation",
         "learningHours": 60,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Consolidate single-vendor silos into multi-model intelligence."
+        "positioning": "Consolidate single-vendor silos into multi-model intelligence.",
+        "course_type": "Certification Course"
       },
       {
         "id": "gemini-mastery",
@@ -1984,7 +2005,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 40,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Merge into Unified Multi-LLM Masterclass."
+        "positioning": "Merge into Unified Multi-LLM Masterclass.",
+        "course_type": "Certification Course"
       },
       {
         "id": "claude-productivity",
@@ -2047,7 +2069,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 40,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Merge into Unified Multi-LLM Masterclass."
+        "positioning": "Merge into Unified Multi-LLM Masterclass.",
+        "course_type": "Certification Course"
       },
       {
         "id": "ai-research-tools",
@@ -2108,7 +2131,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 20,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Embed as module in AI Productivity."
+        "positioning": "Embed as module in AI Productivity.",
+        "course_type": "Certification Course"
       }
     ]
   },
@@ -2126,7 +2150,7 @@ const NS_ACADEMIES = [
         "slug": "creative-design-master",
         "academy": "Design Academy",
         "academyId": "design",
-        "programLevel": "Certification Course",
+        "programLevel": "Career Program",
         "icon": "🎨",
         "color": "linear-gradient(135deg, #8B5CF6, #EC4899)",
         "name": "Creative Design Master",
@@ -2229,7 +2253,8 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 320,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI."
+        "positioning": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI.",
+        "course_type": "Career Program"
       },
       {
         "id": "graphic-design-pro",
@@ -2318,14 +2343,15 @@ const NS_ACADEMIES = [
         "courseRole": "Professional Skill",
         "learningHours": 160,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "A practical graphic-design program covering design principles, Photoshop, Illustrator, branding, advertising campaigns, print production and generative AI creative workflows."
+        "positioning": "A practical graphic-design program covering design principles, Photoshop, Illustrator, branding, advertising campaigns, print production and generative AI creative workflows.",
+        "course_type": "Professional Program"
       },
       {
         "id": "uiux-design-pro",
         "slug": "ui-ux-design-professional",
         "academy": "Design Academy",
         "academyId": "design",
-        "programLevel": "Certification Course",
+        "programLevel": "Professional Program",
         "icon": "🎨",
         "color": "linear-gradient(135deg, #8B5CF6, #EC4899)",
         "name": "UI/UX Design Professional",
@@ -2417,14 +2443,15 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 200,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "A practical UI/UX and digital product design program covering UX research, information architecture, wireframing, Figma, responsive interfaces, design systems, interactive prototypes, usability testing, Framer website production and AI-assisted product design."
+        "positioning": "A practical UI/UX and digital product design program covering UX research, information architecture, wireframing, Figma, responsive interfaces, design systems, interactive prototypes, usability testing, Framer website production and AI-assisted product design.",
+        "course_type": "Professional Program"
       },
       {
         "id": "adobe-photoshop",
         "slug": "adobe-photoshop",
         "academy": "Design Academy",
         "academyId": "design",
-        "programLevel": "Professional Program",
+        "programLevel": "Certification Course",
         "icon": "🎨",
         "color": "linear-gradient(135deg, #001E36, #31A8FF)",
         "name": "Adobe Photoshop — Commercial Image Editing & Design",
@@ -2501,14 +2528,15 @@ const NS_ACADEMIES = [
         "learning_hours": 48,
         "guided_hours": 48,
         "futureReviewStatus": "STABLE_2027",
-        "positioning": "Commercial Image Editing, Retouching, Compositing & Advertising Design"
+        "positioning": "Commercial Image Editing, Retouching, Compositing & Advertising Design",
+        "course_type": "Certification Course"
       },
       {
         "id": "adobe-illustrator",
         "slug": "adobe-illustrator",
         "academy": "Design Academy",
         "academyId": "design",
-        "programLevel": "Professional Program",
+        "programLevel": "Certification Course",
         "icon": "🎨",
         "color": "linear-gradient(135deg, #FF9A00, #FF5500)",
         "name": "Adobe Illustrator — Vector Graphics & Print Design",
@@ -2584,7 +2612,8 @@ const NS_ACADEMIES = [
         "learning_hours": 48,
         "guided_hours": 48,
         "futureReviewStatus": "STABLE_2027",
-        "positioning": "Vector Graphics, Typography, Illustration & Print Production"
+        "positioning": "Vector Graphics, Typography, Illustration & Print Production",
+        "course_type": "Certification Course"
       },
       {
         "id": "canva-pro",
@@ -2670,7 +2699,8 @@ const NS_ACADEMIES = [
         "learning_hours": 32,
         "guided_hours": 32,
         "futureReviewStatus": "STABLE_2027",
-        "positioning": "Brand-Consistent Marketing Design & Reusable Canva Content Systems"
+        "positioning": "Brand-Consistent Marketing Design & Reusable Canva Content Systems",
+        "course_type": "Certification Course"
       },
       {
         "id": "figma-ui-design",
@@ -2762,7 +2792,8 @@ const NS_ACADEMIES = [
         "learning_hours": 64,
         "guided_hours": 64,
         "futureReviewStatus": "STABLE_2027",
-        "positioning": "Responsive UI Design, Components, Prototyping & Developer Handoff"
+        "positioning": "Responsive UI Design, Components, Prototyping & Developer Handoff",
+        "course_type": "Certification Course"
       },
       {
         "id": "brand-identity-design",
@@ -2854,7 +2885,8 @@ const NS_ACADEMIES = [
         "learning_hours": 64,
         "guided_hours": 64,
         "futureReviewStatus": "STABLE_2027",
-        "positioning": "Brand Identity Systems, Creative Direction & Visual Brand Applications"
+        "positioning": "Brand Identity Systems, Creative Direction & Visual Brand Applications",
+        "course_type": "Certification Course"
       },
       {
         "id": "packaging-design",
@@ -2952,7 +2984,8 @@ const NS_ACADEMIES = [
         "learningHours": 64,
         "hours": 64,
         "futureReviewStatus": "STABLE_2027",
-        "positioning": "Commercial Packaging Graphics, Dieline Artwork, Prepress & Production Handover."
+        "positioning": "Commercial Packaging Graphics, Dieline Artwork, Prepress & Production Handover.",
+        "course_type": "Certification Course"
       },
       {
         "id": "logo-design",
@@ -3042,7 +3075,8 @@ const NS_ACADEMIES = [
         "learningHours": 40,
         "hours": 40,
         "futureReviewStatus": "STABLE_2027",
-        "positioning": "Original Logo Design, Vector Marks, Typography & Professional Delivery."
+        "positioning": "Original Logo Design, Vector Marks, Typography & Professional Delivery.",
+        "course_type": "Certification Course"
       }
     ]
   },
@@ -3060,7 +3094,7 @@ const NS_ACADEMIES = [
         "slug": "full-stack-programming-foundation",
         "academy": "Programming Academy",
         "academyId": "programming",
-        "programLevel": "Certification Course",
+        "programLevel": "Career Program",
         "icon": "💻",
         "color": "linear-gradient(135deg, #2563EB, #0599a8)",
         "name": "Full Stack Programming Foundation",
@@ -3154,7 +3188,8 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 240,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment."
+        "positioning": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment.",
+        "course_type": "Career Program"
       },
       {
         "id": "python-developer",
@@ -3244,14 +3279,15 @@ const NS_ACADEMIES = [
         "courseRole": "Professional Skill",
         "learningHours": 120,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment."
+        "positioning": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment.",
+        "course_type": "Professional Program"
       },
       {
         "id": "ai-assisted-full-stack-web-development",
         "slug": "ai-assisted-full-stack-web-development",
         "academy": "Programming Academy",
         "academyId": "programming",
-        "programLevel": "Certification Course",
+        "programLevel": "Career Program",
         "icon": "⚡",
         "color": "linear-gradient(135deg, #3B82F6, #10B981)",
         "name": "AI-Assisted Full Stack Web Development",
@@ -3310,7 +3346,8 @@ const NS_ACADEMIES = [
         "courseRole": "Flagship Career Program",
         "learningHours": 320,
         "futureReviewStatus": "ACTIVE",
-        "positioning": "Flagship AI-Assisted Full-Stack Web Development Program."
+        "positioning": "Flagship AI-Assisted Full-Stack Web Development Program.",
+        "course_type": "Career Program"
       },
       {
         "id": "html-css",
@@ -3368,7 +3405,8 @@ const NS_ACADEMIES = [
         "courseRole": "Foundation",
         "learningHours": 20,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Convert to foundational module inside Full Stack & Frontend."
+        "positioning": "Convert to foundational module inside Full Stack & Frontend.",
+        "course_type": "Certification Course"
       },
       {
         "id": "javascript-cert",
@@ -3431,14 +3469,15 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 40,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Keep as standalone language certification."
+        "positioning": "Keep as standalone language certification.",
+        "course_type": "Certification Course"
       },
       {
         "id": "react-cert",
         "slug": "react-javascript",
         "academy": "Programming Academy",
         "academyId": "programming",
-        "programLevel": "Professional Program",
+        "programLevel": "Certification Course",
         "icon": "💻",
         "color": "linear-gradient(135deg, #2563EB, #0599a8)",
         "name": "React.js Frontend Development",
@@ -3494,14 +3533,15 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 40,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Top commercial frontend library certification."
+        "positioning": "Top commercial frontend library certification.",
+        "course_type": "Certification Course"
       },
       {
         "id": "node-js",
         "slug": "node-js",
         "academy": "Programming Academy",
         "academyId": "programming",
-        "programLevel": "Professional Program",
+        "programLevel": "Certification Course",
         "icon": "💻",
         "color": "linear-gradient(135deg, #2563EB, #75d766)",
         "name": "Node.js Backend Development with Express",
@@ -3555,14 +3595,15 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 40,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Core backend runtime certification."
+        "positioning": "Core backend runtime certification.",
+        "course_type": "Certification Course"
       },
       {
         "id": "sql-basics",
         "slug": "sql-basics",
         "academy": "Programming Academy",
         "academyId": "programming",
-        "programLevel": "Professional Program",
+        "programLevel": "Certification Course",
         "icon": "💻",
         "color": "linear-gradient(135deg, #2563EB, #EC4899)",
         "name": "SQL & Relational Database Fundamentals",
@@ -3611,7 +3652,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 40,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Durable foundational skill used in programming and office data."
+        "positioning": "Durable foundational skill used in programming and office data.",
+        "course_type": "Certification Course"
       },
       {
         "id": "git-github",
@@ -3667,7 +3709,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 20,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Universal developer tool; embed as shared module in all programming tracks."
+        "positioning": "Universal developer tool; embed as shared module in all programming tracks.",
+        "course_type": "Certification Course"
       },
       {
         "id": "rest-apis",
@@ -3723,7 +3766,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 20,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Integrate into Node.js and Full Stack foundations."
+        "positioning": "Integrate into Node.js and Full Stack foundations.",
+        "course_type": "Certification Course"
       }
     ]
   },
@@ -3741,7 +3785,7 @@ const NS_ACADEMIES = [
         "slug": "ecommerce-website-mastery",
         "academy": "No-Code Web Academy",
         "academyId": "nocode",
-        "programLevel": "Certification Course",
+        "programLevel": "Career Program",
         "icon": "🌐",
         "color": "linear-gradient(135deg, #F59E0B, #EF4444)",
         "name": "E-Commerce Website Mastery",
@@ -3856,7 +3900,8 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 240,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Flagship no-code e-commerce career program. Master Shopify and WooCommerce store architecture, Indian payment gateways, GST compliance, logistics, and retention automation."
+        "positioning": "Flagship no-code e-commerce career program. Master Shopify and WooCommerce store architecture, Indian payment gateways, GST compliance, logistics, and retention automation.",
+        "course_type": "Career Program"
       },
       {
         "id": "nocode-web-pro",
@@ -3959,14 +4004,15 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 120,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows."
+        "positioning": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
+        "course_type": "Professional Program"
       },
       {
         "id": "wordpress-cert",
         "slug": "wordpress",
         "academy": "No-Code Web Academy",
         "academyId": "nocode",
-        "programLevel": "Professional Program",
+        "programLevel": "Certification Course",
         "icon": "🌐",
         "color": "linear-gradient(135deg, #F59E0B, #2563EB)",
         "name": "WordPress Website Design & Management",
@@ -4022,14 +4068,15 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 60,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Upgrade to modern WordPress 6.x standards."
+        "positioning": "Upgrade to modern WordPress 6.x standards.",
+        "course_type": "Certification Course"
       },
       {
         "id": "woocommerce-cert",
         "slug": "woocommerce",
         "academy": "No-Code Web Academy",
         "academyId": "nocode",
-        "programLevel": "Professional Program",
+        "programLevel": "Certification Course",
         "icon": "🌐",
         "color": "linear-gradient(135deg, #F59E0B, #8B5CF6)",
         "name": "WooCommerce Store Development & Operations",
@@ -4083,14 +4130,15 @@ const NS_ACADEMIES = [
         "courseRole": "Specialization",
         "learningHours": 40,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Consolidate into WordPress or E-Commerce track."
+        "positioning": "Consolidate into WordPress or E-Commerce track.",
+        "course_type": "Certification Course"
       },
       {
         "id": "shopify-cert",
         "slug": "shopify",
         "academy": "No-Code Web Academy",
         "academyId": "nocode",
-        "programLevel": "Professional Program",
+        "programLevel": "Certification Course",
         "icon": "🌐",
         "color": "linear-gradient(135deg, #F59E0B, #75d766)",
         "name": "Shopify Store Design & E-Commerce Operations",
@@ -4141,7 +4189,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 40,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "High SME and agency client demand across India and globally."
+        "positioning": "High SME and agency client demand across India and globally.",
+        "course_type": "Certification Course"
       },
       {
         "id": "elementor-cert",
@@ -4197,7 +4246,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 40,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Merge into WordPress certification as a module."
+        "positioning": "Merge into WordPress certification as a module.",
+        "course_type": "Certification Course"
       },
       {
         "id": "webflow-cert",
@@ -4260,7 +4310,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 80,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Premium freelance rate earner ($50-$100/hr globally)."
+        "positioning": "Premium freelance rate earner ($50-$100/hr globally).",
+        "course_type": "Certification Course"
       },
       {
         "id": "framer-cert",
@@ -4323,7 +4374,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 80,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "High-velocity 2026 tool for tech startup sites."
+        "positioning": "High-velocity 2026 tool for tech startup sites.",
+        "course_type": "Certification Course"
       }
     ]
   },
@@ -4341,7 +4393,7 @@ const NS_ACADEMIES = [
         "slug": "ai-integrated-video-editing-motion-graphics-professional",
         "academy": "Video & Motion Academy",
         "academyId": "video",
-        "programLevel": "Certification Course",
+        "programLevel": "Career Program",
         "icon": "🎬",
         "color": "linear-gradient(135deg, #EF4444, #F97316)",
         "name": "AI-Integrated Video Editing & Motion Graphics Professional",
@@ -4538,7 +4590,8 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 320,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Flagship creative video editing, motion graphics, and generative AI career track."
+        "positioning": "Flagship creative video editing, motion graphics, and generative AI career track.",
+        "course_type": "Career Program"
       },
       {
         "id": "video-pro",
@@ -4654,14 +4707,15 @@ const NS_ACADEMIES = [
         "learningHours": 160,
         "futureReviewStatus": "EVOLVING",
         "positioning": "A practical professional video editing program teaching Premiere Pro, DaVinci Resolve, Photoshop, professional audio, commercial video production and AI-assisted editing techniques.",
-        "proposedRegularPrice": 35900
+        "proposedRegularPrice": 35900,
+        "course_type": "Professional Program"
       },
       {
         "id": "generative-ai-video-production-professional",
         "slug": "generative-ai-video-production-professional",
         "academy": "Video & Motion Academy",
         "academyId": "video",
-        "programLevel": "Certification Course",
+        "programLevel": "Professional Program",
         "icon": "🎬",
         "color": "linear-gradient(135deg, #EF4444, #75d766)",
         "name": "Generative AI Video Production Professional",
@@ -4785,7 +4839,8 @@ const NS_ACADEMIES = [
         "learningHours": 200,
         "futureReviewStatus": "EVOLVING",
         "positioning": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
-        "proposedRegularPrice": 39900
+        "proposedRegularPrice": 39900,
+        "course_type": "Professional Program"
       },
       {
         "id": "adobe-premiere-pro",
@@ -4843,7 +4898,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 40,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Standard video tool certification."
+        "positioning": "Standard video tool certification.",
+        "course_type": "Certification Course"
       },
       {
         "id": "after-effects",
@@ -4906,7 +4962,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 80,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Indispensable commercial motion graphics tool."
+        "positioning": "Indispensable commercial motion graphics tool.",
+        "course_type": "Certification Course"
       },
       {
         "id": "davinci-resolve",
@@ -4967,7 +5024,8 @@ const NS_ACADEMIES = [
         "courseRole": "Specialization",
         "learningHours": 80,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "High-value color grading & finishing specialization."
+        "positioning": "High-value color grading & finishing specialization.",
+        "course_type": "Certification Course"
       },
       {
         "id": "reels-editing",
@@ -5026,7 +5084,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 40,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "High demand for social media creators and D2C brands."
+        "positioning": "High demand for social media creators and D2C brands.",
+        "course_type": "Certification Course"
       },
       {
         "id": "motion-graphics-essentials",
@@ -5081,7 +5140,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 40,
         "futureReviewStatus": "EVOLVING",
-        "positioning": "Consolidate into After Effects course."
+        "positioning": "Consolidate into After Effects course.",
+        "course_type": "Certification Course"
       }
     ]
   },
@@ -5099,7 +5159,7 @@ const NS_ACADEMIES = [
         "slug": "architectural-visualisation-master",
         "academy": "3D Academy",
         "academyId": "3d",
-        "programLevel": "Certification Course",
+        "programLevel": "Career Program",
         "icon": "🏗️",
         "color": "linear-gradient(135deg, #10B981, #059669)",
         "name": "Architectural Visualisation Master",
@@ -5247,7 +5307,8 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 320,
         "futureReviewStatus": "STABLE",
-        "positioning": "A comprehensive architectural visualization program covering AutoCAD drafting, 3ds Max modeling, Chaos V-Ray rendering, Twinmotion real-time walkthroughs, and guided exposure to Unreal Engine, Blender and safe AI-assisted production."
+        "positioning": "A comprehensive architectural visualization program covering AutoCAD drafting, 3ds Max modeling, Chaos V-Ray rendering, Twinmotion real-time walkthroughs, and guided exposure to Unreal Engine, Blender and safe AI-assisted production.",
+        "course_type": "Career Program"
       },
       {
         "id": "3d-viz-pro",
@@ -5389,7 +5450,8 @@ const NS_ACADEMIES = [
         "courseType": "PROFESSIONAL",
         "courseRole": "Professional Skill",
         "futureReviewStatus": "STABLE",
-        "positioning": "A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production."
+        "positioning": "A hands-on 3D product visualization course focused on Blender hard-surface modeling, PBR materials, professional studio lighting, realistic product rendering, product animation and AI-assisted production.",
+        "course_type": "Professional Program"
       },
       {
         "id": "blender-cert",
@@ -5452,7 +5514,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "Very popular open-source 3D tool certification."
+        "positioning": "Very popular open-source 3D tool certification.",
+        "course_type": "Certification Course"
       },
       {
         "id": "3ds-max-cert",
@@ -5512,7 +5575,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "Standard architectural modeling tool certification."
+        "positioning": "Standard architectural modeling tool certification.",
+        "course_type": "Certification Course"
       },
       {
         "id": "v-ray-cert",
@@ -5578,7 +5642,8 @@ const NS_ACADEMIES = [
         "courseRole": "Specialization",
         "learningHours": 80,
         "futureReviewStatus": "STABLE",
-        "positioning": "High-fidelity rendering specialization."
+        "positioning": "High-fidelity rendering specialization.",
+        "course_type": "Certification Course"
       },
       {
         "id": "twinmotion-cert",
@@ -5643,7 +5708,8 @@ const NS_ACADEMIES = [
         "courseRole": "Specialization",
         "learningHours": 80,
         "futureReviewStatus": "STABLE",
-        "positioning": "Accessible bridge to real-time engine rendering."
+        "positioning": "Accessible bridge to real-time engine rendering.",
+        "course_type": "Certification Course"
       },
       {
         "id": "cinema-4d-cert",
@@ -5708,7 +5774,8 @@ const NS_ACADEMIES = [
         "courseRole": "Specialization",
         "learningHours": 60,
         "futureReviewStatus": "STABLE",
-        "positioning": "Move to Video & Motion path as a high-end 3D motion tool."
+        "positioning": "Move to Video & Motion path as a high-end 3D motion tool.",
+        "course_type": "Certification Course"
       },
       {
         "id": "unreal-engine-basics",
@@ -5776,7 +5843,8 @@ const NS_ACADEMIES = [
         "courseRole": "Advanced Skill",
         "learningHours": 80,
         "futureReviewStatus": "STABLE",
-        "positioning": "Leading edge 2026 specialization in 3D architecture."
+        "positioning": "Leading edge 2026 specialization in 3D architecture.",
+        "course_type": "Certification Course"
       }
     ]
   },
@@ -5794,7 +5862,7 @@ const NS_ACADEMIES = [
         "slug": "freelancing-client-acquisition-professional",
         "academy": "Career & Freelancing Academy",
         "academyId": "career",
-        "programLevel": "Certification Course",
+        "programLevel": "Professional Program",
         "icon": "💼",
         "color": "linear-gradient(135deg, #011731, #0599a8)",
         "name": "Freelancing & Client Acquisition Professional",
@@ -5942,7 +6010,8 @@ const NS_ACADEMIES = [
         "futureReviewStatus": "STABLE",
         "positioning": "Build Your Freelance Brand. Win Clients. Grow Your Business.",
         "academicLabel": "Business & Career Development",
-        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
+        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation.",
+        "course_type": "Professional Program"
       },
       {
         "id": "career-launch-placement-readiness-professional",
@@ -6073,7 +6142,8 @@ const NS_ACADEMIES = [
         "futureReviewStatus": "STABLE",
         "positioning": "Leading 2026 specialization in career launch and placement readiness.",
         "academicLabel": "Business & Career Development",
-        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
+        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation.",
+        "course_type": "Professional Program"
       },
       {
         "id": "resume-building",
@@ -6136,7 +6206,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 20,
         "futureReviewStatus": "STABLE",
-        "positioning": "Embed as mandatory outcome module in all career programs."
+        "positioning": "Embed as mandatory outcome module in all career programs.",
+        "course_type": "Certification Course"
       },
       {
         "id": "linkedin-optimisation",
@@ -6199,7 +6270,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "Universal personal branding asset across all students."
+        "positioning": "Universal personal branding asset across all students.",
+        "course_type": "Certification Course"
       },
       {
         "id": "interview-preparation",
@@ -6260,7 +6332,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 20,
         "futureReviewStatus": "STABLE",
-        "positioning": "Embed as mandatory capstone module in all career programs."
+        "positioning": "Embed as mandatory capstone module in all career programs.",
+        "course_type": "Certification Course"
       },
       {
         "id": "client-communication",
@@ -6321,7 +6394,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 20,
         "futureReviewStatus": "STABLE",
-        "positioning": "Embed inside Freelancing and Communication academies."
+        "positioning": "Embed inside Freelancing and Communication academies.",
+        "course_type": "Certification Course"
       },
       {
         "id": "proposal-writing",
@@ -6382,7 +6456,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 20,
         "futureReviewStatus": "STABLE",
-        "positioning": "Embed as core module inside Freelancing Mastery."
+        "positioning": "Embed as core module inside Freelancing Mastery.",
+        "course_type": "Certification Course"
       },
       {
         "id": "agency-building",
@@ -6450,7 +6525,8 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 80,
         "futureReviewStatus": "STABLE",
-        "positioning": "High-ticket entrepreneurial specialization."
+        "positioning": "High-ticket entrepreneurial specialization.",
+        "course_type": "Certification Course"
       },
       {
         "id": "fiverr-success",
@@ -6513,7 +6589,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "Good entry-level monetization course."
+        "positioning": "Good entry-level monetization course.",
+        "course_type": "Certification Course"
       },
       {
         "id": "upwork-success",
@@ -6576,7 +6653,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "High student demand tactical micro-course."
+        "positioning": "High student demand tactical micro-course.",
+        "course_type": "Certification Course"
       }
     ]
   },
@@ -6594,7 +6672,7 @@ const NS_ACADEMIES = [
         "slug": "business-english-personality-development",
         "academy": "Communication Academy",
         "academyId": "communication",
-        "programLevel": "Certification Course",
+        "programLevel": "Career Program",
         "icon": "💬",
         "color": "linear-gradient(135deg, #75d766, #011731)",
         "name": "Business English & Personality Development",
@@ -6765,7 +6843,8 @@ const NS_ACADEMIES = [
         "futureReviewStatus": "STABLE",
         "positioning": "Speak with Confidence. Communicate with Impact. Grow Professionally.",
         "academicLabel": "Business Communication & Executive Presence",
-        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
+        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation.",
+        "course_type": "Career Program"
       },
       {
         "id": "spoken-english-pro",
@@ -6894,7 +6973,8 @@ const NS_ACADEMIES = [
         "futureReviewStatus": "STABLE",
         "positioning": "Speak English Clearly. Communicate Confidently. Express Yourself Professionally.",
         "academicLabel": "Practical Spoken Fluency & Interactive Communication",
-        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation."
+        "commercialNotice": "Applicable GST extra. Transparent institutional pricing with 0% artificial discount manipulation.",
+        "course_type": "Professional Program"
       },
       {
         "id": "spoken-english-cert",
@@ -6952,7 +7032,8 @@ const NS_ACADEMIES = [
         "courseRole": "Foundation",
         "learningHours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "Consolidate into Spoken English Professional."
+        "positioning": "Consolidate into Spoken English Professional.",
+        "course_type": "Certification Course"
       },
       {
         "id": "business-communication",
@@ -7008,7 +7089,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "High utility corporate writing & correspondence course."
+        "positioning": "High utility corporate writing & correspondence course.",
+        "course_type": "Certification Course"
       },
       {
         "id": "presentation-skills",
@@ -7069,7 +7151,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "Absorb retired PowerPoint into this practical course."
+        "positioning": "Absorb retired PowerPoint into this practical course.",
+        "course_type": "Certification Course"
       },
       {
         "id": "public-speaking",
@@ -7137,7 +7220,8 @@ const NS_ACADEMIES = [
         "courseRole": "Advanced Skill",
         "learningHours": 80,
         "futureReviewStatus": "STABLE",
-        "positioning": "High prestige executive speaking specialization."
+        "positioning": "High prestige executive speaking specialization.",
+        "course_type": "Certification Course"
       },
       {
         "id": "soft-skills",
@@ -7198,7 +7282,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 20,
         "futureReviewStatus": "STABLE",
-        "positioning": "Convert to universal career readiness module."
+        "positioning": "Convert to universal career readiness module.",
+        "course_type": "Certification Course"
       }
     ]
   },
@@ -7216,7 +7301,7 @@ const NS_ACADEMIES = [
         "slug": "future-tech-kids-mastery",
         "academy": "Kids Tech Academy",
         "academyId": "kids",
-        "programLevel": "Certification Course",
+        "programLevel": "Career Program",
         "icon": "👨‍💻",
         "color": "linear-gradient(135deg, #EC4899, #8B5CF6)",
         "name": "Future Tech Kids Mastery",
@@ -7364,14 +7449,15 @@ const NS_ACADEMIES = [
         "courseType": "MASTER",
         "courseRole": "STEAM Mastery",
         "futureReviewStatus": "STABLE",
-        "positioning": "Flagship STEAM Program for Youth (Ages 9–16)."
+        "positioning": "Flagship STEAM Program for Youth (Ages 9–16).",
+        "course_type": "Career Program"
       },
       {
         "id": "young-coders",
         "slug": "young-coders-program",
         "academy": "Kids Tech Academy",
         "academyId": "kids",
-        "programLevel": "Certification Course",
+        "programLevel": "Professional Program",
         "icon": "👨‍💻",
         "color": "linear-gradient(135deg, #EC4899, #2563EB)",
         "name": "Young Coders Program",
@@ -7483,7 +7569,8 @@ const NS_ACADEMIES = [
         "courseType": "FOUNDATION",
         "courseRole": "Coding Foundation",
         "futureReviewStatus": "STABLE",
-        "positioning": "Focused 4-Month Coding Foundation for Youth (Ages 9–16)."
+        "positioning": "Focused 4-Month Coding Foundation for Youth (Ages 9–16).",
+        "course_type": "Professional Program"
       },
       {
         "id": "scratch-programming",
@@ -7545,7 +7632,8 @@ const NS_ACADEMIES = [
         "courseRole": "Foundation",
         "learningHours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "Excellent entry door for young beginners."
+        "positioning": "Excellent entry door for young beginners.",
+        "course_type": "Certification Course"
       },
       {
         "id": "python-for-kids",
@@ -7608,7 +7696,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 80,
         "futureReviewStatus": "STABLE",
-        "positioning": "First real text-based programming language for kids."
+        "positioning": "First real text-based programming language for kids.",
+        "course_type": "Certification Course"
       },
       {
         "id": "ai-for-kids",
@@ -7671,7 +7760,8 @@ const NS_ACADEMIES = [
         "courseRole": "Specialization",
         "learningHours": 80,
         "futureReviewStatus": "STABLE",
-        "positioning": "Cutting-edge modern educational offering for schools."
+        "positioning": "Cutting-edge modern educational offering for schools.",
+        "course_type": "Certification Course"
       },
       {
         "id": "robotics-basics",
@@ -7732,7 +7822,8 @@ const NS_ACADEMIES = [
         "courseRole": "Specialization",
         "learningHours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "Valuable physical computing track."
+        "positioning": "Valuable physical computing track.",
+        "course_type": "Certification Course"
       },
       {
         "id": "web-design-for-kids",
@@ -7788,7 +7879,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 20,
         "futureReviewStatus": "STABLE",
-        "positioning": "Convert to module in Young Coders."
+        "positioning": "Convert to module in Young Coders.",
+        "course_type": "Certification Course"
       }
     ]
   },
@@ -7947,7 +8039,8 @@ const NS_ACADEMIES = [
         "courseType": "PROFESSIONAL",
         "courseRole": "YouTube Content Strategist & Video Producer",
         "futureReviewStatus": "STABLE",
-        "positioning": "Professional Specialization in Digital Content & Creator Economy (5 Months, 150 Guided Hours)."
+        "positioning": "Professional Specialization in Digital Content & Creator Economy (5 Months, 150 Guided Hours).",
+        "course_type": "Professional Program"
       },
       {
         "id": "content-creator-pro",
@@ -8102,7 +8195,8 @@ const NS_ACADEMIES = [
         "courseType": "PROFESSIONAL",
         "courseRole": "Brand Content Creator & Social Video Producer",
         "futureReviewStatus": "STABLE",
-        "positioning": "Professional Specialization in Digital Content & Creator Economy (4 Months, 140 Guided Hours)."
+        "positioning": "Professional Specialization in Digital Content & Creator Economy (4 Months, 140 Guided Hours).",
+        "course_type": "Professional Program"
       },
       {
         "id": "youtube-seo",
@@ -8165,7 +8259,8 @@ const NS_ACADEMIES = [
         "courseRole": "Specialization",
         "learningHours": 80,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Consolidate YouTube search across the platform here."
+        "positioning": "Consolidate YouTube search across the platform here.",
+        "course_type": "Certification Course"
       },
       {
         "id": "thumbnail-design",
@@ -8223,7 +8318,8 @@ const NS_ACADEMIES = [
         "courseRole": "Supporting Skill",
         "learningHours": 20,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Embed as high-impact module in YouTube Mastery."
+        "positioning": "Embed as high-impact module in YouTube Mastery.",
+        "course_type": "Certification Course"
       },
       {
         "id": "podcast-production",
@@ -8279,7 +8375,8 @@ const NS_ACADEMIES = [
         "courseRole": "Specialization",
         "learningHours": 40,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Distinct growing niche for corporate and indie podcasts."
+        "positioning": "Distinct growing niche for corporate and indie podcasts.",
+        "course_type": "Certification Course"
       },
       {
         "id": "personal-branding",
@@ -8335,7 +8432,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 60,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Reposition for high-ticket professional consultants."
+        "positioning": "Reposition for high-ticket professional consultants.",
+        "course_type": "Certification Course"
       },
       {
         "id": "short-video-strategy",
@@ -8394,7 +8492,8 @@ const NS_ACADEMIES = [
         "courseRole": "Core Skill",
         "learningHours": 80,
         "futureReviewStatus": "FAST-CHANGING",
-        "positioning": "Strategic marketing course paired with technical reels editing."
+        "positioning": "Strategic marketing course paired with technical reels editing.",
+        "course_type": "Certification Course"
       }
     ]
   },
@@ -8412,7 +8511,7 @@ const NS_ACADEMIES = [
         "slug": "business-productivity-mastery",
         "academy": "Office Productivity Academy",
         "academyId": "office",
-        "programLevel": "Professional Program",
+        "programLevel": "Career Program",
         "icon": "📋",
         "color": "linear-gradient(135deg, #0599a8, #2563EB)",
         "name": "MIS & Business Intelligence Professional",
@@ -8480,7 +8579,8 @@ const NS_ACADEMIES = [
         "courseRole": "Career/Monetization",
         "learningHours": 240,
         "futureReviewStatus": "STABLE",
-        "positioning": "Upgrade to Business Analytics, Power BI & Microsoft 365 Copilot."
+        "positioning": "Upgrade to Business Analytics, Power BI & Microsoft 365 Copilot.",
+        "course_type": "Career Program"
       },
       {
         "id": "office-pro",
@@ -8608,7 +8708,8 @@ const NS_ACADEMIES = [
         "hours": 96,
         "guidedHours": 96,
         "regularPrice": 15900,
-        "launchBatchFee": 15900
+        "launchBatchFee": 15900,
+        "course_type": "Professional Program"
       },
       {
         "id": "microsoft-excel",
@@ -8739,7 +8840,8 @@ const NS_ACADEMIES = [
         "learning_hours": 48,
         "guided_hours": 48,
         "futureReviewStatus": "2027 Ready",
-        "positioning": "A commercially attractive, job-relevant 6-week Excel reporting certification focused on real office tasks, data accuracy, modern formulas (XLOOKUP, dynamic arrays), PivotTables, and business reporting without advanced BI or programming prerequisites."
+        "positioning": "A commercially attractive, job-relevant 6-week Excel reporting certification focused on real office tasks, data accuracy, modern formulas (XLOOKUP, dynamic arrays), PivotTables, and business reporting without advanced BI or programming prerequisites.",
+        "course_type": "Certification Course"
       },
       {
         "id": "microsoft-word",
@@ -8868,7 +8970,8 @@ const NS_ACADEMIES = [
         "learning_hours": 24,
         "guided_hours": 24,
         "futureReviewStatus": "2027 Ready",
-        "positioning": "A practical, job-relevant 3-week Microsoft Word certification focused on everyday professional document production, styles, structured reports, mail merge, collaboration, and accessible PDF delivery."
+        "positioning": "A practical, job-relevant 3-week Microsoft Word certification focused on everyday professional document production, styles, structured reports, mail merge, collaboration, and accessible PDF delivery.",
+        "course_type": "Certification Course"
       },
       {
         "id": "microsoft-powerpoint",
@@ -8992,7 +9095,8 @@ const NS_ACADEMIES = [
         "learning_hours": 32,
         "guided_hours": 32,
         "futureReviewStatus": "2027 Ready",
-        "positioning": "A modern, practical, portfolio-focused 4-week PowerPoint certification teaching professional slide design, Slide Master templates, editable charts, and accessible business decks without public speaking prerequisites."
+        "positioning": "A modern, practical, portfolio-focused 4-week PowerPoint certification teaching professional slide design, Slide Master templates, editable charts, and accessible business decks without public speaking prerequisites.",
+        "course_type": "Certification Course"
       },
       {
         "id": "google-workspace",
@@ -9120,7 +9224,8 @@ const NS_ACADEMIES = [
         "learning_hours": 40,
         "guided_hours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "A practical digital-office operations course teaching how Google applications connect in real workflows, managing documents, meetings, files, survey responses, permissions, and responsible Gemini AI assistance without requiring enterprise admin privileges."
+        "positioning": "A practical digital-office operations course teaching how Google applications connect in real workflows, managing documents, meetings, files, survey responses, permissions, and responsible Gemini AI assistance without requiring enterprise admin privileges.",
+        "course_type": "Certification Course"
       },
       {
         "id": "notion-cert",
@@ -9245,7 +9350,8 @@ const NS_ACADEMIES = [
         "learning_hours": 40,
         "guided_hours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "A practical business-operations course teaching how to organize company knowledge, connect relational databases, track projects and tasks, author standard operating procedures, and manage permissions in Notion without over-complicated aesthetic clutter or paid-plan dependencies."
+        "positioning": "A practical business-operations course teaching how to organize company knowledge, connect relational databases, track projects and tasks, author standard operating procedures, and manage permissions in Notion without over-complicated aesthetic clutter or paid-plan dependencies.",
+        "course_type": "Certification Course"
       },
       {
         "id": "clickup-cert",
@@ -9372,7 +9478,8 @@ const NS_ACADEMIES = [
         "learning_hours": 40,
         "guided_hours": 40,
         "futureReviewStatus": "STABLE",
-        "positioning": "A practical project coordination course teaching how to break down deliverables, assign responsibilities, manage task dependencies, monitor project health on dashboards, and automate recurring workflows in ClickUp without enterprise PMO overhead."
+        "positioning": "A practical project coordination course teaching how to break down deliverables, assign responsibilities, manage task dependencies, monitor project health on dashboards, and automate recurring workflows in ClickUp without enterprise PMO overhead.",
+        "course_type": "Certification Course"
       },
       {
         "course_id": "microsoft-copilot",
@@ -16677,7 +16784,7 @@ const NS_COURSES = [
     "slug": "ai-digital-marketing-master",
     "academy": "Digital Marketing Academy",
     "academyId": "digital-marketing",
-    "programLevel": "Certification Course",
+    "programLevel": "Career Program",
     "icon": "📊",
     "color": "linear-gradient(135deg, #FF6B00, #8B5CF6)",
     "name": "AI Digital Marketing Strategist",
@@ -16805,7 +16912,8 @@ const NS_COURSES = [
     "learning_hours": 240,
     "hours": 240,
     "short_description": "Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.",
-    "full_description": "Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation."
+    "full_description": "Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.",
+    "course_type": "Career Program"
   },
   {
     "id": "dm-professional",
@@ -16914,14 +17022,15 @@ const NS_COURSES = [
     "learning_hours": 120,
     "hours": 120,
     "short_description": "Intensive 3-month program focused on independent execution of foundational digital marketing campaigns across search, social, web, and analytics using appropriate AI assistance.",
-    "full_description": "Intensive 3-month program focused on independent execution of foundational digital marketing campaigns across search, social, web, and analytics using appropriate AI assistance."
+    "full_description": "Intensive 3-month program focused on independent execution of foundational digital marketing campaigns across search, social, web, and analytics using appropriate AI assistance.",
+    "course_type": "Professional Program"
   },
   {
     "id": "performance-marketing-specialist",
     "slug": "performance-marketing-specialist",
     "academy": "Digital Marketing Academy",
     "academyId": "digital-marketing",
-    "programLevel": "Certification Course",
+    "programLevel": "Professional Program",
     "icon": "📊",
     "color": "linear-gradient(135deg, #FF6B00, #EF4444)",
     "name": "Performance Marketing Specialist",
@@ -17031,14 +17140,15 @@ const NS_COURSES = [
     "learning_hours": 160,
     "hours": 160,
     "short_description": "Specialized 4-month practical training in Google Ads, Meta Ads, conversion measurement, tracking engineering, campaign optimization, and data-driven acquisition.",
-    "full_description": "Specialized 4-month practical training in Google Ads, Meta Ads, conversion measurement, tracking engineering, campaign optimization, and data-driven acquisition."
+    "full_description": "Specialized 4-month practical training in Google Ads, Meta Ads, conversion measurement, tracking engineering, campaign optimization, and data-driven acquisition.",
+    "course_type": "Professional Program"
   },
   {
     "id": "ecommerce-growth-marketing-specialist",
     "slug": "ecommerce-growth-marketing-specialist",
     "academy": "Digital Marketing Academy",
     "academyId": "digital-marketing",
-    "programLevel": "Certification Course",
+    "programLevel": "Professional Program",
     "icon": "🛍️",
     "color": "linear-gradient(135deg, #10B981, #059669)",
     "name": "E-Commerce & Growth Marketing Specialist",
@@ -17155,7 +17265,8 @@ const NS_COURSES = [
     "learning_hours": 160,
     "hours": 160,
     "short_description": "Intensive 4-month specialization mastering Shopify architecture, Google Merchant Center feed diagnostics, Google Shopping & Performance Max campaigns, Meta Advantage+ Catalog ads, PDP conversion optimization, and Klaviyo lifecycle retention with 160 guided training hours.",
-    "full_description": "Intensive 4-month specialization mastering Shopify architecture, Google Merchant Center feed diagnostics, Google Shopping & Performance Max campaigns, Meta Advantage+ Catalog ads, PDP conversion optimization, and Klaviyo lifecycle retention with 160 guided training hours."
+    "full_description": "Intensive 4-month specialization mastering Shopify architecture, Google Merchant Center feed diagnostics, Google Shopping & Performance Max campaigns, Meta Advantage+ Catalog ads, PDP conversion optimization, and Klaviyo lifecycle retention with 160 guided training hours.",
+    "course_type": "Professional Program"
   },
   {
     "id": "google-ads",
@@ -17261,7 +17372,8 @@ const NS_COURSES = [
     "duration_weeks": 8,
     "learning_hours": 64,
     "short_description": "Master Google Search Ads, AI-powered campaigns, conversion tracking and performance optimization through practical, business-focused training.",
-    "full_description": "Learn to plan, launch, measure and optimize Google Ads campaigns using Google's AI-powered advertising tools. Develop practical, industry-relevant skills in search advertising, lead generation, e-commerce campaign planning, conversion measurement and performance reporting. Work on realistic business scenarios, build portfolio-ready campaign assets and learn how to connect advertising decisions with measurable business outcomes."
+    "full_description": "Learn to plan, launch, measure and optimize Google Ads campaigns using Google's AI-powered advertising tools. Develop practical, industry-relevant skills in search advertising, lead generation, e-commerce campaign planning, conversion measurement and performance reporting. Work on realistic business scenarios, build portfolio-ready campaign assets and learn how to connect advertising decisions with measurable business outcomes.",
+    "course_type": "Certification Course"
   },
   {
     "id": "meta-ads",
@@ -17371,7 +17483,8 @@ const NS_COURSES = [
     "duration_weeks": 8,
     "learning_hours": 64,
     "short_description": "Learn Facebook and Instagram Ads, Meta Advantage+, lead-generation funnels, WhatsApp campaigns, creative testing and conversion tracking through practical, business-focused training.",
-    "full_description": "Master performance-driven Facebook and Instagram advertising with practical training in Meta Ads Manager, campaign strategy, audience targeting, creative testing, Meta Advantage+ and conversion measurement. Learn how to design, launch and optimize lead-generation campaigns using Instant Forms, website conversions and click-to-WhatsApp advertising. Develop skills in lead qualification, CRM follow-up, retargeting, advertising analytics and campaign performance reporting. Build portfolio-ready advertising campaigns and learn to evaluate results using qualified leads, conversion costs and measurable business outcomes rather than relying solely on clicks, reach or engagement."
+    "full_description": "Master performance-driven Facebook and Instagram advertising with practical training in Meta Ads Manager, campaign strategy, audience targeting, creative testing, Meta Advantage+ and conversion measurement. Learn how to design, launch and optimize lead-generation campaigns using Instant Forms, website conversions and click-to-WhatsApp advertising. Develop skills in lead qualification, CRM follow-up, retargeting, advertising analytics and campaign performance reporting. Build portfolio-ready advertising campaigns and learn to evaluate results using qualified leads, conversion costs and measurable business outcomes rather than relying solely on clicks, reach or engagement.",
+    "course_type": "Certification Course"
   },
   {
     "id": "seo-geo",
@@ -17482,7 +17595,8 @@ const NS_COURSES = [
     "duration_weeks": 10,
     "learning_hours": 80,
     "short_description": "Master technical SEO, semantic keyword clustering, Schema.org entity graphs, and Generative Engine Optimization (AEO/GEO) to rank on Google and earn citations in AI search engines.",
-    "full_description": "Learn to dominate organic visibility across traditional search engines and next-generation AI answer engines. This comprehensive 10-week, 80-hour specialist program covers technical SEO audits, site speed & Core Web Vitals, semantic content clusters, Schema.org knowledge graphs, Google Search Console analytics, and Generative Engine Optimization (GEO/AEO) for Google AI Overviews, Perplexity AI, and ChatGPT Search. Build real-world portfolio deliverables that prove measurable organic rankings and AI citation presence."
+    "full_description": "Learn to dominate organic visibility across traditional search engines and next-generation AI answer engines. This comprehensive 10-week, 80-hour specialist program covers technical SEO audits, site speed & Core Web Vitals, semantic content clusters, Schema.org knowledge graphs, Google Search Console analytics, and Generative Engine Optimization (GEO/AEO) for Google AI Overviews, Perplexity AI, and ChatGPT Search. Build real-world portfolio deliverables that prove measurable organic rankings and AI citation presence.",
+    "course_type": "Certification Course"
   },
   {
     "id": "social-media-marketing",
@@ -17589,7 +17703,8 @@ const NS_COURSES = [
     "duration_weeks": 6,
     "learning_hours": 48,
     "short_description": "Learn organic social media strategy, content planning, Instagram and LinkedIn growth, community management, creator collaboration and performance analytics through practical brand-building projects.",
-    "full_description": "Learn how to build and manage an effective organic social media presence for businesses, brands and creators. This practical Social Media Marketing & Growth course teaches audience research, brand positioning, platform-specific strategies, content planning, organic Reels and short-form content, community engagement, influencer collaborations and performance measurement. Develop hands-on experience with Meta Business Suite, Instagram Insights, LinkedIn Analytics, Canva and social media planning tools. Learn how to create content calendars, develop engaging creative briefs, manage customer interactions, collaborate responsibly with creators and evaluate organic social media performance. Build a professional portfolio containing a 30-day multi-platform content calendar, 12 practical content assets or briefs, a community response guide and an organic growth dashboard. The course emphasizes sustainable audience relationships, quality engagement, brand trust and measurable business impact rather than vanity metrics or unrealistic viral-growth promises."
+    "full_description": "Learn how to build and manage an effective organic social media presence for businesses, brands and creators. This practical Social Media Marketing & Growth course teaches audience research, brand positioning, platform-specific strategies, content planning, organic Reels and short-form content, community engagement, influencer collaborations and performance measurement. Develop hands-on experience with Meta Business Suite, Instagram Insights, LinkedIn Analytics, Canva and social media planning tools. Learn how to create content calendars, develop engaging creative briefs, manage customer interactions, collaborate responsibly with creators and evaluate organic social media performance. Build a professional portfolio containing a 30-day multi-platform content calendar, 12 practical content assets or briefs, a community response guide and an organic growth dashboard. The course emphasizes sustainable audience relationships, quality engagement, brand trust and measurable business impact rather than vanity metrics or unrealistic viral-growth promises.",
+    "course_type": "Certification Course"
   },
   {
     "id": "content-marketing",
@@ -17697,7 +17812,8 @@ const NS_COURSES = [
     "duration_weeks": 6,
     "learning_hours": 48,
     "short_description": "Master content strategy, research, AI-assisted writing, human editing, editorial planning, multi-channel distribution and performance measurement through practical, portfolio-ready business content projects.",
-    "full_description": "Learn how to develop, produce, distribute and measure content that supports real business objectives. This practical AI-Powered Content Marketing course combines audience research, content strategy, evidence-based editorial planning, AI-assisted content production and professional human editing. Develop skills in creating educational articles, website copy, case studies, newsletters, lead magnets, social media content and video scripts while maintaining accuracy, originality and a consistent brand voice. Learn how to research customer problems, evaluate competing content, create editorial briefs, use ChatGPT and Gemini responsibly, adapt content for multiple channels and manage a professional publishing workflow. Understand how content supports organic discovery, audience trust, lead generation, customer engagement and purchase decisions. Build a professional content marketing portfolio consisting of a complete business content strategy, six polished content assets, a 30-day editorial calendar, a distribution plan and a content performance report. The programme emphasizes useful information, original insights, editorial quality, responsible AI usage and measurable business impact rather than mass-producing generic AI-written content."
+    "full_description": "Learn how to develop, produce, distribute and measure content that supports real business objectives. This practical AI-Powered Content Marketing course combines audience research, content strategy, evidence-based editorial planning, AI-assisted content production and professional human editing. Develop skills in creating educational articles, website copy, case studies, newsletters, lead magnets, social media content and video scripts while maintaining accuracy, originality and a consistent brand voice. Learn how to research customer problems, evaluate competing content, create editorial briefs, use ChatGPT and Gemini responsibly, adapt content for multiple channels and manage a professional publishing workflow. Understand how content supports organic discovery, audience trust, lead generation, customer engagement and purchase decisions. Build a professional content marketing portfolio consisting of a complete business content strategy, six polished content assets, a 30-day editorial calendar, a distribution plan and a content performance report. The programme emphasizes useful information, original insights, editorial quality, responsible AI usage and measurable business impact rather than mass-producing generic AI-written content.",
+    "course_type": "Certification Course"
   },
   {
     "id": "email-marketing",
@@ -17798,7 +17914,8 @@ const NS_COURSES = [
     "duration_weeks": 5,
     "learning_hours": 40,
     "short_description": "Learn permission-based email marketing, professional email campaign design, audience segmentation, automated customer journeys, deliverability and lifecycle performance measurement through practical projects.",
-    "full_description": "Learn how to plan, create, automate and measure professional email marketing campaigns that support customer acquisition, engagement and retention. This practical Email Marketing & Automation course covers ethical subscriber acquisition, audience segmentation, sender authentication, email deliverability, responsive email design, persuasive campaign copy and automated lifecycle workflows. Gain hands-on experience using Mailchimp or Brevo as the primary teaching platform, supported by lightweight CRM concepts, Canva and Google Sheets. Understand how to build welcome sequences, lead-nurturing campaigns, reactivation workflows and behavior-based email journeys while maintaining user consent and healthy sending practices. Learn to interpret clicks, conversions, customer engagement, campaign outcomes and revenue attribution using realistic business scenarios. Create a portfolio containing a segmented contact database, three professionally designed email campaigns, two automated customer journeys and a campaign performance report. The programme emphasizes responsible communication, useful customer experiences, practical automation skills and business outcomes—not bulk unsolicited emailing or unrealistic revenue guarantees."
+    "full_description": "Learn how to plan, create, automate and measure professional email marketing campaigns that support customer acquisition, engagement and retention. This practical Email Marketing & Automation course covers ethical subscriber acquisition, audience segmentation, sender authentication, email deliverability, responsive email design, persuasive campaign copy and automated lifecycle workflows. Gain hands-on experience using Mailchimp or Brevo as the primary teaching platform, supported by lightweight CRM concepts, Canva and Google Sheets. Understand how to build welcome sequences, lead-nurturing campaigns, reactivation workflows and behavior-based email journeys while maintaining user consent and healthy sending practices. Learn to interpret clicks, conversions, customer engagement, campaign outcomes and revenue attribution using realistic business scenarios. Create a portfolio containing a segmented contact database, three professionally designed email campaigns, two automated customer journeys and a campaign performance report. The programme emphasizes responsible communication, useful customer experiences, practical automation skills and business outcomes—not bulk unsolicited emailing or unrealistic revenue guarantees.",
+    "course_type": "Certification Course"
   },
   {
     "id": "google-analytics-ga4",
@@ -17903,7 +18020,8 @@ const NS_COURSES = [
     "duration_weeks": 6,
     "learning_hours": 48,
     "short_description": "Master Google Analytics 4, Google Tag Manager, event tracking, conversion measurement, website traffic analysis and Looker Studio reporting through practical implementation projects.",
-    "full_description": "Learn how to implement, validate, analyze and report website and marketing performance using Google Analytics 4, Google Tag Manager and Looker Studio. This practical Google Analytics 4 & GTM course teaches business measurement planning, event-based tracking, Google tag configuration, website conversions, audience analysis, campaign attribution and performance reporting. Develop hands-on skills in configuring GA4 properties, creating measurement plans, implementing events through Google Tag Manager, troubleshooting tracking issues and validating data quality. Understand privacy-aware measurement, consent signals, UTM governance, cross-domain measurement fundamentals and the limitations of digital attribution. Analyze website traffic, user engagement, marketing channels, funnels and key events using GA4 Reports and Explorations. Create stakeholder-ready dashboards in Looker Studio and translate performance data into meaningful business recommendations. Build a professional analytics portfolio containing an end-to-end measurement plan, validated event tracking implementation, a measurement quality audit and an interactive business performance dashboard. The course emphasizes accurate tracking, responsible data collection and actionable insights rather than simply installing tracking codes or reporting vanity metrics."
+    "full_description": "Learn how to implement, validate, analyze and report website and marketing performance using Google Analytics 4, Google Tag Manager and Looker Studio. This practical Google Analytics 4 & GTM course teaches business measurement planning, event-based tracking, Google tag configuration, website conversions, audience analysis, campaign attribution and performance reporting. Develop hands-on skills in configuring GA4 properties, creating measurement plans, implementing events through Google Tag Manager, troubleshooting tracking issues and validating data quality. Understand privacy-aware measurement, consent signals, UTM governance, cross-domain measurement fundamentals and the limitations of digital attribution. Analyze website traffic, user engagement, marketing channels, funnels and key events using GA4 Reports and Explorations. Create stakeholder-ready dashboards in Looker Studio and translate performance data into meaningful business recommendations. Build a professional analytics portfolio containing an end-to-end measurement plan, validated event tracking implementation, a measurement quality audit and an interactive business performance dashboard. The course emphasizes accurate tracking, responsible data collection and actionable insights rather than simply installing tracking codes or reporting vanity metrics.",
+    "course_type": "Certification Course"
   },
   {
     "id": "google-search-console",
@@ -18002,7 +18120,8 @@ const NS_COURSES = [
     "duration_weeks": 4,
     "learning_hours": 24,
     "short_description": "Master Google Search Console, diagnose indexing issues, analyze organic visibility and create actionable SEO performance reports.",
-    "full_description": "Learn to use Google Search Console to diagnose indexing issues, monitor search performance and identify actionable opportunities for organic visibility. Build practical skills in Search Console reporting, technical issue identification, Google AI-search visibility analysis and data-driven SEO recommendations. This focused 4-week, 24-hour certification course teaches property verification, sitemap submissions, URL inspection, crawl diagnostics, canonicalization, Core Web Vitals interpretation, PageSpeed Insights analysis, and modern Generative AI Performance reporting. Students build an end-to-end SEO Audit & 30-Day Visibility Improvement Plan using real or guided demonstration properties."
+    "full_description": "Learn to use Google Search Console to diagnose indexing issues, monitor search performance and identify actionable opportunities for organic visibility. Build practical skills in Search Console reporting, technical issue identification, Google AI-search visibility analysis and data-driven SEO recommendations. This focused 4-week, 24-hour certification course teaches property verification, sitemap submissions, URL inspection, crawl diagnostics, canonicalization, Core Web Vitals interpretation, PageSpeed Insights analysis, and modern Generative AI Performance reporting. Students build an end-to-end SEO Audit & 30-Day Visibility Improvement Plan using real or guided demonstration properties.",
+    "course_type": "Certification Course"
   },
   {
     "id": "local-seo",
@@ -18102,7 +18221,8 @@ const NS_COURSES = [
     "duration_weeks": 5,
     "learning_hours": 40,
     "short_description": "Learn Google Business Profile management, Google Maps visibility, local keyword research, location-page optimization, customer reviews and local SEO performance reporting through practical business projects.",
-    "full_description": "Learn how to improve local business discoverability across Google Search and Google Maps using accurate business information, responsible Google Business Profile management and measurable local search optimization. This practical Local SEO & Google Business Profile course teaches local search behavior, business eligibility and verification, profile optimization, service-area business configuration, local keyword research, location-based website content, customer-review workflows and ethical directory management. Develop hands-on skills with Google Business Profile, Google Maps, Google Search Console, Google Sheets and local SEO auditing tools. Understand Google's core local ranking considerations—relevance, distance and prominence—and learn how to evaluate a business's current local search presence without promising specific ranking positions. Build a professional portfolio containing a complete local SEO and GBP audit, an optimized profile for an authorized business or a documented simulation, a local landing-page brief and a local search improvement dashboard. The programme emphasizes business accuracy, policy compliance, legitimate customer feedback, relevant local content and evidence-based optimization."
+    "full_description": "Learn how to improve local business discoverability across Google Search and Google Maps using accurate business information, responsible Google Business Profile management and measurable local search optimization. This practical Local SEO & Google Business Profile course teaches local search behavior, business eligibility and verification, profile optimization, service-area business configuration, local keyword research, location-based website content, customer-review workflows and ethical directory management. Develop hands-on skills with Google Business Profile, Google Maps, Google Search Console, Google Sheets and local SEO auditing tools. Understand Google's core local ranking considerations—relevance, distance and prominence—and learn how to evaluate a business's current local search presence without promising specific ranking positions. Build a professional portfolio containing a complete local SEO and GBP audit, an optimized profile for an authorized business or a documented simulation, a local landing-page brief and a local search improvement dashboard. The programme emphasizes business accuracy, policy compliance, legitimate customer feedback, relevant local content and evidence-based optimization.",
+    "course_type": "Certification Course"
   },
   {
     "id": "youtube-marketing",
@@ -18207,14 +18327,15 @@ const NS_COURSES = [
     "duration_weeks": 6,
     "learning_hours": 48,
     "short_description": "Learn YouTube channel strategy, video SEO, thumbnails, Shorts, audience retention, YouTube Analytics and organic channel growth through practical, portfolio-ready projects.",
-    "full_description": "Learn how to plan, optimize and grow a YouTube channel through audience-focused strategies, search visibility, effective video packaging and data-driven improvement. This practical YouTube Marketing & Channel Growth course covers niche research, audience positioning, channel optimization, YouTube Search and discovery, video titles, descriptions, thumbnail strategy, scripts, storytelling, Shorts and long-form content planning. Develop hands-on skills with YouTube Studio, YouTube Analytics, Google Trends, Canva and AI-assisted content planning tools. Understand how viewers discover videos, why they choose to watch, what influences audience retention and how creators can analyze content performance using meaningful engagement metrics. Learn to organize publishing workflows, interpret impressions, click-through rate, engaged views, watch time, audience retention and returning-viewer behavior. Explore community engagement, creator collaborations, brand conversion journeys, YouTube copyright responsibilities, AI-generated content disclosure and monetization eligibility. Build a professional portfolio containing an optimized YouTube channel or documented channel blueprint, six production-ready video packages, four publishing workflow demonstrations and a channel performance analysis. The course emphasizes original content, meaningful audience relationships, editorial consistency and measurable business outcomes rather than artificial subscribers, view manipulation or guaranteed viral growth."
+    "full_description": "Learn how to plan, optimize and grow a YouTube channel through audience-focused strategies, search visibility, effective video packaging and data-driven improvement. This practical YouTube Marketing & Channel Growth course covers niche research, audience positioning, channel optimization, YouTube Search and discovery, video titles, descriptions, thumbnail strategy, scripts, storytelling, Shorts and long-form content planning. Develop hands-on skills with YouTube Studio, YouTube Analytics, Google Trends, Canva and AI-assisted content planning tools. Understand how viewers discover videos, why they choose to watch, what influences audience retention and how creators can analyze content performance using meaningful engagement metrics. Learn to organize publishing workflows, interpret impressions, click-through rate, engaged views, watch time, audience retention and returning-viewer behavior. Explore community engagement, creator collaborations, brand conversion journeys, YouTube copyright responsibilities, AI-generated content disclosure and monetization eligibility. Build a professional portfolio containing an optimized YouTube channel or documented channel blueprint, six production-ready video packages, four publishing workflow demonstrations and a channel performance analysis. The course emphasizes original content, meaningful audience relationships, editorial consistency and measurable business outcomes rather than artificial subscribers, view manipulation or guaranteed viral growth.",
+    "course_type": "Certification Course"
   },
   {
     "id": "ai-mastery",
     "slug": "ai-mastery-program",
     "academy": "AI Academy",
     "academyId": "ai",
-    "programLevel": "Certification Course",
+    "programLevel": "Career Program",
     "icon": "🤖",
     "color": "linear-gradient(135deg, #0599a8, #75d766)",
     "name": "AI Solutions Engineering & Agentic AI Mastery",
@@ -18357,7 +18478,8 @@ const NS_COURSES = [
     "learning_hours": 360,
     "hours": 360,
     "short_description": "Train students to design, build, integrate, evaluate, secure and deploy practical AI solutions using Python, model APIs, RAG, automation, agent frameworks and MCP across 9 Months and 360 guided hours.",
-    "full_description": "Train students to design, build, integrate, evaluate, secure and deploy practical AI solutions using Python, model APIs, RAG, automation, agent frameworks and MCP across 9 Months and 360 guided hours."
+    "full_description": "Train students to design, build, integrate, evaluate, secure and deploy practical AI solutions using Python, model APIs, RAG, automation, agent frameworks and MCP across 9 Months and 360 guided hours.",
+    "course_type": "Career Program"
   },
   {
     "id": "ai-productivity",
@@ -18470,14 +18592,15 @@ const NS_COURSES = [
     "learning_hours": 120,
     "hours": 120,
     "short_description": "The AI Productivity Professional program is Nova Skills' focused, intensive 3-month (120 guided hours) vocational qualification designed to transform knowledge workers, team leads, office administrators, and professionals into high-efficiency AI power users. Rather than relying on trial-and-error prompting, students learn structured context engineering, grounded document synthesis with Gemini Notebook (formerly NotebookLM), high-stakes communications in Claude and ChatGPT Canvas, publication-grade document and deck creation in Microsoft 365 Copilot and Gamma, advanced Excel data analysis, and no-code desktop workflow automation with Power Automate. The program strictly enforces verifiable accuracy, data privacy compliance, and human-in-the-loop accountability, resulting in an audited digital portfolio demonstrating measured 40–60% efficiency improvements.",
-    "full_description": "The AI Productivity Professional program is Nova Skills' focused, intensive 3-month (120 guided hours) vocational qualification designed to transform knowledge workers, team leads, office administrators, and professionals into high-efficiency AI power users. Rather than relying on trial-and-error prompting, students learn structured context engineering, grounded document synthesis with Gemini Notebook (formerly NotebookLM), high-stakes communications in Claude and ChatGPT Canvas, publication-grade document and deck creation in Microsoft 365 Copilot and Gamma, advanced Excel data analysis, and no-code desktop workflow automation with Power Automate. The program strictly enforces verifiable accuracy, data privacy compliance, and human-in-the-loop accountability, resulting in an audited digital portfolio demonstrating measured 40–60% efficiency improvements."
+    "full_description": "The AI Productivity Professional program is Nova Skills' focused, intensive 3-month (120 guided hours) vocational qualification designed to transform knowledge workers, team leads, office administrators, and professionals into high-efficiency AI power users. Rather than relying on trial-and-error prompting, students learn structured context engineering, grounded document synthesis with Gemini Notebook (formerly NotebookLM), high-stakes communications in Claude and ChatGPT Canvas, publication-grade document and deck creation in Microsoft 365 Copilot and Gamma, advanced Excel data analysis, and no-code desktop workflow automation with Power Automate. The program strictly enforces verifiable accuracy, data privacy compliance, and human-in-the-loop accountability, resulting in an audited digital portfolio demonstrating measured 40–60% efficiency improvements.",
+    "course_type": "Professional Program"
   },
   {
     "id": "ai-for-business-pro",
     "slug": "ai-for-business-professional",
     "academy": "AI Academy",
     "academyId": "ai",
-    "programLevel": "Certification Course",
+    "programLevel": "Professional Program",
     "icon": "🤖",
     "color": "linear-gradient(135deg, #0599a8, #2563EB)",
     "name": "AI for Business Professional",
@@ -18587,7 +18710,8 @@ const NS_COURSES = [
     "learning_hours": 160,
     "hours": 160,
     "short_description": "Learn to identify business AI opportunities, automate workflows, integrate CRM and operational tools, build controlled AI assistants, analyze business data and measure automation ROI.",
-    "full_description": "Learn to identify business AI opportunities, automate workflows, integrate CRM and operational tools, build controlled AI assistants, analyze business data and measure automation ROI."
+    "full_description": "Learn to identify business AI opportunities, automate workflows, integrate CRM and operational tools, build controlled AI assistants, analyze business data and measure automation ROI.",
+    "course_type": "Professional Program"
   },
   {
     "id": "prompt-engineering",
@@ -18668,7 +18792,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Learn professional prompt design, context engineering, structured JSON outputs, AI evaluation and reusable prompting workflows across ChatGPT, Claude and Gemini.",
-    "full_description": "Learn how to design, test and improve effective prompts across ChatGPT, Claude and Gemini. This practical Prompt Engineering & AI Output Evaluation course develops professional skills in writing clear instructions, organizing context, creating reusable prompt templates, designing structured outputs and assessing AI-generated results. Understand the capabilities and limitations of language models, including hallucinations, inconsistent answers, context constraints and differences between models. Develop hands-on experience with few-shot prompting, document-grounded workflows, structured JSON outputs, prompt versioning, test cases and scoring rubrics. Learn how to compare AI models using the same business tasks, identify output failures and improve prompts systematically through evidence-based experimentation. Apply these skills to customer communication, marketing briefs, information extraction, educational materials, reporting and everyday business operations. Build a professional portfolio containing 20 tested business prompts, five structured-output examples, a model comparison evaluation workbook and one fully documented business prompting workflow. The programme prioritizes practical AI reliability, transferable prompting skills, human oversight and responsible AI use rather than dependence on one chatbot or memorizing prompt formulas."
+    "full_description": "Learn how to design, test and improve effective prompts across ChatGPT, Claude and Gemini. This practical Prompt Engineering & AI Output Evaluation course develops professional skills in writing clear instructions, organizing context, creating reusable prompt templates, designing structured outputs and assessing AI-generated results. Understand the capabilities and limitations of language models, including hallucinations, inconsistent answers, context constraints and differences between models. Develop hands-on experience with few-shot prompting, document-grounded workflows, structured JSON outputs, prompt versioning, test cases and scoring rubrics. Learn how to compare AI models using the same business tasks, identify output failures and improve prompts systematically through evidence-based experimentation. Apply these skills to customer communication, marketing briefs, information extraction, educational materials, reporting and everyday business operations. Build a professional portfolio containing 20 tested business prompts, five structured-output examples, a model comparison evaluation workbook and one fully documented business prompting workflow. The programme prioritizes practical AI reliability, transferable prompting skills, human oversight and responsible AI use rather than dependence on one chatbot or memorizing prompt formulas.",
+    "course_type": "Certification Course"
   },
   {
     "id": "ai-automation-n8n",
@@ -18753,7 +18878,8 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn practical AI automation with n8n, APIs, webhooks, Google Workspace and connected business tools. Build, test and troubleshoot real-world workflows for lead management, email operations, document processing and business reporting.",
-    "full_description": "Learn how to automate repetitive business tasks using n8n, connected applications, REST APIs, webhooks and AI-powered workflow components.\n\nThis practical AI Automation with n8n & Business Workflows course teaches business process mapping, workflow design, event triggers, conditional logic, JSON data handling, API integration and reliable automation development.\n\nGain hands-on experience connecting Google Sheets, Gmail, Google Drive, Google Forms or equivalent form sources, basic CRM systems and AI models using n8n's visual workflow environment.\n\nLearn to develop lead-management workflows, AI-assisted email classification, structured document processing and scheduled business reporting.\n\nUnderstand how to use AI models responsibly for classification, information extraction and decision support while applying human approval, output validation and controlled error handling.\n\nBuild professional skills in debugging, retries, duplicate prevention, credential security, workflow documentation, testing and basic business ROI estimation.\n\nComplete four working, tested automation workflows that demonstrate practical business value and are suitable for a professional portfolio.\n\nThe programme focuses on building dependable, maintainable low-code automation solutions rather than complex custom software, enterprise infrastructure or autonomous multi-agent systems."
+    "full_description": "Learn how to automate repetitive business tasks using n8n, connected applications, REST APIs, webhooks and AI-powered workflow components.\n\nThis practical AI Automation with n8n & Business Workflows course teaches business process mapping, workflow design, event triggers, conditional logic, JSON data handling, API integration and reliable automation development.\n\nGain hands-on experience connecting Google Sheets, Gmail, Google Drive, Google Forms or equivalent form sources, basic CRM systems and AI models using n8n's visual workflow environment.\n\nLearn to develop lead-management workflows, AI-assisted email classification, structured document processing and scheduled business reporting.\n\nUnderstand how to use AI models responsibly for classification, information extraction and decision support while applying human approval, output validation and controlled error handling.\n\nBuild professional skills in debugging, retries, duplicate prevention, credential security, workflow documentation, testing and basic business ROI estimation.\n\nComplete four working, tested automation workflows that demonstrate practical business value and are suitable for a professional portfolio.\n\nThe programme focuses on building dependable, maintainable low-code automation solutions rather than complex custom software, enterprise infrastructure or autonomous multi-agent systems.",
+    "course_type": "Certification Course"
   },
   {
     "id": "ai-agents-fundamentals",
@@ -18831,7 +18957,8 @@ const NS_COURSES = [
     "learning_hours": 48,
     "hours": 48,
     "short_description": "Learn AI agent design, tool calling, context management, supervised workflows, guardrails and agent evaluation. Build two practical agent prototypes with human oversight.",
-    "full_description": "Understand how AI agents can interpret tasks, access approved tools, retrieve relevant information and perform controlled multi-step workflows.\n\nThis practical AI Agents Fundamentals course introduces agentic AI concepts, single-agent architecture, context management, structured outputs, function calling, API integrations and safe execution boundaries.\n\nLearn how tool-using agents differ from ordinary chatbots and rule-based automation systems, and identify when agent-based solutions are appropriate for business tasks.\n\nGain supervised experience using OpenAI's supported agent tooling or an equivalent visual agent builder, alongside introductory n8n AI Agent tools.\n\nExplore approved information retrieval, task routing, tool selection, input validation, human approvals and basic error handling.\n\nDevelop foundational skills in prompt-injection awareness, permissions, output verification, execution tracing and agent evaluation using realistic test scenarios.\n\nComplete two supervised agent prototypes: a business information assistant that produces traceable answers and a task-routing agent that chooses among allowed actions while requiring approval for sensitive operations.\n\nBuild a 15-case evaluation dataset to test correct behavior, tool selection, access restrictions, prompt-injection resistance and recovery.\n\nThe programme focuses on safe, understandable and testable agent prototypes rather than enterprise autonomous systems, complex multi-agent orchestration or production infrastructure engineering."
+    "full_description": "Understand how AI agents can interpret tasks, access approved tools, retrieve relevant information and perform controlled multi-step workflows.\n\nThis practical AI Agents Fundamentals course introduces agentic AI concepts, single-agent architecture, context management, structured outputs, function calling, API integrations and safe execution boundaries.\n\nLearn how tool-using agents differ from ordinary chatbots and rule-based automation systems, and identify when agent-based solutions are appropriate for business tasks.\n\nGain supervised experience using OpenAI's supported agent tooling or an equivalent visual agent builder, alongside introductory n8n AI Agent tools.\n\nExplore approved information retrieval, task routing, tool selection, input validation, human approvals and basic error handling.\n\nDevelop foundational skills in prompt-injection awareness, permissions, output verification, execution tracing and agent evaluation using realistic test scenarios.\n\nComplete two supervised agent prototypes: a business information assistant that produces traceable answers and a task-routing agent that chooses among allowed actions while requiring approval for sensitive operations.\n\nBuild a 15-case evaluation dataset to test correct behavior, tool selection, access restrictions, prompt-injection resistance and recovery.\n\nThe programme focuses on safe, understandable and testable agent prototypes rather than enterprise autonomous systems, complex multi-agent orchestration or production infrastructure engineering.",
+    "course_type": "Certification Course"
   },
   {
     "id": "chatgpt-mastery",
@@ -18905,7 +19032,8 @@ const NS_COURSES = [
     "learning_hours": 40,
     "hours": 40,
     "short_description": "Learn to use ChatGPT for professional documents, research, spreadsheet analysis, structured thinking and reusable business workflows. Create verified, portfolio-ready workplace deliverables.",
-    "full_description": "Learn how to use ChatGPT as a practical assistant for workplace communication, document preparation, business research, data analysis and everyday professional tasks.\n\nThis hands-on ChatGPT for Work, Research & Data Analysis course teaches effective AI instructions, responsible tool selection, professional writing, document review, spreadsheet interpretation and research workflows.\n\nDevelop practical skills in drafting emails, preparing executive reports, reviewing proposals, structuring presentations, analyzing uploaded datasets, generating charts and interpreting business KPIs.\n\nLearn how to verify calculations, assess source reliability, compare documents, review research findings and identify limitations in AI-generated results.\n\nExplore ChatGPT Projects, reusable instructions, structured working processes, supported plugins and connected tools according to their actual availability.\n\nUnderstand when standard ChatGPT conversations, search, data analysis, deep research or ChatGPT Work are appropriate for a task, without assuming every feature is available on every account.\n\nBuild a professional ChatGPT Business Productivity Toolkit containing an analyzed business dataset, an executive report, a verified research brief, professional communication assets and a documented reusable workflow.\n\nThe programme emphasizes human judgment, accuracy, privacy, practical business value and repeatable quality-controlled outcomes.\n\nIt is designed for students, freelancers, marketers, business owners and professionals who want to become productive and responsible ChatGPT users without learning programming or AI infrastructure engineering."
+    "full_description": "Learn how to use ChatGPT as a practical assistant for workplace communication, document preparation, business research, data analysis and everyday professional tasks.\n\nThis hands-on ChatGPT for Work, Research & Data Analysis course teaches effective AI instructions, responsible tool selection, professional writing, document review, spreadsheet interpretation and research workflows.\n\nDevelop practical skills in drafting emails, preparing executive reports, reviewing proposals, structuring presentations, analyzing uploaded datasets, generating charts and interpreting business KPIs.\n\nLearn how to verify calculations, assess source reliability, compare documents, review research findings and identify limitations in AI-generated results.\n\nExplore ChatGPT Projects, reusable instructions, structured working processes, supported plugins and connected tools according to their actual availability.\n\nUnderstand when standard ChatGPT conversations, search, data analysis, deep research or ChatGPT Work are appropriate for a task, without assuming every feature is available on every account.\n\nBuild a professional ChatGPT Business Productivity Toolkit containing an analyzed business dataset, an executive report, a verified research brief, professional communication assets and a documented reusable workflow.\n\nThe programme emphasizes human judgment, accuracy, privacy, practical business value and repeatable quality-controlled outcomes.\n\nIt is designed for students, freelancers, marketers, business owners and professionals who want to become productive and responsible ChatGPT users without learning programming or AI infrastructure engineering.",
+    "course_type": "Certification Course"
   },
   {
     "id": "gemini-mastery",
@@ -18979,7 +19107,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Learn Gemini-powered workplace productivity across Gmail, Docs, Sheets, Slides and Drive. Build practical skills in AI-assisted writing, spreadsheet analysis, presentations, research and reusable workflows.",
-    "full_description": "Learn how to use Gemini and Google Workspace together to improve everyday professional work.\n\nThis practical Gemini & Google Workspace AI course teaches effective AI instructions, multimodal inputs, professional email communication, document drafting, spreadsheet analysis, presentation creation and information research.\n\nDevelop hands-on experience using Gemini with Gmail, Google Docs, Google Sheets, Google Slides and Google Drive.\n\nLearn to draft and review emails, create structured business documents, understand files, prepare spreadsheet formulas, interpret datasets, build charts and develop professional presentations.\n\nExplore Gemini Deep Research, Gemini Notebook, document-grounded answers, source verification and cross-document comparison.\n\nLearn how reusable instructions and Gemini Skills can support consistent business tasks, subject to verified feature availability.\n\nUnderstand data permissions, AI limitations, safe file handling and human verification requirements.\n\nBuild a professional Google Workspace AI Productivity Suite containing an analyzed spreadsheet, a business presentation, a professional document, an email workflow and a cited research briefing.\n\nThe programme emphasizes practical workplace skills, reliable outputs, privacy-aware collaboration and reusable processes rather than outdated model specifications or advanced API engineering."
+    "full_description": "Learn how to use Gemini and Google Workspace together to improve everyday professional work.\n\nThis practical Gemini & Google Workspace AI course teaches effective AI instructions, multimodal inputs, professional email communication, document drafting, spreadsheet analysis, presentation creation and information research.\n\nDevelop hands-on experience using Gemini with Gmail, Google Docs, Google Sheets, Google Slides and Google Drive.\n\nLearn to draft and review emails, create structured business documents, understand files, prepare spreadsheet formulas, interpret datasets, build charts and develop professional presentations.\n\nExplore Gemini Deep Research, Gemini Notebook, document-grounded answers, source verification and cross-document comparison.\n\nLearn how reusable instructions and Gemini Skills can support consistent business tasks, subject to verified feature availability.\n\nUnderstand data permissions, AI limitations, safe file handling and human verification requirements.\n\nBuild a professional Google Workspace AI Productivity Suite containing an analyzed spreadsheet, a business presentation, a professional document, an email workflow and a cited research briefing.\n\nThe programme emphasizes practical workplace skills, reliable outputs, privacy-aware collaboration and reusable processes rather than outdated model specifications or advanced API engineering.",
+    "course_type": "Certification Course"
   },
   {
     "id": "claude-productivity",
@@ -19053,7 +19182,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Learn Claude for professional writing, complex document analysis, research, business reporting, reusable Skills and Artifacts. Create reliable, reviewable deliverables through practical workflows.",
-    "full_description": "Learn how to turn complex documents, research material and business ideas into professional deliverables using Claude.\n\nThis practical Claude for Productivity, Skills & Artifacts course teaches effective prompting, long-document analysis, business writing, document comparison, structured reporting and knowledge organization.\n\nDevelop hands-on experience in creating professional reports, proposals, executive summaries, requirements documents and research-informed communication.\n\nLearn how Claude Projects can help organize relevant documents, instructions and contextual information for recurring knowledge-work tasks.\n\nExplore Claude Artifacts to create and refine documents, presentations, simple dashboards and lightweight interactive deliverables, according to supported platform capabilities.\n\nLearn how reusable Claude Skills package task procedures, instructions and supporting resources to improve consistency across repeated business activities.\n\nUnderstand how to review AI-generated outputs, verify source information, preserve confidentiality and maintain human approval over important work.\n\nExplore Claude Cowork and its evolving integration with Claude's unified task experience where available, without requiring advanced autonomous workflows or paid premium capabilities.\n\nBuild a professional portfolio containing a long-document analysis, a business report, a reusable task Skill and an interactive or document-based Artifact.\n\nThe programme emphasizes practical productivity, source-grounded analysis, repeatable procedures, responsible AI usage and high-quality professional deliverables."
+    "full_description": "Learn how to turn complex documents, research material and business ideas into professional deliverables using Claude.\n\nThis practical Claude for Productivity, Skills & Artifacts course teaches effective prompting, long-document analysis, business writing, document comparison, structured reporting and knowledge organization.\n\nDevelop hands-on experience in creating professional reports, proposals, executive summaries, requirements documents and research-informed communication.\n\nLearn how Claude Projects can help organize relevant documents, instructions and contextual information for recurring knowledge-work tasks.\n\nExplore Claude Artifacts to create and refine documents, presentations, simple dashboards and lightweight interactive deliverables, according to supported platform capabilities.\n\nLearn how reusable Claude Skills package task procedures, instructions and supporting resources to improve consistency across repeated business activities.\n\nUnderstand how to review AI-generated outputs, verify source information, preserve confidentiality and maintain human approval over important work.\n\nExplore Claude Cowork and its evolving integration with Claude's unified task experience where available, without requiring advanced autonomous workflows or paid premium capabilities.\n\nBuild a professional portfolio containing a long-document analysis, a business report, a reusable task Skill and an interactive or document-based Artifact.\n\nThe programme emphasizes practical productivity, source-grounded analysis, repeatable procedures, responsible AI usage and high-quality professional deliverables.",
+    "course_type": "Certification Course"
   },
   {
     "id": "ai-research-tools",
@@ -19127,14 +19257,15 @@ const NS_COURSES = [
     "learning_hours": 40,
     "hours": 40,
     "short_description": "Learn AI-assisted market, business and academic research using modern research platforms. Master source discovery, evidence verification, document comparison, citation tracing and professional research reporting.",
-    "full_description": "Learn how to conduct more structured, efficient and trustworthy research using AI-assisted discovery tools, academic search platforms and source-grounded document analysis.\n\nThis practical AI Research & Evidence Verification course teaches research question design, search strategies, market and competitor intelligence, academic literature discovery, source credibility assessment and evidence-based reporting.\n\nDevelop hands-on experience with Perplexity, Gemini Notebook, Google Scholar and either Consensus or Elicit as the cohort's principal academic AI research platform.\n\nExplore ChatGPT or Gemini Deep Research, Semantic Scholar, Google Sheets and citation management tools as relevant supporting resources.\n\nLearn how to distinguish original evidence from secondary reporting, assess research methodology, check factual claims, trace citations, identify conflicting findings and record uncertainty.\n\nWork with PDFs and multiple sources to extract information, compare documents and develop transparent evidence matrices.\n\nBuild two professional research reports: a market and competitive intelligence report with actionable business recommendations, and an academic or industry literature review demonstrating study comparison, source-quality assessment and properly traceable references.\n\nThe programme focuses on responsible research discovery, evaluation, synthesis and professional communication—not advanced statistics, formal systematic-review certification or replacing qualified researchers."
+    "full_description": "Learn how to conduct more structured, efficient and trustworthy research using AI-assisted discovery tools, academic search platforms and source-grounded document analysis.\n\nThis practical AI Research & Evidence Verification course teaches research question design, search strategies, market and competitor intelligence, academic literature discovery, source credibility assessment and evidence-based reporting.\n\nDevelop hands-on experience with Perplexity, Gemini Notebook, Google Scholar and either Consensus or Elicit as the cohort's principal academic AI research platform.\n\nExplore ChatGPT or Gemini Deep Research, Semantic Scholar, Google Sheets and citation management tools as relevant supporting resources.\n\nLearn how to distinguish original evidence from secondary reporting, assess research methodology, check factual claims, trace citations, identify conflicting findings and record uncertainty.\n\nWork with PDFs and multiple sources to extract information, compare documents and develop transparent evidence matrices.\n\nBuild two professional research reports: a market and competitive intelligence report with actionable business recommendations, and an academic or industry literature review demonstrating study comparison, source-quality assessment and properly traceable references.\n\nThe programme focuses on responsible research discovery, evaluation, synthesis and professional communication—not advanced statistics, formal systematic-review certification or replacing qualified researchers.",
+    "course_type": "Certification Course"
   },
   {
     "id": "creative-design",
     "slug": "creative-design-master",
     "academy": "Design Academy",
     "academyId": "design",
-    "programLevel": "Certification Course",
+    "programLevel": "Career Program",
     "icon": "🎨",
     "color": "linear-gradient(135deg, #8B5CF6, #EC4899)",
     "name": "Creative Design Master",
@@ -19253,7 +19384,8 @@ const NS_COURSES = [
     "learning_hours": 320,
     "hours": 320,
     "short_description": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI.",
-    "full_description": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI."
+    "full_description": "An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI.",
+    "course_type": "Career Program"
   },
   {
     "id": "graphic-design-pro",
@@ -19356,14 +19488,15 @@ const NS_COURSES = [
     "learning_hours": 160,
     "hours": 160,
     "short_description": "A practical graphic-design program covering design principles, Photoshop, Illustrator, branding, advertising campaigns, print production and generative AI creative workflows.",
-    "full_description": "A practical graphic-design program covering design principles, Photoshop, Illustrator, branding, advertising campaigns, print production and generative AI creative workflows."
+    "full_description": "A practical graphic-design program covering design principles, Photoshop, Illustrator, branding, advertising campaigns, print production and generative AI creative workflows.",
+    "course_type": "Professional Program"
   },
   {
     "id": "uiux-design-pro",
     "slug": "ui-ux-design-professional",
     "academy": "Design Academy",
     "academyId": "design",
-    "programLevel": "Certification Course",
+    "programLevel": "Professional Program",
     "icon": "🎨",
     "color": "linear-gradient(135deg, #8B5CF6, #EC4899)",
     "name": "UI/UX Design Professional",
@@ -19472,14 +19605,15 @@ const NS_COURSES = [
     "learning_hours": 200,
     "hours": 200,
     "short_description": "A practical UI/UX and digital product design program covering UX research, information architecture, wireframing, Figma, responsive interfaces, design systems, interactive prototypes, usability testing, Framer website production and AI-assisted product design.",
-    "full_description": "A practical UI/UX and digital product design program covering UX research, information architecture, wireframing, Figma, responsive interfaces, design systems, interactive prototypes, usability testing, Framer website production and AI-assisted product design."
+    "full_description": "A practical UI/UX and digital product design program covering UX research, information architecture, wireframing, Figma, responsive interfaces, design systems, interactive prototypes, usability testing, Framer website production and AI-assisted product design.",
+    "course_type": "Professional Program"
   },
   {
     "id": "adobe-photoshop",
     "slug": "adobe-photoshop",
     "academy": "Design Academy",
     "academyId": "design",
-    "programLevel": "Professional Program",
+    "programLevel": "Certification Course",
     "icon": "🎨",
     "color": "linear-gradient(135deg, #001E36, #31A8FF)",
     "name": "Adobe Photoshop — Commercial Image Editing & Design",
@@ -19564,14 +19698,15 @@ const NS_COURSES = [
     "discount": 0,
     "duration_weeks": 6,
     "short_description": "Master professional photo editing, retouching, compositing and advertising design with Adobe Photoshop. Learn precision editing, non-destructive workflows and responsible AI tools while building commercial artwork and organized, editable PSD files.",
-    "full_description": "Learn to create professional commercial visuals using Adobe Photoshop, from precise photo correction and realistic retouching to advertising creatives and photorealistic image manipulation.\n\nThis practical Adobe Photoshop — Commercial Image Editing & Design course develops hands-on skills in selections, masking, adjustment layers, Camera Raw, Smart Objects, lighting correction, perspective matching and non-destructive editing.\n\nLearn how to professionally enhance product photography, retouch portraits, remove distractions, create realistic shadows and combine multiple images into visually consistent advertising compositions.\n\nExplore modern AI-assisted workflows using Generative Fill, Harmonize and Generative Expand, while learning to correct unwanted AI artifacts and retain full creative control through manual Photoshop techniques.\n\nBuild premium advertising creatives for e-commerce, social media, digital campaigns and print applications.\n\nLearn commercial layout principles, typography, visual hierarchy, color management, resizing, export specifications and professional file organization.\n\nComplete a practical portfolio that includes product retouching before-and-after images, a photorealistic commercial composite, a premium product advertisement and a complete campaign adapted for 4:5, 1:1 and 9:16 formats.\n\nDeliver professional results with organized, editable PSD source files and properly exported artwork.\n\nThe programme focuses on real commercial production quality, Photoshop craftsmanship and professional client handover—not merely memorizing software tools."
+    "full_description": "Learn to create professional commercial visuals using Adobe Photoshop, from precise photo correction and realistic retouching to advertising creatives and photorealistic image manipulation.\n\nThis practical Adobe Photoshop — Commercial Image Editing & Design course develops hands-on skills in selections, masking, adjustment layers, Camera Raw, Smart Objects, lighting correction, perspective matching and non-destructive editing.\n\nLearn how to professionally enhance product photography, retouch portraits, remove distractions, create realistic shadows and combine multiple images into visually consistent advertising compositions.\n\nExplore modern AI-assisted workflows using Generative Fill, Harmonize and Generative Expand, while learning to correct unwanted AI artifacts and retain full creative control through manual Photoshop techniques.\n\nBuild premium advertising creatives for e-commerce, social media, digital campaigns and print applications.\n\nLearn commercial layout principles, typography, visual hierarchy, color management, resizing, export specifications and professional file organization.\n\nComplete a practical portfolio that includes product retouching before-and-after images, a photorealistic commercial composite, a premium product advertisement and a complete campaign adapted for 4:5, 1:1 and 9:16 formats.\n\nDeliver professional results with organized, editable PSD source files and properly exported artwork.\n\nThe programme focuses on real commercial production quality, Photoshop craftsmanship and professional client handover—not merely memorizing software tools.",
+    "course_type": "Certification Course"
   },
   {
     "id": "adobe-illustrator",
     "slug": "adobe-illustrator",
     "academy": "Design Academy",
     "academyId": "design",
-    "programLevel": "Professional Program",
+    "programLevel": "Certification Course",
     "icon": "🎨",
     "color": "linear-gradient(135deg, #FF9A00, #FF5500)",
     "name": "Adobe Illustrator — Vector Graphics & Print Design",
@@ -19655,7 +19790,8 @@ const NS_COURSES = [
     "discount": 0,
     "duration_weeks": 6,
     "short_description": "Learn Adobe Illustrator for professional vector graphics, typography, scalable illustration and commercial print design. Build precise, editable artwork using manual vector techniques and responsible AI-assisted workflows.",
-    "full_description": "Learn how to create professional, scalable vector graphics using Adobe Illustrator.\n\nThis practical Adobe Illustrator — Vector Graphics & Print Design course develops hands-on skills in vector drawing, precision path construction, typography, icon design, illustration and commercial artwork production.\n\nMaster essential Illustrator tools including the Pen Tool, Curvature Tool, Pathfinder, Shape Builder, compound paths, clipping masks, Appearance panel and object transformation controls.\n\nLearn to create consistent icon systems, original illustrations, typography-led layouts, custom lettering foundations and reusable vector assets.\n\nExplore professional illustration techniques including gradients, blends, patterns, brushes and symbols.\n\nDiscover AI-assisted vector concept development with Adobe Illustrator's Text to Vector Graphic and Generative Shape Fill features, while learning to inspect and refine generated geometry manually.\n\nBuild practical production skills in working with multiple artboards, RGB and CMYK color, spot colors, bleeds, PDF exports, SVG exports and linked asset management.\n\nDevelop a professional portfolio containing a consistent 12-icon family, an original vector illustration, a typography-led poster and a production-ready multi-artboard commercial artwork package.\n\nComplete the course with organized, editable Illustrator source files and correctly prepared digital and print deliverables.\n\nThe programme emphasizes vector precision, visual consistency, professional craftsmanship and reliable client handover."
+    "full_description": "Learn how to create professional, scalable vector graphics using Adobe Illustrator.\n\nThis practical Adobe Illustrator — Vector Graphics & Print Design course develops hands-on skills in vector drawing, precision path construction, typography, icon design, illustration and commercial artwork production.\n\nMaster essential Illustrator tools including the Pen Tool, Curvature Tool, Pathfinder, Shape Builder, compound paths, clipping masks, Appearance panel and object transformation controls.\n\nLearn to create consistent icon systems, original illustrations, typography-led layouts, custom lettering foundations and reusable vector assets.\n\nExplore professional illustration techniques including gradients, blends, patterns, brushes and symbols.\n\nDiscover AI-assisted vector concept development with Adobe Illustrator's Text to Vector Graphic and Generative Shape Fill features, while learning to inspect and refine generated geometry manually.\n\nBuild practical production skills in working with multiple artboards, RGB and CMYK color, spot colors, bleeds, PDF exports, SVG exports and linked asset management.\n\nDevelop a professional portfolio containing a consistent 12-icon family, an original vector illustration, a typography-led poster and a production-ready multi-artboard commercial artwork package.\n\nComplete the course with organized, editable Illustrator source files and correctly prepared digital and print deliverables.\n\nThe programme emphasizes vector precision, visual consistency, professional craftsmanship and reliable client handover.",
+    "course_type": "Certification Course"
   },
   {
     "id": "canva-pro",
@@ -19749,7 +19885,8 @@ const NS_COURSES = [
     "discount": 0,
     "duration_weeks": 4,
     "short_description": "Learn professional Canva marketing design, including typography, brand kits, original layouts, social creatives, presentations, reusable templates and responsible AI-assisted workflows.",
-    "full_description": "Learn how to create professional marketing visuals and maintain consistent brand communication using Canva. This practical Canva Professional — Brand & Marketing Design course combines essential graphic design principles with modern, efficient marketing-content production. Develop hands-on skills in typography, color selection, composition, spacing, alignment, visual hierarchy and layout grids. Learn to create and apply brand colors, typography systems, Brand Kits and reusable templates across different business communication formats. Build original social media designs, educational carousel posts, YouTube thumbnails, banners, posters and product promotions for realistic marketing briefs. Explore Canva AI, Magic tools and AI-assisted design features while learning how to review generated layouts, improve typography, correct visual inconsistencies and verify content. Develop professional presentation skills and create clear, structured business slides. Learn collaborative reviewing, commenting, permissions, approval workflows, bulk design creation fundamentals and appropriate export settings. Build a professional Canva marketing portfolio featuring eight original social designs, one coherent carousel, a reusable template set, a 10-slide business presentation and a one-page brand-use guide. The programme emphasizes original layout decisions, brand consistency, practical design quality and editable deliverables rather than simply modifying ready-made templates. It is designed for entrepreneurs, educators, content creators, marketing assistants and beginner freelance social media designers who want to produce effective business visuals efficiently."
+    "full_description": "Learn how to create professional marketing visuals and maintain consistent brand communication using Canva. This practical Canva Professional — Brand & Marketing Design course combines essential graphic design principles with modern, efficient marketing-content production. Develop hands-on skills in typography, color selection, composition, spacing, alignment, visual hierarchy and layout grids. Learn to create and apply brand colors, typography systems, Brand Kits and reusable templates across different business communication formats. Build original social media designs, educational carousel posts, YouTube thumbnails, banners, posters and product promotions for realistic marketing briefs. Explore Canva AI, Magic tools and AI-assisted design features while learning how to review generated layouts, improve typography, correct visual inconsistencies and verify content. Develop professional presentation skills and create clear, structured business slides. Learn collaborative reviewing, commenting, permissions, approval workflows, bulk design creation fundamentals and appropriate export settings. Build a professional Canva marketing portfolio featuring eight original social designs, one coherent carousel, a reusable template set, a 10-slide business presentation and a one-page brand-use guide. The programme emphasizes original layout decisions, brand consistency, practical design quality and editable deliverables rather than simply modifying ready-made templates. It is designed for entrepreneurs, educators, content creators, marketing assistants and beginner freelance social media designers who want to produce effective business visuals efficiently.",
+    "course_type": "Certification Course"
   },
   {
     "id": "figma-ui-design",
@@ -19849,7 +19986,8 @@ const NS_COURSES = [
     "discount": 0,
     "duration_weeks": 8,
     "short_description": "Learn professional user interface design in Figma. Build responsive website and mobile app screens using Auto Layout, reusable components, design tokens, clickable prototypes and developer-ready handoff practices.",
-    "full_description": "Learn how to design professional, responsive and interactive digital interfaces using Figma. This practical Figma UI Design & Responsive Prototyping course develops hands-on skills in interface layout, visual hierarchy, spacing systems, typography, wireframes, responsive design, component libraries and interactive prototypes. Master Figma's Auto Layout capabilities, including horizontal, vertical and grid layouts; Hug Contents, Fill Container, Fixed sizing, min/max dimensions, wrapping and nested component behavior. Learn to create adaptable website structures, responsive product cards, desktop and mobile navigation patterns, reusable UI components, variants, design styles and design tokens. Develop foundational knowledge of accessibility, contrast, target sizing, readable typography and consistent interaction states. Build practical skills in designing multi-screen e-commerce interfaces, mobile app flows, navigation interactions, overlays, interactive components and realistic prototype demonstrations. Explore Figma variables, reusable design libraries, light/dark modes and documented UI systems that support consistent design across multiple screens. Learn how to prepare organized design files, reusable assets, component specifications, responsive behavior notes and developer-ready handoff documentation. Complete a professional portfolio containing a responsive e-commerce website, a mobile app flow with at least five meaningful screens, a reusable component library, a clickable prototype and a documented developer handoff. The programme emphasizes genuine responsive behavior, professional interface craftsmanship, systematic component reuse and practical UI delivery. It is a focused UI production specialization, not a replacement for a longer programme covering comprehensive UX research, usability testing and product strategy."
+    "full_description": "Learn how to design professional, responsive and interactive digital interfaces using Figma. This practical Figma UI Design & Responsive Prototyping course develops hands-on skills in interface layout, visual hierarchy, spacing systems, typography, wireframes, responsive design, component libraries and interactive prototypes. Master Figma's Auto Layout capabilities, including horizontal, vertical and grid layouts; Hug Contents, Fill Container, Fixed sizing, min/max dimensions, wrapping and nested component behavior. Learn to create adaptable website structures, responsive product cards, desktop and mobile navigation patterns, reusable UI components, variants, design styles and design tokens. Develop foundational knowledge of accessibility, contrast, target sizing, readable typography and consistent interaction states. Build practical skills in designing multi-screen e-commerce interfaces, mobile app flows, navigation interactions, overlays, interactive components and realistic prototype demonstrations. Explore Figma variables, reusable design libraries, light/dark modes and documented UI systems that support consistent design across multiple screens. Learn how to prepare organized design files, reusable assets, component specifications, responsive behavior notes and developer-ready handoff documentation. Complete a professional portfolio containing a responsive e-commerce website, a mobile app flow with at least five meaningful screens, a reusable component library, a clickable prototype and a documented developer handoff. The programme emphasizes genuine responsive behavior, professional interface craftsmanship, systematic component reuse and practical UI delivery. It is a focused UI production specialization, not a replacement for a longer programme covering comprehensive UX research, usability testing and product strategy.",
+    "course_type": "Certification Course"
   },
   {
     "id": "brand-identity-design",
@@ -19949,7 +20087,8 @@ const NS_COURSES = [
     "discount": 0,
     "duration_weeks": 8,
     "short_description": "Learn complete visual identity design—from brand discovery and creative direction to logo systems, typography, colors, brand applications and professional guidelines. Build two cohesive, portfolio-ready brand identity case studies.",
-    "full_description": "Learn how to develop distinctive and consistent visual identities that communicate a business's personality, values and positioning. This practical Brand Identity Design & Visual Systems course teaches the complete process of developing a cohesive visual brand identity, from client briefing and competitor research to creative direction, identity development, real-world applications and professional brand guidelines. Develop research-informed skills in understanding target audiences, analyzing competitor visual identities, identifying differentiation opportunities and translating brand attributes into meaningful creative concepts. Learn how to establish visual territories, develop moodboards and select typography, colors, graphic devices and imagery styles that support a brand's intended positioning. Build professional logo families, flexible identity systems, color palettes, typography hierarchies, supporting graphic languages and practical rules that maintain consistency across different applications. Create cohesive brand assets for stationery, advertising, social media, business collateral, websites and selected environmental touchpoints. Learn to document logo usage, exclusion zones, minimum sizes, approved colors, typography, brand applications and common misuse examples in a professional brand-guidelines document. Use Adobe Illustrator and Adobe Photoshop to produce editable visual identity assets. Apply Figma to selected digital brand applications and Adobe Acrobat to guideline review where appropriate. Complete two distinct, assessed brand identity case studies. Each must demonstrate brand research, creative rationale, a logo family, typography and color systems, supporting visual elements, relevant applications and a professional brand-guidelines document. The programme emphasizes strategic reasoning, originality, visual differentiation, repeatable design standards and practical client delivery—not simply producing a logo and presenting it on attractive mockups."
+    "full_description": "Learn how to develop distinctive and consistent visual identities that communicate a business's personality, values and positioning. This practical Brand Identity Design & Visual Systems course teaches the complete process of developing a cohesive visual brand identity, from client briefing and competitor research to creative direction, identity development, real-world applications and professional brand guidelines. Develop research-informed skills in understanding target audiences, analyzing competitor visual identities, identifying differentiation opportunities and translating brand attributes into meaningful creative concepts. Learn how to establish visual territories, develop moodboards and select typography, colors, graphic devices and imagery styles that support a brand's intended positioning. Build professional logo families, flexible identity systems, color palettes, typography hierarchies, supporting graphic languages and practical rules that maintain consistency across different applications. Create cohesive brand assets for stationery, advertising, social media, business collateral, websites and selected environmental touchpoints. Learn to document logo usage, exclusion zones, minimum sizes, approved colors, typography, brand applications and common misuse examples in a professional brand-guidelines document. Use Adobe Illustrator and Adobe Photoshop to produce editable visual identity assets. Apply Figma to selected digital brand applications and Adobe Acrobat to guideline review where appropriate. Complete two distinct, assessed brand identity case studies. Each must demonstrate brand research, creative rationale, a logo family, typography and color systems, supporting visual elements, relevant applications and a professional brand-guidelines document. The programme emphasizes strategic reasoning, originality, visual differentiation, repeatable design standards and practical client delivery—not simply producing a logo and presenting it on attractive mockups.",
+    "course_type": "Certification Course"
   },
   {
     "id": "packaging-design",
@@ -20056,7 +20195,8 @@ const NS_COURSES = [
     "duration_weeks": 8,
     "learning_hours": 64,
     "short_description": "Learn commercial packaging graphics, dieline-based artwork, label typography, print preparation, material-aware design and product mockups. Create packaging concepts and technically reviewed production artwork for retail and D2C products.",
-    "full_description": "Learn how to design professional retail and direct-to-consumer packaging that combines strong visual communication with reliable production artwork. This practical Packaging Artwork & Print-Ready Design course develops hands-on skills in product research, packaging graphics, dieline interpretation, multi-panel artwork, label typography, print preparation and realistic packaging visualization. Work with supplier-approved dielines to understand cut lines, crease and fold lines, bleed areas, safe margins, glue zones, panel orientation and physical dimensions. Learn how to organize product information, create clear hierarchy, position barcodes, develop consistent brand graphics and prepare label layouts with appropriate regulatory-content review checkpoints. Develop technical skills in CMYK and spot-color fundamentals, overprint awareness, transparency, image resolution, PDF output, color separation previews and Acrobat Pro preflight. Explore the visual effects of paperboard, flexible packaging, labels, coatings, matte and gloss finishes, foil effects and other common packaging treatments while understanding their production limitations. Create realistic packaging mockups and learn how soft proofs, physical samples, supplier feedback and artwork revisions work together in a commercial production workflow. Build a professional portfolio containing an FMCG food label with an illustrative compliance checklist, a cosmetic folding-carton artwork project using an approved dieline, and a premium D2C packaging project with organized print artwork, realistic mockups and a technical preflight report. The programme emphasizes precise artwork, commercially relevant design decisions, responsible labeling practices and professional supplier handover. It does not qualify students to certify regulatory compliance, engineer packaging structures or approve industrial manufacturing specifications."
+    "full_description": "Learn how to design professional retail and direct-to-consumer packaging that combines strong visual communication with reliable production artwork. This practical Packaging Artwork & Print-Ready Design course develops hands-on skills in product research, packaging graphics, dieline interpretation, multi-panel artwork, label typography, print preparation and realistic packaging visualization. Work with supplier-approved dielines to understand cut lines, crease and fold lines, bleed areas, safe margins, glue zones, panel orientation and physical dimensions. Learn how to organize product information, create clear hierarchy, position barcodes, develop consistent brand graphics and prepare label layouts with appropriate regulatory-content review checkpoints. Develop technical skills in CMYK and spot-color fundamentals, overprint awareness, transparency, image resolution, PDF output, color separation previews and Acrobat Pro preflight. Explore the visual effects of paperboard, flexible packaging, labels, coatings, matte and gloss finishes, foil effects and other common packaging treatments while understanding their production limitations. Create realistic packaging mockups and learn how soft proofs, physical samples, supplier feedback and artwork revisions work together in a commercial production workflow. Build a professional portfolio containing an FMCG food label with an illustrative compliance checklist, a cosmetic folding-carton artwork project using an approved dieline, and a premium D2C packaging project with organized print artwork, realistic mockups and a technical preflight report. The programme emphasizes precise artwork, commercially relevant design decisions, responsible labeling practices and professional supplier handover. It does not qualify students to certify regulatory compliance, engineer packaging structures or approve industrial manufacturing specifications.",
+    "course_type": "Certification Course"
   },
   {
     "id": "logo-design",
@@ -20155,14 +20295,15 @@ const NS_COURSES = [
     "duration_weeks": 5,
     "learning_hours": 40,
     "short_description": "Learn professional logo design from client discovery and concept sketches to vector construction, typography, optical refinement and client-ready delivery. Create versatile marks for brands, products and digital applications.",
-    "full_description": "Learn how to develop original, professional and versatile logo designs using Adobe Illustrator. This practical Logo Design & Vector Identity Marks course teaches the process of creating a logo, from understanding a client brief and exploring visual ideas to building precise vector artwork and preparing professional final files. Develop research-informed skills in identifying brand characteristics, evaluating competitor logos, exploring symbolism, generating original concepts and selecting visual directions. Learn creative techniques including mind mapping, thumbnail sketching, negative space, letterform exploration and geometric thinking. Master the Adobe Illustrator tools used in professional logo production, including the Pen Tool, Bézier curves, Shape Builder, Pathfinder, compound paths, typographic refinement and optical correction. Create symbol marks, wordmarks, lettermarks and combination marks with strong proportions, clean geometry and considered visual balance. Learn to refine logos through black-and-white testing, small-size legibility, favicon applications, light and dark backgrounds and practical usage contexts. Explore how primary, secondary and compact logo versions support flexible applications without expanding into a complete brand identity system. Build a professional portfolio containing three original logo concepts supported by research and sketches, two fully refined logo solutions, appropriate size and color variations, and a client-ready file delivery package. Learn introductory trademark similarity awareness and understand why professional legal clearance remains a separate process. The programme focuses on original concept development, vector precision, visual problem-solving and professional client delivery—not merely recreating existing logos or generating marks using templates."
+    "full_description": "Learn how to develop original, professional and versatile logo designs using Adobe Illustrator. This practical Logo Design & Vector Identity Marks course teaches the process of creating a logo, from understanding a client brief and exploring visual ideas to building precise vector artwork and preparing professional final files. Develop research-informed skills in identifying brand characteristics, evaluating competitor logos, exploring symbolism, generating original concepts and selecting visual directions. Learn creative techniques including mind mapping, thumbnail sketching, negative space, letterform exploration and geometric thinking. Master the Adobe Illustrator tools used in professional logo production, including the Pen Tool, Bézier curves, Shape Builder, Pathfinder, compound paths, typographic refinement and optical correction. Create symbol marks, wordmarks, lettermarks and combination marks with strong proportions, clean geometry and considered visual balance. Learn to refine logos through black-and-white testing, small-size legibility, favicon applications, light and dark backgrounds and practical usage contexts. Explore how primary, secondary and compact logo versions support flexible applications without expanding into a complete brand identity system. Build a professional portfolio containing three original logo concepts supported by research and sketches, two fully refined logo solutions, appropriate size and color variations, and a client-ready file delivery package. Learn introductory trademark similarity awareness and understand why professional legal clearance remains a separate process. The programme focuses on original concept development, vector precision, visual problem-solving and professional client delivery—not merely recreating existing logos or generating marks using templates.",
+    "course_type": "Certification Course"
   },
   {
     "id": "fullstack-foundation",
     "slug": "full-stack-programming-foundation",
     "academy": "Programming Academy",
     "academyId": "programming",
-    "programLevel": "Certification Course",
+    "programLevel": "Career Program",
     "icon": "💻",
     "color": "linear-gradient(135deg, #2563EB, #0599a8)",
     "name": "Full Stack Programming Foundation",
@@ -20282,7 +20423,8 @@ const NS_COURSES = [
     "learning_hours": 240,
     "hours": 240,
     "short_description": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment.",
-    "full_description": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment."
+    "full_description": "A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment.",
+    "course_type": "Career Program"
   },
   {
     "id": "python-developer",
@@ -20394,14 +20536,15 @@ const NS_COURSES = [
     "learning_hours": 120,
     "hours": 120,
     "short_description": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment.",
-    "full_description": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment."
+    "full_description": "A hands-on professional Python program covering programming foundations, object-oriented development, automation, API integration, SQL databases, FastAPI, testing and deployment.",
+    "course_type": "Professional Program"
   },
   {
     "id": "ai-assisted-full-stack-web-development",
     "slug": "ai-assisted-full-stack-web-development",
     "academy": "Programming Academy",
     "academyId": "programming",
-    "programLevel": "Certification Course",
+    "programLevel": "Career Program",
     "icon": "⚡",
     "color": "linear-gradient(135deg, #3B82F6, #10B981)",
     "name": "AI-Assisted Full Stack Web Development",
@@ -20589,7 +20732,8 @@ const NS_COURSES = [
     "learning_hours": 320,
     "hours": 320,
     "short_description": "This flagship 8-month, 320-guided-hour professional program combines 300 hours of rigorous core full-stack web development with 20 hours of focused commercial specialization. Students build 6 production-grade portfolio projects under the direct mentorship of senior practitioners.",
-    "full_description": "This flagship 8-month, 320-guided-hour professional program combines 300 hours of rigorous core full-stack web development with 20 hours of focused commercial specialization. Students build 6 production-grade portfolio projects under the direct mentorship of senior practitioners."
+    "full_description": "This flagship 8-month, 320-guided-hour professional program combines 300 hours of rigorous core full-stack web development with 20 hours of focused commercial specialization. Students build 6 production-grade portfolio projects under the direct mentorship of senior practitioners.",
+    "course_type": "Career Program"
   },
   {
     "id": "html-css",
@@ -20661,7 +20805,8 @@ const NS_COURSES = [
     "learning_hours": 48,
     "hours": 48,
     "short_description": "Learn modern HTML and CSS by building accessible, responsive websites from scratch. Master semantic HTML, Flexbox, Grid, mobile-first layouts, forms, CSS animations and practical deployment with AI-assisted development and human-reviewed code.",
-    "full_description": "Learn how to build professional, responsive websites from scratch using HTML and CSS—without requiring previous coding experience.\n\nThis practical HTML, CSS & Responsive Web Design course starts with web fundamentals, semantic HTML, page structure, accessible content, links, images, tables and forms.\n\nDevelop professional CSS skills in selectors, the cascade, specificity, typography, spacing, colors, the box model, reusable styles and custom properties.\n\nMaster modern layout techniques using Flexbox, CSS Grid, relative units, responsive images, mobile-first design, media queries and container queries.\n\nLearn to build common website elements such as responsive navigation, hero sections, cards, galleries, buttons, contact forms and footers using clean HTML and CSS.\n\nExplore CSS transitions, carefully controlled animations, keyboard focus indicators and reduced-motion support.\n\nDevelop foundational knowledge of web accessibility, technical SEO, image optimization, Core Web Vitals and page testing.\n\nLearn to translate simple Figma layouts into HTML/CSS, debug websites using Chrome DevTools, organize source files and publish static sites with GitHub Pages.\n\nUse AI tools responsibly to explain code, identify possible CSS issues and review accessibility or responsiveness—while independently testing every suggested change.\n\nBuild two assessed portfolio projects: a responsive business landing page and a multi-page personal or professional portfolio website.\n\nBoth projects must demonstrate responsive layouts, essential keyboard accessibility, organized source code, clear documentation and deployment readiness.\n\nThe programme focuses on real HTML/CSS website development, not JavaScript application logic, React, authentication or backend programming."
+    "full_description": "Learn how to build professional, responsive websites from scratch using HTML and CSS—without requiring previous coding experience.\n\nThis practical HTML, CSS & Responsive Web Design course starts with web fundamentals, semantic HTML, page structure, accessible content, links, images, tables and forms.\n\nDevelop professional CSS skills in selectors, the cascade, specificity, typography, spacing, colors, the box model, reusable styles and custom properties.\n\nMaster modern layout techniques using Flexbox, CSS Grid, relative units, responsive images, mobile-first design, media queries and container queries.\n\nLearn to build common website elements such as responsive navigation, hero sections, cards, galleries, buttons, contact forms and footers using clean HTML and CSS.\n\nExplore CSS transitions, carefully controlled animations, keyboard focus indicators and reduced-motion support.\n\nDevelop foundational knowledge of web accessibility, technical SEO, image optimization, Core Web Vitals and page testing.\n\nLearn to translate simple Figma layouts into HTML/CSS, debug websites using Chrome DevTools, organize source files and publish static sites with GitHub Pages.\n\nUse AI tools responsibly to explain code, identify possible CSS issues and review accessibility or responsiveness—while independently testing every suggested change.\n\nBuild two assessed portfolio projects: a responsive business landing page and a multi-page personal or professional portfolio website.\n\nBoth projects must demonstrate responsive layouts, essential keyboard accessibility, organized source code, clear documentation and deployment readiness.\n\nThe programme focuses on real HTML/CSS website development, not JavaScript application logic, React, authentication or backend programming.",
+    "course_type": "Certification Course"
   },
   {
     "id": "javascript-cert",
@@ -20739,14 +20884,15 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Master JavaScript programming through practical exercises, browser interactions, asynchronous workflows, API integration and TypeScript foundations. Build working applications, debug code confidently and develop the programming skills needed for React and Node.js.",
-    "full_description": "Learn how to transform static HTML and CSS websites into functional, interactive browser applications using modern JavaScript and introductory TypeScript.\n\nThis practical Modern JavaScript & TypeScript Foundations course develops strong programming fundamentals before introducing advanced browser interactions, asynchronous programming and professional development tools.\n\nStart with variables, data types, conditions, loops, functions and logical problem-solving. Learn to work confidently with arrays, objects, destructuring, spread and rest syntax, scope, callbacks, closures and JavaScript modules.\n\nBuild interactive website features using the DOM, event listeners, accessible forms, validation, UI state and local browser storage.\n\nMaster asynchronous JavaScript fundamentals through Promises, async/await, Fetch API, JSON, HTTP requests, network errors and API response handling.\n\nLearn introductory TypeScript skills including type annotations, interfaces, unions, type narrowing, basic generics and type-safe application code.\n\nExplore professional development workflows using VS Code, browser DevTools, npm, Vite, ESLint, Vitest and Git/GitHub.\n\nBuild two complete portfolio applications: an interactive business application featuring forms, search/filters and local persistence, and an API-powered application with properly designed loading, empty, success and error states.\n\nDevelop the confidence to explain, debug, test and maintain your code while preparing for more advanced React and Node.js learning.\n\nThe programme focuses on practical JavaScript programming, working browser applications and introductory TypeScript—not advanced React architecture, server-side Node.js or full-stack development."
+    "full_description": "Learn how to transform static HTML and CSS websites into functional, interactive browser applications using modern JavaScript and introductory TypeScript.\n\nThis practical Modern JavaScript & TypeScript Foundations course develops strong programming fundamentals before introducing advanced browser interactions, asynchronous programming and professional development tools.\n\nStart with variables, data types, conditions, loops, functions and logical problem-solving. Learn to work confidently with arrays, objects, destructuring, spread and rest syntax, scope, callbacks, closures and JavaScript modules.\n\nBuild interactive website features using the DOM, event listeners, accessible forms, validation, UI state and local browser storage.\n\nMaster asynchronous JavaScript fundamentals through Promises, async/await, Fetch API, JSON, HTTP requests, network errors and API response handling.\n\nLearn introductory TypeScript skills including type annotations, interfaces, unions, type narrowing, basic generics and type-safe application code.\n\nExplore professional development workflows using VS Code, browser DevTools, npm, Vite, ESLint, Vitest and Git/GitHub.\n\nBuild two complete portfolio applications: an interactive business application featuring forms, search/filters and local persistence, and an API-powered application with properly designed loading, empty, success and error states.\n\nDevelop the confidence to explain, debug, test and maintain your code while preparing for more advanced React and Node.js learning.\n\nThe programme focuses on practical JavaScript programming, working browser applications and introductory TypeScript—not advanced React architecture, server-side Node.js or full-stack development.",
+    "course_type": "Certification Course"
   },
   {
     "id": "react-cert",
     "slug": "react-javascript",
     "academy": "Programming Academy",
     "academyId": "programming",
-    "programLevel": "Professional Program",
+    "programLevel": "Certification Course",
     "icon": "💻",
     "color": "linear-gradient(135deg, #2563EB, #0599a8)",
     "name": "React.js Frontend Development",
@@ -20816,14 +20962,15 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn modern React development using reusable components, hooks, state management, routing and real API integrations. Create responsive web applications with professional UI behaviour, organized code, testing and deployment.",
-    "full_description": "Learn how to build professional, interactive and responsive web applications using modern React.js and TypeScript. This practical React.js Frontend Development course teaches component-driven application development through reusable components, JSX, props, state management, Hooks and predictable data flow. Start with React fundamentals, Vite project setup, component composition and reusable application structures. Learn to create interactive interfaces using state, events, controlled form inputs and custom Hooks. Understand state ownership, component communication, React Context and predictable data flow across complex component trees. Integrate client-side routing using React Router, connect real REST APIs, manage loading and error states, and use TypeScript for type-safe props and state management. Write automated component tests with React Testing Library and Vitest, inspect component hierarchies with React DevTools, optimize rendering performance and implement accessible UI patterns. Complete one comprehensive commercial-style React application capstone—either a responsive E-commerce storefront or a business dashboard—featuring clean component structure, API data fetching, search/filtering, form validation, error handling, automated tests and GitHub Pages static deployment. Graduate with a production-style React portfolio project, verifiable code on GitHub and intermediate frontend development skills ready for modern web applications."
+    "full_description": "Learn how to build professional, interactive and responsive web applications using modern React.js and TypeScript. This practical React.js Frontend Development course teaches component-driven application development through reusable components, JSX, props, state management, Hooks and predictable data flow. Start with React fundamentals, Vite project setup, component composition and reusable application structures. Learn to create interactive interfaces using state, events, controlled form inputs and custom Hooks. Understand state ownership, component communication, React Context and predictable data flow across complex component trees. Integrate client-side routing using React Router, connect real REST APIs, manage loading and error states, and use TypeScript for type-safe props and state management. Write automated component tests with React Testing Library and Vitest, inspect component hierarchies with React DevTools, optimize rendering performance and implement accessible UI patterns. Complete one comprehensive commercial-style React application capstone—either a responsive E-commerce storefront or a business dashboard—featuring clean component structure, API data fetching, search/filtering, form validation, error handling, automated tests and GitHub Pages static deployment. Graduate with a production-style React portfolio project, verifiable code on GitHub and intermediate frontend development skills ready for modern web applications.",
+    "course_type": "Certification Course"
   },
   {
     "id": "node-js",
     "slug": "node-js",
     "academy": "Programming Academy",
     "academyId": "programming",
-    "programLevel": "Professional Program",
+    "programLevel": "Certification Course",
     "icon": "💻",
     "color": "linear-gradient(135deg, #2563EB, #75d766)",
     "name": "Node.js Backend Development with Express",
@@ -20890,14 +21037,15 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn Node.js backend development with Express, asynchronous JavaScript, databases, authentication, validation, testing and API deployment. Build maintainable server-side applications through practical projects and professional debugging workflows.",
-    "full_description": "Learn to build practical backend systems using Node.js, Express and PostgreSQL. This hands-on Node.js Backend Development with Express course teaches server-side JavaScript, REST API development, relational database integration, authentication, authorization, testing and backend deployment. Start by understanding how Node.js operates outside the browser, how asynchronous I/O works, and how to use modules, npm, environment variables, filesystem operations and debugging tools. Develop HTTP APIs using Express. Learn routing, middleware, controllers, request and response handling, validation and structured error responses. Connect applications to PostgreSQL using a maintained Node.js database client. Build CRUD operations with parameterized SQL, database constraints, schema migrations, transactions and reliable connection management. Implement user authentication and practical backend security controls, including secure password hashing, session or token concepts, role checks, resource ownership verification, input validation and rate limiting. Develop an understanding of object-level authorization so authenticated users can access only records they are permitted to read or modify. Learn backend reliability through automated unit and integration tests, error handling, structured logging, environment separation, API documentation and debugging workflows. Complete a portfolio-ready business operations REST API featuring a PostgreSQL database, authenticated users, protected CRUD operations, authorization tests and a deployable demonstration. This programme emphasizes maintainable code, correct API behavior, database reliability, security fundamentals and working technical evidence."
+    "full_description": "Learn to build practical backend systems using Node.js, Express and PostgreSQL. This hands-on Node.js Backend Development with Express course teaches server-side JavaScript, REST API development, relational database integration, authentication, authorization, testing and backend deployment. Start by understanding how Node.js operates outside the browser, how asynchronous I/O works, and how to use modules, npm, environment variables, filesystem operations and debugging tools. Develop HTTP APIs using Express. Learn routing, middleware, controllers, request and response handling, validation and structured error responses. Connect applications to PostgreSQL using a maintained Node.js database client. Build CRUD operations with parameterized SQL, database constraints, schema migrations, transactions and reliable connection management. Implement user authentication and practical backend security controls, including secure password hashing, session or token concepts, role checks, resource ownership verification, input validation and rate limiting. Develop an understanding of object-level authorization so authenticated users can access only records they are permitted to read or modify. Learn backend reliability through automated unit and integration tests, error handling, structured logging, environment separation, API documentation and debugging workflows. Complete a portfolio-ready business operations REST API featuring a PostgreSQL database, authenticated users, protected CRUD operations, authorization tests and a deployable demonstration. This programme emphasizes maintainable code, correct API behavior, database reliability, security fundamentals and working technical evidence.",
+    "course_type": "Certification Course"
   },
   {
     "id": "sql-basics",
     "slug": "sql-basics",
     "academy": "Programming Academy",
     "academyId": "programming",
-    "programLevel": "Professional Program",
+    "programLevel": "Certification Course",
     "icon": "💻",
     "color": "linear-gradient(135deg, #2563EB, #EC4899)",
     "name": "SQL & Relational Database Fundamentals",
@@ -20957,7 +21105,8 @@ const NS_COURSES = [
     "learning_hours": 40,
     "hours": 40,
     "short_description": "Build practical SQL skills using PostgreSQL. Learn to design relational tables, query business data, combine datasets, summarize results and perform reliable database operations through hands-on exercises.",
-    "full_description": "Learn how to organize, query and analyze structured business data using SQL and PostgreSQL—without requiring previous programming experience. This practical SQL & Relational Database Fundamentals course introduces relational database concepts, tables, data types, primary keys, foreign keys and SQL query development. Start by learning to retrieve and filter data using SELECT, WHERE, ORDER BY, DISTINCT, LIMIT and conditional expressions. Develop confidence in combining information across related tables with INNER JOIN, LEFT JOIN and multi-table queries. Learn to produce business reports using aggregate functions, GROUP BY, HAVING, CASE expressions, subqueries and Common Table Expressions. Explore introductory window functions for ranking and comparing records without losing individual row detail. Build reliable relational databases using CREATE TABLE, ALTER TABLE, constraints and safe INSERT, UPDATE and DELETE operations. Understand transaction fundamentals, database integrity, indexing awareness and the importance of parameterized queries when SQL is used inside applications. Use PostgreSQL with DBeaver or pgAdmin to work on realistic admissions, retail sales or inventory datasets. Complete a portfolio-ready relational database project containing a documented schema, sample data, at least 20 meaningful SQL queries, a data-quality checklist and a business reporting summary. The programme emphasizes practical SQL reasoning, reliable query results, data relationships and business interpretation—not simply memorizing SQL commands."
+    "full_description": "Learn how to organize, query and analyze structured business data using SQL and PostgreSQL—without requiring previous programming experience. This practical SQL & Relational Database Fundamentals course introduces relational database concepts, tables, data types, primary keys, foreign keys and SQL query development. Start by learning to retrieve and filter data using SELECT, WHERE, ORDER BY, DISTINCT, LIMIT and conditional expressions. Develop confidence in combining information across related tables with INNER JOIN, LEFT JOIN and multi-table queries. Learn to produce business reports using aggregate functions, GROUP BY, HAVING, CASE expressions, subqueries and Common Table Expressions. Explore introductory window functions for ranking and comparing records without losing individual row detail. Build reliable relational databases using CREATE TABLE, ALTER TABLE, constraints and safe INSERT, UPDATE and DELETE operations. Understand transaction fundamentals, database integrity, indexing awareness and the importance of parameterized queries when SQL is used inside applications. Use PostgreSQL with DBeaver or pgAdmin to work on realistic admissions, retail sales or inventory datasets. Complete a portfolio-ready relational database project containing a documented schema, sample data, at least 20 meaningful SQL queries, a data-quality checklist and a business reporting summary. The programme emphasizes practical SQL reasoning, reliable query results, data relationships and business interpretation—not simply memorizing SQL commands.",
+    "course_type": "Certification Course"
   },
   {
     "id": "git-github",
@@ -21024,7 +21173,8 @@ const NS_COURSES = [
     "learning_hours": 20,
     "hours": 20,
     "short_description": "Comprehensive curriculum covering Git, GitHub, VS Code, Terminal to build production-grade projects.",
-    "full_description": "Comprehensive curriculum covering Git, GitHub, VS Code, Terminal to build production-grade projects."
+    "full_description": "Comprehensive curriculum covering Git, GitHub, VS Code, Terminal to build production-grade projects.",
+    "course_type": "Certification Course"
   },
   {
     "id": "rest-apis",
@@ -21091,14 +21241,15 @@ const NS_COURSES = [
     "learning_hours": 20,
     "hours": 20,
     "short_description": "Comprehensive curriculum covering Postman, Express.js, Swagger, Node.js to build production-grade projects.",
-    "full_description": "Comprehensive curriculum covering Postman, Express.js, Swagger, Node.js to build production-grade projects."
+    "full_description": "Comprehensive curriculum covering Postman, Express.js, Swagger, Node.js to build production-grade projects.",
+    "course_type": "Certification Course"
   },
   {
     "id": "ecommerce-mastery",
     "slug": "ecommerce-website-mastery",
     "academy": "No-Code Web Academy",
     "academyId": "nocode",
-    "programLevel": "Certification Course",
+    "programLevel": "Career Program",
     "icon": "🌐",
     "color": "linear-gradient(135deg, #F59E0B, #EF4444)",
     "name": "E-Commerce Website Mastery",
@@ -21231,7 +21382,8 @@ const NS_COURSES = [
     "learning_hours": 240,
     "hours": 240,
     "short_description": "Master Shopify OS 2.0 and WooCommerce 9.x to architect, design, and launch commercial e-commerce stores with payment gateways, statutory Indian GST compliance, Shiprocket fulfillment, and retention automation.",
-    "full_description": "Master Shopify OS 2.0 and WooCommerce 9.x to architect, design, and launch commercial e-commerce stores with payment gateways, statutory Indian GST compliance, Shiprocket fulfillment, and retention automation."
+    "full_description": "Master Shopify OS 2.0 and WooCommerce 9.x to architect, design, and launch commercial e-commerce stores with payment gateways, statutory Indian GST compliance, Shiprocket fulfillment, and retention automation.",
+    "course_type": "Career Program"
   },
   {
     "id": "nocode-web-pro",
@@ -21350,14 +21502,15 @@ const NS_COURSES = [
     "learning_hours": 120,
     "hours": 120,
     "short_description": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
-    "full_description": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows."
+    "full_description": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
+    "course_type": "Professional Program"
   },
   {
     "id": "wordpress-cert",
     "slug": "wordpress",
     "academy": "No-Code Web Academy",
     "academyId": "nocode",
-    "programLevel": "Professional Program",
+    "programLevel": "Certification Course",
     "icon": "🌐",
     "color": "linear-gradient(135deg, #F59E0B, #2563EB)",
     "name": "WordPress Website Design & Management",
@@ -21426,14 +21579,15 @@ const NS_COURSES = [
     "learning_hours": 48,
     "hours": 48,
     "short_description": "Learn to design, build, publish and maintain professional WordPress websites without advanced coding. Master Gutenberg, modern block themes, responsive design, essential SEO, website security and client handover through practical training.",
-    "full_description": "Learn to build, customize, publish and maintain professional WordPress websites without advanced coding. Master modern block themes, Gutenberg, responsive layouts, content management, security, SEO and client handover through practical website projects. Go beyond simply building pages. Learn the complete website lifecycle — planning, installation, design, launch, optimization, maintenance and professional client handover. This 6-week certification course covers modern block-based WordPress design, content administration, contact forms, foundational SEO, performance optimization, backup scheduling, website security and structured client handovers, concluding with an assessed 5-page functional business website."
+    "full_description": "Learn to build, customize, publish and maintain professional WordPress websites without advanced coding. Master modern block themes, Gutenberg, responsive layouts, content management, security, SEO and client handover through practical website projects. Go beyond simply building pages. Learn the complete website lifecycle — planning, installation, design, launch, optimization, maintenance and professional client handover. This 6-week certification course covers modern block-based WordPress design, content administration, contact forms, foundational SEO, performance optimization, backup scheduling, website security and structured client handovers, concluding with an assessed 5-page functional business website.",
+    "course_type": "Certification Course"
   },
   {
     "id": "woocommerce-cert",
     "slug": "woocommerce",
     "academy": "No-Code Web Academy",
     "academyId": "nocode",
-    "programLevel": "Professional Program",
+    "programLevel": "Certification Course",
     "icon": "🌐",
     "color": "linear-gradient(135deg, #F59E0B, #8B5CF6)",
     "name": "WooCommerce Store Development & Operations",
@@ -21500,14 +21654,15 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn to build, configure and manage WooCommerce stores on WordPress. Master product catalogues, variations, shopping carts, payments, taxes, shipping, inventory, order workflows and e-commerce reporting through a practical store-development project.",
-    "full_description": "Learn how to build, operate, and maintain professional e-commerce stores using WordPress and WooCommerce. This practical 8-week, 64-hour applied specialization focuses on real-world e-commerce operations. Master product catalogue construction with variations and SKUs, modern block-based cart and checkout UX, safe payment gateway sandbox testing, Indian shipping zones and rates, coupons, order fulfillment workflows, refunds, High-Performance Order Storage (HPOS), store analytics, and security maintenance. Complete a comprehensive demonstration store featuring at least 15 products and verified end-to-end checkout scenarios."
+    "full_description": "Learn how to build, operate, and maintain professional e-commerce stores using WordPress and WooCommerce. This practical 8-week, 64-hour applied specialization focuses on real-world e-commerce operations. Master product catalogue construction with variations and SKUs, modern block-based cart and checkout UX, safe payment gateway sandbox testing, Indian shipping zones and rates, coupons, order fulfillment workflows, refunds, High-Performance Order Storage (HPOS), store analytics, and security maintenance. Complete a comprehensive demonstration store featuring at least 15 products and verified end-to-end checkout scenarios.",
+    "course_type": "Certification Course"
   },
   {
     "id": "shopify-cert",
     "slug": "shopify",
     "academy": "No-Code Web Academy",
     "academyId": "nocode",
-    "programLevel": "Professional Program",
+    "programLevel": "Certification Course",
     "icon": "🌐",
     "color": "linear-gradient(135deg, #F59E0B, #75d766)",
     "name": "Shopify Store Design & E-Commerce Operations",
@@ -21571,7 +21726,8 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn to design, configure and manage professional Shopify stores for retail and D2C brands. Build product catalogues, collections, responsive storefronts, checkout workflows, inventory systems, shipping configurations and customer-focused shopping experiences.",
-    "full_description": "Learn how to build, customize, and operate professional D2C e-commerce stores using Shopify. This practical 8-week, 64-hour applied specialization covers the complete e-commerce lifecycle without requiring code. Master product catalog management with variants and SKUs, collections, theme customization with Shopify Theme Editor, checkout configuration, India-compatible payment gateway integrations, shipping profiles, inventory tracking, order fulfillment, refund workflows, SEO, store analytics, and conversion rate optimization (CRO). Complete a comprehensive demonstration store featuring at least 20 products and validated operational test scenarios."
+    "full_description": "Learn how to build, customize, and operate professional D2C e-commerce stores using Shopify. This practical 8-week, 64-hour applied specialization covers the complete e-commerce lifecycle without requiring code. Master product catalog management with variants and SKUs, collections, theme customization with Shopify Theme Editor, checkout configuration, India-compatible payment gateway integrations, shipping profiles, inventory tracking, order fulfillment, refund workflows, SEO, store analytics, and conversion rate optimization (CRO). Complete a comprehensive demonstration store featuring at least 20 products and validated operational test scenarios.",
+    "course_type": "Certification Course"
   },
   {
     "id": "elementor-cert",
@@ -21638,7 +21794,8 @@ const NS_COURSES = [
     "learning_hours": 40,
     "hours": 40,
     "short_description": "Learn Elementor website design using responsive containers, reusable design elements, custom layouts, forms and conversion-focused landing pages. Create professional WordPress pages and client-ready website experiences with practical design and publishing workflows.",
-    "full_description": "Learn to design professional WordPress websites using Elementor's visual design tools. Build modern responsive layouts with Flexbox containers, establish reusable styling systems, create consistent site templates and develop conversion-focused landing pages. Practice website performance, responsive testing, essential accessibility, form integration and professional client handover."
+    "full_description": "Learn to design professional WordPress websites using Elementor's visual design tools. Build modern responsive layouts with Flexbox containers, establish reusable styling systems, create consistent site templates and develop conversion-focused landing pages. Practice website performance, responsive testing, essential accessibility, form integration and professional client handover.",
+    "course_type": "Certification Course"
   },
   {
     "id": "webflow-cert",
@@ -21712,7 +21869,8 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn Webflow to design and publish structured, responsive marketing websites using visual development, reusable components, CMS collections and interactive elements. Develop professional site-building skills with attention to SEO, accessibility, performance and client handoff.",
-    "full_description": "Learn to build responsive marketing websites using Webflow's visual development environment, modern CSS layout concepts, reusable components, structured CMS content, visual interactions and professional publishing workflows. Develop a complete CMS-driven website with a maintainable design system, organized content, appropriate accessibility and SEO practices, and client-friendly editing procedures."
+    "full_description": "Learn to build responsive marketing websites using Webflow's visual development environment, modern CSS layout concepts, reusable components, structured CMS content, visual interactions and professional publishing workflows. Develop a complete CMS-driven website with a maintainable design system, organized content, appropriate accessibility and SEO practices, and client-friendly editing procedures.",
+    "course_type": "Certification Course"
   },
   {
     "id": "framer-cert",
@@ -21785,14 +21943,15 @@ const NS_COURSES = [
     "learning_hours": 48,
     "hours": 48,
     "short_description": "Learn Framer to build and publish modern landing pages, portfolios and marketing websites. Master responsive layouts, reusable components, CMS-driven content, polished interactions, SEO settings and practical website handover.",
-    "full_description": "Turn creative website concepts into interactive, responsive and shareable web experiences using Framer. Learn visual website construction, responsive design systems, reusable components, purposeful motion, CMS-driven content and publishing workflows through practical projects. Develop a complete multi-page website for a startup, creative agency or professional portfolio. Use AI assistance responsibly, refine the design manually and demonstrate professional quality through responsive testing, accessibility checks and client documentation."
+    "full_description": "Turn creative website concepts into interactive, responsive and shareable web experiences using Framer. Learn visual website construction, responsive design systems, reusable components, purposeful motion, CMS-driven content and publishing workflows through practical projects. Develop a complete multi-page website for a startup, creative agency or professional portfolio. Use AI assistance responsibly, refine the design manually and demonstrate professional quality through responsive testing, accessibility checks and client documentation.",
+    "course_type": "Certification Course"
   },
   {
     "id": "ai-integrated-video-editing-motion-graphics-professional",
     "slug": "ai-integrated-video-editing-motion-graphics-professional",
     "academy": "Video & Motion Academy",
     "academyId": "video",
-    "programLevel": "Certification Course",
+    "programLevel": "Career Program",
     "icon": "🎬",
     "color": "linear-gradient(135deg, #EF4444, #F97316)",
     "name": "AI-Integrated Video Editing & Motion Graphics Professional",
@@ -21999,7 +22158,8 @@ const NS_COURSES = [
     "learning_hours": 320,
     "hours": 320,
     "short_description": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.",
-    "full_description": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel."
+    "full_description": "Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.",
+    "course_type": "Career Program"
   },
   {
     "id": "video-pro",
@@ -22126,14 +22286,15 @@ const NS_COURSES = [
     "learning_hours": 160,
     "hours": 160,
     "short_description": "Learn professional video editing using Adobe Premiere Pro and DaVinci Resolve 21, with Photoshop graphic production, audio post-production, basic After Effects motion graphics and AI-assisted editing workflows. Develop practical commercial, social media and documentary editing skills through assessed projects.",
-    "full_description": "Learn professional video editing using Adobe Premiere Pro and DaVinci Resolve 21, with Photoshop graphic production, audio post-production, basic After Effects motion graphics and AI-assisted editing workflows. Develop practical commercial, social media and documentary editing skills through assessed projects."
+    "full_description": "Learn professional video editing using Adobe Premiere Pro and DaVinci Resolve 21, with Photoshop graphic production, audio post-production, basic After Effects motion graphics and AI-assisted editing workflows. Develop practical commercial, social media and documentary editing skills through assessed projects.",
+    "course_type": "Professional Program"
   },
   {
     "id": "generative-ai-video-production-professional",
     "slug": "generative-ai-video-production-professional",
     "academy": "Video & Motion Academy",
     "academyId": "video",
-    "programLevel": "Certification Course",
+    "programLevel": "Professional Program",
     "icon": "🎬",
     "color": "linear-gradient(135deg, #EF4444, #75d766)",
     "name": "Generative AI Video Production Professional",
@@ -22271,7 +22432,8 @@ const NS_COURSES = [
     "duration_weeks": 20,
     "learning_hours": 200,
     "short_description": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
-    "full_description": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows."
+    "full_description": "Create Cinematic AI Commercials. Master the Complete Production Workflow. Learn to conceptualize, direct, generate, edit and deliver professional AI-powered videos using Adobe Firefly, Google Flow, Kling AI, Runway, Premiere Pro, After Effects and professional post-production workflows.",
+    "course_type": "Professional Program"
   },
   {
     "id": "adobe-premiere-pro",
@@ -22339,7 +22501,8 @@ const NS_COURSES = [
     "learning_hours": 48,
     "hours": 48,
     "short_description": "Learn professional video editing with Adobe Premiere Pro. Develop skills in timeline editing, visual storytelling, audio enhancement, colour correction, captions, AI-assisted workflows and multi-platform delivery. Create polished promotional, interview and digital content projects with editable source files.",
-    "full_description": "Learn to transform unedited video clips into polished stories using professional editing techniques. Develop practical control over timelines, trimming, dialogue, B-roll, audio mixing, colour correction, titles, captions and delivery settings. Work through realistic interview and commercial editing briefs, then adapt content for mobile-first platforms. Submit not only finished videos but also organized source media, editable project files, export configurations and documented client revisions."
+    "full_description": "Learn to transform unedited video clips into polished stories using professional editing techniques. Develop practical control over timelines, trimming, dialogue, B-roll, audio mixing, colour correction, titles, captions and delivery settings. Work through realistic interview and commercial editing briefs, then adapt content for mobile-first platforms. Submit not only finished videos but also organized source media, editable project files, export configurations and documented client revisions.",
+    "course_type": "Certification Course"
   },
   {
     "id": "after-effects",
@@ -22412,7 +22575,8 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Master the foundations of professional motion design and visual compositing with Adobe After Effects. Learn keyframe animation, kinetic typography, shape layers, graph-editor control, tracking, masking and reusable motion templates through practical brand and commercial video projects.",
-    "full_description": "Learn to transform static graphics, typography and filmed footage into polished motion experiences using Adobe After Effects. Develop control over keyframes, motion curves, shape layers, typography, tracking, masks and compositing. Build a commercial motion-design portfolio demonstrating brand animation, promotional typography, basic visual effects and reusable motion systems. Learn to organize project files, refine animation professionally and deliver editable assets for client revisions."
+    "full_description": "Learn to transform static graphics, typography and filmed footage into polished motion experiences using Adobe After Effects. Develop control over keyframes, motion curves, shape layers, typography, tracking, masks and compositing. Build a commercial motion-design portfolio demonstrating brand animation, promotional typography, basic visual effects and reusable motion systems. Learn to organize project files, refine animation professionally and deliver editable assets for client revisions.",
+    "course_type": "Certification Course"
   },
   {
     "id": "davinci-resolve",
@@ -22483,7 +22647,8 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn DaVinci Resolve for practical video editing, cinematic colour correction, node-based grading, Fairlight audio finishing and professional delivery. Develop repeatable post-production workflows for commercials, interviews, brand films and digital video.",
-    "full_description": "Develop practical post-production skills using DaVinci Resolve. Learn to organize media, edit video, correct exposure and white balance, match camera shots, build creative colour looks, improve dialogue audio and deliver technically reliable videos. Understand professional node-based grading, colour management, scopes, skin-tone consistency, SDR finishing and client review workflows. Complete a practical portfolio demonstrating both technical correction and creative visual storytelling."
+    "full_description": "Develop practical post-production skills using DaVinci Resolve. Learn to organize media, edit video, correct exposure and white balance, match camera shots, build creative colour looks, improve dialogue audio and deliver technically reliable videos. Understand professional node-based grading, colour management, scopes, skin-tone consistency, SDR finishing and client review workflows. Complete a practical portfolio demonstrating both technical correction and creative visual storytelling.",
+    "course_type": "Certification Course"
   },
   {
     "id": "reels-editing",
@@ -22552,7 +22717,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Learn to produce high-quality Instagram Reels, YouTube Shorts and short-form brand videos. Master hooks, pacing, storytelling, caption design, sound synchronization, product-focused editing and platform-ready export through practical creative briefs.",
-    "full_description": "Learn the creative and technical skills needed to turn everyday footage into engaging short-form videos for brands, creators and digital platforms. Build videos around audience intent, clear storytelling, effective editing rhythms, accurate captions and professional visual presentation. Practice talking-head editing, promotional content, branded creative styles and multi-platform delivery. Complete six assessed video edits across three practical briefs, including an alternate hook or editing-structure revision."
+    "full_description": "Learn the creative and technical skills needed to turn everyday footage into engaging short-form videos for brands, creators and digital platforms. Build videos around audience intent, clear storytelling, effective editing rhythms, accurate captions and professional visual presentation. Practice talking-head editing, promotional content, branded creative styles and multi-platform delivery. Complete six assessed video edits across three practical briefs, including an alternate hook or editing-structure revision.",
+    "course_type": "Certification Course"
   },
   {
     "id": "motion-graphics-essentials",
@@ -22617,14 +22783,15 @@ const NS_COURSES = [
     "learning_hours": 40,
     "hours": 40,
     "short_description": "Learn the essential principles of motion design, including timing, easing, shape animation, kinetic typography, transitions and brand motion. Transform static graphics into short, polished motion pieces with Adobe After Effects and practical visual storytelling techniques.",
-    "full_description": "Learn how movement transforms static visual design into engaging communication. Understand animation timing, spacing, anticipation, easing and follow-through, then apply these principles in Adobe After Effects. Create original shape animations, kinetic typography, logo reveals, reusable titles and promotional motion graphics. Develop practical control over keyframes, visual rhythm, transitions, sound synchronization and professional exports."
+    "full_description": "Learn how movement transforms static visual design into engaging communication. Understand animation timing, spacing, anticipation, easing and follow-through, then apply these principles in Adobe After Effects. Create original shape animations, kinetic typography, logo reveals, reusable titles and promotional motion graphics. Develop practical control over keyframes, visual rhythm, transitions, sound synchronization and professional exports.",
+    "course_type": "Certification Course"
   },
   {
     "id": "archviz-mastery",
     "slug": "architectural-visualisation-master",
     "academy": "3D Academy",
     "academyId": "3d",
-    "programLevel": "Certification Course",
+    "programLevel": "Career Program",
     "icon": "🏗️",
     "color": "linear-gradient(135deg, #10B981, #059669)",
     "name": "Architectural Visualisation Master",
@@ -22783,7 +22950,8 @@ const NS_COURSES = [
     "duration_weeks": 32,
     "learning_hours": 320,
     "short_description": "Learn professional architectural modeling, photorealistic rendering, real-time visualization and supervised 3D automation using AutoCAD, 3ds Max, Chaos V-Ray, Twinmotion, Photoshop, and guided advanced workflows in Unreal Engine and Blender.",
-    "full_description": "Learn professional architectural modeling, photorealistic rendering, real-time visualization and supervised 3D automation using AutoCAD, 3ds Max, Chaos V-Ray, Twinmotion, Photoshop, and guided advanced workflows in Unreal Engine and Blender. Designed for aspiring architectural visualizers, interior designers, and 3D artists, this Career Mastery program bridges the gap between raw 2D CAD floor plans and client-ready photorealistic marketing presentations across still renders, cinematic walkthroughs, and interactive real-time environments."
+    "full_description": "Learn professional architectural modeling, photorealistic rendering, real-time visualization and supervised 3D automation using AutoCAD, 3ds Max, Chaos V-Ray, Twinmotion, Photoshop, and guided advanced workflows in Unreal Engine and Blender. Designed for aspiring architectural visualizers, interior designers, and 3D artists, this Career Mastery program bridges the gap between raw 2D CAD floor plans and client-ready photorealistic marketing presentations across still renders, cinematic walkthroughs, and interactive real-time environments.",
+    "course_type": "Career Program"
   },
   {
     "id": "3d-viz-pro",
@@ -22934,7 +23102,8 @@ const NS_COURSES = [
     "duration_weeks": 20,
     "learning_hours": 200,
     "short_description": "Master practical Blender-based 3D product modeling, physically based materials, studio lighting, photorealistic rendering, product animation, compositing and supervised AI-assisted production workflows. Create an integrated product advertising portfolio with professional still images and animated commercial content.",
-    "full_description": "Master practical Blender-based 3D product modeling, physically based materials, studio lighting, photorealistic rendering, product animation, compositing and supervised AI-assisted production workflows. Create an integrated product advertising portfolio with professional still images and animated commercial content."
+    "full_description": "Master practical Blender-based 3D product modeling, physically based materials, studio lighting, photorealistic rendering, product animation, compositing and supervised AI-assisted production workflows. Create an integrated product advertising portfolio with professional still images and animated commercial content.",
+    "course_type": "Professional Program"
   },
   {
     "id": "blender-cert",
@@ -23007,7 +23176,8 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn Blender to create original 3D models, realistic materials, professional lighting and polished rendered visuals. Master mesh modeling, modifiers, UV mapping, PBR shading, Cycles and EEVEE rendering, introductory Geometry Nodes and practical product visualization through hands-on projects.",
-    "full_description": "Learn the complete foundation of 3D visual creation using Blender. Develop practical skills in mesh modeling, object construction, modifiers, UV unwrapping, realistic materials, lighting and camera composition. Progress from simple geometric objects to original product models and professional presentation scenes. Explore Blender's powerful rendering engines, introductory Geometry Nodes and basic animation to create still visuals and product turntables."
+    "full_description": "Learn the complete foundation of 3D visual creation using Blender. Develop practical skills in mesh modeling, object construction, modifiers, UV unwrapping, realistic materials, lighting and camera composition. Progress from simple geometric objects to original product models and professional presentation scenes. Explore Blender's powerful rendering engines, introductory Geometry Nodes and basic animation to create still visuals and product turntables.",
+    "course_type": "Certification Course"
   },
   {
     "id": "3ds-max-cert",
@@ -23077,7 +23247,8 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn Autodesk 3ds Max for architectural and interior modeling. Convert drawing references into detailed 3D environments using precision modeling, spline workflows, editable modifiers, scene management and efficient visualization-ready asset preparation.",
-    "full_description": "Learn to transform architectural plans into accurate and well-organized 3D scenes using Autodesk 3ds Max. Develop practical modeling skills with Editable Poly, splines, modifiers, object snapping and measured construction. Build walls, floors, ceilings, doors, windows, stairs and essential furniture, then assemble a complete residential interior with organized materials and camera views. Prepare the final scene for professional rendering or real-time visualization workflows."
+    "full_description": "Learn to transform architectural plans into accurate and well-organized 3D scenes using Autodesk 3ds Max. Develop practical modeling skills with Editable Poly, splines, modifiers, object snapping and measured construction. Build walls, floors, ceilings, doors, windows, stairs and essential furniture, then assemble a complete residential interior with organized materials and camera views. Prepare the final scene for professional rendering or real-time visualization workflows.",
+    "course_type": "Certification Course"
   },
   {
     "id": "v-ray-cert",
@@ -23153,7 +23324,8 @@ const NS_COURSES = [
     "learning_hours": 48,
     "hours": 48,
     "short_description": "Master Chaos V-Ray for photorealistic architectural and interior rendering. Develop practical skills in physically based materials, lighting, camera exposure, global illumination, colour management, render optimization and professional image finishing using V-Ray for 3ds Max.",
-    "full_description": "Learn to transform prepared 3D architectural scenes into convincing visual presentations. Develop practical control over V-Ray materials, realistic daylight and artificial lighting, camera exposure, global illumination and rendering quality. Understand why materials react differently to light, how to develop consistent interior and exterior lighting, how to identify noise and render bottlenecks, and how to improve the final image using V-Ray Frame Buffer and post-production workflows."
+    "full_description": "Learn to transform prepared 3D architectural scenes into convincing visual presentations. Develop practical control over V-Ray materials, realistic daylight and artificial lighting, camera exposure, global illumination and rendering quality. Understand why materials react differently to light, how to develop consistent interior and exterior lighting, how to identify noise and render bottlenecks, and how to improve the final image using V-Ray Frame Buffer and post-production workflows.",
+    "course_type": "Certification Course"
   },
   {
     "id": "twinmotion-cert",
@@ -23228,7 +23400,8 @@ const NS_COURSES = [
     "learning_hours": 40,
     "hours": 40,
     "short_description": "Learn Twinmotion to transform existing 3D models into compelling architectural presentations. Create realistic environments, lighting scenarios, landscapes, walkthrough videos and client-ready visual experiences through practical real-time visualization workflows.",
-    "full_description": "Learn to transform existing architectural and interior models into compelling visual presentations with Twinmotion. Develop practical skills in importing 3D scenes, refining materials, creating natural and artificial lighting, adding landscapes and environmental assets, and preparing realistic architectural images. Build camera sequences and cinematic walkthroughs, explore day and evening presentation options, and deliver client-ready visual experiences using professional scene optimization, export and handover workflows."
+    "full_description": "Learn to transform existing architectural and interior models into compelling visual presentations with Twinmotion. Develop practical skills in importing 3D scenes, refining materials, creating natural and artificial lighting, adding landscapes and environmental assets, and preparing realistic architectural images. Build camera sequences and cinematic walkthroughs, explore day and evening presentation options, and deliver client-ready visual experiences using professional scene optimization, export and handover workflows.",
+    "course_type": "Certification Course"
   },
   {
     "id": "cinema-4d-cert",
@@ -23303,7 +23476,8 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn Cinema 4D to build professional 3D motion graphics, procedural animations and commercial product visuals. Master modeling, MoGraph, effectors, Fields, keyframe animation, basic dynamics and Redshift rendering through hands-on creative production.",
-    "full_description": "Learn to transform 3D objects, typography and product ideas into polished animations using Maxon Cinema 4D. Develop practical skills in modeling, motion principles, keyframes, MoGraph Cloners, Effectors, Fields, introductory dynamics and professional rendering. Create original procedural motion systems, branded 3D titles and premium product animations. Build reusable setups, refine motion through F-curves, prepare Redshift materials and lighting, and deliver editable project files with professional render outputs."
+    "full_description": "Learn to transform 3D objects, typography and product ideas into polished animations using Maxon Cinema 4D. Develop practical skills in modeling, motion principles, keyframes, MoGraph Cloners, Effectors, Fields, introductory dynamics and professional rendering. Create original procedural motion systems, branded 3D titles and premium product animations. Build reusable setups, refine motion through F-curves, prepare Redshift materials and lighting, and deliver editable project files with professional render outputs.",
+    "course_type": "Certification Course"
   },
   {
     "id": "unreal-engine-basics",
@@ -23383,14 +23557,15 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn Unreal Engine 5 to create real-time 3D environments, configure realistic lighting, build basic Blueprint interactions and present interactive architectural or virtual scenes. Develop practical skills using modern environment-building and real-time rendering workflows.",
-    "full_description": "Learn how to build real-time 3D environments using Unreal Engine 5. Develop practical skills in scene creation, static-mesh importing, materials, lighting, environmental composition and interactive visual scripting. Create immersive architectural or virtual spaces, add functional interactions with Blueprints, animate cinematic cameras and optimize projects for reliable performance. Finish with an editable interactive environment and professional presentation materials."
+    "full_description": "Learn how to build real-time 3D environments using Unreal Engine 5. Develop practical skills in scene creation, static-mesh importing, materials, lighting, environmental composition and interactive visual scripting. Create immersive architectural or virtual spaces, add functional interactions with Blueprints, animate cinematic cameras and optimize projects for reliable performance. Finish with an editable interactive environment and professional presentation materials.",
+    "course_type": "Certification Course"
   },
   {
     "id": "freelancing-client-acquisition-professional",
     "slug": "freelancing-client-acquisition-professional",
     "academy": "Career & Freelancing Academy",
     "academyId": "career",
-    "programLevel": "Certification Course",
+    "programLevel": "Professional Program",
     "icon": "💼",
     "color": "linear-gradient(135deg, #011731, #0599a8)",
     "name": "Freelancing & Client Acquisition Professional",
@@ -23554,7 +23729,8 @@ const NS_COURSES = [
     "duration_weeks": 16,
     "learning_hours": 160,
     "short_description": "Learn how to position professional skills, research client opportunities, develop service packages, create credible portfolios, acquire and qualify clients, write proposals, conduct discovery calls, negotiate projects, manage CRM pipelines, understand freelance payments and deliver client work professionally.",
-    "full_description": "Learn how to position professional skills, research client opportunities, develop service packages, create credible portfolios, acquire and qualify clients, write proposals, conduct discovery calls, negotiate projects, manage CRM pipelines, understand freelance payments and deliver client work professionally."
+    "full_description": "Learn how to position professional skills, research client opportunities, develop service packages, create credible portfolios, acquire and qualify clients, write proposals, conduct discovery calls, negotiate projects, manage CRM pipelines, understand freelance payments and deliver client work professionally.",
+    "course_type": "Professional Program"
   },
   {
     "id": "career-launch-placement-readiness-professional",
@@ -23703,7 +23879,8 @@ const NS_COURSES = [
     "duration_weeks": 12,
     "learning_hours": 120,
     "short_description": "Develop the skills and professional evidence needed to navigate modern recruitment processes. Learn role-specific career planning, ATS-compatible resumes, LinkedIn optimization, verified project portfolios, AI-assisted job research, quality job applications, industry hiring assessments, behavioral and technical mock interviews, salary negotiation and workplace readiness.",
-    "full_description": "Develop the skills and professional evidence needed to navigate modern recruitment processes. Learn role-specific career planning, ATS-compatible resumes, LinkedIn optimization, verified project portfolios, AI-assisted job research, quality job applications, industry hiring assessments, behavioral and technical mock interviews, salary negotiation and workplace readiness."
+    "full_description": "Develop the skills and professional evidence needed to navigate modern recruitment processes. Learn role-specific career planning, ATS-compatible resumes, LinkedIn optimization, verified project portfolios, AI-assisted job research, quality job applications, industry hiring assessments, behavioral and technical mock interviews, salary negotiation and workplace readiness.",
+    "course_type": "Professional Program"
   },
   {
     "id": "resume-building",
@@ -23776,7 +23953,8 @@ const NS_COURSES = [
     "learning_hours": 16,
     "hours": 16,
     "short_description": "Learn to create clear, professional, ATS-friendly resumes aligned with real job requirements. Develop accomplishment-focused bullet points, tailor applications, prepare credible cover letters and use AI responsibly to improve clarity without inventing experience.",
-    "full_description": "Learn to organize your education, skills, experience and project achievements into a clear, professional resume. Understand how applicant-tracking systems are used, choose readable formatting and present your qualifications with accurate, relevant language. Practice analyzing real job descriptions, developing accomplishment-focused bullet points and preparing targeted applications. Use AI responsibly for language refinement while verifying every claim. Complete the course with a master resume, two tailored versions, a personalized cover letter and a requirements-matching worksheet."
+    "full_description": "Learn to organize your education, skills, experience and project achievements into a clear, professional resume. Understand how applicant-tracking systems are used, choose readable formatting and present your qualifications with accurate, relevant language. Practice analyzing real job descriptions, developing accomplishment-focused bullet points and preparing targeted applications. Use AI responsibly for language refinement while verifying every claim. Complete the course with a master resume, two tailored versions, a personalized cover letter and a requirements-matching worksheet.",
+    "course_type": "Certification Course"
   },
   {
     "id": "linkedin-optimisation",
@@ -23850,7 +24028,8 @@ const NS_COURSES = [
     "learning_hours": 24,
     "hours": 24,
     "short_description": "Learn to present your professional experience effectively on LinkedIn through profile positioning, credible project evidence, skill selection, networking and career-focused content. Develop a practical strategy for professional visibility, job discovery and relationship building.",
-    "full_description": "Learn to build a credible professional identity on LinkedIn by presenting your real skills, experience, education and projects clearly. Develop targeted headlines, professional summaries, well-organized profile sections and evidence-backed work samples. Explore LinkedIn job discovery, career preferences, professional networking and thoughtful content creation. Learn to communicate with recruiters, peers and industry professionals respectfully while managing your privacy and online presence."
+    "full_description": "Learn to build a credible professional identity on LinkedIn by presenting your real skills, experience, education and projects clearly. Develop targeted headlines, professional summaries, well-organized profile sections and evidence-backed work samples. Explore LinkedIn job discovery, career preferences, professional networking and thoughtful content creation. Learn to communicate with recruiters, peers and industry professionals respectfully while managing your privacy and online presence.",
+    "course_type": "Certification Course"
   },
   {
     "id": "interview-preparation",
@@ -23922,7 +24101,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Develop practical interview skills through structured preparation, realistic mock interviews, behavioural storytelling, role-specific questions and professional communication. Learn to present genuine strengths, explain projects and respond effectively in in-person, video and AI-assisted interview settings.",
-    "full_description": "Learn how to prepare for interviews with a clear understanding of the role, employer expectations and your own professional evidence. Develop structured answers, explain your projects, communicate your strengths and handle common behavioural and situational questions. Practice in-person and digital interview formats, improve your professional introduction and learn to respond thoughtfully to questions about teamwork, challenges, achievements and career goals. Complete two assessed mock interviews and use structured feedback to strengthen your performance."
+    "full_description": "Learn how to prepare for interviews with a clear understanding of the role, employer expectations and your own professional evidence. Develop structured answers, explain your projects, communicate your strengths and handle common behavioural and situational questions. Practice in-person and digital interview formats, improve your professional introduction and learn to respond thoughtfully to questions about teamwork, challenges, achievements and career goals. Complete two assessed mock interviews and use structured feedback to strengthen your performance.",
+    "course_type": "Certification Course"
   },
   {
     "id": "client-communication",
@@ -23995,7 +24175,8 @@ const NS_COURSES = [
     "learning_hours": 24,
     "hours": 24,
     "short_description": "Learn professional client communication from onboarding and project updates to feedback management, revisions and conflict resolution. Develop practical written, verbal and asynchronous communication skills for freelancing, agency and service-delivery work.",
-    "full_description": "Learn to communicate professionally with clients throughout a project. Develop practical skills in gathering requirements, conducting discovery conversations, writing kickoff summaries, preparing status updates and requesting clear feedback. Practise handling changes, delays and difficult conversations with professionalism and accountability. Build reusable communication templates and complete a simulated client project that demonstrates onboarding, coordination, revisions, escalation and final handover."
+    "full_description": "Learn to communicate professionally with clients throughout a project. Develop practical skills in gathering requirements, conducting discovery conversations, writing kickoff summaries, preparing status updates and requesting clear feedback. Practise handling changes, delays and difficult conversations with professionalism and accountability. Build reusable communication templates and complete a simulated client project that demonstrates onboarding, coordination, revisions, escalation and final handover.",
+    "course_type": "Certification Course"
   },
   {
     "id": "proposal-writing",
@@ -24068,7 +24249,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Learn professional proposal writing for freelancing and client services. Analyze briefs, develop clear solutions, define deliverables, estimate project costs and present credible proposals using practical templates, client research and AI-assisted writing.",
-    "full_description": "Learn to evaluate freelance opportunities, clarify client requirements and develop proposals that address real business needs. Understand how to present relevant work, define a practical project approach, describe deliverables and estimate costs using a repeatable pricing framework. Practise writing proposals for fixed-price projects, milestone-based engagements and recurring services. Learn to prepare Statements of Work, communicate pricing assumptions, present your approach professionally and follow up respectfully."
+    "full_description": "Learn to evaluate freelance opportunities, clarify client requirements and develop proposals that address real business needs. Understand how to present relevant work, define a practical project approach, describe deliverables and estimate costs using a repeatable pricing framework. Practise writing proposals for fixed-price projects, milestone-based engagements and recurring services. Learn to prepare Statements of Work, communicate pricing assumptions, present your approach professionally and follow up respectfully.",
+    "course_type": "Certification Course"
   },
   {
     "id": "agency-building",
@@ -24149,7 +24331,8 @@ const NS_COURSES = [
     "learning_hours": 64,
     "hours": 64,
     "short_description": "Learn to plan and operate a small digital service agency through niche selection, service packaging, client acquisition, pricing, project management and delivery systems. Develop real operational documents and a financially reasoned agency launch plan.",
-    "full_description": "Learn how to structure a small digital or creative service agency around a clearly defined niche, commercially realistic service packages and repeatable delivery workflows. Develop practical skills in pricing, cost estimation, client qualification, project operations and quality control. Understand how to evaluate contractors, document SOPs, manage client relationships and plan agency finances. Complete a comprehensive Agency Operations Blueprint with service packages, a financial model, CRM pipeline, delivery toolkit and 90-day implementation plan."
+    "full_description": "Learn how to structure a small digital or creative service agency around a clearly defined niche, commercially realistic service packages and repeatable delivery workflows. Develop practical skills in pricing, cost estimation, client qualification, project operations and quality control. Understand how to evaluate contractors, document SOPs, manage client relationships and plan agency finances. Complete a comprehensive Agency Operations Blueprint with service packages, a financial model, CRM pipeline, delivery toolkit and 90-day implementation plan.",
+    "course_type": "Certification Course"
   },
   {
     "id": "fiverr-success",
@@ -24222,7 +24405,8 @@ const NS_COURSES = [
     "learning_hours": 40,
     "hours": 40,
     "short_description": "Learn to set up and manage a Fiverr freelance service using niche research, compelling gig presentations, structured pricing packages, professional buyer communication and reliable order fulfilment. Develop a service offering supported by original portfolio evidence.",
-    "full_description": "Learn how Fiverr's service marketplace works and develop practical skills in selecting a suitable niche, presenting original work, writing clear gig descriptions and packaging your services for potential buyers. Understand buyer requirements, realistic delivery times, revisions, seller fees and order quality standards. Build two complete gig dossiers, compare their pricing and practise a full order workflow before deciding whether to publish a service."
+    "full_description": "Learn how Fiverr's service marketplace works and develop practical skills in selecting a suitable niche, presenting original work, writing clear gig descriptions and packaging your services for potential buyers. Understand buyer requirements, realistic delivery times, revisions, seller fees and order quality standards. Build two complete gig dossiers, compare their pricing and practise a full order workflow before deciding whether to publish a service.",
+    "course_type": "Certification Course"
   },
   {
     "id": "upwork-success",
@@ -24296,14 +24480,15 @@ const NS_COURSES = [
     "learning_hours": 40,
     "hours": 40,
     "short_description": "Learn practical Upwork freelancing through profile development, job screening, Connects budgeting, tailored proposals, client interviews, project contracts and professional delivery. Build an evidence-based client acquisition system while understanding marketplace rules and financial risks.",
-    "full_description": "Learn how to present your existing service skills professionally on Upwork, evaluate suitable job opportunities and prepare relevant proposals. Understand how Connects work, estimate application costs and decide when a project is worth pursuing. Explore client interviews, hourly and fixed-price contracts, funded milestones, payment protection, platform communication rules and professional project delivery. Complete an evidence-based portfolio with opportunity assessments, proposals, a financial model and a simulated client interview."
+    "full_description": "Learn how to present your existing service skills professionally on Upwork, evaluate suitable job opportunities and prepare relevant proposals. Understand how Connects work, estimate application costs and decide when a project is worth pursuing. Explore client interviews, hourly and fixed-price contracts, funded milestones, payment protection, platform communication rules and professional project delivery. Complete an evidence-based portfolio with opportunity assessments, proposals, a financial model and a simulated client interview.",
+    "course_type": "Certification Course"
   },
   {
     "id": "business-english",
     "slug": "business-english-personality-development",
     "academy": "Communication Academy",
     "academyId": "communication",
-    "programLevel": "Certification Course",
+    "programLevel": "Career Program",
     "icon": "💬",
     "color": "linear-gradient(135deg, #75d766, #011731)",
     "name": "Business English & Personality Development",
@@ -24492,7 +24677,8 @@ const NS_COURSES = [
     "duration_weeks": 24,
     "learning_hours": 144,
     "short_description": "A comprehensive 6-month Career Mastery program providing 144 guided hours of immersive training in professional spoken English, conversational fluency, business writing, executive presentations, public speaking, active listening, and workplace leadership.",
-    "full_description": "Business English & Personality Development is Nova Skills' flagship 6-month Career Mastery communication program designed for ambitious professionals, recent graduates, technical specialists, and entrepreneurs. Spanning 144 guided instructional hours across 20 meticulously structured modules, this course transforms hesitant communicators into authoritative, articulate business leaders. Through live speaking labs, unscripted role-play sparring, executive writing workshops, presentation defenses, and AI-assisted practice, learners systematically eliminate grammatical hesitation, develop clear and intelligible pronunciation, master professional correspondence, and navigate complex workplace conflicts. Students compile a verified 15-category Professional Communication Portfolio demonstrating measurable progress from Week 1 baseline diagnostics to Week 24 capstone mastery."
+    "full_description": "Business English & Personality Development is Nova Skills' flagship 6-month Career Mastery communication program designed for ambitious professionals, recent graduates, technical specialists, and entrepreneurs. Spanning 144 guided instructional hours across 20 meticulously structured modules, this course transforms hesitant communicators into authoritative, articulate business leaders. Through live speaking labs, unscripted role-play sparring, executive writing workshops, presentation defenses, and AI-assisted practice, learners systematically eliminate grammatical hesitation, develop clear and intelligible pronunciation, master professional correspondence, and navigate complex workplace conflicts. Students compile a verified 15-category Professional Communication Portfolio demonstrating measurable progress from Week 1 baseline diagnostics to Week 24 capstone mastery.",
+    "course_type": "Career Program"
   },
   {
     "id": "spoken-english-pro",
@@ -24635,7 +24821,8 @@ const NS_COURSES = [
     "duration_weeks": 12,
     "learning_hours": 90,
     "short_description": "A practical speaking-intensive English course combining functional grammar, clear pronunciation, listening comprehension, everyday conversations, spontaneous speaking, workplace communication, interview preparation, basic public speaking and AI-assisted practice.",
-    "full_description": "Improve your English speaking skills through practical conversations, sentence formation, pronunciation training, listening exercises, interview preparation and AI-assisted practice. Build confidence through instructor-led speaking labs, recorded assessments, individual corrections and real-world communication activities. Spanning 90 guided instructional hours across 12 structured modules over 3 months, this course is designed for college students, job seekers, early-career executives, and working professionals seeking spontaneous fluency. With 55–60% of every session dedicated to active student speech production, learners overcome hesitation, develop clear pronunciation, master everyday small talk, navigate workplace phone calls and virtual meetings, and ace entry-level job interviews. Every graduate compiles a verified 15-category Spoken English Communication Portfolio demonstrating measurable progress from Week 1 baseline diagnostics to Week 12 exit mastery."
+    "full_description": "Improve your English speaking skills through practical conversations, sentence formation, pronunciation training, listening exercises, interview preparation and AI-assisted practice. Build confidence through instructor-led speaking labs, recorded assessments, individual corrections and real-world communication activities. Spanning 90 guided instructional hours across 12 structured modules over 3 months, this course is designed for college students, job seekers, early-career executives, and working professionals seeking spontaneous fluency. With 55–60% of every session dedicated to active student speech production, learners overcome hesitation, develop clear pronunciation, master everyday small talk, navigate workplace phone calls and virtual meetings, and ace entry-level job interviews. Every graduate compiles a verified 15-category Spoken English Communication Portfolio demonstrating measurable progress from Week 1 baseline diagnostics to Week 12 exit mastery.",
+    "course_type": "Professional Program"
   },
   {
     "id": "spoken-english-cert",
@@ -24705,7 +24892,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Develop essential spoken English through interactive conversations, practical vocabulary, sentence construction, listening and pronunciation exercises. Practise real-life situations, receive personalized feedback and build a strong foundation for further English communication training.",
-    "full_description": "Build your everyday English communication foundation through guided conversations, practical sentence patterns and useful vocabulary. Learn to introduce yourself, ask questions, express simple opinions, make requests and respond to common daily situations. Practise listening and pronunciation with teacher feedback, partner activities and realistic conversation exercises. Compare your baseline and final speaking performance and finish with a personalized plan for continued English development."
+    "full_description": "Build your everyday English communication foundation through guided conversations, practical sentence patterns and useful vocabulary. Learn to introduce yourself, ask questions, express simple opinions, make requests and respond to common daily situations. Practise listening and pronunciation with teacher feedback, partner activities and realistic conversation exercises. Compare your baseline and final speaking performance and finish with a personalized plan for continued English development.",
+    "course_type": "Certification Course"
   },
   {
     "id": "business-communication",
@@ -24772,7 +24960,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Learn effective workplace communication through professional email writing, business messages, meeting participation, reports, stakeholder updates and appropriate use of AI writing assistance. Develop clear, concise and accurate communication skills for modern office and business environments.",
-    "full_description": "Develop practical written and verbal communication skills for everyday office work. Learn to write clear business emails, structure requests and responses, participate effectively in meetings and document decisions and responsibilities. Practise writing status reports, reporting delays, handling constructive disagreement and communicating professionally across teams. Use modern collaboration tools and AI writing assistance responsibly while checking accuracy and protecting confidential information."
+    "full_description": "Develop practical written and verbal communication skills for everyday office work. Learn to write clear business emails, structure requests and responses, participate effectively in meetings and document decisions and responsibilities. Practise writing status reports, reporting delays, handling constructive disagreement and communicating professionally across teams. Use modern collaboration tools and AI writing assistance responsibly while checking accuracy and protecting confidential information.",
+    "course_type": "Certification Course"
   },
   {
     "id": "presentation-skills",
@@ -24843,7 +25032,8 @@ const NS_COURSES = [
     "learning_hours": 40,
     "hours": 40,
     "short_description": "Learn to plan, design and deliver effective business presentations using storytelling, visual hierarchy, data communication, audience analysis and live presentation techniques. Create professional slide decks and demonstrate confident delivery in meetings, pitches and virtual presentations.",
-    "full_description": "Learn how to turn complex information, research and business ideas into clear presentations. Understand your audience, define a central message and organize supporting evidence into a logical story. Develop professional slide layouts, meaningful charts and accessible visuals, then practise delivery through structured rehearsal and recording. Complete a business presentation portfolio with a professional deck, delivery assessment, slide redesign and documented improvements."
+    "full_description": "Learn how to turn complex information, research and business ideas into clear presentations. Understand your audience, define a central message and organize supporting evidence into a logical story. Develop professional slide layouts, meaningful charts and accessible visuals, then practise delivery through structured rehearsal and recording. Complete a business presentation portfolio with a professional deck, delivery assessment, slide redesign and documented improvements.",
+    "course_type": "Certification Course"
   },
   {
     "id": "public-speaking",
@@ -24921,7 +25111,8 @@ const NS_COURSES = [
     "learning_hours": 40,
     "hours": 40,
     "short_description": "A structured five-week (40-hour) public speaking course emphasizing practical speech preparation, vocal delivery, authentic presence, impromptu speaking, Q&A handling and responsible rehearsal tools. Deliver four complete assessed speeches with structured instructor feedback.",
-    "full_description": "Develop practical public speaking skills through structured speech preparation, vocal delivery, audience interaction, storytelling, impromptu speaking and guided performance feedback. Learn to communicate ideas effectively in live, virtual and recorded speaking environments. Practise four different speech formats, receive structured instructor and peer feedback, review recorded performances and build a personalized speaking development plan."
+    "full_description": "Develop practical public speaking skills through structured speech preparation, vocal delivery, audience interaction, storytelling, impromptu speaking and guided performance feedback. Learn to communicate ideas effectively in live, virtual and recorded speaking environments. Practise four different speech formats, receive structured instructor and peer feedback, review recorded performances and build a personalized speaking development plan.",
+    "course_type": "Certification Course"
   },
   {
     "id": "soft-skills",
@@ -24992,14 +25183,15 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Develop practical workplace soft skills through teamwork exercises, active listening, adaptability, feedback, conflict management, problem-solving and professional responsibility. Learn to handle realistic workplace situations through guided role-plays and collaborative projects.",
-    "full_description": "Develop practical interpersonal and professional habits that support effective work in modern teams. Practise listening, giving and receiving feedback, managing responsibilities, solving problems and responding constructively when workplace situations change. Learn through realistic case studies, collaborative exercises and guided role-plays. Complete a Professional Effectiveness Portfolio with a team charter, prioritization plan, conflict and feedback evaluations, group problem-solving exercise and personal development plan."
+    "full_description": "Develop practical interpersonal and professional habits that support effective work in modern teams. Practise listening, giving and receiving feedback, managing responsibilities, solving problems and responding constructively when workplace situations change. Learn through realistic case studies, collaborative exercises and guided role-plays. Complete a Professional Effectiveness Portfolio with a team charter, prioritization plan, conflict and feedback evaluations, group problem-solving exercise and personal development plan.",
+    "course_type": "Certification Course"
   },
   {
     "id": "kids-mastery",
     "slug": "future-tech-kids-mastery",
     "academy": "Kids Tech Academy",
     "academyId": "kids",
-    "programLevel": "Certification Course",
+    "programLevel": "Career Program",
     "icon": "👨‍💻",
     "color": "linear-gradient(135deg, #EC4899, #8B5CF6)",
     "name": "Future Tech Kids Mastery",
@@ -25166,14 +25358,15 @@ const NS_COURSES = [
     "duration_weeks": 32,
     "learning_hours": 128,
     "short_description": "Help your child explore coding, robotics, artificial intelligence and digital creativity through an eight-month hands-on technology learning program.",
-    "full_description": "Future Tech Kids Mastery (2027 Next-Gen STEAM Edition) is an eight-month practical technology program designed specifically for young innovators aged 9 to 16. Through two age-adaptive pathways—Junior Innovators (Ages 9–12) and Teen Tech Creators (Ages 13–16)—learners study Scratch, Python, HTML/CSS, BBC micro:bit, low-voltage electronics, beginner robotics, and safe AI literacy. Guided by qualified STEAM educators in a safe, child-protected environment, students build 8 tangible category projects, progressing through the 'Think, Design, Code, Test, Improve, Create, Present' engineering cycle. With monthly parent progress reports, private student portfolios, and a celebratory final technology showcase, this program empowers young minds to become confident, ethical creators of technology rather than passive consumers."
+    "full_description": "Future Tech Kids Mastery (2027 Next-Gen STEAM Edition) is an eight-month practical technology program designed specifically for young innovators aged 9 to 16. Through two age-adaptive pathways—Junior Innovators (Ages 9–12) and Teen Tech Creators (Ages 13–16)—learners study Scratch, Python, HTML/CSS, BBC micro:bit, low-voltage electronics, beginner robotics, and safe AI literacy. Guided by qualified STEAM educators in a safe, child-protected environment, students build 8 tangible category projects, progressing through the 'Think, Design, Code, Test, Improve, Create, Present' engineering cycle. With monthly parent progress reports, private student portfolios, and a celebratory final technology showcase, this program empowers young minds to become confident, ethical creators of technology rather than passive consumers.",
+    "course_type": "Career Program"
   },
   {
     "id": "young-coders",
     "slug": "young-coders-program",
     "academy": "Kids Tech Academy",
     "academyId": "kids",
-    "programLevel": "Certification Course",
+    "programLevel": "Professional Program",
     "icon": "👨‍💻",
     "color": "linear-gradient(135deg, #EC4899, #2563EB)",
     "name": "Young Coders Program",
@@ -25297,7 +25490,8 @@ const NS_COURSES = [
     "duration_weeks": 16,
     "learning_hours": 64,
     "short_description": "Introduce your child to programming, creative game development and logical problem-solving through a four-month, instructor-led coding foundation program. Designed for learners aged 9–16, the course teaches Scratch, Microsoft MakeCode Arcade and Python through Thonny. Students build two playable games and a beginner Python application while practising independent coding, debugging and safe AI literacy.",
-    "full_description": "Introduce your child to programming, creative game development and logical problem-solving through a four-month, instructor-led coding foundation program. Designed for learners aged 9–16, the course teaches Scratch, Microsoft MakeCode Arcade and Python through Thonny. Students build two playable games and a beginner Python application while practising independent coding, debugging and safe AI literacy."
+    "full_description": "Introduce your child to programming, creative game development and logical problem-solving through a four-month, instructor-led coding foundation program. Designed for learners aged 9–16, the course teaches Scratch, Microsoft MakeCode Arcade and Python through Thonny. Students build two playable games and a beginner Python application while practising independent coding, debugging and safe AI literacy.",
+    "course_type": "Professional Program"
   },
   {
     "id": "scratch-programming",
@@ -25369,7 +25563,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Introduce your child to coding through creative game design, animated stories and interactive challenges using Scratch. Learn sequencing, events, loops, conditions, variables and debugging through age-appropriate, hands-on projects that build logical thinking and creativity.",
-    "full_description": "Scratch makes programming approachable through colourful drag-and-drop coding blocks. Children can create animated characters, build interactive stories and develop simple games while discovering how instructions, events and logical decisions work. Through guided challenges, creative projects and constructive feedback, learners practise planning, testing and improving their own work. They finish with three distinct Scratch projects and a private parent showcase."
+    "full_description": "Scratch makes programming approachable through colourful drag-and-drop coding blocks. Children can create animated characters, build interactive stories and develop simple games while discovering how instructions, events and logical decisions work. Through guided challenges, creative projects and constructive feedback, learners practise planning, testing and improving their own work. They finish with three distinct Scratch projects and a private parent showcase.",
+    "course_type": "Certification Course"
   },
   {
     "id": "python-for-kids",
@@ -25442,7 +25637,8 @@ const NS_COURSES = [
     "learning_hours": 48,
     "hours": 48,
     "short_description": "Help young learners transition into text-based programming with Python. Develop logical thinking through variables, conditions, loops, functions, Turtle graphics and beginner-friendly games, supported by structured debugging and hands-on coding challenges.",
-    "full_description": "Introduce your child to real text-based programming through Python and beginner-friendly creative projects. Learn to write instructions, store information, make decisions, repeat actions and organize code into reusable functions. Using Thonny and Python Turtle, students build digital artwork and interactive programs while learning to find and correct errors. Complete three distinct projects demonstrating creativity, logical thinking and growing programming independence."
+    "full_description": "Introduce your child to real text-based programming through Python and beginner-friendly creative projects. Learn to write instructions, store information, make decisions, repeat actions and organize code into reusable functions. Using Thonny and Python Turtle, students build digital artwork and interactive programs while learning to find and correct errors. Complete three distinct projects demonstrating creativity, logical thinking and growing programming independence.",
+    "course_type": "Certification Course"
   },
   {
     "id": "ai-for-kids",
@@ -25515,7 +25711,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Introduce children to artificial intelligence through creative, supervised activities. Explore machine learning, examples and training data, simple classification systems, AI-generated content and responsible digital behaviour while developing critical thinking and an understanding of AI limitations.",
-    "full_description": "AI is becoming part of the technology children see every day. This course helps young learners understand basic AI concepts through age-appropriate examples, visual machine learning experiments and guided classroom activities. Students learn how training examples influence AI predictions, why models sometimes make mistakes and how to test and improve a basic classifier. They also practise checking AI-generated information and discussing privacy, fairness and responsible technology use."
+    "full_description": "AI is becoming part of the technology children see every day. This course helps young learners understand basic AI concepts through age-appropriate examples, visual machine learning experiments and guided classroom activities. Students learn how training examples influence AI predictions, why models sometimes make mistakes and how to test and improve a basic classifier. They also practise checking AI-generated information and discussing privacy, fairness and responsible technology use.",
+    "course_type": "Certification Course"
   },
   {
     "id": "robotics-basics",
@@ -25586,7 +25783,8 @@ const NS_COURSES = [
     "learning_hours": 48,
     "hours": 48,
     "short_description": "Explore introductory robotics and physical computing through sensors, circuits, microcontrollers and creative engineering challenges. Learn to program the BBC micro:bit with Microsoft MakeCode, develop simple prototypes and understand how digital instructions control physical devices.",
-    "full_description": "Introduce your child to physical computing through the BBC micro:bit, a small programmable device with buttons, an LED display and built-in sensors. Students learn to write block-based programs and explore how digital instructions can respond to the world around them. Through supervised circuit-building, sensor experiments and creative challenges, learners develop practical prototypes, test their ideas and troubleshoot problems. The course concludes with three assessed projects and a private inventor showcase."
+    "full_description": "Introduce your child to physical computing through the BBC micro:bit, a small programmable device with buttons, an LED display and built-in sensors. Students learn to write block-based programs and explore how digital instructions can respond to the world around them. Through supervised circuit-building, sensor experiments and creative challenges, learners develop practical prototypes, test their ideas and troubleshoot problems. The course concludes with three assessed projects and a private inventor showcase.",
+    "course_type": "Certification Course"
   },
   {
     "id": "web-design-for-kids",
@@ -25653,7 +25851,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Introduce young learners to creative website design with HTML and CSS. Learn page structure, typography, images, colours, layouts, responsiveness and internet safety while creating original web pages and a personal project showcase.",
-    "full_description": "Web Design for Kids — HTML & CSS Foundations is an engaging, age-appropriate, project-based 6-week (32 learning hours) certification program for children aged 10–16. Students learn to build authentic web pages using genuine HTML5 and CSS, mastering document structure, typography, color palettes, spacing, the CSS box model, Flexbox layouts, mobile responsiveness, semantic tags, image alternative text, and browser developer tools. The course culminates in an original personal-interest website portfolio presented through a local browser demonstration or optional parent-approved static showcase, adhering strictly to child privacy and digital safety."
+    "full_description": "Web Design for Kids — HTML & CSS Foundations is an engaging, age-appropriate, project-based 6-week (32 learning hours) certification program for children aged 10–16. Students learn to build authentic web pages using genuine HTML5 and CSS, mastering document structure, typography, color palettes, spacing, the CSS box model, Flexbox layouts, mobile responsiveness, semantic tags, image alternative text, and browser developer tools. The course culminates in an original personal-interest website portfolio presented through a local browser demonstration or optional parent-approved static showcase, adhering strictly to child privacy and digital safety.",
+    "course_type": "Certification Course"
   },
   {
     "id": "youtube-mastery",
@@ -25817,7 +26016,8 @@ const NS_COURSES = [
     "duration_weeks": 20,
     "learning_hours": 150,
     "short_description": "Learn to research, plan, produce, edit, package, publish and improve YouTube content using a complete creator-workflow approach. Build original videos and Shorts, design Photoshop thumbnails, analyze channel performance, learn YouTube discovery, understand responsible AI tools and prepare for sustainable creator-business opportunities.",
-    "full_description": "Learn to research, plan, produce, edit, package, publish and improve YouTube content using a complete creator-workflow approach. Build original videos and Shorts, design Photoshop thumbnails, analyze channel performance, learn YouTube discovery, understand responsible AI tools and prepare for sustainable creator-business opportunities. Produce 3 master long-form videos and 8 completed vertical Shorts, build advanced YouTube Studio analytics dashboards, and create an end-to-end Creator Business Launch portfolio."
+    "full_description": "Learn to research, plan, produce, edit, package, publish and improve YouTube content using a complete creator-workflow approach. Build original videos and Shorts, design Photoshop thumbnails, analyze channel performance, learn YouTube discovery, understand responsible AI tools and prepare for sustainable creator-business opportunities. Produce 3 master long-form videos and 8 completed vertical Shorts, build advanced YouTube Studio analytics dashboards, and create an end-to-end Creator Business Launch portfolio.",
+    "course_type": "Professional Program"
   },
   {
     "id": "content-creator-pro",
@@ -25991,7 +26191,8 @@ const NS_COURSES = [
     "duration_weeks": 16,
     "learning_hours": 140,
     "short_description": "Turn creative ideas into professional brand content through practical training in strategy, scriptwriting, photography, smartphone videography, lighting, audio, professional editing, Photoshop, Canva, Reels, Shorts and AI-enhanced production. Learn to create original videos, product visuals, social graphics and creator-led advertising content while developing a complete brand campaign portfolio.",
-    "full_description": "Turn creative ideas into professional brand content through practical training in strategy, scriptwriting, photography, smartphone videography, lighting, audio, professional editing, Photoshop, Canva, Reels, Shorts and AI-enhanced production. Learn to create original videos, product visuals, social graphics and creator-led advertising content while developing a complete brand campaign portfolio."
+    "full_description": "Turn creative ideas into professional brand content through practical training in strategy, scriptwriting, photography, smartphone videography, lighting, audio, professional editing, Photoshop, Canva, Reels, Shorts and AI-enhanced production. Learn to create original videos, product visuals, social graphics and creator-led advertising content while developing a complete brand campaign portfolio.",
+    "course_type": "Professional Program"
   },
   {
     "id": "youtube-seo",
@@ -26066,7 +26267,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Learn practical YouTube SEO and content discovery through search-intent research, audience analysis, effective video titles, descriptions, content packaging and YouTube Studio analytics. Build skills in evaluating video performance and improving content visibility with evidence-based decisions.",
-    "full_description": "YouTube SEO, Discovery & Channel Analytics is a comprehensive 4-week (32 learning hours) certification program designed for creators, digital marketers, educators, channel assistants, and content strategists. Students master the mechanics of YouTube Search and recommendation algorithms, audience-intent mapping, competitive content gap analysis, truthful video packaging (titles, descriptions, chapters, thumbnail alignment), and YouTube Studio Analytics. The course emphasizes evidence-based diagnostic evaluation, Shorts versus long-form reporting nuances (including August 2026 view counting updates), responsible experimentation, and concludes with an authoritative YouTube Discovery Audit Pack and 30-day improvement plan."
+    "full_description": "YouTube SEO, Discovery & Channel Analytics is a comprehensive 4-week (32 learning hours) certification program designed for creators, digital marketers, educators, channel assistants, and content strategists. Students master the mechanics of YouTube Search and recommendation algorithms, audience-intent mapping, competitive content gap analysis, truthful video packaging (titles, descriptions, chapters, thumbnail alignment), and YouTube Studio Analytics. The course emphasizes evidence-based diagnostic evaluation, Shorts versus long-form reporting nuances (including August 2026 view counting updates), responsible experimentation, and concludes with an authoritative YouTube Discovery Audit Pack and 30-day improvement plan.",
+    "course_type": "Certification Course"
   },
   {
     "id": "thumbnail-design",
@@ -26134,7 +26336,8 @@ const NS_COURSES = [
     "learning_hours": 32,
     "hours": 32,
     "short_description": "Learn professional YouTube thumbnail design through visual hierarchy, typography, composition, subject isolation, image compositing and creative testing. Develop original thumbnail concepts that communicate video value clearly and remain legible on mobile screens.",
-    "full_description": "YouTube Thumbnail Design & Creative Testing is a rigorous 4-week (32 learning hours) creative-production specialization designed for graphic designers, freelance creatives, content assistants, and YouTube video creators. Students learn to translate real video briefs into compelling, honest, and technically polished thumbnail concepts using Adobe Photoshop (with Canva as an accessible alternative and optional Adobe Firefly for ideation). The course covers visual hierarchy, non-destructive layer masking, lighting and shadow compositing, small-screen mobile legibility, and native YouTube Studio A/B testing evaluated on watch-time share. Learners graduate with a comprehensive 12-thumbnail portfolio spanning six primary concepts, six meaningful variations, two packaging case studies, and editable source deliverables."
+    "full_description": "YouTube Thumbnail Design & Creative Testing is a rigorous 4-week (32 learning hours) creative-production specialization designed for graphic designers, freelance creatives, content assistants, and YouTube video creators. Students learn to translate real video briefs into compelling, honest, and technically polished thumbnail concepts using Adobe Photoshop (with Canva as an accessible alternative and optional Adobe Firefly for ideation). The course covers visual hierarchy, non-destructive layer masking, lighting and shadow compositing, small-screen mobile legibility, and native YouTube Studio A/B testing evaluated on watch-time share. Learners graduate with a comprehensive 12-thumbnail portfolio spanning six primary concepts, six meaningful variations, two packaging case studies, and editable source deliverables.",
+    "course_type": "Certification Course"
   },
   {
     "id": "podcast-production",
@@ -26200,7 +26403,8 @@ const NS_COURSES = [
     "learning_hours": 48,
     "hours": 48,
     "short_description": "Learn to plan, record, edit and distribute professional audio podcasts, with an introduction to video podcast production. Develop practical skills in microphone technique, storytelling, interviewing, audio cleanup, episode packaging, RSS distribution and podcast analytics.",
-    "full_description": "Podcast Production & Distribution is a comprehensive 6-week, 48-hour certification course designed to take creators and marketing professionals from audio fundamentals to polished episode delivery. Learn microphone placement, room acoustics, Audacity dialogue editing, noise cleanup, EQ, compression, and loudness consistency. Explore structured interview methods, double-ender remote recording, introductory video podcasts, and modern hosting workflows via Spotify for Creators, RSS feeds, Apple Podcasts Connect, and YouTube Podcasts."
+    "full_description": "Podcast Production & Distribution is a comprehensive 6-week, 48-hour certification course designed to take creators and marketing professionals from audio fundamentals to polished episode delivery. Learn microphone placement, room acoustics, Audacity dialogue editing, noise cleanup, EQ, compression, and loudness consistency. Explore structured interview methods, double-ender remote recording, introductory video podcasts, and modern hosting workflows via Spotify for Creators, RSS feeds, Apple Podcasts Connect, and YouTube Podcasts.",
+    "course_type": "Certification Course"
   },
   {
     "id": "personal-branding",
@@ -26266,7 +26470,8 @@ const NS_COURSES = [
     "learning_hours": 48,
     "hours": 48,
     "short_description": "Learn to build a professional personal brand through positioning, audience research, authentic storytelling, content pillars, digital presence and strategic communication. Develop a consistent, evidence-backed personal branding system for professional visibility, networking and business opportunities.",
-    "full_description": "Personal Branding & Thought Leadership is an applied 6-week, 48-hour professional specialization designed to help working professionals, founders, freelancers, and subject-matter specialists build a credible, evidence-based personal brand. Move beyond superficial profile optimizations to master personal brand discovery, audience mapping, positioning statements, messaging architecture, and authentic storytelling. Develop sustainable content pillars, 10 original concepts, 6 full drafts, and 2 publication-ready authoritative pieces while aligning LinkedIn, personal websites, and professional networks into an integrated digital reputation system."
+    "full_description": "Personal Branding & Thought Leadership is an applied 6-week, 48-hour professional specialization designed to help working professionals, founders, freelancers, and subject-matter specialists build a credible, evidence-based personal brand. Move beyond superficial profile optimizations to master personal brand discovery, audience mapping, positioning statements, messaging architecture, and authentic storytelling. Develop sustainable content pillars, 10 original concepts, 6 full drafts, and 2 publication-ready authoritative pieces while aligning LinkedIn, personal websites, and professional networks into an integrated digital reputation system.",
+    "course_type": "Certification Course"
   },
   {
     "id": "short-video-strategy",
@@ -26336,14 +26541,15 @@ const NS_COURSES = [
     "learning_hours": 40,
     "hours": 40,
     "short_description": "Learn to plan strategic Instagram Reels and YouTube Shorts for creators and brands. Develop skills in audience research, content pillars, hooks, short-form storytelling, campaign planning, publishing workflows and performance analysis using realistic creative briefs and practical experiments.",
-    "full_description": "Short-Form Video Strategy & Content Growth is an intensive 5-week, 40-hour professional certification course designed to move creators, marketing managers, and agency strategists from random video posting to systematic, research-backed campaigns. Master the platform dynamics of Instagram Reels and YouTube Shorts, formulate 3 distinct content pillars, brainstorm a 20-idea research matrix, and write 8 detailed production briefs and scripts with compelling hooks. Learn publishing compliance, experimental hypothesis design, prototype evaluation, and in-depth performance analysis using Instagram Insights and YouTube Studio metrics."
+    "full_description": "Short-Form Video Strategy & Content Growth is an intensive 5-week, 40-hour professional certification course designed to move creators, marketing managers, and agency strategists from random video posting to systematic, research-backed campaigns. Master the platform dynamics of Instagram Reels and YouTube Shorts, formulate 3 distinct content pillars, brainstorm a 20-idea research matrix, and write 8 detailed production briefs and scripts with compelling hooks. Learn publishing compliance, experimental hypothesis design, prototype evaluation, and in-depth performance analysis using Instagram Insights and YouTube Studio metrics.",
+    "course_type": "Certification Course"
   },
   {
     "id": "biz-productivity",
     "slug": "business-productivity-mastery",
     "academy": "Office Productivity Academy",
     "academyId": "office",
-    "programLevel": "Professional Program",
+    "programLevel": "Career Program",
     "icon": "📋",
     "color": "linear-gradient(135deg, #0599a8, #2563EB)",
     "name": "MIS & Business Intelligence Professional",
@@ -26434,7 +26640,8 @@ const NS_COURSES = [
     "learning_hours": 210,
     "hours": 210,
     "short_description": "Develop professional MIS and business intelligence skills using Advanced Excel, Power Query, SQL, Power BI, DAX, reporting automation and executive business presentations. Learn to clean operational data, define KPIs, build accurate dashboards, automate recurring reporting and communicate decision-ready insights. Advanced AI and governed MCP workflows are introduced where compatible access and institutional security controls are available.",
-    "full_description": "Develop professional MIS and business intelligence skills using Advanced Excel, Power Query, SQL, Power BI, DAX, reporting automation and executive business presentations. Learn to clean operational data, define KPIs, build accurate dashboards, automate recurring reporting and communicate decision-ready insights. Advanced AI and governed MCP workflows are introduced where compatible access and institutional security controls are available."
+    "full_description": "Develop professional MIS and business intelligence skills using Advanced Excel, Power Query, SQL, Power BI, DAX, reporting automation and executive business presentations. Learn to clean operational data, define KPIs, build accurate dashboards, automate recurring reporting and communicate decision-ready insights. Advanced AI and governed MCP workflows are introduced where compatible access and institutional security controls are available.",
+    "course_type": "Career Program"
   },
   {
     "id": "office-pro",
@@ -26586,7 +26793,8 @@ const NS_COURSES = [
     "duration_weeks": 12,
     "learning_hours": 96,
     "short_description": "Develop practical digital workplace skills with Microsoft Word, Excel, PowerPoint, Outlook, Teams, OneDrive and Google Workspace. Learn to create professional documents, build accurate spreadsheet reports, design presentations, manage emails and schedules, coordinate meetings and collaborate securely. Explore responsible AI-assisted productivity while demonstrating independent software skills through a complete Office Administration Toolkit.",
-    "full_description": "Develop practical digital workplace skills with Microsoft Word, Excel, PowerPoint, Outlook, Teams, OneDrive and Google Workspace. Learn to create professional documents, build accurate spreadsheet reports, design presentations, manage emails and schedules, coordinate meetings and collaborate securely. Explore responsible AI-assisted productivity while demonstrating independent software skills through a complete Office Administration Toolkit."
+    "full_description": "Develop practical digital workplace skills with Microsoft Word, Excel, PowerPoint, Outlook, Teams, OneDrive and Google Workspace. Learn to create professional documents, build accurate spreadsheet reports, design presentations, manage emails and schedules, coordinate meetings and collaborate securely. Explore responsible AI-assisted productivity while demonstrating independent software skills through a complete Office Administration Toolkit.",
+    "course_type": "Professional Program"
   },
   {
     "id": "microsoft-excel",
@@ -26708,7 +26916,8 @@ const NS_COURSES = [
     "course_name": "Microsoft Excel — Business Reporting & Data Analysis",
     "originalFee": 6900,
     "short_description": "Learn Microsoft Excel through real business tasks, formulas, data cleaning, PivotTables, charts and practical reporting. Build professional spreadsheets for sales, attendance, inventory and expense analysis while developing accuracy, troubleshooting and responsible AI-assisted working habits.",
-    "full_description": "Microsoft Excel — Business Reporting & Data Analysis is an applied 6-week, 48-hour certification course designed to teach practical spreadsheet modeling, formula construction, data cleaning, PivotTables, and business reporting. Master essential functions like SUMIFS, COUNTIFS, and IF, modern lookup methods with XLOOKUP, and dynamic arrays like FILTER, UNIQUE, and SORT. Build automated-formula sales trackers, expense or attendance registers, and a comprehensive business reporting capstone workbook with documented reconciliation checks and executive summaries."
+    "full_description": "Microsoft Excel — Business Reporting & Data Analysis is an applied 6-week, 48-hour certification course designed to teach practical spreadsheet modeling, formula construction, data cleaning, PivotTables, and business reporting. Master essential functions like SUMIFS, COUNTIFS, and IF, modern lookup methods with XLOOKUP, and dynamic arrays like FILTER, UNIQUE, and SORT. Build automated-formula sales trackers, expense or attendance registers, and a comprehensive business reporting capstone workbook with documented reconciliation checks and executive summaries.",
+    "course_type": "Certification Course"
   },
   {
     "id": "microsoft-word",
@@ -26824,7 +27033,8 @@ const NS_COURSES = [
     "course_name": "Microsoft Word — Professional Documents & Mail Merge",
     "originalFee": 3900,
     "short_description": "Master Microsoft Word for business letters, reports, proposals, forms and standardized documentation. Learn professional formatting, styles, document structure, references, mail merge, accessibility and PDF delivery through practical office assignments.",
-    "full_description": "Microsoft Word — Professional Documents & Mail Merge is a practical 3-week, 24-hour certification course designed to develop everyday workplace documentation skills. Learn to format business letters and structured multi-page reports with semantic heading styles, Navigation Pane organization, and automatic tables of contents. Create reusable corporate templates with content controls, execute bulk personalized mail merges from Excel data, review collaborative edits with Track Changes, run Accessibility Checker, and export verified, print-ready PDF files."
+    "full_description": "Microsoft Word — Professional Documents & Mail Merge is a practical 3-week, 24-hour certification course designed to develop everyday workplace documentation skills. Learn to format business letters and structured multi-page reports with semantic heading styles, Navigation Pane organization, and automatic tables of contents. Create reusable corporate templates with content controls, execute bulk personalized mail merges from Excel data, review collaborative edits with Track Changes, run Accessibility Checker, and export verified, print-ready PDF files.",
+    "course_type": "Certification Course"
   },
   {
     "id": "microsoft-powerpoint",
@@ -26939,7 +27149,8 @@ const NS_COURSES = [
     "course_name": "Microsoft PowerPoint — Professional Presentation Design",
     "originalFee": 4900,
     "short_description": "Learn to create professional PowerPoint presentations using visual hierarchy, Slide Master, layouts, editable charts, infographics, appropriate animation and consistent brand styling. Build business-ready decks through practical design and technical presentation exercises.",
-    "full_description": "Microsoft PowerPoint — Professional Presentation Design is a 4-week, 32-hour practical certification course designed to teach corporate slide production and information design. Master visual hierarchy, typography, grids, whitespace, Slide Master architecture, and custom layout creation. Construct editable PowerPoint charts, integrate Excel data, design process infographics, apply purposeful animations including Morph, configure technical Presenter View, run Accessibility Checker, and export verified, print-ready PDF decks."
+    "full_description": "Microsoft PowerPoint — Professional Presentation Design is a 4-week, 32-hour practical certification course designed to teach corporate slide production and information design. Master visual hierarchy, typography, grids, whitespace, Slide Master architecture, and custom layout creation. Construct editable PowerPoint charts, integrate Excel data, design process infographics, apply purposeful animations including Morph, configure technical Presenter View, run Accessibility Checker, and export verified, print-ready PDF decks.",
+    "course_type": "Certification Course"
   },
   {
     "id": "google-workspace",
@@ -27077,7 +27288,8 @@ const NS_COURSES = [
     "course_name": "Google Workspace — Cloud Productivity & Collaboration",
     "originalFee": 5900,
     "short_description": "Learn practical Google Workspace workflows with Gmail, Drive, Docs, Sheets, Slides, Calendar, Meet and Forms. Develop secure collaboration, professional communication, file management and coordinated office operations, including responsible Gemini assistance where available.",
-    "full_description": "Learn practical Google Workspace workflows with Gmail, Drive, Docs, Sheets, Slides, Calendar, Meet and Forms. Develop secure collaboration, professional communication, file management and coordinated office operations, including responsible Gemini assistance where available."
+    "full_description": "Learn practical Google Workspace workflows with Gmail, Drive, Docs, Sheets, Slides, Calendar, Meet and Forms. Develop secure collaboration, professional communication, file management and coordinated office operations, including responsible Gemini assistance where available.",
+    "course_type": "Certification Course"
   },
   {
     "id": "notion-cert",
@@ -27209,7 +27421,8 @@ const NS_COURSES = [
     "course_name": "Notion — Workspace, Databases & Knowledge Systems",
     "originalFee": 5900,
     "short_description": "Learn Notion to create structured team workspaces, connected databases, project trackers, knowledge bases and reusable operating systems. Build practical documentation and workflow systems with collaboration, permissions and responsible AI assistance.",
-    "full_description": "Learn Notion to create structured team workspaces, connected databases, project trackers, knowledge bases and reusable operating systems. Build practical documentation and workflow systems with collaboration, permissions and responsible AI assistance."
+    "full_description": "Learn Notion to create structured team workspaces, connected databases, project trackers, knowledge bases and reusable operating systems. Build practical documentation and workflow systems with collaboration, permissions and responsible AI assistance.",
+    "course_type": "Certification Course"
   },
   {
     "id": "clickup-cert",
@@ -27345,7 +27558,8 @@ const NS_COURSES = [
     "course_name": "ClickUp — Project Management & Workflow Automation",
     "originalFee": 5900,
     "short_description": "Learn to manage projects using ClickUp through task hierarchies, team workflows, custom fields, views, timelines, dashboards and introductory automation. Build practical systems for tracking deadlines, responsibilities and delivery quality.",
-    "full_description": "Learn to manage projects using ClickUp through task hierarchies, team workflows, custom fields, views, timelines, dashboards and introductory automation. Build practical systems for tracking deadlines, responsibilities and delivery quality."
+    "full_description": "Learn to manage projects using ClickUp through task hierarchies, team workflows, custom fields, views, timelines, dashboards and introductory automation. Build practical systems for tracking deadlines, responsibilities and delivery quality.",
+    "course_type": "Certification Course"
   },
   {
     "course_id": "microsoft-copilot",
