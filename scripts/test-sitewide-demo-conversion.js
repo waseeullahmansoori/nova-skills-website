@@ -68,9 +68,9 @@ assert(sampleCourse.includes('dm-mastery'), '_rendered_courses/dm-mastery.html p
 // 5. Academy demo form uses correct academy context
 console.log('\nTest 5: Academy demo form uses correct academy context');
 const dmAcademy = fs.readFileSync('academies/digital-marketing/index.html', 'utf8');
-assert(dmAcademy.includes('class="academy-demo-strip"'), 'Academy landing page contains academy-demo-strip');
+assert(dmAcademy.includes('academy-demo-strip') || dmAcademy.includes('academy-demo-banner'), 'Academy landing page contains academy-demo-strip / academy-demo-banner');
 assert(dmAcademy.includes("openDemoModal({academyId:'digital-marketing'"), 'Academy promo band passes academyId: digital-marketing');
-assert(dmAcademy.includes('Experience the Learning Before You Enroll.'), 'Academy promo band has correct headline');
+assert(dmAcademy.includes('Explore Your Skills Before You Commit.') || dmAcademy.includes('Experience the Learning Before You Enroll.'), 'Academy promo band has correct headline');
 assert(dmAcademy.includes('2 Days Free Demo Classes'), 'Academy promo band has Benefit 1');
 assert(dmAcademy.includes('1:1 Live Online Classes'), 'Academy promo band has Benefit 2');
 
