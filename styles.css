@@ -6488,24 +6488,43 @@ body.modal-open-hide-widgets #sticky-mobile-bar {
 
 /* Phone prefix wrapper */
 .phone-input-wrap {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  position: relative;
 }
 
 .phone-prefix {
   position: absolute;
   left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
   font-size: 0.95rem;
   font-weight: 700;
   color: #38bdf8;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
+  line-height: 1;
+  user-select: none;
 }
 
-.form-input.phone-input {
-  padding-left: 52px;
+.phone-prefix::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.25);
+  margin-left: 8px;
+}
+
+.form-input.phone-input,
+.demo-form .form-input.phone-input,
+.enroll-form .form-input.phone-input,
+#demo-phone,
+#enroll-phone {
+  padding-left: 64px !important;
   letter-spacing: 0.03em;
 }
 

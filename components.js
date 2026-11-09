@@ -395,7 +395,17 @@ async function submitNovaForm({
 }) {
   if (!form || !submitBtn) return false;
 
-  if (form.dataset.submitting === 'true' || submitBtn.disabled) return false;
+  const formId = form.id || '';
+  const isManagedModalForm = formId === 'course-enrollment-form' || formId === 'demo-booking-form' || formName === 'course_enrollment' || formName === 'free_demo';
+
+  if (!isManagedModalForm) {
+    if (form.dataset.submitting === 'true' || submitBtn.disabled) return false;
+    form.dataset.submitting = 'true';
+    submitBtn.disabled = true;
+  } else {
+    if (form.dataset.isFetching === 'true') return false;
+    form.dataset.isFetching = 'true';
+  }
 
   // Ensure honeypot field exists in form
   if (!form.querySelector('input[name="website"]')) {
@@ -409,11 +419,10 @@ async function submitNovaForm({
     form.appendChild(hpInput);
   }
 
-  form.dataset.submitting = 'true';
-  submitBtn.disabled = true;
-
   const originalHtml = submitBtn.innerHTML;
-  submitBtn.innerHTML = `<span class="btn-spinner"></span> ${loadingText}`;
+  if (!isManagedModalForm) {
+    submitBtn.innerHTML = `<span class="btn-spinner"></span> ${loadingText}`;
+  }
 
   try {
     const publicIP = await fetchPublicIP();
@@ -475,37 +484,40 @@ async function submitNovaForm({
       body: JSON.stringify(payload)
     });
 
-    let isSuccess = res.ok;
+    let isSuccess = false;
     let responseMsg = '';
 
     try {
       const json = await res.json();
-      if (json) {
-        if (json.success === false) {
-          isSuccess = false;
-          responseMsg = json.message || '';
-        } else if (json.message) {
-          responseMsg = json.message;
-        }
+      if (json && (json.success === true || json.result === 'success' || json.status === 'success')) {
+        isSuccess = true;
+        if (json.message) responseMsg = json.message;
+      } else if (json && json.success === false) {
+        isSuccess = false;
+        responseMsg = json.message || 'Submission was not accepted by admissions backend.';
+      } else if (res.ok && json) {
+        isSuccess = true;
       }
     } catch (e) {
-      // Response redirect handled automatically
+      // In case of non-JSON response from Google Apps Script redirect
+      isSuccess = res.ok;
     }
 
     if (!isSuccess) {
       throw new Error(responseMsg || 'Submission failed');
     }
 
-    // 1. Reset form
-    form.reset();
-
-    // 2. Restore button text and enable button again
-    submitBtn.innerHTML = originalHtml;
-    submitBtn.disabled = false;
-    delete form.dataset.submitting;
+    // 1. Reset form (managed modal forms reset on reopen)
+    if (!isManagedModalForm) {
+      form.reset();
+      submitBtn.innerHTML = originalHtml;
+      submitBtn.disabled = false;
+      delete form.dataset.submitting;
+    } else {
+      delete form.dataset.isFetching;
+    }
 
     // 3. Show success notification
-    const formId = form.id || '';
     if (formId === 'demo-booking-form' || formName === 'free_demo') {
       showToastNotification({
         title: '🎉 Demo Request Received!',
@@ -576,21 +588,25 @@ async function submitNovaForm({
   } catch (err) {
     console.error('Submission error:', err);
 
-    // Restore button and enable again
-    submitBtn.innerHTML = originalHtml;
-    submitBtn.disabled = false;
-    delete form.dataset.submitting;
+    if (!isManagedModalForm) {
+      // Restore button and enable again
+      submitBtn.innerHTML = originalHtml;
+      submitBtn.disabled = false;
+      delete form.dataset.submitting;
 
-    // Show red error toast with server error message if available
-    const errorMsg = err.message && err.message !== 'Submission failed'
-      ? err.message
-      : 'Something went wrong. Please try again.';
+      // Show red error toast with server error message if available
+      const errorMsg = err.message && err.message !== 'Submission failed'
+        ? err.message
+        : 'Something went wrong. Please try again.';
 
-    showToastNotification({
-      title: err.message && err.message.includes('Spam') ? 'Spam Detected' : 'Submission Failed',
-      message: errorMsg,
-      type: 'error'
-    });
+      showToastNotification({
+        title: err.message && err.message.includes('Spam') ? 'Spam Detected' : 'Submission Failed',
+        message: errorMsg,
+        type: 'error'
+      });
+    } else {
+      delete form.dataset.isFetching;
+    }
 
     return false;
   }
@@ -1539,6 +1555,7 @@ function shouldShowPopup() {
 function openConsultationPopup(courseName) {
   const overlay = document.getElementById('popup-overlay');
   if (!overlay) return;
+  initConsultationPopup();
   
   if (courseName) {
     const interestEl = document.getElementById('popup-interest');
@@ -1595,7 +1612,8 @@ function initConsultationPopup() {
   const overlay = document.getElementById('popup-overlay');
   const closeBtn = document.getElementById('popup-close');
   const form = document.getElementById('popup-form');
-  if (!overlay) return;
+  if (!overlay || overlay.dataset.popupInit === 'true') return;
+  overlay.dataset.popupInit = 'true';
 
   // Close button
   closeBtn?.addEventListener('click', closeConsultationPopup);
@@ -1902,7 +1920,7 @@ function injectEnrollmentModalHTML() {
                   <label class="form-label" for="enroll-phone">Mobile Number <span class="req">*</span></label>
                   <div class="phone-input-wrap">
                     <span class="phone-prefix">+91</span>
-                    <input type="tel" id="enroll-phone" class="form-input phone-input" placeholder="10-digit mobile number" inputmode="numeric" maxlength="10" autocomplete="tel-national" required />
+                    <input type="tel" id="enroll-phone" class="form-input phone-input" placeholder="Enter 10-digit mobile number" inputmode="numeric" maxlength="10" autocomplete="tel-national" required />
                   </div>
                   <span class="field-error" id="enroll-phone-error" role="alert"></span>
                 </div>
@@ -2766,7 +2784,7 @@ function injectDemoModalHTML() {
                 <label class="form-label" for="demo-phone">Mobile Number <span class="req">*</span></label>
                 <div class="phone-input-wrap">
                   <span class="phone-prefix">+91</span>
-                  <input type="tel" id="demo-phone" class="form-input phone-input" placeholder="10-digit mobile number" inputmode="numeric" maxlength="10" autocomplete="tel-national" required />
+                  <input type="tel" id="demo-phone" class="form-input phone-input" placeholder="Enter 10-digit mobile number" inputmode="numeric" maxlength="10" autocomplete="tel-national" required />
                 </div>
                 <span class="field-error" id="demo-phone-error" role="alert"></span>
               </div>
