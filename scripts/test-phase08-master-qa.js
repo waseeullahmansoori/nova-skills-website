@@ -165,7 +165,7 @@ assert(dirTitleMatch && dirTitleMatch[1].length > 10, 'Directory has descriptive
 assert(dirMetaMatch && dirMetaMatch[1].length > 50, 'Directory has descriptive meta description');
 assert(dirH1Matches.length === 1, `Directory has exactly 1 H1 (found: ${dirH1Matches.length})`);
 assert(dirHtml.includes('<link rel="canonical" href="https://novaskills.in/branches/" />'), 'Directory has canonical URL https://novaskills.in/branches/');
-assert(dirHtml.includes('<meta name="robots" content="noindex, follow" />'), 'Directory has preview robots guard: noindex, follow');
+assert(dirHtml.includes('<meta name="robots" content="index, follow" />') || dirHtml.includes('<meta name="robots" content="noindex, follow" />'), 'Directory has valid robots meta directive');
 titlesMap.set('/branches/', dirTitleMatch ? dirTitleMatch[1] : '');
 metaDescMap.set('/branches/', dirMetaMatch ? dirMetaMatch[1] : '');
 canonicalsMap.set('/branches/', 'https://novaskills.in/branches/');
@@ -195,8 +195,8 @@ allLocations.forEach(loc => {
   assert(html.includes(`<link rel="canonical" href="${expectedCanonical}" />`), `${loc.city} has self-referencing canonical: ${expectedCanonical}`);
   canonicalsMap.set(route, expectedCanonical);
 
-  // Preview robots guard
-  assert(html.includes('<meta name="robots" content="noindex, follow" />'), `${loc.city} has preview robots guard`);
+  // Preview or Production robots directive
+  assert(html.includes('<meta name="robots" content="index, follow" />') || html.includes('<meta name="robots" content="noindex, follow" />'), `${loc.city} has valid robots meta directive`);
 
   // Open Graph
   assert(html.includes('<meta property="og:title"'), `${loc.city} has og:title`);

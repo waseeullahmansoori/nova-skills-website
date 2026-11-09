@@ -1,0 +1,107 @@
+{
+  "releaseId": "nova-36-locations-production-v1.0.0",
+  "timestamp": "2026-11-09T21:54:14.180Z",
+  "environment": "production",
+  "productionDomain": "https://novaskills.in",
+  "git": {
+    "productionBaseCommit": "da1b66a",
+    "releaseCandidateCommit": "016dfb6",
+    "targetBranch": "main",
+    "releaseBranch": "release/nova-36-locations-phase09"
+  },
+  "scope": {
+    "directoryRoute": "/branches/",
+    "totalCityRoutes": 36,
+    "totalPlannedPages": 37,
+    "approvedPublicPages": 37,
+    "approvedIndexablePages": 37,
+    "noindexPages": [],
+    "withheldPages": []
+  },
+  "geographicIntegrity": {
+    "totalLocations": 36,
+    "totalStatesAndUTs": 14,
+    "deliveryMode": "live_interactive_online",
+    "solePhysicalCampus": "Siddharth Nagar, Uttar Pradesh",
+    "fictionalBranchesCount": 0
+  },
+  "courseIntegrity": {
+    "compulsoryCoreReferences": 144,
+    "additionalReferences": 92,
+    "totalCourseAssociations": 236,
+    "canonicalCatalogueCourses": 109,
+    "canonicalAcademies": 12
+  },
+  "leadWorkflows": [
+    {
+      "name": "Free Demo",
+      "leadType": "free_demo",
+      "formId": "demo-booking-form",
+      "modalId": "demo-booking-modal"
+    },
+    {
+      "name": "Free Consultation",
+      "leadType": "free_consultation",
+      "formId": "popup-form",
+      "modalId": "popup-overlay"
+    },
+    {
+      "name": "Course Enrollment",
+      "leadType": "enrollment_enquiry",
+      "formId": "course-enrollment-form",
+      "modalId": "course-enrollment-modal"
+    }
+  ],
+  "analytics": {
+    "measurementId": "G-9WN9N2KF12",
+    "dispatcher": "window.sendGA4Event",
+    "piiLeakage": false,
+    "idempotentLeadConversions": true
+  },
+  "routes": {
+    "directory": "https://novaskills.in/branches/",
+    "cities": [
+      "https://novaskills.in/branches/indore/",
+      "https://novaskills.in/branches/lucknow/",
+      "https://novaskills.in/branches/jaipur/",
+      "https://novaskills.in/branches/nagpur/",
+      "https://novaskills.in/branches/surat/",
+      "https://novaskills.in/branches/patna/",
+      "https://novaskills.in/branches/nashik/",
+      "https://novaskills.in/branches/rajkot/",
+      "https://novaskills.in/branches/bhopal/",
+      "https://novaskills.in/branches/raipur/",
+      "https://novaskills.in/branches/vadodara/",
+      "https://novaskills.in/branches/dehradun/",
+      "https://novaskills.in/branches/kota/",
+      "https://novaskills.in/branches/chhatrapati-sambhajinagar/",
+      "https://novaskills.in/branches/prayagraj/",
+      "https://novaskills.in/branches/ludhiana/",
+      "https://novaskills.in/branches/jalandhar/",
+      "https://novaskills.in/branches/gorakhpur/",
+      "https://novaskills.in/branches/gwalior/",
+      "https://novaskills.in/branches/hisar/",
+      "https://novaskills.in/branches/basti/",
+      "https://novaskills.in/branches/azamgarh/",
+      "https://novaskills.in/branches/sultanpur/",
+      "https://novaskills.in/branches/muzaffarpur/",
+      "https://novaskills.in/branches/jammu/",
+      "https://novaskills.in/branches/solan/",
+      "https://novaskills.in/branches/margao/",
+      "https://novaskills.in/branches/leh/",
+      "https://novaskills.in/branches/bahraich/",
+      "https://novaskills.in/branches/wardha/",
+      "https://novaskills.in/branches/jagdalpur/",
+      "https://novaskills.in/branches/kaithal/",
+      "https://novaskills.in/branches/anantnag/",
+      "https://novaskills.in/branches/mandi/",
+      "https://novaskills.in/branches/ponda/",
+      "https://novaskills.in/branches/kargil/"
+    ]
+  },
+  "rollbackTarget": {
+    "commit": "da1b66a",
+    "deploymentRollbackReady": true
+  },
+  "approvalReference": "nova-phase08-phase09-go-no-go.md"
+}
