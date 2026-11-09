@@ -201,7 +201,20 @@ function updateCoursesPage() {
     html = html.replace('</head>', `  ${schemaTag}\n</head>`);
   }
 
-  // 4. Pre-render course cards inside #courses-grid-page
+    // 4. Critical CSS injection for Course Card Demo Badge & CSS cache busting
+  const badgeCriticalCss = `
+.course-demo-indicator{display:block;width:100%;margin:10px 0 8px 0;box-sizing:border-box}
+.course-demo-chip{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:8px!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important;background:rgba(5,153,168,0.08)!important;border:1px solid rgba(5,153,168,0.22)!important;border-radius:6px!important;padding:7px 12px!important;font-family:inherit!important;font-size:0.8125rem!important;font-weight:600!important;color:#012B46!important;text-align:left!important;line-height:1.25!important;cursor:pointer;transition:background .15s ease,border-color .15s ease,transform .15s ease;white-space:nowrap!important;text-decoration:none!important}
+.course-demo-chip:hover,.course-demo-chip:focus-visible{background:rgba(5,153,168,0.14)!important;border-color:rgba(5,153,168,0.45)!important;color:#012B46!important;outline:none!important}
+.course-demo-chip svg{width:15px!important;height:15px!important;min-width:15px!important;min-height:15px!important;max-width:15px!important;max-height:15px!important;color:#0599a8!important;stroke:#0599a8!important;fill:none!important;flex-shrink:0!important;display:block!important}
+.course-demo-chip span,.course-demo-chip .demo-chip-text{flex:1 1 auto;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#012B46!important;font-weight:600!important}
+`;
+  if (!html.includes('.course-demo-chip')) {
+    html = html.replace('</style>', badgeCriticalCss + '\n</style>');
+  }
+  html = html.replace(/styles\.min\.css\?v=[0-9.]+/g, 'styles.min.css?v=2.4.0');
+
+  // 5. Pre-render course cards inside #courses-grid-page
   const cardsHtml = NS_COURSES.map(c => buildCourseCardHTML(c)).join('\n');
   const gridRegex = /<div class="courses-grid-page" id="courses-grid-page">[\s\S]*?(?=\s*<!-- No results container -->)/;
   const replacementGrid = `<div class="courses-grid-page" id="courses-grid-page">\n${cardsHtml}\n        </div>`;
