@@ -551,10 +551,75 @@
   color: #012B46 !important;
   font-weight: 600 !important;
 }
+
+/* Critical 2-Day Free Demo Modal Styles */
+.demo-modal-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  z-index: 999999 !important;
+  background: rgba(1, 23, 49, 0.88) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 16px !important;
+  box-sizing: border-box !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.25s ease, visibility 0.25s ease !important;
+}
+.demo-modal-backdrop.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+.demo-modal-dialog {
+  background: #011731 !important;
+  border: 1px solid rgba(5, 153, 168, 0.35) !important;
+  border-radius: 20px !important;
+  width: 100% !important;
+  max-width: 580px !important;
+  max-height: 90vh !important;
+  max-height: 90dvh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  position: relative !important;
+  padding: 32px 28px !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6) !important;
+  box-sizing: border-box !important;
+  color: #ffffff !important;
+  animation: demoModalPop 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+}
+@keyframes demoModalPop {
+  from { transform: scale(0.94); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@media (max-width: 640px) {
+  .demo-modal-backdrop {
+    padding: 8px !important;
+    align-items: flex-end !important;
+  }
+  .demo-modal-dialog {
+    max-height: 94vh !important;
+    max-height: 94dvh !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    padding: 24px 18px !important;
+  }
+}
   </style>
 
-  <link rel="stylesheet" href="/css/styles.min.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="/css/styles.min.css"></noscript>
+  <link rel="stylesheet" href="/css/styles.min.css?v=2.7.3">
+  <noscript><link rel="stylesheet" href="/css/styles.min.css?v=2.7.3"></noscript>
 
   <!-- Structured Data: JSON-LD Suite -->
   <script type="application/ld+json">
@@ -692,7 +757,7 @@
 
         <!-- Action CTAs -->
         <div class="academy-actions" style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
-          <button id="btn-academy-hero-demo" class="btn btn-secondary btn-lg" style="background:#75d766; color:#011731; border:none; font-weight:700;" onclick="if(typeof openDemoModal==='function'){openDemoModal({academyId:'ai', academyName:'AI Academy', sourceCta:'academy_hero'});}">Book Free Demo</button>
+          <button type="button" id="btn-academy-hero-demo" class="btn btn-secondary btn-lg" style="background:#75d766; color:#011731; border:none; font-weight:700;" onclick="if(typeof openDemoModal==='function'){openDemoModal({academyId:'ai', academyName:'AI Academy', sourceCta:'academy_hero'});}">Book Free Demo</button>
           <button id="btn-enroll-now" class="btn btn-primary btn-lg" onclick="openEnrollmentModal('', 'AI Academy')">Enroll Now →</button>
           <button id="btn-free-consultation" class="btn btn-outline btn-lg" style="color:white; border-color:rgba(255,255,255,0.4);" onclick="openConsultationPopup()">Free Consultation</button>
         </div>
@@ -1902,10 +1967,10 @@
   <div id="ns-footer"></div>
 
   <!-- JavaScript Bundles -->
-  <script src="/js/data.min.js?v=2.7.0" defer></script>
-  <script src="/js/components.min.js?v=2.7.0" defer></script>
+  <script src="/js/data.min.js?v=2.7.3" defer></script>
+  <script src="/js/components.min.js?v=2.7.3" defer></script>
   <script src="/nova-ai-widget.js?v=3.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
-  <script src="/js/academy-detail.min.js?v=2.7.1" defer></script>
+  <script src="/js/academy-detail.min.js?v=2.7.3" defer></script>
 </body>
 </html>
