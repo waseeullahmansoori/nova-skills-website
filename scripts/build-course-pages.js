@@ -991,10 +991,23 @@ function generateStaticCourseHtml(courseId, templateHtml) {
     `<button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('${safeName}', '${safeAcademy}', '${safeDuration}', '${safePrice}', '${safeId}')">Enroll Now — Book Seat →</button>`
   );
 
-  html = html.replace(
-    /<button\s+type="button"\s+class="btn-book-demo-secondary"\s+id="btn-detail-book-demo"[^>]*>[\s\S]*?<\/button>/i,
-    `<button type="button" class="btn-book-demo-secondary" id="btn-detail-book-demo" onclick="openDemoModal({courseId:'${safeId}',courseName:'${safeName}',academyName:'${safeAcademy}'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;max-width:18px;max-height:18px;display:block;flex-shrink:0;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg> <span>Book Your Free Demo</span></button>`
-  );
+  const isDemoEligible = isCourseDemoEligible(baseCourse);
+
+  if (isDemoEligible) {
+    html = html.replace(
+      /<button\s+type="button"\s+class="btn-book-demo-secondary"\s+id="btn-detail-book-demo"[^>]*>[\s\S]*?<\/button>/i,
+      `<button type="button" class="btn-book-demo-secondary" id="btn-detail-book-demo" onclick="openDemoModal({courseId:'${safeId}',courseName:'${safeName}',academyName:'${safeAcademy}',academyId:'${baseCourse.academyId || ''}',sourceCta:'course_detail_sidebar'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;max-width:18px;max-height:18px;display:block;flex-shrink:0;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg> <span>Book Your Free Demo</span></button>`
+    );
+  } else {
+    html = html.replace(
+      /<button\s+type="button"\s+class="btn-book-demo-secondary"\s+id="btn-detail-book-demo"[^>]*>[\s\S]*?<\/button>/i,
+      ''
+    );
+    html = html.replace(
+      /(<div\s+class="demo-benefit-item"\s+id="detail-demo-item"[^>]*>)/i,
+      '<div class="demo-benefit-item" id="detail-demo-item" style="display:none;">'
+    );
+  }
 
   html = html.replace(
     /<button\s+class="btn-consult-full"[^>]*>[\s\S]*?<\/button>/i,

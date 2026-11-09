@@ -808,7 +808,7 @@ function buildHeaderHTML(page) {
         <!-- Slide 6 (Free Demo Offer) -->
         <div class="announcement-slide" data-index="5">
           <span class="announcement-text">✨ <strong>2 Days Free Demo Classes</strong> • Experience the Learning Before You Enroll.</span>
-          <a href="#demo" onclick="if(typeof openDemoModal==='function'){openDemoModal();} return false;" class="announcement-cta">Book Free Demo →</a>
+          <a href="#demo" onclick="if(typeof openDemoModal==='function'){openDemoModal({sourceCta:'announcement_bar'});} return false;" class="announcement-cta">Book Free Demo →</a>
         </div>
 
       </div>
@@ -930,7 +930,7 @@ function buildFooterHTML() {
               <ul class="footer-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/courses.html">All Courses</a></li>
-                <li><a href="#demo" onclick="if(typeof openDemoModal==='function'){openDemoModal();} return false;">Book a Free Demo</a></li>
+                <li><a href="#demo" onclick="if(typeof openDemoModal==='function'){openDemoModal({sourceCta:'footer_quick_link'});} return false;">Book a Free Demo</a></li>
                 <li><a href="/blog.html">Blog</a></li>
                 <li><a href="/#placements">Placements</a></li>
                 <li><a href="/#mentors">Our Mentors</a></li>
@@ -2945,6 +2945,27 @@ function injectDemoModalHTML() {
 }
 window.injectDemoModalHTML = injectDemoModalHTML;
 
+const ACADEMY_SLUG_TO_ID_MAP = {
+  'no-code-web': 'nocode',
+  'video-motion': 'video',
+  'career-freelancing': 'career',
+  'kids-tech': 'kids',
+  'office-productivity': 'office',
+  'digital-marketing': 'digital-marketing',
+  'ai': 'ai',
+  'design': 'design',
+  'programming': 'programming',
+  '3d': '3d',
+  'communication': 'communication',
+  'creator': 'creator'
+};
+
+function normalizeDemoAcademyId(idOrSlug) {
+  if (!idOrSlug) return '';
+  const clean = String(idOrSlug).toLowerCase().trim();
+  return ACADEMY_SLUG_TO_ID_MAP[clean] || clean;
+}
+
 function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselectedCourseName) {
   const select = document.getElementById('demo-course-select');
   if (!select) return;
@@ -2953,23 +2974,37 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
     ? NS_COURSES
     : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []);
 
-  select.innerHTML = '<option value="">-- Choose a Course * --</option>';
+  select.innerHTML = '<option value="">-- Choose an Eligible Program * --</option>';
+
+  const normFilter = normalizeDemoAcademyId(filterAcademyId);
+
+  // Filter only eligible courses for demo booking (Phase 5 requirement)
+  const isEligible = (c) => {
+    if (typeof isCourseDemoEligible === 'function') {
+      return isCourseDemoEligible(c);
+    }
+    return true;
+  };
 
   // Group by academy
   const grouped = {};
   coursesList.forEach(c => {
+    if (!isEligible(c)) return;
+
     const acadName = c.academy || 'Nova Skills Academy';
-    const acadId = c.academyId || '';
-    if (filterAcademyId && acadId !== filterAcademyId) {
+    const acadId = normalizeDemoAcademyId(c.academyId || '');
+
+    if (normFilter && acadId !== normFilter && (c.academy || '').toLowerCase() !== String(filterAcademyId).toLowerCase()) {
       return;
     }
     if (!grouped[acadName]) grouped[acadName] = [];
     grouped[acadName].push(c);
   });
 
-  // If filtered but empty, fallback to all courses
+  // If filtered but empty, fallback to all eligible courses
   if (Object.keys(grouped).length === 0) {
     coursesList.forEach(c => {
+      if (!isEligible(c)) return;
       const acadName = c.academy || 'Nova Skills Academy';
       if (!grouped[acadName]) grouped[acadName] = [];
       grouped[acadName].push(c);
@@ -2986,7 +3021,7 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
       opt.dataset.id = c.id;
       opt.dataset.academy = c.academy;
       opt.dataset.academyId = c.academyId;
-      opt.textContent = c.name + (isCourseDemoEligible(c) ? ' ★' : '');
+      opt.textContent = c.name;
       if (preselectedCourseId && (c.id === preselectedCourseId || c.slug === preselectedCourseId)) {
         opt.selected = true;
         foundMatch = true;
@@ -3005,13 +3040,13 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
     opt.value = preselectedCourseName;
     opt.dataset.id = preselectedCourseId || '';
     opt.dataset.academy = filterAcademyId || '';
-    opt.textContent = preselectedCourseName + ' ★';
+    opt.textContent = preselectedCourseName;
     opt.selected = true;
     select.prepend(opt);
   }
 }
 
-function openDemoModal(arg1, arg2, arg3) {
+function openDemoModal(arg1, arg2, arg3, arg4) {
   injectDemoModalHTML();
 
   // Increment session counter to invalidate any pending in-flight async callbacks
@@ -3035,6 +3070,7 @@ function openDemoModal(arg1, arg2, arg3) {
     courseName = typeof arg1 === 'string' ? arg1 : '';
     academyName = typeof arg2 === 'string' ? arg2 : '';
     courseId = typeof arg3 === 'string' ? arg3 : '';
+    sourceCta = typeof arg4 === 'string' ? arg4 : '';
   }
 
   // If no course passed, inspect if we are on a course detail page
@@ -3055,8 +3091,23 @@ function openDemoModal(arg1, arg2, arg3) {
   // If no academy passed, inspect if we are on an academy page
   if (!academyId && !academyName && !courseId) {
     if (typeof currentAcademy !== 'undefined' && currentAcademy) {
-      academyId = currentAcademy.id || '';
+      academyId = currentAcademy.id || currentAcademy.slug || '';
       academyName = currentAcademy.name || '';
+    }
+  }
+
+  // Cross-reference with NS_COURSES to guarantee correct ID/Name/Academy
+  const coursesList = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+    ? NS_COURSES
+    : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []);
+
+  if (courseId || courseName) {
+    const matched = coursesList.find(c => (courseId && (c.id === courseId || c.slug === courseId)) || (courseName && c.name.toLowerCase() === courseName.toLowerCase()));
+    if (matched) {
+      courseId = matched.id;
+      courseName = matched.name;
+      if (!academyName) academyName = matched.academy || '';
+      if (!academyId) academyId = matched.academyId || '';
     }
   }
 
@@ -3084,7 +3135,7 @@ function openDemoModal(arg1, arg2, arg3) {
       contextText.textContent = courseName + (academyName ? ' (' + academyName + ')' : '');
       contextDiv.style.display = 'flex';
     } else if (academyName) {
-      contextText.textContent = academyName + ' (Select a program below)';
+      contextText.textContent = academyName + ' — Select an eligible program below';
       contextDiv.style.display = 'flex';
     } else {
       contextDiv.style.display = 'none';
