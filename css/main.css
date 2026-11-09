@@ -8153,9 +8153,29 @@ body.filter-sheet-open #nova-ai-widget-container {
   transform: translateY(-1px);
 }
 
+/* Demo Modal Hidden & State Visibility Overrides */
+.demo-form-container[hidden],
+#demo-form-container[hidden] {
+  display: none !important;
+}
+
+.demo-success-view[hidden],
+#demo-success-container[hidden] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 .demo-success-view {
   text-align: center;
-  padding: 24px 12px;
+  padding: 28px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .demo-success-view .success-icon-badge {
@@ -8182,6 +8202,54 @@ body.filter-sheet-open #nova-ai-widget-container {
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Responsive adjustments for Free Demo Modal */
+@media (max-width: 640px) {
+  .demo-modal-backdrop {
+    padding: 10px;
+    align-items: flex-end;
+  }
+  .demo-modal-dialog {
+    border-radius: 20px 20px 0 0;
+    padding: 24px 18px calc(24px + env(safe-area-inset-bottom, 0px));
+    max-height: 94vh;
+    max-width: 100%;
+    width: 100%;
+  }
+  .demo-modal-title {
+    font-size: 1.35rem;
+    padding-right: 36px;
+  }
+  .demo-modal-subtitle {
+    font-size: 0.825rem;
+    margin-bottom: 16px;
+  }
+  .demo-form-fields {
+    gap: 12px;
+  }
+  .demo-form .form-input {
+    font-size: 16px !important; /* Prevents auto-zoom in iOS Safari */
+    height: 48px;
+  }
+  .demo-form .form-textarea {
+    height: auto;
+    min-height: 64px;
+    font-size: 16px !important;
+  }
+  .btn-submit-demo {
+    min-height: 50px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .demo-modal-dialog {
+    padding: 18px 14px calc(18px + env(safe-area-inset-bottom, 0px));
+  }
+  .demo-modal-title {
+    font-size: 1.2rem;
+  }
 }
 
 /* Course Card 2-Day Free Demo Promotional Badge (Step 03 Approved Standard) */

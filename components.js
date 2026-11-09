@@ -437,6 +437,10 @@ async function submitNovaForm({
       course: data.course || '',
       city: data.city || '',
       message: data.message || '',
+      lead_type: data.lead_type || (formId === 'demo-booking-form' ? 'free_demo' : formId === 'course-enrollment-form' ? 'enrollment_enquiry' : 'free_consultation'),
+      learning_mode: data.learning_mode || '',
+      course_id: data.course_id || '',
+      academy: data.academy || '',
       website: honeypotValue,
 
       pageUrl: window.location.href,
@@ -501,14 +505,28 @@ async function submitNovaForm({
     delete form.dataset.submitting;
 
     // 3. Show success notification
-    showToastNotification({
-      title: '✅ Consultation Booked Successfully!',
-      message: 'Thank you for contacting Nova Skills.\n\nOur career counsellor will call you within 2 hours.\n\nPlease keep your phone available.',
-      type: 'success'
-    });
+    const formId = form.id || '';
+    if (formId === 'demo-booking-form' || formName === 'free_demo') {
+      showToastNotification({
+        title: '🎉 Demo Request Received!',
+        message: 'Thank you for requesting a 2-Day Free Demo.\r\n\r\nOur admissions team will contact you shortly with schedule details.',
+        type: 'success'
+      });
+    } else if (formId === 'course-enrollment-form' || formName === 'course_enrollment') {
+      showToastNotification({
+        title: '✅ Enquiry Submitted Successfully!',
+        message: 'Thank you for your admission enquiry.\r\n\r\nOur course counsellor will call you shortly.',
+        type: 'success'
+      });
+    } else {
+      showToastNotification({
+        title: '✅ Consultation Booked Successfully!',
+        message: 'Thank you for contacting Nova Skills.\r\n\r\nOur career counsellor will call you within 2 hours.\r\nPlease keep your phone available.',
+        type: 'success'
+      });
+    }
 
     // 4. Fire GA4 Recommended Event: generate_lead (Confirmed backend success only, zero PII)
-    const formId = form.id || '';
     const nonLeadFormIds = ['comment-form', 'article-newsletter-form', 'sidebar-newsletter-form', 'article-sub-form'];
 
     if (!nonLeadFormIds.includes(formId)) {
@@ -516,7 +534,7 @@ async function submitNovaForm({
         (formId === 'counselling-form' ? 'counselling_form' :
          formId === 'popup-form' ? 'consultation_popup' :
          formId === 'course-enrollment-form' ? 'course_enrollment' :
-         formId === 'demo-booking-form' ? 'demo_booking' :
+         formId === 'demo-booking-form' ? 'free_demo' :
          formId === 'contact-enquiry-form' ? 'contact_enquiry' :
          (formId || 'counselling_form'));
 
@@ -2572,6 +2590,122 @@ function isCourseDemoEligible(course) {
 }
 window.isCourseDemoEligible = isCourseDemoEligible;
 
+/**
+ * 2-Day Free Demo Modal State Manager
+ * States:
+ *   - 'idle': Pristine form ready for user input. Success container strictly hidden.
+ *   - 'submitting': Submission in progress. Submit button disabled with spinner.
+ *   - 'success': Backend confirmed receipt. Form hidden, success view visible and focused.
+ *   - 'error': Backend error or network failure. Form preserved (fields NOT cleared), error shown.
+ */
+function setDemoModalState(state, options = {}) {
+  const modal = document.getElementById('demo-booking-modal');
+  if (!modal) return;
+
+  const form = document.getElementById('demo-booking-form');
+  const formContainer = document.getElementById('demo-form-container');
+  const successContainer = document.getElementById('demo-success-container');
+  const submitBtn = document.getElementById('demo-submit-btn');
+  const btnText = document.getElementById('demo-btn-text');
+  const errDiv = document.getElementById('demo-form-error');
+
+  modal.setAttribute('data-state', state);
+
+  if (state === 'idle') {
+    if (form) delete form.dataset.submitting;
+    if (formContainer) {
+      formContainer.removeAttribute('hidden');
+      formContainer.style.display = '';
+    }
+    if (successContainer) {
+      successContainer.setAttribute('hidden', '');
+      successContainer.style.display = 'none';
+    }
+    if (submitBtn) {
+      submitBtn.removeAttribute('disabled');
+      submitBtn.disabled = false;
+      if (btnText) btnText.textContent = 'Request Free Demo →';
+    }
+    if (errDiv) {
+      errDiv.textContent = '';
+      errDiv.setAttribute('hidden', '');
+      errDiv.style.display = 'none';
+    }
+    clearAllDemoFieldErrors();
+
+    const dialog = modal.querySelector('.demo-modal-dialog');
+    if (dialog) dialog.scrollTop = 0;
+  }
+  else if (state === 'submitting') {
+    if (form) form.dataset.submitting = 'true';
+    if (formContainer) {
+      formContainer.removeAttribute('hidden');
+      formContainer.style.display = '';
+    }
+    if (successContainer) {
+      successContainer.setAttribute('hidden', '');
+      successContainer.style.display = 'none';
+    }
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('disabled', 'true');
+      if (btnText) btnText.innerHTML = '<span class="btn-spinner"></span> Requesting Free Demo...';
+    }
+    if (errDiv) {
+      errDiv.textContent = '';
+      errDiv.setAttribute('hidden', '');
+      errDiv.style.display = 'none';
+    }
+  }
+  else if (state === 'success') {
+    if (form) delete form.dataset.submitting;
+    if (formContainer) {
+      formContainer.setAttribute('hidden', '');
+      formContainer.style.display = 'none';
+    }
+    if (successContainer) {
+      successContainer.removeAttribute('hidden');
+      successContainer.style.removeProperty('display');
+    }
+    if (errDiv) {
+      errDiv.textContent = '';
+      errDiv.setAttribute('hidden', '');
+      errDiv.style.display = 'none';
+    }
+
+    const dialog = modal.querySelector('.demo-modal-dialog');
+    if (dialog) dialog.scrollTop = 0;
+
+    const successTitle = document.getElementById('demo-success-title') || modal.querySelector('.success-title');
+    if (successTitle) {
+      successTitle.setAttribute('tabindex', '-1');
+      try { successTitle.focus(); } catch (e) {}
+    }
+  }
+  else if (state === 'error') {
+    if (form) delete form.dataset.submitting;
+    if (formContainer) {
+      formContainer.removeAttribute('hidden');
+      formContainer.style.display = '';
+    }
+    if (successContainer) {
+      successContainer.setAttribute('hidden', '');
+      successContainer.style.display = 'none';
+    }
+    if (submitBtn) {
+      submitBtn.removeAttribute('disabled');
+      submitBtn.disabled = false;
+      if (btnText) btnText.textContent = 'Request Free Demo →';
+    }
+    if (errDiv) {
+      errDiv.textContent = options.message || 'Unable to submit demo request right now. Please check your network or call admissions directly.';
+      errDiv.removeAttribute('hidden');
+      errDiv.style.display = 'block';
+    }
+  }
+}
+window.setDemoModalState = setDemoModalState;
+
 function injectDemoModalHTML() {
   if (document.getElementById('demo-booking-modal')) return;
 
@@ -2595,7 +2729,7 @@ function injectDemoModalHTML() {
             Book Your <span class="gradient-text">2-Day Free Demo</span>
           </h2>
           <p class="demo-modal-subtitle">
-            Experience our practical teaching approach, syllabus depth, and live interactive classes before you enroll.
+            Experience practical training before choosing your course.
           </p>
         </div>
 
@@ -2608,22 +2742,23 @@ function injectDemoModalHTML() {
         </div>
 
         <!-- Form View Container -->
-        <div id="demo-form-container">
+        <div id="demo-form-container" class="demo-form-container">
           <form id="demo-booking-form" class="demo-form" novalidate>
             <input type="hidden" id="demo-course-id" name="courseId" value="" />
             <input type="hidden" id="demo-course-name" name="courseName" value="" />
             <input type="hidden" id="demo-academy-id" name="academyId" value="" />
             <input type="hidden" id="demo-academy-name" name="academyName" value="" />
+            <input type="hidden" id="demo-source-cta" name="sourceCta" value="" />
 
             <div class="demo-form-fields">
-              <!-- Full Name (Required) -->
+              <!-- 1. Full Name (Required) -->
               <div class="form-group" id="group-demo-name">
                 <label class="form-label" for="demo-name">Full Name <span class="req">*</span></label>
                 <input type="text" id="demo-name" class="form-input" placeholder="Enter your full name" autocomplete="name" required />
                 <span class="field-error" id="demo-name-error" role="alert"></span>
               </div>
 
-              <!-- Mobile Number (Required) -->
+              <!-- 2. Mobile Number (Required) -->
               <div class="form-group" id="group-demo-phone">
                 <label class="form-label" for="demo-phone">Mobile Number <span class="req">*</span></label>
                 <div class="phone-input-wrap">
@@ -2633,25 +2768,56 @@ function injectDemoModalHTML() {
                 <span class="field-error" id="demo-phone-error" role="alert"></span>
               </div>
 
-              <!-- Course Selection (Required) -->
+              <!-- 3. Course Selection (Required) -->
               <div class="form-group" id="group-demo-course">
-                <label class="form-label" for="demo-course-select">Select Course for Free Demo <span class="req">*</span></label>
+                <label class="form-label" for="demo-course-select">Interested Course <span class="req">*</span></label>
                 <select id="demo-course-select" class="form-input form-select" required>
-                  <option value="">-- Choose a Course --</option>
+                  <option value="">-- Choose a Course * --</option>
                 </select>
                 <span class="field-error" id="demo-course-error" role="alert"></span>
               </div>
 
-              <!-- Preferred Session / Time Slot (Optional) -->
+              <!-- 4. Preferred Learning Mode (Required: Live Online / Classroom) -->
+              <div class="form-group" id="group-demo-mode">
+                <label class="form-label" for="demo-mode-select">Preferred Learning Mode <span class="req">*</span></label>
+                <select id="demo-mode-select" class="form-input form-select" required>
+                  <option value="">-- Choose Learning Mode * --</option>
+                  <option value="Live Online">Live Online (Interactive Live Classes)</option>
+                  <option value="Classroom">Classroom Training (In-Person Centre)</option>
+                </select>
+                <span class="field-error" id="demo-mode-error" role="alert"></span>
+              </div>
+
+              <!-- 5. City (Required) -->
+              <div class="form-group" id="group-demo-city">
+                <label class="form-label" for="demo-city">City <span class="req">*</span></label>
+                <input type="text" id="demo-city" class="form-input" placeholder="Enter your city" autocomplete="address-level2" required />
+                <span class="field-error" id="demo-city-error" role="alert"></span>
+              </div>
+
+              <!-- 6. Email Address (Optional) -->
+              <div class="form-group" id="group-demo-email">
+                <label class="form-label" for="demo-email">Email Address <span class="opt">(Optional)</span></label>
+                <input type="email" id="demo-email" class="form-input" placeholder="you@example.com" autocomplete="email" />
+                <span class="field-error" id="demo-email-error" role="alert"></span>
+              </div>
+
+              <!-- 7. Preferred Day or Time Window (Optional) -->
               <div class="form-group" id="group-demo-slot">
-                <label class="form-label" for="demo-slot-select">Preferred Demo Slot <span class="opt">(Optional)</span></label>
+                <label class="form-label" for="demo-slot-select">Preferred Day or Time Window <span class="opt">(Optional)</span></label>
                 <select id="demo-slot-select" class="form-input form-select">
-                  <option value="Flexible / Any Slot">Flexible / Any Available Slot</option>
+                  <option value="Flexible / Any Time">Flexible / Any Available Time</option>
                   <option value="Morning Batch (10:00 AM - 1:00 PM)">Morning Batch (10:00 AM – 1:00 PM)</option>
                   <option value="Afternoon Batch (2:00 PM - 5:00 PM)">Afternoon Batch (2:00 PM – 5:00 PM)</option>
                   <option value="Evening Batch (6:00 PM - 9:00 PM)">Evening Batch (6:00 PM – 9:00 PM)</option>
                   <option value="Weekend Special Batch">Weekend Special Batch</option>
                 </select>
+              </div>
+
+              <!-- 8. Additional Message (Optional) -->
+              <div class="form-group" id="group-demo-message">
+                <label class="form-label" for="demo-message">Additional Message <span class="opt">(Optional)</span></label>
+                <textarea id="demo-message" class="form-input form-textarea" rows="2" maxlength="500" placeholder="Any specific learning goals or questions for your free demo?"></textarea>
               </div>
             </div>
 
@@ -2669,14 +2835,14 @@ function injectDemoModalHTML() {
         </div>
 
         <!-- Success View Container -->
-        <div id="demo-success-container" class="demo-success-view" hidden>
-          <div class="success-icon-badge">🎓</div>
-          <h3 class="success-title">Your Free Demo Request Has Been Submitted</h3>
+        <div id="demo-success-container" class="demo-success-view" hidden role="status" aria-live="polite">
+          <div class="success-icon-badge" aria-hidden="true">🎉</div>
+          <h3 class="success-title" id="demo-success-title" tabindex="-1">Demo Request Received!</h3>
           <p class="success-desc">
-            Our admissions team will contact you with available session details, schedule timings, and syllabus materials.
+            Thank you! Our admissions team will contact you to confirm your selected course, demo schedule and batch availability.
           </p>
           <div class="success-actions">
-            <a href="/courses.html" class="btn btn-primary btn-lg">Browse More Courses</a>
+            <a href="/courses.html" class="btn btn-primary btn-lg">Explore More Courses</a>
             <button type="button" class="btn btn-outline btn-lg" id="demo-success-close-btn" style="color:white; border-color:rgba(255,255,255,0.4);">Close</button>
           </div>
         </div>
@@ -2701,8 +2867,43 @@ function injectDemoModalHTML() {
     }
   });
 
+  // Dynamic course select update
+  document.getElementById('demo-course-select')?.addEventListener('change', (e) => {
+    const sel = e.target;
+    const opt = sel.selectedOptions[0];
+    if (opt && opt.value) {
+      const cId = opt.dataset.id || '';
+      const cName = opt.value;
+      const aName = opt.dataset.academy || '';
+      const aId = opt.dataset.academyId || '';
+
+      const cIdInput = document.getElementById('demo-course-id');
+      const cNameInput = document.getElementById('demo-course-name');
+      const aIdInput = document.getElementById('demo-academy-id');
+      const aNameInput = document.getElementById('demo-academy-name');
+      if (cIdInput) cIdInput.value = cId;
+      if (cNameInput) cNameInput.value = cName;
+      if (aIdInput) aIdInput.value = aId;
+      if (aNameInput) aNameInput.value = aName;
+
+      const contextDiv = document.getElementById('demo-selected-context');
+      const contextText = document.getElementById('demo-context-text');
+      if (contextDiv && contextText) {
+        contextText.textContent = cName + (aName ? ' (' + aName + ')' : '');
+        contextDiv.style.display = 'flex';
+      }
+    } else {
+      const cIdInput = document.getElementById('demo-course-id');
+      const cNameInput = document.getElementById('demo-course-name');
+      if (cIdInput) cIdInput.value = '';
+      if (cNameInput) cNameInput.value = '';
+      const contextDiv = document.getElementById('demo-selected-context');
+      if (contextDiv) contextDiv.style.display = 'none';
+    }
+  });
+
   // Clear errors dynamically on input
-  ['demo-name', 'demo-phone', 'demo-course-select'].forEach(id => {
+  ['demo-name', 'demo-phone', 'demo-course-select', 'demo-mode-select', 'demo-city', 'demo-email'].forEach(id => {
     const el = document.getElementById(id);
     el?.addEventListener('input', () => {
       el.classList.remove('has-error');
@@ -2731,7 +2932,7 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
     ? NS_COURSES
     : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []);
 
-  select.innerHTML = '<option value="">-- Choose a Course --</option>';
+  select.innerHTML = '<option value="">-- Choose a Course * --</option>';
 
   // Group by academy
   const grouped = {};
@@ -2782,7 +2983,8 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
     const opt = document.createElement('option');
     opt.value = preselectedCourseName;
     opt.dataset.id = preselectedCourseId || '';
-    opt.textContent = preselectedCourseName;
+    opt.dataset.academy = filterAcademyId || '';
+    opt.textContent = preselectedCourseName + ' ★';
     opt.selected = true;
     select.prepend(opt);
   }
@@ -2791,22 +2993,50 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
 function openDemoModal(arg1, arg2, arg3) {
   injectDemoModalHTML();
 
+  // Increment session counter to invalidate any pending in-flight async callbacks
+  window._currentDemoSessionId = (window._currentDemoSessionId || 0) + 1;
+
   window._lastActiveDemoTrigger = document.activeElement;
 
   let courseId = '';
   let courseName = '';
   let academyId = '';
   let academyName = '';
+  let sourceCta = '';
 
   if (typeof arg1 === 'object' && arg1 !== null) {
-    courseId = arg1.courseId || arg1.id || '';
+    courseId = arg1.courseId || arg1.id || arg1.slug || '';
     courseName = arg1.courseName || arg1.name || arg1.title || '';
     academyId = arg1.academyId || '';
     academyName = arg1.academyName || arg1.academy || '';
+    sourceCta = arg1.sourceCta || arg1.source || '';
   } else {
     courseName = typeof arg1 === 'string' ? arg1 : '';
     academyName = typeof arg2 === 'string' ? arg2 : '';
     courseId = typeof arg3 === 'string' ? arg3 : '';
+  }
+
+  // If no course passed, inspect if we are on a course detail page
+  if (!courseId && !courseName) {
+    if (typeof currentCourse !== 'undefined' && currentCourse && currentCourse.name) {
+      courseId = currentCourse.id || '';
+      courseName = currentCourse.name || '';
+      academyName = currentCourse.academy || '';
+      academyId = currentCourse.academyId || '';
+    } else if (typeof course !== 'undefined' && course && course.name) {
+      courseId = course.id || '';
+      courseName = course.name || '';
+      academyName = course.academy || '';
+      academyId = course.academyId || '';
+    }
+  }
+
+  // If no academy passed, inspect if we are on an academy page
+  if (!academyId && !academyName && !courseId) {
+    if (typeof currentAcademy !== 'undefined' && currentAcademy) {
+      academyId = currentAcademy.id || '';
+      academyName = currentAcademy.name || '';
+    }
   }
 
   const modal = document.getElementById('demo-booking-modal');
@@ -2816,9 +3046,7 @@ function openDemoModal(arg1, arg2, arg3) {
   const courseNameInput = document.getElementById('demo-course-name');
   const academyIdInput = document.getElementById('demo-academy-id');
   const academyNameInput = document.getElementById('demo-academy-name');
-  const formContainer = document.getElementById('demo-form-container');
-  const successContainer = document.getElementById('demo-success-container');
-  const errDiv = document.getElementById('demo-form-error');
+  const sourceCtaInput = document.getElementById('demo-source-cta');
 
   // Populate course dropdown with relevant context
   populateDemoCourseSelect(academyId, courseId, courseName);
@@ -2827,6 +3055,7 @@ function openDemoModal(arg1, arg2, arg3) {
   if (courseNameInput) courseNameInput.value = courseName;
   if (academyIdInput) academyIdInput.value = academyId;
   if (academyNameInput) academyNameInput.value = academyName;
+  if (sourceCtaInput) sourceCtaInput.value = sourceCta;
 
   // Show context badge if course or academy specified
   if (contextDiv && contextText) {
@@ -2841,27 +3070,24 @@ function openDemoModal(arg1, arg2, arg3) {
     }
   }
 
-  // Clear errors and reset view
-  clearAllDemoFieldErrors();
-  if (errDiv) {
-    errDiv.textContent = '';
-    errDiv.setAttribute('hidden', '');
-  }
-  if (formContainer) formContainer.removeAttribute('hidden');
-  if (successContainer) successContainer.setAttribute('hidden', '');
-
-  // Reset inputs
+  // Reset inputs to clean state
   const nameInput = document.getElementById('demo-name');
   const phoneInput = document.getElementById('demo-phone');
+  const modeSelect = document.getElementById('demo-mode-select');
+  const cityInput = document.getElementById('demo-city');
+  const emailInput = document.getElementById('demo-email');
+  const slotSelect = document.getElementById('demo-slot-select');
+  const msgInput = document.getElementById('demo-message');
+
   if (nameInput) nameInput.value = '';
   if (phoneInput) phoneInput.value = '';
+  if (modeSelect) modeSelect.selectedIndex = 0;
+  if (cityInput) cityInput.value = '';
+  if (emailInput) emailInput.value = '';
+  if (slotSelect) slotSelect.selectedIndex = 0;
+  if (msgInput) msgInput.value = '';
 
-  // Fire GA4 Event: demo_form_open (zero PII)
-  sendGA4Event('demo_form_open', {
-    course_name: courseName || 'General',
-    academy_name: academyName || 'General',
-    page_path: window.location.pathname
-  });
+  setDemoModalState('idle');
 
   // Hide floating widgets
   document.body.classList.add('modal-open-hide-widgets');
@@ -2879,6 +3105,7 @@ window.openDemoModal = openDemoModal;
 window.openFreeDemoModal = openDemoModal;
 
 function closeDemoModal() {
+  window._currentDemoSessionId = (window._currentDemoSessionId || 0) + 1;
   const modal = document.getElementById('demo-booking-modal');
   document.body.classList.remove('modal-open-hide-widgets');
 
@@ -2886,6 +3113,7 @@ function closeDemoModal() {
     modal.classList.remove('open');
     setTimeout(() => {
       modal.hidden = true;
+      setDemoModalState('idle');
       document.body.style.overflow = '';
       if (window._lastActiveDemoTrigger && typeof window._lastActiveDemoTrigger.focus === 'function') {
         window._lastActiveDemoTrigger.focus();
@@ -2921,12 +3149,14 @@ async function handleDemoSubmit(e) {
   e.preventDefault();
 
   const form = document.getElementById('demo-booking-form');
-  const errDiv = document.getElementById('demo-form-error');
-  const formContainer = document.getElementById('demo-form-container');
-  const successContainer = document.getElementById('demo-success-container');
-  const submitBtn = document.getElementById('demo-submit-btn');
+  if (!form) return;
+
+  if (form.dataset.submitting === 'true') {
+    return;
+  }
 
   clearAllDemoFieldErrors();
+  const errDiv = document.getElementById('demo-form-error');
   if (errDiv) {
     errDiv.textContent = '';
     errDiv.setAttribute('hidden', '');
@@ -2935,16 +3165,24 @@ async function handleDemoSubmit(e) {
   const nameInput = document.getElementById('demo-name');
   const phoneInput = document.getElementById('demo-phone');
   const courseSelect = document.getElementById('demo-course-select');
+  const modeSelect = document.getElementById('demo-mode-select');
+  const cityInput = document.getElementById('demo-city');
+  const emailInput = document.getElementById('demo-email');
   const slotSelect = document.getElementById('demo-slot-select');
+  const messageInput = document.getElementById('demo-message');
 
   const name = nameInput?.value.trim() || '';
   const rawPhone = phoneInput?.value.trim() || '';
   const selectedCourse = courseSelect?.value.trim() || '';
-  const preferredSlot = slotSelect?.value || 'Flexible';
+  const learningMode = modeSelect?.value.trim() || '';
+  const city = cityInput?.value.trim() || '';
+  const email = emailInput?.value.trim() || '';
+  const preferredSlot = slotSelect?.value || 'Flexible / Any Time';
+  const userMessage = messageInput?.value.trim() || '';
 
   let hasError = false;
 
-  // 1. Full Name validation (Required, min 2 chars)
+  // 1. Full Name validation (Required, minimum 2 characters)
   if (!name || name.length < 2) {
     showDemoFieldError('demo-name', 'Please enter your full name.');
     hasError = true;
@@ -2969,89 +3207,139 @@ async function handleDemoSubmit(e) {
     hasError = true;
   }
 
+  // 4. Learning Mode validation (Required: Live Online / Classroom)
+  if (!learningMode) {
+    showDemoFieldError('demo-mode-select', 'Please choose your preferred learning mode.');
+    hasError = true;
+  }
+
+  // 5. City validation (Required, minimum 2 characters)
+  if (!city || city.length < 2) {
+    showDemoFieldError('demo-city', 'Please enter your city.');
+    hasError = true;
+  }
+
+  // 6. Email validation (Optional: validate only if entered)
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showDemoFieldError('demo-email', 'Please enter a valid email address.');
+    hasError = true;
+  }
+
   if (hasError) {
-    // Fire GA4 error event (zero PII)
-    sendGA4Event('demo_form_error', {
-      error_type: 'validation_error',
-      page_path: window.location.pathname
-    });
     const firstInvalid = form.querySelector('.form-input.has-error');
     if (firstInvalid) firstInvalid.focus();
     return;
   }
 
-  // Fire GA4 submit event (zero PII)
-  sendGA4Event('demo_form_submit', {
-    course_name: selectedCourse,
-    preferred_slot: preferredSlot,
-    page_path: window.location.pathname
-  });
+  // Enter submitting state
+  setDemoModalState('submitting');
+  const submissionSessionId = window._currentDemoSessionId;
 
   const selectedOpt = courseSelect?.selectedOptions?.[0];
   const academyName = selectedOpt?.dataset?.academy || document.getElementById('demo-academy-name')?.value || '';
   const courseId = selectedOpt?.dataset?.id || document.getElementById('demo-course-id')?.value || '';
+  const sourceCta = document.getElementById('demo-source-cta')?.value || '';
 
   const demoNotes = [
-    'LEAD TYPE: 2-Day Free Demo Request',
-    `Preferred Slot: ${preferredSlot}`,
+    'LEAD TYPE: free_demo',
+    `Course: ${selectedCourse}${courseId ? ' (ID: ' + courseId + ')' : ''}`,
     academyName ? `Academy: ${academyName}` : '',
-    courseId ? `Course ID: ${courseId}` : ''
+    `Learning Mode: ${learningMode}`,
+    `Preferred Time: ${preferredSlot}`,
+    `City: ${city}`,
+    sourceCta ? `Source CTA: ${sourceCta}` : '',
+    userMessage ? `User Note: ${userMessage}` : ''
   ].filter(Boolean).join(' | ');
 
-  const success = await submitNovaForm({
-    form,
-    submitBtn,
-    loadingText: 'Requesting Demo...',
-    formName: 'demo_booking',
-    submissionMethod: 'demo_modal',
-    data: {
-      name,
-      mobile: cleanPhone,
-      phone: cleanPhone,
-      course: `[FREE DEMO] ${selectedCourse}`,
-      message: demoNotes
-    },
-    onSuccessCallback: () => {
-      // Store in local CRM demo queue
-      const leadData = {
-        action: '2-Day Free Demo Request',
-        leadType: 'demo_booking',
-        timestamp: new Date().toISOString(),
+  const submitBtn = document.getElementById('demo-submit-btn');
+
+  let success = false;
+  try {
+    success = await submitNovaForm({
+      form,
+      submitBtn,
+      loadingText: 'Requesting Free Demo...',
+      formName: 'free_demo',
+      submissionMethod: 'demo_modal',
+      data: {
         name,
+        mobile: cleanPhone,
         phone: cleanPhone,
-        course: selectedCourse,
-        courseId,
-        academyName,
-        preferredSlot,
-        message: demoNotes
-      };
-      try {
-        const existing = JSON.parse(localStorage.getItem('novaskills_demo_requests') || '[]');
-        existing.unshift(leadData);
-        localStorage.setItem('novaskills_demo_requests', JSON.stringify(existing));
-      } catch (err) {
-        console.warn('[Demo CRM LocalStorage Warning]:', err);
+        email,
+        course: `[FREE DEMO] ${selectedCourse}${academyName ? ' (' + academyName + ')' : ''}`,
+        city,
+        message: demoNotes,
+        lead_type: 'free_demo',
+        learning_mode: learningMode,
+        course_id: courseId,
+        academy: academyName
+      },
+      onSuccessCallback: () => {
+        // Discard if modal was closed or reopened during async fetch
+        if (window._currentDemoSessionId !== submissionSessionId) return;
+
+        // Store in local CRM demo queue
+        const leadData = {
+          action: '2-Day Free Demo Request',
+          lead_type: 'free_demo',
+          timestamp: new Date().toISOString(),
+          name,
+          phone: cleanPhone,
+          email,
+          course: selectedCourse,
+          courseId,
+          academyName,
+          learningMode,
+          city,
+          preferredSlot,
+          message: userMessage,
+          sourceCta,
+          sourceUrl: window.location.href
+        };
+        try {
+          const existing = JSON.parse(localStorage.getItem('novaskills_demo_requests') || '[]');
+          existing.unshift(leadData);
+          localStorage.setItem('novaskills_demo_requests', JSON.stringify(existing));
+        } catch (err) {}
+
+        // Fire dedicated GA4 success event (zero PII)
+        sendGA4Event('free_demo_request_success', {
+          course_name: selectedCourse,
+          course_id: courseId,
+          academy_name: academyName,
+          learning_mode: learningMode,
+          city: city,
+          preferred_slot: preferredSlot,
+          lead_type: 'free_demo',
+          source_cta: sourceCta || 'demo_modal',
+          page_path: window.location.pathname
+        });
+
+        // Populate success view description
+        const successDesc = document.querySelector('#demo-success-container .success-desc');
+        if (successDesc) {
+          successDesc.innerHTML = `Thank you, <strong>${name}</strong>! Our admissions team will contact you to confirm your 2-Day Free Demo schedule for <strong>${selectedCourse}</strong> (${learningMode}).`;
+        }
+
+        // Transition to success state
+        setDemoModalState('success');
       }
+    });
+  } catch (err) {
+    console.error('Demo request submission error:', err);
+    success = false;
+  }
 
-      // Fire GA4 success event (zero PII)
-      sendGA4Event('demo_form_success', {
-        course_name: selectedCourse,
-        preferred_slot: preferredSlot,
-        lead_type: 'demo_booking',
-        page_path: window.location.pathname
-      });
-
-      // Show success view
-      if (formContainer) formContainer.setAttribute('hidden', '');
-      if (successContainer) successContainer.removeAttribute('hidden');
-    }
-  });
+  // Check if session changed while awaiting
+  if (window._currentDemoSessionId !== submissionSessionId) {
+    return;
+  }
 
   if (!success) {
-    if (errDiv) {
-      errDiv.textContent = 'Unable to submit demo request right now. Please check your network or call admissions directly.';
-      errDiv.removeAttribute('hidden');
-    }
+    // Preserve user inputs, transition to error state
+    setDemoModalState('error', {
+      message: 'Unable to submit demo request right now. Please check your network or call admissions directly.'
+    });
   }
 }
 
