@@ -6,7 +6,10 @@ function isCourseDemoEligible(course) {
   if (['MASTER', 'PROFESSIONAL', 'SPECIALIZATION', 'FOUNDATION', 'CAREER'].some(t => type.includes(t))) {
     return true;
   }
-  const price = typeof course.price === 'number' ? course.price : parseInt(String(course.price || '').replace(/\D/g, ''), 10) || 0;
+  const price = Math.max(
+    typeof course.originalPrice === 'number' ? course.originalPrice : 0,
+    typeof course.price === 'number' ? course.price : parseInt(String(course.price || '').replace(/\D/g, ''), 10) || 0
+  );
   if (price >= 12000) return true;
   return false;
 }

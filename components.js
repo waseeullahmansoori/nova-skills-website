@@ -1994,24 +1994,24 @@ function injectEnrollmentModalHTML() {
 const COURSE_CATALOG_METADATA = {
   'No-Code Website Professional': { academy: 'No-Code Web Academy', duration: '3 Months', fee: '₹19,900', category: 'no-code' },
   'E-Commerce Website Mastery': { academy: 'No-Code Web Academy', duration: '6 Months', fee: '₹49,900', category: 'no-code' },
-  'Professional Video Editing': { academy: 'Video & Motion Academy', duration: '4 Months', fee: '₹29,900', category: 'video' },
-  'AI-Integrated Video Editing & Motion Graphics Professional': { academy: 'Video & Motion Academy', duration: '8 Months', fee: '₹69,900', category: 'video' },
-  'Generative AI Video Production Professional': { academy: 'Video & Motion Academy', duration: '5 Months', fee: '₹34,900', category: 'video' },
-  'AI-Assisted Full Stack Web Development': { academy: 'Programming Academy', duration: '8 Months', fee: '₹64,900', category: 'programming' },
-  'AI Web Development Professional': { academy: 'Programming Academy', duration: '8 Months', fee: '₹64,900', category: 'programming' },
-  'Full Stack Programming Foundation': { academy: 'Programming Academy', duration: '6 Months', fee: '₹39,999', category: 'programming' },
-  'Python Developer Professional': { academy: 'Programming Academy', duration: '3 Months', fee: '₹19,999', category: 'programming' },
-  'Creative Design Master': { academy: 'Design Academy', duration: '8 Months', fee: '₹64,900', category: 'design' },
-  'Creative Design Mastery': { academy: 'Design Academy', duration: '8 Months', fee: '₹64,900', category: 'design' },
-  'Graphic Design Professional': { academy: 'Design Academy', duration: '4 Months', fee: '₹29,900', category: 'design' },
-  'UI/UX Design Professional': { academy: 'Design Academy', duration: '5 Months', fee: '₹44,900', category: 'design' },
-  'AI Solutions Engineering & Agentic AI Mastery': { academy: 'AI & Automation Academy', duration: '9 Months', fee: '₹89,900', category: 'ai' },
-  'AI Productivity Professional': { academy: 'AI & Automation Academy', duration: '3 Months', fee: '₹19,900', category: 'ai' },
-  'AI for Business Professional': { academy: 'AI & Automation Academy', duration: '4 Months', fee: '₹39,900', category: 'ai' },
-  'AI Digital Marketing Professional': { academy: 'Digital Marketing Academy', duration: '3 Months', fee: '₹24,999', category: 'digital-marketing' },
-  'AI Mastery Program': { academy: 'AI Academy', duration: '9 Months', fee: '₹89,900', category: 'ai' },
+  'Professional Video Editing': { academy: 'Video & Motion Academy', duration: '4 Months', fee: '₹24,900', category: 'video' },
+  'AI-Integrated Video Editing & Motion Graphics Professional': { academy: 'Video & Motion Academy', duration: '8 Months', fee: '₹49,900', category: 'video' },
+  'Generative AI Video Production Professional': { academy: 'Video & Motion Academy', duration: '5 Months', fee: '₹24,900', category: 'video' },
+  'AI-Assisted Full Stack Web Development': { academy: 'Programming Academy', duration: '8 Months', fee: '₹44,900', category: 'programming' },
+  'AI Web Development Professional': { academy: 'Programming Academy', duration: '8 Months', fee: '₹44,900', category: 'programming' },
+  'Full Stack Programming Foundation': { academy: 'Programming Academy', duration: '6 Months', fee: '₹29,999', category: 'programming' },
+  'Python Developer Professional': { academy: 'Programming Academy', duration: '3 Months', fee: '₹14,999', category: 'programming' },
+  'Creative Design Master': { academy: 'Design Academy', duration: '8 Months', fee: '₹44,900', category: 'design' },
+  'Creative Design Mastery': { academy: 'Design Academy', duration: '8 Months', fee: '₹44,900', category: 'design' },
+  'Graphic Design Professional': { academy: 'Design Academy', duration: '4 Months', fee: '₹24,900', category: 'design' },
+  'UI/UX Design Professional': { academy: 'Design Academy', duration: '5 Months', fee: '₹34,900', category: 'design' },
+  'AI Solutions Engineering & Agentic AI Mastery': { academy: 'AI & Automation Academy', duration: '9 Months', fee: '₹64,900', category: 'ai' },
+  'AI Productivity Professional': { academy: 'AI & Automation Academy', duration: '3 Months', fee: '₹14,900', category: 'ai' },
+  'AI for Business Professional': { academy: 'AI & Automation Academy', duration: '4 Months', fee: '₹29,900', category: 'ai' },
+  'AI Digital Marketing Professional': { academy: 'Digital Marketing Academy', duration: '3 Months', fee: '₹19,900', category: 'digital-marketing' },
+  'AI Mastery Program': { academy: 'AI Academy', duration: '9 Months', fee: '₹64,900', category: 'ai' },
   'Motion Graphics Mastery': { academy: 'Video & Motion Academy', duration: '6 Months', fee: '₹39,999', category: 'video' },
-  'AI Digital Marketing Mastery': { academy: 'Digital Marketing Academy', duration: '6 Months', fee: '₹44,999', category: 'digital-marketing' }
+  'AI Digital Marketing Mastery': { academy: 'Digital Marketing Academy', duration: '6 Months', fee: '₹44,900', category: 'digital-marketing' }
 };
 
 const COURSE_ID_ALIASES = {
@@ -2584,7 +2584,10 @@ function isCourseDemoEligible(course) {
   if (['MASTER', 'PROFESSIONAL', 'SPECIALIZATION', 'FOUNDATION', 'CAREER'].some(t => type.includes(t))) {
     return true;
   }
-  const price = typeof course.price === 'number' ? course.price : parseInt(String(course.price || '').replace(/\D/g, ''), 10) || 0;
+  const price = Math.max(
+    typeof course.originalPrice === 'number' ? course.originalPrice : 0,
+    typeof course.price === 'number' ? course.price : parseInt(String(course.price || '').replace(/\D/g, ''), 10) || 0
+  );
   if (price >= 12000) return true;
   return false;
 }

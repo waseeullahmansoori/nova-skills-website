@@ -171,7 +171,7 @@ function resolveCourse(courseName, explicitId) {
 const c109 = resolveCourse(null, 'tally-gst');
 assert(c109.name === 'TallyPrime — Accounting & GST Compliance', 'Course 109 resolved title: ' + c109.name);
 assert(c109.duration === '10 Weeks', 'Course 109 resolved duration: ' + c109.duration);
-assert(c109.fee === '₹9,900', 'Course 109 resolved fee: ' + c109.fee);
+assert(c109.fee === '₹6,900', 'Course 109 resolved fee: ' + c109.fee);
 
 const c108 = resolveCourse(null, 'microsoft-copilot');
 assert(c108.name === 'Microsoft 365 Copilot — AI Workplace Productivity', 'Course 108 resolved title: ' + c108.name);
@@ -181,12 +181,12 @@ assert(c108.fee === '₹5,900', 'Course 108 resolved fee: ' + c108.fee);
 const c31 = resolveCourse('Figma UI Design & Responsive Prototyping');
 assert(c31.name === 'Figma UI Design & Responsive Prototyping', 'Course 31 resolved title: ' + c31.name);
 assert(c31.duration === '8 Weeks', 'Course 31 resolved duration: ' + c31.duration);
-assert(c31.fee === '₹9,900', 'Course 31 resolved fee: ' + c31.fee);
+assert(c31.fee === '₹7,900', 'Course 31 resolved fee: ' + c31.fee);
 
 const c3 = resolveCourse('Performance Marketing Specialist');
 assert(c3.name === 'Performance Marketing Specialist', 'Course 3 resolved title: ' + c3.name);
 assert(c3.duration === '4 Months', 'Course 3 resolved duration: ' + c3.duration);
-assert(c3.fee === '₹34,900', 'Course 3 resolved fee: ' + c3.fee);
+assert(c3.fee === '₹24,900', 'Course 3 resolved fee: ' + c3.fee);
 
 console.log('\n========================================');
 console.log(`TOTAL TESTS: ${passed + failed}`);

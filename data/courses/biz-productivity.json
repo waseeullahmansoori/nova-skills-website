@@ -2968,11 +2968,11 @@
     "tax_notice": "Applicable statutory GST (18%: INR 5,382; Total: INR 35,282) extra",
     "discount": "0%"
   },
-  "price": 29900,
+  "price": 24900,
   "original_price": 29900,
   "regular_fee": 29900,
   "launch_batch_fee": 29900,
-  "discount": "0%",
+  "discount": 17,
   "commercial_notice": "Standard institutional tuition: INR 29,900 + applicable statutory GST (18%: INR 5,382; Total: INR 35,282). Zero artificial countdown timers, fake discounts, or inflated comparison pricing. Institutional installment plans or third-party EMI options are subject to financial partner credit approval at enrollment and are not an automatic entitlement.",
   "tools": [
     "Microsoft Excel for Microsoft 365",
@@ -3001,5 +3001,13 @@
     "Model Context Protocol (MCP) servers: Power BI Authoring MCP and Fabric IQ MCP are demonstrated in isolated test environments with local sample databases; no live modification of production corporate semantic models is permitted.",
     "Data privacy & PII: Strict policy requiring the use of simulated, anonymized corporate datasets; students are prohibited from uploading confidential employer or client data into public tools or third-party web interfaces."
   ],
-  "programLevel": "Career Program"
+  "programLevel": "Career Program",
+  "fee": 24900,
+  "originalPrice": 29900,
+  "originalFee": 29900,
+  "launch_fee": 24900,
+  "regular_price": 29900,
+  "launch_price": 24900,
+  "effective_price": 24900,
+  "offer_active": true
 }
