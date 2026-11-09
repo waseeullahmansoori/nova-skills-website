@@ -1160,7 +1160,12 @@ export const COURSE_ALIASES = ${JSON.stringify(COURSE_ALIASES)};
 
 export const COURSE_NOT_FOUND_HTML = ${JSON.stringify(notFoundHtml)};
 `;
-  fs.writeFileSync(renderedJsPath, renderedJsContent, 'utf8');
+  const tmpPath = renderedJsPath + '.tmp';
+  fs.writeFileSync(tmpPath, renderedJsContent, 'utf8');
+  if (fs.existsSync(renderedJsPath)) {
+    fs.unlinkSync(renderedJsPath);
+  }
+  fs.renameSync(tmpPath, renderedJsPath);
   console.log(`\n✅ Generated Edge Functions bundle: functions/_rendered_courses.js (${(renderedJsContent.length / (1024 * 1024)).toFixed(2)} MB)`);
 
   // Write functions/_middleware.js

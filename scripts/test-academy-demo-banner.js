@@ -78,7 +78,7 @@ for (const acad of ACADEMIES) {
   assert(html.includes('Experience our practical, mentor-led teaching before enrolling.'), `Benefit 01 copy is 'Experience our practical, mentor-led teaching before enrolling.'`);
   
   // Benefit 02
-  assert(html.includes('1:1 Live Online Classes'), `Benefit 02 headline is '1:1 Live Online Classes'`);
+  assert(/1:1 (?:Live Online Classes|LIVE ONLINE CLASSES)/.test(html), `Benefit 02 headline is '1:1 LIVE ONLINE CLASSES'`);
   assert(html.includes('Personalized live learning for eligible courses, subject to availability.'), `Benefit 02 copy is 'Personalized live learning for eligible courses, subject to availability.'`);
 
   // CTA Button & Microcopy

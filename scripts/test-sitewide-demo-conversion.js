@@ -72,7 +72,7 @@ assert(dmAcademy.includes('academy-demo-strip') || dmAcademy.includes('academy-d
 assert(dmAcademy.includes("openDemoModal({academyId:'digital-marketing'"), 'Academy promo band passes academyId: digital-marketing');
 assert(dmAcademy.includes('Explore Your Skills Before You Commit.') || dmAcademy.includes('Experience the Learning Before You Enroll.'), 'Academy promo band has correct headline');
 assert(dmAcademy.includes('2 Days Free Demo Classes'), 'Academy promo band has Benefit 1');
-assert(dmAcademy.includes('1:1 Live Online Classes'), 'Academy promo band has Benefit 2');
+assert(/1:1 (?:Live Online Classes|LIVE ONLINE CLASSES)/.test(dmAcademy), 'Academy promo band has Benefit 2');
 
 // 6. Course selector supports eligible programs
 console.log('\nTest 6: Course selector supports eligible programs');
