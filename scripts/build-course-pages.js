@@ -1,3 +1,16 @@
+
+function isCourseDemoEligible(course) {
+  if (!course) return false;
+  if (typeof course.demo_available === 'boolean') return course.demo_available;
+  const type = (course.course_type || course.type || course.programLevel || '').toUpperCase();
+  if (['MASTER', 'PROFESSIONAL', 'SPECIALIZATION', 'FOUNDATION', 'CAREER'].some(t => type.includes(t))) {
+    return true;
+  }
+  const price = typeof course.price === 'number' ? course.price : parseInt(String(course.price || '').replace(/\D/g, ''), 10) || 0;
+  if (price >= 12000) return true;
+  return false;
+}
+
 /**
  * Build Static Pre-rendered Course Pages for Cloudflare Edge & Local Serving
  * Controlled Expansion: 4 Target Representative Courses
@@ -775,12 +788,13 @@ function generateStaticCourseHtml(courseId, templateHtml) {
         <p class="course-desc">${escapeHTML(c.shortDesc || '')}</p>
         ${relToolsHtml}
         <div class="course-footer course-footer-stack">
+          ${isCourseDemoEligible(c) ? `
           <div class="course-demo-indicator">
             <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'${c.id}', courseName:'${relSafeName}', academyName:'${relSafeAcademy}'});}">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
-              2-Day Free Demo Available
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              <span class="demo-chip-text">2-Day Free Demo Available</span>
             </button>
-          </div>
+          </div>` : ''}
           <div class="course-pricing course-pricing-row">
             <div>
               <span class="price-current">₹${(c.price || 0).toLocaleString('en-IN')}</span>

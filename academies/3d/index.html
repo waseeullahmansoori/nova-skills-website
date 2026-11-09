@@ -480,6 +480,77 @@
         margin-top: 5px !important;
       }
     }
+  
+    /* Course Card 2-Day Free Demo Promotional Badge (Step 03 Approved Standard) */
+.course-demo-indicator {
+  display: block;
+  width: 100%;
+  margin: 10px 0 8px 0;
+  box-sizing: border-box;
+}
+
+.course-demo-chip {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  background: rgba(5, 153, 168, 0.08) !important;
+  border: 1px solid rgba(5, 153, 168, 0.22) !important;
+  border-radius: 6px !important;
+  padding: 7px 12px !important;
+  font-family: inherit !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  color: #012B46 !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+}
+
+.course-demo-chip:hover,
+.course-demo-chip:focus-visible {
+  background: rgba(5, 153, 168, 0.14) !important;
+  border-color: rgba(5, 153, 168, 0.45) !important;
+  color: #012B46 !important;
+  transform: translateY(-1px);
+  outline: none !important;
+}
+
+.course-demo-chip:active {
+  transform: translateY(0);
+}
+
+.course-demo-chip svg {
+  width: 15px !important;
+  height: 15px !important;
+  min-width: 15px !important;
+  min-height: 15px !important;
+  max-width: 15px !important;
+  max-height: 15px !important;
+  color: #0599a8 !important;
+  stroke: #0599a8 !important;
+  fill: none !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+
+.course-demo-chip span,
+.course-demo-chip .demo-chip-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #012B46 !important;
+  font-weight: 600 !important;
+}
   </style>
 
   <link rel="stylesheet" href="/css/styles.min.css" media="print" onload="this.media='all'">
@@ -815,8 +886,8 @@
           
           <div class="course-demo-indicator">
             <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'archviz-mastery', courseName:'Architectural Visualisation Master', academyName:'3D Academy'});}">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
-              2-Day Free Demo Available
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              <span class="demo-chip-text">2-Day Free Demo Available</span>
             </button>
           </div>
           <div class="course-pricing course-pricing-row">
@@ -881,8 +952,8 @@
           
           <div class="course-demo-indicator">
             <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'3d-viz-pro', courseName:'3D Visualisation Professional', academyName:'3D Academy'});}">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
-              2-Day Free Demo Available
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              <span class="demo-chip-text">2-Day Free Demo Available</span>
             </button>
           </div>
           <div class="course-pricing course-pricing-row">
@@ -1219,8 +1290,8 @@
           
           <div class="course-demo-indicator">
             <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'archviz-mastery', courseName:'Architectural Visualisation Master', academyName:'3D Academy'});}">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
-              2-Day Free Demo Available
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              <span class="demo-chip-text">2-Day Free Demo Available</span>
             </button>
           </div>
           <div class="course-pricing course-pricing-row">
@@ -1266,8 +1337,8 @@
           
           <div class="course-demo-indicator">
             <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'3d-viz-pro', courseName:'3D Visualisation Professional', academyName:'3D Academy'});}">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
-              2-Day Free Demo Available
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              <span class="demo-chip-text">2-Day Free Demo Available</span>
             </button>
           </div>
           <div class="course-pricing course-pricing-row">

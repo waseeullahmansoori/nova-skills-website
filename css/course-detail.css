@@ -1713,3 +1713,75 @@
     font-size: 0.725rem;
   }
 }
+
+
+/* Course Card 2-Day Free Demo Promotional Badge (Step 03 Approved Standard) */
+.course-demo-indicator {
+  display: block;
+  width: 100%;
+  margin: 10px 0 8px 0;
+  box-sizing: border-box;
+}
+
+.course-demo-chip {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  background: rgba(5, 153, 168, 0.08) !important;
+  border: 1px solid rgba(5, 153, 168, 0.22) !important;
+  border-radius: 6px !important;
+  padding: 7px 12px !important;
+  font-family: inherit !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  color: #012B46 !important;
+  text-align: left !important;
+  line-height: 1.25 !important;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+}
+
+.course-demo-chip:hover,
+.course-demo-chip:focus-visible {
+  background: rgba(5, 153, 168, 0.14) !important;
+  border-color: rgba(5, 153, 168, 0.45) !important;
+  color: #012B46 !important;
+  transform: translateY(-1px);
+  outline: none !important;
+}
+
+.course-demo-chip:active {
+  transform: translateY(0);
+}
+
+.course-demo-chip svg {
+  width: 15px !important;
+  height: 15px !important;
+  min-width: 15px !important;
+  min-height: 15px !important;
+  max-width: 15px !important;
+  max-height: 15px !important;
+  color: #0599a8 !important;
+  stroke: #0599a8 !important;
+  fill: none !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+
+.course-demo-chip span,
+.course-demo-chip .demo-chip-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #012B46 !important;
+  font-weight: 600 !important;
+}
