@@ -284,6 +284,7 @@ class CDPClient {
       (() => {
         const el = document.querySelector('${selector}');
         if (!el) return null;
+        el.scrollIntoView({ block: 'center', inline: 'nearest' });
         const rect = el.getBoundingClientRect();
         return {
           x: Math.max(0, rect.left - 10),
