@@ -754,7 +754,7 @@ courses = [
     "fullDesc": "A complete 6-month software development program for beginners. Build production web apps with React, Node.js, Python, SQL, APIs, and AI coding tools like Cursor.",
     "duration": "6 Months", "durationMonths": 6,
     "mode": "Hybrid", "level": "Beginner",
-    "price": 29999, "originalPrice": 84999,
+    "price": 29999, "originalPrice": 39999,
     "rating": 4.9, "reviews": 230, "students": 1340,
     "liveProjects": 15, "certificate": True, "placementSupport": True,
     "tools": ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Python", "SQL", "Git", "GitHub", "Cursor AI"],

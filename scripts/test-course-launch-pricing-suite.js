@@ -170,7 +170,7 @@ assert(
   indexHtml.includes("openEnrollmentModal('Full Stack Programming Foundation', 'Programming Academy', '6 Months', '₹29,999', 'fullstack-foundation')") &&
   indexHtml.includes("openEnrollmentModal('Creative Design Master', 'Design Academy', '8 Months', '₹44,900', 'creative-design')") &&
   indexHtml.includes("openEnrollmentModal('AI-Integrated Video Editing & Motion Graphics Professional', 'Video & Motion Academy', '8 Months', '₹49,900', 'ai-integrated-video-editing-motion-graphics-professional')") &&
-  indexHtml.includes("openEnrollmentModal('AI Digital Marketing Strategist', 'Digital Marketing Academy', '6 Months', '₹44,900', 'dm-mastery')"),
+  indexHtml.includes("openEnrollmentModal('AI Digital Marketing Strategist', 'Digital Marketing Academy', '6 Months', '₹34,900', 'dm-mastery')"),
   '15. index.html featured cards have accurate modal enroll arguments and launch fees',
   'Mismatch in index.html featured cards'
 );

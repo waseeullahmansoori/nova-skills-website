@@ -121,7 +121,10 @@ const NS_ACADEMIES = [
         "launch_price": 34900,
         "effective_price": 34900,
         "offer_active": true,
-        "discount": 22
+        "discount": 22,
+        "regularPrice": 44900,
+        "launch_fee": 34900,
+        "launchBatchFee": 34900
       },
       {
         "id": "dm-professional",
@@ -219,7 +222,10 @@ const NS_ACADEMIES = [
         "launch_price": 19900,
         "effective_price": 19900,
         "offer_active": true,
-        "discount": 20
+        "discount": 20,
+        "regularPrice": 24900,
+        "launch_fee": 19900,
+        "launchBatchFee": 19900
       },
       {
         "id": "performance-marketing-specialist",
@@ -322,7 +328,10 @@ const NS_ACADEMIES = [
         "launch_price": 24900,
         "effective_price": 24900,
         "offer_active": true,
-        "discount": 29
+        "discount": 29,
+        "regularPrice": 34900,
+        "launch_fee": 24900,
+        "launchBatchFee": 24900
       },
       {
         "id": "ecommerce-growth-marketing-specialist",
@@ -431,7 +440,10 @@ const NS_ACADEMIES = [
         "launch_price": 27900,
         "effective_price": 27900,
         "offer_active": true,
-        "discount": 20
+        "discount": 20,
+        "regularPrice": 34900,
+        "launch_fee": 27900,
+        "launchBatchFee": 27900
       },
       {
         "id": "google-ads",
@@ -524,7 +536,7 @@ const NS_ACADEMIES = [
         "hours": 64,
         "guidedHours": 64,
         "regularPrice": 9900,
-        "launchBatchFee": 9900,
+        "launchBatchFee": 7900,
         "course_type": "Certification Course",
         "fee": 7900,
         "regular_fee": 9900,
@@ -533,7 +545,8 @@ const NS_ACADEMIES = [
         "launch_price": 7900,
         "effective_price": 7900,
         "offer_active": true,
-        "discount": 20
+        "discount": 20,
+        "launch_fee": 7900
       },
       {
         "id": "meta-ads",
@@ -627,7 +640,7 @@ const NS_ACADEMIES = [
         "hours": 64,
         "guidedHours": 64,
         "regularPrice": 9900,
-        "launchBatchFee": 9900,
+        "launchBatchFee": 7900,
         "course_type": "Certification Course",
         "fee": 7900,
         "regular_fee": 9900,
@@ -636,7 +649,8 @@ const NS_ACADEMIES = [
         "launch_price": 7900,
         "effective_price": 7900,
         "offer_active": true,
-        "discount": 20
+        "discount": 20,
+        "launch_fee": 7900
       },
       {
         "id": "seo-geo",
@@ -731,7 +745,7 @@ const NS_ACADEMIES = [
         "hours": 80,
         "guidedHours": 80,
         "regularPrice": 12900,
-        "launchBatchFee": 12900,
+        "launchBatchFee": 9900,
         "course_type": "Certification Course",
         "fee": 9900,
         "regular_fee": 12900,
@@ -740,7 +754,8 @@ const NS_ACADEMIES = [
         "launch_price": 9900,
         "effective_price": 9900,
         "offer_active": true,
-        "discount": 23
+        "discount": 23,
+        "launch_fee": 9900
       },
       {
         "id": "social-media-marketing",
@@ -835,7 +850,7 @@ const NS_ACADEMIES = [
         "hours": 48,
         "guidedHours": 48,
         "regularPrice": 6900,
-        "launchBatchFee": 6900,
+        "launchBatchFee": 5900,
         "course_type": "Certification Course",
         "fee": 5900,
         "regular_fee": 6900,
@@ -844,7 +859,8 @@ const NS_ACADEMIES = [
         "launch_price": 5900,
         "effective_price": 5900,
         "offer_active": true,
-        "discount": 14
+        "discount": 14,
+        "launch_fee": 5900
       },
       {
         "id": "content-marketing",
@@ -939,16 +955,17 @@ const NS_ACADEMIES = [
         "hours": 48,
         "guidedHours": 48,
         "regularPrice": 6900,
-        "launchBatchFee": 6900,
+        "launchBatchFee": null,
         "course_type": "Certification Course",
         "fee": 6900,
         "regular_fee": 6900,
         "originalFee": 6900,
         "regular_price": 6900,
-        "launch_price": 6900,
+        "launch_price": null,
         "effective_price": 6900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "launch_fee": null
       },
       {
         "id": "email-marketing",
@@ -1038,16 +1055,17 @@ const NS_ACADEMIES = [
         "hours": 40,
         "guidedHours": 40,
         "regularPrice": 5900,
-        "launchBatchFee": 5900,
+        "launchBatchFee": null,
         "course_type": "Certification Course",
         "fee": 5900,
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "launch_fee": null
       },
       {
         "id": "google-analytics-ga4",
@@ -1143,16 +1161,17 @@ const NS_ACADEMIES = [
         "hours": 48,
         "guidedHours": 48,
         "regularPrice": 7900,
-        "launchBatchFee": 7900,
+        "launchBatchFee": null,
         "course_type": "Certification Course",
         "fee": 7900,
         "regular_fee": 7900,
         "originalFee": 7900,
         "regular_price": 7900,
-        "launch_price": 7900,
+        "launch_price": null,
         "effective_price": 7900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "launch_fee": null
       },
       {
         "id": "google-search-console",
@@ -1242,16 +1261,17 @@ const NS_ACADEMIES = [
         "hours": 24,
         "guidedHours": 24,
         "regularPrice": 3900,
-        "launchBatchFee": 3900,
+        "launchBatchFee": null,
         "course_type": "Certification Course",
         "fee": 3900,
         "regular_fee": 3900,
         "originalFee": 3900,
         "regular_price": 3900,
-        "launch_price": 3900,
+        "launch_price": null,
         "effective_price": 3900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "launch_fee": null
       },
       {
         "id": "local-seo",
@@ -1341,16 +1361,17 @@ const NS_ACADEMIES = [
         "hours": 40,
         "guidedHours": 40,
         "regularPrice": 5900,
-        "launchBatchFee": 5900,
+        "launchBatchFee": null,
         "course_type": "Certification Course",
         "fee": 5900,
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "launch_fee": null
       },
       {
         "id": "youtube-marketing",
@@ -1446,16 +1467,17 @@ const NS_ACADEMIES = [
         "hours": 48,
         "guidedHours": 48,
         "regularPrice": 6900,
-        "launchBatchFee": 6900,
+        "launchBatchFee": null,
         "course_type": "Certification Course",
         "fee": 6900,
         "regular_fee": 6900,
         "originalFee": 6900,
         "regular_price": 6900,
-        "launch_price": 6900,
+        "launch_price": null,
         "effective_price": 6900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "launch_fee": null
       }
     ]
   },
@@ -1596,7 +1618,10 @@ const NS_ACADEMIES = [
         "launch_price": 64900,
         "effective_price": 64900,
         "offer_active": true,
-        "discount": 28
+        "discount": 28,
+        "regularPrice": 89900,
+        "launch_fee": 64900,
+        "launchBatchFee": 64900
       },
       {
         "id": "ai-productivity",
@@ -1701,7 +1726,10 @@ const NS_ACADEMIES = [
         "launch_price": 16900,
         "effective_price": 16900,
         "offer_active": true,
-        "discount": 15
+        "discount": 15,
+        "regularPrice": 19900,
+        "launch_fee": 16900,
+        "launchBatchFee": 16900
       },
       {
         "id": "ai-for-business-pro",
@@ -1808,7 +1836,10 @@ const NS_ACADEMIES = [
         "launch_price": 29900,
         "effective_price": 29900,
         "offer_active": true,
-        "discount": 25
+        "discount": 25,
+        "regularPrice": 39900,
+        "launch_fee": 29900,
+        "launchBatchFee": 29900
       },
       {
         "id": "prompt-engineering",
@@ -1883,10 +1914,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "ai-automation-n8n",
@@ -1963,7 +1997,10 @@ const NS_ACADEMIES = [
         "launch_price": 7900,
         "effective_price": 7900,
         "offer_active": true,
-        "discount": 20
+        "discount": 20,
+        "regularPrice": 9900,
+        "launch_fee": 7900,
+        "launchBatchFee": 7900
       },
       {
         "id": "ai-agents-fundamentals",
@@ -2037,10 +2074,13 @@ const NS_ACADEMIES = [
         "regular_fee": 7900,
         "originalFee": 7900,
         "regular_price": 7900,
-        "launch_price": 7900,
+        "launch_price": null,
         "effective_price": 7900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 7900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "chatgpt-mastery",
@@ -2109,10 +2149,13 @@ const NS_ACADEMIES = [
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "gemini-mastery",
@@ -2179,10 +2222,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "claude-productivity",
@@ -2251,10 +2297,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "ai-research-tools",
@@ -2321,10 +2370,13 @@ const NS_ACADEMIES = [
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       }
     ]
   },
@@ -2454,7 +2506,10 @@ const NS_ACADEMIES = [
         "launch_price": 44900,
         "effective_price": 44900,
         "offer_active": true,
-        "discount": 31
+        "discount": 31,
+        "regularPrice": 64900,
+        "launch_fee": 44900,
+        "launchBatchFee": 44900
       },
       {
         "id": "graphic-design-pro",
@@ -2552,7 +2607,10 @@ const NS_ACADEMIES = [
         "launch_price": 24900,
         "effective_price": 24900,
         "offer_active": true,
-        "discount": 17
+        "discount": 17,
+        "regularPrice": 29900,
+        "launch_fee": 24900,
+        "launchBatchFee": 24900
       },
       {
         "id": "uiux-design-pro",
@@ -2660,7 +2718,10 @@ const NS_ACADEMIES = [
         "launch_price": 34900,
         "effective_price": 34900,
         "offer_active": true,
-        "discount": 22
+        "discount": 22,
+        "regularPrice": 44900,
+        "launch_fee": 34900,
+        "launchBatchFee": 34900
       },
       {
         "id": "adobe-photoshop",
@@ -2750,10 +2811,13 @@ const NS_ACADEMIES = [
         "regular_fee": 6900,
         "originalFee": 6900,
         "regular_price": 6900,
-        "launch_price": 6900,
+        "launch_price": null,
         "effective_price": 6900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 6900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "adobe-illustrator",
@@ -2842,10 +2906,13 @@ const NS_ACADEMIES = [
         "regular_fee": 6900,
         "originalFee": 6900,
         "regular_price": 6900,
-        "launch_price": 6900,
+        "launch_price": null,
         "effective_price": 6900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 6900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "canva-pro",
@@ -2937,10 +3004,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "figma-ui-design",
@@ -3041,7 +3111,10 @@ const NS_ACADEMIES = [
         "launch_price": 7900,
         "effective_price": 7900,
         "offer_active": true,
-        "discount": 20
+        "discount": 20,
+        "regularPrice": 9900,
+        "launch_fee": 7900,
+        "launchBatchFee": 7900
       },
       {
         "id": "brand-identity-design",
@@ -3139,10 +3212,13 @@ const NS_ACADEMIES = [
         "regular_fee": 10900,
         "originalFee": 10900,
         "regular_price": 10900,
-        "launch_price": 10900,
+        "launch_price": null,
         "effective_price": 10900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 10900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "packaging-design",
@@ -3246,10 +3322,13 @@ const NS_ACADEMIES = [
         "regular_fee": 10900,
         "originalFee": 10900,
         "regular_price": 10900,
-        "launch_price": 10900,
+        "launch_price": null,
         "effective_price": 10900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 10900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "logo-design",
@@ -3345,10 +3424,13 @@ const NS_ACADEMIES = [
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       }
     ]
   },
@@ -3468,7 +3550,10 @@ const NS_ACADEMIES = [
         "regular_price": 39999,
         "launch_price": 29999,
         "effective_price": 29999,
-        "offer_active": true
+        "offer_active": true,
+        "regularPrice": 39999,
+        "launch_fee": 29999,
+        "launchBatchFee": 29999
       },
       {
         "id": "python-developer",
@@ -3566,7 +3651,10 @@ const NS_ACADEMIES = [
         "regular_price": 19999,
         "launch_price": 17999,
         "effective_price": 17999,
-        "offer_active": true
+        "offer_active": true,
+        "regularPrice": 19999,
+        "launch_fee": 17999,
+        "launchBatchFee": 17999
       },
       {
         "id": "ai-assisted-full-stack-web-development",
@@ -3640,7 +3728,10 @@ const NS_ACADEMIES = [
         "regular_price": 64900,
         "launch_price": 44900,
         "effective_price": 44900,
-        "offer_active": true
+        "offer_active": true,
+        "regularPrice": 64900,
+        "launch_fee": 44900,
+        "launchBatchFee": 44900
       },
       {
         "id": "html-css",
@@ -3704,10 +3795,13 @@ const NS_ACADEMIES = [
         "regular_fee": 6900,
         "originalFee": 6900,
         "regular_price": 6900,
-        "launch_price": 6900,
+        "launch_price": null,
         "effective_price": 6900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 6900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "javascript-cert",
@@ -3776,10 +3870,13 @@ const NS_ACADEMIES = [
         "regular_fee": 9900,
         "originalFee": 9900,
         "regular_price": 9900,
-        "launch_price": 9900,
+        "launch_price": null,
         "effective_price": 9900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 9900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "react-cert",
@@ -3848,10 +3945,13 @@ const NS_ACADEMIES = [
         "regular_fee": 10900,
         "originalFee": 10900,
         "regular_price": 10900,
-        "launch_price": 10900,
+        "launch_price": null,
         "effective_price": 10900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 10900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "node-js",
@@ -3918,10 +4018,13 @@ const NS_ACADEMIES = [
         "regular_fee": 10900,
         "originalFee": 10900,
         "regular_price": 10900,
-        "launch_price": 10900,
+        "launch_price": null,
         "effective_price": 10900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 10900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "sql-basics",
@@ -3983,10 +4086,13 @@ const NS_ACADEMIES = [
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "git-github",
@@ -4048,10 +4154,13 @@ const NS_ACADEMIES = [
         "regular_fee": 3900,
         "originalFee": 3900,
         "regular_price": 3900,
-        "launch_price": 3900,
+        "launch_price": null,
         "effective_price": 3900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 3900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "rest-apis",
@@ -4113,10 +4222,13 @@ const NS_ACADEMIES = [
         "regular_fee": 6900,
         "originalFee": 6900,
         "regular_price": 6900,
-        "launch_price": 6900,
+        "launch_price": null,
         "effective_price": 6900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 6900,
+        "launch_fee": null,
+        "launchBatchFee": null
       }
     ]
   },
@@ -4258,7 +4370,10 @@ const NS_ACADEMIES = [
         "launch_price": 34900,
         "effective_price": 34900,
         "offer_active": true,
-        "discount": 30
+        "discount": 30,
+        "regularPrice": 49900,
+        "launch_fee": 34900,
+        "launchBatchFee": 34900
       },
       {
         "id": "nocode-web-pro",
@@ -4367,10 +4482,13 @@ const NS_ACADEMIES = [
         "regular_fee": 19900,
         "originalFee": 19900,
         "regular_price": 19900,
-        "launch_price": 19900,
+        "launch_price": null,
         "effective_price": 19900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 19900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "wordpress-cert",
@@ -4439,10 +4557,13 @@ const NS_ACADEMIES = [
         "regular_fee": 6900,
         "originalFee": 6900,
         "regular_price": 6900,
-        "launch_price": 6900,
+        "launch_price": null,
         "effective_price": 6900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 6900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "woocommerce-cert",
@@ -4509,10 +4630,13 @@ const NS_ACADEMIES = [
         "regular_fee": 9900,
         "originalFee": 9900,
         "regular_price": 9900,
-        "launch_price": 9900,
+        "launch_price": null,
         "effective_price": 9900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 9900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "shopify-cert",
@@ -4579,7 +4703,10 @@ const NS_ACADEMIES = [
         "launch_price": 9900,
         "effective_price": 9900,
         "offer_active": true,
-        "discount": 23
+        "discount": 23,
+        "regularPrice": 12900,
+        "launch_fee": 9900,
+        "launchBatchFee": 9900
       },
       {
         "id": "elementor-cert",
@@ -4641,10 +4768,13 @@ const NS_ACADEMIES = [
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "webflow-cert",
@@ -4716,7 +4846,10 @@ const NS_ACADEMIES = [
         "launch_price": 8900,
         "effective_price": 8900,
         "offer_active": true,
-        "discount": 18
+        "discount": 18,
+        "regularPrice": 10900,
+        "launch_fee": 8900,
+        "launchBatchFee": 8900
       },
       {
         "id": "framer-cert",
@@ -4785,10 +4918,13 @@ const NS_ACADEMIES = [
         "regular_fee": 7900,
         "originalFee": 7900,
         "regular_price": 7900,
-        "launch_price": 7900,
+        "launch_price": null,
         "effective_price": 7900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 7900,
+        "launch_fee": null,
+        "launchBatchFee": null
       }
     ]
   },
@@ -5012,7 +5148,10 @@ const NS_ACADEMIES = [
         "launch_price": 49900,
         "effective_price": 49900,
         "offer_active": true,
-        "discount": 29
+        "discount": 29,
+        "regularPrice": 69900,
+        "launch_fee": 49900,
+        "launchBatchFee": 49900
       },
       {
         "id": "video-pro",
@@ -5137,7 +5276,10 @@ const NS_ACADEMIES = [
         "launch_price": 24900,
         "effective_price": 24900,
         "offer_active": true,
-        "discount": 31
+        "discount": 31,
+        "regularPrice": 35900,
+        "launch_fee": 24900,
+        "launchBatchFee": 24900
       },
       {
         "id": "generative-ai-video-production-professional",
@@ -5277,7 +5419,10 @@ const NS_ACADEMIES = [
         "launch_price": 29900,
         "effective_price": 29900,
         "offer_active": true,
-        "discount": 25
+        "discount": 25,
+        "regularPrice": 39900,
+        "launch_fee": 29900,
+        "launchBatchFee": 29900
       },
       {
         "id": "adobe-premiere-pro",
@@ -5341,10 +5486,13 @@ const NS_ACADEMIES = [
         "regular_fee": 7900,
         "originalFee": 7900,
         "regular_price": 7900,
-        "launch_price": 7900,
+        "launch_price": null,
         "effective_price": 7900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 7900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "after-effects",
@@ -5416,7 +5564,10 @@ const NS_ACADEMIES = [
         "launch_price": 8900,
         "effective_price": 8900,
         "offer_active": true,
-        "discount": 18
+        "discount": 18,
+        "regularPrice": 10900,
+        "launch_fee": 8900,
+        "launchBatchFee": 8900
       },
       {
         "id": "davinci-resolve",
@@ -5486,7 +5637,10 @@ const NS_ACADEMIES = [
         "launch_price": 7900,
         "effective_price": 7900,
         "offer_active": true,
-        "discount": 20
+        "discount": 20,
+        "regularPrice": 9900,
+        "launch_fee": 7900,
+        "launchBatchFee": 7900
       },
       {
         "id": "reels-editing",
@@ -5554,7 +5708,10 @@ const NS_ACADEMIES = [
         "launch_price": 3900,
         "effective_price": 3900,
         "offer_active": true,
-        "discount": 20
+        "discount": 20,
+        "regularPrice": 4900,
+        "launch_fee": 3900,
+        "launchBatchFee": 3900
       },
       {
         "id": "motion-graphics-essentials",
@@ -5615,10 +5772,13 @@ const NS_ACADEMIES = [
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       }
     ]
   },
@@ -5793,7 +5953,10 @@ const NS_ACADEMIES = [
         "launch_price": 44900,
         "effective_price": 44900,
         "offer_active": true,
-        "discount": 36
+        "discount": 36,
+        "regularPrice": 69900,
+        "launch_fee": 44900,
+        "launchBatchFee": 44900
       },
       {
         "id": "3d-viz-pro",
@@ -5944,7 +6107,10 @@ const NS_ACADEMIES = [
         "launch_price": 29900,
         "effective_price": 29900,
         "offer_active": true,
-        "discount": 25
+        "discount": 25,
+        "regularPrice": 39900,
+        "launch_fee": 29900,
+        "launchBatchFee": 29900
       },
       {
         "id": "blender-cert",
@@ -6013,10 +6179,13 @@ const NS_ACADEMIES = [
         "regular_fee": 9900,
         "originalFee": 9900,
         "regular_price": 9900,
-        "launch_price": 9900,
+        "launch_price": null,
         "effective_price": 9900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 9900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "3ds-max-cert",
@@ -6082,10 +6251,13 @@ const NS_ACADEMIES = [
         "regular_fee": 10900,
         "originalFee": 10900,
         "regular_price": 10900,
-        "launch_price": 10900,
+        "launch_price": null,
         "effective_price": 10900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 10900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "v-ray-cert",
@@ -6157,10 +6329,13 @@ const NS_ACADEMIES = [
         "regular_fee": 8900,
         "originalFee": 8900,
         "regular_price": 8900,
-        "launch_price": 8900,
+        "launch_price": null,
         "effective_price": 8900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 8900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "twinmotion-cert",
@@ -6231,10 +6406,13 @@ const NS_ACADEMIES = [
         "regular_fee": 6900,
         "originalFee": 6900,
         "regular_price": 6900,
-        "launch_price": 6900,
+        "launch_price": null,
         "effective_price": 6900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 6900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "cinema-4d-cert",
@@ -6308,7 +6486,10 @@ const NS_ACADEMIES = [
         "launch_price": 9900,
         "effective_price": 9900,
         "offer_active": true,
-        "discount": 17
+        "discount": 17,
+        "regularPrice": 11900,
+        "launch_fee": 9900,
+        "launchBatchFee": 9900
       },
       {
         "id": "unreal-engine-basics",
@@ -6385,7 +6566,10 @@ const NS_ACADEMIES = [
         "launch_price": 8900,
         "effective_price": 8900,
         "offer_active": true,
-        "discount": 18
+        "discount": 18,
+        "regularPrice": 10900,
+        "launch_fee": 8900,
+        "launchBatchFee": 8900
       }
     ]
   },
@@ -6421,7 +6605,7 @@ const NS_ACADEMIES = [
         "price": 19900,
         "originalPrice": 29900,
         "regularPrice": 29900,
-        "launchBatchFee": 24900,
+        "launchBatchFee": 19900,
         "rating": 4.9,
         "reviews": 210,
         "students": 1350,
@@ -6560,7 +6744,8 @@ const NS_ACADEMIES = [
         "launch_price": 19900,
         "effective_price": 19900,
         "offer_active": true,
-        "discount": 33
+        "discount": 33,
+        "launch_fee": 19900
       },
       {
         "id": "career-launch-placement-readiness-professional",
@@ -6700,7 +6885,8 @@ const NS_ACADEMIES = [
         "launch_price": 14900,
         "effective_price": 14900,
         "offer_active": true,
-        "discount": 25
+        "discount": 25,
+        "launch_fee": 14900
       },
       {
         "id": "resume-building",
@@ -6769,10 +6955,13 @@ const NS_ACADEMIES = [
         "regular_fee": 2900,
         "originalFee": 2900,
         "regular_price": 2900,
-        "launch_price": 2900,
+        "launch_price": null,
         "effective_price": 2900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 2900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "linkedin-optimisation",
@@ -6841,10 +7030,13 @@ const NS_ACADEMIES = [
         "regular_fee": 3900,
         "originalFee": 3900,
         "regular_price": 3900,
-        "launch_price": 3900,
+        "launch_price": null,
         "effective_price": 3900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 3900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "interview-preparation",
@@ -6911,10 +7103,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "client-communication",
@@ -6981,10 +7176,13 @@ const NS_ACADEMIES = [
         "regular_fee": 3900,
         "originalFee": 3900,
         "regular_price": 3900,
-        "launch_price": 3900,
+        "launch_price": null,
         "effective_price": 3900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 3900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "proposal-writing",
@@ -7051,10 +7249,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "agency-building",
@@ -7131,7 +7332,10 @@ const NS_ACADEMIES = [
         "launch_price": 9900,
         "effective_price": 9900,
         "offer_active": true,
-        "discount": 23
+        "discount": 23,
+        "regularPrice": 12900,
+        "launch_fee": 9900,
+        "launchBatchFee": 9900
       },
       {
         "id": "fiverr-success",
@@ -7200,10 +7404,13 @@ const NS_ACADEMIES = [
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "upwork-success",
@@ -7272,10 +7479,13 @@ const NS_ACADEMIES = [
         "regular_fee": 6900,
         "originalFee": 6900,
         "regular_price": 6900,
-        "launch_price": 6900,
+        "launch_price": null,
         "effective_price": 6900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 6900,
+        "launch_fee": null,
+        "launchBatchFee": null
       }
     ]
   },
@@ -7310,7 +7520,7 @@ const NS_ACADEMIES = [
         "price": 19900,
         "originalPrice": 29900,
         "regularPrice": 29900,
-        "launchBatchFee": 29900,
+        "launchBatchFee": 19900,
         "rating": 4.9,
         "reviews": 195,
         "students": 1320,
@@ -7473,7 +7683,8 @@ const NS_ACADEMIES = [
         "launch_price": 19900,
         "effective_price": 19900,
         "offer_active": true,
-        "discount": 33
+        "discount": 33,
+        "launch_fee": 19900
       },
       {
         "id": "spoken-english-pro",
@@ -7497,7 +7708,7 @@ const NS_ACADEMIES = [
         "price": 9900,
         "originalPrice": 12900,
         "regularPrice": 12900,
-        "launchBatchFee": 12900,
+        "launchBatchFee": 9900,
         "rating": 4.8,
         "reviews": 190,
         "students": 1150,
@@ -7611,7 +7822,8 @@ const NS_ACADEMIES = [
         "launch_price": 9900,
         "effective_price": 9900,
         "offer_active": true,
-        "discount": 23
+        "discount": 23,
+        "launch_fee": 9900
       },
       {
         "id": "spoken-english-cert",
@@ -7675,10 +7887,13 @@ const NS_ACADEMIES = [
         "regular_fee": 3900,
         "originalFee": 3900,
         "regular_price": 3900,
-        "launch_price": 3900,
+        "launch_price": null,
         "effective_price": 3900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 3900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "business-communication",
@@ -7740,10 +7955,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "presentation-skills",
@@ -7810,10 +8028,13 @@ const NS_ACADEMIES = [
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "public-speaking",
@@ -7887,10 +8108,13 @@ const NS_ACADEMIES = [
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "soft-skills",
@@ -7957,10 +8181,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       }
     ]
   },
@@ -7997,7 +8224,7 @@ const NS_ACADEMIES = [
         "price": 24900,
         "originalPrice": 29900,
         "regularPrice": 29900,
-        "launchBatchFee": 29900,
+        "launchBatchFee": 24900,
         "rating": 4.9,
         "reviews": 160,
         "students": 840,
@@ -8135,7 +8362,8 @@ const NS_ACADEMIES = [
         "launch_price": 24900,
         "effective_price": 24900,
         "offer_active": true,
-        "discount": 17
+        "discount": 17,
+        "launch_fee": 24900
       },
       {
         "id": "young-coders",
@@ -8161,7 +8389,7 @@ const NS_ACADEMIES = [
         "price": 11900,
         "originalPrice": 14900,
         "regularPrice": 14900,
-        "launchBatchFee": 14900,
+        "launchBatchFee": 11900,
         "rating": 4.9,
         "reviews": 120,
         "students": 640,
@@ -8263,7 +8491,8 @@ const NS_ACADEMIES = [
         "launch_price": 11900,
         "effective_price": 11900,
         "offer_active": true,
-        "discount": 20
+        "discount": 20,
+        "launch_fee": 11900
       },
       {
         "id": "scratch-programming",
@@ -8331,10 +8560,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "python-for-kids",
@@ -8406,7 +8638,10 @@ const NS_ACADEMIES = [
         "launch_price": 6900,
         "effective_price": 6900,
         "offer_active": true,
-        "discount": 13
+        "discount": 13,
+        "regularPrice": 7900,
+        "launch_fee": 6900,
+        "launchBatchFee": 6900
       },
       {
         "id": "ai-for-kids",
@@ -8475,10 +8710,13 @@ const NS_ACADEMIES = [
         "regular_fee": 5900,
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "robotics-basics",
@@ -8545,10 +8783,13 @@ const NS_ACADEMIES = [
         "regular_fee": 8900,
         "originalFee": 8900,
         "regular_price": 8900,
-        "launch_price": 8900,
+        "launch_price": null,
         "effective_price": 8900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 8900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "web-design-for-kids",
@@ -8610,10 +8851,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       }
     ]
   },
@@ -8649,7 +8893,7 @@ const NS_ACADEMIES = [
         "price": 22900,
         "originalPrice": 29900,
         "regularPrice": 29900,
-        "launchBatchFee": 29900,
+        "launchBatchFee": 22900,
         "rating": 4.9,
         "reviews": 195,
         "students": 1020,
@@ -8781,7 +9025,8 @@ const NS_ACADEMIES = [
         "launch_price": 22900,
         "effective_price": 22900,
         "offer_active": true,
-        "discount": 23
+        "discount": 23,
+        "launch_fee": 22900
       },
       {
         "id": "content-creator-pro",
@@ -8807,7 +9052,7 @@ const NS_ACADEMIES = [
         "price": 19900,
         "originalPrice": 24900,
         "regularPrice": 24900,
-        "launchBatchFee": 24900,
+        "launchBatchFee": 19900,
         "rating": 4.9,
         "reviews": 165,
         "students": 840,
@@ -8945,7 +9190,8 @@ const NS_ACADEMIES = [
         "launch_price": 19900,
         "effective_price": 19900,
         "offer_active": true,
-        "discount": 20
+        "discount": 20,
+        "launch_fee": 19900
       },
       {
         "id": "youtube-seo",
@@ -9014,10 +9260,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "thumbnail-design",
@@ -9081,10 +9330,13 @@ const NS_ACADEMIES = [
         "regular_fee": 4900,
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "podcast-production",
@@ -9149,7 +9401,10 @@ const NS_ACADEMIES = [
         "launch_price": 6900,
         "effective_price": 6900,
         "offer_active": true,
-        "discount": 13
+        "discount": 13,
+        "regularPrice": 7900,
+        "launch_fee": 6900,
+        "launchBatchFee": 6900
       },
       {
         "id": "personal-branding",
@@ -9214,7 +9469,10 @@ const NS_ACADEMIES = [
         "launch_price": 6900,
         "effective_price": 6900,
         "offer_active": true,
-        "discount": 13
+        "discount": 13,
+        "regularPrice": 7900,
+        "launch_fee": 6900,
+        "launchBatchFee": 6900
       },
       {
         "id": "short-video-strategy",
@@ -9279,10 +9537,13 @@ const NS_ACADEMIES = [
         "regular_fee": 6900,
         "originalFee": 6900,
         "regular_price": 6900,
-        "launch_price": 6900,
+        "launch_price": null,
         "effective_price": 6900,
         "offer_active": false,
-        "discount": 0
+        "discount": 0,
+        "regularPrice": 6900,
+        "launch_fee": null,
+        "launchBatchFee": null
       }
     ]
   },
@@ -9377,7 +9638,10 @@ const NS_ACADEMIES = [
         "launch_price": 24900,
         "effective_price": 24900,
         "offer_active": true,
-        "discount": 17
+        "discount": 17,
+        "regularPrice": 29900,
+        "launch_fee": 24900,
+        "launchBatchFee": 24900
       },
       {
         "id": "office-pro",
@@ -9505,7 +9769,7 @@ const NS_ACADEMIES = [
         "hours": 96,
         "guidedHours": 96,
         "regularPrice": 15900,
-        "launchBatchFee": 15900,
+        "launchBatchFee": 12900,
         "course_type": "Professional Program",
         "fee": 12900,
         "regular_fee": 15900,
@@ -9514,7 +9778,8 @@ const NS_ACADEMIES = [
         "launch_price": 12900,
         "effective_price": 12900,
         "offer_active": true,
-        "discount": 19
+        "discount": 19,
+        "launch_fee": 12900
       },
       {
         "id": "microsoft-excel",
@@ -9651,7 +9916,10 @@ const NS_ACADEMIES = [
         "regular_price": 6900,
         "launch_price": 5900,
         "effective_price": 5900,
-        "offer_active": true
+        "offer_active": true,
+        "regularPrice": 6900,
+        "launch_fee": 5900,
+        "launchBatchFee": 5900
       },
       {
         "id": "microsoft-word",
@@ -9784,9 +10052,12 @@ const NS_ACADEMIES = [
         "course_type": "Certification Course",
         "originalFee": 3900,
         "regular_price": 3900,
-        "launch_price": 3900,
+        "launch_price": null,
         "effective_price": 3900,
-        "offer_active": false
+        "offer_active": false,
+        "regularPrice": 3900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "microsoft-powerpoint",
@@ -9914,9 +10185,12 @@ const NS_ACADEMIES = [
         "course_type": "Certification Course",
         "originalFee": 4900,
         "regular_price": 4900,
-        "launch_price": 4900,
+        "launch_price": null,
         "effective_price": 4900,
-        "offer_active": false
+        "offer_active": false,
+        "regularPrice": 4900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "google-workspace",
@@ -10048,9 +10322,12 @@ const NS_ACADEMIES = [
         "course_type": "Certification Course",
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
-        "offer_active": false
+        "offer_active": false,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "notion-cert",
@@ -10179,9 +10456,12 @@ const NS_ACADEMIES = [
         "course_type": "Certification Course",
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
-        "offer_active": false
+        "offer_active": false,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "id": "clickup-cert",
@@ -10312,9 +10592,12 @@ const NS_ACADEMIES = [
         "course_type": "Certification Course",
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
-        "offer_active": false
+        "offer_active": false,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "course_id": "microsoft-copilot",
@@ -13262,9 +13545,12 @@ const NS_ACADEMIES = [
         },
         "originalFee": 5900,
         "regular_price": 5900,
-        "launch_price": 5900,
+        "launch_price": null,
         "effective_price": 5900,
-        "offer_active": false
+        "offer_active": false,
+        "regularPrice": 5900,
+        "launch_fee": null,
+        "launchBatchFee": null
       },
       {
         "course_id": "tally-gst",
@@ -17617,7 +17903,10 @@ const NS_ACADEMIES = [
         "regular_price": 9900,
         "launch_price": 6900,
         "effective_price": 6900,
-        "offer_active": true
+        "offer_active": true,
+        "regularPrice": 9900,
+        "launch_fee": 6900,
+        "launchBatchFee": 6900
       }
     ]
   }
@@ -17762,7 +18051,10 @@ const NS_COURSES = [
     "regular_price": 44900,
     "launch_price": 34900,
     "effective_price": 34900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 44900,
+    "launch_fee": 34900,
+    "launchBatchFee": 34900
   },
   {
     "id": "dm-professional",
@@ -17876,7 +18168,10 @@ const NS_COURSES = [
     "regular_price": 24900,
     "launch_price": 19900,
     "effective_price": 19900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 24900,
+    "launch_fee": 19900,
+    "launchBatchFee": 19900
   },
   {
     "id": "performance-marketing-specialist",
@@ -17998,7 +18293,10 @@ const NS_COURSES = [
     "regular_price": 34900,
     "launch_price": 24900,
     "effective_price": 24900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 34900,
+    "launch_fee": 24900,
+    "launchBatchFee": 24900
   },
   {
     "id": "ecommerce-growth-marketing-specialist",
@@ -18127,7 +18425,10 @@ const NS_COURSES = [
     "regular_price": 34900,
     "launch_price": 27900,
     "effective_price": 27900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 34900,
+    "launch_fee": 27900,
+    "launchBatchFee": 27900
   },
   {
     "id": "google-ads",
@@ -18224,7 +18525,7 @@ const NS_COURSES = [
     "hours": 64,
     "guidedHours": 64,
     "regularPrice": 9900,
-    "launchBatchFee": 9900,
+    "launchBatchFee": 7900,
     "course_name": "Google Ads Performance Specialist",
     "fee": 7900,
     "regular_fee": 9900,
@@ -18238,7 +18539,8 @@ const NS_COURSES = [
     "regular_price": 9900,
     "launch_price": 7900,
     "effective_price": 7900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 7900
   },
   {
     "id": "meta-ads",
@@ -18339,7 +18641,7 @@ const NS_COURSES = [
     "hours": 64,
     "guidedHours": 64,
     "regularPrice": 9900,
-    "launchBatchFee": 9900,
+    "launchBatchFee": 7900,
     "course_name": "Meta Ads & Lead Generation Specialist",
     "fee": 7900,
     "regular_fee": 9900,
@@ -18353,7 +18655,8 @@ const NS_COURSES = [
     "regular_price": 9900,
     "launch_price": 7900,
     "effective_price": 7900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 7900
   },
   {
     "id": "seo-geo",
@@ -18455,7 +18758,7 @@ const NS_COURSES = [
     "hours": 80,
     "guidedHours": 80,
     "regularPrice": 12900,
-    "launchBatchFee": 12900,
+    "launchBatchFee": 9900,
     "course_name": "SEO & AI Search Optimization (AEO/GEO)",
     "fee": 9900,
     "regular_fee": 12900,
@@ -18469,7 +18772,8 @@ const NS_COURSES = [
     "regular_price": 12900,
     "launch_price": 9900,
     "effective_price": 9900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 9900
   },
   {
     "id": "social-media-marketing",
@@ -18567,7 +18871,7 @@ const NS_COURSES = [
     "hours": 48,
     "guidedHours": 48,
     "regularPrice": 6900,
-    "launchBatchFee": 6900,
+    "launchBatchFee": 5900,
     "course_name": "Social Media Marketing & Growth",
     "fee": 5900,
     "regular_fee": 6900,
@@ -18581,7 +18885,8 @@ const NS_COURSES = [
     "regular_price": 6900,
     "launch_price": 5900,
     "effective_price": 5900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 5900
   },
   {
     "id": "content-marketing",
@@ -18680,7 +18985,7 @@ const NS_COURSES = [
     "hours": 48,
     "guidedHours": 48,
     "regularPrice": 6900,
-    "launchBatchFee": 6900,
+    "launchBatchFee": null,
     "course_name": "AI-Powered Content Marketing",
     "fee": 6900,
     "regular_fee": 6900,
@@ -18692,9 +18997,10 @@ const NS_COURSES = [
     "full_description": "Learn how to develop, produce, distribute and measure content that supports real business objectives. This practical AI-Powered Content Marketing course combines audience research, content strategy, evidence-based editorial planning, AI-assisted content production and professional human editing. Develop skills in creating educational articles, website copy, case studies, newsletters, lead magnets, social media content and video scripts while maintaining accuracy, originality and a consistent brand voice. Learn how to research customer problems, evaluate competing content, create editorial briefs, use ChatGPT and Gemini responsibly, adapt content for multiple channels and manage a professional publishing workflow. Understand how content supports organic discovery, audience trust, lead generation, customer engagement and purchase decisions. Build a professional content marketing portfolio consisting of a complete business content strategy, six polished content assets, a 30-day editorial calendar, a distribution plan and a content performance report. The programme emphasizes useful information, original insights, editorial quality, responsible AI usage and measurable business impact rather than mass-producing generic AI-written content.",
     "course_type": "Certification Course",
     "regular_price": 6900,
-    "launch_price": 6900,
+    "launch_price": null,
     "effective_price": 6900,
-    "offer_active": false
+    "offer_active": false,
+    "launch_fee": null
   },
   {
     "id": "email-marketing",
@@ -18786,7 +19092,7 @@ const NS_COURSES = [
     "hours": 40,
     "guidedHours": 40,
     "regularPrice": 5900,
-    "launchBatchFee": 5900,
+    "launchBatchFee": null,
     "course_name": "Email Marketing & Automation",
     "fee": 5900,
     "regular_fee": 5900,
@@ -18798,9 +19104,10 @@ const NS_COURSES = [
     "full_description": "Learn how to plan, create, automate and measure professional email marketing campaigns that support customer acquisition, engagement and retention. This practical Email Marketing & Automation course covers ethical subscriber acquisition, audience segmentation, sender authentication, email deliverability, responsive email design, persuasive campaign copy and automated lifecycle workflows. Gain hands-on experience using Mailchimp or Brevo as the primary teaching platform, supported by lightweight CRM concepts, Canva and Google Sheets. Understand how to build welcome sequences, lead-nurturing campaigns, reactivation workflows and behavior-based email journeys while maintaining user consent and healthy sending practices. Learn to interpret clicks, conversions, customer engagement, campaign outcomes and revenue attribution using realistic business scenarios. Create a portfolio containing a segmented contact database, three professionally designed email campaigns, two automated customer journeys and a campaign performance report. The programme emphasizes responsible communication, useful customer experiences, practical automation skills and business outcomes—not bulk unsolicited emailing or unrealistic revenue guarantees.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "launch_fee": null
   },
   {
     "id": "google-analytics-ga4",
@@ -18896,7 +19203,7 @@ const NS_COURSES = [
     "hours": 48,
     "guidedHours": 48,
     "regularPrice": 7900,
-    "launchBatchFee": 7900,
+    "launchBatchFee": null,
     "course_name": "Google Analytics 4 & GTM",
     "fee": 7900,
     "regular_fee": 7900,
@@ -18908,9 +19215,10 @@ const NS_COURSES = [
     "full_description": "Learn how to implement, validate, analyze and report website and marketing performance using Google Analytics 4, Google Tag Manager and Looker Studio. This practical Google Analytics 4 & GTM course teaches business measurement planning, event-based tracking, Google tag configuration, website conversions, audience analysis, campaign attribution and performance reporting. Develop hands-on skills in configuring GA4 properties, creating measurement plans, implementing events through Google Tag Manager, troubleshooting tracking issues and validating data quality. Understand privacy-aware measurement, consent signals, UTM governance, cross-domain measurement fundamentals and the limitations of digital attribution. Analyze website traffic, user engagement, marketing channels, funnels and key events using GA4 Reports and Explorations. Create stakeholder-ready dashboards in Looker Studio and translate performance data into meaningful business recommendations. Build a professional analytics portfolio containing an end-to-end measurement plan, validated event tracking implementation, a measurement quality audit and an interactive business performance dashboard. The course emphasizes accurate tracking, responsible data collection and actionable insights rather than simply installing tracking codes or reporting vanity metrics.",
     "course_type": "Certification Course",
     "regular_price": 7900,
-    "launch_price": 7900,
+    "launch_price": null,
     "effective_price": 7900,
-    "offer_active": false
+    "offer_active": false,
+    "launch_fee": null
   },
   {
     "id": "google-search-console",
@@ -19000,7 +19308,7 @@ const NS_COURSES = [
     "hours": 24,
     "guidedHours": 24,
     "regularPrice": 3900,
-    "launchBatchFee": 3900,
+    "launchBatchFee": null,
     "course_name": "Google Search Console & SEO Reporting",
     "fee": 3900,
     "regular_fee": 3900,
@@ -19012,9 +19320,10 @@ const NS_COURSES = [
     "full_description": "Learn to use Google Search Console to diagnose indexing issues, monitor search performance and identify actionable opportunities for organic visibility. Build practical skills in Search Console reporting, technical issue identification, Google AI-search visibility analysis and data-driven SEO recommendations. This focused 4-week, 24-hour certification course teaches property verification, sitemap submissions, URL inspection, crawl diagnostics, canonicalization, Core Web Vitals interpretation, PageSpeed Insights analysis, and modern Generative AI Performance reporting. Students build an end-to-end SEO Audit & 30-Day Visibility Improvement Plan using real or guided demonstration properties.",
     "course_type": "Certification Course",
     "regular_price": 3900,
-    "launch_price": 3900,
+    "launch_price": null,
     "effective_price": 3900,
-    "offer_active": false
+    "offer_active": false,
+    "launch_fee": null
   },
   {
     "id": "local-seo",
@@ -19105,7 +19414,7 @@ const NS_COURSES = [
     "hours": 40,
     "guidedHours": 40,
     "regularPrice": 5900,
-    "launchBatchFee": 5900,
+    "launchBatchFee": null,
     "course_name": "Local SEO & Google Business Profile",
     "fee": 5900,
     "regular_fee": 5900,
@@ -19117,9 +19426,10 @@ const NS_COURSES = [
     "full_description": "Learn how to improve local business discoverability across Google Search and Google Maps using accurate business information, responsible Google Business Profile management and measurable local search optimization. This practical Local SEO & Google Business Profile course teaches local search behavior, business eligibility and verification, profile optimization, service-area business configuration, local keyword research, location-based website content, customer-review workflows and ethical directory management. Develop hands-on skills with Google Business Profile, Google Maps, Google Search Console, Google Sheets and local SEO auditing tools. Understand Google's core local ranking considerations—relevance, distance and prominence—and learn how to evaluate a business's current local search presence without promising specific ranking positions. Build a professional portfolio containing a complete local SEO and GBP audit, an optimized profile for an authorized business or a documented simulation, a local landing-page brief and a local search improvement dashboard. The programme emphasizes business accuracy, policy compliance, legitimate customer feedback, relevant local content and evidence-based optimization.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "launch_fee": null
   },
   {
     "id": "youtube-marketing",
@@ -19215,7 +19525,7 @@ const NS_COURSES = [
     "hours": 48,
     "guidedHours": 48,
     "regularPrice": 6900,
-    "launchBatchFee": 6900,
+    "launchBatchFee": null,
     "course_name": "YouTube Marketing & Channel Growth",
     "fee": 6900,
     "regular_fee": 6900,
@@ -19227,9 +19537,10 @@ const NS_COURSES = [
     "full_description": "Learn how to plan, optimize and grow a YouTube channel through audience-focused strategies, search visibility, effective video packaging and data-driven improvement. This practical YouTube Marketing & Channel Growth course covers niche research, audience positioning, channel optimization, YouTube Search and discovery, video titles, descriptions, thumbnail strategy, scripts, storytelling, Shorts and long-form content planning. Develop hands-on skills with YouTube Studio, YouTube Analytics, Google Trends, Canva and AI-assisted content planning tools. Understand how viewers discover videos, why they choose to watch, what influences audience retention and how creators can analyze content performance using meaningful engagement metrics. Learn to organize publishing workflows, interpret impressions, click-through rate, engaged views, watch time, audience retention and returning-viewer behavior. Explore community engagement, creator collaborations, brand conversion journeys, YouTube copyright responsibilities, AI-generated content disclosure and monetization eligibility. Build a professional portfolio containing an optimized YouTube channel or documented channel blueprint, six production-ready video packages, four publishing workflow demonstrations and a channel performance analysis. The course emphasizes original content, meaningful audience relationships, editorial consistency and measurable business outcomes rather than artificial subscribers, view manipulation or guaranteed viral growth.",
     "course_type": "Certification Course",
     "regular_price": 6900,
-    "launch_price": 6900,
+    "launch_price": null,
     "effective_price": 6900,
-    "offer_active": false
+    "offer_active": false,
+    "launch_fee": null
   },
   {
     "id": "ai-mastery",
@@ -19384,7 +19695,10 @@ const NS_COURSES = [
     "regular_price": 89900,
     "launch_price": 64900,
     "effective_price": 64900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 89900,
+    "launch_fee": 64900,
+    "launchBatchFee": 64900
   },
   {
     "id": "ai-productivity",
@@ -19502,7 +19816,10 @@ const NS_COURSES = [
     "regular_price": 19900,
     "launch_price": 16900,
     "effective_price": 16900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 19900,
+    "launch_fee": 16900,
+    "launchBatchFee": 16900
   },
   {
     "id": "ai-for-business-pro",
@@ -19624,7 +19941,10 @@ const NS_COURSES = [
     "regular_price": 39900,
     "launch_price": 29900,
     "effective_price": 29900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 39900,
+    "launch_fee": 29900,
+    "launchBatchFee": 29900
   },
   {
     "id": "prompt-engineering",
@@ -19708,9 +20028,12 @@ const NS_COURSES = [
     "full_description": "Learn how to design, test and improve effective prompts across ChatGPT, Claude and Gemini. This practical Prompt Engineering & AI Output Evaluation course develops professional skills in writing clear instructions, organizing context, creating reusable prompt templates, designing structured outputs and assessing AI-generated results. Understand the capabilities and limitations of language models, including hallucinations, inconsistent answers, context constraints and differences between models. Develop hands-on experience with few-shot prompting, document-grounded workflows, structured JSON outputs, prompt versioning, test cases and scoring rubrics. Learn how to compare AI models using the same business tasks, identify output failures and improve prompts systematically through evidence-based experimentation. Apply these skills to customer communication, marketing briefs, information extraction, educational materials, reporting and everyday business operations. Build a professional portfolio containing 20 tested business prompts, five structured-output examples, a model comparison evaluation workbook and one fully documented business prompting workflow. The programme prioritizes practical AI reliability, transferable prompting skills, human oversight and responsible AI use rather than dependence on one chatbot or memorizing prompt formulas.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "ai-automation-n8n",
@@ -19800,7 +20123,10 @@ const NS_COURSES = [
     "regular_price": 9900,
     "launch_price": 7900,
     "effective_price": 7900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 9900,
+    "launch_fee": 7900,
+    "launchBatchFee": 7900
   },
   {
     "id": "ai-agents-fundamentals",
@@ -19881,9 +20207,12 @@ const NS_COURSES = [
     "full_description": "Understand how AI agents can interpret tasks, access approved tools, retrieve relevant information and perform controlled multi-step workflows.\n\nThis practical AI Agents Fundamentals course introduces agentic AI concepts, single-agent architecture, context management, structured outputs, function calling, API integrations and safe execution boundaries.\n\nLearn how tool-using agents differ from ordinary chatbots and rule-based automation systems, and identify when agent-based solutions are appropriate for business tasks.\n\nGain supervised experience using OpenAI's supported agent tooling or an equivalent visual agent builder, alongside introductory n8n AI Agent tools.\n\nExplore approved information retrieval, task routing, tool selection, input validation, human approvals and basic error handling.\n\nDevelop foundational skills in prompt-injection awareness, permissions, output verification, execution tracing and agent evaluation using realistic test scenarios.\n\nComplete two supervised agent prototypes: a business information assistant that produces traceable answers and a task-routing agent that chooses among allowed actions while requiring approval for sensitive operations.\n\nBuild a 15-case evaluation dataset to test correct behavior, tool selection, access restrictions, prompt-injection resistance and recovery.\n\nThe programme focuses on safe, understandable and testable agent prototypes rather than enterprise autonomous systems, complex multi-agent orchestration or production infrastructure engineering.",
     "course_type": "Certification Course",
     "regular_price": 7900,
-    "launch_price": 7900,
+    "launch_price": null,
     "effective_price": 7900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 7900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "chatgpt-mastery",
@@ -19960,9 +20289,12 @@ const NS_COURSES = [
     "full_description": "Learn how to use ChatGPT as a practical assistant for workplace communication, document preparation, business research, data analysis and everyday professional tasks.\n\nThis hands-on ChatGPT for Work, Research & Data Analysis course teaches effective AI instructions, responsible tool selection, professional writing, document review, spreadsheet interpretation and research workflows.\n\nDevelop practical skills in drafting emails, preparing executive reports, reviewing proposals, structuring presentations, analyzing uploaded datasets, generating charts and interpreting business KPIs.\n\nLearn how to verify calculations, assess source reliability, compare documents, review research findings and identify limitations in AI-generated results.\n\nExplore ChatGPT Projects, reusable instructions, structured working processes, supported plugins and connected tools according to their actual availability.\n\nUnderstand when standard ChatGPT conversations, search, data analysis, deep research or ChatGPT Work are appropriate for a task, without assuming every feature is available on every account.\n\nBuild a professional ChatGPT Business Productivity Toolkit containing an analyzed business dataset, an executive report, a verified research brief, professional communication assets and a documented reusable workflow.\n\nThe programme emphasizes human judgment, accuracy, privacy, practical business value and repeatable quality-controlled outcomes.\n\nIt is designed for students, freelancers, marketers, business owners and professionals who want to become productive and responsible ChatGPT users without learning programming or AI infrastructure engineering.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "gemini-mastery",
@@ -20039,9 +20371,12 @@ const NS_COURSES = [
     "full_description": "Learn how to use Gemini and Google Workspace together to improve everyday professional work.\n\nThis practical Gemini & Google Workspace AI course teaches effective AI instructions, multimodal inputs, professional email communication, document drafting, spreadsheet analysis, presentation creation and information research.\n\nDevelop hands-on experience using Gemini with Gmail, Google Docs, Google Sheets, Google Slides and Google Drive.\n\nLearn to draft and review emails, create structured business documents, understand files, prepare spreadsheet formulas, interpret datasets, build charts and develop professional presentations.\n\nExplore Gemini Deep Research, Gemini Notebook, document-grounded answers, source verification and cross-document comparison.\n\nLearn how reusable instructions and Gemini Skills can support consistent business tasks, subject to verified feature availability.\n\nUnderstand data permissions, AI limitations, safe file handling and human verification requirements.\n\nBuild a professional Google Workspace AI Productivity Suite containing an analyzed spreadsheet, a business presentation, a professional document, an email workflow and a cited research briefing.\n\nThe programme emphasizes practical workplace skills, reliable outputs, privacy-aware collaboration and reusable processes rather than outdated model specifications or advanced API engineering.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "claude-productivity",
@@ -20118,9 +20453,12 @@ const NS_COURSES = [
     "full_description": "Learn how to turn complex documents, research material and business ideas into professional deliverables using Claude.\n\nThis practical Claude for Productivity, Skills & Artifacts course teaches effective prompting, long-document analysis, business writing, document comparison, structured reporting and knowledge organization.\n\nDevelop hands-on experience in creating professional reports, proposals, executive summaries, requirements documents and research-informed communication.\n\nLearn how Claude Projects can help organize relevant documents, instructions and contextual information for recurring knowledge-work tasks.\n\nExplore Claude Artifacts to create and refine documents, presentations, simple dashboards and lightweight interactive deliverables, according to supported platform capabilities.\n\nLearn how reusable Claude Skills package task procedures, instructions and supporting resources to improve consistency across repeated business activities.\n\nUnderstand how to review AI-generated outputs, verify source information, preserve confidentiality and maintain human approval over important work.\n\nExplore Claude Cowork and its evolving integration with Claude's unified task experience where available, without requiring advanced autonomous workflows or paid premium capabilities.\n\nBuild a professional portfolio containing a long-document analysis, a business report, a reusable task Skill and an interactive or document-based Artifact.\n\nThe programme emphasizes practical productivity, source-grounded analysis, repeatable procedures, responsible AI usage and high-quality professional deliverables.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "ai-research-tools",
@@ -20197,9 +20535,12 @@ const NS_COURSES = [
     "full_description": "Learn how to conduct more structured, efficient and trustworthy research using AI-assisted discovery tools, academic search platforms and source-grounded document analysis.\n\nThis practical AI Research & Evidence Verification course teaches research question design, search strategies, market and competitor intelligence, academic literature discovery, source credibility assessment and evidence-based reporting.\n\nDevelop hands-on experience with Perplexity, Gemini Notebook, Google Scholar and either Consensus or Elicit as the cohort's principal academic AI research platform.\n\nExplore ChatGPT or Gemini Deep Research, Semantic Scholar, Google Sheets and citation management tools as relevant supporting resources.\n\nLearn how to distinguish original evidence from secondary reporting, assess research methodology, check factual claims, trace citations, identify conflicting findings and record uncertainty.\n\nWork with PDFs and multiple sources to extract information, compare documents and develop transparent evidence matrices.\n\nBuild two professional research reports: a market and competitive intelligence report with actionable business recommendations, and an academic or industry literature review demonstrating study comparison, source-quality assessment and properly traceable references.\n\nThe programme focuses on responsible research discovery, evaluation, synthesis and professional communication—not advanced statistics, formal systematic-review certification or replacing qualified researchers.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "creative-design",
@@ -20330,7 +20671,10 @@ const NS_COURSES = [
     "regular_price": 64900,
     "launch_price": 44900,
     "effective_price": 44900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 64900,
+    "launch_fee": 44900,
+    "launchBatchFee": 44900
   },
   {
     "id": "graphic-design-pro",
@@ -20438,7 +20782,10 @@ const NS_COURSES = [
     "regular_price": 29900,
     "launch_price": 24900,
     "effective_price": 24900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 29900,
+    "launch_fee": 24900,
+    "launchBatchFee": 24900
   },
   {
     "id": "uiux-design-pro",
@@ -20559,7 +20906,10 @@ const NS_COURSES = [
     "regular_price": 44900,
     "launch_price": 34900,
     "effective_price": 34900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 44900,
+    "launch_fee": 34900,
+    "launchBatchFee": 34900
   },
   {
     "id": "adobe-photoshop",
@@ -20654,9 +21004,12 @@ const NS_COURSES = [
     "full_description": "Learn to create professional commercial visuals using Adobe Photoshop, from precise photo correction and realistic retouching to advertising creatives and photorealistic image manipulation.\n\nThis practical Adobe Photoshop — Commercial Image Editing & Design course develops hands-on skills in selections, masking, adjustment layers, Camera Raw, Smart Objects, lighting correction, perspective matching and non-destructive editing.\n\nLearn how to professionally enhance product photography, retouch portraits, remove distractions, create realistic shadows and combine multiple images into visually consistent advertising compositions.\n\nExplore modern AI-assisted workflows using Generative Fill, Harmonize and Generative Expand, while learning to correct unwanted AI artifacts and retain full creative control through manual Photoshop techniques.\n\nBuild premium advertising creatives for e-commerce, social media, digital campaigns and print applications.\n\nLearn commercial layout principles, typography, visual hierarchy, color management, resizing, export specifications and professional file organization.\n\nComplete a practical portfolio that includes product retouching before-and-after images, a photorealistic commercial composite, a premium product advertisement and a complete campaign adapted for 4:5, 1:1 and 9:16 formats.\n\nDeliver professional results with organized, editable PSD source files and properly exported artwork.\n\nThe programme focuses on real commercial production quality, Photoshop craftsmanship and professional client handover—not merely memorizing software tools.",
     "course_type": "Certification Course",
     "regular_price": 6900,
-    "launch_price": 6900,
+    "launch_price": null,
     "effective_price": 6900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 6900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "adobe-illustrator",
@@ -20750,9 +21103,12 @@ const NS_COURSES = [
     "full_description": "Learn how to create professional, scalable vector graphics using Adobe Illustrator.\n\nThis practical Adobe Illustrator — Vector Graphics & Print Design course develops hands-on skills in vector drawing, precision path construction, typography, icon design, illustration and commercial artwork production.\n\nMaster essential Illustrator tools including the Pen Tool, Curvature Tool, Pathfinder, Shape Builder, compound paths, clipping masks, Appearance panel and object transformation controls.\n\nLearn to create consistent icon systems, original illustrations, typography-led layouts, custom lettering foundations and reusable vector assets.\n\nExplore professional illustration techniques including gradients, blends, patterns, brushes and symbols.\n\nDiscover AI-assisted vector concept development with Adobe Illustrator's Text to Vector Graphic and Generative Shape Fill features, while learning to inspect and refine generated geometry manually.\n\nBuild practical production skills in working with multiple artboards, RGB and CMYK color, spot colors, bleeds, PDF exports, SVG exports and linked asset management.\n\nDevelop a professional portfolio containing a consistent 12-icon family, an original vector illustration, a typography-led poster and a production-ready multi-artboard commercial artwork package.\n\nComplete the course with organized, editable Illustrator source files and correctly prepared digital and print deliverables.\n\nThe programme emphasizes vector precision, visual consistency, professional craftsmanship and reliable client handover.",
     "course_type": "Certification Course",
     "regular_price": 6900,
-    "launch_price": 6900,
+    "launch_price": null,
     "effective_price": 6900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 6900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "canva-pro",
@@ -20849,9 +21205,12 @@ const NS_COURSES = [
     "full_description": "Learn how to create professional marketing visuals and maintain consistent brand communication using Canva. This practical Canva Professional — Brand & Marketing Design course combines essential graphic design principles with modern, efficient marketing-content production. Develop hands-on skills in typography, color selection, composition, spacing, alignment, visual hierarchy and layout grids. Learn to create and apply brand colors, typography systems, Brand Kits and reusable templates across different business communication formats. Build original social media designs, educational carousel posts, YouTube thumbnails, banners, posters and product promotions for realistic marketing briefs. Explore Canva AI, Magic tools and AI-assisted design features while learning how to review generated layouts, improve typography, correct visual inconsistencies and verify content. Develop professional presentation skills and create clear, structured business slides. Learn collaborative reviewing, commenting, permissions, approval workflows, bulk design creation fundamentals and appropriate export settings. Build a professional Canva marketing portfolio featuring eight original social designs, one coherent carousel, a reusable template set, a 10-slide business presentation and a one-page brand-use guide. The programme emphasizes original layout decisions, brand consistency, practical design quality and editable deliverables rather than simply modifying ready-made templates. It is designed for entrepreneurs, educators, content creators, marketing assistants and beginner freelance social media designers who want to produce effective business visuals efficiently.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "figma-ui-design",
@@ -20956,7 +21315,10 @@ const NS_COURSES = [
     "regular_price": 9900,
     "launch_price": 7900,
     "effective_price": 7900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 9900,
+    "launch_fee": 7900,
+    "launchBatchFee": 7900
   },
   {
     "id": "brand-identity-design",
@@ -21059,9 +21421,12 @@ const NS_COURSES = [
     "full_description": "Learn how to develop distinctive and consistent visual identities that communicate a business's personality, values and positioning. This practical Brand Identity Design & Visual Systems course teaches the complete process of developing a cohesive visual brand identity, from client briefing and competitor research to creative direction, identity development, real-world applications and professional brand guidelines. Develop research-informed skills in understanding target audiences, analyzing competitor visual identities, identifying differentiation opportunities and translating brand attributes into meaningful creative concepts. Learn how to establish visual territories, develop moodboards and select typography, colors, graphic devices and imagery styles that support a brand's intended positioning. Build professional logo families, flexible identity systems, color palettes, typography hierarchies, supporting graphic languages and practical rules that maintain consistency across different applications. Create cohesive brand assets for stationery, advertising, social media, business collateral, websites and selected environmental touchpoints. Learn to document logo usage, exclusion zones, minimum sizes, approved colors, typography, brand applications and common misuse examples in a professional brand-guidelines document. Use Adobe Illustrator and Adobe Photoshop to produce editable visual identity assets. Apply Figma to selected digital brand applications and Adobe Acrobat to guideline review where appropriate. Complete two distinct, assessed brand identity case studies. Each must demonstrate brand research, creative rationale, a logo family, typography and color systems, supporting visual elements, relevant applications and a professional brand-guidelines document. The programme emphasizes strategic reasoning, originality, visual differentiation, repeatable design standards and practical client delivery—not simply producing a logo and presenting it on attractive mockups.",
     "course_type": "Certification Course",
     "regular_price": 10900,
-    "launch_price": 10900,
+    "launch_price": null,
     "effective_price": 10900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 10900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "packaging-design",
@@ -21171,9 +21536,12 @@ const NS_COURSES = [
     "full_description": "Learn how to design professional retail and direct-to-consumer packaging that combines strong visual communication with reliable production artwork. This practical Packaging Artwork & Print-Ready Design course develops hands-on skills in product research, packaging graphics, dieline interpretation, multi-panel artwork, label typography, print preparation and realistic packaging visualization. Work with supplier-approved dielines to understand cut lines, crease and fold lines, bleed areas, safe margins, glue zones, panel orientation and physical dimensions. Learn how to organize product information, create clear hierarchy, position barcodes, develop consistent brand graphics and prepare label layouts with appropriate regulatory-content review checkpoints. Develop technical skills in CMYK and spot-color fundamentals, overprint awareness, transparency, image resolution, PDF output, color separation previews and Acrobat Pro preflight. Explore the visual effects of paperboard, flexible packaging, labels, coatings, matte and gloss finishes, foil effects and other common packaging treatments while understanding their production limitations. Create realistic packaging mockups and learn how soft proofs, physical samples, supplier feedback and artwork revisions work together in a commercial production workflow. Build a professional portfolio containing an FMCG food label with an illustrative compliance checklist, a cosmetic folding-carton artwork project using an approved dieline, and a premium D2C packaging project with organized print artwork, realistic mockups and a technical preflight report. The programme emphasizes precise artwork, commercially relevant design decisions, responsible labeling practices and professional supplier handover. It does not qualify students to certify regulatory compliance, engineer packaging structures or approve industrial manufacturing specifications.",
     "course_type": "Certification Course",
     "regular_price": 10900,
-    "launch_price": 10900,
+    "launch_price": null,
     "effective_price": 10900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 10900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "logo-design",
@@ -21275,9 +21643,12 @@ const NS_COURSES = [
     "full_description": "Learn how to develop original, professional and versatile logo designs using Adobe Illustrator. This practical Logo Design & Vector Identity Marks course teaches the process of creating a logo, from understanding a client brief and exploring visual ideas to building precise vector artwork and preparing professional final files. Develop research-informed skills in identifying brand characteristics, evaluating competitor logos, exploring symbolism, generating original concepts and selecting visual directions. Learn creative techniques including mind mapping, thumbnail sketching, negative space, letterform exploration and geometric thinking. Master the Adobe Illustrator tools used in professional logo production, including the Pen Tool, Bézier curves, Shape Builder, Pathfinder, compound paths, typographic refinement and optical correction. Create symbol marks, wordmarks, lettermarks and combination marks with strong proportions, clean geometry and considered visual balance. Learn to refine logos through black-and-white testing, small-size legibility, favicon applications, light and dark backgrounds and practical usage contexts. Explore how primary, secondary and compact logo versions support flexible applications without expanding into a complete brand identity system. Build a professional portfolio containing three original logo concepts supported by research and sketches, two fully refined logo solutions, appropriate size and color variations, and a client-ready file delivery package. Learn introductory trademark similarity awareness and understand why professional legal clearance remains a separate process. The programme focuses on original concept development, vector precision, visual problem-solving and professional client delivery—not merely recreating existing logos or generating marks using templates.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "fullstack-foundation",
@@ -21409,7 +21780,10 @@ const NS_COURSES = [
     "regular_price": 39999,
     "launch_price": 29999,
     "effective_price": 29999,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 39999,
+    "launch_fee": 29999,
+    "launchBatchFee": 29999
   },
   {
     "id": "python-developer",
@@ -21526,7 +21900,10 @@ const NS_COURSES = [
     "regular_price": 19999,
     "launch_price": 17999,
     "effective_price": 17999,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 19999,
+    "launch_fee": 17999,
+    "launchBatchFee": 17999
   },
   {
     "id": "ai-assisted-full-stack-web-development",
@@ -21726,7 +22103,10 @@ const NS_COURSES = [
     "regular_price": 64900,
     "launch_price": 44900,
     "effective_price": 44900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 64900,
+    "launch_fee": 44900,
+    "launchBatchFee": 44900
   },
   {
     "id": "html-css",
@@ -21801,9 +22181,12 @@ const NS_COURSES = [
     "full_description": "Learn how to build professional, responsive websites from scratch using HTML and CSS—without requiring previous coding experience.\n\nThis practical HTML, CSS & Responsive Web Design course starts with web fundamentals, semantic HTML, page structure, accessible content, links, images, tables and forms.\n\nDevelop professional CSS skills in selectors, the cascade, specificity, typography, spacing, colors, the box model, reusable styles and custom properties.\n\nMaster modern layout techniques using Flexbox, CSS Grid, relative units, responsive images, mobile-first design, media queries and container queries.\n\nLearn to build common website elements such as responsive navigation, hero sections, cards, galleries, buttons, contact forms and footers using clean HTML and CSS.\n\nExplore CSS transitions, carefully controlled animations, keyboard focus indicators and reduced-motion support.\n\nDevelop foundational knowledge of web accessibility, technical SEO, image optimization, Core Web Vitals and page testing.\n\nLearn to translate simple Figma layouts into HTML/CSS, debug websites using Chrome DevTools, organize source files and publish static sites with GitHub Pages.\n\nUse AI tools responsibly to explain code, identify possible CSS issues and review accessibility or responsiveness—while independently testing every suggested change.\n\nBuild two assessed portfolio projects: a responsive business landing page and a multi-page personal or professional portfolio website.\n\nBoth projects must demonstrate responsive layouts, essential keyboard accessibility, organized source code, clear documentation and deployment readiness.\n\nThe programme focuses on real HTML/CSS website development, not JavaScript application logic, React, authentication or backend programming.",
     "course_type": "Certification Course",
     "regular_price": 6900,
-    "launch_price": 6900,
+    "launch_price": null,
     "effective_price": 6900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 6900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "javascript-cert",
@@ -21884,9 +22267,12 @@ const NS_COURSES = [
     "full_description": "Learn how to transform static HTML and CSS websites into functional, interactive browser applications using modern JavaScript and introductory TypeScript.\n\nThis practical Modern JavaScript & TypeScript Foundations course develops strong programming fundamentals before introducing advanced browser interactions, asynchronous programming and professional development tools.\n\nStart with variables, data types, conditions, loops, functions and logical problem-solving. Learn to work confidently with arrays, objects, destructuring, spread and rest syntax, scope, callbacks, closures and JavaScript modules.\n\nBuild interactive website features using the DOM, event listeners, accessible forms, validation, UI state and local browser storage.\n\nMaster asynchronous JavaScript fundamentals through Promises, async/await, Fetch API, JSON, HTTP requests, network errors and API response handling.\n\nLearn introductory TypeScript skills including type annotations, interfaces, unions, type narrowing, basic generics and type-safe application code.\n\nExplore professional development workflows using VS Code, browser DevTools, npm, Vite, ESLint, Vitest and Git/GitHub.\n\nBuild two complete portfolio applications: an interactive business application featuring forms, search/filters and local persistence, and an API-powered application with properly designed loading, empty, success and error states.\n\nDevelop the confidence to explain, debug, test and maintain your code while preparing for more advanced React and Node.js learning.\n\nThe programme focuses on practical JavaScript programming, working browser applications and introductory TypeScript—not advanced React architecture, server-side Node.js or full-stack development.",
     "course_type": "Certification Course",
     "regular_price": 9900,
-    "launch_price": 9900,
+    "launch_price": null,
     "effective_price": 9900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 9900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "react-cert",
@@ -21966,9 +22352,12 @@ const NS_COURSES = [
     "full_description": "Learn how to build professional, interactive and responsive web applications using modern React.js and TypeScript. This practical React.js Frontend Development course teaches component-driven application development through reusable components, JSX, props, state management, Hooks and predictable data flow. Start with React fundamentals, Vite project setup, component composition and reusable application structures. Learn to create interactive interfaces using state, events, controlled form inputs and custom Hooks. Understand state ownership, component communication, React Context and predictable data flow across complex component trees. Integrate client-side routing using React Router, connect real REST APIs, manage loading and error states, and use TypeScript for type-safe props and state management. Write automated component tests with React Testing Library and Vitest, inspect component hierarchies with React DevTools, optimize rendering performance and implement accessible UI patterns. Complete one comprehensive commercial-style React application capstone—either a responsive E-commerce storefront or a business dashboard—featuring clean component structure, API data fetching, search/filtering, form validation, error handling, automated tests and GitHub Pages static deployment. Graduate with a production-style React portfolio project, verifiable code on GitHub and intermediate frontend development skills ready for modern web applications.",
     "course_type": "Certification Course",
     "regular_price": 10900,
-    "launch_price": 10900,
+    "launch_price": null,
     "effective_price": 10900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 10900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "node-js",
@@ -22045,9 +22434,12 @@ const NS_COURSES = [
     "full_description": "Learn to build practical backend systems using Node.js, Express and PostgreSQL. This hands-on Node.js Backend Development with Express course teaches server-side JavaScript, REST API development, relational database integration, authentication, authorization, testing and backend deployment. Start by understanding how Node.js operates outside the browser, how asynchronous I/O works, and how to use modules, npm, environment variables, filesystem operations and debugging tools. Develop HTTP APIs using Express. Learn routing, middleware, controllers, request and response handling, validation and structured error responses. Connect applications to PostgreSQL using a maintained Node.js database client. Build CRUD operations with parameterized SQL, database constraints, schema migrations, transactions and reliable connection management. Implement user authentication and practical backend security controls, including secure password hashing, session or token concepts, role checks, resource ownership verification, input validation and rate limiting. Develop an understanding of object-level authorization so authenticated users can access only records they are permitted to read or modify. Learn backend reliability through automated unit and integration tests, error handling, structured logging, environment separation, API documentation and debugging workflows. Complete a portfolio-ready business operations REST API featuring a PostgreSQL database, authenticated users, protected CRUD operations, authorization tests and a deployable demonstration. This programme emphasizes maintainable code, correct API behavior, database reliability, security fundamentals and working technical evidence.",
     "course_type": "Certification Course",
     "regular_price": 10900,
-    "launch_price": 10900,
+    "launch_price": null,
     "effective_price": 10900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 10900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "sql-basics",
@@ -22117,9 +22509,12 @@ const NS_COURSES = [
     "full_description": "Learn how to organize, query and analyze structured business data using SQL and PostgreSQL—without requiring previous programming experience. This practical SQL & Relational Database Fundamentals course introduces relational database concepts, tables, data types, primary keys, foreign keys and SQL query development. Start by learning to retrieve and filter data using SELECT, WHERE, ORDER BY, DISTINCT, LIMIT and conditional expressions. Develop confidence in combining information across related tables with INNER JOIN, LEFT JOIN and multi-table queries. Learn to produce business reports using aggregate functions, GROUP BY, HAVING, CASE expressions, subqueries and Common Table Expressions. Explore introductory window functions for ranking and comparing records without losing individual row detail. Build reliable relational databases using CREATE TABLE, ALTER TABLE, constraints and safe INSERT, UPDATE and DELETE operations. Understand transaction fundamentals, database integrity, indexing awareness and the importance of parameterized queries when SQL is used inside applications. Use PostgreSQL with DBeaver or pgAdmin to work on realistic admissions, retail sales or inventory datasets. Complete a portfolio-ready relational database project containing a documented schema, sample data, at least 20 meaningful SQL queries, a data-quality checklist and a business reporting summary. The programme emphasizes practical SQL reasoning, reliable query results, data relationships and business interpretation—not simply memorizing SQL commands.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "git-github",
@@ -22189,9 +22584,12 @@ const NS_COURSES = [
     "full_description": "Comprehensive curriculum covering Git, GitHub, VS Code, Terminal to build production-grade projects.",
     "course_type": "Certification Course",
     "regular_price": 3900,
-    "launch_price": 3900,
+    "launch_price": null,
     "effective_price": 3900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 3900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "rest-apis",
@@ -22261,9 +22659,12 @@ const NS_COURSES = [
     "full_description": "Comprehensive curriculum covering Postman, Express.js, Swagger, Node.js to build production-grade projects.",
     "course_type": "Certification Course",
     "regular_price": 6900,
-    "launch_price": 6900,
+    "launch_price": null,
     "effective_price": 6900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 6900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "ecommerce-mastery",
@@ -22408,7 +22809,10 @@ const NS_COURSES = [
     "regular_price": 49900,
     "launch_price": 34900,
     "effective_price": 34900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 49900,
+    "launch_fee": 34900,
+    "launchBatchFee": 34900
   },
   {
     "id": "nocode-web-pro",
@@ -22530,9 +22934,12 @@ const NS_COURSES = [
     "full_description": "Learn to design, build, publish and maintain professional no-code websites using WordPress, Elementor, Framer and Webflow, enhanced by responsible generative AI workflows.",
     "course_type": "Professional Program",
     "regular_price": 19900,
-    "launch_price": 19900,
+    "launch_price": null,
     "effective_price": 19900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 19900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "wordpress-cert",
@@ -22611,9 +23018,12 @@ const NS_COURSES = [
     "full_description": "Learn to build, customize, publish and maintain professional WordPress websites without advanced coding. Master modern block themes, Gutenberg, responsive layouts, content management, security, SEO and client handover through practical website projects. Go beyond simply building pages. Learn the complete website lifecycle — planning, installation, design, launch, optimization, maintenance and professional client handover. This 6-week certification course covers modern block-based WordPress design, content administration, contact forms, foundational SEO, performance optimization, backup scheduling, website security and structured client handovers, concluding with an assessed 5-page functional business website.",
     "course_type": "Certification Course",
     "regular_price": 6900,
-    "launch_price": 6900,
+    "launch_price": null,
     "effective_price": 6900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 6900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "woocommerce-cert",
@@ -22690,9 +23100,12 @@ const NS_COURSES = [
     "full_description": "Learn how to build, operate, and maintain professional e-commerce stores using WordPress and WooCommerce. This practical 8-week, 64-hour applied specialization focuses on real-world e-commerce operations. Master product catalogue construction with variations and SKUs, modern block-based cart and checkout UX, safe payment gateway sandbox testing, Indian shipping zones and rates, coupons, order fulfillment workflows, refunds, High-Performance Order Storage (HPOS), store analytics, and security maintenance. Complete a comprehensive demonstration store featuring at least 15 products and verified end-to-end checkout scenarios.",
     "course_type": "Certification Course",
     "regular_price": 9900,
-    "launch_price": 9900,
+    "launch_price": null,
     "effective_price": 9900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 9900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "shopify-cert",
@@ -22768,7 +23181,10 @@ const NS_COURSES = [
     "regular_price": 12900,
     "launch_price": 9900,
     "effective_price": 9900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 12900,
+    "launch_fee": 9900,
+    "launchBatchFee": 9900
   },
   {
     "id": "elementor-cert",
@@ -22838,9 +23254,12 @@ const NS_COURSES = [
     "full_description": "Learn to design professional WordPress websites using Elementor's visual design tools. Build modern responsive layouts with Flexbox containers, establish reusable styling systems, create consistent site templates and develop conversion-focused landing pages. Practice website performance, responsive testing, essential accessibility, form integration and professional client handover.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "webflow-cert",
@@ -22919,7 +23338,10 @@ const NS_COURSES = [
     "regular_price": 10900,
     "launch_price": 8900,
     "effective_price": 8900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 10900,
+    "launch_fee": 8900,
+    "launchBatchFee": 8900
   },
   {
     "id": "framer-cert",
@@ -22995,9 +23417,12 @@ const NS_COURSES = [
     "full_description": "Turn creative website concepts into interactive, responsive and shareable web experiences using Framer. Learn visual website construction, responsive design systems, reusable components, purposeful motion, CMS-driven content and publishing workflows through practical projects. Develop a complete multi-page website for a startup, creative agency or professional portfolio. Use AI assistance responsibly, refine the design manually and demonstrate professional quality through responsive testing, accessibility checks and client documentation.",
     "course_type": "Certification Course",
     "regular_price": 7900,
-    "launch_price": 7900,
+    "launch_price": null,
     "effective_price": 7900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 7900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "ai-integrated-video-editing-motion-graphics-professional",
@@ -23216,7 +23641,10 @@ const NS_COURSES = [
     "regular_price": 69900,
     "launch_price": 49900,
     "effective_price": 49900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 69900,
+    "launch_fee": 49900,
+    "launchBatchFee": 49900
   },
   {
     "id": "video-pro",
@@ -23348,7 +23776,10 @@ const NS_COURSES = [
     "regular_price": 35900,
     "launch_price": 24900,
     "effective_price": 24900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 35900,
+    "launch_fee": 24900,
+    "launchBatchFee": 24900
   },
   {
     "id": "generative-ai-video-production-professional",
@@ -23498,7 +23929,10 @@ const NS_COURSES = [
     "regular_price": 39900,
     "launch_price": 29900,
     "effective_price": 29900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 39900,
+    "launch_fee": 29900,
+    "launchBatchFee": 29900
   },
   {
     "id": "adobe-premiere-pro",
@@ -23569,9 +24003,12 @@ const NS_COURSES = [
     "full_description": "Learn to transform unedited video clips into polished stories using professional editing techniques. Develop practical control over timelines, trimming, dialogue, B-roll, audio mixing, colour correction, titles, captions and delivery settings. Work through realistic interview and commercial editing briefs, then adapt content for mobile-first platforms. Submit not only finished videos but also organized source media, editable project files, export configurations and documented client revisions.",
     "course_type": "Certification Course",
     "regular_price": 7900,
-    "launch_price": 7900,
+    "launch_price": null,
     "effective_price": 7900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 7900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "after-effects",
@@ -23649,7 +24086,10 @@ const NS_COURSES = [
     "regular_price": 10900,
     "launch_price": 8900,
     "effective_price": 8900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 10900,
+    "launch_fee": 8900,
+    "launchBatchFee": 8900
   },
   {
     "id": "davinci-resolve",
@@ -23725,7 +24165,10 @@ const NS_COURSES = [
     "regular_price": 9900,
     "launch_price": 7900,
     "effective_price": 7900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 9900,
+    "launch_fee": 7900,
+    "launchBatchFee": 7900
   },
   {
     "id": "reels-editing",
@@ -23799,7 +24242,10 @@ const NS_COURSES = [
     "regular_price": 4900,
     "launch_price": 3900,
     "effective_price": 3900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 4900,
+    "launch_fee": 3900,
+    "launchBatchFee": 3900
   },
   {
     "id": "motion-graphics-essentials",
@@ -23867,9 +24313,12 @@ const NS_COURSES = [
     "full_description": "Learn how movement transforms static visual design into engaging communication. Understand animation timing, spacing, anticipation, easing and follow-through, then apply these principles in Adobe After Effects. Create original shape animations, kinetic typography, logo reveals, reusable titles and promotional motion graphics. Develop practical control over keyframes, visual rhythm, transitions, sound synchronization and professional exports.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "archviz-mastery",
@@ -24040,7 +24489,10 @@ const NS_COURSES = [
     "regular_price": 69900,
     "launch_price": 44900,
     "effective_price": 44900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 69900,
+    "launch_fee": 44900,
+    "launchBatchFee": 44900
   },
   {
     "id": "3d-viz-pro",
@@ -24196,7 +24648,10 @@ const NS_COURSES = [
     "regular_price": 39900,
     "launch_price": 29900,
     "effective_price": 29900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 39900,
+    "launch_fee": 29900,
+    "launchBatchFee": 29900
   },
   {
     "id": "blender-cert",
@@ -24272,9 +24727,12 @@ const NS_COURSES = [
     "full_description": "Learn the complete foundation of 3D visual creation using Blender. Develop practical skills in mesh modeling, object construction, modifiers, UV unwrapping, realistic materials, lighting and camera composition. Progress from simple geometric objects to original product models and professional presentation scenes. Explore Blender's powerful rendering engines, introductory Geometry Nodes and basic animation to create still visuals and product turntables.",
     "course_type": "Certification Course",
     "regular_price": 9900,
-    "launch_price": 9900,
+    "launch_price": null,
     "effective_price": 9900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 9900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "3ds-max-cert",
@@ -24347,9 +24805,12 @@ const NS_COURSES = [
     "full_description": "Learn to transform architectural plans into accurate and well-organized 3D scenes using Autodesk 3ds Max. Develop practical modeling skills with Editable Poly, splines, modifiers, object snapping and measured construction. Build walls, floors, ceilings, doors, windows, stairs and essential furniture, then assemble a complete residential interior with organized materials and camera views. Prepare the final scene for professional rendering or real-time visualization workflows.",
     "course_type": "Certification Course",
     "regular_price": 10900,
-    "launch_price": 10900,
+    "launch_price": null,
     "effective_price": 10900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 10900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "v-ray-cert",
@@ -24428,9 +24889,12 @@ const NS_COURSES = [
     "full_description": "Learn to transform prepared 3D architectural scenes into convincing visual presentations. Develop practical control over V-Ray materials, realistic daylight and artificial lighting, camera exposure, global illumination and rendering quality. Understand why materials react differently to light, how to develop consistent interior and exterior lighting, how to identify noise and render bottlenecks, and how to improve the final image using V-Ray Frame Buffer and post-production workflows.",
     "course_type": "Certification Course",
     "regular_price": 8900,
-    "launch_price": 8900,
+    "launch_price": null,
     "effective_price": 8900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 8900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "twinmotion-cert",
@@ -24508,9 +24972,12 @@ const NS_COURSES = [
     "full_description": "Learn to transform existing architectural and interior models into compelling visual presentations with Twinmotion. Develop practical skills in importing 3D scenes, refining materials, creating natural and artificial lighting, adding landscapes and environmental assets, and preparing realistic architectural images. Build camera sequences and cinematic walkthroughs, explore day and evening presentation options, and deliver client-ready visual experiences using professional scene optimization, export and handover workflows.",
     "course_type": "Certification Course",
     "regular_price": 6900,
-    "launch_price": 6900,
+    "launch_price": null,
     "effective_price": 6900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 6900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "cinema-4d-cert",
@@ -24590,7 +25057,10 @@ const NS_COURSES = [
     "regular_price": 11900,
     "launch_price": 9900,
     "effective_price": 9900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 11900,
+    "launch_fee": 9900,
+    "launchBatchFee": 9900
   },
   {
     "id": "unreal-engine-basics",
@@ -24675,7 +25145,10 @@ const NS_COURSES = [
     "regular_price": 10900,
     "launch_price": 8900,
     "effective_price": 8900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 10900,
+    "launch_fee": 8900,
+    "launchBatchFee": 8900
   },
   {
     "id": "freelancing-client-acquisition-professional",
@@ -24700,7 +25173,7 @@ const NS_COURSES = [
     "price": 19900,
     "originalPrice": 29900,
     "regularPrice": 29900,
-    "launchBatchFee": 24900,
+    "launchBatchFee": 19900,
     "rating": 4.9,
     "reviews": 210,
     "students": 1350,
@@ -24851,7 +25324,8 @@ const NS_COURSES = [
     "regular_price": 29900,
     "launch_price": 19900,
     "effective_price": 19900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 19900
   },
   {
     "id": "career-launch-placement-readiness-professional",
@@ -25005,7 +25479,8 @@ const NS_COURSES = [
     "regular_price": 19900,
     "launch_price": 14900,
     "effective_price": 14900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 14900
   },
   {
     "id": "resume-building",
@@ -25081,9 +25556,12 @@ const NS_COURSES = [
     "full_description": "Learn to organize your education, skills, experience and project achievements into a clear, professional resume. Understand how applicant-tracking systems are used, choose readable formatting and present your qualifications with accurate, relevant language. Practice analyzing real job descriptions, developing accomplishment-focused bullet points and preparing targeted applications. Use AI responsibly for language refinement while verifying every claim. Complete the course with a master resume, two tailored versions, a personalized cover letter and a requirements-matching worksheet.",
     "course_type": "Certification Course",
     "regular_price": 2900,
-    "launch_price": 2900,
+    "launch_price": null,
     "effective_price": 2900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 2900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "linkedin-optimisation",
@@ -25160,9 +25638,12 @@ const NS_COURSES = [
     "full_description": "Learn to build a credible professional identity on LinkedIn by presenting your real skills, experience, education and projects clearly. Develop targeted headlines, professional summaries, well-organized profile sections and evidence-backed work samples. Explore LinkedIn job discovery, career preferences, professional networking and thoughtful content creation. Learn to communicate with recruiters, peers and industry professionals respectfully while managing your privacy and online presence.",
     "course_type": "Certification Course",
     "regular_price": 3900,
-    "launch_price": 3900,
+    "launch_price": null,
     "effective_price": 3900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 3900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "interview-preparation",
@@ -25237,9 +25718,12 @@ const NS_COURSES = [
     "full_description": "Learn how to prepare for interviews with a clear understanding of the role, employer expectations and your own professional evidence. Develop structured answers, explain your projects, communicate your strengths and handle common behavioural and situational questions. Practice in-person and digital interview formats, improve your professional introduction and learn to respond thoughtfully to questions about teamwork, challenges, achievements and career goals. Complete two assessed mock interviews and use structured feedback to strengthen your performance.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "client-communication",
@@ -25315,9 +25799,12 @@ const NS_COURSES = [
     "full_description": "Learn to communicate professionally with clients throughout a project. Develop practical skills in gathering requirements, conducting discovery conversations, writing kickoff summaries, preparing status updates and requesting clear feedback. Practise handling changes, delays and difficult conversations with professionalism and accountability. Build reusable communication templates and complete a simulated client project that demonstrates onboarding, coordination, revisions, escalation and final handover.",
     "course_type": "Certification Course",
     "regular_price": 3900,
-    "launch_price": 3900,
+    "launch_price": null,
     "effective_price": 3900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 3900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "proposal-writing",
@@ -25393,9 +25880,12 @@ const NS_COURSES = [
     "full_description": "Learn to evaluate freelance opportunities, clarify client requirements and develop proposals that address real business needs. Understand how to present relevant work, define a practical project approach, describe deliverables and estimate costs using a repeatable pricing framework. Practise writing proposals for fixed-price projects, milestone-based engagements and recurring services. Learn to prepare Statements of Work, communicate pricing assumptions, present your approach professionally and follow up respectfully.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "agency-building",
@@ -25481,7 +25971,10 @@ const NS_COURSES = [
     "regular_price": 12900,
     "launch_price": 9900,
     "effective_price": 9900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 12900,
+    "launch_fee": 9900,
+    "launchBatchFee": 9900
   },
   {
     "id": "fiverr-success",
@@ -25557,9 +26050,12 @@ const NS_COURSES = [
     "full_description": "Learn how Fiverr's service marketplace works and develop practical skills in selecting a suitable niche, presenting original work, writing clear gig descriptions and packaging your services for potential buyers. Understand buyer requirements, realistic delivery times, revisions, seller fees and order quality standards. Build two complete gig dossiers, compare their pricing and practise a full order workflow before deciding whether to publish a service.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "upwork-success",
@@ -25636,9 +26132,12 @@ const NS_COURSES = [
     "full_description": "Learn how to present your existing service skills professionally on Upwork, evaluate suitable job opportunities and prepare relevant proposals. Understand how Connects work, estimate application costs and decide when a project is worth pursuing. Explore client interviews, hourly and fixed-price contracts, funded milestones, payment protection, platform communication rules and professional project delivery. Complete an evidence-based portfolio with opportunity assessments, proposals, a financial model and a simulated client interview.",
     "course_type": "Certification Course",
     "regular_price": 6900,
-    "launch_price": 6900,
+    "launch_price": null,
     "effective_price": 6900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 6900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "business-english",
@@ -25662,7 +26161,7 @@ const NS_COURSES = [
     "price": 19900,
     "originalPrice": 29900,
     "regularPrice": 29900,
-    "launchBatchFee": 29900,
+    "launchBatchFee": 19900,
     "rating": 4.9,
     "reviews": 195,
     "students": 1320,
@@ -25839,7 +26338,8 @@ const NS_COURSES = [
     "regular_price": 29900,
     "launch_price": 19900,
     "effective_price": 19900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 19900
   },
   {
     "id": "spoken-english-pro",
@@ -25863,7 +26363,7 @@ const NS_COURSES = [
     "price": 9900,
     "originalPrice": 12900,
     "regularPrice": 12900,
-    "launchBatchFee": 12900,
+    "launchBatchFee": 9900,
     "rating": 4.8,
     "reviews": 190,
     "students": 1150,
@@ -25987,7 +26487,8 @@ const NS_COURSES = [
     "regular_price": 12900,
     "launch_price": 9900,
     "effective_price": 9900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 9900
   },
   {
     "id": "spoken-english-cert",
@@ -26060,9 +26561,12 @@ const NS_COURSES = [
     "full_description": "Build your everyday English communication foundation through guided conversations, practical sentence patterns and useful vocabulary. Learn to introduce yourself, ask questions, express simple opinions, make requests and respond to common daily situations. Practise listening and pronunciation with teacher feedback, partner activities and realistic conversation exercises. Compare your baseline and final speaking performance and finish with a personalized plan for continued English development.",
     "course_type": "Certification Course",
     "regular_price": 3900,
-    "launch_price": 3900,
+    "launch_price": null,
     "effective_price": 3900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 3900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "business-communication",
@@ -26132,9 +26636,12 @@ const NS_COURSES = [
     "full_description": "Develop practical written and verbal communication skills for everyday office work. Learn to write clear business emails, structure requests and responses, participate effectively in meetings and document decisions and responsibilities. Practise writing status reports, reporting delays, handling constructive disagreement and communicating professionally across teams. Use modern collaboration tools and AI writing assistance responsibly while checking accuracy and protecting confidential information.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "presentation-skills",
@@ -26208,9 +26715,12 @@ const NS_COURSES = [
     "full_description": "Learn how to turn complex information, research and business ideas into clear presentations. Understand your audience, define a central message and organize supporting evidence into a logical story. Develop professional slide layouts, meaningful charts and accessible visuals, then practise delivery through structured rehearsal and recording. Complete a business presentation portfolio with a professional deck, delivery assessment, slide redesign and documented improvements.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "public-speaking",
@@ -26291,9 +26801,12 @@ const NS_COURSES = [
     "full_description": "Develop practical public speaking skills through structured speech preparation, vocal delivery, audience interaction, storytelling, impromptu speaking and guided performance feedback. Learn to communicate ideas effectively in live, virtual and recorded speaking environments. Practise four different speech formats, receive structured instructor and peer feedback, review recorded performances and build a personalized speaking development plan.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "soft-skills",
@@ -26367,9 +26880,12 @@ const NS_COURSES = [
     "full_description": "Develop practical interpersonal and professional habits that support effective work in modern teams. Practise listening, giving and receiving feedback, managing responsibilities, solving problems and responding constructively when workplace situations change. Learn through realistic case studies, collaborative exercises and guided role-plays. Complete a Professional Effectiveness Portfolio with a team charter, prioritization plan, conflict and feedback evaluations, group problem-solving exercise and personal development plan.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "kids-mastery",
@@ -26395,7 +26911,7 @@ const NS_COURSES = [
     "price": 24900,
     "originalPrice": 29900,
     "regularPrice": 29900,
-    "launchBatchFee": 29900,
+    "launchBatchFee": 24900,
     "rating": 4.9,
     "reviews": 160,
     "students": 840,
@@ -26548,7 +27064,8 @@ const NS_COURSES = [
     "regular_price": 29900,
     "launch_price": 24900,
     "effective_price": 24900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 24900
   },
   {
     "id": "young-coders",
@@ -26574,7 +27091,7 @@ const NS_COURSES = [
     "price": 11900,
     "originalPrice": 14900,
     "regularPrice": 14900,
-    "launchBatchFee": 14900,
+    "launchBatchFee": 11900,
     "rating": 4.9,
     "reviews": 120,
     "students": 640,
@@ -26684,7 +27201,8 @@ const NS_COURSES = [
     "regular_price": 14900,
     "launch_price": 11900,
     "effective_price": 11900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 11900
   },
   {
     "id": "scratch-programming",
@@ -26759,9 +27277,12 @@ const NS_COURSES = [
     "full_description": "Scratch makes programming approachable through colourful drag-and-drop coding blocks. Children can create animated characters, build interactive stories and develop simple games while discovering how instructions, events and logical decisions work. Through guided challenges, creative projects and constructive feedback, learners practise planning, testing and improving their own work. They finish with three distinct Scratch projects and a private parent showcase.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "python-for-kids",
@@ -26839,7 +27360,10 @@ const NS_COURSES = [
     "regular_price": 7900,
     "launch_price": 6900,
     "effective_price": 6900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 7900,
+    "launch_fee": 6900,
+    "launchBatchFee": 6900
   },
   {
     "id": "ai-for-kids",
@@ -26915,9 +27439,12 @@ const NS_COURSES = [
     "full_description": "AI is becoming part of the technology children see every day. This course helps young learners understand basic AI concepts through age-appropriate examples, visual machine learning experiments and guided classroom activities. Students learn how training examples influence AI predictions, why models sometimes make mistakes and how to test and improve a basic classifier. They also practise checking AI-generated information and discussing privacy, fairness and responsible technology use.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "robotics-basics",
@@ -26991,9 +27518,12 @@ const NS_COURSES = [
     "full_description": "Introduce your child to physical computing through the BBC micro:bit, a small programmable device with buttons, an LED display and built-in sensors. Students learn to write block-based programs and explore how digital instructions can respond to the world around them. Through supervised circuit-building, sensor experiments and creative challenges, learners develop practical prototypes, test their ideas and troubleshoot problems. The course concludes with three assessed projects and a private inventor showcase.",
     "course_type": "Certification Course",
     "regular_price": 8900,
-    "launch_price": 8900,
+    "launch_price": null,
     "effective_price": 8900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 8900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "web-design-for-kids",
@@ -27063,9 +27593,12 @@ const NS_COURSES = [
     "full_description": "Web Design for Kids — HTML & CSS Foundations is an engaging, age-appropriate, project-based 6-week (32 learning hours) certification program for children aged 10–16. Students learn to build authentic web pages using genuine HTML5 and CSS, mastering document structure, typography, color palettes, spacing, the CSS box model, Flexbox layouts, mobile responsiveness, semantic tags, image alternative text, and browser developer tools. The course culminates in an original personal-interest website portfolio presented through a local browser demonstration or optional parent-approved static showcase, adhering strictly to child privacy and digital safety.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "youtube-mastery",
@@ -27090,7 +27623,7 @@ const NS_COURSES = [
     "price": 22900,
     "originalPrice": 29900,
     "regularPrice": 29900,
-    "launchBatchFee": 29900,
+    "launchBatchFee": 22900,
     "rating": 4.9,
     "reviews": 195,
     "students": 1020,
@@ -27234,7 +27767,8 @@ const NS_COURSES = [
     "regular_price": 29900,
     "launch_price": 22900,
     "effective_price": 22900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 22900
   },
   {
     "id": "content-creator-pro",
@@ -27260,7 +27794,7 @@ const NS_COURSES = [
     "price": 19900,
     "originalPrice": 24900,
     "regularPrice": 24900,
-    "launchBatchFee": 24900,
+    "launchBatchFee": 19900,
     "rating": 4.9,
     "reviews": 165,
     "students": 840,
@@ -27413,7 +27947,8 @@ const NS_COURSES = [
     "regular_price": 24900,
     "launch_price": 19900,
     "effective_price": 19900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 19900
   },
   {
     "id": "youtube-seo",
@@ -27491,9 +28026,12 @@ const NS_COURSES = [
     "full_description": "YouTube SEO, Discovery & Channel Analytics is a comprehensive 4-week (32 learning hours) certification program designed for creators, digital marketers, educators, channel assistants, and content strategists. Students master the mechanics of YouTube Search and recommendation algorithms, audience-intent mapping, competitive content gap analysis, truthful video packaging (titles, descriptions, chapters, thumbnail alignment), and YouTube Studio Analytics. The course emphasizes evidence-based diagnostic evaluation, Shorts versus long-form reporting nuances (including August 2026 view counting updates), responsible experimentation, and concludes with an authoritative YouTube Discovery Audit Pack and 30-day improvement plan.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "thumbnail-design",
@@ -27564,9 +28102,12 @@ const NS_COURSES = [
     "full_description": "YouTube Thumbnail Design & Creative Testing is a rigorous 4-week (32 learning hours) creative-production specialization designed for graphic designers, freelance creatives, content assistants, and YouTube video creators. Students learn to translate real video briefs into compelling, honest, and technically polished thumbnail concepts using Adobe Photoshop (with Canva as an accessible alternative and optional Adobe Firefly for ideation). The course covers visual hierarchy, non-destructive layer masking, lighting and shadow compositing, small-screen mobile legibility, and native YouTube Studio A/B testing evaluated on watch-time share. Learners graduate with a comprehensive 12-thumbnail portfolio spanning six primary concepts, six meaningful variations, two packaging case studies, and editable source deliverables.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "podcast-production",
@@ -27637,7 +28178,10 @@ const NS_COURSES = [
     "regular_price": 7900,
     "launch_price": 6900,
     "effective_price": 6900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 7900,
+    "launch_fee": 6900,
+    "launchBatchFee": 6900
   },
   {
     "id": "personal-branding",
@@ -27708,7 +28252,10 @@ const NS_COURSES = [
     "regular_price": 7900,
     "launch_price": 6900,
     "effective_price": 6900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 7900,
+    "launch_fee": 6900,
+    "launchBatchFee": 6900
   },
   {
     "id": "short-video-strategy",
@@ -27781,9 +28328,12 @@ const NS_COURSES = [
     "full_description": "Short-Form Video Strategy & Content Growth is an intensive 5-week, 40-hour professional certification course designed to move creators, marketing managers, and agency strategists from random video posting to systematic, research-backed campaigns. Master the platform dynamics of Instagram Reels and YouTube Shorts, formulate 3 distinct content pillars, brainstorm a 20-idea research matrix, and write 8 detailed production briefs and scripts with compelling hooks. Learn publishing compliance, experimental hypothesis design, prototype evaluation, and in-depth performance analysis using Instagram Insights and YouTube Studio metrics.",
     "course_type": "Certification Course",
     "regular_price": 6900,
-    "launch_price": 6900,
+    "launch_price": null,
     "effective_price": 6900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 6900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "biz-productivity",
@@ -27886,7 +28436,10 @@ const NS_COURSES = [
     "regular_price": 29900,
     "launch_price": 24900,
     "effective_price": 24900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 29900,
+    "launch_fee": 24900,
+    "launchBatchFee": 24900
   },
   {
     "id": "office-pro",
@@ -28029,7 +28582,7 @@ const NS_COURSES = [
     "hours": 96,
     "guidedHours": 96,
     "regularPrice": 15900,
-    "launchBatchFee": 15900,
+    "launchBatchFee": 12900,
     "course_name": "Office Productivity Professional",
     "fee": 12900,
     "regular_fee": 15900,
@@ -28043,7 +28596,8 @@ const NS_COURSES = [
     "regular_price": 15900,
     "launch_price": 12900,
     "effective_price": 12900,
-    "offer_active": true
+    "offer_active": true,
+    "launch_fee": 12900
   },
   {
     "id": "microsoft-excel",
@@ -28170,7 +28724,10 @@ const NS_COURSES = [
     "regular_price": 6900,
     "launch_price": 5900,
     "effective_price": 5900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 6900,
+    "launch_fee": 5900,
+    "launchBatchFee": 5900
   },
   {
     "id": "microsoft-word",
@@ -28289,9 +28846,12 @@ const NS_COURSES = [
     "full_description": "Microsoft Word — Professional Documents & Mail Merge is a practical 3-week, 24-hour certification course designed to develop everyday workplace documentation skills. Learn to format business letters and structured multi-page reports with semantic heading styles, Navigation Pane organization, and automatic tables of contents. Create reusable corporate templates with content controls, execute bulk personalized mail merges from Excel data, review collaborative edits with Track Changes, run Accessibility Checker, and export verified, print-ready PDF files.",
     "course_type": "Certification Course",
     "regular_price": 3900,
-    "launch_price": 3900,
+    "launch_price": null,
     "effective_price": 3900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 3900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "microsoft-powerpoint",
@@ -28409,9 +28969,12 @@ const NS_COURSES = [
     "full_description": "Microsoft PowerPoint — Professional Presentation Design is a 4-week, 32-hour practical certification course designed to teach corporate slide production and information design. Master visual hierarchy, typography, grids, whitespace, Slide Master architecture, and custom layout creation. Construct editable PowerPoint charts, integrate Excel data, design process infographics, apply purposeful animations including Morph, configure technical Presenter View, run Accessibility Checker, and export verified, print-ready PDF decks.",
     "course_type": "Certification Course",
     "regular_price": 4900,
-    "launch_price": 4900,
+    "launch_price": null,
     "effective_price": 4900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 4900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "google-workspace",
@@ -28552,9 +29115,12 @@ const NS_COURSES = [
     "full_description": "Learn practical Google Workspace workflows with Gmail, Drive, Docs, Sheets, Slides, Calendar, Meet and Forms. Develop secure collaboration, professional communication, file management and coordinated office operations, including responsible Gemini assistance where available.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "notion-cert",
@@ -28689,9 +29255,12 @@ const NS_COURSES = [
     "full_description": "Learn Notion to create structured team workspaces, connected databases, project trackers, knowledge bases and reusable operating systems. Build practical documentation and workflow systems with collaboration, permissions and responsible AI assistance.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "id": "clickup-cert",
@@ -28830,9 +29399,12 @@ const NS_COURSES = [
     "full_description": "Learn to manage projects using ClickUp through task hierarchies, team workflows, custom fields, views, timelines, dashboards and introductory automation. Build practical systems for tracking deadlines, responsibilities and delivery quality.",
     "course_type": "Certification Course",
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "course_id": "microsoft-copilot",
@@ -31783,9 +32355,12 @@ const NS_COURSES = [
     },
     "originalFee": 5900,
     "regular_price": 5900,
-    "launch_price": 5900,
+    "launch_price": null,
     "effective_price": 5900,
-    "offer_active": false
+    "offer_active": false,
+    "regularPrice": 5900,
+    "launch_fee": null,
+    "launchBatchFee": null
   },
   {
     "course_id": "tally-gst",
@@ -36138,7 +36713,10 @@ const NS_COURSES = [
     "regular_price": 9900,
     "launch_price": 6900,
     "effective_price": 6900,
-    "offer_active": true
+    "offer_active": true,
+    "regularPrice": 9900,
+    "launch_fee": 6900,
+    "launchBatchFee": 6900
   }
 ];
 
