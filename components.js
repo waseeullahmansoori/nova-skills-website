@@ -1861,7 +1861,7 @@ function injectEnrollmentModalHTML() {
         <!-- FORM COLUMN (Right on Desktop / Form on Mobile) -->
         <div class="enroll-modal-form-col">
           
-          <div id="enroll-form-container">
+          <div id="enroll-form-container" class="enroll-form-container">
             <form id="course-enrollment-form" class="enroll-form" novalidate>
               
               <input type="hidden" id="enroll-course-display" name="courseName" />
@@ -1925,9 +1925,9 @@ function injectEnrollmentModalHTML() {
           </div>
 
           <!-- Success View Container -->
-          <div id="enroll-success-container" class="enroll-success-view" hidden>
-            <div class="success-icon-badge">🎉</div>
-            <h3 class="success-title">Enquiry Submitted Successfully</h3>
+          <div id="enroll-success-container" class="enroll-success-view" hidden role="status" aria-live="polite">
+            <div class="success-icon-badge" aria-hidden="true">🎉</div>
+            <h3 class="success-title" id="enroll-success-title" tabindex="-1">Enquiry Submitted Successfully</h3>
             <p class="success-desc">
               Thank you! Our admissions team will contact you using the details provided to guide you through the syllabus, batch timings, and enrolment steps.
             </p>
@@ -2018,8 +2018,161 @@ const COURSE_ID_ALIASES = {
   'ai-video-pro': 'generative-ai-video-production-professional'
 };
 
+/**
+ * Admission Enquiry Modal State Manager
+ * Strictly controls visibility, accessibility, and UI states.
+ * States:
+ *   - 'idle': Pristine form ready for user input. Success container strictly hidden.
+ *   - 'submitting': Submission in progress. Submit button disabled with spinner.
+ *   - 'success': Backend confirmed receipt. Form hidden, success view visible and focused.
+ *   - 'error': Backend error or failure. Form preserved (fields NOT cleared), error message shown.
+ */
+function setEnrollModalState(state, options = {}) {
+  const modal = document.getElementById('course-enrollment-modal');
+  if (!modal) return;
+
+  const form = document.getElementById('course-enrollment-form');
+  const formContainer = document.getElementById('enroll-form-container');
+  const successContainer = document.getElementById('enroll-success-container');
+  const submitBtn = document.getElementById('enroll-submit-btn');
+  const btnText = document.getElementById('enroll-btn-text');
+  const errDiv = document.getElementById('enroll-form-error');
+
+  modal.setAttribute('data-state', state);
+
+  if (state === 'idle') {
+    if (form) {
+      delete form.dataset.submitting;
+    }
+    if (formContainer) {
+      formContainer.removeAttribute('hidden');
+      formContainer.style.display = '';
+    }
+    if (successContainer) {
+      successContainer.setAttribute('hidden', '');
+      successContainer.style.display = 'none';
+    }
+    if (submitBtn) {
+      submitBtn.removeAttribute('disabled');
+      submitBtn.disabled = false;
+      if (btnText) {
+        btnText.innerHTML = 'Submit Enquiry →';
+      } else {
+        submitBtn.innerHTML = '<span id="enroll-btn-text">Submit Enquiry →</span>';
+      }
+    }
+    if (errDiv) {
+      errDiv.textContent = '';
+      errDiv.setAttribute('hidden', '');
+      errDiv.style.display = 'none';
+    }
+    clearAllFieldErrors();
+
+    // Reset container and dialog scrolling so user starts cleanly at the top
+    const scrollContainer = modal.querySelector('.enroll-modal-container');
+    if (scrollContainer) scrollContainer.scrollTop = 0;
+    const dialog = modal.querySelector('.enroll-modal-dialog');
+    if (dialog) dialog.scrollTop = 0;
+  }
+  else if (state === 'submitting') {
+    if (form) {
+      form.dataset.submitting = 'true';
+    }
+    if (formContainer) {
+      formContainer.removeAttribute('hidden');
+      formContainer.style.display = '';
+    }
+    if (successContainer) {
+      successContainer.setAttribute('hidden', '');
+      successContainer.style.display = 'none';
+    }
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('disabled', 'true');
+      if (btnText) {
+        btnText.innerHTML = '<span class="btn-spinner"></span> Submitting Enquiry...';
+      } else {
+        submitBtn.innerHTML = '<span class="btn-spinner"></span> Submitting Enquiry...';
+      }
+    }
+    if (errDiv) {
+      errDiv.textContent = '';
+      errDiv.setAttribute('hidden', '');
+      errDiv.style.display = 'none';
+    }
+  }
+  else if (state === 'success') {
+    if (form) {
+      delete form.dataset.submitting;
+    }
+    if (formContainer) {
+      formContainer.setAttribute('hidden', '');
+      formContainer.style.display = 'none';
+    }
+    if (successContainer) {
+      successContainer.removeAttribute('hidden');
+      successContainer.style.display = 'flex';
+      successContainer.style.removeProperty('display'); // Let CSS handle flex
+    }
+    if (errDiv) {
+      errDiv.textContent = '';
+      errDiv.setAttribute('hidden', '');
+      errDiv.style.display = 'none';
+    }
+
+    // Scroll container to top immediately so user sees success header without scrolling
+    const scrollContainer = modal.querySelector('.enroll-modal-container');
+    if (scrollContainer) scrollContainer.scrollTop = 0;
+    const dialog = modal.querySelector('.enroll-modal-dialog');
+    if (dialog) dialog.scrollTop = 0;
+
+    // Accessibility focus management
+    const successTitle = document.getElementById('enroll-success-title') || modal.querySelector('.success-title');
+    if (successTitle) {
+      successTitle.setAttribute('tabindex', '-1');
+      try { successTitle.focus(); } catch (e) {}
+    } else {
+      const closeBtn = document.getElementById('success-close-btn');
+      if (closeBtn) {
+        try { closeBtn.focus(); } catch (e) {}
+      }
+    }
+  }
+  else if (state === 'error') {
+    if (form) {
+      delete form.dataset.submitting;
+    }
+    if (formContainer) {
+      formContainer.removeAttribute('hidden');
+      formContainer.style.display = '';
+    }
+    if (successContainer) {
+      successContainer.setAttribute('hidden', '');
+      successContainer.style.display = 'none';
+    }
+    if (submitBtn) {
+      submitBtn.removeAttribute('disabled');
+      submitBtn.disabled = false;
+      if (btnText) {
+        btnText.innerHTML = 'Submit Enquiry →';
+      } else {
+        submitBtn.innerHTML = '<span id="enroll-btn-text">Submit Enquiry →</span>';
+      }
+    }
+    if (errDiv) {
+      errDiv.textContent = options.message || 'Unable to submit enquiry right now. Please check your network and try again.';
+      errDiv.removeAttribute('hidden');
+      errDiv.style.display = 'block';
+    }
+  }
+}
+window.setEnrollModalState = setEnrollModalState;
+
 function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
   injectEnrollmentModalHTML();
+
+  // Increment session counter to invalidate any pending in-flight async callbacks
+  window._currentEnrollSessionId = (window._currentEnrollSessionId || 0) + 1;
 
   // Save the currently active trigger element to restore focus on close
   window._lastActiveEnrollTrigger = document.activeElement;
@@ -2160,18 +2313,7 @@ function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
   if (cityInput) cityInput.value = '';
   if (msgInput) msgInput.value = '';
 
-  clearAllFieldErrors();
-  if (errDiv) {
-    errDiv.textContent = '';
-    errDiv.setAttribute('hidden', '');
-  }
-  if (formContainer) formContainer.removeAttribute('hidden');
-  if (successContainer) successContainer.setAttribute('hidden', '');
-  if (submitBtn) {
-    submitBtn.removeAttribute('disabled');
-    const btnText = document.getElementById('enroll-btn-text');
-    if (btnText) btnText.textContent = 'Submit Enquiry →';
-  }
+  setEnrollModalState('idle');
 
   // Hide floating widgets while modal is open
   document.body.classList.add('modal-open-hide-widgets');
@@ -2190,6 +2332,8 @@ window.openCourseEnrollModal = openEnrollmentModal;
 window.openCourseEnrollment = openEnrollmentModal;
 
 function closeEnrollmentModal() {
+  // Invalidate any pending in-flight async callback on close
+  window._currentEnrollSessionId = (window._currentEnrollSessionId || 0) + 1;
   const modal = document.getElementById('course-enrollment-modal');
   // Re-enable floating widgets
   document.body.classList.remove('modal-open-hide-widgets');
@@ -2198,6 +2342,7 @@ function closeEnrollmentModal() {
     modal.classList.remove('open');
     setTimeout(() => {
       modal.hidden = true;
+      setEnrollModalState('idle');
       document.body.style.overflow = '';
       if (window._lastActiveEnrollTrigger && typeof window._lastActiveEnrollTrigger.focus === 'function') {
         window._lastActiveEnrollTrigger.focus();
@@ -2233,15 +2378,11 @@ async function handleEnrollmentSubmit(e) {
   e.preventDefault();
 
   const form = document.getElementById('course-enrollment-form');
-  const errDiv = document.getElementById('enroll-form-error');
-  const formContainer = document.getElementById('enroll-form-container');
-  const successContainer = document.getElementById('enroll-success-container');
-  const submitBtn = document.getElementById('enroll-submit-btn');
+  if (!form) return;
 
-  clearAllFieldErrors();
-  if (errDiv) {
-    errDiv.textContent = '';
-    errDiv.setAttribute('hidden', '');
+  // Prevent duplicate submissions
+  if (form.dataset.submitting === 'true') {
+    return;
   }
 
   const courseName = document.getElementById('enroll-course-display')?.value || '';
@@ -2262,6 +2403,13 @@ async function handleEnrollmentSubmit(e) {
   const email = emailInput?.value.trim() || '';
   const city = cityInput?.value.trim() || '';
   const userMessage = messageInput?.value.trim() || '';
+
+  clearAllFieldErrors();
+  const errDiv = document.getElementById('enroll-form-error');
+  if (errDiv) {
+    errDiv.textContent = '';
+    errDiv.setAttribute('hidden', '');
+  }
 
   let hasError = false;
 
@@ -2302,6 +2450,10 @@ async function handleEnrollmentSubmit(e) {
     return;
   }
 
+  // Enter submitting state
+  setEnrollModalState('submitting');
+  const submissionSessionId = window._currentEnrollSessionId;
+
   const fullMessageDetails = [
     duration ? `Duration: ${duration}` : '',
     fee ? `Course Fee: ${fee}` : '',
@@ -2313,62 +2465,79 @@ async function handleEnrollmentSubmit(e) {
     ? `${courseName}${academyName ? ' (' + academyName + ')' : ''}` 
     : 'Course Enrollment';
 
-  const success = await submitNovaForm({
-    form,
-    submitBtn,
-    loadingText: 'Submitting Enquiry...',
-    formName: 'course_enrollment',
-    submissionMethod: 'enrollment_modal',
-    data: {
-      name,
-      mobile: cleanPhone,
-      phone: cleanPhone,
-      email,
-      course: courseTitleFull,
-      city,
-      message: fullMessageDetails
-    },
-    onSuccessCallback: () => {
-      // Store in local CRM queue
-      const leadData = {
-        action: 'Course Enrollment Enquiry',
-        timestamp: new Date().toISOString(),
+  const submitBtn = document.getElementById('enroll-submit-btn');
+
+  let success = false;
+  try {
+    success = await submitNovaForm({
+      form,
+      submitBtn,
+      loadingText: 'Submitting Enquiry...',
+      formName: 'course_enrollment',
+      submissionMethod: 'enrollment_modal',
+      data: {
         name,
+        mobile: cleanPhone,
         phone: cleanPhone,
         email,
+        course: courseTitleFull,
         city,
-        message: fullMessageDetails,
-        courseName,
-        academyName,
-        category,
-        duration,
-        fee
-      };
-      try {
-        const existing = JSON.parse(localStorage.getItem('novaskills_enquiries') || '[]');
-        existing.unshift(leadData);
-        localStorage.setItem('novaskills_enquiries', JSON.stringify(existing));
-      } catch (err) {}
+        message: fullMessageDetails
+      },
+      onSuccessCallback: () => {
+        // Discard if modal was closed or reopened during async fetch
+        if (window._currentEnrollSessionId !== submissionSessionId) return;
 
-      // Show Success View inside enrollment modal
-      const successDesc = document.querySelector('#enroll-success-container .success-desc');
-      if (successDesc) {
-        if (selectedPath) {
-          successDesc.innerHTML = `Your course enrollment enquiry for <strong>${courseName}</strong> (${selectedPath}) has been successfully submitted.<br />Our admissions team will contact you using the details provided to guide you through the syllabus, batch timings, and enrolment steps.`;
-        } else {
-          successDesc.innerHTML = `Your course enrollment enquiry for <strong>${courseName}</strong> has been successfully submitted.<br />Our admissions team will contact you using the details provided to guide you through the syllabus, batch timings, and enrolment steps.`;
+        // Store in local CRM queue
+        const leadData = {
+          action: 'Course Enrollment Enquiry',
+          timestamp: new Date().toISOString(),
+          name,
+          phone: cleanPhone,
+          email,
+          city,
+          message: fullMessageDetails,
+          courseName,
+          academyName,
+          category,
+          duration,
+          fee
+        };
+        try {
+          const existing = JSON.parse(localStorage.getItem('novaskills_enquiries') || '[]');
+          existing.unshift(leadData);
+          localStorage.setItem('novaskills_enquiries', JSON.stringify(existing));
+        } catch (err) {}
+
+        // Populate success view description
+        const successDesc = document.querySelector('#enroll-success-container .success-desc');
+        if (successDesc) {
+          if (selectedPath) {
+            successDesc.innerHTML = `Your course enrollment enquiry for <strong>${courseName}</strong> (${selectedPath}) has been successfully submitted.<br />Our admissions team will contact you using the details provided to guide you through the syllabus, batch timings, and enrolment steps.`;
+          } else {
+            successDesc.innerHTML = `Your course enrollment enquiry for <strong>${courseName}</strong> has been successfully submitted.<br />Our admissions team will contact you using the details provided to guide you through the syllabus, batch timings, and enrolment steps.`;
+          }
         }
+
+        // Transition to success state
+        setEnrollModalState('success');
       }
-      if (formContainer) formContainer.setAttribute('hidden', '');
-      if (successContainer) successContainer.removeAttribute('hidden');
-    }
-  });
+    });
+  } catch (err) {
+    console.error('Enquiry submission error:', err);
+    success = false;
+  }
+
+  // Check if session changed while awaiting
+  if (window._currentEnrollSessionId !== submissionSessionId) {
+    return;
+  }
 
   if (!success) {
-    if (errDiv) {
-      errDiv.textContent = 'Unable to submit enquiry right now. Please check your network and try again.';
-      errDiv.removeAttribute('hidden');
-    }
+    // Preserve user inputs, transition to error state
+    setEnrollModalState('error', {
+      message: 'Unable to submit enquiry right now. Please check your network and try again.'
+    });
   }
 }
 

@@ -6906,6 +6906,28 @@ body.modal-open-hide-widgets #sticky-mobile-bar {
   line-height: 1.45;
 }
 
+/* Ensure [hidden] is never overridden by specific display properties */
+[hidden] {
+  display: none !important;
+}
+
+/* Enrollment Modal State Control */
+.enroll-form-container[hidden],
+#enroll-form-container[hidden] {
+  display: none !important;
+}
+
+.enroll-success-view[hidden],
+#enroll-success-container[hidden] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 /* Success View */
 .enroll-success-view {
   text-align: center;
