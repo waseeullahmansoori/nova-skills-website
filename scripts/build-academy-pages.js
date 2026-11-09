@@ -39,6 +39,23 @@ const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(rootDir, 'j
 const dataJs = fs.readFileSync(path.join(rootDir, 'data.js'), 'utf8');
 vm.runInThisContext(dataJs);
 
+// Phase C Pilot: Approved Academy Hero Visual Registry
+const ACADEMY_HERO_VISUALS = {
+  'design': {
+    enabled: true,
+    assetId: 'NS-ACAD-DES-MASTER',
+    approvalStatus: 'approved',
+    desktopSrc: '/images/academies/design/ns-academy-design-hero-desktop-896w.png',
+    tabletSrc: '/images/academies/design/ns-academy-design-hero-tablet-600w.png',
+    mobileSrc: '/images/academies/design/ns-academy-design-hero-mobile-400w.png',
+    alt: 'Graphic design workspace with open brand identity manual, color swatches, and interface wireframes.',
+    caption: 'Industry-Standard Brand Design & UX Studio Setup',
+    aspectRatio: '3 / 4',
+    width: 896,
+    height: 1200
+  }
+};
+
 const ACADEMIES_DATA = {
   'digital-marketing': {
     title: 'Digital Marketing Course & Certification | Nova Skills Academy',
@@ -601,6 +618,7 @@ NS_ACADEMIES.forEach(acad => {
     { q: "Will I receive an industry certificate upon completion?", a: "Yes, every graduate receives an official Nova Skills Certificate of Completion along with verified portfolio projects." }
   ];
 
+  const heroVisual = ACADEMY_HERO_VISUALS[slug];
   const schemaGraph = {
     "@context": "https://schema.org",
     "@graph": [
@@ -681,6 +699,30 @@ NS_ACADEMIES.forEach(acad => {
   const sectionsContent = generateAcademySectionsHTML(acad, academyCourses, seoConfig);
   const safeAcademyName = (acad.name || '').replace(/'/g, "\\'");
 
+    if (heroVisual && heroVisual.enabled) {
+    schemaGraph["@graph"][0]["primaryImageOfPage"] = {
+      "@id": `${canonicalUrl}#heroimage`
+    };
+    schemaGraph["@graph"].push({
+      "@type": "ImageObject",
+      "@id": `${canonicalUrl}#heroimage`,
+      "url": `https://novaskills.in${heroVisual.desktopSrc}`,
+      "contentUrl": `https://novaskills.in${heroVisual.desktopSrc}`,
+      "name": `${acad.name} Professional Studio Workspace`,
+      "description": heroVisual.alt,
+      "caption": heroVisual.caption,
+      "width": heroVisual.width,
+      "height": heroVisual.height,
+      "creator": {
+        "@type": "Organization",
+        "name": "Nova Skills",
+        "url": "https://novaskills.in/"
+      },
+      "license": "https://novaskills.in/terms-and-conditions/",
+      "acquireLicensePage": canonicalUrl
+    });
+  }
+
   const htmlContent = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -736,7 +778,118 @@ NS_ACADEMIES.forEach(acad => {
         min-height: 104px;
       }
     }
-    .academy-hero-section {
+${heroVisual && heroVisual.enabled ? `
+    /* Hero Visual Grid & Responsive Enhancements (Phase C) */
+    .academy-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .academy-hero-grid.hero-grid-control {
+      grid-template-columns: 1fr !important;
+    }
+    .academy-hero-content {
+      min-width: 0;
+    }
+    .academy-hero-visual-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 0;
+    }
+    .academy-hero-visual-frame {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(1, 23, 49, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      background-color: #011731;
+    }
+    .academy-hero-picture {
+      display: block;
+      width: 100%;
+    }
+    .academy-hero-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .academy-hero-visual-frame:hover .academy-hero-img {
+      transform: scale(1.02);
+    }
+    .academy-hero-visual-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 16px;
+      background: linear-gradient(180deg, transparent 0%, rgba(1, 23, 49, 0.92) 100%);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.78rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      backdrop-filter: blur(4px);
+    }
+    .academy-hero-visual-caption .caption-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #75d766;
+      flex-shrink: 0;
+    }
+    .academy-hero-visual-caption .caption-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Tablet Responsive (641px - 1023px) */
+    @media (max-width: 1023px) {
+      .academy-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .academy-hero-visual-frame {
+        max-width: 480px;
+        margin: 0 auto;
+      }
+      .academy-hero-img {
+        max-height: 360px;
+        object-position: center 20%;
+      }
+    }
+
+    /* Mobile Responsive (<= 640px) */
+    @media (max-width: 640px) {
+      .academy-hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .academy-hero-visual-frame {
+        max-width: 100%;
+        border-radius: 12px;
+        margin-top: 4px;
+      }
+      .academy-hero-img {
+        max-height: 200px;
+        aspect-ratio: auto;
+        object-position: center 25%;
+      }
+      .academy-hero-visual-caption {
+        font-size: 0.72rem;
+        padding: 6px 12px;
+      }
+    }
+` : ''}    .academy-hero-section {
       background: linear-gradient(135deg, #011731 0%, #0599a8 100%);
       color: white;
       padding: 60px 0 80px;
@@ -1410,9 +1563,76 @@ ${JSON.stringify(schemaGraph, null, 2)}
   <main id="main-content">
     
     <!-- Hero Banner Section -->
-    <section id="academy-hero-section" class="academy-hero-section">
+    <section id="academy-hero-section" class="academy-hero-section${heroVisual && heroVisual.enabled ? ' academy-hero-with-visual' : ''}">
       <div class="container">
-        <!-- Breadcrumb Navigation -->
+${heroVisual && heroVisual.enabled ? `        <div class="academy-hero-grid">
+          <div class="academy-hero-content">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>›</span>
+              <a href="/courses">Academies</a>
+              <span>›</span>
+              <span id="breadcrumb-selected-academy" style="color:white;">${acad.name}</span>
+            </nav>
+
+            <!-- Hero Content -->
+            <div id="academy-icon-display" class="academy-icon-badge" style="font-size: 3rem; margin-bottom: 12px;">${acad.icon || '🎓'}</div>
+            <h1 id="academy-name-display" class="academy-hero-title">${heroH1}</h1>
+            <p id="academy-desc-display" class="academy-hero-desc">
+              <span class="badge-delivery" style="display:inline-block; background:rgba(117,215,102,0.15); color:#75d766; border:1px solid rgba(117,215,102,0.3); padding:4px 12px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px;">📍 Classroom in Siddharth Nagar • 💻 Live Interactive Online (Pan-India)</span><br>
+              ${acad.description}
+            </p>
+
+            <!-- Accurate Dynamic Stats Pills -->
+            <div class="academy-stats-pills" id="academy-stats-pills">
+              <span id="stat-career-programs" class="stats-pill">💼 Career Programs: ${careerCourses.length}</span>
+              <span id="stat-pro-programs" class="stats-pill">⚡ Professional Programs: ${proCourses.length}</span>
+              <span id="stat-cert-courses" class="stats-pill">📜 Certification Courses: ${certCourses.length}</span>
+              <span id="stat-total-courses" class="stats-pill">📚 Total Courses: ${totalCourses}</span>
+            </div>
+
+            <!-- Action CTAs (Enforce Single Horizontal Row) -->
+            <div class="academy-actions">
+              <button type="button" id="btn-enroll-now" class="btn btn-primary btn-lg" onclick="openEnrollmentModal('', '${(acad.name || '').replace(/'/g, "\\'")}')">Enroll Now →</button>
+              <button type="button" id="btn-free-consultation" class="btn btn-outline btn-lg" onclick="openConsultationPopup()">Free Consultation</button>
+            </div>
+          </div>
+
+          <!-- Hero Visual Column -->
+          <div class="academy-hero-visual-col" id="academy-hero-visual-col">
+            <div class="academy-hero-visual-frame">
+              <picture class="academy-hero-picture">
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="${heroVisual.desktopSrc}"
+                  type="image/png"
+                  width="896"
+                  height="1200">
+                <source
+                  media="(min-width: 641px) and (max-width: 1023px)"
+                  srcset="${heroVisual.tabletSrc}"
+                  type="image/png"
+                  width="600"
+                  height="800">
+                <img
+                  src="${heroVisual.mobileSrc}"
+                  alt="${heroVisual.alt}"
+                  width="400"
+                  height="535"
+                  class="academy-hero-img"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                  onerror="this.closest('.academy-hero-visual-col').style.display='none'">
+              </picture>
+              <div class="academy-hero-visual-caption">
+                <span class="caption-dot"></span>
+                <span class="caption-text">${heroVisual.caption}</span>
+              </div>
+            </div>
+          </div>
+        </div>` : `        <!-- Breadcrumb Navigation -->
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a>
           <span>›</span>
@@ -1441,7 +1661,7 @@ ${JSON.stringify(schemaGraph, null, 2)}
         <div class="academy-actions">
           <button type="button" id="btn-enroll-now" class="btn btn-primary btn-lg" onclick="openEnrollmentModal('', '${(acad.name || '').replace(/'/g, "\\'")}')">Enroll Now →</button>
           <button type="button" id="btn-free-consultation" class="btn btn-outline btn-lg" onclick="openConsultationPopup()">Free Consultation</button>
-        </div>
+        </div>`}
       </div>
     </section>
 
@@ -1499,7 +1719,7 @@ ${sectionsContent}
   <script src="/js/components.min.js?v=2.7.4" defer></script>
   <script src="/nova-ai-widget.js?v=3.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
-  <script src="/js/academy-detail.min.js?v=2.7.4" defer></script>
+  <script src="/js/academy-detail.min.js?v=2.7.4" defer></script>${heroVisual && heroVisual.enabled ? `\n  <script src="/js/academy-hero-experiment.js?v=1.0" defer></script>` : ''}
 </body>
 </html>
 `;
