@@ -628,6 +628,19 @@
       </div>
     </section>
 
+    <!-- COURSE PROJECT SHOWCASE SECTION (EVIDENCE-BASED PILOT) -->
+    <section class="container course-body-section" id="project-showcase-section" style="display:none;">
+      <div class="section-header" style="text-align:left; margin-bottom:32px;">
+        <span class="section-tag" id="showcase-tag">PRACTICAL EVIDENCE</span>
+        <h2 class="section-title">See What You'll <span class="gradient-text">Learn to Create</span></h2>
+        <p class="section-subtitle" style="text-align:left; margin:0;" id="showcase-subtitle">Verified curriculum-aligned demonstration projects showing the real design workflows, software toolchains, and commercial production standards taught in this course.</p>
+      </div>
+
+      <div class="project-showcase-container" id="project-showcase-container">
+        <!-- Populated dynamically ONLY for approved pilot courses -->
+      </div>
+    </section>
+
     <!-- LEARNING JOURNEY ROADMAP SECTION (TEMPLATE C) -->
     <section class="container course-body-section" id="journey-section" style="display:none;">
       <div class="section-header" style="text-align:left; margin-bottom:32px;">
@@ -2282,5 +2295,18 @@
   <script src="/js/components.min.js?v=2.7.0" defer></script>
   <script src="/js/icon-system.js?v=2.2.0" defer></script>
   <script src="/js/course-detail.min.js?v=2.7.0" defer></script>
+  <!-- PROJECT LIGHTBOX MODAL -->
+  <div class="project-lightbox" id="project-lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Project Preview">
+    <div class="project-lightbox-dialog" id="project-lightbox-dialog">
+      <button type="button" class="project-lightbox-close" id="project-lightbox-close" aria-label="Close Project Preview">✕</button>
+      <div class="project-lightbox-img-area">
+        <img id="project-lightbox-img" src="" alt="" />
+      </div>
+      <div class="project-lightbox-info" id="project-lightbox-info">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
