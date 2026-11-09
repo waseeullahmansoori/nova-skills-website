@@ -976,61 +976,152 @@ NS_ACADEMIES.forEach(acad => {
         align-items: flex-start;
       }
     }
+        /* Mobile & Small Tablet (< 768px) */
     @media (max-width: 768px) {
-      .academy-demo-banner, .academy-demo-strip {
-        padding: 20px 0;
+      .academy-demo-banner,
+      .academy-demo-strip {
+        padding: 20px 0 !important;
       }
-      .academy-demo-container, .academy-demo-strip-container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 16px;
+      .academy-demo-container,
+      .academy-demo-strip-container {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 16px !important;
+        padding: 0 18px !important;
       }
       .academy-demo-lead {
-        flex: none;
-        max-width: 100%;
-        width: 100%;
+        flex: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+      }
+      .academy-demo-badge {
+        margin-bottom: 6px !important;
       }
       .academy-demo-heading {
-        font-size: 1.15rem;
+        font-size: 1.2rem !important;
+        line-height: 1.3 !important;
+        margin: 0 !important;
       }
       .academy-demo-benefits {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-        width: 100%;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+        width: 100% !important;
+        flex: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
       .academy-demo-benefit {
-        max-width: 100%;
-        width: 100%;
-        gap: 12px;
-        background: rgba(255,255,255,0.65);
-        border: 1px solid rgba(5,153,168,0.15);
-        border-radius: 10px;
-        padding: 10px 14px;
-        box-sizing: border-box;
+        flex: none !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        background: rgba(255, 255, 255, 0.72) !important;
+        border: 1px solid rgba(5, 153, 168, 0.18) !important;
+        border-radius: 12px !important;
+        padding: 12px 14px !important;
+        box-sizing: border-box !important;
+      }
+      .academy-demo-benefit-icon {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        min-height: 40px !important;
+        max-height: 40px !important;
+        margin-top: 2px !important;
+        flex-shrink: 0 !important;
+        border-radius: 10px !important;
+      }
+      .academy-demo-benefit-icon svg {
+        width: 22px !important;
+        height: 22px !important;
+        min-width: 22px !important;
+        max-width: 22px !important;
+        min-height: 22px !important;
+        max-height: 22px !important;
+      }
+      .academy-demo-benefit-text {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .academy-demo-benefit-text strong {
+        display: block !important;
+        font-size: 0.9375rem !important;
+        font-weight: 700 !important;
+        color: #012B46 !important;
+        line-height: 1.3 !important;
+        margin: 0 0 3px 0 !important;
+        letter-spacing: -0.01em !important;
+      }
+      .academy-demo-benefit-text span {
+        display: block !important;
+        font-size: 0.8125rem !important;
+        color: #475569 !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
       }
       .academy-demo-cta-wrap {
-        width: 100%;
-        align-items: stretch;
+        width: 100% !important;
+        align-items: stretch !important;
+        flex: none !important;
+        margin-top: 2px !important;
       }
       .academy-demo-btn {
         width: 100% !important;
         min-height: 48px !important;
+        height: auto !important;
+        padding: 13px 20px !important;
+        font-size: 0.9375rem !important;
+        font-weight: 700 !important;
+        display: flex !important;
+        align-items: center !important;
         justify-content: center !important;
-        font-size: 0.95rem !important;
-        white-space: normal !important;
         text-align: center !important;
+        white-space: normal !important;
       }
       .academy-demo-microcopy {
-        white-space: normal;
-        text-align: center;
-        margin-top: 6px;
+        white-space: normal !important;
+        text-align: center !important;
+        font-size: 0.75rem !important;
+        color: #64748B !important;
+        margin-top: 6px !important;
+        line-height: 1.3 !important;
       }
     }
+
+    /* Very Small Mobile (< 480px down to 320px) */
     @media (max-width: 480px) {
+      .academy-demo-banner,
+      .academy-demo-strip {
+        padding: 18px 0 !important;
+      }
+      .academy-demo-container,
+      .academy-demo-strip-container {
+        padding: 0 16px !important;
+        gap: 14px !important;
+      }
+      .academy-demo-heading {
+        font-size: 1.125rem !important;
+        line-height: 1.28 !important;
+      }
+      .academy-demo-benefits {
+        gap: 10px !important;
+      }
       .academy-demo-benefit {
-        padding: 8px 10px;
-        gap: 10px;
+        padding: 10px 12px !important;
+        gap: 10px !important;
+        border-radius: 10px !important;
       }
       .academy-demo-benefit-icon {
         width: 38px !important;
@@ -1039,6 +1130,8 @@ NS_ACADEMIES.forEach(acad => {
         max-width: 38px !important;
         min-height: 38px !important;
         max-height: 38px !important;
+        border-radius: 8px !important;
+        margin-top: 1px !important;
       }
       .academy-demo-benefit-icon svg {
         width: 20px !important;
@@ -1049,13 +1142,22 @@ NS_ACADEMIES.forEach(acad => {
         max-height: 20px !important;
       }
       .academy-demo-benefit-text strong {
-        font-size: 0.85rem;
+        font-size: 0.875rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 2px !important;
       }
       .academy-demo-benefit-text span {
-        font-size: 0.725rem;
+        font-size: 0.775rem !important;
+        line-height: 1.35 !important;
+      }
+      .academy-demo-btn {
+        min-height: 48px !important;
+        font-size: 0.9rem !important;
+        padding: 12px 18px !important;
       }
       .academy-demo-microcopy {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
+        margin-top: 5px !important;
       }
     }
   </style>
