@@ -118,6 +118,266 @@
       background: transparent;
       border: 1px solid currentColor;
     }
+    /* Critical Above-the-fold Demo Banner Styles */
+    .academy-demo-banner, .academy-demo-strip {
+      background: linear-gradient(135deg, #EAF3F8 0%, #FFFFFF 100%);
+      border-top: 1px solid rgba(5,153,168,0.22);
+      border-bottom: 1px solid #d0e2ee;
+      padding: 24px 0;
+      color: #011731;
+      box-sizing: border-box;
+    }
+    .academy-demo-banner .container, .academy-demo-strip-container, .academy-demo-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      box-sizing: border-box;
+    }
+    .academy-demo-lead {
+      flex: 0 1 340px;
+      min-width: 260px;
+      box-sizing: border-box;
+    }
+    .academy-demo-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #004672;
+      background: rgba(0,70,114,0.08);
+      border: 1px solid rgba(0,70,114,0.15);
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+    .academy-demo-heading {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #012B46;
+      line-height: 1.28;
+      margin: 0;
+      letter-spacing: -0.015em;
+    }
+    .academy-demo-benefits {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex: 1 1 auto;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .academy-demo-benefit {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1 1 240px;
+      max-width: 320px;
+      box-sizing: border-box;
+    }
+    .academy-demo-benefit-icon {
+      width: 42px !important;
+      height: 42px !important;
+      min-width: 42px !important;
+      max-width: 42px !important;
+      min-height: 42px !important;
+      max-height: 42px !important;
+      border-radius: 10px;
+      background: rgba(5,153,168,0.12);
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: #0599a8 !important;
+      stroke: #0599a8 !important;
+      flex-shrink: 0 !important;
+      flex-grow: 0 !important;
+      box-sizing: border-box !important;
+      overflow: hidden;
+    }
+    .academy-demo-benefit-icon svg {
+      width: 22px !important;
+      height: 22px !important;
+      min-width: 22px !important;
+      max-width: 22px !important;
+      min-height: 22px !important;
+      max-height: 22px !important;
+      color: #0599a8 !important;
+      stroke: #0599a8 !important;
+      stroke-width: 2;
+      display: block !important;
+      flex-shrink: 0 !important;
+      flex-grow: 0 !important;
+    }
+    .academy-demo-benefit-text {
+      flex: 1;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+    .academy-demo-benefit-text strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #012B46;
+      line-height: 1.25;
+      margin: 0 0 2px 0;
+      letter-spacing: -0.01em;
+    }
+    .academy-demo-benefit-text span {
+      display: block;
+      font-size: 0.775rem;
+      color: #475569;
+      line-height: 1.35;
+      margin: 0;
+    }
+    .academy-demo-cta-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      box-sizing: border-box;
+    }
+    .academy-demo-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      min-height: 48px !important;
+      padding: 13px 24px !important;
+      background: linear-gradient(135deg, #012B46 0%, #004672 100%) !important;
+      color: #FFFFFF !important;
+      font-family: inherit !important;
+      font-weight: 700 !important;
+      font-size: 0.9375rem !important;
+      letter-spacing: 0.01em !important;
+      border-radius: 10px !important;
+      border: 1px solid rgba(255,255,255,0.15) !important;
+      cursor: pointer !important;
+      white-space: nowrap !important;
+      box-shadow: 0 4px 14px rgba(1,43,70,0.22) !important;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease !important;
+      box-sizing: border-box !important;
+      text-decoration: none !important;
+    }
+    .academy-demo-btn:hover, .academy-demo-btn:focus-visible {
+      background: linear-gradient(135deg, #003658 0%, #00568c 100%) !important;
+      transform: translateY(-1px) !important;
+      box-shadow: 0 6px 18px rgba(1,43,70,0.3) !important;
+      outline: none !important;
+    }
+    .academy-demo-btn:active {
+      transform: translateY(0) !important;
+      box-shadow: 0 2px 8px rgba(1,43,70,0.2) !important;
+    }
+    .academy-demo-microcopy {
+      font-size: 0.75rem;
+      color: #64748B;
+      font-weight: 500;
+      margin-top: 6px;
+      text-align: center;
+      white-space: nowrap;
+      line-height: 1.3;
+    }
+    @media (max-width: 1199px) {
+      .academy-demo-container, .academy-demo-strip-container {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .academy-demo-lead {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      .academy-demo-benefits {
+        flex: 1 1 auto;
+        justify-content: flex-start;
+      }
+      .academy-demo-cta-wrap {
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 768px) {
+      .academy-demo-banner, .academy-demo-strip {
+        padding: 20px 0;
+      }
+      .academy-demo-container, .academy-demo-strip-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+      }
+      .academy-demo-lead {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+      }
+      .academy-demo-heading {
+        font-size: 1.15rem;
+      }
+      .academy-demo-benefits {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+      }
+      .academy-demo-benefit {
+        max-width: 100%;
+        width: 100%;
+        gap: 12px;
+        background: rgba(255,255,255,0.65);
+        border: 1px solid rgba(5,153,168,0.15);
+        border-radius: 10px;
+        padding: 10px 14px;
+        box-sizing: border-box;
+      }
+      .academy-demo-cta-wrap {
+        width: 100%;
+        align-items: stretch;
+      }
+      .academy-demo-btn {
+        width: 100% !important;
+        min-height: 48px !important;
+        justify-content: center !important;
+        font-size: 0.95rem !important;
+        white-space: normal !important;
+        text-align: center !important;
+      }
+      .academy-demo-microcopy {
+        white-space: normal;
+        text-align: center;
+        margin-top: 6px;
+      }
+    }
+    @media (max-width: 480px) {
+      .academy-demo-benefit {
+        padding: 8px 10px;
+        gap: 10px;
+      }
+      .academy-demo-benefit-icon {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        max-width: 38px !important;
+        min-height: 38px !important;
+        max-height: 38px !important;
+      }
+      .academy-demo-benefit-icon svg {
+        width: 20px !important;
+        height: 20px !important;
+        min-width: 20px !important;
+        max-width: 20px !important;
+        min-height: 20px !important;
+        max-height: 20px !important;
+      }
+      .academy-demo-benefit-text strong {
+        font-size: 0.85rem;
+      }
+      .academy-demo-benefit-text span {
+        font-size: 0.725rem;
+      }
+      .academy-demo-microcopy {
+        font-size: 0.7rem;
+      }
+    }
   </style>
 
   <link rel="stylesheet" href="/css/styles.min.css" media="print" onload="this.media='all'">
@@ -265,37 +525,38 @@
       </div>
     </section>
 
-    <!-- Compact Promotional Band: 2-Day Free Demo & 1:1 Live Online Classes -->
-    <section class="academy-demo-strip" aria-label="Free Demo and Personalized Online Classes">
-      <div class="container academy-demo-strip-container">
+        <!-- Compact Promotional Band: 2-Day Free Demo & 1:1 Live Online Classes -->
+    <section class="academy-demo-banner academy-demo-strip" aria-label="Free Demo and Personalized Online Classes">
+      <div class="container academy-demo-container academy-demo-strip-container">
         <div class="academy-demo-lead">
-          <span class="academy-demo-badge">Experience Before You Enroll</span>
-          <h2 class="academy-demo-heading">Experience the Learning Before You Enroll.</h2>
+          <span class="academy-demo-badge">EXPERIENCE BEFORE YOU ENROLL</span>
+          <h2 class="academy-demo-heading">Explore Your Skills Before You Commit.</h2>
         </div>
         <div class="academy-demo-benefits">
           <div class="academy-demo-benefit">
             <div class="academy-demo-benefit-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
             </div>
             <div class="academy-demo-benefit-text">
               <strong>2 Days Free Demo Classes</strong>
-              <span>Live mentor sessions • 100% Free</span>
+              <span>Experience our practical, mentor-led teaching before enrolling.</span>
             </div>
           </div>
           <div class="academy-demo-benefit">
             <div class="academy-demo-benefit-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
             </div>
             <div class="academy-demo-benefit-text">
               <strong>1:1 Live Online Classes</strong>
-              <span>Where available • Focused attention</span>
+              <span>Personalized live learning for eligible courses, subject to availability.</span>
             </div>
           </div>
         </div>
-        <div>
+        <div class="academy-demo-cta-wrap">
           <button type="button" class="academy-demo-btn" onclick="if(typeof openDemoModal==='function'){openDemoModal({academyId:'no-code-web', academyName:'No-Code Web Academy'});}">
             Book Your Free Demo →
           </button>
+          <div class="academy-demo-microcopy">Free demo booking • No admission commitment</div>
         </div>
       </div>
     </section>
