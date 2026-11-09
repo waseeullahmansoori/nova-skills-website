@@ -56,8 +56,8 @@ function buildDirectoryHtml() {
     const additionalTitles = courseRes.additionalCourses.map(c => c.title).slice(0, 3);
     const keywords = [loc.city, loc.state, loc.stateCode, ...additionalTitles].join(' ').toLowerCase();
 
-    // Publication check (Gate 05): If published in later phase, link to /branches/{slug}/, otherwise link to /courses.html
-    const isPublished = loc.publicationStatus === 'published';
+    // Publication check (Gate 05 & Gate 19): Link verified preview/published city pages to /branches/{slug}/
+    const isPublished = loc.publicationStatus === 'published' || loc.publicationStatus === 'preview_ready';
     const exploreHref = isPublished ? `/branches/${loc.slug}/` : '/courses.html';
     const exploreLabel = isPublished ? 'View City Page →' : 'Explore Courses';
 
