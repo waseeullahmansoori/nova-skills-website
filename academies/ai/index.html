@@ -118,6 +118,98 @@
       background: transparent;
       border: 1px solid currentColor;
     }
+    /* Academy Hero Action CTAs — Enforce Single Horizontal Row */
+    .academy-hero-section .academy-actions {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      align-items: center !important;
+      gap: 14px !important;
+      width: 100% !important;
+      max-width: 440px !important;
+      box-sizing: border-box !important;
+      margin-top: 4px !important;
+    }
+    .academy-hero-section .academy-actions .btn {
+      flex: 1 1 0 !important;
+      min-width: 0 !important;
+      height: 48px !important;
+      min-height: 48px !important;
+      padding: 0 20px !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      white-space: nowrap !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      box-sizing: border-box !important;
+      border-radius: 9999px !important;
+      transition: all 0.2s ease !important;
+    }
+    .academy-hero-section .academy-actions .btn-primary {
+      background: #75d766 !important;
+      color: #011731 !important;
+      border: none !important;
+    }
+    .academy-hero-section .academy-actions .btn-outline {
+      background: transparent !important;
+      color: #ffffff !important;
+      border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+    }
+    .academy-hero-section .academy-actions .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(117, 215, 102, 0.4) !important;
+    }
+    .academy-hero-section .academy-actions .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.15) !important;
+      border-color: rgba(255, 255, 255, 0.8) !important;
+      transform: translateY(-2px);
+    }
+    .academy-hero-section .academy-actions .btn:focus-visible {
+      outline: 2px solid #75d766 !important;
+      outline-offset: 2px !important;
+    }
+    @media (max-width: 768px) {
+      .academy-hero-section .academy-actions {
+        gap: 10px !important;
+        max-width: 100% !important;
+      }
+      .academy-hero-section .academy-actions .btn {
+        padding: 0 12px !important;
+        font-size: 0.875rem !important;
+        height: 46px !important;
+        min-height: 46px !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .academy-hero-section .academy-actions {
+        gap: 8px !important;
+      }
+      .academy-hero-section .academy-actions .btn {
+        padding: 0 8px !important;
+        font-size: 0.85rem !important;
+        height: 44px !important;
+        min-height: 44px !important;
+        letter-spacing: -0.01em !important;
+      }
+    }
+    @media (max-width: 360px) {
+      .academy-hero-section .container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+      .academy-hero-section .academy-actions {
+        gap: 6px !important;
+      }
+      .academy-hero-section .academy-actions .btn {
+        padding: 0 4px !important;
+        font-size: 0.775rem !important;
+        height: 44px !important;
+        min-height: 44px !important;
+        letter-spacing: -0.02em !important;
+      }
+    }
     /* Critical Above-the-fold Demo Banner Styles */
     .academy-demo-banner, .academy-demo-strip {
       background: linear-gradient(135deg, #EAF3F8 0%, #FFFFFF 100%);
@@ -618,8 +710,8 @@
 }
   </style>
 
-  <link rel="stylesheet" href="/css/styles.min.css?v=2.7.3">
-  <noscript><link rel="stylesheet" href="/css/styles.min.css?v=2.7.3"></noscript>
+  <link rel="stylesheet" href="/css/styles.min.css?v=2.7.4">
+  <noscript><link rel="stylesheet" href="/css/styles.min.css?v=2.7.4"></noscript>
 
   <!-- Structured Data: JSON-LD Suite -->
   <script type="application/ld+json">
@@ -756,10 +848,9 @@
         </div>
 
         <!-- Action CTAs -->
-        <div class="academy-actions" style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
-          <button type="button" id="btn-academy-hero-demo" class="btn btn-secondary btn-lg" style="background:#75d766; color:#011731; border:none; font-weight:700;" onclick="if(typeof openDemoModal==='function'){openDemoModal({academyId:'ai', academyName:'AI Academy', sourceCta:'academy_hero'});}">Book Free Demo</button>
-          <button id="btn-enroll-now" class="btn btn-primary btn-lg" onclick="openEnrollmentModal('', 'AI Academy')">Enroll Now →</button>
-          <button id="btn-free-consultation" class="btn btn-outline btn-lg" style="color:white; border-color:rgba(255,255,255,0.4);" onclick="openConsultationPopup()">Free Consultation</button>
+        <div class="academy-actions">
+          <button type="button" id="btn-enroll-now" class="btn btn-primary btn-lg" onclick="openEnrollmentModal('', 'AI Academy')">Enroll Now →</button>
+          <button type="button" id="btn-free-consultation" class="btn btn-outline btn-lg" onclick="openConsultationPopup()">Free Consultation</button>
         </div>
       </div>
     </section>
@@ -1967,10 +2058,10 @@
   <div id="ns-footer"></div>
 
   <!-- JavaScript Bundles -->
-  <script src="/js/data.min.js?v=2.7.3" defer></script>
-  <script src="/js/components.min.js?v=2.7.3" defer></script>
+  <script src="/js/data.min.js?v=2.7.4" defer></script>
+  <script src="/js/components.min.js?v=2.7.4" defer></script>
   <script src="/nova-ai-widget.js?v=3.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
-  <script src="/js/academy-detail.min.js?v=2.7.3" defer></script>
+  <script src="/js/academy-detail.min.js?v=2.7.4" defer></script>
 </body>
 </html>
