@@ -1,0 +1,71 @@
+{
+  "version": "2026.11.10-phase02",
+  "provenanceRegistry": "Nova Skills Nationwide Locations Content Provenance Register",
+  "governingPrinciples": [
+    "Zero fabricated physical campus claims or local office addresses",
+    "Single source of truth for all course pricing and curriculum",
+    "All claims trace directly to verified repository sources"
+  ],
+  "claims": [
+    {
+      "claimType": "course_title",
+      "authoritySource": "data.js (NS_COURSES.title) & scripts/Nova_Skills_109_Course_Master_Mapping.json (final_course_name)",
+      "verificationStatus": "verified",
+      "integrityRule": "Use canonical display title from data.js. Never override titles in city templates."
+    },
+    {
+      "claimType": "course_fee",
+      "authoritySource": "data.js (NS_COURSES.launch_fee / effective_price)",
+      "verificationStatus": "verified",
+      "integrityRule": "Must match 109-course launch pricing rollout approved 2026-11-09. No city-specific fee variations."
+    },
+    {
+      "claimType": "course_duration",
+      "authoritySource": "data.js (NS_COURSES.duration) & data/courses/{id}.json",
+      "verificationStatus": "verified",
+      "integrityRule": "Expressed in months or weeks matching canonical course record."
+    },
+    {
+      "claimType": "curriculum_modules",
+      "authoritySource": "data.js (NS_COURSES.curriculum / modules) & data/courses/{id}.json",
+      "verificationStatus": "verified",
+      "integrityRule": "Derived dynamically from canonical course record."
+    },
+    {
+      "claimType": "software_and_tools",
+      "authoritySource": "data.js (NS_COURSES.tools) & data/courses/{id}.json",
+      "verificationStatus": "verified",
+      "integrityRule": "Verified tool tokens only (e.g. Figma, Photoshop, Premiere Pro, Python, etc.)."
+    },
+    {
+      "claimType": "practical_projects",
+      "authoritySource": "data.js (NS_COURSES.projects / liveProjects)",
+      "verificationStatus": "verified",
+      "integrityRule": "Accurate project counts and capstone titles from canonical source."
+    },
+    {
+      "claimType": "training_methodology",
+      "authoritySource": "Site Standard (Live Interactive Online: Two-way audio/video, mentor code reviews, recorded sessions)",
+      "verificationStatus": "verified",
+      "integrityRule": "Pan-India service areas operate strictly online. Only Siddharth Nagar operates classroom sessions."
+    },
+    {
+      "claimType": "demo_eligibility",
+      "authoritySource": "scripts/build-course-pages.js (isCourseDemoEligible)",
+      "verificationStatus": "verified",
+      "integrityRule": "Free 2-Day Demo available for all professional and master level programs."
+    },
+    {
+      "claimType": "certification",
+      "authoritySource": "Nova Skills Academy Certification Guidelines",
+      "verificationStatus": "verified",
+      "integrityRule": "ISO 9001:2015 certified academy completion certificate upon capstone evaluation."
+    },
+    {
+      "claimType": "placement_assistance",
+      "authoritySource": "Placement Assistance Framework",
+      "verificationStatus": "verified",
+      "integrityRule": "Resume workshops, portfolio clinic, and interview prep. Zero 100% job placement guarantees or fake local hiring quotas."
+    }
+  ]
+}

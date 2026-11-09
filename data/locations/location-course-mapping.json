@@ -1,0 +1,2129 @@
+{
+  "version": "2026.11.10-phase02",
+  "totalLocations": 36,
+  "totalCompulsoryAssociations": 144,
+  "totalAdditionalAssociations": 92,
+  "totalAssociations": 236,
+  "mappings": [
+    {
+      "locationId": "loc-001",
+      "city": "Indore",
+      "slug": "indore",
+      "priority": "P1",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 13,
+          "stableId": "ai-assisted-full-stack-web-development",
+          "canonicalName": "AI-Assisted Full Stack Web Development",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 29,
+          "stableId": "biz-productivity",
+          "canonicalName": "MIS & Business Intelligence Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 10,
+          "stableId": "uiux-design-pro",
+          "canonicalName": "UI/UX Design Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "ai-assisted-full-stack-web-development",
+        "biz-productivity",
+        "uiux-design-pro"
+      ]
+    },
+    {
+      "locationId": "loc-002",
+      "city": "Lucknow",
+      "slug": "lucknow",
+      "priority": "P1",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 12,
+          "stableId": "python-developer",
+          "canonicalName": "Python Developer Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 23,
+          "stableId": "business-english",
+          "canonicalName": "Business English & Personality Development",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 22,
+          "stableId": "career-launch-placement-readiness-professional",
+          "canonicalName": "Career Launch & Placement Readiness Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "python-developer",
+        "business-english",
+        "career-launch-placement-readiness-professional"
+      ]
+    },
+    {
+      "locationId": "loc-003",
+      "city": "Jaipur",
+      "slug": "jaipur",
+      "priority": "P1",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 8,
+          "stableId": "creative-design",
+          "canonicalName": "Creative Design Master",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 10,
+          "stableId": "uiux-design-pro",
+          "canonicalName": "UI/UX Design Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 28,
+          "stableId": "content-creator-pro",
+          "canonicalName": "Content Creator Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "creative-design",
+        "uiux-design-pro",
+        "content-creator-pro"
+      ]
+    },
+    {
+      "locationId": "loc-004",
+      "city": "Nagpur",
+      "slug": "nagpur",
+      "priority": "P1",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 11,
+          "stableId": "fullstack-foundation",
+          "canonicalName": "Full Stack Programming Foundation",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 29,
+          "stableId": "biz-productivity",
+          "canonicalName": "MIS & Business Intelligence Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 6,
+          "stableId": "ai-productivity",
+          "canonicalName": "AI Productivity Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "fullstack-foundation",
+        "biz-productivity",
+        "ai-productivity"
+      ]
+    },
+    {
+      "locationId": "loc-005",
+      "city": "Surat",
+      "slug": "surat",
+      "priority": "P1",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 14,
+          "stableId": "ecommerce-mastery",
+          "canonicalName": "E-Commerce Website Mastery",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 15,
+          "stableId": "nocode-web-pro",
+          "canonicalName": "No-Code Website Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 27,
+          "stableId": "youtube-mastery",
+          "canonicalName": "YouTube Growth & Content Strategy Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "ecommerce-mastery",
+        "nocode-web-pro",
+        "youtube-mastery"
+      ]
+    },
+    {
+      "locationId": "loc-006",
+      "city": "Patna",
+      "slug": "patna",
+      "priority": "P1",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 11,
+          "stableId": "fullstack-foundation",
+          "canonicalName": "Full Stack Programming Foundation",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 24,
+          "stableId": "spoken-english-pro",
+          "canonicalName": "Professional Spoken English",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 22,
+          "stableId": "career-launch-placement-readiness-professional",
+          "canonicalName": "Career Launch & Placement Readiness Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "fullstack-foundation",
+        "spoken-english-pro",
+        "career-launch-placement-readiness-professional"
+      ]
+    },
+    {
+      "locationId": "loc-007",
+      "city": "Nashik",
+      "slug": "nashik",
+      "priority": "P1",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 14,
+          "stableId": "ecommerce-mastery",
+          "canonicalName": "E-Commerce Website Mastery",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 30,
+          "stableId": "office-pro",
+          "canonicalName": "Office Productivity Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 21,
+          "stableId": "freelancing-client-acquisition-professional",
+          "canonicalName": "Freelancing & Client Acquisition Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "ecommerce-mastery",
+        "office-pro",
+        "freelancing-client-acquisition-professional"
+      ]
+    },
+    {
+      "locationId": "loc-008",
+      "city": "Rajkot",
+      "slug": "rajkot",
+      "priority": "P1",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 14,
+          "stableId": "ecommerce-mastery",
+          "canonicalName": "E-Commerce Website Mastery",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 8,
+          "stableId": "creative-design",
+          "canonicalName": "Creative Design Master",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 21,
+          "stableId": "freelancing-client-acquisition-professional",
+          "canonicalName": "Freelancing & Client Acquisition Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "ecommerce-mastery",
+        "creative-design",
+        "freelancing-client-acquisition-professional"
+      ]
+    },
+    {
+      "locationId": "loc-009",
+      "city": "Bhopal",
+      "slug": "bhopal",
+      "priority": "P1",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 12,
+          "stableId": "python-developer",
+          "canonicalName": "Python Developer Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 10,
+          "stableId": "uiux-design-pro",
+          "canonicalName": "UI/UX Design Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 6,
+          "stableId": "ai-productivity",
+          "canonicalName": "AI Productivity Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "python-developer",
+        "uiux-design-pro",
+        "ai-productivity"
+      ]
+    },
+    {
+      "locationId": "loc-010",
+      "city": "Raipur",
+      "slug": "raipur",
+      "priority": "P1",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 29,
+          "stableId": "biz-productivity",
+          "canonicalName": "MIS & Business Intelligence Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 30,
+          "stableId": "office-pro",
+          "canonicalName": "Office Productivity Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 21,
+          "stableId": "freelancing-client-acquisition-professional",
+          "canonicalName": "Freelancing & Client Acquisition Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "biz-productivity",
+        "office-pro",
+        "freelancing-client-acquisition-professional"
+      ]
+    },
+    {
+      "locationId": "loc-011",
+      "city": "Vadodara",
+      "slug": "vadodara",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 15,
+          "stableId": "nocode-web-pro",
+          "canonicalName": "No-Code Website Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 14,
+          "stableId": "ecommerce-mastery",
+          "canonicalName": "E-Commerce Website Mastery",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 10,
+          "stableId": "uiux-design-pro",
+          "canonicalName": "UI/UX Design Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "nocode-web-pro",
+        "ecommerce-mastery",
+        "uiux-design-pro"
+      ]
+    },
+    {
+      "locationId": "loc-012",
+      "city": "Dehradun",
+      "slug": "dehradun",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 25,
+          "stableId": "kids-mastery",
+          "canonicalName": "Future Tech Kids Mastery",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 26,
+          "stableId": "young-coders",
+          "canonicalName": "Young Coders Program",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 22,
+          "stableId": "career-launch-placement-readiness-professional",
+          "canonicalName": "Career Launch & Placement Readiness Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "kids-mastery",
+        "young-coders",
+        "career-launch-placement-readiness-professional"
+      ]
+    },
+    {
+      "locationId": "loc-013",
+      "city": "Kota",
+      "slug": "kota",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 11,
+          "stableId": "fullstack-foundation",
+          "canonicalName": "Full Stack Programming Foundation",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 12,
+          "stableId": "python-developer",
+          "canonicalName": "Python Developer Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 22,
+          "stableId": "career-launch-placement-readiness-professional",
+          "canonicalName": "Career Launch & Placement Readiness Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "fullstack-foundation",
+        "python-developer",
+        "career-launch-placement-readiness-professional"
+      ]
+    },
+    {
+      "locationId": "loc-014",
+      "city": "Chhatrapati Sambhajinagar",
+      "slug": "chhatrapati-sambhajinagar",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 29,
+          "stableId": "biz-productivity",
+          "canonicalName": "MIS & Business Intelligence Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 14,
+          "stableId": "ecommerce-mastery",
+          "canonicalName": "E-Commerce Website Mastery",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 30,
+          "stableId": "office-pro",
+          "canonicalName": "Office Productivity Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "biz-productivity",
+        "ecommerce-mastery",
+        "office-pro"
+      ]
+    },
+    {
+      "locationId": "loc-015",
+      "city": "Prayagraj",
+      "slug": "prayagraj",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 12,
+          "stableId": "python-developer",
+          "canonicalName": "Python Developer Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 24,
+          "stableId": "spoken-english-pro",
+          "canonicalName": "Professional Spoken English",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 22,
+          "stableId": "career-launch-placement-readiness-professional",
+          "canonicalName": "Career Launch & Placement Readiness Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "python-developer",
+        "spoken-english-pro",
+        "career-launch-placement-readiness-professional"
+      ]
+    },
+    {
+      "locationId": "loc-016",
+      "city": "Ludhiana",
+      "slug": "ludhiana",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 14,
+          "stableId": "ecommerce-mastery",
+          "canonicalName": "E-Commerce Website Mastery",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 30,
+          "stableId": "office-pro",
+          "canonicalName": "Office Productivity Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 21,
+          "stableId": "freelancing-client-acquisition-professional",
+          "canonicalName": "Freelancing & Client Acquisition Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "ecommerce-mastery",
+        "office-pro",
+        "freelancing-client-acquisition-professional"
+      ]
+    },
+    {
+      "locationId": "loc-017",
+      "city": "Jalandhar",
+      "slug": "jalandhar",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 27,
+          "stableId": "youtube-mastery",
+          "canonicalName": "YouTube Growth & Content Strategy Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 24,
+          "stableId": "spoken-english-pro",
+          "canonicalName": "Professional Spoken English",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 21,
+          "stableId": "freelancing-client-acquisition-professional",
+          "canonicalName": "Freelancing & Client Acquisition Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "youtube-mastery",
+        "spoken-english-pro",
+        "freelancing-client-acquisition-professional"
+      ]
+    },
+    {
+      "locationId": "loc-018",
+      "city": "Gorakhpur",
+      "slug": "gorakhpur",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 11,
+          "stableId": "fullstack-foundation",
+          "canonicalName": "Full Stack Programming Foundation",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 24,
+          "stableId": "spoken-english-pro",
+          "canonicalName": "Professional Spoken English",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 22,
+          "stableId": "career-launch-placement-readiness-professional",
+          "canonicalName": "Career Launch & Placement Readiness Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "fullstack-foundation",
+        "spoken-english-pro",
+        "career-launch-placement-readiness-professional"
+      ]
+    },
+    {
+      "locationId": "loc-019",
+      "city": "Gwalior",
+      "slug": "gwalior",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 10,
+          "stableId": "uiux-design-pro",
+          "canonicalName": "UI/UX Design Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 12,
+          "stableId": "python-developer",
+          "canonicalName": "Python Developer Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 6,
+          "stableId": "ai-productivity",
+          "canonicalName": "AI Productivity Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "uiux-design-pro",
+        "python-developer",
+        "ai-productivity"
+      ]
+    },
+    {
+      "locationId": "loc-020",
+      "city": "Hisar",
+      "slug": "hisar",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 15,
+          "stableId": "nocode-web-pro",
+          "canonicalName": "No-Code Website Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 29,
+          "stableId": "biz-productivity",
+          "canonicalName": "MIS & Business Intelligence Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 30,
+          "stableId": "office-pro",
+          "canonicalName": "Office Productivity Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 7,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "nocode-web-pro",
+        "biz-productivity",
+        "office-pro"
+      ]
+    },
+    {
+      "locationId": "loc-021",
+      "city": "Basti",
+      "slug": "basti",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 24,
+          "stableId": "spoken-english-pro",
+          "canonicalName": "Professional Spoken English",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 30,
+          "stableId": "office-pro",
+          "canonicalName": "Office Productivity Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "spoken-english-pro",
+        "office-pro"
+      ]
+    },
+    {
+      "locationId": "loc-022",
+      "city": "Azamgarh",
+      "slug": "azamgarh",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 11,
+          "stableId": "fullstack-foundation",
+          "canonicalName": "Full Stack Programming Foundation",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 21,
+          "stableId": "freelancing-client-acquisition-professional",
+          "canonicalName": "Freelancing & Client Acquisition Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "fullstack-foundation",
+        "freelancing-client-acquisition-professional"
+      ]
+    },
+    {
+      "locationId": "loc-023",
+      "city": "Sultanpur",
+      "slug": "sultanpur",
+      "priority": "P2",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 22,
+          "stableId": "career-launch-placement-readiness-professional",
+          "canonicalName": "Career Launch & Placement Readiness Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 26,
+          "stableId": "young-coders",
+          "canonicalName": "Young Coders Program",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "career-launch-placement-readiness-professional",
+        "young-coders"
+      ]
+    },
+    {
+      "locationId": "loc-024",
+      "city": "Muzaffarpur",
+      "slug": "muzaffarpur",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 12,
+          "stableId": "python-developer",
+          "canonicalName": "Python Developer Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 22,
+          "stableId": "career-launch-placement-readiness-professional",
+          "canonicalName": "Career Launch & Placement Readiness Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "python-developer",
+        "career-launch-placement-readiness-professional"
+      ]
+    },
+    {
+      "locationId": "loc-025",
+      "city": "Jammu",
+      "slug": "jammu",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 6,
+          "stableId": "ai-productivity",
+          "canonicalName": "AI Productivity Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 11,
+          "stableId": "fullstack-foundation",
+          "canonicalName": "Full Stack Programming Foundation",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "ai-productivity",
+        "fullstack-foundation"
+      ]
+    },
+    {
+      "locationId": "loc-026",
+      "city": "Solan",
+      "slug": "solan",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 25,
+          "stableId": "kids-mastery",
+          "canonicalName": "Future Tech Kids Mastery",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 15,
+          "stableId": "nocode-web-pro",
+          "canonicalName": "No-Code Website Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "kids-mastery",
+        "nocode-web-pro"
+      ]
+    },
+    {
+      "locationId": "loc-027",
+      "city": "Margao",
+      "slug": "margao",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 27,
+          "stableId": "youtube-mastery",
+          "canonicalName": "YouTube Growth & Content Strategy Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 28,
+          "stableId": "content-creator-pro",
+          "canonicalName": "Content Creator Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "youtube-mastery",
+        "content-creator-pro"
+      ]
+    },
+    {
+      "locationId": "loc-028",
+      "city": "Leh",
+      "slug": "leh",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 6,
+          "stableId": "ai-productivity",
+          "canonicalName": "AI Productivity Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 30,
+          "stableId": "office-pro",
+          "canonicalName": "Office Productivity Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "ai-productivity",
+        "office-pro"
+      ]
+    },
+    {
+      "locationId": "loc-029",
+      "city": "Bahraich",
+      "slug": "bahraich",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 24,
+          "stableId": "spoken-english-pro",
+          "canonicalName": "Professional Spoken English",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 30,
+          "stableId": "office-pro",
+          "canonicalName": "Office Productivity Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "spoken-english-pro",
+        "office-pro"
+      ]
+    },
+    {
+      "locationId": "loc-030",
+      "city": "Wardha",
+      "slug": "wardha",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 12,
+          "stableId": "python-developer",
+          "canonicalName": "Python Developer Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 29,
+          "stableId": "biz-productivity",
+          "canonicalName": "MIS & Business Intelligence Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "python-developer",
+        "biz-productivity"
+      ]
+    },
+    {
+      "locationId": "loc-031",
+      "city": "Jagdalpur",
+      "slug": "jagdalpur",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 21,
+          "stableId": "freelancing-client-acquisition-professional",
+          "canonicalName": "Freelancing & Client Acquisition Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 30,
+          "stableId": "office-pro",
+          "canonicalName": "Office Productivity Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "freelancing-client-acquisition-professional",
+        "office-pro"
+      ]
+    },
+    {
+      "locationId": "loc-032",
+      "city": "Kaithal",
+      "slug": "kaithal",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 14,
+          "stableId": "ecommerce-mastery",
+          "canonicalName": "E-Commerce Website Mastery",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 15,
+          "stableId": "nocode-web-pro",
+          "canonicalName": "No-Code Website Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "ecommerce-mastery",
+        "nocode-web-pro"
+      ]
+    },
+    {
+      "locationId": "loc-033",
+      "city": "Anantnag",
+      "slug": "anantnag",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 12,
+          "stableId": "python-developer",
+          "canonicalName": "Python Developer Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 24,
+          "stableId": "spoken-english-pro",
+          "canonicalName": "Professional Spoken English",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "python-developer",
+        "spoken-english-pro"
+      ]
+    },
+    {
+      "locationId": "loc-034",
+      "city": "Mandi",
+      "slug": "mandi",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 25,
+          "stableId": "kids-mastery",
+          "canonicalName": "Future Tech Kids Mastery",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 26,
+          "stableId": "young-coders",
+          "canonicalName": "Young Coders Program",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "kids-mastery",
+        "young-coders"
+      ]
+    },
+    {
+      "locationId": "loc-035",
+      "city": "Ponda",
+      "slug": "ponda",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 14,
+          "stableId": "ecommerce-mastery",
+          "canonicalName": "E-Commerce Website Mastery",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 27,
+          "stableId": "youtube-mastery",
+          "canonicalName": "YouTube Growth & Content Strategy Professional",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "ecommerce-mastery",
+        "youtube-mastery"
+      ]
+    },
+    {
+      "locationId": "loc-036",
+      "city": "Kargil",
+      "slug": "kargil",
+      "priority": "P3",
+      "coreCourses": [
+        {
+          "masterNumber": 2,
+          "stableId": "dm-professional",
+          "canonicalName": "AI Digital Marketing Specialist",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 9,
+          "stableId": "graphic-design-pro",
+          "canonicalName": "Graphic Design Professional",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 17,
+          "stableId": "video-pro",
+          "canonicalName": "Professional Video Editing",
+          "role": "compulsory_core"
+        },
+        {
+          "masterNumber": 7,
+          "stableId": "ai-for-business-pro",
+          "canonicalName": "AI for Business Professional",
+          "role": "compulsory_core"
+        }
+      ],
+      "additionalCourses": [
+        {
+          "masterNumber": 6,
+          "stableId": "ai-productivity",
+          "canonicalName": "AI Productivity Professional",
+          "role": "recommended_additional"
+        },
+        {
+          "masterNumber": 24,
+          "stableId": "spoken-english-pro",
+          "canonicalName": "Professional Spoken English",
+          "role": "recommended_additional"
+        }
+      ],
+      "totalCourses": 6,
+      "allCourseIds": [
+        "dm-professional",
+        "graphic-design-pro",
+        "video-pro",
+        "ai-for-business-pro",
+        "ai-productivity",
+        "spoken-english-pro"
+      ]
+    }
+  ]
+}
