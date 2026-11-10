@@ -364,8 +364,7 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
               <span>⏱ ${escapeHtml(coreCourses[0].duration)}</span>
               <span>•</span>
               <span>📂 ${coreCourses[0].modulesCount} Modules</span>
-              <span>•</span>
-              <span>🚀 ${coreCourses[0].projectsCount} Live Projects</span>
+              
             </div>
             <div class="loc-pathway-fee-row">
               <span class="loc-pathway-fee-label">Launch Batch Fee:</span>
@@ -396,8 +395,7 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
               <span>⏱ ${escapeHtml(coreCourses[1].duration)}</span>
               <span>•</span>
               <span>📂 ${coreCourses[1].modulesCount} Modules</span>
-              <span>•</span>
-              <span>🚀 ${coreCourses[1].projectsCount} Live Projects</span>
+              
             </div>
             <div class="loc-pathway-fee-row">
               <span class="loc-pathway-fee-label">Launch Batch Fee:</span>
@@ -428,8 +426,7 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
               <span>⏱ ${escapeHtml(coreCourses[2].duration)}</span>
               <span>•</span>
               <span>📂 ${coreCourses[2].modulesCount} Modules</span>
-              <span>•</span>
-              <span>🚀 ${coreCourses[2].projectsCount} Live Projects</span>
+              
             </div>
             <div class="loc-pathway-fee-row">
               <span class="loc-pathway-fee-label">Launch Batch Fee:</span>
@@ -460,8 +457,7 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
               <span>⏱ ${escapeHtml(coreCourses[3].duration)}</span>
               <span>•</span>
               <span>📂 ${coreCourses[3].modulesCount} Modules</span>
-              <span>•</span>
-              <span>🚀 ${coreCourses[3].projectsCount} Live Projects</span>
+              
             </div>
             <div class="loc-pathway-fee-row">
               <span class="loc-pathway-fee-label">Launch Batch Fee:</span>

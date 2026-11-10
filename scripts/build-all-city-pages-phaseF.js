@@ -383,8 +383,6 @@ function generateCityHtml(config) {
               <span>⏱ ${escapeHtml(course.duration)}</span>
               <span>•</span>
               <span>📂 ${course.modulesCount} Modules</span>
-              <span>•</span>
-              <span>🚀 ${course.projectsCount} Projects</span>
             </div>
             <div class="city-card-price-row">
               <div>
@@ -453,7 +451,6 @@ function generateCityHtml(config) {
                 </td>
                 <td>${escapeHtml(c.duration)}</td>
                 <td>${c.modulesCount} Modules</td>
-                <td>${c.projectsCount} Projects</td>
                 <td><strong>₹${c.pricing.launchPrice.toLocaleString('en-IN')}</strong></td>
                 <td>
                   <button type="button" class="city-card-btn-demo" style="height: 36px; padding: 6px 14px; font-size: 0.75rem;" onclick="window.openCityCourseDemo('${escapeHtml(c.id)}', '${escapeHtml(c.title)}')">Demo</button>
@@ -783,7 +780,7 @@ ${heroSectionHtml}
         <header class="city-section-header">
           <span class="city-section-tag">Program Comparison</span>
           <h2 class="city-section-title" id="comparison-heading">Compare All ${allCourses.length} Programs in ${escapeHtml(loc.city)}</h2>
-          <p class="city-section-subtitle">Evaluate course duration, curriculum modules, project counts, and verified launch fees.</p>
+          <p class="city-section-subtitle">Evaluate course duration, curriculum modules, and verified launch fees.</p>
         </header>
 
         <div class="city-table-responsive-wrap">
@@ -793,7 +790,6 @@ ${heroSectionHtml}
                 <th scope="col">Program Title &amp; Academy</th>
                 <th scope="col">Duration</th>
                 <th scope="col">Curriculum</th>
-                <th scope="col">Live Projects</th>
                 <th scope="col">Effective Fee</th>
                 <th scope="col">Action</th>
               </tr>
