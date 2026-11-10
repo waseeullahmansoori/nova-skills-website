@@ -708,6 +708,78 @@ const COURSE_PROJECT_REGISTRY = {
         }
       }
     ]
+  },
+  'fullstack-foundation': {
+    sectionTag: 'CURRICULUM EVIDENCE',
+    sectionTitle: 'See What You\'ll <span class="gradient-text">Build in Production</span>',
+    sectionSubtitle: 'Authentic curriculum demonstration projects illustrating the exact software engineering toolchains, full-stack architectures, and production standards taught in this program.',
+    ctaHeading: 'Ready to Build Production-Grade Full-Stack Applications?',
+    ctaSubtitle: 'Experience our hands-on engineering lab with live code reviews from senior developers before enrolling.',
+    projects: [
+      {
+        id: 'ns-proj-fs-01',
+        role: 'featured',
+        category: 'Full-Stack Cloud Architecture & PostgreSQL',
+        title: 'Enterprise Multi-Tenant Cloud SaaS Application',
+        evidenceType: 'INSTRUCTOR DEMONSTRATION',
+        badge: 'Instructor Demonstration',
+        description: 'Production full-stack web application engineered with React 19, TypeScript, and Node.js 24 LTS. Features multi-tenant JWT authentication with secure httpOnly cookies, interactive administrative KPI telemetry dashboards, Prisma ORM schema with PostgreSQL 3NF relations, and automated GitHub Actions CI/CD deployment pipelines.',
+        skills: ['React 19', 'TypeScript (Strict)', 'Node.js 24 LTS', 'PostgreSQL', 'Prisma ORM', 'JWT / RBAC', 'GitHub Actions CI/CD'],
+        tools: ['React 19', 'TypeScript', 'Node.js', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'Vercel'],
+        moduleRef: 'Modules 07, 08 & Capstone (Enterprise SaaS)',
+        moduleHref: '#curriculum-section',
+        image: {
+          desktop: '/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-desktop-960w.png',
+          card: '/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-card-640w.png',
+          mobile: '/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-mobile-400w.png',
+          width: 960,
+          height: 540,
+          alt: 'Enterprise Multi-Tenant Cloud SaaS dashboard showing real-time telemetry metrics, PostgreSQL pool status, and TypeScript controller.'
+        }
+      },
+      {
+        id: 'ns-proj-fs-02',
+        role: 'supporting',
+        category: 'Full-Stack Multi-Tier Architecture & APIs',
+        title: 'React Frontend + Secure REST API Multi-Tier Application',
+        evidenceType: 'INSTRUCTOR DEMONSTRATION',
+        badge: 'Instructor Demonstration',
+        description: 'Interactive B2B operational portal featuring modular React components, custom React hooks for async data hydration, and an Express.js backend with strict Zod request schema validation, token authorization, and paginated REST endpoints.',
+        skills: ['React Hooks', 'Express.js REST APIs', 'Zod Schema Validation', 'State Management', 'Postman / Bruno Testing'],
+        tools: ['React 19', 'Express.js', 'Node.js', 'Postman', 'Tailwind CSS'],
+        moduleRef: 'Modules 04, 05 & 06 (React & REST APIs)',
+        moduleHref: '#curriculum-section',
+        image: {
+          desktop: '/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-desktop-960w.png',
+          card: '/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-card-640w.png',
+          mobile: '/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-mobile-400w.png',
+          width: 960,
+          height: 540,
+          alt: 'React operational data table integrated with REST API runner and Zod schema validation.'
+        }
+      },
+      {
+        id: 'ns-proj-fs-03',
+        role: 'supporting',
+        category: 'Frontend Engineering & Standards Compliance',
+        title: 'Responsive Business Platform & WCAG 2.2 Accessibility Showcase',
+        evidenceType: 'INSTRUCTOR DEMONSTRATION',
+        badge: 'Instructor Demonstration',
+        description: 'High-performance responsive business platform crafted with semantic HTML5, fluid modern CSS Grid / Flexbox layouts, and zero-dependency vanilla JavaScript. Verified with 100/100 Lighthouse performance and zero Axe DevTools accessibility violations.',
+        skills: ['Semantic HTML5', 'CSS Grid & Flexbox', 'WCAG 2.2 AA Compliance', 'Lighthouse Optimization (Score 100)', 'Axe DevTools'],
+        tools: ['HTML5', 'CSS3', 'Modern ES2024+', 'Lighthouse CI', 'Axe DevTools'],
+        moduleRef: 'Modules 01, 02 & 03 (Frontend Foundations & Accessibility)',
+        moduleHref: '#curriculum-section',
+        image: {
+          desktop: '/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-desktop-960w.png',
+          card: '/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-card-640w.png',
+          mobile: '/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-mobile-400w.png',
+          width: 960,
+          height: 540,
+          alt: 'Lighthouse audit panel showing 100/100 scores in Performance, Accessibility, Best Practices, and SEO.'
+        }
+      }
+    ]
   }
 };
 
