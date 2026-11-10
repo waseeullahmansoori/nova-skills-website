@@ -852,6 +852,78 @@ const COURSE_PROJECT_REGISTRY = {
         }
       }
     ]
+  },
+  'dm-professional': {
+    sectionTag: 'CURRICULUM EVIDENCE',
+    sectionTitle: 'See What You\'ll <span class="gradient-text">Execute & Scale</span>',
+    sectionSubtitle: 'Authentic curriculum demonstration projects illustrating the exact performance marketing dashboards, technical SEO audits, and conversion funnels taught in this program.',
+    ctaHeading: 'Ready to Run High-ROI Digital Marketing Campaigns?',
+    ctaSubtitle: 'Experience our hands-on performance marketing lab with live campaign feedback from senior growth specialists before enrolling.',
+    projects: [
+      {
+        id: 'ns-proj-dm-01',
+        role: 'featured',
+        category: 'Performance Marketing & Data Analytics',
+        title: 'Multichannel Performance Marketing & GA4 Dashboard',
+        evidenceType: 'INSTRUCTOR DEMONSTRATION',
+        badge: 'Instructor Demonstration',
+        description: 'Unified executive marketing intelligence dashboard integrating live Google Ads, Meta Ads Manager ROAS metrics, and GA4 custom event tracking funnels. Demonstrates conversion rate optimization, campaign budget reallocation, and CAC vs. LTV unit economics.',
+        skills: ['GA4 Conversion Funnels', 'Google Tag Manager (GTM)', 'Meta Ads Manager', 'Google Ads Draft Blueprints', 'Looker Studio BI'],
+        tools: ['GA4', 'Google Ads', 'Meta Ads Manager', 'Looker Studio', 'GTM'],
+        moduleRef: 'Stage 4: Analytics & Capstone Defense',
+        moduleHref: '#curriculum-section',
+        image: {
+          desktop: '/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-desktop-960w.png',
+          card: '/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-card-640w.png',
+          mobile: '/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-mobile-400w.png',
+          width: 960,
+          height: 540,
+          alt: 'Looker Studio multichannel marketing dashboard displaying Google Ads, Meta Ads ROAS, and GA4 conversion funnel.'
+        }
+      },
+      {
+        id: 'ns-proj-dm-02',
+        role: 'supporting',
+        category: 'Search Engine & Generative Engine Optimization',
+        title: 'Technical & Local SEO Organic Growth Blueprint',
+        evidenceType: 'INSTRUCTOR DEMONSTRATION',
+        badge: 'Instructor Demonstration',
+        description: 'Comprehensive organic search strategy for a multi-location dental clinic network. Features keyword clustering matrix, Google Search Console click-through rate optimization, local citation schema markup, and AI Overviews (GEO) answer optimization.',
+        skills: ['Keyword Intent Mapping', 'Google Search Console Audit', 'Local SEO Schema', 'Rank Math On-Page Optimization', 'GEO Optimization'],
+        tools: ['Google Search Console', 'Rank Math', 'Ahrefs/Semrush', 'Schema Validator'],
+        moduleRef: 'Stage 2: Organic Visibility & Content',
+        moduleHref: '#curriculum-section',
+        image: {
+          desktop: '/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-desktop-960w.png',
+          card: '/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-card-640w.png',
+          mobile: '/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-mobile-400w.png',
+          width: 960,
+          height: 540,
+          alt: 'Google Search Console performance dashboard showing keyword ranking positions and technical SEO audit scores.'
+        }
+      },
+      {
+        id: 'ns-proj-dm-03',
+        role: 'supporting',
+        category: 'Conversion Funnels & Paid Acquisition',
+        title: 'High-Conversion Paid Ads & Lead Capture Funnel',
+        evidenceType: 'INSTRUCTOR DEMONSTRATION',
+        badge: 'Instructor Demonstration',
+        description: 'End-to-end paid acquisition funnel featuring Meta Carousel and Google Responsive Search Ads directing to a WordPress high-conversion landing page with Brevo automated email nurturing sequence.',
+        skills: ['Meta Ads Creative Strategy', 'Responsive Search Ads (RSA)', 'WordPress Landing Page CRO', 'Brevo Automated Sequences'],
+        tools: ['Meta Ads Manager', 'WordPress', 'Elementor', 'Brevo', 'Canva Pro'],
+        moduleRef: 'Stage 3: Paid Acquisition & Conversion',
+        moduleHref: '#curriculum-section',
+        image: {
+          desktop: '/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-desktop-960w.png',
+          card: '/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-card-640w.png',
+          mobile: '/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-mobile-400w.png',
+          width: 960,
+          height: 540,
+          alt: 'Paid acquisition conversion funnel showing Meta ad creative, WordPress landing page, and Brevo email automation sequence.'
+        }
+      }
+    ]
   }
 };
 

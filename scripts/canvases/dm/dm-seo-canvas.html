@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technical & Local SEO Organic Growth Blueprint</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 960px;
+    height: 540px;
+    overflow: hidden;
+    background: #0d1117;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #e6edf3;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 22px;
+    gap: 14px;
+    position: relative;
+  }
+
+  /* Header */
+  .gsc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+  }
+  .gsc-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .gsc-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #4285f4, #0599a8);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(66, 133, 244, 0.35);
+  }
+  .gsc-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  .gsc-subtitle {
+    font-size: 11px;
+    color: #8b949e;
+  }
+  .gsc-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pill {
+    background: #161b22;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #c9d1d9;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
+  .pill-green {
+    background: rgba(35, 134, 54, 0.2);
+    border: 1px solid rgba(46, 160, 67, 0.4);
+    color: #3fb950;
+    font-weight: 800;
+  }
+
+  /* Main Grid */
+  .seo-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 14px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Left Panel: Search Console Performance */
+  .panel-gsc {
+    background: #141923;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  }
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: #0d1117;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 8px 10px;
+  }
+  .stat-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .stat-lbl { font-size: 9px; color: #8b949e; text-transform: uppercase; }
+  .stat-val { font-size: 15px; font-weight: 800; color: #ffffff; }
+
+  /* SVG Chart */
+  .chart-box {
+    background: #090c12;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    padding: 10px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .chart-svg {
+    width: 100%;
+    height: 70px;
+  }
+
+  /* Keyword Query Table */
+  .kw-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10px;
+  }
+  .kw-table th {
+    text-align: left;
+    color: #8b949e;
+    font-size: 9px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    text-transform: uppercase;
+  }
+  .kw-table td {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  }
+  .kw-rank {
+    font-weight: 800;
+    color: #3fb950;
+    background: rgba(46, 160, 67, 0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 9px;
+    display: inline-block;
+  }
+
+  /* Right Panel: Technical SEO & Local Schema */
+  .panel-audit {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .audit-card {
+    background: #141923;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  }
+  .audit-score-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .score-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: conic-gradient(#3fb950 0% 98%, #21262d 98% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12px rgba(63, 185, 80, 0.3);
+  }
+  .score-inner {
+    width: 36px;
+    height: 36px;
+    background: #141923;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    color: #3fb950;
+  }
+  .checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 10px;
+  }
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #c9d1d9;
+  }
+  .check-ok { color: #3fb950; font-weight: 800; }
+
+  /* Schema Code Preview Box */
+  .schema-preview {
+    background: #090c12;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-family: monospace;
+    font-size: 9px;
+    color: #79c0ff;
+    line-height: 1.4;
+  }
+  .schema-key { color: #ff7b72; }
+  .schema-val { color: #a5d6ff; }
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="gsc-header">
+    <div class="gsc-title-group">
+      <div class="gsc-icon">🔍</div>
+      <div>
+        <div class="gsc-title">Google Search Console • Local &amp; Technical SEO Performance</div>
+        <div class="gsc-subtitle">Multi-Location Medical Network • Keyword Intent &amp; GEO Answer Architecture</div>
+      </div>
+    </div>
+    <div class="gsc-controls">
+      <div class="pill">Property: apexhealthclinics.in</div>
+      <div class="pill-green">● INDEXED &amp; RANKING</div>
+    </div>
+  </div>
+
+  <!-- Grid -->
+  <div class="seo-grid">
+    <!-- Search Console Analytics -->
+    <div class="panel-gsc">
+      <div class="stats-bar">
+        <div class="stat-block">
+          <div class="stat-lbl">Total Clicks</div>
+          <div class="stat-val" style="color:#4285f4;">148.2K</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-lbl">Impressions</div>
+          <div class="stat-val" style="color:#0599a8;">2.84M</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-lbl">Average CTR</div>
+          <div class="stat-val" style="color:#3fb950;">5.22%</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-lbl">Average Position</div>
+          <div class="stat-val" style="color:#ffab19;">4.2</div>
+        </div>
+      </div>
+
+      <!-- Growth Chart -->
+      <div class="chart-box">
+        <div style="font-size:9px; color:#8b949e; font-weight:700;">ORGANIC CLICKS (LAST 90 DAYS)</div>
+        <svg class="chart-svg" viewBox="0 0 450 70">
+          <path d="M0,60 Q60,55 120,40 T240,30 T360,18 L450,8" fill="none" stroke="#4285f4" stroke-width="2.5"/>
+          <path d="M0,60 Q60,55 120,40 T240,30 T360,18 L450,8 L450,70 L0,70 Z" fill="url(#blue-grad)" opacity="0.15"/>
+          <defs>
+            <linearGradient id="blue-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#4285f4"/>
+              <stop offset="100%" stop-color="#0b0f17"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Top Keywords -->
+      <table class="kw-table">
+        <thead>
+          <tr>
+            <th>Search Query</th>
+            <th>Rank</th>
+            <th>Impressions</th>
+            <th>CTR</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight:600;">invisalign dental specialist near me</td>
+            <td><span class="kw-rank">#1 POS</span></td>
+            <td>42,800</td>
+            <td style="color:#3fb950; font-weight:700;">14.2%</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">emergency root canal clinic</td>
+            <td><span class="kw-rank">#2 POS</span></td>
+            <td>28,400</td>
+            <td style="color:#3fb950; font-weight:700;">11.8%</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;">pediatric dentistry cost breakdown</td>
+            <td><span class="kw-rank">#3 POS</span></td>
+            <td>19,600</td>
+            <td style="color:#3fb950; font-weight:700;">8.4%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Technical SEO Audit -->
+    <div class="panel-audit">
+      <div class="audit-card">
+        <div class="audit-score-row">
+          <div>
+            <div style="font-size:12px; font-weight:800; color:#fff;">Technical SEO Health</div>
+            <div style="font-size:10px; color:#8b949e;">Rank Math Pro &amp; Schema Validation</div>
+          </div>
+          <div class="score-circle">
+            <div class="score-inner">98</div>
+          </div>
+        </div>
+        <div class="checklist">
+          <div class="check-item"><span class="check-ok">✓</span> Core Web Vitals (LCP 0.8s, CLS 0.000)</div>
+          <div class="check-item"><span class="check-ok">✓</span> Canonical URL &amp; Self-Referential Hreflang</div>
+          <div class="check-item"><span class="check-ok">✓</span> AI Answer Overviews (GEO) Citation Ready</div>
+        </div>
+      </div>
+
+      <div class="audit-card">
+        <div style="font-size:11px; font-weight:800; color:#fff; text-transform:uppercase; letter-spacing:0.5px;">
+          Structured Data JSON-LD
+        </div>
+        <div class="schema-preview">
+          {<br>
+          &nbsp;&nbsp;<span class="schema-key">"@type"</span>: <span class="schema-val">"Dentist"</span>,<br>
+          &nbsp;&nbsp;<span class="schema-key">"name"</span>: <span class="schema-val">"Apex Health Dental Center"</span>,<br>
+          &nbsp;&nbsp;<span class="schema-key">"geo"</span>: { <span class="schema-key">"lat"</span>: <span class="schema-val">26.8467</span>, <span class="schema-key">"long"</span>: <span class="schema-val">80.9462</span> },<br>
+          &nbsp;&nbsp;<span class="schema-key">"hasMap"</span>: <span class="schema-val">"https://maps.google.com/?cid=..."</span><br>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

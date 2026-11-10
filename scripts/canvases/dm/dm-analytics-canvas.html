@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multichannel Performance Marketing & GA4 Executive Dashboard</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 960px;
+    height: 540px;
+    overflow: hidden;
+    background: #0b0f17;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #e6edf3;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 22px;
+    gap: 14px;
+    position: relative;
+  }
+
+  /* Top Navigation */
+  .dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+  }
+  .dash-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .dash-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #ef7f1a, #ffab19);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(239, 127, 26, 0.35);
+  }
+  .dash-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+  }
+  .dash-subtitle {
+    font-size: 11px;
+    color: #8b949e;
+  }
+  .dash-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .control-pill {
+    background: #161b22;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #c9d1d9;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .badge-live {
+    background: rgba(35, 134, 54, 0.2);
+    border: 1px solid rgba(46, 160, 67, 0.4);
+    color: #3fb950;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    background: #3fb950;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #3fb950;
+  }
+
+  /* KPI Scorecards */
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .kpi-card {
+    background: #141923;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  }
+  .kpi-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .kpi-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+  }
+  .kpi-trend {
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .trend-up { color: #3fb950; }
+  .trend-target { color: #ef7f1a; }
+
+  /* Main Visualization Grid */
+  .vis-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 12px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .panel-box {
+    background: #141923;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .panel-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #c9d1d9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .panel-meta {
+    font-size: 10px;
+    color: #8b949e;
+  }
+
+  /* Funnel Visualization */
+  .funnel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+  }
+  .funnel-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .funnel-name {
+    width: 120px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #8b949e;
+  }
+  .funnel-bar-wrap {
+    flex: 1;
+    height: 18px;
+    background: #0d1117;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+  }
+  .funnel-fill {
+    height: 100%;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 9px;
+    font-weight: 800;
+    color: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  .fill-1 { width: 100%; background: linear-gradient(90deg, #004672, #0599a8); }
+  .fill-2 { width: 68%; background: linear-gradient(90deg, #0599a8, #008080); }
+  .fill-3 { width: 38%; background: linear-gradient(90deg, #ef7f1a, #ffab19); }
+  .fill-4 { width: 18%; background: linear-gradient(90deg, #238636, #2ea043); }
+
+  .funnel-metric {
+    width: 75px;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  /* Channel Attribution Table */
+  .channel-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4px;
+  }
+  .channel-table th {
+    text-align: left;
+    font-size: 9px;
+    font-weight: 700;
+    color: #8b949e;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    text-transform: uppercase;
+  }
+  .channel-table td {
+    padding: 6px 0;
+    font-size: 10px;
+    color: #e6edf3;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  }
+  .channel-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+  }
+  .chan-dot { width: 8px; height: 8px; border-radius: 2px; }
+  .dot-gads { background: #4285f4; }
+  .dot-meta { background: #0668e1; }
+  .dot-organic { background: #34a853; }
+
+  /* GTM Tag Bar at Bottom */
+  .gtm-footer {
+    background: #0f131a;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    padding: 8px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+  }
+  .gtm-id {
+    font-weight: 800;
+    color: #0599a8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tag-status-list {
+    display: flex;
+    gap: 12px;
+  }
+  .tag-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #8b949e;
+  }
+  .tag-badge-ok {
+    color: #3fb950;
+    font-weight: 800;
+  }
+</style>
+</head>
+<body>
+  <!-- Dashboard Header -->
+  <div class="dash-header">
+    <div class="dash-title-group">
+      <div class="dash-icon">📊</div>
+      <div>
+        <div class="dash-title">Looker Studio • Multichannel Marketing Intelligence</div>
+        <div class="dash-subtitle">Integrated Attribution: Google Ads + Meta Ads Manager + GA4 Custom Events</div>
+      </div>
+    </div>
+    <div class="dash-controls">
+      <div class="control-pill">📅 Last 30 Days</div>
+      <div class="control-pill">🎯 Attribution: Data-Driven</div>
+      <div class="badge-live"><div class="live-dot"></div> GA4 LIVE PIPELINE</div>
+    </div>
+  </div>
+
+  <!-- KPI Metrics Row -->
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="kpi-label">Total Ad Spend</div>
+      <div class="kpi-value">₹1,42,800</div>
+      <div class="kpi-trend trend-target">● 100% Budget Utilized</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Verified Leads</div>
+      <div class="kpi-value">1,284</div>
+      <div class="kpi-trend trend-up">▲ +24.6% vs Target</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Cost Per Acquisition (CPA)</div>
+      <div class="kpi-value">₹111.20</div>
+      <div class="kpi-trend trend-up">▼ -18.4% Efficiency</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Blended ROAS</div>
+      <div class="kpi-value">4.82x</div>
+      <div class="kpi-trend trend-up">▲ 482% Return on Spend</div>
+    </div>
+  </div>
+
+  <!-- Visual Panels Grid -->
+  <div class="vis-grid">
+    <!-- Funnel Visualization -->
+    <div class="panel-box">
+      <div class="panel-header">
+        <span class="panel-title">End-to-End Paid Conversion Funnel</span>
+        <span class="panel-meta">GA4 Custom Event Stream</span>
+      </div>
+      <div class="funnel-container">
+        <div class="funnel-step">
+          <span class="funnel-name">Ad Impressions</span>
+          <div class="funnel-bar-wrap"><div class="funnel-fill fill-1">2,410,000 Reach</div></div>
+          <span class="funnel-metric">100%</span>
+        </div>
+        <div class="funnel-step">
+          <span class="funnel-name">Landing Page Views</span>
+          <div class="funnel-bar-wrap"><div class="funnel-fill fill-2">91,200 Sessions (3.78% CTR)</div></div>
+          <span class="funnel-metric">3.78%</span>
+        </div>
+        <div class="funnel-step">
+          <span class="funnel-name">Form Submissions</span>
+          <div class="funnel-bar-wrap"><div class="funnel-fill fill-3">1,284 Verified Leads</div></div>
+          <span class="funnel-metric">1.41%</span>
+        </div>
+        <div class="funnel-step">
+          <span class="funnel-name">Paid Enrolled Students</span>
+          <div class="funnel-bar-wrap"><div class="funnel-fill fill-4">168 Students Enrolled</div></div>
+          <span class="funnel-metric">13.08% CR</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attribution Table -->
+    <div class="panel-box">
+      <div class="panel-header">
+        <span class="panel-title">Channel Performance Matrix</span>
+        <span class="panel-meta">Target: &gt; 3.5x ROAS</span>
+      </div>
+      <table class="channel-table">
+        <thead>
+          <tr>
+            <th>Channel</th>
+            <th>Spend</th>
+            <th>Leads</th>
+            <th>ROAS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="channel-name-cell">
+                <div class="chan-dot dot-gads"></div>
+                Google Search (High Intent)
+              </div>
+            </td>
+            <td>₹84,000</td>
+            <td>712</td>
+            <td style="color:#3fb950; font-weight:800;">5.42x</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="channel-name-cell">
+                <div class="chan-dot dot-meta"></div>
+                Meta Ads (Reels Retargeting)
+              </div>
+            </td>
+            <td>₹58,800</td>
+            <td>572</td>
+            <td style="color:#3fb950; font-weight:800;">4.65x</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="channel-name-cell">
+                <div class="chan-dot dot-organic"></div>
+                Organic Search &amp; Direct
+              </div>
+            </td>
+            <td>₹0</td>
+            <td>284</td>
+            <td style="color:#ef7f1a; font-weight:800;">Inf (Free)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Bottom GTM Instrumentation Footer -->
+  <div class="gtm-footer">
+    <div class="gtm-id">
+      <span>🏷️ Container: GTM-NS2026</span>
+      <span style="color:#8b949e; font-weight:400;">• Production Trigger State:</span>
+    </div>
+    <div class="tag-status-list">
+      <div class="tag-item">
+        <span class="tag-badge-ok">✓</span>
+        <span>GA4_generate_lead (Fired: 1,284)</span>
+      </div>
+      <div class="tag-item">
+        <span class="tag-badge-ok">✓</span>
+        <span>Meta_Lead_Pixel (200 OK)</span>
+      </div>
+      <div class="tag-item">
+        <span class="tag-badge-ok">✓</span>
+        <span>Google_Ads_Conversion (ID: AW-98214)</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

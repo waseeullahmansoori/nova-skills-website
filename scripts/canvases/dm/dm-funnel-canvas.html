@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High-Conversion Paid Ads & Lead Capture Funnel</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 960px;
+    height: 540px;
+    overflow: hidden;
+    background: #0d1117;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #e6edf3;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 22px;
+    gap: 14px;
+    position: relative;
+  }
+
+  /* Header */
+  .funnel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+  }
+  .funnel-title-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .funnel-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #0599a8, #004672);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(5, 153, 168, 0.35);
+  }
+  .funnel-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  .funnel-subtitle {
+    font-size: 11px;
+    color: #8b949e;
+  }
+  .funnel-tag {
+    background: rgba(239, 127, 26, 0.15);
+    border: 1px solid rgba(239, 127, 26, 0.35);
+    color: #ef7f1a;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* 3-Column Lifecycle Pipeline */
+  .lifecycle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .lifecycle-column {
+    background: #141923;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  }
+  .col-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 8px;
+  }
+  .col-step-pill {
+    background: #004672;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+  .col-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  /* Column 1: Paid Ad Creatives */
+  .ad-card-mock {
+    background: #090c12;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .ad-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9px;
+    color: #8b949e;
+  }
+  .ad-copy {
+    font-size: 10px;
+    color: #e6edf3;
+    line-height: 1.4;
+  }
+  .ad-banner-vis {
+    height: 70px;
+    background: linear-gradient(135deg, #004672, #0599a8);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 12px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .ad-cta-btn {
+    background: #0599a8;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+
+  /* Column 2: WordPress Landing Page */
+  .lp-card-mock {
+    background: #090c12;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+  .lp-hero-headline {
+    font-size: 11px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.3;
+  }
+  .lp-form-box {
+    background: #161b22;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .form-field {
+    height: 20px;
+    background: #0d1117;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    font-size: 9px;
+    color: #8b949e;
+  }
+  .form-submit-btn {
+    background: #ef7f1a;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 6px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(239, 127, 26, 0.4);
+  }
+
+  /* Column 3: Brevo Automated Sequence */
+  .email-step {
+    background: #090c12;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .email-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+  }
+  .email-name { font-weight: 700; color: #ffffff; }
+  .email-delay { color: #8b949e; }
+  .email-stat-row {
+    display: flex;
+    gap: 10px;
+    font-size: 9px;
+    margin-top: 2px;
+  }
+  .stat-open { color: #3fb950; font-weight: 700; }
+  .stat-click { color: #58a6ff; font-weight: 700; }
+
+  /* Connector arrows */
+  .flow-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #8b949e;
+  }
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="funnel-header">
+    <div class="funnel-title-group">
+      <div class="funnel-icon">🚀</div>
+      <div>
+        <div class="funnel-title">High-Conversion Paid Acquisition &amp; Automated Lead Funnel</div>
+        <div class="funnel-subtitle">Meta Ads Manager + WordPress Landing Page (CRO) + Brevo Email Automation</div>
+      </div>
+    </div>
+    <div class="funnel-tag">● ACTIVE NURTURING SEQUENCE</div>
+  </div>
+
+  <!-- Pipeline -->
+  <div class="lifecycle-grid">
+    <!-- Step 1: Paid Ads -->
+    <div class="lifecycle-column">
+      <div class="col-header">
+        <span class="col-step-pill">STAGE 01</span>
+        <span class="col-title">Paid Ads (Meta &amp; Google)</span>
+      </div>
+      <div class="ad-card-mock">
+        <div class="ad-meta">
+          <span>🔵 Meta Ads Manager</span>
+          <span>• Sponsored</span>
+        </div>
+        <div class="ad-copy">
+          "Double your local patient appointments in 30 days without expensive agency retainers..."
+        </div>
+        <div class="ad-banner-vis">
+          <span>FREE DENTAL PRACTICE AUDIT</span>
+          <span style="font-size:9px; color:#ef7f1a; font-weight:700;">DOWNLOAD 2026 PLAYBOOK</span>
+        </div>
+        <div class="ad-cta-btn">Learn More →</div>
+      </div>
+      <div style="font-size:9px; color:#8b949e; line-height:1.4;">
+        A/B tested with 4 visual variations. Winning creative produced <strong>3.78% CTR</strong> and <strong>₹28.40 CPC</strong>.
+      </div>
+    </div>
+
+    <!-- Step 2: WordPress Landing Page -->
+    <div class="lifecycle-column">
+      <div class="col-header">
+        <span class="col-step-pill">STAGE 02</span>
+        <span class="col-title">WordPress CRO Landing Page</span>
+      </div>
+      <div class="lp-card-mock">
+        <div class="lp-hero-headline">
+          Get Your Free 20-Point Dental Marketing &amp; SEO Growth Audit
+        </div>
+        <div class="lp-form-box">
+          <div class="form-field">Clinic Name / Doctor</div>
+          <div class="form-field">Work Email Address</div>
+          <div class="form-field">Phone (+91)</div>
+          <div class="form-submit-btn">GET FREE AUDIT REPORT →</div>
+        </div>
+        <div style="font-size:9px; color:#3fb950; text-align:center; font-weight:700;">
+          ✓ Conversion Rate: 13.08%
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Automated Email Sequence -->
+    <div class="lifecycle-column">
+      <div class="col-header">
+        <span class="col-step-pill">STAGE 03</span>
+        <span class="col-title">Brevo Automated Nurture</span>
+      </div>
+      <div class="email-step">
+        <div class="email-header">
+          <span class="email-name">Email 1: Audit PDF Delivery</span>
+          <span class="email-delay">Instant (0m)</span>
+        </div>
+        <div class="email-stat-row">
+          <span class="stat-open">Open: 68.4%</span>
+          <span class="stat-click">CTR: 42.1%</span>
+        </div>
+      </div>
+      <div class="email-step">
+        <div class="email-header">
+          <span class="email-name">Email 2: Case Study Breakdown</span>
+          <span class="email-delay">Day 2 (48h)</span>
+        </div>
+        <div class="email-stat-row">
+          <span class="stat-open">Open: 52.1%</span>
+          <span class="stat-click">CTR: 26.8%</span>
+        </div>
+      </div>
+      <div class="email-step">
+        <div class="email-header">
+          <span class="email-name">Email 3: 1:1 Consultation Invite</span>
+          <span class="email-delay">Day 4 (96h)</span>
+        </div>
+        <div class="email-stat-row">
+          <span class="stat-open">Open: 44.8%</span>
+          <span class="stat-click" style="color:#ef7f1a; font-weight:800;">Bookings: 18.4%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
