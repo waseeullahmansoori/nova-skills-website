@@ -105,6 +105,19 @@ const ACADEMY_HERO_VISUALS = {
     aspectRatio: '3 / 4',
     width: 896,
     height: 1200
+  },
+  'career-freelancing': {
+    enabled: true,
+    assetId: 'NS-ACAD-CAREER-MASTER',
+    approvalStatus: 'approved',
+    desktopSrc: '/images/academies/career-freelancing/ns-academy-career-hero-desktop-896w.png',
+    tabletSrc: '/images/academies/career-freelancing/ns-academy-career-hero-tablet-600w.png',
+    mobileSrc: '/images/academies/career-freelancing/ns-academy-career-hero-mobile-400w.png',
+    alt: 'Freelance consultant workstation showing client contract pipeline, international milestone dashboard, and project proposal notes.',
+    caption: 'Global Freelancing & Agency Consulting Suite',
+    aspectRatio: '3 / 4',
+    width: 896,
+    height: 1200
   }
 };
 
