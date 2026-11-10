@@ -168,6 +168,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: 84px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -179,7 +180,7 @@ body {
   background-color: var(--bg-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Aspect Ratio Utilities (CLS Prevention) */
@@ -373,6 +374,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== ANNOUNCEMENT BAR ===== */
 .announcement-bar {
+  font-family: var(--font-primary);
   background: var(--grad-brand);
   color: white;
   padding: 10px 0;
@@ -437,16 +439,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 #ns-header:empty {
   display: block;
-  min-height: 112px;
+  min-height: 125px;
 }
 @media (max-width: 1024px) {
   #ns-header:empty {
-    min-height: 104px;
+    min-height: 116px;
   }
 }
 
 /* ===== HEADER / NAVIGATION ===== */
 .header {
+  font-family: var(--font-primary);
   position: sticky;
   top: 0;
   z-index: var(--z-nav);
@@ -465,7 +468,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: clamp(14px, 1.5vw, 24px);
   height: 72px;
 }
 
@@ -499,7 +502,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9375rem;
   font-weight: 600;
   height: 40px;
-  padding: 0 16px;
+  padding: 0 clamp(10px, 1vw, 14px);
   border-radius: var(--radius-full);
   border: 1px solid transparent;
   transition: all var(--transition-base);
@@ -522,7 +525,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(5, 153, 168, 0.2);
   box-shadow: var(--shadow-sm);
   font-weight: 600;
-  padding: 0 16px;
+  padding: 0 clamp(10px, 1vw, 14px);
 }
 
 /* Dropdown */
@@ -544,7 +547,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   visibility: hidden;
   transition: all var(--transition-base);
-  z-index: var(--z-overlay);
+  z-index: var(--z-nav);
 }
 
 .dropdown:hover .dropdown-menu,
@@ -3268,7 +3271,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== MOBILE NAVIGATION ===== */
 @media (max-width: 1024px) {
   html, body {
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
   }
 
   .nav-links {
@@ -3288,7 +3291,7 @@ h1, h2, h3, h4, h5, h6 {
     visibility: hidden !important;
     pointer-events: none !important;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s ease !important;
-    z-index: calc(var(--z-modal) + 10) !important;
+    z-index: calc(var(--z-nav) + 10) !important;
     overflow-y: auto !important;
     align-items: flex-start !important;
     gap: 4px !important;
@@ -3323,7 +3326,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .hamburger {
     display: flex;
-    z-index: var(--z-nav);
+    z-index: calc(var(--z-nav) + 15);
   }
 
   .nav-actions {
@@ -6022,6 +6025,7 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
    PREMIUM SMART ANNOUNCEMENT BAR (ROTATING)
    ============================================================ */
 .announcement-bar {
+  font-family: var(--font-primary);
   background: var(--grad-cta);
   color: white;
   padding: 8px 0;
@@ -6340,6 +6344,7 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
     opacity: 1;
     visibility: visible;
     display: none;
+    pointer-events: auto;
   }
   .mega-dropdown.open .mega-menu {
     display: block;
@@ -9012,4 +9017,11 @@ body.filter-sheet-open #nova-ai-widget-container {
   .academy-demo-microcopy {
     font-size: 0.7rem;
   }
+}
+
+
+/* Footer contact email wrapping guard for medium viewports */
+.footer-contact a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }

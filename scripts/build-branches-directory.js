@@ -189,7 +189,7 @@ function buildDirectoryHtml() {
   <link rel="preload" href="/public/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin />
 
   <!-- Base Site Styles & Scoped Directory Styles -->
-  <link rel="stylesheet" href="/css/styles.min.css?v=2.7.4" />
+  <link rel="stylesheet" href="/css/styles.min.css?v=2.8.0" />
   <link rel="stylesheet" href="/css/locations-directory.css" />
 
   <!-- Structured Data JSON-LD -->
@@ -856,7 +856,7 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
 
   <!-- Scripts -->
   <script src="/js/data.min.js?v=2.7.4" defer></script>
-  <script src="/js/components.min.js?v=2.7.4" defer></script>
+  <script src="/js/components.min.js?v=2.8.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
   <script src="/js/locations-directory.js" defer></script>
 </body>

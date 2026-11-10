@@ -619,157 +619,34 @@ window.showToastNotification = showToastNotification;
    Helper: detect current page for active nav
 ───────────────────────────────────────────── */
 function getCurrentPage() {
-  const path = window.location.pathname.toLowerCase();
+  const path = window.location.pathname.toLowerCase().replace(/\/+$/, '') || '/';
+  if (path === '/' || path === '/index.html') return 'home';
   if (path.includes('/branches')) return 'locations';
-  if (path.endsWith('courses.html') || path.includes('/courses')) return 'courses';
-  if (path.endsWith('placements.html') || path.includes('/placements')) return 'placements';
-  if (path.endsWith('success-stories.html') || path.includes('/success-stories')) return 'success-stories';
-  if (path.endsWith('assessment.html') || path.includes('/assessment')) return 'assessment';
-  if (path.endsWith('blog.html') || path.includes('/blog')) return 'blog';
-  if (path.endsWith('contact.html') || path.includes('/contact')) return 'contact';
+  if (
+    path.includes('/courses') ||
+    path.includes('/academies') ||
+    path.includes('/_rendered_courses') ||
+    path.includes('course-detail') ||
+    path.includes('academy-detail')
+  ) return 'courses';
+  if (path.includes('/assessment')) return 'assessment';
+  if (path.includes('/placements')) return 'placements';
+  if (path.includes('/blog') || path.includes('/success-stories') || path.includes('/about')) return 'about';
+  if (path.includes('/contact')) return 'contact';
   if (path.includes('/privacy-policy')) return 'privacy-policy';
   if (path.includes('/refund-policy')) return 'refund-policy';
   if (path.includes('/terms-and-conditions')) return 'terms-and-conditions';
-  if (path.endsWith('course-detail.html')) return 'courses';
-  if (path.endsWith('blog-detail.html')) return 'blog';
-  return 'home';
+  if (path.includes('/thank-you')) return 'thank-you';
+  if (path.includes('/lead-success')) return 'lead-success';
+  return '';
 }
 
 
 /* ─────────────────────────────────────────────
-   NAV LINKS HTML (Global Standardized Header)
+   GLOBAL HEADER SECTION A: ANNOUNCEMENT BAR
 ───────────────────────────────────────────── */
-function buildNavLinksHTML(page) {
-  const activeClass = (p) => page === p ? 'nav-link active' : 'nav-link';
-  const aiHref = (page === 'home') ? '#ai-advisor' : 'index.html#ai-advisor';
-
-  return `
-    <!-- 1. HOME -->
-    <li><a href="/" class="${activeClass('home')}">Home</a></li>
-
-    <!-- 2. COURSES (MEGA MENU) -->
-    <li class="dropdown mega-dropdown">
-      <a href="/courses.html" class="${activeClass('courses')} dropdown-toggle">Courses <span class="chevron">⌄</span></a>
-      <div class="dropdown-menu mega-menu">
-        <div class="mega-menu-grid">
-          <div class="mega-col">
-            <a href="/academies/digital-marketing/" class="mega-item">
-              <span class="mega-icon">📊</span>
-              <div>
-                <div class="mega-title">Digital Marketing</div>
-                <div class="mega-sub">SEO, Google Ads, Meta Ads</div>
-              </div>
-            </a>
-            <a href="/academies/ai/" class="mega-item">
-              <span class="mega-icon">🤖</span>
-              <div>
-                <div class="mega-title">AI & Automation</div>
-                <div class="mega-sub">Prompt Engg, ChatGPT, Workflows</div>
-              </div>
-            </a>
-            <a href="/academies/design/" class="mega-item">
-              <span class="mega-icon">🎨</span>
-              <div>
-                <div class="mega-title">Graphic Design</div>
-                <div class="mega-sub">Photoshop, Figma, Illustrator</div>
-              </div>
-            </a>
-            <a href="/academies/video-motion/" class="mega-item">
-              <span class="mega-icon">🎬</span>
-              <div>
-                <div class="mega-title">Motion Graphics & Video</div>
-                <div class="mega-sub">Premiere Pro, After Effects</div>
-              </div>
-            </a>
-          </div>
-
-          <div class="mega-col">
-            <a href="/academies/programming/" class="mega-item">
-              <span class="mega-icon">💻</span>
-              <div>
-                <div class="mega-title">Web Development</div>
-                <div class="mega-sub">HTML, CSS, React, Full-Stack</div>
-              </div>
-            </a>
-            <a href="/course-detail.html?id=python-developer" class="mega-item">
-              <span class="mega-icon">🐍</span>
-              <div>
-                <div class="mega-title">Python Programming</div>
-                <div class="mega-sub">Data Structures, Backend APIs</div>
-              </div>
-            </a>
-            <a href="/course-detail.html?id=biz-productivity" class="mega-item">
-              <span class="mega-icon">📈</span>
-              <div>
-                <div class="mega-title">Data Analytics & MIS</div>
-                <div class="mega-sub">Excel, Power BI, Dashboards</div>
-              </div>
-            </a>
-            <a href="/academies/no-code-web/" class="mega-item">
-              <span class="mega-icon">🌐</span>
-              <div>
-                <div class="mega-title">No-Code E-Commerce</div>
-                <div class="mega-sub">WordPress, Shopify Store</div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="mega-menu-footer">
-          <a href="/courses.html" class="mega-footer-link">View All <span class="canonical-courses-count">109+</span> Courses →</a>
-        </div>
-      </div>
-    </li>
-
-    <!-- 2b. LEARNING LOCATIONS -->
-    <li><a href="/branches/" class="${activeClass('locations')}"${page === 'locations' ? ' aria-current="page"' : ''}>Learning Locations</a></li>
-
-    <!-- 3. ✨ AI CAREER ADVISOR -->
-    <li>
-      <a href="/assessment.html" class="nav-link nav-ai-pill ${page === 'assessment' ? 'active' : ''}" id="nav-link-ai">
-        <span class="ai-sparkle">✨</span> AI Career Advisor
-      </a>
-    </li>
-
-    <!-- 4. PLACEMENTS -->
-    <li><a href="/placements.html" class="${activeClass('placements')}">Placements</a></li>
-
-    <!-- 5. ABOUT DROPDOWN (MANDATORY ORDER) -->
-    <li class="dropdown">
-      <a href="/#why-nova" class="nav-link dropdown-toggle">About <span class="chevron">⌄</span></a>
-      <ul class="dropdown-menu">
-        <li><a href="/#why-nova">Why Nova Skills</a></li>
-        <li><a href="/#why-nova">Our Story</a></li>
-        <li><a href="/#mentors">Mentors</a></li>
-        <li><a href="/#certifications">Certifications</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/contact/">Contact Us</a></li>
-        <li class="dropdown-divider"></li>
-        <li><a href="/#why-nova">About Nova Skills</a></li>
-      </ul>
-    </li>
-
-    <!-- 6. CONTACT -->
-    <li><a href="/contact/" class="${activeClass('contact')}">Contact</a></li>
-
-    <!-- 7. MOBILE DRAWER ACTIONS (Visible on mobile navigation drawer) -->
-    <li class="mobile-drawer-action-group">
-      <a href="/login.html" onclick="handleNavAuthClick(event);" class="mobile-drawer-action-btn mobile-drawer-login" id="mobile-drawer-auth-btn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Login / Sign Up
-      </a>
-      <a href="tel:+919695904440" class="mobile-drawer-action-btn mobile-drawer-call" id="mobile-drawer-phone-btn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 9695904440
-      </a>
-    </li>
-  `;
-}
-
-/* ─────────────────────────────────────────────
-   HEADER HTML
-───────────────────────────────────────────── */
-function buildHeaderHTML(page) {
-  return `
-  <!-- Smart Rotating Announcement Bar -->
+function buildAnnouncementBarHTML() {
+  return `<!-- Smart Rotating Announcement Bar -->
   <div class="announcement-bar" id="announcement-bar">
     <div class="container announcement-container">
       
@@ -781,7 +658,7 @@ function buildHeaderHTML(page) {
 
         <!-- Slide 1 -->
         <div class="announcement-slide active" data-index="0">
-          <span class="announcement-text">🎓 <strong>Admissions Open for New Batches</strong> • Industry-ready practical training with limited seats available.</span>
+          <span class="announcement-text">🎓 <strong>Admissions Open for Upcoming Batches</strong> • Industry-ready practical training with limited seats available.</span>
           <a href="#counselling" onclick="openConsultationPopup(); return false;" class="announcement-cta">Apply Now →</a>
         </div>
 
@@ -834,7 +711,142 @@ function buildHeaderHTML(page) {
       <button class="announcement-close" id="close-announcement" aria-label="Close announcement">✕</button>
 
     </div>
-  </div>
+  </div>`;
+}
+
+/* ─────────────────────────────────────────────
+   GLOBAL HEADER SECTION B: NAV LINKS (Desktop & Mobile Drawer)
+───────────────────────────────────────────── */
+function buildNavLinksHTML(page) {
+  const activeClass = (p) => page === p ? 'nav-link active' : 'nav-link';
+  const activeAria = (p) => page === p ? ' aria-current="page"' : '';
+
+  return `
+    <!-- 1. HOME -->
+    <li><a href="/" class="${activeClass('home')}"${activeAria('home')}>Home</a></li>
+
+    <!-- 2. COURSES (MEGA MENU) -->
+    <li class="dropdown mega-dropdown">
+      <a href="/courses.html" class="${activeClass('courses')} dropdown-toggle"${activeAria('courses')} aria-haspopup="true" aria-expanded="false">Courses <span class="chevron">⌄</span></a>
+      <div class="dropdown-menu mega-menu">
+        <div class="mega-menu-grid">
+          <div class="mega-col">
+            <a href="/academies/digital-marketing/" class="mega-item">
+              <span class="mega-icon">📊</span>
+              <div>
+                <div class="mega-title">Digital Marketing</div>
+                <div class="mega-sub">SEO, Google Ads, Meta Ads</div>
+              </div>
+            </a>
+            <a href="/academies/ai/" class="mega-item">
+              <span class="mega-icon">🤖</span>
+              <div>
+                <div class="mega-title">AI &amp; Automation</div>
+                <div class="mega-sub">Prompt Engg, ChatGPT, Workflows</div>
+              </div>
+            </a>
+            <a href="/academies/design/" class="mega-item">
+              <span class="mega-icon">🎨</span>
+              <div>
+                <div class="mega-title">Graphic Design</div>
+                <div class="mega-sub">Photoshop, Figma, Illustrator</div>
+              </div>
+            </a>
+            <a href="/academies/video-motion/" class="mega-item">
+              <span class="mega-icon">🎬</span>
+              <div>
+                <div class="mega-title">Motion Graphics &amp; Video</div>
+                <div class="mega-sub">Premiere Pro, After Effects</div>
+              </div>
+            </a>
+          </div>
+          <div class="mega-col">
+            <a href="/academies/programming/" class="mega-item">
+              <span class="mega-icon">💻</span>
+              <div>
+                <div class="mega-title">Web Development</div>
+                <div class="mega-sub">HTML, CSS, React, Full-Stack</div>
+              </div>
+            </a>
+            <a href="/course-detail.html?id=python-developer" class="mega-item">
+              <span class="mega-icon">🐍</span>
+              <div>
+                <div class="mega-title">Python Programming</div>
+                <div class="mega-sub">Data Structures, Backend APIs</div>
+              </div>
+            </a>
+            <a href="/course-detail.html?id=biz-productivity" class="mega-item">
+              <span class="mega-icon">📈</span>
+              <div>
+                <div class="mega-title">Data Analytics &amp; MIS</div>
+                <div class="mega-sub">Excel, Power BI, Dashboards</div>
+              </div>
+            </a>
+            <a href="/academies/no-code-web/" class="mega-item">
+              <span class="mega-icon">🌐</span>
+              <div>
+                <div class="mega-title">No-Code E-Commerce</div>
+                <div class="mega-sub">WordPress, Shopify Store</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="mega-menu-footer">
+          <a href="/courses.html" class="mega-footer-link">View All <span class="canonical-courses-count">109+</span> Courses →</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- 2b. LEARNING LOCATIONS -->
+    <li><a href="/branches/" class="${activeClass('locations')}"${activeAria('locations')}>Learning Locations</a></li>
+
+    <!-- 3. ✨ AI CAREER ADVISOR -->
+    <li>
+      <a href="/assessment.html" class="nav-link nav-ai-pill ${page === 'assessment' ? 'active' : ''}"${activeAria('assessment')} id="nav-link-ai">
+        <span class="ai-sparkle">✨</span> AI Career Advisor
+      </a>
+    </li>
+
+    <!-- 4. PLACEMENTS -->
+    <li><a href="/placements.html" class="${activeClass('placements')}"${activeAria('placements')}>Placements</a></li>
+
+    <!-- 5. ABOUT DROPDOWN (MANDATORY ORDER) -->
+    <li class="dropdown">
+      <a href="/#why-nova" class="${activeClass('about')} dropdown-toggle"${activeAria('about')} aria-haspopup="true" aria-expanded="false">About <span class="chevron">⌄</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/#why-nova">Why Nova Skills</a></li>
+        <li><a href="/#why-nova">Our Story</a></li>
+        <li><a href="/#mentors">Mentors</a></li>
+        <li><a href="/#certifications">Certifications</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+        <li class="dropdown-divider"></li>
+        <li><a href="/#why-nova">About Nova Skills</a></li>
+      </ul>
+    </li>
+
+    <!-- 6. CONTACT -->
+    <li><a href="/contact/" class="${activeClass('contact')}"${activeAria('contact')}>Contact</a></li>
+
+    <!-- 7. MOBILE DRAWER ACTIONS (Visible on mobile navigation drawer) -->
+    <li class="mobile-drawer-action-group">
+      <a href="/login.html" onclick="handleNavAuthClick(event);" class="mobile-drawer-action-btn mobile-drawer-login" id="mobile-drawer-auth-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Login / Sign Up
+      </a>
+      <a href="tel:+919695904440" class="mobile-drawer-action-btn mobile-drawer-call" id="mobile-drawer-phone-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 9695904440
+      </a>
+    </li>
+  `;
+}
+
+/* ─────────────────────────────────────────────
+   GLOBAL HEADER SHELL (Single Source of Truth)
+───────────────────────────────────────────── */
+function buildHeaderHTML(page) {
+  return `
+  ${buildAnnouncementBarHTML()}
 
   <!-- Sticky Navigation -->
   <header class="header" id="main-header">
@@ -854,7 +866,7 @@ function buildHeaderHTML(page) {
         </a>
       </div>
 
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
     </nav>
@@ -1256,15 +1268,17 @@ function initNavBehaviour() {
   if (!header.dataset.scrollBound) {
     header.dataset.scrollBound = 'true';
     let navTicking = false;
+    const updateScrolled = () => {
+      header.classList.toggle('scrolled', (window.scrollY || window.pageYOffset) > 40);
+      navTicking = false;
+    };
     window.addEventListener('scroll', () => {
       if (!navTicking) {
-        window.requestAnimationFrame(() => {
-          header.classList.toggle('scrolled', (window.scrollY || window.pageYOffset) > 40);
-          navTicking = false;
-        });
+        window.requestAnimationFrame(updateScrolled);
         navTicking = true;
       }
     }, { passive: true });
+    updateScrolled();
   }
 
   function openMenu() {
@@ -1285,10 +1299,18 @@ function initNavBehaviour() {
     navLinks.classList.remove('open');
     navOverlay.classList.remove('visible');
     document.body.style.overflow = '';
+    navLinks.querySelectorAll('.dropdown.open').forEach(d => {
+      d.classList.remove('open');
+      const t = d.querySelector('.dropdown-toggle');
+      if (t) t.setAttribute('aria-expanded', 'false');
+    });
     if (document.activeElement && navLinks.contains(document.activeElement)) {
       hamburger.focus();
     }
   }
+
+  if (hamburger.dataset.navBound === 'true') return;
+  hamburger.dataset.navBound = 'true';
 
   // Hamburger toggle click
   hamburger.addEventListener('click', (e) => {
@@ -1301,11 +1323,14 @@ function initNavBehaviour() {
   });
 
   // Close menu on backdrop overlay click
-  navOverlay.addEventListener('click', closeMenu);
+  if (!navOverlay.dataset.navBound) {
+    navOverlay.dataset.navBound = 'true';
+    navOverlay.addEventListener('click', closeMenu);
+  }
 
   // Close menu on link click (except dropdown toggle on mobile)
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', () => {
       if (!link.classList.contains('dropdown-toggle')) {
         closeMenu();
       }
@@ -1313,22 +1338,32 @@ function initNavBehaviour() {
   });
 
   // Mobile dropdown toggles
-  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+  navLinks.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    if (toggle.dataset.dropdownBound === 'true') return;
+    toggle.dataset.dropdownBound = 'true';
     toggle.addEventListener('click', (e) => {
       if (window.innerWidth <= 1024) {
         e.preventDefault();
         const dropdown = toggle.closest('.dropdown');
-        dropdown.classList.toggle('open');
+        const isOpen = dropdown.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       }
     });
   });
 
-  // ESC closes mobile menu
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-      closeMenu();
-    }
-  });
+  // ESC closes mobile menu or open desktop dropdown
+  if (!document.documentElement.dataset.navEscBound) {
+    document.documentElement.dataset.navEscBound = 'true';
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (navLinks.classList.contains('open')) {
+          closeMenu();
+        } else if (document.activeElement && navLinks.contains(document.activeElement)) {
+          document.activeElement.blur();
+        }
+      }
+    });
+  }
 }
 
 /* ── Premium Smart Announcement Bar Rotator ── */
@@ -1349,10 +1384,15 @@ function initAnnouncementBar() {
     return;
   }
 
+  if (bar.dataset.annBound === 'true') return;
+  bar.dataset.annBound = 'true';
+
   const slides = bar.querySelectorAll('.announcement-slide');
   const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
   const totalSlides = slides.length;
   if (totalSlides === 0) return;
+
+  const prefersReducedMotion = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Restore session index if available
   let currentIndex = parseInt(sessionStorage.getItem('ns_announcement_index') || '0', 10);
@@ -1361,7 +1401,7 @@ function initAnnouncementBar() {
   let timer = null;
   const ROTATE_INTERVAL = 6000; // 6 seconds
 
-  function showSlide(index, direction = 'next') {
+  function showSlide(index) {
     if (index === currentIndex && slides[index].classList.contains('active')) return;
 
     slides.forEach((slide, i) => {
@@ -1376,7 +1416,7 @@ function initAnnouncementBar() {
 
     setTimeout(() => {
       slides[currentIndex].classList.add('active');
-    }, 50);
+    }, prefersReducedMotion ? 0 : 50);
 
     // Update dots
     dots.forEach((dot, i) => {
@@ -1385,20 +1425,24 @@ function initAnnouncementBar() {
   }
 
   function nextSlide() {
-    showSlide(currentIndex + 1, 'next');
+    showSlide(currentIndex + 1);
   }
 
   function prevSlide() {
-    showSlide(currentIndex - 1, 'prev');
+    showSlide(currentIndex - 1);
   }
 
   function startTimer() {
+    if (prefersReducedMotion) return;
     stopTimer();
     timer = setInterval(nextSlide, ROTATE_INTERVAL);
   }
 
   function stopTimer() {
-    if (timer) clearInterval(timer);
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
   }
 
   // Initial display setup
@@ -1451,17 +1495,17 @@ function initAnnouncementBar() {
   // Dismiss Close Button
   closeBtn?.addEventListener('click', () => {
     stopTimer();
-    bar.style.transition = 'max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease';
+    bar.style.transition = prefersReducedMotion ? 'none' : 'max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease';
     bar.style.maxHeight = '0';
     bar.style.opacity = '0';
     bar.style.padding = '0';
     localStorage.setItem('ns_announcement_closed', 'true');
     const headerWrapper = document.getElementById('ns-header');
     if (headerWrapper) headerWrapper.style.minHeight = 'auto';
-    setTimeout(() => bar.style.display = 'none', 320);
+    setTimeout(() => { bar.style.display = 'none'; }, prefersReducedMotion ? 0 : 320);
   });
 
-  // Start auto-rotation
+  // Start auto-rotation (skipped automatically if reduced motion requested)
   startTimer();
 }
 
@@ -1839,15 +1883,15 @@ function handleNavAuthClick(e) {
     try {
       const user = JSON.parse(userStr);
       if (user && user.role === 'Admin') {
-        window.location.href = 'admin.html';
+        window.location.href = '/admin.html';
         return;
       } else {
-        window.location.href = 'student.html';
+        window.location.href = '/student.html';
         return;
       }
     } catch (err) {}
   }
-  window.location.href = 'login.html';
+  window.location.href = '/login.html';
 }
 window.handleNavAuthClick = handleNavAuthClick;
 
@@ -3601,10 +3645,30 @@ function initAllMobileSliders() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+if (typeof window !== 'undefined') {
+  window.NovaGlobalHeader = {
+    getCurrentPage,
+    buildAnnouncementBarHTML,
+    buildNavLinksHTML,
+    buildHeaderHTML,
+    initNavBehaviour,
+    initAnnouncementBar
+  };
+}
+
+function bootSharedComponents() {
   injectComponents();
 
-  // Defer modal injection to idle time
+  // Immediate interactive header, announcement bar & scroll bindings (zero delay)
+  initScrollProgress();
+  initNavBehaviour();
+  initAnnouncementBar();
+  initYearAuto();
+  if (typeof window !== 'undefined' && window.NovaSkillsData && typeof window.NovaSkillsData.hydrateDOM === 'function') {
+    window.NovaSkillsData.hydrateDOM();
+  }
+
+  // Defer secondary enhancements & modals to idle time
   if ('requestIdleCallback' in window) {
     requestIdleCallback(() => { injectEnrollmentModalHTML(); });
   } else {
@@ -3612,7 +3676,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const postDomInit = () => {
-    initShared();
+    initConsultationPopup();
+    initWhatsAppDelay();
+    initGA4ClickTracking();
     initScrollReveal();
     initCounters();
     initAllMobileSliders();
@@ -3623,7 +3689,13 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     requestAnimationFrame(postDomInit);
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bootSharedComponents);
+} else {
+  bootSharedComponents();
+}
 
 window.addEventListener('resize', () => {
   initAllMobileSliders();

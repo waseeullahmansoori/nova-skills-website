@@ -44,3 +44,28 @@ if (fs.existsSync(iconSysSrc)) {
   fs.writeFileSync(path.join(JS_DIR, 'icon-system.min.js'), minified, 'utf8');
   console.log(`✅ Built js/icon-system.min.js (${(minified.length/1024).toFixed(1)} KB)`);
 }
+
+// Sync Homepage SSR Header Shell (<div id="ns-header">...</div>) directly from components.js (Single Source of Truth)
+const compPath = path.join(BASE_DIR, 'components.js');
+const indexPath = path.join(BASE_DIR, 'index.html');
+if (fs.existsSync(compPath) && fs.existsSync(indexPath)) {
+  const compCode = fs.readFileSync(compPath, 'utf8');
+  const bStart = compCode.indexOf('function buildAnnouncementBarHTML');
+  const bEnd = compCode.indexOf('/* ─────────────────────────────────────────────', compCode.indexOf('function buildHeaderHTML'));
+  if (bStart !== -1 && bEnd !== -1) {
+    const buildHeaderFn = new Function(compCode.substring(bStart, bEnd) + '; return buildHeaderHTML("home");');
+    const renderedHeader = buildHeaderFn().trim();
+    let indexHtml = fs.readFileSync(indexPath, 'utf8');
+    const eol = indexHtml.includes('\r\n') ? '\r\n' : '\n';
+    const slotStartTag = '<div id="ns-header">';
+    const startIdx = indexHtml.indexOf(slotStartTag);
+    const closeHeaderIdx = indexHtml.indexOf('</header>', startIdx);
+    const slotEndIdx = indexHtml.indexOf('</div>', closeHeaderIdx);
+    if (startIdx !== -1 && closeHeaderIdx !== -1 && slotEndIdx !== -1) {
+      const replacement = `${slotStartTag}${eol}${renderedHeader.replace(/\r?\n/g, eol)}${eol}  </div>`;
+      indexHtml = indexHtml.substring(0, startIdx) + replacement + indexHtml.substring(slotEndIdx + '</div>'.length);
+      fs.writeFileSync(indexPath, indexHtml, 'utf8');
+      console.log('✅ Synced index.html #ns-header SSR snapshot from single source components.js');
+    }
+  }
+}

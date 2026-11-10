@@ -862,11 +862,11 @@ NS_ACADEMIES.forEach(acad => {
     }
     #ns-header:empty {
       display: block;
-      min-height: 112px;
+      min-height: 125px;
     }
     @media (max-width: 1024px) {
       #ns-header:empty {
-        min-height: 104px;
+        min-height: 116px;
       }
     }
 ${heroVisual && heroVisual.enabled ? `
@@ -1637,8 +1637,8 @@ ${heroVisual && heroVisual.enabled ? `
 }
   </style>
 
-  <link rel="stylesheet" href="/css/styles.min.css?v=2.7.4">
-  <noscript><link rel="stylesheet" href="/css/styles.min.css?v=2.7.4"></noscript>
+  <link rel="stylesheet" href="/css/styles.min.css?v=2.8.0">
+  <noscript><link rel="stylesheet" href="/css/styles.min.css?v=2.8.0"></noscript>
 
   <!-- Structured Data: JSON-LD Suite -->
   <script type="application/ld+json">
@@ -1807,7 +1807,7 @@ ${sectionsContent}
 
   <!-- JavaScript Bundles -->
   <script src="/js/data.min.js?v=2.7.4" defer></script>
-  <script src="/js/components.min.js?v=2.7.4" defer></script>
+  <script src="/js/components.min.js?v=2.8.0" defer></script>
   <script src="/nova-ai-widget.js?v=3.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
   <script src="/js/academy-detail.min.js?v=2.7.4" defer></script>${heroVisual && heroVisual.enabled ? `\n  <script src="/js/academy-hero-experiment.js?v=1.0" defer></script>` : ''}

@@ -25,7 +25,17 @@ if (fs.existsSync(mainCssPath)) {
   console.log('✅ Successfully minified css/main.css -> css/styles.min.css');
 }
 
-// 2. Minify styles.css -> styles.min.css
+// 2. Minify css/critical.css -> css/critical.min.css
+const criticalCssPath = path.join(baseDir, 'css', 'critical.css');
+const criticalMinPath = path.join(baseDir, 'css', 'critical.min.css');
+if (fs.existsSync(criticalCssPath)) {
+  const critCss = fs.readFileSync(criticalCssPath, 'utf8');
+  const minifiedCrit = minify(critCss);
+  fs.writeFileSync(criticalMinPath, minifiedCrit, 'utf8');
+  console.log('✅ Successfully minified css/critical.css -> css/critical.min.css');
+}
+
+// 3. Minify styles.css -> styles.min.css
 const stylesPath = path.join(baseDir, 'styles.css');
 const stylesMinPath = path.join(baseDir, 'styles.min.css');
 if (fs.existsSync(stylesPath)) {

@@ -151,6 +151,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: 84px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -162,7 +163,7 @@ body {
   background-color: var(--bg-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Aspect Ratio Utilities (CLS Prevention) */
@@ -353,6 +354,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== ANNOUNCEMENT BAR ===== */
 .announcement-bar {
+  font-family: var(--font-primary);
   background: var(--grad-brand);
   color: white;
   padding: 10px 0;
@@ -407,9 +409,14 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255,255,255,0.15);
 }
 
-/* ===== HEADER
+/* Reserved Header Height to Eliminate Layout Shift (CLS) */
+#ns-header { display: contents; }
+#ns-header:empty { display: block; min-height: 125px; }
+@media (max-width: 1024px) { #ns-header:empty { min-height: 116px; } }
+
 /* ===== HEADER / NAVIGATION ===== */
 .header {
+  font-family: var(--font-primary);
   position: sticky;
   top: 0;
   z-index: var(--z-nav);
@@ -428,7 +435,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: clamp(14px, 1.5vw, 24px);
   height: 72px;
 }
 
@@ -462,7 +469,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9375rem;
   font-weight: 600;
   height: 40px;
-  padding: 0 16px;
+  padding: 0 clamp(10px, 1vw, 14px);
   border-radius: var(--radius-full);
   border: 1px solid transparent;
   transition: all var(--transition-base);
@@ -485,7 +492,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(5, 153, 168, 0.2);
   box-shadow: var(--shadow-sm);
   font-weight: 600;
-  padding: 0 16px;
+  padding: 0 clamp(10px, 1vw, 14px);
 }
 
 .nav-ai-pill {
@@ -521,7 +528,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   visibility: hidden;
   transition: all var(--transition-base);
-  z-index: var(--z-overlay);
+  z-index: var(--z-nav);
 }
 
 .dropdown:hover .dropdown-menu,
@@ -1120,4 +1127,15 @@ h1, h2, h3, h4, h5, h6 {
 .final-cta-section {
   content-visibility: auto;
   contain-intrinsic-size: 1px 700px;
+}
+
+
+/* Desktop Navbar Tight Viewport Guard (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .header .container { padding: 0 16px !important; }
+  .navbar { gap: 12px !important; }
+  .nav-logo .logo-light { height: 38px !important; }
+  .nav-links { gap: 2px !important; }
+  .nav-link { padding: 0 8px !important; font-size: 0.8125rem !important; }
+  .nav-phone { padding: 6px 10px !important; font-size: 0.8125rem !important; }
 }
