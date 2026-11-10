@@ -79,6 +79,32 @@ const ACADEMY_HERO_VISUALS = {
     aspectRatio: '3 / 4',
     width: 896,
     height: 1200
+  },
+  '3d': {
+    enabled: true,
+    assetId: 'NS-ACAD-3D-MASTER',
+    approvalStatus: 'approved',
+    desktopSrc: '/images/academies/3d/ns-academy-3d-hero-desktop-896w.png',
+    tabletSrc: '/images/academies/3d/ns-academy-3d-hero-tablet-600w.png',
+    mobileSrc: '/images/academies/3d/ns-academy-3d-hero-mobile-400w.png',
+    alt: '3D digital artist workstation displaying 3D character mesh wireframe and photorealistic PBR rendering in Blender.',
+    caption: 'Spatial Design & 3D Production Studio',
+    aspectRatio: '3 / 4',
+    width: 896,
+    height: 1200
+  },
+  'office-productivity': {
+    enabled: true,
+    assetId: 'NS-ACAD-OFFICE-MASTER',
+    approvalStatus: 'approved',
+    desktopSrc: '/images/academies/office-productivity/ns-academy-office-hero-desktop-896w.png',
+    tabletSrc: '/images/academies/office-productivity/ns-academy-office-hero-tablet-600w.png',
+    mobileSrc: '/images/academies/office-productivity/ns-academy-office-hero-mobile-400w.png',
+    alt: 'Business intelligence analyst workspace showing executive Power BI dashboards and financial forecast models.',
+    caption: 'Enterprise Business Intelligence & Analytics Lab',
+    aspectRatio: '3 / 4',
+    width: 896,
+    height: 1200
   }
 };
 
