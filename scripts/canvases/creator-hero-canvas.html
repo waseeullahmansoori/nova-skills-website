@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creator Academy Master Studio</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #0d1117;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #e6edf3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* Studio Background: Acoustic Slat Wall & Ambient Lighting */
+  .studio-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(circle at 75% 25%, rgba(239, 127, 26, 0.18) 0%, transparent 45%),
+      radial-gradient(circle at 25% 40%, rgba(5, 153, 168, 0.14) 0%, transparent 50%),
+      linear-gradient(180deg, #0a0d14 0%, #111622 60%, #161c2b 100%);
+  }
+  .slat-wall {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(20, 24, 34, 0.85) 0px,
+      rgba(20, 24, 34, 0.85) 28px,
+      rgba(10, 12, 18, 0.95) 28px,
+      rgba(10, 12, 18, 0.95) 36px
+    );
+    opacity: 0.65;
+  }
+  .ambient-glow-key {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(255, 230, 190, 0.22) 0%, transparent 70%);
+    filter: blur(40px);
+  }
+
+  /* Foreground Studio Workspace */
+  .workspace-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 36px 36px;
+    justify-content: space-between;
+  }
+
+  /* Header Badge */
+  .studio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 14px;
+  }
+  .brand-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand-logo-icon {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #004672, #0599a8);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 15px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(5, 153, 168, 0.35);
+  }
+  .brand-text {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #f0f6fc;
+  }
+  .brand-sub {
+    font-size: 11px;
+    color: #8b949e;
+    letter-spacing: 0.5px;
+  }
+  .live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(239, 127, 26, 0.14);
+    border: 1px solid rgba(239, 127, 26, 0.35);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ef7f1a;
+  }
+  .live-dot {
+    width: 8px;
+    height: 8px;
+    background: #ef7f1a;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ef7f1a;
+  }
+
+  /* Main Display: DaVinci Resolve Video Production Suite */
+  .display-rig {
+    display: grid;
+    grid-template-columns: 1fr 310px;
+    gap: 20px;
+    margin-top: 14px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .main-monitor {
+    background: #141720;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .monitor-titlebar {
+    background: #191e2b;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .window-dots {
+    display: flex;
+    gap: 6px;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-red { background: #ff5f56; }
+  .dot-yellow { background: #ffbd2e; }
+  .dot-green { background: #27c93f; }
+  .monitor-filename {
+    font-size: 11px;
+    font-weight: 600;
+    color: #8b949e;
+  }
+  .badge-resolution {
+    background: rgba(5, 153, 168, 0.18);
+    color: #0599a8;
+    border: 1px solid rgba(5, 153, 168, 0.4);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 4px;
+  }
+
+  /* Video Workspace */
+  .editor-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+  }
+  .viewer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 10px;
+    padding: 12px;
+    flex: 1;
+    min-height: 220px;
+  }
+  .video-preview-box {
+    background: #090c12;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cinematic-scene {
+    width: 100%;
+    height: 100%;
+    background:
+      linear-gradient(135deg, rgba(0, 70, 114, 0.55), rgba(239, 127, 26, 0.35)),
+      radial-gradient(ellipse at 60% 40%, rgba(255, 200, 120, 0.25) 0%, transparent 60%),
+      #131a26;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 14px;
+    position: relative;
+  }
+  .cinematic-grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .rec-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #ff5f56;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .rec-dot { width: 7px; height: 7px; background: #ff5f56; border-radius: 50%; }
+  .tc-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: #0599a8;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .cinematic-caption {
+    position: relative;
+    z-index: 2;
+    background: rgba(13, 17, 23, 0.85);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .caption-title { font-weight: 700; color: #fff; display: flex; justify-content: space-between; }
+  .caption-sub { font-size: 10px; color: #8b949e; }
+
+  /* Audio & Scopes Panel */
+  .scopes-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .scope-box {
+    background: #090c12;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .scope-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 700;
+    color: #8b949e;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .waveform-svg {
+    width: 100%;
+    height: 52px;
+  }
+
+  /* Multi-track Timeline */
+  .timeline-container {
+    background: #0e121a;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 10px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .timeline-ruler {
+    height: 18px;
+    background: #141924;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-family: monospace;
+    font-size: 9px;
+    color: #6e7681;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+  }
+  .track-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 28px;
+  }
+  .track-label {
+    width: 60px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #8b949e;
+    padding-left: 4px;
+  }
+  .track-lane {
+    flex: 1;
+    height: 100%;
+    background: #121620;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 2px 4px;
+    gap: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+  }
+  .clip {
+    height: 22px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  }
+  .clip-v1 { background: #004672; width: 42%; }
+  .clip-v2 { background: #0599a8; width: 34%; }
+  .clip-v3 { background: #5c3580; width: 22%; }
+  .clip-a1 { background: #238636; width: 68%; }
+  .clip-a2 { background: #b08800; width: 28%; }
+
+  /* Side Rig: YouTube Studio Analytics & Storyboard */
+  .side-rig {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .analytics-card {
+    background: #141720;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  .analytics-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .channel-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .yt-icon {
+    width: 18px;
+    height: 13px;
+    background: #ff0000;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+  }
+  .yt-icon::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    border-style: solid;
+    border-width: 3.5px 0 3.5px 6px;
+    border-color: transparent transparent transparent #fff;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .stat-box {
+    background: #090c12;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 10px;
+  }
+  .stat-num {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.3px;
+  }
+  .stat-growth {
+    font-size: 10px;
+    font-weight: 700;
+    color: #3fb950;
+    margin-top: 2px;
+  }
+  .stat-lbl {
+    font-size: 9px;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+  }
+
+  /* Stream Deck Macro Board */
+  .stream-deck-card {
+    background: #141720;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  .macro-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .macro-key {
+    background: #090c12;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 8px;
+    font-weight: 700;
+    color: #c9d1d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  .macro-icon {
+    font-size: 14px;
+  }
+  .macro-key.active {
+    border-color: #ef7f1a;
+    background: rgba(239, 127, 26, 0.16);
+    color: #ef7f1a;
+  }
+
+  /* Hardware Strip at Bottom */
+  .hardware-bar {
+    background: #141824;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+  }
+  .hw-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hw-icon-box {
+    width: 36px;
+    height: 36px;
+    background: #0d1117;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+  .hw-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: #f0f6fc;
+  }
+  .hw-detail {
+    font-size: 10px;
+    color: #8b949e;
+  }
+  .fader-group {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .vu-bar {
+    width: 90px;
+    height: 8px;
+    background: #0d1117;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    padding: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .vu-fill {
+    height: 100%;
+    width: 78%;
+    background: linear-gradient(90deg, #238636 0%, #2ea043 60%, #e3b341 85%, #f85149 100%);
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+  <div class="studio-backdrop">
+    <div class="slat-wall"></div>
+    <div class="ambient-glow-key"></div>
+  </div>
+
+  <div class="workspace-container">
+    <!-- Header -->
+    <div class="studio-header">
+      <div class="brand-badge">
+        <div class="brand-logo-icon">N</div>
+        <div>
+          <div class="brand-text">Nova Skills Creator Academy</div>
+          <div class="brand-sub">Professional Production Studio Suite • 4K HDR Lab</div>
+        </div>
+      </div>
+      <div class="live-indicator">
+        <div class="live-dot"></div>
+        LIVE PRODUCTION ON AIR
+      </div>
+    </div>
+
+    <!-- Main Rig -->
+    <div class="display-rig">
+      <!-- Main Monitor: DaVinci Resolve Studio -->
+      <div class="main-monitor">
+        <div class="monitor-titlebar">
+          <div class="window-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="monitor-filename">DaVinci Resolve Studio 19 — Master_Doc_Cut_v04.drp</div>
+          <div class="badge-resolution">4K DCI • 24.000 fps</div>
+        </div>
+
+        <div class="editor-body">
+          <div class="viewer-grid">
+            <!-- Video Canvas -->
+            <div class="video-preview-box">
+              <div class="cinematic-scene">
+                <div class="cinematic-grid-overlay"></div>
+                <div class="rec-tag"><div class="rec-dot"></div> REC [RAW]</div>
+                <div class="tc-tag">01:14:28:16</div>
+                <div class="cinematic-caption">
+                  <div class="caption-title">
+                    <span>Scene 04: Visual Hook & Story Architecture</span>
+                    <span style="color: #ef7f1a; font-weight: 800;">72% RETENTION</span>
+                  </div>
+                  <div class="caption-sub">Sony FX3 • 24mm T1.5 Cine • S-Log3/S-Gamut3.Cine Rec.709 LUT</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scopes & Meters -->
+            <div class="scopes-panel">
+              <div class="scope-box">
+                <div class="scope-header">
+                  <span>RGB Parade & Waveform</span>
+                  <span style="color: #2ea043;">100 IRE</span>
+                </div>
+                <svg class="waveform-svg" viewBox="0 0 200 60">
+                  <path d="M0,45 Q15,10 30,35 T60,25 T90,40 T120,15 T150,30 T180,18 L200,32" fill="none" stroke="#0599a8" stroke-width="1.8" opacity="0.85"/>
+                  <path d="M0,50 Q18,20 35,42 T65,30 T95,48 T125,22 T155,38 T185,25 L200,40" fill="none" stroke="#238636" stroke-width="1.8" opacity="0.85"/>
+                  <path d="M0,40 Q12,15 28,30 T58,18 T88,35 T118,10 T148,25 T178,14 L200,28" fill="none" stroke="#ef7f1a" stroke-width="1.8" opacity="0.85"/>
+                </svg>
+              </div>
+              <div class="scope-box">
+                <div class="scope-header">
+                  <span>Master Broadcast Audio Level</span>
+                  <span style="color: #ef7f1a;">-14.1 LUFS</span>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:6px; margin-top:8px;">
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <span style="font-size:9px; color:#8b949e; width:14px;">L</span>
+                    <div style="flex:1; height:6px; background:#161b22; border-radius:3px; overflow:hidden;">
+                      <div style="height:100%; width:82%; background:linear-gradient(90deg, #238636, #2ea043, #e3b341);"></div>
+                    </div>
+                  </div>
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <span style="font-size:9px; color:#8b949e; width:14px;">R</span>
+                    <div style="flex:1; height:6px; background:#161b22; border-radius:3px; overflow:hidden;">
+                      <div style="height:100%; width:79%; background:linear-gradient(90deg, #238636, #2ea043, #e3b341);"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="timeline-container">
+            <div class="timeline-ruler">
+              <span>01:14:00:00</span>
+              <span>01:14:15:00</span>
+              <span style="color: #ef7f1a; font-weight:700;">▼ 01:14:28:16 [PLAYHEAD]</span>
+              <span>01:14:45:00</span>
+              <span>01:15:00:00</span>
+            </div>
+            <!-- Video Track 2 -->
+            <div class="track-row">
+              <div class="track-label">V2 B-ROLL</div>
+              <div class="track-lane">
+                <div class="clip clip-v2" style="margin-left: 20%;">4K Drone Arch B-Roll</div>
+                <div class="clip clip-v3">Graphic Motion Callout</div>
+              </div>
+            </div>
+            <!-- Video Track 1 -->
+            <div class="track-row">
+              <div class="track-label">V1 A-ROLL</div>
+              <div class="track-lane">
+                <div class="clip clip-v1">Studio Master Interview_Take3.mov</div>
+                <div class="clip clip-v1" style="width: 38%;">Creator Hook Delivery_Final.mov</div>
+              </div>
+            </div>
+            <!-- Audio Track 1 -->
+            <div class="track-row">
+              <div class="track-label">A1 VOICE</div>
+              <div class="track-lane">
+                <div class="clip clip-a1">Shure SM7B Broadcast Master [Comp + EQ]</div>
+              </div>
+            </div>
+            <!-- Audio Track 2 -->
+            <div class="track-row">
+              <div class="track-label">A2 SCORE</div>
+              <div class="track-lane">
+                <div class="clip clip-a2" style="width: 90%;">Cinematic Soundbed & SFX Riser 48kHz</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Rig -->
+      <div class="side-rig">
+        <!-- YouTube Studio Analytics -->
+        <div class="analytics-card">
+          <div class="analytics-header">
+            <div class="channel-title">
+              <span class="yt-icon"></span>
+              YouTube Studio Pro
+            </div>
+            <span style="font-size:10px; color:#3fb950; font-weight:700;">● REALTIME</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-box">
+              <div class="stat-num">148.4K</div>
+              <div class="stat-growth">▲ +14,210 (28d)</div>
+              <div class="stat-lbl">Subscribers</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">1.84M</div>
+              <div class="stat-growth">▲ +32.8%</div>
+              <div class="stat-lbl">Monthly Views</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">72.4%</div>
+              <div class="stat-growth">Top 5% Tier</div>
+              <div class="stat-lbl">Avg Retention</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">11.8%</div>
+              <div class="stat-growth">High Impact</div>
+              <div class="stat-lbl">CTR Score</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stream Deck Control Panel -->
+        <div class="stream-deck-card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:11px; font-weight:700; color:#8b949e;">STUDIO MACRO DECK</span>
+            <span style="font-size:9px; color:#0599a8; font-weight:700;">PAGE 1 / 4</span>
+          </div>
+          <div class="macro-grid">
+            <div class="macro-key active">
+              <span class="macro-icon">🔴</span>
+              <span>RECORD</span>
+            </div>
+            <div class="macro-key">
+              <span class="macro-icon">🎬</span>
+              <span>CAM 1</span>
+            </div>
+            <div class="macro-key">
+              <span class="macro-icon">🎙️</span>
+              <span>SM7B</span>
+            </div>
+            <div class="macro-key">
+              <span class="macro-icon">💡</span>
+              <span>LIGHTS</span>
+            </div>
+            <div class="macro-key">
+              <span class="macro-icon">✂️</span>
+              <span>SPLIT</span>
+            </div>
+            <div class="macro-key">
+              <span class="macro-icon">📊</span>
+              <span>SCOPES</span>
+            </div>
+            <div class="macro-key">
+              <span class="macro-icon">📁</span>
+              <span>B-ROLL</span>
+            </div>
+            <div class="macro-key">
+              <span class="macro-icon">⚡</span>
+              <span>EXPORT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hardware Strip -->
+    <div class="hardware-bar">
+      <div class="hw-item">
+        <div class="hw-icon-box">🎙️</div>
+        <div>
+          <div class="hw-name">Shure SM7B + Cloudlifter CL-1</div>
+          <div class="hw-detail">Broadcast Dynamic XLR Voice Chain • 24-Bit / 96kHz</div>
+        </div>
+      </div>
+      <div class="fader-group">
+        <div style="font-size:10px; font-weight:700; color:#8b949e;">INPUT GAIN</div>
+        <div class="vu-bar"><div class="vu-fill"></div></div>
+      </div>
+      <div class="hw-item">
+        <div class="hw-icon-box">📷</div>
+        <div>
+          <div class="hw-name">Sony FX3 Cinema Line</div>
+          <div class="hw-detail">All-Intra 4:2:2 10-Bit • Dual Native ISO 800/12800</div>
+        </div>
+      </div>
+      <div class="hw-item">
+        <div class="hw-icon-box">🎧</div>
+        <div>
+          <div class="hw-name">Studio Monitoring</div>
+          <div class="hw-detail">Flat Reference Response Curve</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

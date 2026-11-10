@@ -118,6 +118,32 @@ const ACADEMY_HERO_VISUALS = {
     aspectRatio: '3 / 4',
     width: 896,
     height: 1200
+  },
+  'creator': {
+    enabled: true,
+    assetId: 'NS-ACAD-CREATOR-MASTER',
+    approvalStatus: 'approved',
+    desktopSrc: '/images/academies/creator/ns-academy-creator-hero-desktop-896w.png',
+    tabletSrc: '/images/academies/creator/ns-academy-creator-hero-tablet-600w.png',
+    mobileSrc: '/images/academies/creator/ns-academy-creator-hero-mobile-400w.png',
+    alt: 'Digital creator workstation showing 4K video editing timeline in DaVinci Resolve, live YouTube Studio analytics, and Shure SM7B broadcast microphone.',
+    caption: 'Professional Video Production & Content Creation Studio',
+    aspectRatio: '3 / 4',
+    width: 896,
+    height: 1200
+  },
+  'kids-tech': {
+    enabled: true,
+    assetId: 'NS-ACAD-KIDS-MASTER',
+    approvalStatus: 'approved',
+    desktopSrc: '/images/academies/kids-tech/ns-academy-kids-hero-desktop-896w.png',
+    tabletSrc: '/images/academies/kids-tech/ns-academy-kids-hero-tablet-600w.png',
+    mobileSrc: '/images/academies/kids-tech/ns-academy-kids-hero-mobile-400w.png',
+    alt: 'Bright Scandinavian youth coding maker space featuring Scratch 3.0 visual block programming on tablet, hands-on micro:bit robotics rover, and algorithmic flowcharts.',
+    caption: 'Interactive Coding, AI & Physical Robotics Maker Studio',
+    aspectRatio: '3 / 4',
+    width: 896,
+    height: 1200
   }
 };
 

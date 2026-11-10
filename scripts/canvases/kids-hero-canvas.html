@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids Tech Academy Master Maker Studio</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #fbfbfd;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* Bright Natural Studio Backdrop: Scandinavian Blonde Birch & Warm Morning Sunlight */
+  .studio-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255, 235, 180, 0.35) 0%, transparent 50%),
+      radial-gradient(circle at 85% 75%, rgba(5, 153, 168, 0.08) 0%, transparent 45%),
+      linear-gradient(135deg, #f7f9fc 0%, #edf2f7 50%, #e2e8f0 100%);
+  }
+  .wood-grain-subtle {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(240, 230, 215, 0.25) 0px,
+      rgba(240, 230, 215, 0.25) 3px,
+      transparent 3px,
+      transparent 8px
+    );
+    opacity: 0.7;
+  }
+  .sun-light-shaft {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 245, 220, 0.2) 50%, transparent 80%);
+    transform: rotate(-10deg);
+    filter: blur(30px);
+    pointer-events: none;
+  }
+
+  /* Workspace Container */
+  .workspace-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 36px 36px;
+    justify-content: space-between;
+  }
+
+  /* Header Badge */
+  .studio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 70, 114, 0.08);
+    padding-bottom: 14px;
+  }
+  .brand-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-logo-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #ef7f1a, #ffab19);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(239, 127, 26, 0.35);
+  }
+  .brand-text {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #004672;
+  }
+  .brand-sub {
+    font-size: 11px;
+    color: #57606a;
+    font-weight: 500;
+  }
+  .age-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #eaf3f8;
+    border: 1px solid rgba(0, 70, 114, 0.2);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #004672;
+  }
+
+  /* Display Rig */
+  .display-rig {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 22px;
+    margin-top: 14px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Main Tablet/Screen: Scratch 3.0 Visual Coding Environment */
+  .main-screen {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 18px 45px rgba(0, 70, 114, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .scratch-titlebar {
+    background: #004672;
+    padding: 9px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+  }
+  .scratch-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+  }
+  .scratch-logo-pill {
+    background: #ffab19;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+  .project-name {
+    font-size: 11px;
+    color: #eaf3f8;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+
+  /* Scratch Studio Body */
+  .scratch-body {
+    display: grid;
+    grid-template-columns: 88px 1fr 140px;
+    flex: 1;
+    min-height: 0;
+    background: #f9fafb;
+  }
+
+  /* Category Sidebar */
+  .scratch-categories {
+    background: #f0f4f8;
+    border-right: 1px solid #e1e4e8;
+    padding: 10px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .cat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #4b5563;
+    padding: 4px 2px;
+    border-radius: 6px;
+  }
+  .cat-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+  .cat-motion .cat-dot { background: #4c97ff; }
+  .cat-looks .cat-dot { background: #9966ff; }
+  .cat-sound .cat-dot { background: #cf63cf; }
+  .cat-events .cat-dot { background: #ffbf00; }
+  .cat-control .cat-dot { background: #ffab19; }
+  .cat-sensing .cat-dot { background: #5cb1d6; }
+  .cat-variables .cat-dot { background: #ff8c1a; }
+
+  /* Scratch Block Scripts Canvas */
+  .scripts-canvas {
+    background: #ffffff;
+    padding: 14px 16px;
+    overflow: hidden;
+    position: relative;
+    background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+    background-size: 18px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .scratch-block {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.08);
+    position: relative;
+    max-width: fit-content;
+  }
+  .block-hat {
+    background: #ffbf00;
+    border-radius: 12px 12px 6px 6px;
+    padding-top: 8px;
+  }
+  .block-motion { background: #4c97ff; }
+  .block-control { background: #ffab19; }
+  .block-looks { background: #9966ff; }
+  .block-sound { background: #cf63cf; }
+  .block-variable { background: #ff8c1a; }
+  .block-arg {
+    background: #ffffff;
+    color: #1f2937;
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .c-block {
+    background: #ffab19;
+    padding: 6px 12px;
+    border-radius: 6px 6px 0 0;
+  }
+  .c-nested {
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-left: 12px solid #ffab19;
+    background: rgba(255, 171, 25, 0.05);
+    margin: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .c-end {
+    background: #ffab19;
+    height: 10px;
+    border-radius: 0 0 6px 6px;
+    width: 60px;
+  }
+
+  /* Stage Canvas */
+  .stage-sidebar {
+    background: #f3f4f6;
+    border-left: 1px solid #e1e4e8;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .game-stage {
+    background: linear-gradient(180deg, #091224 0%, #1e293b 100%);
+    border-radius: 8px;
+    aspect-ratio: 4 / 3;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .rover-sprite {
+    width: 36px;
+    height: 36px;
+    background: #ffab19;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(255, 171, 25, 0.5);
+    position: absolute;
+    bottom: 20px;
+    left: 24px;
+  }
+  .star-sprite {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    font-size: 18px;
+    animation: pulse 1.5s infinite;
+  }
+  .stage-score {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 9px;
+    font-weight: 800;
+    color: #004672;
+  }
+
+  /* Side Rig: Tactile Robotics & STEM Maker Kit */
+  .side-rig {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .robotics-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 14px 35px rgba(0, 70, 114, 0.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .robotics-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .robot-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: #004672;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .robot-rover-chassis {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+  .microbit-board {
+    width: 80px;
+    height: 64px;
+    background: #111827;
+    border-radius: 8px;
+    border: 2px solid #ef7f1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    box-shadow: 0 4px 12px rgba(239, 127, 26, 0.25);
+  }
+  .led-matrix {
+    display: grid;
+    grid-template-columns: repeat(5, 5px);
+    gap: 3px;
+  }
+  .led-dot {
+    width: 5px;
+    height: 5px;
+    background: #374151;
+    border-radius: 50%;
+  }
+  .led-on {
+    background: #ff0000;
+    box-shadow: 0 0 4px #ff0000;
+  }
+  .rover-wheels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .wheel {
+    width: 22px;
+    height: 38px;
+    background: #1e293b;
+    border-radius: 4px;
+    border: 2px solid #64748b;
+  }
+  .ultrasonic-eyes {
+    display: flex;
+    gap: 12px;
+    margin-top: -6px;
+  }
+  .eye {
+    width: 20px;
+    height: 20px;
+    background: #0599a8;
+    border: 2px solid #004672;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .eye-inner { width: 8px; height: 8px; background: #fff; border-radius: 50%; }
+
+  /* Flowchart Discovery Notebook */
+  .notebook-card {
+    background: #fffdfa;
+    border-radius: 14px;
+    border: 1px solid #e8dfd5;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    background-image: linear-gradient(#e5dfd3 1px, transparent 1px);
+    background-size: 100% 20px;
+  }
+  .notebook-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 800;
+    color: #004672;
+  }
+  .flowchart-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #374151;
+  }
+  .step-badge {
+    background: #ffab19;
+    color: #fff;
+    font-weight: 800;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .step-connector {
+    width: 2px;
+    height: 8px;
+    background: #9ca3af;
+    margin-left: 14px;
+  }
+
+  /* Hardware Strip at Bottom */
+  .hardware-bar {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 70, 114, 0.1);
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    box-shadow: 0 8px 24px rgba(0, 70, 114, 0.06);
+  }
+  .hw-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .hw-icon-box {
+    width: 36px;
+    height: 36px;
+    background: #eaf3f8;
+    border: 1px solid rgba(0, 70, 114, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #004672;
+  }
+  .hw-name {
+    font-size: 12px;
+    font-weight: 800;
+    color: #004672;
+  }
+  .hw-detail {
+    font-size: 10px;
+    color: #57606a;
+  }
+</style>
+</head>
+<body>
+  <div class="studio-backdrop">
+    <div class="wood-grain-subtle"></div>
+    <div class="sun-light-shaft"></div>
+  </div>
+
+  <div class="workspace-container">
+    <!-- Header -->
+    <div class="studio-header">
+      <div class="brand-badge">
+        <div class="brand-logo-icon">🚀</div>
+        <div>
+          <div class="brand-text">Nova Skills Kids Tech Academy</div>
+          <div class="brand-sub">Hands-On Coding, AI & Physical Robotics Studio • Ages 8–16</div>
+        </div>
+      </div>
+      <div class="age-pill">
+        <span>⭐ JUNIOR & SENIOR TRACKS</span>
+      </div>
+    </div>
+
+    <!-- Main Rig -->
+    <div class="display-rig">
+      <!-- Main Screen: Scratch Visual Coding -->
+      <div class="main-screen">
+        <div class="scratch-titlebar">
+          <div class="scratch-brand">
+            <span>SCRATCH 3.0</span>
+            <span class="scratch-logo-pill">Visual Coding</span>
+          </div>
+          <div class="project-name">Project: Space_Rover_Obstacle_Escape.sb3</div>
+          <div style="font-size: 11px; font-weight:700; color:#ffab19;">● RUNNING</div>
+        </div>
+
+        <div class="scratch-body">
+          <!-- Categories -->
+          <div class="scratch-categories">
+            <div class="cat-item cat-motion"><div class="cat-dot"></div>Motion</div>
+            <div class="cat-item cat-looks"><div class="cat-dot"></div>Looks</div>
+            <div class="cat-item cat-sound"><div class="cat-dot"></div>Sound</div>
+            <div class="cat-item cat-events"><div class="cat-dot"></div>Events</div>
+            <div class="cat-item cat-control"><div class="cat-dot"></div>Control</div>
+            <div class="cat-item cat-sensing"><div class="cat-dot"></div>Sensing</div>
+            <div class="cat-item cat-variables"><div class="cat-dot"></div>Variables</div>
+          </div>
+
+          <!-- Code Scripts Area -->
+          <div class="scripts-canvas">
+            <!-- Event Hat -->
+            <div class="scratch-block block-hat">
+              <span>🚩 when green flag clicked</span>
+            </div>
+            <!-- Set Variable -->
+            <div class="scratch-block block-variable">
+              <span>set <span class="block-arg">Stars Collected</span> to <span class="block-arg">0</span></span>
+            </div>
+            <!-- Position -->
+            <div class="scratch-block block-motion">
+              <span>go to x: <span class="block-arg">0</span> y: <span class="block-arg">-100</span></span>
+            </div>
+            <!-- Loop -->
+            <div class="scratch-block c-block">
+              <span>forever</span>
+            </div>
+            <div class="c-nested">
+              <div class="scratch-block block-motion">
+                <span>move <span class="block-arg">12</span> steps</span>
+              </div>
+              <div class="scratch-block block-motion">
+                <span>if on edge, bounce</span>
+              </div>
+              <div class="scratch-block block-control">
+                <span>if &lt;distance sensor &lt; <span class="block-arg">15 cm</span>&gt; then</span>
+              </div>
+              <div class="scratch-block block-sound" style="margin-left: 10px;">
+                <span>play sound <span class="block-arg">Robot Beep 🎵</span></span>
+              </div>
+              <div class="scratch-block block-motion" style="margin-left: 10px;">
+                <span>turn ↪ <span class="block-arg">90</span> degrees</span>
+              </div>
+            </div>
+            <div class="c-end"></div>
+          </div>
+
+          <!-- Stage Preview -->
+          <div class="stage-sidebar">
+            <div style="font-size: 10px; font-weight:800; color:#57606a;">GAME CANVAS</div>
+            <div class="game-stage">
+              <div class="stage-score">SCORE: 48 ⭐</div>
+              <div class="star-sprite">⭐</div>
+              <div class="rover-sprite">🤖</div>
+            </div>
+            <div style="background:#eaf3f8; border-radius:6px; padding:6px; font-size:9px; color:#004672; font-weight:700; text-align:center;">
+              Simulation Active: 60 FPS
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Rig -->
+      <div class="side-rig">
+        <!-- Physical Robotics Rover -->
+        <div class="robotics-card">
+          <div class="robotics-header">
+            <div class="robot-title">
+              <span>🤖</span>
+              <span>Physical STEM Rover</span>
+            </div>
+            <span style="font-size:10px; color:#238636; font-weight:800;">CONNECTED</span>
+          </div>
+
+          <div class="robot-rover-chassis">
+            <div class="ultrasonic-eyes">
+              <div class="eye"><div class="eye-inner"></div></div>
+              <div class="eye"><div class="eye-inner"></div></div>
+            </div>
+            <div class="microbit-board">
+              <div class="led-matrix">
+                <!-- Smiley Face Pattern in LED Matrix -->
+                <div class="led-dot"></div><div class="led-dot led-on"></div><div class="led-dot"></div><div class="led-dot led-on"></div><div class="led-dot"></div>
+                <div class="led-dot"></div><div class="led-dot led-on"></div><div class="led-dot"></div><div class="led-dot led-on"></div><div class="led-dot"></div>
+                <div class="led-dot"></div><div class="led-dot"></div><div class="led-dot"></div><div class="led-dot"></div><div class="led-dot"></div>
+                <div class="led-dot led-on"></div><div class="led-dot"></div><div class="led-dot"></div><div class="led-dot"></div><div class="led-dot led-on"></div>
+                <div class="led-dot"></div><div class="led-dot led-on"></div><div class="led-dot led-on"></div><div class="led-dot led-on"></div><div class="led-dot"></div>
+              </div>
+            </div>
+            <div class="rover-wheels">
+              <div class="wheel"></div>
+              <div class="wheel"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Algorithm Flowchart Notebook -->
+        <div class="notebook-card">
+          <div class="notebook-header">
+            <span>ALGORITHM DESIGN NOTEBOOK</span>
+            <span style="color:#ef7f1a;">MISSION 04</span>
+          </div>
+          <div class="flowchart-step">
+            <span class="step-badge">01</span>
+            <span>Initialize Sonar Obstacle Sensor</span>
+          </div>
+          <div class="step-connector"></div>
+          <div class="flowchart-step">
+            <span class="step-badge">02</span>
+            <span>Check Distance (&lt; 15cm)</span>
+          </div>
+          <div class="step-connector"></div>
+          <div class="flowchart-step">
+            <span class="step-badge">03</span>
+            <span>Turn Right 90° &amp; Play Sound</span>
+          </div>
+          <div class="step-connector"></div>
+          <div class="flowchart-step">
+            <span class="step-badge">04</span>
+            <span>Collect Star &amp; Add +1 to Score</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hardware Strip -->
+    <div class="hardware-bar">
+      <div class="hw-item">
+        <div class="hw-icon-box">💻</div>
+        <div>
+          <div class="hw-name">Scratch 3.0 &amp; Python Turtle</div>
+          <div class="hw-detail">Visual Computational Thinking &amp; Game Logic</div>
+        </div>
+      </div>
+      <div class="hw-item">
+        <div class="hw-icon-box">⚡</div>
+        <div>
+          <div class="hw-name">BBC micro:bit v2 Robotics</div>
+          <div class="hw-detail">LED Display, Accelerometer, Bluetooth &amp; Ultrasonic Sensors</div>
+        </div>
+      </div>
+      <div class="hw-item">
+        <div class="hw-icon-box">🧠</div>
+        <div>
+          <div class="hw-name">AI &amp; Machine Learning for Kids</div>
+          <div class="hw-detail">Teachable Machine &amp; Computer Vision Basics</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

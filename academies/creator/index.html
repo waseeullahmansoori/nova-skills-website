@@ -53,6 +53,117 @@
         min-height: 104px;
       }
     }
+
+    /* Hero Visual Grid & Responsive Enhancements (Phase C) */
+    .academy-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .academy-hero-grid.hero-grid-control {
+      grid-template-columns: 1fr !important;
+    }
+    .academy-hero-content {
+      min-width: 0;
+    }
+    .academy-hero-visual-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 0;
+    }
+    .academy-hero-visual-frame {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(1, 23, 49, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      background-color: #011731;
+    }
+    .academy-hero-picture {
+      display: block;
+      width: 100%;
+    }
+    .academy-hero-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .academy-hero-visual-frame:hover .academy-hero-img {
+      transform: scale(1.02);
+    }
+    .academy-hero-visual-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 16px;
+      background: linear-gradient(180deg, transparent 0%, rgba(1, 23, 49, 0.92) 100%);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.78rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      backdrop-filter: blur(4px);
+    }
+    .academy-hero-visual-caption .caption-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #75d766;
+      flex-shrink: 0;
+    }
+    .academy-hero-visual-caption .caption-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Tablet Responsive (641px - 1023px) */
+    @media (max-width: 1023px) {
+      .academy-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .academy-hero-visual-frame {
+        max-width: 480px;
+        margin: 0 auto;
+      }
+      .academy-hero-img {
+        max-height: 360px;
+        object-position: center 20%;
+      }
+    }
+
+    /* Mobile Responsive (<= 640px) */
+    @media (max-width: 640px) {
+      .academy-hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .academy-hero-visual-frame {
+        max-width: 100%;
+        border-radius: 12px;
+        margin-top: 4px;
+      }
+      .academy-hero-img {
+        max-height: 200px;
+        aspect-ratio: auto;
+        object-position: center 25%;
+      }
+      .academy-hero-visual-caption {
+        font-size: 0.72rem;
+        padding: 6px 12px;
+      }
+    }
     .academy-hero-section {
       background: linear-gradient(135deg, #011731 0%, #0599a8 100%);
       color: white;
@@ -729,6 +840,9 @@
         "@id": "https://novaskills.in/#website",
         "name": "Nova Skills",
         "url": "https://novaskills.in/"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://novaskills.in/academies/creator/#heroimage"
       }
     },
     {
@@ -806,6 +920,24 @@
           }
         }
       ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://novaskills.in/academies/creator/#heroimage",
+      "url": "https://novaskills.in/images/academies/creator/ns-academy-creator-hero-desktop-896w.png",
+      "contentUrl": "https://novaskills.in/images/academies/creator/ns-academy-creator-hero-desktop-896w.png",
+      "name": "Creator Academy Professional Studio Workspace",
+      "description": "Digital creator workstation showing 4K video editing timeline in DaVinci Resolve, live YouTube Studio analytics, and Shure SM7B broadcast microphone.",
+      "caption": "Professional Video Production & Content Creation Studio",
+      "width": 896,
+      "height": 1200,
+      "creator": {
+        "@type": "Organization",
+        "name": "Nova Skills",
+        "url": "https://novaskills.in/"
+      },
+      "license": "https://novaskills.in/terms-and-conditions/",
+      "acquireLicensePage": "https://novaskills.in/academies/creator/"
     }
   ]
 }
@@ -820,37 +952,75 @@
   <main id="main-content">
     
     <!-- Hero Banner Section -->
-    <section id="academy-hero-section" class="academy-hero-section">
+    <section id="academy-hero-section" class="academy-hero-section academy-hero-with-visual">
       <div class="container">
-        <!-- Breadcrumb Navigation -->
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span>›</span>
-          <a href="/courses">Academies</a>
-          <span>›</span>
-          <span id="breadcrumb-selected-academy" style="color:white;">Creator Academy</span>
-        </nav>
+        <div class="academy-hero-grid">
+          <div class="academy-hero-content">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>›</span>
+              <a href="/courses">Academies</a>
+              <span>›</span>
+              <span id="breadcrumb-selected-academy" style="color:white;">Creator Academy</span>
+            </nav>
 
-        <!-- Hero Content -->
-        <div id="academy-icon-display" class="academy-icon-badge" style="font-size: 3rem; margin-bottom: 12px;">🎥</div>
-        <h1 id="academy-name-display" class="academy-hero-title">Creator Academy: Content Strategy, YouTube & Personal Branding</h1>
-        <p id="academy-desc-display" class="academy-hero-desc">
-          <span class="badge-delivery" style="display:inline-block; background:rgba(117,215,102,0.15); color:#75d766; border:1px solid rgba(117,215,102,0.3); padding:4px 12px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px;">📍 Classroom in Siddharth Nagar • 💻 Live Interactive Online (Pan-India)</span><br>
-          YouTube Growth, Short Video Strategy, Podcasting, Personal Branding & Monetising Content Creation.
-        </p>
+            <!-- Hero Content -->
+            <div id="academy-icon-display" class="academy-icon-badge" style="font-size: 3rem; margin-bottom: 12px;">🎥</div>
+            <h1 id="academy-name-display" class="academy-hero-title">Creator Academy: Content Strategy, YouTube & Personal Branding</h1>
+            <p id="academy-desc-display" class="academy-hero-desc">
+              <span class="badge-delivery" style="display:inline-block; background:rgba(117,215,102,0.15); color:#75d766; border:1px solid rgba(117,215,102,0.3); padding:4px 12px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px;">📍 Classroom in Siddharth Nagar • 💻 Live Interactive Online (Pan-India)</span><br>
+              YouTube Growth, Short Video Strategy, Podcasting, Personal Branding & Monetising Content Creation.
+            </p>
 
-        <!-- Accurate Dynamic Stats Pills -->
-        <div class="academy-stats-pills" id="academy-stats-pills">
-          <span id="stat-career-programs" class="stats-pill">💼 Career Programs: 0</span>
-          <span id="stat-pro-programs" class="stats-pill">⚡ Professional Programs: 2</span>
-          <span id="stat-cert-courses" class="stats-pill">📜 Certification Courses: 5</span>
-          <span id="stat-total-courses" class="stats-pill">📚 Total Courses: 7</span>
-        </div>
+            <!-- Accurate Dynamic Stats Pills -->
+            <div class="academy-stats-pills" id="academy-stats-pills">
+              <span id="stat-career-programs" class="stats-pill">💼 Career Programs: 0</span>
+              <span id="stat-pro-programs" class="stats-pill">⚡ Professional Programs: 2</span>
+              <span id="stat-cert-courses" class="stats-pill">📜 Certification Courses: 5</span>
+              <span id="stat-total-courses" class="stats-pill">📚 Total Courses: 7</span>
+            </div>
 
-        <!-- Action CTAs -->
-        <div class="academy-actions">
-          <button type="button" id="btn-enroll-now" class="btn btn-primary btn-lg" onclick="openEnrollmentModal('', 'Creator Academy')">Enroll Now →</button>
-          <button type="button" id="btn-free-consultation" class="btn btn-outline btn-lg" onclick="openConsultationPopup()">Free Consultation</button>
+            <!-- Action CTAs (Enforce Single Horizontal Row) -->
+            <div class="academy-actions">
+              <button type="button" id="btn-enroll-now" class="btn btn-primary btn-lg" onclick="openEnrollmentModal('', 'Creator Academy')">Enroll Now →</button>
+              <button type="button" id="btn-free-consultation" class="btn btn-outline btn-lg" onclick="openConsultationPopup()">Free Consultation</button>
+            </div>
+          </div>
+
+          <!-- Hero Visual Column -->
+          <div class="academy-hero-visual-col" id="academy-hero-visual-col">
+            <div class="academy-hero-visual-frame">
+              <picture class="academy-hero-picture">
+                <source
+                  media="(min-width: 1024px)"
+                  srcset="/images/academies/creator/ns-academy-creator-hero-desktop-896w.png"
+                  type="image/png"
+                  width="896"
+                  height="1200">
+                <source
+                  media="(min-width: 641px) and (max-width: 1023px)"
+                  srcset="/images/academies/creator/ns-academy-creator-hero-tablet-600w.png"
+                  type="image/png"
+                  width="600"
+                  height="800">
+                <img
+                  src="/images/academies/creator/ns-academy-creator-hero-mobile-400w.png"
+                  alt="Digital creator workstation showing 4K video editing timeline in DaVinci Resolve, live YouTube Studio analytics, and Shure SM7B broadcast microphone."
+                  width="400"
+                  height="535"
+                  class="academy-hero-img"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                  onerror="this.closest('.academy-hero-visual-col').style.display='none'">
+              </picture>
+              <div class="academy-hero-visual-caption">
+                <span class="caption-dot"></span>
+                <span class="caption-text">Professional Video Production & Content Creation Studio</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1786,5 +1956,6 @@
   <script src="/nova-ai-widget.js?v=3.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
   <script src="/js/academy-detail.min.js?v=2.7.4" defer></script>
+  <script src="/js/academy-hero-experiment.js?v=1.0" defer></script>
 </body>
 </html>
