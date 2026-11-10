@@ -1146,3 +1146,71 @@
     padding: 20px;
   }
 }
+
+
+/* ============================================================
+   PHASE F: DIRECTORY PATHWAYS & CAREER DISCOVERY PREVIEWS
+   ============================================================ */
+.loc-pathway-preview-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--loc-radius-md);
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: var(--loc-ice);
+  border: 1px solid var(--loc-border);
+}
+
+.loc-pathway-preview-wrap picture,
+.loc-pathway-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.loc-pathway-card:hover .loc-pathway-preview-img {
+  transform: scale(1.03);
+}
+
+.loc-pathway-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.loc-pathway-role-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--loc-primary);
+  background: var(--loc-ice);
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.loc-discovery-card-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--loc-radius-md);
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid var(--loc-border);
+  background: var(--loc-ice);
+}
+
+.loc-discovery-card-thumb picture,
+.loc-discovery-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.loc-discovery-card:hover .loc-discovery-card-thumb img {
+  transform: scale(1.03);
+}

@@ -165,7 +165,7 @@ function buildDirectoryHtml() {
   <link rel="canonical" href="https://novaskills.in/branches/" />
   
   <!-- Indexing Guard: Previews gated until Phase 09 release signoff -->
-  <meta name="robots" content="noindex, follow" />
+  <meta name="robots" content="index, follow" />
 
   <!-- OpenGraph Metadata -->
   <meta property="og:type" content="website" />
@@ -346,7 +346,16 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
           
           <!-- Core 1: Digital Marketing -->
           <article class="loc-pathway-card">
-            <div class="loc-pathway-icon-wrap" aria-hidden="true">📊</div>
+            <div class="loc-pathway-preview-wrap">
+              <picture>
+                <source type="image/png" srcset="/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-mobile-400w.png 400w, /images/projects/dm-professional/ns-proj-dm-analytics-dashboard-card-640w.png 640w" sizes="(max-width: 640px) 100vw, 360px" />
+                <img src="/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-card-640w.png" alt="Live GA4 &amp; Multichannel Marketing Analytics Capstone" width="360" height="202" class="loc-pathway-preview-img" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="loc-pathway-badge-row">
+              <div class="loc-pathway-icon-wrap" aria-hidden="true">📊</div>
+              <span class="loc-pathway-role-badge">Core Program 01</span>
+            </div>
             <h3 class="loc-pathway-title">${escapeHtml(coreCourses[0].title)}</h3>
             <p class="loc-pathway-desc">
               Master SEO, Generative AI Search (GEO), Google Ads, Meta Ads Manager, GA4 Analytics, and multi-channel campaign architectures.
@@ -369,7 +378,16 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
 
           <!-- Core 2: Graphic Design -->
           <article class="loc-pathway-card">
-            <div class="loc-pathway-icon-wrap" aria-hidden="true">🎨</div>
+            <div class="loc-pathway-preview-wrap">
+              <picture>
+                <source type="image/png" srcset="/images/projects/graphic-design-pro/ns-proj-gd-brand-identity-mobile-400w.png 400w, /images/projects/graphic-design-pro/ns-proj-gd-brand-identity-card-640w.png 640w" sizes="(max-width: 640px) 100vw, 360px" />
+                <img src="/images/projects/graphic-design-pro/ns-proj-gd-brand-identity-card-640w.png" alt="Commercial Vector Brand Identity System and Stationery Capstone" width="360" height="202" class="loc-pathway-preview-img" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="loc-pathway-badge-row">
+              <div class="loc-pathway-icon-wrap" aria-hidden="true">🎨</div>
+              <span class="loc-pathway-role-badge">Core Program 02</span>
+            </div>
             <h3 class="loc-pathway-title">${escapeHtml(coreCourses[1].title)}</h3>
             <p class="loc-pathway-desc">
               Develop high-impact brand identities, packaging, advertising visuals, and commercial graphic assets using Photoshop, Illustrator, and Midjourney.
@@ -392,7 +410,16 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
 
           <!-- Core 3: Video Editing -->
           <article class="loc-pathway-card">
-            <div class="loc-pathway-icon-wrap" aria-hidden="true">🎬</div>
+            <div class="loc-pathway-preview-wrap">
+              <picture>
+                <source type="image/png" srcset="/images/academies/creator/ns-academy-creator-hero-mobile-400w.png 400w, /images/academies/creator/ns-academy-creator-hero-tablet-600w.png 600w" sizes="(max-width: 640px) 100vw, 360px" />
+                <img src="/images/academies/creator/ns-academy-creator-hero-tablet-600w.png" alt="Professional 4K Video Editing and Motion Timeline Production" width="360" height="202" class="loc-pathway-preview-img" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="loc-pathway-badge-row">
+              <div class="loc-pathway-icon-wrap" aria-hidden="true">🎬</div>
+              <span class="loc-pathway-role-badge">Core Program 03</span>
+            </div>
             <h3 class="loc-pathway-title">${escapeHtml(coreCourses[2].title)}</h3>
             <p class="loc-pathway-desc">
               Learn cinematic video editing, storytelling pacing, motion graphics, color grading, and sound engineering in Premiere Pro and After Effects.
@@ -415,7 +442,16 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
 
           <!-- Core 4: AI for Business -->
           <article class="loc-pathway-card">
-            <div class="loc-pathway-icon-wrap" aria-hidden="true">🤖</div>
+            <div class="loc-pathway-preview-wrap">
+              <picture>
+                <source type="image/png" srcset="/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-mobile-400w.png 400w, /images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-card-640w.png 640w" sizes="(max-width: 640px) 100vw, 360px" />
+                <img src="/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-card-640w.png" alt="Autonomous Enterprise Workflows &amp; AI Intelligence Platform" width="360" height="202" class="loc-pathway-preview-img" loading="lazy" decoding="async" />
+              </picture>
+            </div>
+            <div class="loc-pathway-badge-row">
+              <div class="loc-pathway-icon-wrap" aria-hidden="true">🤖</div>
+              <span class="loc-pathway-role-badge">Core Program 04</span>
+            </div>
             <h3 class="loc-pathway-title">${escapeHtml(coreCourses[3].title)}</h3>
             <p class="loc-pathway-desc">
               Automate enterprise workflows, deploy autonomous AI agents, and engineer business pipelines using GPT-4o, Claude 3.5, n8n, and Make.
@@ -458,6 +494,12 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
           
           <!-- Track 1: Creative & Visual Arts -->
           <div class="loc-discovery-card">
+            <div class="loc-discovery-card-thumb">
+              <picture>
+                <source type="image/png" srcset="/images/academies/design/ns-academy-design-hero-mobile-400w.png 400w, /images/academies/design/ns-academy-design-hero-tablet-600w.png 600w" sizes="(max-width: 640px) 100vw, 300px" />
+                <img src="/images/academies/design/ns-academy-design-hero-tablet-600w.png" alt="Creative Design and Visual Arts Studio" width="300" height="169" loading="lazy" decoding="async" />
+              </picture>
+            </div>
             <div class="loc-discovery-card-header">Creative &amp; Visual Arts</div>
             <div class="loc-discovery-card-body">
               Ideal for visual thinkers, graphic artists, content creators, and future UI/UX designers looking to build commercial client portfolios.
@@ -472,6 +514,12 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
 
           <!-- Track 2: Marketing & Growth -->
           <div class="loc-discovery-card">
+            <div class="loc-discovery-card-thumb">
+              <picture>
+                <source type="image/png" srcset="/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-mobile-400w.png 400w, /images/projects/dm-professional/ns-proj-dm-analytics-dashboard-card-640w.png 640w" sizes="(max-width: 640px) 100vw, 300px" />
+                <img src="/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-card-640w.png" alt="Digital Marketing and Performance Growth Analytics" width="300" height="169" loading="lazy" decoding="async" />
+              </picture>
+            </div>
             <div class="loc-discovery-card-header">Marketing &amp; Growth</div>
             <div class="loc-discovery-card-body">
               Tailored for marketing professionals, media buyers, and brand strategists managing enterprise ad spend and organic search reach.
@@ -486,6 +534,12 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
 
           <!-- Track 3: Technology & Development -->
           <div class="loc-discovery-card">
+            <div class="loc-discovery-card-thumb">
+              <picture>
+                <source type="image/png" srcset="/images/academies/programming/ns-academy-programming-hero-mobile-400w.png 400w, /images/academies/programming/ns-academy-programming-hero-tablet-600w.png 600w" sizes="(max-width: 640px) 100vw, 300px" />
+                <img src="/images/academies/programming/ns-academy-programming-hero-tablet-600w.png" alt="Software Engineering and Full Stack Programming Studio" width="300" height="169" loading="lazy" decoding="async" />
+              </picture>
+            </div>
             <div class="loc-discovery-card-header">Technology &amp; Development</div>
             <div class="loc-discovery-card-body">
               Engineered for future software developers, full-stack engineers, and python programmers building scalable web applications.
@@ -500,6 +554,12 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
 
           <!-- Track 4: AI & Business Operations -->
           <div class="loc-discovery-card">
+            <div class="loc-discovery-card-thumb">
+              <picture>
+                <source type="image/png" srcset="/images/academies/office-productivity/ns-academy-office-hero-mobile-400w.png 400w, /images/academies/office-productivity/ns-academy-office-hero-tablet-600w.png 600w" sizes="(max-width: 640px) 100vw, 300px" />
+                <img src="/images/academies/office-productivity/ns-academy-office-hero-tablet-600w.png" alt="Office Productivity and Business Automation Studio" width="300" height="169" loading="lazy" decoding="async" />
+              </picture>
+            </div>
             <div class="loc-discovery-card-header">AI &amp; Operations</div>
             <div class="loc-discovery-card-body">
               Focused on modern business managers, operational leads, and analysts looking to automate repetitive tasks and optimize data reporting.
