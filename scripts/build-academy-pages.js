@@ -39,7 +39,7 @@ const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(rootDir, 'j
 const dataJs = fs.readFileSync(path.join(rootDir, 'data.js'), 'utf8');
 vm.runInThisContext(dataJs);
 
-// Phase C Pilot: Approved Academy Hero Visual Registry
+// Phase C & Phase E Approved Academy Hero Visual Registry
 const ACADEMY_HERO_VISUALS = {
   'design': {
     enabled: true,
@@ -50,6 +50,32 @@ const ACADEMY_HERO_VISUALS = {
     mobileSrc: '/images/academies/design/ns-academy-design-hero-mobile-400w.png',
     alt: 'Graphic design workspace with open brand identity manual, color swatches, and interface wireframes.',
     caption: 'Industry-Standard Brand Design & UX Studio Setup',
+    aspectRatio: '3 / 4',
+    width: 896,
+    height: 1200
+  },
+  'programming': {
+    enabled: true,
+    assetId: 'NS-ACAD-PROG-MASTER',
+    approvalStatus: 'approved',
+    desktopSrc: '/images/academies/programming/ns-academy-programming-hero-desktop-896w.png',
+    tabletSrc: '/images/academies/programming/ns-academy-programming-hero-tablet-600w.png',
+    mobileSrc: '/images/academies/programming/ns-academy-programming-hero-mobile-400w.png',
+    alt: 'Software developer workstation with dark-mode code editor, terminal test suites, and architecture wireframes.',
+    caption: 'Production Software Engineering & Full-Stack Development Lab',
+    aspectRatio: '3 / 4',
+    width: 896,
+    height: 1200
+  },
+  'no-code-web': {
+    enabled: true,
+    assetId: 'NS-ACAD-NOCODE-MASTER',
+    approvalStatus: 'approved',
+    desktopSrc: '/images/academies/no-code-web/ns-academy-nocode-hero-desktop-896w.png',
+    tabletSrc: '/images/academies/no-code-web/ns-academy-nocode-hero-tablet-600w.png',
+    mobileSrc: '/images/academies/no-code-web/ns-academy-nocode-hero-mobile-400w.png',
+    alt: 'Web designer workstation showing responsive boutique store canvas in Webflow and mobile preview on iPad.',
+    caption: 'Modern Visual Web & E-Commerce Production Studio',
     aspectRatio: '3 / 4',
     width: 896,
     height: 1200
