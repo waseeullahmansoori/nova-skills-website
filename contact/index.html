@@ -363,6 +363,42 @@
       flex-direction: column;
       gap: 24px;
     }
+    .contact-editorial-panel {
+      display: none;
+    }
+    @media (min-width: 961px) {
+      .contact-editorial-panel {
+        display: block;
+        background: #ffffff;
+        border: 1px solid rgba(5, 153, 168, 0.16);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 28px rgba(1, 23, 49, 0.08);
+      }
+      .contact-editorial-panel img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center 20%;
+      }
+      .contact-editorial-caption {
+        padding: 14px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        background: #f8fafc;
+        border-top: 1px solid rgba(5, 153, 168, 0.12);
+      }
+      .contact-editorial-caption strong {
+        font-size: 0.92rem;
+        color: #011731;
+      }
+      .contact-editorial-caption span {
+        font-size: 0.8rem;
+        color: #475569;
+      }
+    }
     .cro-trust-card {
       background: linear-gradient(135deg, #011731 0%, #042a4a 100%);
       color: #ffffff;
@@ -780,6 +816,18 @@
 
         <!-- SIDEBAR: CRO TRUST BADGES & CAMPUS DETAILS -->
         <div class="cro-sidebar">
+
+          <!-- DESKTOP-ONLY EDITORIAL GUIDANCE PREVIEW (IMG-085; hidden on mobile/tablet to preserve zero field obstruction) -->
+          <div class="contact-editorial-panel" aria-label="Academic counselling session editorial concept">
+            <picture>
+              <source media="(min-width: 961px)" srcset="/public/assets/nova-images/desktop/IMG-085.webp" type="image/webp" width="1200" height="900" />
+              <img src="/public/assets/nova-images/mobile/IMG-085.webp" alt="Editorial concept illustration depicting an academic advisor discussing course pathways" width="900" height="1125" loading="lazy" decoding="async" />
+            </picture>
+            <div class="contact-editorial-caption">
+              <strong>Personalized Course Guidance</strong>
+              <span>Clear syllabus, schedule, and pathway comparison — zero pressure</span>
+            </div>
+          </div>
 
           <!-- TRUST BADGES CARD -->
           <div class="cro-trust-card">

@@ -39,111 +39,175 @@ const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(rootDir, 'j
 const dataJs = fs.readFileSync(path.join(rootDir, 'data.js'), 'utf8');
 vm.runInThisContext(dataJs);
 
-// Phase C & Phase E Approved Academy Hero Visual Registry
+// Final Consolidated 93-ID Package Academy Hero Visual Registry (All 12 Academies)
 const ACADEMY_HERO_VISUALS = {
+  'digital-marketing': {
+    enabled: true,
+    assetId: 'IMG-022',
+    approvalStatus: 'approved',
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-022.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-022.webp',
+    alt: 'Editorial workspace illustration depicting Digital Marketing campaign planning and analytics dashboards.',
+    caption: 'Performance Marketing, SEO & Campaign Analytics Workflow',
+    outcomeId: 'IMG-023',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'Campaign Planning & GA4 Analytics Architecture',
+    outcomeDesc: 'Explore how modules combine funnel strategy, search optimization, paid ad experimentation, and sanitized performance reporting.',
+    outcomeAlt: 'Sanitized digital marketing funnel and channel analytics preview'
+  },
+  'ai': {
+    enabled: true,
+    assetId: 'IMG-024',
+    approvalStatus: 'approved',
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-024.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-024.webp',
+    alt: 'Editorial workspace illustration showing n8n node automation pipelines and agentic AI architecture planning.',
+    caption: 'Practical AI Workflow Orchestration & Automation Lab',
+    outcomeId: 'IMG-025',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'Multi-Step AI Agent & Evaluation Pipelines',
+    outcomeDesc: 'Build structured automation graphs with validation checks, human-in-the-loop oversight, and measurable reliability criteria.',
+    outcomeAlt: 'AI workflow diagram showing retrieval, evaluation checkpoints, and automation orchestration'
+  },
   'design': {
     enabled: true,
-    assetId: 'NS-ACAD-DES-MASTER',
+    assetId: 'IMG-026',
     approvalStatus: 'approved',
-    desktopSrc: '/images/academies/design/ns-academy-design-hero-desktop-896w.png',
-    tabletSrc: '/images/academies/design/ns-academy-design-hero-tablet-600w.png',
-    mobileSrc: '/images/academies/design/ns-academy-design-hero-mobile-400w.png',
-    alt: 'Graphic design workspace with open brand identity manual, color swatches, and interface wireframes.',
-    caption: 'Industry-Standard Brand Design & UX Studio Setup',
-    aspectRatio: '3 / 4',
-    width: 896,
-    height: 1200
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-026.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-026.webp',
+    alt: 'Editorial design studio illustration featuring brand identity boards, typography grids, and Figma interface layouts.',
+    caption: 'Brand Identity Systems, Typography & UI/UX Studio',
+    outcomeId: 'IMG-027',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'Brand Guidelines & Interactive UI Systems',
+    outcomeDesc: 'Move from grid theory and color tokens to multi-platform identity packages and clickable Figma prototypes.',
+    outcomeAlt: 'Brand style guide and Figma interface layout curriculum preview'
   },
   'programming': {
     enabled: true,
-    assetId: 'NS-ACAD-PROG-MASTER',
+    assetId: 'IMG-028',
     approvalStatus: 'approved',
-    desktopSrc: '/images/academies/programming/ns-academy-programming-hero-desktop-896w.png',
-    tabletSrc: '/images/academies/programming/ns-academy-programming-hero-tablet-600w.png',
-    mobileSrc: '/images/academies/programming/ns-academy-programming-hero-mobile-400w.png',
-    alt: 'Software developer workstation with dark-mode code editor, terminal test suites, and architecture wireframes.',
-    caption: 'Production Software Engineering & Full-Stack Development Lab',
-    aspectRatio: '3 / 4',
-    width: 896,
-    height: 1200
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-028.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-028.webp',
+    alt: 'Editorial software development workstation showing application code, responsive previews, and debugging panes.',
+    caption: 'Full-Stack Engineering & Applied Coding Studio',
+    outcomeId: 'IMG-029',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'Full-Stack Application Architecture & Testing',
+    outcomeDesc: 'Train on structured front-end components, API endpoints, database models, and automated verification checks.',
+    outcomeAlt: 'Full-stack code editor and responsive interface testing preview'
   },
   'no-code-web': {
     enabled: true,
-    assetId: 'NS-ACAD-NOCODE-MASTER',
+    assetId: 'IMG-030',
     approvalStatus: 'approved',
-    desktopSrc: '/images/academies/no-code-web/ns-academy-nocode-hero-desktop-896w.png',
-    tabletSrc: '/images/academies/no-code-web/ns-academy-nocode-hero-tablet-600w.png',
-    mobileSrc: '/images/academies/no-code-web/ns-academy-nocode-hero-mobile-400w.png',
-    alt: 'Web designer workstation showing responsive boutique store canvas in Webflow and mobile preview on iPad.',
-    caption: 'Modern Visual Web & E-Commerce Production Studio',
-    aspectRatio: '3 / 4',
-    width: 896,
-    height: 1200
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-030.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-030.webp',
+    alt: 'Editorial visual web studio showing no-code storefront builder, responsive breakpoints, and CMS blocks.',
+    caption: 'Visual Web Design, Webflow & Storefront Production',
+    outcomeId: 'IMG-031',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'E-Commerce Storefront & CMS Systems',
+    outcomeDesc: 'Design responsive WordPress, Webflow, Framer, and Shopify sites built for real conversion performance.',
+    outcomeAlt: 'No-code storefront and responsive CMS builder preview'
+  },
+  'video-motion': {
+    enabled: true,
+    assetId: 'IMG-032',
+    approvalStatus: 'approved',
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-032.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-032.webp',
+    alt: 'Editorial post-production workstation displaying multi-track editing timeline and color-grading scopes.',
+    caption: 'Video Editing Timeline & Motion Graphics Studio',
+    outcomeId: 'IMG-033',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'Storytelling Cuts, Color Grading & Motion',
+    outcomeDesc: 'Practice pacing, LUT calibration, typography animation, and audio mastering across commercial timelines.',
+    outcomeAlt: 'Video editing multi-track timeline and before-after color grading frames preview'
   },
   '3d': {
     enabled: true,
-    assetId: 'NS-ACAD-3D-MASTER',
+    assetId: 'IMG-034',
     approvalStatus: 'approved',
-    desktopSrc: '/images/academies/3d/ns-academy-3d-hero-desktop-896w.png',
-    tabletSrc: '/images/academies/3d/ns-academy-3d-hero-tablet-600w.png',
-    mobileSrc: '/images/academies/3d/ns-academy-3d-hero-mobile-400w.png',
-    alt: '3D digital artist workstation displaying 3D character mesh wireframe and photorealistic PBR rendering in Blender.',
-    caption: 'Spatial Design & 3D Production Studio',
-    aspectRatio: '3 / 4',
-    width: 896,
-    height: 1200
-  },
-  'office-productivity': {
-    enabled: true,
-    assetId: 'NS-ACAD-OFFICE-MASTER',
-    approvalStatus: 'approved',
-    desktopSrc: '/images/academies/office-productivity/ns-academy-office-hero-desktop-896w.png',
-    tabletSrc: '/images/academies/office-productivity/ns-academy-office-hero-tablet-600w.png',
-    mobileSrc: '/images/academies/office-productivity/ns-academy-office-hero-mobile-400w.png',
-    alt: 'Business intelligence analyst workspace showing executive Power BI dashboards and financial forecast models.',
-    caption: 'Enterprise Business Intelligence & Analytics Lab',
-    aspectRatio: '3 / 4',
-    width: 896,
-    height: 1200
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-034.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-034.webp',
+    alt: 'Editorial 3D artist workspace showing architectural mesh geometry, lighting rigs, and rendered interior view.',
+    caption: 'Architectural Visualization & 3D Production Lab',
+    outcomeId: 'IMG-035',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'Wireframe Geometry to Photoreal Renders',
+    outcomeDesc: 'Progress through clean quad topology, physically-based materials, camera staging, and realistic lighting.',
+    outcomeAlt: '3D wireframe topology transitioning to finished interior render preview'
   },
   'career-freelancing': {
     enabled: true,
-    assetId: 'NS-ACAD-CAREER-MASTER',
+    assetId: 'IMG-036',
     approvalStatus: 'approved',
-    desktopSrc: '/images/academies/career-freelancing/ns-academy-career-hero-desktop-896w.png',
-    tabletSrc: '/images/academies/career-freelancing/ns-academy-career-hero-tablet-600w.png',
-    mobileSrc: '/images/academies/career-freelancing/ns-academy-career-hero-mobile-400w.png',
-    alt: 'Freelance consultant workstation showing client contract pipeline, international milestone dashboard, and project proposal notes.',
-    caption: 'Global Freelancing & Agency Consulting Suite',
-    aspectRatio: '3 / 4',
-    width: 896,
-    height: 1200
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-036.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-036.webp',
+    alt: 'Editorial workspace illustrating freelance client proposals, portfolio case studies, and scope timelines.',
+    caption: 'Portfolio Positioning & Client Consulting Suite',
+    outcomeId: 'IMG-037',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'ATS Resume & Client Proposal Systems',
+    outcomeDesc: 'Structure compelling proposals, redacted case studies, pricing tiers, and career-readiness portfolios.',
+    outcomeAlt: 'Structured resume and client proposal template preview'
   },
-  'creator': {
+  'communication': {
     enabled: true,
-    assetId: 'NS-ACAD-CREATOR-MASTER',
+    assetId: 'IMG-038',
     approvalStatus: 'approved',
-    desktopSrc: '/images/academies/creator/ns-academy-creator-hero-desktop-896w.png',
-    tabletSrc: '/images/academies/creator/ns-academy-creator-hero-tablet-600w.png',
-    mobileSrc: '/images/academies/creator/ns-academy-creator-hero-mobile-400w.png',
-    alt: 'Digital creator workstation showing 4K video editing timeline in DaVinci Resolve, live YouTube Studio analytics, and Shure SM7B broadcast microphone.',
-    caption: 'Professional Video Production & Content Creation Studio',
-    aspectRatio: '3 / 4',
-    width: 896,
-    height: 1200
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-038.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-038.webp',
+    alt: 'Editorial concept illustration of structured interactive workplace speaking and presentation practice.',
+    caption: 'Structured Communication & Workplace Readiness',
+    outcomeId: 'IMG-039',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'Scenario Role-Play & Presentation Confidence',
+    outcomeDesc: 'Develop fluency through guided workplace dialogues, active listening rubrics, and presentation practice.',
+    outcomeAlt: 'Editorial illustration depicting guided workplace communication role-play practice'
   },
   'kids-tech': {
     enabled: true,
-    assetId: 'NS-ACAD-KIDS-MASTER',
+    assetId: 'IMG-040',
     approvalStatus: 'approved',
-    desktopSrc: '/images/academies/kids-tech/ns-academy-kids-hero-desktop-896w.png',
-    tabletSrc: '/images/academies/kids-tech/ns-academy-kids-hero-tablet-600w.png',
-    mobileSrc: '/images/academies/kids-tech/ns-academy-kids-hero-mobile-400w.png',
-    alt: 'Bright Scandinavian youth coding maker space featuring Scratch 3.0 visual block programming on tablet, hands-on micro:bit robotics rover, and algorithmic flowcharts.',
-    caption: 'Interactive Coding, AI & Physical Robotics Maker Studio',
-    aspectRatio: '3 / 4',
-    width: 896,
-    height: 1200
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-040.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-040.webp',
+    alt: 'Editorial illustration showcasing supervised youth coding workspace with Scratch visual blocks and micro:bit kits.',
+    caption: 'Supervised Youth Coding & Computational Maker Lab',
+    outcomeId: 'IMG-041',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'Visual Block Logic & Guided Mini-Games',
+    outcomeDesc: 'Age-appropriate guided lessons turning foundational logic blocks into interactive animations and safe hardware tasks.',
+    outcomeAlt: 'Visual Scratch block coding and youth project logic preview'
+  },
+  'creator': {
+    enabled: true,
+    assetId: 'IMG-042',
+    approvalStatus: 'approved',
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-042.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-042.webp',
+    alt: 'Editorial studio concept featuring camera rig, key lighting, audio mic, and digital content creation workspace.',
+    caption: 'Creator Production, Scripting & Channel Workflow',
+    outcomeId: 'IMG-043',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'Content Strategy, Thumbnails & Channel Packaging',
+    outcomeDesc: 'Plan retention-focused scripts, structured thumbnails, and consistent publishing systems across modern platforms.',
+    outcomeAlt: 'Content planning board and YouTube channel packaging preview'
+  },
+  'office-productivity': {
+    enabled: true,
+    assetId: 'IMG-044',
+    approvalStatus: 'approved',
+    desktopSrc: '/public/assets/nova-images/desktop/IMG-044.webp',
+    mobileSrc: '/public/assets/nova-images/mobile/IMG-044.webp',
+    alt: 'Editorial workstation illustrating structured spreadsheet modeling, executive reports, and office workflow automation.',
+    caption: 'Business Data Reporting, Excel & MIS Operations',
+    outcomeId: 'IMG-045',
+    outcomeTag: 'SKILLS & WORKFLOW PREVIEW',
+    outcomeTitle: 'MIS Reporting, Power Query & Executive Decks',
+    outcomeDesc: 'Master clean data normalization, formula logic, pivot summaries, and stakeholder-ready slide decks.',
+    outcomeAlt: 'Power BI data reporting and Excel business modeling dashboard preview'
   }
 };
 
@@ -892,10 +956,10 @@ ${heroVisual && heroVisual.enabled ? `
     .academy-hero-visual-frame {
       position: relative;
       width: 100%;
-      max-width: 440px;
+      max-width: 520px;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 20px 40px -15px rgba(1, 23, 49, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px -15px rgba(1, 23, 49, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.14);
       background-color: #011731;
     }
     .academy-hero-picture {
@@ -906,9 +970,9 @@ ${heroVisual && heroVisual.enabled ? `
       display: block;
       width: 100%;
       height: auto;
-      aspect-ratio: 3 / 4;
+      aspect-ratio: 16 / 10;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 20%;
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .academy-hero-visual-frame:hover .academy-hero-img {
@@ -942,6 +1006,62 @@ ${heroVisual && heroVisual.enabled ? `
       text-overflow: ellipsis;
     }
 
+    /* Academy Practical Outcome Strip (Odd IDs IMG-023..IMG-045) */
+    .academy-outcome-strip {
+      padding: 28px 0 8px;
+      background: #f8fafc;
+    }
+    .academy-outcome-card {
+      background: #ffffff;
+      border: 1px solid rgba(5, 153, 168, 0.16);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(1, 23, 49, 0.05);
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      align-items: center;
+    }
+    .academy-outcome-media {
+      background: #011731;
+      height: 100%;
+    }
+    .academy-outcome-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 290px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    .academy-outcome-body {
+      padding: 24px 32px;
+    }
+    .academy-outcome-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0599a8;
+      background: rgba(5, 153, 168, 0.1);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .academy-outcome-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #011731;
+      margin: 0 0 8px;
+    }
+    .academy-outcome-desc {
+      font-size: 0.94rem;
+      color: #475569;
+      margin: 0;
+      line-height: 1.6;
+    }
+
     /* Tablet Responsive (641px - 1023px) */
     @media (max-width: 1023px) {
       .academy-hero-grid {
@@ -949,12 +1069,18 @@ ${heroVisual && heroVisual.enabled ? `
         gap: 32px;
       }
       .academy-hero-visual-frame {
-        max-width: 480px;
+        max-width: 520px;
         margin: 0 auto;
       }
       .academy-hero-img {
-        max-height: 360px;
+        max-height: 340px;
         object-position: center 20%;
+      }
+      .academy-outcome-card {
+        grid-template-columns: 1fr;
+      }
+      .academy-outcome-body {
+        padding: 20px 22px;
       }
     }
 
@@ -971,9 +1097,9 @@ ${heroVisual && heroVisual.enabled ? `
         margin-top: 4px;
       }
       .academy-hero-img {
-        max-height: 200px;
-        aspect-ratio: auto;
-        object-position: center 25%;
+        max-height: 290px;
+        aspect-ratio: 4 / 5;
+        object-position: center 20%;
       }
       .academy-hero-visual-caption {
         font-size: 0.72rem;
@@ -1695,22 +1821,16 @@ ${heroVisual && heroVisual.enabled ? `        <div class="academy-hero-grid">
             <div class="academy-hero-visual-frame">
               <picture class="academy-hero-picture">
                 <source
-                  media="(min-width: 1024px)"
+                  media="(min-width: 768px)"
                   srcset="${heroVisual.desktopSrc}"
-                  type="image/png"
-                  width="896"
-                  height="1200">
-                <source
-                  media="(min-width: 641px) and (max-width: 1023px)"
-                  srcset="${heroVisual.tabletSrc}"
-                  type="image/png"
-                  width="600"
-                  height="800">
+                  type="image/webp"
+                  width="1600"
+                  height="1000">
                 <img
                   src="${heroVisual.mobileSrc}"
                   alt="${heroVisual.alt}"
-                  width="400"
-                  height="535"
+                  width="900"
+                  height="1125"
                   class="academy-hero-img"
                   loading="eager"
                   fetchpriority="high"
@@ -1792,6 +1912,25 @@ ${heroVisual && heroVisual.enabled ? `        <div class="academy-hero-grid">
       </div>
     </section>
 
+    ${heroVisual && heroVisual.outcomeId ? `<!-- Practical Skills & Workflow Preview Strip (${heroVisual.outcomeId}) -->
+    <section class="academy-outcome-strip" aria-label="Academy curriculum workflow preview">
+      <div class="container">
+        <div class="academy-outcome-card">
+          <div class="academy-outcome-media">
+            <picture>
+              <source media="(min-width: 768px)" srcset="/public/assets/nova-images/desktop/${heroVisual.outcomeId}.webp" type="image/webp" width="1400" height="1050">
+              <img src="/public/assets/nova-images/mobile/${heroVisual.outcomeId}.webp" alt="${heroVisual.outcomeAlt}" width="900" height="675" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="academy-outcome-body">
+            <span class="academy-outcome-tag">${heroVisual.outcomeTag}</span>
+            <h2 class="academy-outcome-title">${heroVisual.outcomeTitle}</h2>
+            <p class="academy-outcome-desc">${heroVisual.outcomeDesc}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+` : ''}
     <!-- Pre-rendered Semantic Academy Programs & Course Sections -->
     <div id="academy-sections-container" data-prerendered="true">
 ${sectionsContent}

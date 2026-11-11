@@ -52,6 +52,17 @@ if (!Array.isArray(NS_COURSES) || NS_COURSES.length === 0) {
 
 console.log(`Loaded ${NS_COURSES.length} courses from data.js`);
 
+const COURSE_CATALOGUE_THUMBNAILS = {
+  'dm-professional': { unit: 'unit-01', alt: 'AI Digital Marketing Specialist campaign planning workspace and analytics dashboard preview' },
+  'ai-mastery': { unit: 'unit-02', alt: 'AI Solutions Engineering and Agentic AI workflow architecture preview' },
+  'graphic-design-pro': { unit: 'unit-03', alt: 'Graphic Design Professional brand identity and typography layout preview' },
+  'fullstack-foundation': { unit: 'unit-04', alt: 'Full Stack Programming Foundation responsive web application and code preview' },
+  'uiux-design-pro': { unit: 'unit-05', alt: 'UI/UX Design Professional wireframe-to-interface mobile checkout flow preview' },
+  'video-pro': { unit: 'unit-06', alt: 'Professional Video Editing cinema timeline and motion graphics sequence preview' },
+  'ecommerce-mastery': { unit: 'unit-07', alt: 'E-Commerce Website Mastery storefront product and checkout layout preview' },
+  '3d-viz-pro': { unit: 'unit-08', alt: '3D Visualisation Professional viewport modeling and material shader preview' }
+};
+
 function buildCourseCardHTML(course) {
   const courseUrl = `/course-detail.html?id=${course.id}`;
   
@@ -70,12 +81,18 @@ function buildCourseCardHTML(course) {
   const safePrice = `₹${(course.price || 0).toLocaleString('en-IN')}`;
   const safeId = course.id;
 
+  const thumbCfg = COURSE_CATALOGUE_THUMBNAILS[course.id];
+  const hasVisualClass = thumbCfg ? ' has-course-visual' : '';
+  const thumbInnerHtml = thumbCfg
+    ? `<picture class="course-thumb-picture"><source media="(min-width: 768px)" srcset="/public/assets/nova-images/desktop/${thumbCfg.unit}/IMG-048.webp" type="image/webp" width="800" height="600" /><img src="/public/assets/nova-images/mobile/${thumbCfg.unit}/IMG-048.webp" alt="${thumbCfg.alt}" class="course-thumb-img" width="600" height="450" loading="lazy" decoding="async" /></picture>`
+    : renderCourseIcon(course.icon || course);
+
   return `
     <div class="course-card" data-category="${course.academyId}">
       ${course.featured ? '<span class="course-hot-tag">🔥 Popular</span>' : ''}
-      <div class="course-thumbnail">
-        <div class="course-thumb-bg" style="background:${course.color}">
-          ${renderCourseIcon(course.icon || course)}
+      <div class="course-thumbnail${hasVisualClass}">
+        <div class="course-thumb-bg${hasVisualClass}" style="background:${course.color}">
+          ${thumbInnerHtml}
         </div>
         <div class="course-badge-overlay">
           <span class="course-level-badge">${course.level}</span>
