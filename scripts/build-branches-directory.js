@@ -189,8 +189,8 @@ function buildDirectoryHtml() {
   <link rel="preload" href="/public/fonts/Inter-400.woff2" as="font" type="font/woff2" crossorigin />
 
   <!-- Base Site Styles & Scoped Directory Styles -->
-  <link rel="stylesheet" href="/css/styles.min.css?v=2.8.0" />
-  <link rel="stylesheet" href="/css/locations-directory.css" />
+  <link rel="stylesheet" href="/css/styles.min.css?v=2.9.0" />
+  <link rel="stylesheet" href="/css/locations-directory.css?v=2.9.0" />
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">

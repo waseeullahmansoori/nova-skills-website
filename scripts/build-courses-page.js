@@ -232,7 +232,8 @@ function updateCoursesPage() {
   if (!html.includes('.course-demo-chip')) {
     html = html.replace('</style>', badgeCriticalCss + '\n</style>');
   }
-  html = html.replace(/styles\.min\.css\?v=[0-9.]+/g, 'styles.min.css?v=2.4.0');
+  html = html.replace(/styles\.min\.css\?v=[0-9.]+/g, 'styles.min.css?v=2.9.0');
+  html = html.replace(/courses\.min\.js\?v=[0-9.]+/g, 'courses.min.js?v=2.9.0');
 
   // 5. Pre-render course cards inside #courses-grid-page
   const cardsHtml = NS_COURSES.map(c => buildCourseCardHTML(c)).join('\n');

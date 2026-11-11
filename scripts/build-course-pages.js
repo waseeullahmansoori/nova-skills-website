@@ -1043,6 +1043,30 @@ function generateStaticCourseHtml(courseId, templateHtml) {
     html = html.replace(/<div\s+id="projects-container"[\s\S]*?<\/div>/i, `<div id="projects-container" style="max-width:860px;">\n        ${projectsHtml}\n      </div>`);
   }
 
+  // Static Project Showcase & Section Visual Strips (IMG-050..IMG-075)
+  const showcaseStaticHtml = buildStaticProjectShowcaseHtml(courseId);
+  if (showcaseStaticHtml) {
+    html = html.replace(/<section class="container course-body-section" id="project-showcase-section" style="display:none;">[\s\S]*?<\/section>/i, showcaseStaticHtml);
+  }
+  const secVisuals = COURSE_VISUALS_DATA.sectionVisualsByCourse[courseId];
+  if (secVisuals) {
+    if (secVisuals.overview && secVisuals.overview.length) {
+      html = html.replace(/(<section class="container course-body-section" id="overview-section">[\s\S]*?)(<\/section>)/i, (_, body, close) => body + buildStaticSectionVisualStripHtml(secVisuals.overview) + '\n    ' + close);
+    }
+    if (secVisuals.buildOutcomes && secVisuals.buildOutcomes.length) {
+      html = html.replace(/<section class="container course-body-section" id="build-outcomes-section" style="display:none;">([\s\S]*?<div id="build-outcomes-container"[^>]*>)([\s\S]*?)(<\/div>\s*<\/section>)/i, (_, head, inner, tail) => '<section class="container course-body-section" id="build-outcomes-section" style="display:block;">' + head + inner + buildStaticSectionVisualStripHtml(secVisuals.buildOutcomes) + tail);
+    }
+    if (secVisuals.curriculum && secVisuals.curriculum.length) {
+      html = html.replace(/(<section class="container course-body-section" id="curriculum-section">[\s\S]*?)(<\/section>)/i, (_, body, close) => body + buildStaticSectionVisualStripHtml(secVisuals.curriculum) + '\n    ' + close);
+    }
+    if (secVisuals.tools && secVisuals.tools.length) {
+      html = html.replace(/(<section class="container course-body-section" id="tools-section">[\s\S]*?)(<\/section>)/i, (_, body, close) => body + buildStaticSectionVisualStripHtml(secVisuals.tools) + '\n    ' + close);
+    }
+    if (secVisuals.projects && secVisuals.projects.length) {
+      html = html.replace(/(<section class="container course-body-section" id="projects-section">[\s\S]*?)(<\/section>)/i, (_, body, close) => body + buildStaticSectionVisualStripHtml(secVisuals.projects) + '\n    ' + close);
+    }
+  }
+
   // Mentors
   html = html.replace(/<div\s+class="mentors-grid"\s+id="mentors-container">[\s\S]*?<\/section>/i, `<div class="mentors-grid" id="mentors-container">\n        ${mentorsHtml}\n      </div>\n    </section>`);
 

@@ -1763,8 +1763,8 @@ ${heroVisual && heroVisual.enabled ? `
 }
   </style>
 
-  <link rel="stylesheet" href="/css/styles.min.css?v=2.8.0">
-  <noscript><link rel="stylesheet" href="/css/styles.min.css?v=2.8.0"></noscript>
+  <link rel="stylesheet" href="/css/styles.min.css?v=2.9.0">
+  <noscript><link rel="stylesheet" href="/css/styles.min.css?v=2.9.0"></noscript>
 
   <!-- Structured Data: JSON-LD Suite -->
   <script type="application/ld+json">
