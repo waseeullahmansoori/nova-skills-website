@@ -39,6 +39,105 @@ const vm = require('vm');
 const ROOT_DIR = path.resolve(__dirname, '..');
 const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(ROOT_DIR, 'js', 'icon-system.js'));
 
+const COURSE_VISUALS_DATA = JSON.parse(
+  fs.readFileSync(path.join(ROOT_DIR, 'data', 'visual-assets', 'course-visuals.json'), 'utf8')
+);
+
+function buildStaticSectionVisualStripHtml(items) {
+  if (!Array.isArray(items) || items.length === 0) return '';
+  return '\n      <div class="course-section-visual-strip">\n        <div class="course-section-visual-grid">\n          ' +
+    items.map(item => `
+            <figure class="course-section-visual-card${item.wide ? ' featured-wide' : ''}">
+              <picture>
+                <source media="(min-width: 768px)" srcset="${item.desktop}" type="image/webp" width="${item.width}" height="${item.height}" />
+                <img src="${item.mobile}" alt="${escapeHTML(item.alt)}" width="${item.mobileWidth || item.width}" height="${item.mobileHeight || item.height}" loading="lazy" decoding="async" />
+              </picture>
+              <figcaption class="course-section-visual-caption">
+                <span class="course-section-visual-tag">${escapeHTML(item.tag || 'PREVIEW')}</span>
+                <h4>${escapeHTML(item.title || '')}</h4>
+                <p>${escapeHTML(item.desc || '')}</p>
+              </figcaption>
+            </figure>
+          `).join('') + '\n        </div>\n      </div>';
+}
+
+function buildStaticProjectShowcaseHtml(courseId) {
+  const entry = COURSE_VISUALS_DATA.showcaseByCourse[courseId];
+  if (!entry || !Array.isArray(entry.projects) || entry.projects.length === 0) return null;
+  const featured = entry.projects.find(p => p.role === 'featured') || entry.projects[0];
+  const supporting = entry.projects.filter(p => p !== featured);
+
+  const renderCard = (proj, isFeatured) => `
+      <div class="project-evidence-card${isFeatured ? ' project-card-featured' : ''}" id="card-${proj.id}">
+        <div class="project-img-wrap${proj.faceSafe ? ' face-safe' : ''}" onclick="openProjectLightbox('${proj.id}')" tabindex="0" role="button" aria-label="Inspect ${escapeHTML(proj.title)} Preview" onkeydown="if(event.key==='Enter'||event.key===' ')openProjectLightbox('${proj.id}')">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="${proj.image.desktop}" type="image/webp" width="${proj.image.width}" height="${proj.image.height}" />
+            <source media="(min-width: 641px)" srcset="${proj.image.card}" type="image/webp" width="${proj.image.width}" height="${proj.image.height}" />
+            <img src="${proj.image.mobile}" alt="${escapeHTML(proj.image.alt)}" width="${proj.image.mobileWidth || proj.image.width}" height="${proj.image.mobileHeight || proj.image.height}" loading="lazy" decoding="async" />
+          </picture>
+          <span class="project-badge"><span class="project-badge-dot" aria-hidden="true"></span> ${escapeHTML(proj.badge)}</span>
+          <button type="button" class="project-inspect-btn" onclick="event.stopPropagation(); openProjectLightbox('${proj.id}')" aria-label="Inspect full preview for ${escapeHTML(proj.title)}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            Inspect Preview
+          </button>
+        </div>
+        <div class="project-content">
+          <div>
+            <div class="project-category">${escapeHTML(proj.category)}</div>
+            <h3 class="project-title">${escapeHTML(proj.title)}</h3>
+            <p class="project-desc">${escapeHTML(proj.description)}</p>
+            <div class="project-skills-list" aria-label="Skills demonstrated">
+              ${proj.skills.map(s => `<span class="project-skill-tag">${escapeHTML(s)}</span>`).join('')}
+            </div>
+          </div>
+          <div>
+            <div class="project-tools-row">
+              <span>🛠️ Tools Used:</span> <strong>${escapeHTML(proj.tools.join(', '))}</strong>
+            </div>
+            <a href="${proj.moduleHref || '#curriculum-section'}" class="project-module-link">
+              📚 Curriculum Reference: ${escapeHTML(proj.moduleRef)} →
+            </a>
+          </div>
+        </div>
+      </div>`;
+
+  let inner = '<div class="project-showcase-grid">';
+  if (featured) inner += renderCard(featured, true);
+  if (supporting.length > 0) {
+    inner += `<div class="project-subgrid${supporting.length === 1 ? ' single-item' : ''}">`;
+    supporting.forEach(p => { inner += renderCard(p, false); });
+    inner += '</div>';
+  }
+  inner += `
+    <div class="project-showcase-cta">
+      <div class="project-showcase-cta-text">
+        <h3>${escapeHTML(entry.ctaHeading || 'Ready to Build Commercial Portfolio Projects Like This?')}</h3>
+        <p>${escapeHTML(entry.ctaSubtitle || 'Experience our hands-on studio approach with personal mentor feedback before enrolling.')}</p>
+      </div>
+      <div class="project-showcase-cta-actions">
+        <button type="button" class="btn-showcase-demo" onclick="if(typeof openDemoModal==='function'){const c=(typeof currentCourse!=='undefined'&&currentCourse)?currentCourse:(typeof course!=='undefined'?course:null);if(c)openDemoModal({courseId:c.id,courseName:c.name,academyName:c.academy,academyId:c.academyId,sourceCta:'showcase_banner'});else openDemoModal({sourceCta:'showcase_banner'});}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
+          <span>Book 2 Days Free Demo</span>
+        </button>
+        <button type="button" class="btn-showcase-enroll" onclick="if(typeof openEnrollmentModal==='function'){const c=(typeof currentCourse!=='undefined'&&currentCourse)?currentCourse:(typeof course!=='undefined'?course:null);if(c)openEnrollmentModal(c.name,c.academy,c.duration,'₹'+(c.price?c.price.toLocaleString('en-IN'):''),c.id);else openEnrollmentModal();}">
+          Enroll Now →
+        </button>
+      </div>
+    </div>`;
+  inner += '</div>';
+
+  return `<section class="container course-body-section" id="project-showcase-section" style="display:block;">
+      <div class="section-header" style="text-align:left; margin-bottom:32px;">
+        <span class="section-tag" id="showcase-tag">${escapeHTML(entry.sectionTag || 'CURRICULUM DEMONSTRATION')}</span>
+        <h2 class="section-title">${entry.sectionTitle || 'See What You\'ll <span class="gradient-text">Learn to Create</span>'}</h2>
+        <p class="section-subtitle" style="text-align:left; margin:0;" id="showcase-subtitle">${escapeHTML(entry.sectionSubtitle || '')}</p>
+      </div>
+      <div class="project-showcase-container" id="project-showcase-container">
+        ${inner}
+      </div>
+    </section>`;
+}
+
 // 1. Load data.js (NS_COURSES, NS_ACADEMIES)
 const dataJs = fs.readFileSync(path.join(ROOT_DIR, 'data.js'), 'utf8');
 vm.runInThisContext(dataJs);

@@ -76,10 +76,10 @@
     .academy-hero-visual-frame {
       position: relative;
       width: 100%;
-      max-width: 440px;
+      max-width: 520px;
       border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 20px 40px -15px rgba(1, 23, 49, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px -15px rgba(1, 23, 49, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.14);
       background-color: #011731;
     }
     .academy-hero-picture {
@@ -90,9 +90,9 @@
       display: block;
       width: 100%;
       height: auto;
-      aspect-ratio: 3 / 4;
+      aspect-ratio: 16 / 10;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 20%;
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .academy-hero-visual-frame:hover .academy-hero-img {
@@ -126,6 +126,62 @@
       text-overflow: ellipsis;
     }
 
+    /* Academy Practical Outcome Strip (Odd IDs IMG-023..IMG-045) */
+    .academy-outcome-strip {
+      padding: 28px 0 8px;
+      background: #f8fafc;
+    }
+    .academy-outcome-card {
+      background: #ffffff;
+      border: 1px solid rgba(5, 153, 168, 0.16);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(1, 23, 49, 0.05);
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      align-items: center;
+    }
+    .academy-outcome-media {
+      background: #011731;
+      height: 100%;
+    }
+    .academy-outcome-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 290px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    .academy-outcome-body {
+      padding: 24px 32px;
+    }
+    .academy-outcome-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0599a8;
+      background: rgba(5, 153, 168, 0.1);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .academy-outcome-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #011731;
+      margin: 0 0 8px;
+    }
+    .academy-outcome-desc {
+      font-size: 0.94rem;
+      color: #475569;
+      margin: 0;
+      line-height: 1.6;
+    }
+
     /* Tablet Responsive (641px - 1023px) */
     @media (max-width: 1023px) {
       .academy-hero-grid {
@@ -133,12 +189,18 @@
         gap: 32px;
       }
       .academy-hero-visual-frame {
-        max-width: 480px;
+        max-width: 520px;
         margin: 0 auto;
       }
       .academy-hero-img {
-        max-height: 360px;
+        max-height: 340px;
         object-position: center 20%;
+      }
+      .academy-outcome-card {
+        grid-template-columns: 1fr;
+      }
+      .academy-outcome-body {
+        padding: 20px 22px;
       }
     }
 
@@ -155,9 +217,9 @@
         margin-top: 4px;
       }
       .academy-hero-img {
-        max-height: 200px;
-        aspect-ratio: auto;
-        object-position: center 25%;
+        max-height: 290px;
+        aspect-ratio: 4 / 5;
+        object-position: center 20%;
       }
       .academy-hero-visual-caption {
         font-size: 0.72rem;
@@ -924,13 +986,11 @@
     {
       "@type": "ImageObject",
       "@id": "https://novaskills.in/academies/design/#heroimage",
-      "url": "https://novaskills.in/images/academies/design/ns-academy-design-hero-desktop-896w.png",
-      "contentUrl": "https://novaskills.in/images/academies/design/ns-academy-design-hero-desktop-896w.png",
+      "url": "https://novaskills.in/public/assets/nova-images/desktop/IMG-026.webp",
+      "contentUrl": "https://novaskills.in/public/assets/nova-images/desktop/IMG-026.webp",
       "name": "Design Academy Professional Studio Workspace",
-      "description": "Graphic design workspace with open brand identity manual, color swatches, and interface wireframes.",
-      "caption": "Industry-Standard Brand Design & UX Studio Setup",
-      "width": 896,
-      "height": 1200,
+      "description": "Editorial design studio illustration featuring brand identity boards, typography grids, and Figma interface layouts.",
+      "caption": "Brand Identity Systems, Typography & UI/UX Studio",
       "creator": {
         "@type": "Organization",
         "name": "Nova Skills",
@@ -993,22 +1053,16 @@
             <div class="academy-hero-visual-frame">
               <picture class="academy-hero-picture">
                 <source
-                  media="(min-width: 1024px)"
-                  srcset="/images/academies/design/ns-academy-design-hero-desktop-896w.png"
-                  type="image/png"
-                  width="896"
-                  height="1200">
-                <source
-                  media="(min-width: 641px) and (max-width: 1023px)"
-                  srcset="/images/academies/design/ns-academy-design-hero-tablet-600w.png"
-                  type="image/png"
-                  width="600"
-                  height="800">
+                  media="(min-width: 768px)"
+                  srcset="/public/assets/nova-images/desktop/IMG-026.webp"
+                  type="image/webp"
+                  width="1600"
+                  height="1000">
                 <img
-                  src="/images/academies/design/ns-academy-design-hero-mobile-400w.png"
-                  alt="Graphic design workspace with open brand identity manual, color swatches, and interface wireframes."
-                  width="400"
-                  height="535"
+                  src="/public/assets/nova-images/mobile/IMG-026.webp"
+                  alt="Editorial design studio illustration featuring brand identity boards, typography grids, and Figma interface layouts."
+                  width="900"
+                  height="1125"
                   class="academy-hero-img"
                   loading="eager"
                   fetchpriority="high"
@@ -1017,7 +1071,7 @@
               </picture>
               <div class="academy-hero-visual-caption">
                 <span class="caption-dot"></span>
-                <span class="caption-text">Industry-Standard Brand Design & UX Studio Setup</span>
+                <span class="caption-text">Brand Identity Systems, Typography & UI/UX Studio</span>
               </div>
             </div>
           </div>
@@ -1057,6 +1111,25 @@
             Book Your Free Demo →
           </button>
           <div class="academy-demo-microcopy">Free demo booking • No admission commitment</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practical Skills & Workflow Preview Strip (IMG-027) -->
+    <section class="academy-outcome-strip" aria-label="Academy curriculum workflow preview">
+      <div class="container">
+        <div class="academy-outcome-card">
+          <div class="academy-outcome-media">
+            <picture>
+              <source media="(min-width: 768px)" srcset="/public/assets/nova-images/desktop/IMG-027.webp" type="image/webp" width="1400" height="1050">
+              <img src="/public/assets/nova-images/mobile/IMG-027.webp" alt="Brand style guide and Figma interface layout curriculum preview" width="900" height="675" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="academy-outcome-body">
+            <span class="academy-outcome-tag">SKILLS & WORKFLOW PREVIEW</span>
+            <h2 class="academy-outcome-title">Brand Guidelines & Interactive UI Systems</h2>
+            <p class="academy-outcome-desc">Move from grid theory and color tokens to multi-platform identity packages and clickable Figma prototypes.</p>
+          </div>
         </div>
       </div>
     </section>

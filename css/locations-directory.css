@@ -1214,3 +1214,79 @@
 .loc-discovery-card:hover .loc-discovery-card-thumb img {
   transform: scale(1.03);
 }
+
+/* Directory Hero 2-Column Visual Integration (IMG-087) */
+.loc-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.loc-hero-grid .loc-hero-content {
+  margin: 0;
+  text-align: left;
+  max-width: 100%;
+}
+
+.loc-hero-grid .loc-hero-subtitle {
+  margin-left: 0;
+}
+
+.loc-hero-grid .loc-hero-metrics,
+.loc-hero-grid .loc-hero-ctas,
+.loc-hero-grid .loc-hero-trust-strip {
+  justify-content: flex-start;
+}
+
+.loc-hero-visual-frame {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 48px rgba(1, 23, 49, 0.4);
+  background: #012b46;
+}
+
+.loc-hero-visual-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.loc-hero-visual-caption {
+  padding: 10px 14px;
+  background: rgba(1, 23, 49, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .loc-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .loc-hero-grid .loc-hero-content {
+    text-align: center;
+  }
+  .loc-hero-grid .loc-hero-subtitle {
+    margin: 0 auto 28px;
+  }
+  .loc-hero-grid .loc-hero-metrics,
+  .loc-hero-grid .loc-hero-ctas,
+  .loc-hero-grid .loc-hero-trust-strip {
+    justify-content: center;
+  }
+  .loc-hero-visual-frame {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .loc-hero-visual-frame img {
+    aspect-ratio: 4 / 5;
+    max-height: 260px;
+  }
+}

@@ -70,6 +70,9 @@
 /public/images/*
   Cache-Control: public, max-age=31536000, immutable
 
+/public/assets/nova-images/*
+  Cache-Control: public, max-age=31536000, immutable
+
 # 8. Self-Hosted Fonts (WOFF2 - Pre-Compressed Binary, Do Not Re-Compress)
 /public/fonts/*
   Cache-Control: public, max-age=31536000, immutable

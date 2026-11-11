@@ -53,6 +53,179 @@
         min-height: 116px;
       }
     }
+
+    /* Hero Visual Grid & Responsive Enhancements (Phase C) */
+    .academy-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .academy-hero-grid.hero-grid-control {
+      grid-template-columns: 1fr !important;
+    }
+    .academy-hero-content {
+      min-width: 0;
+    }
+    .academy-hero-visual-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 0;
+    }
+    .academy-hero-visual-frame {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(1, 23, 49, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.14);
+      background-color: #011731;
+    }
+    .academy-hero-picture {
+      display: block;
+      width: 100%;
+    }
+    .academy-hero-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: center 20%;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .academy-hero-visual-frame:hover .academy-hero-img {
+      transform: scale(1.02);
+    }
+    .academy-hero-visual-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 16px;
+      background: linear-gradient(180deg, transparent 0%, rgba(1, 23, 49, 0.92) 100%);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.78rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      backdrop-filter: blur(4px);
+    }
+    .academy-hero-visual-caption .caption-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #75d766;
+      flex-shrink: 0;
+    }
+    .academy-hero-visual-caption .caption-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Academy Practical Outcome Strip (Odd IDs IMG-023..IMG-045) */
+    .academy-outcome-strip {
+      padding: 28px 0 8px;
+      background: #f8fafc;
+    }
+    .academy-outcome-card {
+      background: #ffffff;
+      border: 1px solid rgba(5, 153, 168, 0.16);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(1, 23, 49, 0.05);
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      align-items: center;
+    }
+    .academy-outcome-media {
+      background: #011731;
+      height: 100%;
+    }
+    .academy-outcome-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 290px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    .academy-outcome-body {
+      padding: 24px 32px;
+    }
+    .academy-outcome-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0599a8;
+      background: rgba(5, 153, 168, 0.1);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .academy-outcome-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #011731;
+      margin: 0 0 8px;
+    }
+    .academy-outcome-desc {
+      font-size: 0.94rem;
+      color: #475569;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Tablet Responsive (641px - 1023px) */
+    @media (max-width: 1023px) {
+      .academy-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .academy-hero-visual-frame {
+        max-width: 520px;
+        margin: 0 auto;
+      }
+      .academy-hero-img {
+        max-height: 340px;
+        object-position: center 20%;
+      }
+      .academy-outcome-card {
+        grid-template-columns: 1fr;
+      }
+      .academy-outcome-body {
+        padding: 20px 22px;
+      }
+    }
+
+    /* Mobile Responsive (<= 640px) */
+    @media (max-width: 640px) {
+      .academy-hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .academy-hero-visual-frame {
+        max-width: 100%;
+        border-radius: 12px;
+        margin-top: 4px;
+      }
+      .academy-hero-img {
+        max-height: 290px;
+        aspect-ratio: 4 / 5;
+        object-position: center 20%;
+      }
+      .academy-hero-visual-caption {
+        font-size: 0.72rem;
+        padding: 6px 12px;
+      }
+    }
     .academy-hero-section {
       background: linear-gradient(135deg, #011731 0%, #0599a8 100%);
       color: white;
@@ -729,6 +902,9 @@
         "@id": "https://novaskills.in/#website",
         "name": "Nova Skills",
         "url": "https://novaskills.in/"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://novaskills.in/academies/digital-marketing/#heroimage"
       }
     },
     {
@@ -814,6 +990,22 @@
           }
         }
       ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://novaskills.in/academies/digital-marketing/#heroimage",
+      "url": "https://novaskills.in/public/assets/nova-images/desktop/IMG-022.webp",
+      "contentUrl": "https://novaskills.in/public/assets/nova-images/desktop/IMG-022.webp",
+      "name": "Digital Marketing Academy Professional Studio Workspace",
+      "description": "Editorial workspace illustration depicting Digital Marketing campaign planning and analytics dashboards.",
+      "caption": "Performance Marketing, SEO & Campaign Analytics Workflow",
+      "creator": {
+        "@type": "Organization",
+        "name": "Nova Skills",
+        "url": "https://novaskills.in/"
+      },
+      "license": "https://novaskills.in/terms-and-conditions/",
+      "acquireLicensePage": "https://novaskills.in/academies/digital-marketing/"
     }
   ]
 }
@@ -828,37 +1020,69 @@
   <main id="main-content">
     
     <!-- Hero Banner Section -->
-    <section id="academy-hero-section" class="academy-hero-section">
+    <section id="academy-hero-section" class="academy-hero-section academy-hero-with-visual">
       <div class="container">
-        <!-- Breadcrumb Navigation -->
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span>›</span>
-          <a href="/courses">Academies</a>
-          <span>›</span>
-          <span id="breadcrumb-selected-academy" style="color:white;">Digital Marketing Academy</span>
-        </nav>
+        <div class="academy-hero-grid">
+          <div class="academy-hero-content">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>›</span>
+              <a href="/courses">Academies</a>
+              <span>›</span>
+              <span id="breadcrumb-selected-academy" style="color:white;">Digital Marketing Academy</span>
+            </nav>
 
-        <!-- Hero Content -->
-        <div id="academy-icon-display" class="academy-icon-badge" style="font-size: 3rem; margin-bottom: 12px;">📊</div>
-        <h1 id="academy-name-display" class="academy-hero-title">Digital Marketing Academy: Job-Ready Training & Certification</h1>
-        <p id="academy-desc-display" class="academy-hero-desc">
-          <span class="badge-delivery" style="display:inline-block; background:rgba(117,215,102,0.15); color:#75d766; border:1px solid rgba(117,215,102,0.3); padding:4px 12px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px;">📍 Classroom in Siddharth Nagar • 💻 Live Interactive Online (Pan-India)</span><br>
-          Master SEO, Google Ads, Meta Ads, Social Media, Content & AI-powered marketing strategies with 100% practical training.
-        </p>
+            <!-- Hero Content -->
+            <div id="academy-icon-display" class="academy-icon-badge" style="font-size: 3rem; margin-bottom: 12px;">📊</div>
+            <h1 id="academy-name-display" class="academy-hero-title">Digital Marketing Academy: Job-Ready Training & Certification</h1>
+            <p id="academy-desc-display" class="academy-hero-desc">
+              <span class="badge-delivery" style="display:inline-block; background:rgba(117,215,102,0.15); color:#75d766; border:1px solid rgba(117,215,102,0.3); padding:4px 12px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px;">📍 Classroom in Siddharth Nagar • 💻 Live Interactive Online (Pan-India)</span><br>
+              Master SEO, Google Ads, Meta Ads, Social Media, Content & AI-powered marketing strategies with 100% practical training.
+            </p>
 
-        <!-- Accurate Dynamic Stats Pills -->
-        <div class="academy-stats-pills" id="academy-stats-pills">
-          <span id="stat-career-programs" class="stats-pill">💼 Career Programs: 1</span>
-          <span id="stat-pro-programs" class="stats-pill">⚡ Professional Programs: 3</span>
-          <span id="stat-cert-courses" class="stats-pill">📜 Certification Courses: 10</span>
-          <span id="stat-total-courses" class="stats-pill">📚 Total Courses: 14</span>
-        </div>
+            <!-- Accurate Dynamic Stats Pills -->
+            <div class="academy-stats-pills" id="academy-stats-pills">
+              <span id="stat-career-programs" class="stats-pill">💼 Career Programs: 1</span>
+              <span id="stat-pro-programs" class="stats-pill">⚡ Professional Programs: 3</span>
+              <span id="stat-cert-courses" class="stats-pill">📜 Certification Courses: 10</span>
+              <span id="stat-total-courses" class="stats-pill">📚 Total Courses: 14</span>
+            </div>
 
-        <!-- Action CTAs -->
-        <div class="academy-actions">
-          <button type="button" id="btn-enroll-now" class="btn btn-primary btn-lg" onclick="openEnrollmentModal('', 'Digital Marketing Academy')">Enroll Now →</button>
-          <button type="button" id="btn-free-consultation" class="btn btn-outline btn-lg" onclick="openConsultationPopup()">Free Consultation</button>
+            <!-- Action CTAs (Enforce Single Horizontal Row) -->
+            <div class="academy-actions">
+              <button type="button" id="btn-enroll-now" class="btn btn-primary btn-lg" onclick="openEnrollmentModal('', 'Digital Marketing Academy')">Enroll Now →</button>
+              <button type="button" id="btn-free-consultation" class="btn btn-outline btn-lg" onclick="openConsultationPopup()">Free Consultation</button>
+            </div>
+          </div>
+
+          <!-- Hero Visual Column -->
+          <div class="academy-hero-visual-col" id="academy-hero-visual-col">
+            <div class="academy-hero-visual-frame">
+              <picture class="academy-hero-picture">
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/public/assets/nova-images/desktop/IMG-022.webp"
+                  type="image/webp"
+                  width="1600"
+                  height="1000">
+                <img
+                  src="/public/assets/nova-images/mobile/IMG-022.webp"
+                  alt="Editorial workspace illustration depicting Digital Marketing campaign planning and analytics dashboards."
+                  width="900"
+                  height="1125"
+                  class="academy-hero-img"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                  onerror="this.closest('.academy-hero-visual-col').style.display='none'">
+              </picture>
+              <div class="academy-hero-visual-caption">
+                <span class="caption-dot"></span>
+                <span class="caption-text">Performance Marketing, SEO & Campaign Analytics Workflow</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -895,6 +1119,25 @@
             Book Your Free Demo →
           </button>
           <div class="academy-demo-microcopy">Free demo booking • No admission commitment</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practical Skills & Workflow Preview Strip (IMG-023) -->
+    <section class="academy-outcome-strip" aria-label="Academy curriculum workflow preview">
+      <div class="container">
+        <div class="academy-outcome-card">
+          <div class="academy-outcome-media">
+            <picture>
+              <source media="(min-width: 768px)" srcset="/public/assets/nova-images/desktop/IMG-023.webp" type="image/webp" width="1400" height="1050">
+              <img src="/public/assets/nova-images/mobile/IMG-023.webp" alt="Sanitized digital marketing funnel and channel analytics preview" width="900" height="675" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="academy-outcome-body">
+            <span class="academy-outcome-tag">SKILLS & WORKFLOW PREVIEW</span>
+            <h2 class="academy-outcome-title">Campaign Planning & GA4 Analytics Architecture</h2>
+            <p class="academy-outcome-desc">Explore how modules combine funnel strategy, search optimization, paid ad experimentation, and sanitized performance reporting.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -2433,5 +2676,6 @@
   <script src="/nova-ai-widget.js?v=3.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
   <script src="/js/academy-detail.min.js?v=2.7.4" defer></script>
+  <script src="/js/academy-hero-experiment.js?v=1.0" defer></script>
 </body>
 </html>
