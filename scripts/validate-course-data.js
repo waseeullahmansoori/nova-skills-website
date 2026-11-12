@@ -197,6 +197,37 @@ check(CourseData.getCourseById('dm-professional')?.guidedHours === 120, `NovaCou
 check(CourseData.getCourseById('dm-professional')?.liveProjects === 5, `NovaCourseData.getCourseById('dm-professional').liveProjects === 5`);
 check(CourseData.getCourseProjectLabel(CourseData.getCourseById('dm-professional')) === '5 Core Production Projects', `dm-professional projectDisplayLabel === '5 Core Production Projects'`);
 check(CourseData.getCourseById('ai-assisted-full-stack-web-development')?.liveProjects === 6, `NovaCourseData.getCourseById('ai-assisted-full-stack-web-development').liveProjects === 6`);
+check(CourseData.getCourseProjectLabel(CourseData.getCourseById('ai-assisted-full-stack-web-development')) === '6 Portfolio Projects', `ai-assisted-full-stack-web-development projectDisplayLabel === '6 Portfolio Projects'`);
+
+// P0-3: AI-Assisted Full Stack Web Development Portfolio Structure Validation
+const fsDetailPath = path.join(ROOT, 'data', 'courses', 'ai-assisted-full-stack-web-development.json');
+const fsDetail = JSON.parse(fs.readFileSync(fsDetailPath, 'utf8'));
+const pStruct = fsDetail.portfolioStructure;
+check(Boolean(pStruct), `portfolioStructure exists in ai-assisted-full-stack-web-development.json`);
+check(Array.isArray(pStruct?.commonProjects) && pStruct.commonProjects.length === 4, `portfolioStructure.commonProjects length === 4`);
+check(Array.isArray(pStruct?.specialization?.availableOptions) && pStruct.specialization.availableOptions.length === 3, `portfolioStructure.specialization.availableOptions length === 3`);
+check(pStruct?.specialization?.requiredSelection === 1, `portfolioStructure.specialization.requiredSelection === 1`);
+check(Boolean(pStruct?.capstone) && pStruct.capstone.sequence === 6, `portfolioStructure.capstone.sequence === 6`);
+check(pStruct?.requiredPortfolioCount === 6, `portfolioStructure.requiredPortfolioCount === 6`);
+
+// Mathematical invariant: 4 common + 1 selected + 1 capstone = 6
+if (pStruct) {
+  const calcTotal = pStruct.commonProjects.length + pStruct.specialization.requiredSelection + 1;
+  check(calcTotal === 6, `Calculation: 4 common + 1 specialization + 1 capstone === 6 (got ${calcTotal})`);
+
+  // Verify path invariance: Selecting Path A, B, or C produces the exact same required project total (6)
+  ['path-a', 'path-b', 'path-c'].forEach(pathId => {
+    const chosenOpt = pStruct.specialization.availableOptions.find(o => o.id === pathId);
+    check(Boolean(chosenOpt), `Specialization option ${pathId} exists`);
+    const pathTotal = pStruct.commonProjects.length + (chosenOpt ? 1 : 0) + 1;
+    check(pathTotal === 6, `Selecting ${pathId} yields exact required portfolio count 6`);
+  });
+}
+
+// Verify Module 14 capstone maps to Portfolio Project 06
+const mod14 = fsDetail.modules?.find(m => String(m.module_number).includes('14') || String(m.module_title).includes('Client Project'));
+check(Boolean(mod14), `Module 14 exists in ai-assisted-full-stack-web-development`);
+check(String(mod14?.assignment).includes('Portfolio Project 06') || String(mod14?.assignment).includes('Project 6'), `Module 14 assignment maps to Portfolio Project 06`);
 check(CourseData.getCourseById('nonexistent-id-xyz') === null, `NovaCourseData.getCourseById safely returns null on invalid ID`);
 check(CourseData.getAcademyCourseCount('no-code-web') === 8, `NovaCourseData.getAcademyCourseCount('no-code-web') alias resolves to 8`);
 check(CourseData.getAcademyStartingPrice('career') === 2900, `NovaCourseData.getAcademyStartingPrice('career') === 2900`);

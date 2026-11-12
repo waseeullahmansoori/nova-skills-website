@@ -717,7 +717,73 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
   if (builds.length > 0) {
     const deliverables = (detailData && detailData.final_deliverables) || [];
-    projectsHtml = `
+    const isStructured = (baseCourse && baseCourse.id === 'ai-assisted-full-stack-web-development') ||
+      (detailData && (detailData.portfolioStructure || (detailData.course_id === 'ai-assisted-full-stack-web-development')));
+
+    if (isStructured && builds.length === 8) {
+      const commonBuilds = builds.slice(0, 4);
+      const specBuilds = builds.slice(4, 7);
+      const capstoneBuild = builds[7];
+
+      const renderCard = (b, defaultBadge, extraClass = '') => {
+        const bTitle = (typeof b === 'object' && b !== null) ? (b.title || b.project_title || b.name || '') : String(b);
+        const isCap = bTitle.toLowerCase().includes('capstone') || (typeof b === 'object' && b.type === 'capstone');
+        const bBadge = (typeof b === 'object' && b !== null && b.badge) ? b.badge : defaultBadge;
+        const bDesc = (typeof b === 'object' && b !== null) ? (b.client_brief || b.description || b.business_brief || '') : '';
+        const bDeliverable = (typeof b === 'object' && b !== null && Array.isArray(b.deliverables))
+          ? b.deliverables[0]
+          : ((typeof b === 'object' && b !== null && b.deliverables) ? b.deliverables : (deliverables[0] || 'Production ready asset in student portfolio'));
+
+        return `
+          <div class="portfolio-project-card ${isCap ? 'capstone' : ''} ${extraClass}">
+            <span class="project-tag-badge">${escapeHTML(bBadge)}</span>
+            <div class="project-card-title">${escapeHTML(bTitle)}</div>
+            <p class="project-card-desc">
+              ${escapeHTML(bDesc)}
+            </p>
+            <div class="project-deliverable-badge">
+              <span>📁</span> Deliverable: ${escapeHTML(bDeliverable)}
+            </div>
+          </div>
+        `;
+      };
+
+      projectsHtml = `
+        <div class="project-group-block">
+          <div class="project-group-heading" style="margin-bottom:18px;">
+            <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:var(--teal); margin-bottom:4px;">COMMON CORE — REQUIRED FOR EVERY STUDENT</div>
+            <h3 style="font-size:1.25rem; font-weight:800; color:var(--navy); margin:0 0 6px;">Common Projects (Modules 01–12)</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin:0;">Four foundational production applications completed by every student in the program.</p>
+          </div>
+          <div class="projects-suite-grid">
+            ${commonBuilds.map((b, idx) => renderCard(b, `Production Project ${idx + 1}`)).join('')}
+          </div>
+        </div>
+
+        <div class="project-group-block" style="margin-top:36px;">
+          <div class="project-group-heading" style="margin-bottom:18px;">
+            <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:var(--teal); margin-bottom:4px;">CAREER SPECIALIZATION — SELECT ONE</div>
+            <h3 style="font-size:1.25rem; font-weight:800; color:var(--navy); margin:0 0 6px;">Specialization Project (Module 10)</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin:0;">Each student completes exactly ONE 20-hour commercial track project aligned with their chosen career pathway. Tracks are mutually exclusive; all three options are presented below for comparison.</p>
+          </div>
+          <div class="projects-suite-grid">
+            ${specBuilds.map((b, idx) => renderCard(b, `Specialization Project — Option ${String.fromCharCode(65 + idx)}`)).join('')}
+          </div>
+        </div>
+
+        <div class="project-group-block" style="margin-top:36px;">
+          <div class="project-group-heading" style="margin-bottom:18px;">
+            <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:var(--green); margin-bottom:4px;">FINAL CAPSTONE & DEFENSE — REQUIRED FOR EVERY STUDENT</div>
+            <h3 style="font-size:1.25rem; font-weight:800; color:var(--navy); margin:0 0 6px;">Final Project: Enterprise Commercial Capstone & Viva Voce (Modules 13–14)</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin:0;">Culminating enterprise commercial engagement synthesized with your chosen specialization stack, featuring automated tests, CI/CD, documentation, and oral technical defense.</p>
+          </div>
+          <div class="projects-suite-grid">
+            ${renderCard(capstoneBuild, 'Portfolio Project 6 — Enterprise Capstone')}
+          </div>
+        </div>
+      `.trim();
+    } else {
+      projectsHtml = `
       <div class="projects-suite-grid">
         ${builds.map((b, bIdx) => {
           const bTitle = (typeof b === 'object' && b !== null) ? (b.title || b.name || '') : String(b);
@@ -739,6 +805,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
         }).join('')}
       </div>
     `.trim();
+    }
   }
 
   // Domain Mentors

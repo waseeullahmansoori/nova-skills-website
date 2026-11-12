@@ -482,6 +482,7 @@ for (const c of NS_COURSES) {
       }
     },
     projects,
+    ...(detailJson.portfolioStructure ? { portfolioStructure: detailJson.portfolioStructure } : {}),
     tools: Array.isArray(c.tools) && c.tools.length > 0 ? c.tools : [],
     eligibility: parseEligibility(detailJson, c.id, c.academyId),
     learningOutcomes: Array.isArray(detailJson.learning_outcomes) ? detailJson.learning_outcomes : [],

@@ -7508,6 +7508,76 @@
         "reviewRequired": false,
         "reviewNotes": []
       },
+      "portfolioStructure": {
+        "commonProjects": [
+          {
+            "projectId": "fullstack-project-01",
+            "sequence": 1,
+            "title": "Responsive Developer Portfolio & Identity Hub",
+            "type": "common-core",
+            "moduleNumber": 3,
+            "required": true
+          },
+          {
+            "projectId": "fullstack-project-02",
+            "sequence": 2,
+            "title": "High-Conversion Business Lead Generation Website",
+            "type": "common-core",
+            "moduleNumber": 7,
+            "required": true
+          },
+          {
+            "projectId": "fullstack-project-03",
+            "sequence": 3,
+            "title": "Full-Stack Multi-Role Admin Dashboard",
+            "type": "common-core",
+            "moduleNumber": 8,
+            "required": true
+          },
+          {
+            "projectId": "fullstack-project-04",
+            "sequence": 4,
+            "title": "AI-Powered Business Assistant with Streaming & RAG",
+            "type": "common-core",
+            "moduleNumber": 11,
+            "required": true
+          }
+        ],
+        "specialization": {
+          "requiredSelection": 1,
+          "availableOptions": [
+            {
+              "id": "path-a",
+              "trackCode": "Path A",
+              "projectId": "fullstack-project-05a",
+              "title": "Commercial Agency Client Website with Dynamic CMS",
+              "moduleNumber": 10
+            },
+            {
+              "id": "path-b",
+              "trackCode": "Path B",
+              "projectId": "fullstack-project-05b",
+              "title": "Production Shopify Storefront with Custom Liquid Architecture",
+              "moduleNumber": 10
+            },
+            {
+              "id": "path-c",
+              "trackCode": "Path C",
+              "projectId": "fullstack-project-05c",
+              "title": "Production-Grade AI SaaS MVP with Multi-Tenancy & Stripe",
+              "moduleNumber": 10
+            }
+          ]
+        },
+        "capstone": {
+          "projectId": "fullstack-project-06",
+          "sequence": 6,
+          "title": "Client-Style Commercial Capstone & Viva Voce Showcase",
+          "moduleNumber": 14,
+          "required": true
+        },
+        "requiredPortfolioCount": 6
+      },
       "tools": [
         "HTML5",
         "CSS3",

@@ -9,7 +9,7 @@
   "seo_description": "Learn AI-Assisted Full Stack Web Development at Nova Skills. 8 Months (320 hrs) practical training with projects, tools, and placement-oriented portfolio guidance.",
   "overview": {
     "positioning": "Master modern full-stack web engineering through Next.js 15, React 19, TypeScript, PostgreSQL, and agentic AI workflows — followed by a focused commercial specialization in agency, e-commerce, or AI SaaS development.",
-    "short_description": "This flagship 8-month, 320-guided-hour professional program combines 300 hours of rigorous core full-stack web development with 20 hours of focused commercial specialization. Students build 6 production-grade portfolio projects under the direct mentorship of senior practitioners.",
+    "short_description": "This flagship 8-month, 320-guided-hour professional program combines 300 hours of rigorous core full-stack web development with 20 hours of focused commercial specialization. Students complete four common core production projects, one selected commercial specialization project and one integrated enterprise capstone, building a total portfolio of six projects under the direct mentorship of senior practitioners.",
     "curriculum_structure": "300 Hours Common Core Full-Stack Curriculum + 20 Hours Selected Commercial Specialization = 320 Total Guided Instructional Hours.",
     "specialization_rule": "Each student chooses exactly ONE specialization path (Path A: Agency Website Developer, Path B: E-commerce Developer, or Path C: AI Web App & SaaS Developer) included in the standard tuition fee of INR 64,900. Paths are mutually exclusive; students do not pay extra fees nor accumulate additional hours."
   },
@@ -2830,7 +2830,7 @@
   "what_you_will_build": [
     {
       "project_id": "build-01",
-      "badge": "Common Core Build 01",
+      "badge": "Production Project 1",
       "title": "Responsive Developer Portfolio & Identity Hub",
       "project_title": "Responsive Developer Portfolio & Identity Hub",
       "track": "Common Core (Modules 01-03)",
@@ -2875,11 +2875,12 @@
       "deployment_status": "Verified live production deployment on Vercel with automated continuous deployment on GitHub main branch.",
       "qa": "Tested with axe DevTools accessibility checker, Chrome DevTools Device Mode, and CSS color contrast analyzer (minimum 4.5:1 ratio).",
       "student_evaluation": "Evaluated by mentors on semantic code structure, CSS organization without frameworks, responsive layout fluidity, and Git commit discipline.",
-      "portfolio_case_study_evidence": "Published case study page detailing design system choices, typography scale calculations, accessibility remediations, and live performance metrics."
+      "portfolio_case_study_evidence": "Published case study page detailing design system choices, typography scale calculations, accessibility remediations, and live performance metrics.",
+      "type": "common-core"
     },
     {
       "project_id": "build-02",
-      "badge": "Common Core Build 02",
+      "badge": "Production Project 2",
       "title": "High-Conversion Business Lead Generation Website",
       "project_title": "High-Conversion Business Lead Generation Website",
       "track": "Common Core (Modules 04-06)",
@@ -2926,11 +2927,12 @@
       "deployment_status": "Live on Vercel serverless platform with edge caching and automatic HTTPS.",
       "qa": "Responsive stress testing, Zod schema validation verification, and accessible modal focus trapping audit.",
       "student_evaluation": "Evaluated on component decomposition, TypeScript type safety, design token consistency with Tailwind CSS, and UX polish.",
-      "portfolio_case_study_evidence": "Complete portfolio case study highlighting wireframe-to-code workflow, form UX considerations, and structured SEO implementation."
+      "portfolio_case_study_evidence": "Complete portfolio case study highlighting wireframe-to-code workflow, form UX considerations, and structured SEO implementation.",
+      "type": "common-core"
     },
     {
       "project_id": "build-03",
-      "badge": "Common Core Build 03",
+      "badge": "Production Project 3",
       "title": "Full-Stack Multi-Role Admin Dashboard",
       "project_title": "Full-Stack Multi-Role Admin Dashboard",
       "track": "Common Core (Modules 07-08)",
@@ -2979,11 +2981,12 @@
       "deployment_status": "Deployed on Vercel with linked Supabase PostgreSQL production instance and environment variable encryption.",
       "qa": "Database connection pooling tests, CSRF protection verification, and RLS vulnerability probing using unprivileged API keys.",
       "student_evaluation": "Evaluated on database normalization (3NF), RLS policy correctness, Next.js Server Actions vs Route Handlers architecture, and UI responsiveness.",
-      "portfolio_case_study_evidence": "Architectural blueprint published in portfolio documenting the relational schema, security model, and performance benchmarking data."
+      "portfolio_case_study_evidence": "Architectural blueprint published in portfolio documenting the relational schema, security model, and performance benchmarking data.",
+      "type": "common-core"
     },
     {
       "project_id": "build-04",
-      "badge": "Common Core Build 04",
+      "badge": "Production Project 4",
       "title": "AI-Powered Business Assistant with Streaming & RAG",
       "project_title": "AI-Powered Business Assistant with Streaming & RAG",
       "track": "Common Core (Modules 11-12)",
@@ -3031,11 +3034,12 @@
       "deployment_status": "Deployed on Vercel with streaming Route Handlers and Supabase pgvector vector database.",
       "qa": "Token limit stress testing, API rate-limiting validation, and API secret key protection audit ensuring no client-side exposure.",
       "student_evaluation": "Evaluated on Vercel AI SDK mastery, RAG pipeline architecture, prompt defense rigor, and user interface responsiveness.",
-      "portfolio_case_study_evidence": "Technical case study detailing vector search mathematics, embedding cost calculations, chunking strategies, and before/after RAG accuracy comparisons."
+      "portfolio_case_study_evidence": "Technical case study detailing vector search mathematics, embedding cost calculations, chunking strategies, and before/after RAG accuracy comparisons.",
+      "type": "common-core"
     },
     {
       "project_id": "build-05a",
-      "badge": "Specialization Build 5A",
+      "badge": "Specialization Project — Option A (Path A)",
       "title": "Commercial Agency Client Website with Dynamic CMS",
       "project_title": "Commercial Agency Client Website with Dynamic CMS",
       "track": "Path A: Agency Website Developer (Module 10)",
@@ -3079,11 +3083,12 @@
       "deployment_status": "Deployed on production staging with Cloudflare caching, SSL encryption, and automated daily backups.",
       "qa": "Theme security audit, database optimization, image compression with WebP, and WordPress user role restriction testing.",
       "student_evaluation": "Evaluated on visual design quality, block theme code architecture, CMS usability for clients, and agency handoff thoroughness.",
-      "portfolio_case_study_evidence": "Full agency case study showcasing client brief analysis, Framer interactive prototypes, WordPress architecture, and client testimonial simulation."
+      "portfolio_case_study_evidence": "Full agency case study showcasing client brief analysis, Framer interactive prototypes, WordPress architecture, and client testimonial simulation.",
+      "type": "specialization-option"
     },
     {
       "project_id": "build-05b",
-      "badge": "Specialization Build 5B",
+      "badge": "Specialization Project — Option B (Path B)",
       "title": "Production Shopify Storefront with Custom Liquid Architecture",
       "project_title": "Production Shopify Storefront with Custom Liquid Architecture",
       "track": "Path B: E-commerce Developer (Module 10)",
@@ -3128,11 +3133,12 @@
       "deployment_status": "Published on Shopify Partner development store with password protection and verified test checkout.",
       "qa": "Accessibility testing on interactive product selectors, responsive image srcset audit, and cart drawer keyboard trap verification.",
       "student_evaluation": "Evaluated on Liquid templating precision, Theme Store code compliance, e-commerce CRO UX patterns, and merchant usability.",
-      "portfolio_case_study_evidence": "E-commerce case study detailing technical challenges of custom Liquid development, conversion funnel design decisions, and sandbox order proofs."
+      "portfolio_case_study_evidence": "E-commerce case study detailing technical challenges of custom Liquid development, conversion funnel design decisions, and sandbox order proofs.",
+      "type": "specialization-option"
     },
     {
       "project_id": "build-05c",
-      "badge": "Specialization Build 5C",
+      "badge": "Specialization Project — Option C (Path C)",
       "title": "Production-Grade AI SaaS MVP with Multi-Tenancy & Stripe",
       "project_title": "Production-Grade AI SaaS MVP with Multi-Tenancy & Stripe",
       "track": "Path C: AI Web App & SaaS Developer (Module 10)",
@@ -3178,11 +3184,12 @@
       "deployment_status": "Deployed to production on Vercel with linked Supabase database, Redis cache, and Stripe sandbox.",
       "qa": "Webhook replay idempotency verification, SQL injection vulnerability scans, and multi-tenant session security checks.",
       "student_evaluation": "Evaluated on multi-tenant architecture rigor, Stripe integration completeness, server-side quota management, and code cleanliness.",
-      "portfolio_case_study_evidence": "Comprehensive SaaS case study published in portfolio documenting the recurring revenue architecture, database isolation models, and production launch checklists."
+      "portfolio_case_study_evidence": "Comprehensive SaaS case study published in portfolio documenting the recurring revenue architecture, database isolation models, and production launch checklists.",
+      "type": "specialization-option"
     },
     {
       "project_id": "build-06",
-      "badge": "Integrated Capstone Build 06",
+      "badge": "Portfolio Project 6 — Enterprise Capstone",
       "title": "Client-Style Commercial Capstone & Viva Voce Showcase",
       "project_title": "Client-Style Commercial Capstone & Viva Voce Showcase",
       "track": "Integrated Capstone Aligned with Selected Specialization (Modules 13-14)",
@@ -3226,7 +3233,8 @@
       "deployment_status": "Verified live production deployment on enterprise cloud infrastructure with continuous monitoring.",
       "qa": "Comprehensive quality assurance audit covering functional testing, security vulnerability scanning, performance benchmarking, and disaster recovery.",
       "student_evaluation": "Evaluated by industry mentor panel on technical execution, code quality, software design, commercial empathy, and oral defense communication.",
-      "portfolio_case_study_evidence": "Flagship portfolio case study published with live interactive demo, technical architecture diagrams, Git history walkthrough, and oral defense summary."
+      "portfolio_case_study_evidence": "Flagship portfolio case study published with live interactive demo, technical architecture diagrams, Git history walkthrough, and oral defense summary.",
+      "type": "capstone"
     }
   ],
   "final_deliverables": [
