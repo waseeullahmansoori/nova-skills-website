@@ -24,9 +24,9 @@ const FEATURED_CARD_SPECS = [
     hotTag: null,
     featureBullets: (c) => [
       `✅ ${CourseData.getCourseProjectLabel(c)}`,
+      `✅ ${c.guidedHours} Guided Hours`,
       '✅ Industry Certificate',
-      '✅ Placement Support',
-      '✅ Lifetime Access'
+      '✅ Placement Support'
     ]
   },
   {

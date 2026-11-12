@@ -204,12 +204,12 @@ function buildProjectsModel(c, detailJson) {
     displayLabel = '6 Portfolio Projects';
   } else if (c.id === 'dm-professional') {
     metrics.push(
-      { type: 'core-production', count: 5, displayLabel: '5 Core Projects' },
+      { type: 'core-production', count: 5, displayLabel: '5 Core Production Projects' },
       { type: 'capstone', count: 1, displayLabel: '1 Final Portfolio Project' },
       { type: 'graduation-deliverables', count: finalDeliv || 5, displayLabel: `${finalDeliv || 5} Practical Deliverables` }
     );
     primaryCount = 5;
-    displayLabel = '5 Core Projects';
+    displayLabel = '5 Core Production Projects';
   } else if (c.id === 'dm-mastery' || c.id === 'performance-marketing-specialist') {
     metrics.push(
       { type: 'core-production', count: 7, displayLabel: '7 Core Projects' },

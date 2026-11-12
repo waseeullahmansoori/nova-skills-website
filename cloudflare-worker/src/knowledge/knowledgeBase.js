@@ -133,7 +133,7 @@ export const KNOWLEDGE_BASE = {
       "guidedHours": 120,
       "fee": "₹19,900",
       "originalFee": "₹24,900",
-      "projects": "5 Core Projects",
+      "projects": "5 Core Production Projects",
       "highlights": [
         "Google Ads",
         "Meta Ads Manager",

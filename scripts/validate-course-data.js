@@ -193,7 +193,9 @@ for (const a of NS_ACADEMIES) {
 check(CourseData.getGlobalCourseCount() === 109, `NovaCourseData.getGlobalCourseCount() === 109`);
 check(CourseData.getCanonicalStartingPrice() === 2900, `NovaCourseData.getCanonicalStartingPrice() === 2900`);
 check(CourseData.getCourseById('dm-professional')?.duration === '3 Months', `NovaCourseData.getCourseById('dm-professional').duration === '3 Months'`);
+check(CourseData.getCourseById('dm-professional')?.guidedHours === 120, `NovaCourseData.getCourseById('dm-professional').guidedHours === 120`);
 check(CourseData.getCourseById('dm-professional')?.liveProjects === 5, `NovaCourseData.getCourseById('dm-professional').liveProjects === 5`);
+check(CourseData.getCourseProjectLabel(CourseData.getCourseById('dm-professional')) === '5 Core Production Projects', `dm-professional projectDisplayLabel === '5 Core Production Projects'`);
 check(CourseData.getCourseById('ai-assisted-full-stack-web-development')?.liveProjects === 6, `NovaCourseData.getCourseById('ai-assisted-full-stack-web-development').liveProjects === 6`);
 check(CourseData.getCourseById('nonexistent-id-xyz') === null, `NovaCourseData.getCourseById safely returns null on invalid ID`);
 check(CourseData.getAcademyCourseCount('no-code-web') === 8, `NovaCourseData.getAcademyCourseCount('no-code-web') alias resolves to 8`);

@@ -334,14 +334,14 @@ const NS_COURSES = [
     ],
     "liveProjects": 5,
     "projectsCount": 5,
-    "projectDisplayLabel": "5 Core Projects",
+    "projectDisplayLabel": "5 Core Production Projects",
     "projectSuppressNumeric": false,
     "projectsMeta": {
       "metrics": [
         {
           "type": "core-production",
           "count": 5,
-          "displayLabel": "5 Core Projects"
+          "displayLabel": "5 Core Production Projects"
         },
         {
           "type": "capstone",
@@ -355,7 +355,7 @@ const NS_COURSES = [
         }
       ],
       "primaryCount": 5,
-      "displayLabel": "5 Core Projects",
+      "displayLabel": "5 Core Production Projects",
       "suppressNumericBadge": false,
       "reviewRequired": false,
       "reviewNotes": []
