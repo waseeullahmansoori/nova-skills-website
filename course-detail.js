@@ -362,17 +362,17 @@ function populateCourseDetail(course) {
     if (discount) discount.style.display = 'none';
   }
 
-  // Dynamic EMI with 18% GST
+  // Dynamic EMI & Tax Disclosure
   const durationMonths = (typeof course.durationMonths === 'number' && course.durationMonths > 0)
     ? course.durationMonths
     : (parseInt(course.duration, 10) || 1);
-  const gstAmount = (course.price || 0) * 0.18;
-  const totalWithGST = (course.price || 0) + gstAmount;
-  const monthlyInstallment = Math.round(totalWithGST / durationMonths);
+  const taxDisclosure = (typeof NovaCourseData !== 'undefined' && typeof NovaCourseData.getGstDisclosure === 'function')
+    ? NovaCourseData.getGstDisclosure(course)
+    : 'The final payable amount, including any applicable taxes, will be clearly displayed before payment.';
 
   const emiEl = document.getElementById('detail-emi');
   if (emiEl) {
-    emiEl.innerHTML = `💳 Flexible monthly installment options available · 18% GST included`;
+    emiEl.innerHTML = `💳 Flexible monthly installment options available · ${taxDisclosure}`;
   }
 
   // Mobile sticky price

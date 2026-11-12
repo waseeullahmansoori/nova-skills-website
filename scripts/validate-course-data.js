@@ -136,7 +136,7 @@ for (const c of courses) {
   if (!c.pricing.offerActive) {
     check(c.pricing.currentPrice === c.pricing.originalPrice && c.pricing.discountPercent === 0, `${c.id}: regular-only course has zero discount`);
   }
-  check(c.pricing.gst && c.pricing.gst.rate === 18 && ['included', 'extra', 'requires-admin-confirmation'].includes(c.pricing.gst.treatment), `${c.id}: explicit GST policy metadata`);
+  check(c.pricing.gst && c.pricing.gst.rate === 18 && ['included', 'extra', 'requires-admin-confirmation', 'pending-approval'].includes(c.pricing.gst.treatment), `${c.id}: explicit GST policy metadata`);
 
   // Project validation
   check(Array.isArray(c.projects?.metrics) && c.projects.metrics.length > 0, `${c.id}: explicit projects.metrics array`);

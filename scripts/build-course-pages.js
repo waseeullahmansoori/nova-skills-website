@@ -372,10 +372,10 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   const durationMonths = (typeof baseCourse.durationMonths === 'number' && baseCourse.durationMonths > 0)
     ? baseCourse.durationMonths
     : (parseInt(baseCourse.duration, 10) || 1);
-  const gstAmount = (baseCourse.price || 0) * 0.18;
-  const totalWithGST = (baseCourse.price || 0) + gstAmount;
-  const monthlyInstallment = Math.round(totalWithGST / durationMonths);
-  const emiText = `💳 Flexible monthly installment options available · 18% GST included`;
+  const taxDisclosure = (typeof NovaCourseData !== 'undefined' && typeof NovaCourseData.getGstDisclosure === 'function')
+    ? NovaCourseData.getGstDisclosure(baseCourse)
+    : 'The final payable amount, including any applicable taxes, will be clearly displayed before payment.';
+  const emiText = `💳 Flexible monthly installment options available · ${taxDisclosure}`;
 
   const acadSlug = getAcademySlug(baseCourse.academyId);
   const acadUrl = acadSlug ? `/academies/${acadSlug}/` : '/academies/';

@@ -55,15 +55,67 @@ const NS_COURSES = [
     "launchBatchFee": 34900,
     "offer_active": true,
     "discount": 22,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 44900,
+      "launchPrice": 34900,
+      "currentPrice": 34900,
+      "originalPrice": 44900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 22,
+        "displayEnabled": true
+      },
+      "discountPercent": 22,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 41182
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -260,9 +312,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -313,15 +363,67 @@ const NS_COURSES = [
     "launchBatchFee": 19900,
     "offer_active": true,
     "discount": 20,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 24900,
+      "launchPrice": 19900,
+      "currentPrice": 19900,
+      "originalPrice": 24900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 20,
+        "displayEnabled": true
+      },
+      "discountPercent": 20,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 23482
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -508,9 +610,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -559,15 +659,67 @@ const NS_COURSES = [
     "launchBatchFee": 24900,
     "offer_active": true,
     "discount": 29,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 34900,
+      "launchPrice": 24900,
+      "currentPrice": 24900,
+      "originalPrice": 34900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 29,
+        "displayEnabled": true
+      },
+      "discountPercent": 29,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 29382
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -750,9 +902,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -803,15 +953,67 @@ const NS_COURSES = [
     "launchBatchFee": 27900,
     "offer_active": true,
     "discount": 20,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 34900,
+      "launchPrice": 27900,
+      "currentPrice": 27900,
+      "originalPrice": 34900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 20,
+        "displayEnabled": true
+      },
+      "discountPercent": 20,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 32922
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -982,9 +1184,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -1034,15 +1234,67 @@ const NS_COURSES = [
     "launchBatchFee": 7900,
     "offer_active": true,
     "discount": 20,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 9900,
+      "launchPrice": 7900,
+      "currentPrice": 7900,
+      "originalPrice": 9900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 20,
+        "displayEnabled": true
+      },
+      "discountPercent": 20,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 9322
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -1179,9 +1431,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -1231,15 +1481,67 @@ const NS_COURSES = [
     "launchBatchFee": 7900,
     "offer_active": true,
     "discount": 20,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 9900,
+      "launchPrice": 7900,
+      "currentPrice": 7900,
+      "originalPrice": 9900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 20,
+        "displayEnabled": true
+      },
+      "discountPercent": 20,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 9322
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -1381,9 +1683,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -1433,15 +1733,67 @@ const NS_COURSES = [
     "launchBatchFee": 9900,
     "offer_active": true,
     "discount": 23,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 12900,
+      "launchPrice": 9900,
+      "currentPrice": 9900,
+      "originalPrice": 12900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 23,
+        "displayEnabled": true
+      },
+      "discountPercent": 23,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 11682
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -1583,9 +1935,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -1635,15 +1985,67 @@ const NS_COURSES = [
     "launchBatchFee": 5900,
     "offer_active": true,
     "discount": 14,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 6900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 14,
+        "displayEnabled": true
+      },
+      "discountPercent": 14,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -1777,9 +2179,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -1829,15 +2229,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 6900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -1972,9 +2424,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -2024,15 +2474,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -2161,9 +2663,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -2213,15 +2713,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 7900,
+      "launchPrice": 7900,
+      "currentPrice": 7900,
+      "originalPrice": 7900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 9322
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -2345,9 +2897,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -2397,15 +2947,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 3900,
+      "launchPrice": 3900,
+      "currentPrice": 3900,
+      "originalPrice": 3900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 4602
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -2525,9 +3127,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -2577,15 +3177,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -2705,9 +3357,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -2757,15 +3407,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 6900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -2889,9 +3591,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -2942,15 +3642,67 @@ const NS_COURSES = [
     "launchBatchFee": 64900,
     "offer_active": true,
     "discount": 28,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 89900,
+      "launchPrice": 64900,
+      "currentPrice": 64900,
+      "originalPrice": 89900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 28,
+        "displayEnabled": true
+      },
+      "discountPercent": 28,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 76582
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -3174,9 +3926,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -3225,15 +3975,67 @@ const NS_COURSES = [
     "launchBatchFee": 16900,
     "offer_active": true,
     "discount": 15,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 19900,
+      "launchPrice": 16900,
+      "currentPrice": 16900,
+      "originalPrice": 19900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 15,
+        "displayEnabled": true
+      },
+      "discountPercent": 15,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 19942
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -3407,9 +4209,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -3458,15 +4258,67 @@ const NS_COURSES = [
     "launchBatchFee": 29900,
     "offer_active": true,
     "discount": 25,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 39900,
+      "launchPrice": 29900,
+      "currentPrice": 29900,
+      "originalPrice": 39900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 25,
+        "displayEnabled": true
+      },
+      "discountPercent": 25,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 35282
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -3659,9 +4511,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -3710,15 +4560,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -3837,9 +4739,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -3888,15 +4788,67 @@ const NS_COURSES = [
     "launchBatchFee": 7900,
     "offer_active": true,
     "discount": 20,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 9900,
+      "launchPrice": 7900,
+      "currentPrice": 7900,
+      "originalPrice": 9900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 20,
+        "displayEnabled": true
+      },
+      "discountPercent": 20,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 9322
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -4027,9 +4979,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -4078,15 +5028,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 7900,
+      "launchPrice": 7900,
+      "currentPrice": 7900,
+      "originalPrice": 7900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 9322
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -4210,9 +5212,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -4261,15 +5261,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -4389,9 +5441,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -4440,15 +5490,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -4568,9 +5670,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -4619,15 +5719,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -4747,9 +5899,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -4798,15 +5948,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -4926,9 +6128,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -4979,15 +6179,67 @@ const NS_COURSES = [
     "launchBatchFee": 44900,
     "offer_active": true,
     "discount": 31,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 64900,
+      "launchPrice": 44900,
+      "currentPrice": 44900,
+      "originalPrice": 64900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 31,
+        "displayEnabled": true
+      },
+      "discountPercent": 31,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 52982
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -5188,9 +6440,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -5239,15 +6489,67 @@ const NS_COURSES = [
     "launchBatchFee": 24900,
     "offer_active": true,
     "discount": 17,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 29900,
+      "launchPrice": 24900,
+      "currentPrice": 24900,
+      "originalPrice": 29900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 17,
+        "displayEnabled": true
+      },
+      "discountPercent": 17,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 29382
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -5426,9 +6728,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -5479,15 +6779,67 @@ const NS_COURSES = [
     "launchBatchFee": 34900,
     "offer_active": true,
     "discount": 22,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 44900,
+      "launchPrice": 34900,
+      "currentPrice": 34900,
+      "originalPrice": 44900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 22,
+        "displayEnabled": true
+      },
+      "discountPercent": 22,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 41182
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -5693,8 +7045,7 @@ const NS_COURSES = [
       "status": "review-required",
       "reviewRequired": true,
       "reviewNotes": [
-        "uiux-design-pro: data.js previously listed 5 (from final_deliverables) vs detail JSON \"3 Major Portfolio Case Studies + 1 Flagship Capstone\".",
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
+        "uiux-design-pro: data.js previously listed 5 (from final_deliverables) vs detail JSON \"3 Major Portfolio Case Studies + 1 Flagship Capstone\"."
       ]
     }
   },
@@ -5745,15 +7096,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 6900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -5873,9 +7276,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -5925,15 +7326,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 6900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -6052,9 +7505,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -6104,15 +7555,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -6233,9 +7736,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -6285,15 +7786,67 @@ const NS_COURSES = [
     "launchBatchFee": 7900,
     "offer_active": true,
     "discount": 20,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 9900,
+      "launchPrice": 7900,
+      "currentPrice": 7900,
+      "originalPrice": 9900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 20,
+        "displayEnabled": true
+      },
+      "discountPercent": 20,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 9322
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -6419,9 +7972,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -6471,15 +8022,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 10900,
+      "launchPrice": 10900,
+      "currentPrice": 10900,
+      "originalPrice": 10900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 12862
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -6606,9 +8209,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -6657,15 +8258,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 10900,
+      "launchPrice": 10900,
+      "currentPrice": 10900,
+      "originalPrice": 10900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 12862
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -6794,9 +8447,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -6845,15 +8496,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -6976,9 +8679,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -7029,15 +8730,67 @@ const NS_COURSES = [
     "launchBatchFee": 29999,
     "offer_active": true,
     "discount": 25,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 39999,
+      "launchPrice": 29999,
+      "currentPrice": 29999,
+      "originalPrice": 39999,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 25,
+        "displayEnabled": true
+      },
+      "discountPercent": 25,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 35399
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -7256,8 +9009,7 @@ const NS_COURSES = [
       "status": "review-required",
       "reviewRequired": true,
       "reviewNotes": [
-        "fullstack-foundation: data.js previously listed 5 (from final_deliverables) vs detail JSON \"3 MAJOR PORTFOLIO PROJECTS + CAPSTONE\".",
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
+        "fullstack-foundation: data.js previously listed 5 (from final_deliverables) vs detail JSON \"3 MAJOR PORTFOLIO PROJECTS + CAPSTONE\"."
       ]
     }
   },
@@ -7307,15 +9059,67 @@ const NS_COURSES = [
     "launchBatchFee": 17999,
     "offer_active": true,
     "discount": 10,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 19999,
+      "launchPrice": 17999,
+      "currentPrice": 17999,
+      "originalPrice": 19999,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 10,
+        "displayEnabled": true
+      },
+      "discountPercent": 10,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 21239
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -7516,9 +9320,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -7567,15 +9369,67 @@ const NS_COURSES = [
     "launchBatchFee": 44900,
     "offer_active": true,
     "discount": 31,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 64900,
+      "launchPrice": 44900,
+      "currentPrice": 44900,
+      "originalPrice": 64900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 31,
+        "displayEnabled": true
+      },
+      "discountPercent": 31,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 52982
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -7805,7 +9659,6 @@ const NS_COURSES = [
       "status": "verified",
       "reviewRequired": false,
       "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation.",
         "overview.specialization_rule prose mentions INR 64,900 standard tuition while approved 2026-11-09 launch offer is INR 44,900."
       ]
     }
@@ -7856,15 +9709,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 6900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -8008,9 +9913,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -8059,15 +9962,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 9900,
+      "launchPrice": 9900,
+      "currentPrice": 9900,
+      "originalPrice": 9900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 11682
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -8211,9 +10166,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -8262,15 +10215,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 10900,
+      "launchPrice": 10900,
+      "currentPrice": 10900,
+      "originalPrice": 10900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 12862
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -8394,9 +10399,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -8445,15 +10448,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 10900,
+      "launchPrice": 10900,
+      "currentPrice": 10900,
+      "originalPrice": 10900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 12862
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -8574,9 +10629,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -8625,15 +10678,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -8752,9 +10857,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -8803,15 +10906,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 3900,
+      "launchPrice": 3900,
+      "currentPrice": 3900,
+      "originalPrice": 3900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 4602
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -8916,9 +11071,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -8967,15 +11120,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 6900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -9080,9 +11285,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -9133,15 +11336,67 @@ const NS_COURSES = [
     "launchBatchFee": 34900,
     "offer_active": true,
     "discount": 30,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 49900,
+      "launchPrice": 34900,
+      "currentPrice": 34900,
+      "originalPrice": 49900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 30,
+        "displayEnabled": true
+      },
+      "discountPercent": 30,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 41182
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -9342,9 +11597,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -9393,15 +11646,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 19900,
+      "launchPrice": 19900,
+      "currentPrice": 19900,
+      "originalPrice": 19900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 23482
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -9594,9 +11899,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -9645,15 +11948,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 6900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -9782,9 +12137,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -9833,15 +12186,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 9900,
+      "launchPrice": 9900,
+      "currentPrice": 9900,
+      "originalPrice": 9900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 11682
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -9972,9 +12377,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -10023,15 +12426,67 @@ const NS_COURSES = [
     "launchBatchFee": 9900,
     "offer_active": true,
     "discount": 23,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 12900,
+      "launchPrice": 9900,
+      "currentPrice": 9900,
+      "originalPrice": 12900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 23,
+        "displayEnabled": true
+      },
+      "discountPercent": 23,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 11682
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -10166,9 +12621,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -10217,15 +12670,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -10348,9 +12853,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -10399,15 +12902,67 @@ const NS_COURSES = [
     "launchBatchFee": 8900,
     "offer_active": true,
     "discount": 18,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 10900,
+      "launchPrice": 8900,
+      "currentPrice": 8900,
+      "originalPrice": 10900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 18,
+        "displayEnabled": true
+      },
+      "discountPercent": 18,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 10502
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -10540,9 +13095,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -10591,15 +13144,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 7900,
+      "launchPrice": 7900,
+      "currentPrice": 7900,
+      "originalPrice": 7900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 9322
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -10731,9 +13336,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -10784,15 +13387,67 @@ const NS_COURSES = [
     "launchBatchFee": 49900,
     "offer_active": true,
     "discount": 29,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 69900,
+      "launchPrice": 49900,
+      "currentPrice": 49900,
+      "originalPrice": 69900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 29,
+        "displayEnabled": true
+      },
+      "discountPercent": 29,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 58882
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -11034,9 +13689,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -11085,15 +13738,67 @@ const NS_COURSES = [
     "launchBatchFee": 24900,
     "offer_active": true,
     "discount": 31,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 35900,
+      "launchPrice": 24900,
+      "currentPrice": 24900,
+      "originalPrice": 35900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 31,
+        "displayEnabled": true
+      },
+      "discountPercent": 31,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 29382
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -11289,9 +13994,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -11340,15 +14043,67 @@ const NS_COURSES = [
     "launchBatchFee": 29900,
     "offer_active": true,
     "discount": 25,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 39900,
+      "launchPrice": 29900,
+      "currentPrice": 29900,
+      "originalPrice": 39900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 25,
+        "displayEnabled": true
+      },
+      "discountPercent": 25,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 35282
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -11540,9 +14295,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -11591,15 +14344,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 7900,
+      "launchPrice": 7900,
+      "currentPrice": 7900,
+      "originalPrice": 7900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 9322
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -11733,9 +14538,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -11784,15 +14587,67 @@ const NS_COURSES = [
     "launchBatchFee": 8900,
     "offer_active": true,
     "discount": 18,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 10900,
+      "launchPrice": 8900,
+      "currentPrice": 8900,
+      "originalPrice": 10900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 18,
+        "displayEnabled": true
+      },
+      "discountPercent": 18,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 10502
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -11930,9 +14785,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -11981,15 +14834,67 @@ const NS_COURSES = [
     "launchBatchFee": 7900,
     "offer_active": true,
     "discount": 20,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 9900,
+      "launchPrice": 7900,
+      "currentPrice": 7900,
+      "originalPrice": 9900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 20,
+        "displayEnabled": true
+      },
+      "discountPercent": 20,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 9322
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -12126,9 +15031,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -12177,15 +15080,67 @@ const NS_COURSES = [
     "launchBatchFee": 3900,
     "offer_active": true,
     "discount": 20,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 3900,
+      "currentPrice": 3900,
+      "originalPrice": 4900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 20,
+        "displayEnabled": true
+      },
+      "discountPercent": 20,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 4602
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -12319,9 +15274,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -12370,15 +15323,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -12510,9 +15515,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -12563,15 +15566,67 @@ const NS_COURSES = [
     "launchBatchFee": 44900,
     "offer_active": true,
     "discount": 36,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 69900,
+      "launchPrice": 44900,
+      "currentPrice": 44900,
+      "originalPrice": 69900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 36,
+        "displayEnabled": true
+      },
+      "discountPercent": 36,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 52982
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -12805,9 +15860,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -12856,15 +15909,67 @@ const NS_COURSES = [
     "launchBatchFee": 29900,
     "offer_active": true,
     "discount": 25,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 39900,
+      "launchPrice": 29900,
+      "currentPrice": 29900,
+      "originalPrice": 39900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 25,
+        "displayEnabled": true
+      },
+      "discountPercent": 25,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 35282
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -13090,9 +16195,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -13141,15 +16244,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 9900,
+      "launchPrice": 9900,
+      "currentPrice": 9900,
+      "originalPrice": 9900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 11682
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -13294,9 +16449,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -13345,15 +16498,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 10900,
+      "launchPrice": 10900,
+      "currentPrice": 10900,
+      "originalPrice": 10900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 12862
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -13496,9 +16701,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -13547,15 +16750,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 8900,
+      "launchPrice": 8900,
+      "currentPrice": 8900,
+      "originalPrice": 8900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 10502
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -13697,9 +16952,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -13748,15 +17001,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 6900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -13903,9 +17208,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -13954,15 +17257,67 @@ const NS_COURSES = [
     "launchBatchFee": 9900,
     "offer_active": true,
     "discount": 17,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 11900,
+      "launchPrice": 9900,
+      "currentPrice": 9900,
+      "originalPrice": 11900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 17,
+        "displayEnabled": true
+      },
+      "discountPercent": 17,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 11682
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -14105,9 +17460,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -14156,15 +17509,67 @@ const NS_COURSES = [
     "launchBatchFee": 8900,
     "offer_active": true,
     "discount": 18,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 10900,
+      "launchPrice": 8900,
+      "currentPrice": 8900,
+      "originalPrice": 10900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 18,
+        "displayEnabled": true
+      },
+      "discountPercent": 18,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 10502
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -14315,9 +17720,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -14366,15 +17769,67 @@ const NS_COURSES = [
     "launchBatchFee": 19900,
     "offer_active": true,
     "discount": 33,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 29900,
+      "launchPrice": 19900,
+      "currentPrice": 19900,
+      "originalPrice": 29900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 33,
+        "displayEnabled": true
+      },
+      "discountPercent": 33,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 23482
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -14601,9 +18056,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -14652,15 +18105,67 @@ const NS_COURSES = [
     "launchBatchFee": 14900,
     "offer_active": true,
     "discount": 25,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 19900,
+      "launchPrice": 14900,
+      "currentPrice": 14900,
+      "originalPrice": 19900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 25,
+        "displayEnabled": true
+      },
+      "discountPercent": 25,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 17582
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -14847,9 +18352,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -14898,15 +18401,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 2900,
+      "launchPrice": 2900,
+      "currentPrice": 2900,
+      "originalPrice": 2900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 3422
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -15037,9 +18592,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -15088,15 +18641,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 3900,
+      "launchPrice": 3900,
+      "currentPrice": 3900,
+      "originalPrice": 3900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 4602
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -15237,9 +18842,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -15288,15 +18891,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -15432,9 +19087,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -15483,15 +19136,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 3900,
+      "launchPrice": 3900,
+      "currentPrice": 3900,
+      "originalPrice": 3900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 4602
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -15630,9 +19335,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -15681,15 +19384,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -15832,9 +19587,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -15883,15 +19636,67 @@ const NS_COURSES = [
     "launchBatchFee": 9900,
     "offer_active": true,
     "discount": 23,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 12900,
+      "launchPrice": 9900,
+      "currentPrice": 9900,
+      "originalPrice": 12900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 23,
+        "displayEnabled": true
+      },
+      "discountPercent": 23,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 11682
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -16050,9 +19855,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -16101,15 +19904,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -16264,9 +20119,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -16315,15 +20168,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 6900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -16479,9 +20384,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -16532,15 +20435,67 @@ const NS_COURSES = [
     "launchBatchFee": 19900,
     "offer_active": true,
     "discount": 33,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 29900,
+      "launchPrice": 19900,
+      "currentPrice": 19900,
+      "originalPrice": 29900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 33,
+        "displayEnabled": true
+      },
+      "discountPercent": 33,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 23482
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -16785,9 +20740,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -16837,15 +20790,67 @@ const NS_COURSES = [
     "launchBatchFee": 9900,
     "offer_active": true,
     "discount": 23,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 12900,
+      "launchPrice": 9900,
+      "currentPrice": 9900,
+      "originalPrice": 12900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 23,
+        "displayEnabled": true
+      },
+      "discountPercent": 23,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 11682
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -17032,9 +21037,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -17083,15 +21086,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 3900,
+      "launchPrice": 3900,
+      "currentPrice": 3900,
+      "originalPrice": 3900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 4602
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -17236,9 +21291,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -17287,15 +21340,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -17439,9 +21544,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -17490,15 +21593,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -17645,9 +21800,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -17696,15 +21849,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -17854,9 +22059,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -17905,15 +22108,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -18056,9 +22311,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -18108,15 +22361,67 @@ const NS_COURSES = [
     "launchBatchFee": 24900,
     "offer_active": true,
     "discount": 17,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 29900,
+      "launchPrice": 24900,
+      "currentPrice": 24900,
+      "originalPrice": 29900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 17,
+        "displayEnabled": true
+      },
+      "discountPercent": 17,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 29382
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -18335,9 +22640,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -18387,15 +22690,67 @@ const NS_COURSES = [
     "launchBatchFee": 11900,
     "offer_active": true,
     "discount": 20,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 14900,
+      "launchPrice": 11900,
+      "currentPrice": 11900,
+      "originalPrice": 14900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 20,
+        "displayEnabled": true
+      },
+      "discountPercent": 20,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 14042
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -18562,9 +22917,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -18613,15 +22966,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -18767,9 +23172,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -18818,15 +23221,67 @@ const NS_COURSES = [
     "launchBatchFee": 6900,
     "offer_active": true,
     "discount": 13,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 7900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 7900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 13,
+        "displayEnabled": true
+      },
+      "discountPercent": 13,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -18981,9 +23436,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -19032,15 +23485,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -19187,9 +23692,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -19238,15 +23741,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 8900,
+      "launchPrice": 8900,
+      "currentPrice": 8900,
+      "originalPrice": 8900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 10502
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -19401,9 +23956,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -19452,15 +24005,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -19615,9 +24220,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -19668,15 +24271,67 @@ const NS_COURSES = [
     "launchBatchFee": 22900,
     "offer_active": true,
     "discount": 23,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 29900,
+      "launchPrice": 22900,
+      "currentPrice": 22900,
+      "originalPrice": 29900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 23,
+        "displayEnabled": true
+      },
+      "discountPercent": 23,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 27022
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -19872,8 +24527,7 @@ const NS_COURSES = [
       "status": "review-required",
       "reviewRequired": true,
       "reviewNotes": [
-        "youtube-mastery: data.js previously listed 15 (final_deliverables) vs overview.key_facts.project_count=3; requires academic confirmation.",
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
+        "youtube-mastery: data.js previously listed 15 (final_deliverables) vs overview.key_facts.project_count=3; requires academic confirmation."
       ]
     }
   },
@@ -19924,15 +24578,67 @@ const NS_COURSES = [
     "launchBatchFee": 19900,
     "offer_active": true,
     "discount": 20,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 24900,
+      "launchPrice": 19900,
+      "currentPrice": 19900,
+      "originalPrice": 24900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 20,
+        "displayEnabled": true
+      },
+      "discountPercent": 20,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 23482
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -20161,8 +24867,7 @@ const NS_COURSES = [
       "status": "review-required",
       "reviewRequired": true,
       "reviewNotes": [
-        "content-creator-pro: data.js previously listed 15 (final_deliverables) vs overview.key_facts.project_count=3; requires academic confirmation.",
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
+        "content-creator-pro: data.js previously listed 15 (final_deliverables) vs overview.key_facts.project_count=3; requires academic confirmation."
       ]
     }
   },
@@ -20212,15 +24917,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -20380,9 +25137,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -20431,15 +25186,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -20598,9 +25405,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -20649,15 +25454,67 @@ const NS_COURSES = [
     "launchBatchFee": 6900,
     "offer_active": true,
     "discount": 13,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 7900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 7900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 13,
+        "displayEnabled": true
+      },
+      "discountPercent": 13,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.7,
@@ -20838,9 +25695,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -20889,15 +25744,67 @@ const NS_COURSES = [
     "launchBatchFee": 6900,
     "offer_active": true,
     "discount": 13,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 7900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 7900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 13,
+        "displayEnabled": true
+      },
+      "discountPercent": 13,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -21057,9 +25964,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -21108,15 +26013,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 6900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -21289,9 +26246,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -21342,15 +26297,67 @@ const NS_COURSES = [
     "launchBatchFee": 24900,
     "offer_active": true,
     "discount": 17,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 29900,
+      "launchPrice": 24900,
+      "currentPrice": 24900,
+      "originalPrice": 29900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 17,
+        "displayEnabled": true
+      },
+      "discountPercent": 17,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 29382
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -21574,8 +26581,7 @@ const NS_COURSES = [
       "status": "review-required",
       "reviewRequired": true,
       "reviewNotes": [
-        "biz-productivity: overview.key_facts.project_count=6 vs what_you_will_build=4 vs legacy data.js=1; requires academic confirmation.",
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
+        "biz-productivity: overview.key_facts.project_count=6 vs what_you_will_build=4 vs legacy data.js=1; requires academic confirmation."
       ]
     }
   },
@@ -21626,15 +26632,67 @@ const NS_COURSES = [
     "launchBatchFee": 12900,
     "offer_active": true,
     "discount": 19,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 15900,
+      "launchPrice": 12900,
+      "currentPrice": 12900,
+      "originalPrice": 15900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 19,
+        "displayEnabled": true
+      },
+      "discountPercent": 19,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 15222
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -21845,9 +26903,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -21898,15 +26954,67 @@ const NS_COURSES = [
     "launchBatchFee": 5900,
     "offer_active": true,
     "discount": 14,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 6900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 6900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 14,
+        "displayEnabled": true
+      },
+      "discountPercent": 14,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -22074,9 +27182,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -22127,15 +27233,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 3900,
+      "launchPrice": 3900,
+      "currentPrice": 3900,
+      "originalPrice": 3900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 4602
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -22294,9 +27452,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -22347,15 +27503,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 4900,
+      "launchPrice": 4900,
+      "currentPrice": 4900,
+      "originalPrice": 4900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 5782
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.8,
@@ -22517,9 +27725,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -22570,15 +27776,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -22746,9 +28004,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -22799,15 +28055,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -22972,9 +28280,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -23025,15 +28331,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -23200,9 +28558,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -23251,15 +28607,67 @@ const NS_COURSES = [
     "launchBatchFee": null,
     "offer_active": false,
     "discount": 0,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 5900,
+      "launchPrice": 5900,
+      "currentPrice": 5900,
+      "originalPrice": 5900,
+      "offerActive": false,
+      "discount": {
+        "type": "percentage",
+        "percent": 0,
+        "displayEnabled": false
+      },
+      "discountPercent": 0,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 6962
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -23415,9 +28823,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   },
   {
@@ -23466,15 +28872,67 @@ const NS_COURSES = [
     "launchBatchFee": 6900,
     "offer_active": true,
     "discount": 30,
+    "pricing": {
+      "currency": "INR",
+      "regularPrice": 9900,
+      "launchPrice": 6900,
+      "currentPrice": 6900,
+      "originalPrice": 9900,
+      "offerActive": true,
+      "discount": {
+        "type": "percentage",
+        "percent": 30,
+        "displayEnabled": true
+      },
+      "discountPercent": 30,
+      "tax": {
+        "type": "GST",
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "gst": {
+        "rate": 18,
+        "treatment": "pending-approval",
+        "verificationStatus": "pending",
+        "source": "requires-admin-confirmation",
+        "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+        "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+        "totalWithExtraGst": null
+      },
+      "payable": {
+        "taxAmount": null,
+        "totalAmount": null,
+        "displayNote": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+      },
+      "installment": {
+        "available": true,
+        "providerVerified": false,
+        "note": "Flexible monthly installment options available"
+      }
+    },
+    "tax": {
+      "type": "GST",
+      "rate": 18,
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "disclosure": "The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
     "gst": {
       "rate": 18,
-      "treatment": "requires-admin-confirmation",
-      "uiDisplayLabel": "18% GST included",
-      "faqProseNote": "Detail FAQ prose on 68 courses states statutory 18% GST extra",
-      "totalWithExtraGst": 8142
+      "treatment": "pending-approval",
+      "verificationStatus": "pending",
+      "source": "requires-admin-confirmation",
+      "uiDisplayLabel": "The final payable amount, including any applicable taxes, will be clearly displayed before payment.",
+      "faqProseNote": "Pending finance/admin confirmation: FAQ prose previously stated statutory 18% GST extra while hero stated 18% GST included. Neutral disclosure applied sitewide pending formal policy signoff.",
+      "totalWithExtraGst": null
     },
     "installment": {
       "available": true,
+      "providerVerified": false,
       "note": "Flexible monthly installment options available"
     },
     "rating": 4.9,
@@ -23663,9 +29121,7 @@ const NS_COURSES = [
     "dataQuality": {
       "status": "verified",
       "reviewRequired": false,
-      "reviewNotes": [
-        "GST Policy Note: Detail sidebar displays \"18% GST included\" per Phase 4 audit, whereas 68 curriculum FAQ responses state \"statutory 18% GST extra\"; requires administrative confirmation."
-      ]
+      "reviewNotes": []
     }
   }
 ];

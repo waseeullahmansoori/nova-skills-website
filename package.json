@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "validate:courses": "node scripts/validate-course-data.js",
+    "validate:pricing": "node scripts/validate-course-pricing.js",
     "build:data": "node scripts/build-canonical-data.js && node scripts/sync-worker-course-data.js && node scripts/build-homepage-featured.js",
     "build:js": "node scripts/build_min_js.js",
     "build:academies": "node scripts/build-academy-pages.js",
