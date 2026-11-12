@@ -12,10 +12,10 @@
     "pending_verification_ids": 10,
     "no_new_image_required_ids": 8,
     "reconciliation_check": "75 + 10 + 8 = 93 | 114 x 2 = 228",
-    "integrated_ids": 69,
-    "integrated_visual_units": 102,
-    "skipped_ids": 6,
-    "skipped_visual_units": 12
+    "integrated_ids": 68,
+    "integrated_visual_units": 101,
+    "skipped_ids": 7,
+    "skipped_visual_units": 13
   },
   "visual_units": [
     {
@@ -2751,8 +2751,8 @@
       "source_package": "Nova-Skills-Pending-Antigravity.zip",
       "provenance": "AI-generated editorial concept",
       "alt_text": "Architectural 3D spatial model and floor-plan dashboard output illustrating specialized technical pathway outcomes",
-      "integration_status": "integrated",
-      "status_notes": "Compact preview card in Section 04 Recommended Pathways across all 36 city pages; tabs remain uncluttered."
+      "integration_status": "conditionally_omitted",
+      "status_notes": "Gated in build-all-city-pages-phaseF.js on canonical Architectural/3D Visualization courses (ARCH_3D_COURSE_IDS); omitted cleanly on all 36 current cities because none recommend 3D/architectural courses. WebP binaries preserved in public/assets/nova-images/."
     }
   ],
   "non_included_ids": [

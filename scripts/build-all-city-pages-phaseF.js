@@ -346,6 +346,45 @@ const CITY_VISUAL_MAP = {
   }
 };
 
+const ARCH_3D_COURSE_IDS = new Set([
+  '3d-viz-pro',
+  'blender-cert',
+  '3ds-max-cert',
+  'v-ray-cert',
+  'twinmotion-cert',
+  'cinema-4d-cert',
+  'unreal-engine-basics'
+]);
+
+/**
+ * Render IMG-092 ONLY when the city's canonical recommended pathways or
+ * decision explorer genuinely cover Architectural / 3D Visualization.
+ * Prevents displaying unrelated 3D/architectural visuals on unrelated tracks.
+ */
+function resolvePathwaySpotlightHtml(loc, additionalCourses, decisionTabs) {
+  const addIds = (additionalCourses || []).map(c => c.id);
+  const tabIds = (decisionTabs || []).map(t => t.courseId);
+  const hasArch3DPathway = [...addIds, ...tabIds].some(id => ARCH_3D_COURSE_IDS.has(id));
+  if (!hasArch3DPathway) return '';
+
+  return `
+      <div class="city-pathway-spotlight">
+        <div class="city-pathway-spotlight-media">
+          <picture>
+            <source media="(min-width: 768px)" srcset="/public/assets/nova-images/desktop/IMG-092.webp" type="image/webp" width="1200" height="800" />
+            <img src="/public/assets/nova-images/mobile/IMG-092.webp" alt="Architectural 3D spatial model and floor-plan dashboard output illustrating specialized technical pathway outcomes" width="900" height="600" loading="lazy" decoding="async" />
+          </picture>
+        </div>
+        <div class="city-pathway-spotlight-body">
+          <span class="city-pathway-spotlight-tag">SPECIALIZED PATHWAY DEMONSTRATION</span>
+          <h3 class="city-pathway-spotlight-title">Architectural &amp; 3D Spatial Visualization Outcomes</h3>
+          <p class="city-pathway-spotlight-desc">
+            Alongside our four flagship programs, learners in ${escapeHtml(loc.city)} can explore Architectural &amp; 3D Visualization with structured weekly mentor reviews.
+          </p>
+        </div>
+      </div>`;
+}
+
 function generateCityHtml(config) {
   const loc = getLocationBySlug(config.slug);
   if (!loc) throw new Error('Location not found in registry: ' + config.slug);
@@ -386,8 +425,8 @@ function generateCityHtml(config) {
             </div>
             <div class="city-card-price-row">
               <div>
-                <span class="city-price-label">Launch Fee:</span>
-                <span class="city-price-current">₹${course.pricing.launchPrice.toLocaleString('en-IN')}</span>
+                <span class="city-price-label">${course.pricing.offerActive ? 'Launch Fee:' : 'Course Fee:'}</span>
+                <span class="city-price-current">₹${(course.pricing.effectivePrice || course.pricing.regularPrice || course.pricing.launchPrice).toLocaleString('en-IN')}</span>
               </div>
               ${course.pricing.offerActive ? `<span class="city-price-original">₹${course.pricing.regularPrice.toLocaleString('en-IN')}</span>` : ''}
             </div>
@@ -451,7 +490,7 @@ function generateCityHtml(config) {
                 </td>
                 <td>${escapeHtml(c.duration)}</td>
                 <td>${c.modulesCount} Modules</td>
-                <td><strong>₹${c.pricing.launchPrice.toLocaleString('en-IN')}</strong></td>
+                <td><strong>₹${(c.pricing.effectivePrice || c.pricing.regularPrice || c.pricing.launchPrice).toLocaleString('en-IN')}</strong></td>
                 <td>
                   <button type="button" class="city-card-btn-demo" style="height: 36px; padding: 6px 14px; font-size: 0.75rem;" onclick="window.openCityCourseDemo('${escapeHtml(c.id)}', '${escapeHtml(c.title)}')">Demo</button>
                 </td>
@@ -577,7 +616,7 @@ function generateCityHtml(config) {
           <div class="city-hero-visual-col" id="city-hero-visual-col">
             <div class="city-hero-card">
               <picture class="city-hero-picture">
-                <source type="image/png" srcset="${visualCfg.mobilePath} 400w, ${visualCfg.tabletPath} 600w, ${visualCfg.imagePath} 896w" sizes="(max-width: 768px) 100vw, 440px" />
+                <source type="image/png" srcset="${visualCfg.mobilePath} 400w, ${visualCfg.tabletPath} 600w, ${visualCfg.imagePath} 896w" sizes="(max-width: 640px) 92vw, 440px" />
                 <img src="${visualCfg.tabletPath}" alt="${escapeHtml(visualCfg.alt)}" class="city-hero-img" width="440" height="340" loading="eager" fetchpriority="high" />
               </picture>
               <div class="city-hero-card-badge">
@@ -673,7 +712,7 @@ function generateCityHtml(config) {
 
   <!-- Base Site Styles & Scoped City Styles -->
   <link rel="stylesheet" href="/css/styles.min.css?v=2.9.0" />
-  <link rel="stylesheet" href="/css/locations-city.css?v=2.9.0" />
+  <link rel="stylesheet" href="/css/locations-city.css?v=2.9.1" />
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
@@ -743,22 +782,7 @@ ${heroSectionHtml}
         <p class="city-section-subtitle">
           Specialized programs selected to align with emerging industry opportunities and career advancement.
         </p>
-      </header>
-      <div class="city-pathway-spotlight">
-        <div class="city-pathway-spotlight-media">
-          <picture>
-            <source media="(min-width: 768px)" srcset="/public/assets/nova-images/desktop/IMG-092.webp" type="image/webp" width="1200" height="800" />
-            <img src="/public/assets/nova-images/mobile/IMG-092.webp" alt="Architectural 3D spatial model and floor-plan dashboard output illustrating specialized technical pathway outcomes" width="900" height="600" loading="lazy" decoding="async" />
-          </picture>
-        </div>
-        <div class="city-pathway-spotlight-body">
-          <span class="city-pathway-spotlight-tag">SPECIALIZED PATHWAY DEMONSTRATION</span>
-          <h3 class="city-pathway-spotlight-title">Industry-Grade Portfolio Outcomes Across Domains</h3>
-          <p class="city-pathway-spotlight-desc">
-            Alongside our four flagship programs, learners in ${escapeHtml(loc.city)} can specialize in Architectural &amp; 3D Visualization, AI Workflow Automation, No-Code Development, and Post-Production with structured weekly mentor reviews.
-          </p>
-        </div>
-      </div>
+      </header>${resolvePathwaySpotlightHtml(loc, additionalCourses, config.decisionTabs)}
       <div class="city-courses-grid">
         ${additionalCardsHtml}
       </div>

@@ -190,7 +190,7 @@ function buildDirectoryHtml() {
 
   <!-- Base Site Styles & Scoped Directory Styles -->
   <link rel="stylesheet" href="/css/styles.min.css?v=2.9.0" />
-  <link rel="stylesheet" href="/css/locations-directory.css?v=2.9.0" />
+  <link rel="stylesheet" href="/css/locations-directory.css?v=2.9.1" />
 
   <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
