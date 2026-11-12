@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-canva" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-canva" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-canva" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-canva" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <pattern id="grid-canva" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-canva)"/>
+  <rect width="800" height="600" fill="url(#grid-canva)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-canva)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-canva)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">CANVA PRO • BRAND KIT &amp; SOCIAL TEMPLATE ENGINE</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#06b6d4" fill-opacity="0.18" stroke="#06b6d4" stroke-opacity="0.5"/>
+    <rect x="92" y="160" width="150" height="308" rx="10" fill="#132d52" stroke="rgba(148,163,184,0.2)"/>
+    <text x="108" y="186" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#7dd3fc">BRAND KIT</text>
+    <circle cx="122" cy="216" r="14" fill="#0599a8"/>
+    <circle cx="158" cy="216" r="14" fill="#75d766"/>
+    <circle cx="194" cy="216" r="14" fill="#8b5cf6"/>
+    <rect x="108" y="250" width="118" height="34" rx="8" fill="#0d2342" stroke="#06b6d4"/>
+    <text x="167" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff">Aa Heading Bold</text>
+    <rect x="108" y="296" width="118" height="34" rx="8" fill="#0d2342"/>
+    <text x="167" y="317" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#cbd5e1">Aa Body Sans</text>
+    <rect x="108" y="352" width="118" height="28" rx="14" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-opacity="0.45"/>
+  <text x="167" y="370" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Magic Resize</text>
+    <rect x="264" y="160" width="214" height="308" rx="12" fill="url(#grad-canva)" fill-opacity="0.22" stroke="#06b6d4" stroke-width="1.5"/>
+    <rect x="284" y="182" width="174" height="128" rx="10" fill="#071934"/>
+    <circle cx="371" cy="246" r="36" fill="#06b6d4" opacity="0.35"/>
+    <rect x="284" y="328" width="150" height="14" rx="7" fill="#fff" opacity="0.9"/>
+    <rect x="284" y="352" width="120" height="10" rx="5" fill="#cbd5e1" opacity="0.65"/>
+    <rect x="284" y="392" width="112" height="36" rx="18" fill="#06b6d4"/>
+    <text x="340" y="414" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11.5" font-weight="800" fill="#011731">Export Deck</text>
+    <rect x="498" y="160" width="210" height="146" rx="12" fill="#132d52" stroke="#8b5cf6" stroke-opacity="0.5"/>
+    <text x="518" y="188" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#c4b5fd">16:9 Presentation</text>
+    <rect x="518" y="204" width="170" height="82" rx="8" fill="#0b1f3b"/>
+    <rect x="498" y="322" width="210" height="146" rx="12" fill="#132d52" stroke="#75d766" stroke-opacity="0.5"/>
+    <text x="518" y="350" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#86efac">Instagram Carousel</text>
+    <rect x="518" y="368" width="78" height="80" rx="6" fill="#0b1f3b"/>
+    <rect x="608" y="368" width="78" height="80" rx="6" fill="#0b1f3b"/>
+  
+</svg>

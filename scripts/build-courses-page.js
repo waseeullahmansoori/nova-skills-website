@@ -52,18 +52,24 @@ if (!Array.isArray(NS_COURSES) || NS_COURSES.length === 0) {
 
 console.log(`Loaded ${NS_COURSES.length} courses from data.js`);
 
-const COURSE_CATALOGUE_THUMBNAILS = {
-  'dm-professional': { unit: 'unit-01', alt: 'AI Digital Marketing Specialist campaign planning workspace and analytics dashboard preview' },
-  'ai-mastery': { unit: 'unit-02', alt: 'AI Solutions Engineering and Agentic AI workflow architecture preview' },
-  'graphic-design-pro': { unit: 'unit-03', alt: 'Graphic Design Professional brand identity and typography layout preview' },
-  'fullstack-foundation': { unit: 'unit-04', alt: 'Full Stack Programming Foundation responsive web application and code preview' },
-  'uiux-design-pro': { unit: 'unit-05', alt: 'UI/UX Design Professional wireframe-to-interface mobile checkout flow preview' },
-  'video-pro': { unit: 'unit-06', alt: 'Professional Video Editing cinema timeline and motion graphics sequence preview' },
-  'ecommerce-mastery': { unit: 'unit-07', alt: 'E-Commerce Website Mastery storefront product and checkout layout preview' },
-  '3d-viz-pro': { unit: 'unit-08', alt: '3D Visualisation Professional viewport modeling and material shader preview' }
-};
+const COURSE_IMAGE_MAP = require(path.join(ROOT_DIR, 'course-image-map.json')).byId;
 
-function buildCourseCardHTML(course) {
+function renderCourseCardMediaHtml(course, bannerIconHtml, cardIndex = 0) {
+  const rec = course && COURSE_IMAGE_MAP[course.id];
+  if (!rec) {
+    return {
+      hasVisualClass: '',
+      innerHtml: bannerIconHtml
+    };
+  }
+  const loadingAttr = cardIndex < 3 ? 'eager' : 'lazy';
+  return {
+    hasVisualClass: ' has-course-visual',
+    innerHtml: `<picture class="course-thumb-picture"><source media="(min-width: 768px)" srcset="${escapeHTML(rec.image.desktop)}" type="${escapeHTML(rec.image.mimeType)}" width="${rec.image.width}" height="${rec.image.height}" /><img src="${escapeHTML(rec.image.mobile)}" alt="${escapeHTML(rec.image.alt)}" class="course-thumb-img" width="${rec.image.mobileWidth}" height="${rec.image.mobileHeight}" loading="${loadingAttr}" decoding="async" /></picture>`
+  };
+}
+
+function buildCourseCardHTML(course, cardIndex = 0) {
   const courseUrl = `/course-detail.html?id=${course.id}`;
   
   let trackClass = 'track-cert';
@@ -81,11 +87,9 @@ function buildCourseCardHTML(course) {
   const safePrice = `₹${(course.price || 0).toLocaleString('en-IN')}`;
   const safeId = course.id;
 
-  const thumbCfg = COURSE_CATALOGUE_THUMBNAILS[course.id];
-  const hasVisualClass = thumbCfg ? ' has-course-visual' : '';
-  const thumbInnerHtml = thumbCfg
-    ? `<picture class="course-thumb-picture"><source media="(min-width: 768px)" srcset="/public/assets/nova-images/desktop/${thumbCfg.unit}/IMG-048.webp" type="image/webp" width="800" height="600" /><img src="/public/assets/nova-images/mobile/${thumbCfg.unit}/IMG-048.webp" alt="${thumbCfg.alt}" class="course-thumb-img" width="600" height="450" loading="lazy" decoding="async" /></picture>`
-    : renderCourseIcon(course.icon || course);
+  const cardMedia = renderCourseCardMediaHtml(course, renderCourseIcon(course.icon || course), cardIndex);
+  const hasVisualClass = cardMedia.hasVisualClass;
+  const thumbInnerHtml = cardMedia.innerHtml;
 
   return `
     <div class="course-card" data-category="${course.academyId}">
@@ -233,10 +237,11 @@ function updateCoursesPage() {
     html = html.replace('</style>', badgeCriticalCss + '\n</style>');
   }
   html = html.replace(/styles\.min\.css\?v=[0-9.]+/g, 'styles.min.css?v=2.9.0');
-  html = html.replace(/courses\.min\.js\?v=[0-9.]+/g, 'courses.min.js?v=2.9.0');
+  html = html.replace(/courses\.min\.js\?v=[0-9.]+/g, 'courses.min.js?v=3.0.0');
+  html = html.replace(/courses\.js\?v=[0-9.]+/g, 'courses.js?v=3.0.0');
 
   // 5. Pre-render course cards inside #courses-grid-page
-  const cardsHtml = NS_COURSES.map(c => buildCourseCardHTML(c)).join('\n');
+  const cardsHtml = NS_COURSES.map((c, idx) => buildCourseCardHTML(c, idx)).join('\n');
   const gridRegex = /<div class="courses-grid-page" id="courses-grid-page">[\s\S]*?(?=\s*<!-- No results container -->)/;
   const replacementGrid = `<div class="courses-grid-page" id="courses-grid-page">\n${cardsHtml}\n        </div>`;
 

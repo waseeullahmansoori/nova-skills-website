@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-gemini" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-gemini" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-gemini" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0599a8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0599a8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-gemini" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#0599a8"/>
+    </linearGradient>
+    <pattern id="grid-gemini" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-gemini)"/>
+  <rect width="800" height="600" fill="url(#grid-gemini)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-gemini)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-gemini)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">GOOGLE GEMINI • WORKSPACE AI INTEGRATION</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#3b82f6" fill-opacity="0.18" stroke="#3b82f6" stroke-opacity="0.5"/>
+    <path d="M400 225 Q405 275 455 280 Q405 285 400 335 Q395 285 345 280 Q395 275 400 225 Z" fill="url(#grad-gemini)"/>
+    <rect x="96" y="176" width="210" height="118" rx="12" fill="#132d52" stroke="#3b82f6" stroke-opacity="0.6"/>
+    <text x="118" y="206" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#93c5fd">Gmail Smart Drafts</text>
+    <rect x="118" y="222" width="160" height="8" rx="4" fill="#cbd5e1" opacity="0.7"/>
+    <rect x="118" y="240" width="135" height="8" rx="4" fill="#94a3b8" opacity="0.5"/>
+    <rect x="494" y="176" width="210" height="118" rx="12" fill="#132d52" stroke="#0599a8" stroke-opacity="0.6"/>
+    <text x="516" y="206" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#67e8f9">Docs &amp; Briefings</text>
+    <rect x="516" y="222" width="160" height="8" rx="4" fill="#cbd5e1" opacity="0.7"/>
+    <rect x="516" y="240" width="142" height="8" rx="4" fill="#94a3b8" opacity="0.5"/>
+    <rect x="96" y="330" width="210" height="118" rx="12" fill="#132d52" stroke="#75d766" stroke-opacity="0.6"/>
+    <text x="118" y="360" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#86efac">Sheets AI Tables</text>
+    <rect x="118" y="378" width="166" height="44" rx="6" fill="#0d2342" stroke="#75d766" stroke-opacity="0.3"/>
+    <rect x="494" y="330" width="210" height="118" rx="12" fill="#132d52" stroke="#a78bfa" stroke-opacity="0.6"/>
+    <text x="516" y="360" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#c4b5fd">Slides Generation</text>
+    <rect x="516" y="378" width="166" height="44" rx="6" fill="#0d2342" stroke="#a78bfa" stroke-opacity="0.3"/>
+    <line x1="306" y1="235" x2="365" y2="268" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4 4"/>
+    <line x1="494" y1="235" x2="435" y2="268" stroke="#22d3ee" stroke-width="2" stroke-dasharray="4 4"/>
+    <line x1="306" y1="388" x2="365" y2="305" stroke="#75d766" stroke-width="2" stroke-dasharray="4 4"/>
+    <line x1="494" y1="388" x2="435" y2="305" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4 4"/>
+  
+</svg>

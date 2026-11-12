@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-reels" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-reels" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-reels" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-reels" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <pattern id="grid-reels" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-reels)"/>
+  <rect width="800" height="600" fill="url(#grid-reels)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-reels)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-reels)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">REELS &amp; SHORTS STUDIO • VERTICAL 9:16 RETENTION CUTS</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#ec4899" fill-opacity="0.18" stroke="#ec4899" stroke-opacity="0.5"/>
+    <rect x="292" y="156" width="186" height="318" rx="22" fill="#071324" stroke="#ec4899" stroke-width="2"/>
+    <rect x="308" y="176" width="154" height="264" rx="12" fill="url(#grad-reels)" opacity="0.28"/>
+    <rect x="330" y="250" width="110" height="34" rx="8" fill="#facc15"/>
+    <text x="385" y="271" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="900" fill="#011731">HOOK CAPTION</text>
+    <rect x="92" y="182" width="180" height="260" rx="12" fill="#132d52" stroke="rgba(148,163,184,0.2)"/>
+    <text x="112" y="212" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#f9a8d4">BEAT-SYNC TIMELINE</text>
+    <rect x="112" y="232" width="140" height="24" rx="4" fill="#ec4899" opacity="0.8"/>
+    <rect x="112" y="268" width="140" height="24" rx="4" fill="#0599a8" opacity="0.8"/>
+    <rect x="112" y="304" width="140" height="24" rx="4" fill="#f59e0b" opacity="0.8"/>
+    <rect x="112" y="356" width="140" height="28" rx="14" fill="#ec4899" fill-opacity="0.18" stroke="#ec4899" stroke-opacity="0.45"/>
+  <text x="182" y="374" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">0–3s Hook Pacing</text>
+    <rect x="498" y="182" width="210" height="260" rx="12" fill="#132d52" stroke="rgba(148,163,184,0.2)"/>
+    <text x="518" y="212" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#86efac">RETENTION METRICS</text>
+    <text x="518" y="256" font-family="system-ui,sans-serif" font-size="26" font-weight="800" fill="#75d766">118% Replay</text>
+    <rect x="518" y="286" width="150" height="26" rx="13" fill="#0599a8" fill-opacity="0.18" stroke="#0599a8" stroke-opacity="0.45"/>
+  <text x="593" y="303" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Auto Captions SRT</text>
+    <rect x="518" y="326" width="150" height="26" rx="13" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-opacity="0.45"/>
+  <text x="593" y="343" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">SFX &amp; Speed Ramps</text>
+  
+</svg>

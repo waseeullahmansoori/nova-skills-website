@@ -36,6 +36,7 @@ const vm = require('vm');
 
 const rootDir = path.resolve(__dirname, '..');
 const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(rootDir, 'js', 'icon-system.js'));
+const COURSE_IMAGE_MAP = require(path.join(rootDir, 'course-image-map.json')).byId;
 const dataJs = fs.readFileSync(path.join(rootDir, 'data.js'), 'utf8');
 vm.runInThisContext(dataJs);
 
@@ -345,6 +346,22 @@ function normalizeProgramLevel(level) {
   return level;
 }
 
+function renderAcademyCourseMediaHtml(course, bannerIconHtml) {
+  const rec = course && COURSE_IMAGE_MAP[course.id];
+  if (!rec) {
+    return {
+      wrapperClass: '',
+      bgClass: '',
+      innerHtml: bannerIconHtml
+    };
+  }
+  return {
+    wrapperClass: ' has-course-visual',
+    bgClass: ' has-course-visual',
+    innerHtml: `<picture class="course-thumb-picture"><source media="(min-width: 768px)" srcset="${escapeHTML(rec.image.desktop)}" type="${escapeHTML(rec.image.mimeType)}" width="${rec.image.width}" height="${rec.image.height}" /><img src="${escapeHTML(rec.image.mobile)}" alt="${escapeHTML(rec.image.alt)}" class="course-thumb-img" width="${rec.image.mobileWidth}" height="${rec.image.mobileHeight}" loading="lazy" decoding="async" /></picture>`
+  };
+}
+
 function buildCourseCardHTML(course, extraClass = '') {
   const safeName = (course.name || '').replace(/'/g, "\\'");
   const safeAcademy = (course.academy || '').replace(/'/g, "\\'");
@@ -367,12 +384,14 @@ function buildCourseCardHTML(course, extraClass = '') {
     ? `<div class="course-tools-preview"><span class="tools-label">Key Tools:</span><div class="tools-tag-list">${course.tools.slice(0, 3).map(t => `<span class="tool-tag">${t}</span>`).join(' ')}</div></div>`
     : '';
 
+  const cardMedia = renderAcademyCourseMediaHtml(course, renderCourseIcon(course.icon || course));
+
   return `
     <div class="course-card ${extraClass}" data-category="${course.academyId}" data-level="${normLevel}" data-title="${(course.name || '').replace(/"/g, '&quot;')}" data-desc="${(course.shortDesc || '').replace(/"/g, '&quot;')}">
       ${isFeatured ? '<span class="course-hot-tag">🔥 Popular</span>' : ''}
-      <div class="course-thumbnail">
-        <div class="course-thumb-bg" style="background:${course.color || 'linear-gradient(135deg, #0599a8, #011731)'}">
-          ${renderCourseIcon(course.icon || course)}
+      <div class="course-thumbnail${cardMedia.wrapperClass}">
+        <div class="course-thumb-bg${cardMedia.bgClass}" style="background:${course.color || 'linear-gradient(135deg, #0599a8, #011731)'}">
+          ${cardMedia.innerHtml}
         </div>
         <div class="course-badge-overlay">
           <span class="course-level-badge">${normLevel || course.level || 'All Levels'}</span>
@@ -1949,7 +1968,7 @@ ${sectionsContent}
   <script src="/js/components.min.js?v=2.8.0" defer></script>
   <script src="/nova-ai-widget.js?v=3.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
-  <script src="/js/academy-detail.min.js?v=2.7.4" defer></script>${heroVisual && heroVisual.enabled ? `\n  <script src="/js/academy-hero-experiment.js?v=1.0" defer></script>` : ''}
+  <script src="/js/academy-detail.min.js?v=2.8.0" defer></script>${heroVisual && heroVisual.enabled ? `\n  <script src="/js/academy-hero-experiment.js?v=1.0" defer></script>` : ''}
 </body>
 </html>
 `;

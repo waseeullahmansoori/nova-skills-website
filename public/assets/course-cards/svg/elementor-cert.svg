@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-elementor" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-elementor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-elementor" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0599a8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0599a8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-elementor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#0599a8"/>
+    </linearGradient>
+    <pattern id="grid-elementor" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-elementor)"/>
+  <rect width="800" height="600" fill="url(#grid-elementor)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-elementor)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-elementor)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">ELEMENTOR FLEXBOX • RESPONSIVE LANDING PAGE BUILDER</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#ec4899" fill-opacity="0.18" stroke="#ec4899" stroke-opacity="0.5"/>
+    <rect x="92" y="160" width="164" height="308" rx="10" fill="#132d52" stroke="rgba(236,72,153,0.4)"/>
+    <text x="110" y="186" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#f9a8d4">WIDGET PANEL</text>
+    
+      <rect x="108" y="204" width="132" height="36" rx="7" fill="#0d2342" stroke="rgba(148,163,184,0.25)"/>
+      <text x="174" y="226" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Container Flex</text>
+    
+      <rect x="108" y="252" width="132" height="36" rx="7" fill="#0d2342" stroke="rgba(148,163,184,0.25)"/>
+      <text x="174" y="274" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Hero Heading</text>
+    
+      <rect x="108" y="300" width="132" height="36" rx="7" fill="#0d2342" stroke="rgba(148,163,184,0.25)"/>
+      <text x="174" y="322" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">CTA Button</text>
+    
+      <rect x="108" y="348" width="132" height="36" rx="7" fill="#0d2342" stroke="rgba(148,163,184,0.25)"/>
+      <text x="174" y="370" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Pricing Table</text>
+    
+      <rect x="108" y="396" width="132" height="36" rx="7" fill="#0d2342" stroke="rgba(148,163,184,0.25)"/>
+      <text x="174" y="418" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">FAQ Accordion</text>
+    
+    <rect x="276" y="160" width="432" height="308" rx="10" fill="#08182e" stroke="#ec4899" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <rect x="300" y="182" width="384" height="122" rx="10" fill="#132d52" stroke="#0599a8" stroke-width="1.5"/>
+    <text x="322" y="218" font-family="system-ui,sans-serif" font-size="16" font-weight="800" fill="#fff">Responsive Hero Container</text>
+    <rect x="322" y="234" width="210" height="8" rx="4" fill="#cbd5e1" opacity="0.65"/>
+    <rect x="322" y="256" width="110" height="30" rx="15" fill="#ec4899"/>
+    <rect x="300" y="322" width="118" height="122" rx="8" fill="#132d52" stroke="rgba(148,163,184,0.25)"/>
+    <rect x="433" y="322" width="118" height="122" rx="8" fill="#132d52" stroke="rgba(148,163,184,0.25)"/>
+    <rect x="566" y="322" width="118" height="122" rx="8" fill="#132d52" stroke="rgba(148,163,184,0.25)"/>
+    <text x="492" y="458" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#75d766">Desktop 1440px • Tablet 768px • Mobile 390px</text>
+  
+</svg>

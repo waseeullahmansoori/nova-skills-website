@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-notion" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-notion" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#94a3b8" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#94a3b8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-notion" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0599a8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0599a8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-notion" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#0599a8"/>
+    </linearGradient>
+    <pattern id="grid-notion" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-notion)"/>
+  <rect width="800" height="600" fill="url(#grid-notion)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-notion)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-notion)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">NOTION WORKSPACE • DATABASES, RELATIONS &amp; ROLLUPS</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#0599a8" fill-opacity="0.18" stroke="#0599a8" stroke-opacity="0.5"/>
+    <rect x="94" y="162" width="166" height="304" rx="10" fill="#08182e" stroke="rgba(148,163,184,0.2)"/>
+    <text x="112" y="192" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#cbd5e1">WORKSPACE PAGES</text>
+    
+      <rect x="108" y="212" width="138" height="32" rx="6" fill="transparent" stroke="none"/>
+      <text x="122" y="232" font-family="system-ui,sans-serif" font-size="11.5" font-weight="600" fill="#e2e8f0">Company Wiki</text>
+    
+      <rect x="108" y="256" width="138" height="32" rx="6" fill="#132d52" stroke="#0599a8"/>
+      <text x="122" y="276" font-family="system-ui,sans-serif" font-size="11.5" font-weight="600" fill="#e2e8f0">Projects DB</text>
+    
+      <rect x="108" y="300" width="138" height="32" rx="6" fill="transparent" stroke="none"/>
+      <text x="122" y="320" font-family="system-ui,sans-serif" font-size="11.5" font-weight="600" fill="#e2e8f0">Tasks &amp; Sprints</text>
+    
+      <rect x="108" y="344" width="138" height="32" rx="6" fill="transparent" stroke="none"/>
+      <text x="122" y="364" font-family="system-ui,sans-serif" font-size="11.5" font-weight="600" fill="#e2e8f0">CRM Contacts</text>
+    
+      <rect x="108" y="388" width="138" height="32" rx="6" fill="transparent" stroke="none"/>
+      <text x="122" y="408" font-family="system-ui,sans-serif" font-size="11.5" font-weight="600" fill="#e2e8f0">OKR Rollups</text>
+    
+    <rect x="278" y="162" width="430" height="304" rx="12" fill="#0d2342" stroke="rgba(5,153,168,0.4)"/>
+    <text x="298" y="194" font-family="system-ui,sans-serif" font-size="14" font-weight="800" fill="#ffffff">Projects Database (Board + Relations View)</text>
+    
+      <rect x="298" y="214" width="122" height="176" rx="10" fill="#132d52" stroke="rgba(148,163,184,0.2)"/>
+      <text x="312" y="238" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#7dd3fc">Q3 Launch</text>
+      <rect x="310" y="254" width="98" height="44" rx="6" fill="#08182e"/>
+      <rect x="310" y="308" width="98" height="44" rx="6" fill="#08182e"/>
+    
+      <rect x="432" y="214" width="122" height="176" rx="10" fill="#132d52" stroke="rgba(148,163,184,0.2)"/>
+      <text x="446" y="238" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#7dd3fc">Client Portal</text>
+      <rect x="444" y="254" width="98" height="44" rx="6" fill="#08182e"/>
+      <rect x="444" y="308" width="98" height="44" rx="6" fill="#08182e"/>
+    
+      <rect x="566" y="214" width="122" height="176" rx="10" fill="#132d52" stroke="rgba(148,163,184,0.2)"/>
+      <text x="580" y="238" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#7dd3fc">Content OS</text>
+      <rect x="578" y="254" width="98" height="44" rx="6" fill="#08182e"/>
+      <rect x="578" y="308" width="98" height="44" rx="6" fill="#08182e"/>
+    
+    <rect x="298" y="408" width="134" height="28" rx="14" fill="#0599a8" fill-opacity="0.18" stroke="#0599a8" stroke-opacity="0.45"/>
+  <text x="365" y="426" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">2-Way Relations</text>
+    <rect x="444" y="408" width="122" height="28" rx="14" fill="#75d766" fill-opacity="0.18" stroke="#75d766" stroke-opacity="0.45"/>
+  <text x="505" y="426" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Rollups 2.0</text>
+    <rect x="578" y="408" width="114" height="28" rx="14" fill="#a78bfa" fill-opacity="0.18" stroke="#a78bfa" stroke-opacity="0.45"/>
+  <text x="635" y="426" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Formulas</text>
+  
+</svg>

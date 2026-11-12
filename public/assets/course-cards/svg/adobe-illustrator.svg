@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-aiillus" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-aiillus" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-aiillus" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-aiillus" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <pattern id="grid-aiillus" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-aiillus)"/>
+  <rect width="800" height="600" fill="url(#grid-aiillus)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-aiillus)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-aiillus)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">ADOBE ILLUSTRATOR • VECTOR BEZIER &amp; PRINT STUDIO</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-opacity="0.5"/>
+    <rect x="92" y="160" width="430" height="308" rx="12" fill="#0b1f3b" stroke="rgba(245,158,11,0.4)"/>
+    <path d="M 150 380 C 175 190, 325 190, 350 320 C 375 430, 445 250, 470 215" fill="none" stroke="url(#grad-aiillus)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="175" y1="190" x2="325" y2="190" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <circle cx="175" cy="190" r="5" fill="#38bdf8"/>
+    <circle cx="325" cy="190" r="5" fill="#38bdf8"/>
+    <rect x="144" y="374" width="12" height="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="344" y="314" width="12" height="12" fill="#ffffff" stroke="#ec4899" stroke-width="2"/>
+    <rect x="464" y="209" width="12" height="12" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <polygon points="242,272 288,332 232,350" fill="none" stroke="#75d766" stroke-width="2"/>
+    <rect x="542" y="160" width="166" height="145" rx="10" fill="#132d52" stroke="rgba(148,163,184,0.22)"/>
+    <text x="558" y="184" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#94a3b8">CMYK PRINT SWATCHES</text>
+    
+      <rect x="558" y="200" width="28" height="44" rx="5" fill="#0599a8" stroke="rgba(255,255,255,0.2)"/>
+    
+      <rect x="592" y="200" width="28" height="44" rx="5" fill="#ec4899" stroke="rgba(255,255,255,0.2)"/>
+    
+      <rect x="626" y="200" width="28" height="44" rx="5" fill="#f59e0b" stroke="rgba(255,255,255,0.2)"/>
+    
+      <rect x="660" y="200" width="28" height="44" rx="5" fill="#011731" stroke="rgba(255,255,255,0.2)"/>
+    
+    <rect x="558" y="260" width="134" height="26" rx="13" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-opacity="0.45"/>
+  <text x="625" y="277" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">300 DPI Vector Outlines</text>
+    <rect x="542" y="320" width="166" height="148" rx="10" fill="#132d52" stroke="rgba(148,163,184,0.22)"/>
+    <text x="558" y="344" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#94a3b8">PATHFINDER LAYERS</text>
+    <rect x="558" y="360" width="134" height="24" rx="5" fill="#0d2342" stroke="#0599a8"/>
+    <rect x="558" y="392" width="134" height="24" rx="5" fill="#0d2342" stroke="#f59e0b"/>
+    <rect x="558" y="424" width="134" height="24" rx="5" fill="#0d2342" stroke="#ec4899"/>
+  
+</svg>

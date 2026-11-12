@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-davinci" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-davinci" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-davinci" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0599a8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0599a8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-davinci" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#0599a8"/>
+    </linearGradient>
+    <pattern id="grid-davinci" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-davinci)"/>
+  <rect width="800" height="600" fill="url(#grid-davinci)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-davinci)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-davinci)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">DAVINCI RESOLVE • COLOR GRADING WHEELS &amp; SCOPES</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-opacity="0.5"/>
+    <rect x="92" y="158" width="380" height="162" rx="10" fill="#0d2342" stroke="rgba(245,158,11,0.4)"/>
+    
+      <circle cx="164" cy="236" r="46" fill="#071324" stroke="#38bdf8" stroke-width="6"/>
+      <circle cx="156" cy="232" r="7" fill="#fff"/>
+      <text x="164" y="304" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#cbd5e1">LIFT</text>
+    
+      <circle cx="282" cy="236" r="46" fill="#071324" stroke="#75d766" stroke-width="6"/>
+      <circle cx="282" cy="232" r="7" fill="#fff"/>
+      <text x="282" y="304" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#cbd5e1">GAMMA</text>
+    
+      <circle cx="400" cy="236" r="46" fill="#071324" stroke="#f59e0b" stroke-width="6"/>
+      <circle cx="408" cy="232" r="7" fill="#fff"/>
+      <text x="400" y="304" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#cbd5e1">GAIN</text>
+    
+    <rect x="490" y="158" width="218" height="162" rx="10" fill="#071324" stroke="rgba(148,163,184,0.2)"/>
+    <text x="510" y="184" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#94a3b8">RGB PARADE SCOPE</text>
+    <polyline points="508,290 526,232 544,264 562,218" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+    <polyline points="574,292 592,226 610,254 628,214" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+    <polyline points="640,290 658,242 676,268 694,228" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+    <rect x="92" y="336" width="616" height="134" rx="10" fill="#0b1f3b" stroke="rgba(5,153,168,0.4)"/>
+    <text x="114" y="364" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#94a3b8">COLOR NODE PIPELINE</text>
+    <line x1="180" y1="414" x2="620" y2="414" stroke="#64748b" stroke-width="2.5"/>
+    
+      <rect x="114" y="388" width="122" height="52" rx="8" fill="#132d52" stroke="#0599a8"/>
+      <text x="175" y="418" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#fff">01 Exposure</text>
+    
+      <rect x="262" y="388" width="122" height="52" rx="8" fill="#132d52" stroke="#0599a8"/>
+      <text x="323" y="418" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#fff">02 Balance</text>
+    
+      <rect x="410" y="388" width="122" height="52" rx="8" fill="#132d52" stroke="#0599a8"/>
+      <text x="471" y="418" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#fff">03 Skin Mask</text>
+    
+      <rect x="558" y="388" width="122" height="52" rx="8" fill="#132d52" stroke="#f59e0b"/>
+      <text x="619" y="418" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#fff">04 Film LUT</text>
+    
+  
+</svg>
