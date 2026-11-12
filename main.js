@@ -226,6 +226,7 @@ function initFormSubmission() {
           phone: vPhone.value,
           email: vEmail.value,
           course: course,
+          formType: 'career_counselling',
           lead_type: 'free_consultation',
           message: `LEAD TYPE: free_consultation | Course Interest: ${rawCourse} | Source: Homepage inline counselling section`
         }

@@ -723,6 +723,53 @@ async function submitNovaForm({
     submitBtn.innerHTML = `<span class="btn-spinner"></span> ${loadingText}`;
   }
 
+  // 1. Idempotency Key & Lead ID Generation (Persist across retries on form.dataset)
+  const existingLeadId = form.dataset.currentLeadId || data.leadId || data.lead_id;
+  const generatedLeadId = existingLeadId || ('NS-' + Date.now() + '-' + Math.random().toString(36).substring(2, 8).toUpperCase());
+  form.dataset.currentLeadId = generatedLeadId;
+
+  // 2. Formula Injection Protection for Google Sheets / Excel
+  function sanitizeSheetFormula(val) {
+    if (typeof val !== 'string') return val;
+    if (/^[=+\-@\t\r]/.test(val)) {
+      return "'" + val;
+    }
+    return val;
+  }
+
+  // 3. Standardized Form Type Taxonomy Resolution (Section 5)
+  function resolveStandardFormType(fId, fName, d) {
+    if (d.formType) return d.formType;
+    if (d.sourceCta === 'ai_career_advisor' || d.source_cta === 'ai_career_advisor' || d.lead_type === 'career_advisor_handoff' || fName === 'career_advisor_handoff') {
+      return 'career_advisor_handoff';
+    }
+    if (d.lead_type === 'free_demo' || d.lead_type === 'demo_booking' || fId === 'demo-booking-form' || fName === 'free_demo') {
+      return 'demo_booking';
+    }
+    if (d.lead_type === 'enrollment_enquiry' || d.lead_type === 'admission_enquiry' || fId === 'course-enrollment-form' || fName === 'course_enrollment') {
+      return 'admission_enquiry';
+    }
+    if (d.lead_type === 'course_enquiry' || fName === 'course_enquiry') {
+      return 'course_enquiry';
+    }
+    if (d.lead_type === 'free_consultation' || d.lead_type === 'career_counselling' || fId === 'counselling-booking-form' || fName === 'career_counselling' || fId === 'counselling-form' || fId === 'contact-enquiry-form' || fId === 'popup-form' || fName === 'consultation_popup') {
+      return 'career_counselling';
+    }
+    return 'general_enquiry';
+  }
+
+  function resolveLegacyLeadType(standardType, explicitLeadType) {
+    if (explicitLeadType) return explicitLeadType;
+    switch (standardType) {
+      case 'demo_booking': return 'free_demo';
+      case 'career_counselling': return 'free_consultation';
+      case 'admission_enquiry': return 'enrollment_enquiry';
+      case 'course_enquiry': return 'course_enquiry';
+      case 'career_advisor_handoff': return 'career_advisor_handoff';
+      default: return 'general_enquiry';
+    }
+  }
+
   try {
     const publicIP = await fetchPublicIP();
     const utm = getUTMParams();
@@ -738,21 +785,128 @@ async function submitNovaForm({
     const resolvedReferrer = (firstTouch && firstTouch.referrer) || document.referrer || '';
     const detectedAi = (firstTouch && firstTouch.aiPlatform) || (lastTouch && lastTouch.aiPlatform) || '';
 
-    const payload = {
+    // 4. Canonical Course & Academy Resolution
+    let canonicalCourse = null;
+    let courseId = data.course_id || '';
+    let courseName = (data.course || '').trim();
+    let academyName = (data.academy || '').trim();
+    let academyId = (data.academy_id || '').trim();
+
+    if (typeof window !== 'undefined' && window.NovaCourseData) {
+      if (courseId && window.NovaCourseData.getCourseById) {
+        canonicalCourse = window.NovaCourseData.getCourseById(courseId);
+      }
+      if (!canonicalCourse && courseName && window.NovaCourseData.getAllCourses) {
+        const all = window.NovaCourseData.getAllCourses();
+        const cleanSearchName = courseName.replace(/^\[[^\]]+\]\s*/, '').trim().toLowerCase();
+        canonicalCourse = all.find(c => c.name && cleanSearchName.includes(c.name.toLowerCase())) ||
+                          all.find(c => c.id && cleanSearchName.includes(c.id.toLowerCase()));
+      }
+      if (canonicalCourse) {
+        courseId = courseId || canonicalCourse.id;
+        courseName = courseName || canonicalCourse.name;
+        academyId = academyId || canonicalCourse.academyId || canonicalCourse.academy;
+        academyName = academyName || canonicalCourse.academyName || canonicalCourse.academy;
+      }
+    }
+
+    // 5. Minor Safeguard / Kids Tech Detection
+    let guardianConsentRequired = Boolean(data.guardianConsentRequired);
+    if (!guardianConsentRequired) {
+      if (academyId === 'kids' || academyId === 'kids-tech') {
+        guardianConsentRequired = true;
+      } else if (typeof window !== 'undefined' && window.NovaCourseData && window.NovaCourseData.resolveCanonicalAcademyId) {
+        if (window.NovaCourseData.resolveCanonicalAcademyId(academyId) === 'kids') {
+          guardianConsentRequired = true;
+        }
+      }
+      if (!guardianConsentRequired) {
+        const checkStr = `${courseId} ${courseName} ${academyId} ${academyName}`.toLowerCase();
+        if (checkStr.includes('kids') || checkStr.includes('young coders') || checkStr.includes('scratch programming') || checkStr.includes('ai for kids') || checkStr.includes('robotics')) {
+          guardianConsentRequired = true;
+        }
+      }
+    }
+
+    const preferredMode = data.learning_mode || data.preferredMode || data.preferredLearningMode || 'online_live';
+    const cleanNotes = (data.message || data.notes || '').trim();
+    const finalNotes = guardianConsentRequired && !cleanNotes.includes('Minor Safeguard')
+      ? (cleanNotes ? `${cleanNotes} | [Minor Safeguard: Guardian/Parental Consent Required]` : '[Minor Safeguard: Guardian/Parental Consent Required]')
+      : cleanNotes;
+
+    const cleanPhone = (data.phone || data.mobile || '').toString().trim();
+    const standardFormType = resolveStandardFormType(formId, formName, data);
+    const legacyLeadType = resolveLegacyLeadType(standardFormType, data.lead_type);
+
+    const resolvedMethod = submissionMethod ||
+      (formId === 'counselling-booking-form' ? 'counselling_modal' :
+       formId === 'counselling-form' ? 'inline_counselling_form' :
+       formId === 'popup-form' ? 'consultation_popup_modal' :
+       formId === 'course-enrollment-form' ? 'enrollment_modal' :
+       formId === 'demo-booking-form' ? 'demo_modal' :
+       formId === 'contact-enquiry-form' ? 'contact_page_form' :
+       'web_form');
+
+    const resolvedLeadSource = data.leadSource || (
+      resolvedMethod ||
+      (formId === 'counselling-booking-form' ? 'counselling_modal' :
+       formId === 'counselling-form' ? 'homepage_inline_counselling' :
+       formId === 'popup-form' ? 'consultation_popup_modal' :
+       formId === 'course-enrollment-form' ? 'enrollment_modal' :
+       formId === 'demo-booking-form' ? 'demo_modal' :
+       formId === 'contact-enquiry-form' ? 'contact_page_form' :
+       'website_form')
+    );
+
+    // 6. Structured CRM & Webhook Payload
+    const rawPayload = {
+      // Primary CRM Keys (Google Apps Script Leads Sheet — 21 columns)
+      leadId: generatedLeadId,
+      createdAt: data.createdAt || new Date().toISOString(),
+      sessionId: (firstTouch && firstTouch.sessionId) || data.sessionId || generatedLeadId,
       name: data.name || '',
-      mobile: data.mobile || data.phone || '',
+      phone: cleanPhone,
       email: data.email || '',
-      course: data.course || '',
       city: data.city || '',
-      message: data.message || '',
-      lead_type: data.lead_type || (formId === 'demo-booking-form' ? 'free_demo' : formId === 'course-enrollment-form' ? 'enrollment_enquiry' : 'free_consultation'),
-      learning_mode: data.learning_mode || '',
-      course_id: data.course_id || '',
-      academy: data.academy || '',
+      state: data.state || '',
+      qualification: data.qualification || '',
+      currentStatus: data.currentStatus || '',
+      careerGoal: data.careerGoal || '',
+      interest: academyName || data.interest || '',
+      budget: data.budget || '',
+      preferredMode: preferredMode,
+      preferredLearningMode: preferredMode,
+      recommendedCourse: courseName,
+      leadScore: typeof data.leadScore === 'number' ? data.leadScore : 50,
+      status: 'NEW',
+      qualificationStatus: 'NEW',
+      conversationSummary: data.conversationSummary || '',
+      leadSource: resolvedLeadSource,
+      notes: finalNotes,
+
+      // Webhook & Legacy Compatibility Keys
+      mobile: cleanPhone,
+      course: courseName,
+      course_id: courseId,
+      courseTitle: courseName,
+      academy: academyName,
+      academy_id: academyId,
+      learning_mode: preferredMode,
+      formType: standardFormType,
+      lead_type: legacyLeadType,
+      message: finalNotes,
       website: honeypotValue,
 
+      // Minor Safeguard Compliance
+      guardianConsentRequired: guardianConsentRequired,
+      minorSafeguard: guardianConsentRequired,
+
+      // Multi-touch Attribution
       pageUrl: window.location.href,
       referrer: resolvedReferrer,
+      sourcePage: window.location.pathname,
+      sourceComponent: resolvedMethod,
+      submissionMethod: resolvedMethod,
 
       utmSource: resolvedUtmSource,
       utmMedium: resolvedUtmMedium,
@@ -762,20 +916,27 @@ async function submitNovaForm({
 
       firstTouchSource: (firstTouch && firstTouch.source) || resolvedUtmSource,
       firstTouchMedium: (firstTouch && firstTouch.medium) || resolvedUtmMedium,
+      firstTouchCampaign: (firstTouch && firstTouch.campaign) || resolvedUtmCampaign,
       firstTouchReferrer: (firstTouch && firstTouch.referrer) || '',
       firstLandingPage: (firstTouch && firstTouch.landingPage) || window.location.href,
       aiPlatform: detectedAi,
 
+      // Device & Environment Diagnostics (No PII)
       browser: detectBrowser(),
       device: detectDevice(),
       os: detectOS(),
       screenResolution: detectScreenResolution(),
       timezone: detectTimezone(),
-
-      "public IP": publicIP,
       publicIP: publicIP,
-      ip: publicIP
+      ip: publicIP,
+      "public IP": publicIP
     };
+
+    // Sanitize user-controlled fields against Google Sheets formula injection
+    const payload = {};
+    for (const key of Object.keys(rawPayload)) {
+      payload[key] = sanitizeSheetFormula(rawPayload[key]);
+    }
 
     const res = await fetch(NS_SCRIPT_ENDPOINT, {
       method: 'POST',
@@ -788,23 +949,26 @@ async function submitNovaForm({
 
     try {
       const json = await res.json();
-      if (json && (json.success === true || json.result === 'success' || json.status === 'success')) {
+      if (json && (json.success === true || json.result === 'success' || json.status === 'success' || json.action === 'created' || json.action === 'updated')) {
         isSuccess = true;
         if (json.message) responseMsg = json.message;
       } else if (json && json.success === false) {
         isSuccess = false;
-        responseMsg = json.message || 'Submission was not accepted by admissions backend.';
+        responseMsg = json.error || json.message || 'Submission was not accepted by admissions backend.';
       } else if (res.ok && json) {
         isSuccess = true;
       }
     } catch (e) {
-      // In case of non-JSON response from Google Apps Script redirect
+      // Non-JSON response from Google Apps Script 302 redirect
       isSuccess = res.ok;
     }
 
     if (!isSuccess) {
       throw new Error(responseMsg || 'Submission failed');
     }
+
+    // Success verified: clear idempotency key
+    delete form.dataset.currentLeadId;
 
     // 1. Reset form (managed modal forms reset on reopen)
     if (!isManagedModalForm) {
@@ -816,20 +980,20 @@ async function submitNovaForm({
       delete form.dataset.isFetching;
     }
 
-    // 3. Show success notification
-    if (formId === 'demo-booking-form' || formName === 'free_demo') {
+    // 2. Show success notification
+    if (formId === 'demo-booking-form' || formName === 'free_demo' || standardFormType === 'demo_booking') {
       showToastNotification({
         title: '🎉 Demo Request Received!',
         message: 'Your 2-Day Free Demo request has been received.\r\n\r\nOur admissions team will contact you to confirm course eligibility, batch availability and the demo schedule.',
         type: 'success'
       });
-    } else if (formId === 'counselling-booking-form' || formName === 'career_counselling' || formId === 'counselling-form') {
+    } else if (formId === 'counselling-booking-form' || formName === 'career_counselling' || formId === 'counselling-form' || standardFormType === 'career_counselling') {
       showToastNotification({
         title: '🎉 Counselling Request Received!',
         message: 'Thank you! Your counselling request has been received.\r\n\r\nOur admissions team will contact you to understand your goals and help you choose an appropriate learning pathway.',
         type: 'success'
       });
-    } else if (formId === 'course-enrollment-form' || formName === 'course_enrollment') {
+    } else if (formId === 'course-enrollment-form' || formName === 'course_enrollment' || standardFormType === 'admission_enquiry') {
       showToastNotification({
         title: '✅ Enquiry Submitted Successfully!',
         message: 'Thank you for your admission enquiry.\r\n\r\nOur course counsellor will call you shortly.',
@@ -843,7 +1007,7 @@ async function submitNovaForm({
       });
     }
 
-    // 4. Fire GA4 Recommended Event: generate_lead (Confirmed backend success only, zero PII)
+    // 3. Fire GA4 Recommended Event: generate_lead (Confirmed backend success only, zero PII)
     const nonLeadFormIds = ['comment-form', 'article-newsletter-form', 'sidebar-newsletter-form', 'article-sub-form'];
 
     if (!nonLeadFormIds.includes(formId)) {
@@ -856,16 +1020,7 @@ async function submitNovaForm({
          formId === 'contact-enquiry-form' ? 'contact_enquiry' :
          (formId || 'counselling_form'));
 
-      const resolvedMethod = submissionMethod ||
-        (formId === 'counselling-booking-form' ? 'counselling_modal' :
-         formId === 'counselling-form' ? 'inline_counselling_form' :
-         formId === 'popup-form' ? 'consultation_popup_modal' :
-         formId === 'course-enrollment-form' ? 'enrollment_modal' :
-         formId === 'demo-booking-form' ? 'demo_modal' :
-         formId === 'contact-enquiry-form' ? 'contact_page_form' :
-         'web_form');
-
-      const cleanCourseName = (data.course || 'General').toString().trim() || 'General';
+      const cleanCourseName = (courseName || 'General').toString().trim() || 'General';
 
       const landingPagePath = (firstTouch && firstTouch.landingPage)
         ? (function() {
@@ -873,24 +1028,17 @@ async function submitNovaForm({
           })()
         : window.location.pathname;
 
-      const formType = (
-        formId === 'demo-booking-form' || formName === 'free_demo' ? 'demo_booking' :
-        formId === 'counselling-booking-form' || formName === 'career_counselling' ? 'career_counselling' :
-        formId === 'contact-enquiry-form' ? 'contact_enquiry' :
-        formId === 'course-enrollment-form' ? 'course_enrollment' : 'admissions_enquiry'
-      );
-
       NovaAnalytics.trackLeadGenerated({
         form_id: formId,
-        form_type: formType,
+        form_type: standardFormType,
         form_name: resolvedFormName,
-        course_id: data.course_id || (data.course && typeof data.course === 'string' ? data.course : '') || '',
-        academy_id: data.academy_id || data.academy || '',
+        course_id: courseId || '',
+        academy_id: academyId || '',
         course_name: cleanCourseName,
         source_page: window.location.pathname,
         source_component: resolvedMethod,
         submission_method: resolvedMethod,
-        learning_mode: data.learning_mode || 'online_live',
+        learning_mode: preferredMode,
         traffic_source: resolvedUtmSource || 'direct',
         traffic_medium: resolvedUtmMedium || 'none',
         traffic_campaign: resolvedUtmCampaign || 'none',
@@ -907,18 +1055,17 @@ async function submitNovaForm({
     return true;
 
   } catch (err) {
-    console.error('Submission error:', err);
+    // Redact potential PII from error logs
+    console.error('[Nova CRM] Lead submission error:', err && err.message ? err.message.replace(/([0-9]{10}|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})/g, '[REDACTED]') : 'CRM_SUBMISSION_ERROR');
 
     if (!isManagedModalForm) {
-      // Restore button and enable again
       submitBtn.innerHTML = originalHtml;
       submitBtn.disabled = false;
       delete form.dataset.submitting;
 
-      // Show red error toast with server error message if available
       const errorMsg = err.message && err.message !== 'Submission failed'
         ? err.message
-        : 'Something went wrong. Please try again.';
+        : 'Unable to connect to admissions CRM. Please verify your connection and try again.';
 
       showToastNotification({
         title: err.message && err.message.includes('Spam') ? 'Spam Detected' : 'Submission Failed',
@@ -2731,6 +2878,7 @@ function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
     }
   }
 
+  if (found && found.id) { if (form) form.dataset.courseId = found.id; } else if (explicitId) { if (form) form.dataset.courseId = explicitId; }
   if (courseInput) courseInput.value = finalCourse;
   if (academyInput) academyInput.value = finalAcademy;
   if (categoryInput) categoryInput.value = finalCategory;
@@ -3820,6 +3968,7 @@ async function handleDemoSubmit(e) {
         city: city.trim(),
         message: demoNotes,
         lead_type: 'free_demo',
+        formType: 'demo_booking',
         learning_mode: learningMode,
         course_id: courseId,
         academy: academyName
@@ -4449,6 +4598,7 @@ async function handleCounsellingSubmit(e) {
         city: city.trim(),
         message: counsellingNotes,
         lead_type: 'free_consultation',
+        formType: 'career_counselling',
         learning_mode: learningMode,
         course_id: courseId,
         academy: academyName
