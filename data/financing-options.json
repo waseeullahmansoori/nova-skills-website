@@ -1,0 +1,82 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-11-13T04:25:00+05:30",
+  "description": "Nova Skills Canonical Financing, Payment Plans & EMI Options Registry",
+  "disclaimer": "Financing and EMI availability depends on payment aggregator partnerships, issuing bank eligibility, and third-party credit evaluation. Nova Skills maintains complete cost transparency: unverified financing rates are never advertised as guaranteed.",
+  "policies": {
+    "tier1ShortCourses": {
+      "durationScope": "Duration 6 weeks or less (56 courses)",
+      "policyType": "single-payment-enrollment",
+      "statement": "Paid as a single lump-sum enrollment fee. Multi-month bank financing is not applicable due to banking partner transaction minimums."
+    },
+    "tier2MediumPrograms": {
+      "durationScope": "Duration 2 to 4 months (38 courses)",
+      "policyType": "milestone-or-card-emi",
+      "statement": "Eligible for 2-stage institutional installment plans or standard bank credit card EMI subject to cardholder credit limits."
+    },
+    "tier3MasteryPrograms": {
+      "durationScope": "Duration 5 to 9 months (15 courses)",
+      "policyType": "multi-stage-financing-eligible",
+      "statement": "Eligible for multi-stage milestone payment plans and bank EMI options (3, 6, 9, or 12 months) through authorized payment partners."
+    }
+  },
+  "financingModels": [
+    {
+      "typeId": "bank_no_cost_emi",
+      "displayName": "Bank No-Cost EMI (Subvention)",
+      "description": "Third-party financing arrangement where the student pays zero net interest because the institute absorbs the interest charge as an upfront discount (merchant subvention).",
+      "eligibility": {
+        "minimumTransaction": 15000,
+        "eligibleInstruments": ["Select Bank Credit Cards", "Partner Consumer Finance"],
+        "creditApprovalRequired": true
+      },
+      "interestRate": 0,
+      "processingFees": "Bank processing fees (₹199–₹299 + GST) may be charged directly by the issuing bank",
+      "verificationStatus": "partner-gateway-dependent"
+    },
+    {
+      "typeId": "standard_bank_emi",
+      "displayName": "Standard Bank EMI",
+      "description": "Convenience installment option provided directly by the student's credit card issuing bank at prevailing commercial rates.",
+      "eligibility": {
+        "minimumTransaction": 3000,
+        "eligibleInstruments": ["All Major Indian Bank Credit Cards"],
+        "creditApprovalRequired": true
+      },
+      "interestRate": "13% to 16% per annum (charged by issuing bank)",
+      "processingFees": "Varies by issuing bank",
+      "verificationStatus": "verified-gateway-standard"
+    },
+    {
+      "typeId": "institute_milestone_plan",
+      "displayName": "Nova Skills Milestone Payment Plan",
+      "description": "Direct institutional payment schedule dividing course tuition into 2 or 3 scheduled milestone payments without a third-party loan.",
+      "eligibility": {
+        "minimumTransaction": 12000,
+        "eligibleInstruments": ["UPI", "Net Banking", "Debit Card", "Credit Card"],
+        "creditApprovalRequired": false
+      },
+      "interestRate": 0,
+      "processingFees": 0,
+      "verificationStatus": "approved-institutional-policy"
+    }
+  ],
+  "caseStudies": {
+    "ai-mastery": {
+      "courseId": "ai-mastery",
+      "courseName": "AI Solutions Engineering & Agentic AI Mastery",
+      "duration": "9 Months",
+      "canonicalTuition": {
+        "regularFee": 89900,
+        "launchFee": 64900,
+        "gstRate": "18%",
+        "gstAmount": 11682,
+        "totalPayable": 76582
+      },
+      "financingStatus": {
+        "historicalDiscrepancy": "Legacy pages previously showed ₹7,866/mo (derived from 39,999 * 1.18 / 6) vs ₹3,999/mo (editorial 10-month division) without partner verification.",
+        "resolvedPresentation": "Conflicting numeric claims removed. Approved canonical launch fee is ₹64,900 (statutory 18% GST extra; total ₹76,582). Financing is available via 3-stage institutional milestone payments or 6/9-month bank EMI through payment gateway partners subject to bank approval."
+      }
+    }
+  }
+}
