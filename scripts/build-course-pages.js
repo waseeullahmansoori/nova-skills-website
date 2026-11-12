@@ -5,6 +5,7 @@ const path = require('path');
 const ROOT_DIR = path.resolve(__dirname, '..');
 const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(ROOT_DIR, 'js', 'icon-system.js'));
 const NovaCourseData = require(path.join(ROOT_DIR, 'js', 'course-data.js'));
+const NovaCredibility = require(path.join(ROOT_DIR, 'js', 'credibility-data.js'));
 
 const NS_COURSES = NovaCourseData.getPublishedCourses();
 const NS_ACADEMIES = NovaCourseData.getAllAcademies();
@@ -167,7 +168,7 @@ function escapeHTML(str) {
 function getCourseSeoTitle(course) {
   const type = (course.courseType || course.course_type || course.type || '').toUpperCase();
   const name = course.name || course.course_name;
-  
+
   if (type === 'MASTER') {
     return `${name} — Flagship Career Program | Nova Skills`;
   } else if (type === 'PROFESSIONAL' || type === 'MERGE') {
@@ -393,13 +394,26 @@ function generateStaticCourseHtml(courseId, templateHtml) {
     ${baseCourse.placementSupport ? '<div class="course-meta-item" style="color:var(--green-light); font-weight:700;"><span class="meta-icon">🎯</span> Placement Support Included</div>' : ''}
   `.trim();
 
-  // Render Rating Row
-  const ratingRowHtml = `
+  // Render Rating Row (Authentic Credibility / Verified Standards)
+  const courseTestimonials = NovaCredibility.getCourseTestimonials(baseCourse.id);
+  let ratingRowHtml;
+  if (courseTestimonials && courseTestimonials.length > 0) {
+    const t = courseTestimonials[0];
+    const score = (t.testimonial && t.testimonial.rating ? t.testimonial.rating.toFixed(1) : '5.0');
+    ratingRowHtml = `
     <span class="rating-stars">★★★★★</span>
-    <span class="rating-num">${baseCourse.rating || 4.7}</span>
-    <span class="rating-count">(${baseCourse.reviews || 165} student reviews)</span>
-    <span class="student-count">• ${(baseCourse.students || 710).toLocaleString('en-IN')}+ learners enrolled</span>
+    <span class="rating-num">${score}</span>
+    <span class="rating-count">(Verified Course Review)</span>
+    <span class="student-count">• Portfolio Capstone Verified</span>
   `.trim();
+  } else {
+    ratingRowHtml = `
+    <span class="rating-stars" style="color:var(--teal);">🛡️</span>
+    <span class="rating-num" style="color:var(--teal);">Verified Quality</span>
+    <span class="rating-count">• Industry-Standard Curriculum</span>
+    <span class="student-count">• Practical Mentorship Capstone</span>
+  `.trim();
+  }
 
   // Render Thumb
   const thumbHtml = renderCourseIcon(baseCourse.icon || baseCourse, { fontSize: '4rem', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.3))' });
@@ -413,7 +427,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
         <div class="advisory-content">
           <h4>Curriculum Integration Pathway Notice</h4>
           <p>
-            This program is an integrated specialization module. If you are seeking complete career mastery, 
+            This program is an integrated specialization module. If you are seeking complete career mastery,
             this entire curriculum is also included in our flagship career track:
             <a href="/course-detail.html?id=dm-mastery" class="advisory-link">Explore Parent Career Program →</a>
           </p>
@@ -431,8 +445,8 @@ function generateStaticCourseHtml(courseId, templateHtml) {
       </p>
       <p style="margin-bottom:16px;">${escapeHTML(detailData.overview.short_description || baseCourse.shortDesc || '')}</p>
       <p style="margin-bottom:0;">
-        Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through 
-        <strong>${escapeHTML(projectLabel)}</strong>, live interactive labs, 
+        Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through
+        <strong>${escapeHTML(projectLabel)}</strong>, live interactive labs,
         code/design critiques, and commercial delivery standards.
       </p>
     `.trim();
@@ -522,7 +536,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
 
   // Curriculum Accordion
-  
+
   // Specialization Tracks Pre-rendering
   let specTracksHtml = '';
   let showSpecSection = false;
@@ -809,29 +823,10 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
 
   // Domain Mentors
-  const academyMentors = {
-    'digital-marketing': { lead: 'Growth & Ads Lead Mentor', role: 'Head of Performance & GEO Strategy', bio: 'Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture.', initials: 'GA' },
-    'programming': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.', initials: 'FS' },
-    'programming-academy': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.', initials: 'FS' }
-  };
-  const mentorData = academyMentors[baseCourse.academyId] || academyMentors['digital-marketing'];
-  const mentorsHtml = `
-    <div class="mentor-card">
-      <div class="mentor-avatar" style="background:var(--grad-hero);"><span class="mentor-initials">${mentorData.initials}</span></div>
-      <h3 class="mentor-name">${escapeHTML(mentorData.lead)}</h3>
-      <div class="mentor-role">${escapeHTML(mentorData.role)}</div>
-      <span class="mentor-exp">Industry Practitioner Mentorship</span>
-      <p class="mentor-bio">${escapeHTML(mentorData.bio)}</p>
-    </div>
+  const mentorsHtml = NovaCredibility.renderMentorCardsForCourse(baseCourse.academyId);
 
-    <div class="mentor-card">
-      <div class="mentor-avatar" style="background:var(--grad-teal-green);"><span class="mentor-initials">PT</span></div>
-      <h3 class="mentor-name">Senior Project Trainer</h3>
-      <div class="mentor-role">Hands-On Lab &amp; Critique Mentor</div>
-      <span class="mentor-exp">Live Project Mentorship</span>
-      <p class="mentor-bio">Dedicated to portfolio asset building, iterative project critiques, industry toolchains, and commercial quality assurance.</p>
-    </div>
-  `.trim();
+  // Testimonials
+  const testimonialsHtml = NovaCredibility.renderTestimonialsSectionForCourse(baseCourse.id, baseCourse.name);
 
   // Boundaries
   let boundariesHtml = '';
@@ -1082,6 +1077,18 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   // Mentors
   html = html.replace(/<div\s+class="mentors-grid"\s+id="mentors-container">[\s\S]*?<\/section>/i, `<div class="mentors-grid" id="mentors-container">\n        ${mentorsHtml}\n      </div>\n    </section>`);
 
+  // Testimonials
+  if (testimonialsHtml) {
+    if (html.includes('id="testimonials-slot"')) {
+      html = html.replace(/<div\s+id="testimonials-slot">[\s\S]*?<\/div>/i, testimonialsHtml);
+    } else {
+      html = html.replace(/<!-- REVIEWS \/ TESTIMONIALS -->[\s\S]*?<section\s+class="container\s+course-body-section"\s+id="testimonials-section">[\s\S]*?<\/section>/i, `<!-- REVIEWS / TESTIMONIALS -->\n    ${testimonialsHtml}`);
+    }
+  } else {
+    html = html.replace(/<div\s+id="testimonials-slot">[\s\S]*?<\/div>/i, '');
+    html = html.replace(/<!-- REVIEWS \/ TESTIMONIALS -->[\s\S]*?<section\s+class="container\s+course-body-section"\s+id="testimonials-section">[\s\S]*?<\/section>/i, '');
+  }
+
   // Boundaries
   if (boundariesHtml) {
     html = html.replace(/<div\s+id="boundaries-container"[\s\S]*?<\/div>/i, `<div id="boundaries-container" style="max-width:860px;">\n        ${boundariesHtml}\n      </div>`);
@@ -1158,7 +1165,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   // Cert Course Display Name
   html = html.replace(/<div\s+class="cert-course-name"\s+id="cert-course-display"[\s\S]*?<\/div>/i, `<div class="cert-course-name" id="cert-course-display" style="font-size:0.8rem; padding:4px 12px;">${escapeHTML(baseCourse.name)}</div>`);
 
-  return html;
+  return html.replace(/[ \t]+$/gm, '');
 }
 
 function generateNotFoundHtml(templateHtml) {
@@ -1172,7 +1179,7 @@ function generateNotFoundHtml(templateHtml) {
           <div style="font-size:3.5rem; margin-bottom:16px;">🔍</div>
           <h1 style="font-size:2rem; font-weight:800; color:var(--navy); margin-bottom:12px;">Course Not Found</h1>
           <p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:24px; line-height:1.6;">
-            The program you are looking for may have been modernized, renamed, or relocated. 
+            The program you are looking for may have been modernized, renamed, or relocated.
             Explore our catalog of 109+ industry-standard career courses across 12 academies.
           </p>
           <div class="course-error-actions" style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
@@ -1184,7 +1191,7 @@ function generateNotFoundHtml(templateHtml) {
     </main>
   `);
   html = html.replace(/<div\s+class="sticky-enroll-bar"[\s\S]*?<\/button>\s*<\/div>/i, '');
-  return html;
+  return html.replace(/[ \t]+$/gm, '');
 }
 
 function validateCourseHtml(baseCourse, html) {

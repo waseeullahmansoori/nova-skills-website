@@ -1148,6 +1148,8 @@
 
 
 
+
+
         </div>
 
         <!-- View All CTA -->
@@ -1365,8 +1367,8 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Student Work</span>
-          <h2 class="section-title">Real Projects by<br /><span class="gradient-text">Real Students</span></h2>
-          <p class="section-subtitle">Our students don't just learn — they create. Here's a sample of the professional-quality work our students produce.</p>
+          <h2 class="section-title">Student Portfolio <span class="gradient-text">Showcase</span></h2>
+          <p class="section-subtitle">Explore selected practical deliverables, production assets, and portfolio work created through hands-on learning at Nova Skills.</p>
         </div>
 
         <div class="projects-grid">
@@ -1382,6 +1384,7 @@
               <h3>Multichannel Growth &amp; GA4 Analytics</h3>
               <p>Hands-on campaign planning, ad budget allocation, ROAS optimization, and live GA4 tracking funnels.</p>
               <div class="project-result">🚀 Practical Performance Marketing</div>
+              <button type="button" class="btn btn-outline btn-sm" onclick="openProjectModal('proj-dm-01')" style="margin-top:10px; font-size:0.8rem; padding:5px 12px; cursor:pointer;" aria-label="View case study for Multichannel Growth &amp; GA4 Analytics">View Case Study →</button>
             </div>
           </div>
           <div class="project-card" id="project-ai">
@@ -1396,6 +1399,7 @@
               <h3>Enterprise Multi-Tenant Cloud SaaS</h3>
               <p>Built a scalable React 19, TypeScript, and PostgreSQL cloud SaaS application with automated workflows.</p>
               <div class="project-result">⚙️ Production Cloud SaaS Platform</div>
+              <button type="button" class="btn btn-outline btn-sm" onclick="openProjectModal('proj-fs-01')" style="margin-top:10px; font-size:0.8rem; padding:5px 12px; cursor:pointer;" aria-label="View case study for Enterprise Multi-Tenant Cloud SaaS">View Case Study →</button>
             </div>
           </div>
           <div class="project-card" id="project-design">
@@ -1410,6 +1414,7 @@
               <h3>Complete Commercial Brand System</h3>
               <p>Designed vector logo system, typography hierarchy, commercial packaging, and official brand guidelines.</p>
               <div class="project-result">🎨 Production-Ready Brand Identity</div>
+              <button type="button" class="btn btn-outline btn-sm" onclick="openProjectModal('proj-gd-01')" style="margin-top:10px; font-size:0.8rem; padding:5px 12px; cursor:pointer;" aria-label="View case study for Complete Commercial Brand System">View Case Study →</button>
             </div>
           </div>
           <div class="project-card" id="project-video">
@@ -1424,6 +1429,7 @@
               <h3>Client-First Directory Architecture</h3>
               <p>Engineered a dynamic relational directory, custom search filtering, and responsive landing pages.</p>
               <div class="project-result">💻 Production-Grade Web Application</div>
+              <button type="button" class="btn btn-outline btn-sm" onclick="openProjectModal('proj-nc-01')" style="margin-top:10px; font-size:0.8rem; padding:5px 12px; cursor:pointer;" aria-label="View case study for Client-First Directory Architecture">View Case Study →</button>
             </div>
           </div>
         </div>
@@ -1686,9 +1692,9 @@
     <section class="mentors-section" id="mentors" aria-label="Industry mentors">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Expert Faculty</span>
-          <h2 class="section-title">Learn From<br /><span class="gradient-text">Industry Experts</span></h2>
-          <p class="section-subtitle">Our mentors are active industry professionals with real-world experience who bring insider knowledge to every session.</p>
+          <span class="section-tag">Academic Faculty</span>
+          <h2 class="section-title">Meet Our Mentors &amp;<br /><span class="gradient-text">Academic Experts</span></h2>
+          <p class="section-subtitle">Our mentors are active industry practitioners and domain specialists guiding practical capstones and live reviews.</p>
         </div>
 
         <div class="mentors-grid">
@@ -1703,6 +1709,7 @@
             <div class="mentor-tags">
               <span>Google Ads</span><span>SEO</span><span>AI Marketing</span>
             </div>
+            <a href="/courses.html?academy=digital-marketing" class="mentor-link" style="display:inline-block; margin-top:14px; font-size:0.85rem; font-weight:600; color:var(--teal); text-decoration:none;">Explore Courses They Teach →</a>
           </div>
 
           <div class="mentor-card" id="mentor-2">
@@ -1716,6 +1723,7 @@
             <div class="mentor-tags">
               <span>ChatGPT</span><span>n8n</span><span>AI Agents</span>
             </div>
+            <a href="/courses.html?academy=ai" class="mentor-link" style="display:inline-block; margin-top:14px; font-size:0.85rem; font-weight:600; color:var(--teal); text-decoration:none;">Explore Courses They Teach →</a>
           </div>
 
           <div class="mentor-card" id="mentor-3">
@@ -1729,6 +1737,7 @@
             <div class="mentor-tags">
               <span>Photoshop</span><span>Figma</span><span>Branding</span>
             </div>
+            <a href="/courses.html?academy=design" class="mentor-link" style="display:inline-block; margin-top:14px; font-size:0.85rem; font-weight:600; color:var(--teal); text-decoration:none;">Explore Courses They Teach →</a>
           </div>
 
           <div class="mentor-card" id="mentor-4">
@@ -1742,6 +1751,7 @@
             <div class="mentor-tags">
               <span>After Effects</span><span>Premiere</span><span>Motion</span>
             </div>
+            <a href="/courses.html?academy=video" class="mentor-link" style="display:inline-block; margin-top:14px; font-size:0.85rem; font-weight:600; color:var(--teal); text-decoration:none;">Explore Courses They Teach →</a>
           </div>
         </div>
       </div>
@@ -2123,8 +2133,8 @@
   </footer>
 
   <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
-  <a href="https://wa.me/919695904440?text=Hi%2C%20I%27m%20interested%20in%20Nova%20Skills%20courses.%20Can%20you%20help%20me%3F" 
-     class="whatsapp-float" 
+  <a href="https://wa.me/919695904440?text=Hi%2C%20I%27m%20interested%20in%20Nova%20Skills%20courses.%20Can%20you%20help%20me%3F"
+     class="whatsapp-float"
      id="whatsapp-btn"
      aria-label="Chat on WhatsApp"
      target="_blank"
@@ -2135,6 +2145,7 @@
 
   <!-- JavaScript -->
   <script src="/js/data.min.js?v=3.1.0" defer></script>
+  <script src="/js/credibility-data.min.js?v=3.1.0" defer></script>
   <script src="/js/components.min.js?v=3.1.0" defer></script>
   <script src="/js/main.min.js?v=3.1.0" defer></script>
 </body>

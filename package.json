@@ -18,6 +18,7 @@
     "test:analytics": "node scripts/test-p1-2-ga4-analytics-suite.js",
     "test:crm": "node scripts/test-p1-3-crm-integration-suite.js",
     "validate:contact": "node scripts/validate-contact-ctas.js",
+    "validate:credibility": "node scripts/validate-student-faculty.js",
     "build": "npm run build:data && node scripts/build_min_js.js && node scripts/build-homepage-featured.js && node scripts/build-courses-page.js && node scripts/build-academy-pages.js && node scripts/build-course-pages.js && node scripts/build-all-city-pages-phaseF.js && node scripts/build-branches-directory.js && node scripts/generate-sitemap.js"
   },
   "keywords": [

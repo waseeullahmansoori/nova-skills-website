@@ -85,6 +85,24 @@ if (fs.existsSync(iconSysSrc)) {
   console.log(`✅ Built js/icon-system.min.js (${(minified.length/1024).toFixed(1)} KB)`);
 }
 
+// Also minify js/credibility-data.js with embedded data for zero-latency client usage (P1-5)
+const credSrc = path.join(JS_DIR, 'credibility-data.js');
+if (fs.existsSync(credSrc)) {
+  const projectsJson = fs.readFileSync(path.join(BASE_DIR, 'data', 'student-projects.json'), 'utf8');
+  const testimonialsJson = fs.readFileSync(path.join(BASE_DIR, 'data', 'student-testimonials.json'), 'utf8');
+  const mentorsJson = fs.readFileSync(path.join(BASE_DIR, 'data', 'mentors.json'), 'utf8');
+  const credCode = fs.readFileSync(credSrc, 'utf8');
+  const embeddedBundle = [
+    `var NS_STUDENT_PROJECTS = ${JSON.stringify(JSON.parse(projectsJson))};`,
+    `var NS_STUDENT_TESTIMONIALS = ${JSON.stringify(JSON.parse(testimonialsJson))};`,
+    `var NS_MENTORS = ${JSON.stringify(JSON.parse(mentorsJson))};`,
+    `if(typeof window !== 'undefined'){ window.NS_STUDENT_PROJECTS = NS_STUDENT_PROJECTS; window.NS_STUDENT_TESTIMONIALS = NS_STUDENT_TESTIMONIALS; window.NS_MENTORS = NS_MENTORS; }`,
+    simpleJsMinify(credCode)
+  ].join('\n');
+  fs.writeFileSync(path.join(JS_DIR, 'credibility-data.min.js'), embeddedBundle, 'utf8');
+  console.log(`✅ Built js/credibility-data.min.js (${(embeddedBundle.length/1024).toFixed(1)} KB)`);
+}
+
 // Sync Homepage SSR Header Shell (<div id="ns-header">...</div>) directly from components.js (Single Source of Truth)
 const compPath = path.join(BASE_DIR, 'components.js');
 const indexPath = path.join(BASE_DIR, 'index.html');
@@ -102,8 +120,10 @@ if (fs.existsSync(compPath) && fs.existsSync(indexPath)) {
     const closeHeaderIdx = indexHtml.indexOf('</header>', startIdx);
     const slotEndIdx = indexHtml.indexOf('</div>', closeHeaderIdx);
     if (startIdx !== -1 && closeHeaderIdx !== -1 && slotEndIdx !== -1) {
-      const replacement = `${slotStartTag}${eol}${renderedHeader.replace(/\r?\n/g, eol)}${eol}  </div>`;
+      const cleanHeader = renderedHeader.replace(/[ \t]+$/gm, '');
+      const replacement = `${slotStartTag}${eol}${cleanHeader.replace(/\r?\n/g, eol)}${eol}  </div>`;
       indexHtml = indexHtml.substring(0, startIdx) + replacement + indexHtml.substring(slotEndIdx + '</div>'.length);
+      indexHtml = indexHtml.replace(/[ \t]+$/gm, '');
       fs.writeFileSync(indexPath, indexHtml, 'utf8');
       console.log('✅ Synced index.html #ns-header SSR snapshot from single source components.js');
     }

@@ -1,0 +1,615 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-11-13T03:48:00+05:30",
+  "description": "Nova Skills Student Project Showcase and Curriculum Portfolio Briefs Registry",
+  "disclaimer": "All showcase entries represent verified production capstone specifications and portfolio deliverables developed within Nova Skills programs. Illustrative curriculum briefs are explicitly marked.",
+  "projects": [
+    {
+      "projectId": "proj-dm-multichannel-growth",
+      "status": "published-as-sample",
+      "title": "Multichannel Growth & GA4 Analytics",
+      "courseId": "dm-professional",
+      "courseName": "AI Digital Marketing Specialist",
+      "academyId": "digital-marketing",
+      "academyName": "Digital Marketing Academy",
+      "category": "Performance Marketing",
+      "badge": "🚀 Practical Performance Marketing",
+      "summary": "Hands-on campaign planning, ad budget allocation, ROAS optimization, and live GA4 tracking funnels.",
+      "problem": "Modern brands struggle with fragmented conversion tracking, unoptimized ROAS across Meta and Google Ads, and rising customer acquisition costs.",
+      "solution": "Designed an integrated omnichannel growth funnel combining server-side GA4 event streaming, Google Ads Search/Shopping campaigns, and high-converting retargeting funnels.",
+      "deliverables": [
+        "GA4 Custom Conversion Funnel & Event Mapping",
+        "Meta & Google Ads Campaign Strategy Deck",
+        "Budget & ROAS Forecasting Matrix",
+        "Looker Studio Executive Reporting Dashboard"
+      ],
+      "tools": [
+        "Google Analytics 4",
+        "Google Ads",
+        "Meta Ads Manager",
+        "Looker Studio",
+        "Google Tag Manager"
+      ],
+      "outcome": "Comprehensive practical portfolio asset demonstrating omnichannel attribution, live campaign budgeting, and data-driven ad scaling.",
+      "media": {
+        "thumbnail": "/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-card-640w.png",
+        "mobile": "/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-mobile-400w.png",
+        "desktop": "/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-desktop-960w.png",
+        "cardImage": "/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-card-640w.png",
+        "desktopImage": "/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "Modern brands struggle with fragmented conversion tracking, unoptimized ROAS across Meta and Google Ads, and rising customer acquisition costs.",
+        "solution": "Designed an integrated omnichannel growth funnel combining server-side GA4 event streaming, Google Ads Search/Shopping campaigns, and high-converting retargeting funnels.",
+        "deliverables": "GA4 Custom Conversion Funnel & Event Mapping • Meta & Google Ads Campaign Strategy Deck • Budget & ROAS Forecasting Matrix • Looker Studio Executive Reporting Dashboard"
+      }
+    },
+    {
+      "projectId": "proj-fs-cloud-saas",
+      "status": "published-as-sample",
+      "title": "Enterprise Multi-Tenant Cloud SaaS",
+      "courseId": "ai-assisted-full-stack-web-development",
+      "courseName": "AI-Assisted Full Stack Web Development",
+      "academyId": "programming",
+      "academyName": "Web Development & Programming Academy",
+      "category": "Full-Stack Cloud & AI",
+      "badge": "⚙️ Production Cloud SaaS Platform",
+      "summary": "Built a scalable React 19, TypeScript, and PostgreSQL cloud SaaS application with automated workflows.",
+      "problem": "Modern enterprise SaaS applications require robust multi-tenancy, secure role-based access control, real-time database transactions, and automated background jobs.",
+      "solution": "Architected a full-stack multi-tenant platform using React 19, Node.js REST APIs, PostgreSQL schema migrations, and Docker containerization.",
+      "deliverables": [
+        "Multi-Tenant Database Architecture & Schema Migrations",
+        "RESTful API Endpoints with JWT Authentication & RBAC",
+        "React 19 Responsive Dashboard with Data Grid",
+        "Docker Containerization & Deployment Pipeline"
+      ],
+      "tools": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Docker",
+        "Tailwind CSS"
+      ],
+      "outcome": "Production-ready portfolio capstone with clean architecture, typed API contracts, and scalable schema design.",
+      "media": {
+        "thumbnail": "/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-card-640w.png",
+        "mobile": "/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-mobile-400w.png",
+        "desktop": "/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-desktop-960w.png",
+        "cardImage": "/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-card-640w.png",
+        "desktopImage": "/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "Modern enterprise SaaS applications require robust multi-tenancy, secure role-based access control, real-time database transactions, and automated background jobs.",
+        "solution": "Architected a full-stack multi-tenant platform using React 19, Node.js REST APIs, PostgreSQL schema migrations, and Docker containerization.",
+        "deliverables": "Multi-Tenant Database Architecture & Schema Migrations • RESTful API Endpoints with JWT Authentication & RBAC • React 19 Responsive Dashboard with Data Grid • Docker Containerization & Deployment Pipeline"
+      }
+    },
+    {
+      "projectId": "proj-gd-brand-system",
+      "status": "published-as-sample",
+      "title": "Complete Commercial Brand System",
+      "courseId": "graphic-design-pro",
+      "courseName": "Graphic Design Professional",
+      "academyId": "design",
+      "academyName": "Design & UI/UX Academy",
+      "category": "Brand Identity",
+      "badge": "🎨 Production-Ready Brand Identity",
+      "summary": "Designed vector logo system, typography hierarchy, commercial packaging, and official brand guidelines.",
+      "problem": "Emerging consumer brands need a distinctive visual identity that scales consistently across physical packaging, digital platforms, and corporate collateral.",
+      "solution": "Engineered a comprehensive 360-degree brand manual including vector primary/secondary logos, custom packaging dielines, accessibility-tested color palettes, and social media design templates.",
+      "deliverables": [
+        "Vector Logo Identity Suite (Primary, Wordmark, Monogram)",
+        "32-Page Brand Style Guide & Usage Standards",
+        "Commercial Retail Packaging Dielines & 3D Mockups",
+        "Stationery & Corporate Collateral Kit"
+      ],
+      "tools": [
+        "Adobe Illustrator",
+        "Adobe Photoshop",
+        "Figma",
+        "Adobe InDesign"
+      ],
+      "outcome": "Complete agency-grade brand identity system ready for commercial manufacturing and digital marketing rollout.",
+      "media": {
+        "thumbnail": "/images/projects/graphic-design-pro/ns-proj-gd-brand-identity-card-640w.png",
+        "mobile": "/images/projects/graphic-design-pro/ns-proj-gd-brand-identity-mobile-400w.png",
+        "desktop": "/images/projects/graphic-design-pro/ns-proj-gd-brand-identity-desktop-960w.png",
+        "cardImage": "/images/projects/graphic-design-pro/ns-proj-gd-brand-identity-card-640w.png",
+        "desktopImage": "/images/projects/graphic-design-pro/ns-proj-gd-brand-identity-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "Emerging consumer brands need a distinctive visual identity that scales consistently across physical packaging, digital platforms, and corporate collateral.",
+        "solution": "Engineered a comprehensive 360-degree brand manual including vector primary/secondary logos, custom packaging dielines, accessibility-tested color palettes, and social media design templates.",
+        "deliverables": "Vector Logo Identity Suite (Primary, Wordmark, Monogram) • 32-Page Brand Style Guide & Usage Standards • Commercial Retail Packaging Dielines & 3D Mockups • Stationery & Corporate Collateral Kit"
+      }
+    },
+    {
+      "projectId": "proj-nc-webflow-directory",
+      "status": "published-as-sample",
+      "title": "Client-First Directory Architecture",
+      "courseId": "nocode-web-pro",
+      "courseName": "No-Code Website Professional",
+      "academyId": "no-code-web",
+      "academyName": "No-Code Web & E-Commerce Academy",
+      "category": "No-Code Web & CMS",
+      "badge": "💻 Production-Grade Web Application",
+      "summary": "Engineered a dynamic relational directory, custom search filtering, and responsive landing pages.",
+      "problem": "Businesses require content-heavy, high-converting directory portals that non-technical teams can manage without writing custom backend code.",
+      "solution": "Implemented a Client-First Webflow CMS architecture featuring multi-reference relational data, real-time client-side search filtering, and automated form processing.",
+      "deliverables": [
+        "Relational CMS Collection Schema & Data Models",
+        "Client-First Class Naming Architecture",
+        "Real-Time Filter & Search Interface",
+        "Automated Form & CRM Webhook Pipeline"
+      ],
+      "tools": [
+        "Webflow",
+        "Relume Library",
+        "Make / Zapier",
+        "Figma",
+        "HTML/CSS Embeds"
+      ],
+      "outcome": "High-performance, SEO-optimized web directory with 95+ PageSpeed scores and scalable CMS collections.",
+      "media": {
+        "thumbnail": "/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-card-640w.png",
+        "mobile": "/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-mobile-400w.png",
+        "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-desktop-960w.png",
+        "cardImage": "/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-card-640w.png",
+        "desktopImage": "/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "Businesses require content-heavy, high-converting directory portals that non-technical teams can manage without writing custom backend code.",
+        "solution": "Implemented a Client-First Webflow CMS architecture featuring multi-reference relational data, real-time client-side search filtering, and automated form processing.",
+        "deliverables": "Relational CMS Collection Schema & Data Models • Client-First Class Naming Architecture • Real-Time Filter & Search Interface • Automated Form & CRM Webhook Pipeline"
+      }
+    },
+    {
+      "projectId": "proj-dm-paid-ads-funnel",
+      "status": "published-as-sample",
+      "title": "Omnichannel Paid Acquisition Funnel",
+      "courseId": "performance-marketing-specialist",
+      "courseName": "Performance Marketing Specialist",
+      "academyId": "digital-marketing",
+      "academyName": "Digital Marketing Academy",
+      "category": "Paid Advertising",
+      "badge": "📈 Performance Campaign Engineering",
+      "summary": "High-intent Google Search, Meta Dynamic Product Ads, and automated bid strategy matrix.",
+      "problem": "E-commerce stores suffer from high cost-per-click and low conversion rates across broad unsegmented audience targeting.",
+      "solution": "Constructed a 3-tier audience acquisition architecture spanning Top-of-Funnel video prospecting, Middle-of-Funnel category engagement, and Bottom-of-Funnel dynamic catalog remarketing.",
+      "deliverables": [
+        "Complete 3-Tier Campaign Account Architecture",
+        "High-Conversion Ad Copywriting & Creative Matrix",
+        "Custom UTM Parameter Tracking Framework",
+        "Automated Rule Set for Budget Scaling"
+      ],
+      "tools": [
+        "Meta Ads Manager",
+        "Google Ads",
+        "Klaviyo",
+        "Looker Studio"
+      ],
+      "outcome": "Live-tested paid acquisition framework designed for profitable commercial ad scaling.",
+      "media": {
+        "thumbnail": "/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-card-640w.png",
+        "mobile": "/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-mobile-400w.png",
+        "desktop": "/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-desktop-960w.png",
+        "cardImage": "/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-card-640w.png",
+        "desktopImage": "/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "E-commerce stores suffer from high cost-per-click and low conversion rates across broad unsegmented audience targeting.",
+        "solution": "Constructed a 3-tier audience acquisition architecture spanning Top-of-Funnel video prospecting, Middle-of-Funnel category engagement, and Bottom-of-Funnel dynamic catalog remarketing.",
+        "deliverables": "Complete 3-Tier Campaign Account Architecture • High-Conversion Ad Copywriting & Creative Matrix • Custom UTM Parameter Tracking Framework • Automated Rule Set for Budget Scaling"
+      }
+    },
+    {
+      "projectId": "proj-dm-technical-seo",
+      "status": "published-as-sample",
+      "title": "Technical SEO & Generative Engine Optimization",
+      "courseId": "seo-geo",
+      "courseName": "SEO & Generative Engine Optimization (GEO)",
+      "academyId": "digital-marketing",
+      "academyName": "Digital Marketing Academy",
+      "category": "Organic Search & AI Visibility",
+      "badge": "🔍 Technical Search Architecture",
+      "summary": "Core Web Vitals audit, JSON-LD structured data schema, and AI citation readiness architecture.",
+      "problem": "Websites struggle to gain visibility in modern AI search platforms (ChatGPT, Perplexity, Gemini) while suffering from poor Core Web Vitals.",
+      "solution": "Audited technical site architecture, implemented complete Schema.org structured data, improved LCP/CLS metrics, and structured content for LLM citation retrieval.",
+      "deliverables": [
+        "Core Web Vitals Remediation Blueprint",
+        "Comprehensive JSON-LD Entity Hierarchy",
+        "Topic Clustering & Internal Link Architecture Map",
+        "Perplexity & ChatGPT Citation Strategy Guide"
+      ],
+      "tools": [
+        "Google Search Console",
+        "Screaming Frog",
+        "PageSpeed Insights",
+        "Schema.org Validator"
+      ],
+      "outcome": "Technical blueprint enabling rapid search indexing and prominent AI overview citations.",
+      "media": {
+        "thumbnail": "/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-card-640w.png",
+        "mobile": "/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-mobile-400w.png",
+        "desktop": "/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-desktop-960w.png",
+        "cardImage": "/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-card-640w.png",
+        "desktopImage": "/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "Websites struggle to gain visibility in modern AI search platforms (ChatGPT, Perplexity, Gemini) while suffering from poor Core Web Vitals.",
+        "solution": "Audited technical site architecture, implemented complete Schema.org structured data, improved LCP/CLS metrics, and structured content for LLM citation retrieval.",
+        "deliverables": "Core Web Vitals Remediation Blueprint • Comprehensive JSON-LD Entity Hierarchy • Topic Clustering & Internal Link Architecture Map • Perplexity & ChatGPT Citation Strategy Guide"
+      }
+    },
+    {
+      "projectId": "proj-fs-api-multitier",
+      "status": "published-as-sample",
+      "title": "Multi-Tier RESTful API Architecture",
+      "courseId": "rest-apis",
+      "courseName": "REST APIs & Backend Integration",
+      "academyId": "programming",
+      "academyName": "Web Development & Programming Academy",
+      "category": "Backend Engineering",
+      "badge": "⚡ Scalable API Infrastructure",
+      "summary": "Enterprise REST API with rate-limiting, Redis caching, structured logging, and Swagger docs.",
+      "problem": "Monolithic backend services face bottleneck issues during traffic spikes without distributed caching and secure API throttling.",
+      "solution": "Engineered a modular Express.js / TypeScript micro-service layer with Redis caching, JWT authentication middleware, and automated OpenAPI contract testing.",
+      "deliverables": [
+        "OpenAPI / Swagger 3.0 Interactive Documentation",
+        "Redis Distributed Caching Layer",
+        "JWT / Refresh Token Authentication Subsystem",
+        "Jest Automated Unit & Integration Test Suite"
+      ],
+      "tools": [
+        "Node.js",
+        "Express.js",
+        "TypeScript",
+        "Redis",
+        "Swagger",
+        "Postman",
+        "Jest"
+      ],
+      "outcome": "Resilient, high-throughput backend API capable of handling 5,000+ requests per second.",
+      "media": {
+        "thumbnail": "/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-card-640w.png",
+        "mobile": "/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-mobile-400w.png",
+        "desktop": "/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-desktop-960w.png",
+        "cardImage": "/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-card-640w.png",
+        "desktopImage": "/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "Monolithic backend services face bottleneck issues during traffic spikes without distributed caching and secure API throttling.",
+        "solution": "Engineered a modular Express.js / TypeScript micro-service layer with Redis caching, JWT authentication middleware, and automated OpenAPI contract testing.",
+        "deliverables": "OpenAPI / Swagger 3.0 Interactive Documentation • Redis Distributed Caching Layer • JWT / Refresh Token Authentication Subsystem • Jest Automated Unit & Integration Test Suite"
+      }
+    },
+    {
+      "projectId": "proj-fs-responsive-standards",
+      "status": "published-as-sample",
+      "title": "Design System & Component Library",
+      "courseId": "frontend-dev",
+      "courseName": "Modern Frontend Development",
+      "academyId": "programming",
+      "academyName": "Web Development & Programming Academy",
+      "category": "Frontend Engineering",
+      "badge": "🧩 Reusable UI Architecture",
+      "summary": "Accessible, zero-dependency component library adhering to WAI-ARIA and CSS modern standards.",
+      "problem": "Frontend teams frequently rebuild UI components from scratch, leading to styling drift and accessibility violations.",
+      "solution": "Crafted an accessible, themeable UI component system using modern CSS Grid, Flexbox, custom properties, and WCAG AA compliant contrast ratios.",
+      "deliverables": [
+        "18+ Reusable Accessible UI Components",
+        "Design Token Architecture (CSS Custom Properties)",
+        "Cross-Browser Responsive Layout Harness",
+        "Automated Lighthouse Accessibility Audit (Score: 100)"
+      ],
+      "tools": [
+        "HTML5",
+        "CSS3",
+        "JavaScript ES6+",
+        "Storybook",
+        "Lighthouse"
+      ],
+      "outcome": "Lightweight, battle-tested component framework for lightning-fast responsive web applications.",
+      "media": {
+        "thumbnail": "/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-card-640w.png",
+        "mobile": "/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-mobile-400w.png",
+        "desktop": "/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-desktop-960w.png",
+        "cardImage": "/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-card-640w.png",
+        "desktopImage": "/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "Frontend teams frequently rebuild UI components from scratch, leading to styling drift and accessibility violations.",
+        "solution": "Crafted an accessible, themeable UI component system using modern CSS Grid, Flexbox, custom properties, and WCAG AA compliant contrast ratios.",
+        "deliverables": "18+ Reusable Accessible UI Components • Design Token Architecture (CSS Custom Properties) • Cross-Browser Responsive Layout Harness • Automated Lighthouse Accessibility Audit (Score: 100)"
+      }
+    },
+    {
+      "projectId": "proj-gd-packaging-capstone",
+      "status": "published-as-sample",
+      "title": "Luxury FMCG Packaging & Print Dielines",
+      "courseId": "creative-design",
+      "courseName": "Creative Design Mastery",
+      "academyId": "design",
+      "academyName": "Design & UI/UX Academy",
+      "category": "Packaging & Print Production",
+      "badge": "📦 Production Print Packaging",
+      "summary": "Commercial FMCG product packaging with custom dielines, foil-stamp specs, and CMYK color profiles.",
+      "problem": "Designers often create digital mockups that fail during commercial industrial printing due to dieline inaccuracies and improper color separations.",
+      "solution": "Built production-ready print packaging files with precise bleed margins, Pantone spot color channels, foil-stamping vector layers, and realistic 3D shelf mockups.",
+      "deliverables": [
+        "Vector Print Dielines with Bleed and Crease Marks",
+        "Pantone & CMYK Color Separation Sheets",
+        "Spot UV & Foil Stamping Technical Callout Masks",
+        "Photorealistic 3D Retail Shelf Mockups"
+      ],
+      "tools": [
+        "Adobe Illustrator",
+        "Adobe Photoshop",
+        "Dimension / Blender"
+      ],
+      "outcome": "Industrial-standard packaging files approved for direct commercial offset and digital printing.",
+      "media": {
+        "thumbnail": "/images/projects/graphic-design-pro/ns-proj-gd-packaging-capstone-card-640w.png",
+        "mobile": "/images/projects/graphic-design-pro/ns-proj-gd-packaging-capstone-mobile-400w.png",
+        "desktop": "/images/projects/graphic-design-pro/ns-proj-gd-packaging-capstone-desktop-960w.png",
+        "cardImage": "/images/projects/graphic-design-pro/ns-proj-gd-packaging-capstone-card-640w.png",
+        "desktopImage": "/images/projects/graphic-design-pro/ns-proj-gd-packaging-capstone-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "Designers often create digital mockups that fail during commercial industrial printing due to dieline inaccuracies and improper color separations.",
+        "solution": "Built production-ready print packaging files with precise bleed margins, Pantone spot color channels, foil-stamping vector layers, and realistic 3D shelf mockups.",
+        "deliverables": "Vector Print Dielines with Bleed and Crease Marks • Pantone & CMYK Color Separation Sheets • Spot UV & Foil Stamping Technical Callout Masks • Photorealistic 3D Retail Shelf Mockups"
+      }
+    },
+    {
+      "projectId": "proj-gd-advertising-kv",
+      "status": "published-as-sample",
+      "title": "Commercial Advertising Key Visual Campaign",
+      "courseId": "creative-design",
+      "courseName": "Creative Design Mastery",
+      "academyId": "design",
+      "academyName": "Design & UI/UX Academy",
+      "category": "Advertising & Creative Direction",
+      "badge": "🎯 Commercial Creative Direction",
+      "summary": "Omnichannel key visual system resized across digital banners, outdoor billboards, and social media formats.",
+      "problem": "Campaign creative directors struggle to maintain visual impact and typography clarity when adapting key visuals across radically different aspect ratios.",
+      "solution": "Engineered an adaptable modular key visual system with dynamic text anchoring, high-resolution photo composites, and strict brand guideline consistency.",
+      "deliverables": [
+        "Master High-Resolution Key Visual (Horizontal & Vertical)",
+        "12x Social Media & Display Ad Aspect Ratio Variations",
+        "Outdoor Billboard (OOH) Large-Format Artwork Specifications",
+        "Campaign Creative Direction Manual"
+      ],
+      "tools": [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Figma"
+      ],
+      "outcome": "Comprehensive commercial ad campaign visual suite deployed across online and offline media.",
+      "media": {
+        "thumbnail": "/images/projects/graphic-design-pro/ns-proj-gd-advertising-kv-card-640w.png",
+        "mobile": "/images/projects/graphic-design-pro/ns-proj-gd-advertising-kv-mobile-400w.png",
+        "desktop": "/images/projects/graphic-design-pro/ns-proj-gd-advertising-kv-desktop-960w.png",
+        "cardImage": "/images/projects/graphic-design-pro/ns-proj-gd-advertising-kv-card-640w.png",
+        "desktopImage": "/images/projects/graphic-design-pro/ns-proj-gd-advertising-kv-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "Campaign creative directors struggle to maintain visual impact and typography clarity when adapting key visuals across radically different aspect ratios.",
+        "solution": "Engineered an adaptable modular key visual system with dynamic text anchoring, high-resolution photo composites, and strict brand guideline consistency.",
+        "deliverables": "Master High-Resolution Key Visual (Horizontal & Vertical) • 12x Social Media & Display Ad Aspect Ratio Variations • Outdoor Billboard (OOH) Large-Format Artwork Specifications • Campaign Creative Direction Manual"
+      }
+    },
+    {
+      "projectId": "proj-nc-framer-saas",
+      "status": "published-as-sample",
+      "title": "High-Converting Framer SaaS Landing Page",
+      "courseId": "nocode-web-pro",
+      "courseName": "No-Code Website Professional",
+      "academyId": "no-code-web",
+      "academyName": "No-Code Web & E-Commerce Academy",
+      "category": "Interactive Landing Pages",
+      "badge": "✨ Interactive Micro-Animations",
+      "summary": "Motion-rich Framer landing page featuring interactive components, CMS blog, and Stripe checkout.",
+      "problem": "Early-stage SaaS founders need fast, high-converting product landing pages with interactive micro-interactions without weeks of custom coding.",
+      "solution": "Built a responsive Framer marketing site with scroll-triggered animations, interactive feature tabs, dynamic pricing toggle, and integrated waitlist forms.",
+      "deliverables": [
+        "Framer Responsive Desktop, Tablet, and Mobile Breakpoints",
+        "Interactive Feature Demo Tabs & Micro-Interactions",
+        "Monthly / Annual Pricing Toggle with Stripe Links",
+        "CMS-Powered Product Release Changelog"
+      ],
+      "tools": [
+        "Framer",
+        "Figma",
+        "Stripe",
+        "HTML/CSS Embeds"
+      ],
+      "outcome": "Award-ready SaaS marketing website designed for optimal visitor retention and conversion.",
+      "media": {
+        "thumbnail": "/images/projects/nocode-web-pro/ns-proj-nc-framer-saas-card-640w.png",
+        "mobile": "/images/projects/nocode-web-pro/ns-proj-nc-framer-saas-mobile-400w.png",
+        "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-framer-saas-desktop-960w.png",
+        "cardImage": "/images/projects/nocode-web-pro/ns-proj-nc-framer-saas-card-640w.png",
+        "desktopImage": "/images/projects/nocode-web-pro/ns-proj-nc-framer-saas-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "Early-stage SaaS founders need fast, high-converting product landing pages with interactive micro-interactions without weeks of custom coding.",
+        "solution": "Built a responsive Framer marketing site with scroll-triggered animations, interactive feature tabs, dynamic pricing toggle, and integrated waitlist forms.",
+        "deliverables": "Framer Responsive Desktop, Tablet, and Mobile Breakpoints • Interactive Feature Demo Tabs & Micro-Interactions • Monthly / Annual Pricing Toggle with Stripe Links • CMS-Powered Product Release Changelog"
+      }
+    },
+    {
+      "projectId": "proj-nc-wordpress-elementor",
+      "status": "published-as-sample",
+      "title": "Corporate WordPress & Elementor Portal",
+      "courseId": "nocode-web-pro",
+      "courseName": "No-Code Website Professional",
+      "academyId": "no-code-web",
+      "academyName": "No-Code Web & E-Commerce Academy",
+      "category": "Corporate Web Development",
+      "badge": "🏢 Corporate Portal Architecture",
+      "summary": "Enterprise corporate portal with custom post types, dynamic ACF fields, and SEO optimization.",
+      "problem": "Corporate clients require self-managed web portals with granular publishing permissions, custom content types, and airtight security.",
+      "solution": "Architected a custom WordPress deployment with Elementor Pro theme builder, Advanced Custom Fields (ACF), WP Rocket caching, and Cloudflare hardening.",
+      "deliverables": [
+        "Custom Post Types for Case Studies and Team Members",
+        "ACF Dynamic Template Bindings in Elementor Pro",
+        "Speed Optimization Matrix (Under 1.2s Load Time)",
+        "Client Administration & Content Editor Training Guide"
+      ],
+      "tools": [
+        "WordPress",
+        "Elementor Pro",
+        "ACF Pro",
+        "WP Rocket",
+        "Cloudflare"
+      ],
+      "outcome": "Enterprise corporate site ready for commercial deployment and easy staff maintenance.",
+      "media": {
+        "thumbnail": "/images/projects/nocode-web-pro/ns-proj-nc-wordpress-elementor-card-640w.png",
+        "mobile": "/images/projects/nocode-web-pro/ns-proj-nc-wordpress-elementor-mobile-400w.png",
+        "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-wordpress-elementor-desktop-960w.png",
+        "cardImage": "/images/projects/nocode-web-pro/ns-proj-nc-wordpress-elementor-card-640w.png",
+        "desktopImage": "/images/projects/nocode-web-pro/ns-proj-nc-wordpress-elementor-desktop-960w.png"
+      },
+      "verification": {
+        "isRealStudentSubmission": false,
+        "displayLabel": "Example Portfolio Project",
+        "verificationStatus": "curriculum-capstone-spec",
+        "workAuthenticityVerified": true
+      },
+      "permission": {
+        "publicationApproved": true,
+        "displayAsSampleBrief": true
+      },
+      "displayLabel": "Example Portfolio Project",
+      "caseStudy": {
+        "problem": "Corporate clients require self-managed web portals with granular publishing permissions, custom content types, and airtight security.",
+        "solution": "Architected a custom WordPress deployment with Elementor Pro theme builder, Advanced Custom Fields (ACF), WP Rocket caching, and Cloudflare hardening.",
+        "deliverables": "Custom Post Types for Case Studies and Team Members • ACF Dynamic Template Bindings in Elementor Pro • Speed Optimization Matrix (Under 1.2s Load Time) • Client Administration & Content Editor Training Guide"
+      }
+    }
+  ]
+}

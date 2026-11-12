@@ -1346,7 +1346,7 @@ function buildAnnouncementBarHTML() {
   return `<!-- Smart Rotating Announcement Bar -->
   <div class="announcement-bar" id="announcement-bar">
     <div class="container announcement-container">
-      
+
       <!-- Previous Control Button -->
       <button class="announcement-nav-btn prev-btn" id="announcement-prev" aria-label="Previous announcement">‹</button>
 
@@ -2257,7 +2257,7 @@ function initGA4ClickTracking() {
 
       // 1. WhatsApp Links (click_whatsapp)
       if (href.includes('wa.me') || href.includes('api.whatsapp.com') || href.includes('whatsapp.com') || href.startsWith('whatsapp:')) {
-        const buttonId = link.id || link.getAttribute('data-tracking-id') || 
+        const buttonId = link.id || link.getAttribute('data-tracking-id') ||
           (link.classList.contains('whatsapp-float') ? 'whatsapp-btn' :
            link.closest('footer, #ns-footer, #footer') ? 'footer-whatsapp-link' :
            link.closest('header, .navbar, #main-header') ? 'header-whatsapp-link' :
@@ -2369,7 +2369,7 @@ function openConsultationPopup(courseName) {
   const overlay = document.getElementById('popup-overlay');
   if (!overlay) return;
   initConsultationPopup();
-  
+
   if (courseName) {
     const interestEl = document.getElementById('popup-interest');
     if (interestEl) {
@@ -2393,7 +2393,7 @@ function openConsultationPopup(courseName) {
 
   // Hide floating widgets while consultation popup is open
   document.body.classList.add('modal-open-hide-widgets');
-  
+
   overlay.removeAttribute('hidden');
   document.body.style.overflow = 'hidden';
   // Trigger CSS animation
@@ -2404,10 +2404,10 @@ function openConsultationPopup(courseName) {
 function closeConsultationPopup() {
   const overlay = document.getElementById('popup-overlay');
   if (!overlay) return;
-  
+
   // Restore floating widgets
   document.body.classList.remove('modal-open-hide-widgets');
-  
+
   overlay.classList.remove('visible');
   setTimeout(() => {
     overlay.setAttribute('hidden', '');
@@ -2499,10 +2499,10 @@ function initConsultationPopup() {
     setTimeout(() => {
       // Mark as shown for the current session so it pops up only once per session
       sessionStorage.setItem('ns_popup_shown_session', 'true');
-      
+
       const enrollModal = document.getElementById('course-enrollment-modal');
       const isEnrollOpen = enrollModal && !enrollModal.hidden && enrollModal.classList.contains('open');
-      
+
       const aiPanel = document.querySelector('.nova-ai-panel');
       const isAiOpen = aiPanel && aiPanel.classList.contains('open');
 
@@ -2676,9 +2676,9 @@ function injectEnrollmentModalHTML() {
   modal.innerHTML = `
     <div class="enroll-modal-dialog" role="document">
       <button type="button" class="enroll-modal-close" id="enroll-modal-close" aria-label="Close modal">✕</button>
-      
+
       <div class="enroll-modal-container">
-        
+
         <!-- SUMMARY COLUMN (Left on Desktop / Top on Mobile) -->
         <div class="enroll-modal-summary-col">
           <div class="enroll-modal-header">
@@ -2709,10 +2709,10 @@ function injectEnrollmentModalHTML() {
 
         <!-- FORM COLUMN (Right on Desktop / Form on Mobile) -->
         <div class="enroll-modal-form-col">
-          
+
           <div id="enroll-form-container" class="enroll-form-container">
             <form id="course-enrollment-form" class="enroll-form" novalidate>
-              
+
               <input type="hidden" id="enroll-course-display" name="courseName" />
               <input type="hidden" id="enroll-academy-display" name="academyName" />
               <input type="hidden" id="enroll-category-display" name="category" />
@@ -2727,7 +2727,7 @@ function injectEnrollmentModalHTML() {
                   <input type="text" id="enroll-name" class="form-input" placeholder="Enter your full name" autocomplete="name" required />
                   <span class="field-error" id="enroll-name-error" role="alert"></span>
                 </div>
-                
+
                 <!-- 2. Mobile Number -->
                 <div class="form-group" id="group-enroll-phone">
                   <label class="form-label" for="enroll-phone">Mobile Number <span class="req">*</span></label>
@@ -3075,13 +3075,13 @@ function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
   const cardAcademyName = document.getElementById('card-academy-name');
   const cardDuration = document.getElementById('card-duration');
   const cardFee = document.getElementById('card-fee');
-  
+
   const courseInput = document.getElementById('enroll-course-display');
   const academyInput = document.getElementById('enroll-academy-display');
   const categoryInput = document.getElementById('enroll-category-display');
   const durationInput = document.getElementById('enroll-duration-display');
   const feeInput = document.getElementById('enroll-fee-display');
-  
+
   const errDiv = document.getElementById('enroll-form-error');
   const formContainer = document.getElementById('enroll-form-container');
   const successContainer = document.getElementById('enroll-success-container');
@@ -3318,8 +3318,8 @@ async function handleEnrollmentSubmit(e) {
     userMessage ? `User Note: ${userMessage}` : ''
   ].filter(Boolean).join(' | ');
 
-  const courseTitleFull = courseName 
-    ? `${courseName}${academyName ? ' (' + academyName + ')' : ''}` 
+  const courseTitleFull = courseName
+    ? `${courseName}${academyName ? ' (' + academyName + ')' : ''}`
     : 'Course Enrollment';
 
   const submitBtn = document.getElementById('enroll-submit-btn');
@@ -4917,7 +4917,7 @@ function createMobileSlider(trackEl) {
   // Create Dots Container
   const dotsNav = document.createElement('div');
   dotsNav.className = 'mobile-slider-dots';
-  
+
   cards.forEach((_, idx) => {
     const dot = document.createElement('button');
     dot.className = `mobile-slider-dot ${idx === 0 ? 'active' : ''}`;
@@ -5019,6 +5019,205 @@ if (typeof window !== 'undefined') {
   };
 }
 
+/* ─────────────────────────────────────────────
+   GLOBAL STUDENT PROJECT CASE STUDY MODAL SYSTEM (P1-5)
+───────────────────────────────────────────── */
+
+function injectProjectModalHTML() {
+  if (typeof document === 'undefined') return;
+  if (document.getElementById('project-case-study-modal')) return;
+
+  const modalHtml = `
+  <div class="project-modal-backdrop" id="project-case-study-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" hidden>
+    <div class="project-modal-dialog">
+      <button type="button" class="project-modal-close" id="project-modal-close-btn" aria-label="Close Case Study" onclick="closeProjectModal()">✕</button>
+      <div class="project-modal-body" id="project-modal-body">
+        <!-- Content dynamically injected -->
+      </div>
+    </div>
+  </div>
+  `;
+
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+  const modal = document.getElementById('project-case-study-modal');
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeProjectModal();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const m = document.getElementById('project-case-study-modal');
+      if (m && !m.hidden) closeProjectModal();
+    }
+  });
+}
+if (typeof window !== 'undefined') window.injectProjectModalHTML = injectProjectModalHTML;
+
+function openProjectModal(projectId) {
+  if (typeof document === 'undefined') return;
+  injectProjectModalHTML();
+
+  let project = null;
+  if (typeof NovaCredibility !== 'undefined' && typeof NovaCredibility.getProjectById === 'function') {
+    project = NovaCredibility.getProjectById(projectId);
+  }
+  if (!project && typeof window !== 'undefined' && window.NS_STUDENT_PROJECTS && Array.isArray(window.NS_STUDENT_PROJECTS.projects)) {
+    project = window.NS_STUDENT_PROJECTS.projects.find(p => p.projectId === projectId);
+  }
+
+  // Fallback defaults if data not loaded
+  const fallbackProjects = {
+    'proj-dm-01': {
+      title: 'Multichannel Growth & GA4 Analytics Dashboard',
+      academyName: 'Digital Marketing & Growth Academy',
+      courseName: 'AI Digital Marketing Specialist',
+      courseId: 'dm-professional',
+      displayLabel: 'Example Portfolio Project',
+      media: {
+        cardImage: '/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-card-640w.png',
+        desktopImage: '/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-desktop-1024w.png',
+        alt: 'Multichannel Performance Marketing & GA4 Analytics Dashboard'
+      },
+      caseStudy: {
+        problem: 'Direct-to-consumer and business-to-business brands often struggle to connect multi-channel ad spend across Meta and Google with verified bottom-funnel conversions and revenue in Google Analytics 4.',
+        solution: 'Developed an end-to-end performance marketing framework combining structured campaign UTM naming conventions, customized Meta and Google Search campaigns, server-side GA4 custom event tracking, and an automated client reporting dashboard.',
+        deliverables: 'Complete multi-channel media plan with target audience personas, ad copy variants, live GA4 conversion tracking container, and Looker Studio performance dashboard.'
+      },
+      tools: ['Google Ads', 'Meta Ads Manager', 'GA4 Analytics', 'Google Tag Manager', 'Looker Studio', 'SEMrush']
+    },
+    'proj-fs-01': {
+      title: 'Enterprise Multi-Tenant Cloud SaaS Web Architecture',
+      academyName: 'Programming & Web Development Academy',
+      courseName: 'AI-Assisted Full Stack Web Development',
+      courseId: 'fullstack-foundation',
+      displayLabel: 'Example Portfolio Project',
+      media: {
+        cardImage: '/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-card-640w.png',
+        desktopImage: '/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-desktop-1024w.png',
+        alt: 'Enterprise Multi-Tenant Cloud SaaS Web Architecture'
+      },
+      caseStudy: {
+        problem: 'Modern SaaS applications require high uptime, isolated multi-tenant organization workspaces, granular role-based permissions (RBAC), and low-latency API responses under concurrent user loads.',
+        solution: 'Architected and deployed a production-grade full-stack web application featuring React 19, TypeScript, Node.js REST API endpoints, PostgreSQL database schema with indexing, and secure JWT authentication.',
+        deliverables: 'Live cloud-deployed SaaS web application, modular GitHub repository with unit/integration test coverage, database migration scripts, and interactive API documentation.'
+      },
+      tools: ['React 19', 'Node.js', 'TypeScript', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'Vite']
+    },
+    'proj-gd-01': {
+      title: 'Commercial Vector Brand Identity System and Stationery Kit',
+      academyName: 'Visual Design & UI/UX Academy',
+      courseName: 'Graphic Design Professional',
+      courseId: 'graphic-design-pro',
+      displayLabel: 'Example Portfolio Project',
+      media: {
+        cardImage: '/images/projects/graphic-design-pro/ns-proj-gd-brand-identity-card-640w.png',
+        desktopImage: '/images/projects/graphic-design-pro/ns-proj-gd-brand-identity-desktop-1024w.png',
+        alt: 'Commercial Vector Brand Identity System and Stationery Kit'
+      },
+      caseStudy: {
+        problem: 'Emerging lifestyle and hospitality ventures need a distinct, cohesive brand identity system that scales seamlessly from small digital social avatars to massive physical commercial packaging.',
+        solution: 'Created a comprehensive brand identity including responsive primary and secondary logos, a defined color palette with WCAG accessibility contrast compliance, custom typography pairings, and tactile print dielines.',
+        deliverables: '36-page comprehensive Brand Style Guide PDF, vector stationery suite (business cards, letterhead, envelopes), retail packaging mockups, and digital asset library.'
+      },
+      tools: ['Adobe Photoshop', 'Adobe Illustrator', 'Figma', 'Vector Systems', 'Print Production']
+    },
+    'proj-nc-01': {
+      title: 'Webflow Client-First Directory and Dynamic CMS Architecture',
+      academyName: 'No-Code & Modern Web Academy',
+      courseName: 'No-Code Web & App Development Pro',
+      courseId: 'nocode-web-pro',
+      displayLabel: 'Example Portfolio Project',
+      media: {
+        cardImage: '/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-card-640w.png',
+        desktopImage: '/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-desktop-1024w.png',
+        alt: 'Webflow Client-First Directory and Dynamic CMS Architecture'
+      },
+      caseStudy: {
+        problem: 'Businesses frequently need rapid web application prototypes and search-optimized listing platforms without enduring multi-month custom software engineering lifecycles.',
+        solution: 'Engineered an accessible, high-performance web platform utilizing the Finsweet Client-First CSS system in Webflow, dynamic relational CMS collections, multi-facet search filtering, and Zapier automated lead intake.',
+        deliverables: 'Fully responsive production Webflow website with custom CMS database architecture, dynamic search and filter engine, 95+ Google PageSpeed score, and automated CRM intake.'
+      },
+      tools: ['Webflow', 'Finsweet Client-First', 'Zapier', 'Relume Library', 'Figma']
+    }
+  };
+
+  const p = project || fallbackProjects[projectId] || fallbackProjects['proj-dm-01'];
+  const modal = document.getElementById('project-case-study-modal');
+  const body = document.getElementById('project-modal-body');
+
+  if (!modal || !body) return;
+
+  const toolsHtml = (p.tools || []).map(t => `<span class="project-modal-tool-tag">${t}</span>`).join('');
+  const imgPath = (p.media && (p.media.desktopImage || p.media.cardImage)) || '/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-card-640w.png';
+  const imgAlt = (p.media && p.media.alt) || p.title;
+
+  body.innerHTML = `
+    <div class="project-modal-header">
+      <span class="project-modal-badge">${p.displayLabel || 'Example Portfolio Project'}</span>
+      <h3 id="project-modal-title" class="project-modal-title">${p.title}</h3>
+      <div class="project-modal-meta">
+        <span>🏛️ ${p.academyName || 'Nova Skills Academy'}</span>
+        <span>•</span>
+        <span>🎓 ${p.courseName || 'Professional Course'}</span>
+      </div>
+    </div>
+
+    <div class="project-modal-img-container">
+      <img src="${imgPath}" alt="${imgAlt}" loading="lazy" decoding="async" class="project-modal-hero-img" />
+    </div>
+
+    <div class="project-modal-case-body">
+      <div class="project-modal-section">
+        <h4 class="project-modal-subtitle">🎯 Project Brief &amp; Challenge</h4>
+        <p>${p.caseStudy ? p.caseStudy.problem : ''}</p>
+      </div>
+
+      <div class="project-modal-section">
+        <h4 class="project-modal-subtitle">💡 Practical Execution &amp; Approach</h4>
+        <p>${p.caseStudy ? p.caseStudy.solution : ''}</p>
+      </div>
+
+      <div class="project-modal-section">
+        <h4 class="project-modal-subtitle">📁 Verified Deliverable</h4>
+        <p class="project-modal-deliverable"><strong>Deliverable:</strong> ${p.caseStudy ? p.caseStudy.deliverables : ''}</p>
+      </div>
+
+      <div class="project-modal-section">
+        <h4 class="project-modal-subtitle">🛠️ Tools &amp; Technologies Mastered</h4>
+        <div class="project-modal-tools-list">
+          ${toolsHtml}
+        </div>
+      </div>
+    </div>
+
+    <div class="project-modal-actions">
+      <a href="/course-detail.html?id=${encodeURIComponent(p.courseId || '')}" class="btn btn-primary" onclick="closeProjectModal()">View Related Course Curriculum →</a>
+      <button type="button" class="btn btn-outline" onclick="closeProjectModal()">Close Case Study</button>
+    </div>
+  `;
+
+  modal.hidden = false;
+  requestAnimationFrame(() => {
+    modal.classList.add('open');
+  });
+  document.body.style.overflow = 'hidden';
+}
+if (typeof window !== 'undefined') window.openProjectModal = openProjectModal;
+
+function closeProjectModal() {
+  const modal = document.getElementById('project-case-study-modal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  setTimeout(() => {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }, 250);
+}
+if (typeof window !== 'undefined') window.closeProjectModal = closeProjectModal;
+
 function bootSharedComponents() {
   injectComponents();
 
@@ -5041,12 +5240,14 @@ function bootSharedComponents() {
       if (typeof injectEnrollmentModalHTML === 'function') injectEnrollmentModalHTML();
       if (typeof injectDemoModalHTML === 'function') injectDemoModalHTML();
       if (typeof injectCounsellingModalHTML === 'function') injectCounsellingModalHTML();
+      if (typeof injectProjectModalHTML === 'function') injectProjectModalHTML();
     });
   } else {
     setTimeout(() => {
       if (typeof injectEnrollmentModalHTML === 'function') injectEnrollmentModalHTML();
       if (typeof injectDemoModalHTML === 'function') injectDemoModalHTML();
       if (typeof injectCounsellingModalHTML === 'function') injectCounsellingModalHTML();
+      if (typeof injectProjectModalHTML === 'function') injectProjectModalHTML();
     }, 1500);
   }
 

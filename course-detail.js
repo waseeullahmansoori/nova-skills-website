@@ -175,7 +175,7 @@ function renderCourseNotFound() {
           <div style="font-size:3.5rem; margin-bottom:16px;">🔍</div>
           <h2>Course Not Found</h2>
           <p>
-            The program you are looking for may have been modernized, renamed, or relocated. 
+            The program you are looking for may have been modernized, renamed, or relocated.
             Explore our catalog of 109+ industry-standard career courses across 12 academies.
           </p>
           <div class="course-error-actions">
@@ -198,7 +198,7 @@ function renderCourseNotFound() {
 function getCourseSeoTitle(course) {
   const type = (course.courseType || course.course_type || course.type || '').toUpperCase();
   const name = course.name || course.course_name;
-  
+
   if (type === 'MASTER') {
     return `${name} — Flagship Career Program | Nova Skills`;
   } else if (type === 'PROFESSIONAL') {
@@ -324,15 +324,35 @@ function populateCourseDetail(course) {
     `;
   }
 
-  // Rating Row
+  // Rating Row (Authentic Credibility / Verified Standards)
   const ratingRow = document.getElementById('detail-rating-row');
   if (ratingRow) {
-    ratingRow.innerHTML = `
-      <span class="rating-stars">★★★★★</span>
-      <span class="rating-num">${course.rating || 4.8}</span>
-      <span class="rating-count">(${course.reviews || 120} student reviews)</span>
-      <span class="student-count">• ${(course.students || 500).toLocaleString('en-IN')}+ learners enrolled</span>
-    `;
+    let hasVerified = false;
+    let verifiedRating = '5.0';
+    if (typeof NovaCredibility !== 'undefined' && typeof NovaCredibility.getCourseTestimonials === 'function') {
+      const cTestimonials = NovaCredibility.getCourseTestimonials(course.id);
+      if (cTestimonials && cTestimonials.length > 0) {
+        hasVerified = true;
+        if (cTestimonials[0].testimonial && cTestimonials[0].testimonial.rating) {
+          verifiedRating = cTestimonials[0].testimonial.rating.toFixed(1);
+        }
+      }
+    }
+    if (hasVerified) {
+      ratingRow.innerHTML = `
+        <span class="rating-stars">★★★★★</span>
+        <span class="rating-num">${verifiedRating}</span>
+        <span class="rating-count">(Verified Course Review)</span>
+        <span class="student-count">• Portfolio Capstone Verified</span>
+      `;
+    } else {
+      ratingRow.innerHTML = `
+        <span class="rating-stars" style="color:var(--teal);">🛡️</span>
+        <span class="rating-num" style="color:var(--teal);">Verified Quality</span>
+        <span class="rating-count">• Industry-Standard Curriculum</span>
+        <span class="student-count">• Practical Mentorship Capstone</span>
+      `;
+    }
   }
 
   // Enroll Card
@@ -445,6 +465,7 @@ function populateCourseDetail(course) {
 
   // Tailor Mentors and Testimonials based on Academy
   populateDomainMentors(course);
+  populateTestimonials(course);
 
   // Inject Base Schema.org
   injectCourseSchema(course, courseImg, canonicalUrl);
@@ -585,26 +606,48 @@ function populateDomainMentors(course) {
   const mentorsContainer = document.getElementById('mentors-container');
   if (!mentorsContainer) return;
 
+  if (typeof NovaCredibility !== 'undefined' && typeof NovaCredibility.renderMentorCardsForCourse === 'function') {
+    mentorsContainer.innerHTML = NovaCredibility.renderMentorCardsForCourse(course.academyId);
+    return;
+  }
+
+  // Self-contained fallback covering canonical academy IDs and aliases
   const academyMentors = {
-    'digital-marketing': { lead: 'Growth & Ads Lead Mentor', role: 'Head of Performance & GEO Strategy', bio: 'Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture.' },
-    'ai-academy': { lead: 'Principal AI Architect', role: 'Applied Generative AI & Agents Lead', bio: 'Specialist in multi-agent orchestration, LLM application pipelines, workflow automation, and enterprise deployment.' },
-    'design-academy': { lead: 'Design Director & UI Lead', role: 'Product Design & Brand Architect', bio: 'Specialist in design systems, micro-interactions, commercial packaging, and user experience psychology.' },
-    'programming-academy': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.' },
-    'nocode-academy': { lead: 'Lead No-Code Architect', role: 'Enterprise Webflow & Shopify Lead', bio: 'Specialist in scalable headless web systems, e-commerce conversion pipelines, and workflow automation.' },
-    'video-academy': { lead: 'Post-Production Director', role: 'Senior Video Editor & Motion Lead', bio: 'Specialist in high-retention commercial storytelling, color grading, dynamic motion graphics, and audio mastering.' },
-    '3d-academy': { lead: 'Senior 3D & Technical Artist', role: 'Real-Time Pipeline & ArchViz Lead', bio: 'Specialist in Blender, Unreal Engine 5 Lumen/Nanite workflows, architectural visualization, and photorealistic asset creation.' },
-    'career-academy': { lead: 'Agency Strategist & Founder', role: 'Freelance & Retainer Monetization Mentor', bio: 'Specialist in international client acquisition, proposal engineering, high-ticket packaging, and business operations.' },
-    'comm-academy': { lead: 'Executive Voice Coach', role: 'Leadership Communication & Pitch Specialist', bio: 'Specialist in executive presence, persuasive presentations, high-stakes stakeholder meetings, and corporate dialogue.' },
-    'kids-tech': { lead: 'Certified STEM Educator', role: 'Creative Computing & Logic Mentor', bio: 'Dedicated educator specializing in gamified algorithmic thinking, beginner Python, and interactive digital creation.' },
-    'creator-academy': { lead: 'Creator Economy Strategist', role: 'YouTube Production & Distribution Lead', bio: 'Specialist in audience analytics, algorithmic retention optimization, content monetization, and personal branding.' },
-    'office-academy': { lead: 'Business Intelligence Lead', role: 'Data Analytics & Copilot Specialist', bio: 'Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.' }
+    'digital-marketing': { lead: 'Growth & Ads Lead Mentor', role: 'Head of Performance & GEO Strategy', bio: 'Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture.', initials: 'DM' },
+    'marketing': { lead: 'Growth & Ads Lead Mentor', role: 'Head of Performance & GEO Strategy', bio: 'Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture.', initials: 'DM' },
+    'ai': { lead: 'Principal AI Architect', role: 'Applied Generative AI & Agents Lead', bio: 'Specialist in multi-agent orchestration, LLM application pipelines, workflow automation, and enterprise deployment.', initials: 'AI' },
+    'ai-academy': { lead: 'Principal AI Architect', role: 'Applied Generative AI & Agents Lead', bio: 'Specialist in multi-agent orchestration, LLM application pipelines, workflow automation, and enterprise deployment.', initials: 'AI' },
+    'design': { lead: 'Design Director & UI Lead', role: 'Product Design & Brand Architect', bio: 'Specialist in design systems, micro-interactions, commercial packaging, and user experience psychology.', initials: 'DS' },
+    'design-academy': { lead: 'Design Director & UI Lead', role: 'Product Design & Brand Architect', bio: 'Specialist in design systems, micro-interactions, commercial packaging, and user experience psychology.', initials: 'DS' },
+    'programming': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.', initials: 'FS' },
+    'programming-academy': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.', initials: 'FS' },
+    'nocode': { lead: 'Lead No-Code Architect', role: 'Enterprise Webflow & Shopify Lead', bio: 'Specialist in scalable headless web systems, e-commerce conversion pipelines, and workflow automation.', initials: 'NC' },
+    'no-code-web': { lead: 'Lead No-Code Architect', role: 'Enterprise Webflow & Shopify Lead', bio: 'Specialist in scalable headless web systems, e-commerce conversion pipelines, and workflow automation.', initials: 'NC' },
+    'nocode-academy': { lead: 'Lead No-Code Architect', role: 'Enterprise Webflow & Shopify Lead', bio: 'Specialist in scalable headless web systems, e-commerce conversion pipelines, and workflow automation.', initials: 'NC' },
+    'video': { lead: 'Post-Production Director', role: 'Senior Video Editor & Motion Lead', bio: 'Specialist in high-retention commercial storytelling, color grading, dynamic motion graphics, and audio mastering.', initials: 'VM' },
+    'video-motion': { lead: 'Post-Production Director', role: 'Senior Video Editor & Motion Lead', bio: 'Specialist in high-retention commercial storytelling, color grading, dynamic motion graphics, and audio mastering.', initials: 'VM' },
+    'video-academy': { lead: 'Post-Production Director', role: 'Senior Video Editor & Motion Lead', bio: 'Specialist in high-retention commercial storytelling, color grading, dynamic motion graphics, and audio mastering.', initials: 'VM' },
+    '3d': { lead: 'Senior 3D & Technical Artist', role: 'Real-Time Pipeline & ArchViz Lead', bio: 'Specialist in Blender, Unreal Engine 5 Lumen/Nanite workflows, architectural visualization, and photorealistic asset creation.', initials: '3D' },
+    '3d-academy': { lead: 'Senior 3D & Technical Artist', role: 'Real-Time Pipeline & ArchViz Lead', bio: 'Specialist in Blender, Unreal Engine 5 Lumen/Nanite workflows, architectural visualization, and photorealistic asset creation.', initials: '3D' },
+    'career': { lead: 'Agency Strategist & Founder', role: 'Freelance & Retainer Monetization Mentor', bio: 'Specialist in international client acquisition, proposal engineering, high-ticket packaging, and business operations.', initials: 'CF' },
+    'career-freelancing': { lead: 'Agency Strategist & Founder', role: 'Freelance & Retainer Monetization Mentor', bio: 'Specialist in international client acquisition, proposal engineering, high-ticket packaging, and business operations.', initials: 'CF' },
+    'career-academy': { lead: 'Agency Strategist & Founder', role: 'Freelance & Retainer Monetization Mentor', bio: 'Specialist in international client acquisition, proposal engineering, high-ticket packaging, and business operations.', initials: 'CF' },
+    'communication': { lead: 'Executive Voice Coach', role: 'Leadership Communication & Pitch Specialist', bio: 'Specialist in executive presence, persuasive presentations, high-stakes stakeholder meetings, and corporate dialogue.', initials: 'EC' },
+    'comm-academy': { lead: 'Executive Voice Coach', role: 'Leadership Communication & Pitch Specialist', bio: 'Specialist in executive presence, persuasive presentations, high-stakes stakeholder meetings, and corporate dialogue.', initials: 'EC' },
+    'kids': { lead: 'Certified STEM Educator', role: 'Creative Computing & Logic Mentor', bio: 'Dedicated educator specializing in gamified algorithmic thinking, beginner Python, and interactive digital creation.', initials: 'KT' },
+    'kids-tech': { lead: 'Certified STEM Educator', role: 'Creative Computing & Logic Mentor', bio: 'Dedicated educator specializing in gamified algorithmic thinking, beginner Python, and interactive digital creation.', initials: 'KT' },
+    'creator': { lead: 'Creator Economy Strategist', role: 'YouTube Production & Distribution Lead', bio: 'Specialist in audience analytics, algorithmic retention optimization, content monetization, and personal branding.', initials: 'CR' },
+    'creator-academy': { lead: 'Creator Economy Strategist', role: 'YouTube Production & Distribution Lead', bio: 'Specialist in audience analytics, algorithmic retention optimization, content monetization, and personal branding.', initials: 'CR' },
+    'office': { lead: 'Business Intelligence Lead', role: 'Data Analytics & Copilot Specialist', bio: 'Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.', initials: 'OP' },
+    'office-productivity': { lead: 'Business Intelligence Lead', role: 'Data Analytics & Copilot Specialist', bio: 'Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.', initials: 'OP' },
+    'office-academy': { lead: 'Business Intelligence Lead', role: 'Data Analytics & Copilot Specialist', bio: 'Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.', initials: 'OP' }
   };
 
   const domain = academyMentors[course.academyId] || academyMentors['digital-marketing'];
 
   mentorsContainer.innerHTML = `
     <div class="mentor-card">
-      <div class="mentor-avatar" style="background:var(--grad-hero);"><span class="mentor-initials">${domain.lead.slice(0, 2).toUpperCase()}</span></div>
+      <div class="mentor-avatar" style="background:var(--grad-hero);"><span class="mentor-initials">${domain.initials || domain.lead.slice(0, 2).toUpperCase()}</span></div>
       <h3 class="mentor-name">${escapeHTML(domain.lead)}</h3>
       <div class="mentor-role">${escapeHTML(domain.role)}</div>
       <span class="mentor-exp">Industry Practitioner Mentorship</span>
@@ -612,13 +655,29 @@ function populateDomainMentors(course) {
     </div>
 
     <div class="mentor-card">
-      <div class="mentor-avatar" style="background:var(--grad-teal-green);"><span class="mentor-initials">PT</span></div>
-      <h3 class="mentor-name">Senior Project Trainer</h3>
-      <div class="mentor-role">Hands-On Lab & Critique Mentor</div>
+      <div class="mentor-avatar" style="background:var(--grad-teal-green);"><span class="mentor-initials">PR</span></div>
+      <h3 class="mentor-name">Lab &amp; Portfolio Review Mentor</h3>
+      <div class="mentor-role">Hands-On Lab &amp; Critique Mentor</div>
       <span class="mentor-exp">Live Project Mentorship</span>
       <p class="mentor-bio">Dedicated to portfolio asset building, iterative project critiques, industry toolchains, and commercial quality assurance.</p>
     </div>
   `;
+}
+
+/* Dynamically tailor Student Testimonials / Social Proof based on Course */
+function populateTestimonials(course) {
+  const testimonialsSlot = document.getElementById('testimonials-slot');
+  const existingSection = document.getElementById('testimonials-section');
+  if (!testimonialsSlot && !existingSection) return;
+
+  if (typeof NovaCredibility !== 'undefined' && typeof NovaCredibility.renderTestimonialsSectionForCourse === 'function') {
+    const rendered = NovaCredibility.renderTestimonialsSectionForCourse(course.id, course.name);
+    if (testimonialsSlot) {
+      testimonialsSlot.outerHTML = rendered;
+    } else if (existingSection) {
+      existingSection.outerHTML = rendered;
+    }
+  }
 }
 
 /* ============================================================
@@ -2513,7 +2572,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
           <div class="advisory-content">
             <h4>Curriculum Integration Pathway Notice</h4>
             <p>
-              This program is an integrated specialization module. If you are seeking complete career mastery, 
+              This program is an integrated specialization module. If you are seeking complete career mastery,
               this entire curriculum is also included in our flagship career track:
               <a href="/course-detail.html?id=${parentId}" class="advisory-link">Explore Parent Career Program →</a>
             </p>
@@ -2527,7 +2586,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
           <div class="advisory-content">
             <h4>Modernization & Successor Notice</h4>
             <p>
-              This curriculum is scheduled for modernization to reflect 2026/27 workplace standards. 
+              This curriculum is scheduled for modernization to reflect 2026/27 workplace standards.
               We recommend reviewing our modernized flagship alternatives for maximum job market impact.
             </p>
           </div>
@@ -2550,8 +2609,8 @@ function renderEnrichedCourseDetail(baseCourse, data) {
       </p>
       <p style="margin-bottom:16px;">${escapeHTML(data.overview.short_description || '')}</p>
       <p style="margin-bottom:0;">
-        Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through 
-        <strong>${escapeHTML(overviewProjLabel)}</strong>, live interactive labs, 
+        Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through
+        <strong>${escapeHTML(overviewProjLabel)}</strong>, live interactive labs,
         code/design critiques, and commercial delivery standards.
       </p>
     `;
@@ -3345,7 +3404,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
       const typical = data.course_comparison.typical_course;
       const nova = data.course_comparison.novaskills_mastery;
       const rowCount = Math.max(typical.length, nova.length);
-      
+
       let rowsHtml = '';
       for (let r = 0; r < rowCount; r++) {
         rowsHtml += `
@@ -3475,8 +3534,8 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   const certDesc = document.getElementById('cert-desc');
   if (certDesc && data.certification) {
     certDesc.innerHTML = `
-      Upon completing this program and defending your portfolio projects, you earn the 
-      <strong>${escapeHTML(data.certification.title || baseCourse.name)}</strong> credential from Nova Skills — 
+      Upon completing this program and defending your portfolio projects, you earn the
+      <strong>${escapeHTML(data.certification.title || baseCourse.name)}</strong> credential from Nova Skills —
       ISO 9001:2015 verified with permanent online QR-code validation.
     `;
   }
@@ -3521,7 +3580,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   const nextPathContainer = document.getElementById('next-path-container');
   if (nextPathContainer && data.next_learning_path) {
     const nextText = data.next_learning_path.recommended_next || '';
-    
+
     // Find potential course ID
     const words = nextText.match(/[a-z0-9]+-[a-z0-9-]+/gi) || [];
     let nextCourseId = null;

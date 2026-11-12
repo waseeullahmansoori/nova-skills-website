@@ -437,63 +437,14 @@
       </div>
 
       <div class="mentors-grid" id="mentors-container">
-        <div class="mentor-card">
-          <div class="mentor-avatar" style="background:var(--grad-hero);"><span class="mentor-initials">DM</span></div>
-          <h3 class="mentor-name">Lead Domain Mentor</h3>
-          <div class="mentor-role">Curriculum & Technical Lead</div>
-          <span class="mentor-exp">Industry-Focused Training</span>
-          <p class="mentor-bio">Specialist in practical project execution, workflow automation, and real-world domain toolchains.</p>
-        </div>
-
-        <div class="mentor-card">
-          <div class="mentor-avatar" style="background:var(--grad-teal-green);"><span class="mentor-initials">AK</span></div>
-          <h3 class="mentor-name">Senior Project Trainer</h3>
-          <div class="mentor-role">Hands-On Lab Mentor</div>
-          <span class="mentor-exp">Live Project Mentorship</span>
-          <p class="mentor-bio">Dedicated to portfolio building, code reviews, design critiques, and interview readiness preparation.</p>
-        </div>
+        <!-- Mentors populated dynamically from credibility registry -->
       </div>
     </section>
 
     <!-- REVIEWS / TESTIMONIALS -->
-    <section class="container course-body-section" id="testimonials-section">
-      <div class="section-header" style="text-align:left; margin-bottom:32px;">
-        <span class="section-tag">STUDENT EXPERIENCE</span>
-        <h2 class="section-title">What Our Learners <span class="gradient-text">Say</span></h2>
-      </div>
-
-      <div class="testimonials-grid" style="grid-template-columns: repeat(2,1fr);">
-        <div class="testimonial-card">
-          <div class="testimonial-quote">“</div>
-          <p class="testimonial-text">
-            "The practical hands-on approach and live projects gave me real confidence. Building real-world briefs helped me create a solid portfolio for my job search."
-          </p>
-          <div class="testimonial-footer">
-            <div class="testimonial-avatar" style="background:var(--teal);">RM</div>
-            <div>
-              <div class="testimonial-name">Rohit M.</div>
-              <div class="testimonial-role">Nova Skills Alumnus</div>
-            </div>
-            <div class="testimonial-stars">★★★★★</div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-quote">“</div>
-          <p class="testimonial-text">
-            "The 1-on-1 mentor feedback and resume guidance were exceptional. It really bridged the gap between basic theory and actual industry tools."
-          </p>
-          <div class="testimonial-footer">
-            <div class="testimonial-avatar" style="background:var(--green);">PS</div>
-            <div>
-              <div class="testimonial-name">Pooja S.</div>
-              <div class="testimonial-role">Program Graduate</div>
-            </div>
-            <div class="testimonial-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div id="testimonials-slot">
+      <!-- Testimonials populated dynamically from credibility registry -->
+    </div>
 
     <!-- COURSE BOUNDARIES SECTION -->
     <section class="container course-body-section" id="boundaries-section">
@@ -559,6 +510,7 @@
 
   <!-- JavaScript -->
   <script src="/js/data.min.js?v=3.1.0" defer></script>
+  <script src="/js/credibility-data.min.js?v=3.1.0" defer></script>
   <script src="/js/components.min.js?v=3.1.0" defer></script>
   <script src="/js/icon-system.js?v=2.2.0" defer></script>
   <script src="/js/course-detail.min.js?v=3.1.0" defer></script>
