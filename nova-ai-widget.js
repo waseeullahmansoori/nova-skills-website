@@ -1838,7 +1838,7 @@
     // 2. Append user message & track
     appendMessage(userText, 'user');
     saveHistory();
-    trackEvent('user_ai_query', { query: userText });
+    trackEvent('ai_query_received', { query_length: (userText || '').length, query_intent: intent });
 
     // 3. Show typing animation
     showTypingIndicator();
@@ -1928,6 +1928,13 @@
 
     // Attach verified recommendation card if a specific course was recommended
     if (role === 'assistant' && recommendedCourse) {
+      if (typeof NovaAnalytics !== 'undefined' && typeof NovaAnalytics.trackCareerAdvisorComplete === 'function') {
+        NovaAnalytics.trackCareerAdvisorComplete({
+          recommended_course_id: recommendedCourse.id,
+          recommended_academy_id: recommendedCourse.academyId || recommendedCourse.academy || '',
+          assessment_type: 'ai_interactive_chat'
+        });
+      }
       msgEl.insertAdjacentHTML('beforeend', renderRecommendationCardHTML(recommendedCourse));
     }
 

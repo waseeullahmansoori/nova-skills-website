@@ -1032,7 +1032,7 @@
       // Track Email Clicks (No PII)
       document.querySelectorAll('a[href^="mailto:"]').forEach(el => {
         el.addEventListener('click', () => {
-          trackConversion('email_click', { button_id: el.id || 'click-email-card', link_type: 'email' });
+          if (window.NovaAnalytics) { window.NovaAnalytics.trackEmailClick({ button_id: el.id || 'click-email-card', source_component: 'contact_card' }); } else { trackConversion('click_email', { button_id: el.id || 'click-email-card', contact_type: 'email' }); }
         });
       });
 

@@ -361,27 +361,223 @@ function showToastNotification({ title, message, type = 'success' }) {
   setTimeout(removeToast, isSuccess ? 6500 : 5000);
 }
 
-/**
- * Centralized Safe GA4 Event Dispatcher
- * Dispatches events to window.gtag or safely queues into window.dataLayer.
- * Guarantees zero runtime errors and zero PII leakage.
- */
-function sendGA4Event(eventName, params = {}) {
-  try {
-    if (typeof window === 'undefined') return;
-    window.dataLayer = window.dataLayer || [];
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', eventName, params);
-    } else {
-      window.dataLayer.push({
-        event: eventName,
-        ...params
-      });
+/* ─────────────────────────────────────────────────────────────
+   UNIFIED NOVA GA4 ANALYTICS & CONVERSION TRACKING MODULE (P1-2)
+   Authoritative dispatch, deduplication, PII-scrubbing, and Dev/Prod tagging
+───────────────────────────────────────────────────────────── */
+const NovaAnalytics = (function() {
+  const _trackedFormStarts = new Set();
+  const _trackedCourseViews = new Set();
+  const _trackedAdvisorCompletions = new Set();
+
+  function isDeveloperEnv() {
+    try {
+      if (typeof window === 'undefined' || !window.location) return false;
+      const host = (window.location.hostname || '').toLowerCase();
+      return (
+        host === 'localhost' ||
+        host === '127.0.0.1' ||
+        host === '0.0.0.0' ||
+        host.endsWith('.local') ||
+        host.endsWith('.test') ||
+        host.endsWith('.pages.dev') ||
+        (window.location.port !== '' && window.location.port !== '80' && window.location.port !== '443')
+      );
+    } catch (e) {
+      return false;
     }
-  } catch (err) {
-    console.warn('[Nova GA4 Error]:', err);
   }
+
+  function trackEvent(eventName, rawParams = {}) {
+    try {
+      if (typeof window === 'undefined') return;
+      window.dataLayer = window.dataLayer || [];
+
+      // Sanitize parameters: remove any potential PII fields
+      const sanitized = {};
+      const piiBlacklist = ['name', 'full_name', 'phone', 'mobile', 'tel', 'email', 'message', 'query', 'address', 'password'];
+
+      for (const [key, val] of Object.entries(rawParams)) {
+        if (piiBlacklist.includes(key.toLowerCase())) continue;
+        if (val !== undefined && val !== null) sanitized[key] = val;
+      }
+
+      // Automatically tag developer / testing / preview traffic
+      if (isDeveloperEnv()) {
+        sanitized.traffic_type = 'developer';
+        sanitized.debug_mode = true;
+      }
+
+      // Ensure page context is captured
+      if (!sanitized.source_page && window.location) {
+        sanitized.source_page = window.location.pathname;
+      }
+      if (!sanitized.page_path && window.location) {
+        sanitized.page_path = window.location.pathname;
+      }
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', eventName, sanitized);
+      } else {
+        window.dataLayer.push({
+          event: eventName,
+          ...sanitized
+        });
+      }
+    } catch (err) {
+      console.warn('[NovaAnalytics Error]:', err);
+    }
+  }
+
+  function trackPageView(pageData = {}) {
+    trackEvent('page_view', {
+      page_title: typeof document !== 'undefined' ? document.title : '',
+      page_location: typeof window !== 'undefined' ? window.location.href : '',
+      page_path: typeof window !== 'undefined' ? window.location.pathname : '',
+      ...pageData
+    });
+  }
+
+  function trackCourseView(course) {
+    if (!course || !course.id) return;
+    if (_trackedCourseViews.has(course.id)) return;
+    _trackedCourseViews.add(course.id);
+
+    trackEvent('view_course', {
+      course_id: course.id,
+      course_name: course.name || '',
+      academy_id: course.academyId || course.academy || '',
+      page_type: 'course_detail'
+    });
+  }
+
+  function trackCourseSelect(course, selectionSource = 'catalog_card') {
+    if (!course) return;
+    const courseId = typeof course === 'string' ? course : (course.id || course.slug || '');
+    const courseName = typeof course === 'string' ? course : (course.name || course.title || courseId);
+    const academyId = typeof course === 'object' ? (course.academyId || course.academy || '') : '';
+
+    trackEvent('select_course', {
+      course_id: courseId,
+      course_name: courseName,
+      academy_id: academyId,
+      selection_source: selectionSource
+    });
+  }
+
+  function trackFormStart(formElementOrId, formType, extra = {}) {
+    const formId = typeof formElementOrId === 'string' ? formElementOrId : (formElementOrId && formElementOrId.id ? formElementOrId.id : 'unknown_form');
+    if (_trackedFormStarts.has(formId)) return;
+    _trackedFormStarts.add(formId);
+
+    const resolvedType = formType || (
+      formId === 'demo-booking-form' ? 'demo_booking' :
+      formId === 'counselling-booking-form' || formId === 'counselling-form' ? 'career_counselling' :
+      formId === 'contact-enquiry-form' ? 'contact_enquiry' :
+      formId === 'course-enrollment-form' ? 'course_enrollment' : 'admissions_form'
+    );
+
+    const resolvedComponent = extra.source_component || (
+      formId === 'demo-booking-form' ? 'demo_modal' :
+      formId === 'counselling-booking-form' ? 'counselling_modal' :
+      formId === 'counselling-form' ? 'homepage_inline' :
+      formId === 'contact-enquiry-form' ? 'contact_page' :
+      formId === 'course-enrollment-form' ? 'enrollment_modal' : 'modal'
+    );
+
+    trackEvent('form_start', {
+      form_id: formId,
+      form_type: resolvedType,
+      course_id: extra.course_id || '',
+      academy_id: extra.academy_id || '',
+      source_page: typeof window !== 'undefined' ? window.location.pathname : '',
+      source_component: resolvedComponent
+    });
+  }
+
+  function attachFormStartListener(formEl, formType, extra = {}) {
+    if (!formEl || formEl.dataset.hasFormStartListener === 'true') return;
+    formEl.dataset.hasFormStartListener = 'true';
+    const handler = function() {
+      trackFormStart(formEl, formType, extra);
+      formEl.removeEventListener('focusin', handler);
+      formEl.removeEventListener('input', handler);
+    };
+    formEl.addEventListener('focusin', handler, { once: true, passive: true });
+    formEl.addEventListener('input', handler, { once: true, passive: true });
+  }
+
+  function trackLeadGenerated(leadData) {
+    trackEvent('generate_lead', leadData);
+  }
+
+  function trackWhatsAppClick(sourceData = {}) {
+    trackEvent('click_whatsapp', {
+      contact_type: 'whatsapp',
+      button_id: sourceData.button_id || 'whatsapp_btn',
+      link_type: sourceData.link_type || 'cta_button',
+      source_component: sourceData.source_component || sourceData.link_type || 'cta_button',
+      source_page: typeof window !== 'undefined' ? window.location.pathname : '',
+      page_path: typeof window !== 'undefined' ? window.location.pathname : '',
+      course_id: sourceData.course_id || '',
+      academy_id: sourceData.academy_id || ''
+    });
+  }
+
+  function trackPhoneClick(sourceData = {}) {
+    trackEvent('click_phone', {
+      contact_type: 'phone',
+      button_id: sourceData.button_id || 'phone_btn',
+      source_component: sourceData.source_component || sourceData.button_id || 'phone_btn',
+      source_page: typeof window !== 'undefined' ? window.location.pathname : '',
+      page_path: typeof window !== 'undefined' ? window.location.pathname : '',
+      course_id: sourceData.course_id || '',
+      academy_id: sourceData.academy_id || ''
+    });
+  }
+
+  function trackEmailClick(sourceData = {}) {
+    trackEvent('click_email', {
+      contact_type: 'email',
+      button_id: sourceData.button_id || 'email_btn',
+      source_component: sourceData.source_component || 'email_link',
+      source_page: typeof window !== 'undefined' ? window.location.pathname : '',
+      page_path: typeof window !== 'undefined' ? window.location.pathname : ''
+    });
+  }
+
+  function trackCareerAdvisorComplete(recData = {}) {
+    const courseId = recData.recommended_course_id || '';
+    if (courseId && _trackedAdvisorCompletions.has(courseId)) return;
+    if (courseId) _trackedAdvisorCompletions.add(courseId);
+
+    trackEvent('career_advisor_complete', {
+      recommended_academy_id: recData.recommended_academy_id || '',
+      recommended_course_id: courseId,
+      assessment_type: recData.assessment_type || 'ai_chat_advisor'
+    });
+  }
+
+  return {
+    trackEvent,
+    trackPageView,
+    trackCourseView,
+    trackCourseSelect,
+    trackFormStart,
+    attachFormStartListener,
+    trackLeadGenerated,
+    trackWhatsAppClick,
+    trackPhoneClick,
+    trackEmailClick,
+    trackCareerAdvisorComplete,
+    isDeveloperEnv
+  };
+})();
+
+function sendGA4Event(eventName, params = {}) {
+  return NovaAnalytics.trackEvent(eventName, params);
 }
+window.NovaAnalytics = NovaAnalytics;
 window.sendGA4Event = sendGA4Event;
 
 /* ─────────────────────────────────────────────────────────────
@@ -677,13 +873,27 @@ async function submitNovaForm({
           })()
         : window.location.pathname;
 
-      sendGA4Event('generate_lead', {
+      const formType = (
+        formId === 'demo-booking-form' || formName === 'free_demo' ? 'demo_booking' :
+        formId === 'counselling-booking-form' || formName === 'career_counselling' ? 'career_counselling' :
+        formId === 'contact-enquiry-form' ? 'contact_enquiry' :
+        formId === 'course-enrollment-form' ? 'course_enrollment' : 'admissions_enquiry'
+      );
+
+      NovaAnalytics.trackLeadGenerated({
+        form_id: formId,
+        form_type: formType,
         form_name: resolvedFormName,
+        course_id: data.course_id || (data.course && typeof data.course === 'string' ? data.course : '') || '',
+        academy_id: data.academy_id || data.academy || '',
         course_name: cleanCourseName,
+        source_page: window.location.pathname,
+        source_component: resolvedMethod,
         submission_method: resolvedMethod,
-        page_path: window.location.pathname,
+        learning_mode: data.learning_mode || 'online_live',
         traffic_source: resolvedUtmSource || 'direct',
         traffic_medium: resolvedUtmMedium || 'none',
+        traffic_campaign: resolvedUtmCampaign || 'none',
         ai_platform: detectedAi || 'none',
         landing_page: landingPagePath
       });
@@ -1331,6 +1541,10 @@ function initShared() {
   initNavBehaviour();
   initAnnouncementBar();
   initConsultationPopup();
+    const hpForm = document.getElementById('counselling-form');
+    if (hpForm) NovaAnalytics.attachFormStartListener(hpForm, 'career_counselling');
+    const contactForm = document.getElementById('contact-enquiry-form');
+    if (contactForm) NovaAnalytics.attachFormStartListener(contactForm, 'contact_enquiry');
   initYearAuto();
   initWhatsAppDelay();
   initGA4ClickTracking();
@@ -1636,14 +1850,14 @@ function initWhatsAppDelay() {
   setTimeout(() => { btn.style.opacity = '1'; btn.style.transform = 'scale(1) translateY(0)'; }, 2500);
 }
 
-/* ── GA4 Global Click Tracking (WhatsApp & Telephone Links) ── */
+/* ── GA4 Global Click Tracking (WhatsApp, Telephone & Email Links) ── */
 function initGA4ClickTracking() {
   if (typeof window === 'undefined' || window.__ns_ga4_click_tracking_initialized) return;
   window.__ns_ga4_click_tracking_initialized = true;
 
   document.addEventListener('click', (event) => {
     try {
-      const link = event.target.closest('a');
+      const link = event.target && typeof event.target.closest === 'function' ? event.target.closest('a') : null;
       if (!link) return;
 
       const href = (link.getAttribute('href') || '').trim();
@@ -1663,10 +1877,12 @@ function initGA4ClickTracking() {
             ? 'footer_link'
             : (link.classList.contains('btn') || link.classList.contains('contact-card-link') ? 'cta_button' : 'inline_link');
 
-        sendGA4Event('click_whatsapp', {
+        NovaAnalytics.trackWhatsAppClick({
           button_id: buttonId,
-          page_path: window.location.pathname,
-          link_type: linkType
+          link_type: linkType,
+          source_component: linkType,
+          source_page: typeof window !== 'undefined' ? window.location.pathname : '',
+          page_path: typeof window !== 'undefined' ? window.location.pathname : ''
         });
         return;
       }
@@ -1678,9 +1894,26 @@ function initGA4ClickTracking() {
            link.closest('footer, #ns-footer, #footer') ? 'footer-phone-link' :
            (link.classList.contains('btn') || link.classList.contains('contact-card-link') ? 'cta-phone-btn' : 'phone-link'));
 
-        sendGA4Event('click_phone', {
+        NovaAnalytics.trackPhoneClick({
           button_id: buttonId,
-          page_path: window.location.pathname
+          source_component: buttonId,
+          source_page: typeof window !== 'undefined' ? window.location.pathname : '',
+          page_path: typeof window !== 'undefined' ? window.location.pathname : ''
+        });
+        return;
+      }
+
+      // 3. Email Links (click_email, mailto: protocol) - ZERO personal data sent
+      if (href.startsWith('mailto:')) {
+        const buttonId = link.id || link.getAttribute('data-tracking-id') ||
+          (link.closest('footer, #ns-footer, #footer') ? 'footer-email-link' :
+           link.closest('.contact-main-grid, .contact-card') ? 'contact-card-email' : 'email-link');
+
+        NovaAnalytics.trackEmailClick({
+          button_id: buttonId,
+          source_component: buttonId,
+          source_page: typeof window !== 'undefined' ? window.location.pathname : '',
+          page_path: typeof window !== 'undefined' ? window.location.pathname : ''
         });
         return;
       }
@@ -3147,6 +3380,10 @@ function injectDemoModalHTML() {
 
   // Dynamic course select update
   document.getElementById('demo-course-select')?.addEventListener('change', (e) => {
+    const selCourseVal = e.target.value;
+    if (selCourseVal && typeof NovaAnalytics !== 'undefined') {
+      NovaAnalytics.trackCourseSelect(selCourseVal, 'demo_form_select');
+    }
     const sel = e.target;
     const opt = sel.selectedOptions[0];
     if (opt && opt.value) {
@@ -3402,6 +3639,7 @@ function openDemoModal(arg1, arg2, arg3, arg4) {
   if (msgInput) msgInput.value = '';
 
   setDemoModalState('idle');
+  NovaAnalytics.attachFormStartListener(document.getElementById('demo-booking-form'), 'demo_booking', { course_id: courseId, academy_id: academyId });
 
   document.body.classList.add('modal-open-hide-widgets');
 
@@ -3589,18 +3827,7 @@ async function handleDemoSubmit(e) {
       onSuccessCallback: () => {
         if (window._currentDemoSessionId !== submissionSessionId) return;
 
-        // Dedicated non-PII GA4 event
-        sendGA4Event('free_demo_request_success', {
-          course_name: selectedCourse,
-          course_id: courseId || 'none',
-          academy_name: academyName || 'none',
-          learning_mode: learningMode,
-          city: city.trim() || 'unspecified',
-          preferred_slot: preferredSlot,
-          lead_type: 'free_demo',
-          source_cta: sourceCta || 'demo_modal',
-          page_path: window.location.pathname
-        });
+        // Note: Authoritative conversion measured via generate_lead with form_type=demo_booking
 
         const successDesc = document.querySelector('#demo-success-container .success-desc');
         if (successDesc) {
@@ -3868,6 +4095,10 @@ function injectCounsellingModalHTML() {
   });
 
   document.getElementById('counselling-course-select')?.addEventListener('change', (e) => {
+    const selCourseVal = e.target.value;
+    if (selCourseVal && typeof NovaAnalytics !== 'undefined') {
+      NovaAnalytics.trackCourseSelect(selCourseVal, 'counselling_form_select');
+    }
     const sel = e.target;
     const opt = sel.selectedOptions[0];
     const contextDiv = document.getElementById('counselling-selected-context');
@@ -4045,6 +4276,7 @@ function openCounsellingModal(arg1, arg2, arg3, arg4) {
   if (msgInput) msgInput.value = '';
 
   setCounsellingModalState('idle');
+  NovaAnalytics.attachFormStartListener(document.getElementById('counselling-booking-form'), 'career_counselling', { course_id: courseId, academy_id: academyId });
 
   document.body.classList.add('modal-open-hide-widgets');
 
@@ -4224,16 +4456,7 @@ async function handleCounsellingSubmit(e) {
       onSuccessCallback: () => {
         if (window._currentCounsellingSessionId !== submissionSessionId) return;
 
-        sendGA4Event('career_counselling_request_success', {
-          course_name: cleanCourseDisplay,
-          course_id: courseId || 'none',
-          academy_name: academyName || 'none',
-          learning_mode: learningMode,
-          city: city.trim() || 'unspecified',
-          lead_type: 'free_consultation',
-          source_cta: sourceCta || 'counselling_modal',
-          page_path: window.location.pathname
-        });
+        // Note: Authoritative conversion measured via generate_lead with form_type=career_counselling
 
         const successDesc = document.querySelector('#counselling-success-container .success-desc');
         if (successDesc) {
