@@ -41,6 +41,8 @@ class MockElement {
     this.value = '';
     this.innerHTML = '';
   }
+  addEventListener() {}
+  removeEventListener() {}
   querySelector(sel) {
     if (sel.includes('input[name="website"]')) return null;
     return null;
@@ -81,8 +83,8 @@ function setupEnvironment({ url, referrer, sessionStorage = new MockSessionStora
       querySelector: (sel) => null,
       querySelectorAll: (sel) => [],
       createElement: (tag) => new MockElement(tag),
-      head: { appendChild: () => {} },
-      body: { appendChild: () => {} },
+      head: { appendChild: () => {}, insertAdjacentHTML: () => {} },
+      body: { appendChild: () => {}, insertAdjacentHTML: () => {} },
       addEventListener: () => {},
       removeEventListener: () => {}
     },

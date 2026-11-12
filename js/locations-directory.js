@@ -175,10 +175,10 @@
       });
     }
 
-    if (typeof window.openFreeDemoModal === 'function') {
+    if (typeof window.openDemoModal === 'function') {
+      window.openDemoModal({ city: cityName || '', sourceCta: 'directory_card' });
+    } else if (typeof window.openFreeDemoModal === 'function') {
       window.openFreeDemoModal();
-    } else if (typeof window.openDemoModal === 'function') {
-      window.openDemoModal();
     } else {
       const demoModal = document.getElementById('demo-booking-modal') || document.querySelector('.free-demo-modal');
       if (demoModal) {
@@ -205,7 +205,9 @@
       });
     }
 
-    if (typeof window.openConsultationPopup === 'function') {
+    if (typeof window.openCounsellingModal === 'function') {
+      window.openCounsellingModal({ city: cityName || '', sourceCta: 'directory_card' });
+    } else if (typeof window.openConsultationPopup === 'function') {
       window.openConsultationPopup();
     } else if (typeof window.openConsultationModal === 'function') {
       window.openConsultationModal();

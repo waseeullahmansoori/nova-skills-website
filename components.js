@@ -384,6 +384,109 @@ function sendGA4Event(eventName, params = {}) {
 }
 window.sendGA4Event = sendGA4Event;
 
+/* ─────────────────────────────────────────────────────────────
+   SHARED FORM VALIDATION & DATA SANITIZATION UTILITIES (P1-1)
+───────────────────────────────────────────────────────────── */
+const NovaFormValidator = {
+  validateFullName: function(name) {
+    if (!name || typeof name !== 'string') return { valid: false, message: 'Please enter your full name.' };
+    const trimmed = name.trim();
+    if (trimmed.length < 2) return { valid: false, message: 'Full name must be at least 2 characters long.' };
+    if (/\d/.test(trimmed)) {
+      return { valid: false, message: 'Full name should not contain numbers.' };
+    }
+    if (!/^[a-zA-Z\s.'\-\u00C0-\u024F\u0900-\u097F]+$/.test(trimmed)) {
+      return { valid: false, message: 'Please enter a valid full name containing letters.' };
+    }
+    return { valid: true, value: trimmed };
+  },
+
+  validateMobile: function(rawPhone) {
+    if (!rawPhone || typeof rawPhone !== 'string') return { valid: false, message: 'Please enter your mobile number.' };
+    let clean = String(rawPhone).replace(/\D/g, '');
+    if (clean.length === 12 && clean.startsWith('91')) {
+      clean = clean.slice(2);
+    } else if (clean.length === 11 && clean.startsWith('0')) {
+      clean = clean.slice(1);
+    }
+    if (/^(\d)\1{9}$/.test(clean) || clean === '1234567890') {
+      return { valid: false, message: 'Please enter a genuine mobile number.' };
+    }
+    if (!clean || !/^[6-9]\d{9}$/.test(clean)) {
+      return { valid: false, message: 'Please enter a valid 10-digit Indian mobile number.' };
+    }
+    return { valid: true, value: clean, cleanValue: clean };
+  },
+
+  validateEmail: function(email, isRequired) {
+    if (!email || typeof email !== 'string') {
+      if (isRequired) return { valid: false, message: 'Please enter your email address.' };
+      return { valid: true, value: '' };
+    }
+    const trimmed = email.trim();
+    if (!trimmed) {
+      if (isRequired) return { valid: false, message: 'Please enter your email address.' };
+      return { valid: true, value: '' };
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
+      return { valid: false, message: 'Please enter a valid email address.' };
+    }
+    return { valid: true, value: trimmed };
+  },
+
+  validateCourse: function(courseIdOrName, allowNotSure, isRequired) {
+    let opts = {};
+    if (typeof allowNotSure === 'object' && allowNotSure !== null) {
+      opts = allowNotSure;
+    } else if (typeof allowNotSure === 'boolean' && typeof isRequired === 'boolean') {
+      opts = { allowNotSure: allowNotSure, required: isRequired };
+    } else if (typeof allowNotSure === 'boolean') {
+      opts = { allowNotSure: allowNotSure, required: !allowNotSure };
+    }
+    const req = opts.required !== undefined ? opts.required : false;
+    const allowNotSureVal = opts.allowNotSure !== undefined ? opts.allowNotSure : true;
+
+    if (!courseIdOrName || typeof courseIdOrName !== 'string') {
+      if (req) return { valid: false, message: 'Please select an eligible course.' };
+      return { valid: true, value: '' };
+    }
+    const trimmed = courseIdOrName.trim();
+    if (!trimmed) {
+      if (req) return { valid: false, message: 'Please select an eligible course.' };
+      return { valid: true, value: '' };
+    }
+    if (trimmed === 'not-sure' || trimmed.toLowerCase().includes('not sure')) {
+      if (!allowNotSureVal) {
+        return { valid: false, message: 'Please select a specific eligible course for your 2-Day Free Demo.' };
+      }
+      return { valid: true, value: 'not-sure' };
+    }
+    return { valid: true, value: trimmed };
+  },
+
+  validateCity: function(city, isRequired) {
+    if (!city || typeof city !== 'string') {
+      if (isRequired) return { valid: false, message: 'Please enter your city.' };
+      return { valid: true, value: '' };
+    }
+    const trimmed = city.trim();
+    if (!trimmed && isRequired) {
+      return { valid: false, message: 'Please enter your city.' };
+    }
+    if (trimmed && trimmed.length < 2) {
+      return { valid: false, message: 'Please enter a valid city name.' };
+    }
+    return { valid: true, value: trimmed };
+  },
+
+  sanitizeMessage: function(msg, maxLength) {
+    const limit = typeof maxLength === 'number' ? maxLength : 500;
+    if (!msg || typeof msg !== 'string') return '';
+    return msg.trim().slice(0, limit);
+  }
+};
+window.NovaFormValidator = NovaFormValidator;
+
 async function submitNovaForm({
   form,
   submitBtn,
@@ -396,7 +499,7 @@ async function submitNovaForm({
   if (!form || !submitBtn) return false;
 
   const formId = form.id || '';
-  const isManagedModalForm = formId === 'course-enrollment-form' || formId === 'demo-booking-form' || formName === 'course_enrollment' || formName === 'free_demo';
+  const isManagedModalForm = formId === 'course-enrollment-form' || formId === 'demo-booking-form' || formId === 'counselling-booking-form' || formName === 'course_enrollment' || formName === 'free_demo' || formName === 'career_counselling';
 
   if (!isManagedModalForm) {
     if (form.dataset.submitting === 'true' || submitBtn.disabled) return false;
@@ -521,7 +624,13 @@ async function submitNovaForm({
     if (formId === 'demo-booking-form' || formName === 'free_demo') {
       showToastNotification({
         title: '🎉 Demo Request Received!',
-        message: 'Thank you for requesting a 2-Day Free Demo.\r\n\r\nOur admissions team will contact you shortly with schedule details.',
+        message: 'Your 2-Day Free Demo request has been received.\r\n\r\nOur admissions team will contact you to confirm course eligibility, batch availability and the demo schedule.',
+        type: 'success'
+      });
+    } else if (formId === 'counselling-booking-form' || formName === 'career_counselling' || formId === 'counselling-form') {
+      showToastNotification({
+        title: '🎉 Counselling Request Received!',
+        message: 'Thank you! Your counselling request has been received.\r\n\r\nOur admissions team will contact you to understand your goals and help you choose an appropriate learning pathway.',
         type: 'success'
       });
     } else if (formId === 'course-enrollment-form' || formName === 'course_enrollment') {
@@ -543,7 +652,8 @@ async function submitNovaForm({
 
     if (!nonLeadFormIds.includes(formId)) {
       const resolvedFormName = formName ||
-        (formId === 'counselling-form' ? 'counselling_form' :
+        (formId === 'counselling-booking-form' ? 'career_counselling' :
+         formId === 'counselling-form' ? 'counselling_form' :
          formId === 'popup-form' ? 'consultation_popup' :
          formId === 'course-enrollment-form' ? 'course_enrollment' :
          formId === 'demo-booking-form' ? 'free_demo' :
@@ -551,7 +661,8 @@ async function submitNovaForm({
          (formId || 'counselling_form'));
 
       const resolvedMethod = submissionMethod ||
-        (formId === 'counselling-form' ? 'inline_counselling_form' :
+        (formId === 'counselling-booking-form' ? 'counselling_modal' :
+         formId === 'counselling-form' ? 'inline_counselling_form' :
          formId === 'popup-form' ? 'consultation_popup_modal' :
          formId === 'course-enrollment-form' ? 'enrollment_modal' :
          formId === 'demo-booking-form' ? 'demo_modal' :
@@ -2668,6 +2779,18 @@ function isCourseDemoEligible(course) {
 window.isCourseDemoEligible = isCourseDemoEligible;
 
 /**
+ * =============================================================
+ * P1-1 STANDARDISED LEAD FORMS ARCHITECTURE: FORMS A & B
+ * 1. FORM A: 2-Day Free Demo Booking (Interactive Experience)
+ * 2. FORM B: Free Career Counselling (1-on-1 Academic Guidance)
+ * =============================================================
+ */
+
+/* ─────────────────────────────────────────────────────────────
+   FORM A: 2-DAY FREE DEMO MODAL STATE & CONTROLLER
+───────────────────────────────────────────────────────────── */
+
+/**
  * 2-Day Free Demo Modal State Manager
  * States:
  *   - 'idle': Pristine form ready for user input. Success container strictly hidden.
@@ -2701,7 +2824,7 @@ function setDemoModalState(state, options = {}) {
     if (submitBtn) {
       submitBtn.removeAttribute('disabled');
       submitBtn.disabled = false;
-      if (btnText) btnText.textContent = 'Request Free Demo →';
+      if (btnText) btnText.textContent = 'Request My Free Demo →';
     }
     if (errDiv) {
       errDiv.textContent = '';
@@ -2715,14 +2838,6 @@ function setDemoModalState(state, options = {}) {
   }
   else if (state === 'submitting') {
     if (form) form.dataset.submitting = 'true';
-    if (formContainer) {
-      formContainer.removeAttribute('hidden');
-      formContainer.style.display = '';
-    }
-    if (successContainer) {
-      successContainer.setAttribute('hidden', '');
-      successContainer.style.display = 'none';
-    }
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.setAttribute('disabled', 'true');
@@ -2742,37 +2857,22 @@ function setDemoModalState(state, options = {}) {
     }
     if (successContainer) {
       successContainer.removeAttribute('hidden');
-      successContainer.style.removeProperty('display');
+      successContainer.style.display = 'block';
+      const heading = document.getElementById('demo-success-title');
+      if (heading) {
+        heading.setAttribute('tabindex', '-1');
+        heading.focus();
+      }
     }
-    if (errDiv) {
-      errDiv.textContent = '';
-      errDiv.setAttribute('hidden', '');
-      errDiv.style.display = 'none';
-    }
-
     const dialog = modal.querySelector('.demo-modal-dialog');
     if (dialog) dialog.scrollTop = 0;
-
-    const successTitle = document.getElementById('demo-success-title') || modal.querySelector('.success-title');
-    if (successTitle) {
-      successTitle.setAttribute('tabindex', '-1');
-      try { successTitle.focus(); } catch (e) {}
-    }
   }
   else if (state === 'error') {
     if (form) delete form.dataset.submitting;
-    if (formContainer) {
-      formContainer.removeAttribute('hidden');
-      formContainer.style.display = '';
-    }
-    if (successContainer) {
-      successContainer.setAttribute('hidden', '');
-      successContainer.style.display = 'none';
-    }
     if (submitBtn) {
       submitBtn.removeAttribute('disabled');
       submitBtn.disabled = false;
-      if (btnText) btnText.textContent = 'Request Free Demo →';
+      if (btnText) btnText.textContent = 'Request My Free Demo →';
     }
     if (errDiv) {
       errDiv.textContent = options.message || 'Unable to submit demo request right now. Please check your network or call admissions directly.';
@@ -2788,7 +2888,7 @@ function injectDemoModalHTML() {
     const style = document.createElement('style');
     style.id = 'demo-modal-critical-styles';
     style.textContent = `
-      .demo-modal-backdrop {
+      .demo-modal-backdrop, .counselling-modal-backdrop {
         position: fixed !important;
         inset: 0 !important;
         top: 0 !important;
@@ -2812,12 +2912,12 @@ function injectDemoModalHTML() {
         pointer-events: none !important;
         transition: opacity 0.25s ease, visibility 0.25s ease !important;
       }
-      .demo-modal-backdrop.open {
+      .demo-modal-backdrop.open, .counselling-modal-backdrop.open {
         opacity: 1 !important;
         visibility: visible !important;
         pointer-events: auto !important;
       }
-      .demo-modal-dialog {
+      .demo-modal-dialog, .counselling-modal-dialog {
         background: #011731 !important;
         border: 1px solid rgba(5, 153, 168, 0.35) !important;
         border-radius: 20px !important;
@@ -2839,17 +2939,46 @@ function injectDemoModalHTML() {
         to { transform: scale(1); opacity: 1; }
       }
       @media (max-width: 640px) {
-        .demo-modal-backdrop {
+        .demo-modal-backdrop, .counselling-modal-backdrop {
           padding: 8px !important;
           align-items: flex-end !important;
         }
-        .demo-modal-dialog {
+        .demo-modal-dialog, .counselling-modal-dialog {
           max-height: 94vh !important;
           max-height: 94dvh !important;
           border-bottom-left-radius: 0 !important;
           border-bottom-right-radius: 0 !important;
           padding: 24px 18px !important;
         }
+      }
+      .demo-context-pill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(5, 153, 168, 0.12);
+        border: 1px solid rgba(5, 153, 168, 0.3);
+        border-radius: 12px;
+        padding: 10px 14px;
+        margin-bottom: 20px;
+        font-size: 0.88rem;
+        color: #ffffff;
+        flex-wrap: wrap;
+      }
+      .demo-avail-badge {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 12px;
+        background: rgba(5, 153, 168, 0.25);
+        color: #75d766;
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin-left: auto;
+      }
+      .form-help-text {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 4px;
+        line-height: 1.4;
       }
     `;
     document.head.appendChild(style);
@@ -2877,16 +3006,17 @@ function injectDemoModalHTML() {
             Book Your <span class="gradient-text">2-Day Free Demo</span>
           </h2>
           <p class="demo-modal-subtitle">
-            Experience practical training before choosing your course.
+            Experience our practical teaching methodology, explore the course workflow and interact with our mentors before making your enrolment decision.
           </p>
         </div>
 
         <!-- Selected Context Banner (Shows if pre-selected) -->
         <div id="demo-selected-context" class="demo-context-pill" style="display:none;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          <div>
+          <div style="flex:1;">
             <strong>Selected: </strong><span id="demo-context-text">Program</span>
           </div>
+          <span class="demo-avail-badge" id="demo-avail-badge">2-Day Free Demo Available</span>
         </div>
 
         <!-- Form View Container -->
@@ -2908,7 +3038,7 @@ function injectDemoModalHTML() {
 
               <!-- 2. Mobile Number (Required) -->
               <div class="form-group" id="group-demo-phone">
-                <label class="form-label" for="demo-phone">Mobile Number <span class="req">*</span></label>
+                <label class="form-label" for="demo-phone">Mobile Number / WhatsApp <span class="req">*</span></label>
                 <div class="phone-input-wrap">
                   <span class="phone-prefix">+91</span>
                   <input type="tel" id="demo-phone" class="form-input phone-input" placeholder="Enter 10-digit mobile number" inputmode="numeric" maxlength="10" autocomplete="tel-national" required />
@@ -2918,28 +3048,28 @@ function injectDemoModalHTML() {
 
               <!-- 3. Course Selection (Required) -->
               <div class="form-group" id="group-demo-course">
-                <label class="form-label" for="demo-course-select">Interested Course <span class="req">*</span></label>
+                <label class="form-label" for="demo-course-select">Course Interested In <span class="req">*</span></label>
                 <select id="demo-course-select" class="form-input form-select" required>
-                  <option value="">-- Choose a Course * --</option>
+                  <option value="">-- Choose an Eligible Program * --</option>
                 </select>
                 <span class="field-error" id="demo-course-error" role="alert"></span>
               </div>
 
-              <!-- 4. Preferred Learning Mode (Required: Live Online / Classroom) -->
+              <!-- 4. Preferred Learning Mode (Optional / Contextual) -->
               <div class="form-group" id="group-demo-mode">
-                <label class="form-label" for="demo-mode-select">Preferred Learning Mode <span class="req">*</span></label>
-                <select id="demo-mode-select" class="form-input form-select" required>
-                  <option value="">-- Choose Learning Mode * --</option>
-                  <option value="Live Online">Live Online (Interactive Live Classes)</option>
-                  <option value="Classroom">Classroom Training (In-Person Centre)</option>
+                <label class="form-label" for="demo-mode-select">Preferred Learning Mode <span class="opt">(Optional)</span></label>
+                <select id="demo-mode-select" class="form-input form-select">
+                  <option value="Live Online">Online Live (Interactive Online Classes • Nationwide)</option>
+                  <option value="Classroom">Classroom Training (In-Person Centre • Siddharth Nagar Campus)</option>
                 </select>
+                <div class="form-help-text" id="demo-mode-help">🏢 In-person classroom training is available exclusively at our Siddharth Nagar campus. Live Online is accessible across all 36 locations nationwide.</div>
                 <span class="field-error" id="demo-mode-error" role="alert"></span>
               </div>
 
-              <!-- 5. City (Required) -->
+              <!-- 5. City (Optional / Contextual) -->
               <div class="form-group" id="group-demo-city">
-                <label class="form-label" for="demo-city">City <span class="req">*</span></label>
-                <input type="text" id="demo-city" class="form-input" placeholder="Enter your city" autocomplete="address-level2" required />
+                <label class="form-label" for="demo-city">City / Location <span class="opt">(Optional)</span></label>
+                <input type="text" id="demo-city" class="form-input" placeholder="e.g., Siddharth Nagar, Lucknow, Delhi" autocomplete="address-level2" />
                 <span class="field-error" id="demo-city-error" role="alert"></span>
               </div>
 
@@ -2973,11 +3103,11 @@ function injectDemoModalHTML() {
 
             <!-- Submit Button -->
             <button type="submit" class="btn btn-primary btn-submit-demo" id="demo-submit-btn">
-              <span id="demo-btn-text">Request Free Demo →</span>
+              <span id="demo-btn-text">Request My Free Demo →</span>
             </button>
 
             <p class="enroll-privacy-notice" style="margin-top:12px; font-size:0.75rem; color:rgba(255,255,255,0.65); text-align:center;">
-              🔒 Your details are kept confidential and used solely by admissions to schedule your free demo sessions.
+              🔒 Your details are kept confidential and used solely by admissions to schedule your free demo sessions. View our <a href="/privacy-policy/" target="_blank" style="color:var(--teal,#0599a8); text-decoration:underline;">Privacy Policy</a>.
             </p>
           </form>
         </div>
@@ -2985,12 +3115,12 @@ function injectDemoModalHTML() {
         <!-- Success View Container -->
         <div id="demo-success-container" class="demo-success-view" hidden role="status" aria-live="polite">
           <div class="success-icon-badge" aria-hidden="true">🎉</div>
-          <h3 class="success-title" id="demo-success-title" tabindex="-1">Demo Request Received!</h3>
+          <h3 class="success-title" id="demo-success-title" tabindex="-1">Your 2-Day Free Demo Request Has Been Received</h3>
           <p class="success-desc">
-            Thank you! Our admissions team will contact you to confirm your selected course, demo schedule and batch availability.
+            Thank you! Our admissions team will contact you to confirm course eligibility, batch availability and the demo schedule.
           </p>
           <div class="success-actions">
-            <a href="/courses.html" class="btn btn-primary btn-lg">Explore More Courses</a>
+            <a href="/courses.html" class="btn btn-primary btn-lg">Explore All Courses</a>
             <button type="button" class="btn btn-outline btn-lg" id="demo-success-close-btn" style="color:white; border-color:rgba(255,255,255,0.4);">Close</button>
           </div>
         </div>
@@ -3050,41 +3180,24 @@ function injectDemoModalHTML() {
     }
   });
 
-  // Clear errors dynamically on input
-  ['demo-name', 'demo-phone', 'demo-course-select', 'demo-mode-select', 'demo-city', 'demo-email'].forEach(id => {
-    const el = document.getElementById(id);
-    el?.addEventListener('input', () => {
-      el.classList.remove('has-error');
-      el.removeAttribute('aria-invalid');
-      const errSpan = document.getElementById(id.replace('-select', '') + '-error');
-      if (errSpan) errSpan.textContent = '';
-    });
-    el?.addEventListener('change', () => {
-      el.classList.remove('has-error');
-      el.removeAttribute('aria-invalid');
-      const errSpan = document.getElementById(id.replace('-select', '') + '-error');
-      if (errSpan) errSpan.textContent = '';
-    });
-  });
-
   // Bind form submit
   document.getElementById('demo-booking-form')?.addEventListener('submit', handleDemoSubmit);
 }
 window.injectDemoModalHTML = injectDemoModalHTML;
 
 const ACADEMY_SLUG_TO_ID_MAP = {
-  'no-code-web': 'nocode',
-  'video-motion': 'video',
-  'career-freelancing': 'career',
-  'kids-tech': 'kids',
-  'office-productivity': 'office',
   'digital-marketing': 'digital-marketing',
   'ai': 'ai',
   'design': 'design',
   'programming': 'programming',
+  'no-code-web': 'no-code-web',
+  'video-motion': 'video-motion',
   '3d': '3d',
+  'career-freelancing': 'career-freelancing',
   'communication': 'communication',
-  'creator': 'creator'
+  'kids-tech': 'kids-tech',
+  'creator': 'creator',
+  'office-productivity': 'office-productivity'
 };
 
 function normalizeDemoAcademyId(idOrSlug) {
@@ -3107,7 +3220,6 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
 
   const normFilter = normalizeDemoAcademyId(filterAcademyId);
 
-  // Filter only eligible courses for demo booking (Phase 5 requirement)
   const isEligible = (c) => {
     if (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.isCourseDemoEligible === 'function') {
       return window.NovaCourseData.isCourseDemoEligible(c);
@@ -3118,7 +3230,6 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
     return true;
   };
 
-  // Group by academy
   const grouped = {};
   coursesList.forEach(c => {
     if (!isEligible(c)) return;
@@ -3133,7 +3244,6 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
     grouped[acadName].push(c);
   });
 
-  // If filtered but empty, fallback to all eligible courses
   if (Object.keys(grouped).length === 0) {
     coursesList.forEach(c => {
       if (!isEligible(c)) return;
@@ -3166,7 +3276,6 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
     select.appendChild(optgroup);
   });
 
-  // If explicit course wasn't in list but name is provided, add it
   if (!foundMatch && preselectedCourseName) {
     const opt = document.createElement('option');
     opt.value = preselectedCourseName;
@@ -3181,9 +3290,7 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
 function openDemoModal(arg1, arg2, arg3, arg4) {
   injectDemoModalHTML();
 
-  // Increment session counter to invalidate any pending in-flight async callbacks
   window._currentDemoSessionId = (window._currentDemoSessionId || 0) + 1;
-
   window._lastActiveDemoTrigger = document.activeElement;
 
   let courseId = '';
@@ -3205,7 +3312,6 @@ function openDemoModal(arg1, arg2, arg3, arg4) {
     sourceCta = typeof arg4 === 'string' ? arg4 : '';
   }
 
-  // If no course passed, inspect if we are on a course detail page
   if (!courseId && !courseName) {
     if (typeof currentCourse !== 'undefined' && currentCourse && currentCourse.name) {
       courseId = currentCourse.id || '';
@@ -3220,7 +3326,6 @@ function openDemoModal(arg1, arg2, arg3, arg4) {
     }
   }
 
-  // If no academy passed, inspect if we are on an academy page
   if (!academyId && !academyName && !courseId) {
     if (typeof currentAcademy !== 'undefined' && currentAcademy) {
       academyId = currentAcademy.id || currentAcademy.slug || '';
@@ -3228,23 +3333,23 @@ function openDemoModal(arg1, arg2, arg3, arg4) {
     }
   }
 
-  // Cross-reference with canonical NovaCourseData / NS_COURSES to guarantee correct ID/Name/Academy
   const coursesList = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
     ? window.NovaCourseData.getPublishedCourses()
     : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
       ? NS_COURSES
       : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []));
 
+  let matchedCourse = null;
   if (courseId || courseName) {
-    const matched = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseById === 'function'
+    matchedCourse = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseById === 'function'
       ? (window.NovaCourseData.getCourseById(courseId) || window.NovaCourseData.getCourseById(courseName))
       : null)
       || coursesList.find(c => (courseId && (c.id === courseId || c.slug === courseId)) || (courseName && c.name.toLowerCase() === courseName.toLowerCase()));
-    if (matched) {
-      courseId = matched.id;
-      courseName = matched.name;
-      if (!academyName) academyName = matched.academy || '';
-      if (!academyId) academyId = matched.academyId || '';
+    if (matchedCourse) {
+      courseId = matchedCourse.id;
+      courseName = matchedCourse.name;
+      if (!academyName) academyName = matchedCourse.academy || '';
+      if (!academyId) academyId = matchedCourse.academyId || '';
     }
   }
 
@@ -3257,7 +3362,6 @@ function openDemoModal(arg1, arg2, arg3, arg4) {
   const academyNameInput = document.getElementById('demo-academy-name');
   const sourceCtaInput = document.getElementById('demo-source-cta');
 
-  // Populate course dropdown with relevant context
   populateDemoCourseSelect(academyId, courseId, courseName);
 
   if (courseIdInput) courseIdInput.value = courseId;
@@ -3266,7 +3370,6 @@ function openDemoModal(arg1, arg2, arg3, arg4) {
   if (academyNameInput) academyNameInput.value = academyName;
   if (sourceCtaInput) sourceCtaInput.value = sourceCta;
 
-  // Show context badge if course or academy specified
   if (contextDiv && contextText) {
     if (courseName) {
       contextText.textContent = courseName + (academyName ? ' (' + academyName + ')' : '');
@@ -3279,7 +3382,9 @@ function openDemoModal(arg1, arg2, arg3, arg4) {
     }
   }
 
-  // Reset inputs to clean state
+  let savedCity = '';
+  try { savedCity = sessionStorage.getItem('nova_last_city_name') || ''; } catch (e) {}
+
   const nameInput = document.getElementById('demo-name');
   const phoneInput = document.getElementById('demo-phone');
   const modeSelect = document.getElementById('demo-mode-select');
@@ -3291,14 +3396,13 @@ function openDemoModal(arg1, arg2, arg3, arg4) {
   if (nameInput) nameInput.value = '';
   if (phoneInput) phoneInput.value = '';
   if (modeSelect) modeSelect.selectedIndex = 0;
-  if (cityInput) cityInput.value = '';
+  if (cityInput) cityInput.value = savedCity;
   if (emailInput) emailInput.value = '';
   if (slotSelect) slotSelect.selectedIndex = 0;
   if (msgInput) msgInput.value = '';
 
   setDemoModalState('idle');
 
-  // Hide floating widgets
   document.body.classList.add('modal-open-hide-widgets');
 
   if (modal) {
@@ -3388,57 +3492,49 @@ async function handleDemoSubmit(e) {
   const slotSelect = document.getElementById('demo-slot-select');
   const messageInput = document.getElementById('demo-message');
 
-  const name = nameInput?.value.trim() || '';
-  const rawPhone = phoneInput?.value.trim() || '';
-  const selectedCourse = courseSelect?.value.trim() || '';
-  const learningMode = modeSelect?.value.trim() || '';
-  const city = cityInput?.value.trim() || '';
-  const email = emailInput?.value.trim() || '';
+  const name = nameInput?.value || '';
+  const rawPhone = phoneInput?.value || '';
+  const selectedCourse = courseSelect?.value || '';
+  const learningMode = modeSelect?.value || 'Live Online';
+  const city = cityInput?.value || '';
+  const email = emailInput?.value || '';
   const preferredSlot = slotSelect?.value || 'Flexible / Any Time';
-  const userMessage = messageInput?.value.trim() || '';
+  const userMessage = messageInput?.value || '';
 
   let hasError = false;
+  const validator = (typeof window !== 'undefined' && window.NovaFormValidator) ? window.NovaFormValidator : null;
 
-  // 1. Full Name validation (Required, minimum 2 characters)
-  if (!name || name.length < 2) {
-    showDemoFieldError('demo-name', 'Please enter your full name.');
+  // 1. Full Name validation (Required)
+  const vName = validator ? validator.validateFullName(name) : { valid: name.trim().length >= 2, message: 'Please enter your full name.', value: name.trim() };
+  if (!vName.valid) {
+    showDemoFieldError('demo-name', vName.message);
     hasError = true;
   }
 
   // 2. Mobile validation (Required Indian 10-digit number)
-  let cleanPhone = rawPhone.replace(/\D/g, '');
-  if (cleanPhone.length === 12 && cleanPhone.startsWith('91')) {
-    cleanPhone = cleanPhone.slice(2);
-  } else if (cleanPhone.length === 11 && cleanPhone.startsWith('0')) {
-    cleanPhone = cleanPhone.slice(1);
-  }
-
-  if (!cleanPhone || !/^[6-9]\d{9}$/.test(cleanPhone)) {
-    showDemoFieldError('demo-phone', 'Please enter a valid 10-digit Indian mobile number.');
+  const vPhone = validator ? validator.validateMobile(rawPhone) : { valid: rawPhone.replace(/\D/g, '').length >= 10, message: 'Please enter a valid 10-digit Indian mobile number.', value: rawPhone.replace(/\D/g, '') };
+  if (!vPhone.valid) {
+    showDemoFieldError('demo-phone', vPhone.message);
     hasError = true;
   }
 
   // 3. Course selection validation (Required)
-  if (!selectedCourse) {
-    showDemoFieldError('demo-course-select', 'Please select a course for your free demo.');
+  const vCourse = validator ? validator.validateCourse(selectedCourse, true) : { valid: Boolean(selectedCourse.trim()), message: 'Please select a course for your free demo.', value: selectedCourse.trim() };
+  if (!vCourse.valid) {
+    showDemoFieldError('demo-course-select', vCourse.message);
     hasError = true;
   }
 
-  // 4. Learning Mode validation (Required: Live Online / Classroom)
+  // 4. Learning Mode validation
   if (!learningMode) {
     showDemoFieldError('demo-mode-select', 'Please choose your preferred learning mode.');
     hasError = true;
   }
 
-  // 5. City validation (Required, minimum 2 characters)
-  if (!city || city.length < 2) {
-    showDemoFieldError('demo-city', 'Please enter your city.');
-    hasError = true;
-  }
-
-  // 6. Email validation (Optional: validate only if entered)
-  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    showDemoFieldError('demo-email', 'Please enter a valid email address.');
+  // 5. Email validation (Optional)
+  const vEmail = validator ? validator.validateEmail(email, false) : { valid: true, value: email.trim() };
+  if (!vEmail.valid) {
+    showDemoFieldError('demo-email', vEmail.message);
     hasError = true;
   }
 
@@ -3448,7 +3544,6 @@ async function handleDemoSubmit(e) {
     return;
   }
 
-  // Enter submitting state
   setDemoModalState('submitting');
   const submissionSessionId = window._currentDemoSessionId;
 
@@ -3463,9 +3558,9 @@ async function handleDemoSubmit(e) {
     academyName ? `Academy: ${academyName}` : '',
     `Learning Mode: ${learningMode}`,
     `Preferred Time: ${preferredSlot}`,
-    `City: ${city}`,
+    city ? `City: ${city.trim()}` : '',
     sourceCta ? `Source CTA: ${sourceCta}` : '',
-    userMessage ? `User Note: ${userMessage}` : ''
+    userMessage ? `User Note: ${userMessage.trim()}` : ''
   ].filter(Boolean).join(' | ');
 
   const submitBtn = document.getElementById('demo-submit-btn');
@@ -3479,12 +3574,12 @@ async function handleDemoSubmit(e) {
       formName: 'free_demo',
       submissionMethod: 'demo_modal',
       data: {
-        name,
-        mobile: cleanPhone,
-        phone: cleanPhone,
-        email,
+        name: vName.value,
+        mobile: vPhone.value,
+        phone: vPhone.value,
+        email: vEmail.value,
         course: `[FREE DEMO] ${selectedCourse}${academyName ? ' (' + academyName + ')' : ''}`,
-        city,
+        city: city.trim(),
         message: demoNotes,
         lead_type: 'free_demo',
         learning_mode: learningMode,
@@ -3492,53 +3587,26 @@ async function handleDemoSubmit(e) {
         academy: academyName
       },
       onSuccessCallback: () => {
-        // Discard if modal was closed or reopened during async fetch
         if (window._currentDemoSessionId !== submissionSessionId) return;
 
-        // Store in local CRM demo queue
-        const leadData = {
-          action: '2-Day Free Demo Request',
-          lead_type: 'free_demo',
-          timestamp: new Date().toISOString(),
-          name,
-          phone: cleanPhone,
-          email,
-          course: selectedCourse,
-          courseId,
-          academyName,
-          learningMode,
-          city,
-          preferredSlot,
-          message: userMessage,
-          sourceCta,
-          sourceUrl: window.location.href
-        };
-        try {
-          const existing = JSON.parse(localStorage.getItem('novaskills_demo_requests') || '[]');
-          existing.unshift(leadData);
-          localStorage.setItem('novaskills_demo_requests', JSON.stringify(existing));
-        } catch (err) {}
-
-        // Fire dedicated GA4 success event (zero PII)
+        // Dedicated non-PII GA4 event
         sendGA4Event('free_demo_request_success', {
           course_name: selectedCourse,
-          course_id: courseId,
-          academy_name: academyName,
+          course_id: courseId || 'none',
+          academy_name: academyName || 'none',
           learning_mode: learningMode,
-          city: city,
+          city: city.trim() || 'unspecified',
           preferred_slot: preferredSlot,
           lead_type: 'free_demo',
           source_cta: sourceCta || 'demo_modal',
           page_path: window.location.pathname
         });
 
-        // Populate success view description
         const successDesc = document.querySelector('#demo-success-container .success-desc');
         if (successDesc) {
-          successDesc.innerHTML = `Thank you, <strong>${name}</strong>! Our admissions team will contact you to confirm your 2-Day Free Demo schedule for <strong>${selectedCourse}</strong> (${learningMode}).`;
+          successDesc.innerHTML = `Thank you, <strong>${vName.value}</strong>! Your 2-Day Free Demo request has been received. Our admissions team will contact you to confirm course eligibility, batch availability and the demo schedule.`;
         }
 
-        // Transition to success state
         setDemoModalState('success');
       }
     });
@@ -3547,18 +3615,650 @@ async function handleDemoSubmit(e) {
     success = false;
   }
 
-  // Check if session changed while awaiting
   if (window._currentDemoSessionId !== submissionSessionId) {
     return;
   }
 
   if (!success) {
-    // Preserve user inputs, transition to error state
     setDemoModalState('error', {
-      message: 'Unable to submit demo request right now. Please check your network or call admissions directly.'
+      message: 'Unable to submit demo request right now. Please check your network or contact admissions via WhatsApp (+91 9695904440).'
     });
   }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   FORM B: FREE CAREER COUNSELLING MODAL & STATE CONTROLLER
+   Standardised Reusable Component for 1-on-1 Academic Guidance
+───────────────────────────────────────────────────────────── */
+
+function setCounsellingModalState(state, options = {}) {
+  const modal = document.getElementById('career-counselling-modal');
+  if (!modal) return;
+
+  const form = document.getElementById('counselling-booking-form');
+  const formContainer = document.getElementById('counselling-form-container');
+  const successContainer = document.getElementById('counselling-success-container');
+  const submitBtn = document.getElementById('counselling-modal-submit-btn');
+  const btnText = document.getElementById('counselling-modal-btn-text');
+  const errDiv = document.getElementById('counselling-form-error');
+
+  modal.setAttribute('data-state', state);
+
+  if (state === 'idle') {
+    if (form) delete form.dataset.submitting;
+    if (formContainer) {
+      formContainer.removeAttribute('hidden');
+      formContainer.style.display = '';
+    }
+    if (successContainer) {
+      successContainer.setAttribute('hidden', '');
+      successContainer.style.display = 'none';
+    }
+    if (submitBtn) {
+      submitBtn.removeAttribute('disabled');
+      submitBtn.disabled = false;
+      if (btnText) btnText.textContent = 'Book My Free Counselling Session →';
+    }
+    if (errDiv) {
+      errDiv.textContent = '';
+      errDiv.setAttribute('hidden', '');
+      errDiv.style.display = 'none';
+    }
+    clearAllCounsellingFieldErrors();
+
+    const dialog = modal.querySelector('.counselling-modal-dialog');
+    if (dialog) dialog.scrollTop = 0;
+  }
+  else if (state === 'submitting') {
+    if (form) form.dataset.submitting = 'true';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('disabled', 'true');
+      if (btnText) btnText.innerHTML = '<span class="btn-spinner"></span> Booking Session...';
+    }
+    if (errDiv) {
+      errDiv.textContent = '';
+      errDiv.setAttribute('hidden', '');
+      errDiv.style.display = 'none';
+    }
+  }
+  else if (state === 'success') {
+    if (form) delete form.dataset.submitting;
+    if (formContainer) {
+      formContainer.setAttribute('hidden', '');
+      formContainer.style.display = 'none';
+    }
+    if (successContainer) {
+      successContainer.removeAttribute('hidden');
+      successContainer.style.display = 'block';
+      const heading = document.getElementById('counselling-success-title');
+      if (heading) {
+        heading.setAttribute('tabindex', '-1');
+        heading.focus();
+      }
+    }
+    const dialog = modal.querySelector('.counselling-modal-dialog');
+    if (dialog) dialog.scrollTop = 0;
+  }
+  else if (state === 'error') {
+    if (form) delete form.dataset.submitting;
+    if (submitBtn) {
+      submitBtn.removeAttribute('disabled');
+      submitBtn.disabled = false;
+      if (btnText) btnText.textContent = 'Book My Free Counselling Session →';
+    }
+    if (errDiv) {
+      errDiv.textContent = options.message || 'Unable to submit your counselling request right now. Please check your network and try again.';
+      errDiv.removeAttribute('hidden');
+      errDiv.style.display = 'block';
+    }
+  }
+}
+window.setCounsellingModalState = setCounsellingModalState;
+
+function injectCounsellingModalHTML() {
+  if (document.getElementById('career-counselling-modal')) return;
+
+  injectDemoModalHTML(); // Ensure critical styles are attached
+
+  const modal = document.createElement('div');
+  modal.id = 'career-counselling-modal';
+  modal.className = 'demo-modal-backdrop counselling-modal-backdrop';
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-labelledby', 'counselling-modal-title');
+  modal.hidden = true;
+
+  modal.innerHTML = `
+    <div class="demo-modal-dialog counselling-modal-dialog" role="document">
+      <button type="button" class="demo-modal-close" id="counselling-modal-close" aria-label="Close modal">✕</button>
+
+      <div class="demo-modal-content">
+        <!-- Header -->
+        <div class="demo-modal-header">
+          <span class="demo-modal-badge">1-ON-1 GUIDANCE • 100% FREE</span>
+          <h2 id="counselling-modal-title" class="demo-modal-title">
+            Book a Free <span class="gradient-text">Career Counselling Session</span>
+          </h2>
+          <p class="demo-modal-subtitle">
+            Speak with our academic counsellors to understand the right course, curriculum, fees and learning format for your goals.
+          </p>
+        </div>
+
+        <!-- Selected Context Banner (Shows if pre-selected) -->
+        <div id="counselling-selected-context" class="demo-context-pill" style="display:none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>
+            <strong>Context: </strong><span id="counselling-context-text">Career Pathway Guidance</span>
+          </div>
+        </div>
+
+        <!-- Form View Container -->
+        <div id="counselling-form-container" class="demo-form-container">
+          <form id="counselling-booking-form" class="demo-form" novalidate>
+            <input type="hidden" id="counselling-course-id" name="courseId" value="" />
+            <input type="hidden" id="counselling-course-name" name="courseName" value="" />
+            <input type="hidden" id="counselling-academy-id" name="academyId" value="" />
+            <input type="hidden" id="counselling-academy-name" name="academyName" value="" />
+            <input type="hidden" id="counselling-source-cta" name="sourceCta" value="" />
+
+            <div class="demo-form-fields">
+              <!-- 1. Full Name (Required) -->
+              <div class="form-group" id="group-counselling-name">
+                <label class="form-label" for="counselling-name">Full Name <span class="req">*</span></label>
+                <input type="text" id="counselling-name" class="form-input" placeholder="Enter your full name" autocomplete="name" required />
+                <span class="field-error" id="counselling-name-error" role="alert"></span>
+              </div>
+
+              <!-- 2. Mobile Number (Required) -->
+              <div class="form-group" id="group-counselling-phone">
+                <label class="form-label" for="counselling-phone">Mobile Number / WhatsApp <span class="req">*</span></label>
+                <div class="phone-input-wrap">
+                  <span class="phone-prefix">+91</span>
+                  <input type="tel" id="counselling-phone" class="form-input phone-input" placeholder="Enter 10-digit mobile number" inputmode="numeric" maxlength="10" autocomplete="tel-national" required />
+                </div>
+                <span class="field-error" id="counselling-phone-error" role="alert"></span>
+              </div>
+
+              <!-- 3. Course Interest (Optional) -->
+              <div class="form-group" id="group-counselling-course">
+                <label class="form-label" for="counselling-course-select">Course Interest <span class="opt">(Optional)</span></label>
+                <select id="counselling-course-select" class="form-input form-select">
+                  <option value="not-sure">🎯 Not Sure — Help Me Choose a Course</option>
+                </select>
+                <span class="field-error" id="counselling-course-error" role="alert"></span>
+              </div>
+
+              <!-- 4. Preferred Learning Mode (Optional) -->
+              <div class="form-group" id="group-counselling-mode">
+                <label class="form-label" for="counselling-mode-select">Preferred Learning Mode <span class="opt">(Optional)</span></label>
+                <select id="counselling-mode-select" class="form-input form-select">
+                  <option value="Flexible / Need Advice">Flexible / Need Advice from Counsellor</option>
+                  <option value="Live Online">Online Live (Interactive Online Classes • Nationwide)</option>
+                  <option value="Classroom">Classroom Training (In-Person Centre • Siddharth Nagar Campus)</option>
+                </select>
+                <div class="form-help-text" id="counselling-mode-help">🏢 In-person classroom training is available exclusively at our Siddharth Nagar campus. Live Online is accessible across all 36 locations nationwide.</div>
+                <span class="field-error" id="counselling-mode-error" role="alert"></span>
+              </div>
+
+              <!-- 5. City / Location (Optional) -->
+              <div class="form-group" id="group-counselling-city">
+                <label class="form-label" for="counselling-city">City / Location <span class="opt">(Optional)</span></label>
+                <input type="text" id="counselling-city" class="form-input" placeholder="e.g., Siddharth Nagar, Lucknow, Delhi" autocomplete="address-level2" />
+                <span class="field-error" id="counselling-city-error" role="alert"></span>
+              </div>
+
+              <!-- 6. Email Address (Optional) -->
+              <div class="form-group" id="group-counselling-email">
+                <label class="form-label" for="counselling-email">Email Address <span class="opt">(Optional)</span></label>
+                <input type="email" id="counselling-email" class="form-input" placeholder="you@example.com" autocomplete="email" />
+                <span class="field-error" id="counselling-email-error" role="alert"></span>
+              </div>
+
+              <!-- 7. Career Goal or Specific Question (Optional) -->
+              <div class="form-group" id="group-counselling-message">
+                <label class="form-label" for="counselling-message">Career Goal or Specific Question <span class="opt">(Optional)</span></label>
+                <textarea id="counselling-message" class="form-input form-textarea" rows="2" maxlength="500" placeholder="e.g., Switching careers from non-tech, guidance on fees & EMI, placement eligibility..."></textarea>
+              </div>
+            </div>
+
+            <div id="counselling-form-error" class="enroll-error-msg" hidden role="alert"></div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-submit-counselling" id="counselling-modal-submit-btn">
+              <span id="counselling-modal-btn-text">Book My Free Counselling Session →</span>
+            </button>
+
+            <p class="enroll-privacy-notice" style="margin-top:12px; font-size:0.75rem; color:rgba(255,255,255,0.65); text-align:center;">
+              🔒 Your details are kept confidential and used solely by our academic counsellors to guide your career path. View our <a href="/privacy-policy/" target="_blank" style="color:var(--teal,#0599a8); text-decoration:underline;">Privacy Policy</a>.
+            </p>
+          </form>
+        </div>
+
+        <!-- Success View Container -->
+        <div id="counselling-success-container" class="demo-success-view" hidden role="status" aria-live="polite">
+          <div class="success-icon-badge" aria-hidden="true">🎉</div>
+          <h3 class="success-title" id="counselling-success-title" tabindex="-1">Your Counselling Request Has Been Received</h3>
+          <p class="success-desc">
+            Thank you! Your counselling request has been received. Our admissions team will contact you to understand your goals and help you choose an appropriate learning pathway.
+          </p>
+          <div class="success-actions">
+            <a href="/courses.html" class="btn btn-primary btn-lg">Explore All Courses</a>
+            <button type="button" class="btn btn-outline btn-lg" id="counselling-success-close-btn" style="color:white; border-color:rgba(255,255,255,0.4);">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  document.getElementById('counselling-modal-close')?.addEventListener('click', closeCounsellingModal);
+  document.getElementById('counselling-success-close-btn')?.addEventListener('click', closeCounsellingModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeCounsellingModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) {
+      closeCounsellingModal();
+    }
+  });
+
+  document.getElementById('counselling-course-select')?.addEventListener('change', (e) => {
+    const sel = e.target;
+    const opt = sel.selectedOptions[0];
+    const contextDiv = document.getElementById('counselling-selected-context');
+    const contextText = document.getElementById('counselling-context-text');
+    const cIdInput = document.getElementById('counselling-course-id');
+    const cNameInput = document.getElementById('counselling-course-name');
+    const aIdInput = document.getElementById('counselling-academy-id');
+    const aNameInput = document.getElementById('counselling-academy-name');
+
+    if (opt && opt.value && opt.value !== 'not-sure') {
+      const cId = opt.dataset.id || '';
+      const cName = opt.value;
+      const aName = opt.dataset.academy || '';
+      const aId = opt.dataset.academyId || '';
+
+      if (cIdInput) cIdInput.value = cId;
+      if (cNameInput) cNameInput.value = cName;
+      if (aIdInput) aIdInput.value = aId;
+      if (aNameInput) aNameInput.value = aName;
+
+      if (contextDiv && contextText) {
+        contextText.textContent = cName + (aName ? ' (' + aName + ')' : '');
+        contextDiv.style.display = 'flex';
+      }
+    } else {
+      if (cIdInput) cIdInput.value = '';
+      if (cNameInput) cNameInput.value = '';
+      if (aIdInput) aIdInput.value = '';
+      if (aNameInput) aNameInput.value = '';
+      if (contextDiv) contextDiv.style.display = 'none';
+    }
+  });
+
+  document.getElementById('counselling-booking-form')?.addEventListener('submit', handleCounsellingSubmit);
+}
+window.injectCounsellingModalHTML = injectCounsellingModalHTML;
+
+function populateCounsellingCourseSelect(filterAcademyId, preselectedCourseId, preselectedCourseName) {
+  const select = document.getElementById('counselling-course-select');
+  if (!select) return;
+
+  const coursesList = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+    ? window.NovaCourseData.getPublishedCourses()
+    : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+      ? NS_COURSES
+      : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []));
+
+  select.innerHTML = '<option value="not-sure">🎯 Not Sure — Help Me Choose a Course</option>';
+
+  const grouped = {};
+  coursesList.forEach(c => {
+    const acadName = c.academy || 'Nova Skills Academy';
+    if (!grouped[acadName]) grouped[acadName] = [];
+    grouped[acadName].push(c);
+  });
+
+  let foundMatch = false;
+  Object.keys(grouped).forEach(acad => {
+    const optgroup = document.createElement('optgroup');
+    optgroup.label = acad;
+    grouped[acad].forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c.name;
+      opt.dataset.id = c.id;
+      opt.dataset.academy = c.academy;
+      opt.dataset.academyId = c.academyId;
+      opt.textContent = c.name;
+      if (preselectedCourseId && (c.id === preselectedCourseId || c.slug === preselectedCourseId)) {
+        opt.selected = true;
+        foundMatch = true;
+      } else if (!foundMatch && preselectedCourseName && c.name.toLowerCase() === preselectedCourseName.toLowerCase()) {
+        opt.selected = true;
+        foundMatch = true;
+      }
+      optgroup.appendChild(opt);
+    });
+    select.appendChild(optgroup);
+  });
+
+  if (!foundMatch && preselectedCourseName && preselectedCourseName !== 'not-sure') {
+    const opt = document.createElement('option');
+    opt.value = preselectedCourseName;
+    opt.dataset.id = preselectedCourseId || '';
+    opt.dataset.academy = filterAcademyId || '';
+    opt.textContent = preselectedCourseName;
+    opt.selected = true;
+    select.prepend(opt);
+  }
+}
+
+function openCounsellingModal(arg1, arg2, arg3, arg4) {
+  injectCounsellingModalHTML();
+
+  window._currentCounsellingSessionId = (window._currentCounsellingSessionId || 0) + 1;
+  window._lastActiveCounsellingTrigger = document.activeElement;
+
+  let courseId = '';
+  let courseName = '';
+  let academyId = '';
+  let academyName = '';
+  let sourceCta = '';
+  let city = '';
+
+  if (typeof arg1 === 'object' && arg1 !== null) {
+    courseId = arg1.courseId || arg1.id || arg1.slug || '';
+    courseName = arg1.courseName || arg1.name || arg1.title || '';
+    academyId = arg1.academyId || '';
+    academyName = arg1.academyName || arg1.academy || '';
+    sourceCta = arg1.sourceCta || arg1.source || '';
+    city = arg1.city || '';
+  } else {
+    courseName = typeof arg1 === 'string' ? arg1 : '';
+    academyName = typeof arg2 === 'string' ? arg2 : '';
+    courseId = typeof arg3 === 'string' ? arg3 : '';
+    sourceCta = typeof arg4 === 'string' ? arg4 : '';
+  }
+
+  if (courseId || courseName) {
+    const matched = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseById === 'function'
+      ? (window.NovaCourseData.getCourseById(courseId) || window.NovaCourseData.getCourseById(courseName))
+      : null);
+    if (matched) {
+      courseId = matched.id;
+      courseName = matched.name;
+      if (!academyName) academyName = matched.academy || '';
+      if (!academyId) academyId = matched.academyId || '';
+    }
+  }
+
+  if (!city) {
+    try { city = sessionStorage.getItem('nova_last_city_name') || ''; } catch (e) {}
+  }
+
+  const modal = document.getElementById('career-counselling-modal');
+  const contextDiv = document.getElementById('counselling-selected-context');
+  const contextText = document.getElementById('counselling-context-text');
+  const courseIdInput = document.getElementById('counselling-course-id');
+  const courseNameInput = document.getElementById('counselling-course-name');
+  const academyIdInput = document.getElementById('counselling-academy-id');
+  const academyNameInput = document.getElementById('counselling-academy-name');
+  const sourceCtaInput = document.getElementById('counselling-source-cta');
+
+  populateCounsellingCourseSelect(academyId, courseId, courseName);
+
+  if (courseIdInput) courseIdInput.value = courseId;
+  if (courseNameInput) courseNameInput.value = courseName;
+  if (academyIdInput) academyIdInput.value = academyId;
+  if (academyNameInput) academyNameInput.value = academyName;
+  if (sourceCtaInput) sourceCtaInput.value = sourceCta;
+
+  if (contextDiv && contextText) {
+    if (courseName && courseName !== 'not-sure') {
+      contextText.textContent = courseName + (academyName ? ' (' + academyName + ')' : '');
+      contextDiv.style.display = 'flex';
+    } else if (academyName) {
+      contextText.textContent = academyName + ' — Academic Guidance';
+      contextDiv.style.display = 'flex';
+    } else {
+      contextDiv.style.display = 'none';
+    }
+  }
+
+  const nameInput = document.getElementById('counselling-name');
+  const phoneInput = document.getElementById('counselling-phone');
+  const modeSelect = document.getElementById('counselling-mode-select');
+  const cityInput = document.getElementById('counselling-city');
+  const emailInput = document.getElementById('counselling-email');
+  const msgInput = document.getElementById('counselling-message');
+
+  if (nameInput) nameInput.value = '';
+  if (phoneInput) phoneInput.value = '';
+  if (modeSelect) modeSelect.selectedIndex = 0;
+  if (cityInput) cityInput.value = city;
+  if (emailInput) emailInput.value = '';
+  if (msgInput) msgInput.value = '';
+
+  setCounsellingModalState('idle');
+
+  document.body.classList.add('modal-open-hide-widgets');
+
+  if (modal) {
+    modal.hidden = false;
+    requestAnimationFrame(() => modal.classList.add('open'));
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      try {
+        document.getElementById('counselling-name')?.focus({ preventScroll: true });
+      } catch (e) {
+        document.getElementById('counselling-name')?.focus();
+      }
+    }, 60);
+  }
+}
+window.openCounsellingModal = openCounsellingModal;
+window.openCareerCounsellingModal = openCounsellingModal;
+window.openConsultationPopup = openCounsellingModal;
+window.openConsultationModal = openCounsellingModal;
+
+function closeCounsellingModal() {
+  window._currentCounsellingSessionId = (window._currentCounsellingSessionId || 0) + 1;
+  const modal = document.getElementById('career-counselling-modal');
+  document.body.classList.remove('modal-open-hide-widgets');
+
+  if (modal) {
+    modal.classList.remove('open');
+    setTimeout(() => {
+      modal.hidden = true;
+      setCounsellingModalState('idle');
+      document.body.style.overflow = '';
+      if (window._lastActiveCounsellingTrigger && typeof window._lastActiveCounsellingTrigger.focus === 'function') {
+        try {
+          window._lastActiveCounsellingTrigger.focus({ preventScroll: true });
+        } catch (e) {
+          window._lastActiveCounsellingTrigger.focus();
+        }
+      }
+    }, 280);
+  }
+}
+window.closeCounsellingModal = closeCounsellingModal;
+
+function showCounsellingFieldError(fieldId, errorMsg) {
+  const input = document.getElementById(fieldId);
+  const errSpan = document.getElementById(fieldId.replace('-select', '') + '-error');
+  if (input) {
+    input.classList.add('has-error');
+    input.setAttribute('aria-invalid', 'true');
+  }
+  if (errSpan) {
+    errSpan.textContent = errorMsg;
+  }
+}
+
+function clearAllCounsellingFieldErrors() {
+  document.querySelectorAll('.counselling-modal-dialog .form-input').forEach(input => {
+    input.classList.remove('has-error');
+    input.removeAttribute('aria-invalid');
+  });
+  document.querySelectorAll('.counselling-modal-dialog .field-error').forEach(span => {
+    span.textContent = '';
+  });
+}
+
+async function handleCounsellingSubmit(e) {
+  e.preventDefault();
+
+  const form = document.getElementById('counselling-booking-form');
+  if (!form) return;
+
+  if (form.dataset.submitting === 'true') {
+    return;
+  }
+
+  clearAllCounsellingFieldErrors();
+  const errDiv = document.getElementById('counselling-form-error');
+  if (errDiv) {
+    errDiv.textContent = '';
+    errDiv.setAttribute('hidden', '');
+  }
+
+  const nameInput = document.getElementById('counselling-name');
+  const phoneInput = document.getElementById('counselling-phone');
+  const courseSelect = document.getElementById('counselling-course-select');
+  const modeSelect = document.getElementById('counselling-mode-select');
+  const cityInput = document.getElementById('counselling-city');
+  const emailInput = document.getElementById('counselling-email');
+  const messageInput = document.getElementById('counselling-message');
+
+  const name = nameInput?.value || '';
+  const rawPhone = phoneInput?.value || '';
+  const selectedCourse = courseSelect?.value || 'not-sure';
+  const learningMode = modeSelect?.value || 'Flexible / Need Advice';
+  const city = cityInput?.value || '';
+  const email = emailInput?.value || '';
+  const userMessage = messageInput?.value || '';
+
+  let hasError = false;
+  const validator = (typeof window !== 'undefined' && window.NovaFormValidator) ? window.NovaFormValidator : null;
+
+  // 1. Full Name validation (Required)
+  const vName = validator ? validator.validateFullName(name) : { valid: name.trim().length >= 2, message: 'Please enter your full name.', value: name.trim() };
+  if (!vName.valid) {
+    showCounsellingFieldError('counselling-name', vName.message);
+    hasError = true;
+  }
+
+  // 2. Mobile validation (Required Indian 10-digit number)
+  const vPhone = validator ? validator.validateMobile(rawPhone) : { valid: rawPhone.replace(/\D/g, '').length >= 10, message: 'Please enter a valid 10-digit Indian mobile number.', value: rawPhone.replace(/\D/g, '') };
+  if (!vPhone.valid) {
+    showCounsellingFieldError('counselling-phone', vPhone.message);
+    hasError = true;
+  }
+
+  // 3. Email validation (Optional)
+  const vEmail = validator ? validator.validateEmail(email, false) : { valid: true, value: email.trim() };
+  if (!vEmail.valid) {
+    showCounsellingFieldError('counselling-email', vEmail.message);
+    hasError = true;
+  }
+
+  if (hasError) {
+    const firstInvalid = form.querySelector('.form-input.has-error');
+    if (firstInvalid) firstInvalid.focus();
+    return;
+  }
+
+  setCounsellingModalState('submitting');
+  const submissionSessionId = window._currentCounsellingSessionId;
+
+  const selectedOpt = courseSelect?.selectedOptions?.[0];
+  const academyName = selectedOpt?.dataset?.academy || document.getElementById('counselling-academy-name')?.value || '';
+  const courseId = selectedOpt?.dataset?.id || document.getElementById('counselling-course-id')?.value || '';
+  const sourceCta = document.getElementById('counselling-source-cta')?.value || '';
+
+  const cleanCourseDisplay = (selectedCourse === 'not-sure' || !selectedCourse)
+    ? 'Not Sure — Help Me Choose a Course'
+    : selectedCourse;
+
+  const counsellingNotes = [
+    'LEAD TYPE: free_consultation',
+    `Course Interest: ${cleanCourseDisplay}${courseId ? ' (ID: ' + courseId + ')' : ''}`,
+    academyName ? `Academy: ${academyName}` : '',
+    `Learning Mode: ${learningMode}`,
+    city ? `City: ${city.trim()}` : '',
+    sourceCta ? `Source CTA: ${sourceCta}` : '',
+    userMessage ? `Career Goal / Question: ${userMessage.trim()}` : ''
+  ].filter(Boolean).join(' | ');
+
+  const submitBtn = document.getElementById('counselling-modal-submit-btn');
+
+  let success = false;
+  try {
+    success = await submitNovaForm({
+      form,
+      submitBtn,
+      loadingText: 'Booking Session...',
+      formName: 'career_counselling',
+      submissionMethod: 'counselling_modal',
+      data: {
+        name: vName.value,
+        mobile: vPhone.value,
+        phone: vPhone.value,
+        email: vEmail.value,
+        course: (selectedCourse === 'not-sure' || !selectedCourse)
+          ? '[CAREER COUNSELLING] Not Sure — Help Me Choose'
+          : `[CAREER COUNSELLING] ${selectedCourse}${academyName ? ' (' + academyName + ')' : ''}`,
+        city: city.trim(),
+        message: counsellingNotes,
+        lead_type: 'free_consultation',
+        learning_mode: learningMode,
+        course_id: courseId,
+        academy: academyName
+      },
+      onSuccessCallback: () => {
+        if (window._currentCounsellingSessionId !== submissionSessionId) return;
+
+        sendGA4Event('career_counselling_request_success', {
+          course_name: cleanCourseDisplay,
+          course_id: courseId || 'none',
+          academy_name: academyName || 'none',
+          learning_mode: learningMode,
+          city: city.trim() || 'unspecified',
+          lead_type: 'free_consultation',
+          source_cta: sourceCta || 'counselling_modal',
+          page_path: window.location.pathname
+        });
+
+        const successDesc = document.querySelector('#counselling-success-container .success-desc');
+        if (successDesc) {
+          successDesc.innerHTML = `Thank you, <strong>${vName.value}</strong>! Your counselling request has been received. Our admissions team will contact you to understand your goals and help you choose an appropriate learning pathway.`;
+        }
+
+        setCounsellingModalState('success');
+      }
+    });
+  } catch (err) {
+    console.error('Counselling request submission error:', err);
+    success = false;
+  }
+
+  if (window._currentCounsellingSessionId !== submissionSessionId) {
+    return;
+  }
+
+  if (!success) {
+    setCounsellingModalState('error', {
+      message: 'Unable to submit your counselling request right now. Please check your network or contact admissions via WhatsApp (+91 9695904440).'
+    });
+  }
+}
+
 
 function createMobileSlider(trackEl) {
   if (!trackEl || trackEl.dataset.sliderInitialized === 'true') return;
@@ -3687,9 +4387,17 @@ function bootSharedComponents() {
 
   // Defer secondary enhancements & modals to idle time
   if ('requestIdleCallback' in window) {
-    requestIdleCallback(() => { injectEnrollmentModalHTML(); });
+    requestIdleCallback(() => {
+      if (typeof injectEnrollmentModalHTML === 'function') injectEnrollmentModalHTML();
+      if (typeof injectDemoModalHTML === 'function') injectDemoModalHTML();
+      if (typeof injectCounsellingModalHTML === 'function') injectCounsellingModalHTML();
+    });
   } else {
-    setTimeout(injectEnrollmentModalHTML, 1500);
+    setTimeout(() => {
+      if (typeof injectEnrollmentModalHTML === 'function') injectEnrollmentModalHTML();
+      if (typeof injectDemoModalHTML === 'function') injectDemoModalHTML();
+      if (typeof injectCounsellingModalHTML === 'function') injectCounsellingModalHTML();
+    }, 1500);
   }
 
   const postDomInit = () => {

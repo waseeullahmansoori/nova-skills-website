@@ -184,33 +184,50 @@ function initFormSubmission() {
     const emailEl = document.getElementById('email');
     const courseEl = document.getElementById('course-interest');
 
-    const name = nameEl ? nameEl.value.trim() : '';
-    const phone = phoneEl ? phoneEl.value.trim() : '';
+    const name = nameEl ? nameEl.value : '';
+    const phone = phoneEl ? phoneEl.value : '';
+    const email = emailEl ? emailEl.value : '';
 
-    if (!name) {
-      showFormError('full-name', 'Please enter your full name');
+    const validator = (typeof window !== 'undefined' && window.NovaFormValidator) ? window.NovaFormValidator : null;
+
+    const vName = validator ? validator.validateFullName(name) : { valid: name.trim().length >= 2, message: 'Please enter your full name.', value: name.trim() };
+    if (!vName.valid) {
+      showFormError('full-name', vName.message);
       return;
     }
 
-    if (!phone || phone.replace(/\D/g, '').length < 10) {
-      showFormError('phone', 'Please enter a valid 10-digit phone number');
+    const vPhone = validator ? validator.validateMobile(phone) : { valid: phone.replace(/\D/g, '').length >= 10, message: 'Please enter a valid 10-digit Indian mobile number.', value: phone.replace(/\D/g, '') };
+    if (!vPhone.valid) {
+      showFormError('phone', vPhone.message);
       return;
     }
 
-    const course = courseEl ? (courseEl.options[courseEl.selectedIndex]?.text || courseEl.value) : '';
+    const vEmail = validator ? validator.validateEmail(email, false) : { valid: true, value: email.trim() };
+    if (!vEmail.valid) {
+      showFormError('email', vEmail.message);
+      return;
+    }
+
+    const rawCourse = courseEl ? (courseEl.options[courseEl.selectedIndex]?.text || courseEl.value) : '';
+    const course = (!rawCourse || rawCourse.includes('Not Sure'))
+      ? '[CAREER COUNSELLING] Not Sure — Help Me Choose'
+      : `[CAREER COUNSELLING] ${rawCourse}`;
 
     if (typeof submitNovaForm === 'function') {
       await submitNovaForm({
         form,
         submitBtn,
-        loadingText: 'Booking...',
-        formName: 'counselling_form',
+        loadingText: 'Booking Session...',
+        formName: 'career_counselling',
         submissionMethod: 'inline_counselling_form',
         data: {
-          name,
-          mobile: phone,
-          email: emailEl ? emailEl.value.trim() : '',
-          course
+          name: vName.value,
+          mobile: vPhone.value,
+          phone: vPhone.value,
+          email: vEmail.value,
+          course: course,
+          lead_type: 'free_consultation',
+          message: `LEAD TYPE: free_consultation | Course Interest: ${rawCourse} | Source: Homepage inline counselling section`
         }
       });
     }

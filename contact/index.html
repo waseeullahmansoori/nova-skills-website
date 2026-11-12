@@ -731,23 +731,23 @@
             <!-- Row 2: Email & City -->
             <div class="form-grid-2">
               <div class="form-group-custom">
-                <label for="contact-email">Email Address <span class="req">*</span></label>
-                <input type="email" id="contact-email" name="email" class="form-control-custom" placeholder="e.g., rahul@gmail.com" required aria-required="true" aria-describedby="err-email" />
+                <label for="contact-email">Email Address <span class="opt" style="font-weight: normal; color: #64748b;">(Optional)</span></label>
+                <input type="email" id="contact-email" name="email" class="form-control-custom" placeholder="e.g., rahul@gmail.com" autocomplete="email" aria-describedby="err-email" />
                 <div id="err-email" class="error-msg">Please enter a valid email address.</div>
               </div>
 
               <div class="form-group-custom">
-                <label for="contact-city">City / Location <span class="req">*</span></label>
-                <input type="text" id="contact-city" name="city" class="form-control-custom" placeholder="e.g., Siddharth Nagar, Gorakhpur, Lucknow" required aria-required="true" aria-describedby="err-city" />
-                <div id="err-city" class="error-msg">Please enter your city name.</div>
+                <label for="contact-city">City / Location <span class="opt" style="font-weight: normal; color: #64748b;">(Optional)</span></label>
+                <input type="text" id="contact-city" name="city" class="form-control-custom" placeholder="e.g., Siddharth Nagar, Gorakhpur, Lucknow" autocomplete="address-level2" aria-describedby="err-city" />
+                <div id="err-city" class="error-msg">Please enter a valid city name.</div>
               </div>
             </div>
 
             <!-- Row 3: Course Selection -->
             <div class="form-group-custom">
-              <label for="contact-course">Course Interested In <span class="req">*</span></label>
-              <select id="contact-course" name="course" class="form-control-custom" required aria-required="true" aria-describedby="err-course">
-                <option value="">-- Select a Skill Program / Academy --</option>
+              <label for="contact-course">Course Interested In <span class="opt" style="font-weight: normal; color: #64748b;">(Optional)</span></label>
+              <select id="contact-course" name="course" class="form-control-custom" aria-describedby="err-course">
+                <option value="not-sure">🎯 Not Sure — Help Me Choose a Course</option>
                 <optgroup label="🚀 Digital Marketing Academy">
                   <option value="dm-professional">AI Digital Marketing Professional (3 Months)</option>
                   <option value="dm-mastery">AI Digital Marketing Strategist (6 Months)</option>
@@ -773,10 +773,10 @@
                   <option value="nocode-web">No-Code E-Commerce & Web Design</option>
                 </optgroup>
                 <optgroup label="💼 General Counselling & Career Guidance">
-                  <option value="general-counselling">General Admission Enquiry / Not Sure Yet</option>
+                  <option value="general-counselling">General Admission Enquiry / Career Pathway Guidance</option>
                 </optgroup>
               </select>
-              <div id="err-course" class="error-msg">Please select a course or general enquiry option.</div>
+              <div id="err-course" class="error-msg">Please select a course or choose guidance option.</div>
             </div>
 
             <!-- Row 4: Preferred Mode -->
@@ -806,10 +806,10 @@
 
             <!-- Submit Button -->
             <button type="submit" id="contact-submit-btn" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.05rem; font-weight: 700; border-radius: 12px; margin-top: 10px;">
-              Get Free Career Counselling & Syllabus →
+              Book My Free Counselling Session →
             </button>
             <p style="text-align: center; font-size: 0.82rem; color: #94a3b8; margin-top: 12px; margin-bottom: 0;">
-              🔒 100% Privacy Guaranteed. We never spam your phone or email.
+              🔒 100% Privacy Guaranteed &bull; <a href="/privacy-policy/" style="color:var(--teal,#0599a8); text-decoration:underline;">Privacy Policy</a>
             </p>
           </form>
         </div>
@@ -1068,38 +1068,54 @@
 
       // Real-time validation listeners
       nameInput.addEventListener('input', () => {
-        validateInput(nameInput, document.getElementById('err-name'), nameInput.value.trim().length >= 2);
+        const valid = window.NovaFormValidator ? window.NovaFormValidator.validateFullName(nameInput.value).valid : nameInput.value.trim().length >= 2;
+        validateInput(nameInput, document.getElementById('err-name'), valid);
       });
 
       mobileInput.addEventListener('input', () => {
-        const val = mobileInput.value.replace(/\D/g, '');
+        const val = mobileInput.value.replace(/\D/g, '').slice(0, 10);
         mobileInput.value = val;
-        validateInput(mobileInput, document.getElementById('err-mobile'), /^[6-9]\d{9}$/.test(val));
+        const valid = window.NovaFormValidator ? window.NovaFormValidator.validateMobile(val).valid : /^[6-9]\d{9}$/.test(val);
+        validateInput(mobileInput, document.getElementById('err-mobile'), valid);
       });
 
       emailInput.addEventListener('input', () => {
-        validateInput(emailInput, document.getElementById('err-email'), /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim()));
+        const val = emailInput.value.trim();
+        const valid = val === '' || (window.NovaFormValidator ? window.NovaFormValidator.validateEmail(val, false).valid : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val));
+        validateInput(emailInput, document.getElementById('err-email'), valid);
       });
 
       cityInput.addEventListener('input', () => {
-        validateInput(cityInput, document.getElementById('err-city'), cityInput.value.trim().length >= 2);
+        const val = cityInput.value.trim();
+        const valid = val === '' || (window.NovaFormValidator ? window.NovaFormValidator.validateCity(val, false).valid : val.length >= 2);
+        validateInput(cityInput, document.getElementById('err-city'), valid);
       });
 
       courseSelect.addEventListener('change', () => {
-        validateInput(courseSelect, document.getElementById('err-course'), courseSelect.value !== '');
+        // Form B: Course is optional / can be "not-sure"
+        validateInput(courseSelect, document.getElementById('err-course'), true);
       });
 
       // Form submission handler
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const vName = validateInput(nameInput, document.getElementById('err-name'), nameInput.value.trim().length >= 2);
-        const vMobile = validateInput(mobileInput, document.getElementById('err-mobile'), /^[6-9]\d{9}$/.test(mobileInput.value.trim()));
-        const vEmail = validateInput(emailInput, document.getElementById('err-email'), /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim()));
-        const vCity = validateInput(cityInput, document.getElementById('err-city'), cityInput.value.trim().length >= 2);
-        const vCourse = validateInput(courseSelect, document.getElementById('err-course'), courseSelect.value !== '');
+        const vName = validateInput(nameInput, document.getElementById('err-name'), 
+          window.NovaFormValidator ? window.NovaFormValidator.validateFullName(nameInput.value).valid : nameInput.value.trim().length >= 2
+        );
+        const vMobile = validateInput(mobileInput, document.getElementById('err-mobile'), 
+          window.NovaFormValidator ? window.NovaFormValidator.validateMobile(mobileInput.value).valid : /^[6-9]\d{9}$/.test(mobileInput.value.trim())
+        );
+        const emailVal = emailInput.value.trim();
+        const vEmail = validateInput(emailInput, document.getElementById('err-email'), 
+          emailVal === '' || (window.NovaFormValidator ? window.NovaFormValidator.validateEmail(emailVal, false).valid : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal))
+        );
+        const cityVal = cityInput.value.trim();
+        const vCity = validateInput(cityInput, document.getElementById('err-city'), 
+          cityVal === '' || (window.NovaFormValidator ? window.NovaFormValidator.validateCity(cityVal, false).valid : cityVal.length >= 2)
+        );
 
-        if (!vName || !vMobile || !vEmail || !vCity || !vCourse) {
+        if (!vName || !vMobile || !vEmail || !vCity) {
           const firstError = form.querySelector('.form-control-custom.error');
           if (firstError) firstError.focus();
           return;
@@ -1107,14 +1123,17 @@
 
         const selectedMode = form.querySelector('input[name="learning_mode"]:checked')?.value || 'Online Live';
         const messageText = document.getElementById('contact-message').value.trim();
+        const chosenCourse = courseSelect.value === 'not-sure' || !courseSelect.value ? 'Not Sure — Help Me Choose a Course' : courseSelect.options[courseSelect.selectedIndex].text;
 
         const formData = {
           name: nameInput.value.trim(),
           mobile: mobileInput.value.trim(),
-          email: emailInput.value.trim(),
-          city: cityInput.value.trim(),
-          course: courseSelect.options[courseSelect.selectedIndex].text,
-          message: `[Learning Mode: ${selectedMode}] ${messageText}`,
+          email: emailVal,
+          city: cityVal,
+          course: chosenCourse,
+          lead_type: 'free_consultation',
+          learning_mode: selectedMode,
+          message: `[CAREER COUNSELLING] [Mode: ${selectedMode}] ${messageText}`.trim(),
           website: form.querySelector('input[name="website"]')?.value || ''
         };
 
@@ -1123,13 +1142,16 @@
             form,
             submitBtn,
             data: formData,
-            formName: 'contact_enquiry',
+            formName: 'career_counselling',
             submissionMethod: 'contact_page_form',
-            loadingText: 'Submitting Enquiry...'
+            loadingText: 'Booking Counselling Session...'
           });
+          if (success) {
+            form.reset();
+          }
         } else {
           // Fallback alert if submitNovaForm is loading
-          alert('Thank you! Your enquiry has been received. Our team will contact you shortly.');
+          alert('Thank you! Your career counselling request has been received. Our senior academic counsellor will contact you shortly.');
           form.reset();
         }
       });

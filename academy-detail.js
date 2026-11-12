@@ -63,7 +63,9 @@ function toggleFaq(btn) {
 window.toggleFaq = toggleFaq;
 
 function openCurriculumNotice(academyName) {
-  if (typeof openConsultationPopup === 'function') {
+  if (typeof openCounsellingModal === 'function') {
+    openCounsellingModal({ academyName: academyName, sourceCta: 'curriculum_download' });
+  } else if (typeof openConsultationPopup === 'function') {
     openConsultationPopup();
   } else {
     alert(`Curriculum syllabus request received for ${academyName}! Our counsellor will share the detailed PDF on your phone.`);
@@ -493,6 +495,7 @@ function buildCourseCardHTML(course, extraClass = '') {
 }
 
 function renderAcademyLandingPage(academy) {
+  window.currentAcademy = academy;
   // 1. Retrieve Courses & Filter for Academy
   const academyCourses = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCoursesByAcademy === 'function')
     ? window.NovaCourseData.getCoursesByAcademy(academy.id)
@@ -573,7 +576,11 @@ function renderAcademyLandingPage(academy) {
   }
   if (consultationBtn) {
     consultationBtn.onclick = () => {
-      if (typeof openConsultationPopup === 'function') openConsultationPopup();
+      if (typeof openCounsellingModal === 'function') {
+        openCounsellingModal({ academyId: academy.id, academyName: academy.name, sourceCta: 'academy_counselling_cta' });
+      } else if (typeof openConsultationPopup === 'function') {
+        openConsultationPopup();
+      }
     };
   }
 
@@ -1253,7 +1260,7 @@ function renderAcademyLandingPage(academy) {
 
         <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; margin-bottom: 24px;">
           <button type="button" class="btn btn-primary btn-lg" style="background: #75d766; color: #011731; font-weight: 800;" onclick="openEnrollmentModal('', '${(academy.name || '').replace(/'/g, "\\'")}')">Enroll Now →</button>
-          <button type="button" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);" onclick="openConsultationPopup()">Free Career Counselling</button>
+          <button type="button" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);" onclick="if(typeof openCounsellingModal==='function'){openCounsellingModal({academyName:(window.currentAcademy&&window.currentAcademy.name)||'',sourceCta:'academy_bottom_cta'});}else if(typeof openConsultationPopup==='function'){openConsultationPopup();}">Free Career Counselling</button>
           <a href="tel:+919695904440" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);">📞 Call Now</a>
           <a href="https://wa.me/919695904440?text=${waMsg}" target="_blank" rel="noopener" class="btn btn-outline btn-lg" style="color: #75d766; border-color: #75d766;">💬 WhatsApp Us</a>
           <button type="button" class="btn btn-outline btn-lg" style="color: #38bdf8; border-color: #38bdf8;" onclick="openCurriculumNotice('${(academy.name || '').replace(/'/g, "\\'")}')">📥 Download Curriculum</button>

@@ -14,6 +14,7 @@
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "test:remediation": "node scripts/test-ai-search-audit-remediation.js",
     "test:attribution": "node scripts/test-attribution-lead-flow.js",
+    "test:forms": "node scripts/test-p1-1-lead-forms-suite.js && node scripts/test-p1-1-submission-flow.js",
     "build": "npm run build:data && node scripts/build_min_js.js && node scripts/build-homepage-featured.js && node scripts/build-courses-page.js && node scripts/build-academy-pages.js && node scripts/build-course-pages.js && node scripts/build-all-city-pages-phaseF.js && node scripts/build-branches-directory.js && node scripts/generate-sitemap.js"
   },
   "keywords": [
