@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-shopify" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-shopify" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-shopify" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0599a8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0599a8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-shopify" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#0599a8"/>
+    </linearGradient>
+    <pattern id="grid-shopify" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-shopify)"/>
+  <rect width="800" height="600" fill="url(#grid-shopify)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-shopify)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-shopify)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">SHOPIFY ADMIN • STOREFRONT DESIGN &amp; E-COMMERCE OPS</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-opacity="0.5"/>
+    <rect x="94" y="162" width="388" height="304" rx="12" fill="#0d2342" stroke="rgba(16,185,129,0.45)"/>
+    <rect x="114" y="182" width="348" height="106" rx="10" fill="url(#grad-shopify)" opacity="0.28"/>
+    <text x="288" y="232" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="900" fill="#ffffff">D2C BRAND STOREFRONT</text>
+    <text x="288" y="256" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11.5" fill="#a7f3d0">Online Store 2.0 • Mobile Conversion Layout</text>
+    
+      <rect x="114" y="304" width="108" height="104" rx="10" fill="#132d52" stroke="rgba(16,185,129,0.4)"/>
+      <rect x="126" y="316" width="84" height="50" rx="6" fill="#08182e"/>
+      <text x="168" y="388" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#e2e8f0">SKU-01 Serum</text>
+    
+      <rect x="234" y="304" width="108" height="104" rx="10" fill="#132d52" stroke="rgba(16,185,129,0.4)"/>
+      <rect x="246" y="316" width="84" height="50" rx="6" fill="#08182e"/>
+      <text x="288" y="388" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#e2e8f0">SKU-02 Kit</text>
+    
+      <rect x="354" y="304" width="108" height="104" rx="10" fill="#132d52" stroke="rgba(16,185,129,0.4)"/>
+      <rect x="366" y="316" width="84" height="50" rx="6" fill="#08182e"/>
+      <text x="408" y="388" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#e2e8f0">SKU-03 Bundle</text>
+    
+    <rect x="114" y="422" width="166" height="26" rx="13" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-opacity="0.45"/>
+  <text x="197" y="439" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Collections &amp; Filters</text>
+    <rect x="294" y="422" width="168" height="26" rx="13" fill="#0599a8" fill-opacity="0.18" stroke="#0599a8" stroke-opacity="0.45"/>
+  <text x="378" y="439" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Shipping &amp; Razorpay</text>
+    <rect x="500" y="162" width="208" height="304" rx="12" fill="#132d52" stroke="rgba(148,163,184,0.2)"/>
+    <text x="520" y="192" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#86efac">STORE METRICS</text>
+    <text x="520" y="238" font-family="system-ui,sans-serif" font-size="28" font-weight="900" fill="#75d766">3.8% CVR</text>
+    <text x="520" y="260" font-family="system-ui,sans-serif" font-size="11" fill="#94a3b8">Checkout Completion</text>
+    <rect x="520" y="298" width="168" height="28" rx="14" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-opacity="0.45"/>
+  <text x="604" y="316" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Order Fulfillment</text>
+    <rect x="520" y="340" width="168" height="28" rx="14" fill="#38bdf8" fill-opacity="0.18" stroke="#38bdf8" stroke-opacity="0.45"/>
+  <text x="604" y="358" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">App &amp; Pixel Setup</text>
+    <rect x="520" y="382" width="168" height="28" rx="14" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-opacity="0.45"/>
+  <text x="604" y="400" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Inventory &amp; Discounts</text>
+  
+</svg>

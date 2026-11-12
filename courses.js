@@ -151,6 +151,16 @@ function getCourseUrl(course) {
 // BEGIN GENERATED COURSE_IMAGE_MAP
 const COURSE_IMAGE_MAP = {
   "dm-mastery": {
+    "desktop": "/public/assets/nova-images/desktop/IMG-008.webp",
+    "mobile": "/public/assets/nova-images/mobile/IMG-008.webp",
+    "mimeType": "image/webp",
+    "width": 800,
+    "height": 600,
+    "mobileWidth": 600,
+    "mobileHeight": 450,
+    "alt": "AI Digital Marketing Strategist — strategic digital marketing growth planning and performance executive dashboard"
+  },
+  "dm-professional": {
     "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-048.webp",
     "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-048.webp",
     "mimeType": "image/webp",
@@ -158,17 +168,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "AI Digital Marketing Strategist — campaign planning and marketing analytics course preview"
-  },
-  "dm-professional": {
-    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-056.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-056.webp",
-    "mimeType": "image/webp",
-    "width": 800,
-    "height": 600,
-    "mobileWidth": 600,
-    "mobileHeight": 450,
-    "alt": "AI Digital Marketing Specialist — hands-on course workspace and practical project preview"
+    "alt": "AI Digital Marketing Specialist — campaign planning, analytics and paid acquisition workspace"
   },
   "performance-marketing-specialist": {
     "desktop": "/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-card-640w.png",
@@ -178,7 +178,7 @@ const COURSE_IMAGE_MAP = {
     "height": 360,
     "mobileWidth": 400,
     "mobileHeight": 225,
-    "alt": "Performance Marketing Specialist — authentic student capstone and practical workflow preview"
+    "alt": "Performance Marketing Specialist — project workflow and practical capstone preview"
   },
   "ecommerce-growth-marketing-specialist": {
     "desktop": "/public/assets/course-cards/desktop/ecommerce-growth-marketing-specialist.webp",
@@ -188,7 +188,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "E-Commerce & Growth Marketing Specialist — curated practical workstation and course preview"
+    "alt": "E-Commerce & Growth Marketing Specialist — custom workspace and practical curriculum preview"
   },
   "google-ads": {
     "desktop": "/public/assets/course-cards/desktop/google-ads.webp",
@@ -198,7 +198,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Google Ads Performance Specialist — curated practical workstation and course preview"
+    "alt": "Google Ads Performance Specialist — custom workspace and practical curriculum preview"
   },
   "meta-ads": {
     "desktop": "/public/assets/course-cards/svg/meta-ads.svg",
@@ -208,7 +208,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Meta Ads & Lead Generation Specialist — interactive workflow and software interface preview"
+    "alt": "Meta Ads & Lead Generation Specialist — bespoke interactive workflow and software preview"
   },
   "seo-geo": {
     "desktop": "/public/assets/course-cards/svg/seo-geo.svg",
@@ -218,7 +218,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "SEO & AI Search Optimization (AEO/GEO) — interactive workflow and software interface preview"
+    "alt": "SEO & AI Search Optimization (AEO/GEO) — bespoke interactive workflow and software preview"
   },
   "social-media-marketing": {
     "desktop": "/public/assets/course-cards/svg/social-media-marketing.svg",
@@ -228,7 +228,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Social Media Marketing & Growth — interactive workflow and software interface preview"
+    "alt": "Social Media Marketing & Growth — bespoke interactive workflow and software preview"
   },
   "content-marketing": {
     "desktop": "/public/assets/course-cards/svg/content-marketing.svg",
@@ -238,7 +238,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "AI-Powered Content Marketing — interactive workflow and software interface preview"
+    "alt": "AI-Powered Content Marketing — bespoke interactive workflow and software preview"
   },
   "email-marketing": {
     "desktop": "/public/assets/course-cards/svg/email-marketing.svg",
@@ -248,17 +248,17 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Email Marketing & Automation — interactive workflow and software interface preview"
+    "alt": "Email Marketing & Automation — bespoke interactive workflow and software preview"
   },
   "google-analytics-ga4": {
-    "desktop": "/public/assets/course-cards/svg/google-analytics-ga4.svg",
-    "mobile": "/public/assets/course-cards/svg/google-analytics-ga4.svg",
-    "mimeType": "image/svg+xml",
-    "width": 800,
-    "height": 600,
-    "mobileWidth": 600,
-    "mobileHeight": 450,
-    "alt": "Google Analytics 4 & GTM — interactive workflow and software interface preview"
+    "desktop": "/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-card-640w.png",
+    "mobile": "/images/projects/dm-professional/ns-proj-dm-analytics-dashboard-mobile-400w.png",
+    "mimeType": "image/png",
+    "width": 640,
+    "height": 360,
+    "mobileWidth": 400,
+    "mobileHeight": 225,
+    "alt": "Google Analytics 4 & GTM — project workflow and practical capstone preview"
   },
   "google-search-console": {
     "desktop": "/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-card-640w.png",
@@ -268,7 +268,7 @@ const COURSE_IMAGE_MAP = {
     "height": 360,
     "mobileWidth": 400,
     "mobileHeight": 225,
-    "alt": "Google Search Console & SEO Reporting — authentic student capstone and practical workflow preview"
+    "alt": "Google Search Console & SEO Reporting — project workflow and practical capstone preview"
   },
   "local-seo": {
     "desktop": "/public/assets/course-cards/svg/local-seo.svg",
@@ -278,7 +278,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Local SEO & Google Business Profile — interactive workflow and software interface preview"
+    "alt": "Local SEO & Google Business Profile — bespoke interactive workflow and software preview"
   },
   "youtube-marketing": {
     "desktop": "/public/assets/course-cards/svg/youtube-marketing.svg",
@@ -288,37 +288,37 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "YouTube Marketing & Channel Growth — interactive workflow and software interface preview"
+    "alt": "YouTube Marketing & Channel Growth — bespoke interactive workflow and software preview"
   },
   "ai-mastery": {
-    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-059.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-059.webp",
+    "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-048.webp",
+    "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-048.webp",
     "mimeType": "image/webp",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "AI Solutions Engineering & Agentic AI Mastery — hands-on course workspace and practical project preview"
+    "alt": "AI Solutions Engineering & Agentic AI Mastery — AI solutions engineering, multi-agent systems and LLM workflows"
   },
   "ai-productivity": {
-    "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-067.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-067.webp",
+    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-067.webp",
+    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-067.webp",
     "mimeType": "image/webp",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "AI Productivity Professional — hands-on course workspace and practical project preview"
+    "alt": "AI Productivity Professional — practical workstation and applied training visual"
   },
   "ai-for-business-pro": {
-    "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-060.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-060.webp",
+    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-060.webp",
+    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-060.webp",
     "mimeType": "image/webp",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "AI for Business Professional — hands-on course workspace and practical project preview"
+    "alt": "AI for Business Professional — practical workstation and applied training visual"
   },
   "prompt-engineering": {
     "desktop": "/public/assets/course-cards/svg/prompt-engineering.svg",
@@ -328,17 +328,17 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Prompt Engineering & AI Output Evaluation — interactive workflow and software interface preview"
+    "alt": "Prompt Engineering & AI Output Evaluation — bespoke interactive workflow and software preview"
   },
   "ai-automation-n8n": {
-    "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-048.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-048.webp",
-    "mimeType": "image/webp",
+    "desktop": "/public/assets/course-cards/svg/ai-automation-n8n.svg",
+    "mobile": "/public/assets/course-cards/svg/ai-automation-n8n.svg",
+    "mimeType": "image/svg+xml",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "AI Automation with n8n & Business Workflows — AI and business workflow automation dashboard course preview"
+    "alt": "AI Automation with n8n & Business Workflows — bespoke interactive workflow and software preview"
   },
   "ai-agents-fundamentals": {
     "desktop": "/public/assets/course-cards/svg/ai-agents-fundamentals.svg",
@@ -348,7 +348,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "AI Agents Fundamentals: Design, Tools & Safety — interactive workflow and software interface preview"
+    "alt": "AI Agents Fundamentals: Design, Tools & Safety — bespoke interactive workflow and software preview"
   },
   "chatgpt-mastery": {
     "desktop": "/public/assets/course-cards/svg/chatgpt-mastery.svg",
@@ -358,7 +358,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "ChatGPT for Work, Research & Data Analysis — interactive workflow and software interface preview"
+    "alt": "ChatGPT for Work, Research & Data Analysis — bespoke interactive workflow and software preview"
   },
   "gemini-mastery": {
     "desktop": "/public/assets/course-cards/svg/gemini-mastery.svg",
@@ -368,7 +368,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Gemini & Google Workspace AI — interactive workflow and software interface preview"
+    "alt": "Gemini & Google Workspace AI — bespoke interactive workflow and software preview"
   },
   "claude-productivity": {
     "desktop": "/public/assets/course-cards/svg/claude-productivity.svg",
@@ -378,7 +378,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Claude for Productivity, Skills & Artifacts — interactive workflow and software interface preview"
+    "alt": "Claude for Productivity, Skills & Artifacts — bespoke interactive workflow and software preview"
   },
   "ai-research-tools": {
     "desktop": "/public/assets/course-cards/svg/ai-research-tools.svg",
@@ -388,37 +388,37 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "AI Research & Evidence Verification — interactive workflow and software interface preview"
+    "alt": "AI Research & Evidence Verification — bespoke interactive workflow and software preview"
   },
   "creative-design": {
-    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-066.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-066.webp",
+    "desktop": "/public/assets/nova-images/desktop/IMG-006.webp",
+    "mobile": "/public/assets/nova-images/mobile/IMG-006.webp",
     "mimeType": "image/webp",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Creative Design Master — hands-on course workspace and practical project preview"
+    "alt": "Creative Design Master — creative design studio visual brand system and multi-format artwork"
   },
   "graphic-design-pro": {
-    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-057.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-057.webp",
+    "desktop": "/public/assets/nova-images/desktop/unit-03/IMG-048.webp",
+    "mobile": "/public/assets/nova-images/mobile/unit-03/IMG-048.webp",
     "mimeType": "image/webp",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Graphic Design Professional — hands-on course workspace and practical project preview"
+    "alt": "Graphic Design Professional — graphic design, visual hierarchy and layout composition"
   },
   "uiux-design-pro": {
-    "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-061.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-061.webp",
+    "desktop": "/public/assets/nova-images/desktop/unit-05/IMG-048.webp",
+    "mobile": "/public/assets/nova-images/mobile/unit-05/IMG-048.webp",
     "mimeType": "image/webp",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "UI/UX Design Professional — hands-on course workspace and practical project preview"
+    "alt": "UI/UX Design Professional — UI/UX wireframing, mobile user flows and interactive design"
   },
   "adobe-photoshop": {
     "desktop": "/public/assets/course-cards/desktop/adobe-photoshop.webp",
@@ -428,7 +428,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Adobe Photoshop — Commercial Image Editing & Design — curated practical workstation and course preview"
+    "alt": "Adobe Photoshop — Commercial Image Editing & Design — custom workspace and practical curriculum preview"
   },
   "adobe-illustrator": {
     "desktop": "/public/assets/course-cards/svg/adobe-illustrator.svg",
@@ -438,7 +438,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Adobe Illustrator — Vector Graphics & Print Design — interactive workflow and software interface preview"
+    "alt": "Adobe Illustrator — Vector Graphics & Print Design — bespoke interactive workflow and software preview"
   },
   "canva-pro": {
     "desktop": "/public/assets/course-cards/svg/canva-pro.svg",
@@ -448,27 +448,27 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Canva Professional — Brand & Marketing Design — interactive workflow and software interface preview"
+    "alt": "Canva Professional — Brand & Marketing Design — bespoke interactive workflow and software preview"
   },
   "figma-ui-design": {
-    "desktop": "/public/assets/nova-images/desktop/unit-05/IMG-048.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-05/IMG-048.webp",
-    "mimeType": "image/webp",
+    "desktop": "/public/assets/course-cards/svg/figma-ui-design.svg",
+    "mobile": "/public/assets/course-cards/svg/figma-ui-design.svg",
+    "mimeType": "image/svg+xml",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Figma UI Design & Responsive Prototyping — mobile application UI design and responsive wireframes course preview"
+    "alt": "Figma UI Design & Responsive Prototyping — bespoke interactive workflow and software preview"
   },
   "brand-identity-design": {
-    "desktop": "/public/assets/nova-images/desktop/unit-03/IMG-048.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-03/IMG-048.webp",
-    "mimeType": "image/webp",
-    "width": 800,
-    "height": 600,
-    "mobileWidth": 600,
-    "mobileHeight": 450,
-    "alt": "Brand Identity Design & Visual Systems — graphic design, branding and typography system course preview"
+    "desktop": "/images/projects/graphic-design-pro/ns-proj-gd-brand-identity-card-640w.png",
+    "mobile": "/images/projects/graphic-design-pro/ns-proj-gd-brand-identity-mobile-400w.png",
+    "mimeType": "image/png",
+    "width": 640,
+    "height": 360,
+    "mobileWidth": 400,
+    "mobileHeight": 225,
+    "alt": "Brand Identity Design & Visual Systems — project workflow and practical capstone preview"
   },
   "packaging-design": {
     "desktop": "/images/projects/graphic-design-pro/ns-proj-gd-packaging-capstone-card-640w.png",
@@ -478,7 +478,7 @@ const COURSE_IMAGE_MAP = {
     "height": 360,
     "mobileWidth": 400,
     "mobileHeight": 225,
-    "alt": "Packaging Artwork & Print-Ready Design — authentic student capstone and practical workflow preview"
+    "alt": "Packaging Artwork & Print-Ready Design — project workflow and practical capstone preview"
   },
   "logo-design": {
     "desktop": "/public/assets/course-cards/svg/logo-design.svg",
@@ -488,17 +488,17 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Logo Design & Vector Identity Marks — interactive workflow and software interface preview"
+    "alt": "Logo Design & Vector Identity Marks — bespoke interactive workflow and software preview"
   },
   "fullstack-foundation": {
-    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-062.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-062.webp",
+    "desktop": "/public/assets/nova-images/desktop/unit-04/IMG-048.webp",
+    "mobile": "/public/assets/nova-images/mobile/unit-04/IMG-048.webp",
     "mimeType": "image/webp",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Full Stack Programming Foundation — hands-on course workspace and practical project preview"
+    "alt": "Full Stack Programming Foundation — full stack software engineering and web application code"
   },
   "python-developer": {
     "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-063.webp",
@@ -508,17 +508,17 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Python Developer Professional — hands-on course workspace and practical project preview"
+    "alt": "Python Developer Professional — practical workstation and applied training visual"
   },
   "ai-assisted-full-stack-web-development": {
-    "desktop": "/public/assets/nova-images/desktop/unit-04/IMG-048.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-04/IMG-048.webp",
-    "mimeType": "image/webp",
-    "width": 800,
-    "height": 600,
-    "mobileWidth": 600,
-    "mobileHeight": 450,
-    "alt": "AI-Assisted Full Stack Web Development — desktop application and full-stack coding interface course preview"
+    "desktop": "/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-card-640w.png",
+    "mobile": "/images/projects/fullstack-foundation/ns-proj-fs-saas-capstone-mobile-400w.png",
+    "mimeType": "image/png",
+    "width": 640,
+    "height": 360,
+    "mobileWidth": 400,
+    "mobileHeight": 225,
+    "alt": "AI-Assisted Full Stack Web Development — project workflow and practical capstone preview"
   },
   "html-css": {
     "desktop": "/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-card-640w.png",
@@ -528,7 +528,7 @@ const COURSE_IMAGE_MAP = {
     "height": 360,
     "mobileWidth": 400,
     "mobileHeight": 225,
-    "alt": "HTML, CSS & Responsive Web Design — authentic student capstone and practical workflow preview"
+    "alt": "HTML, CSS & Responsive Web Design — project workflow and practical capstone preview"
   },
   "javascript-cert": {
     "desktop": "/public/assets/course-cards/svg/javascript-cert.svg",
@@ -538,7 +538,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Modern JavaScript & TypeScript Foundations — interactive workflow and software interface preview"
+    "alt": "Modern JavaScript & TypeScript Foundations — bespoke interactive workflow and software preview"
   },
   "react-cert": {
     "desktop": "/public/assets/course-cards/svg/react-cert.svg",
@@ -548,7 +548,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "React.js Frontend Development — interactive workflow and software interface preview"
+    "alt": "React.js Frontend Development — bespoke interactive workflow and software preview"
   },
   "node-js": {
     "desktop": "/public/assets/course-cards/svg/node-js.svg",
@@ -558,7 +558,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Node.js Backend Development with Express — interactive workflow and software interface preview"
+    "alt": "Node.js Backend Development with Express — bespoke interactive workflow and software preview"
   },
   "sql-basics": {
     "desktop": "/public/assets/course-cards/svg/sql-basics.svg",
@@ -568,7 +568,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "SQL & Relational Database Fundamentals — interactive workflow and software interface preview"
+    "alt": "SQL & Relational Database Fundamentals — bespoke interactive workflow and software preview"
   },
   "git-github": {
     "desktop": "/public/assets/course-cards/svg/git-github.svg",
@@ -578,7 +578,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Git & GitHub — interactive workflow and software interface preview"
+    "alt": "Git & GitHub — bespoke interactive workflow and software preview"
   },
   "rest-apis": {
     "desktop": "/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-card-640w.png",
@@ -588,17 +588,17 @@ const COURSE_IMAGE_MAP = {
     "height": 360,
     "mobileWidth": 400,
     "mobileHeight": 225,
-    "alt": "REST APIs — authentic student capstone and practical workflow preview"
+    "alt": "REST APIs — project workflow and practical capstone preview"
   },
   "ecommerce-mastery": {
-    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-065.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-065.webp",
+    "desktop": "/public/assets/nova-images/desktop/unit-07/IMG-048.webp",
+    "mobile": "/public/assets/nova-images/mobile/unit-07/IMG-048.webp",
     "mimeType": "image/webp",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "E-Commerce Website Mastery — hands-on course workspace and practical project preview"
+    "alt": "E-Commerce Website Mastery — e-commerce storefront architecture and product merchandising"
   },
   "nocode-web-pro": {
     "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-064.webp",
@@ -608,7 +608,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "No-Code Website Professional — hands-on course workspace and practical project preview"
+    "alt": "No-Code Website Professional — practical workstation and applied training visual"
   },
   "wordpress-cert": {
     "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-wordpress-elementor-card-640w.png",
@@ -618,7 +618,7 @@ const COURSE_IMAGE_MAP = {
     "height": 360,
     "mobileWidth": 400,
     "mobileHeight": 225,
-    "alt": "WordPress Website Design & Management — authentic student capstone and practical workflow preview"
+    "alt": "WordPress Website Design & Management — project workflow and practical capstone preview"
   },
   "woocommerce-cert": {
     "desktop": "/public/assets/course-cards/svg/woocommerce-cert.svg",
@@ -628,17 +628,17 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "WooCommerce Store Development & Operations — interactive workflow and software interface preview"
+    "alt": "WooCommerce Store Development & Operations — bespoke interactive workflow and software preview"
   },
   "shopify-cert": {
-    "desktop": "/public/assets/nova-images/desktop/unit-07/IMG-048.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-07/IMG-048.webp",
-    "mimeType": "image/webp",
+    "desktop": "/public/assets/course-cards/svg/shopify-cert.svg",
+    "mobile": "/public/assets/course-cards/svg/shopify-cert.svg",
+    "mimeType": "image/svg+xml",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Shopify Store Design & E-Commerce Operations — e-commerce storefront and product presentation course preview"
+    "alt": "Shopify Store Design & E-Commerce Operations — bespoke interactive workflow and software preview"
   },
   "elementor-cert": {
     "desktop": "/public/assets/course-cards/svg/elementor-cert.svg",
@@ -648,7 +648,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Elementor Website Design & Landing Pages — interactive workflow and software interface preview"
+    "alt": "Elementor Website Design & Landing Pages — bespoke interactive workflow and software preview"
   },
   "webflow-cert": {
     "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-card-640w.png",
@@ -658,7 +658,7 @@ const COURSE_IMAGE_MAP = {
     "height": 360,
     "mobileWidth": 400,
     "mobileHeight": 225,
-    "alt": "Webflow Website Design & CMS Development — authentic student capstone and practical workflow preview"
+    "alt": "Webflow Website Design & CMS Development — project workflow and practical capstone preview"
   },
   "framer-cert": {
     "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-framer-saas-card-640w.png",
@@ -668,9 +668,19 @@ const COURSE_IMAGE_MAP = {
     "height": 360,
     "mobileWidth": 400,
     "mobileHeight": 225,
-    "alt": "Framer Website Design & Interactive Experiences — authentic student capstone and practical workflow preview"
+    "alt": "Framer Website Design & Interactive Experiences — project workflow and practical capstone preview"
   },
   "ai-integrated-video-editing-motion-graphics-professional": {
+    "desktop": "/public/assets/nova-images/desktop/IMG-007.webp",
+    "mobile": "/public/assets/nova-images/mobile/IMG-007.webp",
+    "mimeType": "image/webp",
+    "width": 800,
+    "height": 600,
+    "mobileWidth": 600,
+    "mobileHeight": 450,
+    "alt": "AI-Integrated Video Editing & Motion Graphics Professional — AI-integrated video editing suite, motion graphics timeline and color workspace"
+  },
+  "video-pro": {
     "desktop": "/public/assets/nova-images/desktop/unit-06/IMG-048.webp",
     "mobile": "/public/assets/nova-images/mobile/unit-06/IMG-048.webp",
     "mimeType": "image/webp",
@@ -678,17 +688,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "AI-Integrated Video Editing & Motion Graphics Professional — professional camera and video editing workstation course preview"
-  },
-  "video-pro": {
-    "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-058.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-058.webp",
-    "mimeType": "image/webp",
-    "width": 800,
-    "height": 600,
-    "mobileWidth": 600,
-    "mobileHeight": 450,
-    "alt": "Professional Video Editing — hands-on course workspace and practical project preview"
+    "alt": "Professional Video Editing — professional video editing workstation and camera production"
   },
   "generative-ai-video-production-professional": {
     "desktop": "/public/assets/course-cards/svg/generative-ai-video-production-professional.svg",
@@ -698,7 +698,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Generative AI Video Production Professional — interactive workflow and software interface preview"
+    "alt": "Generative AI Video Production Professional — bespoke interactive workflow and software preview"
   },
   "adobe-premiere-pro": {
     "desktop": "/public/assets/course-cards/svg/adobe-premiere-pro.svg",
@@ -708,7 +708,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Adobe Premiere Pro — Professional Video Editing — interactive workflow and software interface preview"
+    "alt": "Adobe Premiere Pro — Professional Video Editing — bespoke interactive workflow and software preview"
   },
   "after-effects": {
     "desktop": "/public/assets/course-cards/svg/after-effects.svg",
@@ -718,7 +718,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Adobe After Effects — Motion Design & Compositing — interactive workflow and software interface preview"
+    "alt": "Adobe After Effects — Motion Design & Compositing — bespoke interactive workflow and software preview"
   },
   "davinci-resolve": {
     "desktop": "/public/assets/course-cards/svg/davinci-resolve.svg",
@@ -728,7 +728,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "DaVinci Resolve — Colour Grading & Video Finishing — interactive workflow and software interface preview"
+    "alt": "DaVinci Resolve — Colour Grading & Video Finishing — bespoke interactive workflow and software preview"
   },
   "reels-editing": {
     "desktop": "/public/assets/course-cards/svg/reels-editing.svg",
@@ -738,7 +738,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Reels & Shorts Editing for Brands and Creators — interactive workflow and software interface preview"
+    "alt": "Reels & Shorts Editing for Brands and Creators — bespoke interactive workflow and software preview"
   },
   "motion-graphics-essentials": {
     "desktop": "/public/assets/course-cards/svg/motion-graphics-essentials.svg",
@@ -748,29 +748,19 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Motion Graphics Essentials — 2D Animation & Typography — interactive workflow and software interface preview"
+    "alt": "Motion Graphics Essentials — 2D Animation & Typography — bespoke interactive workflow and software preview"
   },
   "archviz-mastery": {
-    "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-068.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-068.webp",
+    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-068.webp",
+    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-068.webp",
     "mimeType": "image/webp",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Architectural Visualisation Master — hands-on course workspace and practical project preview"
+    "alt": "Architectural Visualisation Master — practical workstation and applied training visual"
   },
   "3d-viz-pro": {
-    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-069.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-069.webp",
-    "mimeType": "image/webp",
-    "width": 800,
-    "height": 600,
-    "mobileWidth": 600,
-    "mobileHeight": 450,
-    "alt": "3D Visualisation Professional — hands-on course workspace and practical project preview"
-  },
-  "blender-cert": {
     "desktop": "/public/assets/nova-images/desktop/unit-08/IMG-048.webp",
     "mobile": "/public/assets/nova-images/mobile/unit-08/IMG-048.webp",
     "mimeType": "image/webp",
@@ -778,7 +768,17 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Blender 3D Modeling, Materials & Rendering — 3D product modelling, materials and rendering viewport course preview"
+    "alt": "3D Visualisation Professional — 3D visualization viewport modeling, lighting and rendering"
+  },
+  "blender-cert": {
+    "desktop": "/public/assets/course-cards/svg/blender-cert.svg",
+    "mobile": "/public/assets/course-cards/svg/blender-cert.svg",
+    "mimeType": "image/svg+xml",
+    "width": 800,
+    "height": 600,
+    "mobileWidth": 600,
+    "mobileHeight": 450,
+    "alt": "Blender 3D Modeling, Materials & Rendering — bespoke interactive workflow and software preview"
   },
   "3ds-max-cert": {
     "desktop": "/public/assets/course-cards/svg/3ds-max-cert.svg",
@@ -788,7 +788,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "3ds Max Architectural Modeling & Visualization — interactive workflow and software interface preview"
+    "alt": "3ds Max Architectural Modeling & Visualization — bespoke interactive workflow and software preview"
   },
   "v-ray-cert": {
     "desktop": "/public/assets/course-cards/svg/v-ray-cert.svg",
@@ -798,7 +798,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "V-Ray Photorealistic Rendering & Lighting — interactive workflow and software interface preview"
+    "alt": "V-Ray Photorealistic Rendering & Lighting — bespoke interactive workflow and software preview"
   },
   "twinmotion-cert": {
     "desktop": "/public/assets/course-cards/svg/twinmotion-cert.svg",
@@ -808,7 +808,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Twinmotion Real-Time Architectural Visualization — interactive workflow and software interface preview"
+    "alt": "Twinmotion Real-Time Architectural Visualization — bespoke interactive workflow and software preview"
   },
   "cinema-4d-cert": {
     "desktop": "/public/assets/course-cards/svg/cinema-4d-cert.svg",
@@ -818,7 +818,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Cinema 4D Motion Graphics & Product Animation — interactive workflow and software interface preview"
+    "alt": "Cinema 4D Motion Graphics & Product Animation — bespoke interactive workflow and software preview"
   },
   "unreal-engine-basics": {
     "desktop": "/public/assets/course-cards/svg/unreal-engine-basics.svg",
@@ -828,7 +828,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Unreal Engine 5 Real-Time 3D Fundamentals — interactive workflow and software interface preview"
+    "alt": "Unreal Engine 5 Real-Time 3D Fundamentals — bespoke interactive workflow and software preview"
   },
   "freelancing-client-acquisition-professional": {
     "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-074.webp",
@@ -838,7 +838,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Freelancing & Client Acquisition Professional — hands-on course workspace and practical project preview"
+    "alt": "Freelancing & Client Acquisition Professional — practical workstation and applied training visual"
   },
   "career-launch-placement-readiness-professional": {
     "desktop": "/public/assets/course-cards/svg/career-launch-placement-readiness-professional.svg",
@@ -848,7 +848,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Career Launch & Placement Readiness Professional — interactive workflow and software interface preview"
+    "alt": "Career Launch & Placement Readiness Professional — bespoke interactive workflow and software preview"
   },
   "resume-building": {
     "desktop": "/public/assets/course-cards/svg/resume-building.svg",
@@ -858,7 +858,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "ATS-Friendly Resume & Job Application Essentials — interactive workflow and software interface preview"
+    "alt": "ATS-Friendly Resume & Job Application Essentials — bespoke interactive workflow and software preview"
   },
   "linkedin-optimisation": {
     "desktop": "/public/assets/course-cards/svg/linkedin-optimisation.svg",
@@ -868,7 +868,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "LinkedIn Profile Optimisation & Professional Branding — interactive workflow and software interface preview"
+    "alt": "LinkedIn Profile Optimisation & Professional Branding — bespoke interactive workflow and software preview"
   },
   "interview-preparation": {
     "desktop": "/public/assets/course-cards/svg/interview-preparation.svg",
@@ -878,7 +878,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Interview Preparation & Professional Communication — interactive workflow and software interface preview"
+    "alt": "Interview Preparation & Professional Communication — bespoke interactive workflow and software preview"
   },
   "client-communication": {
     "desktop": "/public/assets/course-cards/svg/client-communication.svg",
@@ -888,7 +888,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Professional Client Communication & Project Coordination — interactive workflow and software interface preview"
+    "alt": "Professional Client Communication & Project Coordination — bespoke interactive workflow and software preview"
   },
   "proposal-writing": {
     "desktop": "/public/assets/course-cards/svg/proposal-writing.svg",
@@ -898,7 +898,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Freelance Proposal Writing & Client Pitching — interactive workflow and software interface preview"
+    "alt": "Freelance Proposal Writing & Client Pitching — bespoke interactive workflow and software preview"
   },
   "agency-building": {
     "desktop": "/public/assets/course-cards/svg/agency-building.svg",
@@ -908,7 +908,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Digital Agency Building & Operations — interactive workflow and software interface preview"
+    "alt": "Digital Agency Building & Operations — bespoke interactive workflow and software preview"
   },
   "fiverr-success": {
     "desktop": "/public/assets/course-cards/svg/fiverr-success.svg",
@@ -918,7 +918,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Fiverr Freelancing & Gig Management — interactive workflow and software interface preview"
+    "alt": "Fiverr Freelancing & Gig Management — bespoke interactive workflow and software preview"
   },
   "upwork-success": {
     "desktop": "/public/assets/course-cards/svg/upwork-success.svg",
@@ -928,17 +928,17 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Upwork Freelancing & Client Acquisition — interactive workflow and software interface preview"
+    "alt": "Upwork Freelancing & Client Acquisition — bespoke interactive workflow and software preview"
   },
   "business-english": {
-    "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-073.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-073.webp",
+    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-073.webp",
+    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-073.webp",
     "mimeType": "image/webp",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Business English & Personality Development — hands-on course workspace and practical project preview"
+    "alt": "Business English & Personality Development — practical workstation and applied training visual"
   },
   "spoken-english-pro": {
     "desktop": "/public/assets/course-cards/svg/spoken-english-pro.svg",
@@ -948,7 +948,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Professional Spoken English — interactive workflow and software interface preview"
+    "alt": "Professional Spoken English — bespoke interactive workflow and software preview"
   },
   "spoken-english-cert": {
     "desktop": "/public/assets/course-cards/svg/spoken-english-cert.svg",
@@ -958,7 +958,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Spoken English Foundations & Everyday Conversation — interactive workflow and software interface preview"
+    "alt": "Spoken English Foundations & Everyday Conversation — bespoke interactive workflow and software preview"
   },
   "business-communication": {
     "desktop": "/public/assets/course-cards/svg/business-communication.svg",
@@ -968,7 +968,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Business Communication & Workplace Writing — interactive workflow and software interface preview"
+    "alt": "Business Communication & Workplace Writing — bespoke interactive workflow and software preview"
   },
   "presentation-skills": {
     "desktop": "/public/assets/course-cards/svg/presentation-skills.svg",
@@ -978,7 +978,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Presentation Skills & Business Storytelling — interactive workflow and software interface preview"
+    "alt": "Presentation Skills & Business Storytelling — bespoke interactive workflow and software preview"
   },
   "public-speaking": {
     "desktop": "/public/assets/course-cards/svg/public-speaking.svg",
@@ -988,7 +988,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Public Speaking & Audience Engagement — interactive workflow and software interface preview"
+    "alt": "Public Speaking & Audience Engagement — bespoke interactive workflow and software preview"
   },
   "soft-skills": {
     "desktop": "/public/assets/course-cards/svg/soft-skills.svg",
@@ -998,17 +998,17 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Workplace Soft Skills & Professional Effectiveness — interactive workflow and software interface preview"
+    "alt": "Workplace Soft Skills & Professional Effectiveness — bespoke interactive workflow and software preview"
   },
   "kids-mastery": {
-    "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-072.webp",
-    "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-072.webp",
+    "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-072.webp",
+    "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-072.webp",
     "mimeType": "image/webp",
     "width": 800,
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Future Tech Kids Mastery — hands-on course workspace and practical project preview"
+    "alt": "Future Tech Kids Mastery — practical workstation and applied training visual"
   },
   "young-coders": {
     "desktop": "/public/assets/course-cards/svg/young-coders.svg",
@@ -1018,7 +1018,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Young Coders Program — interactive workflow and software interface preview"
+    "alt": "Young Coders Program — bespoke interactive workflow and software preview"
   },
   "scratch-programming": {
     "desktop": "/public/assets/course-cards/svg/scratch-programming.svg",
@@ -1028,7 +1028,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Scratch Programming & Game Creation — interactive workflow and software interface preview"
+    "alt": "Scratch Programming & Game Creation — bespoke interactive workflow and software preview"
   },
   "python-for-kids": {
     "desktop": "/public/assets/course-cards/svg/python-for-kids.svg",
@@ -1038,7 +1038,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Python for Kids — Coding & Creative Projects — interactive workflow and software interface preview"
+    "alt": "Python for Kids — Coding & Creative Projects — bespoke interactive workflow and software preview"
   },
   "ai-for-kids": {
     "desktop": "/public/assets/course-cards/svg/ai-for-kids.svg",
@@ -1048,7 +1048,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "AI Literacy & Creative Machine Learning for Kids — interactive workflow and software interface preview"
+    "alt": "AI Literacy & Creative Machine Learning for Kids — bespoke interactive workflow and software preview"
   },
   "robotics-basics": {
     "desktop": "/public/assets/course-cards/svg/robotics-basics.svg",
@@ -1058,7 +1058,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Robotics & Physical Computing with micro:bit — interactive workflow and software interface preview"
+    "alt": "Robotics & Physical Computing with micro:bit — bespoke interactive workflow and software preview"
   },
   "web-design-for-kids": {
     "desktop": "/public/assets/course-cards/svg/web-design-for-kids.svg",
@@ -1068,7 +1068,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Web Design for Kids — HTML & CSS Foundations — interactive workflow and software interface preview"
+    "alt": "Web Design for Kids — HTML & CSS Foundations — bespoke interactive workflow and software preview"
   },
   "youtube-mastery": {
     "desktop": "/public/assets/course-cards/svg/youtube-mastery.svg",
@@ -1078,7 +1078,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "YouTube Growth & Content Strategy Professional — interactive workflow and software interface preview"
+    "alt": "YouTube Growth & Content Strategy Professional — bespoke interactive workflow and software preview"
   },
   "content-creator-pro": {
     "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-070.webp",
@@ -1088,7 +1088,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Content Creator Professional — hands-on course workspace and practical project preview"
+    "alt": "Content Creator Professional — practical workstation and applied training visual"
   },
   "youtube-seo": {
     "desktop": "/public/assets/course-cards/svg/youtube-seo.svg",
@@ -1098,7 +1098,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "YouTube SEO, Discovery & Channel Analytics — interactive workflow and software interface preview"
+    "alt": "YouTube SEO, Discovery & Channel Analytics — bespoke interactive workflow and software preview"
   },
   "thumbnail-design": {
     "desktop": "/public/assets/course-cards/svg/thumbnail-design.svg",
@@ -1108,7 +1108,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "YouTube Thumbnail Design & Creative Testing — interactive workflow and software interface preview"
+    "alt": "YouTube Thumbnail Design & Creative Testing — bespoke interactive workflow and software preview"
   },
   "podcast-production": {
     "desktop": "/public/assets/course-cards/svg/podcast-production.svg",
@@ -1118,7 +1118,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Podcast Production & Distribution — interactive workflow and software interface preview"
+    "alt": "Podcast Production & Distribution — bespoke interactive workflow and software preview"
   },
   "personal-branding": {
     "desktop": "/public/assets/course-cards/svg/personal-branding.svg",
@@ -1128,7 +1128,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Personal Branding & Thought Leadership — interactive workflow and software interface preview"
+    "alt": "Personal Branding & Thought Leadership — bespoke interactive workflow and software preview"
   },
   "short-video-strategy": {
     "desktop": "/public/assets/course-cards/svg/short-video-strategy.svg",
@@ -1138,7 +1138,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Short-Form Video Strategy & Content Growth — interactive workflow and software interface preview"
+    "alt": "Short-Form Video Strategy & Content Growth — bespoke interactive workflow and software preview"
   },
   "biz-productivity": {
     "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-071.webp",
@@ -1148,7 +1148,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "MIS & Business Intelligence Professional — hands-on course workspace and practical project preview"
+    "alt": "MIS & Business Intelligence Professional — practical workstation and applied training visual"
   },
   "office-pro": {
     "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-075.webp",
@@ -1158,7 +1158,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Office Productivity Professional — hands-on course workspace and practical project preview"
+    "alt": "Office Productivity Professional — practical workstation and applied training visual"
   },
   "microsoft-excel": {
     "desktop": "/public/assets/course-cards/svg/microsoft-excel.svg",
@@ -1168,7 +1168,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Microsoft Excel — Business Reporting & Data Analysis — interactive workflow and software interface preview"
+    "alt": "Microsoft Excel — Business Reporting & Data Analysis — bespoke interactive workflow and software preview"
   },
   "microsoft-word": {
     "desktop": "/public/assets/course-cards/svg/microsoft-word.svg",
@@ -1178,7 +1178,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Microsoft Word — Professional Documents & Mail Merge — interactive workflow and software interface preview"
+    "alt": "Microsoft Word — Professional Documents & Mail Merge — bespoke interactive workflow and software preview"
   },
   "microsoft-powerpoint": {
     "desktop": "/public/assets/course-cards/svg/microsoft-powerpoint.svg",
@@ -1188,7 +1188,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Microsoft PowerPoint — Professional Presentation Design — interactive workflow and software interface preview"
+    "alt": "Microsoft PowerPoint — Professional Presentation Design — bespoke interactive workflow and software preview"
   },
   "google-workspace": {
     "desktop": "/public/assets/course-cards/svg/google-workspace.svg",
@@ -1198,7 +1198,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Google Workspace — Cloud Productivity & Collaboration — interactive workflow and software interface preview"
+    "alt": "Google Workspace — Cloud Productivity & Collaboration — bespoke interactive workflow and software preview"
   },
   "notion-cert": {
     "desktop": "/public/assets/course-cards/svg/notion-cert.svg",
@@ -1208,7 +1208,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Notion — Workspace, Databases & Knowledge Systems — interactive workflow and software interface preview"
+    "alt": "Notion — Workspace, Databases & Knowledge Systems — bespoke interactive workflow and software preview"
   },
   "clickup-cert": {
     "desktop": "/public/assets/course-cards/svg/clickup-cert.svg",
@@ -1218,7 +1218,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "ClickUp — Project Management & Workflow Automation — interactive workflow and software interface preview"
+    "alt": "ClickUp — Project Management & Workflow Automation — bespoke interactive workflow and software preview"
   },
   "microsoft-copilot": {
     "desktop": "/public/assets/course-cards/svg/microsoft-copilot.svg",
@@ -1228,7 +1228,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "Microsoft 365 Copilot — AI Workplace Productivity — interactive workflow and software interface preview"
+    "alt": "Microsoft 365 Copilot — AI Workplace Productivity — bespoke interactive workflow and software preview"
   },
   "tally-gst": {
     "desktop": "/public/assets/course-cards/svg/tally-gst.svg",
@@ -1238,7 +1238,7 @@ const COURSE_IMAGE_MAP = {
     "height": 600,
     "mobileWidth": 600,
     "mobileHeight": 450,
-    "alt": "TallyPrime — Accounting & GST Compliance — interactive workflow and software interface preview"
+    "alt": "TallyPrime — Accounting & GST Compliance — bespoke interactive workflow and software preview"
   }
 };
 // END GENERATED COURSE_IMAGE_MAP
