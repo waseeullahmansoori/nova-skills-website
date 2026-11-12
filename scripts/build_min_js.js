@@ -29,12 +29,43 @@ const files = ['data.js', 'components.js', 'main.js', 'nova-ai-widget.js', 'blog
 files.forEach(f => {
   const srcPath = path.join(BASE_DIR, f);
   if (!fs.existsSync(srcPath)) return;
-  const content = fs.readFileSync(srcPath, 'utf8');
-  const minified = simpleJsMinify(content);
+  let minified = '';
+  if (f === 'data.js') {
+    // Compact canonical data safely via AST/runtime evaluation instead of regex comment stripping (preserves string literals like "/*")
+    const loaded = require(srcPath);
+    const metaMeta = JSON.stringify(loaded.NS_CANONICAL_META || {});
+    const coursesCompact = JSON.stringify(loaded.NS_COURSES || []);
+    const acadsCompact = JSON.stringify((loaded.NS_ACADEMIES || []).map(a => {
+      const copy = Object.assign({}, a);
+      delete copy.courses;
+      return copy;
+    }));
+    const dataCompact = [
+      `var NS_CANONICAL_META=${metaMeta};`,
+      `var NS_COURSES=${coursesCompact};`,
+      `var NS_ACADEMIES=${acadsCompact};`,
+      `NS_ACADEMIES.forEach(function(a){a.courses=NS_COURSES.filter(function(c){return c.academyId===a.id});});`,
+      `if(typeof window!=='undefined'){window.NS_CANONICAL_META=NS_CANONICAL_META;window.NS_COURSES=NS_COURSES;window.NS_ACADEMIES=NS_ACADEMIES;}`
+    ].join('\n');
+    const cdPath = path.join(JS_DIR, 'course-data.js');
+    const cdMin = fs.existsSync(cdPath) ? ('\n' + simpleJsMinify(fs.readFileSync(cdPath, 'utf8'))) : '';
+    minified = dataCompact + cdMin;
+  } else {
+    const content = fs.readFileSync(srcPath, 'utf8');
+    minified = simpleJsMinify(content);
+  }
   const outPath = path.join(JS_DIR, f.replace('.js', '.min.js'));
   fs.writeFileSync(outPath, minified, 'utf8');
   console.log(`✅ Built js/${f.replace('.js', '.min.js')} (${(minified.length/1024).toFixed(1)} KB)`);
 });
+
+// Also minify standalone js/course-data.js
+const courseDataSrc = path.join(JS_DIR, 'course-data.js');
+if (fs.existsSync(courseDataSrc)) {
+  const cdMin = simpleJsMinify(fs.readFileSync(courseDataSrc, 'utf8'));
+  fs.writeFileSync(path.join(JS_DIR, 'course-data.min.js'), cdMin, 'utf8');
+  console.log(`✅ Built js/course-data.min.js (${(cdMin.length/1024).toFixed(1)} KB)`);
+}
 
 // Also minify js/icon-system.js
 const iconSysSrc = path.join(JS_DIR, 'icon-system.js');

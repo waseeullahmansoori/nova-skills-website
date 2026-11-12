@@ -1,17 +1,16 @@
 
+const fs = require('fs');
+const path = require('path');
+
+const rootDir = path.resolve(__dirname, '..');
+const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(rootDir, 'js', 'icon-system.js'));
+const NovaCourseData = require(path.join(rootDir, 'js', 'course-data.js'));
+
+const ACADEMIES_LIST = NovaCourseData.getAllAcademies();
+const COURSES_LIST = NovaCourseData.getPublishedCourses();
+
 function isCourseDemoEligible(course) {
-  if (!course) return false;
-  if (typeof course.demo_available === 'boolean') return course.demo_available;
-  const type = (course.course_type || course.type || course.programLevel || '').toUpperCase();
-  if (['MASTER', 'PROFESSIONAL', 'SPECIALIZATION', 'FOUNDATION', 'CAREER'].some(t => type.includes(t))) {
-    return true;
-  }
-  const price = Math.max(
-    typeof course.originalPrice === 'number' ? course.originalPrice : 0,
-    typeof course.price === 'number' ? course.price : parseInt(String(course.price || '').replace(/\D/g, ''), 10) || 0
-  );
-  if (price >= 12000) return true;
-  return false;
+  return NovaCourseData.isCourseDemoEligible(course);
 }
 
 function escapeHTML(str) {
@@ -26,19 +25,9 @@ function escapeHTML(str) {
 
 /**
  * Enhanced Static HTML Generator for All 12 Nova Skills Academies
- * Pre-renders full course cards, links, accurate counts, and SEO schemas.
- * Nova Skills V1.2 Technical SEO Remediation
+ * Pre-renders full course cards, links, accurate counts, and SEO schemas
+ * directly from the canonical course data layer (NovaCourseData).
  */
-
-const fs = require('fs');
-const path = require('path');
-const vm = require('vm');
-
-const rootDir = path.resolve(__dirname, '..');
-const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(rootDir, 'js', 'icon-system.js'));
-const COURSE_IMAGE_MAP = require(path.join(rootDir, 'course-image-map.json')).byId;
-const dataJs = fs.readFileSync(path.join(rootDir, 'data.js'), 'utf8');
-vm.runInThisContext(dataJs);
 
 // Final Consolidated 93-ID Package Academy Hero Visual Registry (All 12 Academies)
 const ACADEMY_HERO_VISUALS = {
@@ -347,7 +336,7 @@ function normalizeProgramLevel(level) {
 }
 
 function renderAcademyCourseMediaHtml(course, bannerIconHtml) {
-  const rec = course && COURSE_IMAGE_MAP[course.id];
+  const rec = course && course.images && course.images.card ? course.images.card : null;
   if (!rec) {
     return {
       wrapperClass: '',
@@ -358,7 +347,7 @@ function renderAcademyCourseMediaHtml(course, bannerIconHtml) {
   return {
     wrapperClass: ' has-course-visual',
     bgClass: ' has-course-visual',
-    innerHtml: `<picture class="course-thumb-picture"><source media="(min-width: 768px)" srcset="${escapeHTML(rec.image.desktop)}" type="${escapeHTML(rec.image.mimeType)}" width="${rec.image.width}" height="${rec.image.height}" /><img src="${escapeHTML(rec.image.mobile)}" alt="${escapeHTML(rec.image.alt)}" class="course-thumb-img" width="${rec.image.mobileWidth}" height="${rec.image.mobileHeight}" loading="lazy" decoding="async" /></picture>`
+    innerHtml: `<picture class="course-thumb-picture"><source media="(min-width: 768px)" srcset="${escapeHTML(rec.desktop)}" type="${escapeHTML(rec.mimeType || 'image/webp')}" width="${rec.width || 800}" height="${rec.height || 600}" /><img src="${escapeHTML(rec.mobile)}" alt="${escapeHTML(rec.alt || course.name)}" class="course-thumb-img" width="${rec.mobileWidth || 600}" height="${rec.mobileHeight || 450}" loading="lazy" decoding="async" /></picture>`
   };
 }
 
@@ -369,11 +358,11 @@ function buildCourseCardHTML(course, extraClass = '') {
   const safePrice = `₹${(course.price || 0).toLocaleString('en-IN')}`;
   const safeId = course.id;
   const isFeatured = course.featured || (course.tags && course.tags.includes('popular'));
-  const liveProj = course.liveProjects || 2;
+  const projectLabel = NovaCourseData.getCourseProjectLabel(course);
   const rating = course.rating || 4.8;
   const reviews = course.reviews || 120;
   const normLevel = normalizeProgramLevel(course.programLevel || course.level);
-  const courseUrl = `/course-detail.html?id=${course.id}`;
+  const courseUrl = NovaCourseData.getCourseDetailUrl(course);
 
   let trackClass = 'track-cert';
   const progLevel = course.programLevel || normLevel || 'Certification Course';
@@ -407,7 +396,7 @@ function buildCourseCardHTML(course, extraClass = '') {
         <p class="course-desc">${course.shortDesc || course.description || ''}</p>
         ${toolsHTML}
         <div class="course-features">
-          <span class="feature-item">💻 ${liveProj}+ Live Projects</span>
+          <span class="feature-item">💻 ${projectLabel}</span>
           <span class="feature-item">📜 Verified Certificate</span>
           ${course.placementSupport ? '<span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>' : '<span class="feature-item">💼 Capstone Portfolio</span>'}
           <span class="feature-item">⭐ ${rating} (${reviews})</span>
@@ -454,7 +443,7 @@ function getSmartRelatedAcademies(currentSlug) {
 
   const targetSlugs = smartMap[currentSlug] || ['ai', 'digital-marketing', 'design', 'programming'];
   return targetSlugs
-    .map(slug => NS_ACADEMIES.find(a => a.slug === slug || a.id === slug))
+    .map(slug => ACADEMIES_LIST.find(a => a.slug === slug || a.id === slug))
     .filter(Boolean)
     .slice(0, 4);
 }
@@ -769,7 +758,7 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
 
 console.log('Generating pre-rendered SEO HTML files for all 12 academies...');
 
-NS_ACADEMIES.forEach(acad => {
+ACADEMIES_LIST.forEach(acad => {
   const slug = acad.slug;
   const canonicalUrl = `https://novaskills.in/academies/${slug}/`;
   const seoConfig = ACADEMIES_DATA[slug] || {};
@@ -778,7 +767,7 @@ NS_ACADEMIES.forEach(acad => {
   const heroH1 = seoConfig.h1 || `${acad.name}: Job-Ready Practical Training & Certification`;
   const ogImage = `https://novaskills.in/public/images/seo/og-banner.png?v=2026`;
 
-  const academyCourses = NS_COURSES.filter(c => c.academyId === acad.id || c.academyId === acad.slug);
+  const academyCourses = NovaCourseData.getCoursesByAcademy(acad.id);
   const careerCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Career Program');
   const proCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Professional Program');
   const certCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Certification Course');
@@ -1964,11 +1953,11 @@ ${sectionsContent}
   <div id="ns-footer"></div>
 
   <!-- JavaScript Bundles -->
-  <script src="/js/data.min.js?v=2.7.4" defer></script>
-  <script src="/js/components.min.js?v=2.8.0" defer></script>
-  <script src="/nova-ai-widget.js?v=3.0" defer></script>
+  <script src="/js/data.min.js?v=3.1.0" defer></script>
+  <script src="/js/components.min.js?v=3.1.0" defer></script>
+  <script src="/nova-ai-widget.js?v=3.1.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
-  <script src="/js/academy-detail.min.js?v=2.8.0" defer></script>${heroVisual && heroVisual.enabled ? `\n  <script src="/js/academy-hero-experiment.js?v=1.0" defer></script>` : ''}
+  <script src="/js/academy-detail.min.js?v=3.1.0" defer></script>${heroVisual && heroVisual.enabled ? `\n  <script src="/js/academy-hero-experiment.js?v=1.0" defer></script>` : ''}
 </body>
 </html>
 `;

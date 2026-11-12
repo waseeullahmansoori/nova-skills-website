@@ -1,43 +1,18 @@
 
-function isCourseDemoEligible(course) {
-  if (!course) return false;
-  if (typeof course.demo_available === 'boolean') return course.demo_available;
-  const type = (course.course_type || course.type || course.programLevel || '').toUpperCase();
-  if (['MASTER', 'PROFESSIONAL', 'SPECIALIZATION', 'FOUNDATION', 'CAREER'].some(t => type.includes(t))) {
-    return true;
-  }
-  const price = Math.max(
-    typeof course.originalPrice === 'number' ? course.originalPrice : 0,
-    typeof course.price === 'number' ? course.price : parseInt(String(course.price || '').replace(/\D/g, ''), 10) || 0
-  );
-  if (price >= 12000) return true;
-  return false;
-}
-
-/**
- * Build Static Pre-rendered Course Pages for Cloudflare Edge & Local Serving
- * Controlled Expansion: 4 Target Representative Courses
- * 
- * 1. digital-marketing-pro (Advanced Digital Marketing Professional)
- * 2. dm-professional (AI Digital Marketing Professional)
- * 3. dm-mastery (AI Digital Marketing Master)
- * 4. python-developer (Python Developer Professional)
- * 
- * Preserves existing canonical public URLs: /course-detail.html?id=COURSE_ID
- * Outputs:
- * - functions/_rendered_courses.js (in-memory bundle for Cloudflare Pages Functions)
- * - functions/_middleware.js (Cloudflare Pages edge middleware)
- * - _rendered_courses/<id>.html (static audit files)
- */
-
-'use strict';
-
 const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(ROOT_DIR, 'js', 'icon-system.js'));
+const NovaCourseData = require(path.join(ROOT_DIR, 'js', 'course-data.js'));
+
+const NS_COURSES = NovaCourseData.getPublishedCourses();
+const NS_ACADEMIES = NovaCourseData.getAllAcademies();
+const COURSE_ALIASES = NovaCourseData.COURSE_ID_ALIASES;
+
+function isCourseDemoEligible(course) {
+  return NovaCourseData.isCourseDemoEligible(course);
+}
 
 const COURSE_VISUALS_DATA = JSON.parse(
   fs.readFileSync(path.join(ROOT_DIR, 'data', 'visual-assets', 'course-visuals.json'), 'utf8')
@@ -138,46 +113,12 @@ function buildStaticProjectShowcaseHtml(courseId) {
     </section>`;
 }
 
-// 1. Load data.js (NS_COURSES, NS_ACADEMIES)
-const dataJs = fs.readFileSync(path.join(ROOT_DIR, 'data.js'), 'utf8');
-vm.runInThisContext(dataJs);
-
-const BATCHES = [
-  { batchNum: 1, academyId: 'digital-marketing', name: 'Digital Marketing Academy' },
-  { batchNum: 2, academyId: 'ai', name: 'AI & Automation Academy' },
-  { batchNum: 3, academyId: 'design', name: 'Graphic Design & UI/UX Academy' },
-  { batchNum: 4, academyId: 'programming', name: 'Programming & Web Dev Academy' },
-  { batchNum: 5, academyId: 'nocode', name: 'No-Code Web Academy' },
-  { batchNum: 6, academyId: 'video', name: 'Video & Motion Academy' },
-  { batchNum: 7, academyId: '3d', name: '3D Animation & VFX Academy' },
-  { batchNum: 8, academyId: 'career', name: 'Career & Freelancing Academy' },
-  { batchNum: 9, academyId: 'communication', name: 'Communication Academy' },
-  { batchNum: 10, academyId: 'kids', name: 'Kids Tech Academy' },
-  { batchNum: 11, academyId: 'creator', name: 'Creator Academy' },
-  { batchNum: 12, academyId: 'office', name: 'Office Productivity Academy' }
-];
-
-const COURSE_ALIASES = {
-  'digital-marketing-pro': 'ecommerce-growth-marketing-specialist',
-  'perf-marketing-pro': 'performance-marketing-specialist',
-  'dm-master': 'dm-mastery',
-  'full-stack': 'fullstack-foundation',
-  'design-mastery': 'creative-design',
-  'video-editing': 'video-pro',
-  'digital-marketing': 'dm-mastery',
-  'ai-master': 'ai-mastery',
-  'python-dev': 'python-developer',
-  'ai-web-dev-pro': 'ai-assisted-full-stack-web-development',
-  'prompt-engineering-mastery': 'prompt-engineering',
-  'freelance-agency-master': 'agency-building',
-  'freelance-agency-mastery': 'agency-building',
-  'freelance-mastery': 'freelancing-client-acquisition-professional',
-  'freelancing-mastery': 'freelancing-client-acquisition-professional',
-  'career-launch': 'career-launch-placement-readiness-professional',
-  'career-launch-program': 'career-launch-placement-readiness-professional',
-  'motion-mastery': 'ai-integrated-video-editing-motion-graphics-professional',
-  'ai-video-pro': 'generative-ai-video-production-professional'
-};
+// Canonical data loaded via NovaCourseData (js/course-data.js)
+const BATCHES = NS_ACADEMIES.map((a, idx) => ({
+  batchNum: idx + 1,
+  academyId: a.id,
+  name: a.name
+}));
 
 const ACADEMY_SLUG_MAP = {
   'digital-marketing': 'digital-marketing',
@@ -405,9 +346,14 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
 
   let detailData = null;
-  const detailPath = path.join(ROOT_DIR, 'data', 'courses', `${courseId}.json`);
-  if (fs.existsSync(detailPath)) {
-    detailData = JSON.parse(fs.readFileSync(detailPath, 'utf8'));
+  const canonicalCurPath = baseCourse.curriculumRef
+    ? path.join(ROOT_DIR, 'data', baseCourse.curriculumRef)
+    : path.join(ROOT_DIR, 'data', 'curricula', `${courseId}.json`);
+  const legacyDetailPath = path.join(ROOT_DIR, 'data', 'courses', `${courseId}.json`);
+  if (fs.existsSync(canonicalCurPath)) {
+    detailData = JSON.parse(fs.readFileSync(canonicalCurPath, 'utf8'));
+  } else if (fs.existsSync(legacyDetailPath)) {
+    detailData = JSON.parse(fs.readFileSync(legacyDetailPath, 'utf8'));
   }
 
   // Preserve existing canonical public URL
@@ -434,10 +380,9 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   const acadSlug = getAcademySlug(baseCourse.academyId);
   const acadUrl = acadSlug ? `/academies/${acadSlug}/` : '/academies/';
 
-  // Hours and project count
-  const hours = baseCourse.learningHours || (detailData && detailData.learning_hours) || 40;
-  const projectCount = (detailData && detailData.what_you_will_build) ? detailData.what_you_will_build.length : (baseCourse.projects || baseCourse.liveProjects || 2);
-  const projectLabel = `${projectCount} Core Production Projects`;
+  // Hours and project label (canonical NovaCourseData)
+  const hours = baseCourse.learningHours || (detailData && (detailData.guidedHours || detailData.learning_hours)) || 40;
+  const projectLabel = NovaCourseData.getCourseProjectLabel(baseCourse);
 
   // Render Meta Badges
   const metaBadgesHtml = `
@@ -487,7 +432,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
       <p style="margin-bottom:16px;">${escapeHTML(detailData.overview.short_description || baseCourse.shortDesc || '')}</p>
       <p style="margin-bottom:0;">
         Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through 
-        <strong>${projectCount} major production portfolio projects</strong>, live interactive labs, 
+        <strong>${escapeHTML(projectLabel)}</strong>, live interactive labs, 
         code/design critiques, and commercial delivery standards.
       </p>
     `.trim();

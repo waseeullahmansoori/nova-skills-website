@@ -1,0 +1,339 @@
+{
+  "courseId": "google-workspace",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/google-workspace.json",
+  "guidedHours": 40,
+  "learning_hours": 40,
+  "course_type": "Certification Course",
+  "seo_title": "Google Workspace & Cloud Collaboration Course | Nova Skills",
+  "seo_description": "Learn Gmail, Drive, Docs, Sheets, Slides, Calendar, Meet and Forms in 5 weeks (40h). Build a practical cloud-office portfolio. ₹5,900.",
+  "overview": {
+    "heading": "What You Will Learn",
+    "description": "Learn practical Google Workspace workflows with Gmail, Drive, Docs, Sheets, Slides, Calendar, Meet and Forms. Develop secure collaboration, professional communication, file management and coordinated office operations, including responsible Gemini assistance where available.",
+    "expanded_copy_1": "Learn to organize cloud files, write professional emails, schedule meetings, collaborate on documents, maintain shared spreadsheets, prepare presentations and collect information through Google Forms.",
+    "expanded_copy_2": "Practise realistic team workflows that connect Gmail, Calendar, Meet, Drive, Docs, Sheets, Slides and Forms. Learn how to configure appropriate access, manage revisions, review shared information and use Gemini responsibly when eligible features are available.",
+    "primary_differentiator": "A Complete Connected-Office Workflow, Not Eight Isolated Software Tutorials.",
+    "learning_journey": "Secure Access → Communication → Shared Documents → Team Workflows → Responsible AI → Office Capstone",
+    "core_principle": "Share Only What Is Needed. Give the Right Access. Keep Documents Accurate. Maintain Clear Ownership.",
+    "teaching_principles": [
+      "Least-privilege permission management.",
+      "Inherited folder permission audits.",
+      "Clear file ownership and naming conventions.",
+      "Professional asynchronous communication.",
+      "Accurate scheduling across timezones.",
+      "Collaborative document commenting and suggestions.",
+      "Structured spreadsheet data validation and formulas.",
+      "Accessible and visual presentation updates.",
+      "Independent verification of Forms and linked Sheets permissions.",
+      "Responsible human verification for AI drafts.",
+      "Safe cloud handover documentation."
+    ]
+  },
+  "why_now": null,
+  "learning_journey": null,
+  "prerequisites": [
+    "Basic computer literacy (operating mouse, keyboard, and web browser).",
+    "Familiarity with everyday internet browsing and personal email accounts."
+  ],
+  "target_audience": [
+    "Office teams and administrative professionals seeking coordinated cloud operations.",
+    "Remote workers and distributed team members needing reliable digital collaboration.",
+    "Freelancers and consultants managing client briefs, deliverables, and handovers.",
+    "Executive assistants and project coordinators scheduling meetings and tracking tasks.",
+    "Small business owners and entrepreneurs organizing commercial files and forms.",
+    "Educators and institutional staff streamlining agendas and feedback surveys.",
+    "Students and career starters preparing for modern cloud-enabled workplaces."
+  ],
+  "learning_outcomes": [
+    "Explain cloud productivity fundamentals, browser-based synchronization, and modern digital office workflows.",
+    "Understand the key distinctions between consumer Google accounts and organization-managed Google Workspace plans.",
+    "Distinguish free personal Google tools from subscription-dependent enterprise administration and AI features.",
+    "Navigate Google Drive confidently, utilizing My Drive, search bars, starred items, shortcuts, and recent views.",
+    "Create well-structured, logical folder architectures for projects, departments, shared assets, and archives.",
+    "Apply professional, standardized file-naming conventions incorporating dates, versions, and project codes.",
+    "Understand Google file ownership rules, creator privileges, and constraints on organizational ownership transfers.",
+    "Manage sharing permissions accurately across Viewer, Commenter, and Editor access levels.",
+    "Recognize how child files inherit parent folder access and inspect effective permissions to prevent data exposure.",
+    "Utilize Google Drive and Docs version history to track edits, inspect collaborator revisions, and restore earlier drafts.",
+    "Implement foundational Google account security measures, including strong passwords and two-step verification.",
+    "Identify common email phishing risks, suspicious attachments, and spoofed sender addresses.",
+    "Compose clear, professional Gmail messages structured with explicit subject lines, greetings, and call-to-actions.",
+    "Create and manage Gmail labels and color codes to organize incoming project and client correspondence.",
+    "Build automated Gmail filters to label, categorize, prioritize, and archive recurring business emails.",
+    "Execute advanced Gmail searches using targeted search operators to locate specific messages and attachments rapidly.",
+    "Create and manage Google Calendar events with precise titles, descriptions, buffers, and notification reminders.",
+    "Invite internal and external attendees to meetings, monitor RSVP statuses, and handle reschedule notifications cleanly.",
+    "Coordinate meetings across regional and international timezones without scheduling misalignments.",
+    "Join and facilitate Google Meet sessions, managing audio, video, chat, screen sharing, and participant controls.",
+    "Prepare structured meeting agendas in Google Docs with stated objectives, discussion topics, and time limits.",
+    "Document meeting outcomes into concise follow-up summaries with explicit action items, assignees, and deadlines.",
+    "Create professional documents in Google Docs using standardized heading hierarchies, tables, lists, and formatting.",
+    "Collaborate in real-time in Google Docs using comments, @mentions, suggestion mode, and revision resolution.",
+    "Review, name, and compare document versions to maintain an authoritative single source of truth.",
+    "Build structured team operations trackers and registers in Google Sheets with appropriate data types.",
+    "Apply essential business formulas in Google Sheets, including SUM, AVERAGE, COUNT, COUNTIF, and IF logic.",
+    "Implement data validation rules in Google Sheets to enforce dropdown selections and prevent inaccurate entries.",
+    "Apply conditional formatting rules in Google Sheets to highlight overdue deadlines, priorities, and status updates.",
+    "Create collaborative presentations in Google Slides with cohesive themes, clean layouts, and visual hierarchy.",
+    "Design user-friendly Google Forms with appropriate question types, sections, and input validation rules.",
+    "Configure Google Form settings to collect necessary information ethically while respecting respondent privacy.",
+    "Link Google Forms to dedicated Google Sheets destinations to automatically capture incoming response records.",
+    "Audit Google Forms and linked response Sheet permissions independently to avoid unintended public data exposure.",
+    "Organize personal and team action items using Google Tasks connected with Gmail and Calendar schedules.",
+    "Apply safe sharing practices, enforcing least-privilege access and eliminating unmonitored public links.",
+    "Explain Gemini AI capabilities and limitations across Gmail, Docs, Sheets, and Slides.",
+    "Perform rigorous factual verification on all AI-generated content, cross-checking calculations, dates, and names.",
+    "Complete an end-to-end connected office workflow linking email, calendar, docs, sheets, slides, and forms.",
+    "Audit access permissions across the entire workspace and compile a comprehensive handover documentation package."
+  ],
+  "hands_on_tech": [
+    "Gmail",
+    "Google Drive",
+    "Google Docs",
+    "Google Sheets",
+    "Google Slides",
+    "Google Calendar",
+    "Google Meet",
+    "Google Forms",
+    "Google Tasks",
+    "Gemini for Google Workspace (Where Eligible)",
+    "Google Apps Script (Awareness)"
+  ],
+  "modules": [
+    {
+      "module_number": 1,
+      "module": "Module 01",
+      "title": "Cloud Workplace & Security",
+      "hours": 6,
+      "lessons": 20
+    },
+    {
+      "module_number": 2,
+      "module": "Module 02",
+      "title": "Gmail, Calendar & Meet",
+      "hours": 8,
+      "lessons": 24
+    },
+    {
+      "module_number": 3,
+      "module": "Module 03",
+      "title": "Docs, Sheets & Slides",
+      "hours": 8,
+      "lessons": 24
+    },
+    {
+      "module_number": 4,
+      "module": "Module 04",
+      "title": "Forms & Team Workflows",
+      "hours": 8,
+      "lessons": 24
+    },
+    {
+      "module_number": 5,
+      "module": "Module 05",
+      "title": "Gemini-Assisted Productivity",
+      "hours": 6,
+      "lessons": 24
+    },
+    {
+      "module_number": 6,
+      "module": "Module 06",
+      "title": "Digital Office Capstone",
+      "hours": 4,
+      "lessons": 15
+    }
+  ],
+  "what_you_will_build": [],
+  "final_deliverables": [],
+  "student_deliverables_and_evidence": [],
+  "assessment": null,
+  "certification": null,
+  "career_paths": [],
+  "freelance_applications": [],
+  "business_use_cases": [
+    {
+      "title": "Remote Team Operations",
+      "description": "Coordinating distributed team members using shared Drive project folders, synchronized Calendar schedules, Google Meet video standups, and centralized Sheets action trackers."
+    },
+    {
+      "title": "Small Business Administration",
+      "description": "Streamlining customer inquiries through Google Forms, capturing responses in a linked Google Sheet, dispatching templated Gmail follow-ups, and storing invoices securely in Drive."
+    },
+    {
+      "title": "Education & Departmental Support",
+      "description": "Organizing meeting agendas in Google Docs, distributing course feedback surveys via Forms, analyzing student feedback trends in Sheets, and presenting results in Slides."
+    },
+    {
+      "title": "Freelance Client Project Coordination",
+      "description": "Setting up a client briefing doc, managing milestone schedules, presenting project update slides, and transferring final deliverable ownership safely upon completion."
+    },
+    {
+      "title": "Internal Office Operations & Requests",
+      "description": "Managing internal IT, stationery, or leave requests through Google Forms, assigning triage ownership in Sheets, and logging status updates with automated data validation."
+    },
+    {
+      "title": "Executive Business Reporting",
+      "description": "Consolidating departmental survey figures into Google Sheets, embedding live-linked summary charts into Google Slides, and circulating structured executive summaries via Gmail."
+    }
+  ],
+  "industry_workflow": [],
+  "best_practices": [],
+  "common_mistakes": [],
+  "not_covered": [],
+  "next_learning_path": [],
+  "faq": [
+    {
+      "id": 1,
+      "question": "What is Google Workspace — Cloud Productivity & Collaboration?",
+      "answer": "It is a practical course teaching connected Google applications for communication, documents, meetings, reporting and teamwork."
+    },
+    {
+      "id": 2,
+      "question": "How long is the course?",
+      "answer": "Five weeks with 40 learning hours."
+    },
+    {
+      "id": 3,
+      "question": "What is the course fee?",
+      "answer": "₹5,900, subject to verified Nova Skills pricing and tax policy."
+    },
+    {
+      "id": 4,
+      "question": "Is it suitable for beginners?",
+      "answer": "Yes. Basic computer and internet knowledge are sufficient."
+    },
+    {
+      "id": 5,
+      "question": "Which Google applications are covered?",
+      "answer": "Gmail, Drive, Docs, Sheets, Slides, Calendar, Meet and Forms."
+    },
+    {
+      "id": 6,
+      "question": "What is the difference between a personal Google account and Google Workspace?",
+      "answer": "Personal accounts provide access to many Google productivity tools. Paid Workspace editions add organization-oriented controls and features depending on the plan."
+    },
+    {
+      "id": 7,
+      "question": "Must I purchase Google Workspace?",
+      "answer": "Not for every core collaboration exercise. Certain business and AI features require eligible paid plans."
+    },
+    {
+      "id": 8,
+      "question": "Will I learn Google Drive?",
+      "answer": "Yes, including folder organization, file sharing, ownership and version history."
+    },
+    {
+      "id": 9,
+      "question": "What are Viewer, Commenter and Editor permissions?",
+      "answer": "They are access roles that determine how collaborators can use or modify shared files."
+    },
+    {
+      "id": 10,
+      "question": "Can folder permissions affect files inside them?",
+      "answer": "Yes. Drive supports inherited permissions, so folder-level sharing must be reviewed."
+    },
+    {
+      "id": 11,
+      "question": "Will I learn Gmail productivity?",
+      "answer": "Yes, including professional emails, labels, filters and search."
+    },
+    {
+      "id": 12,
+      "question": "Will I learn Calendar scheduling?",
+      "answer": "Yes, including invitations, recurring meetings, meeting details and follow-ups."
+    },
+    {
+      "id": 13,
+      "question": "Will I learn Google Meet?",
+      "answer": "Yes, including meeting participation and basic coordination."
+    },
+    {
+      "id": 14,
+      "question": "Is Meet recording free for everyone?",
+      "answer": "No. Recording depends on eligible account plans and permissions."
+    },
+    {
+      "id": 15,
+      "question": "Will I learn Google Docs collaboration?",
+      "answer": "Yes, including comments, suggestions and version history."
+    },
+    {
+      "id": 16,
+      "question": "Will I learn Google Sheets?",
+      "answer": "Yes, for basic formulas, team trackers and reporting."
+    },
+    {
+      "id": 17,
+      "question": "Will I learn Google Slides?",
+      "answer": "Yes, for collaborative business presentations."
+    },
+    {
+      "id": 18,
+      "question": "Is this a complete Google Sheets or presentation design specialization?",
+      "answer": "No. The course focuses on practical cloud-office operations."
+    },
+    {
+      "id": 19,
+      "question": "Will I learn Google Forms?",
+      "answer": "Yes, including form creation, response collection and linking responses to Sheets."
+    },
+    {
+      "id": 20,
+      "question": "Do Forms and linked Sheets have the same permissions?",
+      "answer": "Not necessarily. Their permissions may need to be reviewed separately."
+    },
+    {
+      "id": 21,
+      "question": "Will I learn Google Tasks?",
+      "answer": "Yes, as a supporting tool for basic task coordination."
+    },
+    {
+      "id": 22,
+      "question": "Will I learn Gemini?",
+      "answer": "Yes, through responsible AI assistance and eligible feature demonstrations."
+    },
+    {
+      "id": 23,
+      "question": "Is Gemini included in every free Google account?",
+      "answer": "No. Workspace-integrated Gemini capabilities depend on eligible plans and feature requirements."
+    },
+    {
+      "id": 24,
+      "question": "Can Gemini generate presentations in Google Slides?",
+      "answer": "Eligible plans support certain Gemini presentation-generation capabilities, subject to current availability and limits."
+    },
+    {
+      "id": 25,
+      "question": "Will I learn Apps Script?",
+      "answer": "Only introductory awareness or optional demonstrations. Complex scripting is excluded."
+    },
+    {
+      "id": 26,
+      "question": "Is a business email domain required?",
+      "answer": "No. The core training can use accessible tools and authorized practice accounts."
+    },
+    {
+      "id": 27,
+      "question": "Will I learn Workspace Admin Console?",
+      "answer": "No. Enterprise domain administration is outside this certification."
+    },
+    {
+      "id": 28,
+      "question": "What will I build for the portfolio?",
+      "answer": "A collaborative office workspace containing documents, a tracker, a presentation, a Forms workflow, meeting coordination and a permissions audit."
+    },
+    {
+      "id": 29,
+      "question": "Will the course use real company information?",
+      "answer": "No real confidential data is required. Synthetic or authorized practice information can be used."
+    },
+    {
+      "id": 30,
+      "question": "Who should enroll?",
+      "answer": "Office staff, remote workers, freelancers, administrators, students and entrepreneurs who need practical cloud collaboration skills."
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}

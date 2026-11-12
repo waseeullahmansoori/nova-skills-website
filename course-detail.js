@@ -117,9 +117,11 @@ function getAcademySlug(id) {
 }
 
 function getTargetCourse() {
-  const courses = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
-    ? NS_COURSES
-    : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []);
+  const courses = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+    ? window.NovaCourseData.getPublishedCourses()
+    : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+      ? NS_COURSES
+      : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []));
 
   // 1. Check meta tag (pre-rendered course pages)
   const metaCourseEl = document.querySelector('meta[name="course-id"]');
@@ -309,7 +311,9 @@ function populateCourseDetail(course) {
   const meta = document.getElementById('detail-meta');
   if (meta) {
     const hours = course.learningHours ? `${course.learningHours} Hours` : (course.duration || 'Flexible');
-    const projectLabel = course.courseType === 'MASTER' ? '3 Major Portfolio Projects' : '2 Production Projects';
+    const projectLabel = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseProjectLabel === 'function')
+      ? window.NovaCourseData.getCourseProjectLabel(course)
+      : (course.projectDisplayLabel || `${course.liveProjects || 2} Projects`);
     meta.innerHTML = `
       <div class="course-meta-item"><span class="meta-icon">⏱️</span> Duration: ${course.duration || 'Flexible'} (${hours})</div>
       <div class="course-meta-item"><span class="meta-icon">📶</span> Level: ${course.level || 'All Levels'}</div>
@@ -605,7 +609,11 @@ async function loadDetailedCourseData(baseCourse) {
   let detailData = null;
 
   try {
-    const res = await fetch(`/data/courses/${encodeURIComponent(baseCourse.id)}.json`);
+    const curriculumRef = baseCourse.curriculumRef ? `/data/${baseCourse.curriculumRef}` : `/data/curricula/${encodeURIComponent(baseCourse.id)}.json`;
+    let res = await fetch(curriculumRef);
+    if (!res.ok) {
+      res = await fetch(`/data/courses/${encodeURIComponent(baseCourse.id)}.json`);
+    }
     if (res.ok) {
       detailData = await res.json();
     }
@@ -2514,7 +2522,9 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   // --- Overview & Positioning ---
   const overviewEl = document.getElementById('overview-content');
   if (overviewEl && data.overview) {
-    const projectCount = data.what_you_will_build ? data.what_you_will_build.length : (baseCourse.liveProjects || 2);
+    const overviewProjLabel = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseProjectLabel === 'function')
+      ? window.NovaCourseData.getCourseProjectLabel(baseCourse)
+      : `${data.what_you_will_build ? data.what_you_will_build.length : (baseCourse.liveProjects || 2)} Portfolio Projects`;
     overviewEl.innerHTML = `
       <p style="font-size:1.15rem; font-weight:700; color:var(--navy); margin-bottom:14px; line-height:1.5;">
         ${escapeHTML(data.overview.positioning || '')}
@@ -2522,7 +2532,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
       <p style="margin-bottom:16px;">${escapeHTML(data.overview.short_description || '')}</p>
       <p style="margin-bottom:0;">
         Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through 
-        <strong>${projectCount} major production portfolio projects</strong>, live interactive labs, 
+        <strong>${escapeHTML(overviewProjLabel)}</strong>, live interactive labs, 
         code/design critiques, and commercial delivery standards.
       </p>
     `;
@@ -3432,14 +3442,18 @@ function renderEnrichedCourseDetail(baseCourse, data) {
     // Find potential course ID
     const words = nextText.match(/[a-z0-9]+-[a-z0-9-]+/gi) || [];
     let nextCourseId = null;
-    const courses = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
-      ? NS_COURSES
-      : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []);
+    const courses = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+      ? window.NovaCourseData.getPublishedCourses()
+      : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+        ? NS_COURSES
+        : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []));
     const validIds = new Set(courses.map(c => c.id));
 
     for (const w of words) {
       const clean = w.toLowerCase().replace(/[^a-z0-9-]/g, '');
-      const resolved = COURSE_ALIASES[clean] || clean;
+      const resolved = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.resolveCanonicalCourseId === 'function')
+        ? window.NovaCourseData.resolveCanonicalCourseId(clean)
+        : (COURSE_ALIASES[clean] || clean);
       if (validIds.has(resolved) && resolved !== baseCourse.id) {
         nextCourseId = resolved;
         break;
@@ -3628,9 +3642,11 @@ function renderRelatedCourses(currentCourse) {
   const container = document.getElementById('related-courses-grid');
   if (!container) return;
 
-  const courses = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
-    ? NS_COURSES
-    : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []);
+  const courses = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+    ? window.NovaCourseData.getPublishedCourses()
+    : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+      ? NS_COURSES
+      : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []));
 
   const sameAcademyCourses = courses.filter(c => c.id !== currentCourse.id && c.academyId === currentCourse.academyId);
   const otherAcademyCourses = courses.filter(c => c.id !== currentCourse.id && c.academyId !== currentCourse.academyId);

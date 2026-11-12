@@ -1,0 +1,2052 @@
+{
+  "courseId": "robotics-basics",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/robotics-basics.json",
+  "guidedHours": 48,
+  "learning_hours": 48,
+  "course_type": "Certification Course",
+  "seo_title": "Robotics & Physical Computing with micro:bit | Nova Skills",
+  "seo_description": "Hands-on micro:bit robotics course: 8 weeks, 48h, ₹8,900. Learn MakeCode, sensors, circuits and build 3 supervised projects.",
+  "overview": {
+    "section_heading": "What Your Child Will Learn",
+    "approved_description": "Explore introductory robotics and physical computing through sensors, circuits, microcontrollers and creative engineering challenges. Learn to program the BBC micro:bit with Microsoft MakeCode, develop simple prototypes and understand how digital instructions control physical devices.",
+    "expanded_website_copy": "Introduce your child to physical computing through the BBC micro:bit, a small programmable device with buttons, an LED display and built-in sensors. Students learn to write block-based programs and explore how digital instructions can respond to the world around them. Through supervised circuit-building, sensor experiments and creative challenges, learners develop practical prototypes, test their ideas and troubleshoot problems. The course concludes with three assessed projects and a private inventor showcase.",
+    "main_differentiator": "Not Just Watching Simulations — Building and Testing Real Interactive Devices.",
+    "learning_process": "Problem → Design → Program → Simulate → Assemble Safely → Test → Debug → Improve → Demonstrate",
+    "parent_facing_hero_message": "Your Child Sees Code Control Real Sensors and Devices — and Learns How to Fix an Invention That Doesn't Work.",
+    "core_educational_principles": [
+      "Safety before experimentation: strict low-voltage procedures and no mains electricity",
+      "Real hardware experience: hands-on interaction with physical micro:bit boards and electronic components",
+      "Accessible visual coding: Microsoft MakeCode blocks establish logic without typing syntax hurdles",
+      "Clear cause and effect: Input → Process → Output model connects sensors directly to actions",
+      "Learning through prototypes: iterative engineering design cycles rather than single-pass builds",
+      "Testing before claiming success: comparing simulated behavior with physical hardware results",
+      "Constructive troubleshooting: diagnosing software bugs vs. loose wires or component polarity",
+      "Responsible use of components: respecting current limits, power budgets, and device longevity"
+    ]
+  },
+  "why_now": null,
+  "learning_journey": null,
+  "prerequisites": [
+    "Basic computer operation skills (mouse navigation, opening browsers, and saving files)",
+    "Curiosity about how physical devices, sensors, and electronic gadgets work",
+    "No prior electronics or circuit experience required; all safety and fundamentals are taught from scratch",
+    "No prior coding required (MakeCode visual blocks provide an accessible, gentle introduction)"
+  ],
+  "target_audience": {
+    "best_for": [
+      "Children and teenagers aged 9–16 eager to see their computer code interact with real physical gadgets",
+      "Young makers, tinkerers, and future engineers interested in electronics, sensors, and microcontroller prototyping",
+      "Scratch or visual coding graduates ready to move from on-screen sprites to real-world hardware",
+      "Students who enjoy hands-on building, practical troubleshooting, and inventing physical devices"
+    ],
+    "not_for": [
+      "Adults seeking industrial robotics engineering, ROS (Robot Operating System), or 3-phase motor drives",
+      "Students wanting purely virtual simulation without any hands-on hardware laboratory work",
+      "Anyone expecting autonomous self-driving mobile vehicles or computer vision robotics in an introductory course"
+    ]
+  },
+  "learning_outcomes": [
+    "Explaining physical computing.",
+    "Identifying a microcontroller.",
+    "Distinguishing inputs and outputs.",
+    "Explaining simple circuit completion.",
+    "Following basic electrical safety.",
+    "Identifying micro:bit components.",
+    "Using Microsoft MakeCode.",
+    "Using the MakeCode simulator.",
+    "Creating event-driven programs.",
+    "Using buttons as inputs.",
+    "Programming the LED matrix.",
+    "Using loops.",
+    "Using variables.",
+    "Applying conditions.",
+    "Reading sensor values.",
+    "Understanding motion sensing.",
+    "Using light-level readings.",
+    "Exploring temperature readings with appropriate limitations.",
+    "Setting thresholds.",
+    "Creating a sensor-based response.",
+    "Understanding simple data collection.",
+    "Organizing a basic data log.",
+    "Connecting approved low-voltage components.",
+    "Understanding LED polarity.",
+    "Explaining why current-limiting resistors may be necessary.",
+    "Using a breadboard safely.",
+    "Understanding simple buzzer/sound output.",
+    "Explaining basic servo/motor control concepts.",
+    "Recognizing the need for suitable drivers and power.",
+    "Designing a simple prototype.",
+    "Testing physical outputs.",
+    "Identifying wiring faults.",
+    "Identifying logic errors.",
+    "Improving a program.",
+    "Documenting test results.",
+    "Explaining the difference between simulated and physical results.",
+    "Creating an original invention.",
+    "Describing safety precautions.",
+    "Giving a supervised demonstration.",
+    "Reflecting on a prototype's limitations."
+  ],
+  "hands_on_tech": [
+    "BBC micro:bit V2/V2.2 Microcontroller Boards",
+    "Microsoft MakeCode for micro:bit (Visual Block Editor & Simulator)",
+    "Solderless Breadboards & Low-Voltage Electronic Components (LEDs, Resistors, Buttons)",
+    "Built-in Hardware Sensors (3-Axis Accelerometer, Light Estimation, Temperature)",
+    "Engineering System Diagrams & Physical Troubleshooting Logs"
+  ],
+  "modules": [
+    {
+      "module_number": 1,
+      "module_title": "Engineering & Physical Computing",
+      "title": "Engineering & Physical Computing",
+      "hours": 8,
+      "duration_hours": 8,
+      "learning_hours": 8,
+      "objective": "Understand how code, electrical inputs, outputs and physical components work together in basic engineering systems.",
+      "lessons_count": 19,
+      "lessons": [
+        {
+          "lesson_number": "1.1",
+          "lesson_title": "What Is Engineering?",
+          "title": "What Is Engineering?",
+          "topics": [
+            "Identifying problems.",
+            "Designing solutions.",
+            "Building.",
+            "Testing.",
+            "Improving."
+          ],
+          "what_is_taught": "Identifying problems.. Designing solutions.. Building..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for What Is Engineering?.",
+          "expected_outcome": "Practical understanding and successful physical validation of What Is Engineering?."
+        },
+        {
+          "lesson_number": "1.2",
+          "lesson_title": "What Is Physical Computing?",
+          "title": "What Is Physical Computing?",
+          "topics": [
+            "Digital instructions.",
+            "Physical inputs.",
+            "Physical outputs.",
+            "Real-world interaction."
+          ],
+          "what_is_taught": "Digital instructions.. Physical inputs.. Physical outputs..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for What Is Physical Computing?.",
+          "expected_outcome": "Practical understanding and successful physical validation of What Is Physical Computing?."
+        },
+        {
+          "lesson_number": "1.3",
+          "lesson_title": "Microcontrollers",
+          "title": "Microcontrollers",
+          "topics": [
+            "What a microcontroller is.",
+            "How it differs from a desktop computer.",
+            "Basic applications.",
+            "Simple programmed behaviour."
+          ],
+          "what_is_taught": "What a microcontroller is.. How it differs from a desktop computer.. Basic applications..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Microcontrollers.",
+          "expected_outcome": "Practical understanding and successful physical validation of Microcontrollers."
+        },
+        {
+          "lesson_number": "1.4",
+          "lesson_title": "Inputs",
+          "title": "Inputs",
+          "topics": [
+            "Buttons.",
+            "Sensors.",
+            "Switches.",
+            "Environmental signals."
+          ],
+          "what_is_taught": "Buttons.. Sensors.. Switches..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Inputs.",
+          "expected_outcome": "Practical understanding and successful physical validation of Inputs."
+        },
+        {
+          "lesson_number": "1.5",
+          "lesson_title": "Outputs",
+          "title": "Outputs",
+          "topics": [
+            "LEDs.",
+            "Displays.",
+            "Sound indicators.",
+            "Motors.",
+            "Simple movement."
+          ],
+          "what_is_taught": "LEDs.. Displays.. Sound indicators..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Outputs.",
+          "expected_outcome": "Practical understanding and successful physical validation of Outputs."
+        },
+        {
+          "lesson_number": "1.6",
+          "lesson_title": "Input–Process–Output Model",
+          "title": "Input–Process–Output Model",
+          "topics": [
+            "Observe an input.",
+            "Apply logic.",
+            "Produce output.",
+            "Check result."
+          ],
+          "what_is_taught": "Observe an input.. Apply logic.. Produce output..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Input–Process–Output Model.",
+          "expected_outcome": "Practical understanding and successful physical validation of Input–Process–Output Model."
+        },
+        {
+          "lesson_number": "1.7",
+          "lesson_title": "Computational Thinking",
+          "title": "Computational Thinking",
+          "topics": [
+            "Breaking down a problem.",
+            "Sequencing.",
+            "Algorithms.",
+            "Logical decisions.",
+            "Repeated operations."
+          ],
+          "what_is_taught": "Breaking down a problem.. Sequencing.. Algorithms..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Computational Thinking.",
+          "expected_outcome": "Practical understanding and successful physical validation of Computational Thinking."
+        },
+        {
+          "lesson_number": "1.8",
+          "lesson_title": "Unplugged Algorithms",
+          "title": "Unplugged Algorithms",
+          "topics": [
+            "Paper instructions.",
+            "Conditional choices.",
+            "Repeated actions.",
+            "Correcting missing steps."
+          ],
+          "what_is_taught": "Paper instructions.. Conditional choices.. Repeated actions..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Unplugged Algorithms.",
+          "expected_outcome": "Practical understanding and successful physical validation of Unplugged Algorithms."
+        },
+        {
+          "lesson_number": "1.9",
+          "lesson_title": "Engineering Design Cycle",
+          "title": "Engineering Design Cycle",
+          "topics": [
+            "Identify.",
+            "Imagine.",
+            "Plan.",
+            "Build.",
+            "Test.",
+            "Improve."
+          ],
+          "what_is_taught": "Identify.. Imagine.. Plan..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Engineering Design Cycle.",
+          "expected_outcome": "Practical understanding and successful physical validation of Engineering Design Cycle."
+        },
+        {
+          "lesson_number": "1.10",
+          "lesson_title": "Introductory Electricity",
+          "title": "Introductory Electricity",
+          "topics": [
+            "Voltage.",
+            "Current.",
+            "Circuit.",
+            "Power source.",
+            "Conductors.",
+            "Insulators.",
+            "Use simple, scientifically accurate explanations."
+          ],
+          "what_is_taught": "Voltage.. Current.. Circuit..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Introductory Electricity.",
+          "expected_outcome": "Practical understanding and successful physical validation of Introductory Electricity."
+        },
+        {
+          "lesson_number": "1.11",
+          "lesson_title": "Complete Circuits",
+          "title": "Complete Circuits",
+          "topics": [
+            "Power source.",
+            "Load.",
+            "Conductive path.",
+            "Switch.",
+            "Return path."
+          ],
+          "what_is_taught": "Power source.. Load.. Conductive path..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Complete Circuits.",
+          "expected_outcome": "Practical understanding and successful physical validation of Complete Circuits."
+        },
+        {
+          "lesson_number": "1.12",
+          "lesson_title": "Basic Components",
+          "title": "Basic Components",
+          "topics": [
+            "LEDs.",
+            "Resistors.",
+            "Breadboards.",
+            "Wires.",
+            "Buttons.",
+            "Sensors."
+          ],
+          "what_is_taught": "LEDs.. Resistors.. Breadboards..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Basic Components.",
+          "expected_outcome": "Practical understanding and successful physical validation of Basic Components."
+        },
+        {
+          "lesson_number": "1.13",
+          "lesson_title": "LED Polarity",
+          "title": "LED Polarity",
+          "topics": [
+            "Anode/cathode.",
+            "Correct orientation.",
+            "Current limiting."
+          ],
+          "what_is_taught": "Anode/cathode.. Correct orientation.. Current limiting..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for LED Polarity.",
+          "expected_outcome": "Practical understanding and successful physical validation of LED Polarity."
+        },
+        {
+          "lesson_number": "1.14",
+          "lesson_title": "Breadboard Fundamentals",
+          "title": "Breadboard Fundamentals",
+          "topics": [
+            "Connected rows.",
+            "Power rails.",
+            "Component placement.",
+            "Safe connections."
+          ],
+          "what_is_taught": "Connected rows.. Power rails.. Component placement..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Breadboard Fundamentals.",
+          "expected_outcome": "Practical understanding and successful physical validation of Breadboard Fundamentals."
+        },
+        {
+          "lesson_number": "1.15",
+          "lesson_title": "Safety Fundamentals",
+          "title": "Safety Fundamentals",
+          "topics": [
+            "Low voltage only.",
+            "Power disconnected before rewiring.",
+            "No mains electricity.",
+            "No soldering.",
+            "No short circuits.",
+            "Instructor-approved equipment."
+          ],
+          "what_is_taught": "Low voltage only.. Power disconnected before rewiring.. No mains electricity..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Safety Fundamentals.",
+          "expected_outcome": "Practical understanding and successful physical validation of Safety Fundamentals."
+        },
+        {
+          "lesson_number": "1.16",
+          "lesson_title": "Safe Battery Handling",
+          "title": "Safe Battery Handling",
+          "topics": [
+            "Manufacturer-approved holders.",
+            "Correct polarity.",
+            "No damaged batteries.",
+            "No charging disposable batteries.",
+            "No mixing battery types."
+          ],
+          "what_is_taught": "Manufacturer-approved holders.. Correct polarity.. No damaged batteries..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Safe Battery Handling.",
+          "expected_outcome": "Practical understanding and successful physical validation of Safe Battery Handling."
+        },
+        {
+          "lesson_number": "1.17",
+          "lesson_title": "Component Inspection",
+          "title": "Component Inspection",
+          "topics": [
+            "Frayed wire.",
+            "Damaged connector.",
+            "Hot components.",
+            "Loose wiring.",
+            "Incorrect polarity."
+          ],
+          "what_is_taught": "Frayed wire.. Damaged connector.. Hot components..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Component Inspection.",
+          "expected_outcome": "Practical understanding and successful physical validation of Component Inspection."
+        },
+        {
+          "lesson_number": "1.18",
+          "lesson_title": "System Diagrams",
+          "title": "System Diagrams",
+          "topics": [
+            "Sensor.",
+            "Microcontroller.",
+            "Program.",
+            "Output.",
+            "Power supply."
+          ],
+          "what_is_taught": "Sensor.. Microcontroller.. Program..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for System Diagrams.",
+          "expected_outcome": "Practical understanding and successful physical validation of System Diagrams."
+        },
+        {
+          "lesson_number": "1.19",
+          "lesson_title": "Engineering Documentation",
+          "title": "Engineering Documentation",
+          "topics": [
+            "Problem statement.",
+            "Design sketch.",
+            "Parts list.",
+            "Test observation.",
+            "Improvement note."
+          ],
+          "what_is_taught": "Problem statement.. Design sketch.. Parts list..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Engineering Documentation.",
+          "expected_outcome": "Practical understanding and successful physical validation of Engineering Documentation."
+        }
+      ],
+      "hands_on_practice": "Construct a supervised low-voltage LED circuit with a current-limiting resistor and suitable source.\nUse an instructor-verified wiring diagram and component ratings.\nPlan a simple automatic alert system with:\n**Sensor → Decision → LED Alert**",
+      "assignment": "Create:\n1. Input/output diagram.\n2. Simple engineering brief.\n3. Basic circuit diagram.\n4. Hardware safety checklist.\n5. Instructor-reviewed circuit exercise.",
+      "expected_deliverable": "**Physical Computing Foundations & Safe Circuit Worksheet**",
+      "assessment": "Verify the student understands basic circuit completion and safe construction.\n---"
+    },
+    {
+      "module_number": 2,
+      "module_title": "micro:bit & MakeCode Foundations",
+      "title": "micro:bit & MakeCode Foundations",
+      "hours": 8,
+      "duration_hours": 8,
+      "learning_hours": 8,
+      "objective": "Learn to program BBC micro:bit using Microsoft MakeCode and connect software decisions to hardware behaviour.",
+      "lessons_count": 19,
+      "lessons": [
+        {
+          "lesson_number": "2.1",
+          "lesson_title": "Meet the BBC micro:bit",
+          "title": "Meet the BBC micro:bit",
+          "topics": [
+            "Purpose.",
+            "Microcontroller.",
+            "Classroom use.",
+            "Physical computing."
+          ],
+          "what_is_taught": "Purpose.. Microcontroller.. Classroom use..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Meet the BBC micro:bit.",
+          "expected_outcome": "Practical understanding and successful physical validation of Meet the BBC micro:bit."
+        },
+        {
+          "lesson_number": "2.2",
+          "lesson_title": "V2/V2.2 Hardware Overview",
+          "title": "V2/V2.2 Hardware Overview",
+          "topics": [
+            "LED matrix.",
+            "Buttons.",
+            "Edge connector.",
+            "Accelerometer.",
+            "Compass.",
+            "Microphone/speaker capabilities.",
+            "Touch logo.",
+            "USB.",
+            "Battery connector.",
+            "Explain features appropriate to the supplied board."
+          ],
+          "what_is_taught": "LED matrix.. Buttons.. Edge connector..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for V2/V2.2 Hardware Overview.",
+          "expected_outcome": "Practical understanding and successful physical validation of V2/V2.2 Hardware Overview."
+        },
+        {
+          "lesson_number": "2.3",
+          "lesson_title": "Board Revisions",
+          "title": "Board Revisions",
+          "topics": [
+            "V2.",
+            "V2.2.",
+            "Compatibility.",
+            "Identifying the actual classroom device.",
+            "The V2.2 revision does not require a separate course curriculum."
+          ],
+          "what_is_taught": "V2.. V2.2.. Compatibility..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Board Revisions.",
+          "expected_outcome": "Practical understanding and successful physical validation of Board Revisions."
+        },
+        {
+          "lesson_number": "2.4",
+          "lesson_title": "MakeCode Editor",
+          "title": "MakeCode Editor",
+          "topics": [
+            "Block categories.",
+            "Workspace.",
+            "Simulator.",
+            "Project name.",
+            "Download controls.",
+            "Editing."
+          ],
+          "what_is_taught": "Block categories.. Workspace.. Simulator..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for MakeCode Editor.",
+          "expected_outcome": "Practical understanding and successful physical validation of MakeCode Editor."
+        },
+        {
+          "lesson_number": "2.5",
+          "lesson_title": "Getting Started",
+          "title": "Getting Started",
+          "topics": [
+            "Create project.",
+            "Add blocks.",
+            "Run simulator.",
+            "Save.",
+            "Transfer program to device."
+          ],
+          "what_is_taught": "Create project.. Add blocks.. Run simulator..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Getting Started.",
+          "expected_outcome": "Practical understanding and successful physical validation of Getting Started."
+        },
+        {
+          "lesson_number": "2.6",
+          "lesson_title": "Simulator",
+          "title": "Simulator",
+          "topics": [
+            "Virtual buttons.",
+            "LED display.",
+            "Supported simulated sensor readings.",
+            "Testing program flow."
+          ],
+          "what_is_taught": "Virtual buttons.. LED display.. Supported simulated sensor readings..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Simulator.",
+          "expected_outcome": "Practical understanding and successful physical validation of Simulator."
+        },
+        {
+          "lesson_number": "2.7",
+          "lesson_title": "Buttons",
+          "title": "Buttons",
+          "topics": [
+            "Button A.",
+            "Button B.",
+            "A+B interactions.",
+            "Button-press events."
+          ],
+          "what_is_taught": "Button A.. Button B.. A+B interactions..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Buttons.",
+          "expected_outcome": "Practical understanding and successful physical validation of Buttons."
+        },
+        {
+          "lesson_number": "2.8",
+          "lesson_title": "LED Matrix",
+          "title": "LED Matrix",
+          "topics": [
+            "Showing icons.",
+            "Text.",
+            "Numbers.",
+            "LED patterns.",
+            "Simple animations."
+          ],
+          "what_is_taught": "Showing icons.. Text.. Numbers..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for LED Matrix.",
+          "expected_outcome": "Practical understanding and successful physical validation of LED Matrix."
+        },
+        {
+          "lesson_number": "2.9",
+          "lesson_title": "Events",
+          "title": "Events",
+          "topics": [
+            "On start.",
+            "On button pressed.",
+            "On shake.",
+            "Sensor-triggered actions."
+          ],
+          "what_is_taught": "On start.. On button pressed.. On shake..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Events.",
+          "expected_outcome": "Practical understanding and successful physical validation of Events."
+        },
+        {
+          "lesson_number": "2.10",
+          "lesson_title": "Sequencing",
+          "title": "Sequencing",
+          "topics": [
+            "Order of commands.",
+            "Timing.",
+            "Delays.",
+            "Expected behaviour."
+          ],
+          "what_is_taught": "Order of commands.. Timing.. Delays..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Sequencing.",
+          "expected_outcome": "Practical understanding and successful physical validation of Sequencing."
+        },
+        {
+          "lesson_number": "2.11",
+          "lesson_title": "Loops",
+          "title": "Loops",
+          "topics": [
+            "Forever.",
+            "Repeat.",
+            "Repeated sensor checks.",
+            "Avoiding unnecessary loops."
+          ],
+          "what_is_taught": "Forever.. Repeat.. Repeated sensor checks..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Loops.",
+          "expected_outcome": "Practical understanding and successful physical validation of Loops."
+        },
+        {
+          "lesson_number": "2.12",
+          "lesson_title": "Variables",
+          "title": "Variables",
+          "topics": [
+            "Creating variables.",
+            "Storing counters.",
+            "Tracking simple states."
+          ],
+          "what_is_taught": "Creating variables.. Storing counters.. Tracking simple states..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Variables.",
+          "expected_outcome": "Practical understanding and successful physical validation of Variables."
+        },
+        {
+          "lesson_number": "2.13",
+          "lesson_title": "Conditions",
+          "title": "Conditions",
+          "topics": [
+            "If.",
+            "Else.",
+            "Comparison.",
+            "Using a condition to control output."
+          ],
+          "what_is_taught": "If.. Else.. Comparison..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Conditions.",
+          "expected_outcome": "Practical understanding and successful physical validation of Conditions."
+        },
+        {
+          "lesson_number": "2.14",
+          "lesson_title": "Logic",
+          "title": "Logic",
+          "topics": [
+            "True/false.",
+            "Simple comparisons.",
+            "Multiple conditions."
+          ],
+          "what_is_taught": "True/false.. Simple comparisons.. Multiple conditions..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Logic.",
+          "expected_outcome": "Practical understanding and successful physical validation of Logic."
+        },
+        {
+          "lesson_number": "2.15",
+          "lesson_title": "Device Programming",
+          "title": "Device Programming",
+          "topics": [
+            "Transfer program by supported methods.",
+            "Appropriate USB data cable.",
+            "Verify actual download/pairing process.",
+            "Power safely."
+          ],
+          "what_is_taught": "Transfer program by supported methods.. Appropriate USB data cable.. Verify actual download/pairing process..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Device Programming.",
+          "expected_outcome": "Practical understanding and successful physical validation of Device Programming."
+        },
+        {
+          "lesson_number": "2.16",
+          "lesson_title": "Simulator vs Physical Hardware",
+          "title": "Simulator vs Physical Hardware",
+          "topics": [
+            "Virtual representation.",
+            "Actual device behaviour.",
+            "Possible differences.",
+            "Why physical testing matters."
+          ],
+          "what_is_taught": "Virtual representation.. Actual device behaviour.. Possible differences..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Simulator vs Physical Hardware.",
+          "expected_outcome": "Practical understanding and successful physical validation of Simulator vs Physical Hardware."
+        },
+        {
+          "lesson_number": "2.17",
+          "lesson_title": "Troubleshooting",
+          "title": "Troubleshooting",
+          "topics": [
+            "Program not transferred.",
+            "Wrong board connection.",
+            "Wrong button event.",
+            "Display not behaving as expected.",
+            "Incorrect logic."
+          ],
+          "what_is_taught": "Program not transferred.. Wrong board connection.. Wrong button event..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Troubleshooting.",
+          "expected_outcome": "Practical understanding and successful physical validation of Troubleshooting."
+        },
+        {
+          "lesson_number": "2.18",
+          "lesson_title": "Beginner Program Challenges",
+          "title": "Beginner Program Challenges",
+          "topics": [
+            "Digital name badge.",
+            "Reaction counter.",
+            "Button-controlled icon.",
+            "Simple choice program."
+          ],
+          "what_is_taught": "Digital name badge.. Reaction counter.. Button-controlled icon..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Beginner Program Challenges.",
+          "expected_outcome": "Practical understanding and successful physical validation of Beginner Program Challenges."
+        },
+        {
+          "lesson_number": "2.19",
+          "lesson_title": "Mini Design Brief",
+          "title": "Mini Design Brief",
+          "topics": [
+            "User action.",
+            "Expected response.",
+            "Program logic.",
+            "Testing."
+          ],
+          "what_is_taught": "User action.. Expected response.. Program logic..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Mini Design Brief.",
+          "expected_outcome": "Practical understanding and successful physical validation of Mini Design Brief."
+        }
+      ],
+      "hands_on_practice": "Program the micro:bit so buttons A and B produce distinct LED patterns or messages.\nAdd a variable-based interaction.",
+      "assignment": "Begin:\n**Portfolio Project 02 — Interactive Input/Output Device**",
+      "expected_deliverable": "**Micro:bit Interactive Input/Output Prototype**",
+      "assessment": "Student demonstrates:\n- Event understanding.\n- Correct output.\n- Button interaction.\n- Working MakeCode program.\n- Successful physical device test.\n---"
+    },
+    {
+      "module_number": 3,
+      "module_title": "Sensors & Data",
+      "title": "Sensors & Data",
+      "hours": 10,
+      "duration_hours": 10,
+      "learning_hours": 10,
+      "objective": "Use built-in micro:bit sensors to observe environmental or movement changes and trigger appropriate programmed responses.",
+      "lessons_count": 21,
+      "lessons": [
+        {
+          "lesson_number": "3.1",
+          "lesson_title": "What Is a Sensor?",
+          "title": "What Is a Sensor?",
+          "topics": [
+            "Detecting conditions.",
+            "Converting input.",
+            "Interpreting readings.",
+            "Triggering action."
+          ],
+          "what_is_taught": "Detecting conditions.. Converting input.. Interpreting readings..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for What Is a Sensor?.",
+          "expected_outcome": "Practical understanding and successful physical validation of What Is a Sensor?."
+        },
+        {
+          "lesson_number": "3.2",
+          "lesson_title": "Digital and Analog Concepts",
+          "title": "Digital and Analog Concepts",
+          "topics": [
+            "Discrete states.",
+            "Variable measurements.",
+            "Simple sensor values."
+          ],
+          "what_is_taught": "Discrete states.. Variable measurements.. Simple sensor values..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Digital and Analog Concepts.",
+          "expected_outcome": "Practical understanding and successful physical validation of Digital and Analog Concepts."
+        },
+        {
+          "lesson_number": "3.3",
+          "lesson_title": "micro:bit Sensor Overview",
+          "title": "micro:bit Sensor Overview",
+          "topics": [
+            "Accelerometer.",
+            "Light sensing.",
+            "Temperature reading.",
+            "Compass where appropriate.",
+            "Other available inputs."
+          ],
+          "what_is_taught": "Accelerometer.. Light sensing.. Temperature reading..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for micro:bit Sensor Overview.",
+          "expected_outcome": "Practical understanding and successful physical validation of micro:bit Sensor Overview."
+        },
+        {
+          "lesson_number": "3.4",
+          "lesson_title": "Accelerometer",
+          "title": "Accelerometer",
+          "topics": [
+            "Movement.",
+            "Tilt.",
+            "Shake.",
+            "Acceleration.",
+            "Simple motion events."
+          ],
+          "what_is_taught": "Movement.. Tilt.. Shake..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Accelerometer.",
+          "expected_outcome": "Practical understanding and successful physical validation of Accelerometer."
+        },
+        {
+          "lesson_number": "3.5",
+          "lesson_title": "Movement Detection",
+          "title": "Movement Detection",
+          "topics": [
+            "Shake event.",
+            "Gesture events.",
+            "Orientation.",
+            "Appropriate sensor thresholds."
+          ],
+          "what_is_taught": "Shake event.. Gesture events.. Orientation..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Movement Detection.",
+          "expected_outcome": "Practical understanding and successful physical validation of Movement Detection."
+        },
+        {
+          "lesson_number": "3.6",
+          "lesson_title": "Light Sensing",
+          "title": "Light Sensing",
+          "topics": [
+            "Light level.",
+            "Brightness changes.",
+            "Dark/bright conditions.",
+            "Explain that micro:bit light sensing uses the LED display hardware rather than a separate dedicated light sensor."
+          ],
+          "what_is_taught": "Light level.. Brightness changes.. Dark/bright conditions..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Light Sensing.",
+          "expected_outcome": "Practical understanding and successful physical validation of Light Sensing."
+        },
+        {
+          "lesson_number": "3.7",
+          "lesson_title": "Temperature Reading",
+          "title": "Temperature Reading",
+          "topics": [
+            "Reading temperature.",
+            "Comparing values.",
+            "Thresholds.",
+            "Displaying readings.",
+            "Explain that the board's temperature reading may reflect chip/environment conditions and is not equivalent to a calibrated ambient thermometer."
+          ],
+          "what_is_taught": "Reading temperature.. Comparing values.. Thresholds..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Temperature Reading.",
+          "expected_outcome": "Practical understanding and successful physical validation of Temperature Reading."
+        },
+        {
+          "lesson_number": "3.8",
+          "lesson_title": "Sensor Data",
+          "title": "Sensor Data",
+          "topics": [
+            "Numeric readings.",
+            "Units.",
+            "Meaning.",
+            "Variation.",
+            "Sampling."
+          ],
+          "what_is_taught": "Numeric readings.. Units.. Meaning..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Sensor Data.",
+          "expected_outcome": "Practical understanding and successful physical validation of Sensor Data."
+        },
+        {
+          "lesson_number": "3.9",
+          "lesson_title": "Thresholds",
+          "title": "Thresholds",
+          "topics": [
+            "Greater than.",
+            "Less than.",
+            "Trigger points.",
+            "Choosing suitable values."
+          ],
+          "what_is_taught": "Greater than.. Less than.. Trigger points..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Thresholds.",
+          "expected_outcome": "Practical understanding and successful physical validation of Thresholds."
+        },
+        {
+          "lesson_number": "3.10",
+          "lesson_title": "Conditional Alerts",
+          "title": "Conditional Alerts",
+          "topics": [
+            "Sensor input.",
+            "If/else.",
+            "LED message.",
+            "Sound or approved output."
+          ],
+          "what_is_taught": "Sensor input.. If/else.. LED message..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Conditional Alerts.",
+          "expected_outcome": "Practical understanding and successful physical validation of Conditional Alerts."
+        },
+        {
+          "lesson_number": "3.11",
+          "lesson_title": "Calibration Awareness",
+          "title": "Calibration Awareness",
+          "topics": [
+            "Test current environment.",
+            "Observe typical values.",
+            "Choose threshold.",
+            "Retest."
+          ],
+          "what_is_taught": "Test current environment.. Observe typical values.. Choose threshold..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Calibration Awareness.",
+          "expected_outcome": "Practical understanding and successful physical validation of Calibration Awareness."
+        },
+        {
+          "lesson_number": "3.12",
+          "lesson_title": "Sensor Noise",
+          "title": "Sensor Noise",
+          "topics": [
+            "Readings fluctuate.",
+            "Environmental variation.",
+            "False triggers.",
+            "Simple stabilization."
+          ],
+          "what_is_taught": "Readings fluctuate.. Environmental variation.. False triggers..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Sensor Noise.",
+          "expected_outcome": "Practical understanding and successful physical validation of Sensor Noise."
+        },
+        {
+          "lesson_number": "3.13",
+          "lesson_title": "Repeated Measurements",
+          "title": "Repeated Measurements",
+          "topics": [
+            "Checking over time.",
+            "Timing intervals.",
+            "Storing readings.",
+            "Avoiding excessive sampling where unnecessary."
+          ],
+          "what_is_taught": "Checking over time.. Timing intervals.. Storing readings..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Repeated Measurements.",
+          "expected_outcome": "Practical understanding and successful physical validation of Repeated Measurements."
+        },
+        {
+          "lesson_number": "3.14",
+          "lesson_title": "Data Logging Concepts",
+          "title": "Data Logging Concepts",
+          "topics": [
+            "Time.",
+            "Sensor reading.",
+            "Table.",
+            "Interpreting changes."
+          ],
+          "what_is_taught": "Time.. Sensor reading.. Table..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Data Logging Concepts.",
+          "expected_outcome": "Practical understanding and successful physical validation of Data Logging Concepts."
+        },
+        {
+          "lesson_number": "3.15",
+          "lesson_title": "micro:bit V2 Data Logging",
+          "title": "micro:bit V2 Data Logging",
+          "topics": [
+            "Built-in storage capability.",
+            "MakeCode datalogger extension where supported.",
+            "Saving readings.",
+            "Viewing/download of logs.",
+            "Device storage limitations."
+          ],
+          "what_is_taught": "Built-in storage capability.. MakeCode datalogger extension where supported.. Saving readings..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for micro:bit V2 Data Logging.",
+          "expected_outcome": "Practical understanding and successful physical validation of micro:bit V2 Data Logging."
+        },
+        {
+          "lesson_number": "3.16",
+          "lesson_title": "Manual Data Collection",
+          "title": "Manual Data Collection",
+          "topics": [
+            "Observational worksheet.",
+            "Recording readings.",
+            "Comparing conditions."
+          ],
+          "what_is_taught": "Observational worksheet.. Recording readings.. Comparing conditions..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Manual Data Collection.",
+          "expected_outcome": "Practical understanding and successful physical validation of Manual Data Collection."
+        },
+        {
+          "lesson_number": "3.17",
+          "lesson_title": "Simple Visualizations",
+          "title": "Simple Visualizations",
+          "topics": [
+            "Tables.",
+            "Bar charts.",
+            "Line charts.",
+            "Trends.",
+            "Observations."
+          ],
+          "what_is_taught": "Tables.. Bar charts.. Line charts..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Simple Visualizations.",
+          "expected_outcome": "Practical understanding and successful physical validation of Simple Visualizations."
+        },
+        {
+          "lesson_number": "3.18",
+          "lesson_title": "Sensor-Based Projects",
+          "title": "Sensor-Based Projects",
+          "topics": [
+            "Nightlight.",
+            "Movement alert.",
+            "Temperature threshold indicator.",
+            "Tilt warning.",
+            "Simple activity monitor using non-personal data."
+          ],
+          "what_is_taught": "Nightlight.. Movement alert.. Temperature threshold indicator..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Sensor-Based Projects.",
+          "expected_outcome": "Practical understanding and successful physical validation of Sensor-Based Projects."
+        },
+        {
+          "lesson_number": "3.19",
+          "lesson_title": "False Alerts",
+          "title": "False Alerts",
+          "topics": [
+            "Threshold too sensitive.",
+            "Noise.",
+            "Hardware movement.",
+            "Environmental changes."
+          ],
+          "what_is_taught": "Threshold too sensitive.. Noise.. Hardware movement..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for False Alerts.",
+          "expected_outcome": "Practical understanding and successful physical validation of False Alerts."
+        },
+        {
+          "lesson_number": "3.20",
+          "lesson_title": "Testing",
+          "title": "Testing",
+          "topics": [
+            "Expected input.",
+            "Actual reading.",
+            "Output observed.",
+            "Repeatability."
+          ],
+          "what_is_taught": "Expected input.. Actual reading.. Output observed..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Testing.",
+          "expected_outcome": "Practical understanding and successful physical validation of Testing."
+        },
+        {
+          "lesson_number": "3.21",
+          "lesson_title": "Safety",
+          "title": "Safety",
+          "topics": [
+            "No hazardous temperatures.",
+            "No fire or heat-source experiments.",
+            "No recording identifiable children's movement profiles.",
+            "No sensitive monitoring systems."
+          ],
+          "what_is_taught": "No hazardous temperatures.. No fire or heat-source experiments.. No recording identifiable children's movement profiles..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Safety.",
+          "expected_outcome": "Practical understanding and successful physical validation of Safety."
+        }
+      ],
+      "hands_on_practice": "Build a safe micro:bit sensor alert responding to:\n- Light level, OR\n- Movement, OR\n- A suitable temperature threshold.",
+      "assignment": "Complete:\n**Portfolio Project 01 — Sensor-Based Alert Device**",
+      "expected_deliverable": "**One Working Sensor-Based Alert Device**",
+      "assessment": "Verify:\n- Appropriate sensor.\n- Correct threshold logic.\n- Functional response.\n- Physical testing.\n- Clear explanation.\n- Test record.\n- At least one revision.\n---"
+    },
+    {
+      "module_number": 4,
+      "module_title": "Circuits, Motors & Prototyping",
+      "title": "Circuits, Motors & Prototyping",
+      "hours": 10,
+      "duration_hours": 10,
+      "learning_hours": 10,
+      "objective": "Connect approved low-voltage components, understand physical outputs and explore appropriately powered motion control.",
+      "lessons_count": 23,
+      "lessons": [
+        {
+          "lesson_number": "4.1",
+          "lesson_title": "Revisit Circuit Safety",
+          "title": "Revisit Circuit Safety",
+          "topics": [
+            "Low voltage.",
+            "Instructor supervision.",
+            "Power off before rewiring.",
+            "Polarity.",
+            "Current ratings."
+          ],
+          "what_is_taught": "Low voltage.. Instructor supervision.. Power off before rewiring..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Revisit Circuit Safety.",
+          "expected_outcome": "Practical understanding and successful physical validation of Revisit Circuit Safety."
+        },
+        {
+          "lesson_number": "4.2",
+          "lesson_title": "micro:bit Edge Connector",
+          "title": "micro:bit Edge Connector",
+          "topics": [
+            "Pins.",
+            "Ground.",
+            "3V.",
+            "Signal connections.",
+            "Appropriate breakout accessories."
+          ],
+          "what_is_taught": "Pins.. Ground.. 3V..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for micro:bit Edge Connector.",
+          "expected_outcome": "Practical understanding and successful physical validation of micro:bit Edge Connector."
+        },
+        {
+          "lesson_number": "4.3",
+          "lesson_title": "Digital Outputs",
+          "title": "Digital Outputs",
+          "topics": [
+            "On/off states.",
+            "Controlling an LED.",
+            "Control logic."
+          ],
+          "what_is_taught": "On/off states.. Controlling an LED.. Control logic..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Digital Outputs.",
+          "expected_outcome": "Practical understanding and successful physical validation of Digital Outputs."
+        },
+        {
+          "lesson_number": "4.4",
+          "lesson_title": "LED Circuits",
+          "title": "LED Circuits",
+          "topics": [
+            "Polarity.",
+            "Current-limiting resistor.",
+            "Correct connection.",
+            "Testing."
+          ],
+          "what_is_taught": "Polarity.. Current-limiting resistor.. Correct connection..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for LED Circuits.",
+          "expected_outcome": "Practical understanding and successful physical validation of LED Circuits."
+        },
+        {
+          "lesson_number": "4.5",
+          "lesson_title": "Current and Power Limitations",
+          "title": "Current and Power Limitations",
+          "topics": [
+            "Microcontroller output limits.",
+            "External components.",
+            "Power budgeting.",
+            "Why loads cannot be connected indiscriminately."
+          ],
+          "what_is_taught": "Microcontroller output limits.. External components.. Power budgeting..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Current and Power Limitations.",
+          "expected_outcome": "Practical understanding and successful physical validation of Current and Power Limitations."
+        },
+        {
+          "lesson_number": "4.6",
+          "lesson_title": "Breadboard Practice",
+          "title": "Breadboard Practice",
+          "topics": [
+            "Layout.",
+            "Correct rows.",
+            "Separate connections.",
+            "Clear wiring.",
+            "Common ground."
+          ],
+          "what_is_taught": "Layout.. Correct rows.. Separate connections..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Breadboard Practice.",
+          "expected_outcome": "Practical understanding and successful physical validation of Breadboard Practice."
+        },
+        {
+          "lesson_number": "4.7",
+          "lesson_title": "Multiple LEDs",
+          "title": "Multiple LEDs",
+          "topics": [
+            "Sequencing.",
+            "Timing.",
+            "Different output patterns."
+          ],
+          "what_is_taught": "Sequencing.. Timing.. Different output patterns..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Multiple LEDs.",
+          "expected_outcome": "Practical understanding and successful physical validation of Multiple LEDs."
+        },
+        {
+          "lesson_number": "4.8",
+          "lesson_title": "Buzzer and Sound",
+          "title": "Buzzer and Sound",
+          "topics": [
+            "Built-in micro:bit V2 speaker.",
+            "Optional approved buzzer.",
+            "Event-based alerts.",
+            "Appropriate sound levels."
+          ],
+          "what_is_taught": "Built-in micro:bit V2 speaker.. Optional approved buzzer.. Event-based alerts..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Buzzer and Sound.",
+          "expected_outcome": "Practical understanding and successful physical validation of Buzzer and Sound."
+        },
+        {
+          "lesson_number": "4.9",
+          "lesson_title": "Sensors and Actuators",
+          "title": "Sensors and Actuators",
+          "topics": [
+            "Inputs.",
+            "Outputs.",
+            "Control.",
+            "Actuation."
+          ],
+          "what_is_taught": "Inputs.. Outputs.. Control..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Sensors and Actuators.",
+          "expected_outcome": "Practical understanding and successful physical validation of Sensors and Actuators."
+        },
+        {
+          "lesson_number": "4.10",
+          "lesson_title": "Motor Fundamentals",
+          "title": "Motor Fundamentals",
+          "topics": [
+            "Motor movement.",
+            "Rotation.",
+            "Speed.",
+            "Direction.",
+            "Electrical load."
+          ],
+          "what_is_taught": "Motor movement.. Rotation.. Speed..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Motor Fundamentals.",
+          "expected_outcome": "Practical understanding and successful physical validation of Motor Fundamentals."
+        },
+        {
+          "lesson_number": "4.11",
+          "lesson_title": "Servo Fundamentals",
+          "title": "Servo Fundamentals",
+          "topics": [
+            "Position control.",
+            "PWM concept.",
+            "Compatible servo requirements.",
+            "Physical movement limitations."
+          ],
+          "what_is_taught": "Position control.. PWM concept.. Compatible servo requirements..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Servo Fundamentals.",
+          "expected_outcome": "Practical understanding and successful physical validation of Servo Fundamentals."
+        },
+        {
+          "lesson_number": "4.12",
+          "lesson_title": "Motor Drivers",
+          "title": "Motor Drivers",
+          "topics": [
+            "Why drivers are used.",
+            "Suitable voltage/current.",
+            "Microcontroller control signals.",
+            "Electrical isolation/protection awareness."
+          ],
+          "what_is_taught": "Why drivers are used.. Suitable voltage/current.. Microcontroller control signals..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Motor Drivers.",
+          "expected_outcome": "Practical understanding and successful physical validation of Motor Drivers."
+        },
+        {
+          "lesson_number": "4.13",
+          "lesson_title": "External Motor Power",
+          "title": "External Motor Power",
+          "topics": [
+            "Why an independent suitable supply may be needed.",
+            "Matching voltage.",
+            "Current requirements.",
+            "Common ground where appropriate.",
+            "Preventing reverse connection."
+          ],
+          "what_is_taught": "Why an independent suitable supply may be needed.. Matching voltage.. Current requirements..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for External Motor Power.",
+          "expected_outcome": "Practical understanding and successful physical validation of External Motor Power."
+        },
+        {
+          "lesson_number": "4.14",
+          "lesson_title": "Power-Safety Demonstration",
+          "title": "Power-Safety Demonstration",
+          "topics": [
+            "Compare low-power LED output with a motor load.",
+            "Explain why a motor must not be connected directly to an ordinary signal output."
+          ],
+          "what_is_taught": "Compare low-power LED output with a motor load.. Explain why a motor must not be connected directly to an ordinary signal output..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Power-Safety Demonstration.",
+          "expected_outcome": "Practical understanding and successful physical validation of Power-Safety Demonstration."
+        },
+        {
+          "lesson_number": "4.15",
+          "lesson_title": "Approved Servo Activity",
+          "title": "Approved Servo Activity",
+          "topics": [
+            "Small compatible servo.",
+            "Suitable interface/driver or approved external supply arrangement.",
+            "Safe movement range.",
+            "No hazardous mechanical load.",
+            "Only perform if actual hardware, ratings and instructor supervision are verified."
+          ],
+          "what_is_taught": "Small compatible servo.. Suitable interface/driver or approved external supply arrangement.. Safe movement range..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Approved Servo Activity.",
+          "expected_outcome": "Practical understanding and successful physical validation of Approved Servo Activity."
+        },
+        {
+          "lesson_number": "4.16",
+          "lesson_title": "PWM Awareness",
+          "title": "PWM Awareness",
+          "topics": [
+            "Repeated pulses.",
+            "Basic control signals.",
+            "Difference between signal and power delivery."
+          ],
+          "what_is_taught": "Repeated pulses.. Basic control signals.. Difference between signal and power delivery..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for PWM Awareness.",
+          "expected_outcome": "Practical understanding and successful physical validation of PWM Awareness."
+        },
+        {
+          "lesson_number": "4.17",
+          "lesson_title": "Building a Prototype",
+          "title": "Building a Prototype",
+          "topics": [
+            "Design sketch.",
+            "Parts selection.",
+            "Wiring plan.",
+            "Physical arrangement.",
+            "Safe assembly."
+          ],
+          "what_is_taught": "Design sketch.. Parts selection.. Wiring plan..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Building a Prototype.",
+          "expected_outcome": "Practical understanding and successful physical validation of Building a Prototype."
+        },
+        {
+          "lesson_number": "4.18",
+          "lesson_title": "Testing External Outputs",
+          "title": "Testing External Outputs",
+          "topics": [
+            "Correct wiring.",
+            "Correct program.",
+            "Safe power.",
+            "Response.",
+            "Stop conditions."
+          ],
+          "what_is_taught": "Correct wiring.. Correct program.. Safe power..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Testing External Outputs.",
+          "expected_outcome": "Practical understanding and successful physical validation of Testing External Outputs."
+        },
+        {
+          "lesson_number": "4.19",
+          "lesson_title": "Physical Assembly",
+          "title": "Physical Assembly",
+          "topics": [
+            "Stable mounting.",
+            "Avoiding exposed moving parts.",
+            "Neat wiring.",
+            "Component protection."
+          ],
+          "what_is_taught": "Stable mounting.. Avoiding exposed moving parts.. Neat wiring..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Physical Assembly.",
+          "expected_outcome": "Practical understanding and successful physical validation of Physical Assembly."
+        },
+        {
+          "lesson_number": "4.20",
+          "lesson_title": "Simple Mechanisms",
+          "title": "Simple Mechanisms",
+          "topics": [
+            "Basic linkages.",
+            "Servo-controlled flap.",
+            "Alert indicator.",
+            "Movement-triggered output."
+          ],
+          "what_is_taught": "Basic linkages.. Servo-controlled flap.. Alert indicator..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Simple Mechanisms.",
+          "expected_outcome": "Practical understanding and successful physical validation of Simple Mechanisms."
+        },
+        {
+          "lesson_number": "4.21",
+          "lesson_title": "Tinkercad Circuits",
+          "title": "Tinkercad Circuits",
+          "topics": [
+            "General circuit visualization.",
+            "LEDs.",
+            "Breadboard connections.",
+            "Component understanding.",
+            "Do not claim Tinkercad Circuits provides a fully equivalent native micro:bit V2 hardware simulator.",
+            "Use MakeCode for micro:bit code simulation."
+          ],
+          "what_is_taught": "General circuit visualization.. LEDs.. Breadboard connections..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Tinkercad Circuits.",
+          "expected_outcome": "Practical understanding and successful physical validation of Tinkercad Circuits."
+        },
+        {
+          "lesson_number": "4.22",
+          "lesson_title": "Hardware Limits",
+          "title": "Hardware Limits",
+          "topics": [
+            "What can the board power?",
+            "What needs an external driver?",
+            "Why power budgets matter.",
+            "Why real testing differs from simulation."
+          ],
+          "what_is_taught": "What can the board power?. What needs an external driver?. Why power budgets matter..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Hardware Limits.",
+          "expected_outcome": "Practical understanding and successful physical validation of Hardware Limits."
+        },
+        {
+          "lesson_number": "4.23",
+          "lesson_title": "Prototype Documentation",
+          "title": "Prototype Documentation",
+          "topics": [
+            "Diagram.",
+            "Parts.",
+            "Wiring.",
+            "Program.",
+            "Test.",
+            "Issue.",
+            "Correction."
+          ],
+          "what_is_taught": "Diagram.. Parts.. Wiring..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Prototype Documentation.",
+          "expected_outcome": "Practical understanding and successful physical validation of Prototype Documentation."
+        }
+      ],
+      "hands_on_practice": "Complete an instructor-supervised low-voltage input/output prototype.\nInclude one or more approved external components.\nDemonstrate servo/motor operation only with verified compatible equipment.",
+      "assignment": "Extend the interactive input/output device using appropriate physical connections.\nPrepare preliminary ideas for the final invention.",
+      "expected_deliverable": "**Safe Low-Voltage Hardware Prototype & Wiring Documentation**\nDo not connect DC motors directly to micro:bit signal pins.\nServos can create current demands beyond what the micro:bit board can safely provide.\nUse the officially recommended suitable power and control configuration for the chosen servo.\nDo not connect the positive terminal of an external servo/motor power supply to a micro:bit signal or power input unless the specific approved design and electrical documentation explicitly permit it.\nAny separate motor supply arrangement must be reviewed by a qualified instructor and wired according to manufacturer guidance.\n---",
+      "assessment": "Instructor review of circuit safety, wiring correctness, and working MakeCode program logic."
+    },
+    {
+      "module_number": 5,
+      "module_title": "Debugging & Engineering Design",
+      "title": "Debugging & Engineering Design",
+      "hours": 6,
+      "duration_hours": 6,
+      "learning_hours": 6,
+      "objective": "Troubleshoot programs and hardware safely, record evidence and make meaningful prototype improvements.",
+      "lessons_count": 16,
+      "lessons": [
+        {
+          "lesson_number": "5.1",
+          "lesson_title": "What Is Troubleshooting?",
+          "title": "What Is Troubleshooting?",
+          "topics": [
+            "Expected result.",
+            "Actual result.",
+            "Identifying a problem.",
+            "Finding likely causes.",
+            "Testing changes."
+          ],
+          "what_is_taught": "Expected result.. Actual result.. Identifying a problem..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for What Is Troubleshooting?.",
+          "expected_outcome": "Practical understanding and successful physical validation of What Is Troubleshooting?."
+        },
+        {
+          "lesson_number": "5.2",
+          "lesson_title": "Software vs Hardware Faults",
+          "title": "Software vs Hardware Faults",
+          "topics": [
+            "Wrong code.",
+            "Incorrect threshold.",
+            "Wiring problem.",
+            "Disconnected component.",
+            "Insufficient power."
+          ],
+          "what_is_taught": "Wrong code.. Incorrect threshold.. Wiring problem..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Software vs Hardware Faults.",
+          "expected_outcome": "Practical understanding and successful physical validation of Software vs Hardware Faults."
+        },
+        {
+          "lesson_number": "5.3",
+          "lesson_title": "Programming Errors",
+          "title": "Programming Errors",
+          "topics": [
+            "Incorrect condition.",
+            "Unintended loop.",
+            "Wrong variable.",
+            "Missing event.",
+            "Wrong pin selection."
+          ],
+          "what_is_taught": "Incorrect condition.. Unintended loop.. Wrong variable..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Programming Errors.",
+          "expected_outcome": "Practical understanding and successful physical validation of Programming Errors."
+        },
+        {
+          "lesson_number": "5.4",
+          "lesson_title": "Sensor Errors",
+          "title": "Sensor Errors",
+          "topics": [
+            "Wrong threshold.",
+            "Noisy readings.",
+            "Incorrect orientation.",
+            "Environmental interference."
+          ],
+          "what_is_taught": "Wrong threshold.. Noisy readings.. Incorrect orientation..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Sensor Errors.",
+          "expected_outcome": "Practical understanding and successful physical validation of Sensor Errors."
+        },
+        {
+          "lesson_number": "5.5",
+          "lesson_title": "Wiring Problems",
+          "title": "Wiring Problems",
+          "topics": [
+            "Loose connections.",
+            "Wrong polarity.",
+            "Incorrect breadboard row.",
+            "Wrong pin.",
+            "Missing ground."
+          ],
+          "what_is_taught": "Loose connections.. Wrong polarity.. Incorrect breadboard row..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Wiring Problems.",
+          "expected_outcome": "Practical understanding and successful physical validation of Wiring Problems."
+        },
+        {
+          "lesson_number": "5.6",
+          "lesson_title": "Safe Inspection",
+          "title": "Safe Inspection",
+          "topics": [
+            "Disconnect power.",
+            "Inspect components.",
+            "Check wiring diagram.",
+            "Review device ratings.",
+            "Ask the instructor when uncertain."
+          ],
+          "what_is_taught": "Disconnect power.. Inspect components.. Check wiring diagram..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Safe Inspection.",
+          "expected_outcome": "Practical understanding and successful physical validation of Safe Inspection."
+        },
+        {
+          "lesson_number": "5.7",
+          "lesson_title": "MakeCode Simulator",
+          "title": "MakeCode Simulator",
+          "topics": [
+            "Test event logic.",
+            "Adjust simulated inputs.",
+            "Verify program flow.",
+            "Identify simple code issues."
+          ],
+          "what_is_taught": "Test event logic.. Adjust simulated inputs.. Verify program flow..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for MakeCode Simulator.",
+          "expected_outcome": "Practical understanding and successful physical validation of MakeCode Simulator."
+        },
+        {
+          "lesson_number": "5.8",
+          "lesson_title": "Physical Testing",
+          "title": "Physical Testing",
+          "topics": [
+            "Test the actual board.",
+            "Compare against simulator.",
+            "Observe real sensors.",
+            "Verify output behaviour."
+          ],
+          "what_is_taught": "Test the actual board.. Compare against simulator.. Observe real sensors..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Physical Testing.",
+          "expected_outcome": "Practical understanding and successful physical validation of Physical Testing."
+        },
+        {
+          "lesson_number": "5.9",
+          "lesson_title": "Test Planning",
+          "title": "Test Planning",
+          "topics": [
+            "Test ID.",
+            "Input.",
+            "Expected response.",
+            "Actual response.",
+            "Result."
+          ],
+          "what_is_taught": "Test ID.. Input.. Expected response..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Test Planning.",
+          "expected_outcome": "Practical understanding and successful physical validation of Test Planning."
+        },
+        {
+          "lesson_number": "5.10",
+          "lesson_title": "Engineering Constraints",
+          "title": "Engineering Constraints",
+          "topics": [
+            "Time.",
+            "Components.",
+            "Device availability.",
+            "Power.",
+            "Reliability.",
+            "Safety."
+          ],
+          "what_is_taught": "Time.. Components.. Device availability..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Engineering Constraints.",
+          "expected_outcome": "Practical understanding and successful physical validation of Engineering Constraints."
+        },
+        {
+          "lesson_number": "5.11",
+          "lesson_title": "Iteration",
+          "title": "Iteration",
+          "topics": [
+            "Modify code.",
+            "Improve component layout.",
+            "Adjust threshold.",
+            "Improve user instructions.",
+            "Retest."
+          ],
+          "what_is_taught": "Modify code.. Improve component layout.. Adjust threshold..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Iteration.",
+          "expected_outcome": "Practical understanding and successful physical validation of Iteration."
+        },
+        {
+          "lesson_number": "5.12",
+          "lesson_title": "Failure Analysis",
+          "title": "Failure Analysis",
+          "topics": [
+            "What failed?",
+            "Why might it have failed?",
+            "What evidence exists?",
+            "Which change is appropriate?"
+          ],
+          "what_is_taught": "What failed?. Why might it have failed?. What evidence exists?.",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Failure Analysis.",
+          "expected_outcome": "Practical understanding and successful physical validation of Failure Analysis."
+        },
+        {
+          "lesson_number": "5.13",
+          "lesson_title": "Safety Before Retesting",
+          "title": "Safety Before Retesting",
+          "topics": [
+            "Confirm power removed.",
+            "Verify new connections.",
+            "Inspect components.",
+            "Authorize safe restart."
+          ],
+          "what_is_taught": "Confirm power removed.. Verify new connections.. Inspect components..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Safety Before Retesting.",
+          "expected_outcome": "Practical understanding and successful physical validation of Safety Before Retesting."
+        },
+        {
+          "lesson_number": "5.14",
+          "lesson_title": "Documentation",
+          "title": "Documentation",
+          "topics": [
+            "Before/after diagram.",
+            "Bug explanation.",
+            "Test log.",
+            "Improvement notes."
+          ],
+          "what_is_taught": "Before/after diagram.. Bug explanation.. Test log..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Documentation.",
+          "expected_outcome": "Practical understanding and successful physical validation of Documentation."
+        },
+        {
+          "lesson_number": "5.15",
+          "lesson_title": "Prototype Review",
+          "title": "Prototype Review",
+          "topics": [
+            "Does it solve the intended problem?",
+            "Does it behave safely?",
+            "Is it repeatable?",
+            "Can the student explain it?"
+          ],
+          "what_is_taught": "Does it solve the intended problem?. Does it behave safely?. Is it repeatable?.",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Prototype Review.",
+          "expected_outcome": "Practical understanding and successful physical validation of Prototype Review."
+        },
+        {
+          "lesson_number": "5.16",
+          "lesson_title": "Engineering Reflection",
+          "title": "Engineering Reflection",
+          "topics": [
+            "What worked?",
+            "What did not?",
+            "What was changed?",
+            "What remains uncertain?",
+            "What would be improved next?"
+          ],
+          "what_is_taught": "What worked?. What did not?. What was changed?.",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Engineering Reflection.",
+          "expected_outcome": "Practical understanding and successful physical validation of Engineering Reflection."
+        }
+      ],
+      "hands_on_practice": "Use an instructor-prepared safe faulty-program scenario.\nExamples:\n- Incorrect threshold.\n- Missing event handler.\n- Incorrect LED sequence.\n- Safe, disconnected wrong breadboard row.\nDo not deliberately create dangerous wiring faults or power shorts.",
+      "assignment": "Produce:\n1. Problem description.\n2. Expected behaviour.\n3. Observed behaviour.\n4. Suspected cause.\n5. Correction.\n6. Retest.\n7. Improvement note.",
+      "expected_deliverable": "**Engineering Troubleshooting & Prototype Improvement Log**\n---",
+      "assessment": "Instructor review of circuit safety, wiring correctness, and working MakeCode program logic."
+    },
+    {
+      "module_number": 6,
+      "module_title": "Inventor Capstone & Showcase",
+      "title": "Inventor Capstone & Showcase",
+      "hours": 6,
+      "duration_hours": 6,
+      "learning_hours": 6,
+      "objective": "Plan, assemble, program, test and demonstrate an original micro:bit physical computing invention.",
+      "lessons_count": 16,
+      "lessons": [
+        {
+          "lesson_number": "6.1",
+          "lesson_title": "Identify a Realistic Problem",
+          "title": "Identify a Realistic Problem",
+          "topics": [
+            "Classroom.",
+            "Home.",
+            "Learning.",
+            "Everyday convenience.",
+            "Simple safety-awareness applications."
+          ],
+          "what_is_taught": "Classroom.. Home.. Learning..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Identify a Realistic Problem.",
+          "expected_outcome": "Practical understanding and successful physical validation of Identify a Realistic Problem."
+        },
+        {
+          "lesson_number": "6.2",
+          "lesson_title": "Define the User",
+          "title": "Define the User",
+          "topics": [
+            "Who uses the device?",
+            "What problem does it address?",
+            "What response is useful?"
+          ],
+          "what_is_taught": "Who uses the device?. What problem does it address?. What response is useful?.",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Define the User.",
+          "expected_outcome": "Practical understanding and successful physical validation of Define the User."
+        },
+        {
+          "lesson_number": "6.3",
+          "lesson_title": "Capstone Scope",
+          "title": "Capstone Scope",
+          "topics": [
+            "Achievable with classroom equipment.",
+            "Safe.",
+            "Age-appropriate.",
+            "Limited complexity."
+          ],
+          "what_is_taught": "Achievable with classroom equipment.. Safe.. Age-appropriate..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Capstone Scope.",
+          "expected_outcome": "Practical understanding and successful physical validation of Capstone Scope."
+        },
+        {
+          "lesson_number": "6.4",
+          "lesson_title": "Design Brief",
+          "title": "Design Brief",
+          "topics": [
+            "Project title.",
+            "Problem.",
+            "User.",
+            "Input.",
+            "Processing logic.",
+            "Output.",
+            "Parts."
+          ],
+          "what_is_taught": "Project title.. Problem.. User..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Design Brief.",
+          "expected_outcome": "Practical understanding and successful physical validation of Design Brief."
+        },
+        {
+          "lesson_number": "6.5",
+          "lesson_title": "System Diagram",
+          "title": "System Diagram",
+          "topics": [
+            "Power.",
+            "Sensor/button.",
+            "Micro:bit.",
+            "Program logic.",
+            "Output."
+          ],
+          "what_is_taught": "Power.. Sensor/button.. Micro:bit..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for System Diagram.",
+          "expected_outcome": "Practical understanding and successful physical validation of System Diagram."
+        },
+        {
+          "lesson_number": "6.6",
+          "lesson_title": "Prototype Planning",
+          "title": "Prototype Planning",
+          "topics": [
+            "Parts inventory.",
+            "Sketch.",
+            "Wiring.",
+            "Code flow.",
+            "Test plan."
+          ],
+          "what_is_taught": "Parts inventory.. Sketch.. Wiring..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Prototype Planning.",
+          "expected_outcome": "Practical understanding and successful physical validation of Prototype Planning."
+        },
+        {
+          "lesson_number": "6.7",
+          "lesson_title": "Programming",
+          "title": "Programming",
+          "topics": [
+            "Events.",
+            "Loops.",
+            "Variables.",
+            "Conditions.",
+            "Sensor reading.",
+            "Output response."
+          ],
+          "what_is_taught": "Events.. Loops.. Variables..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Programming.",
+          "expected_outcome": "Practical understanding and successful physical validation of Programming."
+        },
+        {
+          "lesson_number": "6.8",
+          "lesson_title": "Simulate",
+          "title": "Simulate",
+          "topics": [
+            "Test supported behaviour.",
+            "Correct program flow.",
+            "Understand simulator limitations."
+          ],
+          "what_is_taught": "Test supported behaviour.. Correct program flow.. Understand simulator limitations..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Simulate.",
+          "expected_outcome": "Practical understanding and successful physical validation of Simulate."
+        },
+        {
+          "lesson_number": "6.9",
+          "lesson_title": "Supervised Assembly",
+          "title": "Supervised Assembly",
+          "topics": [
+            "Approved components.",
+            "No mains power.",
+            "No soldering.",
+            "Correct wiring.",
+            "Safe power."
+          ],
+          "what_is_taught": "Approved components.. No mains power.. No soldering..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Supervised Assembly.",
+          "expected_outcome": "Practical understanding and successful physical validation of Supervised Assembly."
+        },
+        {
+          "lesson_number": "6.10",
+          "lesson_title": "Initial Physical Test",
+          "title": "Initial Physical Test",
+          "topics": [
+            "Does input register?",
+            "Is logic correct?",
+            "Does the output work?",
+            "Does the device behave safely?"
+          ],
+          "what_is_taught": "Does input register?. Is logic correct?. Does the output work?.",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Initial Physical Test.",
+          "expected_outcome": "Practical understanding and successful physical validation of Initial Physical Test."
+        },
+        {
+          "lesson_number": "6.11",
+          "lesson_title": "Debugging",
+          "title": "Debugging",
+          "topics": [
+            "Find errors.",
+            "Explain cause.",
+            "Correct.",
+            "Retest."
+          ],
+          "what_is_taught": "Find errors.. Explain cause.. Correct..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Debugging.",
+          "expected_outcome": "Practical understanding and successful physical validation of Debugging."
+        },
+        {
+          "lesson_number": "6.12",
+          "lesson_title": "User Testing",
+          "title": "User Testing",
+          "topics": [
+            "Give an appropriate test instruction.",
+            "Observe outcome.",
+            "Ask for feedback.",
+            "Identify an improvement."
+          ],
+          "what_is_taught": "Give an appropriate test instruction.. Observe outcome.. Ask for feedback..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for User Testing.",
+          "expected_outcome": "Practical understanding and successful physical validation of User Testing."
+        },
+        {
+          "lesson_number": "6.13",
+          "lesson_title": "Iteration",
+          "title": "Iteration",
+          "topics": [
+            "Code refinement.",
+            "Better alert.",
+            "Improved threshold.",
+            "Better instructions.",
+            "More reliable response."
+          ],
+          "what_is_taught": "Code refinement.. Better alert.. Improved threshold..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Iteration.",
+          "expected_outcome": "Practical understanding and successful physical validation of Iteration."
+        },
+        {
+          "lesson_number": "6.14",
+          "lesson_title": "Documentation",
+          "title": "Documentation",
+          "topics": [
+            "Original idea.",
+            "System diagram.",
+            "Program.",
+            "Components.",
+            "Tests.",
+            "Safety.",
+            "Changes."
+          ],
+          "what_is_taught": "Original idea.. System diagram.. Program..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Documentation.",
+          "expected_outcome": "Practical understanding and successful physical validation of Documentation."
+        },
+        {
+          "lesson_number": "6.15",
+          "lesson_title": "Live Parent Demonstration",
+          "title": "Live Parent Demonstration",
+          "topics": [
+            "Explain the problem.",
+            "Show the prototype.",
+            "Demonstrate input.",
+            "Explain output.",
+            "Discuss one issue and correction."
+          ],
+          "what_is_taught": "Explain the problem.. Show the prototype.. Demonstrate input..",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Live Parent Demonstration.",
+          "expected_outcome": "Practical understanding and successful physical validation of Live Parent Demonstration."
+        },
+        {
+          "lesson_number": "6.16",
+          "lesson_title": "Reflection",
+          "title": "Reflection",
+          "topics": [
+            "What did I invent?",
+            "What did the micro:bit control?",
+            "What did I test?",
+            "What did I fix?",
+            "What would I build next?"
+          ],
+          "what_is_taught": "What did I invent?. What did the micro:bit control?. What did I test?.",
+          "what_learner_does": "Construct supervised circuit connections, program MakeCode logic, and test on physical micro:bit hardware for Reflection.",
+          "expected_outcome": "Practical understanding and successful physical validation of Reflection."
+        }
+      ],
+      "hands_on_practice": "Create and test the final invention using actual supervised micro:bit equipment.",
+      "assignment": "Complete:\n**Portfolio Project 03 — Original micro:bit Invention**",
+      "expected_deliverable": "**Original Functioning Prototype + MakeCode Program + Engineering Log + Private Parent Showcase**\nThe invention does not need to move on wheels to qualify as a robotics/physical computing foundation project.\nIt must demonstrate meaningful interaction between program logic and physical input/output.\n---",
+      "assessment": "Instructor review of circuit safety, wiring correctness, and working MakeCode program logic."
+    }
+  ],
+  "what_you_will_build": [],
+  "final_deliverables": [],
+  "student_deliverables_and_evidence": [],
+  "assessment": null,
+  "certification": null,
+  "career_paths": [],
+  "freelance_applications": [],
+  "business_use_cases": [],
+  "industry_workflow": [],
+  "best_practices": [],
+  "common_mistakes": [],
+  "not_covered": [],
+  "next_learning_path": [],
+  "faq": [
+    {
+      "q": "What is Robotics & Physical Computing with micro:bit?",
+      "a": "It is a hands-on introductory course where students learn how programs interact with sensors, circuits and physical devices.",
+      "question": "What is Robotics & Physical Computing with micro:bit?",
+      "answer": "It is a hands-on introductory course where students learn how programs interact with sensors, circuits and physical devices."
+    },
+    {
+      "q": "What is the course duration?",
+      "a": "Eight weeks with 48 learning hours.",
+      "question": "What is the course duration?",
+      "answer": "Eight weeks with 48 learning hours."
+    },
+    {
+      "q": "What is the fee?",
+      "a": "₹8,900, subject to Nova Skills' verified tax and pricing policy.",
+      "question": "What is the fee?",
+      "answer": "₹8,900, subject to Nova Skills' verified tax and pricing policy."
+    },
+    {
+      "q": "What is a micro:bit?",
+      "a": "The BBC micro:bit is a small programmable educational microcontroller board with built-in inputs, outputs and sensors.",
+      "question": "What is a micro:bit?",
+      "answer": "The BBC micro:bit is a small programmable educational microcontroller board with built-in inputs, outputs and sensors."
+    },
+    {
+      "q": "What software will students use?",
+      "a": "Microsoft MakeCode and its micro:bit simulator.",
+      "question": "What software will students use?",
+      "answer": "Microsoft MakeCode and its micro:bit simulator."
+    },
+    {
+      "q": "Is coding experience required?",
+      "a": "No. The course begins with beginner-friendly block programming.",
+      "question": "Is coding experience required?",
+      "answer": "No. The course begins with beginner-friendly block programming."
+    },
+    {
+      "q": "Is electronics experience required?",
+      "a": "No. Basic circuits and safety are introduced from the beginning.",
+      "question": "Is electronics experience required?",
+      "answer": "No. Basic circuits and safety are introduced from the beginning."
+    },
+    {
+      "q": "What age groups are suitable?",
+      "a": "Suggested teaching bands are ages 9–12 and 13–16, with activities adapted to learner readiness.",
+      "question": "What age groups are suitable?",
+      "answer": "Suggested teaching bands are ages 9–12 and 13–16, with activities adapted to learner readiness."
+    },
+    {
+      "q": "Will students work with real hardware?",
+      "a": "Yes. The approved curriculum requires supervised physical hardware practicals.",
+      "question": "Will students work with real hardware?",
+      "answer": "Yes. The approved curriculum requires supervised physical hardware practicals."
+    },
+    {
+      "q": "Is this a simulation-only course?",
+      "a": "No. The simulator supports programming, but mandatory practical work involves actual devices.",
+      "question": "Is this a simulation-only course?",
+      "answer": "No. The simulator supports programming, but mandatory practical work involves actual devices."
+    },
+    {
+      "q": "Are shared hardware components included in the fee?",
+      "a": "The approved transparent course fee for Robotics & Physical Computing with micro:bit is ₹8,900 (statutory 18% GST extra). Nova Skills maintains absolute pricing integrity with zero hidden administrative fees. Flexible installment options are available.",
+      "question": "Are shared hardware components included in the fee?",
+      "answer": "The approved transparent course fee for Robotics & Physical Computing with micro:bit is ₹8,900 (statutory 18% GST extra). Nova Skills maintains absolute pricing integrity with zero hidden administrative fees. Flexible installment options are available."
+    },
+    {
+      "q": "Must I purchase a take-home robotics kit?",
+      "a": "No. A personal take-home kit is optional and separately priced.",
+      "question": "Must I purchase a take-home robotics kit?",
+      "answer": "No. A personal take-home kit is optional and separately priced."
+    },
+    {
+      "q": "Will my child build a moving robot?",
+      "a": "Not necessarily. The core course covers physical computing devices. A mobile robot requires additional approved equipment and a supported teaching pathway.",
+      "question": "Will my child build a moving robot?",
+      "answer": "Not necessarily. The core course covers physical computing devices. A mobile robot requires additional approved equipment and a supported teaching pathway."
+    },
+    {
+      "q": "What is MakeCode?",
+      "a": "MakeCode is a visual programming editor used to create programs for micro:bit.",
+      "question": "What is MakeCode?",
+      "answer": "MakeCode is a visual programming editor used to create programs for micro:bit."
+    },
+    {
+      "q": "What is a sensor?",
+      "a": "A sensor detects or measures a condition that a program can use as input.",
+      "question": "What is a sensor?",
+      "answer": "A sensor detects or measures a condition that a program can use as input."
+    },
+    {
+      "q": "What sensors are covered?",
+      "a": "The course introduces movement, light and temperature sensing, with appropriate limitations.",
+      "question": "What sensors are covered?",
+      "answer": "The course introduces movement, light and temperature sensing, with appropriate limitations."
+    },
+    {
+      "q": "Will students learn about circuits?",
+      "a": "Yes. They will study supervised low-voltage circuits, LEDs, resistors, connectors and safe wiring.",
+      "question": "Will students learn about circuits?",
+      "answer": "Yes. They will study supervised low-voltage circuits, LEDs, resistors, connectors and safe wiring."
+    },
+    {
+      "q": "Will students use motors?",
+      "a": "Motor and servo concepts are covered. Physical activities depend on verified, approved compatible equipment and supervision.",
+      "question": "Will students use motors?",
+      "answer": "Motor and servo concepts are covered. Physical activities depend on verified, approved compatible equipment and supervision."
+    },
+    {
+      "q": "Is soldering required?",
+      "a": "No. Soldering is outside this foundation course.",
+      "question": "Is soldering required?",
+      "answer": "No. Soldering is outside this foundation course."
+    },
+    {
+      "q": "Will students use household mains electricity?",
+      "a": "No. Mandatory practicals use approved low-voltage equipment.",
+      "question": "Will students use household mains electricity?",
+      "answer": "No. Mandatory practicals use approved low-voltage equipment."
+    },
+    {
+      "q": "Will students learn troubleshooting?",
+      "a": "Yes. They will identify software and hardware faults, test corrections and document improvements.",
+      "question": "Will students learn troubleshooting?",
+      "answer": "Yes. They will identify software and hardware faults, test corrections and document improvements."
+    },
+    {
+      "q": "What projects are required?",
+      "a": "A sensor-based alert, an interactive input/output device and an original micro:bit invention.",
+      "question": "What projects are required?",
+      "answer": "A sensor-based alert, an interactive input/output device and an original micro:bit invention."
+    },
+    {
+      "q": "Is Python included?",
+      "a": "MakeCode blocks are the primary programming method. MicroPython may be an optional extension for ready older learners.",
+      "question": "Is Python included?",
+      "answer": "MakeCode blocks are the primary programming method. MicroPython may be an optional extension for ready older learners."
+    },
+    {
+      "q": "Is this an AI robotics course?",
+      "a": "No. The primary focus is microcontrollers, sensors, programming and physical computing.",
+      "question": "Is this an AI robotics course?",
+      "answer": "No. The primary focus is microcontrollers, sensors, programming and physical computing."
+    },
+    {
+      "q": "Will parents see the projects?",
+      "a": "The course includes a supervised parent-facing invention demonstration, subject to verified delivery arrangements.",
+      "question": "Will parents see the projects?",
+      "answer": "The course includes a supervised parent-facing invention demonstration, subject to verified delivery arrangements."
+    },
+    {
+      "q": "Will students need a personal laptop?",
+      "a": "The required learning setup depends on the institute's actual classroom arrangements. Verify device access before making claims about included computers.",
+      "question": "Will students need a personal laptop?",
+      "answer": "The required learning setup depends on the institute's actual classroom arrangements. Verify device access before making claims about included computers."
+    },
+    {
+      "q": "Is this a professional robotics qualification?",
+      "a": "No. It is an introductory educational hardware specialization.",
+      "question": "Is this a professional robotics qualification?",
+      "answer": "No. It is an introductory educational hardware specialization."
+    },
+    {
+      "q": "What is the final portfolio?",
+      "a": "Three functional physical computing projects supported by program logic, diagrams, safety checks, testing and improvements.",
+      "question": "What is the final portfolio?",
+      "answer": "Three functional physical computing projects supported by program logic, diagrams, safety checks, testing and improvements."
+    },
+    {
+      "q": "Is the course safe for children?",
+      "a": "It uses supervised, approved low-voltage equipment and established safety procedures. As with any hardware activity, careful handling and instruction are necessary.",
+      "question": "Is the course safe for children?",
+      "answer": "It uses supervised, approved low-voltage equipment and established safety procedures. As with any hardware activity, careful handling and instruction are necessary."
+    },
+    {
+      "q": "What can my child learn afterward?",
+      "a": "Suitable next steps may include advanced age-appropriate electronics, programming or broader Kids Tech Academy programs.",
+      "question": "What can my child learn afterward?",
+      "answer": "Suitable next steps may include advanced age-appropriate electronics, programming or broader Kids Tech Academy programs."
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}

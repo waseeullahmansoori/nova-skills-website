@@ -20,6 +20,7 @@ const {
   getLocationBySlug,
   resolveCoursesForLocation
 } = require('../lib/locations');
+const NovaCourseData = require('../js/course-data.js');
 
 const { P1_CONFIGS } = require('./build-p1-city-pages');
 const { P2_CONFIGS } = require('./build-p2-city-pages');
@@ -982,7 +983,7 @@ ${heroSectionHtml}
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
         <div>
           <span style="font-weight: 700; color: var(--city-navy);">Explore More at Nova Skills:</span>
-          <a href="/courses.html" style="color: var(--city-primary); margin-left: 12px; text-decoration: underline;">All Courses (109)</a>
+          <a href="/courses.html" style="color: var(--city-primary); margin-left: 12px; text-decoration: underline;">All Courses (${NovaCourseData.getGlobalCourseCount()})</a>
           <span style="color: var(--city-border); margin: 0 8px;">|</span>
           <a href="/branches/" style="color: var(--city-primary); text-decoration: underline;">All Learning Locations (36)</a>
           <span style="color: var(--city-border); margin: 0 8px;">|</span>
@@ -1000,8 +1001,8 @@ ${heroSectionHtml}
   <div id="ns-footer"></div>
 
   <!-- Scripts -->
-  <script src="/js/data.min.js?v=2.7.4" defer></script>
-  <script src="/js/components.min.js?v=2.8.0" defer></script>
+  <script src="/js/data.min.js?v=3.1.0" defer></script>
+  <script src="/js/components.min.js?v=3.1.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
   <script src="/js/locations-city.js" defer></script>
 </body>

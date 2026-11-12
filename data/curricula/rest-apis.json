@@ -1,0 +1,347 @@
+{
+  "courseId": "rest-apis",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/rest-apis.json",
+  "guidedHours": 20,
+  "learning_hours": 20,
+  "course_type": "Certification Course",
+  "seo_title": "REST APIs Course | 1-2 Weeks, ₹6,900 | Nova Skills",
+  "seo_description": "Learn REST APIs at Nova Skills. 1-2 Weeks (20 hrs) practical training with projects, tools, and placement-oriented portfolio guidance.",
+  "overview": {
+    "positioning": "Integrate into Node.js and Full Stack foundations.",
+    "short_description": "Comprehensive curriculum covering Postman, Express.js, Swagger, Node.js to build production-grade projects.",
+    "key_facts": {
+      "level": "BEGINNER+",
+      "duration": "1-2 Weeks",
+      "format": "Practical Hands-On Studio / Interactive Live Labs",
+      "estimated_learning_hours": "20 Hours",
+      "project_count": "EXERCISE",
+      "capstone": "Practical Production Artifact",
+      "ai_integration": "AI-AUGMENTED",
+      "career_focus": "API Integrator"
+    },
+    "what_you_will_be_able_to_do": [
+      "Architect and execute end-to-end solutions using Postman.",
+      "Solve concrete business problems applying REST APIs principles.",
+      "Package professional case studies demonstrating verifiable skills."
+    ]
+  },
+  "why_now": {
+    "industry_shift": "The transition toward modern cloud and web ecosystems requires deep expertise in Postman and related technologies.",
+    "ai_impact": "AI serves as a powerful workflow copilot, drastically reducing production turnaround times for professionals who know how to direct it.",
+    "business_demand": "Businesses actively seek talent who can deliver robust REST APIs solutions efficiently.",
+    "career_opportunity": "Mastering these tools opens doors to high-paying specialized roles and global freelance opportunities."
+  },
+  "learning_journey": {
+    "stages": [
+      {
+        "stage": "Stage 1: Mental Model & Environment",
+        "focus": "Foundational vocabulary, toolchain installation, and workflow orientation."
+      },
+      {
+        "stage": "Stage 2: Core Mechanics & Best Practices",
+        "focus": "Standard operating procedures, essential techniques, and syntax/tool mastery."
+      },
+      {
+        "stage": "Stage 3: Guided Production Labs",
+        "focus": "Hands-on guided walkthroughs replicating real client briefs."
+      },
+      {
+        "stage": "Stage 4: Advanced Scenarios & Troubleshooting",
+        "focus": "Edge cases, performance optimization, security, and quality assurance."
+      },
+      {
+        "stage": "Stage 5: Portfolio Project Execution",
+        "focus": "Independent unguided project build matching commercial specifications."
+      }
+    ]
+  },
+  "prerequisites": {
+    "required": "javascript-cert",
+    "recommended": "Basic domain workflow understanding",
+    "not_required": "Prior enterprise experience or advanced mathematics unless specified in technical syllabus",
+    "system_requirements": {
+      "hardware": "Standard laptop/PC with 8GB+ RAM, stable broadband internet connection",
+      "software_accounts": "REST APIs, Git & GitHub, VS Code (student/free tiers sufficient for coursework)"
+    }
+  },
+  "target_audience": {
+    "best_for": [
+      "Aspiring professionals aiming to master REST APIs and secure industry roles.",
+      "Current developers wanting to upskill using modern Postman workflows.",
+      "Freelancers looking to offer REST APIs services to clients."
+    ],
+    "who_should_take_foundation_first": "Learners lacking foundational proficiency in javascript-cert should complete the prerequisite foundation before enrolling.",
+    "not_for": [
+      "Students looking for purely theoretical knowledge without hands-on implementation.",
+      "Individuals unwilling to engage in active problem-solving and coding."
+    ]
+  },
+  "learning_outcomes": [
+    "PLAN: Formulate project architectures utilizing Postman.",
+    "BUILD: Construct professional deliverables using modern workflows.",
+    "OPTIMIZE: Refine outputs against strict quality metrics."
+  ],
+  "hands_on_tech": {
+    "core_tools": [
+      {
+        "tool": "Postman",
+        "purpose": "Core utility for rest-apis.",
+        "what_student_learns": "Best practices.",
+        "what_student_builds": "Project components."
+      },
+      {
+        "tool": "Express.js",
+        "purpose": "Core utility for rest-apis.",
+        "what_student_learns": "Best practices.",
+        "what_student_builds": "Project components."
+      },
+      {
+        "tool": "Swagger",
+        "purpose": "Core utility for rest-apis.",
+        "what_student_learns": "Best practices.",
+        "what_student_builds": "Project components."
+      },
+      {
+        "tool": "Node.js",
+        "purpose": "Core utility for rest-apis.",
+        "what_student_learns": "Best practices.",
+        "what_student_builds": "Project components."
+      }
+    ],
+    "supporting_tools": [
+      {
+        "tool": "Postman",
+        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+      },
+      {
+        "tool": "Docker",
+        "purpose": "Workflow accelerator, asset library, or collaboration utility."
+      }
+    ],
+    "emerging_tools": [
+      {
+        "tool": "Cursor",
+        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
+      },
+      {
+        "tool": "Supabase",
+        "purpose": "Cutting-edge 2026/27 technology providing significant productivity leverage."
+      }
+    ],
+    "tools_to_review": [
+      "Outdated legacy libraries"
+    ]
+  },
+  "modules": [
+    {
+      "module_number": "Module 01",
+      "module_title": "REST Architecture Principles",
+      "module_purpose": "Understand stateless communication.",
+      "what_you_will_learn": [
+        "Master the concepts of REST Architecture Principles.",
+        "Apply Postman effectively.",
+        "Troubleshoot common issues in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "1.1",
+          "lesson_title": "HTTP Verbs",
+          "what_is_taught": "GET/POST/PUT.",
+          "why_it_matters": "Standards.",
+          "what_learner_does": "Tests verbs.",
+          "expected_outcome": "Understanding."
+        },
+        {
+          "lesson_number": "1.2",
+          "lesson_title": "Status Codes",
+          "what_is_taught": "200/404/500.",
+          "why_it_matters": "Error handling.",
+          "what_learner_does": "Handles codes.",
+          "expected_outcome": "Proper responses."
+        },
+        {
+          "lesson_number": "1.3",
+          "lesson_title": "Statelessness",
+          "what_is_taught": "REST rules.",
+          "why_it_matters": "Scalability.",
+          "what_learner_does": "Designs API.",
+          "expected_outcome": "API spec."
+        }
+      ],
+      "key_concepts": [
+        "Industry Standards",
+        "Best Practices",
+        "Core Implementation"
+      ],
+      "tools": [
+        "Postman",
+        "Express.js",
+        "Swagger"
+      ],
+      "hands_on_practice": "Guided lab focused on REST Architecture Principles.",
+      "assignment": "Deliverable: Complete implementation of REST Architecture Principles.",
+      "business_application": "Directly applicable to industry standard requirements.",
+      "expected_outcome": "Verified functional artifact."
+    },
+    {
+      "module_number": "Module 02",
+      "module_title": "Building & Documenting",
+      "module_purpose": "Implement robust APIs.",
+      "what_you_will_learn": [
+        "Master the concepts of Building & Documenting.",
+        "Apply Postman effectively.",
+        "Troubleshoot common issues in this domain."
+      ],
+      "lessons": [
+        {
+          "lesson_number": "2.1",
+          "lesson_title": "Express Endpoints",
+          "what_is_taught": "Routing.",
+          "why_it_matters": "Functionality.",
+          "what_learner_does": "Builds API.",
+          "expected_outcome": "Working API."
+        },
+        {
+          "lesson_number": "2.2",
+          "lesson_title": "Swagger Docs",
+          "what_is_taught": "OpenAPI.",
+          "why_it_matters": "Usability.",
+          "what_learner_does": "Writes docs.",
+          "expected_outcome": "Interactive docs."
+        },
+        {
+          "lesson_number": "2.3",
+          "lesson_title": "Postman Testing",
+          "what_is_taught": "Automated tests.",
+          "why_it_matters": "Reliability.",
+          "what_learner_does": "Tests API.",
+          "expected_outcome": "Test suite."
+        }
+      ],
+      "key_concepts": [
+        "Industry Standards",
+        "Best Practices",
+        "Core Implementation"
+      ],
+      "tools": [
+        "Postman",
+        "Express.js",
+        "Swagger"
+      ],
+      "hands_on_practice": "Guided lab focused on Building & Documenting.",
+      "assignment": "Deliverable: Complete implementation of Building & Documenting.",
+      "business_application": "Directly applicable to industry standard requirements.",
+      "expected_outcome": "Verified functional artifact."
+    }
+  ],
+  "what_you_will_build": [
+    "Production Project 1: Foundational client asset built to professional specifications.",
+    "Production Project 2: Advanced commercial scenario with multi-tool integration."
+  ],
+  "final_deliverables": [
+    "Production-ready digital assets, code repository, or live published URL.",
+    "Professional case study documentation ready for Behance, GitHub, or portfolio website.",
+    "QR-code verifiable Nova Skills certificate of completion."
+  ],
+  "student_deliverables_and_evidence": [],
+  "assessment": {
+    "model": "Hands-on Production Lab Evaluation against Industry Rubric (100%)",
+    "criteria": "Evaluation strictly measures functionality, code/design cleaniness, adherence to briefs, and performance benchmarks."
+  },
+  "certification": {
+    "title": "Certified Specialist in REST APIs",
+    "criteria": "100% submission of required hands-on labs, minimum 75% score on portfolio project rubrics, and successful final assessment completion.",
+    "verification": "Cryptographically secured QR-code online verification portal under ISO 9001:2015 educational standards."
+  },
+  "career_paths": {
+    "entry_roles": "API Integrator",
+    "mid_roles": "Specialist Lead",
+    "specialist_roles": "None",
+    "freelance_roles": "Independent Remote Contractor (India & Global USD clients)",
+    "employer_expectations": "Demonstrable live portfolio proof-of-work, clean communication, and rapid autonomous execution.",
+    "what_student_demonstrates": "Ability to take a vague brief and deliver a production-ready, verified output on schedule."
+  },
+  "freelance_applications": {
+    "services_offered": [
+      "End-to-end REST APIs project delivery for international SMEs and agencies.",
+      "Audit, troubleshooting, and optimization of existing client assets.",
+      "Monthly recurring maintenance and performance scaling retainers."
+    ],
+    "client_workflow": "OpenAPI / Swagger Specification -> Endpoint Development & Auth -> Automated Test Validation -> API Documentation & Gateway Handoff",
+    "portfolio_requirements": "2-3 documented case studies showcasing problem statement, process, final artifact, and client value."
+  },
+  "business_use_cases": [
+    {
+      "sector": "Startups & SMEs",
+      "business_problem": "Need rapid, scalable digital solutions.",
+      "approach": "Utilize Postman to quickly iterate and deliver value.",
+      "toolset": "Postman, Express.js, Swagger",
+      "output": "Functional Minimum Viable Product (MVP)."
+    }
+  ],
+  "industry_workflow": {
+    "overview": "How leading practitioners implement REST APIs in 2026/27:",
+    "stages": [
+      {
+        "step": 1,
+        "name": "Requirements Analysis",
+        "desc": "Deconstruct the business problem and technical constraints."
+      },
+      {
+        "step": 2,
+        "name": "Architecture & Setup",
+        "desc": "Initialize the environment and plan the structure."
+      },
+      {
+        "step": 3,
+        "name": "Implementation",
+        "desc": "Execute core development using standard practices."
+      },
+      {
+        "step": 4,
+        "name": "Testing & Deployment",
+        "desc": "Validate functionality and release to production."
+      }
+    ]
+  },
+  "best_practices": [
+    "Maintain rigorous file naming conventions, version control, and modular architecture.",
+    "Prioritize performance optimization, accessibility standards, and clean documentation.",
+    "Test across realistic edge cases rather than only ideal laboratory conditions."
+  ],
+  "common_mistakes": [
+    {
+      "mistake": "Relying entirely on default software presets or raw unedited AI outputs.",
+      "why_it_happens": "Beginners mistake speed for quality and skip the refinement phase.",
+      "professional_approach": "Treat AI and templates as drafts; apply human art direction and technical verification before delivery."
+    },
+    {
+      "mistake": "Focusing exclusively on technical syntax without understanding client business objectives.",
+      "why_it_happens": "Learning tools in isolation from commercial contexts.",
+      "professional_approach": "Anchor every deliverable to measurable business ROI, user satisfaction, or operational speed."
+    }
+  ],
+  "not_covered": "This program focuses strictly on modern practical implementation and commercial production; it does not cover obsolete legacy software versions or ungrounded academic theory.",
+  "next_learning_path": {
+    "recommended_next": "Advance to node-js to specialize further.",
+    "related_programs": "For broader career mastery, compare with node-js, fullstack-foundation."
+  },
+  "faq": [
+    {
+      "question": "What prior experience do I need for REST APIs?",
+      "answer": "javascript-cert"
+    },
+    {
+      "question": "What tools will I learn?",
+      "answer": "You will gain hands-on experience with Postman, Express.js, Swagger, Node.js."
+    },
+    {
+      "question": "Are the projects practical?",
+      "answer": "Yes, all projects simulate real-world client briefs and business requirements."
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}

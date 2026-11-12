@@ -392,14 +392,14 @@
 
           <h1 class="course-detail-title" id="detail-title">Microsoft 365 Copilot — AI Workplace Productivity</h1>
 
-          <p class="course-detail-desc" id="detail-desc">Learn to Use Copilot Across Real Office Tasks—While Remaining Responsible for the Final Work.</p>
+          <p class="course-detail-desc" id="detail-desc">A practical 4-week, 32-hour applied AI upskilling specialization in Office Productivity Academy. Master Microsoft 365 Copilot across Word, Excel, PowerPoint, Outlook, and Teams with rigorous human verification, prompt engineering, permission awareness, and responsible business data governance.</p>
 
           <!-- META BADGES -->
           <div class="course-detail-meta" id="detail-meta">
             <div class="course-meta-item"><span class="meta-icon">⏱️</span> Duration: 4 Weeks (32 Hours)</div>
     <div class="course-meta-item"><span class="meta-icon">📶</span> Level: Applied AI Workplace Upskilling</div>
     <div class="course-meta-item"><span class="meta-icon">💻</span> Mode: Live Online & Supervised Demonstrations / Guided Simulations</div>
-    <div class="course-meta-item"><span class="meta-icon">🚀</span> 1 Core Production Projects</div>
+    <div class="course-meta-item"><span class="meta-icon">🚀</span> 1 Project</div>
           </div>
 
           <!-- RATING ROW -->
@@ -427,7 +427,7 @@
             <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options available · 18% GST included</p>
             <!-- Compact Demo & 1:1 Benefits Area -->
             <div class="detail-demo-benefit-box" id="detail-demo-box">
-              <div class="demo-benefit-item" id="detail-demo-item" style="display:none;">
+              <div class="demo-benefit-item" id="detail-demo-item">
                 <div class="demo-benefit-icon-wrap" aria-hidden="true">
                   <svg class="demo-benefit-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;max-width:20px;max-height:20px;display:block;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
                 </div>
@@ -449,7 +449,7 @@
 
             <button class="btn btn-primary btn-enroll-full" onclick="openEnrollmentModal('Microsoft 365 Copilot — AI Workplace Productivity', 'Office Productivity Academy', '4 Weeks', '₹5,900', 'microsoft-copilot')">Enroll Now — Book Seat →</button>
 
-            
+            <button type="button" class="btn-book-demo-secondary" id="btn-detail-book-demo" onclick="openDemoModal({courseId:'microsoft-copilot',courseName:'Microsoft 365 Copilot — AI Workplace Productivity',academyName:'Office Productivity Academy',academyId:'office',sourceCta:'course_detail_sidebar'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;max-width:18px;max-height:18px;display:block;flex-shrink:0;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg> <span>Book Your Free Demo</span></button>
 
             <button class="btn-consult-full" onclick="openConsultationPopup('Microsoft 365 Copilot — AI Workplace Productivity')">📞 Request Callback / Syllabus</button>
 
@@ -482,12 +482,12 @@
 
       <div id="overview-content" style="font-size:1.0625rem; line-height:1.8; color:var(--text-secondary); max-width:860px; margin-bottom:24px;">
         <p style="font-size:1.15rem; font-weight:700; color:var(--navy); margin-bottom:14px; line-height:1.5;">
-        Learn to Use Copilot Across Real Office Tasks—While Remaining Responsible for the Final Work.
+        A practical 4-week, 32-hour applied AI upskilling specialization in Office Productivity Academy. Master Microsoft 365 Copilot across Word, Excel, PowerPoint, Outlook, and Teams with rigorous human verification, prompt engineering, permission awareness, and responsible business data governance.
       </p>
       <p style="margin-bottom:16px;">Learn responsible AI-assisted office productivity using Microsoft 365 Copilot. Practise document drafting, spreadsheet insights, presentation preparation, email support and meeting follow-ups while developing prompt quality, factual verification and business-data safety skills.</p>
       <p style="margin-bottom:0;">
         Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through 
-        <strong>1 major production portfolio projects</strong>, live interactive labs, 
+        <strong>1 Project</strong>, live interactive labs, 
         code/design critiques, and commercial delivery standards.
       </p>
       </div>
@@ -2846,7 +2846,13 @@
       </div>
 
       <div id="boundaries-container" style="max-width:860px;">
-        <!-- Populated by JS -->
+        <div class="course-boundaries-card">
+        <div class="boundaries-header">
+          <span>🎯</span>
+          <span>Clear Boundaries: What This Course Focuses On &amp; What Is NOT Covered</span>
+        </div>
+        <p class="boundaries-text"></p>
+      </div>
       </div>
     </section>
 
@@ -3312,10 +3318,10 @@
   <div id="ns-footer"></div>
 
   <!-- JavaScript -->
-  <script src="/js/data.min.js?v=2.7.0" defer></script>
-  <script src="/js/components.min.js?v=2.8.0" defer></script>
+  <script src="/js/data.min.js?v=3.1.0" defer></script>
+  <script src="/js/components.min.js?v=3.1.0" defer></script>
   <script src="/js/icon-system.js?v=2.2.0" defer></script>
-  <script src="/js/course-detail.min.js?v=2.9.0" defer></script>
+  <script src="/js/course-detail.min.js?v=3.1.0" defer></script>
   <!-- PROJECT LIGHTBOX MODAL -->
   <div class="project-lightbox" id="project-lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Project Preview">
     <div class="project-lightbox-dialog" id="project-lightbox-dialog">

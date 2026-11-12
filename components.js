@@ -2060,24 +2060,26 @@ function injectEnrollmentModalHTML() {
 
 const COURSE_CATALOG_METADATA = {
   'No-Code Website Professional': { academy: 'No-Code Web Academy', duration: '3 Months', fee: '₹19,900', category: 'no-code' },
-  'E-Commerce Website Mastery': { academy: 'No-Code Web Academy', duration: '6 Months', fee: '₹49,900', category: 'no-code' },
+  'E-Commerce Website Mastery': { academy: 'No-Code Web Academy', duration: '6 Months', fee: '₹34,900', category: 'no-code' },
   'Professional Video Editing': { academy: 'Video & Motion Academy', duration: '4 Months', fee: '₹24,900', category: 'video' },
   'AI-Integrated Video Editing & Motion Graphics Professional': { academy: 'Video & Motion Academy', duration: '8 Months', fee: '₹49,900', category: 'video' },
-  'Generative AI Video Production Professional': { academy: 'Video & Motion Academy', duration: '5 Months', fee: '₹24,900', category: 'video' },
+  'Generative AI Video Production Professional': { academy: 'Video & Motion Academy', duration: '5 Months', fee: '₹29,900', category: 'video' },
   'AI-Assisted Full Stack Web Development': { academy: 'Programming Academy', duration: '8 Months', fee: '₹44,900', category: 'programming' },
   'AI Web Development Professional': { academy: 'Programming Academy', duration: '8 Months', fee: '₹44,900', category: 'programming' },
   'Full Stack Programming Foundation': { academy: 'Programming Academy', duration: '6 Months', fee: '₹29,999', category: 'programming' },
-  'Python Developer Professional': { academy: 'Programming Academy', duration: '3 Months', fee: '₹14,999', category: 'programming' },
+  'Python Developer Professional': { academy: 'Programming Academy', duration: '3 Months', fee: '₹17,999', category: 'programming' },
   'Creative Design Master': { academy: 'Design Academy', duration: '8 Months', fee: '₹44,900', category: 'design' },
   'Creative Design Mastery': { academy: 'Design Academy', duration: '8 Months', fee: '₹44,900', category: 'design' },
   'Graphic Design Professional': { academy: 'Design Academy', duration: '4 Months', fee: '₹24,900', category: 'design' },
   'UI/UX Design Professional': { academy: 'Design Academy', duration: '5 Months', fee: '₹34,900', category: 'design' },
-  'AI Solutions Engineering & Agentic AI Mastery': { academy: 'AI & Automation Academy', duration: '9 Months', fee: '₹64,900', category: 'ai' },
-  'AI Productivity Professional': { academy: 'AI & Automation Academy', duration: '3 Months', fee: '₹14,900', category: 'ai' },
-  'AI for Business Professional': { academy: 'AI & Automation Academy', duration: '4 Months', fee: '₹29,900', category: 'ai' },
+  'AI Solutions Engineering & Agentic AI Mastery': { academy: 'AI Academy', duration: '9 Months', fee: '₹64,900', category: 'ai' },
+  'AI Productivity Professional': { academy: 'AI Academy', duration: '3 Months', fee: '₹16,900', category: 'ai' },
+  'AI for Business Professional': { academy: 'AI Academy', duration: '4 Months', fee: '₹29,900', category: 'ai' },
+  'AI Digital Marketing Specialist': { academy: 'Digital Marketing Academy', duration: '3 Months', fee: '₹19,900', category: 'digital-marketing' },
   'AI Digital Marketing Professional': { academy: 'Digital Marketing Academy', duration: '3 Months', fee: '₹19,900', category: 'digital-marketing' },
   'AI Mastery Program': { academy: 'AI Academy', duration: '9 Months', fee: '₹64,900', category: 'ai' },
-  'Motion Graphics Mastery': { academy: 'Video & Motion Academy', duration: '6 Months', fee: '₹39,999', category: 'video' },
+  'Motion Graphics Mastery': { academy: 'Video & Motion Academy', duration: '8 Months', fee: '₹49,900', category: 'video' },
+  'AI Digital Marketing Strategist': { academy: 'Digital Marketing Academy', duration: '6 Months', fee: '₹34,900', category: 'digital-marketing' },
   'AI Digital Marketing Mastery': { academy: 'Digital Marketing Academy', duration: '6 Months', fee: '₹34,900', category: 'digital-marketing' }
 };
 
@@ -2321,13 +2323,18 @@ function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
   const successContainer = document.getElementById('enroll-success-container');
   const submitBtn = document.getElementById('enroll-submit-btn');
 
-  // Dynamic course resolution from authoritative NS_COURSES
+  // Dynamic course resolution from canonical NovaCourseData (fallback NS_COURSES)
   let found = null;
-  const coursesList = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
-    ? NS_COURSES
-    : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []);
+  if (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseById === 'function') {
+    found = (explicitId && window.NovaCourseData.getCourseById(explicitId)) || (courseName && window.NovaCourseData.getCourseById(courseName)) || null;
+  }
+  const coursesList = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+    ? window.NovaCourseData.getPublishedCourses()
+    : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+      ? NS_COURSES
+      : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []));
 
-  if (coursesList.length > 0) {
+  if (!found && coursesList.length > 0) {
     if (explicitId) {
       found = coursesList.find(c => c.id === explicitId || c.slug === explicitId);
     }
@@ -3090,9 +3097,11 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
   const select = document.getElementById('demo-course-select');
   if (!select) return;
 
-  const coursesList = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
-    ? NS_COURSES
-    : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []);
+  const coursesList = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+    ? window.NovaCourseData.getPublishedCourses()
+    : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+      ? NS_COURSES
+      : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []));
 
   select.innerHTML = '<option value="">-- Choose an Eligible Program * --</option>';
 
@@ -3100,6 +3109,9 @@ function populateDemoCourseSelect(filterAcademyId, preselectedCourseId, preselec
 
   // Filter only eligible courses for demo booking (Phase 5 requirement)
   const isEligible = (c) => {
+    if (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.isCourseDemoEligible === 'function') {
+      return window.NovaCourseData.isCourseDemoEligible(c);
+    }
     if (typeof isCourseDemoEligible === 'function') {
       return isCourseDemoEligible(c);
     }
@@ -3216,13 +3228,18 @@ function openDemoModal(arg1, arg2, arg3, arg4) {
     }
   }
 
-  // Cross-reference with NS_COURSES to guarantee correct ID/Name/Academy
-  const coursesList = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
-    ? NS_COURSES
-    : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []);
+  // Cross-reference with canonical NovaCourseData / NS_COURSES to guarantee correct ID/Name/Academy
+  const coursesList = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+    ? window.NovaCourseData.getPublishedCourses()
+    : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+      ? NS_COURSES
+      : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []));
 
   if (courseId || courseName) {
-    const matched = coursesList.find(c => (courseId && (c.id === courseId || c.slug === courseId)) || (courseName && c.name.toLowerCase() === courseName.toLowerCase()));
+    const matched = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseById === 'function'
+      ? (window.NovaCourseData.getCourseById(courseId) || window.NovaCourseData.getCourseById(courseName))
+      : null)
+      || coursesList.find(c => (courseId && (c.id === courseId || c.slug === courseId)) || (courseName && c.name.toLowerCase() === courseName.toLowerCase()));
     if (matched) {
       courseId = matched.id;
       courseName = matched.name;

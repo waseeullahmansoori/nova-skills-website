@@ -1,0 +1,1546 @@
+{
+  "courseId": "youtube-seo",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/youtube-seo.json",
+  "guidedHours": 32,
+  "learning_hours": 32,
+  "course_type": "Certification Course",
+  "seo_title": "YouTube SEO & Channel Analytics Course | Nova Skills",
+  "seo_description": "Learn YouTube SEO, discovery, metadata and Analytics in 4 weeks (32h). Build an audit portfolio and 30-day improvement plan. Fee ₹4,900.",
+  "overview": {
+    "heading": "What You Will Master",
+    "description": "Learn practical YouTube SEO and content discovery through search-intent research, audience analysis, effective video titles, descriptions, content packaging and YouTube Studio analytics. Build skills in evaluating video performance and improving content visibility with evidence-based decisions.",
+    "expandedCopy": [
+      "Learn how audiences discover videos through YouTube Search, recommendations and other traffic sources. Research relevant topics, understand viewer intent and prepare titles, descriptions, chapters and content organization that accurately represent each video.",
+      "Explore YouTube Studio Analytics to interpret impressions, click-through rates, retention and traffic patterns. Complete an evidence-based Discovery Audit Pack with topic research, metadata recommendations, analytics findings and a realistic 30-day improvement plan."
+    ],
+    "differentiation": "YouTube Discovery Is a Content-and-Audience Problem, Not Just a Keyword Problem.",
+    "learningJourney": "Audience Research → Topic Opportunities → Content Packaging → Analytics Review → Diagnosis → Improvement Plan",
+    "corePrinciples": [
+      "Audience relevance",
+      "Honest video packaging",
+      "Meaningful content value",
+      "Search and recommendations are different",
+      "Evidence before assumptions",
+      "Context before metrics",
+      "Viewer satisfaction",
+      "Responsible experiments",
+      "No guaranteed distribution",
+      "Transparent reporting"
+    ]
+  },
+  "why_now": null,
+  "learning_journey": null,
+  "prerequisites": {
+    "required": "Basic familiarity with navigating the YouTube website or mobile application.",
+    "recommended": "An owned or authorized YouTube channel is helpful for applying real-time data, but simulated/sample datasets are fully supported.",
+    "system_requirements": {
+      "hardware": "Desktop or laptop computer (Windows, macOS, Linux, or ChromeOS) with internet access.",
+      "software_accounts": "Free Google account to access YouTube Studio, Google Trends, and Google Sheets. Third-party research tools (vidIQ/TubeBuddy) are strictly optional."
+    },
+    "not_required": "Channel ownership, monetized status, prior video editing experience, or paid tool subscriptions."
+  },
+  "target_audience": {
+    "best_for": [
+      "YouTube channel assistants and managers seeking structured discovery workflows",
+      "Content strategists and digital marketers handling video optimization",
+      "Educators, founders, and subject-matter experts publishing instructional videos",
+      "Working video creators wanting to decode YouTube Studio Analytics and improve retention",
+      "Freelance content consultants and marketing professionals offering channel audits"
+    ],
+    "not_for": [
+      "Learners seeking full YouTube channel management, filming, or video production",
+      "Anyone looking for advanced motion graphics, video editing, or graphic design training",
+      "Marketers focused exclusively on paid YouTube Ads and performance advertising campaigns",
+      "Anyone expecting secret algorithm 'hacks', guaranteed rankings, or instant viral growth"
+    ],
+    "who_should_take_foundation_first": "Learners should have basic familiarity with YouTube as a viewer or uploader. No existing monetized channel or advanced technical background required."
+  },
+  "learning_outcomes": [
+    "Explain YouTube Search.",
+    "Explain recommendation-based discovery.",
+    "Distinguish Search, Browse, Suggested and Shorts Feed.",
+    "Recognize viewer intent.",
+    "Identify relevant audience questions.",
+    "Define a channel topic focus.",
+    "Recognize topic demand.",
+    "Research YouTube search queries.",
+    "Use Google Trends appropriately.",
+    "Compare audience language variations.",
+    "Review publicly visible competitor content.",
+    "Identify content gaps.",
+    "Prioritize topic opportunities.",
+    "Write accurate video titles.",
+    "Prepare useful descriptions.",
+    "Create valid chapter timestamps where applicable.",
+    "Understand caption quality.",
+    "Propose playlist structures.",
+    "Align thumbnail and title messaging.",
+    "Understand the limited role of tags.",
+    "Use hashtags appropriately.",
+    "Navigate YouTube Studio Analytics.",
+    "Identify major traffic sources.",
+    "Interpret impressions.",
+    "Evaluate CTR with context.",
+    "Interpret average view duration.",
+    "Review audience retention.",
+    "Understand engaged views.",
+    "Distinguish Shorts and long-form reporting.",
+    "Compare videos appropriately.",
+    "Recognize insufficient sample sizes.",
+    "Describe possible reach/retention issues.",
+    "Suggest specific improvements.",
+    "Design a reasonable experiment.",
+    "Create an audit report.",
+    "Build a 30-day discovery plan.",
+    "Explain limitations and uncertainty.",
+    "Present recommendations without guaranteed results."
+  ],
+  "hands_on_tech": {
+    "core_tools": [
+      {
+        "tool": "YouTube Studio",
+        "purpose": "Channel management, content configuration, and publishing settings",
+        "what_student_learns": "Video metadata fields, chapter markers, playlist organization, captions, and permission roles",
+        "what_student_builds": "Configured video publishing dossiers and channel structural layouts"
+      },
+      {
+        "tool": "YouTube Analytics",
+        "purpose": "Data-driven performance evaluation and discovery diagnostics",
+        "what_student_learns": "Traffic sources, impressions, CTR context, average view duration, audience retention, and engaged views",
+        "what_student_builds": "Comprehensive analytics interpretation reports and diagnostic audit summaries"
+      },
+      {
+        "tool": "YouTube Search & Google Trends",
+        "purpose": "Audience search intent research and topic demand validation",
+        "what_student_learns": "Search suggestions, query patterns, normalized relative trend interest, and content gap identification",
+        "what_student_builds": "20-topic researched content matrix and audience-intent map"
+      },
+      {
+        "tool": "Google Sheets",
+        "purpose": "Audit documentation, data structuring, and strategy presentation",
+        "what_student_learns": "Metric tracking tables, baseline comparisons, hypothesis documentation, and 30-day action planning",
+        "what_student_builds": "Completed YouTube Discovery Audit Pack workbook"
+      }
+    ],
+    "supporting_tools": [
+      {
+        "tool": "vidIQ & TubeBuddy (Optional)",
+        "purpose": "Secondary keyword suggestions and research organization aids (paid accounts not required)"
+      },
+      {
+        "tool": "Responsible AI Assistants",
+        "purpose": "First-draft brainstorming and description formatting, subject to mandatory human verification"
+      }
+    ],
+    "emerging_tools": [],
+    "tools_to_review": []
+  },
+  "modules": [
+    {
+      "module_number": 1,
+      "module": "Module 01",
+      "module_title": "YouTube Discovery Foundations",
+      "title": "YouTube Discovery Foundations",
+      "duration": "6 Hours",
+      "hours": 6,
+      "objective": "Understand how audiences discover videos and how search relevance, viewer interests and satisfaction relate to content performance.",
+      "lessons_count": 18,
+      "lessons": [
+        {
+          "code": "1.1",
+          "title": "The YouTube Ecosystem",
+          "topics": [
+            "Videos.",
+            "Shorts.",
+            "Live content awareness.",
+            "Channels.",
+            "Creators.",
+            "Audiences.",
+            "Discovery surfaces."
+          ]
+        },
+        {
+          "code": "1.2",
+          "title": "YouTube Search",
+          "topics": [
+            "Search queries.",
+            "Search results.",
+            "Query relevance.",
+            "Video information.",
+            "Engagement.",
+            "Viewer expectations."
+          ]
+        },
+        {
+          "code": "1.3",
+          "title": "Recommendations",
+          "topics": [
+            "Home.",
+            "Suggested/Up Next.",
+            "Personalized recommendations.",
+            "Shorts Feed.",
+            "Viewer behaviour."
+          ]
+        },
+        {
+          "code": "1.4",
+          "title": "Search vs Recommendations",
+          "topics": [
+            "Intent-led retrieval.",
+            "Personalized discovery.",
+            "Different user contexts.",
+            "Different performance interpretations."
+          ]
+        },
+        {
+          "code": "1.5",
+          "title": "Other Traffic Sources",
+          "topics": [
+            "External.",
+            "Channel pages.",
+            "Playlists.",
+            "Notifications.",
+            "Direct or unknown traffic."
+          ]
+        },
+        {
+          "code": "1.6",
+          "title": "Viewer Interest",
+          "topics": [
+            "Topics.",
+            "Viewer needs.",
+            "Repeated viewing behaviour.",
+            "Topic familiarity.",
+            "Content preferences."
+          ]
+        },
+        {
+          "code": "1.7",
+          "title": "Relevance",
+          "topics": [
+            "Title.",
+            "Description.",
+            "Actual video content.",
+            "Search query.",
+            "Audience expectation."
+          ]
+        },
+        {
+          "code": "1.8",
+          "title": "Engagement",
+          "topics": [
+            "Choosing to watch.",
+            "Staying to watch.",
+            "Watch duration.",
+            "Relevant interactions."
+          ]
+        },
+        {
+          "code": "1.9",
+          "title": "Satisfaction",
+          "topics": [
+            "Viewer experience.",
+            "Interest in continuing.",
+            "Relevance of content.",
+            "Satisfaction signals."
+          ]
+        },
+        {
+          "code": "1.10",
+          "title": "Channel Positioning",
+          "topics": [
+            "Main topic.",
+            "Intended audience.",
+            "Content promise.",
+            "Relevant expertise.",
+            "Topic consistency."
+          ]
+        },
+        {
+          "code": "1.11",
+          "title": "Audience Segments",
+          "topics": [
+            "Beginners.",
+            "Intermediate viewers.",
+            "Students.",
+            "Professionals.",
+            "Buyers.",
+            "Hobbyists.",
+            "Local-language viewers."
+          ]
+        },
+        {
+          "code": "1.12",
+          "title": "Search Intent",
+          "topics": [
+            "Informational.",
+            "How-to.",
+            "Comparison.",
+            "Problem-solving.",
+            "Product/service research.",
+            "Navigational queries."
+          ]
+        },
+        {
+          "code": "1.13",
+          "title": "Viewer Expectations",
+          "topics": [
+            "What does the title promise?",
+            "What does the video deliver?",
+            "Does the opening match the promise?",
+            "Is the content useful?"
+          ]
+        },
+        {
+          "code": "1.14",
+          "title": "External Discovery Factors",
+          "topics": [
+            "Topic interest.",
+            "Competition.",
+            "Seasonality.",
+            "Viewer geography.",
+            "Language.",
+            "Content age and context."
+          ]
+        },
+        {
+          "code": "1.15",
+          "title": "What Is Not a Ranking Guarantee",
+          "topics": [
+            "Keyword count.",
+            "Upload frequency alone.",
+            "Tag count.",
+            "Arbitrary CTR benchmark.",
+            "Purchased keyword scores.",
+            "Changing metadata without content improvement."
+          ]
+        },
+        {
+          "code": "1.16",
+          "title": "Discovery Diagnosis Introduction",
+          "topics": [
+            "Low relevance.",
+            "Weak topic interest.",
+            "Unclear packaging.",
+            "Retention mismatch.",
+            "Audience competition.",
+            "Insufficient evidence."
+          ]
+        },
+        {
+          "code": "1.17",
+          "title": "Channel Case Studies",
+          "topics": [
+            "Educational channel.",
+            "Local business channel.",
+            "Tech creator.",
+            "Skills-training channel.",
+            "Entertainment channel."
+          ]
+        },
+        {
+          "code": "1.18",
+          "title": "Audience Research Worksheet",
+          "topics": [
+            "Audience.",
+            "Main question.",
+            "Video promise.",
+            "Suitable content format.",
+            "Relevant discovery surface."
+          ]
+        }
+      ],
+      "hands_on_lab": "Analyze three publicly visible YouTube videos from one topic area.\r\n\r\nIdentify:\r\n\r\n- Intended audience.\r\n- Likely search intent.\r\n- Title promise.\r\n- Thumbnail message.\r\n- Video format.\r\n- Potential discovery surfaces.\r\n\r\nDo not infer private audience metrics from public views.",
+      "practical_assignment": "Create:\r\n\r\n1. Preliminary channel positioning brief.\r\n2. Audience profile.\r\n3. Five audience questions.\r\n4. Search-versus-recommendations comparison.",
+      "expected_deliverable": "**YouTube Discovery Foundations & Audience Brief**",
+      "assessment": "Search ranking and recommendations are not controlled by a universal SEO score.\r\n\r\nTeach relevance, performance, personalization and satisfaction without claiming to know YouTube's confidential exact ranking weights."
+    },
+    {
+      "module_number": 2,
+      "module": "Module 02",
+      "module_title": "Topic & Keyword Research",
+      "title": "Topic & Keyword Research",
+      "duration": "6 Hours",
+      "hours": 6,
+      "objective": "Research real audience questions, compare topic opportunities and build an evidence-based content idea list.",
+      "lessons_count": 20,
+      "lessons": [
+        {
+          "code": "2.1",
+          "title": "Topic Research vs Keyword Stuffing",
+          "topics": [
+            "Audience problem.",
+            "Topic.",
+            "Search language.",
+            "Video concept.",
+            "Content value."
+          ]
+        },
+        {
+          "code": "2.2",
+          "title": "YouTube Search Interface",
+          "topics": [
+            "Query suggestions.",
+            "Search results.",
+            "Search wording.",
+            "Content types.",
+            "Search context."
+          ]
+        },
+        {
+          "code": "2.3",
+          "title": "Search Suggestion Interpretation",
+          "topics": [
+            "Possible audience vocabulary.",
+            "Related ideas.",
+            "Question patterns.",
+            "No guarantee of exact search volume."
+          ]
+        },
+        {
+          "code": "2.4",
+          "title": "Search Intent",
+          "topics": [
+            "Learning.",
+            "Troubleshooting.",
+            "Comparison.",
+            "Evaluation.",
+            "Entertainment.",
+            "Discovery."
+          ]
+        },
+        {
+          "code": "2.5",
+          "title": "Topic Clusters",
+          "topics": [
+            "Broad topic.",
+            "Subtopics.",
+            "Beginner questions.",
+            "Follow-up questions.",
+            "Content series."
+          ]
+        },
+        {
+          "code": "2.6",
+          "title": "Question-Based Research",
+          "topics": [
+            "What.",
+            "Why.",
+            "How.",
+            "Which.",
+            "When.",
+            "Common mistakes.",
+            "Troubleshooting."
+          ]
+        },
+        {
+          "code": "2.7",
+          "title": "Google Trends",
+          "topics": [
+            "Explore.",
+            "Search term.",
+            "Time period.",
+            "Geography.",
+            "Category.",
+            "Comparison."
+          ]
+        },
+        {
+          "code": "2.8",
+          "title": "YouTube Search in Google Trends",
+          "topics": [
+            "Selecting a supported YouTube Search search type.",
+            "Understanding relative interest.",
+            "Comparing topics."
+          ]
+        },
+        {
+          "code": "2.9",
+          "title": "Google Trends Interpretation",
+          "topics": [
+            "Normalized interest.",
+            "Relative scores.",
+            "Time windows.",
+            "Geographic variation.",
+            "Low-volume uncertainty."
+          ]
+        },
+        {
+          "code": "2.10",
+          "title": "Competitor Research",
+          "topics": [
+            "Relevant creators.",
+            "Video titles.",
+            "Formats.",
+            "Publishing topics.",
+            "Public engagement.",
+            "Content organization."
+          ]
+        },
+        {
+          "code": "2.11",
+          "title": "Public vs Private Data",
+          "topics": [
+            "Public views.",
+            "Public descriptions.",
+            "Public playlists.",
+            "Public publishing dates."
+          ]
+        },
+        {
+          "code": "2.12",
+          "title": "Content Gap Analysis",
+          "topics": [
+            "Unanswered questions.",
+            "Outdated videos.",
+            "Missing detail.",
+            "Different audience level.",
+            "Regional-language needs.",
+            "Better explanations."
+          ]
+        },
+        {
+          "code": "2.13",
+          "title": "Multilingual Search",
+          "topics": [
+            "English.",
+            "Hindi.",
+            "Gujarati where relevant.",
+            "Mixed-language queries.",
+            "Transliteration.",
+            "Regional terminology."
+          ]
+        },
+        {
+          "code": "2.14",
+          "title": "Topic Seasonality",
+          "topics": [
+            "Festivals.",
+            "Academic calendars.",
+            "Product cycles.",
+            "News events.",
+            "Evergreen questions."
+          ]
+        },
+        {
+          "code": "2.15",
+          "title": "Topic Competition",
+          "topics": [
+            "Existing relevant content.",
+            "Quality of available answers.",
+            "Creator differentiation.",
+            "Audience expectations."
+          ]
+        },
+        {
+          "code": "2.16",
+          "title": "Keyword Tool Scores",
+          "topics": [
+            "vidIQ.",
+            "TubeBuddy.",
+            "Estimated volumes.",
+            "Proprietary difficulty indicators.",
+            "Limitations of external estimates."
+          ]
+        },
+        {
+          "code": "2.17",
+          "title": "Idea Prioritization",
+          "topics": [
+            "Audience fit.",
+            "Relevance.",
+            "Evidence of interest.",
+            "Feasibility.",
+            "Channel positioning.",
+            "Content value."
+          ]
+        },
+        {
+          "code": "2.18",
+          "title": "Opportunity Reasoning",
+          "topics": [
+            "Why create the video?",
+            "Whom does it help?",
+            "What will it answer?",
+            "What makes it distinct?",
+            "What evidence supports the idea?"
+          ]
+        },
+        {
+          "code": "2.19",
+          "title": "Research Documentation",
+          "topics": [
+            "Query.",
+            "Language.",
+            "Audience.",
+            "Intent.",
+            "Source.",
+            "Observation.",
+            "Opportunity."
+          ]
+        },
+        {
+          "code": "2.20",
+          "title": "Topic Matrix",
+          "topics": [
+            "Content idea.",
+            "Target question.",
+            "Format.",
+            "Audience.",
+            "Evidence.",
+            "Priority."
+          ]
+        }
+      ],
+      "hands_on_lab": "Research 20 topic ideas for one coherent channel niche.\r\n\r\nOrganize them into meaningful topic clusters.",
+      "practical_assignment": "Prepare:\r\n\r\n1. 20 researched topic ideas.\r\n2. One audience-intent map.\r\n3. Evidence or observation for each idea.\r\n4. Topic prioritization.\r\n5. Multilingual considerations where relevant.",
+      "expected_deliverable": "**20-Topic Research Matrix + Audience-Intent Map**",
+      "assessment": "Search suggestions, trend data and third-party keyword scores are research aids.\r\n\r\nThey do not guarantee ranking, traffic or subscriber growth."
+    },
+    {
+      "module_number": 3,
+      "module": "Module 03",
+      "module_title": "Video Metadata & Packaging",
+      "title": "Video Metadata & Packaging",
+      "duration": "8 Hours",
+      "hours": 8,
+      "objective": "Prepare accurate, useful and audience-appropriate publishing information that helps people understand each video's topic and value.",
+      "lessons_count": 24,
+      "lessons": [
+        {
+          "code": "3.1",
+          "title": "What Is Video Packaging?",
+          "topics": [
+            "Topic framing.",
+            "Title.",
+            "Thumbnail.",
+            "Description.",
+            "Viewer expectation.",
+            "Content promise."
+          ]
+        },
+        {
+          "code": "3.2",
+          "title": "Title Accuracy",
+          "topics": [
+            "Truthful representation.",
+            "Relevant topic.",
+            "Clarity.",
+            "Specificity.",
+            "No misleading promises."
+          ]
+        },
+        {
+          "code": "3.3",
+          "title": "Searchable Titles",
+          "topics": [
+            "Clear topic.",
+            "Audience question.",
+            "Useful language.",
+            "Accurate terms."
+          ]
+        },
+        {
+          "code": "3.4",
+          "title": "Curiosity-Based Titles",
+          "topics": [
+            "Compelling framing.",
+            "Honest information.",
+            "Value proposition.",
+            "Avoiding sensationalism."
+          ]
+        },
+        {
+          "code": "3.5",
+          "title": "Title Length and Truncation",
+          "topics": [
+            "Clear opening words.",
+            "Readability.",
+            "Mobile context.",
+            "No universal ideal character count."
+          ]
+        },
+        {
+          "code": "3.6",
+          "title": "Title-Content Alignment",
+          "topics": [
+            "Does the video actually answer the question?",
+            "Does the opening match the title?",
+            "Is the claim supported?"
+          ]
+        },
+        {
+          "code": "3.7",
+          "title": "Thumbnail Principles",
+          "topics": [
+            "Accurate visual promise.",
+            "Clear subject.",
+            "Readable composition.",
+            "Suitable contrast.",
+            "Audience relevance."
+          ]
+        },
+        {
+          "code": "3.8",
+          "title": "Thumbnail-Title Alignment",
+          "topics": [
+            "Complementary messaging.",
+            "Avoiding unnecessary duplication.",
+            "One coherent promise.",
+            "No deceptive imagery."
+          ]
+        },
+        {
+          "code": "3.9",
+          "title": "Thumbnail Scope Boundary",
+          "topics": [
+            "Review and briefing fundamentals.",
+            "Not advanced Photoshop or thumbnail illustration training."
+          ]
+        },
+        {
+          "code": "3.10",
+          "title": "Descriptions",
+          "topics": [
+            "Useful summary.",
+            "Context.",
+            "Relevant links.",
+            "Supporting resources.",
+            "Clear organization."
+          ]
+        },
+        {
+          "code": "3.11",
+          "title": "Description Accuracy",
+          "topics": [
+            "No fabricated details.",
+            "No irrelevant keyword lists.",
+            "No misleading links.",
+            "No unverified offers."
+          ]
+        },
+        {
+          "code": "3.12",
+          "title": "Chapters",
+          "topics": [
+            "Timestamp structure.",
+            "Chapter titles.",
+            "Navigation.",
+            "Eligibility requirements.",
+            "First timestamp starts at 00:00.",
+            "At least three timestamps.",
+            "Ascending order.",
+            "Each chapter at least ten seconds."
+          ]
+        },
+        {
+          "code": "3.13",
+          "title": "Playlists",
+          "topics": [
+            "Topic grouping.",
+            "Series organization.",
+            "Relevant progression.",
+            "Clear playlist naming."
+          ]
+        },
+        {
+          "code": "3.14",
+          "title": "Channel Content Structure",
+          "topics": [
+            "Major topics.",
+            "Related videos.",
+            "Playlists.",
+            "Viewer journey.",
+            "Relevant channel sections."
+          ]
+        },
+        {
+          "code": "3.15",
+          "title": "Captions",
+          "topics": [
+            "Accessibility.",
+            "Accuracy.",
+            "Correct terminology.",
+            "Suitable language.",
+            "Reviewing automatic captions."
+          ]
+        },
+        {
+          "code": "3.16",
+          "title": "Language Metadata",
+          "topics": [
+            "Video language.",
+            "Relevant regional-language audience.",
+            "Available subtitle options.",
+            "Appropriate translated information."
+          ]
+        },
+        {
+          "code": "3.17",
+          "title": "Hashtags",
+          "topics": [
+            "Relevance.",
+            "Appropriate usage.",
+            "Platform policies.",
+            "Avoiding excessive or unrelated hashtags."
+          ]
+        },
+        {
+          "code": "3.18",
+          "title": "Video Tags",
+          "topics": [
+            "Common misspellings.",
+            "Alternate spellings.",
+            "Limited role in discovery."
+          ]
+        },
+        {
+          "code": "3.19",
+          "title": "Misleading Metadata",
+          "topics": [
+            "Keyword stuffing.",
+            "Unrelated hashtags.",
+            "Deceptive titles.",
+            "Fake claims.",
+            "Mismatch between title and content."
+          ]
+        },
+        {
+          "code": "3.20",
+          "title": "Shorts vs Long-Form Packaging",
+          "topics": [
+            "Different viewing surfaces.",
+            "Different interaction behaviour.",
+            "Format-specific limitations.",
+            "Accurate title and description."
+          ]
+        },
+        {
+          "code": "3.21",
+          "title": "AI Draft Assistance",
+          "topics": [
+            "Idea organization.",
+            "First-draft descriptions.",
+            "Title alternatives.",
+            "Language improvement."
+          ]
+        },
+        {
+          "code": "3.22",
+          "title": "Human Review",
+          "topics": [
+            "Verify facts.",
+            "Match real video content.",
+            "Check links.",
+            "Remove invented timestamps.",
+            "Confirm any offers and claims."
+          ]
+        },
+        {
+          "code": "3.23",
+          "title": "Metadata Auditing",
+          "topics": [
+            "Existing title.",
+            "Proposed title.",
+            "Reason for change.",
+            "Description.",
+            "Packaging note.",
+            "Expected viewer question."
+          ]
+        },
+        {
+          "code": "3.24",
+          "title": "Native A/B Testing Awareness",
+          "topics": [
+            "YouTube Studio-supported title and thumbnail testing.",
+            "Eligibility-dependent feature.",
+            "Watch time as the winning criterion.",
+            "Inconclusive results.",
+            "Not a guaranteed CTR improvement method."
+          ]
+        }
+      ],
+      "hands_on_lab": "Optimize metadata for FIVE existing or simulated videos.\r\n\r\nEach exercise should include:\r\n\r\n- Audience.\r\n- Intent.\r\n- Main topic.\r\n- Accurate proposed title.\r\n- Description.\r\n- Relevant chapter plan where appropriate.\r\n- Thumbnail-title alignment note.\r\n- Caption/language review.\r\n- Appropriate hashtag/tag decision.",
+      "practical_assignment": "Complete:\r\n\r\n**Five Video Metadata Optimization Dossiers**",
+      "expected_deliverable": "**Five Complete, Evidence-Based Video Packaging Recommendations**",
+      "assessment": "No ranking or traffic promises.\r\n\r\nDo not optimize only for search keywords while ignoring content accuracy and viewer satisfaction."
+    },
+    {
+      "module_number": 4,
+      "module": "Module 04",
+      "module_title": "YouTube Studio Analytics",
+      "title": "YouTube Studio Analytics",
+      "duration": "6 Hours",
+      "hours": 6,
+      "objective": "Interpret YouTube discovery and engagement data with attention to traffic source, format, reporting definitions and uncertainty.",
+      "lessons_count": 26,
+      "lessons": [
+        {
+          "code": "4.1",
+          "title": "YouTube Studio Overview",
+          "topics": [
+            "Dashboard.",
+            "Content.",
+            "Analytics.",
+            "Channel-level reports.",
+            "Video-level reports."
+          ]
+        },
+        {
+          "code": "4.2",
+          "title": "Analytics Sections",
+          "topics": [
+            "Overview.",
+            "Content.",
+            "Reach.",
+            "Engagement.",
+            "Audience.",
+            "Trends where supported.",
+            "Advanced Mode."
+          ]
+        },
+        {
+          "code": "4.3",
+          "title": "Channel vs Video Analytics",
+          "topics": [
+            "Overall trends.",
+            "Individual performance.",
+            "Comparing similar content."
+          ]
+        },
+        {
+          "code": "4.4",
+          "title": "Reporting Time Ranges",
+          "topics": [
+            "Last seven days.",
+            "Twenty-eight days.",
+            "Custom periods.",
+            "Published-date comparisons.",
+            "Seasonality."
+          ]
+        },
+        {
+          "code": "4.5",
+          "title": "Impressions",
+          "topics": [
+            "Registered YouTube thumbnail impressions.",
+            "Eligible surfaces.",
+            "Exclusions.",
+            "Difference from total views."
+          ]
+        },
+        {
+          "code": "4.6",
+          "title": "Impression CTR",
+          "topics": [
+            "Definition.",
+            "Interpretation.",
+            "Traffic-source context.",
+            "Sample-size concerns."
+          ]
+        },
+        {
+          "code": "4.7",
+          "title": "CTR Context",
+          "topics": [
+            "Search and Home differences.",
+            "Loyal vs unfamiliar audiences.",
+            "Small datasets.",
+            "Competition.",
+            "Video age."
+          ]
+        },
+        {
+          "code": "4.8",
+          "title": "Traffic Sources",
+          "topics": [
+            "YouTube Search.",
+            "Browse features.",
+            "Suggested videos.",
+            "Shorts Feed.",
+            "Channel pages.",
+            "Playlists.",
+            "External.",
+            "Other reported sources."
+          ]
+        },
+        {
+          "code": "4.9",
+          "title": "YouTube Search Terms",
+          "topics": [
+            "Queries where reported.",
+            "Search intent.",
+            "Query relevance.",
+            "Data limitations."
+          ]
+        },
+        {
+          "code": "4.10",
+          "title": "Views",
+          "topics": [
+            "Current definition.",
+            "Differences from historical reporting.",
+            "Views versus engaged views."
+          ]
+        },
+        {
+          "code": "4.11",
+          "title": "Critical 2026 Views Correction",
+          "topics": [
+            "Shorts public view counting changed March 31, 2025.",
+            "Beginning August 24, 2026, YouTube aligned public view counting across Shorts, long-form videos and live streams.",
+            "A view may now be counted when playback starts.",
+            "Engaged views remain important for understanding continued viewing.",
+            "Avoid comparing historical views without considering changes in definitions."
+          ]
+        },
+        {
+          "code": "4.12",
+          "title": "Engaged Views",
+          "topics": [
+            "Viewers continuing beyond the initial seconds.",
+            "Excluding loops as specified by current YouTube documentation.",
+            "Format-specific analysis."
+          ]
+        },
+        {
+          "code": "4.13",
+          "title": "Shorts-Specific Metrics",
+          "topics": [
+            "Engaged views.",
+            "Stayed to watch.",
+            "Swiped-away context.",
+            "Average view duration.",
+            "Average percentage viewed.",
+            "Shorts Feed discovery."
+          ]
+        },
+        {
+          "code": "4.14",
+          "title": "Average View Duration",
+          "topics": [
+            "What it measures.",
+            "Appropriate denominator.",
+            "How metric definitions may differ by format.",
+            "Context of video length."
+          ]
+        },
+        {
+          "code": "4.15",
+          "title": "Average Percentage Viewed",
+          "topics": [
+            "Meaning.",
+            "Content length considerations.",
+            "Comparisons."
+          ]
+        },
+        {
+          "code": "4.16",
+          "title": "Audience Retention",
+          "topics": [
+            "Retention curve.",
+            "Early drop-offs.",
+            "Spikes.",
+            "Dips.",
+            "Key moments."
+          ]
+        },
+        {
+          "code": "4.17",
+          "title": "Retention Interpretation",
+          "topics": [
+            "Opening mismatch.",
+            "Pacing.",
+            "Unclear explanations.",
+            "Irrelevant sections.",
+            "Satisfied quick-answer viewers."
+          ]
+        },
+        {
+          "code": "4.18",
+          "title": "Audience Reports",
+          "topics": [
+            "New viewers.",
+            "Returning viewers.",
+            "Regular viewers where reported.",
+            "Audience interests.",
+            "Data limitations."
+          ]
+        },
+        {
+          "code": "4.19",
+          "title": "Diagnostic Patterns",
+          "topics": [
+            "High impressions and low CTR.",
+            "High CTR and weak retention.",
+            "Strong search traffic but limited recommendations.",
+            "High early drop-off.",
+            "Small audience with strong engagement."
+          ]
+        },
+        {
+          "code": "4.20",
+          "title": "Alternative Explanations",
+          "topics": [
+            "Content topic.",
+            "Competition.",
+            "Audience segment.",
+            "Video length.",
+            "Distribution surface.",
+            "Seasonality.",
+            "Limited sample."
+          ]
+        },
+        {
+          "code": "4.21",
+          "title": "Appropriate Comparison",
+          "topics": [
+            "Similar format.",
+            "Similar duration.",
+            "Similar audience.",
+            "Similar period.",
+            "Similar traffic source."
+          ]
+        },
+        {
+          "code": "4.22",
+          "title": "Limited Analytics Data",
+          "topics": [
+            "Hidden values.",
+            "Missing data.",
+            "Privacy restrictions.",
+            "Incomplete processing.",
+            "Low sample volume."
+          ]
+        },
+        {
+          "code": "4.23",
+          "title": "Reporting Accuracy",
+          "topics": [
+            "Source.",
+            "Date range.",
+            "Metric definition.",
+            "Observed value.",
+            "Interpretation.",
+            "Limitation."
+          ]
+        },
+        {
+          "code": "4.24",
+          "title": "Using Google Sheets",
+          "topics": [
+            "Tables.",
+            "Basic formulas.",
+            "Data validation.",
+            "Charts.",
+            "Comments.",
+            "Action recommendations."
+          ]
+        },
+        {
+          "code": "4.25",
+          "title": "Example Analysis",
+          "topics": [
+            "Five simulated videos.",
+            "Impressions.",
+            "CTR where appropriately supplied.",
+            "Traffic sources.",
+            "Retention.",
+            "Engaged views for applicable formats.",
+            "Recommendations."
+          ]
+        },
+        {
+          "code": "4.26",
+          "title": "Data Interpretation Without Ownership",
+          "topics": [
+            "Instructor-provided dataset.",
+            "Anonymized authorized report.",
+            "Clear labels.",
+            "No fabricated live channel access."
+          ]
+        }
+      ],
+      "hands_on_lab": "Analyze an authorized or instructor-provided sample YouTube Analytics dataset.\r\n\r\nIdentify:\r\n\r\n1. Main traffic source.\r\n2. Suitable metric comparisons.\r\n3. Viewer retention observations.\r\n4. Possible discovery limitation.\r\n5. Alternative explanations.\r\n6. Specific recommended next step.",
+      "practical_assignment": "Create:\r\n\r\n**YouTube Analytics Interpretation Report**",
+      "expected_deliverable": "A clear report containing:\r\n\r\n- Dataset source.\r\n- Date range.\r\n- Format.\r\n- Metrics.\r\n- Findings.\r\n- Limitations.\r\n- Three evidence-based recommendations.",
+      "assessment": "Do not calculate platform CTR simply by dividing total video views by thumbnail impressions, because not every view originates from a registered impression.\r\n\r\nWhen official CTR is available, use the platform-reported metric."
+    },
+    {
+      "module_number": 5,
+      "module": "Module 05",
+      "module_title": "Discovery Audit & Capstone",
+      "title": "Discovery Audit & Capstone",
+      "duration": "6 Hours",
+      "hours": 6,
+      "objective": "Integrate audience research, metadata improvements, channel structure and analytics into a coherent discovery audit and 30-day plan.",
+      "lessons_count": 20,
+      "lessons": [
+        {
+          "code": "5.1",
+          "title": "Audit Purpose",
+          "topics": [
+            "Channel or video objectives.",
+            "Target audience.",
+            "Available evidence.",
+            "Audit scope."
+          ]
+        },
+        {
+          "code": "5.2",
+          "title": "Access and Permissions",
+          "topics": [
+            "Owned channel.",
+            "Authorized channel.",
+            "Public research.",
+            "Sample data."
+          ]
+        },
+        {
+          "code": "5.3",
+          "title": "Channel Positioning Review",
+          "topics": [
+            "Topic clarity.",
+            "Intended audience.",
+            "Content promise.",
+            "Main themes."
+          ]
+        },
+        {
+          "code": "5.4",
+          "title": "Content Structure Review",
+          "topics": [
+            "Topic clusters.",
+            "Playlists.",
+            "Related videos.",
+            "Navigational clarity.",
+            "Content gaps."
+          ]
+        },
+        {
+          "code": "5.5",
+          "title": "Audience-Intent Review",
+          "topics": [
+            "Audience needs.",
+            "Search questions.",
+            "Intent categories.",
+            "Video topic alignment."
+          ]
+        },
+        {
+          "code": "5.6",
+          "title": "Topic Research Review",
+          "topics": [
+            "Twenty ideas.",
+            "Evidence.",
+            "Priority.",
+            "Content fit."
+          ]
+        },
+        {
+          "code": "5.7",
+          "title": "Metadata Audit",
+          "topics": [
+            "Five videos.",
+            "Title accuracy.",
+            "Description quality.",
+            "Thumbnail-title alignment.",
+            "Chapters.",
+            "Captions.",
+            "Tags/hashtags where suitable."
+          ]
+        },
+        {
+          "code": "5.8",
+          "title": "Analytics Review",
+          "topics": [
+            "Traffic sources.",
+            "Impressions.",
+            "CTR.",
+            "Retention.",
+            "Average view duration.",
+            "Engaged views.",
+            "Search terms."
+          ]
+        },
+        {
+          "code": "5.9",
+          "title": "Evidence Quality",
+          "topics": [
+            "Observed metrics.",
+            "Inference.",
+            "Hypothesis.",
+            "Missing data.",
+            "Uncertainty."
+          ]
+        },
+        {
+          "code": "5.10",
+          "title": "Problem Prioritization",
+          "topics": [
+            "Audience mismatch.",
+            "Packaging mismatch.",
+            "Topic gap.",
+            "Retention concerns.",
+            "Weak content organization."
+          ]
+        },
+        {
+          "code": "5.11",
+          "title": "Improvement Recommendations",
+          "topics": [
+            "More relevant topics.",
+            "Clearer titles.",
+            "Better descriptions.",
+            "More accurate packaging.",
+            "Playlist organization.",
+            "Stronger content openings.",
+            "Content structure revisions."
+          ]
+        },
+        {
+          "code": "5.12",
+          "title": "Experiment Design",
+          "topics": [
+            "Hypothesis.",
+            "Proposed change.",
+            "Metric to monitor.",
+            "Review window.",
+            "Risks.",
+            "Confounding factors."
+          ]
+        },
+        {
+          "code": "5.13",
+          "title": "A/B Testing Awareness",
+          "topics": [
+            "Eligibility.",
+            "Native YouTube capabilities.",
+            "Watch-time-based evaluation.",
+            "Inconclusive outcomes.",
+            "Appropriate reporting."
+          ]
+        },
+        {
+          "code": "5.14",
+          "title": "Benchmarking",
+          "topics": [
+            "Channel's own relevant history.",
+            "Comparable videos.",
+            "Similar format.",
+            "Similar traffic source.",
+            "No invented universal benchmark."
+          ]
+        },
+        {
+          "code": "5.15",
+          "title": "Thirty-Day Plan",
+          "topics": [
+            "Week 1: Audit and baseline.",
+            "Week 2: Topic and metadata preparation.",
+            "Week 3: Controlled improvements.",
+            "Week 4: Measurement and review."
+          ]
+        },
+        {
+          "code": "5.16",
+          "title": "Measurement Plan",
+          "topics": [
+            "Metrics.",
+            "Baseline.",
+            "Observation dates.",
+            "Hypotheses.",
+            "Reporting notes."
+          ]
+        },
+        {
+          "code": "5.17",
+          "title": "Reporting",
+          "topics": [
+            "Executive summary.",
+            "Opportunities.",
+            "Evidence.",
+            "Actions.",
+            "Risks.",
+            "Limitations."
+          ]
+        },
+        {
+          "code": "5.18",
+          "title": "Client-Friendly Communication",
+          "topics": [
+            "Plain language.",
+            "Clear recommendations.",
+            "No guarantees.",
+            "Distinguishing analysis from proven outcomes."
+          ]
+        },
+        {
+          "code": "5.19",
+          "title": "Capstone Review",
+          "topics": [
+            "Portfolio completeness.",
+            "Evidence.",
+            "Accuracy.",
+            "Relevance.",
+            "Practical feasibility."
+          ]
+        },
+        {
+          "code": "5.20",
+          "title": "Final Presentation",
+          "topics": [
+            "Explain the audience.",
+            "Describe the research.",
+            "Show five video recommendations.",
+            "Interpret the analytics.",
+            "Explain the 30-day plan."
+          ]
+        }
+      ],
+      "hands_on_lab": "Assemble the complete YouTube Discovery Audit Pack.",
+      "practical_assignment": "Submit the SIX-component portfolio.",
+      "expected_deliverable": "**One Complete YouTube Discovery Audit Pack + 30-Day Improvement Plan + Presentation**",
+      "assessment": "The capstone is an audit and recommendation exercise.\r\n\r\nDo not require students to make changes to an actual client channel."
+    }
+  ],
+  "what_you_will_build": [],
+  "final_deliverables": [],
+  "student_deliverables_and_evidence": [],
+  "assessment": null,
+  "certification": null,
+  "career_paths": [],
+  "freelance_applications": [],
+  "business_use_cases": [],
+  "industry_workflow": [],
+  "best_practices": [],
+  "common_mistakes": [],
+  "not_covered": [],
+  "next_learning_path": [],
+  "faq": [
+    {
+      "question": "What is YouTube SEO, Discovery & Channel Analytics?",
+      "answer": "It is a practical certification covering video discoverability, audience research, metadata optimization and YouTube Analytics interpretation."
+    },
+    {
+      "question": "How long is the course?",
+      "answer": "Four weeks with 32 learning hours."
+    },
+    {
+      "question": "What is the fee?",
+      "answer": "₹4,900, subject to Nova Skills' verified pricing and tax policy."
+    },
+    {
+      "question": "Is it suitable for beginners?",
+      "answer": "Yes, for learners with a basic understanding of YouTube."
+    },
+    {
+      "question": "Do I need my own YouTube channel?",
+      "answer": "No. Authorized channel examples and instructor-provided sample datasets can be used."
+    },
+    {
+      "question": "What is YouTube SEO?",
+      "answer": "It involves helping YouTube and audiences understand a video's relevant topic and improving discoverability through accurate content information and viewer-focused planning."
+    },
+    {
+      "question": "Is YouTube SEO the same as Google SEO?",
+      "answer": "They share concepts such as relevance and search intent, but the platforms have different discovery systems and user behaviour."
+    },
+    {
+      "question": "Can keywords guarantee YouTube rankings?",
+      "answer": "No. YouTube Search considers relevance and engagement, while recommendation systems also involve personalization and satisfaction."
+    },
+    {
+      "question": "Will I learn YouTube keyword research?",
+      "answer": "Yes. The course includes search-intent research, YouTube Search and Google Trends."
+    },
+    {
+      "question": "Does Google Trends show exact monthly search volume?",
+      "answer": "No. It reports normalized relative interest rather than exact YouTube search counts."
+    },
+    {
+      "question": "Will I learn competitor analysis?",
+      "answer": "Yes. You will review publicly visible content and identify suitable topic gaps."
+    },
+    {
+      "question": "Will I learn to optimize YouTube titles?",
+      "answer": "Yes. You will prepare accurate titles aligned with viewer intent and the real video content."
+    },
+    {
+      "question": "Are YouTube tags still important?",
+      "answer": "Tags generally play a minimal role in discovery, although they may help with common misspellings."
+    },
+    {
+      "question": "Will I learn descriptions, hashtags and chapters?",
+      "answer": "Yes. The curriculum covers these elements and relevant platform rules."
+    },
+    {
+      "question": "Will I learn thumbnail design?",
+      "answer": "You will learn thumbnail-title alignment and packaging evaluation, not advanced graphic-design production."
+    },
+    {
+      "question": "What is YouTube Studio?",
+      "answer": "It is the creator management environment providing video settings, channel tools and analytics."
+    },
+    {
+      "question": "Will I learn YouTube Analytics?",
+      "answer": "Yes. The course covers discovery metrics, traffic sources, audience retention and other relevant reports."
+    },
+    {
+      "question": "What is YouTube CTR?",
+      "answer": "It measures how frequently viewers watch a video after a registered thumbnail impression."
+    },
+    {
+      "question": "What is audience retention?",
+      "answer": "It describes how viewers continue watching through different parts of a video."
+    },
+    {
+      "question": "What are engaged views?",
+      "answer": "Engaged views help distinguish continued viewing from the broader public view count, according to current YouTube metric definitions."
+    },
+    {
+      "question": "Are Shorts analytics different?",
+      "answer": "Yes. Different formats and surfaces have different metrics and interpretation requirements."
+    },
+    {
+      "question": "Can I compare every video's CTR directly?",
+      "answer": "Not reliably. Traffic sources, format, audience, video age and sample size affect interpretation."
+    },
+    {
+      "question": "Will I learn A/B testing?",
+      "answer": "Yes. The course introduces responsible title/thumbnail experiment design and eligibility-dependent native testing."
+    },
+    {
+      "question": "Will I need paid vidIQ or TubeBuddy?",
+      "answer": "No. These are optional research tools."
+    },
+    {
+      "question": "Can AI help with YouTube SEO?",
+      "answer": "AI can support drafting and organization, but research, facts, video-content accuracy and performance analysis require human verification."
+    },
+    {
+      "question": "What will my portfolio include?",
+      "answer": "Twenty topics, an intent map, five metadata dossiers, channel structure review, analytics interpretation and a 30-day plan."
+    },
+    {
+      "question": "Will the course guarantee more subscribers?",
+      "answer": "No. The course develops research, packaging and analysis skills without guaranteeing platform outcomes."
+    },
+    {
+      "question": "Will I learn video editing?",
+      "answer": "No. Advanced editing belongs to separate Video & Motion or longer Creator Academy programs."
+    },
+    {
+      "question": "Will I learn monetization?",
+      "answer": "The main focus is discoverability and analytics, not a complete YouTube monetization strategy."
+    },
+    {
+      "question": "Who should take this course?",
+      "answer": "Creators, educators, digital marketers, channel assistants, content strategists and professionals supporting YouTube publishing."
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}

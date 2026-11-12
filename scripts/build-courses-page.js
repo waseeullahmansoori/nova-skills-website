@@ -40,22 +40,21 @@ const vm = require('vm');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(ROOT_DIR, 'js', 'icon-system.js'));
+const NovaCourseData = require(path.join(ROOT_DIR, 'js', 'course-data.js'));
 
-// 1. Load data.js
-const dataJs = fs.readFileSync(path.join(ROOT_DIR, 'data.js'), 'utf8');
-vm.runInThisContext(dataJs);
+// 1. Load canonical course data
+const PUBLISHED_COURSES = NovaCourseData.getPublishedCourses();
+const ACADEMIES = NovaCourseData.getAllAcademies();
 
-if (!Array.isArray(NS_COURSES) || NS_COURSES.length === 0) {
-  console.error('❌ Failed to load NS_COURSES from data.js');
+if (!Array.isArray(PUBLISHED_COURSES) || PUBLISHED_COURSES.length === 0) {
+  console.error('❌ Failed to load canonical courses from NovaCourseData');
   process.exit(1);
 }
 
-console.log(`Loaded ${NS_COURSES.length} courses from data.js`);
-
-const COURSE_IMAGE_MAP = require(path.join(ROOT_DIR, 'course-image-map.json')).byId;
+console.log(`Loaded ${PUBLISHED_COURSES.length} courses from NovaCourseData`);
 
 function renderCourseCardMediaHtml(course, bannerIconHtml, cardIndex = 0) {
-  const rec = course && COURSE_IMAGE_MAP[course.id];
+  const rec = course && course.images && course.images.card ? course.images.card : null;
   if (!rec) {
     return {
       hasVisualClass: '',
@@ -65,12 +64,12 @@ function renderCourseCardMediaHtml(course, bannerIconHtml, cardIndex = 0) {
   const loadingAttr = cardIndex < 3 ? 'eager' : 'lazy';
   return {
     hasVisualClass: ' has-course-visual',
-    innerHtml: `<picture class="course-thumb-picture"><source media="(min-width: 768px)" srcset="${escapeHTML(rec.image.desktop)}" type="${escapeHTML(rec.image.mimeType)}" width="${rec.image.width}" height="${rec.image.height}" /><img src="${escapeHTML(rec.image.mobile)}" alt="${escapeHTML(rec.image.alt)}" class="course-thumb-img" width="${rec.image.mobileWidth}" height="${rec.image.mobileHeight}" loading="${loadingAttr}" decoding="async" /></picture>`
+    innerHtml: `<picture class="course-thumb-picture"><source media="(min-width: 768px)" srcset="${escapeHTML(rec.desktop)}" type="${escapeHTML(rec.mimeType || 'image/webp')}" width="${rec.width || 800}" height="${rec.height || 600}" /><img src="${escapeHTML(rec.mobile)}" alt="${escapeHTML(rec.alt || course.name)}" class="course-thumb-img" width="${rec.mobileWidth || 600}" height="${rec.mobileHeight || 450}" loading="${loadingAttr}" decoding="async" /></picture>`
   };
 }
 
 function buildCourseCardHTML(course, cardIndex = 0) {
-  const courseUrl = `/course-detail.html?id=${course.id}`;
+  const courseUrl = NovaCourseData.getCourseDetailUrl(course);
   
   let trackClass = 'track-cert';
   const progLevel = course.programLevel || 'Certification Course';
@@ -86,6 +85,8 @@ function buildCourseCardHTML(course, cardIndex = 0) {
   const safeDuration = course.duration || '';
   const safePrice = `₹${(course.price || 0).toLocaleString('en-IN')}`;
   const safeId = course.id;
+  const projectLabel = NovaCourseData.getCourseProjectLabel(course);
+  const demoEligible = NovaCourseData.isCourseDemoEligible(course);
 
   const cardMedia = renderCourseCardMediaHtml(course, renderCourseIcon(course.icon || course), cardIndex);
   const hasVisualClass = cardMedia.hasVisualClass;
@@ -112,13 +113,13 @@ function buildCourseCardHTML(course, cardIndex = 0) {
         <p class="course-desc">${course.shortDesc}</p>
         ${toolsHTML}
         <div class="course-features">
-          <span class="feature-item">💻 ${course.liveProjects} Projects</span>
+          <span class="feature-item">💻 ${projectLabel}</span>
           <span class="feature-item">📜 Verified Certificate</span>
           ${course.placementSupport ? '<span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>' : '<span class="feature-item">💼 Capstone Portfolio</span>'}
           <span class="feature-item">⭐ ${course.rating} (${course.reviews})</span>
         </div>
         <div class="course-footer course-footer-stack">
-          ${(typeof isCourseDemoEligible === 'function' ? isCourseDemoEligible(course) : true) ? `
+          ${demoEligible ? `
           <div class="course-demo-indicator">
             <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'${course.id}', courseName:'${safeName}', academyName:'${safeAcademy}', sourceCta:'catalogue_card_demo'});}">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
@@ -214,11 +215,16 @@ function updateCoursesPage() {
   html = html.replace(/<link rel="canonical" href="[^"]*courses(\.html)?" \/>/g, '<link rel="canonical" href="https://novaskills.in/courses" />');
   html = html.replace(/<meta property="og:url" content="[^"]*courses(\.html)?" \/>/g, '<meta property="og:url" content="https://novaskills.in/courses" />');
 
-  // 2. Update count from 0 to 109
-  html = html.replace(/<strong id="courses-showing-count">\d+<\/strong>/g, `<strong id="courses-showing-count">${NS_COURSES.length}</strong>`);
+  // 2. Update dynamic canonical counts
+  html = html.replace(/<strong id="courses-showing-count">\d+<\/strong>/g, `<strong id="courses-showing-count">${PUBLISHED_COURSES.length}</strong>`);
+  html = html.replace(/<strong id="mobile-results-number">\d+<\/strong>/g, `<strong id="mobile-results-number">${PUBLISHED_COURSES.length}</strong>`);
+  html = html.replace(/<span id="sheet-preview-count">\d+<\/span>/g, `<span id="sheet-preview-count">${PUBLISHED_COURSES.length}</span>`);
+  html = html.replace(/<span class="canonical-courses-count">[^<]+<\/span>/g, `<span class="canonical-courses-count">${PUBLISHED_COURSES.length}+</span>`);
+  html = html.replace(/<span class="canonical-academies-count">[^<]+<\/span>/g, `<span class="canonical-academies-count">${ACADEMIES.length}</span>`);
+  html = html.replace(/All Programs \(\d+\)/g, `All Programs (${PUBLISHED_COURSES.length})`);
 
   // 3. Inject JSON-LD schema into <head>
-  const schemaTag = generateCatalogSchema(NS_COURSES);
+  const schemaTag = generateCatalogSchema(PUBLISHED_COURSES);
   if (html.includes('id="courses-catalog-jsonld"')) {
     html = html.replace(/<script type="application\/ld\+json" id="courses-catalog-jsonld">[\s\S]*?<\/script>/, schemaTag);
   } else {
@@ -237,11 +243,13 @@ function updateCoursesPage() {
     html = html.replace('</style>', badgeCriticalCss + '\n</style>');
   }
   html = html.replace(/styles\.min\.css\?v=[0-9.]+/g, 'styles.min.css?v=2.9.0');
-  html = html.replace(/courses\.min\.js\?v=[0-9.]+/g, 'courses.min.js?v=3.0.0');
-  html = html.replace(/courses\.js\?v=[0-9.]+/g, 'courses.js?v=3.0.0');
+  html = html.replace(/data\.min\.js\?v=[0-9.]+/g, 'data.min.js?v=3.1.0');
+  html = html.replace(/components\.min\.js\?v=[0-9.]+/g, 'components.min.js?v=3.1.0');
+  html = html.replace(/courses\.min\.js\?v=[0-9.]+/g, 'courses.min.js?v=3.1.0');
+  html = html.replace(/courses\.js\?v=[0-9.]+/g, 'courses.js?v=3.1.0');
 
   // 5. Pre-render course cards inside #courses-grid-page
-  const cardsHtml = NS_COURSES.map((c, idx) => buildCourseCardHTML(c, idx)).join('\n');
+  const cardsHtml = PUBLISHED_COURSES.map((c, idx) => buildCourseCardHTML(c, idx)).join('\n');
   const gridRegex = /<div class="courses-grid-page" id="courses-grid-page">[\s\S]*?(?=\s*<!-- No results container -->)/;
   const replacementGrid = `<div class="courses-grid-page" id="courses-grid-page">\n${cardsHtml}\n        </div>`;
 
@@ -252,11 +260,11 @@ function updateCoursesPage() {
 
   html = html.replace(gridRegex, replacementGrid);
   if (!html.includes('/js/icon-system.js')) {
-    html = html.replace('<script src="/js/courses.min.js?v=2.7.0', '<script src="/js/icon-system.js?v=2.2.0" defer></script>\n  <script src="/js/courses.min.js?v=2.7.0');
+    html = html.replace('<script src="/js/courses.min.js?v=3.1.0', '<script src="/js/icon-system.js?v=2.2.0" defer></script>\n  <script src="/js/courses.min.js?v=3.1.0');
   }
 
   fs.writeFileSync(coursesPath, html, 'utf8');
-  console.log(`✅ Successfully updated courses.html with ${NS_COURSES.length} pre-rendered course cards, clean canonical & CollectionPage schema.`);
+  console.log(`✅ Successfully updated courses.html with ${PUBLISHED_COURSES.length} pre-rendered course cards, clean canonical & CollectionPage schema.`);
 }
 
 updateCoursesPage();

@@ -22,41 +22,71 @@ if ('requestIdleCallback' in window) {
   setTimeout(initInteractiveModules, 300);
 }
 
-// ===== DYNAMIC CANONICAL COUNTS HYDRATION =====
+// ===== DYNAMIC CANONICAL COUNTS & HOMEPAGE COURSE HYDRATION =====
 function initCanonicalCounts() {
-  if (typeof window.NovaSkillsData === 'undefined') return;
+  const api = window.NovaCourseData || window.NovaSkillsData;
+  if (!api) return;
 
-  window.NovaSkillsData.hydrateDOM();
+  api.hydrateDOM();
 
-  const academiesCount = window.NovaSkillsData.getTotalAcademiesCount();
-  const coursesCount = window.NovaSkillsData.getTotalCoursesCount();
+  const academiesCount = api.getTotalAcademiesCount();
+  const coursesCount = api.getTotalCoursesCount();
 
-  const academiesCard = document.querySelector('.stat-card #stat-academies')?.closest('.stat-card') || 
+  const academiesCard = document.querySelector('.stat-card #stat-academies')?.closest('.stat-card') ||
                         document.querySelector('.stat-card[data-count="12"]');
   if (academiesCard) {
     academiesCard.setAttribute('data-count', academiesCount);
   }
 
-  const coursesCard = document.querySelector('.stat-card #stat-courses')?.closest('.stat-card') || 
-                      document.querySelector('.stat-card[data-count="100"]') || 
+  const coursesCard = document.querySelector('.stat-card #stat-courses')?.closest('.stat-card') ||
+                      document.querySelector('.stat-card[data-stat="courses"]') ||
                       document.querySelector('.stat-card[data-count="109"]');
   if (coursesCard) {
     coursesCard.setAttribute('data-count', coursesCount);
   }
 
-  // Hydrate academy cards badges
+  // Hydrate academy cards counts & starting prices from canonical records
   document.querySelectorAll('[data-academy-course-badge]').forEach(el => {
     const acadId = el.getAttribute('data-academy-course-badge');
     if (acadId) {
-      const count = window.NovaSkillsData.getAcademyCourseCount(acadId);
-      el.textContent = `${count} Courses`;
+      el.textContent = `${api.getAcademyCourseCount(acadId)} Courses`;
+    }
+  });
+
+  document.querySelectorAll('[data-academy-price-badge]').forEach(el => {
+    const acadId = el.getAttribute('data-academy-price-badge');
+    if (acadId) {
+      const startFee = api.getAcademyStartingPrice(acadId);
+      if (startFee) {
+        el.textContent = `From ${api.formatPriceINR(startFee)}`;
+      }
+    }
+  });
+
+  // Hydrate homepage featured course cards by stable course ID
+  document.querySelectorAll('#courses-grid .course-card[data-course-id]').forEach(card => {
+    const cid = card.getAttribute('data-course-id');
+    const c = api.getCourseById(cid);
+    if (!c) return;
+    const durBadge = card.querySelector('.course-duration-badge');
+    if (durBadge) durBadge.textContent = c.duration;
+    const titleLink = card.querySelector('.course-title a');
+    if (titleLink) {
+      titleLink.textContent = c.name;
+      titleLink.setAttribute('href', api.getCourseDetailUrl(c.id));
+    }
+    const priceCur = card.querySelector('.price-current');
+    if (priceCur) priceCur.textContent = api.formatPriceINR(c.price);
+    const priceOrig = card.querySelector('.price-original');
+    if (priceOrig && c.offer_active && c.originalPrice > c.price) {
+      priceOrig.textContent = api.formatPriceINR(c.originalPrice);
     }
   });
 
   // Update view all courses button if present
   const viewAllBtn = document.getElementById('view-all-courses');
   if (viewAllBtn) {
-    viewAllBtn.textContent = `View All ${coursesCount}+ Courses`;
+    viewAllBtn.innerHTML = `View All <span class="canonical-courses-count">${coursesCount}+</span> Courses`;
   }
 }
 

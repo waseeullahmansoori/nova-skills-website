@@ -1,0 +1,690 @@
+{
+  "courseId": "ai-agents-fundamentals",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/ai-agents-fundamentals.json",
+  "guidedHours": 48,
+  "learning_hours": 48,
+  "course_type": "Certification Course",
+  "seo_title": "AI Agents Course | 6 Weeks, ₹7,900 | Nova Skills",
+  "seo_description": "Learn AI agent design, tool calling, guardrails and evaluation. Build 2 supervised prototypes and test 15 cases. 6 weeks, 48 hours at ₹7,900.",
+  "overview": {
+    "positioning": "Foundational Agentic AI Design, Supervised Prototyping, Tool Calling & Safety Evaluation",
+    "core_philosophy": "Go Beyond Chatbots. Design AI Agents That Use Tools and Complete Tasks.",
+    "key_facts": {
+      "level": "Foundation to Intermediate",
+      "duration": "6 Weeks",
+      "format": "Online Interactive Labs & Supervised Prototyping Studio",
+      "estimated_learning_hours": "48 Hours (6 Weeks × 8 Hours/Week)",
+      "project_count": "2 Supervised Agent Prototypes + 15-Case Evaluation Suite",
+      "capstone": "Two Supervised Business Agent Prototypes & 15-Case Evaluation Matrix",
+      "ai_integration": "Tool-Using Single Agents with Bounded Autonomy & Human Approval Checkpoints",
+      "career_focus": "Junior AI Agent Prototype Developer, AI Workflow Design Assistant, Agentic AI Operations Assistant"
+    },
+    "what_you_will_be_able_to_do": [
+      "Articulate precise conceptual distinctions between chatbots, deterministic workflows, and tool-using AI agents.",
+      "Design bounded single-agent architectures with explicit system instructions, role limits, and termination conditions.",
+      "Author rigorous JSON-based tool schemas defining tool names, parameter types, descriptions, and required fields.",
+      "Understand foundational Model Context Protocol (MCP) concepts: tools, resources, prompts, client/server boundaries, and trust.",
+      "Implement document-grounded information retrieval with strict source attribution and missing-data fallbacks.",
+      "Build human-in-the-loop approval gates before sensitive actions (e.g. database updates, client messaging, financial calls).",
+      "Defend agents against direct and indirect prompt injection embedded within user prompts, retrieved files, or tool responses.",
+      "Inspect observable execution traces, verifying tool selection arguments, execution outcomes, and latency.",
+      "Apply a 15-case empirical evaluation dataset using a 5-dimension rubric (25 points) with hard pass/fail safety gates."
+    ]
+  },
+  "why_now": "In 2027, the AI landscape has transitioned from conversational chatbots to agentic systems that take actions in the real world. However, enterprise adoption is limited by reliability, security, and uncontrolled tool execution risks. Organizations urgently require specialists who can design bounded agents, enforce tool permission guardrails, mandate human approval for sensitive actions, and empirically evaluate agent behavior before deployment.",
+  "learning_journey": null,
+  "prerequisites": "Required: Basic computer literacy, familiarity with standard web applications, and ability to follow structured step-by-step instructions. Recommended: Basic familiarity with prompt engineering concepts, simple JSON structures, and elementary workflow logic. No advanced programming, Python proficiency, or computer science degree is required; visual agent builders and supervised low-code tools are utilized throughout the primary learning pathway.",
+  "target_audience": [
+    "Students exploring Agentic AI and visual workflow design",
+    "AI and automation beginners seeking practical, bounded agent design skills",
+    "Digital marketing professionals wanting to build information retrieval and routing agents",
+    "Freelancers expanding their services to include AI agent prototyping for small businesses",
+    "Business owners seeking to evaluate where AI agents add value over traditional automation",
+    "Operations professionals designing internal assistants with strict human oversight",
+    "Technical enthusiasts exploring Model Context Protocol (MCP) and tool-calling foundations",
+    "No-code and low-code learners transitioning from deterministic pipelines to agentic nodes",
+    "AI productivity professionals wanting to move beyond conversational chat interfaces",
+    "Junior developers exploring agent architectures without heavy Python framework overhead",
+    "Entrepreneurs building lean prototypes with verified safety guardrails",
+    "Professionals designing AI-assisted business workflows with human sign-off"
+  ],
+  "learning_outcomes": [
+    "Differentiate precisely between chatbots, deterministic automation rules, and tool-using AI agents.",
+    "Formulate bounded single-agent architectures with explicit system instructions, operational constraints, and termination limits.",
+    "Draft rigid JSON tool schemas specifying parameter data types, descriptions, and required input fields.",
+    "Explain foundational Model Context Protocol (MCP) concepts including tools, resources, prompts, client/server roles, and trust boundaries.",
+    "Implement document-grounded knowledge retrieval that produces verifiable source citations and handles missing data gracefully.",
+    "Configure human-in-the-loop approval gates that intercept sensitive write operations before execution.",
+    "Identify vulnerabilities arising from direct and indirect prompt injection within user inputs, retrieved docs, and tool results.",
+    "Enforce tool permission models based on the principle of least privilege, isolating read-only data from state-modifying actions.",
+    "Inspect observable execution traces to verify tool arguments, model decisions, and failure reasons without relying on hidden model states.",
+    "Build and demonstrate two fully documented supervised agent prototypes (Business Information Assistant and Task-Routing Agent).",
+    "Execute an empirical 15-case evaluation dataset across both prototypes, scoring behaviors across five dimensions with hard safety gates.",
+    "Author professional agent runbooks documenting architecture diagrams, permission matrices, failure fallbacks, and human oversight procedures."
+  ],
+  "hands_on_tech": [
+    "Visual Agent Canvas & Instructions Panel",
+    "JSON Schema Tool Definitions & Parameter Config",
+    "Document-Grounded Knowledge Source Connections",
+    "Human Approval Checkpoint Interceptors",
+    "Read-Only vs Write Tool Access Permissions",
+    "Observable Execution Trace & Event Log Inspection",
+    "Direct & Indirect Prompt Injection Test Harness",
+    "5-Dimension Agent Behavior Evaluation Sheets"
+  ],
+  "modules": [
+    {
+      "module_number": 1,
+      "module": "Module 01",
+      "number": "01",
+      "title": "Agentic AI Foundations",
+      "duration": "8 Hours",
+      "hours": 8,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Understand agentic AI concepts, distinguish agents from chatbots and deterministic workflows, master task decomposition, establish bounded autonomy limits, and identify suitable business use cases.",
+      "topics": [
+        "Artificial intelligence fundamentals",
+        "Generative AI and LLM overview",
+        "Chatbots versus AI agents",
+        "Traditional software automation versus AI agents",
+        "Deterministic workflows versus agentic workflows",
+        "Model instructions and goals",
+        "Tool-using agent concepts",
+        "What an agent can and cannot do",
+        "Agent components",
+        "Models, tools and contextual information",
+        "Agent execution loop concepts",
+        "Task interpretation",
+        "Task decomposition",
+        "Planning and action selection",
+        "Multi-step task completion",
+        "Observation and feedback loops",
+        "Bounded autonomy",
+        "Agent termination conditions",
+        "Maximum steps and execution limits",
+        "Agent failure scenarios",
+        "Reliability limitations",
+        "Model hallucinations",
+        "Agent tool-use errors",
+        "When not to use an agent",
+        "Automation suitability assessment",
+        "Business use cases",
+        "Responsible agent development",
+        "Human oversight fundamentals",
+        "Cost and latency awareness",
+        "Agent design documentation"
+      ],
+      "hands_on_tools": [
+        "Agent Execution Loop Diagrams",
+        "Automation Suitability Rubric",
+        "Visual Canvas"
+      ],
+      "hands_on_practice": "Analyze three distinct business scenarios and categorize each as a traditional chatbot, deterministic workflow, or tool-using agent; draft an execution loop blueprint with explicit step limits.",
+      "assignment": {
+        "title": "Agent Suitability & Architecture Blueprint",
+        "description": "Select three realistic business problems (e.g., student inquiry support, lead routing, document filing) and classify each by solution type, defining tool requirements, autonomy boundaries, termination rules, and human oversight needs."
+      },
+      "competencies": [
+        "Ability to articulate the distinct operational differences between chatbots, deterministic workflows, and tool-using agents",
+        "Proficiency in defining task decomposition sequences, bounded autonomy constraints, and termination rules",
+        "Sound judgment in assessing automation suitability and recognizing when deterministic logic is superior to agentic systems"
+      ],
+      "assessment_criteria": "Evaluated on clarity of solution categorization, completeness of task decomposition steps, realistic risk assessment, and justification accuracy."
+    },
+    {
+      "module_number": 2,
+      "module": "Module 02",
+      "number": "02",
+      "title": "Agent Architecture & Context",
+      "duration": "8 Hours",
+      "hours": 8,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Architect single-agent systems, engineer system instructions, manage working memory and session state, implement document-grounded knowledge retrieval, and enforce structured JSON output schemas.",
+      "topics": [
+        "Agent architecture fundamentals",
+        "Agent instructions",
+        "Goal definition",
+        "Role and responsibilities",
+        "Instruction priority concepts",
+        "System/developer/user instruction distinctions where relevant",
+        "Agent boundaries",
+        "Tool descriptions",
+        "Tool capabilities",
+        "Tool availability",
+        "Model selection fundamentals",
+        "Context engineering",
+        "Input context",
+        "Relevant versus irrelevant information",
+        "Context-window limitations",
+        "Working memory concepts",
+        "Session state",
+        "Context persistence concepts",
+        "Short-term versus long-term memory",
+        "Retrieval fundamentals",
+        "Document-grounded responses",
+        "Approved knowledge sources",
+        "Source citation requirements",
+        "Source freshness",
+        "Missing information handling",
+        "Structured outputs",
+        "JSON objects and schemas",
+        "Required fields",
+        "Output validation",
+        "Agent state transitions",
+        "Multi-step context management",
+        "Avoiding context contamination",
+        "Untrusted source content",
+        "Agent configuration documentation"
+      ],
+      "hands_on_tools": [
+        "JSON Schema Validator",
+        "Knowledge Base Test Documents",
+        "Agent Prompt Workspace"
+      ],
+      "hands_on_practice": "Author a comprehensive agent specification with priority-ordered system instructions, connect a sample business FAQ knowledge source, and validate structured JSON outputs against rigid schemas.",
+      "assignment": {
+        "title": "Single-Agent Architecture & Context Design",
+        "description": "Author a formal single-agent design specification detailing agent purpose, system instructions, role limits, tool inventories, approved knowledge sources, structured output contracts, and missing-information responses."
+      },
+      "competencies": [
+        "Mastery of agent system instruction design, role delimitation, and operational boundary enforcement",
+        "Ability to manage session state and context windows while preventing context contamination from untrusted data",
+        "Proficiency in enforcing rigid JSON structured outputs and requiring transparent source citations for retrieved facts"
+      ],
+      "assessment_criteria": "Assessed on instruction precision, schema validity, robust missing-data handling, and separation of instructions from retrieved context."
+    },
+    {
+      "module_number": 3,
+      "module": "Module 03",
+      "number": "03",
+      "title": "Tool Calling & Integrations",
+      "duration": "10 Hours",
+      "hours": 10,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Master tool-calling mechanics and function schemas, differentiate read-only vs write permissions, understand foundational Model Context Protocol (MCP) concepts, and mandate human approval for sensitive actions.",
+      "topics": [
+        "Tool calling fundamentals",
+        "Why agents use tools",
+        "Function calling concepts",
+        "Tools versus model-generated answers",
+        "Tool names and descriptions",
+        "Tool parameter specifications",
+        "JSON-based tool schemas",
+        "Required and optional parameters",
+        "Input validation",
+        "Data type checking",
+        "Tool argument validation",
+        "Tool permission models",
+        "Read-only versus write tools",
+        "Tool access restrictions",
+        "Tool invocation lifecycle",
+        "Model-selected tool calls",
+        "Tool execution results",
+        "Tool response interpretation",
+        "Tool failure handling",
+        "API fundamentals",
+        "REST API awareness",
+        "HTTP request/response basics",
+        "API authentication concepts",
+        "Postman basics",
+        "Approved external integrations",
+        "Introduction to MCP",
+        "MCP tools, resources and prompts",
+        "MCP client/server concepts",
+        "Tool discovery",
+        "MCP trust boundaries",
+        "Tool permissions and user consent",
+        "External action authorization",
+        "Human approval for sensitive actions",
+        "Tool output validation",
+        "Prompt-injection risks from tool results",
+        "Tool execution logs",
+        "Tool-call trace inspection",
+        "Safe supervised workflow execution",
+        "Tool selection evaluation",
+        "Tool access documentation"
+      ],
+      "hands_on_tools": [
+        "Postman",
+        "JSON Tool Schema Builder",
+        "MCP Concept Sandbox",
+        "Simulated Tool Endpoints"
+      ],
+      "hands_on_practice": "Draft JSON schemas for two distinct tools (one read-only lookup and one write-capable update); simulate model tool-call selection in Postman, and configure a human approval gate before the write tool triggers.",
+      "assignment": {
+        "title": "Tool-Calling Agent Lab",
+        "description": "Build and document a supervised single-agent prototype using at least two tools. Include JSON schemas, parameter contracts, a tool permission matrix, positive and negative tool-selection tests, and human approval boundary definitions."
+      },
+      "competencies": [
+        "Ability to define robust JSON-based function schemas with explicit parameter validation and descriptions",
+        "Deep conceptual understanding of Model Context Protocol (MCP) architecture, resources, and trust boundaries",
+        "Strict enforcement of the principle of least privilege, isolating read-only tools and requiring approval for state-modifying actions"
+      ],
+      "assessment_criteria": "Tested on tool schema syntax accuracy, proper parameter typing, correct model tool selection, and successful human approval interception."
+    },
+    {
+      "module_number": 4,
+      "module": "Module 04",
+      "number": "04",
+      "title": "Agent Prototyping",
+      "duration": "10 Hours",
+      "hours": 10,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Build functional single-agent prototypes using supported OpenAI agent tooling or equivalent visual builders, alongside n8n AI Agent nodes, establishing document grounding, trace inspection, and approval paths.",
+      "topics": [
+        "Agent prototyping fundamentals",
+        "Selecting a suitable agent builder",
+        "Visual versus code-first approaches",
+        "OpenAI agent tooling overview",
+        "n8n AI Agent tools",
+        "Single-agent architecture",
+        "Creating agent instructions",
+        "Connecting approved tools",
+        "Configuring knowledge sources",
+        "Document-grounded information retrieval",
+        "Query interpretation",
+        "Task decomposition",
+        "Multi-step execution",
+        "Tool-selection rules",
+        "Tool argument preparation",
+        "Output formatting",
+        "Structured agent responses",
+        "Source attribution",
+        "Traceable answer generation",
+        "Missing-information handling",
+        "Ambiguous request handling",
+        "Tool execution limits",
+        "Timeouts and basic recovery concepts",
+        "Agent state/context handling",
+        "Human review integration",
+        "Approval and rejection paths",
+        "Safe read-only actions",
+        "Controlled write actions",
+        "Agent testing",
+        "Tool selection debugging",
+        "Agent trace inspection",
+        "Prototype documentation",
+        "Demonstration preparation",
+        "Prototype usability review",
+        "Basic cost and usage awareness"
+      ],
+      "hands_on_tools": [
+        "OpenAI Agent Tooling / Visual Agent Builder",
+        "n8n AI Agent Node",
+        "Trace Inspector"
+      ],
+      "hands_on_practice": "Construct working prototypes of both portfolio deliverables: (1) Business Information Assistant with source attribution and (2) Task-Routing Agent with approval and rejection pathways.",
+      "assignment": {
+        "title": "Supervised Agent Prototypes Initial Build",
+        "description": "Implement initial working versions of Prototype A (Business Information Assistant) and Prototype B (Task-Routing Agent) with verified tool connections, source-grounded answers, human approval triggers, and trace logs."
+      },
+      "competencies": [
+        "Proficiency in building working single-agent prototypes in visual builders and low-code n8n AI Agent nodes",
+        "Ability to implement document-grounded responses with mandatory source citations and graceful missing-data handling",
+        "Skill in constructing functional human approval and rejection branches for sensitive operations"
+      ],
+      "assessment_criteria": "Demonstrated functional tool calling, traceable response generation, approval gate interception, and clean prototype documentation."
+    },
+    {
+      "module_number": 5,
+      "module": "Module 05",
+      "number": "05",
+      "title": "Guardrails, Safety & Evaluation",
+      "duration": "6 Hours",
+      "hours": 6,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Implement agent safety guardrails, analyze direct and indirect prompt-injection vectors, conduct observable trace audits, and execute empirical evaluations using structured test datasets and rubrics.",
+      "topics": [
+        "Agent safety fundamentals",
+        "Agent autonomy boundaries",
+        "Input validation",
+        "Output validation",
+        "Tool permissions",
+        "Principle of least privilege",
+        "Human-in-the-loop approval",
+        "Approval and rejection handling",
+        "Side-effect prevention",
+        "Prompt-injection awareness",
+        "Direct versus indirect prompt injection",
+        "Untrusted documents",
+        "Untrusted tool responses",
+        "Unauthorized tool requests",
+        "Sensitive information protection",
+        "Credential handling awareness",
+        "Hallucinations and unsupported claims",
+        "Output verification",
+        "Source-grounded answers",
+        "Failure handling",
+        "Safe fallback responses",
+        "Tool-call errors",
+        "Trace inspection",
+        "Tool-selection diagnostics",
+        "Basic agent evaluation",
+        "Test datasets",
+        "Evaluation rubrics",
+        "Valid behavior testing",
+        "Incorrect tool-selection testing",
+        "Permission-denial testing",
+        "Prompt-injection resistance testing",
+        "Recovery testing",
+        "Regression testing fundamentals",
+        "Human review of evaluation findings"
+      ],
+      "hands_on_tools": [
+        "Execution Trace Inspector",
+        "Prompt Injection Test Scenarios",
+        "5-Dimension Scoring Matrix"
+      ],
+      "hands_on_practice": "Inject indirect prompt-injection payloads into a test document, audit the agent trace to observe tool decision behavior, enforce pre-execution authorization checks, and score test cases on a 25-point rubric.",
+      "assignment": {
+        "title": "Agent Safety & Evaluation Lab",
+        "description": "Conduct a comprehensive safety and evaluation audit across normal and adversarial scenarios, documenting tool selections, permission denials, prompt-injection intercepts, failure recovery actions, and 5-dimension rubric scores."
+      },
+      "competencies": [
+        "Understanding of guardrail layers (input, output, tool-level permission checks) and their practical limits",
+        "Deep awareness of direct and indirect prompt injection through user inputs, retrieved files, and tool results",
+        "Ability to audit observable execution traces and score agent behaviors systematically using empirical evaluation rubrics"
+      ],
+      "assessment_criteria": "Evaluated on thoroughness of adversarial testing, identification of safety vulnerabilities, trace audit accuracy, and rubric scoring integrity."
+    },
+    {
+      "module_number": 6,
+      "module": "Module 06",
+      "number": "06",
+      "title": "Applied Agent Capstone",
+      "duration": "6 Hours",
+      "hours": 6,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Finalize both supervised agent prototypes, author and execute the mandatory 15-case evaluation dataset, compile operational runbooks with risk documentation, and present findings to stakeholders.",
+      "topics": [
+        "Business requirement gathering",
+        "Agent use-case selection",
+        "Scope definition",
+        "User requirements",
+        "Agent architecture",
+        "Tool inventory",
+        "Permission design",
+        "Context specification",
+        "Prototype implementation",
+        "Evaluation criteria",
+        "Test case preparation",
+        "Execution testing",
+        "Correct tool selection",
+        "Invalid input handling",
+        "Prompt-injection testing",
+        "Human approval testing",
+        "Failure recovery",
+        "Trace inspection",
+        "Output verification",
+        "Improvement recommendations",
+        "Prototype documentation",
+        "Risk documentation",
+        "Demo preparation",
+        "Stakeholder explanation",
+        "Portfolio presentation",
+        "Limitations and next steps"
+      ],
+      "hands_on_tools": [
+        "Capstones Showcase Workspace",
+        "15-Case Evaluation Matrix",
+        "Operational Runbook Templates"
+      ],
+      "hands_on_practice": "Execute all 15 empirical test cases across the two prototypes, document pass/fail results and failure reasons, compile stakeholder runbooks, and present demonstrations with human-in-the-loop oversight.",
+      "assignment": {
+        "title": "Two Supervised Agent Prototypes & 15-Case Evaluation Capstone Package",
+        "description": "Submit the complete portfolio package: (1) Tool-Using Business Information Assistant, (2) Safe Business Task-Routing Agent, (3) 15-Case Agent Evaluation & Safety Test Suite with executed results, and (4) Operational Runbooks with risk assessments."
+      },
+      "competencies": [
+        "Ability to deliver complete, documented, and tested single-agent prototypes suitable for professional portfolios",
+        "Mastery in executing and reporting empirical 15-case evaluation matrices with rigorous failure diagnostics",
+        "Excellence in communicating agent capabilities, safety boundaries, and human oversight requirements to business stakeholders"
+      ],
+      "assessment_criteria": "Comprehensive evaluation across prototype functionality, evaluation matrix completeness, safety enforcement proof, and documentation clarity."
+    }
+  ],
+  "what_you_will_build": [
+    {
+      "project_number": 1,
+      "badge": "Portfolio Project 01 — Document Grounding & Attribution",
+      "title": "Tool-Using Business Information Assistant",
+      "subtitle": "Grounded Knowledge Retrieval & Source Attribution Agent",
+      "scenario": "An educational institute, SaaS provider, or enterprise team needs an AI assistant capable of answering user inquiries strictly using authorized business documentation (e.g. course catalogs, product specifications, company policies, or operating procedures). Rather than hallucinating or relying on unverified pre-training knowledge, the agent must interpret the user's inquiry, call a dedicated information lookup tool to query approved knowledge files, validate retrieved snippets, formulate a grounded answer with explicit source citations, and transparently declare when requested information is absent.",
+      "required_capabilities": [
+        "Accept user queries and decompose complex multi-part questions into specific search parameters",
+        "Invoke at least one permitted information retrieval tool querying approved synthetic business records",
+        "Extract and validate relevant document snippets while filtering out irrelevant noise",
+        "Formulate clear, conversational, and factually grounded responses strictly supported by retrieved facts",
+        "Provide explicit source attribution and document references for every factual claim made",
+        "Detect missing or ambiguous information and gracefully inform the user rather than guessing",
+        "Log observable tool invocations, parameters, and latency in an audit trace",
+        "Enforce strict read-only permissions preventing unauthorized data manipulation"
+      ],
+      "deliverables": [
+        "Agent architecture diagram and system instruction prompt with role boundaries",
+        "Approved synthetic knowledge repository (FAQ catalog, course specs, or product data)",
+        "JSON-based tool schema defining the search/lookup function parameters and return contracts",
+        "Verified tool invocation trace showing query parameters, returned snippets, and execution latency",
+        "Grounded response demonstrations including transparent source citations (e.g., '[Doc: Course-Catalog-2027, Sec: 4.2]')",
+        "Negative test cases demonstrating graceful missing-information handling without hallucination",
+        "Tool failure recovery test simulating knowledge source unavailability with fallback messaging",
+        "Comprehensive prototype runbook detailing setup, configuration, and maintenance procedures"
+      ],
+      "tools": [
+        "OpenAI Agent Tooling / Visual Builder",
+        "JSON Tool Schema Builder",
+        "Synthetic Knowledge Base",
+        "Trace Inspector"
+      ],
+      "expected_output": "A functional, verified business information assistant that reliably answers user inquiries using authorized tools, provides clear source citations, and safely handles missing data.",
+      "evaluation_summary": "Evaluated across valid factual inquiries, missing data tests, multi-step queries, and simulated tool outages with complete trace logging."
+    },
+    {
+      "project_number": 2,
+      "badge": "Portfolio Project 02 — Bounded Autonomy & Human Approval",
+      "title": "Safe Business Task-Routing Agent",
+      "subtitle": "Categorization, Tool Routing & Human-in-the-Loop Approval Agent",
+      "scenario": "A business operations department receives diverse incoming requests ranging from read-only status lookups (e.g., order tracking, inventory checks) to sensitive write operations (e.g., updating customer addresses, issuing credit notes, modifying booking dates). The business requires an intelligent routing agent that can classify requests, validate input parameters, invoke safe read-only tools automatically, but strictly pause and request human approval before executing any sensitive write action. If a human manager rejects the action, the agent must abort execution safely and notify the requester.",
+      "required_capabilities": [
+        "Receive and parse unstructured incoming business requests across multiple operational categories",
+        "Validate mandatory parameter fields and reject malformed or incomplete submissions",
+        "Classify task category and map intent to an authorized tool within the permission matrix",
+        "Automatically execute safe read-only tools (e.g., 'check_order_status', 'lookup_customer_tier')",
+        "Intercept sensitive write actions (e.g., 'update_shipping_address', 'cancel_booking') with a mandatory human approval gate",
+        "Generate a structured approval payload presenting proposed action, entity ID, and reason to the human reviewer",
+        "Execute approved write operations only upon receiving a cryptographically valid approval token",
+        "Gracefully handle rejection events, informing the requester of the reviewer's decision without modifying state",
+        "Maintain an immutable execution trace recording inputs, decisions, approvals, and outcomes"
+      ],
+      "deliverables": [
+        "Agent architecture diagram and task classification decision tree",
+        "Allowed action inventory and tool permission matrix (distinguishing read-only vs sensitive write operations)",
+        "JSON tool schemas with parameter validation contracts for all connected tools",
+        "Interactive human approval flow demonstration (via mock Slack alert or web approval prompt)",
+        "Rejection branch demonstration showing clean abort behavior when human manager denies the action",
+        "Permission denial test showing agent declining unsupported or prohibited tool calls",
+        "Complete observable execution trace capturing incoming request, classification, approval wait, and final result",
+        "Operational safety runbook with escalation protocols and reviewer guidelines"
+      ],
+      "tools": [
+        "OpenAI Agent Tooling / Visual Builder",
+        "n8n AI Agent Node",
+        "Postman",
+        "Mock Approval Webhook",
+        "Trace Inspector"
+      ],
+      "expected_output": "A supervised task-routing agent that accurately classifies business requests, executes read-only tools autonomously, and enforces non-negotiable human approval before taking sensitive write actions.",
+      "evaluation_summary": "Evaluated across routine read tasks, sensitive write approval requests, manager rejections, and unauthorized action attempts."
+    }
+  ],
+  "final_deliverables": [],
+  "student_deliverables_and_evidence": [],
+  "assessment": null,
+  "certification": {
+    "type": "Institution-Issued Course Completion Certificate",
+    "issuer": "Nova Skills",
+    "title": "Certificate of Completion in AI Agents Fundamentals: Design, Tools & Safety",
+    "description": "Awarded upon successful completion of all six curriculum modules, supervised laboratory assessments, and verified submission of two working agent prototypes and the 15-case evaluation matrix.",
+    "disclaimer": "This credential is an institutional certificate of completion issued by Nova Skills. It is not an official certification issued or endorsed by OpenAI, Anthropic, Google, or n8n. Course completion does not guarantee employment, client contracts, or autonomous agent security."
+  },
+  "career_paths": [
+    {
+      "role": "Junior AI Agent Prototype Developer",
+      "domain": "Applied AI Prototyping",
+      "description": "Build, configure, and test single-agent prototypes using visual builders, tool connectors, and human approval gates."
+    },
+    {
+      "role": "AI Workflow Design Assistant",
+      "domain": "Process & Experience Design",
+      "description": "Map human-agent workflows, author clear agent instructions, define tool schemas, and document execution boundaries."
+    },
+    {
+      "role": "Agentic AI Operations Assistant",
+      "domain": "Operations & Integration",
+      "description": "Monitor agent execution logs, verify tool permissions, maintain knowledge bases, and coordinate human review queues."
+    },
+    {
+      "role": "AI Tool Integration Assistant",
+      "domain": "Technical Integration",
+      "description": "Connect business APIs and endpoints to agent platforms, specifying JSON parameter contracts and validation rules."
+    },
+    {
+      "role": "AI Agent Testing Assistant",
+      "domain": "Quality Assurance & Evaluation",
+      "description": "Execute empirical evaluation test suites across agent prototypes, grading outputs against rubrics and logging failures."
+    },
+    {
+      "role": "AI Quality Assurance Assistant",
+      "domain": "Risk & Compliance",
+      "description": "Test agent prototypes against prompt-injection attacks, unauthorized tool attempts, and data leakage scenarios."
+    },
+    {
+      "role": "Business AI Prototype Coordinator",
+      "domain": "Digital Transformation",
+      "description": "Liaise between business stakeholders and technical teams to identify viable agent use cases and assess automation risks."
+    },
+    {
+      "role": "Agent Workflow Documentation Assistant",
+      "domain": "Technical Documentation",
+      "description": "Draft comprehensive operational runbooks, tool permission matrices, and user guidelines for deployed agent assistants."
+    },
+    {
+      "role": "Entry-Level AI Solutions Support",
+      "domain": "Application Support",
+      "description": "Investigate agent errors, inspect execution traces, identify failed tool arguments, and support end-user interactions."
+    }
+  ],
+  "freelance_applications": [],
+  "business_use_cases": [],
+  "industry_workflow": [],
+  "best_practices": [],
+  "common_mistakes": [],
+  "not_covered": [
+    "Production AI engineering and custom Python SDK architectures",
+    "Complex multi-agent frameworks (CrewAI, AutoGen, LangGraph)",
+    "Vector databases and enterprise RAG embedding pipelines",
+    "Autonomous financial operations or unrestricted tool execution",
+    "Production infrastructure deployment or Kubernetes clustering",
+    "Official third-party certifications from OpenAI, Anthropic, or n8n"
+  ],
+  "next_learning_path": [],
+  "faq": [
+    {
+      "question": "What is the AI Agents Fundamentals course?",
+      "answer": "AI Agents Fundamentals: Design, Tools & Safety is a foundational, practical certification course that teaches you how to design, prototype, and evaluate tool-using AI agents. Unlike ordinary chatbots that only generate conversational text, agents decompose tasks, select and execute permitted tools, access document-grounded knowledge, and perform multi-step workflows under strict human oversight and safety guardrails."
+    },
+    {
+      "question": "Is this course suitable for beginners?",
+      "answer": "Yes. The course is structured for beginners and intermediate learners with basic computer and web-application literacy. No prior programming or Python experience is required; we focus on visual agent builders, low-code n8n AI Agent nodes, JSON tool schemas, and supervised prototyping. Optional code-first concepts are demonstrated, but visual mastery is the primary evaluated pathway."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course spans 6 Weeks (48 total instructional hours, at 8 hours per week: 4 hours of live technical instruction and 4 hours of supervised studio lab). The transparent institutional fee is exactly ₹7,900 (+ applicable GST), adhering to Truth in Pricing with zero artificial countdown markups or fake retail strike-throughs. Flexible two-installment options are available."
+    },
+    {
+      "question": "What is the difference between a chatbot and an AI agent?",
+      "answer": "A traditional chatbot primarily communicates conversationally with a user, generating text based on pre-training and immediate prompt context. An AI agent uses a language model as a reasoning and decision engine to decompose user goals, select from permitted tools (such as database searches or API calls), observe tool results, and complete multi-step tasks within bounded operational guardrails."
+    },
+    {
+      "question": "What is the difference between AI agents and n8n automation?",
+      "answer": "Deterministic automations (like standard n8n workflows) follow predefined, hardcoded conditional paths (e.g. 'If email contains X, do Y'). An AI agent operates with bounded autonomy: the model evaluates incoming input dynamically and decides which tools to call, in what sequence, and with what arguments to achieve the user's objective, while respecting safety constraints."
+    },
+    {
+      "question": "Will I learn how AI agents use tools?",
+      "answer": "Yes. Tool calling is a central pillar of the curriculum (Module 03). You will learn how models inspect tool names, descriptions, and JSON parameter schemas, select appropriate tools for specific sub-tasks, receive and interpret tool execution results, and handle tool errors or timeouts."
+    },
+    {
+      "question": "What is function calling?",
+      "answer": "Function calling (or tool calling) is a model capability where an LLM detects when external tools are needed, pauses generation, and outputs structured JSON containing the function name and validated arguments. The host application executes the tool locally and returns the result to the model, ensuring external code execution remains under developer control."
+    },
+    {
+      "question": "Will I learn MCP fundamentals?",
+      "answer": "Yes. We introduce the core architectural concepts of the Model Context Protocol (MCP): why the open standard exists, client/server relationships, tools vs resources vs prompts, tool discovery mechanisms, trust boundaries, and user permission models. Complex custom MCP server engineering is reserved for advanced tracks."
+    },
+    {
+      "question": "Do I need Python programming?",
+      "answer": "No. Advanced Python programming is not mandatory. You will learn to construct, configure, and inspect agents using supported visual agent builders, OpenAI agent tooling, and n8n's visual AI Agent nodes. Basic understanding of JSON syntax and API concepts is taught step-by-step during the course."
+    },
+    {
+      "question": "Will I build actual agent prototypes?",
+      "answer": "Yes. You will build, test, and document two complete, supervised agent prototypes: (1) a Tool-Using Business Information Assistant that answers inquiries with verified source attribution, and (2) a Safe Business Task-Routing Agent that chooses allowed tools and pauses for human approval before sensitive actions."
+    },
+    {
+      "question": "How many practical projects are included?",
+      "answer": "The portfolio consists of three concrete deliverables: (1) The Tool-Using Business Information Assistant, (2) The Safe Business Task-Routing Agent, and (3) The 15-Case Agent Evaluation & Safety Test Suite with full trace logs and 5-dimension rubric scores."
+    },
+    {
+      "question": "What is human-in-the-loop approval?",
+      "answer": "Human-in-the-loop (HITL) approval is a critical safety architecture where sensitive or consequential agent actions (such as sending customer emails, modifying database records, or initiating financial transactions) are paused before execution. The agent creates a staged action proposal, alerts a human reviewer, and only executes if valid approval is granted."
+    },
+    {
+      "question": "Will I learn prompt-injection awareness?",
+      "answer": "Yes, prompt-injection defense is a compulsory topic (Module 05). You will learn the difference between direct user prompt overrides and indirect prompt injections concealed within retrieved documents or third-party tool responses, and how to implement pre-execution permission checks and output sanitization."
+    },
+    {
+      "question": "What are AI agent guardrails?",
+      "answer": "Guardrails are layered programmatic safeguards that restrict agent behavior. They include input validation filters, role and instruction boundary constraints, tool-level permission checks (principle of least privilege), human approval checkpoints, and output schema validators. Guardrails significantly reduce risk but do not guarantee complete immunity."
+    },
+    {
+      "question": "Does the course include agent testing?",
+      "answer": "Yes. Thorough empirical testing is a core learning outcome. You will learn how to create test datasets, assess agents against normal requests, evaluate ambiguous inputs, test tool selection traps, verify permission denials, and document failure recovery."
+    },
+    {
+      "question": "What is included in the 15-case evaluation dataset?",
+      "answer": "The 15-case evaluation dataset includes: 5 valid requests with expected responses, 3 incorrect or ambiguous tool-selection traps, 2 permission error and human approval tests, 3 prompt-injection attacks (direct, indirect in document, and inside tool responses), and 2 failure recovery tests (tool timeout and malformed response)."
+    },
+    {
+      "question": "Will I learn agent tracing and debugging?",
+      "answer": "Yes. You will learn how to inspect observable execution traces—including incoming user prompts, selected tools, generated arguments, tool execution output, and decision timestamps. We emphasize observable operational debugging rather than speculating on unobservable internal model chain-of-thought."
+    },
+    {
+      "question": "Does the course teach advanced multi-agent systems?",
+      "answer": "No. This course focuses on single-agent architecture, bounded autonomy, tool calling, and safety. Complex multi-agent orchestration frameworks (such as CrewAI, AutoGen, and LangGraph multi-agent swarms) are advanced engineering topics covered in Nova Skills' longer AI Solutions Engineering programme."
+    },
+    {
+      "question": "Are paid AI API subscriptions compulsory?",
+      "answer": "No. You are not required to maintain multiple expensive enterprise subscriptions. We utilize budget-controlled test accounts, sandbox endpoints, and visual builder environments with minimal token usage. We also teach you how to forecast execution costs and manage API token budgets responsibly."
+    },
+    {
+      "question": "Does this course include production agent deployment?",
+      "answer": "No. The course focuses on designing, prototyping, testing, and evaluating safe agent architectures in controlled studio environments. Enterprise Kubernetes clustering, high-availability server deployment, and production DevOps infrastructure are outside the scope of this foundational certification."
+    },
+    {
+      "question": "Will I receive an official OpenAI certification?",
+      "answer": "Upon successful completion of all coursework and project assessments, Nova Skills awards an institutional Certificate of Completion in AI Agents Fundamentals: Design, Tools & Safety. This verifies your practical competency and portfolio deliverables; it is not an official vendor certification issued by OpenAI, Anthropic, or n8n."
+    },
+    {
+      "question": "What career opportunities are available?",
+      "answer": "Graduates can explore entry-level roles such as Junior AI Agent Prototype Developer, AI Workflow Design Assistant, Agentic AI Operations Assistant, AI Tool Integration Assistant, AI Quality Assurance Assistant, and Business AI Prototype Coordinator across modern tech agencies, startups, and enterprise operations."
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}
