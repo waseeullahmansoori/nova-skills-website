@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-spokencert" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-spokencert" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-spokencert" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-spokencert" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <pattern id="grid-spokencert" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-spokencert)"/>
+  <rect width="800" height="600" fill="url(#grid-spokencert)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-spokencert)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-spokencert)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">SPOKEN ENGLISH FOUNDATIONS • DAILY CONVERSATIONS</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#38bdf8" fill-opacity="0.18" stroke="#38bdf8" stroke-opacity="0.5"/>
+    <rect x="96" y="166" width="300" height="84" rx="16" fill="#132d52" stroke="#38bdf8" stroke-opacity="0.5"/>
+    <text x="118" y="198" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#7dd3fc">Speaker A • Guided Prompt</text>
+    <text x="118" y="224" font-family="system-ui,sans-serif" font-size="12" fill="#e2e8f0">"Could you walk me through today's plan?"</text>
+    <rect x="196" y="268" width="320" height="84" rx="16" fill="#064e5b" stroke="#10b981"/>
+    <text x="218" y="300" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#86efac">Learner Reply • Natural Phrasing</text>
+    <text x="218" y="326" font-family="system-ui,sans-serif" font-size="12" fill="#ffffff">"Sure! First, we will review key priorities."</text>
+    <rect x="96" y="376" width="420" height="84" rx="12" fill="#091a32" stroke="rgba(148,163,184,0.2)"/>
+    <rect x="116" y="404" width="122" height="28" rx="14" fill="#38bdf8" fill-opacity="0.18" stroke="#38bdf8" stroke-opacity="0.45"/>
+  <text x="177" y="422" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Grammar in Use</text>
+    <rect x="250" y="404" width="122" height="28" rx="14" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-opacity="0.45"/>
+  <text x="311" y="422" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Daily Vocabulary</text>
+    <rect x="384" y="404" width="114" height="28" rx="14" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-opacity="0.45"/>
+  <text x="441" y="422" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Voice Playback</text>
+    <rect x="536" y="166" width="172" height="294" rx="12" fill="#132d52" stroke="rgba(148,163,184,0.2)"/>
+    <text x="556" y="198" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1">CORE CONFIDENCE</text>
+    <text x="622" y="260" text-anchor="middle" font-family="system-ui,sans-serif" font-size="30" font-weight="900" fill="#75d766">B2+</text>
+    <text x="622" y="286" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#94a3b8">Everyday Fluency</text>
+    <rect x="554" y="330" width="136" height="26" rx="13" fill="#38bdf8" fill-opacity="0.18" stroke="#38bdf8" stroke-opacity="0.45"/>
+  <text x="622" y="347" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Guided Roleplay</text>
+    <rect x="554" y="372" width="136" height="26" rx="13" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-opacity="0.45"/>
+  <text x="622" y="389" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Hesitation Fix</text>
+  
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-youngcoders" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-youngcoders" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-youngcoders" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-youngcoders" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <pattern id="grid-youngcoders" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-youngcoders)"/>
+  <rect width="800" height="600" fill="url(#grid-youngcoders)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-youngcoders)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-youngcoders)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">YOUNG CODERS LAB • BLOCKS, ARCADE &amp; PYTHON</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-opacity="0.5"/>
+    <rect x="94" y="162" width="276" height="304" rx="12" fill="#0d2342" stroke="rgba(245,158,11,0.4)"/>
+    <text x="114" y="190" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fde68a">LOGIC BLOCKS → CODE</text>
+    <rect x="114" y="210" width="220" height="38" rx="9" fill="#f59e0b"/>
+    <text x="130" y="233" font-family="system-ui,sans-serif" font-size="12" font-weight="800" fill="#011731">when [SPACE] pressed</text>
+    <rect x="130" y="256" width="210" height="38" rx="9" fill="#3b82f6"/>
+    <text x="146" y="279" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">move hero (10) steps</text>
+    <rect x="130" y="302" width="210" height="38" rx="9" fill="#10b981"/>
+    <text x="146" y="325" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">add +1 score star</text>
+    <rect x="114" y="388" width="108" height="28" rx="14" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-opacity="0.45"/>
+  <text x="168" y="406" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Scratch &amp; Arcade</text>
+    <rect x="232" y="388" width="118" height="28" rx="14" fill="#06b6d4" fill-opacity="0.18" stroke="#06b6d4" stroke-opacity="0.45"/>
+  <text x="291" y="406" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Thonny Python 3</text>
+    <rect x="390" y="162" width="318" height="304" rx="12" fill="#071529" stroke="rgba(6,182,212,0.5)"/>
+    <text x="412" y="190" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#67e8f9">GAME STAGE • SCORE: 420</text>
+    <circle cx="482" cy="306" r="32" fill="#06b6d4"/>
+    <circle cx="492" cy="296" r="6" fill="#011731"/>
+    <polygon points="586,256 596,278 620,280 602,296 608,320 586,308 564,320 570,296 552,280 576,278" fill="#fbbf24"/>
+    <rect x="424" y="366" width="250" height="18" rx="9" fill="#10b981" opacity="0.85"/>
+    <text x="549" y="424" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="11.5" fill="#86efac">if score == 10: level_up()</text>
+  
+</svg>

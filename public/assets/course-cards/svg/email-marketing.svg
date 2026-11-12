@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-email" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-email" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0599a8" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0599a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-email" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-email" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0599a8"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <pattern id="grid-email" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-email)"/>
+  <rect width="800" height="600" fill="url(#grid-email)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-email)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-email)"/>
+  
+    <rect x="68" y="108" width="420" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="420" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="420" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="488" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">DRIP AUTOMATION BUILDER • MAILCHIMP &amp; BREVO</text>
+  <rect x="412" y="117" width="62" height="16" rx="8" fill="#0599a8" fill-opacity="0.18" stroke="#0599a8" stroke-opacity="0.5"/>
+    <rect x="198" y="162" width="160" height="44" rx="10" fill="#0599a8" fill-opacity="0.22" stroke="#0599a8" stroke-width="1.5"/>
+    <text x="278" y="188" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">Trigger: Lead Signup</text>
+    <line x1="278" y1="206" x2="278" y2="236" stroke="#64748b" stroke-width="2"/>
+    <rect x="208" y="236" width="140" height="34" rx="17" fill="#1e293b" stroke="#f59e0b" stroke-opacity="0.7"/>
+    <text x="278" y="257" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fcd34d">Wait 24 Hours</text>
+    <line x1="278" y1="270" x2="180" y2="310" stroke="#64748b" stroke-width="2"/>
+    <line x1="278" y1="270" x2="376" y2="310" stroke="#64748b" stroke-width="2"/>
+    <rect x="100" y="310" width="160" height="58" rx="10" fill="#132d52" stroke="#75d766"/>
+    <text x="180" y="336" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#75d766">Opened Email #1</text>
+    <text x="180" y="354" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="#cbd5e1">Send Case Study</text>
+    <rect x="296" y="310" width="160" height="58" rx="10" fill="#132d52" stroke="#f59e0b"/>
+    <text x="376" y="336" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#fcd34d">Not Opened</text>
+    <text x="376" y="354" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="#cbd5e1">Resend Subject B</text>
+    <rect x="100" y="394" width="356" height="74" rx="10" fill="rgba(15,36,66,0.9)" stroke="rgba(148,163,184,0.2)"/>
+    <text x="122" y="424" font-family="system-ui,sans-serif" font-size="11" fill="#94a3b8">OPEN RATE</text>
+    <text x="122" y="450" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#75d766">41.8%</text>
+    <text x="242" y="424" font-family="system-ui,sans-serif" font-size="11" fill="#94a3b8">DELIVERABILITY</text>
+    <text x="242" y="450" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#38bdf8">99.2%</text>
+    <text x="372" y="424" font-family="system-ui,sans-serif" font-size="11" fill="#94a3b8">CTR</text>
+    <text x="372" y="450" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#fcd34d">6.4%</text>
+    <rect x="512" y="138" width="218" height="328" rx="16" fill="#0b1f3b" stroke="rgba(5,153,168,0.45)" stroke-width="1.5"/>
+    <rect x="530" y="160" width="182" height="84" rx="10" fill="url(#grad-email)" opacity="0.88"/>
+    <polygon points="530,160 621,214 712,160" fill="none" stroke="#ffffff" stroke-width="2.5" opacity="0.8"/>
+    <rect x="530" y="264" width="182" height="16" rx="8" fill="#f8fafc" opacity="0.88"/>
+    <rect x="530" y="292" width="150" height="10" rx="5" fill="#94a3b8" opacity="0.6"/>
+    <rect x="530" y="312" width="166" height="10" rx="5" fill="#94a3b8" opacity="0.5"/>
+    <rect x="530" y="346" width="182" height="40" rx="10" fill="#0599a8"/>
+    <text x="621" y="370" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">CTA: Book Demo →</text>
+  
+</svg>

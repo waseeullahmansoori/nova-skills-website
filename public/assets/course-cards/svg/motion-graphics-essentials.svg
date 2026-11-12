@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-mograph" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-mograph" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0599a8" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0599a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-mograph" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#75d766" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#75d766" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-mograph" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0599a8"/>
+      <stop offset="100%" stop-color="#75d766"/>
+    </linearGradient>
+    <pattern id="grid-mograph" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-mograph)"/>
+  <rect width="800" height="600" fill="url(#grid-mograph)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-mograph)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-mograph)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">2D MOTION GRAPHICS &amp; KINETIC TYPOGRAPHY</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#0599a8" fill-opacity="0.18" stroke="#0599a8" stroke-opacity="0.5"/>
+    <rect x="92" y="160" width="380" height="308" rx="12" fill="#08182e" stroke="rgba(5,153,168,0.45)"/>
+    <path d="M 135 385 Q 240 190 420 245" fill="none" stroke="#75d766" stroke-width="2.5" stroke-dasharray="6 5"/>
+    <circle cx="135" cy="385" r="22" fill="#0599a8" opacity="0.4"/>
+    <circle cx="255" cy="272" r="28" fill="#0599a8" opacity="0.7"/>
+    <rect x="382" y="212" width="64" height="64" rx="14" transform="rotate(14 414 244)" fill="url(#grad-mograph)"/>
+    <text x="282" y="424" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="900" fill="#ffffff" letter-spacing="2">KINETIC TYPE</text>
+    <rect x="492" y="160" width="216" height="308" rx="12" fill="#132d52" stroke="rgba(148,163,184,0.22)"/>
+    <text x="512" y="188" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#94a3b8">EASING &amp; SHAPE LAYERS</text>
+    <path d="M 522 302 C 562 302, 578 214, 676 214" fill="none" stroke="#75d766" stroke-width="3.5"/>
+    <line x1="522" y1="302" x2="568" y2="302" stroke="#38bdf8" stroke-width="2"/>
+    <line x1="676" y1="214" x2="628" y2="214" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="512" y="344" width="174" height="28" rx="14" fill="#0599a8" fill-opacity="0.18" stroke="#0599a8" stroke-opacity="0.45"/>
+  <text x="599" y="362" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Ease-In-Out Bezier</text>
+    <rect x="512" y="386" width="174" height="28" rx="14" fill="#75d766" fill-opacity="0.18" stroke="#75d766" stroke-opacity="0.45"/>
+  <text x="599" y="404" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Vector Rigging</text>
+  
+</svg>

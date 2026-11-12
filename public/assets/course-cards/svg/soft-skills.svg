@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-softskills" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-softskills" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0599a8" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0599a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-softskills" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#75d766" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#75d766" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-softskills" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0599a8"/>
+      <stop offset="100%" stop-color="#75d766"/>
+    </linearGradient>
+    <pattern id="grid-softskills" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-softskills)"/>
+  <rect width="800" height="600" fill="url(#grid-softskills)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-softskills)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-softskills)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">WORKPLACE EFFECTIVENESS &amp; COLLABORATION MATRIX</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#75d766" fill-opacity="0.18" stroke="#75d766" stroke-opacity="0.5"/>
+    <rect x="94" y="162" width="310" height="304" rx="12" fill="#0d2342" stroke="rgba(117,215,102,0.4)"/>
+    <polygon points="249,210 342,276 308,382 190,382 156,276" fill="rgba(5,153,168,0.25)" stroke="#0599a8" stroke-width="2"/>
+    <polygon points="249,232 320,282 294,364 204,364 178,282" fill="rgba(117,215,102,0.28)" stroke="#75d766" stroke-width="2.5"/>
+    <text x="249" y="196" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">TIME MANAGEMENT</text>
+    <text x="148" y="276" text-anchor="end" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#7dd3fc">EQ</text>
+    <text x="352" y="276" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" fill="#7dd3fc">OWNERSHIP</text>
+    <text x="249" y="424" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#86efac">TEAMWORK &amp; ADAPTABILITY</text>
+    <rect x="424" y="162" width="284" height="304" rx="12" fill="#132d52" stroke="rgba(148,163,184,0.22)"/>
+    <text x="444" y="192" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1">CORE WORKPLACE HABITS</text>
+    
+      <rect x="444" y="214" width="244" height="42" rx="8" fill="#08182e" stroke="#0599a8" stroke-opacity="0.5"/>
+      <circle cx="464" cy="235" r="6" fill="#0599a8"/>
+      <text x="480" y="239" font-family="system-ui,sans-serif" font-size="11.5" font-weight="600" fill="#e2e8f0">Deep Focus &amp; Prioritisation</text>
+    
+      <rect x="444" y="270" width="244" height="42" rx="8" fill="#08182e" stroke="#38bdf8" stroke-opacity="0.5"/>
+      <circle cx="464" cy="291" r="6" fill="#38bdf8"/>
+      <text x="480" y="295" font-family="system-ui,sans-serif" font-size="11.5" font-weight="600" fill="#e2e8f0">Active Listening &amp; Feedback</text>
+    
+      <rect x="444" y="326" width="244" height="42" rx="8" fill="#08182e" stroke="#a78bfa" stroke-opacity="0.5"/>
+      <circle cx="464" cy="347" r="6" fill="#a78bfa"/>
+      <text x="480" y="351" font-family="system-ui,sans-serif" font-size="11.5" font-weight="600" fill="#e2e8f0">Stakeholder Accountability</text>
+    
+      <rect x="444" y="382" width="244" height="42" rx="8" fill="#08182e" stroke="#75d766" stroke-opacity="0.5"/>
+      <circle cx="464" cy="403" r="6" fill="#75d766"/>
+      <text x="480" y="407" font-family="system-ui,sans-serif" font-size="11.5" font-weight="600" fill="#e2e8f0">Cross-Team Problem Solving</text>
+    
+  
+</svg>

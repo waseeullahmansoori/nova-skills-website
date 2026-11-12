@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-msword" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-msword" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-msword" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-msword" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <pattern id="grid-msword" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-msword)"/>
+  <rect width="800" height="600" fill="url(#grid-msword)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-msword)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-msword)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">MICROSOFT WORD • STYLES, TOC &amp; MAIL MERGE</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#2563eb" fill-opacity="0.18" stroke="#2563eb" stroke-opacity="0.5"/>
+    <rect x="114" y="162" width="324" height="304" rx="10" fill="#f8fafc"/>
+    <rect x="138" y="184" width="180" height="16" rx="4" fill="#1d4ed8"/>
+    <rect x="138" y="210" width="276" height="38" rx="6" fill="#dbeafe"/>
+    <text x="150" y="234" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#1e3a8a">AUTO TABLE OF CONTENTS • H1 / H2</text>
+    
+      <rect x="138" y="266" width="270" height="9" rx="4" fill="#475569" opacity="0.8"/>
+    
+      <rect x="138" y="288" width="228" height="9" rx="4" fill="#475569" opacity="0.8"/>
+    
+      <rect x="138" y="310" width="270" height="9" rx="4" fill="#475569" opacity="0.8"/>
+    
+      <rect x="138" y="344" width="228" height="9" rx="4" fill="#475569" opacity="0.8"/>
+    
+      <rect x="138" y="366" width="270" height="9" rx="4" fill="#475569" opacity="0.8"/>
+    
+      <rect x="138" y="388" width="228" height="9" rx="4" fill="#475569" opacity="0.8"/>
+    
+      <rect x="138" y="410" width="270" height="9" rx="4" fill="#475569" opacity="0.8"/>
+    
+    <rect x="460" y="162" width="248" height="304" rx="12" fill="#132d52" stroke="rgba(56,189,248,0.4)"/>
+    <text x="480" y="192" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#93c5fd">MAIL MERGE AUTOMATION</text>
+    <rect x="480" y="214" width="208" height="72" rx="10" fill="#08182e" stroke="#2563eb"/>
+    <text x="584" y="244" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#e2e8f0">Excel Recipient Table</text>
+    <text x="584" y="266" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="10.5" fill="#7dd3fc">&lt;&lt;Name&gt;&gt; • &lt;&lt;Invoice_ID&gt;&gt;</text>
+    <line x1="584" y1="286" x2="584" y2="316" stroke="#38bdf8" stroke-width="2.5"/>
+    <rect x="480" y="316" width="208" height="62" rx="10" fill="#08182e" stroke="#75d766"/>
+    <text x="584" y="351" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#86efac">250 Custom PDFs Ready</text>
+    <rect x="480" y="404" width="208" height="28" rx="14" fill="#38bdf8" fill-opacity="0.18" stroke="#38bdf8" stroke-opacity="0.45"/>
+  <text x="584" y="422" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Track Changes &amp; Templates</text>
+  
+</svg>

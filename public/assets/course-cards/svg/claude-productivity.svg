@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-claude" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-claude" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-claude" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0599a8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0599a8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-claude" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#0599a8"/>
+    </linearGradient>
+    <pattern id="grid-claude" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-claude)"/>
+  <rect width="800" height="600" fill="url(#grid-claude)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-claude)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-claude)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">CLAUDE WORKSPACE • SKILLS &amp; LIVE ARTIFACTS</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#f97316" fill-opacity="0.18" stroke="#f97316" stroke-opacity="0.5"/>
+    <rect x="92" y="160" width="252" height="310" rx="12" fill="rgba(15,36,66,0.9)" stroke="rgba(148,163,184,0.2)"/>
+    <text x="110" y="186" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fdba74">PROJECT INSTRUCTIONS</text>
+    <rect x="110" y="204" width="216" height="62" rx="10" fill="#132d52" stroke="#f97316" stroke-opacity="0.45"/>
+    <text x="124" y="232" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">Custom Project Knowledge</text>
+    <text x="124" y="250" font-family="system-ui,sans-serif" font-size="10.5" fill="#fdba74">Tone + Domain SOP Rules</text>
+    <rect x="110" y="284" width="216" height="62" rx="10" fill="#132d52" stroke="#0599a8" stroke-opacity="0.45"/>
+    <text x="124" y="312" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">Modular Reusable Skills</text>
+    <text x="124" y="330" font-family="system-ui,sans-serif" font-size="10.5" fill="#7dd3fc">SOPs • Audits • Workflows</text>
+    <rect x="110" y="368" width="98" height="26" rx="13" fill="#f97316" fill-opacity="0.18" stroke="#f97316" stroke-opacity="0.45"/>
+  <text x="159" y="385" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Projects</text>
+    <rect x="216" y="368" width="104" height="26" rx="13" fill="#0599a8" fill-opacity="0.18" stroke="#0599a8" stroke-opacity="0.45"/>
+  <text x="268" y="385" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Artifacts UI</text>
+    <rect x="364" y="160" width="344" height="310" rx="12" fill="rgba(13,31,58,0.95)" stroke="#0599a8" stroke-opacity="0.6"/>
+    <text x="386" y="188" font-family="system-ui,sans-serif" font-size="11.5" font-weight="800" fill="#7dd3fc">INTERACTIVE ARTIFACT CANVAS</text>
+    <rect x="386" y="206" width="300" height="142" rx="10" fill="#071528" stroke="rgba(148,163,184,0.2)"/>
+    <rect x="406" y="226" width="120" height="10" rx="5" fill="#f97316"/>
+    <rect x="406" y="248" width="240" height="8" rx="4" fill="#cbd5e1" opacity="0.75"/>
+    <rect x="406" y="268" width="210" height="8" rx="4" fill="#94a3b8" opacity="0.55"/>
+    <rect x="406" y="294" width="256" height="34" rx="6" fill="#0599a8" fill-opacity="0.2" stroke="#0599a8"/>
+    <rect x="386" y="366" width="142" height="84" rx="10" fill="#132d52"/>
+    <text x="457" y="405" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#75d766">3.4x</text>
+    <text x="457" y="428" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="#94a3b8">Workflow Output</text>
+    <rect x="544" y="366" width="142" height="84" rx="10" fill="#132d52"/>
+    <text x="615" y="405" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="800" fill="#fdba74">v2.4</text>
+    <text x="615" y="428" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="#94a3b8">Live Versioned Spec</text>
+  
+</svg>

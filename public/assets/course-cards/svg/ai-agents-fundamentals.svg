@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-agents" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-agents" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0599a8" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0599a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-agents" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#75d766" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#75d766" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-agents" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0599a8"/>
+      <stop offset="100%" stop-color="#75d766"/>
+    </linearGradient>
+    <pattern id="grid-agents" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-agents)"/>
+  <rect width="800" height="600" fill="url(#grid-agents)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-agents)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-agents)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">AUTONOMOUS AI AGENT ORCHESTRATION &amp; TOOL SAFETY</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#0599a8" fill-opacity="0.18" stroke="#0599a8" stroke-opacity="0.5"/>
+    <line x1="250" y1="305" x2="400" y2="305" stroke="#0599a8" stroke-width="3"/>
+    <line x1="400" y1="305" x2="555" y2="215" stroke="#75d766" stroke-width="2.5"/>
+    <line x1="400" y1="305" x2="555" y2="305" stroke="#0599a8" stroke-width="2.5"/>
+    <line x1="400" y1="305" x2="555" y2="395" stroke="#38bdf8" stroke-width="2.5"/>
+    <rect x="96" y="268" width="154" height="74" rx="12" fill="#132d52" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="173" y="300" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="800" fill="#fff">User Objective</text>
+    <text x="173" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#7dd3fc">Task + Guardrails</text>
+    <circle cx="400" cy="305" r="56" fill="#0599a8" fill-opacity="0.24" stroke="#75d766" stroke-width="2.5"/>
+    <text x="400" y="300" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="800" fill="#fff">AGENT</text>
+    <text x="400" y="319" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#75d766">Planner Loop</text>
+    <rect x="555" y="182" width="150" height="58" rx="10" fill="#132d52" stroke="#75d766"/>
+    <text x="630" y="216" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#86efac">API &amp; Web Tools</text>
+    <rect x="555" y="276" width="150" height="58" rx="10" fill="#132d52" stroke="#0599a8"/>
+    <text x="630" y="310" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#7dd3fc">Vector Memory</text>
+    <rect x="555" y="370" width="150" height="58" rx="10" fill="#132d52" stroke="#38bdf8"/>
+    <text x="630" y="404" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">Human Approval</text>
+  
+</svg>

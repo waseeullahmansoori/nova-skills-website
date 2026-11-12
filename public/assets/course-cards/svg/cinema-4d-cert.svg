@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-c4d" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-c4d" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-c4d" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-c4d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <pattern id="grid-c4d" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-c4d)"/>
+  <rect width="800" height="600" fill="url(#grid-c4d)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-c4d)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-c4d)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">CINEMA 4D + REDSHIFT • MOGRAPH &amp; PRODUCT 3D</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#3b82f6" fill-opacity="0.18" stroke="#3b82f6" stroke-opacity="0.5"/>
+    <rect x="92" y="160" width="388" height="308" rx="12" fill="#08162b" stroke="rgba(59,130,246,0.4)"/>
+    
+      <rect x="145" y="225" width="44" height="118" rx="14" transform="rotate(-12 167 290)" fill="url(#grad-c4d)" opacity="0.55"/>
+    
+      <rect x="197" y="257" width="44" height="118" rx="14" transform="rotate(-12 219 290)" fill="url(#grad-c4d)" opacity="0.65"/>
+    
+      <rect x="249" y="225" width="44" height="118" rx="14" transform="rotate(-12 271 290)" fill="url(#grad-c4d)" opacity="0.75"/>
+    
+      <rect x="301" y="257" width="44" height="118" rx="14" transform="rotate(-12 323 290)" fill="url(#grad-c4d)" opacity="0.8500000000000001"/>
+    
+      <rect x="353" y="225" width="44" height="118" rx="14" transform="rotate(-12 375 290)" fill="url(#grad-c4d)" opacity="0.9500000000000001"/>
+    
+    <circle cx="380" cy="235" r="38" fill="#38bdf8" opacity="0.28" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="116" y="424" width="152" height="26" rx="13" fill="#3b82f6" fill-opacity="0.18" stroke="#3b82f6" stroke-opacity="0.45"/>
+  <text x="192" y="441" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Cloner &amp; Effectors</text>
+    <rect x="282" y="424" width="168" height="26" rx="13" fill="#ec4899" fill-opacity="0.18" stroke="#ec4899" stroke-opacity="0.45"/>
+  <text x="366" y="441" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Redshift GPU Render</text>
+    <rect x="498" y="160" width="210" height="308" rx="12" fill="#132d52" stroke="rgba(148,163,184,0.2)"/>
+    <text x="518" y="190" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#93c5fd">OBJECT MANAGER</text>
+    
+      <rect x="518" y="210" width="170" height="34" rx="7" fill="#08182e" stroke="rgba(59,130,246,0.3)"/>
+      <text x="534" y="231" font-family="ui-monospace,Consolas,monospace" font-size="10.5" fill="#e2e8f0">Null.Studio_Rig</text>
+    
+      <rect x="518" y="256" width="170" height="34" rx="7" fill="#08182e" stroke="rgba(59,130,246,0.3)"/>
+      <text x="534" y="277" font-family="ui-monospace,Consolas,monospace" font-size="10.5" fill="#e2e8f0">Cloner.ProductGrid</text>
+    
+      <rect x="518" y="302" width="170" height="34" rx="7" fill="#08182e" stroke="rgba(59,130,246,0.3)"/>
+      <text x="534" y="323" font-family="ui-monospace,Consolas,monospace" font-size="10.5" fill="#e2e8f0">Plain.Effector</text>
+    
+      <rect x="518" y="348" width="170" height="34" rx="7" fill="#08182e" stroke="rgba(59,130,246,0.3)"/>
+      <text x="534" y="369" font-family="ui-monospace,Consolas,monospace" font-size="10.5" fill="#e2e8f0">Redshift.AreaLight</text>
+    
+      <rect x="518" y="394" width="170" height="34" rx="7" fill="#08182e" stroke="rgba(59,130,246,0.3)"/>
+      <text x="534" y="415" font-family="ui-monospace,Consolas,monospace" font-size="10.5" fill="#e2e8f0">Camera.DoF_85mm</text>
+    
+  
+</svg>

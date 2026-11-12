@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-linkedin" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-linkedin" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-linkedin" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#75d766" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#75d766" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-linkedin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#75d766"/>
+    </linearGradient>
+    <pattern id="grid-linkedin" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-linkedin)"/>
+  <rect width="800" height="600" fill="url(#grid-linkedin)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-linkedin)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-linkedin)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">LINKEDIN PROFILE STUDIO • DISCOVERY &amp; INBOUND</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#0284c7" fill-opacity="0.18" stroke="#0284c7" stroke-opacity="0.5"/>
+    <rect x="94" y="160" width="400" height="308" rx="12" fill="#102544" stroke="rgba(148,163,184,0.22)"/>
+    <rect x="94" y="160" width="400" height="86" rx="12" fill="url(#grad-linkedin)"/>
+    <circle cx="152" cy="244" r="36" fill="#071934" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="152" cy="236" r="13" fill="#7dd3fc"/>
+    <path d="M 128 268 Q 152 248 176 268" fill="#7dd3fc"/>
+    <text x="204" y="276" font-family="system-ui,sans-serif" font-size="14" font-weight="800" fill="#ffffff">Role Headline + Value Proof</text>
+    <text x="204" y="296" font-family="system-ui,sans-serif" font-size="11" fill="#93c5fd">Open to Work &amp; Client Consulting • Featured Work</text>
+    <rect x="116" y="324" width="356" height="58" rx="8" fill="#08182e" stroke="rgba(2,132,199,0.4)"/>
+    <text x="134" y="348" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#86efac">FEATURED CASE STUDIES &amp; CREDENTIALS</text>
+    <rect x="134" y="396" width="106" height="26" rx="13" fill="#0284c7" fill-opacity="0.18" stroke="#0284c7" stroke-opacity="0.45"/>
+  <text x="187" y="413" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">SEO Keywords</text>
+    <rect x="252" y="396" width="110" height="26" rx="13" fill="#75d766" fill-opacity="0.18" stroke="#75d766" stroke-opacity="0.45"/>
+  <text x="307" y="413" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Content Cadence</text>
+    <rect x="374" y="396" width="98" height="26" rx="13" fill="#38bdf8" fill-opacity="0.18" stroke="#38bdf8" stroke-opacity="0.45"/>
+  <text x="423" y="413" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Outreach DMs</text>
+    <rect x="514" y="160" width="194" height="308" rx="12" fill="#132d52" stroke="rgba(148,163,184,0.2)"/>
+    <text x="534" y="192" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#94a3b8">SEARCH APPEARANCES</text>
+    <text x="534" y="236" font-family="system-ui,sans-serif" font-size="30" font-weight="800" fill="#75d766">+340%</text>
+    <polyline points="534,340 572,315 612,322 652,272 688,250" fill="none" stroke="#75d766" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="534" y="394" width="154" height="28" rx="14" fill="#0284c7" fill-opacity="0.18" stroke="#0284c7" stroke-opacity="0.45"/>
+  <text x="611" y="412" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">SSI Score Builder</text>
+  
+</svg>

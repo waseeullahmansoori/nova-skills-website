@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="bg-ue5" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="55%" stop-color="#04152b"/>
+      <stop offset="100%" stop-color="#010d1c"/>
+    </radialGradient>
+    <radialGradient id="glow1-ue5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2-ue5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="grad-ue5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <pattern id="grid-ue5" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-ue5)"/>
+  <rect width="800" height="600" fill="url(#grid-ue5)"/>
+  <circle cx="210" cy="210" r="240" fill="url(#glow1-ue5)"/>
+  <circle cx="610" cy="400" r="230" fill="url(#glow2-ue5)"/>
+  
+    <rect x="68" y="108" width="664" height="384" rx="14" fill="rgba(10,25,47,0.92)" stroke="rgba(148,163,184,0.22)" stroke-width="1.5"/>
+  <rect x="68" y="108" width="664" height="34" rx="14" fill="rgba(15,36,66,0.95)"/>
+  <rect x="68" y="128" width="664" height="14" fill="rgba(15,36,66,0.95)"/>
+  <line x1="68" y1="142" x2="732" y2="142" stroke="rgba(148,163,184,0.16)" stroke-width="1"/>
+  <circle cx="86" cy="125" r="4.5" fill="#ef4444" opacity="0.85"/>
+  <circle cx="101" cy="125" r="4.5" fill="#f59e0b" opacity="0.85"/>
+  <circle cx="116" cy="125" r="4.5" fill="#10b981" opacity="0.85"/>
+  <text x="136" y="129" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="11.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.4">UNREAL ENGINE 5 • LUMEN + BLUEPRINTS REAL-TIME</text>
+  <rect x="656" y="117" width="62" height="16" rx="8" fill="#a855f7" fill-opacity="0.18" stroke="#a855f7" stroke-opacity="0.5"/>
+    <rect x="92" y="160" width="330" height="308" rx="12" fill="#08172b" stroke="rgba(6,182,212,0.4)"/>
+    <polygon points="115,388 215,245 312,330 398,225 398,388" fill="#164e63" opacity="0.8"/>
+    <circle cx="330" cy="215" r="24" fill="#a855f7" opacity="0.75"/>
+    <text x="114" y="192" font-family="system-ui,sans-serif" font-size="12" font-weight="800" fill="#67e8f9">LUMEN GI + NANITE VIEWPORT</text>
+    <rect x="114" y="424" width="134" height="26" rx="13" fill="#06b6d4" fill-opacity="0.18" stroke="#06b6d4" stroke-opacity="0.45"/>
+  <text x="181" y="441" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Sequencer Cinematics</text>
+    <rect x="260" y="424" width="138" height="26" rx="13" fill="#a855f7" fill-opacity="0.18" stroke="#a855f7" stroke-opacity="0.45"/>
+  <text x="329" y="441" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">Fab Assets &amp; World</text>
+    <rect x="442" y="160" width="266" height="308" rx="12" fill="#0d213d" stroke="rgba(168,85,247,0.4)"/>
+    <text x="462" y="190" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#d8b4fe">BLUEPRINTS VISUAL SCRIPT</text>
+    <rect x="462" y="218" width="104" height="58" rx="8" fill="#7f1d1d" stroke="#f87171"/>
+    <text x="514" y="250" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff">OnBeginPlay</text>
+    <rect x="590" y="218" width="98" height="58" rx="8" fill="#1e3a8a" stroke="#60a5fa"/>
+    <text x="639" y="250" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#fff">PlaySequence</text>
+    <path d="M 566 247 L 590 247" stroke="#ffffff" stroke-width="2.5"/>
+    <rect x="462" y="310" width="226" height="122" rx="10" fill="#132d52" stroke="rgba(148,163,184,0.2)"/>
+    <text x="482" y="342" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#86efac">FPS: 120.0 (8.3ms)</text>
+    <text x="482" y="368" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#cbd5e1">Nanite Polys: 18.4M</text>
+    <text x="482" y="394" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#93c5fd">Lighting: Real-Time</text>
+  
+</svg>

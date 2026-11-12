@@ -1,0 +1,3939 @@
+{
+  "version": "1.0.0",
+  "totalCourses": 109,
+  "counts": {
+    "img048": 8,
+    "imgSpecific": 20,
+    "existingProject": 8,
+    "generatedWebp": 3,
+    "customSvg": 70
+  },
+  "courses": [
+    {
+      "courseId": "dm-mastery",
+      "courseName": "AI Digital Marketing Strategist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "AI Digital Marketing Strategist — campaign planning and marketing analytics course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-01",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    {
+      "courseId": "dm-professional",
+      "courseName": "AI Digital Marketing Specialist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-056.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-056.webp",
+        "mimeType": "image/webp",
+        "alt": "AI Digital Marketing Specialist — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-056/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "performance-marketing-specialist",
+      "courseName": "Performance Marketing Specialist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-card-640w.png",
+        "mobile": "/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "Performance Marketing Specialist — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-DM-PAID-ADS",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    {
+      "courseId": "ecommerce-growth-marketing-specialist",
+      "courseName": "E-Commerce & Growth Marketing Specialist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/desktop/ecommerce-growth-marketing-specialist.webp",
+        "mobile": "/public/assets/course-cards/mobile/ecommerce-growth-marketing-specialist.webp",
+        "mimeType": "image/webp",
+        "alt": "E-Commerce & Growth Marketing Specialist — curated practical workstation and course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "generated-webp",
+      "imageId": "GEN-ECOMMERCE-GROWTH-MARKETING-SPECIALIST",
+      "status": "Integrated (Generated WebP Asset)"
+    },
+    {
+      "courseId": "google-ads",
+      "courseName": "Google Ads Performance Specialist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/desktop/google-ads.webp",
+        "mobile": "/public/assets/course-cards/mobile/google-ads.webp",
+        "mimeType": "image/webp",
+        "alt": "Google Ads Performance Specialist — curated practical workstation and course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "generated-webp",
+      "imageId": "GEN-GOOGLE-ADS",
+      "status": "Integrated (Generated WebP Asset)"
+    },
+    {
+      "courseId": "meta-ads",
+      "courseName": "Meta Ads & Lead Generation Specialist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/meta-ads.svg",
+        "mobile": "/public/assets/course-cards/svg/meta-ads.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Meta Ads & Lead Generation Specialist — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-META-ADS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "seo-geo",
+      "courseName": "SEO & AI Search Optimization (AEO/GEO)",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/seo-geo.svg",
+        "mobile": "/public/assets/course-cards/svg/seo-geo.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "SEO & AI Search Optimization (AEO/GEO) — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SEO-GEO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "social-media-marketing",
+      "courseName": "Social Media Marketing & Growth",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/social-media-marketing.svg",
+        "mobile": "/public/assets/course-cards/svg/social-media-marketing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Social Media Marketing & Growth — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SOCIAL-MEDIA-MARKETING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "content-marketing",
+      "courseName": "AI-Powered Content Marketing",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/content-marketing.svg",
+        "mobile": "/public/assets/course-cards/svg/content-marketing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "AI-Powered Content Marketing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CONTENT-MARKETING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "email-marketing",
+      "courseName": "Email Marketing & Automation",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/email-marketing.svg",
+        "mobile": "/public/assets/course-cards/svg/email-marketing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Email Marketing & Automation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-EMAIL-MARKETING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "google-analytics-ga4",
+      "courseName": "Google Analytics 4 & GTM",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/google-analytics-ga4.svg",
+        "mobile": "/public/assets/course-cards/svg/google-analytics-ga4.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Google Analytics 4 & GTM — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-GOOGLE-ANALYTICS-GA4",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "google-search-console",
+      "courseName": "Google Search Console & SEO Reporting",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-card-640w.png",
+        "mobile": "/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "Google Search Console & SEO Reporting — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-DM-TECH-SEO",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    {
+      "courseId": "local-seo",
+      "courseName": "Local SEO & Google Business Profile",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/local-seo.svg",
+        "mobile": "/public/assets/course-cards/svg/local-seo.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Local SEO & Google Business Profile — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-LOCAL-SEO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "youtube-marketing",
+      "courseName": "YouTube Marketing & Channel Growth",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/youtube-marketing.svg",
+        "mobile": "/public/assets/course-cards/svg/youtube-marketing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "YouTube Marketing & Channel Growth — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-YOUTUBE-MARKETING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "ai-mastery",
+      "courseName": "AI Solutions Engineering & Agentic AI Mastery",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-059.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-059.webp",
+        "mimeType": "image/webp",
+        "alt": "AI Solutions Engineering & Agentic AI Mastery — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-059/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "ai-productivity",
+      "courseName": "AI Productivity Professional",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-067.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-067.webp",
+        "mimeType": "image/webp",
+        "alt": "AI Productivity Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-067/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "ai-for-business-pro",
+      "courseName": "AI for Business Professional",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-060.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-060.webp",
+        "mimeType": "image/webp",
+        "alt": "AI for Business Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-060/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "prompt-engineering",
+      "courseName": "Prompt Engineering & AI Output Evaluation",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/prompt-engineering.svg",
+        "mobile": "/public/assets/course-cards/svg/prompt-engineering.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Prompt Engineering & AI Output Evaluation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PROMPT-ENGINEERING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "ai-automation-n8n",
+      "courseName": "AI Automation with n8n & Business Workflows",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "AI Automation with n8n & Business Workflows — AI and business workflow automation dashboard course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-02",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    {
+      "courseId": "ai-agents-fundamentals",
+      "courseName": "AI Agents Fundamentals: Design, Tools & Safety",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/ai-agents-fundamentals.svg",
+        "mobile": "/public/assets/course-cards/svg/ai-agents-fundamentals.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "AI Agents Fundamentals: Design, Tools & Safety — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-AI-AGENTS-FUNDAMENTALS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "chatgpt-mastery",
+      "courseName": "ChatGPT for Work, Research & Data Analysis",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/chatgpt-mastery.svg",
+        "mobile": "/public/assets/course-cards/svg/chatgpt-mastery.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "ChatGPT for Work, Research & Data Analysis — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CHATGPT-MASTERY",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "gemini-mastery",
+      "courseName": "Gemini & Google Workspace AI",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/gemini-mastery.svg",
+        "mobile": "/public/assets/course-cards/svg/gemini-mastery.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Gemini & Google Workspace AI — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-GEMINI-MASTERY",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "claude-productivity",
+      "courseName": "Claude for Productivity, Skills & Artifacts",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/claude-productivity.svg",
+        "mobile": "/public/assets/course-cards/svg/claude-productivity.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Claude for Productivity, Skills & Artifacts — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CLAUDE-PRODUCTIVITY",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "ai-research-tools",
+      "courseName": "AI Research & Evidence Verification",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/ai-research-tools.svg",
+        "mobile": "/public/assets/course-cards/svg/ai-research-tools.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "AI Research & Evidence Verification — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-AI-RESEARCH-TOOLS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "creative-design",
+      "courseName": "Creative Design Master",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-066.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-066.webp",
+        "mimeType": "image/webp",
+        "alt": "Creative Design Master — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-066/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "graphic-design-pro",
+      "courseName": "Graphic Design Professional",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-057.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-057.webp",
+        "mimeType": "image/webp",
+        "alt": "Graphic Design Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-057/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "uiux-design-pro",
+      "courseName": "UI/UX Design Professional",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-061.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-061.webp",
+        "mimeType": "image/webp",
+        "alt": "UI/UX Design Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-061/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "adobe-photoshop",
+      "courseName": "Adobe Photoshop — Commercial Image Editing & Design",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/course-cards/desktop/adobe-photoshop.webp",
+        "mobile": "/public/assets/course-cards/mobile/adobe-photoshop.webp",
+        "mimeType": "image/webp",
+        "alt": "Adobe Photoshop — Commercial Image Editing & Design — curated practical workstation and course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "generated-webp",
+      "imageId": "GEN-ADOBE-PHOTOSHOP",
+      "status": "Integrated (Generated WebP Asset)"
+    },
+    {
+      "courseId": "adobe-illustrator",
+      "courseName": "Adobe Illustrator — Vector Graphics & Print Design",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/adobe-illustrator.svg",
+        "mobile": "/public/assets/course-cards/svg/adobe-illustrator.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Adobe Illustrator — Vector Graphics & Print Design — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-ADOBE-ILLUSTRATOR",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "canva-pro",
+      "courseName": "Canva Professional — Brand & Marketing Design",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/canva-pro.svg",
+        "mobile": "/public/assets/course-cards/svg/canva-pro.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Canva Professional — Brand & Marketing Design — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CANVA-PRO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "figma-ui-design",
+      "courseName": "Figma UI Design & Responsive Prototyping",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-05/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-05/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "Figma UI Design & Responsive Prototyping — mobile application UI design and responsive wireframes course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-05",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    {
+      "courseId": "brand-identity-design",
+      "courseName": "Brand Identity Design & Visual Systems",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-03/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-03/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "Brand Identity Design & Visual Systems — graphic design, branding and typography system course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-03",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    {
+      "courseId": "packaging-design",
+      "courseName": "Packaging Artwork & Print-Ready Design",
+      "academyId": "design",
+      "image": {
+        "desktop": "/images/projects/graphic-design-pro/ns-proj-gd-packaging-capstone-card-640w.png",
+        "mobile": "/images/projects/graphic-design-pro/ns-proj-gd-packaging-capstone-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "Packaging Artwork & Print-Ready Design — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-GD-PACKAGING",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    {
+      "courseId": "logo-design",
+      "courseName": "Logo Design & Vector Identity Marks",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/logo-design.svg",
+        "mobile": "/public/assets/course-cards/svg/logo-design.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Logo Design & Vector Identity Marks — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-LOGO-DESIGN",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "fullstack-foundation",
+      "courseName": "Full Stack Programming Foundation",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-062.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-062.webp",
+        "mimeType": "image/webp",
+        "alt": "Full Stack Programming Foundation — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-062/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "python-developer",
+      "courseName": "Python Developer Professional",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-063.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-063.webp",
+        "mimeType": "image/webp",
+        "alt": "Python Developer Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-063/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "ai-assisted-full-stack-web-development",
+      "courseName": "AI-Assisted Full Stack Web Development",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-04/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-04/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "AI-Assisted Full Stack Web Development — desktop application and full-stack coding interface course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-04",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    {
+      "courseId": "html-css",
+      "courseName": "HTML, CSS & Responsive Web Design",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-card-640w.png",
+        "mobile": "/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "HTML, CSS & Responsive Web Design — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-FS-RESPONSIVE",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    {
+      "courseId": "javascript-cert",
+      "courseName": "Modern JavaScript & TypeScript Foundations",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/javascript-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/javascript-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Modern JavaScript & TypeScript Foundations — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-JAVASCRIPT-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "react-cert",
+      "courseName": "React.js Frontend Development",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/react-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/react-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "React.js Frontend Development — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-REACT-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "node-js",
+      "courseName": "Node.js Backend Development with Express",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/node-js.svg",
+        "mobile": "/public/assets/course-cards/svg/node-js.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Node.js Backend Development with Express — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-NODE-JS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "sql-basics",
+      "courseName": "SQL & Relational Database Fundamentals",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/sql-basics.svg",
+        "mobile": "/public/assets/course-cards/svg/sql-basics.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "SQL & Relational Database Fundamentals — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SQL-BASICS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "git-github",
+      "courseName": "Git & GitHub",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/git-github.svg",
+        "mobile": "/public/assets/course-cards/svg/git-github.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Git & GitHub — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-GIT-GITHUB",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "rest-apis",
+      "courseName": "REST APIs",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-card-640w.png",
+        "mobile": "/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "REST APIs — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-FS-API-MULTITIER",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    {
+      "courseId": "ecommerce-mastery",
+      "courseName": "E-Commerce Website Mastery",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-065.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-065.webp",
+        "mimeType": "image/webp",
+        "alt": "E-Commerce Website Mastery — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-065/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "nocode-web-pro",
+      "courseName": "No-Code Website Professional",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-064.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-064.webp",
+        "mimeType": "image/webp",
+        "alt": "No-Code Website Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-064/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "wordpress-cert",
+      "courseName": "WordPress Website Design & Management",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-wordpress-elementor-card-640w.png",
+        "mobile": "/images/projects/nocode-web-pro/ns-proj-nc-wordpress-elementor-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "WordPress Website Design & Management — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-NC-WORDPRESS",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    {
+      "courseId": "woocommerce-cert",
+      "courseName": "WooCommerce Store Development & Operations",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/woocommerce-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/woocommerce-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "WooCommerce Store Development & Operations — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-WOOCOMMERCE-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "shopify-cert",
+      "courseName": "Shopify Store Design & E-Commerce Operations",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-07/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-07/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "Shopify Store Design & E-Commerce Operations — e-commerce storefront and product presentation course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-07",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    {
+      "courseId": "elementor-cert",
+      "courseName": "Elementor Website Design & Landing Pages",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/elementor-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/elementor-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Elementor Website Design & Landing Pages — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-ELEMENTOR-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "webflow-cert",
+      "courseName": "Webflow Website Design & CMS Development",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-card-640w.png",
+        "mobile": "/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "Webflow Website Design & CMS Development — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-NC-WEBFLOW",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    {
+      "courseId": "framer-cert",
+      "courseName": "Framer Website Design & Interactive Experiences",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-framer-saas-card-640w.png",
+        "mobile": "/images/projects/nocode-web-pro/ns-proj-nc-framer-saas-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "Framer Website Design & Interactive Experiences — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-NC-FRAMER",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    {
+      "courseId": "ai-integrated-video-editing-motion-graphics-professional",
+      "courseName": "AI-Integrated Video Editing & Motion Graphics Professional",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-06/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-06/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "AI-Integrated Video Editing & Motion Graphics Professional — professional camera and video editing workstation course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-06",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    {
+      "courseId": "video-pro",
+      "courseName": "Professional Video Editing",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-058.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-058.webp",
+        "mimeType": "image/webp",
+        "alt": "Professional Video Editing — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-058/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "generative-ai-video-production-professional",
+      "courseName": "Generative AI Video Production Professional",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/generative-ai-video-production-professional.svg",
+        "mobile": "/public/assets/course-cards/svg/generative-ai-video-production-professional.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Generative AI Video Production Professional — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-GENERATIVE-AI-VIDEO-PRODUCTION-PROFESSIONAL",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "adobe-premiere-pro",
+      "courseName": "Adobe Premiere Pro — Professional Video Editing",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/adobe-premiere-pro.svg",
+        "mobile": "/public/assets/course-cards/svg/adobe-premiere-pro.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Adobe Premiere Pro — Professional Video Editing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-ADOBE-PREMIERE-PRO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "after-effects",
+      "courseName": "Adobe After Effects — Motion Design & Compositing",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/after-effects.svg",
+        "mobile": "/public/assets/course-cards/svg/after-effects.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Adobe After Effects — Motion Design & Compositing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-AFTER-EFFECTS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "davinci-resolve",
+      "courseName": "DaVinci Resolve — Colour Grading & Video Finishing",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/davinci-resolve.svg",
+        "mobile": "/public/assets/course-cards/svg/davinci-resolve.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "DaVinci Resolve — Colour Grading & Video Finishing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-DAVINCI-RESOLVE",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "reels-editing",
+      "courseName": "Reels & Shorts Editing for Brands and Creators",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/reels-editing.svg",
+        "mobile": "/public/assets/course-cards/svg/reels-editing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Reels & Shorts Editing for Brands and Creators — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-REELS-EDITING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "motion-graphics-essentials",
+      "courseName": "Motion Graphics Essentials — 2D Animation & Typography",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/motion-graphics-essentials.svg",
+        "mobile": "/public/assets/course-cards/svg/motion-graphics-essentials.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Motion Graphics Essentials — 2D Animation & Typography — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-MOTION-GRAPHICS-ESSENTIALS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "archviz-mastery",
+      "courseName": "Architectural Visualisation Master",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-068.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-068.webp",
+        "mimeType": "image/webp",
+        "alt": "Architectural Visualisation Master — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-068/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "3d-viz-pro",
+      "courseName": "3D Visualisation Professional",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-069.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-069.webp",
+        "mimeType": "image/webp",
+        "alt": "3D Visualisation Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-069/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "blender-cert",
+      "courseName": "Blender 3D Modeling, Materials & Rendering",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-08/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-08/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "Blender 3D Modeling, Materials & Rendering — 3D product modelling, materials and rendering viewport course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-08",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    {
+      "courseId": "3ds-max-cert",
+      "courseName": "3ds Max Architectural Modeling & Visualization",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/3ds-max-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/3ds-max-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "3ds Max Architectural Modeling & Visualization — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-3DS-MAX-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "v-ray-cert",
+      "courseName": "V-Ray Photorealistic Rendering & Lighting",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/v-ray-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/v-ray-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "V-Ray Photorealistic Rendering & Lighting — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-V-RAY-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "twinmotion-cert",
+      "courseName": "Twinmotion Real-Time Architectural Visualization",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/twinmotion-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/twinmotion-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Twinmotion Real-Time Architectural Visualization — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-TWINMOTION-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "cinema-4d-cert",
+      "courseName": "Cinema 4D Motion Graphics & Product Animation",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/cinema-4d-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/cinema-4d-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Cinema 4D Motion Graphics & Product Animation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CINEMA-4D-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "unreal-engine-basics",
+      "courseName": "Unreal Engine 5 Real-Time 3D Fundamentals",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/unreal-engine-basics.svg",
+        "mobile": "/public/assets/course-cards/svg/unreal-engine-basics.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Unreal Engine 5 Real-Time 3D Fundamentals — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-UNREAL-ENGINE-BASICS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "freelancing-client-acquisition-professional",
+      "courseName": "Freelancing & Client Acquisition Professional",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-074.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-074.webp",
+        "mimeType": "image/webp",
+        "alt": "Freelancing & Client Acquisition Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-074/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "career-launch-placement-readiness-professional",
+      "courseName": "Career Launch & Placement Readiness Professional",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/career-launch-placement-readiness-professional.svg",
+        "mobile": "/public/assets/course-cards/svg/career-launch-placement-readiness-professional.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Career Launch & Placement Readiness Professional — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CAREER-LAUNCH-PLACEMENT-READINESS-PROFESSIONAL",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "resume-building",
+      "courseName": "ATS-Friendly Resume & Job Application Essentials",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/resume-building.svg",
+        "mobile": "/public/assets/course-cards/svg/resume-building.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "ATS-Friendly Resume & Job Application Essentials — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-RESUME-BUILDING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "linkedin-optimisation",
+      "courseName": "LinkedIn Profile Optimisation & Professional Branding",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/linkedin-optimisation.svg",
+        "mobile": "/public/assets/course-cards/svg/linkedin-optimisation.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "LinkedIn Profile Optimisation & Professional Branding — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-LINKEDIN-OPTIMISATION",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "interview-preparation",
+      "courseName": "Interview Preparation & Professional Communication",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/interview-preparation.svg",
+        "mobile": "/public/assets/course-cards/svg/interview-preparation.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Interview Preparation & Professional Communication — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-INTERVIEW-PREPARATION",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "client-communication",
+      "courseName": "Professional Client Communication & Project Coordination",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/client-communication.svg",
+        "mobile": "/public/assets/course-cards/svg/client-communication.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Professional Client Communication & Project Coordination — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CLIENT-COMMUNICATION",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "proposal-writing",
+      "courseName": "Freelance Proposal Writing & Client Pitching",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/proposal-writing.svg",
+        "mobile": "/public/assets/course-cards/svg/proposal-writing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Freelance Proposal Writing & Client Pitching — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PROPOSAL-WRITING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "agency-building",
+      "courseName": "Digital Agency Building & Operations",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/agency-building.svg",
+        "mobile": "/public/assets/course-cards/svg/agency-building.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Digital Agency Building & Operations — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-AGENCY-BUILDING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "fiverr-success",
+      "courseName": "Fiverr Freelancing & Gig Management",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/fiverr-success.svg",
+        "mobile": "/public/assets/course-cards/svg/fiverr-success.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Fiverr Freelancing & Gig Management — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-FIVERR-SUCCESS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "upwork-success",
+      "courseName": "Upwork Freelancing & Client Acquisition",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/upwork-success.svg",
+        "mobile": "/public/assets/course-cards/svg/upwork-success.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Upwork Freelancing & Client Acquisition — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-UPWORK-SUCCESS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "business-english",
+      "courseName": "Business English & Personality Development",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-073.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-073.webp",
+        "mimeType": "image/webp",
+        "alt": "Business English & Personality Development — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-073/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "spoken-english-pro",
+      "courseName": "Professional Spoken English",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/spoken-english-pro.svg",
+        "mobile": "/public/assets/course-cards/svg/spoken-english-pro.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Professional Spoken English — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SPOKEN-ENGLISH-PRO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "spoken-english-cert",
+      "courseName": "Spoken English Foundations & Everyday Conversation",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/spoken-english-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/spoken-english-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Spoken English Foundations & Everyday Conversation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SPOKEN-ENGLISH-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "business-communication",
+      "courseName": "Business Communication & Workplace Writing",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/business-communication.svg",
+        "mobile": "/public/assets/course-cards/svg/business-communication.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Business Communication & Workplace Writing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-BUSINESS-COMMUNICATION",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "presentation-skills",
+      "courseName": "Presentation Skills & Business Storytelling",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/presentation-skills.svg",
+        "mobile": "/public/assets/course-cards/svg/presentation-skills.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Presentation Skills & Business Storytelling — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PRESENTATION-SKILLS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "public-speaking",
+      "courseName": "Public Speaking & Audience Engagement",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/public-speaking.svg",
+        "mobile": "/public/assets/course-cards/svg/public-speaking.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Public Speaking & Audience Engagement — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PUBLIC-SPEAKING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "soft-skills",
+      "courseName": "Workplace Soft Skills & Professional Effectiveness",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/soft-skills.svg",
+        "mobile": "/public/assets/course-cards/svg/soft-skills.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Workplace Soft Skills & Professional Effectiveness — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SOFT-SKILLS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "kids-mastery",
+      "courseName": "Future Tech Kids Mastery",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-072.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-072.webp",
+        "mimeType": "image/webp",
+        "alt": "Future Tech Kids Mastery — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-072/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "young-coders",
+      "courseName": "Young Coders Program",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/young-coders.svg",
+        "mobile": "/public/assets/course-cards/svg/young-coders.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Young Coders Program — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-YOUNG-CODERS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "scratch-programming",
+      "courseName": "Scratch Programming & Game Creation",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/scratch-programming.svg",
+        "mobile": "/public/assets/course-cards/svg/scratch-programming.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Scratch Programming & Game Creation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SCRATCH-PROGRAMMING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "python-for-kids",
+      "courseName": "Python for Kids — Coding & Creative Projects",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/python-for-kids.svg",
+        "mobile": "/public/assets/course-cards/svg/python-for-kids.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Python for Kids — Coding & Creative Projects — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PYTHON-FOR-KIDS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "ai-for-kids",
+      "courseName": "AI Literacy & Creative Machine Learning for Kids",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/ai-for-kids.svg",
+        "mobile": "/public/assets/course-cards/svg/ai-for-kids.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "AI Literacy & Creative Machine Learning for Kids — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-AI-FOR-KIDS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "robotics-basics",
+      "courseName": "Robotics & Physical Computing with micro:bit",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/robotics-basics.svg",
+        "mobile": "/public/assets/course-cards/svg/robotics-basics.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Robotics & Physical Computing with micro:bit — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-ROBOTICS-BASICS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "web-design-for-kids",
+      "courseName": "Web Design for Kids — HTML & CSS Foundations",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/web-design-for-kids.svg",
+        "mobile": "/public/assets/course-cards/svg/web-design-for-kids.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Web Design for Kids — HTML & CSS Foundations — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-WEB-DESIGN-FOR-KIDS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "youtube-mastery",
+      "courseName": "YouTube Growth & Content Strategy Professional",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/youtube-mastery.svg",
+        "mobile": "/public/assets/course-cards/svg/youtube-mastery.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "YouTube Growth & Content Strategy Professional — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-YOUTUBE-MASTERY",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "content-creator-pro",
+      "courseName": "Content Creator Professional",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-070.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-070.webp",
+        "mimeType": "image/webp",
+        "alt": "Content Creator Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-070/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "youtube-seo",
+      "courseName": "YouTube SEO, Discovery & Channel Analytics",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/youtube-seo.svg",
+        "mobile": "/public/assets/course-cards/svg/youtube-seo.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "YouTube SEO, Discovery & Channel Analytics — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-YOUTUBE-SEO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "thumbnail-design",
+      "courseName": "YouTube Thumbnail Design & Creative Testing",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/thumbnail-design.svg",
+        "mobile": "/public/assets/course-cards/svg/thumbnail-design.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "YouTube Thumbnail Design & Creative Testing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-THUMBNAIL-DESIGN",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "podcast-production",
+      "courseName": "Podcast Production & Distribution",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/podcast-production.svg",
+        "mobile": "/public/assets/course-cards/svg/podcast-production.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Podcast Production & Distribution — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PODCAST-PRODUCTION",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "personal-branding",
+      "courseName": "Personal Branding & Thought Leadership",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/personal-branding.svg",
+        "mobile": "/public/assets/course-cards/svg/personal-branding.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Personal Branding & Thought Leadership — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PERSONAL-BRANDING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "short-video-strategy",
+      "courseName": "Short-Form Video Strategy & Content Growth",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/short-video-strategy.svg",
+        "mobile": "/public/assets/course-cards/svg/short-video-strategy.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Short-Form Video Strategy & Content Growth — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SHORT-VIDEO-STRATEGY",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "biz-productivity",
+      "courseName": "MIS & Business Intelligence Professional",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-071.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-071.webp",
+        "mimeType": "image/webp",
+        "alt": "MIS & Business Intelligence Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-071/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "office-pro",
+      "courseName": "Office Productivity Professional",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-075.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-075.webp",
+        "mimeType": "image/webp",
+        "alt": "Office Productivity Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-075/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    {
+      "courseId": "microsoft-excel",
+      "courseName": "Microsoft Excel — Business Reporting & Data Analysis",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/microsoft-excel.svg",
+        "mobile": "/public/assets/course-cards/svg/microsoft-excel.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Microsoft Excel — Business Reporting & Data Analysis — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-MICROSOFT-EXCEL",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "microsoft-word",
+      "courseName": "Microsoft Word — Professional Documents & Mail Merge",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/microsoft-word.svg",
+        "mobile": "/public/assets/course-cards/svg/microsoft-word.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Microsoft Word — Professional Documents & Mail Merge — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-MICROSOFT-WORD",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "microsoft-powerpoint",
+      "courseName": "Microsoft PowerPoint — Professional Presentation Design",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/microsoft-powerpoint.svg",
+        "mobile": "/public/assets/course-cards/svg/microsoft-powerpoint.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Microsoft PowerPoint — Professional Presentation Design — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-MICROSOFT-POWERPOINT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "google-workspace",
+      "courseName": "Google Workspace — Cloud Productivity & Collaboration",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/google-workspace.svg",
+        "mobile": "/public/assets/course-cards/svg/google-workspace.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Google Workspace — Cloud Productivity & Collaboration — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-GOOGLE-WORKSPACE",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "notion-cert",
+      "courseName": "Notion — Workspace, Databases & Knowledge Systems",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/notion-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/notion-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Notion — Workspace, Databases & Knowledge Systems — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-NOTION-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "clickup-cert",
+      "courseName": "ClickUp — Project Management & Workflow Automation",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/clickup-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/clickup-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "ClickUp — Project Management & Workflow Automation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CLICKUP-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "microsoft-copilot",
+      "courseName": "Microsoft 365 Copilot — AI Workplace Productivity",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/microsoft-copilot.svg",
+        "mobile": "/public/assets/course-cards/svg/microsoft-copilot.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Microsoft 365 Copilot — AI Workplace Productivity — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-MICROSOFT-COPILOT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    {
+      "courseId": "tally-gst",
+      "courseName": "TallyPrime — Accounting & GST Compliance",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/tally-gst.svg",
+        "mobile": "/public/assets/course-cards/svg/tally-gst.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "TallyPrime — Accounting & GST Compliance — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-TALLY-GST",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    }
+  ],
+  "byId": {
+    "dm-mastery": {
+      "courseId": "dm-mastery",
+      "courseName": "AI Digital Marketing Strategist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "AI Digital Marketing Strategist — campaign planning and marketing analytics course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-01",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    "dm-professional": {
+      "courseId": "dm-professional",
+      "courseName": "AI Digital Marketing Specialist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-056.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-056.webp",
+        "mimeType": "image/webp",
+        "alt": "AI Digital Marketing Specialist — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-056/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "performance-marketing-specialist": {
+      "courseId": "performance-marketing-specialist",
+      "courseName": "Performance Marketing Specialist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-card-640w.png",
+        "mobile": "/images/projects/dm-professional/ns-proj-dm-paid-ads-funnel-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "Performance Marketing Specialist — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-DM-PAID-ADS",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    "ecommerce-growth-marketing-specialist": {
+      "courseId": "ecommerce-growth-marketing-specialist",
+      "courseName": "E-Commerce & Growth Marketing Specialist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/desktop/ecommerce-growth-marketing-specialist.webp",
+        "mobile": "/public/assets/course-cards/mobile/ecommerce-growth-marketing-specialist.webp",
+        "mimeType": "image/webp",
+        "alt": "E-Commerce & Growth Marketing Specialist — curated practical workstation and course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "generated-webp",
+      "imageId": "GEN-ECOMMERCE-GROWTH-MARKETING-SPECIALIST",
+      "status": "Integrated (Generated WebP Asset)"
+    },
+    "google-ads": {
+      "courseId": "google-ads",
+      "courseName": "Google Ads Performance Specialist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/desktop/google-ads.webp",
+        "mobile": "/public/assets/course-cards/mobile/google-ads.webp",
+        "mimeType": "image/webp",
+        "alt": "Google Ads Performance Specialist — curated practical workstation and course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "generated-webp",
+      "imageId": "GEN-GOOGLE-ADS",
+      "status": "Integrated (Generated WebP Asset)"
+    },
+    "meta-ads": {
+      "courseId": "meta-ads",
+      "courseName": "Meta Ads & Lead Generation Specialist",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/meta-ads.svg",
+        "mobile": "/public/assets/course-cards/svg/meta-ads.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Meta Ads & Lead Generation Specialist — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-META-ADS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "seo-geo": {
+      "courseId": "seo-geo",
+      "courseName": "SEO & AI Search Optimization (AEO/GEO)",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/seo-geo.svg",
+        "mobile": "/public/assets/course-cards/svg/seo-geo.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "SEO & AI Search Optimization (AEO/GEO) — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SEO-GEO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "social-media-marketing": {
+      "courseId": "social-media-marketing",
+      "courseName": "Social Media Marketing & Growth",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/social-media-marketing.svg",
+        "mobile": "/public/assets/course-cards/svg/social-media-marketing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Social Media Marketing & Growth — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SOCIAL-MEDIA-MARKETING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "content-marketing": {
+      "courseId": "content-marketing",
+      "courseName": "AI-Powered Content Marketing",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/content-marketing.svg",
+        "mobile": "/public/assets/course-cards/svg/content-marketing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "AI-Powered Content Marketing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CONTENT-MARKETING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "email-marketing": {
+      "courseId": "email-marketing",
+      "courseName": "Email Marketing & Automation",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/email-marketing.svg",
+        "mobile": "/public/assets/course-cards/svg/email-marketing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Email Marketing & Automation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-EMAIL-MARKETING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "google-analytics-ga4": {
+      "courseId": "google-analytics-ga4",
+      "courseName": "Google Analytics 4 & GTM",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/google-analytics-ga4.svg",
+        "mobile": "/public/assets/course-cards/svg/google-analytics-ga4.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Google Analytics 4 & GTM — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-GOOGLE-ANALYTICS-GA4",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "google-search-console": {
+      "courseId": "google-search-console",
+      "courseName": "Google Search Console & SEO Reporting",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-card-640w.png",
+        "mobile": "/images/projects/dm-professional/ns-proj-dm-technical-seo-blueprint-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "Google Search Console & SEO Reporting — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-DM-TECH-SEO",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    "local-seo": {
+      "courseId": "local-seo",
+      "courseName": "Local SEO & Google Business Profile",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/local-seo.svg",
+        "mobile": "/public/assets/course-cards/svg/local-seo.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Local SEO & Google Business Profile — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-LOCAL-SEO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "youtube-marketing": {
+      "courseId": "youtube-marketing",
+      "courseName": "YouTube Marketing & Channel Growth",
+      "academyId": "digital-marketing",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/youtube-marketing.svg",
+        "mobile": "/public/assets/course-cards/svg/youtube-marketing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "YouTube Marketing & Channel Growth — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-YOUTUBE-MARKETING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "ai-mastery": {
+      "courseId": "ai-mastery",
+      "courseName": "AI Solutions Engineering & Agentic AI Mastery",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-059.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-059.webp",
+        "mimeType": "image/webp",
+        "alt": "AI Solutions Engineering & Agentic AI Mastery — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-059/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "ai-productivity": {
+      "courseId": "ai-productivity",
+      "courseName": "AI Productivity Professional",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-067.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-067.webp",
+        "mimeType": "image/webp",
+        "alt": "AI Productivity Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-067/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "ai-for-business-pro": {
+      "courseId": "ai-for-business-pro",
+      "courseName": "AI for Business Professional",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-060.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-060.webp",
+        "mimeType": "image/webp",
+        "alt": "AI for Business Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-060/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "prompt-engineering": {
+      "courseId": "prompt-engineering",
+      "courseName": "Prompt Engineering & AI Output Evaluation",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/prompt-engineering.svg",
+        "mobile": "/public/assets/course-cards/svg/prompt-engineering.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Prompt Engineering & AI Output Evaluation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PROMPT-ENGINEERING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "ai-automation-n8n": {
+      "courseId": "ai-automation-n8n",
+      "courseName": "AI Automation with n8n & Business Workflows",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "AI Automation with n8n & Business Workflows — AI and business workflow automation dashboard course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-02",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    "ai-agents-fundamentals": {
+      "courseId": "ai-agents-fundamentals",
+      "courseName": "AI Agents Fundamentals: Design, Tools & Safety",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/ai-agents-fundamentals.svg",
+        "mobile": "/public/assets/course-cards/svg/ai-agents-fundamentals.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "AI Agents Fundamentals: Design, Tools & Safety — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-AI-AGENTS-FUNDAMENTALS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "chatgpt-mastery": {
+      "courseId": "chatgpt-mastery",
+      "courseName": "ChatGPT for Work, Research & Data Analysis",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/chatgpt-mastery.svg",
+        "mobile": "/public/assets/course-cards/svg/chatgpt-mastery.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "ChatGPT for Work, Research & Data Analysis — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CHATGPT-MASTERY",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "gemini-mastery": {
+      "courseId": "gemini-mastery",
+      "courseName": "Gemini & Google Workspace AI",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/gemini-mastery.svg",
+        "mobile": "/public/assets/course-cards/svg/gemini-mastery.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Gemini & Google Workspace AI — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-GEMINI-MASTERY",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "claude-productivity": {
+      "courseId": "claude-productivity",
+      "courseName": "Claude for Productivity, Skills & Artifacts",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/claude-productivity.svg",
+        "mobile": "/public/assets/course-cards/svg/claude-productivity.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Claude for Productivity, Skills & Artifacts — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CLAUDE-PRODUCTIVITY",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "ai-research-tools": {
+      "courseId": "ai-research-tools",
+      "courseName": "AI Research & Evidence Verification",
+      "academyId": "ai",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/ai-research-tools.svg",
+        "mobile": "/public/assets/course-cards/svg/ai-research-tools.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "AI Research & Evidence Verification — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-AI-RESEARCH-TOOLS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "creative-design": {
+      "courseId": "creative-design",
+      "courseName": "Creative Design Master",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-066.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-066.webp",
+        "mimeType": "image/webp",
+        "alt": "Creative Design Master — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-066/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "graphic-design-pro": {
+      "courseId": "graphic-design-pro",
+      "courseName": "Graphic Design Professional",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-057.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-057.webp",
+        "mimeType": "image/webp",
+        "alt": "Graphic Design Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-057/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "uiux-design-pro": {
+      "courseId": "uiux-design-pro",
+      "courseName": "UI/UX Design Professional",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-061.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-061.webp",
+        "mimeType": "image/webp",
+        "alt": "UI/UX Design Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-061/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "adobe-photoshop": {
+      "courseId": "adobe-photoshop",
+      "courseName": "Adobe Photoshop — Commercial Image Editing & Design",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/course-cards/desktop/adobe-photoshop.webp",
+        "mobile": "/public/assets/course-cards/mobile/adobe-photoshop.webp",
+        "mimeType": "image/webp",
+        "alt": "Adobe Photoshop — Commercial Image Editing & Design — curated practical workstation and course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "generated-webp",
+      "imageId": "GEN-ADOBE-PHOTOSHOP",
+      "status": "Integrated (Generated WebP Asset)"
+    },
+    "adobe-illustrator": {
+      "courseId": "adobe-illustrator",
+      "courseName": "Adobe Illustrator — Vector Graphics & Print Design",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/adobe-illustrator.svg",
+        "mobile": "/public/assets/course-cards/svg/adobe-illustrator.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Adobe Illustrator — Vector Graphics & Print Design — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-ADOBE-ILLUSTRATOR",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "canva-pro": {
+      "courseId": "canva-pro",
+      "courseName": "Canva Professional — Brand & Marketing Design",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/canva-pro.svg",
+        "mobile": "/public/assets/course-cards/svg/canva-pro.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Canva Professional — Brand & Marketing Design — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CANVA-PRO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "figma-ui-design": {
+      "courseId": "figma-ui-design",
+      "courseName": "Figma UI Design & Responsive Prototyping",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-05/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-05/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "Figma UI Design & Responsive Prototyping — mobile application UI design and responsive wireframes course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-05",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    "brand-identity-design": {
+      "courseId": "brand-identity-design",
+      "courseName": "Brand Identity Design & Visual Systems",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-03/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-03/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "Brand Identity Design & Visual Systems — graphic design, branding and typography system course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-03",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    "packaging-design": {
+      "courseId": "packaging-design",
+      "courseName": "Packaging Artwork & Print-Ready Design",
+      "academyId": "design",
+      "image": {
+        "desktop": "/images/projects/graphic-design-pro/ns-proj-gd-packaging-capstone-card-640w.png",
+        "mobile": "/images/projects/graphic-design-pro/ns-proj-gd-packaging-capstone-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "Packaging Artwork & Print-Ready Design — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-GD-PACKAGING",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    "logo-design": {
+      "courseId": "logo-design",
+      "courseName": "Logo Design & Vector Identity Marks",
+      "academyId": "design",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/logo-design.svg",
+        "mobile": "/public/assets/course-cards/svg/logo-design.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Logo Design & Vector Identity Marks — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-LOGO-DESIGN",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "fullstack-foundation": {
+      "courseId": "fullstack-foundation",
+      "courseName": "Full Stack Programming Foundation",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-062.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-062.webp",
+        "mimeType": "image/webp",
+        "alt": "Full Stack Programming Foundation — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-062/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "python-developer": {
+      "courseId": "python-developer",
+      "courseName": "Python Developer Professional",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-063.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-063.webp",
+        "mimeType": "image/webp",
+        "alt": "Python Developer Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-063/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "ai-assisted-full-stack-web-development": {
+      "courseId": "ai-assisted-full-stack-web-development",
+      "courseName": "AI-Assisted Full Stack Web Development",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-04/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-04/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "AI-Assisted Full Stack Web Development — desktop application and full-stack coding interface course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-04",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    "html-css": {
+      "courseId": "html-css",
+      "courseName": "HTML, CSS & Responsive Web Design",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-card-640w.png",
+        "mobile": "/images/projects/fullstack-foundation/ns-proj-fs-responsive-standards-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "HTML, CSS & Responsive Web Design — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-FS-RESPONSIVE",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    "javascript-cert": {
+      "courseId": "javascript-cert",
+      "courseName": "Modern JavaScript & TypeScript Foundations",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/javascript-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/javascript-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Modern JavaScript & TypeScript Foundations — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-JAVASCRIPT-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "react-cert": {
+      "courseId": "react-cert",
+      "courseName": "React.js Frontend Development",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/react-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/react-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "React.js Frontend Development — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-REACT-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "node-js": {
+      "courseId": "node-js",
+      "courseName": "Node.js Backend Development with Express",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/node-js.svg",
+        "mobile": "/public/assets/course-cards/svg/node-js.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Node.js Backend Development with Express — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-NODE-JS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "sql-basics": {
+      "courseId": "sql-basics",
+      "courseName": "SQL & Relational Database Fundamentals",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/sql-basics.svg",
+        "mobile": "/public/assets/course-cards/svg/sql-basics.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "SQL & Relational Database Fundamentals — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SQL-BASICS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "git-github": {
+      "courseId": "git-github",
+      "courseName": "Git & GitHub",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/git-github.svg",
+        "mobile": "/public/assets/course-cards/svg/git-github.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Git & GitHub — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-GIT-GITHUB",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "rest-apis": {
+      "courseId": "rest-apis",
+      "courseName": "REST APIs",
+      "academyId": "programming",
+      "image": {
+        "desktop": "/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-card-640w.png",
+        "mobile": "/images/projects/fullstack-foundation/ns-proj-fs-api-multitier-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "REST APIs — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-FS-API-MULTITIER",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    "ecommerce-mastery": {
+      "courseId": "ecommerce-mastery",
+      "courseName": "E-Commerce Website Mastery",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-065.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-065.webp",
+        "mimeType": "image/webp",
+        "alt": "E-Commerce Website Mastery — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-065/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "nocode-web-pro": {
+      "courseId": "nocode-web-pro",
+      "courseName": "No-Code Website Professional",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-064.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-064.webp",
+        "mimeType": "image/webp",
+        "alt": "No-Code Website Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-064/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "wordpress-cert": {
+      "courseId": "wordpress-cert",
+      "courseName": "WordPress Website Design & Management",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-wordpress-elementor-card-640w.png",
+        "mobile": "/images/projects/nocode-web-pro/ns-proj-nc-wordpress-elementor-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "WordPress Website Design & Management — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-NC-WORDPRESS",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    "woocommerce-cert": {
+      "courseId": "woocommerce-cert",
+      "courseName": "WooCommerce Store Development & Operations",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/woocommerce-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/woocommerce-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "WooCommerce Store Development & Operations — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-WOOCOMMERCE-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "shopify-cert": {
+      "courseId": "shopify-cert",
+      "courseName": "Shopify Store Design & E-Commerce Operations",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-07/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-07/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "Shopify Store Design & E-Commerce Operations — e-commerce storefront and product presentation course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-07",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    "elementor-cert": {
+      "courseId": "elementor-cert",
+      "courseName": "Elementor Website Design & Landing Pages",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/elementor-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/elementor-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Elementor Website Design & Landing Pages — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-ELEMENTOR-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "webflow-cert": {
+      "courseId": "webflow-cert",
+      "courseName": "Webflow Website Design & CMS Development",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-card-640w.png",
+        "mobile": "/images/projects/nocode-web-pro/ns-proj-nc-webflow-clientfirst-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "Webflow Website Design & CMS Development — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-NC-WEBFLOW",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    "framer-cert": {
+      "courseId": "framer-cert",
+      "courseName": "Framer Website Design & Interactive Experiences",
+      "academyId": "nocode",
+      "image": {
+        "desktop": "/images/projects/nocode-web-pro/ns-proj-nc-framer-saas-card-640w.png",
+        "mobile": "/images/projects/nocode-web-pro/ns-proj-nc-framer-saas-mobile-400w.png",
+        "mimeType": "image/png",
+        "alt": "Framer Website Design & Interactive Experiences — authentic student capstone and practical workflow preview",
+        "width": 640,
+        "height": 360,
+        "mobileWidth": 400,
+        "mobileHeight": 225
+      },
+      "imageSource": "existing-project-asset",
+      "imageId": "PROJ-NC-FRAMER",
+      "status": "Integrated (Preserved Repo Capstone PNG)"
+    },
+    "ai-integrated-video-editing-motion-graphics-professional": {
+      "courseId": "ai-integrated-video-editing-motion-graphics-professional",
+      "courseName": "AI-Integrated Video Editing & Motion Graphics Professional",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-06/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-06/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "AI-Integrated Video Editing & Motion Graphics Professional — professional camera and video editing workstation course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-06",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    "video-pro": {
+      "courseId": "video-pro",
+      "courseName": "Professional Video Editing",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-058.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-058.webp",
+        "mimeType": "image/webp",
+        "alt": "Professional Video Editing — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-058/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "generative-ai-video-production-professional": {
+      "courseId": "generative-ai-video-production-professional",
+      "courseName": "Generative AI Video Production Professional",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/generative-ai-video-production-professional.svg",
+        "mobile": "/public/assets/course-cards/svg/generative-ai-video-production-professional.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Generative AI Video Production Professional — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-GENERATIVE-AI-VIDEO-PRODUCTION-PROFESSIONAL",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "adobe-premiere-pro": {
+      "courseId": "adobe-premiere-pro",
+      "courseName": "Adobe Premiere Pro — Professional Video Editing",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/adobe-premiere-pro.svg",
+        "mobile": "/public/assets/course-cards/svg/adobe-premiere-pro.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Adobe Premiere Pro — Professional Video Editing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-ADOBE-PREMIERE-PRO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "after-effects": {
+      "courseId": "after-effects",
+      "courseName": "Adobe After Effects — Motion Design & Compositing",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/after-effects.svg",
+        "mobile": "/public/assets/course-cards/svg/after-effects.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Adobe After Effects — Motion Design & Compositing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-AFTER-EFFECTS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "davinci-resolve": {
+      "courseId": "davinci-resolve",
+      "courseName": "DaVinci Resolve — Colour Grading & Video Finishing",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/davinci-resolve.svg",
+        "mobile": "/public/assets/course-cards/svg/davinci-resolve.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "DaVinci Resolve — Colour Grading & Video Finishing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-DAVINCI-RESOLVE",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "reels-editing": {
+      "courseId": "reels-editing",
+      "courseName": "Reels & Shorts Editing for Brands and Creators",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/reels-editing.svg",
+        "mobile": "/public/assets/course-cards/svg/reels-editing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Reels & Shorts Editing for Brands and Creators — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-REELS-EDITING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "motion-graphics-essentials": {
+      "courseId": "motion-graphics-essentials",
+      "courseName": "Motion Graphics Essentials — 2D Animation & Typography",
+      "academyId": "video",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/motion-graphics-essentials.svg",
+        "mobile": "/public/assets/course-cards/svg/motion-graphics-essentials.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Motion Graphics Essentials — 2D Animation & Typography — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-MOTION-GRAPHICS-ESSENTIALS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "archviz-mastery": {
+      "courseId": "archviz-mastery",
+      "courseName": "Architectural Visualisation Master",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-068.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-068.webp",
+        "mimeType": "image/webp",
+        "alt": "Architectural Visualisation Master — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-068/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "3d-viz-pro": {
+      "courseId": "3d-viz-pro",
+      "courseName": "3D Visualisation Professional",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-069.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-069.webp",
+        "mimeType": "image/webp",
+        "alt": "3D Visualisation Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-069/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "blender-cert": {
+      "courseId": "blender-cert",
+      "courseName": "Blender 3D Modeling, Materials & Rendering",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-08/IMG-048.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-08/IMG-048.webp",
+        "mimeType": "image/webp",
+        "alt": "Blender 3D Modeling, Materials & Rendering — 3D product modelling, materials and rendering viewport course preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-img-048",
+      "imageId": "IMG-048/unit-08",
+      "status": "Integrated (Authoritative IMG-048)"
+    },
+    "3ds-max-cert": {
+      "courseId": "3ds-max-cert",
+      "courseName": "3ds Max Architectural Modeling & Visualization",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/3ds-max-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/3ds-max-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "3ds Max Architectural Modeling & Visualization — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-3DS-MAX-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "v-ray-cert": {
+      "courseId": "v-ray-cert",
+      "courseName": "V-Ray Photorealistic Rendering & Lighting",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/v-ray-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/v-ray-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "V-Ray Photorealistic Rendering & Lighting — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-V-RAY-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "twinmotion-cert": {
+      "courseId": "twinmotion-cert",
+      "courseName": "Twinmotion Real-Time Architectural Visualization",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/twinmotion-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/twinmotion-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Twinmotion Real-Time Architectural Visualization — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-TWINMOTION-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "cinema-4d-cert": {
+      "courseId": "cinema-4d-cert",
+      "courseName": "Cinema 4D Motion Graphics & Product Animation",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/cinema-4d-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/cinema-4d-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Cinema 4D Motion Graphics & Product Animation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CINEMA-4D-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "unreal-engine-basics": {
+      "courseId": "unreal-engine-basics",
+      "courseName": "Unreal Engine 5 Real-Time 3D Fundamentals",
+      "academyId": "3d",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/unreal-engine-basics.svg",
+        "mobile": "/public/assets/course-cards/svg/unreal-engine-basics.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Unreal Engine 5 Real-Time 3D Fundamentals — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-UNREAL-ENGINE-BASICS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "freelancing-client-acquisition-professional": {
+      "courseId": "freelancing-client-acquisition-professional",
+      "courseName": "Freelancing & Client Acquisition Professional",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-074.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-074.webp",
+        "mimeType": "image/webp",
+        "alt": "Freelancing & Client Acquisition Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-074/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "career-launch-placement-readiness-professional": {
+      "courseId": "career-launch-placement-readiness-professional",
+      "courseName": "Career Launch & Placement Readiness Professional",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/career-launch-placement-readiness-professional.svg",
+        "mobile": "/public/assets/course-cards/svg/career-launch-placement-readiness-professional.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Career Launch & Placement Readiness Professional — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CAREER-LAUNCH-PLACEMENT-READINESS-PROFESSIONAL",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "resume-building": {
+      "courseId": "resume-building",
+      "courseName": "ATS-Friendly Resume & Job Application Essentials",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/resume-building.svg",
+        "mobile": "/public/assets/course-cards/svg/resume-building.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "ATS-Friendly Resume & Job Application Essentials — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-RESUME-BUILDING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "linkedin-optimisation": {
+      "courseId": "linkedin-optimisation",
+      "courseName": "LinkedIn Profile Optimisation & Professional Branding",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/linkedin-optimisation.svg",
+        "mobile": "/public/assets/course-cards/svg/linkedin-optimisation.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "LinkedIn Profile Optimisation & Professional Branding — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-LINKEDIN-OPTIMISATION",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "interview-preparation": {
+      "courseId": "interview-preparation",
+      "courseName": "Interview Preparation & Professional Communication",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/interview-preparation.svg",
+        "mobile": "/public/assets/course-cards/svg/interview-preparation.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Interview Preparation & Professional Communication — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-INTERVIEW-PREPARATION",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "client-communication": {
+      "courseId": "client-communication",
+      "courseName": "Professional Client Communication & Project Coordination",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/client-communication.svg",
+        "mobile": "/public/assets/course-cards/svg/client-communication.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Professional Client Communication & Project Coordination — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CLIENT-COMMUNICATION",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "proposal-writing": {
+      "courseId": "proposal-writing",
+      "courseName": "Freelance Proposal Writing & Client Pitching",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/proposal-writing.svg",
+        "mobile": "/public/assets/course-cards/svg/proposal-writing.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Freelance Proposal Writing & Client Pitching — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PROPOSAL-WRITING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "agency-building": {
+      "courseId": "agency-building",
+      "courseName": "Digital Agency Building & Operations",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/agency-building.svg",
+        "mobile": "/public/assets/course-cards/svg/agency-building.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Digital Agency Building & Operations — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-AGENCY-BUILDING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "fiverr-success": {
+      "courseId": "fiverr-success",
+      "courseName": "Fiverr Freelancing & Gig Management",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/fiverr-success.svg",
+        "mobile": "/public/assets/course-cards/svg/fiverr-success.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Fiverr Freelancing & Gig Management — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-FIVERR-SUCCESS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "upwork-success": {
+      "courseId": "upwork-success",
+      "courseName": "Upwork Freelancing & Client Acquisition",
+      "academyId": "career",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/upwork-success.svg",
+        "mobile": "/public/assets/course-cards/svg/upwork-success.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Upwork Freelancing & Client Acquisition — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-UPWORK-SUCCESS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "business-english": {
+      "courseId": "business-english",
+      "courseName": "Business English & Personality Development",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-073.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-073.webp",
+        "mimeType": "image/webp",
+        "alt": "Business English & Personality Development — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-073/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "spoken-english-pro": {
+      "courseId": "spoken-english-pro",
+      "courseName": "Professional Spoken English",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/spoken-english-pro.svg",
+        "mobile": "/public/assets/course-cards/svg/spoken-english-pro.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Professional Spoken English — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SPOKEN-ENGLISH-PRO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "spoken-english-cert": {
+      "courseId": "spoken-english-cert",
+      "courseName": "Spoken English Foundations & Everyday Conversation",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/spoken-english-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/spoken-english-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Spoken English Foundations & Everyday Conversation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SPOKEN-ENGLISH-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "business-communication": {
+      "courseId": "business-communication",
+      "courseName": "Business Communication & Workplace Writing",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/business-communication.svg",
+        "mobile": "/public/assets/course-cards/svg/business-communication.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Business Communication & Workplace Writing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-BUSINESS-COMMUNICATION",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "presentation-skills": {
+      "courseId": "presentation-skills",
+      "courseName": "Presentation Skills & Business Storytelling",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/presentation-skills.svg",
+        "mobile": "/public/assets/course-cards/svg/presentation-skills.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Presentation Skills & Business Storytelling — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PRESENTATION-SKILLS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "public-speaking": {
+      "courseId": "public-speaking",
+      "courseName": "Public Speaking & Audience Engagement",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/public-speaking.svg",
+        "mobile": "/public/assets/course-cards/svg/public-speaking.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Public Speaking & Audience Engagement — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PUBLIC-SPEAKING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "soft-skills": {
+      "courseId": "soft-skills",
+      "courseName": "Workplace Soft Skills & Professional Effectiveness",
+      "academyId": "communication",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/soft-skills.svg",
+        "mobile": "/public/assets/course-cards/svg/soft-skills.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Workplace Soft Skills & Professional Effectiveness — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SOFT-SKILLS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "kids-mastery": {
+      "courseId": "kids-mastery",
+      "courseName": "Future Tech Kids Mastery",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-01/IMG-072.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-01/IMG-072.webp",
+        "mimeType": "image/webp",
+        "alt": "Future Tech Kids Mastery — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-072/unit-01",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "young-coders": {
+      "courseId": "young-coders",
+      "courseName": "Young Coders Program",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/young-coders.svg",
+        "mobile": "/public/assets/course-cards/svg/young-coders.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Young Coders Program — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-YOUNG-CODERS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "scratch-programming": {
+      "courseId": "scratch-programming",
+      "courseName": "Scratch Programming & Game Creation",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/scratch-programming.svg",
+        "mobile": "/public/assets/course-cards/svg/scratch-programming.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Scratch Programming & Game Creation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SCRATCH-PROGRAMMING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "python-for-kids": {
+      "courseId": "python-for-kids",
+      "courseName": "Python for Kids — Coding & Creative Projects",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/python-for-kids.svg",
+        "mobile": "/public/assets/course-cards/svg/python-for-kids.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Python for Kids — Coding & Creative Projects — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PYTHON-FOR-KIDS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "ai-for-kids": {
+      "courseId": "ai-for-kids",
+      "courseName": "AI Literacy & Creative Machine Learning for Kids",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/ai-for-kids.svg",
+        "mobile": "/public/assets/course-cards/svg/ai-for-kids.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "AI Literacy & Creative Machine Learning for Kids — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-AI-FOR-KIDS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "robotics-basics": {
+      "courseId": "robotics-basics",
+      "courseName": "Robotics & Physical Computing with micro:bit",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/robotics-basics.svg",
+        "mobile": "/public/assets/course-cards/svg/robotics-basics.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Robotics & Physical Computing with micro:bit — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-ROBOTICS-BASICS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "web-design-for-kids": {
+      "courseId": "web-design-for-kids",
+      "courseName": "Web Design for Kids — HTML & CSS Foundations",
+      "academyId": "kids",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/web-design-for-kids.svg",
+        "mobile": "/public/assets/course-cards/svg/web-design-for-kids.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Web Design for Kids — HTML & CSS Foundations — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-WEB-DESIGN-FOR-KIDS",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "youtube-mastery": {
+      "courseId": "youtube-mastery",
+      "courseName": "YouTube Growth & Content Strategy Professional",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/youtube-mastery.svg",
+        "mobile": "/public/assets/course-cards/svg/youtube-mastery.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "YouTube Growth & Content Strategy Professional — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-YOUTUBE-MASTERY",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "content-creator-pro": {
+      "courseId": "content-creator-pro",
+      "courseName": "Content Creator Professional",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-070.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-070.webp",
+        "mimeType": "image/webp",
+        "alt": "Content Creator Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-070/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "youtube-seo": {
+      "courseId": "youtube-seo",
+      "courseName": "YouTube SEO, Discovery & Channel Analytics",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/youtube-seo.svg",
+        "mobile": "/public/assets/course-cards/svg/youtube-seo.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "YouTube SEO, Discovery & Channel Analytics — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-YOUTUBE-SEO",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "thumbnail-design": {
+      "courseId": "thumbnail-design",
+      "courseName": "YouTube Thumbnail Design & Creative Testing",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/thumbnail-design.svg",
+        "mobile": "/public/assets/course-cards/svg/thumbnail-design.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "YouTube Thumbnail Design & Creative Testing — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-THUMBNAIL-DESIGN",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "podcast-production": {
+      "courseId": "podcast-production",
+      "courseName": "Podcast Production & Distribution",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/podcast-production.svg",
+        "mobile": "/public/assets/course-cards/svg/podcast-production.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Podcast Production & Distribution — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PODCAST-PRODUCTION",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "personal-branding": {
+      "courseId": "personal-branding",
+      "courseName": "Personal Branding & Thought Leadership",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/personal-branding.svg",
+        "mobile": "/public/assets/course-cards/svg/personal-branding.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Personal Branding & Thought Leadership — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-PERSONAL-BRANDING",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "short-video-strategy": {
+      "courseId": "short-video-strategy",
+      "courseName": "Short-Form Video Strategy & Content Growth",
+      "academyId": "creator",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/short-video-strategy.svg",
+        "mobile": "/public/assets/course-cards/svg/short-video-strategy.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Short-Form Video Strategy & Content Growth — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-SHORT-VIDEO-STRATEGY",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "biz-productivity": {
+      "courseId": "biz-productivity",
+      "courseName": "MIS & Business Intelligence Professional",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-071.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-071.webp",
+        "mimeType": "image/webp",
+        "alt": "MIS & Business Intelligence Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-071/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "office-pro": {
+      "courseId": "office-pro",
+      "courseName": "Office Productivity Professional",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/nova-images/desktop/unit-02/IMG-075.webp",
+        "mobile": "/public/assets/nova-images/mobile/unit-02/IMG-075.webp",
+        "mimeType": "image/webp",
+        "alt": "Office Productivity Professional — hands-on course workspace and practical project preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "package-course-specific",
+      "imageId": "IMG-075/unit-02",
+      "status": "Integrated (Authoritative Course-Specific)"
+    },
+    "microsoft-excel": {
+      "courseId": "microsoft-excel",
+      "courseName": "Microsoft Excel — Business Reporting & Data Analysis",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/microsoft-excel.svg",
+        "mobile": "/public/assets/course-cards/svg/microsoft-excel.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Microsoft Excel — Business Reporting & Data Analysis — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-MICROSOFT-EXCEL",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "microsoft-word": {
+      "courseId": "microsoft-word",
+      "courseName": "Microsoft Word — Professional Documents & Mail Merge",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/microsoft-word.svg",
+        "mobile": "/public/assets/course-cards/svg/microsoft-word.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Microsoft Word — Professional Documents & Mail Merge — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-MICROSOFT-WORD",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "microsoft-powerpoint": {
+      "courseId": "microsoft-powerpoint",
+      "courseName": "Microsoft PowerPoint — Professional Presentation Design",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/microsoft-powerpoint.svg",
+        "mobile": "/public/assets/course-cards/svg/microsoft-powerpoint.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Microsoft PowerPoint — Professional Presentation Design — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-MICROSOFT-POWERPOINT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "google-workspace": {
+      "courseId": "google-workspace",
+      "courseName": "Google Workspace — Cloud Productivity & Collaboration",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/google-workspace.svg",
+        "mobile": "/public/assets/course-cards/svg/google-workspace.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Google Workspace — Cloud Productivity & Collaboration — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-GOOGLE-WORKSPACE",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "notion-cert": {
+      "courseId": "notion-cert",
+      "courseName": "Notion — Workspace, Databases & Knowledge Systems",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/notion-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/notion-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Notion — Workspace, Databases & Knowledge Systems — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-NOTION-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "clickup-cert": {
+      "courseId": "clickup-cert",
+      "courseName": "ClickUp — Project Management & Workflow Automation",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/clickup-cert.svg",
+        "mobile": "/public/assets/course-cards/svg/clickup-cert.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "ClickUp — Project Management & Workflow Automation — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-CLICKUP-CERT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "microsoft-copilot": {
+      "courseId": "microsoft-copilot",
+      "courseName": "Microsoft 365 Copilot — AI Workplace Productivity",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/microsoft-copilot.svg",
+        "mobile": "/public/assets/course-cards/svg/microsoft-copilot.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "Microsoft 365 Copilot — AI Workplace Productivity — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-MICROSOFT-COPILOT",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    },
+    "tally-gst": {
+      "courseId": "tally-gst",
+      "courseName": "TallyPrime — Accounting & GST Compliance",
+      "academyId": "office",
+      "image": {
+        "desktop": "/public/assets/course-cards/svg/tally-gst.svg",
+        "mobile": "/public/assets/course-cards/svg/tally-gst.svg",
+        "mimeType": "image/svg+xml",
+        "alt": "TallyPrime — Accounting & GST Compliance — interactive workflow and software interface preview",
+        "width": 800,
+        "height": 600,
+        "mobileWidth": 600,
+        "mobileHeight": 450
+      },
+      "imageSource": "custom-svg-fallback",
+      "imageId": "SVG-TALLY-GST",
+      "status": "Integrated (Bespoke Vector Visual Fallback)"
+    }
+  }
+}
