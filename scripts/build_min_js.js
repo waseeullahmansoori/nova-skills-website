@@ -26,6 +26,15 @@ function simpleJsMinify(code) {
 
 const files = ['data.js', 'components.js', 'main.js', 'nova-ai-widget.js', 'blog.js', 'blog-detail.js', 'academy-detail.js', 'course-detail.js', 'courses.js'];
 
+// Also minify js/contact-config.js
+const contactCfgSrc = path.join(JS_DIR, 'contact-config.js');
+if (fs.existsSync(contactCfgSrc)) {
+  const cfgContent = fs.readFileSync(contactCfgSrc, 'utf8');
+  const minified = simpleJsMinify(cfgContent);
+  fs.writeFileSync(path.join(JS_DIR, 'contact-config.min.js'), minified, 'utf8');
+  console.log(`✅ Built js/contact-config.min.js (${(minified.length/1024).toFixed(1)} KB)`);
+}
+
 files.forEach(f => {
   const srcPath = path.join(BASE_DIR, f);
   if (!fs.existsSync(srcPath)) return;

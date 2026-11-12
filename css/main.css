@@ -3364,10 +3364,16 @@ h1, h2, h3, h4, h5, h6 {
     border: 1.5px solid rgba(5, 153, 168, 0.3) !important;
   }
 
-  .mobile-drawer-call {
-    background: var(--grad-teal-green) !important;
+  .mobile-drawer-whatsapp {
+    background: #25D366 !important;
     color: #ffffff !important;
-    box-shadow: var(--shadow-sm) !important;
+    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.35) !important;
+  }
+
+  .mobile-drawer-call {
+    background: rgba(5, 153, 168, 0.12) !important;
+    color: var(--teal) !important;
+    border: 1.5px solid var(--teal) !important;
   }
 }
 

@@ -1,6 +1,6 @@
 /**
  * Pre-rendered Course HTML Dictionary for Cloudflare Pages Edge Middleware
- * Generated at 2026-11-12T21:34:58.286Z
+ * Generated at 2026-11-12T22:04:03.929Z
  * Total Pre-rendered Courses: 109
  */
 

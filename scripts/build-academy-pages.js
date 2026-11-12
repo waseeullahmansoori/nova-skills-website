@@ -727,7 +727,8 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
   }
 
   // 9. Final CTA
-  const waMsg = encodeURIComponent(`Hi Nova Skills, I want to know more about admission & fees for ${academy.name}.`);
+  const acadNameText = academy.name.includes('Academy') ? academy.name : `${academy.name} Academy`;
+  const waMsg = encodeURIComponent(`Hi Nova Skills, I am interested in your ${acadNameText}. Please help me explore the available courses and learning options.`);
   html += `
     <section class="section-final-cta" style="padding: 80px 0; background: linear-gradient(135deg, #0599a8 0%, #011731 100%); color: white; text-align: center;">
       <div class="container" style="max-width: 860px;">
@@ -740,8 +741,8 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
         <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; margin-bottom: 24px;">
           <button type="button" class="btn btn-primary btn-lg" style="background: #75d766; color: #011731; font-weight: 800;" onclick="openEnrollmentModal('', '${(academy.name || '').replace(/'/g, "\\'")}')">Enroll Now →</button>
           <button type="button" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);" onclick="openConsultationPopup()">Free Career Counselling</button>
-          <a href="tel:+919695904440" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);">📞 Call Now</a>
-          <a href="https://wa.me/919695904440?text=${waMsg}" target="_blank" rel="noopener" class="btn btn-outline btn-lg" style="color: #75d766; border-color: #75d766;">💬 WhatsApp Us</a>
+          <a href="https://wa.me/919695904440?text=${waMsg}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="background: #25D366; color: #ffffff; font-weight: 700; border: none;" data-academy-id="${academy.id}" data-source-component="academy_final_cta_whatsapp">💬 Chat on WhatsApp</a>
+          <a href="tel:+919695904440" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.7);" data-academy-id="${academy.id}" data-source-component="academy_final_cta_call">📞 Call Admissions</a>
         </div>
 
         <div style="display: flex; gap: 20px; justify-content: center; font-size: 0.92rem; opacity: 0.9; flex-wrap: wrap;">

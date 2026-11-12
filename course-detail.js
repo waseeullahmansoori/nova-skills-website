@@ -25,12 +25,13 @@ function showSpecializationRequired() {
 function updateWhatsAppCourseLink(courseName, pathTitle) {
   const waBtn = document.getElementById('whatsapp-btn') || document.querySelector('.whatsapp-float');
   if (waBtn) {
-    let msg = `Hi, I'm interested in ${courseName || 'AI-Assisted Full Stack Web Development'}`;
-    if (pathTitle) {
-      msg += ` (Specialization: ${pathTitle})`;
-    }
-    msg += '. Please share details and admission schedule.';
+    const cName = courseName || (typeof currentCourse !== 'undefined' && currentCourse && currentCourse.name) || 'AI-Assisted Full Stack Web Development';
+    const spec = pathTitle ? ` (Specialization: ${pathTitle})` : '';
+    const msg = `Hi Nova Skills, I am interested in the ${cName}${spec} course. Please share the syllabus, fees and upcoming batch information.`;
     waBtn.href = `https://wa.me/919695904440?text=${encodeURIComponent(msg)}`;
+    waBtn.setAttribute('data-course-id', (typeof currentCourse !== 'undefined' && currentCourse && currentCourse.id) || '');
+    waBtn.setAttribute('data-academy-id', (typeof currentCourse !== 'undefined' && currentCourse && currentCourse.academyId) || '');
+    waBtn.setAttribute('data-source-component', 'floating_whatsapp_btn');
   }
 }
 
