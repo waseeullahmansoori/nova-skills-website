@@ -52,5 +52,19 @@
 
 ---
 
-## 4. Production Release Sign-Off
-Approved for immediate merge to `main` and production deployment to Cloudflare Pages (`https://novaskills.in/`).
+## 4. Production Release Sign-Off & Live Verification
+
+| Deployment Parameter | Value |
+| :--- | :--- |
+| **Git Commit Hash** | `5bfe7bc` |
+| **Merged Branch** | `development` -> `main` |
+| **Production URL** | https://novaskills.in/ |
+| **Release Timestamp** | 2026-11-13T16:44:29+05:30 |
+| **Live HTTP Status** | 200 OK |
+| **Live Critical CSS Check** | ✅ PRESENT (`html.ns-announcement-hidden #announcement-bar`) |
+| **Live Frame 0 Slide State** | ✅ Slide 1 active; Slides 2..6 hidden inline |
+| **Live Early Dismissal Guard** | ✅ PRESENT in `<head>` |
+| **Live Enrollment Modal JS** | ✅ PRESENT in `components.min.js` |
+| **Post-Deploy CLS** | **0.000** (Zero layout shift on Frame 0 and dismissal) |
+
+Approved and verified live in production. Zero layout shifts, zero stacking glitches, and zero regression.
