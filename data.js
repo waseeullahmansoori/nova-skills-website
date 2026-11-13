@@ -8358,7 +8358,7 @@ const NS_COURSES = [
       "type": "Certification Course",
       "description": "QR-Code Verifiable Nova Skills Completion Certificate"
     },
-    "placementSupport": true,
+    "placementSupport": false,
     "demo_available": true,
     "freeDemo": true,
     "tools": [
@@ -8595,7 +8595,7 @@ const NS_COURSES = [
       "type": "Certification Course",
       "description": "QR-Code Verifiable Nova Skills Completion Certificate"
     },
-    "placementSupport": true,
+    "placementSupport": false,
     "demo_available": true,
     "freeDemo": true,
     "tools": [
@@ -27056,7 +27056,7 @@ const NS_COURSES = [
       "type": "Certification Course",
       "description": "QR-Code Verifiable Nova Skills Completion Certificate"
     },
-    "placementSupport": true,
+    "placementSupport": false,
     "demo_available": false,
     "freeDemo": false,
     "tools": [
@@ -27335,7 +27335,7 @@ const NS_COURSES = [
       "type": "Certification Course",
       "description": "QR-Code Verifiable Nova Skills Completion Certificate"
     },
-    "placementSupport": true,
+    "placementSupport": false,
     "demo_available": false,
     "freeDemo": false,
     "tools": [
@@ -27604,7 +27604,7 @@ const NS_COURSES = [
       "type": "Certification Course",
       "description": "QR-Code Verifiable Nova Skills Completion Certificate"
     },
-    "placementSupport": true,
+    "placementSupport": false,
     "demo_available": false,
     "freeDemo": false,
     "tools": [

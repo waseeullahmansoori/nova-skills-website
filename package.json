@@ -21,6 +21,7 @@
     "validate:credibility": "node scripts/validate-student-faculty.js",
     "validate:costs": "node scripts/validate-course-cost-disclosures.js",
     "validate:refunds": "node scripts/validate-refund-disclosures.js",
+    "validate:placements": "node scripts/validate-placement-claims.js",
     "build": "npm run build:data && node scripts/build_min_js.js && node scripts/build-homepage-featured.js && node scripts/build-courses-page.js && node scripts/build-academy-pages.js && node scripts/build-course-pages.js && node scripts/build-all-city-pages-phaseF.js && node scripts/build-branches-directory.js && node scripts/generate-sitemap.js"
   },
   "keywords": [

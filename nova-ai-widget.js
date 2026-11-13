@@ -1641,8 +1641,10 @@
     const projects = courseData.liveProjects ? `${courseData.liveProjects} Live Projects` : (courseData.projects || '10+ Projects');
     const feeStr = formatFee(courseData.price);
     const emiStr = calculateEMI(courseData.price, courseData.durationMonths || 6);
-    const salary = courseData.salary || '₹4.5 – ₹9.0 LPA';
-    const placementBadge = courseData.placementSupport ? '100% Dedicated Placement' : 'Career Mentorship';
+    const salary = courseData.salary || (courseData.placementSupport ? 'Career Track Portfolio Ready' : 'Skill & Portfolio Ready');
+    const placementBadge = courseData.academyId === 'kids-tech'
+      ? 'Junior Tech Showcase'
+      : (courseData.placementSupport ? 'Dedicated Placement Assistance' : 'Practical Portfolio Support');
     const courseUrl = courseData.slug ? `/course-detail.html?id=${courseData.slug}` : (courseData.id ? `/course-detail.html?id=${courseData.id}` : '/courses.html');
 
     return `
@@ -1658,7 +1660,7 @@
           <div class="nova-ai-rec-spec">💻 <strong>Projects:</strong> ${projects}</div>
           <div class="nova-ai-rec-spec">💰 <strong>Fee:</strong> ${feeStr} <span style="font-size:0.7rem;color:#38bdf8;">(${emiStr}/mo EMI)</span></div>
           <div class="nova-ai-rec-spec">🎓 <strong>Placement:</strong> ${placementBadge}</div>
-          <div class="nova-ai-rec-spec nova-ai-rec-salary">💼 <strong>Career Outcome:</strong> ${salary}</div>
+          <div class="nova-ai-rec-spec nova-ai-rec-salary">💼 <strong>Outcome Focus:</strong> ${salary}</div>
         </div>
 
         <div class="nova-ai-rec-actions">

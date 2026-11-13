@@ -401,7 +401,11 @@ function generateStaticCourseHtml(courseId, templateHtml) {
     <div class="course-meta-item"><span class="meta-icon">📶</span> Level: ${baseCourse.level || 'Beginner'}</div>
     <div class="course-meta-item"><span class="meta-icon">💻</span> Mode: ${baseCourse.mode || 'Online'}</div>
     <div class="course-meta-item"><span class="meta-icon">🚀</span> ${projectLabel}</div>
-    ${baseCourse.placementSupport ? '<div class="course-meta-item" style="color:var(--green-light); font-weight:700;"><span class="meta-icon">🎯</span> Placement Support Included</div>' : ''}
+    ${baseCourse.academyId === 'kids-tech'
+      ? '<div class="course-meta-item"><span class="meta-icon">🌟</span> Junior Project Showcase & Certificate</div>'
+      : (baseCourse.placementSupport
+          ? '<div class="course-meta-item" style="color:var(--green-light); font-weight:700;"><span class="meta-icon">🎯</span> Placement Assistance Included</div>'
+          : '<div class="course-meta-item"><span class="meta-icon">💼</span> Practical Portfolio & Capstone Support</div>')}
   `.trim();
 
   // Render Rating Row (Authentic Credibility / Verified Standards)
@@ -1115,9 +1119,14 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
 
   // Dynamic Includes List
-  const placementIncludeItem = baseCourse.placementSupport
-    ? `<li><span class="include-icon">🎯</span> Placement Support & Interviews</li>`
-    : `<li><span class="include-icon">💼</span> Practical Portfolio & Capstone Support</li>`;
+  let placementIncludeItem;
+  if (baseCourse.academyId === 'kids-tech') {
+    placementIncludeItem = `<li><span class="include-icon">🌟</span> Junior Project Showcase & Certificate</li>`;
+  } else if (baseCourse.placementSupport) {
+    placementIncludeItem = `<li><span class="include-icon">🎯</span> Placement Assistance & Interview Prep</li>`;
+  } else {
+    placementIncludeItem = `<li><span class="include-icon">💼</span> Practical Portfolio & Capstone Support</li>`;
+  }
 
   const includesHtml = `
               <ul id="detail-includes-list">

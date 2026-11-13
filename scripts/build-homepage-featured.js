@@ -194,7 +194,7 @@ function updateHomepage() {
   if (!gridRegex.test(html)) {
     throw new Error('Could not locate #courses-grid inside index.html');
   }
-  html = html.replace(gridRegex, `$1\n\n${cardsHtml}\n        `);
+  html = html.replace(gridRegex, `$1\n\n${cardsHtml}\n`);
 
   // 3. Sync canonical global count spans + View All link
   const totalCount = CourseData.getGlobalCourseCount();

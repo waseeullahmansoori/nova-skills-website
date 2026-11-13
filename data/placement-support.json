@@ -1,0 +1,189 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-11-13T05:55:00+05:30",
+  "title": "Nova Skills Canonical Placement Support, Eligibility & Employer Framework",
+  "legalDisclaimer": {
+    "source": "Terms & Conditions Section 8 (Academic Curriculum & Certification)",
+    "officialStatement": "While Nova Skills provides extensive career support—including resume building, portfolio guidance, mock interviews, and access to industry hiring connections—enrolment does not guarantee a job offer, specific salary package, or employment outcome. Placement success depends on student performance, merit, and interview clearing.",
+    "shortDisclaimer": "Placement assistance supports career preparation and access to relevant opportunities. Enrolment does not guarantee a job offer, interview, specific salary or employment outcome. Final selection depends on student eligibility, performance and employer requirements."
+  },
+  "tiers": {
+    "tierA_career_programs": {
+      "levelName": "Career Programs",
+      "durationRange": "6–9 Months",
+      "placementLevel": "Full Placement Assistance Included",
+      "uiBadge": "🎯 Placement Assistance Included",
+      "sidebarInclude": "🎯 Placement Assistance & Interview Prep",
+      "referralAccess": "conditional-upon-eligibility",
+      "totalCourses": 10,
+      "courseIds": [
+        "dm-mastery",
+        "ai-mastery",
+        "creative-design",
+        "fullstack-foundation",
+        "ai-assisted-full-stack-web-development",
+        "ecommerce-mastery",
+        "ai-integrated-video-editing-motion-graphics-professional",
+        "archviz-mastery",
+        "business-english",
+        "biz-productivity"
+      ],
+      "services": [
+        "1-on-1 Portfolio & Code/Design Quality Audit",
+        "ATS-Optimized Professional Resume Structuring",
+        "LinkedIn, GitHub & Behance Profile Positioning",
+        "1-on-1 Mock Technical & HR Interviews",
+        "Practical Capstone Viva Defense",
+        "Access to Employer Referral Network Drives",
+        "Salary Negotiation & First-30-Day Onboarding Guidance"
+      ]
+    },
+    "tierB_professional_programs": {
+      "levelName": "Professional Programs",
+      "durationRange": "3–5 Months",
+      "placementLevel": "Dedicated Career Preparation & Portfolio Review",
+      "uiBadge": "💼 Career Preparation & Portfolio Review",
+      "sidebarInclude": "💼 Career Preparation & Portfolio Review",
+      "referralAccess": "conditional-specialist-openings",
+      "totalCourses": 14,
+      "courseIds": [
+        "dm-professional",
+        "performance-marketing-specialist",
+        "ecommerce-growth-marketing-specialist",
+        "ai-productivity",
+        "ai-for-business-pro",
+        "graphic-design-pro",
+        "uiux-design-pro",
+        "python-developer",
+        "nocode-web-pro",
+        "video-pro",
+        "generative-ai-video-production-professional",
+        "3d-viz-pro",
+        "freelancing-client-acquisition-professional",
+        "career-launch-placement-readiness-professional"
+      ],
+      "services": [
+        "ATS Resume Formatting Review",
+        "Specialist Portfolio Assembly Guidance",
+        "1-on-1 Mock Domain Interview Session",
+        "Freelance Client Proposal & Scoping Guidance",
+        "Targeted Referral Sharing for Specialist Openings"
+      ]
+    },
+    "tierC_modular_certifications": {
+      "levelName": "Certification Courses",
+      "durationRange": "3–8 Weeks",
+      "placementLevel": "Practical Portfolio & Capstone Support",
+      "uiBadge": "📜 Practical Portfolio & Capstone Support",
+      "sidebarInclude": "💼 Practical Portfolio & Capstone Support",
+      "referralAccess": "not-included",
+      "totalCourses": 83,
+      "services": [
+        "Verified Course Completion Certificate (QR Verifiable)",
+        "Industry-Standard Hands-on Project Brief",
+        "Mentor Code/Design Feedback on Final Deliverable",
+        "Skill Positioning Guidance for CV & LinkedIn"
+      ],
+      "limitations": [
+        "No dedicated placement desk representation",
+        "No individual recruiter forwarding or interview scheduling"
+      ]
+    },
+    "tierD_kids_tech": {
+      "levelName": "Kids Tech Academy (Minors Ages 8–16)",
+      "durationRange": "4 Weeks – 8 Months",
+      "placementLevel": "Young Creator Showcase & Minor Safeguards",
+      "uiBadge": "🌟 Young Creator Showcase & Certificate",
+      "sidebarInclude": "🌟 Junior Project Showcase & Certificate",
+      "referralAccess": "strictly-prohibited",
+      "totalCourses": 2,
+      "courseIds": [
+        "kids-mastery",
+        "young-coders"
+      ],
+      "services": [
+        "Interactive Coding & Game Project Showcase",
+        "Young Innovator Certificate of Completion",
+        "Computational Thinking & Safe AI Literacy"
+      ],
+      "safeguards": [
+        "Strictly zero placement assistance or employer forwarding",
+        "Parent/Guardian consent required for all enrollment and interactions"
+      ]
+    }
+  },
+  "eligibilityCriteria": [
+    {
+      "id": "CRIT-01",
+      "name": "Curriculum Completion",
+      "requirement": "100% completion of core syllabus modules with minimum 80% verified attendance."
+    },
+    {
+      "id": "CRIT-02",
+      "name": "Capstone Project Quality",
+      "requirement": "Submission of all mandatory production capstone projects approved by mentor."
+    },
+    {
+      "id": "CRIT-03",
+      "name": "Practical Assessment & Viva",
+      "requirement": "Achieving >= 70% in practical evaluation and passing mentor viva defense."
+    },
+    {
+      "id": "CRIT-04",
+      "name": "ATS Resume Readiness",
+      "requirement": "Completion and approval of an ATS-compliant, one-page verified resume."
+    },
+    {
+      "id": "CRIT-05",
+      "name": "Recruiter Portfolio Assets",
+      "requirement": "Clean, public GitHub repository, Behance portfolio, or live web deployment."
+    },
+    {
+      "id": "CRIT-06",
+      "name": "Mock Interview Completion",
+      "requirement": "Participation in and completion of at least one formal 1-on-1 mock interview."
+    },
+    {
+      "id": "CRIT-07",
+      "name": "Professional Ethics",
+      "requirement": "Truthful representation of qualifications and punctual attendance at scheduled interviews."
+    }
+  ],
+  "employerClassification": {
+    "tierA_formal_partners": {
+      "description": "Companies with executed MoU or formal campus recruitment agreements.",
+      "count": 0,
+      "logoDisplayApproved": false
+    },
+    "tierB_referral_network": {
+      "description": "Regional agencies and startups that share active vacancy notices with Nova Skills.",
+      "count": "Active Regional Network",
+      "logoDisplayApproved": false
+    },
+    "tierC_employment_sectors": {
+      "description": "The 6 verified industry sectors whose workflows Nova Skills courses prepare learners for.",
+      "sectors": [
+        "Digital Marketing Agencies & Media Consultancies",
+        "Technology Startups & SaaS Companies",
+        "E-Commerce Brands & D2C Enterprises",
+        "Creative Design Studios & Branding Agencies",
+        "Media Houses & Video Production Studios",
+        "3D Visualization & Architectural Design Firms"
+      ]
+    }
+  },
+  "crmPlacementLifecycle": [
+    { "step": 1, "code": "ENROLLED", "label": "Student Enrolled in Qualifying Program" },
+    { "step": 2, "code": "TRAINING_COMPLETE", "label": "Modules & Attendance Criteria Satisfied" },
+    { "step": 3, "code": "CAPSTONE_APPROVED", "label": "All Mandatory Capstones Mentor-Approved" },
+    { "step": 4, "code": "ELIGIBLE_VERIFIED", "label": "All 7 Placement Eligibility Criteria Verified" },
+    { "step": 5, "code": "RESUME_APPROVED", "label": "ATS Resume & Public Portfolio Verified" },
+    { "step": 6, "code": "MOCK_INTERVIEW_PASSED", "label": "1-on-1 Technical & HR Mock Completed" },
+    { "step": 7, "code": "REFERRED_TO_EMPLOYER", "label": "Profile Shared with Employer Opening" },
+    { "step": 8, "code": "INTERVIEW_SCHEDULED", "label": "Employer Shortlist Confirmed & Date Set" },
+    { "step": 9, "code": "INTERVIEW_ATTENDED", "label": "Candidate Attended Employer Interview" },
+    { "step": 10, "code": "OFFER_RECEIVED", "label": "Formal Offer Received by Student" },
+    { "step": 11, "code": "OFFER_ACCEPTED", "label": "Student Formally Accepted Offer" },
+    { "step": 12, "code": "EMPLOYMENT_COMMENCED", "label": "Verification of Candidate Joining" }
+  ]
+}
