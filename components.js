@@ -1640,6 +1640,7 @@ function buildFooterHTML() {
                 <li><a href="/academies/no-code-web/">🌐 No-Code Web</a></li>
                 <li><a href="/academies/3d/">🏗️ 3D Academy</a></li>
                 <li><a href="/academies/kids-tech/">👨‍💻 Kids Tech</a></li>
+                <li><a href="/academies/" style="color: #38bdf8; font-weight: 600;">View All Academies →</a></li>
               </ul>
             </div>
 
@@ -1716,6 +1717,7 @@ function buildFooterHTML() {
             <a href="/privacy-policy/">Privacy Policy</a>
             <a href="/terms-and-conditions/">Terms & Conditions</a>
             <a href="/refund-policy/">Refund &amp; Cancellation Policy</a>
+            <a href="/verify">Verify Certificate</a>
           </div>
           <p class="footer-made">Made with ❤️ in India</p>
         </div>

@@ -195,10 +195,13 @@
 </head>
 <body>
 
-  <div class="verify-header">
-    <div class="verify-brand">Nova <span>Skills</span></div>
-    <div style="color:var(--text-muted); margin-top:4px">Official Credential Verification Portal</div>
-  </div>
+  <header class="verify-header">
+    <div class="verify-brand"><a href="/" style="color:inherit; text-decoration:none;">Nova <span>Skills</span></a></div>
+    <h1 style="font-size:1.4rem; font-weight:700; color:#fff; margin:8px 0 4px;">Verify Nova Skills Certificate &amp; Credentials</h1>
+    <p style="color:#94a3b8; font-size:0.95rem; max-width:600px; margin:0 auto; line-height:1.5;">
+      Verify the authenticity of official Nova Skills course completion certificates, professional diplomas, and verified credentials. Enter the unique certificate identification number below to authenticate student completion records, grades, and instructor signatures.
+    </p>
+  </header>
 
   <div class="verify-box">
     <div class="search-row">
@@ -210,6 +213,17 @@
       <!-- Dynamic verification result output -->
     </div>
   </div>
+
+  <section class="verify-info" style="max-width:680px; width:100%; margin-top:32px; font-size:0.875rem; color:#94a3b8; line-height:1.6; border-top:1px solid rgba(255,255,255,0.1); padding-top:24px;">
+    <h2 style="font-size:1.1rem; color:#fff; margin-bottom:12px;">About Nova Skills Credential Security &amp; Verification</h2>
+    <p style="margin-bottom:12px;">Every student completing a career program across our 12 academies—including Digital Marketing, AI &amp; Automation, Programming, Design, and Video Production—receives a distinct, cryptographically indexed certificate ID.</p>
+    <p style="margin-bottom:12px;">Hiring partners, recruitment managers, and academic institutions can quickly authenticate program completion, verified skill mastery, grades, and capstone project credentials through this public register.</p>
+    <div style="margin-top:16px;">
+      <a href="/" style="color:var(--accent-light); text-decoration:none; margin-right:16px;">← Back to Home</a>
+      <a href="/courses.html" style="color:var(--accent-light); text-decoration:none; margin-right:16px;">Explore All 109 Courses</a>
+      <a href="/contact/" style="color:var(--accent-light); text-decoration:none;">Contact Admissions Helpline</a>
+    </div>
+  </section>
 
   <script>
     async function verifyCertificate() {

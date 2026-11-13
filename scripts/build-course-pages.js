@@ -166,25 +166,52 @@ function escapeHTML(str) {
 }
 
 function getCourseSeoTitle(course) {
-  const type = (course.courseType || course.course_type || course.type || '').toUpperCase();
-  const name = course.name || course.course_name;
-
-  if (type === 'MASTER') {
-    return `${name} — Flagship Career Program | Nova Skills`;
-  } else if (type === 'PROFESSIONAL' || type === 'MERGE') {
-    return `${name} — Professional Certification Course | Nova Skills`;
-  } else if (type === 'SPECIALIZATION') {
-    return `${name} Specialization Course | Hands-on Labs | Nova Skills`;
-  } else if (type === 'MICRO') {
-    return `${name} Practical Certification | Live Projects | Nova Skills`;
-  } else if (type === 'MODULE') {
-    return `${name} Practical Skill Module | Guided Labs | Nova Skills`;
-  } else if (type === 'REPOSITION') {
-    return `${name} Training — Industry Aligned Course | Nova Skills`;
-  } else if (type === 'RETIRE') {
-    return `${name} Training | Modernized Curriculum Advisory | Nova Skills`;
+  let rawName = course.title || course.name || course.course_name || course.id;
+  // If title has a dash/subtitle and is long, split on dash to preserve core subject
+  if (rawName.includes('—')) {
+    const mainPart = rawName.split('—')[0].trim();
+    if (mainPart.length >= 5) rawName = mainPart;
+  } else if (rawName.includes('–')) {
+    const mainPart = rawName.split('–')[0].trim();
+    if (mainPart.length >= 5) rawName = mainPart;
   }
-  return `${name} — Professional Certification Course | Nova Skills`;
+  
+  let candidate = `${rawName} Course | Nova Skills`;
+  if (escapeHTML(candidate).length <= 60) return candidate;
+
+  // If over 60, try shortTitle
+  if (course.shortTitle) {
+    let shortCandidate = `${course.shortTitle} Course | Nova Skills`;
+    if (escapeHTML(shortCandidate).length <= 60) return shortCandidate;
+    shortCandidate = `${course.shortTitle} | Nova Skills`;
+    if (escapeHTML(shortCandidate).length <= 60) return shortCandidate;
+  }
+
+  // Fallback to rawName | Nova Skills
+  if (escapeHTML(`${rawName} | Nova Skills`).length <= 60) {
+    return `${rawName} | Nova Skills`;
+  }
+
+  // Word-boundary truncation keeping | Nova Skills
+  const suffix = ' | Nova Skills';
+  const targetMax = 60 - escapeHTML(suffix).length;
+  const words = rawName.split(' ');
+  let acc = '';
+  for (const w of words) {
+    const next = acc ? `${acc} ${w}` : w;
+    if (escapeHTML(next).length > targetMax) break;
+    acc = next;
+  }
+  if (acc && escapeHTML(`${acc}${suffix}`).length <= 60) {
+    return `${acc}${suffix}`;
+  }
+
+  // Ultimate fallback
+  let truncated = rawName;
+  while (truncated.length > 0 && escapeHTML(`${truncated}...${suffix}`).length > 60) {
+    truncated = truncated.slice(0, -1);
+  }
+  return `${truncated}...${suffix}`;
 }
 
 function getCourseMetaDescription(course, detailData = null) {
