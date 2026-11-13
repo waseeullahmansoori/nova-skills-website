@@ -55,7 +55,7 @@ assert(
   sitemapContent.includes('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'),
   'XML sitemap uses official sitemaps.org 0.9 namespace'
 );
-assert(sitemapContent.endsWith('</urlset>\n') || sitemapContent.endsWith('</urlset>'), 'XML sitemap has closing urlset tag');
+assert(sitemapContent.trim().endsWith('</urlset>'), 'XML sitemap has closing urlset tag');
 
 // Extract URLs and lastmod entries
 const locMatches = [...sitemapContent.matchAll(/<loc>(.*?)<\/loc>/g)].map(m => m[1]);
