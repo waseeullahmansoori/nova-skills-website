@@ -1,0 +1,61 @@
+# ============================================================
+# Nova Skills Official Robots Exclusion Protocol File
+# Website: https://novaskills.in
+# Compliant with Googlebot, Bingbot, ChatGPT, Perplexity & Claude
+# ============================================================
+
+# 1. Global Crawler Directives
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /admin-activity.html
+Disallow: /admin-settings.html
+Disallow: /admin/
+Disallow: /login.html
+Disallow: /student.html
+Disallow: /portal.html
+Disallow: /register.html
+Disallow: /ai-chat.html
+Disallow: /thank-you/
+Disallow: /lead-success/
+Disallow: /scripts/
+Disallow: /cloudflare-worker/
+Disallow: /database/
+Disallow: /google-apps-script/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# 2. ChatGPT Search Discovery (OpenAI Search)
+User-agent: OAI-SearchBot
+Allow: /
+
+# 3. ChatGPT User Retrieval
+User-agent: ChatGPT-User
+Allow: /
+
+# 4. Perplexity Search Discovery
+User-agent: PerplexityBot
+Allow: /
+
+# 5. Perplexity User Retrieval
+User-agent: Perplexity-User
+Allow: /
+
+# 6. Claude Search Discovery (Anthropic Search)
+User-agent: Claude-SearchBot
+Allow: /
+
+# 7. Claude User Retrieval
+User-agent: Claude-User
+Allow: /
+
+# 8. Google Ecosystem (Search, AI Overviews & AI Mode)
+User-agent: Googlebot
+Allow: /
+
+# 9. Microsoft Ecosystem (Bing & Copilot)
+User-agent: Bingbot
+Allow: /
+
+# Official Sitemap Location
+Sitemap: https://novaskills.in/sitemap.xml

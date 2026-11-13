@@ -1,0 +1,6 @@
+Fact Category,Canonical Ground Truth,Observed AI Representation,Accuracy Status,Risk of Hallucination,Enforced Mitigation
+"Physical Campus","One physical classroom campus in Siddharth Nagar, UP (PIN 272153)","Models accurately cite Siddharth Nagar; no false branches observed in top prompts","ACCURATE (100%)","LOW","Retain exclusive LocalBusiness schema on contact/ and clean service area semantics on branches/"
+"Starting Tuition","₹2,900 starting tuition (+ 18% GST)","Models quote ₹2,900 starting price with GST disclosure","ACCURATE (100%)","LOW","Standardized course data disclosures across all SSR files"
+"Total Courses","109 published canonical courses across 12 academies","Models report 109 courses or 100+ courses across 12 academies","ACCURATE (100%)","VERY LOW","Strict count synchronization in data/courses.json and sitemaps"
+"Training Mode","Live-Interactive Online across 36 cities + Classroom at Siddharth Nagar","Models clearly explain live online format with instructor interaction","ACCURATE (100%)","LOW","Reinforced educational organization schema with deliveryLeadTime & courseMode"
+"Trial Class","Free 2-Day Live Interactive Demo Class","Models cite 2-day demo class as trial opportunity","ACCURATE (100%)","VERY LOW","Consistent prominent hero banners & syllabus sidebar disclosures"
