@@ -1354,37 +1354,37 @@ function buildAnnouncementBarHTML() {
       <div class="announcement-stage" id="announcement-stage">
 
         <!-- Slide 1 -->
-        <div class="announcement-slide active" data-index="0">
+        <div class="announcement-slide active" data-index="0" aria-hidden="false">
           <span class="announcement-text">🎓 <strong>Admissions Open for Upcoming Batches</strong> • Industry-ready practical training with limited seats available.</span>
           <a href="#counselling" onclick="openConsultationPopup(); return false;" class="announcement-cta">Apply Now →</a>
         </div>
 
         <!-- Slide 2 -->
-        <div class="announcement-slide" data-index="1">
+        <div class="announcement-slide" data-index="1" style="display:none;" aria-hidden="true">
           <span class="announcement-text">💻 <strong>Live Online & Classroom Training</strong> • Choose how you learn. Same curriculum. Same expert trainers.</span>
           <a href="/courses.html" class="announcement-cta">Explore Learning Modes →</a>
         </div>
 
         <!-- Slide 3 -->
-        <div class="announcement-slide" data-index="2">
+        <div class="announcement-slide" data-index="2" style="display:none;" aria-hidden="true">
           <span class="announcement-text">🚀 <strong>Free Career Counselling</strong> • Speak directly with our academic experts and receive personalised guidance.</span>
           <a href="#counselling" onclick="openConsultationPopup(); return false;" class="announcement-cta">Book Free Counselling →</a>
         </div>
 
         <!-- Slide 4 -->
-        <div class="announcement-slide" data-index="3">
+        <div class="announcement-slide" data-index="3" style="display:none;" aria-hidden="true">
           <span class="announcement-text">🏆 <strong><span class="canonical-courses-count">109+</span> Courses • 5,000+ Students</strong> • Build practical skills that employers actually hire for.</span>
           <a href="/courses.html" class="announcement-cta">Explore Courses →</a>
         </div>
 
         <!-- Slide 5 -->
-        <div class="announcement-slide" data-index="4">
+        <div class="announcement-slide" data-index="4" style="display:none;" aria-hidden="true">
           <span class="announcement-text">🤖 <strong>Try Our AI Career Advisor</strong> • Get a personalised course recommendation in less than 30 seconds.</span>
           <a href="/assessment.html" class="announcement-cta">Start Assessment →</a>
         </div>
 
         <!-- Slide 6 (Free Demo Offer) -->
-        <div class="announcement-slide" data-index="5">
+        <div class="announcement-slide" data-index="5" style="display:none;" aria-hidden="true">
           <span class="announcement-text">✨ <strong>2 Days Free Demo Classes</strong> • Experience the Learning Before You Enroll.</span>
           <a href="#demo" onclick="if(typeof openDemoModal==='function'){openDemoModal({sourceCta:'announcement_bar'});} return false;" class="announcement-cta">Book Free Demo →</a>
         </div>
@@ -2123,19 +2123,30 @@ function initAnnouncementBar() {
   function showSlide(index) {
     if (index === currentIndex && slides[index].classList.contains('active')) return;
 
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active', 'slide-out');
-      if (i === currentIndex) {
-        slide.classList.add('slide-out');
-      }
-    });
-
+    const prevSlideEl = slides[currentIndex];
     currentIndex = (index + totalSlides) % totalSlides;
     sessionStorage.setItem('ns_announcement_index', currentIndex);
+    const nextSlideEl = slides[currentIndex];
+
+    // Ensure target slide is made display:flex and accessible before transition begins
+    nextSlideEl.style.display = 'flex';
+    nextSlideEl.setAttribute('aria-hidden', 'false');
+
+    if (prevSlideEl) {
+      prevSlideEl.classList.remove('active');
+      prevSlideEl.classList.add('slide-out');
+      prevSlideEl.setAttribute('aria-hidden', 'true');
+      setTimeout(() => {
+        if (!prevSlideEl.classList.contains('active')) {
+          prevSlideEl.style.display = 'none';
+          prevSlideEl.classList.remove('slide-out');
+        }
+      }, 420);
+    }
 
     setTimeout(() => {
-      slides[currentIndex].classList.add('active');
-    }, prefersReducedMotion ? 0 : 50);
+      nextSlideEl.classList.add('active');
+    }, prefersReducedMotion ? 0 : 30);
 
     // Update dots
     dots.forEach((dot, i) => {
@@ -2164,9 +2175,12 @@ function initAnnouncementBar() {
     }
   }
 
-  // Initial display setup
+  // Initial display setup (guarantees strictly one slide is visible)
   slides.forEach((s, i) => {
-    s.classList.toggle('active', i === currentIndex);
+    const isActive = (i === currentIndex);
+    s.classList.toggle('active', isActive);
+    s.style.display = isActive ? 'flex' : 'none';
+    s.setAttribute('aria-hidden', isActive ? 'false' : 'true');
   });
   dots.forEach((d, i) => {
     d.classList.toggle('active', i === currentIndex);
@@ -2726,6 +2740,15 @@ function injectEnrollmentModalHTML() {
               <input type="hidden" id="enroll-path-display" name="specialization_path" value="" />
 
               <div class="enroll-form-fields">
+                <!-- Course Interested In Selection -->
+                <div class="form-group" id="group-enroll-course-select">
+                  <label class="form-label" for="enroll-course-select">Course Interested In <span class="req">*</span></label>
+                  <select id="enroll-course-select" class="form-input form-select" required>
+                    <option value="">🎯 Not Sure Yet — Help Me Choose a Course</option>
+                  </select>
+                  <span class="field-error" id="enroll-course-select-error" role="alert"></span>
+                </div>
+
                 <!-- 1. Full Name -->
                 <div class="form-group" id="group-enroll-name">
                   <label class="form-label" for="enroll-name">Full Name <span class="req">*</span></label>
@@ -2816,7 +2839,7 @@ function injectEnrollmentModalHTML() {
   });
 
   // Clear errors dynamically on input
-  ['enroll-name', 'enroll-phone', 'enroll-email', 'enroll-city'].forEach(id => {
+  ['enroll-name', 'enroll-phone', 'enroll-email', 'enroll-city', 'enroll-course-select'].forEach(id => {
     const el = document.getElementById(id);
     el?.addEventListener('input', () => {
       el.classList.remove('has-error');
@@ -2824,7 +2847,18 @@ function injectEnrollmentModalHTML() {
       const errSpan = document.getElementById(`${id}-error`);
       if (errSpan) errSpan.textContent = '';
     });
+    if (id === 'enroll-course-select') {
+      el?.addEventListener('change', () => {
+        el.classList.remove('has-error');
+        el.removeAttribute('aria-invalid');
+        const errSpan = document.getElementById(`${id}-error`);
+        if (errSpan) errSpan.textContent = '';
+      });
+    }
   });
+
+  // Dynamic course selector synchronization
+  document.getElementById('enroll-course-select')?.addEventListener('change', syncEnrollCourseFromSelect);
 
   // Bind form submit
   document.getElementById('course-enrollment-form')?.addEventListener('submit', handleEnrollmentSubmit);
@@ -3027,6 +3061,154 @@ function setEnrollModalState(state, options = {}) {
 }
 window.setEnrollModalState = setEnrollModalState;
 
+/**
+ * Populates the Course Interested In dropdown with all 109 canonical courses
+ * across all 12 academies, grouped cleanly by academy with a top "Not Sure Yet" option.
+ */
+function populateEnrollCourseSelect(preselectedCourseId, preselectedCourseName) {
+  const select = document.getElementById('enroll-course-select');
+  if (!select) return;
+
+  const coursesList = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+    ? window.NovaCourseData.getPublishedCourses()
+    : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+      ? NS_COURSES
+      : ((typeof window !== 'undefined' && Array.isArray(window.NS_COURSES)) ? window.NS_COURSES : []));
+
+  select.innerHTML = '<option value="">🎯 Not Sure Yet — Help Me Choose a Course</option>';
+
+  const grouped = {};
+  coursesList.forEach(c => {
+    const acadName = c.academy || 'Nova Skills Academy';
+    if (!grouped[acadName]) grouped[acadName] = [];
+    grouped[acadName].push(c);
+  });
+
+  let foundMatch = false;
+  const targetId = preselectedCourseId ? String(preselectedCourseId).toLowerCase().trim() : '';
+  const targetName = preselectedCourseName ? String(preselectedCourseName).toLowerCase().trim() : '';
+
+  Object.keys(grouped).forEach(acad => {
+    const optgroup = document.createElement('optgroup');
+    optgroup.label = acad;
+    grouped[acad].forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c.id;
+      opt.dataset.id = c.id;
+      opt.dataset.name = c.name;
+      opt.dataset.academy = c.academy;
+      opt.dataset.academyId = c.academyId || '';
+      opt.dataset.duration = c.duration || '';
+      opt.dataset.fee = '₹' + (c.price || 0).toLocaleString('en-IN');
+      opt.textContent = `${c.name} (${c.duration || 'Flexible'} | ₹${(c.price || 0).toLocaleString('en-IN')})`;
+
+      if (targetId && (c.id.toLowerCase() === targetId || (c.slug && c.slug.toLowerCase() === targetId))) {
+        opt.selected = true;
+        foundMatch = true;
+      } else if (!foundMatch && targetName && c.name.toLowerCase() === targetName) {
+        opt.selected = true;
+        foundMatch = true;
+      }
+      optgroup.appendChild(opt);
+    });
+    select.appendChild(optgroup);
+  });
+
+  if (!foundMatch && preselectedCourseName && targetName) {
+    const customOpt = document.createElement('option');
+    customOpt.value = targetId || targetName;
+    customOpt.dataset.id = targetId || '';
+    customOpt.dataset.name = preselectedCourseName;
+    customOpt.textContent = preselectedCourseName;
+    customOpt.selected = true;
+    select.appendChild(customOpt);
+  }
+}
+
+/**
+ * Synchronizes the modal summary card and hidden form fields whenever
+ * the user interacts with the Course Interested In select dropdown.
+ */
+function syncEnrollCourseFromSelect() {
+  const select = document.getElementById('enroll-course-select');
+  if (!select) return;
+
+  const selectedVal = select.value;
+  const selectedOpt = select.selectedOptions && select.selectedOptions[0];
+
+  const titleSpan = document.getElementById('enroll-course-title-span');
+  const cardCourseName = document.getElementById('card-course-name');
+  const cardAcademyName = document.getElementById('card-academy-name');
+  const cardDuration = document.getElementById('card-duration');
+  const cardFee = document.getElementById('card-fee');
+
+  const courseInput = document.getElementById('enroll-course-display');
+  const academyInput = document.getElementById('enroll-academy-display');
+  const categoryInput = document.getElementById('enroll-category-display');
+  const durationInput = document.getElementById('enroll-duration-display');
+  const feeInput = document.getElementById('enroll-fee-display');
+  const form = document.getElementById('course-enrollment-form');
+
+  if (!selectedVal) {
+    // "Not Sure Yet" selected
+    const fallbackCourse = 'General Admissions (Help Me Choose a Course)';
+    const fallbackAcademy = 'Nova Skills Admissions';
+    const fallbackDuration = 'Flexible Guidance';
+    const fallbackFee = 'Free Counselling';
+
+    if (titleSpan) titleSpan.textContent = 'Nova Skills Programs';
+    if (cardCourseName) cardCourseName.textContent = 'General Admissions & Guidance';
+    if (cardAcademyName) cardAcademyName.textContent = fallbackAcademy;
+    if (cardDuration) cardDuration.textContent = fallbackDuration;
+    if (cardFee) cardFee.textContent = fallbackFee;
+
+    if (courseInput) courseInput.value = fallbackCourse;
+    if (academyInput) academyInput.value = fallbackAcademy;
+    if (categoryInput) categoryInput.value = 'general';
+    if (durationInput) durationInput.value = fallbackDuration;
+    if (feeInput) feeInput.value = fallbackFee;
+    if (form) delete form.dataset.courseId;
+    return;
+  }
+
+  // Find course in NovaCourseData or NS_COURSES
+  let found = null;
+  if (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseById === 'function') {
+    found = window.NovaCourseData.getCourseById(selectedVal);
+  }
+  if (!found) {
+    const list = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+      ? window.NovaCourseData.getPublishedCourses()
+      : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES)) ? NS_COURSES : []);
+    found = list.find(c => c.id === selectedVal || c.slug === selectedVal);
+  }
+
+  const cName = found ? found.name : (selectedOpt ? selectedOpt.dataset.name || selectedOpt.textContent : selectedVal);
+  const cAcademy = found ? found.academy : (selectedOpt ? selectedOpt.dataset.academy : 'Nova Skills Academy');
+  const cDuration = found ? found.duration : (selectedOpt ? selectedOpt.dataset.duration : 'Flexible Duration');
+  const cPrice = found ? ('₹' + (found.price || 0).toLocaleString('en-IN')) : (selectedOpt ? selectedOpt.dataset.fee : 'Enquire for Fee');
+  const cCat = (found ? found.academyId : (selectedOpt ? selectedOpt.dataset.academyId : '')) || 'general';
+
+  if (titleSpan) titleSpan.textContent = cName;
+  if (cardCourseName) cardCourseName.textContent = cName;
+  if (cardAcademyName) cardAcademyName.textContent = cAcademy;
+  if (cardDuration) cardDuration.textContent = cDuration;
+  if (cardFee) cardFee.textContent = cPrice;
+
+  if (courseInput) courseInput.value = cName;
+  if (academyInput) academyInput.value = cAcademy;
+  if (categoryInput) categoryInput.value = cCat;
+  if (durationInput) durationInput.value = cDuration;
+  if (feeInput) feeInput.value = cPrice;
+  if (form) {
+    if (found && found.id) {
+      form.dataset.courseId = found.id;
+    } else {
+      form.dataset.courseId = selectedVal;
+    }
+  }
+}
+
 function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
   injectEnrollmentModalHTML();
 
@@ -3092,6 +3274,7 @@ function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
 
   const errDiv = document.getElementById('enroll-form-error');
   const formContainer = document.getElementById('enroll-form-container');
+  const form = document.getElementById('course-enrollment-form');
   const successContainer = document.getElementById('enroll-success-container');
   const submitBtn = document.getElementById('enroll-submit-btn');
 
@@ -3124,18 +3307,57 @@ function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
     }
   }
 
-  const meta = COURSE_CATALOG_METADATA[courseName] || {};
-  const finalCourse = (found ? found.name : courseName) || 'Selected Course';
-  const finalAcademy = (found ? found.academy : (academyName || meta.academy)) || 'Nova Skills Academy';
-  const finalDuration = (found ? found.duration : (explicitDuration || meta.duration)) || 'Flexible Duration';
-  const finalFee = (found ? ('₹' + (found.price || 0).toLocaleString('en-IN')) : (explicitFee || meta.fee)) || 'Enquire for Fee';
-  const finalCategory = (found ? found.academyId : null) || meta.category || 'general';
+  // Populate dynamic course selector
+  populateEnrollCourseSelect(found ? found.id : explicitId, found ? found.name : courseName);
 
-  if (titleSpan) titleSpan.textContent = finalCourse;
-  if (cardCourseName) cardCourseName.textContent = finalCourse;
-  if (cardAcademyName) cardAcademyName.textContent = finalAcademy;
-  if (cardDuration) cardDuration.textContent = finalDuration;
-  if (cardFee) cardFee.textContent = finalFee;
+  if (found || courseName || explicitId) {
+    const meta = COURSE_CATALOG_METADATA[courseName] || {};
+    const finalCourse = (found ? found.name : courseName) || 'Selected Course';
+    const finalAcademy = (found ? found.academy : (academyName || meta.academy)) || 'Nova Skills Academy';
+    const finalDuration = (found ? found.duration : (explicitDuration || meta.duration)) || 'Flexible Duration';
+    const finalFee = (found ? ('₹' + (found.price || 0).toLocaleString('en-IN')) : (explicitFee || meta.fee)) || 'Enquire for Fee';
+    const finalCategory = (found ? found.academyId : null) || meta.category || 'general';
+
+    if (titleSpan) titleSpan.textContent = finalCourse;
+    if (cardCourseName) cardCourseName.textContent = finalCourse;
+    if (cardAcademyName) cardAcademyName.textContent = finalAcademy;
+    if (cardDuration) cardDuration.textContent = finalDuration;
+    if (cardFee) cardFee.textContent = finalFee;
+
+    if (courseInput) courseInput.value = finalCourse;
+    if (academyInput) academyInput.value = finalAcademy;
+    if (categoryInput) categoryInput.value = finalCategory;
+    if (durationInput) durationInput.value = finalDuration;
+    if (feeInput) feeInput.value = finalFee;
+
+    if (form) {
+      if (found && found.id) {
+        form.dataset.courseId = found.id;
+      } else if (explicitId) {
+        form.dataset.courseId = explicitId;
+      }
+    }
+  } else {
+    // Generic open without specific course
+    const fallbackCourse = 'General Admissions (Help Me Choose a Course)';
+    const fallbackAcademy = 'Nova Skills Admissions';
+    const fallbackDuration = 'Flexible Guidance';
+    const fallbackFee = 'Free Counselling';
+
+    if (titleSpan) titleSpan.textContent = 'Nova Skills Programs';
+    if (cardCourseName) cardCourseName.textContent = 'General Admissions & Guidance';
+    if (cardAcademyName) cardAcademyName.textContent = fallbackAcademy;
+    if (cardDuration) cardDuration.textContent = fallbackDuration;
+    if (cardFee) cardFee.textContent = fallbackFee;
+
+    if (courseInput) courseInput.value = fallbackCourse;
+    if (academyInput) academyInput.value = fallbackAcademy;
+    if (categoryInput) categoryInput.value = 'general';
+    if (durationInput) durationInput.value = fallbackDuration;
+    if (feeInput) feeInput.value = fallbackFee;
+
+    if (form) delete form.dataset.courseId;
+  }
 
   // Handle Specialization Path selection
   const selectedPath = options.selectedPath || (typeof window !== 'undefined' && window.novaSelectedSpecialization) || '';
@@ -3159,13 +3381,6 @@ function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
     }
   }
 
-  if (found && found.id) { if (form) form.dataset.courseId = found.id; } else if (explicitId) { if (form) form.dataset.courseId = explicitId; }
-  if (courseInput) courseInput.value = finalCourse;
-  if (academyInput) academyInput.value = finalAcademy;
-  if (categoryInput) categoryInput.value = finalCategory;
-  if (durationInput) durationInput.value = finalDuration;
-  if (feeInput) feeInput.value = finalFee;
-
   // Reset input values to pristine state
   const nameInput = document.getElementById('enroll-name');
   const phoneInput = document.getElementById('enroll-phone');
@@ -3175,7 +3390,18 @@ function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
   if (nameInput) nameInput.value = '';
   if (phoneInput) phoneInput.value = '';
   if (emailInput) emailInput.value = '';
-  if (cityInput) cityInput.value = '';
+  if (cityInput) {
+    // Contextual city pre-filling from session or page data
+    let contextualCity = '';
+    try {
+      contextualCity = sessionStorage.getItem('nova_last_city_name') || document.body.getAttribute('data-city-name') || '';
+      if (!contextualCity && typeof NovaContact !== 'undefined' && typeof NovaContact.resolveCurrentPageContactContext === 'function') {
+        const ctx = NovaContact.resolveCurrentPageContactContext();
+        if (ctx && ctx.cityName) contextualCity = ctx.cityName;
+      }
+    } catch (e) {}
+    cityInput.value = contextualCity;
+  }
   if (msgInput) msgInput.value = '';
 
   setEnrollModalState('idle');
@@ -3195,6 +3421,27 @@ function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
 window.openEnrollmentModal = openEnrollmentModal;
 window.openCourseEnrollModal = openEnrollmentModal;
 window.openCourseEnrollment = openEnrollmentModal;
+
+// Global Click Delegation for Enroll Now buttons & CTAs
+if (typeof document !== 'undefined') {
+  document.addEventListener('click', (e) => {
+    const trigger = e.target && typeof e.target.closest === 'function'
+      ? e.target.closest('[data-action="enroll"], [data-action="open-enrollment"], .btn-open-enroll, .btn-enroll, [data-enroll-course]')
+      : null;
+    if (!trigger) return;
+    const inlineOnclick = trigger.getAttribute('onclick') || '';
+    if (inlineOnclick.includes('openEnrollmentModal') || inlineOnclick.includes('openCourseEnrollModal')) {
+      return;
+    }
+    e.preventDefault();
+    const cId = trigger.dataset.courseId || trigger.dataset.course || trigger.getAttribute('data-enroll-course') || '';
+    const cName = trigger.dataset.courseName || trigger.dataset.name || '';
+    const cAcademy = trigger.dataset.academy || '';
+    const cDuration = trigger.dataset.duration || '';
+    const cFee = trigger.dataset.fee || trigger.dataset.price || '';
+    openEnrollmentModal(cName || cId, cAcademy, cDuration, cFee, cId);
+  });
+}
 
 function closeEnrollmentModal() {
   // Invalidate any pending in-flight async callback on close
