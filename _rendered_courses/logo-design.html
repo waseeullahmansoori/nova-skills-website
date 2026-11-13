@@ -447,7 +447,7 @@
               <span class="enroll-discount" id="detail-discount" style="display:none;"></span>
             </div>
 
-            <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options available · The final payable amount, including any applicable taxes, will be clearly displayed before payment.</p>
+            <p class="enroll-emi" id="detail-emi">💳 One-time course enrollment fee · The final payable amount, including any applicable taxes, will be clearly displayed before payment.</p>
             <!-- Compact Demo & 1:1 Benefits Area -->
             <div class="detail-demo-benefit-box" id="detail-demo-box">
               <div class="demo-benefit-item" id="detail-demo-item">
@@ -475,6 +475,11 @@
             <button type="button" class="btn-book-demo-secondary" id="btn-detail-book-demo" onclick="openDemoModal({courseId:'logo-design',courseName:'Logo Design & Vector Identity Marks',academyName:'Design Academy',academyId:'design',sourceCta:'course_detail_sidebar'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;max-width:18px;max-height:18px;display:block;flex-shrink:0;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg> <span>Book Your Free Demo</span></button>
 
             <button class="btn-consult-full" onclick="openConsultationPopup('Logo Design & Vector Identity Marks')">📞 Request Callback / Syllabus</button>
+
+            <div class="enroll-refund-notice" id="detail-refund-notice">
+              <span class="refund-notice-icon">📄</span>
+              <span>Review our <a href="/refund-policy/" target="_blank" rel="noopener">Refund &amp; Cancellation Policy</a> before payment.</span>
+            </div>
 
             <div class="course-card-includes">
               <h4>This Course Includes:</h4>
@@ -1129,6 +1134,51 @@
 
       <div class="financing-policy-banner" id="financing-policy-banner">
         <!-- Financing tier banner rendered dynamically -->
+      </div>
+
+      <!-- Pre-Enrolment Refund & Cancellation Disclosure (P1-7) -->
+      <div class="refund-transparency-card" id="refund-transparency-card">
+        <div class="refund-card-header">
+          <span class="refund-badge">PRE-ENROLMENT LEGAL TRANSPARENCY</span>
+          <h3 class="refund-card-title">Refund &amp; Cancellation Policy</h3>
+          <p class="refund-card-desc">Review our course cancellation, refund eligibility, cooling-off conditions, and non-refundable situations before proceeding with enrolment.</p>
+        </div>
+        <div class="refund-rules-grid">
+          <div class="refund-rule-box">
+            <div class="rule-icon-title">
+              <span class="rule-icon">🕒</span>
+              <h4>Standard Cancellation (≥ 7 Days)</h4>
+            </div>
+            <p>Written cancellation received 7+ calendar days before batch start qualifies for <strong>100% Tuition Fee refund</strong> (minus nominal administrative registration deduction, capped at ₹1,000 or 10%, whichever is lower).</p>
+          </div>
+          <div class="refund-rule-box">
+            <div class="rule-icon-title">
+              <span class="rule-icon">🛡️</span>
+              <h4>48-Hour Cooling-Off Window</h4>
+            </div>
+            <p>For enrolments completed within 7 days of batch start, students receive a <strong>48-hour cooling-off period</strong> (90% refund of fees paid), provided the first live class or classroom session has not yet commenced.</p>
+          </div>
+          <div class="refund-rule-box">
+            <div class="rule-icon-title">
+              <span class="rule-icon">⚠️</span>
+              <h4>Non-Refundable Situations</h4>
+            </div>
+            <p>Under Section 4 of our policy, fees are strictly non-refundable once classes commence, LMS credentials / study materials are accessed, or for promotional / discounted / scholarship enrolments.</p>
+          </div>
+          <div class="refund-rule-box">
+            <div class="rule-icon-title">
+              <span class="rule-icon">🏛️</span>
+              <h4>Institute Cancellation Guarantee</h4>
+            </div>
+            <p>If Nova Skills cancels or reschedules a batch by &gt; 14 days without mutual agreement, students are entitled to a <strong>100% full refund</strong> with zero deductions, or free priority batch transfer.</p>
+          </div>
+        </div>
+        <div class="refund-card-action">
+          <div class="refund-action-text">
+            <span>Formal refund requests must be emailed to <a href="mailto:novaskills.official@gmail.com" class="refund-mail-link">novaskills.official@gmail.com</a>. Processing timeline: 7–10 business days upon approval.</span>
+          </div>
+          <a href="/refund-policy/" target="_blank" rel="noopener" class="btn btn-outline btn-sm refund-cta-btn">Read Full Refund Policy →</a>
+        </div>
       </div>
     </section>
 

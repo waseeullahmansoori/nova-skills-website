@@ -1715,7 +1715,7 @@ function buildFooterHTML() {
           <div class="footer-legal">
             <a href="/privacy-policy/">Privacy Policy</a>
             <a href="/terms-and-conditions/">Terms & Conditions</a>
-            <a href="/refund-policy/">Refund Policy</a>
+            <a href="/refund-policy/">Refund &amp; Cancellation Policy</a>
           </div>
           <p class="footer-made">Made with ❤️ in India</p>
         </div>
@@ -2763,6 +2763,9 @@ function injectEnrollmentModalHTML() {
 
               <!-- Persistent / Sticky Action Area -->
               <div class="enroll-modal-actions">
+                <p class="enroll-refund-advisory">
+                  📄 <strong>Admissions Notice:</strong> Please review our official <a href="/refund-policy/" target="_blank" rel="noopener">Refund &amp; Cancellation Policy</a> prior to seat confirmation. Enrolment conditions, cooling-off cutoffs, and promotional restrictions apply.
+                </p>
                 <button type="submit" class="btn btn-primary btn-submit-enroll" id="enroll-submit-btn">
                   <span id="enroll-btn-text">Submit Enquiry →</span>
                 </button>

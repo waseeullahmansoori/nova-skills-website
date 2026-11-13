@@ -376,7 +376,17 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   const taxDisclosure = (typeof NovaCourseData !== 'undefined' && typeof NovaCourseData.getGstDisclosure === 'function')
     ? NovaCourseData.getGstDisclosure(baseCourse)
     : 'The final payable amount, including any applicable taxes, will be clearly displayed before payment.';
-  const emiText = `💳 Flexible monthly installment options available · ${taxDisclosure}`;
+
+  const durLower = (baseCourse.duration || '').toLowerCase();
+  const isTier1 = durLower.includes('week') || durationMonths <= 1.5;
+  const isTier3 = durationMonths >= 5;
+  let emiPrefix = '💳 Flexible 2-part milestone & card EMI options available';
+  if (isTier1) {
+    emiPrefix = '💳 One-time course enrollment fee';
+  } else if (isTier3) {
+    emiPrefix = '💳 Structured milestone & partner EMI options available';
+  }
+  const emiText = `${emiPrefix} · ${taxDisclosure}`;
 
   const acadSlug = getAcademySlug(baseCourse.academyId);
   const acadUrl = acadSlug ? `/academies/${acadSlug}/` : '/academies/';
