@@ -1,0 +1,1582 @@
+{
+  "courseId": "proposal-writing",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/proposal-writing.json",
+  "guidedHours": 32,
+  "learning_hours": 32,
+  "course_type": "Certification Course",
+  "seo_title": "Freelance Proposal Writing & Pitching Course | Nova Skills",
+  "seo_description": "Learn freelance proposals, pricing, SOWs and client pitching in 4 weeks (32h). Build 3 tailored proposals, a calculator and pitch portfolio. ₹4,900.",
+  "overview": {
+    "section_heading": "What You Will Master",
+    "positioning": "Proposal Development, Commercial Scoping & Client Pitching",
+    "short_description": "Learn professional proposal writing for freelancing and client services. Analyze briefs, develop clear solutions, define deliverables, estimate project costs and present credible proposals using practical templates, client research and AI-assisted writing.",
+    "expanded_overview": "Learn to evaluate freelance opportunities, clarify client requirements and develop proposals that address real business needs. Understand how to present relevant work, define a practical project approach, describe deliverables and estimate costs using a repeatable pricing framework. Practise writing proposals for fixed-price projects, milestone-based engagements and recurring services. Learn to prepare Statements of Work, communicate pricing assumptions, present your approach professionally and follow up respectfully.",
+    "commercial_differentiation": "Move Beyond Generic Bids. Build Proposals With Clear Scope, Evidence and Commercial Logic.",
+    "workflow": "Find Opportunity → Qualify → Research → Clarify → Scope → Estimate → Write → Review → Pitch → Follow Up → Track"
+  },
+  "why_now": {
+    "industry_shift": "Clients and marketplace algorithms heavily penalize generic AI-generated copy-paste proposals in favor of tailored diagnostic pitches.",
+    "ai_impact": "AI tools accelerate research and outline drafting, but human empathy, commercial judgment, and bespoke project scoping win client trust.",
+    "business_demand": "Clients receive dozens of low-effort spam bids and eagerly reward freelancers who demonstrate clear comprehension of their specific problem.",
+    "career_opportunity": "Mastering proposal development, commercial estimation, and professional pitching empowers independent professionals to win better clients and protect profit margins."
+  },
+  "learning_journey": null,
+  "prerequisites": {
+    "required": "Basic professional writing ability. A genuine marketable service skill OR an instructor-approved simulated business service. No real clients required.",
+    "recommended": "Familiarity with general office document tools (Google Docs, Google Sheets).",
+    "hardware": "A laptop or desktop computer with reliable internet access and browser.",
+    "software_accounts": "Access to Google Docs or Microsoft Word, Google Sheets, an accessible screen recorder (Loom or free equivalent), and an AI writing assistant (ChatGPT / Gemini)."
+  },
+  "target_audience": {
+    "ideal_for": [
+      "Freelancers and independent service professionals seeking to improve proposal quality",
+      "Graphic designers, UI/UX designers, and brand identity creators",
+      "Video editors, motion designers, and content production specialists",
+      "Web developers, full-stack engineers, and software consultants",
+      "Digital marketing specialists, SEO consultants, and copywriters",
+      "Small agency owners, consultants, and junior business development coordinators"
+    ],
+    "not_for": [
+      "Individuals seeking copy-paste spam templates to mass-bid across marketplaces",
+      "Those seeking enterprise government procurement or legal contract law certifications"
+    ],
+    "who_should_take_foundation_first": "Students with basic professional writing literacy and a marketable skill can enroll directly. Simulated briefs are provided for those without existing client histories."
+  },
+  "learning_outcomes": [
+    "Identify realistic freelance opportunities.",
+    "Understand common RFP and brief structures.",
+    "Extract a client's primary objectives.",
+    "Distinguish essential requirements from preferences.",
+    "Assess opportunity feasibility.",
+    "Identify risks and missing information.",
+    "Research a client business responsibly.",
+    "Prepare useful clarification questions.",
+    "Write a personalized proposal opening.",
+    "Explain a proposed service solution.",
+    "Define measurable project deliverables.",
+    "Present relevant project evidence.",
+    "Prepare realistic project timelines.",
+    "Develop milestone structures.",
+    "Estimate effort and direct costs.",
+    "Calculate hourly and fixed-price options.",
+    "Understand markup versus profit margin.",
+    "Evaluate revision and contingency allowances.",
+    "Prepare a basic recurring-service price.",
+    "Create a detailed Statement of Work.",
+    "Document exclusions and assumptions.",
+    "Explain scope-change procedures.",
+    "Present a proposal professionally.",
+    "Record a simulated client pitch.",
+    "Handle common buyer objections.",
+    "Ask constructive clarification questions.",
+    "Write respectful follow-up messages.",
+    "Maintain a proposal tracking sheet.",
+    "Use AI responsibly for drafting and review.",
+    "Verify commercial claims and commitments.",
+    "Present a three-proposal portfolio.",
+    "Defend pricing and scope decisions during a simulated review."
+  ],
+  "hands_on_tech": {
+    "primary_tools": [
+      {
+        "tool": "Google Docs OR Microsoft Word",
+        "purpose": "Proposal authoring, typographic visual formatting, Statement of Work drafting, and clean PDF export.",
+        "what_student_learns": "Structuring clear client proposals, formatting SOWs, and setting up professional document hierarchies.",
+        "what_student_builds": "Three tailored client proposals and one detailed Statement of Work."
+      },
+      {
+        "tool": "Google Sheets",
+        "purpose": "Commercial cost estimation, labor modeling, contingency buffers, markup vs margin formulas, and proposal pipeline tracking.",
+        "what_student_learns": "Building defensible commercial pricing models, auditing formulas, and managing proposal stages.",
+        "what_student_builds": "A working Pricing Calculator and a Proposal Tracking Sheet."
+      },
+      {
+        "tool": "Proposal Tracking Sheet",
+        "purpose": "Pipeline management, status logging, follow-up scheduling, and client decision recording.",
+        "what_student_learns": "Tracking proposals through 10 lifecycle stages without expensive proprietary software.",
+        "what_student_builds": "An active proposal pipeline tracking worksheet."
+      }
+    ],
+    "supporting_tools": [
+      "Loom (Optional screen-recorded proposal walkthroughs and mock pitch recordings)",
+      "Canva (Optional visual pitch deck design, proposal covers, and workflow diagrams)",
+      "AI Writing Assistant (ChatGPT / Gemini - draft refinement, tone review, conciseness editing, and prompt validation)",
+      "Notion / PandaDoc (Optional template organization and document workflow demonstration)"
+    ],
+    "removed_from_mandatory_toolchain": [
+      "Paid Upwork Connects or live bidding mandates",
+      "Paid Fiverr seller accounts or promoted gig tools",
+      "LinkedIn Sales Navigator subscriptions",
+      "Paid CRM or proposal automation subscriptions (PandaDoc paid plans)",
+      "Automated cold-email scrapers or mass outreach bots",
+      "Paid electronic contract-signing services"
+    ]
+  },
+  "modules": [
+    {
+      "module_number": 1,
+      "moduleNumber": 1,
+      "title": "Client Brief & Opportunity Analysis",
+      "module_title": "Client Brief & Opportunity Analysis",
+      "name": "Client Brief & Opportunity Analysis",
+      "hours": 5,
+      "guided_hours": 5,
+      "learning_hours": 5,
+      "module_purpose": "Evaluate freelance opportunities, understand client requirements and develop a practical qualification process.",
+      "objective": "Evaluate freelance opportunities, understand client requirements and develop a practical qualification process.",
+      "lessons_count": 13,
+      "lessons": [
+        {
+          "number": "1.1",
+          "lesson_number": 1,
+          "title": "Understanding Freelance Opportunities",
+          "lesson_title": "Understanding Freelance Opportunities",
+          "what_is_taught": "Navigating freelance project categories: service-based contracts, small fixed-price assignments, multi-stage milestone projects, recurring retainer engagements, direct client inbound enquiries, client briefs, and formal RFPs.",
+          "topics": [
+            "Freelance project types",
+            "Service-based contracts",
+            "Small fixed-price assignments",
+            "Larger milestone-based projects",
+            "Recurring service engagements",
+            "Direct client enquiries",
+            "Client briefs and RFPs"
+          ]
+        },
+        {
+          "number": "1.2",
+          "lesson_number": 2,
+          "title": "Types of Client Briefs",
+          "lesson_title": "Types of Client Briefs",
+          "what_is_taught": "Deconstructing varied client briefs: informal messages, formal project briefs, job descriptions, Requests for Proposal (RFPs), Requests for Quotation (RFQs), creative briefs, and technical specifications.",
+          "topics": [
+            "Informal client messages",
+            "Formal project briefs",
+            "Job descriptions and listings",
+            "Requests for Proposal (RFPs)",
+            "Requests for Quotation (RFQs)",
+            "Creative briefs",
+            "Service requirements and technical specs"
+          ]
+        },
+        {
+          "number": "1.3",
+          "lesson_number": 3,
+          "title": "Reading the Client Brief",
+          "lesson_title": "Reading the Client Brief",
+          "what_is_taught": "Extracting key brief parameters: project objective, underlying business problem, target audience, commercial context, required deliverables, delivery timelines, budget hints, required skills, and approval workflows.",
+          "topics": [
+            "Project core objective",
+            "Underlying business problem",
+            "Intended target audience",
+            "Commercial context",
+            "Expected deliverables inventory",
+            "Target timeline and milestones",
+            "Budget parameters",
+            "Required technical/creative skills",
+            "Approval process"
+          ]
+        },
+        {
+          "number": "1.4",
+          "lesson_number": 4,
+          "title": "Understanding Buyer Objectives",
+          "lesson_title": "Understanding Buyer Objectives",
+          "what_is_taught": "Diagnosing buyer motives: business problems, commercial desired outcomes, operational bottlenecks, technical constraints, design requirements, service expectations, and explicit success criteria.",
+          "topics": [
+            "Diagnosing core business problems",
+            "Desired commercial outcomes",
+            "Operational constraints",
+            "Technical requirements and tech stacks",
+            "Design and branding requirements",
+            "Service delivery expectations",
+            "Defining project success criteria"
+          ]
+        },
+        {
+          "number": "1.5",
+          "lesson_number": 5,
+          "title": "Requirements Analysis",
+          "lesson_title": "Requirements Analysis",
+          "what_is_taught": "Categorizing project requirements: mandatory specifications, preferred features, optional enhancements, existing client assets, client dependencies, acceptance conditions, and missing information.",
+          "topics": [
+            "Mandatory non-negotiable requirements",
+            "Preferred project features",
+            "Optional future enhancements",
+            "Existing client assets audit",
+            "Client dependencies",
+            "Acceptance conditions",
+            "Identifying missing critical information"
+          ]
+        },
+        {
+          "number": "1.6",
+          "lesson_number": 6,
+          "title": "Opportunity Qualification",
+          "lesson_title": "Opportunity Qualification",
+          "what_is_taught": "Applying qualification filters: skill alignment, calendar availability, scope clarity, budget adequacy, delivery feasibility, client expectations, communication style, and potential project risk.",
+          "topics": [
+            "Skill and capability fit",
+            "Calendar availability and workload",
+            "Scope clarity and ambiguity risk",
+            "Budget suitability and margin potential",
+            "Delivery feasibility",
+            "Client expectations calibration",
+            "Communication cadence requirements",
+            "Potential project risk assessment"
+          ]
+        },
+        {
+          "number": "1.7",
+          "lesson_number": 7,
+          "title": "Feasibility Review",
+          "lesson_title": "Feasibility Review",
+          "what_is_taught": "Assessing operational feasibility: required labor effort, technical complexity, available tools, deadline constraints, external vendor dependencies, skills gaps, and licensing considerations.",
+          "topics": [
+            "Estimating required labor effort",
+            "Technical complexity assessment",
+            "Available tools and software assets",
+            "Deadline constraints and schedule realism",
+            "External dependencies and subcontractor needs",
+            "Identifying and bridging skills gaps",
+            "Delivery capacity and licensing review"
+          ]
+        },
+        {
+          "number": "1.8",
+          "lesson_number": 8,
+          "title": "Client Research",
+          "lesson_title": "Client Research",
+          "what_is_taught": "Conducting public client research: official company websites, core products and services, public client portfolio, market positioning, industry vertical context, and project-specific business needs.",
+          "topics": [
+            "Official company website research",
+            "Product and service portfolio review",
+            "Client public work and brand tone",
+            "Market positioning and competitors",
+            "Industry vertical dynamics",
+            "Identifying project-specific needs",
+            "Evaluating reliable public sources"
+          ]
+        },
+        {
+          "number": "1.9",
+          "lesson_number": 9,
+          "title": "Responsible Client Research",
+          "lesson_title": "Responsible Client Research",
+          "what_is_taught": "Adhering to ethical research boundaries: respecting client privacy, avoiding unfounded assumptions, strictly refusing unauthorized scraping or confidential data gathering, and separating observed facts from interpretations.",
+          "topics": [
+            "Respecting privacy boundaries",
+            "Avoiding unsupported assumptions",
+            "Prohibition of unauthorized scraping",
+            "No confidential or private data collection",
+            "Separating verified facts from interpretations",
+            "Verifying business legitimacy"
+          ]
+        },
+        {
+          "number": "1.10",
+          "lesson_number": 10,
+          "title": "Clarification Questions",
+          "lesson_title": "Clarification Questions",
+          "what_is_taught": "Drafting targeted pre-proposal clarification inquiries: What problem needs solving? Who is the end user? What deliverables are required? What assets exist? What is the deadline? Who approves? What constraints exist?",
+          "topics": [
+            "What specific problem needs solving?",
+            "Who is the intended customer or user?",
+            "What exact deliverables are required?",
+            "What source assets already exist?",
+            "What is the firm target deadline?",
+            "Who has final project approval authority?",
+            "What is the expected review process?",
+            "What technical or budget constraints exist?"
+          ]
+        },
+        {
+          "number": "1.11",
+          "lesson_number": 11,
+          "title": "Risk Identification",
+          "lesson_title": "Risk Identification",
+          "what_is_taught": "Spotting commercial and delivery red flags: ambiguous scopes, unreasonable turnaround times, unclear ownership, missing client assets, unapproved third-party content, budget volatility, and excessive revision demands.",
+          "topics": [
+            "Ambiguous or shifting scope of work",
+            "Unrealistic rush deadlines",
+            "Unclear decision-making ownership",
+            "Missing client-provided source assets",
+            "Unlicensed third-party materials",
+            "Budget uncertainty or mismatched expectations",
+            "Excessive or undefined revision demands",
+            "Unverifiable client promises"
+          ]
+        },
+        {
+          "number": "1.12",
+          "lesson_number": 12,
+          "title": "Qualification Decision",
+          "lesson_title": "Qualification Decision",
+          "what_is_taught": "Making defensible bid/no-bid determinations: identifying suitable opportunities, flagging items requiring clarification, declining unfeasible briefs courteously, and referring to specialists when appropriate.",
+          "topics": [
+            "Criteria for pursuing an opportunity",
+            "When to request clarification before bidding",
+            "Recognizing projects outside current capability",
+            "Identifying commercially unfeasible briefs",
+            "Politely and respectfully declining opportunities",
+            "Appropriate professional referral practices"
+          ]
+        },
+        {
+          "number": "1.13",
+          "lesson_number": 13,
+          "title": "Opportunity Analysis Worksheet",
+          "lesson_title": "Opportunity Analysis Worksheet",
+          "what_is_taught": "Completing the Opportunity Analysis Worksheet: brief summary, project category, objectives, deliverables breakdown, feasibility score, identified risks, open questions, and bid/no-bid recommendation.",
+          "topics": [
+            "Opportunity Analysis Worksheet architecture",
+            "Documenting client brief parameters",
+            "Mapping objectives to core deliverables",
+            "Scoring technical and operational feasibility",
+            "Documenting project risks and mitigations",
+            "Formulating pre-bid clarification questions",
+            "Final bid/no-bid recommendation"
+          ]
+        }
+      ],
+      "hands_on_lab": "Analyze THREE realistic client briefs corresponding to: 1. Small fixed-price service, 2. Larger milestone-based project, 3. Recurring service engagement. Identify different scope and pricing considerations.",
+      "practical_assignment": "Create an Opportunity Qualification & Client Brief Analysis worksheet for all three cases.",
+      "expected_deliverable": "Three Client Brief Analysis Sheets and a Qualification Matrix",
+      "commercial_application": "Helps freelancers and agencies avoid unsuitable opportunities and prepare more relevant proposals."
+    },
+    {
+      "module_number": 2,
+      "moduleNumber": 2,
+      "title": "Proposal Structure & Persuasive Writing",
+      "module_title": "Proposal Structure & Persuasive Writing",
+      "name": "Proposal Structure & Persuasive Writing",
+      "hours": 7,
+      "guided_hours": 7,
+      "learning_hours": 7,
+      "module_purpose": "Create clear, customized and evidence-based proposals that help clients understand the recommended solution.",
+      "objective": "Create clear, customized and evidence-based proposals that help clients understand the recommended solution.",
+      "lessons_count": 18,
+      "lessons": [
+        {
+          "number": "2.1",
+          "lesson_number": 1,
+          "title": "Purpose of a Professional Proposal",
+          "lesson_title": "Purpose of a Professional Proposal",
+          "what_is_taught": "Distinguishing proposals from simple price quotations, casual pitches, and legal Statements of Work; supporting client decision-making with commercial clarity and professional tone.",
+          "topics": [
+            "Proposal vs price quotation vs pitch",
+            "Proposal vs Statement of Work (SOW)",
+            "Addressing client business requirements",
+            "Supporting stakeholder decision-making",
+            "Establishing commercial clarity and trust",
+            "Calibrating professional tone"
+          ]
+        },
+        {
+          "number": "2.2",
+          "lesson_number": 2,
+          "title": "Proposal Formats",
+          "lesson_title": "Proposal Formats",
+          "what_is_taught": "Selecting proposal formats: short direct freelance proposal, formal service proposal, comprehensive project proposal, agency proposal, retainer proposal, and formal RFP responses.",
+          "topics": [
+            "Short direct freelance proposals",
+            "Formal service proposals",
+            "Multi-phase project proposals",
+            "Agency proposals",
+            "Recurring retainer proposals",
+            "RFP formal response documents",
+            "Determining format by client context"
+          ]
+        },
+        {
+          "number": "2.3",
+          "lesson_number": 3,
+          "title": "Personalized Openings",
+          "lesson_title": "Personalized Openings",
+          "what_is_taught": "Writing relevant, personalized openings: demonstrating client-specific context, acknowledging core requirements, framing the problem accurately, and eliminating generic filler.",
+          "topics": [
+            "Client-specific contextual framing",
+            "Acknowledging the client's specific requirements",
+            "Relevant problem framing",
+            "Demonstrating immediate professional value",
+            "Eliminating generic greetings and boilerplate filler"
+          ]
+        },
+        {
+          "number": "2.4",
+          "lesson_number": 4,
+          "title": "Proposal Length",
+          "lesson_title": "Proposal Length",
+          "what_is_taught": "Matching proposal length to project complexity: short proposals for simple tasks, detailed proposals for complex engagements, adhering to RFP guidelines, and avoiding artificial word counts.",
+          "topics": [
+            "Short proposals for clearly defined jobs",
+            "Detailed proposals for complex architectures",
+            "Following RFP submission instructions",
+            "Balancing information density with readability",
+            "Eliminating unnecessary filler sections",
+            "Debunking universal word-count myths"
+          ]
+        },
+        {
+          "number": "2.5",
+          "lesson_number": 5,
+          "title": "Client Problem Statement",
+          "lesson_title": "Client Problem Statement",
+          "what_is_taught": "Articulating the client problem: stated challenges, business context, desired outcomes, operational friction, missing information, and avoiding invented problems.",
+          "topics": [
+            "Reflecting the client's stated problem",
+            "Contextualizing commercial impact",
+            "Connecting problem to desired outcome",
+            "Identifying current operational limitations",
+            "Addressing missing client information",
+            "Avoiding hallucinated or invented problems"
+          ]
+        },
+        {
+          "number": "2.6",
+          "lesson_number": 6,
+          "title": "Proposed Solution",
+          "lesson_title": "Proposed Solution",
+          "what_is_taught": "Designing the proposed solution: service approach, work phases, execution methods, key deliverables, practical rationale, constraints, and project outputs.",
+          "topics": [
+            "Tailored service delivery approach",
+            "Structuring distinct work phases",
+            "Selecting appropriate tools and methods",
+            "Defining tangible project outputs",
+            "Explaining the strategic rationale",
+            "Respecting client technical constraints"
+          ]
+        },
+        {
+          "number": "2.7",
+          "lesson_number": 7,
+          "title": "Scope Presentation",
+          "lesson_title": "Scope Presentation",
+          "what_is_taught": "Presenting scope transparently: included tasks, deliverables inventory, deliverable quantities, delivery formats, technical specifications, review stages, and explicit exclusions.",
+          "topics": [
+            "Included tasks and activities",
+            "Deliverables inventory",
+            "Deliverable quantities and assets",
+            "File formats and delivery methods",
+            "Technical specifications",
+            "Client review stages",
+            "Explicit scope exclusions"
+          ]
+        },
+        {
+          "number": "2.8",
+          "lesson_number": 8,
+          "title": "Relevant Proof of Capability",
+          "lesson_title": "Relevant Proof of Capability",
+          "what_is_taught": "Selecting genuine evidence: past project examples, portfolio case studies, technical methods, demonstrated achievements, and verifiable client results.",
+          "topics": [
+            "Demonstrating genuine experience",
+            "Selecting highly relevant project samples",
+            "Presenting concise case studies",
+            "Highlighting technical proficiency",
+            "Explaining relevant workflows",
+            "Presenting verifiable outcomes"
+          ]
+        },
+        {
+          "number": "2.9",
+          "lesson_number": 9,
+          "title": "Evidence for New Freelancers",
+          "lesson_title": "Evidence for New Freelancers",
+          "what_is_taught": "Presenting proof without prior client history: original sample work, academic projects, training assignments, personal side projects, volunteer work, and accurately labeling practice work.",
+          "topics": [
+            "Showcasing original sample work",
+            "Academic and coursework projects",
+            "Training and capstone assignments",
+            "Personal portfolio projects",
+            "Volunteer and non-profit experience",
+            "Ethical labeling of simulated vs paid client work"
+          ]
+        },
+        {
+          "number": "2.10",
+          "lesson_number": 10,
+          "title": "Proposal Benefits",
+          "lesson_title": "Proposal Benefits",
+          "what_is_taught": "Translating features into client value: problem-solution alignment, practical business outcomes, delivery efficiency, client convenience, and quality standards.",
+          "topics": [
+            "Aligning features to client problems",
+            "Communicating understandable business value",
+            "Practical outcomes and operational gains",
+            "Delivery efficiency and milestone clarity",
+            "Reducing client management overhead",
+            "Meeting relevant quality standards"
+          ]
+        },
+        {
+          "number": "2.11",
+          "lesson_number": 11,
+          "title": "Project Methodology",
+          "lesson_title": "Project Methodology",
+          "what_is_taught": "Outlining project execution phases: discovery, planning, execution, review, revisions, and handover; scaling methodology to project scope.",
+          "topics": [
+            "Phase 1: Discovery and asset gathering",
+            "Phase 2: Planning and architecture",
+            "Phase 3: Execution and drafting",
+            "Phase 4: Client review and feedback",
+            "Phase 5: Revisions and refinement",
+            "Phase 6: Final delivery and handover"
+          ]
+        },
+        {
+          "number": "2.12",
+          "lesson_number": 12,
+          "title": "Credible Timelines",
+          "lesson_title": "Credible Timelines",
+          "what_is_taught": "Constructing realistic timelines: planned activities, client dependencies, review turnarounds, milestone dates, contingency buffers, and assumptions without false deadline guarantees.",
+          "topics": [
+            "Sequencing planned activities",
+            "Identifying client dependencies and input times",
+            "Factoring in client review turnarounds",
+            "Establishing milestone targets",
+            "Building realistic contingency buffers",
+            "Documenting schedule assumptions"
+          ]
+        },
+        {
+          "number": "2.13",
+          "lesson_number": 13,
+          "title": "Proposal Pricing Presentation",
+          "lesson_title": "Proposal Pricing Presentation",
+          "what_is_taught": "Formatting proposal prices clearly: service description, pricing basis (fixed vs hourly vs milestone), included scope, optional add-ons, payment stages, currency, and tax treatment.",
+          "topics": [
+            "Clear service descriptions",
+            "Stating the pricing basis clearly",
+            "Detailing included work in each package",
+            "Structuring optional add-on services",
+            "Payment stages and deposit requirements",
+            "Currency specification and tax clarity"
+          ]
+        },
+        {
+          "number": "2.14",
+          "lesson_number": 14,
+          "title": "Calls to Action",
+          "lesson_title": "Calls to Action",
+          "what_is_taught": "Formulating low-friction next steps: scheduling clarification calls, confirming project scope, reviewing draft proposals, requesting formal sign-off, and aligning CTAs to decision stages.",
+          "topics": [
+            "Proposing a brief clarification meeting",
+            "Confirming scope alignment",
+            "Inviting proposal review and feedback",
+            "Formal sign-off and approval requests",
+            "Matching CTA to client decision stage"
+          ]
+        },
+        {
+          "number": "2.15",
+          "lesson_number": 15,
+          "title": "Professional Proposal Formatting",
+          "lesson_title": "Professional Proposal Formatting",
+          "what_is_taught": "Designing readable documents: clear heading hierarchies, balanced white space, readable typography, structured comparison tables, visual branding, and accessible PDF exports.",
+          "topics": [
+            "Hierarchical headings and structure",
+            "Balancing white space and margins",
+            "Clean typography and readability",
+            "Structured tables for deliverables and prices",
+            "Subtle, professional branding",
+            "Consistent page layouts and clean PDF export"
+          ]
+        },
+        {
+          "number": "2.16",
+          "lesson_number": 16,
+          "title": "Proposal Customization",
+          "lesson_title": "Proposal Customization",
+          "what_is_taught": "Adapting proposals to client contexts: small business vs enterprise, technical vs creative briefs, matching information density, and stripping out irrelevant boilerplate.",
+          "topics": [
+            "Tailoring detail to buyer type",
+            "Adapting to diverse client budgets",
+            "Differentiating technical vs creative services",
+            "Direct inquiries vs formal RFP responses",
+            "Stripping out generic template sections",
+            "Ensuring every paragraph is relevant"
+          ]
+        },
+        {
+          "number": "2.17",
+          "lesson_number": 17,
+          "title": "AI-Assisted Proposal Writing",
+          "lesson_title": "AI-Assisted Proposal Writing",
+          "what_is_taught": "Leveraging AI responsibly: outline ideation, problem statement drafting, tone editing, conciseness editing, proofreading, and mandatory human verification of claims.",
+          "topics": [
+            "Generating proposal outlines with AI",
+            "Drafting problem statements from briefs",
+            "Editing for conciseness and clarity",
+            "Calibrating tone to client expectations",
+            "Proofreading grammar and syntax",
+            "Mandatory human verification of all facts"
+          ]
+        },
+        {
+          "number": "2.18",
+          "lesson_number": 18,
+          "title": "Proposal Quality Checklist",
+          "lesson_title": "Proposal Quality Checklist",
+          "what_is_taught": "Auditing proposals against quality rubrics: factual accuracy, brief relevance, deliverable specificity, genuine evidence, pricing transparency, realistic timelines, and appropriate CTAs.",
+          "topics": [
+            "Factual accuracy verification",
+            "Relevance to the client brief",
+            "Deliverables clarity and completeness",
+            "Authentic capability evidence",
+            "Pricing transparency and formula check",
+            "Realistic timeline feasibility",
+            "Appropriate call to action",
+            "Confirming no unverified claims exist"
+          ]
+        }
+      ],
+      "hands_on_lab": "Write the first draft of three tailored proposals for the approved client briefs (fixed-price, milestone-based, recurring).",
+      "practical_assignment": "Prepare personalized opening, problem statement, proposed solution, scope summary, relevant evidence, project approach, estimated timing, and clear next step for each brief.",
+      "expected_deliverable": "Three Draft Proposal Documents",
+      "commercial_application": "Direct freelance enquiries, agency proposals, consulting services and project-based client engagements."
+    },
+    {
+      "module_number": 3,
+      "moduleNumber": 3,
+      "title": "Pricing & Scope of Work",
+      "module_title": "Pricing & Scope of Work",
+      "name": "Pricing & Scope of Work",
+      "hours": 7,
+      "guided_hours": 7,
+      "learning_hours": 7,
+      "module_purpose": "Estimate project work, calculate defensible prices and define clear commercial scope and responsibilities.",
+      "objective": "Estimate project work, calculate defensible prices and define clear commercial scope and responsibilities.",
+      "lessons_count": 19,
+      "lessons": [
+        {
+          "number": "3.1",
+          "lesson_number": 1,
+          "title": "Pricing Fundamentals",
+          "lesson_title": "Pricing Fundamentals",
+          "what_is_taught": "Understanding commercial pricing principles: cost vs price vs value, labor effort estimation, project risk premiums, profit margins, freelance capacity, client budgets, and market positioning.",
+          "topics": [
+            "Cost vs Price vs Value",
+            "Labor effort and time estimation",
+            "Project risk premiums",
+            "Profit targets",
+            "Freelancer delivery capacity",
+            "Client budget constraints",
+            "Market competitive positioning"
+          ]
+        },
+        {
+          "number": "3.2",
+          "lesson_number": 2,
+          "title": "Hourly Pricing",
+          "lesson_title": "Hourly Pricing",
+          "what_is_taught": "Calculating defensible hourly rates: target annual income, billable vs non-billable hours, direct business expenses, platform fees, buffer contingencies, and rate rounding.",
+          "topics": [
+            "Target annual income modeling",
+            "Billable vs non-billable hours ratio",
+            "Direct business expenses allocation",
+            "Platform and transaction fee awareness",
+            "Contingency buffer calculation",
+            "Professional rate rounding"
+          ]
+        },
+        {
+          "number": "3.3",
+          "lesson_number": 3,
+          "title": "Fixed-Price Estimation",
+          "lesson_title": "Fixed-Price Estimation",
+          "what_is_taught": "Building fixed-price project estimates: Work Breakdown Structure (WBS), task-level effort estimation, internal hourly cost, direct expenses, client review time, revision allowance, and profit margins.",
+          "topics": [
+            "Work Breakdown Structure (WBS) creation",
+            "Task-level effort estimation in hours",
+            "Internal hourly cost application",
+            "Direct project expenses (assets, software)",
+            "Factoring in client review cycles",
+            "Allocating revision time allowances",
+            "Profit margin targets"
+          ]
+        },
+        {
+          "number": "3.4",
+          "lesson_number": 4,
+          "title": "Pricing Formula — Basic Cost Model",
+          "lesson_title": "Pricing Formula — Basic Cost Model",
+          "what_is_taught": "Applying core mathematical cost models: Labor Cost = Estimated Hours × Internal Hourly Cost; Estimated Base Cost = Labor Cost + Direct Expenses + Other Project Costs.",
+          "topics": [
+            "Labor Cost formula: Hours × Internal Rate",
+            "Direct expenses categorization",
+            "Subcontractor and asset costs",
+            "Estimated Base Cost calculation",
+            "Distinguishing internal cost from client price"
+          ]
+        },
+        {
+          "number": "3.5",
+          "lesson_number": 5,
+          "title": "Markup vs Profit Margin",
+          "lesson_title": "Markup vs Profit Margin",
+          "what_is_taught": "Mastering the mathematical difference between markup and profit margin: Selling Price with Markup = Cost × (1 + Markup Rate); Selling Price for Target Gross Margin = Cost ÷ (1 − Target Margin Rate).",
+          "topics": [
+            "Selling Price with Markup formula: Cost × (1 + Markup)",
+            "Selling Price for Target Margin formula: Cost ÷ (1 − Margin)",
+            "Comparing numerical differences between markup and margin",
+            "Preventing underpricing from margin confusion",
+            "Simplified gross-margin cost boundaries"
+          ]
+        },
+        {
+          "number": "3.6",
+          "lesson_number": 6,
+          "title": "Pricing Calculator in Google Sheets",
+          "lesson_title": "Pricing Calculator in Google Sheets",
+          "what_is_taught": "Developing a functional pricing calculator in Google Sheets: hours input, internal hourly cost, labor cost formula, direct expenses, contingency rates, target markup/margin options, and proposal selling prices.",
+          "topics": [
+            "Spreadsheet architecture and input cells",
+            "Labor cost formulas and dynamic references",
+            "Direct expenses and asset line items",
+            "Contingency rate calculation",
+            "Markup and gross margin toggles",
+            "Final proposed selling price calculation"
+          ]
+        },
+        {
+          "number": "3.7",
+          "lesson_number": 7,
+          "title": "Calculation Validation",
+          "lesson_title": "Calculation Validation",
+          "what_is_taught": "Validating spreadsheet models: formula audits, catching divide-by-zero errors, preventing invalid negative inputs, percentage formatting, avoiding double-counted costs, and scenario stress testing.",
+          "topics": [
+            "Auditing spreadsheet formulas",
+            "Preventing divide-by-zero errors on margins",
+            "Handling invalid negative inputs",
+            "Formatting percentages and currencies",
+            "Auditing for double-counted costs",
+            "Stress testing best/worst-case scenarios"
+          ]
+        },
+        {
+          "number": "3.8",
+          "lesson_number": 8,
+          "title": "Fixed-Price Project Scope",
+          "lesson_title": "Fixed-Price Project Scope",
+          "what_is_taught": "Defining fixed-price project scope: included activities, deliverables count, technical formats, review milestones, acceptance criteria, and explicit non-negotiable boundaries.",
+          "topics": [
+            "Inventory of included tasks and activities",
+            "Quantified deliverable counts",
+            "Asset specifications and final formats",
+            "Milestone review stages",
+            "Objective acceptance criteria",
+            "Clear scope boundaries"
+          ]
+        },
+        {
+          "number": "3.9",
+          "lesson_number": 9,
+          "title": "Milestone Pricing",
+          "lesson_title": "Milestone Pricing",
+          "what_is_taught": "Designing milestone pricing: multi-phase work breakdown, deliverable-based milestones, milestone payment values, completion verification, and reconciling milestone sums to project price.",
+          "topics": [
+            "Multi-phase project decomposition",
+            "Connecting milestones to specific deliverables",
+            "Allocating milestone payment percentages",
+            "Defining completion verification conditions",
+            "Reconciling milestone sums to total project price"
+          ]
+        },
+        {
+          "number": "3.10",
+          "lesson_number": 10,
+          "title": "Milestone Payment Schedule",
+          "lesson_title": "Milestone Payment Schedule",
+          "what_is_taught": "Structuring payment schedules: upfront deposit requirements, milestone invoice triggers, client acceptance periods, payment terms, and project-specific cash-flow assumptions.",
+          "topics": [
+            "Upfront commencement deposit requirements",
+            "Milestone delivery invoice triggers",
+            "Client acceptance and review windows",
+            "Clear payment terms (Net 0, Net 7, Net 14)",
+            "Managing project cash-flow assumptions"
+          ]
+        },
+        {
+          "number": "3.11",
+          "lesson_number": 11,
+          "title": "Recurring Service Pricing",
+          "lesson_title": "Recurring Service Pricing",
+          "what_is_taught": "Modeling recurring retainer services: monthly billing cycles, recurring deliverable batches, allocated service capacity, reporting cadences, and additional work billing.",
+          "topics": [
+            "Recurring billing cycles and retainers",
+            "Scheduled monthly deliverable batches",
+            "Allocating hours and capacity",
+            "Reporting and performance review cadences",
+            "Pricing out-of-scope additional requests"
+          ]
+        },
+        {
+          "number": "3.12",
+          "lesson_number": 12,
+          "title": "Retainer Boundaries",
+          "lesson_title": "Retainer Boundaries",
+          "what_is_taught": "Establishing sustainable retainer boundaries: included deliverables, hours caps, carryover policies, client availability windows, response times, and additional request protocols.",
+          "topics": [
+            "Defining included hours and deliverable caps",
+            "Establishing rollover/carryover policies",
+            "Managing unused retainer capacity",
+            "Availability windows and SLAs",
+            "Response time expectations",
+            "Protocols for additional service requests"
+          ]
+        },
+        {
+          "number": "3.13",
+          "lesson_number": 13,
+          "title": "Revision Allowances",
+          "lesson_title": "Revision Allowances",
+          "what_is_taught": "Defining revision allowances: number of revision rounds included, defining what constitutes a revision vs new scope, revision feedback windows, and hourly rates for extra revisions.",
+          "topics": [
+            "Specifying included revision rounds (e.g., 2 rounds)",
+            "Defining revisions vs new scope requests",
+            "Consolidated client feedback requirements",
+            "Client review turnaround windows",
+            "Billing additional revision rounds"
+          ]
+        },
+        {
+          "number": "3.14",
+          "lesson_number": 14,
+          "title": "Assumptions",
+          "lesson_title": "Assumptions",
+          "what_is_taught": "Documenting operational assumptions: client provision of brand assets, timely approvals within agreed windows, credential access, stable scope, and third-party fee responsibilities.",
+          "topics": [
+            "Client provision of source files and assets",
+            "Timely review and approval windows",
+            "Platform credentials and software access",
+            "Assumption of stable project scope",
+            "Identification of third-party licensing fees"
+          ]
+        },
+        {
+          "number": "3.15",
+          "lesson_number": 15,
+          "title": "Exclusions",
+          "lesson_title": "Exclusions",
+          "what_is_taught": "Specifying explicit exclusions: services not covered, third-party stock/plugin licensing fees, scope expansion, ongoing maintenance, extra revisions, and rush delivery fees.",
+          "topics": [
+            "Explicitly excluded services",
+            "Third-party software, fonts, and stock assets",
+            "New feature and scope additions",
+            "Ongoing post-launch maintenance",
+            "Extra revision rounds beyond allowance",
+            "Rush delivery surcharges"
+          ]
+        },
+        {
+          "number": "3.16",
+          "lesson_number": 16,
+          "title": "Scope Changes",
+          "lesson_title": "Scope Changes",
+          "what_is_taught": "Managing scope modifications: acknowledging change requests, written impact assessment, calculating cost and timeline adjustments, securing client approval, and updating project agreements.",
+          "topics": [
+            "Acknowledging client change requests",
+            "Drafting written impact assessments",
+            "Calculating schedule and price adjustments",
+            "Securing written client approval",
+            "Updating the formal project record"
+          ]
+        },
+        {
+          "number": "3.17",
+          "lesson_number": 17,
+          "title": "Statement of Work Fundamentals",
+          "lesson_title": "Statement of Work Fundamentals",
+          "what_is_taught": "Writing a professional Statement of Work (SOW): project background, detailed scope, deliverables specifications, schedule, responsibilities, assumptions, acceptance criteria, and change procedures.",
+          "topics": [
+            "Purpose and role of the Statement of Work",
+            "Project background and business context",
+            "Detailed scope of work breakdown",
+            "Deliverables inventory and technical formats",
+            "Milestone schedule and deadlines",
+            "Mutual roles and responsibilities",
+            "Acceptance criteria and sign-off protocols"
+          ]
+        },
+        {
+          "number": "3.18",
+          "lesson_number": 18,
+          "title": "SOW vs Legal Contract",
+          "lesson_title": "SOW vs Legal Contract",
+          "what_is_taught": "Understanding legal boundaries: SOW as a commercial scope document, incorporation into master services agreements, commercial obligations, and the role of independent legal counsel.",
+          "topics": [
+            "SOW as a commercial scope document",
+            "How SOWs attach to master service agreements",
+            "Commercial commitments vs legal terms",
+            "Identifying when legal counsel is required",
+            "Debunking legal enforceability assumptions"
+          ]
+        },
+        {
+          "number": "3.19",
+          "lesson_number": 19,
+          "title": "Pricing Risk Review",
+          "lesson_title": "Pricing Risk Review",
+          "what_is_taught": "Conducting pricing risk audits: identifying underestimated hours, ambiguous scope risks, unpriced work, currency fluctuations, platform fees, taxes, and payment gateway costs.",
+          "topics": [
+            "Underestimated labor hours risk",
+            "Unclear or volatile brief requirements",
+            "Unpriced scope creep items",
+            "Currency exchange risk on international work",
+            "Factoring in platform fees (Upwork, Fiverr)",
+            "Taxation and payment processing deductions"
+          ]
+        }
+      ],
+      "hands_on_lab": "Build a working Google Sheets pricing calculator and test it across three distinct scenarios: small fixed-price, milestone-based project, and recurring retainer service.",
+      "practical_assignment": "Submit editable pricing calculator, cost breakdown, three validated pricing scenarios, detailed Statement of Work, scope assumptions, revision boundaries, milestone schedule, and change-request procedure.",
+      "expected_deliverable": "Pricing Calculator + Detailed Statement of Work",
+      "commercial_application": "Freelance pricing, project estimation, agency quotations, scope clarification and sustainable service delivery."
+    },
+    {
+      "module_number": 4,
+      "moduleNumber": 4,
+      "title": "Pitching & Follow-Up",
+      "module_title": "Pitching & Follow-Up",
+      "name": "Pitching & Follow-Up",
+      "hours": 7,
+      "guided_hours": 7,
+      "learning_hours": 7,
+      "module_purpose": "Present proposals confidently, explain commercial decisions and handle client questions professionally.",
+      "objective": "Present proposals confidently, explain commercial decisions and handle client questions professionally.",
+      "lessons_count": 18,
+      "lessons": [
+        {
+          "number": "4.1",
+          "lesson_number": 1,
+          "title": "Introduction to Client Pitching",
+          "lesson_title": "Introduction to Client Pitching",
+          "what_is_taught": "Understanding the client pitch: proposal walkthroughs, buyer comprehension, demonstrating problem-solution fit, establishing commercial credibility, and securing commitment to next steps.",
+          "topics": [
+            "Purpose and dynamics of client pitching",
+            "Walking clients through proposal documents",
+            "Ensuring buyer understanding",
+            "Demonstrating problem-solution fit live",
+            "Establishing commercial credibility",
+            "Securing agreement on next actions"
+          ]
+        },
+        {
+          "number": "4.2",
+          "lesson_number": 2,
+          "title": "Pitch Structure",
+          "lesson_title": "Pitch Structure",
+          "what_is_taught": "Organizing the pitch presentation: client problem, proposed solution, relevant work evidence, project scope, key deliverables, timeline/milestones, pricing rationale, assumptions, and call to action.",
+          "topics": [
+            "Opening problem statement",
+            "Proposed solution overview",
+            "Showcasing relevant work evidence",
+            "Reviewing scope and deliverables",
+            "Milestone timeline explanation",
+            "Transparent pricing rationale",
+            "Highlighting key assumptions",
+            "Recommended next steps"
+          ]
+        },
+        {
+          "number": "4.3",
+          "lesson_number": 3,
+          "title": "Verbal Proposal Presentation",
+          "lesson_title": "Verbal Proposal Presentation",
+          "what_is_taught": "Mastering verbal pitch delivery: clear opening hooks, concise explanations, speaking pace, professional tone, active listening during presentations, and managing interruptions.",
+          "topics": [
+            "Delivering clear verbal openings",
+            "Concise problem-solution explanation",
+            "Managing speaking pace and articulation",
+            "Professional tone and confidence",
+            "Active listening during client presentations",
+            "Handling client interruptions gracefully"
+          ]
+        },
+        {
+          "number": "4.4",
+          "lesson_number": 4,
+          "title": "Short Video Pitches",
+          "lesson_title": "Short Video Pitches",
+          "what_is_taught": "Creating asynchronous video pitches: when video adds value, personalizing presentations, effective screen sharing, walking through work samples, ensuring audio quality, and appropriate duration.",
+          "topics": [
+            "When video pitches add measurable value",
+            "Personalizing video introductions to the brief",
+            "Screen sharing proposal highlights",
+            "Walking through relevant work samples",
+            "Audio quality and video framing checks",
+            "Debunking the rigid 90-second duration myth"
+          ]
+        },
+        {
+          "number": "4.5",
+          "lesson_number": 5,
+          "title": "Loom or Equivalent",
+          "lesson_title": "Loom or Equivalent",
+          "what_is_taught": "Recording proposal walkthroughs: using Loom or accessible recording tools, camera and screen options, reviewing playback, setting privacy and sharing permissions, and self-recorded simulated pitches.",
+          "topics": [
+            "Recording screen walkthroughs in Loom or alternatives",
+            "Camera bubble and screen display options",
+            "Self-reviewing recorded playback",
+            "Setting restricted sharing permissions",
+            "Recording simulated pitches without real clients",
+            "Managing video links"
+          ]
+        },
+        {
+          "number": "4.6",
+          "lesson_number": 6,
+          "title": "Visual Pitch Preparation",
+          "lesson_title": "Visual Pitch Preparation",
+          "what_is_taught": "Designing visual pitch materials: simple slide decks, portfolio showcases, scope diagrams, pricing summary graphics, and clean typography using Canva or presentation tools.",
+          "topics": [
+            "Designing simple, clean pitch decks",
+            "Showcasing visual portfolio evidence",
+            "Visualizing scope and workflow diagrams",
+            "Designing transparent pricing comparison slides",
+            "Using Canva or presentation software effectively"
+          ]
+        },
+        {
+          "number": "4.7",
+          "lesson_number": 7,
+          "title": "Explaining Project Value",
+          "lesson_title": "Explaining Project Value",
+          "what_is_taught": "Articulating commercial value: aligning solutions to business outcomes, explaining quality standards, describing workflows, discussing project risks, and setting realistic client expectations.",
+          "topics": [
+            "Connecting project outputs to commercial value",
+            "Explaining technical and creative quality standards",
+            "Walking through the project workflow",
+            "Addressing potential delivery risks proactively",
+            "Setting realistic client expectations"
+          ]
+        },
+        {
+          "number": "4.8",
+          "lesson_number": 8,
+          "title": "Pricing Conversations",
+          "lesson_title": "Pricing Conversations",
+          "what_is_taught": "Navigating pricing discussions: explaining cost drivers, clarifying assumptions, defending included scope, handling client budget constraints, offering tiered options, and avoiding defensive reactions.",
+          "topics": [
+            "Explaining cost drivers transparently",
+            "Clarifying underlying pricing assumptions",
+            "Defending included scope boundaries",
+            "Handling client budget constraints constructively",
+            "Presenting phased or tiered options",
+            "Maintaining calm, non-defensive communication"
+          ]
+        },
+        {
+          "number": "4.9",
+          "lesson_number": 9,
+          "title": "Buyer Objections",
+          "lesson_title": "Buyer Objections",
+          "what_is_taught": "Understanding common buyer objections: price resistance, timeline doubts, experience or domain concerns, scope misunderstandings, trust hesitation, and competitor comparisons.",
+          "topics": [
+            "Price and budget objections",
+            "Timeline and delivery schedule doubts",
+            "Domain experience and portfolio concerns",
+            "Scope misunderstandings and exclusions",
+            "Trust and credibility hesitations",
+            "Comparisons with cheaper competitors"
+          ]
+        },
+        {
+          "number": "4.10",
+          "lesson_number": 10,
+          "title": "Objection-Handling Framework",
+          "lesson_title": "Objection-Handling Framework",
+          "what_is_taught": "Mastering the 5-step objection-handling framework: Listen → Clarify → Acknowledge → Explain → Confirm Next Step without aggressive closing tactics.",
+          "topics": [
+            "Step 1: Active listening without interruption",
+            "Step 2: Clarifying the underlying concern",
+            "Step 3: Acknowledging client perspective",
+            "Step 4: Explaining options or rationale",
+            "Step 5: Confirming agreed next step",
+            "Avoiding aggressive closing tactics"
+          ]
+        },
+        {
+          "number": "4.11",
+          "lesson_number": 11,
+          "title": "Clarifying Questions",
+          "lesson_title": "Clarifying Questions",
+          "what_is_taught": "Using clarification during pitch discussions: discovering underlying priorities, identifying unstated objections, discussing scope-cost trade-offs, and confirming decision processes.",
+          "topics": [
+            "Asking targeted probing questions",
+            "Uncovering unspoken client concerns",
+            "Discussing scope vs budget trade-offs",
+            "Clarifying client decision milestones",
+            "Verifying stakeholder alignment"
+          ]
+        },
+        {
+          "number": "4.12",
+          "lesson_number": 12,
+          "title": "Handling Negotiation Boundaries",
+          "lesson_title": "Handling Negotiation Boundaries",
+          "what_is_taught": "Managing commercial boundaries: adjusting scope rather than discounting rates, deliverable trade-offs, formal approval requirements, and avoiding unauthorized commitments.",
+          "topics": [
+            "Adjusting scope rather than slashing rates",
+            "Negotiating deliverable trade-offs",
+            "Documenting scope changes before signing",
+            "Referring to decision authorities when needed",
+            "Avoiding unauthorized commercial concessions"
+          ]
+        },
+        {
+          "number": "4.13",
+          "lesson_number": 13,
+          "title": "Professional Follow-Ups",
+          "lesson_title": "Professional Follow-Ups",
+          "what_is_taught": "Drafting respectful follow-ups: timing considerations, contextual references to previous conversations, adding value, avoiding guilt-tripping or pushiness, and providing clear next steps.",
+          "topics": [
+            "Timing follow-up communications respectfully",
+            "Referencing specific proposal discussion points",
+            "Adding relevant contextual value or insights",
+            "Avoiding high-pressure, desperate, or guilt tactics",
+            "Providing simple, low-friction reply options"
+          ]
+        },
+        {
+          "number": "4.14",
+          "lesson_number": 14,
+          "title": "Follow-Up Cadence",
+          "lesson_title": "Follow-Up Cadence",
+          "what_is_taught": "Designing sensible follow-up cadences: client communication preferences, project deadlines, channel selection, opportunity urgency, and knowing when to close the loop.",
+          "topics": [
+            "Designing context-aware follow-up intervals",
+            "Aligning cadence to project urgency and deadlines",
+            "Selecting appropriate communication channels",
+            "Limiting total follow-up touchpoints",
+            "Debunking rigid universal follow-up formulas",
+            "Writing graceful closing-the-loop messages"
+          ]
+        },
+        {
+          "number": "4.15",
+          "lesson_number": 15,
+          "title": "Proposal Tracking",
+          "lesson_title": "Proposal Tracking",
+          "what_is_taught": "Building a proposal tracking sheet: opportunity ID, client name, service category, proposal title, submission date, status, estimated value, next action, follow-up date, and outcome notes.",
+          "topics": [
+            "Tracking sheet architecture and fields",
+            "Logging client and opportunity details",
+            "Tracking proposal submission dates",
+            "Monitoring estimated pipeline value",
+            "Scheduling next follow-up dates",
+            "Recording client decision reasons"
+          ]
+        },
+        {
+          "number": "4.16",
+          "lesson_number": 16,
+          "title": "Pipeline Status",
+          "lesson_title": "Pipeline Status",
+          "what_is_taught": "Managing proposal lifecycle stages: Draft, Under Review, Submitted, Awaiting Response, Clarification Requested, Pitch Scheduled, Accepted, Declined, and Closed.",
+          "topics": [
+            "Proposal pipeline stage definitions",
+            "Tracking transitions through the pipeline",
+            "Managing active vs inactive bids",
+            "Analyzing acceptance and decline patterns",
+            "Simulating pipeline progression"
+          ]
+        },
+        {
+          "number": "4.17",
+          "lesson_number": 17,
+          "title": "Responsible Tracking",
+          "lesson_title": "Responsible Tracking",
+          "what_is_taught": "Ethical tracking practices: avoiding fabricated conversion analytics, no unauthorized scraping, protecting client contact data, and using accessible spreadsheets without costly CRMs.",
+          "topics": [
+            "Avoiding fabricated win-rate analytics",
+            "Protecting client contact information",
+            "Compliance with privacy and anti-scraping rules",
+            "Utilizing Google Sheets as an accessible pipeline tool",
+            "Maintaining data hygiene"
+          ]
+        },
+        {
+          "number": "4.18",
+          "lesson_number": 18,
+          "title": "Pitch Review",
+          "lesson_title": "Pitch Review",
+          "what_is_taught": "Evaluating proposal pitches: clarity of delivery, evidence quality, problem-solution relevance, scope explanation, pricing transparency, objection handling, professional tone, and timing.",
+          "topics": [
+            "Reviewing pitch clarity and articulation",
+            "Evaluating relevance of work evidence",
+            "Checking scope and deliverables explanation",
+            "Assessing pricing transparency and confidence",
+            "Reviewing objection-handling effectiveness",
+            "Evaluating professional composure and timing"
+          ]
+        }
+      ],
+      "hands_on_lab": "Conduct a simulated proposal pitch and buyer objection-handling exercise.",
+      "practical_assignment": "Prepare pitch outline, recorded mock proposal pitch, objection-response notes, three respectful follow-up drafts, proposal tracking sheet, and self-assessment.",
+      "expected_deliverable": "Mock Client Pitch & Proposal Follow-Up Kit",
+      "commercial_application": "Freelance project discussions, agency meetings, consulting presentations and service proposals."
+    },
+    {
+      "module_number": 5,
+      "moduleNumber": 5,
+      "title": "Proposal Capstone & Review",
+      "module_title": "Proposal Capstone & Review",
+      "name": "Proposal Capstone & Review",
+      "hours": 6,
+      "guided_hours": 6,
+      "learning_hours": 6,
+      "module_purpose": "Complete, defend and professionally present a three-proposal portfolio with a detailed SOW, pricing model and recorded mock pitch.",
+      "objective": "Complete, defend and professionally present a three-proposal portfolio with a detailed SOW, pricing model and recorded mock pitch.",
+      "lessons_count": 12,
+      "lessons": [
+        {
+          "number": "5.1",
+          "lesson_number": 1,
+          "title": "Capstone Brief Selection",
+          "lesson_title": "Capstone Brief Selection",
+          "what_is_taught": "Selecting and validating three distinct capstone briefs: small fixed-price scenario, multi-phase milestone scenario, and recurring retainer service scenario.",
+          "topics": [
+            "Validating the fixed-price project brief",
+            "Validating the milestone project brief",
+            "Validating the recurring service brief",
+            "Ensuring realistic commercial constraints",
+            "Mapping required deliverables for each brief"
+          ]
+        },
+        {
+          "number": "5.2",
+          "lesson_number": 2,
+          "title": "Proposal A — Fixed-Price",
+          "lesson_title": "Proposal A — Fixed-Price",
+          "what_is_taught": "Finalizing the small fixed-price proposal: clearly bounded scope, specific deliverables, transparent pricing, realistic delivery schedule, revision allowances, and call to action.",
+          "topics": [
+            "Drafting Proposal A for a small project",
+            "Defining clear scope boundaries",
+            "Itemizing specific deliverables",
+            "Transparent fixed pricing and payment terms",
+            "Stipulating revision limits and exclusions",
+            "Setting up next-step approval CTAs"
+          ]
+        },
+        {
+          "number": "5.3",
+          "lesson_number": 3,
+          "title": "Proposal B — Milestone-Based",
+          "lesson_title": "Proposal B — Milestone-Based",
+          "what_is_taught": "Finalizing the larger milestone proposal: multi-phase work breakdown, milestone deliverables, payment stages, client dependencies, acceptance criteria, and change-request workflows.",
+          "topics": [
+            "Structuring Proposal B for a larger project",
+            "Decomposing project phases and milestones",
+            "Connecting milestone payments to acceptance",
+            "Documenting client inputs and dependencies",
+            "Defining acceptance criteria and change processes",
+            "Reconciling total milestone fees"
+          ]
+        },
+        {
+          "number": "5.4",
+          "lesson_number": 4,
+          "title": "Proposal C — Recurring Service",
+          "lesson_title": "Proposal C — Recurring Service",
+          "what_is_taught": "Finalizing the recurring service proposal: monthly deliverable schedules, reporting cadences, service capacity caps, retainer assumptions, out-of-scope billing, and renewal terms.",
+          "topics": [
+            "Structuring Proposal C for recurring services",
+            "Monthly deliverables schedule and outputs",
+            "Service capacity hours and rollover rules",
+            "Reporting and communication cadence",
+            "Pricing out-of-scope additional work",
+            "Retainer continuation and renewal terms"
+          ]
+        },
+        {
+          "number": "5.5",
+          "lesson_number": 5,
+          "title": "Final Proposal Writing",
+          "lesson_title": "Final Proposal Writing",
+          "what_is_taught": "Polishing all three proposal documents: personalizing openings, refining problem statements, strengthening solutions, selecting proof, and ensuring consistent professional tone.",
+          "topics": [
+            "Polishing opening hooks and client context",
+            "Refining crisp problem statements",
+            "Strengthening proposed solution clarity",
+            "Selecting and embedding relevant project proof",
+            "Ensuring professional, persuasive writing"
+          ]
+        },
+        {
+          "number": "5.6",
+          "lesson_number": 6,
+          "title": "Statement of Work Finalization",
+          "lesson_title": "Statement of Work Finalization",
+          "what_is_taught": "Finalizing the comprehensive Statement of Work: project objectives, work boundaries, deliverables specifications, schedule, responsibilities, assumptions, exclusions, acceptance, and change requests.",
+          "topics": [
+            "Completing all 14 mandatory SOW sections",
+            "Aligning SOW deliverables with Proposal B",
+            "Documenting client inputs and dependencies",
+            "Codifying revision limits and exclusions",
+            "Establishing formal change-request procedures",
+            "Adding legal and commercial disclaimer notes"
+          ]
+        },
+        {
+          "number": "5.7",
+          "lesson_number": 7,
+          "title": "Pricing Calculator Review",
+          "lesson_title": "Pricing Calculator Review",
+          "what_is_taught": "Auditing the Google Sheets pricing calculator: verifying formula integrity, testing three pricing scenarios, checking markup vs margin accuracy, and ensuring milestone totals match proposal quotes.",
+          "topics": [
+            "Formula audit across all calculator tabs",
+            "Testing fixed, milestone, and retainer scenarios",
+            "Verifying markup and margin calculations",
+            "Ensuring milestone sums equal proposal prices",
+            "Documenting clear calculation assumptions"
+          ]
+        },
+        {
+          "number": "5.8",
+          "lesson_number": 8,
+          "title": "Professional Proposal Design",
+          "lesson_title": "Professional Proposal Design",
+          "what_is_taught": "Applying visual design standards: clear headings, balanced white space, readable typography, professional pricing tables, subtle branding, and clean export to PDF.",
+          "topics": [
+            "Typography and hierarchical formatting",
+            "Designing scannable comparison tables",
+            "Balancing white space and margins",
+            "Adding professional visual elements",
+            "Generating high-quality, clean PDF exports"
+          ]
+        },
+        {
+          "number": "5.9",
+          "lesson_number": 9,
+          "title": "Mock Client Pitch",
+          "lesson_title": "Mock Client Pitch",
+          "what_is_taught": "Executing the recorded mock pitch: walking through proposal highlights, explaining the problem and solution, defending pricing assumptions, addressing objections, and closing professionally.",
+          "topics": [
+            "Executing the recorded pitch presentation",
+            "Walking through problem, solution, and scope",
+            "Explaining commercial pricing logic clearly",
+            "Addressing simulated buyer objections",
+            "Professional closing and next-step CTA"
+          ]
+        },
+        {
+          "number": "5.10",
+          "lesson_number": 10,
+          "title": "Mentor/Reviewer Critique",
+          "lesson_title": "Mentor/Reviewer Critique",
+          "what_is_taught": "Receiving structured assessment critique: evaluating proposal relevance, deliverable precision, scope boundaries, pricing defensibility, pitch presentation, and commercial judgment.",
+          "topics": [
+            "Receiving rubric-based assessment feedback",
+            "Reviewing critique on scope boundaries",
+            "Evaluating pricing defensibility and transparency",
+            "Analyzing pitch presentation strengths and weaknesses",
+            "Identifying areas requiring commercial revision"
+          ]
+        },
+        {
+          "number": "5.11",
+          "lesson_number": 11,
+          "title": "Revision & Improvement",
+          "lesson_title": "Revision & Improvement",
+          "what_is_taught": "Iterating on feedback: clarifying ambiguous assumptions, sharpening deliverable specifications, improving pricing rationale, eliminating unverified claims, and polishing CTAs.",
+          "topics": [
+            "Clarifying ambiguous scope and assumptions",
+            "Sharpening deliverable specifications",
+            "Refining pricing formulas and explanations",
+            "Removing any unverified promises or claims",
+            "Strengthening calls to action"
+          ]
+        },
+        {
+          "number": "5.12",
+          "lesson_number": 12,
+          "title": "Professional Handover",
+          "lesson_title": "Professional Handover",
+          "what_is_taught": "Compiling the final portfolio package: editable proposal docs, clean PDFs, Statement of Work, pricing spreadsheet, pitch recording link, proposal tracker, and personal reflection report.",
+          "topics": [
+            "Organizing editable source documents (Docs/Sheets)",
+            "Packaging presentation-ready PDF proposals",
+            "Finalizing the SOW and pricing spreadsheet",
+            "Archiving the recorded pitch and feedback log",
+            "Submitting the completed portfolio package"
+          ]
+        }
+      ],
+      "hands_on_lab": "Complete all proposals and conduct a simulated client pitch defence.",
+      "practical_assignment": "Submit the entire Freelance Proposal & Client Pitching Portfolio: Three Assessed Proposals + One SOW + Pricing Calculator + Recorded Mock Pitch + Review Report.",
+      "expected_deliverable": "Three Assessed Proposals + One SOW + Pricing Calculator + Recorded Mock Pitch + Review Report",
+      "commercial_application": "Freelancing, small-agency proposals, service contracts and consulting engagements."
+    }
+  ],
+  "what_you_will_build": [],
+  "final_deliverables": [],
+  "student_deliverables_and_evidence": [],
+  "assessment": null,
+  "certification": null,
+  "career_paths": {
+    "entry_roles": [
+      "Freelance Proposal Specialist",
+      "Junior Business Development Coordinator",
+      "Agency Account Coordinator",
+      "Bid & Proposal Assistant",
+      "Client Solutions Coordinator"
+    ],
+    "mid_roles": [
+      "Business Development Manager",
+      "Proposal Manager",
+      "Account Executive"
+    ],
+    "specialist_roles": [
+      "B2B Proposal Strategist",
+      "Commercial Estimator",
+      "Commercial Solutions Architect"
+    ],
+    "employer_expectations": "Rigorous RFP analysis, clear deliverable scoping, mathematically defensible pricing, professional presentation, objection handling, and honest communication.",
+    "what_student_demonstrates": "Ability to deconstruct client briefs, estimate realistic costs in spreadsheets, draft comprehensive SOWs, pitch proposals on video, and track opportunities professionally."
+  },
+  "freelance_applications": [],
+  "business_use_cases": [],
+  "industry_workflow": [],
+  "best_practices": [],
+  "common_mistakes": [],
+  "not_covered": [],
+  "next_learning_path": [],
+  "faq": [
+    {
+      "q": "What is freelance proposal writing?",
+      "question": "What is freelance proposal writing?",
+      "a": "Freelance proposal writing is the process of presenting a relevant solution, deliverables, scope, estimated cost and next steps to a potential client.",
+      "answer": "Freelance proposal writing is the process of presenting a relevant solution, deliverables, scope, estimated cost and next steps to a potential client."
+    },
+    {
+      "q": "Is this course suitable for beginners?",
+      "question": "Is this course suitable for beginners?",
+      "a": "It is an applied course. Basic professional writing and a service skill—or an approved simulated service—are recommended.",
+      "answer": "It is an applied course. Basic professional writing and a service skill—or an approved simulated service—are recommended."
+    },
+    {
+      "q": "Do I need actual clients to complete the course?",
+      "question": "Do I need actual clients to complete the course?",
+      "a": "No. You can complete all portfolio assignments using approved simulated client briefs.",
+      "answer": "No. You can complete all portfolio assignments using approved simulated client briefs."
+    },
+    {
+      "q": "What proposal types will I learn?",
+      "question": "What proposal types will I learn?",
+      "a": "You will prepare a small fixed-price proposal, a larger milestone-based proposal and a recurring-service proposal.",
+      "answer": "You will prepare a small fixed-price proposal, a larger milestone-based proposal and a recurring-service proposal."
+    },
+    {
+      "q": "Will I learn pricing?",
+      "question": "Will I learn pricing?",
+      "a": "Yes. The course includes hourly and fixed-price estimation, cost components, margins, contingencies and recurring-service pricing.",
+      "answer": "Yes. The course includes hourly and fixed-price estimation, cost components, margins, contingencies and recurring-service pricing."
+    },
+    {
+      "q": "Will I build a pricing calculator?",
+      "question": "Will I build a pricing calculator?",
+      "a": "Yes. You will build a working calculator in Google Sheets and test it against three project scenarios.",
+      "answer": "Yes. You will build a working calculator in Google Sheets and test it against three project scenarios."
+    },
+    {
+      "q": "What is a Statement of Work?",
+      "question": "What is a Statement of Work?",
+      "a": "An SOW documents project scope, deliverables, responsibilities, timelines, assumptions, exclusions, acceptance criteria and change procedures.",
+      "answer": "An SOW documents project scope, deliverables, responsibilities, timelines, assumptions, exclusions, acceptance criteria and change procedures."
+    },
+    {
+      "q": "Will I learn to avoid scope creep?",
+      "question": "Will I learn to avoid scope creep?",
+      "a": "You will learn to define scope clearly, document revision allowances and explain the process for reviewing additional requests.",
+      "answer": "You will learn to define scope clearly, document revision allowances and explain the process for reviewing additional requests."
+    },
+    {
+      "q": "Does this course include legal contract drafting?",
+      "question": "Does this course include legal contract drafting?",
+      "a": "No. The course teaches practical SOW and commercial scope documentation, not legal contract drafting or legal advice.",
+      "answer": "No. The course teaches practical SOW and commercial scope documentation, not legal contract drafting or legal advice."
+    },
+    {
+      "q": "Will I learn client pitching?",
+      "question": "Will I learn client pitching?",
+      "a": "Yes. You will prepare and deliver a recorded mock client pitch and receive structured feedback.",
+      "answer": "Yes. You will prepare and deliver a recorded mock client pitch and receive structured feedback."
+    },
+    {
+      "q": "Is Loom required?",
+      "question": "Is Loom required?",
+      "a": "Loom or an equivalent recording method may be used. A paid Loom subscription is not mandatory.",
+      "answer": "Loom or an equivalent recording method may be used. A paid Loom subscription is not mandatory."
+    },
+    {
+      "q": "Does every proposal need a video?",
+      "question": "Does every proposal need a video?",
+      "a": "No. Video is an optional presentation format that can help explain certain projects. It is not universally necessary or guaranteed to improve responses.",
+      "answer": "No. Video is an optional presentation format that can help explain certain projects. It is not universally necessary or guaranteed to improve responses."
+    },
+    {
+      "q": "How long should a freelance proposal be?",
+      "question": "How long should a freelance proposal be?",
+      "a": "Proposal length depends on project complexity, the client's instructions and the level of detail needed. There is no universal length that guarantees success.",
+      "answer": "Proposal length depends on project complexity, the client's instructions and the level of detail needed. There is no universal length that guarantees success."
+    },
+    {
+      "q": "Will I learn how to write proposal openings?",
+      "question": "Will I learn how to write proposal openings?",
+      "a": "Yes. You will learn to write client-relevant openings that accurately communicate understanding of the project.",
+      "answer": "Yes. You will learn to write client-relevant openings that accurately communicate understanding of the project."
+    },
+    {
+      "q": "Does a two-line proposal hook guarantee replies?",
+      "question": "Does a two-line proposal hook guarantee replies?",
+      "a": "No. Clear, relevant openings are useful, but employer response and client decisions depend on many factors.",
+      "answer": "No. Clear, relevant openings are useful, but employer response and client decisions depend on many factors."
+    },
+    {
+      "q": "Can I use ChatGPT to write proposals?",
+      "question": "Can I use ChatGPT to write proposals?",
+      "a": "Yes. AI may assist with drafting and editing, but project details, pricing, experience and commitments must be verified by the student.",
+      "answer": "Yes. AI may assist with drafting and editing, but project details, pricing, experience and commitments must be verified by the student."
+    },
+    {
+      "q": "Will I learn professional follow-ups?",
+      "question": "Will I learn professional follow-ups?",
+      "a": "Yes. The course covers respectful follow-up messages and a simple proposal tracking system.",
+      "answer": "Yes. The course covers respectful follow-up messages and a simple proposal tracking system."
+    },
+    {
+      "q": "Does this course teach Upwork or Fiverr bidding?",
+      "question": "Does this course teach Upwork or Fiverr bidding?",
+      "a": "It teaches transferable proposal skills. Detailed marketplace-specific bidding mechanics belong to separate courses.",
+      "answer": "It teaches transferable proposal skills. Detailed marketplace-specific bidding mechanics belong to separate courses."
+    },
+    {
+      "q": "Will I learn agency sales operations?",
+      "question": "Will I learn agency sales operations?",
+      "a": "No. Advanced agency sales and operations are outside this focused certification.",
+      "answer": "No. Advanced agency sales and operations are outside this focused certification."
+    },
+    {
+      "q": "What portfolio will I complete?",
+      "question": "What portfolio will I complete?",
+      "a": "Three tailored proposals, one detailed SOW, one pricing calculator and a recorded mock client pitch with review feedback.",
+      "answer": "Three tailored proposals, one detailed SOW, one pricing calculator and a recorded mock client pitch with review feedback."
+    },
+    {
+      "q": "Does the course guarantee freelance clients?",
+      "question": "Does the course guarantee freelance clients?",
+      "a": "No. The course develops proposal and pitching skills but cannot guarantee client acquisition or revenue.",
+      "answer": "No. The course develops proposal and pitching skills but cannot guarantee client acquisition or revenue."
+    },
+    {
+      "q": "What is the duration and fee?",
+      "question": "What is the duration and fee?",
+      "a": "The course lasts four weeks, includes 32 guided hours and has a listed fee of ₹4,900, subject to Nova Skills' verified pricing and tax policy.",
+      "answer": "The course spans 4 Weeks (32 guided training hours). The approved regular tuition fee for Freelance Proposal Writing & Client Pitching is ₹4,900. Under our current introductory launch offer, an approved launch fee of ₹4,900 is available. The final payable amount, including any applicable taxes, will be clearly displayed before payment. All live instructional sessions, portfolio reviews, and certification are included."
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}

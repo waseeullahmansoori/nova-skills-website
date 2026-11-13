@@ -21,7 +21,7 @@
         script.src = 'https://www.googletagmanager.com/gtag/js?id=G-9WN9N2KF12';
         document.head.appendChild(script);
       }
-      
+
       ['pointerdown', 'touchstart', 'scroll', 'keydown'].forEach(function(evt) {
         window.addEventListener(evt, loadGtag, { once: true, passive: true });
       });
@@ -180,7 +180,7 @@
 <!-- Smart Rotating Announcement Bar -->
   <div class="announcement-bar" id="announcement-bar">
     <div class="container announcement-container">
-      
+
       <!-- Previous Control Button -->
       <button class="announcement-nav-btn prev-btn" id="announcement-prev" aria-label="Previous announcement">‹</button>
 
@@ -253,7 +253,7 @@
       </a>
 
       <ul class="nav-links" id="nav-links">
-        
+
     <!-- 1. HOME -->
     <li><a href="/" class="nav-link active" aria-current="page">Home</a></li>
 
@@ -363,19 +363,25 @@
 
     <!-- 7. MOBILE DRAWER ACTIONS (Visible on mobile navigation drawer) -->
     <li class="mobile-drawer-action-group">
+      <a href="https://wa.me/919695904440?text=Hi%20Nova%20Skills%2C%20I%20am%20interested%20in%20your%20courses.%20Please%20help%20me%20with%20course%20details%2C%20fees%20and%20upcoming%20batch%20information." target="_blank" rel="noopener noreferrer" class="mobile-drawer-action-btn mobile-drawer-whatsapp" id="mobile-drawer-whatsapp-btn" data-source-component="mobile_drawer_whatsapp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 8px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Chat on WhatsApp
+      </a>
+      <a href="tel:+919695904440" class="mobile-drawer-action-btn mobile-drawer-call" id="mobile-drawer-phone-btn" data-source-component="mobile_drawer_phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call Admissions (+91 9695904440)
+      </a>
       <a href="/login.html" onclick="handleNavAuthClick(event);" class="mobile-drawer-action-btn mobile-drawer-login" id="mobile-drawer-auth-btn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Login / Sign Up
       </a>
-      <a href="tel:+919695904440" class="mobile-drawer-action-btn mobile-drawer-call" id="mobile-drawer-phone-btn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 9695904440
-      </a>
     </li>
-  
+
       </ul>
 
       <div class="nav-actions">
-        <a href="/login.html" onclick="handleNavAuthClick(event);" class="nav-phone" id="nav-auth-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Login / Sign Up
+        <a href="tel:+919695904440" class="nav-phone" id="nav-phone-btn" data-source-component="header_helpline" title="Call Admissions Helpline">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+91 9695904440
+        </a>
+        <a href="/login.html" onclick="handleNavAuthClick(event);" class="nav-auth-btn" id="nav-auth-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Login / Sign Up
         </a>
       </div>
 
@@ -411,7 +417,7 @@
           </h1>
           <p class="hero-subtitle">
             <span class="canonical-academies-count">12</span> Academies · <span class="canonical-courses-count">109+</span> Courses · Expert Mentors · Real Projects · Placement Support.<br />
-            Transform your future with industry-ready training starting at just ₹2,999.
+            Transform your future with industry-ready training starting at just <span class="canonical-starting-price">₹2,900</span>.
           </p>
 
           <div class="hero-tagline">
@@ -681,7 +687,7 @@
             <p class="academy-desc">Master SEO, Google Ads, Social Media, Content & AI-powered marketing strategies.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="digital-marketing">14 Courses</span>
-              <span class="meta-badge">From ₹5,999</span>
+              <span class="meta-badge" data-academy-price-badge="digital-marketing">From ₹3,900</span>
             </div>
             <a href="/academies/digital-marketing/" class="academy-link" aria-label="Explore Digital Marketing Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -695,7 +701,7 @@
             <p class="academy-desc">ChatGPT, Prompt Engineering, AI Automation, AI Agents & cutting-edge AI tools.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="ai">10 Courses</span>
-              <span class="meta-badge">From ₹5,999</span>
+              <span class="meta-badge" data-academy-price-badge="ai">From ₹4,900</span>
             </div>
             <a href="/academies/ai/" class="academy-link" aria-label="Explore AI Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -708,7 +714,7 @@
             <p class="academy-desc">Photoshop, Illustrator, Figma, UI/UX Design and complete Creative Design mastery.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="design">10 Courses</span>
-              <span class="meta-badge">From ₹4,999</span>
+              <span class="meta-badge" data-academy-price-badge="design">From ₹4,900</span>
             </div>
             <a href="/academies/design/" class="academy-link" aria-label="Explore Design Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -721,7 +727,7 @@
             <p class="academy-desc">Python, Full Stack, JavaScript, SQL and complete programming foundations.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="programming">10 Courses</span>
-              <span class="meta-badge">From ₹4,999</span>
+              <span class="meta-badge" data-academy-price-badge="programming">From ₹3,900</span>
             </div>
             <a href="/academies/programming/" class="academy-link" aria-label="Explore Programming Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -734,7 +740,7 @@
             <p class="academy-desc">Premiere Pro, After Effects, Motion Graphics, Cinematography & DaVinci Resolve.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="video">8 Courses</span>
-              <span class="meta-badge">From ₹5,999</span>
+              <span class="meta-badge" data-academy-price-badge="video">From ₹3,900</span>
             </div>
             <a href="/academies/video-motion/" class="academy-link" aria-label="Explore Video and Motion Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -747,7 +753,7 @@
             <p class="academy-desc">3ds Max, Blender, Cinema 4D, V-Ray, Twinmotion & Architectural Visualization.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="3d">8 Courses</span>
-              <span class="meta-badge">From ₹9,999</span>
+              <span class="meta-badge" data-academy-price-badge="3d">From ₹6,900</span>
             </div>
             <a href="/academies/3d/" class="academy-link" aria-label="Explore 3D Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -760,7 +766,7 @@
             <p class="academy-desc">WordPress, Shopify, Webflow, Framer & complete E-Commerce Website building.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="nocode">8 Courses</span>
-              <span class="meta-badge">From ₹5,999</span>
+              <span class="meta-badge" data-academy-price-badge="nocode">From ₹5,900</span>
             </div>
             <a href="/academies/no-code-web/" class="academy-link" aria-label="Explore No-Code Web Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -773,7 +779,7 @@
             <p class="academy-desc">Scratch, Python for Kids, Robotics, AI Basics & future-ready tech skills for children.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="kids">7 Courses</span>
-              <span class="meta-badge">From ₹3,999</span>
+              <span class="meta-badge" data-academy-price-badge="kids">From ₹4,900</span>
             </div>
             <a href="/academies/kids-tech/" class="academy-link" aria-label="Explore Kids Tech Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -786,7 +792,7 @@
             <p class="academy-desc">YouTube, Instagram Growth, Podcasting, Personal Branding & Content Creation.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="creator">7 Courses</span>
-              <span class="meta-badge">From ₹4,999</span>
+              <span class="meta-badge" data-academy-price-badge="creator">From ₹4,900</span>
             </div>
             <a href="/academies/creator/" class="academy-link" aria-label="Explore Creator Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -799,7 +805,7 @@
             <p class="academy-desc">Excel, PowerPoint, Tally, Google Workspace & Microsoft Copilot mastery.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="office">10 Courses</span>
-              <span class="meta-badge">From ₹3,999</span>
+              <span class="meta-badge" data-academy-price-badge="office">From ₹3,900</span>
             </div>
             <a href="/academies/office-productivity/" class="academy-link" aria-label="Explore Office Productivity Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -812,7 +818,7 @@
             <p class="academy-desc">Spoken English, Business Communication, Personality Development & Interview Skills.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="communication">7 Courses</span>
-              <span class="meta-badge">From ₹3,999</span>
+              <span class="meta-badge" data-academy-price-badge="communication">From ₹3,900</span>
             </div>
             <a href="/academies/communication/" class="academy-link" aria-label="Explore Communication Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -825,7 +831,7 @@
             <p class="academy-desc">Resume Building, LinkedIn, Portfolio, Interview Prep, Freelancing & Client Acquisition.</p>
             <div class="academy-meta">
               <span class="meta-badge" data-academy-course-badge="career">10 Courses</span>
-              <span class="meta-badge">From ₹3,999</span>
+              <span class="meta-badge" data-academy-price-badge="career">From ₹2,900</span>
             </div>
             <a href="/academies/career-freelancing/" class="academy-link" aria-label="Explore Career and Freelancing Academy"><span>Explore Academy</span><span class="arrow-icon" aria-hidden="true">→</span></a>
           </div>
@@ -855,8 +861,8 @@
         <!-- Course Cards Grid -->
         <div class="courses-grid" id="courses-grid">
 
-          <!-- Digital Marketing Professional -->
-          <article class="course-card" data-category="digital-marketing" id="course-dm-pro">
+          <!-- AI Digital Marketing Specialist (dm-professional) -->
+          <article class="course-card" data-category="digital-marketing" data-course-id="dm-professional" id="course-dm-pro">
             <div class="course-thumbnail has-course-visual">
               <div class="course-thumb-bg has-course-visual" style="background: linear-gradient(135deg, #FF6B00 0%, #FF9A3C 50%, #FFC300 100%);">
                 <picture class="course-thumb-picture">
@@ -867,26 +873,25 @@
               <div class="course-badge-overlay">
                 <span class="course-level-badge">Beginner Friendly</span>
               </div>
-              <div class="course-duration-badge">4 Months</div>
+              <div class="course-duration-badge">3 Months</div>
             </div>
             <div class="course-body">
               <div class="course-academy-tag">📊 Digital Marketing Academy</div>
               <h3 class="course-title"><a href="/course-detail.html?id=dm-professional">AI Digital Marketing Specialist</a></h3>
-              <p class="course-desc">Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing tools.</p>
+              <p class="course-desc">Intensive 3-month program focused on independent execution of foundational digital marketing campaigns across search, social, web, and analytics using appropriate AI assistance.</p>
               <div class="course-features">
-                <span class="feature-item">✅ 15 Live Projects</span>
+                <span class="feature-item">✅ 5 Core Production Projects</span>
+                <span class="feature-item">✅ 120 Guided Hours</span>
                 <span class="feature-item">✅ Industry Certificate</span>
                 <span class="feature-item">✅ Placement Support</span>
-                <span class="feature-item">✅ Lifetime Access</span>
               </div>
-              
               <div class="course-footer course-footer-stack">
-              <div class="course-demo-indicator">
-                <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'dm-professional', courseName:'AI Digital Marketing Specialist', academyName:'Digital Marketing Academy', sourceCta:'home_featured_card'});}">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  <span>2-Day Free Demo Available</span>
-                </button>
-              </div>
+                <div class="course-demo-indicator">
+                  <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'dm-professional', courseName:'AI Digital Marketing Specialist', academyName:'Digital Marketing Academy', sourceCta:'home_featured_card'});}">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>2-Day Free Demo Available</span>
+                  </button>
+                </div>
                 <div class="course-pricing course-pricing-row">
                   <div>
                     <span class="price-current">₹19,900</span>
@@ -902,8 +907,8 @@
             </div>
           </article>
 
-          <!-- AI Mastery Program -->
-          <article class="course-card course-featured-card" data-category="ai" id="course-ai-mastery">
+          <!-- AI Solutions Engineering &amp; Agentic AI Mastery (ai-mastery) -->
+          <article class="course-card course-featured-card" data-category="ai" data-course-id="ai-mastery" id="course-ai-mastery">
             <div class="course-hot-tag">⭐ Flagship Career</div>
             <div class="course-thumbnail has-course-visual">
               <div class="course-thumb-bg has-course-visual" style="background: linear-gradient(135deg, #0599a8 0%, #011731 50%, #75d766 100%);">
@@ -919,22 +924,21 @@
             </div>
             <div class="course-body">
               <div class="course-academy-tag">🤖 AI Academy</div>
-              <h3 class="course-title"><a href="/course-detail.html?id=ai-mastery">AI Solutions Engineering & Agentic AI Mastery</a></h3>
-              <p class="course-desc">Build AI Agents, RAG Systems, Business Automations & Production AI Applications with Python, n8n, LangGraph & MCP.</p>
+              <h3 class="course-title"><a href="/course-detail.html?id=ai-mastery">AI Solutions Engineering &amp; Agentic AI Mastery</a></h3>
+              <p class="course-desc">Train students to design, build, integrate, evaluate, secure and deploy practical AI solutions using Python, model APIs, RAG, automation, agent frameworks and MCP across 9 Months and 360 guided hours.</p>
               <div class="course-features">
-                <span class="feature-item">✅ 14 Modules & 360 Guided Hours</span>
+                <span class="feature-item">✅ 14 Modules &amp; 360 Guided Hours</span>
                 <span class="feature-item">✅ 7 Canonical Portfolio Builds</span>
                 <span class="feature-item">✅ ISO Verified Credential</span>
                 <span class="feature-item">✅ Dedicated Placement Support</span>
               </div>
-              
               <div class="course-footer course-footer-stack">
-              <div class="course-demo-indicator">
-                <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'ai-mastery', courseName:'AI Solutions Engineering & Agentic AI Mastery', academyName:'AI & Automation Academy', sourceCta:'home_featured_card'});}">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  <span>2-Day Free Demo Available</span>
-                </button>
-              </div>
+                <div class="course-demo-indicator">
+                  <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'ai-mastery', courseName:'AI Solutions Engineering & Agentic AI Mastery', academyName:'AI Academy', sourceCta:'home_featured_card'});}">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>2-Day Free Demo Available</span>
+                  </button>
+                </div>
                 <div class="course-pricing course-pricing-row">
                   <div>
                     <span class="price-current">₹64,900</span>
@@ -944,14 +948,14 @@
                 </div>
                 <div class="course-card-actions">
                   <a href="/course-detail.html?id=ai-mastery" class="btn btn-outline btn-sm">View Syllabus</a>
-                  <button type="button" class="btn btn-primary btn-sm btn-enroll" onclick="openEnrollmentModal('AI Solutions Engineering & Agentic AI Mastery', 'AI & Automation Academy', '9 Months', '₹64,900', 'ai-mastery')">Enroll Now →</button>
+                  <button type="button" class="btn btn-primary btn-sm btn-enroll" onclick="openEnrollmentModal('AI Solutions Engineering & Agentic AI Mastery', 'AI Academy', '9 Months', '₹64,900', 'ai-mastery')">Enroll Now →</button>
                 </div>
               </div>
             </div>
           </article>
 
-          <!-- Full Stack Programming -->
-          <article class="course-card" data-category="programming" id="course-fullstack">
+          <!-- Full Stack Programming Foundation (fullstack-foundation) -->
+          <article class="course-card" data-category="programming" data-course-id="fullstack-foundation" id="course-fullstack">
             <div class="course-thumbnail has-course-visual">
               <div class="course-thumb-bg has-course-visual" style="background: linear-gradient(135deg, #2563EB 0%, #0599a8 100%);">
                 <picture class="course-thumb-picture">
@@ -967,21 +971,20 @@
             <div class="course-body">
               <div class="course-academy-tag">💻 Programming Academy</div>
               <h3 class="course-title"><a href="/course-detail.html?id=fullstack-foundation">Full Stack Programming Foundation</a></h3>
-              <p class="course-desc">HTML, CSS, Bootstrap, JavaScript, Python, SQL, Git & REST APIs — complete developer roadmap.</p>
+              <p class="course-desc">A practical beginner-to-junior-development program teaching responsive web design, JavaScript, TypeScript, React, APIs, Node.js, SQL, secure application development, testing and deployment.</p>
               <div class="course-features">
-                <span class="feature-item">✅ Portfolio Projects</span>
+                <span class="feature-item">✅ Portfolio Projects + Capstone</span>
                 <span class="feature-item">✅ Industry Certificate</span>
                 <span class="feature-item">✅ Placement Support</span>
                 <span class="feature-item">✅ Code Reviews</span>
               </div>
-              
               <div class="course-footer course-footer-stack">
-              <div class="course-demo-indicator">
-                <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'fullstack-foundation', courseName:'Full Stack Programming Foundation', academyName:'Programming Academy', sourceCta:'home_featured_card'});}">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  <span>2-Day Free Demo Available</span>
-                </button>
-              </div>
+                <div class="course-demo-indicator">
+                  <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'fullstack-foundation', courseName:'Full Stack Programming Foundation', academyName:'Programming Academy', sourceCta:'home_featured_card'});}">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>2-Day Free Demo Available</span>
+                  </button>
+                </div>
                 <div class="course-pricing course-pricing-row">
                   <div>
                     <span class="price-current">₹29,999</span>
@@ -997,8 +1000,8 @@
             </div>
           </article>
 
-          <!-- Creative Design Mastery -->
-          <article class="course-card" data-category="design" id="course-design">
+          <!-- Creative Design Master (creative-design) -->
+          <article class="course-card" data-category="design" data-course-id="creative-design" id="course-design">
             <div class="course-thumbnail has-course-visual">
               <div class="course-thumb-bg has-course-visual" style="background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);">
                 <picture class="course-thumb-picture">
@@ -1009,26 +1012,25 @@
               <div class="course-badge-overlay">
                 <span class="course-level-badge">Beginner Friendly</span>
               </div>
-              <div class="course-duration-badge">6 Months</div>
+              <div class="course-duration-badge">8 Months</div>
             </div>
             <div class="course-body">
               <div class="course-academy-tag">🎨 Design Academy</div>
               <h3 class="course-title"><a href="/course-detail.html?id=creative-design">Creative Design Master</a></h3>
-              <p class="course-desc">Photoshop, Illustrator, Figma, UI Design, Brand Identity, Logo & Packaging Design mastery.</p>
+              <p class="course-desc">An integrated professional design program covering brand identity, commercial visual design, campaign production, print and packaging, UI/UX fundamentals, motion assets and human-directed generative AI.</p>
               <div class="course-features">
-                <span class="feature-item">✅ Real Client Projects</span>
+                <span class="feature-item">✅ 6 Portfolio Case Studies</span>
                 <span class="feature-item">✅ Industry Certificate</span>
                 <span class="feature-item">✅ Placement Support</span>
                 <span class="feature-item">✅ Portfolio Building</span>
               </div>
-              
               <div class="course-footer course-footer-stack">
-              <div class="course-demo-indicator">
-                <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'creative-design', courseName:'Creative Design Master', academyName:'Design Academy', sourceCta:'home_featured_card'});}">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  <span>2-Day Free Demo Available</span>
-                </button>
-              </div>
+                <div class="course-demo-indicator">
+                  <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'creative-design', courseName:'Creative Design Master', academyName:'Design Academy', sourceCta:'home_featured_card'});}">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>2-Day Free Demo Available</span>
+                  </button>
+                </div>
                 <div class="course-pricing course-pricing-row">
                   <div>
                     <span class="price-current">₹44,900</span>
@@ -1044,8 +1046,8 @@
             </div>
           </article>
 
-          <!-- Motion Graphics Mastery -->
-          <article class="course-card" data-category="video" id="course-video">
+          <!-- AI-Integrated Video Editing &amp; Motion Graphics Professional (ai-integrated-video-editing-motion-graphics-professional) -->
+          <article class="course-card" data-category="video" data-course-id="ai-integrated-video-editing-motion-graphics-professional" id="course-video">
             <div class="course-thumbnail has-course-visual">
               <div class="course-thumb-bg has-course-visual" style="background: linear-gradient(135deg, #EF4444 0%, #F97316 100%);">
                 <picture class="course-thumb-picture">
@@ -1056,26 +1058,25 @@
               <div class="course-badge-overlay">
                 <span class="course-level-badge">Intermediate</span>
               </div>
-              <div class="course-duration-badge">6 Months</div>
+              <div class="course-duration-badge">8 Months</div>
             </div>
             <div class="course-body">
-              <div class="course-academy-tag">🎬 Video & Motion Academy</div>
-              <h3 class="course-title"><a href="/course-detail.html?id=ai-integrated-video-editing-motion-graphics-professional">AI-Integrated Video Editing & Motion Graphics Professional</a></h3>
-              <p class="course-desc">Premiere Pro, After Effects, Motion Graphics, DaVinci Resolve & Professional Cinematography.</p>
+              <div class="course-academy-tag">🎬 Video &amp; Motion Academy</div>
+              <h3 class="course-title"><a href="/course-detail.html?id=ai-integrated-video-editing-motion-graphics-professional">AI-Integrated Video Editing &amp; Motion Graphics Professional</a></h3>
+              <p class="course-desc">Learn professional video editing, motion graphics, VFX compositing, cinematic colour grading, audio post-production and AI-powered video production using Premiere, After Effects, DaVinci Resolve, Adobe Firefly, Google Flow and Runway. Build client-style commercial projects and a professional showreel.</p>
               <div class="course-features">
-                <span class="feature-item">✅ Commercial Projects</span>
+                <span class="feature-item">✅ 7 Projects</span>
                 <span class="feature-item">✅ Industry Certificate</span>
                 <span class="feature-item">✅ Placement Support</span>
                 <span class="feature-item">✅ Showreel Building</span>
               </div>
-              
               <div class="course-footer course-footer-stack">
-              <div class="course-demo-indicator">
-                <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'ai-integrated-video-editing-motion-graphics-professional', courseName:'AI-Integrated Video Editing & Motion Graphics Professional', academyName:'Video & Motion Academy', sourceCta:'home_featured_card'});}">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  <span>2-Day Free Demo Available</span>
-                </button>
-              </div>
+                <div class="course-demo-indicator">
+                  <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'ai-integrated-video-editing-motion-graphics-professional', courseName:'AI-Integrated Video Editing & Motion Graphics Professional', academyName:'Video & Motion Academy', sourceCta:'home_featured_card'});}">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>2-Day Free Demo Available</span>
+                  </button>
+                </div>
                 <div class="course-pricing course-pricing-row">
                   <div>
                     <span class="price-current">₹49,900</span>
@@ -1091,8 +1092,8 @@
             </div>
           </article>
 
-          <!-- AI Digital Marketing Strategist -->
-          <article class="course-card" data-category="digital-marketing" id="course-dm-mastery">
+          <!-- AI Digital Marketing Strategist (dm-mastery) -->
+          <article class="course-card" data-category="digital-marketing" data-course-id="dm-mastery" id="course-dm-mastery">
             <div class="course-thumbnail has-course-visual">
               <div class="course-thumb-bg has-course-visual" style="background: linear-gradient(135deg, #FF6B00 0%, #8B5CF6 100%);">
                 <picture class="course-thumb-picture">
@@ -1108,21 +1109,20 @@
             <div class="course-body">
               <div class="course-academy-tag">📊 Digital Marketing Academy</div>
               <h3 class="course-title"><a href="/course-detail.html?id=dm-mastery">AI Digital Marketing Strategist</a></h3>
-              <p class="course-desc">Complete digital marketing + AI automation: all 15 modules, live campaigns & freelancing skills.</p>
+              <p class="course-desc">Comprehensive 6-month flagship mastery in AI-powered digital marketing strategy, full-funnel growth, advanced SEO/GEO, paid advertising, conversion optimization, CRM, and automation.</p>
               <div class="course-features">
-                <span class="feature-item">✅ Live Campaigns</span>
+                <span class="feature-item">✅ 8 Core &amp; Capstone Projects</span>
                 <span class="feature-item">✅ Industry Certificate</span>
                 <span class="feature-item">✅ Placement Support</span>
                 <span class="feature-item">✅ Freelancing Module</span>
               </div>
-              
               <div class="course-footer course-footer-stack">
-              <div class="course-demo-indicator">
-                <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'dm-mastery', courseName:'AI Digital Marketing Strategist', academyName:'Digital Marketing Academy', sourceCta:'home_featured_card'});}">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                  <span>2-Day Free Demo Available</span>
-                </button>
-              </div>
+                <div class="course-demo-indicator">
+                  <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'dm-mastery', courseName:'AI Digital Marketing Strategist', academyName:'Digital Marketing Academy', sourceCta:'home_featured_card'});}">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    <span>2-Day Free Demo Available</span>
+                  </button>
+                </div>
                 <div class="course-pricing course-pricing-row">
                   <div>
                     <span class="price-current">₹34,900</span>
@@ -1137,6 +1137,7 @@
               </div>
             </div>
           </article>
+
 
         </div>
 
@@ -1355,8 +1356,8 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Student Work</span>
-          <h2 class="section-title">Real Projects by<br /><span class="gradient-text">Real Students</span></h2>
-          <p class="section-subtitle">Our students don't just learn — they create. Here's a sample of the professional-quality work our students produce.</p>
+          <h2 class="section-title">Student Portfolio <span class="gradient-text">Showcase</span></h2>
+          <p class="section-subtitle">Explore selected practical deliverables, production assets, and portfolio work created through hands-on learning at Nova Skills.</p>
         </div>
 
         <div class="projects-grid">
@@ -1372,6 +1373,7 @@
               <h3>Multichannel Growth &amp; GA4 Analytics</h3>
               <p>Hands-on campaign planning, ad budget allocation, ROAS optimization, and live GA4 tracking funnels.</p>
               <div class="project-result">🚀 Practical Performance Marketing</div>
+              <button type="button" class="btn btn-outline btn-sm" onclick="openProjectModal('proj-dm-01')" style="margin-top:10px; font-size:0.8rem; padding:5px 12px; cursor:pointer;" aria-label="View case study for Multichannel Growth &amp; GA4 Analytics">View Case Study →</button>
             </div>
           </div>
           <div class="project-card" id="project-ai">
@@ -1386,6 +1388,7 @@
               <h3>Enterprise Multi-Tenant Cloud SaaS</h3>
               <p>Built a scalable React 19, TypeScript, and PostgreSQL cloud SaaS application with automated workflows.</p>
               <div class="project-result">⚙️ Production Cloud SaaS Platform</div>
+              <button type="button" class="btn btn-outline btn-sm" onclick="openProjectModal('proj-fs-01')" style="margin-top:10px; font-size:0.8rem; padding:5px 12px; cursor:pointer;" aria-label="View case study for Enterprise Multi-Tenant Cloud SaaS">View Case Study →</button>
             </div>
           </div>
           <div class="project-card" id="project-design">
@@ -1400,6 +1403,7 @@
               <h3>Complete Commercial Brand System</h3>
               <p>Designed vector logo system, typography hierarchy, commercial packaging, and official brand guidelines.</p>
               <div class="project-result">🎨 Production-Ready Brand Identity</div>
+              <button type="button" class="btn btn-outline btn-sm" onclick="openProjectModal('proj-gd-01')" style="margin-top:10px; font-size:0.8rem; padding:5px 12px; cursor:pointer;" aria-label="View case study for Complete Commercial Brand System">View Case Study →</button>
             </div>
           </div>
           <div class="project-card" id="project-video">
@@ -1414,6 +1418,7 @@
               <h3>Client-First Directory Architecture</h3>
               <p>Engineered a dynamic relational directory, custom search filtering, and responsive landing pages.</p>
               <div class="project-result">💻 Production-Grade Web Application</div>
+              <button type="button" class="btn btn-outline btn-sm" onclick="openProjectModal('proj-nc-01')" style="margin-top:10px; font-size:0.8rem; padding:5px 12px; cursor:pointer;" aria-label="View case study for Client-First Directory Architecture">View Case Study →</button>
             </div>
           </div>
         </div>
@@ -1501,9 +1506,9 @@
     <section class="placement-process-section" id="placement-process" aria-label="Placement process">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Placement Process</span>
-          <h2 class="section-title">How We Get You<br /><span class="gradient-text">Hired</span></h2>
-          <p class="section-subtitle">Our dedicated placement team follows a proven process to match you with the right opportunity.</p>
+          <span class="section-tag">Career Support</span>
+          <h2 class="section-title">Your Career Preparation<br /><span class="gradient-text">Journey</span></h2>
+          <p class="section-subtitle">Our comprehensive career support framework prepares eligible learners for industry interviews through practical portfolios and active employer connections.</p>
         </div>
 
         <div class="process-grid">
@@ -1532,16 +1537,22 @@
             <div class="process-icon" style="background: linear-gradient(135deg, #FF6B00, #FF9A3C);">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
-            <h3>Direct Job Referrals</h3>
-            <p>We directly connect you with our network of hiring partners and industry employers to schedule interviews — no cold applications.</p>
+            <h3>Relevant Hiring Referrals</h3>
+            <p>We connect eligible learners with active vacancy notifications across our employer referral network based on merit, portfolio readiness, and employer shortlisting.</p>
           </div>
           <div class="process-step" id="process-5">
             <div class="process-icon" style="background: linear-gradient(135deg, #75d766, #0599a8);">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             </div>
             <h3>Offer & Onboarding</h3>
-            <p>We guide you through salary negotiation, offer letters and your first 30-day onboarding at the new job.</p>
+            <p>We provide expert guidance on compensation breakdown, offer evaluation, and professional first-30-day workplace onboarding checklists.</p>
           </div>
+        </div>
+
+        <div class="placement-disclaimer-note" style="margin-top:32px; padding:16px 20px; background:rgba(5, 153, 168, 0.05); border:1px solid rgba(5, 153, 168, 0.2); border-radius:12px; text-align:center; max-width:860px; margin-left:auto; margin-right:auto;">
+          <p style="font-size:0.8125rem; color:var(--text-muted); line-height:1.5; margin:0;">
+            ⚖️ <strong>Placement Support Notice:</strong> Placement assistance supports career preparation and access to relevant opportunities. Enrolment does not guarantee a job offer, interview, specific salary, or employment outcome. Final selection depends on student eligibility, performance, and employer criteria. See our <a href="/terms-and-conditions/" style="color:var(--teal); text-decoration:underline;">Terms &amp; Conditions</a>.
+          </p>
         </div>
 
         <div class="placement-editorial-preview" aria-label="Sample redacted ATS resume and portfolio layout">
@@ -1583,7 +1594,7 @@
               <div>
                 <div class="testimonial-name">Ayesha Patel</div>
                 <div class="testimonial-role">Digital Marketing Executive, Mumbai</div>
-                <div class="testimonial-course">AI Digital Marketing Professional</div>
+                <div class="testimonial-course">AI Digital Marketing Specialist</div>
               </div>
               <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
             </div>
@@ -1676,9 +1687,9 @@
     <section class="mentors-section" id="mentors" aria-label="Industry mentors">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Expert Faculty</span>
-          <h2 class="section-title">Learn From<br /><span class="gradient-text">Industry Experts</span></h2>
-          <p class="section-subtitle">Our mentors are active industry professionals with real-world experience who bring insider knowledge to every session.</p>
+          <span class="section-tag">Academic Faculty</span>
+          <h2 class="section-title">Meet Our Mentors &amp;<br /><span class="gradient-text">Academic Experts</span></h2>
+          <p class="section-subtitle">Our mentors are active industry practitioners and domain specialists guiding practical capstones and live reviews.</p>
         </div>
 
         <div class="mentors-grid">
@@ -1693,6 +1704,7 @@
             <div class="mentor-tags">
               <span>Google Ads</span><span>SEO</span><span>AI Marketing</span>
             </div>
+            <a href="/courses.html?academy=digital-marketing" class="mentor-link" style="display:inline-block; margin-top:14px; font-size:0.85rem; font-weight:600; color:var(--teal); text-decoration:none;">Explore Courses They Teach →</a>
           </div>
 
           <div class="mentor-card" id="mentor-2">
@@ -1706,6 +1718,7 @@
             <div class="mentor-tags">
               <span>ChatGPT</span><span>n8n</span><span>AI Agents</span>
             </div>
+            <a href="/courses.html?academy=ai" class="mentor-link" style="display:inline-block; margin-top:14px; font-size:0.85rem; font-weight:600; color:var(--teal); text-decoration:none;">Explore Courses They Teach →</a>
           </div>
 
           <div class="mentor-card" id="mentor-3">
@@ -1719,6 +1732,7 @@
             <div class="mentor-tags">
               <span>Photoshop</span><span>Figma</span><span>Branding</span>
             </div>
+            <a href="/courses.html?academy=design" class="mentor-link" style="display:inline-block; margin-top:14px; font-size:0.85rem; font-weight:600; color:var(--teal); text-decoration:none;">Explore Courses They Teach →</a>
           </div>
 
           <div class="mentor-card" id="mentor-4">
@@ -1732,6 +1746,7 @@
             <div class="mentor-tags">
               <span>After Effects</span><span>Premiere</span><span>Motion</span>
             </div>
+            <a href="/courses.html?academy=video" class="mentor-link" style="display:inline-block; margin-top:14px; font-size:0.85rem; font-weight:600; color:var(--teal); text-decoration:none;">Explore Courses They Teach →</a>
           </div>
         </div>
       </div>
@@ -1851,7 +1866,7 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-3" hidden>
-              <p>Course fees range from ₹2,999 for individual short courses to ₹49,999 for comprehensive 6-month mastery programmes. Yes, we offer 0% EMI options through our banking partners. We also offer group discounts and scholarships for deserving students. Speak to our counsellors for personalised pricing.</p>
+              <p>Course fees range from <span class="canonical-starting-price">₹2,900</span> for individual short courses up to ₹64,900 for comprehensive mastery programmes (18% statutory GST extra). Flexible payment options include structured milestone installment plans on multi-month courses and credit/debit card EMI options at checkout through our payment gateway partners, subject to card-issuing bank terms. Speak to our counsellors at +91 9695904440 for complete fee and payment details.</p>
             </div>
           </div>
 
@@ -1941,28 +1956,27 @@
                 <div class="form-group">
                   <label for="course-interest">Course Interest</label>
                   <select id="course-interest" name="course">
-                    <option value="">Select Academy / Course</option>
-                    <option>Digital Marketing Academy</option>
-                    <option>AI Academy</option>
-                    <option>Design Academy</option>
-                    <option>Programming Academy</option>
-                    <option>Video & Motion Academy</option>
-                    <option>3D Academy</option>
-                    <option>No-Code Web Academy</option>
-                    <option>Kids Tech Academy</option>
-                    <option>Creator Academy</option>
-                    <option>Office Productivity Academy</option>
-                    <option>Communication Academy</option>
-                    <option>Career & Freelancing Academy</option>
-                    <option>Not Sure – Need Guidance</option>
+                    <option value="not-sure">🎯 Not Sure — Help Me Choose a Course</option>
+                    <option value="digital-marketing">Digital Marketing Academy</option>
+                    <option value="ai">AI Academy</option>
+                    <option value="design">Design Academy</option>
+                    <option value="programming">Programming Academy</option>
+                    <option value="video">Video &amp; Motion Academy</option>
+                    <option value="3d">3D Academy</option>
+                    <option value="no-code-web">No-Code Web Academy</option>
+                    <option value="kids">Kids Tech Academy</option>
+                    <option value="creator">Creator Academy</option>
+                    <option value="office">Office Productivity Academy</option>
+                    <option value="communication">Communication Academy</option>
+                    <option value="career">Career &amp; Freelancing Academy</option>
                   </select>
                 </div>
               </div>
               <button type="submit" class="btn btn-cta btn-lg" id="counselling-submit">
-                Book My Free Session
+                Book My Free Counselling Session
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
-              <p class="form-note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; color:var(--teal, #0599a8);" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Free, no obligation &bull; <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; color:var(--teal, #0599a8);" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> We'll call you within 2 hours &bull; <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; color:var(--teal, #0599a8);" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Your information is 100% safe</p>
+              <p class="form-note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; color:var(--teal, #0599a8);" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Free, no obligation &bull; <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; color:var(--teal, #0599a8);" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> We'll call you within 2 hours &bull; <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:-2px; color:var(--teal, #0599a8);" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Your data is secure &bull; <a href="/privacy-policy/" style="color:var(--teal,#0599a8); text-decoration:underline;">Privacy Policy</a></p>
             </form>
           </div>
           <div class="cta-editorial-panel" aria-label="Academic pathway guidance editorial concept">
@@ -2105,7 +2119,7 @@
           <div class="footer-legal">
             <a href="/privacy-policy/">Privacy Policy</a>
             <a href="/terms-and-conditions/">Terms of Service</a>
-            <a href="/refund-policy/">Refund Policy</a>
+            <a href="/refund-policy/">Refund &amp; Cancellation Policy</a>
           </div>
           <p class="footer-made">Made with ❤️ in India</p>
         </div>
@@ -2114,8 +2128,8 @@
   </footer>
 
   <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
-  <a href="https://wa.me/919695904440?text=Hi%2C%20I%27m%20interested%20in%20Nova%20Skills%20courses.%20Can%20you%20help%20me%3F" 
-     class="whatsapp-float" 
+  <a href="https://wa.me/919695904440?text=Hi%2C%20I%27m%20interested%20in%20Nova%20Skills%20courses.%20Can%20you%20help%20me%3F"
+     class="whatsapp-float"
      id="whatsapp-btn"
      aria-label="Chat on WhatsApp"
      target="_blank"
@@ -2125,9 +2139,10 @@
   </a>
 
   <!-- JavaScript -->
-  <script src="/js/data.min.js?v=2.7.0" defer></script>
-  <script src="/js/components.min.js?v=2.8.0" defer></script>
-  <script src="/js/main.min.js" defer></script>
+  <script src="/js/data.min.js?v=3.1.0" defer></script>
+  <script src="/js/credibility-data.min.js?v=3.1.0" defer></script>
+  <script src="/js/components.min.js?v=3.1.0" defer></script>
+  <script src="/js/main.min.js?v=3.1.0" defer></script>
 </body>
 </html>
 

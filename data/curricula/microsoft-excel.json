@@ -1,0 +1,542 @@
+{
+  "courseId": "microsoft-excel",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/microsoft-excel.json",
+  "guidedHours": 48,
+  "learning_hours": 48,
+  "course_type": "Certification Course",
+  "seo_title": "Microsoft Excel & Business Reporting Course | Nova Skills",
+  "seo_description": "Learn Excel formulas, XLOOKUP, PivotTables, charts and reporting in 6 weeks (48h). Build 3 practical Excel projects. Fee ₹6,900.",
+  "overview": {
+    "heading": "What You Will Learn",
+    "description": "Learn Microsoft Excel through real business tasks, formulas, data cleaning, PivotTables, charts and practical reporting. Build professional spreadsheets for sales, attendance, inventory and expense analysis while developing accuracy, troubleshooting and responsible AI-assisted working habits.",
+    "expanded_copy_1": "Learn to organize business data, create dependable formulas, validate entries and generate useful reports in Microsoft Excel. Practise common office tasks including sales tracking, attendance monitoring, inventory analysis and expense summaries.",
+    "expanded_copy_2": "Build confidence with modern Excel functions, PivotTables, charts and basic data-import workflows. Complete a practical reporting portfolio with documented checks that demonstrate your ability to calculate, analyze and explain business information accurately.",
+    "main_value_proposition": "Business-Ready Excel Skills Built Around Accuracy and Practical Reporting.",
+    "learning_journey": "Prepare Data → Calculate → Validate → Analyze → Visualize → Reconcile → Report → Explain",
+    "teaching_principles": [
+      "Hands-on tasks.",
+      "Clear business objectives.",
+      "Realistic datasets.",
+      "Correct formulas.",
+      "Meaningful data structure.",
+      "Responsible automation.",
+      "Quality control.",
+      "Independent verification.",
+      "Professional presentation.",
+      "Explainable outcomes."
+    ]
+  },
+  "why_now": null,
+  "learning_journey": null,
+  "prerequisites": [
+    "Basic computer skills (file management, typing, mouse navigation)",
+    "Basic arithmetic operations (addition, subtraction, multiplication, division, percentages)",
+    "No prior Microsoft Excel experience or programming required"
+  ],
+  "target_audience": [
+    "College students preparing for workplace office roles",
+    "Job seekers targeting administrative, operational, or coordinator positions",
+    "Office executives and administrative staff looking to upgrade spreadsheet reporting",
+    "Sales coordinators and account executives tracking sales data",
+    "HR assistants and payroll coordinators monitoring attendance records",
+    "Inventory coordinators and retail management staff managing stock registers",
+    "Small business owners seeking reliable monthly reporting without costly software",
+    "Early-career operations staff building foundational business data skills"
+  ],
+  "learning_outcomes": [
+    "Navigate Excel efficiently.",
+    "Understand workbooks and worksheets.",
+    "Enter and format business data.",
+    "Distinguish values, text and dates.",
+    "Use relative, absolute and mixed references.",
+    "Organize data into Excel Tables.",
+    "Sort and filter records.",
+    "Apply appropriate number formats.",
+    "Identify missing and duplicate data.",
+    "Use formula troubleshooting techniques.",
+    "Create SUMIFS formulas.",
+    "Create COUNTIFS formulas.",
+    "Use IF and IFS.",
+    "Use IFERROR responsibly.",
+    "Perform XLOOKUP operations.",
+    "Explain INDEX/MATCH at an awareness level.",
+    "Use common text functions.",
+    "Use common date functions.",
+    "Understand structured references.",
+    "Apply conditional formatting.",
+    "Create data-validation rules.",
+    "Understand dynamic arrays.",
+    "Use FILTER.",
+    "Use UNIQUE.",
+    "Use SORT.",
+    "Identify spill errors.",
+    "Clean simple business datasets.",
+    "Create PivotTables.",
+    "Group and summarize data appropriately.",
+    "Create PivotCharts.",
+    "Use slicers where supported.",
+    "Produce relevant business charts.",
+    "Define basic KPIs.",
+    "Compare source totals with report totals.",
+    "Refresh PivotTable reports.",
+    "Import CSV files.",
+    "Preserve data types while importing.",
+    "Understand basic Power Query.",
+    "Use AI to explain formulas.",
+    "Independently verify AI suggestions.",
+    "Detect common spreadsheet errors.",
+    "Create an automated-formula sales tracker.",
+    "Create an attendance or expense report.",
+    "Build a final reporting workbook.",
+    "Document accuracy checks.",
+    "Write a management summary.",
+    "Present findings clearly.",
+    "Recognize the limitations of the analysis."
+  ],
+  "hands_on_tech": [
+    "Microsoft Excel for Microsoft 365 (Windows Desktop preferred)",
+    "Power Query (Introductory CSV Import & Transformation)",
+    "Microsoft Copilot in Excel (Optional, where licensed)",
+    "CSV Business Practice Datasets (Sales, HR Attendance, Operational Expenses, Inventory)"
+  ],
+  "modules": [
+    {
+      "module_number": 1,
+      "module": "Module 01",
+      "module_title": "Excel Foundations & Data Quality",
+      "title": "Excel Foundations & Data Quality",
+      "duration": "6 Hours",
+      "hours": 6,
+      "objective": "Develop correct foundational habits for working with business spreadsheets and structured data.",
+      "lessons_count": 20,
+      "lessons": [
+        "1.1 Introduction to Microsoft Excel: Spreadsheet purpose.; Office workflows.; Business reporting.; Common practical applications.",
+        "1.2 Excel Interface: Ribbon.; Formula bar.; Name box.; Worksheets.; Workbook navigation.; Quick Access Toolbar awareness.",
+        "1.3 Workbook Fundamentals: Create.; Open.; Save.; Save As.; File formats.; Worksheet naming.",
+        "1.4 Cells and Ranges: Row.; Column.; Cell address.; Range.; Selection.",
+        "1.5 Data Entry: Text.; Numeric data.; Dates.; Percentages.; Currency.; Blank cells.",
+        "1.6 Data Types: Number vs text.; Dates as serial values.; Text-based IDs.; Common errors.",
+        "1.7 Cell References: Relative references.; Absolute references.; Mixed references.; Fill behaviour.",
+        "1.8 Basic Calculation: Arithmetic operators.; Order of operations.; Basic formula syntax.",
+        "1.9 Essential Formatting: Number formats.; Currency.; Percentages.; Dates.; Decimal precision.",
+        "1.10 Professional Formatting: Alignment.; Readable headings.; Consistent fonts.; Borders.; Table formatting.; Controlled colours.",
+        "1.11 Excel Tables: Insert Table.; Headers.; Table names.; Auto-expanding table rows.; Calculated columns.",
+        "1.12 Structured Business Data: One record per row.; One variable per column.; Unique column headings.; No merged cells in source tables.; No blank separator rows.",
+        "1.13 Sorting: Single-column sorting.; Multi-column sorting.; Avoiding partial-range sorting errors.",
+        "1.14 Filtering: AutoFilter.; Date filters.; Numeric filters.; Text filters.; Clear filters.",
+        "1.15 Data Quality: Missing values.; Duplicate records.; Wrong data types.; Inconsistent spelling.; Invalid dates.",
+        "1.16 Error Prevention: Correct headings.; Unique identifiers.; Consistent data entry.; Input documentation.; Source preservation.",
+        "1.17 Freeze Panes: Maintaining header visibility.; Navigation.",
+        "1.18 Basic Worksheet Protection Awareness: Preventing accidental formula changes.; Protection is not a substitute for information security.",
+        "1.19 File Organization: Version naming.; Source files.; Reporting files.; Backups.",
+        "1.20 Basic Troubleshooting: #### display.; Number stored as text.; Incorrect dates.; Broken references.; Formula entered as text."
+      ],
+      "hands_on_lab": "Create a structured sales data worksheet with:\r\n\r\n- Transaction ID.\r\n- Date.\r\n- Product.\r\n- Quantity.\r\n- Unit price.\r\n- Salesperson.\r\n- Region.\r\n- Sales amount.\r\n\r\nConvert it to an Excel Table.\r\n\r\nApply suitable formatting, sorting and filtering.",
+      "practical_assignment": "Prepare an accurate and clean business transaction register.",
+      "expected_deliverable": "**Structured Excel Sales Data Table**",
+      "assessment": "Check:\r\n\r\n- Correct types.\r\n- Proper headers.\r\n- Correct structure.\r\n- Table formatting.\r\n- Appropriate sorting/filtering.\r\n- No obvious data integrity errors.\r\n\r\n---"
+    },
+    {
+      "module_number": 2,
+      "module": "Module 02",
+      "module_title": "Business Formulas & Functions",
+      "title": "Business Formulas & Functions",
+      "duration": "10 Hours",
+      "hours": 10,
+      "objective": "Apply essential Excel formulas to realistic business reporting problems and independently verify the results.",
+      "lessons_count": 24,
+      "lessons": [
+        "2.1 Formula Fundamentals: Equals sign.; Operators.; Arguments.; Function structure.; Parentheses.",
+        "2.2 References in Formulas: Relative.; Absolute.; Mixed.; Copying formulas.",
+        "2.3 Basic Functions: SUM.; AVERAGE.; MIN.; MAX.; COUNT.; COUNTA.; Teach as building blocks, not the entire assessment focus.",
+        "2.4 SUMIF vs SUMIFS: Conditional sums.; Multiple criteria.; Dates.; Product categories.; Salespersons.",
+        "2.5 COUNTIF vs COUNTIFS: Counting records.; Attendance.; Status reports.; Multiple conditions.",
+        "2.6 IF: Logical tests.; Business rules.; Status labels.; Eligibility conditions.",
+        "2.7 IFS: Multiple conditions.; Ordered tests.; Default cases.; Appropriate use.",
+        "2.8 AND / OR: Combined conditions.; Validity checks.; Eligibility rules.",
+        "2.9 IFERROR: Handling expected error cases.; Clear messages.; Formula quality.; Important: Do not teach IFERROR as a method of hiding all errors without investigation.",
+        "2.10 Lookup Concepts: Unique identifiers.; Lookup tables.; Exact matches.; Missing values.",
+        "2.11 XLOOKUP: Lookup value.; Lookup array.; Return array.; Exact match.; Not-found handling.",
+        "2.12 XLOOKUP Business Examples: Product price lookup.; Employee department lookup.; Inventory category lookup.; Commission category lookup.",
+        "2.13 Duplicate Lookup Keys: First-match behaviour.; Data reliability.; Why identifiers matter.",
+        "2.14 INDEX/MATCH Awareness: Concept.; Why older workbooks use it.; Compatibility.; Simple alternative lookup explanation.; Avoid making complex INDEX/MATCH combinations a major advanced specialization.",
+        "2.15 VLOOKUP Compatibility Awareness: Recognize existing VLOOKUP formulas.; Understand approximate vs exact match.; Common legacy workbook considerations.",
+        "2.16 Text Functions: LEFT.; RIGHT.; MID.; LEN.; TRIM.; CONCAT or TEXTJOIN where supported.; UPPER/LOWER/PROPER.",
+        "2.17 Text Cleanup: Extra spaces.; Standardizing codes.; Extracting fields.; Joining text.",
+        "2.18 Date Functions: TODAY.; YEAR.; MONTH.; DAY.; EOMONTH awareness.; Date differences.",
+        "2.19 Business Date Calculations: Report month.; Attendance month.; Due-date status.; Ageing awareness without advanced finance modeling.",
+        "2.20 Common Formula Errors: #N/A.; #VALUE!.; #REF!.; #DIV/0!.; #NAME?.; #SPILL! awareness.",
+        "2.21 Formula Auditing: Evaluate Formula.; Trace precedents/dependents.; Formula bar review.; Test cases.",
+        "2.22 Formula Verification: Manual calculations.; Small known datasets.; Expected-result examples.; Independent totals.",
+        "2.23 Structured References: Table column references.; Automatically filling formulas.; Expanding source tables.",
+        "2.24 Business Formula Documentation: Meaning of calculated fields.; Assumptions.; Calculation logic."
+      ],
+      "hands_on_lab": "Build a sales tracker calculating:\r\n\r\n- Sales amount.\r\n- Product lookup.\r\n- Sales by region.\r\n- Sales by employee.\r\n- Transaction status.\r\n- Monthly totals.\r\n\r\nUse:\r\n\r\n- SUMIFS.\r\n- COUNTIFS.\r\n- IF/IFS.\r\n- IFERROR.\r\n- XLOOKUP.\r\n- Appropriate date/text functions.",
+      "practical_assignment": "Complete a dynamic, formula-driven sales tracking workbook.",
+      "expected_deliverable": "**Automated-Formula Sales Tracker**",
+      "assessment": "Explain that an Excel Table can extend calculated columns to new records where configured correctly.\r\n\r\nThis does not mean every PivotTable or imported CSV updates automatically without refresh.\r\n\r\nNo VBA or macro automation is required.\r\n\r\n---"
+    },
+    {
+      "module_number": 3,
+      "module": "Module 03",
+      "module_title": "Modern Excel & Data Management",
+      "title": "Modern Excel & Data Management",
+      "duration": "10 Hours",
+      "hours": 10,
+      "objective": "Use modern spreadsheet management tools to organize, validate, clean and retrieve business information.",
+      "lessons_count": 24,
+      "lessons": [
+        "3.1 Data Management Principles: Source data.; Calculated data.; Reports.; Data integrity.; Consistency.",
+        "3.2 Excel Tables: Structured references.; Calculated columns.; Table expansion.; Table naming.",
+        "3.3 Conditional Formatting: Highlight cell rules.; Greater/less than.; Duplicate values.; Colour scales.; Data bars.; Formula-based rules at a suitable introductory level.",
+        "3.4 Practical Conditional Formatting: Overdue tasks.; Low inventory.; High expenses.; Attendance exceptions.; Outlier awareness.",
+        "3.5 Data Validation: Lists.; Whole numbers.; Decimal ranges.; Dates.; Input messages.; Error alerts.",
+        "3.6 Drop-Down Lists: Allowed categories.; Department names.; Employee status.; Expense types.",
+        "3.7 Validation Limitations: Pasted data may bypass some controls.; Users can change validation.; Data checks remain necessary.",
+        "3.8 Duplicate Handling: Identify duplicates.; Unique record keys.; Conditional formatting.; Remove Duplicates.; Preserve original data.",
+        "3.9 Missing Values: Blank fields.; Null concept.; Required input checks.; Appropriate correction.",
+        "3.10 Inconsistent Data: Product names.; Department names.; Leading/trailing spaces.; Date formatting.; Data-type mismatches.",
+        "3.11 Find and Replace: Appropriate use.; Scope awareness.; Avoid accidental global changes.",
+        "3.12 Text to Columns: Delimited text.; Basic import cleanup.; Avoiding unintended overwrites.",
+        "3.13 Introduction to Dynamic Arrays: Spill behaviour.; Multi-cell results.; Dynamic resizing.; Version requirements.",
+        "3.14 FILTER: Extract records meeting conditions.; Handle empty-result cases.; Use safe sample data.",
+        "3.15 UNIQUE: Distinct products.; Unique departments.; Category lists.; Duplicate investigation.",
+        "3.16 SORT: Sorting a dynamic array.; Ascending/descending.; Suitable business examples.",
+        "3.17 Combining Dynamic Functions: FILTER and SORT.; UNIQUE and SORT.; Appropriate intermediate complexity.",
+        "3.18 Spill Ranges: Understanding spill outputs.; Blocking cells.; #SPILL! errors.; Dynamic range references.",
+        "3.19 Excel Table Compatibility: Structured source data.; Dynamic-array formulas placed in the worksheet grid outside the Excel Table.; Important: Spilled-array formulas are not supported inside Excel Tables themselves.",
+        "3.20 Dynamic Array Version Awareness: Excel for Microsoft 365.; Supported newer perpetual editions.; Older Excel limitations.",
+        "3.21 Simple Inventory Data: Item code.; Category.; Current quantity.; Reorder point.; Status.; Supplier field.",
+        "3.22 Attendance Data: Employee/student ID.; Date.; Status.; Department/class.; Reporting period.",
+        "3.23 Expense Data: Date.; Category.; Description.; Payment mode.; Amount.; Approval status.",
+        "3.24 Data Quality Checklist: Correct types.; Complete records.; Unique IDs.; No unintended duplicates.; Appropriate validation."
+      ],
+      "hands_on_lab": "Build either:\r\n\r\n- A structured expense tracker, or\r\n- An attendance reporting workbook.\r\n\r\nInclude:\r\n\r\n1. Excel Table.\r\n2. Drop-down validation.\r\n3. Relevant calculations.\r\n4. Conditional formatting.\r\n5. Duplicate review.\r\n6. Data-quality checks.\r\n7. At least one suitable modern dynamic-array exercise.",
+      "practical_assignment": "Create a practical office reporting workbook.",
+      "expected_deliverable": "**Expense or Attendance Report**",
+      "assessment": "Evaluate working formulas, data validation, data quality and clarity of the report.\r\n\r\n---"
+    },
+    {
+      "module_number": 4,
+      "module": "Module 04",
+      "module_title": "PivotTables & Reporting",
+      "title": "PivotTables & Reporting",
+      "duration": "10 Hours",
+      "hours": 10,
+      "objective": "Summarize structured datasets, create meaningful business charts and prepare dependable management reports.",
+      "lessons_count": 24,
+      "lessons": [
+        "4.1 Business Reporting Fundamentals: Source data.; Summary.; KPI.; Reporting period.; Audience.; Decision context.",
+        "4.2 Preparing PivotTable Data: Unique headers.; One record per row.; Consistent types.; No merged source headers.; Proper Excel Table.",
+        "4.3 Creating PivotTables: Insert.; Source selection.; New worksheet.; Field list.",
+        "4.4 PivotTable Areas: Rows.; Columns.; Values.; Filters.",
+        "4.5 Aggregations: Sum.; Count.; Average.; Appropriate summary types.",
+        "4.6 PivotTable Value Settings: Number formats.; Summarize Values By.; Show Values As.; Percentage of total.",
+        "4.7 Sorting and Filtering: Largest to smallest.; Top categories.; Period filtering.; Report filters.",
+        "4.8 Date Grouping: Months.; Quarters where appropriate.; Calendar years.; Date type corrections.",
+        "4.9 Multiple Views: Sales by product.; Sales by region.; Sales by salesperson.; Expenses by category.",
+        "4.10 PivotCharts: Create.; Suitable chart type.; Field filtering.; Report connection.",
+        "4.11 Slicers: Insert.; Filter.; Appropriate supported versions.; Connecting to PivotTables where relevant.",
+        "4.12 Timelines Awareness: Date filtering.; Version support.; Optional demonstration where suitable.",
+        "4.13 Charts: Column.; Bar.; Line.; Pie when appropriate.; Choosing a suitable chart.",
+        "4.14 Data Visualization Principles: Accuracy.; Readability.; Scales.; Titles.; Labels.; Colour.; Avoiding misleading charts.",
+        "4.15 KPI Definitions: Total sales.; Transaction count.; Average order value.; Attendance percentage.; Monthly expenses.; Inventory status.",
+        "4.16 KPI Calculation Logic: Numerator.; Denominator.; Reporting period.; Exclusions.; Units.",
+        "4.17 Summary Report Structure: Report title.; Period.; KPI summary.; Supporting charts.; Key findings.; Notes.",
+        "4.18 PivotTable Refresh: Source updates.; Refresh command.; Refresh All.; Checking updated results.",
+        "4.19 Excel Table Source Advantage: New records included in source table.; PivotTable still requires appropriate refresh.",
+        "4.20 Data Reconciliation: Compare raw totals.; Compare PivotTable totals.; Check filtered records.; Identify excluded rows.",
+        "4.21 Report Validation: Correct source.; Correct period.; Correct grouping.; Correct units.; Correct charts.",
+        "4.22 Reporting Mistakes: Wrong aggregation.; Count instead of sum.; Dates treated as text.; Wrong source range.; Stale PivotTable.; Hidden filters.; Duplicate records.",
+        "4.23 Management Summary: Main finding.; Supporting evidence.; Business implication.; Limitation.; Recommended next check.",
+        "4.24 Practical Reporting Exercise: Monthly sales.; Department expenses.; Attendance.; Inventory movement."
+      ],
+      "hands_on_lab": "Build a management reporting sheet containing:\r\n\r\n1. Source Table.\r\n2. One or more PivotTables.\r\n3. A PivotChart.\r\n4. A relevant additional chart.\r\n5. Slicer where supported.\r\n6. Defined KPIs.\r\n7. Report period.\r\n8. Reconciled totals.",
+      "practical_assignment": "Create a monthly business performance summary.",
+      "expected_deliverable": "**PivotTable-Based Management Report**",
+      "assessment": "A visually attractive report with incorrect numbers must not pass assessment.\r\n\r\nAccuracy takes priority over decoration.\r\n\r\n---"
+    },
+    {
+      "module_number": 5,
+      "module": "Module 05",
+      "module_title": "Reporting Workflow & AI",
+      "title": "Reporting Workflow & AI",
+      "duration": "6 Hours",
+      "hours": 6,
+      "objective": "Understand simple data import workflows, CSV safety, introductory Power Query and responsible AI-assisted spreadsheet work.",
+      "lessons_count": 20,
+      "lessons": [
+        "5.1 Business Reporting Workflow: Receive data.; Validate source.; Import.; Clean.; Calculate.; Analyze.; Report.; Review.",
+        "5.2 Excel File Formats: XLSX.; CSV.; XLS.; Basic format differences.",
+        "5.3 CSV Fundamentals: Delimiters.; Headers.; Quoted values.; Character encoding.; Field types.",
+        "5.4 Importing CSV: Import workflow.; Preview.; Column types.; Appropriate delimiter.; Correct encoding.",
+        "5.5 Leading Zeros: Product codes.; Employee IDs.; Postal codes.; Importing identifiers as text.",
+        "5.6 Date Interpretation: DD/MM/YYYY.; MM/DD/YYYY.; Locale dependence.; Ambiguous dates.; Explicit parsing.",
+        "5.7 CSV Safety: Untrusted data.; Spreadsheet formula injection.; Values beginning with formula-triggering characters.; Safe handling of imported external records.; Teach this at an introductory awareness level.",
+        "5.8 CSV Export: Single-sheet limitations.; Values vs formulas.; Formatting loss.; Character encoding.",
+        "5.9 Power Query Introduction: Get & Transform.; Import data.; Preview.; Change types.; Remove obvious unwanted columns.; Refresh.",
+        "5.10 Power Query Demonstration: Import sample CSV.; Inspect columns.; Correct types.; Load cleaned result to worksheet.",
+        "5.11 Power Query Scope: Introduction only.; No advanced M programming.; No complex merges.; No advanced ETL architecture.",
+        "5.12 Version and Platform Awareness: Excel for Windows.; Excel for Mac.; Excel for the web.; Feature differences.; Actual classroom version.",
+        "5.13 Microsoft Copilot in Excel: What it can help with.; Formula explanations.; Worksheet assistance.; Data summaries.; Licensed feature availability.",
+        "5.14 Copilot Licensing: Microsoft 365 plan.; User eligibility.; Organizational configuration.; Feature rollout.; Do not promise universal Copilot access.",
+        "5.15 AI Formula Explanations: Explain SUMIFS.; Explain XLOOKUP.; Diagnose formula errors.; Suggest test cases.",
+        "5.16 AI-Generated Formula Review: Check ranges.; Check criteria.; Check data types.; Check references.; Verify outputs.",
+        "5.17 AI Hallucinations and Errors: Nonexistent functions.; Unsupported syntax.; Wrong assumptions.; Incorrect results.; Misinterpretation of data.",
+        "5.18 Confidential Data: HR records.; Customer information.; Employee salaries.; Sensitive financial records.; Permissions.; Approved AI services.; Do not upload confidential business data to unapproved AI platforms.",
+        "5.19 Independent Verification: Recalculate sample records.; Compare totals.; Test boundary cases.; Check unmatched lookups.; Check missing values.",
+        "5.20 Responsible Reporting: Data source.; Calculation logic.; Reporting period.; Accuracy checks.; Uncertainty."
+      ],
+      "hands_on_lab": "Import a sample CSV.\r\n\r\nPerform:\r\n\r\n1. Data-type checks.\r\n2. Identifier preservation.\r\n3. Basic cleaning.\r\n4. Simple Power Query demonstration.\r\n5. Formula explanation with optional AI.\r\n6. Independent verification.",
+      "practical_assignment": "Create a reporting workflow note containing:\r\n\r\n- Data source.\r\n- Import steps.\r\n- Data quality issues.\r\n- Corrected fields.\r\n- Formula review.\r\n- Reconciliation approach.\r\n- AI verification notes.",
+      "expected_deliverable": "**Excel Data Import & Reporting Quality Checklist**",
+      "assessment": "Students must understand and verify formulas independently.\r\n\r\nCopilot is optional—not mandatory.\r\n\r\n---"
+    },
+    {
+      "module_number": 6,
+      "module": "Module 06",
+      "module_title": "Business Reporting Capstone",
+      "title": "Business Reporting Capstone",
+      "duration": "6 Hours",
+      "hours": 6,
+      "objective": "Integrate Excel Tables, formulas, data validation, PivotTables and charts into a complete business reporting workbook.",
+      "lessons_count": 18,
+      "lessons": [
+        "6.1 Business Brief: Organization.; Reporting requirement.; Business questions.; Stakeholders.; Reporting period.",
+        "6.2 Dataset Review: Fields.; Sources.; Types.; Missing records.; Duplicates.; Errors.",
+        "6.3 Workbook Architecture: Instructions.; Input/source data.; Lookup tables.; Calculations.; Reports.; Validation checks.; Management summary.",
+        "6.4 Excel Table Setup: Structured data.; Table naming.; Record IDs.; Consistent columns.",
+        "6.5 Business Formulas: Sales amount.; Category totals.; Region totals.; Status logic.; Lookups.",
+        "6.6 Data Validation: Approved values.; Date restrictions.; Drop-down categories.; Error messages.",
+        "6.7 Data Cleaning: Remove errors.; Preserve source.; Document corrections.; Check types.",
+        "6.8 PivotTable Reporting: Summary by month.; Product.; Region.; Salesperson or operations area.",
+        "6.9 Charts: KPI charts.; Category comparison.; Trends.; Clear labeling.",
+        "6.10 KPI Summary: Appropriate metrics.; Time period.; Units.; Accurate calculations.",
+        "6.11 Reconciliation: Source row count.; Missing IDs.; Duplicate keys.; Source total.; Calculated total.; Pivot total.",
+        "6.12 Testing: Add new transactions.; Check formulas.; Refresh PivotTables.; Validate report update.",
+        "6.13 Error Checks: #N/A.; #VALUE!.; #REF!.; #DIV/0!.; Invalid dates.; Missing lookups.",
+        "6.14 Management Summary: Main findings.; Supporting metrics.; Useful observations.; Important limitations.",
+        "6.15 Documentation: Source.; Calculation logic.; Refresh instructions.; Quality checks.; Date of report.",
+        "6.16 Final Demonstration: Open workbook.; Explain source data.; Demonstrate formulas.; Show PivotTable.; Show chart.; Verify totals.; Explain business insights.",
+        "6.17 Instructor Critique: Accuracy.; Usability.; Readability.; Report logic.; Professional quality.",
+        "6.18 Final Corrections: Repair errors.; Improve labels.; Refine summaries.; Retest."
+      ],
+      "hands_on_lab": "Complete a business reporting workbook using sales and operations data.",
+      "practical_assignment": "Submit:\r\n\r\n**Final Excel Business Reporting Workbook**",
+      "expected_deliverable": "Final Excel Business Reporting Workbook",
+      "assessment": "A report is not complete merely because it has colourful charts.\r\n\r\nStudents must demonstrate how the reported figures were calculated and checked.\r\n\r\n---"
+    }
+  ],
+  "what_you_will_build": [],
+  "final_deliverables": [],
+  "student_deliverables_and_evidence": [],
+  "assessment": null,
+  "certification": null,
+  "career_paths": [],
+  "freelance_applications": [],
+  "business_use_cases": [
+    {
+      "case_number": 1,
+      "domain": "Sales Reporting",
+      "problem": "Monthly sales figures from multiple reps and territories are scattered and time-consuming to aggregate.",
+      "excel_solution": "Structured Excel Tables, XLOOKUP price matching, SUMIFS regional totals, and PivotTable executive summaries.",
+      "deliverable": "Automated Sales Tracker and Monthly Sales Summary."
+    },
+    {
+      "case_number": 2,
+      "domain": "HR & Attendance",
+      "problem": "Monthly employee attendance logs require accurate counting of present, absent, and leave days.",
+      "excel_solution": "Drop-down data validation, COUNTIFS multi-criteria counting, date formulas, and conditional formatting.",
+      "deliverable": "Departmental Attendance Register & Summary Report."
+    },
+    {
+      "case_number": 3,
+      "domain": "Expense Tracking",
+      "problem": "Operational expenditures across departments need categorical oversight and budget adherence checks.",
+      "excel_solution": "Structured expense logs, SUMIFS category grouping, PivotTables, and expense breakdown charts.",
+      "deliverable": "Monthly Expense Analysis Report."
+    },
+    {
+      "case_number": 4,
+      "domain": "Inventory Management",
+      "problem": "Stock levels across warehouse items require alerts when quantities fall below reorder thresholds.",
+      "excel_solution": "Excel Tables, IF/IFS threshold conditions, data validation, and conditional formatting highlight alerts.",
+      "deliverable": "Inventory Status & Stock Reorder Report."
+    },
+    {
+      "case_number": 5,
+      "domain": "Office Administration",
+      "problem": "Manually maintained administrative registers suffer from typos, duplicates, and inconsistent categorizations.",
+      "excel_solution": "Input validation rules, duplicate record removal, text cleaning functions, and structured references.",
+      "deliverable": "Standardized Administrative Master Register."
+    },
+    {
+      "case_number": 6,
+      "domain": "Small Business KPI Dashboard",
+      "problem": "Business owners need a reliable high-level view of monthly performance without expensive enterprise software.",
+      "excel_solution": "Summary KPI cards, PivotCharts, dynamic array sorting, and documented accuracy reconciliation.",
+      "deliverable": "Excel Business Reporting Workbook Capstone."
+    }
+  ],
+  "industry_workflow": [],
+  "best_practices": [],
+  "common_mistakes": [],
+  "not_covered": [],
+  "next_learning_path": [],
+  "faq": [
+    {
+      "id": 1,
+      "question": "What is Microsoft Excel — Business Reporting & Data Analysis?",
+      "answer": "It is a practical Excel certification covering formulas, structured data, data validation, PivotTables, charts and business reporting."
+    },
+    {
+      "id": 2,
+      "question": "How long is the course?",
+      "answer": "Six weeks, with 48 learning hours."
+    },
+    {
+      "id": 3,
+      "question": "What is the course fee?",
+      "answer": "₹6,900, subject to Nova Skills' verified fee and tax policy."
+    },
+    {
+      "id": 4,
+      "question": "Is the course suitable for beginners?",
+      "answer": "Yes. It begins with Excel fundamentals."
+    },
+    {
+      "id": 5,
+      "question": "Do I need prior Excel knowledge?",
+      "answer": "No. Basic computer and arithmetic skills are sufficient."
+    },
+    {
+      "id": 6,
+      "question": "Which Excel version is used?",
+      "answer": "Microsoft Excel for Microsoft 365, preferably the Windows desktop version."
+    },
+    {
+      "id": 7,
+      "question": "Will I learn Excel formulas?",
+      "answer": "Yes, including SUMIFS, COUNTIFS, IF, IFS, IFERROR and XLOOKUP."
+    },
+    {
+      "id": 8,
+      "question": "Will I learn XLOOKUP?",
+      "answer": "Yes. XLOOKUP is part of the mandatory curriculum."
+    },
+    {
+      "id": 9,
+      "question": "Will I learn VLOOKUP and INDEX/MATCH?",
+      "answer": "Students receive useful awareness of legacy lookup methods, while XLOOKUP is the main modern lookup function."
+    },
+    {
+      "id": 10,
+      "question": "What are dynamic arrays?",
+      "answer": "They are modern Excel formulas capable of returning results across multiple worksheet cells."
+    },
+    {
+      "id": 11,
+      "question": "Will I learn FILTER, UNIQUE and SORT?",
+      "answer": "Yes. These are included in the modern Excel module."
+    },
+    {
+      "id": 12,
+      "question": "Why do some formulas not work in older Excel versions?",
+      "answer": "Modern functions depend on the Excel version. Older installations may lack XLOOKUP or dynamic-array functionality."
+    },
+    {
+      "id": 13,
+      "question": "Will I learn data validation?",
+      "answer": "Yes, including suitable restrictions and drop-down lists."
+    },
+    {
+      "id": 14,
+      "question": "Will I learn conditional formatting?",
+      "answer": "Yes, for useful tasks such as highlighting exceptions and business statuses."
+    },
+    {
+      "id": 15,
+      "question": "Will I learn PivotTables?",
+      "answer": "Yes. PivotTables are a major part of the course."
+    },
+    {
+      "id": 16,
+      "question": "Will I learn charts and reporting?",
+      "answer": "Yes. Students practise charts, PivotCharts, KPIs and business summaries."
+    },
+    {
+      "id": 17,
+      "question": "Will I learn dashboards?",
+      "answer": "The course teaches practical reporting summaries with charts and PivotTables, not complex enterprise BI dashboards."
+    },
+    {
+      "id": 18,
+      "question": "Will I learn Power Query?",
+      "answer": "Yes, at an introductory level for importing and preparing data."
+    },
+    {
+      "id": 19,
+      "question": "Will I learn Power BI?",
+      "answer": "No. Power BI belongs to an advanced MIS/Business Intelligence pathway."
+    },
+    {
+      "id": 20,
+      "question": "Will I learn VBA or macros?",
+      "answer": "No. VBA automation is outside this certification."
+    },
+    {
+      "id": 21,
+      "question": "Will I learn Python in Excel?",
+      "answer": "No. The course concentrates on Excel foundations and applied reporting."
+    },
+    {
+      "id": 22,
+      "question": "Is Copilot required?",
+      "answer": "No. Copilot is optional and depends on licensing and feature availability."
+    },
+    {
+      "id": 23,
+      "question": "Can AI help with Excel formulas?",
+      "answer": "Yes, but students must understand and independently verify all formula outputs."
+    },
+    {
+      "id": 24,
+      "question": "What business reports will I create?",
+      "answer": "A sales tracker, an expense or attendance report and a final Excel reporting workbook."
+    },
+    {
+      "id": 25,
+      "question": "What will my final capstone include?",
+      "answer": "Structured data, validation, formulas, a PivotTable, charts, quality checks and a management summary."
+    },
+    {
+      "id": 26,
+      "question": "Will I learn CSV import?",
+      "answer": "Yes, including data types, encoding, dates and common import issues."
+    },
+    {
+      "id": 27,
+      "question": "Will I learn to identify spreadsheet errors?",
+      "answer": "Yes. Formula errors, invalid data and report reconciliation are important parts of the course."
+    },
+    {
+      "id": 28,
+      "question": "Is this suitable for office executives?",
+      "answer": "Yes. The content focuses on common office reporting and data analysis work."
+    },
+    {
+      "id": 29,
+      "question": "Can small business owners take this course?",
+      "answer": "Yes. It covers practical sales, expense and inventory reporting applications."
+    },
+    {
+      "id": 30,
+      "question": "What can I study next?",
+      "answer": "Suitable progression may include advanced Excel, Business Productivity Mastery and longer MIS/Business Intelligence programs. ---"
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}

@@ -1,0 +1,531 @@
+{
+  "courseId": "prompt-engineering",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/prompt-engineering.json",
+  "guidedHours": 32,
+  "learning_hours": 32,
+  "course_type": "Certification Course",
+  "seo_title": "Prompt Engineering Course | 4 Weeks, ₹4,900 | Nova Skills",
+  "seo_description": "Master prompt engineering, ChatGPT, Claude, Gemini, structured outputs and AI evaluation. 4 weeks, 32 practical hours at ₹4,900.",
+  "overview": "Prompt engineering in 2027 is an empirical quality-assurance discipline, not a creative writing trick. As large language models become foundational infrastructure in business, marketing, operations, and customer support, organizations require professionals who can engineer dependable context, constrain outputs into validated schemas, and scientifically evaluate performance variations across ChatGPT, Claude, and Gemini. This 4-week certification bridges the gap between casual conversational querying and enterprise-grade generative AI reliability.",
+  "why_now": "Generative AI is shifting from novelty chatbots to mission-critical business workflows. Writing casual prompts produces inconsistent, hallucinated, or unparseable answers that cannot be trusted in business operations. Employers, agencies, and freelance clients now demand structured prompt architecture, verifiable source grounding, schema-valid JSON outputs, and rigorous human-in-the-loop evaluation to ensure safe, repeatable, and commercially viable AI outcomes.",
+  "learning_journey": null,
+  "prerequisites": [
+    "Basic computer literacy, comfortable web browsing, and document editing skills",
+    "Zero coding, programming, or Python knowledge required — all labs use graphical web interfaces and spreadsheets",
+    "No paid AI subscriptions required — all exercises are designed for accessible free tiers or instructor-provided evaluation datasets",
+    "No prior machine learning background needed — concepts are taught from foundational intuition to applied practice"
+  ],
+  "target_audience": [
+    "Students and career switchers exploring practical, industry-aligned generative AI applications",
+    "Freelancers seeking to build high-value prompt libraries and AI workflow documentation services",
+    "Digital marketers and content strategists looking to produce consistent, brand-aligned copy at scale",
+    "Business executives, office managers, and operations coordinators seeking workplace AI productivity",
+    "Entrepreneurs and startup founders building rapid prototypes and automated customer touchpoints",
+    "Educators, corporate trainers, and researchers developing structured learning and assessment assets",
+    "Customer support team leads aiming to standardize triage prompts and response drafting templates",
+    "Non-technical professionals wanting vendor-neutral AI skills that transfer across LLM platforms"
+  ],
+  "learning_outcomes": [
+    "Deconstruct large language model mechanics including tokens, context windows, inference vs training, and stochastic generation",
+    "Architect reusable, portable prompts utilizing the 7-step Professional Prompt Framework across ChatGPT, Claude, and Gemini",
+    "Engineer targeted context and document-grounded constraints that significantly reduce unsupported claims and hallucinations",
+    "Specify, extract, and validate structured JSON outputs with field-level schemas while distinguishing syntax validity from factual truth",
+    "Identify and defend against prompt-injection risks and untrusted instructions embedded in external source documents",
+    "Design rigorous 5-dimension scoring rubrics to evaluate AI outputs across Accuracy, Instruction Adherence, Completeness, Format, and Usefulness",
+    "Execute empirical model comparisons using standardized business test cases to make objective, data-backed AI tool selections",
+    "Manage and maintain a version-controlled repository of 20 tested business prompts in Google Sheets",
+    "Build an end-to-end Evaluated Business Prompting Workflow featuring multi-step chaining, fallback protocols, and human verification checkpoints"
+  ],
+  "hands_on_tech": {
+    "core_tools": [
+      {
+        "tool": "ChatGPT",
+        "purpose": "Primary conversational and structured prompting interface for business tasks"
+      },
+      {
+        "tool": "Claude",
+        "purpose": "Long-document synthesis, complex context handling, and nuanced reasoning"
+      },
+      {
+        "tool": "Gemini",
+        "purpose": "Multimodal instruction testing and cross-model evaluation benchmarks"
+      }
+    ],
+    "supporting_tools": [
+      {
+        "tool": "Google Sheets",
+        "purpose": "Test case registers, 5-dimension rubric tracking, and prompt version control"
+      },
+      {
+        "tool": "JSONLint",
+        "purpose": "Validating syntax and structural integrity of AI-generated JSON outputs"
+      },
+      {
+        "tool": "Model Playgrounds",
+        "purpose": "Exploring parameter adjustments (temperature, system instructions) in web sandboxes"
+      }
+    ],
+    "emerging_tools": [
+      {
+        "tool": "JSON Schema Validators",
+        "purpose": "Contract conformance checking for enterprise data extraction"
+      },
+      {
+        "tool": "Human-in-the-Loop Rubrics",
+        "purpose": "Standardized quality assurance matrices for factual verification"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "module_number": 1,
+      "module": "Module 01",
+      "number": "01",
+      "title": "Generative AI & LLM Fundamentals",
+      "duration": "6 Hours",
+      "hours": 6,
+      "lessons": 3,
+      "lesson_count": 3,
+      "objective": "Deconstruct how large language models generate text, understand the implications of tokens, context windows, and stochastic behavior, and establish practical safety, privacy, and responsible AI guardrails.",
+      "topics": [
+        "Introduction to artificial intelligence & practical generative AI ecosystem overview",
+        "How large language models work: next-token prediction, tokenization mechanics, and probabilistic text generation",
+        "Model training phases (pre-training, fine-tuning, RLHF) versus real-time inference",
+        "Context windows and token constraints: understanding input limits, output limits, and context decay",
+        "Instruction hierarchy fundamentals: system instructions versus user-supplied queries versus external data",
+        "Frontier model landscape in 2027: core capabilities, design philosophies, and architectural differences between ChatGPT, Claude, and Gemini",
+        "Model capabilities versus realistic constraints: why LLMs are reasoning engines, not deterministic databases",
+        "Hallucinations, factual inaccuracies, and the critical distinction between model confidence and objective correctness",
+        "Output variability and non-deterministic behavior: understanding temperature, top-p, and stochastic generation",
+        "Selecting the right model for specific business tasks: speed, context size, cost, reasoning depth, and multimodal needs",
+        "Tool-augmented models (browsing, code execution) versus parametric model memory",
+        "Responsible AI practices: data privacy, avoiding confidential enterprise disclosures, intellectual property, and platform acceptable use policies",
+        "Recognizing bias, harmful outputs, and establishing the necessity of human oversight for high-stakes decisions"
+      ],
+      "hands_on_tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Google Docs"
+      ],
+      "hands_on_practice": "Conducting token-budget calculations, observing output variations across multiple runs of the same prompt, and testing model knowledge cutoffs versus tool-assisted live retrieval.",
+      "assignment": "AI Model Capability & Limitation Analysis: A comparative diagnostic report evaluating ChatGPT, Claude, and Gemini across three representative business tasks (factual research, creative synthesis, and document summarization), documenting output differences, accuracy observations, and tool selection rationales.",
+      "competencies": [
+        "LLM architecture intuition",
+        "Context window calculation",
+        "Hallucination identification",
+        "Model selection strategy",
+        "AI privacy compliance"
+      ],
+      "assessment_criteria": "Depth of capability vs. limitation analysis, clarity in identifying stochastic variations, and sound reasoning in matching specific business tasks to appropriate AI models."
+    },
+    {
+      "module_number": 2,
+      "module": "Module 02",
+      "number": "02",
+      "title": "Professional Prompt Design",
+      "duration": "6 Hours",
+      "hours": 6,
+      "lessons": 3,
+      "lesson_count": 3,
+      "objective": "Master the 7-step Professional Prompt Framework to design unambiguous, role-calibrated, reusable prompts utilizing zero-shot, one-shot, and few-shot in-context learning.",
+      "topics": [
+        "Prompt engineering as a software-like discipline: why vague questions produce mediocre results",
+        "Core prompt components: clear task directives, persona/role definition, audience specification, and explicit constraints",
+        "The 7-Step Professional Prompt Framework: Objective → Context → Inputs → Constraints → Output Specification → Success Criteria → Evaluation",
+        "Separating instructions from input data using clear structural delimiters (markdown tags, triple quotes, XML-style blocks)",
+        "Zero-shot prompting: when direct instructions work and where they break down",
+        "One-shot and few-shot in-context learning: selecting diverse, high-quality positive examples to calibrate tone, structure, and depth",
+        "Positive guidance versus negative constraints: why telling the model what to do outperforms long lists of prohibitions",
+        "Designing reusable prompt templates with variable placeholders (e.g., [CLIENT_NAME], [INDUSTRY], [SOURCE_TEXT])",
+        "Iterative prompt refinement: testing baseline instructions, analyzing shortcomings, and systematically adding missing constraints",
+        "Handling ambiguous user requests: crafting prompts that ask clarifying questions before generating final answers",
+        "Deconstructing complex multifaceted business requests into logical sequential instructions",
+        "Managing instruction conflicts and edge cases: ensuring constraints take precedence over creative elaboration",
+        "Documenting prompts for team reuse: recording intent, required context, and expected output parameters",
+        "Cross-model portability principles: engineering prompts that function predictably across ChatGPT, Claude, and Gemini without heavy model-specific rewriting"
+      ],
+      "hands_on_tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Google Sheets"
+      ],
+      "hands_on_practice": "Refining a poorly worded 1-line business request through 4 progressive iterations using the 7-step framework, then converting it into a standardized few-shot template with variable placeholders.",
+      "assignment": "Reusable Business Prompt Library Starter: Crafting, testing, and documenting eight standardized business prompts (customer email drafting, executive summaries, marketing campaign briefs, product descriptions, meeting action items, educational explanations, report outlines, and FAQ generators) with complete input-output logs.",
+      "competencies": [
+        "7-step prompt framework application",
+        "Few-shot example selection",
+        "Structural delimiter usage",
+        "Prompt templating with variables",
+        "Iterative prompt debugging"
+      ],
+      "assessment_criteria": "Adherence to structural prompt components, quality and diversity of few-shot examples, prompt portability across models, and precision of documented constraints."
+    },
+    {
+      "module_number": 3,
+      "module": "Module 03",
+      "number": "03",
+      "title": "Advanced Prompt Workflows, Context Engineering & Structured Outputs",
+      "duration": "8 Hours",
+      "hours": 8,
+      "lessons": 4,
+      "lesson_count": 4,
+      "objective": "Engineer precise context to anchor model responses in verified source data, design schema-constrained JSON outputs, handle multimodal inputs, and implement prompt-injection defenses.",
+      "topics": [
+        "Context engineering fundamentals: the critical role of relevant context in determining output quality",
+        "Curating, filtering, and organizing context: minimizing noise, preventing 'lost in the middle' phenomena, and respecting token budgets",
+        "Document-grounded prompting (Retrieval-Augmented Prompting): constraining the model strictly to supplied reference material",
+        "Source attribution and citation techniques: instructing models to cite specific paragraph numbers or direct quotes",
+        "Preventing hallucinated extrapolation: crafting strict fallback instructions when answers are not present in the source text",
+        "Structured output fundamentals: understanding key-value pairs, arrays, nested objects, and data typing in JSON",
+        "JSON Schema principles: defining required versus optional fields, string enums, number boundaries, and object structures",
+        "The Critical Triad: Distinguishing Valid JSON Syntax vs. Schema-Conforming JSON vs. Factually Correct JSON Values",
+        "Data extraction workflows: transforming messy unstructured emails, PDFs, and meeting transcripts into clean JSON entities",
+        "Classification prompts: multi-class categorization, sentiment scoring, and urgency tagging with strict schema enums",
+        "Multimodal prompt architecture: analyzing screenshots, invoices, data charts, and diagrams using vision-capable LLMs",
+        "Multi-step prompt workflows and task decomposition: breaking complex analysis into sequential staging prompts",
+        "Intermediate verification: validating step-1 outputs before feeding them into step-2 prompt stages",
+        "Prompt injection and untrusted input defense: understanding indirect prompt injection inside user documents, emails, and web pages",
+        "Defensive prompting strategies: treating external text strictly as passive data and shielding system instructions from override attacks",
+        "Enterprise data confidentiality: redacting PII, masking sensitive client numbers, and ethical source data governance"
+      ],
+      "hands_on_tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "JSONLint",
+        "JSON Schema Validator"
+      ],
+      "hands_on_practice": "Extracting invoice line-items from a synthetic receipt image into validated JSON, and testing indirect prompt injection vulnerabilities by embedding malicious override commands inside source text.",
+      "assignment": "Structured AI Output Portfolio: Five complete, validated structured-output deliverables (customer enquiry classification JSON, synthetic invoice information extraction JSON, meeting notes action-item JSON, product catalog attribute JSON, and educational reporting JSON) with validation logs and factual accuracy checks.",
+      "competencies": [
+        "Document grounding & citation",
+        "JSON syntax & schema design",
+        "Multimodal prompt execution",
+        "Prompt injection defense",
+        "Unstructured data extraction"
+      ],
+      "assessment_criteria": "Syntactic and schema validity of JSON deliverables, strict grounding in source material without hallucinations, and effectiveness of prompt-injection safeguards."
+    },
+    {
+      "module_number": 4,
+      "module": "Module 04",
+      "number": "04",
+      "title": "Prompt Evaluation & Output Optimization",
+      "duration": "6 Hours",
+      "hours": 6,
+      "lessons": 3,
+      "lesson_count": 3,
+      "objective": "Implement scientific, empirical evaluation methodologies using 5-dimension scoring rubrics, test case suites, failure categorization, and cross-model comparison workbooks.",
+      "topics": [
+        "Why evaluation is the cornerstone of professional prompt engineering: moving beyond subjective 'looks good to me' impressions",
+        "The challenge of non-deterministic model behavior: evaluating outputs across repeated runs and edge-case inputs",
+        "Dissecting prompt quality versus response quality: isolating prompt ambiguity from underlying model limitations",
+        "Constructing representative test case suites: standard inputs, complex multi-intent requests, and deliberate edge cases",
+        "Defining ground-truth references and acceptable output variance in open-ended language tasks",
+        "Developing standardized scoring rubrics: the Nova Skills 5-Dimension Evaluation Matrix (0–5 per dimension, 25 points maximum)",
+        "Dimension 1 — Accuracy: factual correctness, source alignment, and absence of hallucinations",
+        "Dimension 2 — Instruction Adherence: strict compliance with all specified constraints, negative rules, and persona guidelines",
+        "Dimension 3 — Completeness: addressing all requested points without omitting critical sub-tasks",
+        "Dimension 4 — Format Compliance: adherence to JSON schemas, markdown headers, character counts, or bullet layouts",
+        "Dimension 5 — Practical Usefulness: commercial relevance, clarity, tone appropriateness, and client readiness",
+        "Categorizing AI failure modes: hallucination, instruction drift, over-refusal, truncation, formatting collapse, and tone mismatch",
+        "Empirical model comparison protocols: establishing fair, identical testing conditions across ChatGPT, Claude, and Gemini",
+        "Tracking test metadata: recording model version, test date, system settings (temperature/tool access), and prompt revisions",
+        "Before-and-after prompt iteration testing: measuring quantitative score improvements following targeted prompt adjustments",
+        "Prompt regression awareness: ensuring revisions that fix edge case A do not break baseline capability B",
+        "Prompt version control and repository management: organizing enterprise prompt libraries with changelogs in Google Sheets"
+      ],
+      "hands_on_tools": [
+        "Google Sheets",
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "hands_on_practice": "Evaluating 15 model outputs against a synthetic business customer complaint dataset using the 5-dimension scoring rubric, identifying failure patterns, and calculating mean quality scores.",
+      "assignment": "AI Model Comparison & Evaluation Workbook: A comprehensive Google Sheets evaluation matrix testing at least five diverse business tasks across ChatGPT, Claude, and Gemini (or documented benchmark outputs), featuring quantitative 25-point rubric scoring, failure analysis, and model selection recommendations.",
+      "competencies": [
+        "5-dimension rubric scoring",
+        "Test case suite architecture",
+        "Failure mode categorization",
+        "Cross-model benchmarking",
+        "Prompt regression testing"
+      ],
+      "assessment_criteria": "Rigor of scoring justification, thoroughness of failure mode categorization, objectivity in model comparison, and quantitative demonstration of prompt improvement."
+    },
+    {
+      "module_number": 5,
+      "module": "Module 05",
+      "number": "05",
+      "title": "Business Applications, Prompt Libraries & Capstone",
+      "duration": "6 Hours",
+      "hours": 6,
+      "lessons": 3,
+      "lesson_count": 3,
+      "objective": "Apply advanced prompting and evaluation techniques to real-world business productivity scenarios, organize an enterprise-ready prompt library, and build an evaluated business workflow capstone.",
+      "topics": [
+        "Mapping business productivity opportunities: where prompt engineering delivers immediate operational ROI",
+        "Customer operations: multi-turn enquiry classification, empathetic complaint resolution, and personalized follow-up drafting",
+        "Marketing & commercial copy: creative campaign briefs, audience avatar persona generation, and multi-channel content variations",
+        "Executive research & business intelligence: synthesizing lengthy market reports, competitor teardowns, and spreadsheet-ready tabular data",
+        "Training & educational operations: automated lesson planning, Bloom's taxonomy assessment generation, and explanatory study guides",
+        "Meeting productivity: transforming disorganized audio/transcript notes into structured executive summaries, action items, and task assignments",
+        "Designing multi-step business prompting workflows: connecting intake prompts, extraction prompts, drafting prompts, and QA prompts",
+        "Building human-in-the-loop verification gates: identifying exactly where human approval is legally, ethically, and commercially required",
+        "Constructing an enterprise-ready Prompt Library in Google Sheets: folder hierarchies, variable documentation, sample outputs, and version histories",
+        "Handling edge cases and failure fallbacks: designing prompts that gracefully flag uncertainty or request managerial review",
+        "Data security, confidentiality, and organizational AI policies: establishing safe operating procedures for corporate teams",
+        "Capstone Project Workshop: assembling, testing, and presenting an end-to-end Evaluated Business Prompting Workflow",
+        "Career navigation and portfolio presentation: packaging prompt libraries, evaluation workbooks, and workflow diagrams for employers and freelance clients"
+      ],
+      "hands_on_tools": [
+        "Google Sheets",
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Google Docs"
+      ],
+      "hands_on_practice": "Designing a complete multi-step customer support intake workflow that classifies incoming customer requests, extracts account numbers into JSON, drafts a personalized empathetic reply, and prepares an internal summary for human review.",
+      "assignment": "Final Capstone Project — Evaluated Business AI Workflow: Designing, testing, and documenting a complete business prompting workflow (selected from customer support, marketing brief generation, executive document synthesis, or educational operations) complete with problem statement, prompt architecture, test cases, evaluation scoring, failure handling, and human approval protocols.",
+      "competencies": [
+        "Business process translation",
+        "Multi-step prompt workflow design",
+        "Human-in-the-loop gate integration",
+        "Enterprise prompt library curation",
+        "Client-facing portfolio presentation"
+      ],
+      "assessment_criteria": "Commercial viability of the workflow, thoroughness of multi-step prompt design, rigor of evaluation test cases, and clarity of human verification checkpoints."
+    }
+  ],
+  "what_you_will_build": [
+    {
+      "project_number": 1,
+      "badge": "Portfolio Project 01 — Reusable Asset",
+      "title": "Professional Business Prompt Library (20 Tested Prompts)",
+      "subtitle": "Enterprise-Ready Repository of 20 Tested, Parameterized & Evaluated Business Prompts Across 5 Core Domains",
+      "client_brief": "Businesses waste countless hours drafting repetitive communications, re-explaining context to AI models, and coping with inconsistent output formatting. You are commissioned to construct a standardized, reusable corporate Prompt Library containing 20 tested prompts across five operational domains, complete with variable placeholders, context requirements, test cases, and quality evaluation scores.",
+      "deliverables": [
+        "Customer Communication (4 Prompts): Professional customer email drafter, multi-intent enquiry classifier, empathetic escalation/complaint handler, and knowledge-base FAQ generator",
+        "Marketing & Content (4 Prompts): Campaign strategic brief developer, high-resolution audience persona builder, multi-channel content outline creator, and feature-to-benefit product copy generator",
+        "Research & Reporting (4 Prompts): Document executive summarizer, comparative research synthesizer, structured business report outline builder, and evidence-based recommendation compiler",
+        "Education & Productivity (4 Prompts): Structured lesson plan generator, Bloom's taxonomy assessment question creator, meeting transcript action-item extractor, and business SOP checklist builder",
+        "Data & Structured Outputs (4 Prompts): Entity data extraction prompt, multi-class categorization prompt, spreadsheet-ready table generator, and strict JSON business information formatter",
+        "Complete Documentation Matrix: Every prompt documented with unique ID, business purpose, input requirements, template with [VARIABLES], test case input, observed model response, 5-dimension score, and refinement notes"
+      ],
+      "tools": [
+        "Google Sheets",
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "outcome": "A professional, modular Google Sheets Prompt Library containing 20 battle-tested business prompts ready for enterprise deployment or freelance client delivery."
+    },
+    {
+      "project_number": 2,
+      "badge": "Portfolio Project 02 — Data Architecture",
+      "title": "Structured AI Output Portfolio (Five Validated JSON Deliverables)",
+      "subtitle": "Schema-Constrained Information Extraction & Data Categorization Across Real-World Business Scenarios",
+      "client_brief": "Modern software applications and business databases require machine-readable data, not conversational paragraphs. You are tasked with engineering prompt workflows that reliably convert messy, unstructured business text into syntactically valid and schema-conforming JSON datasets, verifying both syntactic structure and factual ground-truth fidelity.",
+      "deliverables": [
+        "Deliverable 1 — Customer Support Enquiry JSON: Parsing incoming customer emails into sender_intent, urgency_level (enum), product_category, sentiment_score (-1 to 1), and required_action_flag",
+        "Deliverable 2 — Document Information Extraction JSON: Extracting vendor name, invoice date, line-item arrays (description, quantity, unit_price, total), tax amount, and payment status from synthetic receipts",
+        "Deliverable 3 — Meeting Action-Items JSON: Deconstructing unstructured meeting transcripts into agenda_topics, key_decisions_made, and action_items array with assignee, deadline, and priority",
+        "Deliverable 4 — Product Catalog Entity JSON: Parsing e-commerce supplier blurbs into standardized SKU attributes, technical specs dictionary, target user persona, and SEO feature tags",
+        "Deliverable 5 — Educational Assessment Data JSON: Formatting test questions into question_text, options array, correct_answer_key, cognitive_level (Bloom's enum), and explanation_rationale",
+        "Data Validation Reports: JSONLint syntactic validation logs, JSON Schema specification contracts, and factual verification checklists proving values match source text without hallucinations"
+      ],
+      "tools": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "JSONLint",
+        "JSON Schema Validator"
+      ],
+      "outcome": "A technical portfolio demonstrating mastery of structured generative AI outputs, schema constraints, and factual verification protocols."
+    },
+    {
+      "project_number": 3,
+      "badge": "Portfolio Project 03 — Empirical Testing",
+      "title": "ChatGPT vs. Claude vs. Gemini — Practical Model Evaluation Workbook",
+      "subtitle": "Scientific Benchmarking of Frontier LLMs Across Standardized Business Tasks Using a 5-Dimension Rubric",
+      "client_brief": "Enterprise teams frequently argue over which AI model to adopt based on hype and subjective preference. You are hired as an AI Quality Assurance Specialist to execute an empirical benchmarking evaluation comparing ChatGPT, Claude, and Gemini across five standardized business tasks, scoring outputs quantitatively using an objective 25-point rubric.",
+      "deliverables": [
+        "Standardized Task Suite: 5 diverse business tasks spanning complex reasoning, long-document summarization, structured data extraction, creative marketing copy, and multi-constraint problem solving",
+        "5-Dimension Scoring Matrix: Evaluating each output across Accuracy (0–5), Instruction Adherence (0–5), Completeness (0–5), Format Compliance (0–5), and Practical Usefulness (0–5)",
+        "Quantitative Evaluation Spreadsheet: Complete scoring register with side-by-side output logs, test dates, model versions, and parameter records",
+        "Failure Mode Analysis: Diagnosing specific failure points including hallucinated figures, instruction leakage, over-refusals, and formatting collapse",
+        "Comparative Model Findings: Data-backed synthesis identifying task-specific strengths (e.g., Claude for long-context grounding, ChatGPT for structured tasks, Gemini for multimodal reasoning)",
+        "Executive Recommendation Memo: A practical, objective advisory report guiding an organization on model selection based on cost, performance, and operational fit"
+      ],
+      "tools": [
+        "Google Sheets",
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "outcome": "A rigorous, data-driven Model Comparison Workbook proving the ability to evaluate AI outputs objectively and provide evidence-based software recommendations."
+    },
+    {
+      "project_number": 4,
+      "badge": "Final Capstone Project — Workflow Engineering",
+      "title": "Evaluated Business AI Workflow & Quality Assurance System",
+      "subtitle": "End-to-End Multi-Step Prompting System with Structured Outputs, Failure Handling & Human Verification Gate",
+      "client_brief": "Single prompts cannot solve complex business processes. You must design, test, and document a complete multi-step business prompting workflow for a chosen operational scenario (customer support intake, marketing campaign launch, executive document intelligence, or training curriculum preparation), embedding quality checks, error fallbacks, and human verification checkpoints.",
+      "deliverables": [
+        "Business Architecture & Problem Definition: Clear statement of operational bottleneck, user personas, input specifications, and commercial success criteria",
+        "Multi-Step Prompt Architecture: Minimum 3-stage linked prompt sequence (Stage 1: Intake & Triage, Stage 2: Synthesis & Structured Processing, Stage 3: Client Output Generation)",
+        "Context Management Blueprint: Clear separation of system instructions, background reference data, and variable user inputs to prevent context pollution and prompt injection",
+        "Structured Output Contracts: Standardized JSON schemas governing intermediate data passing between workflow stages",
+        "Human-in-the-Loop Verification Protocol: Explicit checkpoints where human managers review, edit, or authorize AI outputs before external release",
+        "Edge-Case & Failure Handling: Documented fallback protocols for low-confidence answers, unparseable source documents, or missing critical data",
+        "Evaluation & Validation Suite: Test runs across 3 diverse scenario inputs (standard, edge-case, and adversarial), complete with rubric scores and refinement history",
+        "Executive Operational SOP: A client-ready Standard Operating Procedure manual enabling non-technical team members to operate the workflow consistently"
+      ],
+      "tools": [
+        "Google Sheets",
+        "Google Docs",
+        "ChatGPT",
+        "Claude",
+        "Gemini"
+      ],
+      "outcome": "A comprehensive, production-grade Business Prompting Workflow and Quality Assurance manual demonstrating applied, portfolio-ready AI engineering competence."
+    }
+  ],
+  "final_deliverables": [],
+  "student_deliverables_and_evidence": [],
+  "assessment": null,
+  "certification": {
+    "title": "Nova Skills Certificate of Completion — Prompt Engineering & AI Output Evaluation",
+    "issuer": "Nova Skills Education Institute",
+    "credential_type": "Institute Certification Course",
+    "verification_method": "Unique Online Verification URL and QR Code on Student Portal",
+    "accreditation_notice": "Issued directly by Nova Skills upon passing all module lab assignments, the 20-prompt library review, and the capstone workflow evaluation. This is an academic certification of applied competence, distinct from third-party vendor credentials issued by OpenAI, Anthropic, or Google."
+  },
+  "career_paths": [
+    {
+      "title": "AI-Assisted Content Operations Specialist",
+      "role": "Designs structured prompt workflows to produce consistent, on-brand marketing copy, summaries, and editorial assets.",
+      "salary_range": "₹3,50,000 – ₹7,00,000 / year",
+      "primary_skills": "Prompt architecture, brand voice calibration, few-shot templating, content evaluation"
+    },
+    {
+      "title": "Prompt Quality Assurance Assistant",
+      "role": "Tests, scores, and optimizes prompts across different AI models to ensure high accuracy and format compliance.",
+      "salary_range": "₹4,00,000 – ₹8,00,000 / year",
+      "primary_skills": "5-dimension rubric scoring, test case design, model comparison, hallucination diagnosis"
+    },
+    {
+      "title": "AI Workflow Documentation Coordinator",
+      "role": "Maintains organizational prompt repositories, documenting context parameters, input contracts, and revision histories.",
+      "salary_range": "₹3,80,000 – ₹7,50,000 / year",
+      "primary_skills": "Google Sheets prompt registers, version tracking, workflow checklists, schema documentation"
+    },
+    {
+      "title": "Freelance Prompt Library Developer",
+      "role": "Builds bespoke, evaluated prompt collections and SOPs for SMEs, creators, agencies, and e-commerce stores.",
+      "salary_range": "₹25,000 – ₹80,000 / project",
+      "primary_skills": "Business requirement translation, cross-model testing, structured JSON extraction, client training"
+    }
+  ],
+  "freelance_applications": [],
+  "business_use_cases": [],
+  "industry_workflow": [],
+  "best_practices": [],
+  "common_mistakes": [],
+  "not_covered": [
+    "Building autonomous multi-agent swarms (covered in AI Solutions & Agentic AI Mastery)",
+    "Backend Python coding and REST API integration (covered in Programming Academy)",
+    "No-code workflow automation with n8n or webhooks (covered in AI Automation with n8n)",
+    "Vector embeddings and Pinecone/Milvus database infrastructure",
+    "Fine-tuning foundation model weights on custom server clusters",
+    "Guaranteed 100% error-free or perfectly deterministic text outputs"
+  ],
+  "next_learning_path": [],
+  "faq": [
+    {
+      "question": "What is Prompt Engineering & AI Output Evaluation?",
+      "answer": "Prompt Engineering & AI Output Evaluation is the professional practice of designing, structuring, testing, and verifying inputs to large language models (such as ChatGPT, Claude, and Gemini) to produce dependable, high-quality, and structured business outputs. Beyond writing clever conversational queries, it encompasses context engineering, few-shot in-context learning, schema-constrained JSON outputs, prompt injection defenses, and empirical quality assurance using objective scoring rubrics."
+    },
+    {
+      "question": "Is this course suitable for beginners?",
+      "answer": "Yes. The course is specifically designed for beginners with standard computer literacy. It starts from foundational concepts—explaining how tokens, context windows, and language models function—and progressively builds toward professional, applied prompting workflows. No prior artificial intelligence, programming, or mathematics background is required."
+    },
+    {
+      "question": "What is the course duration and fee?",
+      "answer": "The course spans 4 Weeks (32 guided training hours). The approved regular tuition fee for Prompt Engineering & AI Output Evaluation is ₹4,900. Under our current introductory launch offer, an approved launch fee of ₹4,900 is available. The final payable amount, including any applicable taxes, will be clearly displayed before payment. All live instructional sessions, portfolio reviews, and certification are included."
+    },
+    {
+      "question": "Will I learn across ChatGPT, Claude, and Gemini?",
+      "answer": "Tuition for this intensive short-format certification course (4 Weeks) is payable as a one-time enrollment fee. Flexible credit card and debit card installment options are available directly at online checkout through our payment gateway partners, subject to your card-issuing bank's eligibility and terms. The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
+    {
+      "question": "Do I need coding or programming knowledge?",
+      "answer": "No. You do not need to write Python, JavaScript, or any programming code. All prompt design, context management, and evaluation workflows are conducted through web interfaces, playground sandboxes, and Google Sheets. While we teach JSON structure and schema validation, these are learned conceptually and verified using graphical online validators."
+    },
+    {
+      "question": "What is context engineering?",
+      "answer": "Context engineering is the disciplined practice of curating, organizing, and formatting the background information, reference documents, and instructions provided to an AI model within its token window. Proper context engineering ensures the model has access to relevant facts while minimizing irrelevant noise, preventing hallucinations, and avoiding context truncation."
+    },
+    {
+      "question": "Will I learn few-shot prompting?",
+      "answer": "Yes. Few-shot prompting is a core technique where you provide the model with a few carefully selected input-output examples inside the prompt. This demonstrates the exact format, tone, level of detail, and reasoning structure required, dramatically improving output consistency compared to zero-shot (example-free) instructions."
+    },
+    {
+      "question": "Does the course include structured JSON outputs?",
+      "answer": "Yes. Module 03 is dedicated to structured data outputs. You will learn to format prompts that reliably generate key-value pairs, arrays, and nested JSON objects, specify JSON schemas, and test responses with validators. Critically, we teach students to distinguish valid JSON syntax from schema compliance and objective factual correctness."
+    },
+    {
+      "question": "What is AI output evaluation?",
+      "answer": "AI output evaluation is the systematic process of testing, scoring, and benchmarking model responses against defined criteria rather than subjective impressions. You will learn to build test case suites, apply the Nova Skills 5-dimension rubric (Accuracy, Instruction Adherence, Completeness, Format, Usefulness), categorize failure modes, and quantify prompt improvements over time."
+    },
+    {
+      "question": "Can prompt engineering completely eliminate hallucinations?",
+      "answer": "No, and any course promising 100% hallucination-free AI outputs is misleading. Large language models are probabilistic, generative systems, not deterministic databases. While professional prompt engineering and document grounding dramatically reduce factual errors and unsupported claims, human verification and structured evaluation remain essential safeguards for critical business decisions."
+    },
+    {
+      "question": "Will I learn to compare different AI models?",
+      "answer": "Yes. In Module 04 and Portfolio Project 03, you will conduct standardized head-to-head evaluations comparing ChatGPT, Claude, and Gemini on identical business tasks. You will record outputs, score them across the 5-dimension rubric, diagnose model-specific failure modes, and provide evidence-based recommendations on which model is best suited for specific organizational workflows."
+    },
+    {
+      "question": "Are practical projects included in the curriculum?",
+      "answer": "Yes. The curriculum is entirely project-driven. You will complete weekly studio labs and produce four comprehensive portfolio deliverables: a 20-Prompt Business Library, a 5-Part Structured Output Portfolio, a Cross-Model Evaluation Workbook, and a full Business Prompting Workflow Capstone."
+    },
+    {
+      "question": "How many business prompts will I build and test?",
+      "answer": "You will build, test, and document at least 20 reusable business prompts organized across five operational domains: Customer Communication, Marketing & Content, Research & Reporting, Education & Productivity, and Data Extraction. Every prompt in your library will include defined variables, test inputs, observed responses, and quality scores."
+    },
+    {
+      "question": "Will I learn prompt-injection defense awareness?",
+      "answer": "Yes. You will learn about prompt-injection vulnerabilities—specifically how malicious or distracting instructions embedded inside external emails, PDFs, or web pages can attempt to hijack model behavior. You will practice defensive prompting strategies that treat external text strictly as passive data and insulate core system instructions."
+    },
+    {
+      "question": "Does the course include backend API development?",
+      "answer": "No. Backend API programming, Python script development, LangGraph coding, and enterprise infrastructure deployment are intentionally excluded. Course 41 focuses on practical prompt architecture, context design, and quality evaluation for business professionals, content creators, and consultants. API development is covered in our advanced engineering programmes."
+    },
+    {
+      "question": "Are paid AI subscriptions compulsory to take this course?",
+      "answer": "No. All mandatory coursework, lab exercises, and portfolio projects can be completed using the accessible free tiers of ChatGPT, Claude, and Gemini, or with instructor-provided evaluation datasets and model playgrounds. We do not require students to purchase paid subscriptions or enter credit card details for API billing."
+    },
+    {
+      "question": "What real-world business applications are covered?",
+      "answer": "We cover customer operations (enquiry triage, complaint drafting, FAQ generation), marketing (campaign briefs, audience personas, product descriptions), executive productivity (meeting action-item extraction, document summarization, research synthesis), educational operations (lesson plans, quiz generation), and data processing (unstructured text to JSON)."
+    },
+    {
+      "question": "Will I receive an official OpenAI, Anthropic, or Google certificate?",
+      "answer": "No. Successful graduates receive the verified Nova Skills Certificate of Completion in Prompt Engineering & AI Output Evaluation. Neither OpenAI, Anthropic, nor Google offers official public individual certifications for prompt engineering. We maintain strict academic honesty and do not claim unverified vendor accreditations."
+    },
+    {
+      "question": "What career and freelance opportunities can I explore afterward?",
+      "answer": "Graduates apply these skills as AI-Assisted Content Operations Specialists, Prompt Quality Assurance Assistants, AI Workflow Documentation Coordinators, Business AI Productivity Leads, or Freelance Prompt Library Developers building custom prompt repositories and SOPs for SMEs and digital agencies."
+    },
+    {
+      "question": "How is this course different from AI Automation or AI Agents training?",
+      "answer": "Course 41 focuses specifically on the foundational language interaction layer: crafting instructions, organizing context, structuring outputs, and evaluating model quality. AI Automation with n8n (Course 44) focuses on connecting webhooks and multi-app triggers, while AI Agents (Course 45) focuses on autonomous agent loops and tool-calling architectures. Course 41 provides the essential prompting foundation required before advanced automation."
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}

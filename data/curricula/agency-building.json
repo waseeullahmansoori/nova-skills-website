@@ -1,0 +1,2263 @@
+{
+  "courseId": "agency-building",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/agency-building.json",
+  "guidedHours": 64,
+  "learning_hours": 64,
+  "course_type": "Certification Course",
+  "seo_title": "Digital Agency Building & Operations Course | Nova Skills",
+  "seo_description": "Learn digital agency setup, service pricing, CRM, SOPs, contractors and operations in 8 weeks (64h). Build an agency blueprint. Fee ₹12,900.",
+  "overview": {
+    "section_heading": "What You Will Master",
+    "positioning": "Premium Specialist Certification",
+    "short_description": "Learn to plan and operate a small digital service agency through niche selection, service packaging, client acquisition, pricing, project management and delivery systems. Develop real operational documents and a financially reasoned agency launch plan.",
+    "expanded_overview": "Learn how to structure a small digital or creative service agency around a clearly defined niche, commercially realistic service packages and repeatable delivery workflows. Develop practical skills in pricing, cost estimation, client qualification, project operations and quality control. Understand how to evaluate contractors, document SOPs, manage client relationships and plan agency finances. Complete a comprehensive Agency Operations Blueprint with service packages, a financial model, CRM pipeline, delivery toolkit and 90-day implementation plan.",
+    "commercial_differentiation": "Build the Business Systems Behind Your Creative or Technical Skills.",
+    "workflow": "Position → Package → Price → Qualify → Sell → Onboard → Deliver → Review → Invoice → Retain → Improve",
+    "core_principles": [
+      "Service-market fit and genuine customer demand",
+      "Founder skill boundaries and delivery capacity limits",
+      "True direct cost of delivery and margin discipline",
+      "Appropriate client qualification and mutual fit",
+      "Reliable, transparent client communication",
+      "Single-point project ownership and clear accountability",
+      "Multi-gate quality assurance prior to client handover",
+      "Prudent working capital and cash-flow management",
+      "Contractor responsibility, clear briefs, and fair evaluation",
+      "Data protection, privacy compliance, and confidential access control",
+      "Proactive client retention and structured account reviews",
+      "Ethical business governance and statutory compliance awareness"
+    ]
+  },
+  "why_now": {
+    "industry_shift": "Modern clients increasingly reject bloated legacy agencies with high overheads and unpredictable solo freelancers in favor of structured, specialized boutique agencies with transparent pricing, clear SLAs, and rigorous operational accountability.",
+    "ai_impact": "Responsible AI accelerates research, documentation, meeting transcription, and initial drafting—allowing small, well-organized agencies to operate with high operational clarity while maintaining mandatory human review for quality, accuracy, and compliance.",
+    "business_demand": "Mid-market companies and growing brands require reliable service delivery partners who combine technical excellence with documented processes, reliable communication cadences, and professional risk management.",
+    "economic_reality": "Building an agency requires operational discipline and financial literacy: distinguishing revenue from profit, profit from cash flow, and understanding that capacity and delivery costs dictate sustainable growth."
+  },
+  "learning_journey": null,
+  "prerequisites": {
+    "required": "Demonstrable service-delivery ability OR prior project experience (freelance, employment, portfolio, or training)",
+    "recommended": "Basic familiarity with spreadsheets (Google Sheets or Excel) and digital communication tools",
+    "not_required": "Fixed monthly earnings, existing agency, employees, or formal corporate leadership background",
+    "system_requirements": {
+      "hardware": "Standard desktop or laptop computer with reliable internet access",
+      "software_accounts": "Google Workspace (Sheets, Docs, Drive), HubSpot CRM (free tier), ClickUp or Notion (free tier), Loom (free tier)"
+    }
+  },
+  "target_audience": {
+    "ideal_for": [
+      "Skilled freelancers seeking to transition from solo time-billing to a structured service agency model.",
+      "Digital marketers, SEO specialists, and content strategists building recurring client service retainers.",
+      "Graphic designers, brand identity artists, and UI/UX practitioners creating repeatable design delivery systems.",
+      "Video editors, motion designers, and 3D artists establishing creative production pipelines.",
+      "Web developers and no-code builders standardizing website scoping, delivery sprints, and maintenance packages.",
+      "Consultants, agency project managers, and operations coordinators managing contractor teams and client communication."
+    ],
+    "mandatory_prerequisite": "Demonstrable service-delivery ability OR prior project experience. Evidence may come from paid client work, freelance projects, professional employment, original portfolio projects, supervised commercial simulations, or relevant practical training.",
+    "not_required": [
+      "Fixed monthly freelance income (no ₹1 lakh or $2,000 threshold required)",
+      "Existing registered company or incorporation",
+      "Current full-time employees or established contractor roster",
+      "Active paying agency clients at time of enrollment",
+      "Prior enterprise agency management or corporate executive experience"
+    ]
+  },
+  "learning_outcomes": [
+    "Compare freelancer and agency operating models.",
+    "Select a feasible service niche.",
+    "Identify buyer segments.",
+    "Analyze competing service providers.",
+    "Write a credible agency positioning statement.",
+    "Design three defined service packages.",
+    "Calculate delivery costs.",
+    "Understand utilization and capacity.",
+    "Distinguish revenue, profit and cash flow.",
+    "Calculate gross margin and operating profit.",
+    "Identify fixed and variable overheads.",
+    "Prepare revenue and cash-flow forecasts.",
+    "Evaluate retainer economics.",
+    "Develop ethical client-acquisition channels.",
+    "Qualify leads and opportunities.",
+    "Create a CRM pipeline.",
+    "Interpret pipeline forecasts cautiously.",
+    "Prepare a client onboarding workflow.",
+    "Structure delivery projects.",
+    "Assign responsibilities.",
+    "Track milestones and risks.",
+    "Define quality-assurance gates.",
+    "Prepare five operational SOPs.",
+    "Evaluate prospective contractors.",
+    "Design paid sample assessments.",
+    "Understand confidentiality and access control.",
+    "Use AI responsibly in agency operations.",
+    "Explain client retention processes.",
+    "Understand agency governance fundamentals.",
+    "Identify India-specific compliance topics requiring professional advice.",
+    "Simulate a complete service-delivery workflow.",
+    "Prepare a financially reasoned 90-day launch plan."
+  ],
+  "hands_on_tech": {
+    "core_tools": [
+      {
+        "tool": "Google Sheets",
+        "purpose": "Agency Financial Modeling, Cost Estimation & Operational Dashboarding",
+        "what_student_learns": "Designing structured spreadsheet models for direct service delivery costing, founder and contractor billable utilization, gross margin calculations, operating overhead allocation, break-even analysis, and 3-scenario cash-flow forecasting.",
+        "what_student_builds": "Working Agency Financial Model with dynamic costing, margin validation, overhead schedules, and conservative, base, and optimistic cash-flow projections."
+      },
+      {
+        "tool": "HubSpot CRM or Suitable CRM",
+        "purpose": "B2B Sales Pipeline Configuration & Deal Management",
+        "what_student_learns": "Configuring deal stages, lead qualification filters, contact properties, opportunity values, task reminders, sales handoffs, and pipeline probability forecasting using simulated prospect records.",
+        "what_student_builds": "Functional 7-Stage Simulated Agency CRM Pipeline with deal qualification rubrics, activity logs, and pipeline revenue projections."
+      },
+      {
+        "tool": "ClickUp OR Notion",
+        "purpose": "Agency Project Management, Task Allocation & SOP Repository",
+        "what_student_learns": "Building client delivery boards, sprint backlog tracking, milestone timelines, custom statuses, RACI responsibility matrices, client onboarding portals, and internal team documentation hubs.",
+        "what_student_builds": "Agency Delivery Operations Workspace with pre-configured project templates, client onboarding checklists, and living SOP knowledge base."
+      }
+    ],
+    "supporting_tools": [
+      {
+        "tool": "Google Workspace",
+        "purpose": "Professional agency administration, client proposals (Docs), asset storage (Drive), and communications"
+      },
+      {
+        "tool": "Loom or Equivalent",
+        "purpose": "Asynchronous video walkthroughs for SOP demonstration, client review presentations, and contractor task briefs"
+      },
+      {
+        "tool": "Meeting Software",
+        "purpose": "Structured discovery sessions, project kickoff meetings, team sprint reviews, and quarterly client check-ins"
+      },
+      {
+        "tool": "Proposal & SOW Templates",
+        "purpose": "Documenting scope of work, milestone deliverables, assumptions, revision limits, and payment schedules"
+      },
+      {
+        "tool": "AI Planning Assistant",
+        "purpose": "Assisted brainstorming, SOP outline drafting, meeting summarization, and rubric review under strict human verification"
+      }
+    ],
+    "not_mandatory": [
+      "Stripe or payment gateway setup",
+      "Paid CRM subscriptions (free tier is fully sufficient)",
+      "Paid ClickUp or Notion enterprise plans",
+      "Slack premium or paid team messaging accounts",
+      "Apollo, ZoomInfo, or paid B2B lead scraping tools",
+      "Automated outbound email sequences or cold-email infrastructure",
+      "Paid AI agents or Make.com / Zapier paid automation subscriptions",
+      "Actual business bank account or paid legal incorporation"
+    ]
+  },
+  "modules": [
+    {
+      "module_number": 1,
+      "moduleNumber": 1,
+      "title": "Agency Business Model & Positioning",
+      "module_title": "Agency Business Model & Positioning",
+      "name": "Agency Business Model & Positioning",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
+      "module_purpose": "Select a feasible agency model, service niche, buyer segment and credible market position.",
+      "objective": "Select a feasible agency model, service niche, buyer segment and credible market position.",
+      "lessons_count": 12,
+      "lessons": [
+        {
+          "number": "1.1",
+          "lesson_number": 1,
+          "title": "Freelance vs Agency Models",
+          "lesson_title": "Freelance vs Agency Models",
+          "what_is_taught": "Solo freelancing.; Contractor-supported freelancing.; Boutique agency.; Specialist agency.; Productized service business.; Multi-service agency.; Operational responsibility.",
+          "topics": [
+            "Solo freelancing.",
+            "Contractor-supported freelancing.",
+            "Boutique agency.",
+            "Specialist agency.",
+            "Productized service business.",
+            "Multi-service agency.",
+            "Operational responsibility."
+          ]
+        },
+        {
+          "number": "1.2",
+          "lesson_number": 2,
+          "title": "Agency Service Categories",
+          "lesson_title": "Agency Service Categories",
+          "what_is_taught": "Digital marketing services.; Graphic design.; Video production.; Website development.; UI/UX design.; SEO/content services.; AI automation.; Business support services.; Students must select services they can genuinely deliver or reasonably supervise.",
+          "topics": [
+            "Digital marketing services.",
+            "Graphic design.",
+            "Video production.",
+            "Website development.",
+            "UI/UX design.",
+            "SEO/content services.",
+            "AI automation.",
+            "Business support services.",
+            "Students must select services they can genuinely deliver or reasonably supervise."
+          ]
+        },
+        {
+          "number": "1.3",
+          "lesson_number": 3,
+          "title": "Agency Business Models",
+          "lesson_title": "Agency Business Models",
+          "what_is_taught": "Project-based delivery.; Hourly consulting.; Fixed-fee services.; Recurring retainers.; Productized packages.; Hybrid models.; Advantages and limitations.",
+          "topics": [
+            "Project-based delivery.",
+            "Hourly consulting.",
+            "Fixed-fee services.",
+            "Recurring retainers.",
+            "Productized packages.",
+            "Hybrid models.",
+            "Advantages and limitations."
+          ]
+        },
+        {
+          "number": "1.4",
+          "lesson_number": 4,
+          "title": "Service Skill Audit",
+          "lesson_title": "Service Skill Audit",
+          "what_is_taught": "Demonstrable capabilities.; Existing work.; Portfolio strength.; Delivery complexity.; Tools.; Available time.; Quality standards.; Skills gaps.",
+          "topics": [
+            "Demonstrable capabilities.",
+            "Existing work.",
+            "Portfolio strength.",
+            "Delivery complexity.",
+            "Tools.",
+            "Available time.",
+            "Quality standards.",
+            "Skills gaps."
+          ]
+        },
+        {
+          "number": "1.5",
+          "lesson_number": 5,
+          "title": "Niche Research",
+          "lesson_title": "Niche Research",
+          "what_is_taught": "Industry verticals.; Customer problems.; Service demand.; Competition.; Buyer budgets.; Decision-makers.; Market accessibility.; Delivery feasibility.",
+          "topics": [
+            "Industry verticals.",
+            "Customer problems.",
+            "Service demand.",
+            "Competition.",
+            "Buyer budgets.",
+            "Decision-makers.",
+            "Market accessibility.",
+            "Delivery feasibility."
+          ]
+        },
+        {
+          "number": "1.6",
+          "lesson_number": 6,
+          "title": "Buyer Segmentation",
+          "lesson_title": "Buyer Segmentation",
+          "what_is_taught": "Local businesses.; Startups.; Established SMEs.; E-commerce brands.; Professionals.; Agencies seeking subcontractors.; Larger organizations.",
+          "topics": [
+            "Local businesses.",
+            "Startups.",
+            "Established SMEs.",
+            "E-commerce brands.",
+            "Professionals.",
+            "Agencies seeking subcontractors.",
+            "Larger organizations."
+          ]
+        },
+        {
+          "number": "1.7",
+          "lesson_number": 7,
+          "title": "Ideal Client Profile",
+          "lesson_title": "Ideal Client Profile",
+          "what_is_taught": "Industry.; Company size.; Core problem.; Service fit.; Budget suitability.; Decision-making process.; Typical buying triggers.; Delivery risks.",
+          "topics": [
+            "Industry.",
+            "Company size.",
+            "Core problem.",
+            "Service fit.",
+            "Budget suitability.",
+            "Decision-making process.",
+            "Typical buying triggers.",
+            "Delivery risks."
+          ]
+        },
+        {
+          "number": "1.8",
+          "lesson_number": 8,
+          "title": "Competitor Analysis",
+          "lesson_title": "Competitor Analysis",
+          "what_is_taught": "Service offerings.; Positioning.; Pricing transparency.; Portfolio evidence.; Differentiation.; Strengths.; Weaknesses.; Unmet customer needs.; Use actual public evidence, not invented market statistics.",
+          "topics": [
+            "Service offerings.",
+            "Positioning.",
+            "Pricing transparency.",
+            "Portfolio evidence.",
+            "Differentiation.",
+            "Strengths.",
+            "Weaknesses.",
+            "Unmet customer needs.",
+            "Use actual public evidence, not invented market statistics."
+          ]
+        },
+        {
+          "number": "1.9",
+          "lesson_number": 9,
+          "title": "Positioning",
+          "lesson_title": "Positioning",
+          "what_is_taught": "Specialization.; Core value proposition.; Proof of capability.; Relevant differentiators.; Appropriate brand promise.; Avoiding exaggerated claims.",
+          "topics": [
+            "Specialization.",
+            "Core value proposition.",
+            "Proof of capability.",
+            "Relevant differentiators.",
+            "Appropriate brand promise.",
+            "Avoiding exaggerated claims."
+          ]
+        },
+        {
+          "number": "1.10",
+          "lesson_number": 10,
+          "title": "Agency Capacity",
+          "lesson_title": "Agency Capacity",
+          "what_is_taught": "Founder time.; Service demand.; Delivery capability.; Contractor dependence.; Quality supervision.; Sales effort.; Administrative burden.",
+          "topics": [
+            "Founder time.",
+            "Service demand.",
+            "Delivery capability.",
+            "Contractor dependence.",
+            "Quality supervision.",
+            "Sales effort.",
+            "Administrative burden."
+          ]
+        },
+        {
+          "number": "1.11",
+          "lesson_number": 11,
+          "title": "Business Model Assumptions",
+          "lesson_title": "Business Model Assumptions",
+          "what_is_taught": "Target customer.; Service category.; Revenue model.; Cost structure.; Channels.; Resources.; Risks.",
+          "topics": [
+            "Target customer.",
+            "Service category.",
+            "Revenue model.",
+            "Cost structure.",
+            "Channels.",
+            "Resources.",
+            "Risks."
+          ]
+        },
+        {
+          "number": "1.12",
+          "lesson_number": 12,
+          "title": "Feasibility Matrix",
+          "lesson_title": "Feasibility Matrix",
+          "what_is_taught": "Skill fit.; Buyer demand.; Competition.; Delivery effort.; Potential margin.; Capacity.; Client access.; Risk.",
+          "topics": [
+            "Skill fit.",
+            "Buyer demand.",
+            "Competition.",
+            "Delivery effort.",
+            "Potential margin.",
+            "Capacity.",
+            "Client access.",
+            "Risk."
+          ]
+        }
+      ],
+      "hands_on_lab": "Research three potential agency niches and compare them using a structured feasibility matrix.",
+      "practical_assignment": "Prepare:\r\n\r\n- Agency business model.\r\n- Selected niche.\r\n- Buyer segment.\r\n- Competitor comparison.\r\n- Service capability audit.\r\n- Positioning statement.\r\n- Risk assumptions.",
+      "expected_deliverable": "**Agency Business Model & Niche Positioning Document**",
+      "commercial_application": "Helps skilled freelancers and service providers choose a commercially realistic agency direction.",
+      "special_rule": null
+    },
+    {
+      "module_number": 2,
+      "moduleNumber": 2,
+      "title": "Offers, Pricing & Financial Planning",
+      "module_title": "Offers, Pricing & Financial Planning",
+      "name": "Offers, Pricing & Financial Planning",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
+      "module_purpose": "Create clear service packages and build a financially reasoned agency pricing, profitability and cash-flow model.",
+      "objective": "Create clear service packages and build a financially reasoned agency pricing, profitability and cash-flow model.",
+      "lessons_count": 17,
+      "lessons": [
+        {
+          "number": "2.1",
+          "lesson_number": 1,
+          "title": "Productized Services",
+          "lesson_title": "Productized Services",
+          "what_is_taught": "Standardized outcomes.; Defined deliverables.; Target customers.; Service boundaries.; Review stages.; Quality expectations.; Repeatability.",
+          "topics": [
+            "Standardized outcomes.",
+            "Defined deliverables.",
+            "Target customers.",
+            "Service boundaries.",
+            "Review stages.",
+            "Quality expectations.",
+            "Repeatability."
+          ]
+        },
+        {
+          "number": "2.2",
+          "lesson_number": 2,
+          "title": "Designing Three Service Packages",
+          "lesson_title": "Designing Three Service Packages",
+          "what_is_taught": "Entry package.; Core service package.; Extended service package.; These are suggested tiers, not mandatory marketing names.; Each package must have a meaningful scope and customer fit.",
+          "topics": [
+            "Entry package.",
+            "Core service package.",
+            "Extended service package.",
+            "These are suggested tiers, not mandatory marketing names.",
+            "Each package must have a meaningful scope and customer fit."
+          ]
+        },
+        {
+          "number": "2.3",
+          "lesson_number": 3,
+          "title": "Package Specifications",
+          "lesson_title": "Package Specifications",
+          "what_is_taught": "Target buyer.; Problem addressed.; Included deliverables.; Delivery cadence.; Revision allowance.; Client inputs.; Exclusions.; Price.; Acceptance criteria.",
+          "topics": [
+            "Target buyer.",
+            "Problem addressed.",
+            "Included deliverables.",
+            "Delivery cadence.",
+            "Revision allowance.",
+            "Client inputs.",
+            "Exclusions.",
+            "Price.",
+            "Acceptance criteria."
+          ]
+        },
+        {
+          "number": "2.4",
+          "lesson_number": 4,
+          "title": "Cost of Delivery",
+          "lesson_title": "Cost of Delivery",
+          "what_is_taught": "Direct labor.; Contractor payments.; Project-specific software.; Paid assets.; Outsourcing.; Delivery-related expenses.; Rework.; Project management time.",
+          "topics": [
+            "Direct labor.",
+            "Contractor payments.",
+            "Project-specific software.",
+            "Paid assets.",
+            "Outsourcing.",
+            "Delivery-related expenses.",
+            "Rework.",
+            "Project management time."
+          ]
+        },
+        {
+          "number": "2.5",
+          "lesson_number": 5,
+          "title": "Fixed vs Variable Costs",
+          "lesson_title": "Fixed vs Variable Costs",
+          "what_is_taught": "Software subscriptions.; Office/remote operations.; Insurance where applicable.; Accounting.; Marketing.; Team costs.; Infrastructure.; Hardware.; Project-specific expenses.",
+          "topics": [
+            "Software subscriptions.",
+            "Office/remote operations.",
+            "Insurance where applicable.",
+            "Accounting.",
+            "Marketing.",
+            "Team costs.",
+            "Infrastructure.",
+            "Hardware.",
+            "Project-specific expenses."
+          ]
+        },
+        {
+          "number": "2.6",
+          "lesson_number": 6,
+          "title": "Utilization",
+          "lesson_title": "Utilization",
+          "what_is_taught": "Available working hours.; Billable hours.; Nonbillable activities.; Sales time.; Administration.; Training.; Client communication.; Contractor supervision.; *Utilization Rate = Billable Hours ÷ Available Working Hours × 100**; Define the measurement period and included hours.; Do not assume 100% billable utilization.",
+          "topics": [
+            "Available working hours.",
+            "Billable hours.",
+            "Nonbillable activities.",
+            "Sales time.",
+            "Administration.",
+            "Training.",
+            "Client communication.",
+            "Contractor supervision.",
+            "*Utilization Rate = Billable Hours ÷ Available Working Hours × 100**",
+            "Define the measurement period and included hours.",
+            "Do not assume 100% billable utilization."
+          ]
+        },
+        {
+          "number": "2.7",
+          "lesson_number": 7,
+          "title": "Capacity Planning",
+          "lesson_title": "Capacity Planning",
+          "what_is_taught": "Workload.; Skill requirements.; Concurrent projects.; Review time.; Contractor capacity.; Client delays.; Bottlenecks.; Quality limits.",
+          "topics": [
+            "Workload.",
+            "Skill requirements.",
+            "Concurrent projects.",
+            "Review time.",
+            "Contractor capacity.",
+            "Client delays.",
+            "Bottlenecks.",
+            "Quality limits."
+          ]
+        },
+        {
+          "number": "2.8",
+          "lesson_number": 8,
+          "title": "Gross Margin",
+          "lesson_title": "Gross Margin",
+          "what_is_taught": "Revenue.; Direct delivery costs.; Gross profit.; Gross margin.; *Gross Profit = Revenue − Direct Delivery Costs**; *Gross Margin % = Gross Profit ÷ Revenue × 100**; Explain cost classifications and when additional labor costs belong in direct delivery.",
+          "topics": [
+            "Revenue.",
+            "Direct delivery costs.",
+            "Gross profit.",
+            "Gross margin.",
+            "*Gross Profit = Revenue − Direct Delivery Costs**",
+            "*Gross Margin % = Gross Profit ÷ Revenue × 100**",
+            "Explain cost classifications and when additional labor costs belong in direct delivery."
+          ]
+        },
+        {
+          "number": "2.9",
+          "lesson_number": 9,
+          "title": "Operating Profit",
+          "lesson_title": "Operating Profit",
+          "what_is_taught": "Gross profit.; Operating overhead.; Operating profit.; Founder compensation assumptions.; Noncash expenses awareness.; *Operating Profit = Revenue − Direct Costs − Operating Expenses**; Avoid confusing operating profit with net profit or available cash.",
+          "topics": [
+            "Gross profit.",
+            "Operating overhead.",
+            "Operating profit.",
+            "Founder compensation assumptions.",
+            "Noncash expenses awareness.",
+            "*Operating Profit = Revenue − Direct Costs − Operating Expenses**",
+            "Avoid confusing operating profit with net profit or available cash."
+          ]
+        },
+        {
+          "number": "2.10",
+          "lesson_number": 10,
+          "title": "Pricing Methods",
+          "lesson_title": "Pricing Methods",
+          "what_is_taught": "Cost-plus pricing.; Hourly pricing.; Fixed-project pricing.; Monthly retainer pricing.; Value-aware pricing.; Pricing assumptions.; Competitive context.",
+          "topics": [
+            "Cost-plus pricing.",
+            "Hourly pricing.",
+            "Fixed-project pricing.",
+            "Monthly retainer pricing.",
+            "Value-aware pricing.",
+            "Pricing assumptions.",
+            "Competitive context."
+          ]
+        },
+        {
+          "number": "2.11",
+          "lesson_number": 11,
+          "title": "Markup vs Margin",
+          "lesson_title": "Markup vs Margin",
+          "what_is_taught": "Markup on cost.; Margin on revenue.; Correct formula usage.; Difference between markup and margin.; Pricing implications.; *Selling Price = Cost × (1 + Markup Rate)**; *Selling Price for Target Gross Margin = Cost ÷ (1 − Target Margin Rate)**",
+          "topics": [
+            "Markup on cost.",
+            "Margin on revenue.",
+            "Correct formula usage.",
+            "Difference between markup and margin.",
+            "Pricing implications.",
+            "*Selling Price = Cost × (1 + Markup Rate)**",
+            "*Selling Price for Target Gross Margin = Cost ÷ (1 − Target Margin Rate)**"
+          ]
+        },
+        {
+          "number": "2.12",
+          "lesson_number": 12,
+          "title": "Retainer Economics",
+          "lesson_title": "Retainer Economics",
+          "what_is_taught": "Monthly deliverables.; Capacity reservation.; Recurring workload.; Delivery cost.; Churn risk.; Unused capacity.; Over-servicing.; Renewal risk.; Retainers do not eliminate volatility or guarantee cash collection.",
+          "topics": [
+            "Monthly deliverables.",
+            "Capacity reservation.",
+            "Recurring workload.",
+            "Delivery cost.",
+            "Churn risk.",
+            "Unused capacity.",
+            "Over-servicing.",
+            "Renewal risk.",
+            "Retainers do not eliminate volatility or guarantee cash collection."
+          ]
+        },
+        {
+          "number": "2.13",
+          "lesson_number": 13,
+          "title": "Revenue Forecast",
+          "lesson_title": "Revenue Forecast",
+          "what_is_taught": "Number of clients.; Service mix.; Expected contract values.; Project start dates.; Recurring revenue.; Pipeline assumptions.; Conservative/base/optimistic scenarios.",
+          "topics": [
+            "Number of clients.",
+            "Service mix.",
+            "Expected contract values.",
+            "Project start dates.",
+            "Recurring revenue.",
+            "Pipeline assumptions.",
+            "Conservative/base/optimistic scenarios."
+          ]
+        },
+        {
+          "number": "2.14",
+          "lesson_number": 14,
+          "title": "Cash-Flow Fundamentals",
+          "lesson_title": "Cash-Flow Fundamentals",
+          "what_is_taught": "Cash receipts.; Payment dates.; Vendor payments.; Salaries/contractors.; Software subscriptions.; Taxes.; Working capital.; Cash buffer.; *Closing Cash = Opening Cash + Cash Received − Cash Paid**; Revenue recognized and cash collected may differ.",
+          "topics": [
+            "Cash receipts.",
+            "Payment dates.",
+            "Vendor payments.",
+            "Salaries/contractors.",
+            "Software subscriptions.",
+            "Taxes.",
+            "Working capital.",
+            "Cash buffer.",
+            "*Closing Cash = Opening Cash + Cash Received − Cash Paid**",
+            "Revenue recognized and cash collected may differ."
+          ]
+        },
+        {
+          "number": "2.15",
+          "lesson_number": 15,
+          "title": "Break-Even Awareness",
+          "lesson_title": "Break-Even Awareness",
+          "what_is_taught": "Fixed costs.; Contribution margin.; Required sales.; Capacity constraints.; Pricing assumptions.; Teach a simple break-even model with clearly stated assumptions.",
+          "topics": [
+            "Fixed costs.",
+            "Contribution margin.",
+            "Required sales.",
+            "Capacity constraints.",
+            "Pricing assumptions.",
+            "Teach a simple break-even model with clearly stated assumptions."
+          ]
+        },
+        {
+          "number": "2.16",
+          "lesson_number": 16,
+          "title": "Scenario Planning",
+          "lesson_title": "Scenario Planning",
+          "what_is_taught": "Low sales.; Delayed payments.; Contractor price increase.; Client churn.; Unexpected revisions.; Additional overhead.; Lower utilization.",
+          "topics": [
+            "Low sales.",
+            "Delayed payments.",
+            "Contractor price increase.",
+            "Client churn.",
+            "Unexpected revisions.",
+            "Additional overhead.",
+            "Lower utilization."
+          ]
+        },
+        {
+          "number": "2.17",
+          "lesson_number": 17,
+          "title": "Financial Decision-Making",
+          "lesson_title": "Financial Decision-Making",
+          "what_is_taught": "Feasibility.; Risk.; Cash runway.; Resource capacity.; Service margins.; Pricing updates.; Investment priorities.",
+          "topics": [
+            "Feasibility.",
+            "Risk.",
+            "Cash runway.",
+            "Resource capacity.",
+            "Service margins.",
+            "Pricing updates.",
+            "Investment priorities."
+          ]
+        }
+      ],
+      "hands_on_lab": "Build an agency pricing and financial model using Google Sheets.\r\n\r\nTest three services across conservative, base and optimistic scenarios.",
+      "practical_assignment": "Submit:\r\n\r\n1. Three service packages.\r\n2. Cost-of-delivery worksheet.\r\n3. Pricing calculator.\r\n4. Utilization/capacity model.\r\n5. Gross-margin calculations.\r\n6. Operating-cost model.\r\n7. Revenue forecast.\r\n8. Cash-flow forecast.\r\n9. Scenario analysis.\r\n10. Financial assumptions.",
+      "expected_deliverable": "**Agency Service Packages & Financial Planning Model**",
+      "commercial_application": "Pricing agency services, understanding delivery economics and evaluating business viability.",
+      "special_rule": {
+        "rule_type": "Critical Accuracy Rule",
+        "content": "Do not promise fixed margins, profits, revenue or unlimited capacity.\r\n\r\nThe spreadsheet must distinguish assumptions, forecasts, expenses and actual results."
+      }
+    },
+    {
+      "module_number": 3,
+      "moduleNumber": 3,
+      "title": "Client Acquisition & Sales",
+      "module_title": "Client Acquisition & Sales",
+      "name": "Client Acquisition & Sales",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
+      "module_purpose": "Create an ethical client-acquisition strategy and structured CRM pipeline without relying on spam or guaranteed sales formulas.",
+      "objective": "Create an ethical client-acquisition strategy and structured CRM pipeline without relying on spam or guaranteed sales formulas.",
+      "lessons_count": 17,
+      "lessons": [
+        {
+          "number": "3.1",
+          "lesson_number": 1,
+          "title": "Client Acquisition Fundamentals",
+          "lesson_title": "Client Acquisition Fundamentals",
+          "what_is_taught": "Demand generation.; Business development.; Inbound leads.; Referrals.; Direct outreach.; Partnerships.; Customer qualification.",
+          "topics": [
+            "Demand generation.",
+            "Business development.",
+            "Inbound leads.",
+            "Referrals.",
+            "Direct outreach.",
+            "Partnerships.",
+            "Customer qualification."
+          ]
+        },
+        {
+          "number": "3.2",
+          "lesson_number": 2,
+          "title": "Buyer Journey",
+          "lesson_title": "Buyer Journey",
+          "what_is_taught": "Problem awareness.; Research.; Comparison.; Discovery.; Proposal.; Decision.; Onboarding.",
+          "topics": [
+            "Problem awareness.",
+            "Research.",
+            "Comparison.",
+            "Discovery.",
+            "Proposal.",
+            "Decision.",
+            "Onboarding."
+          ]
+        },
+        {
+          "number": "3.3",
+          "lesson_number": 3,
+          "title": "Ideal Client Profile",
+          "lesson_title": "Ideal Client Profile",
+          "what_is_taught": "Industry.; Buyer role.; Service requirement.; Business needs.; Budget suitability.; Timeline.; Purchase readiness.",
+          "topics": [
+            "Industry.",
+            "Buyer role.",
+            "Service requirement.",
+            "Business needs.",
+            "Budget suitability.",
+            "Timeline.",
+            "Purchase readiness."
+          ]
+        },
+        {
+          "number": "3.4",
+          "lesson_number": 4,
+          "title": "Ethical Prospecting",
+          "lesson_title": "Ethical Prospecting",
+          "what_is_taught": "Public business research.; Relevance.; Permission-aware outreach.; Legitimate interest.; Professional messaging.; Privacy protection.; No unauthorized scraping.",
+          "topics": [
+            "Public business research.",
+            "Relevance.",
+            "Permission-aware outreach.",
+            "Legitimate interest.",
+            "Professional messaging.",
+            "Privacy protection.",
+            "No unauthorized scraping."
+          ]
+        },
+        {
+          "number": "3.5",
+          "lesson_number": 5,
+          "title": "Inbound Acquisition",
+          "lesson_title": "Inbound Acquisition",
+          "what_is_taught": "Agency website.; Portfolio.; Content.; SEO visibility.; Referrals.; Professional networks.; Case-study credibility.",
+          "topics": [
+            "Agency website.",
+            "Portfolio.",
+            "Content.",
+            "SEO visibility.",
+            "Referrals.",
+            "Professional networks.",
+            "Case-study credibility."
+          ]
+        },
+        {
+          "number": "3.6",
+          "lesson_number": 6,
+          "title": "Outbound Acquisition",
+          "lesson_title": "Outbound Acquisition",
+          "what_is_taught": "Targeted business communication.; Relevance to recipient.; Professional introductions.; Appropriate follow-ups.; Respecting opt-outs.; Platform terms.; Applicable legal obligations.; Do not require students to send unsolicited commercial messages.",
+          "topics": [
+            "Targeted business communication.",
+            "Relevance to recipient.",
+            "Professional introductions.",
+            "Appropriate follow-ups.",
+            "Respecting opt-outs.",
+            "Platform terms.",
+            "Applicable legal obligations.",
+            "Do not require students to send unsolicited commercial messages."
+          ]
+        },
+        {
+          "number": "3.7",
+          "lesson_number": 7,
+          "title": "Referrals & Partnerships",
+          "lesson_title": "Referrals & Partnerships",
+          "what_is_taught": "Existing professional networks.; Complementary agencies.; Service specialists.; Professional communities.; Referral suitability.; Transparency around incentives.",
+          "topics": [
+            "Existing professional networks.",
+            "Complementary agencies.",
+            "Service specialists.",
+            "Professional communities.",
+            "Referral suitability.",
+            "Transparency around incentives."
+          ]
+        },
+        {
+          "number": "3.8",
+          "lesson_number": 8,
+          "title": "Discovery Calls",
+          "lesson_title": "Discovery Calls",
+          "what_is_taught": "Understanding goals.; Identifying the problem.; Scope questions.; Budget discussion.; Timeline.; Decision authority.; Service fit.",
+          "topics": [
+            "Understanding goals.",
+            "Identifying the problem.",
+            "Scope questions.",
+            "Budget discussion.",
+            "Timeline.",
+            "Decision authority.",
+            "Service fit."
+          ]
+        },
+        {
+          "number": "3.9",
+          "lesson_number": 9,
+          "title": "Lead Qualification",
+          "lesson_title": "Lead Qualification",
+          "what_is_taught": "Need.; Budget suitability.; Authority.; Timing.; Delivery feasibility.; Client expectations.; Risk factors.",
+          "topics": [
+            "Need.",
+            "Budget suitability.",
+            "Authority.",
+            "Timing.",
+            "Delivery feasibility.",
+            "Client expectations.",
+            "Risk factors."
+          ]
+        },
+        {
+          "number": "3.10",
+          "lesson_number": 10,
+          "title": "CRM Fundamentals",
+          "lesson_title": "CRM Fundamentals",
+          "what_is_taught": "Leads.; Contacts.; Companies.; Deals.; Activities.; Tasks.; Ownership.; Pipeline stages.",
+          "topics": [
+            "Leads.",
+            "Contacts.",
+            "Companies.",
+            "Deals.",
+            "Activities.",
+            "Tasks.",
+            "Ownership.",
+            "Pipeline stages."
+          ]
+        },
+        {
+          "number": "3.11",
+          "lesson_number": 11,
+          "title": "HubSpot CRM",
+          "lesson_title": "HubSpot CRM",
+          "what_is_taught": "Contact records.; Deal pipeline.; Notes.; Deal stages.; Tasks.; Activity tracking.; Reporting awareness.; Use an appropriate educational or sandbox environment.; Do not require paid CRM features.",
+          "topics": [
+            "Contact records.",
+            "Deal pipeline.",
+            "Notes.",
+            "Deal stages.",
+            "Tasks.",
+            "Activity tracking.",
+            "Reporting awareness.",
+            "Use an appropriate educational or sandbox environment.",
+            "Do not require paid CRM features."
+          ]
+        },
+        {
+          "number": "3.12",
+          "lesson_number": 12,
+          "title": "CRM Pipeline Design",
+          "lesson_title": "CRM Pipeline Design",
+          "what_is_taught": "New enquiry.; Qualification.; Discovery.; Proposal.; Negotiation/clarification.; Won.; Lost.; Adapt to the intended service business.",
+          "topics": [
+            "New enquiry.",
+            "Qualification.",
+            "Discovery.",
+            "Proposal.",
+            "Negotiation/clarification.",
+            "Won.",
+            "Lost.",
+            "Adapt to the intended service business."
+          ]
+        },
+        {
+          "number": "3.13",
+          "lesson_number": 13,
+          "title": "Proposal & Sales Handoff",
+          "lesson_title": "Proposal & Sales Handoff",
+          "what_is_taught": "Opportunity notes.; Requirements.; Scope assumptions.; Proposal status.; Pricing approval.; Delivery readiness.; Handoff to operations.",
+          "topics": [
+            "Opportunity notes.",
+            "Requirements.",
+            "Scope assumptions.",
+            "Proposal status.",
+            "Pricing approval.",
+            "Delivery readiness.",
+            "Handoff to operations."
+          ]
+        },
+        {
+          "number": "3.14",
+          "lesson_number": 14,
+          "title": "Sales Forecasting",
+          "lesson_title": "Sales Forecasting",
+          "what_is_taught": "Open pipeline value.; Stage assumptions.; Weighted forecast.; Expected close dates.; Capacity constraints.; Uncertainty.; *Illustrative Weighted Pipeline = Σ(Deal Value × Assumed Win Probability)**; This is an estimate, not guaranteed future revenue.",
+          "topics": [
+            "Open pipeline value.",
+            "Stage assumptions.",
+            "Weighted forecast.",
+            "Expected close dates.",
+            "Capacity constraints.",
+            "Uncertainty.",
+            "*Illustrative Weighted Pipeline = Σ(Deal Value × Assumed Win Probability)**",
+            "This is an estimate, not guaranteed future revenue."
+          ]
+        },
+        {
+          "number": "3.15",
+          "lesson_number": 15,
+          "title": "Sales Conversion Metrics",
+          "lesson_title": "Sales Conversion Metrics",
+          "what_is_taught": "Leads.; Qualified opportunities.; Discovery calls.; Proposals.; Wins.; Win rate.; Sales cycle.; Average deal value.; *Win Rate = Won Deals ÷ Relevant Closed Opportunities × 100**; Define the period and denominator.",
+          "topics": [
+            "Leads.",
+            "Qualified opportunities.",
+            "Discovery calls.",
+            "Proposals.",
+            "Wins.",
+            "Win rate.",
+            "Sales cycle.",
+            "Average deal value.",
+            "*Win Rate = Won Deals ÷ Relevant Closed Opportunities × 100**",
+            "Define the period and denominator."
+          ]
+        },
+        {
+          "number": "3.16",
+          "lesson_number": 16,
+          "title": "Ethical Sales Reporting",
+          "lesson_title": "Ethical Sales Reporting",
+          "what_is_taught": "No invented leads.; No inflated pipeline.; No fabricated testimonials.; No fake case studies.; No guaranteed response-rate claims.",
+          "topics": [
+            "No invented leads.",
+            "No inflated pipeline.",
+            "No fabricated testimonials.",
+            "No fake case studies.",
+            "No guaranteed response-rate claims."
+          ]
+        },
+        {
+          "number": "3.17",
+          "lesson_number": 17,
+          "title": "Basic Sales Forecast Review",
+          "lesson_title": "Basic Sales Forecast Review",
+          "what_is_taught": "Pipeline quality.; Forecast assumptions.; Stalled deals.; Lost deal reasons.; Capacity.; Delivery profitability.",
+          "topics": [
+            "Pipeline quality.",
+            "Forecast assumptions.",
+            "Stalled deals.",
+            "Lost deal reasons.",
+            "Capacity.",
+            "Delivery profitability."
+          ]
+        }
+      ],
+      "hands_on_lab": "Design a simulated CRM pipeline using HubSpot or a suitable CRM training workspace.\r\n\r\nEnter fictional opportunities and practice stage transitions.",
+      "practical_assignment": "Create:\r\n\r\n- Ideal client profile.\r\n- Ethical acquisition-channel plan.\r\n- Lead qualification checklist.\r\n- CRM pipeline.\r\n- Simulated opportunity records.\r\n- Discovery question list.\r\n- Sales forecast worksheet.\r\n- CRM-to-project handoff checklist.",
+      "expected_deliverable": "**Agency Client Acquisition Strategy & CRM Pipeline**",
+      "commercial_application": "Agency business development, account coordination and client qualification.",
+      "special_rule": {
+        "rule_type": "Mandatory Restriction",
+        "content": "No live cold outreach, contact scraping or actual prospect-data collection is required.\r\n\r\nUse fictional or authorized sample records."
+      }
+    },
+    {
+      "module_number": 4,
+      "moduleNumber": 4,
+      "title": "Delivery & Project Operations",
+      "module_title": "Delivery & Project Operations",
+      "name": "Delivery & Project Operations",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
+      "module_purpose": "Design a repeatable agency delivery process that controls scope, responsibilities, communication and quality.",
+      "objective": "Design a repeatable agency delivery process that controls scope, responsibilities, communication and quality.",
+      "lessons_count": 16,
+      "lessons": [
+        {
+          "number": "4.1",
+          "lesson_number": 1,
+          "title": "Agency Service-Delivery Lifecycle",
+          "lesson_title": "Agency Service-Delivery Lifecycle",
+          "what_is_taught": "Sales handoff.; Client onboarding.; Discovery.; Planning.; Production.; Review.; Revisions.; Approval.; Delivery.; Handover.",
+          "topics": [
+            "Sales handoff.",
+            "Client onboarding.",
+            "Discovery.",
+            "Planning.",
+            "Production.",
+            "Review.",
+            "Revisions.",
+            "Approval.",
+            "Delivery.",
+            "Handover."
+          ]
+        },
+        {
+          "number": "4.2",
+          "lesson_number": 2,
+          "title": "Project Scoping",
+          "lesson_title": "Project Scoping",
+          "what_is_taught": "Deliverables.; Exclusions.; Assumptions.; Client dependencies.; Quality standards.; Acceptance criteria.",
+          "topics": [
+            "Deliverables.",
+            "Exclusions.",
+            "Assumptions.",
+            "Client dependencies.",
+            "Quality standards.",
+            "Acceptance criteria."
+          ]
+        },
+        {
+          "number": "4.3",
+          "lesson_number": 3,
+          "title": "Project Stages",
+          "lesson_title": "Project Stages",
+          "what_is_taught": "Intake.; Approved scope.; Planning.; In progress.; Internal review.; Client review.; Revision.; Approved.; Delivered.",
+          "topics": [
+            "Intake.",
+            "Approved scope.",
+            "Planning.",
+            "In progress.",
+            "Internal review.",
+            "Client review.",
+            "Revision.",
+            "Approved.",
+            "Delivered."
+          ]
+        },
+        {
+          "number": "4.4",
+          "lesson_number": 4,
+          "title": "Client Onboarding",
+          "lesson_title": "Client Onboarding",
+          "what_is_taught": "Welcome.; Scope summary.; Stakeholder contacts.; Asset collection.; Access requirements.; Communication channels.; Kickoff agenda.",
+          "topics": [
+            "Welcome.",
+            "Scope summary.",
+            "Stakeholder contacts.",
+            "Asset collection.",
+            "Access requirements.",
+            "Communication channels.",
+            "Kickoff agenda."
+          ]
+        },
+        {
+          "number": "4.5",
+          "lesson_number": 5,
+          "title": "Project Breakdown",
+          "lesson_title": "Project Breakdown",
+          "what_is_taught": "Tasks.; Subtasks.; Milestones.; Dependencies.; Due dates.; Required skills.; Deliverable ownership.",
+          "topics": [
+            "Tasks.",
+            "Subtasks.",
+            "Milestones.",
+            "Dependencies.",
+            "Due dates.",
+            "Required skills.",
+            "Deliverable ownership."
+          ]
+        },
+        {
+          "number": "4.6",
+          "lesson_number": 6,
+          "title": "Project Management Platform",
+          "lesson_title": "Project Management Platform",
+          "what_is_taught": "Choose ONE primary tool:; *ClickUp OR Notion**; Teach:; Workspace organization.; Project records.; Task status.; Assignment.; Due dates.; Dependencies where supported.; Review stages.; Comments.; Basic reporting.; A structured spreadsheet may support training when platform features are restricted.",
+          "topics": [
+            "Choose ONE primary tool:",
+            "*ClickUp OR Notion**",
+            "Teach:",
+            "Workspace organization.",
+            "Project records.",
+            "Task status.",
+            "Assignment.",
+            "Due dates.",
+            "Dependencies where supported.",
+            "Review stages.",
+            "Comments.",
+            "Basic reporting.",
+            "A structured spreadsheet may support training when platform features are restricted."
+          ]
+        },
+        {
+          "number": "4.7",
+          "lesson_number": 7,
+          "title": "Ownership & Accountability",
+          "lesson_title": "Ownership & Accountability",
+          "what_is_taught": "Agency founder.; Account coordinator.; Service specialist.; Contractor.; Quality reviewer.; Client approver.",
+          "topics": [
+            "Agency founder.",
+            "Account coordinator.",
+            "Service specialist.",
+            "Contractor.",
+            "Quality reviewer.",
+            "Client approver."
+          ]
+        },
+        {
+          "number": "4.8",
+          "lesson_number": 8,
+          "title": "Responsibility Matrix",
+          "lesson_title": "Responsibility Matrix",
+          "what_is_taught": "Who performs work.; Who approves it.; Who provides input.; Who receives updates.; Introduce lightweight RACI awareness where useful.",
+          "topics": [
+            "Who performs work.",
+            "Who approves it.",
+            "Who provides input.",
+            "Who receives updates.",
+            "Introduce lightweight RACI awareness where useful."
+          ]
+        },
+        {
+          "number": "4.9",
+          "lesson_number": 9,
+          "title": "Scope Control",
+          "lesson_title": "Scope Control",
+          "what_is_taught": "Original scope.; New requests.; Change requests.; Impact assessment.; Approval.; Updated delivery schedule.; Recordkeeping.",
+          "topics": [
+            "Original scope.",
+            "New requests.",
+            "Change requests.",
+            "Impact assessment.",
+            "Approval.",
+            "Updated delivery schedule.",
+            "Recordkeeping."
+          ]
+        },
+        {
+          "number": "4.10",
+          "lesson_number": 10,
+          "title": "Client Communication",
+          "lesson_title": "Client Communication",
+          "what_is_taught": "Weekly updates.; Milestone reviews.; Clarification requests.; Feedback collection.; Escalation.; Handover.",
+          "topics": [
+            "Weekly updates.",
+            "Milestone reviews.",
+            "Clarification requests.",
+            "Feedback collection.",
+            "Escalation.",
+            "Handover."
+          ]
+        },
+        {
+          "number": "4.11",
+          "lesson_number": 11,
+          "title": "Quality Assurance",
+          "lesson_title": "Quality Assurance",
+          "what_is_taught": "Acceptance criteria.; Internal reviews.; Functional checks.; Content accuracy.; Design quality.; Version consistency.; Client requirements.",
+          "topics": [
+            "Acceptance criteria.",
+            "Internal reviews.",
+            "Functional checks.",
+            "Content accuracy.",
+            "Design quality.",
+            "Version consistency.",
+            "Client requirements."
+          ]
+        },
+        {
+          "number": "4.12",
+          "lesson_number": 12,
+          "title": "QA Gates",
+          "lesson_title": "QA Gates",
+          "what_is_taught": "Draft review.; Technical/creative review.; Pre-delivery checklist.; Approval.; Final handover.",
+          "topics": [
+            "Draft review.",
+            "Technical/creative review.",
+            "Pre-delivery checklist.",
+            "Approval.",
+            "Final handover."
+          ]
+        },
+        {
+          "number": "4.13",
+          "lesson_number": 13,
+          "title": "Revision Management",
+          "lesson_title": "Revision Management",
+          "what_is_taught": "Revision rounds.; Feedback tracking.; Approved changes.; Out-of-scope requests.; Rework.; Additional costs.",
+          "topics": [
+            "Revision rounds.",
+            "Feedback tracking.",
+            "Approved changes.",
+            "Out-of-scope requests.",
+            "Rework.",
+            "Additional costs."
+          ]
+        },
+        {
+          "number": "4.14",
+          "lesson_number": 14,
+          "title": "Operational Documentation",
+          "lesson_title": "Operational Documentation",
+          "what_is_taught": "Project brief.; Action register.; Status report.; Risk log.; QA checklist.; Approval record.; Handover checklist.",
+          "topics": [
+            "Project brief.",
+            "Action register.",
+            "Status report.",
+            "Risk log.",
+            "QA checklist.",
+            "Approval record.",
+            "Handover checklist."
+          ]
+        },
+        {
+          "number": "4.15",
+          "lesson_number": 15,
+          "title": "Workload Visibility",
+          "lesson_title": "Workload Visibility",
+          "what_is_taught": "Assigned tasks.; Available capacity.; Deadlines.; Contractor utilization.; Blockers.; Work in progress.",
+          "topics": [
+            "Assigned tasks.",
+            "Available capacity.",
+            "Deadlines.",
+            "Contractor utilization.",
+            "Blockers.",
+            "Work in progress."
+          ]
+        },
+        {
+          "number": "4.16",
+          "lesson_number": 16,
+          "title": "Client Handover",
+          "lesson_title": "Client Handover",
+          "what_is_taught": "Final files.; Permissions.; Documentation.; Account access ownership.; Support boundaries.; Final confirmation.",
+          "topics": [
+            "Final files.",
+            "Permissions.",
+            "Documentation.",
+            "Account access ownership.",
+            "Support boundaries.",
+            "Final confirmation."
+          ]
+        }
+      ],
+      "hands_on_lab": "Create a simulated agency project board for one approved service package.\r\n\r\nMove the project through each delivery stage.",
+      "practical_assignment": "Submit:\r\n\r\n- Project workflow map.\r\n- Client onboarding checklist.\r\n- Task board.\r\n- Responsibility matrix.\r\n- Milestone plan.\r\n- Status report.\r\n- QA checklist.\r\n- Change-request log.\r\n- Handover checklist.",
+      "expected_deliverable": "**Agency Project Delivery & Client Onboarding Toolkit**",
+      "commercial_application": "Repeatable service delivery for small agencies and distributed project teams.",
+      "special_rule": null
+    },
+    {
+      "module_number": 5,
+      "moduleNumber": 5,
+      "title": "Contractors, Systems & AI",
+      "module_title": "Contractors, Systems & AI",
+      "name": "Contractors, Systems & AI",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
+      "module_purpose": "Develop a controlled contractor evaluation process, reusable SOPs and responsible AI-assisted operating procedures.",
+      "objective": "Develop a controlled contractor evaluation process, reusable SOPs and responsible AI-assisted operating procedures.",
+      "lessons_count": 18,
+      "lessons": [
+        {
+          "number": "5.1",
+          "lesson_number": 1,
+          "title": "Contractor vs Employee Awareness",
+          "lesson_title": "Contractor vs Employee Awareness",
+          "what_is_taught": "Contractor roles.; Staff roles.; Project-based work.; Control and supervision.; Cost differences.; Availability.; Legal classification awareness.; Do not claim contractor classification is determined solely by the contract label.",
+          "topics": [
+            "Contractor roles.",
+            "Staff roles.",
+            "Project-based work.",
+            "Control and supervision.",
+            "Cost differences.",
+            "Availability.",
+            "Legal classification awareness.",
+            "Do not claim contractor classification is determined solely by the contract label."
+          ]
+        },
+        {
+          "number": "5.2",
+          "lesson_number": 2,
+          "title": "Identifying Contractor Needs",
+          "lesson_title": "Identifying Contractor Needs",
+          "what_is_taught": "Skills gaps.; Peak workload.; Specialist work.; Quality requirements.; Capacity constraints.; Budget.",
+          "topics": [
+            "Skills gaps.",
+            "Peak workload.",
+            "Specialist work.",
+            "Quality requirements.",
+            "Capacity constraints.",
+            "Budget."
+          ]
+        },
+        {
+          "number": "5.3",
+          "lesson_number": 3,
+          "title": "Contractor Role Specification",
+          "lesson_title": "Contractor Role Specification",
+          "what_is_taught": "Required skill.; Deliverables.; Tools.; Experience evidence.; Communication needs.; Timeline.; Quality expectations.",
+          "topics": [
+            "Required skill.",
+            "Deliverables.",
+            "Tools.",
+            "Experience evidence.",
+            "Communication needs.",
+            "Timeline.",
+            "Quality expectations."
+          ]
+        },
+        {
+          "number": "5.4",
+          "lesson_number": 4,
+          "title": "Sourcing & Evaluation",
+          "lesson_title": "Sourcing & Evaluation",
+          "what_is_taught": "Portfolio review.; Work samples.; Relevant experience.; Communication.; Reliability.; References where appropriate.; Skill fit.",
+          "topics": [
+            "Portfolio review.",
+            "Work samples.",
+            "Relevant experience.",
+            "Communication.",
+            "Reliability.",
+            "References where appropriate.",
+            "Skill fit."
+          ]
+        },
+        {
+          "number": "5.5",
+          "lesson_number": 5,
+          "title": "Paid Sample Assessments",
+          "lesson_title": "Paid Sample Assessments",
+          "what_is_taught": "Clear brief.; Limited scope.; Appropriate compensation.; Defined output.; Realistic time allowance.; Fair evaluation criteria.; Written feedback.; Do not require unpaid speculative work.",
+          "topics": [
+            "Clear brief.",
+            "Limited scope.",
+            "Appropriate compensation.",
+            "Defined output.",
+            "Realistic time allowance.",
+            "Fair evaluation criteria.",
+            "Written feedback.",
+            "Do not require unpaid speculative work."
+          ]
+        },
+        {
+          "number": "5.6",
+          "lesson_number": 6,
+          "title": "Contractor Evaluation Rubric",
+          "lesson_title": "Contractor Evaluation Rubric",
+          "what_is_taught": "Technical competence.; Brief understanding.; Communication.; Accuracy.; Timeliness.; Quality.; Documentation.; Professional conduct.",
+          "topics": [
+            "Technical competence.",
+            "Brief understanding.",
+            "Communication.",
+            "Accuracy.",
+            "Timeliness.",
+            "Quality.",
+            "Documentation.",
+            "Professional conduct."
+          ]
+        },
+        {
+          "number": "5.7",
+          "lesson_number": 7,
+          "title": "Contractor Onboarding",
+          "lesson_title": "Contractor Onboarding",
+          "what_is_taught": "Task description.; Project context.; Delivery expectations.; Approved access.; Tools.; Quality requirements.; Communication rules.",
+          "topics": [
+            "Task description.",
+            "Project context.",
+            "Delivery expectations.",
+            "Approved access.",
+            "Tools.",
+            "Quality requirements.",
+            "Communication rules."
+          ]
+        },
+        {
+          "number": "5.8",
+          "lesson_number": 8,
+          "title": "Access Controls",
+          "lesson_title": "Access Controls",
+          "what_is_taught": "Least-privilege access.; Role-based sharing.; Client-owned credentials.; Password-manager awareness.; Multi-factor authentication.; Avoiding shared passwords.; Revoking access.",
+          "topics": [
+            "Least-privilege access.",
+            "Role-based sharing.",
+            "Client-owned credentials.",
+            "Password-manager awareness.",
+            "Multi-factor authentication.",
+            "Avoiding shared passwords.",
+            "Revoking access."
+          ]
+        },
+        {
+          "number": "5.9",
+          "lesson_number": 9,
+          "title": "Confidentiality",
+          "lesson_title": "Confidentiality",
+          "what_is_taught": "Client files.; Personal data.; Business information.; Non-disclosure concepts.; Authorized sharing.; Retention.; Offboarding.",
+          "topics": [
+            "Client files.",
+            "Personal data.",
+            "Business information.",
+            "Non-disclosure concepts.",
+            "Authorized sharing.",
+            "Retention.",
+            "Offboarding."
+          ]
+        },
+        {
+          "number": "5.10",
+          "lesson_number": 10,
+          "title": "Intellectual Property",
+          "lesson_title": "Intellectual Property",
+          "what_is_taught": "Original work.; Licensed third-party assets.; Work ownership.; Copyright assignment concepts.; Usage rights.; Contractor agreements.; Legal review.; Do not promise automatic ownership of every contractor deliverable.",
+          "topics": [
+            "Original work.",
+            "Licensed third-party assets.",
+            "Work ownership.",
+            "Copyright assignment concepts.",
+            "Usage rights.",
+            "Contractor agreements.",
+            "Legal review.",
+            "Do not promise automatic ownership of every contractor deliverable."
+          ]
+        },
+        {
+          "number": "5.11",
+          "lesson_number": 11,
+          "title": "SOP Fundamentals",
+          "lesson_title": "SOP Fundamentals",
+          "what_is_taught": "Trigger.; Owner.; Inputs.; Tools.; Steps.; Quality checks.; Outputs.; Exceptions.; Escalation.",
+          "topics": [
+            "Trigger.",
+            "Owner.",
+            "Inputs.",
+            "Tools.",
+            "Steps.",
+            "Quality checks.",
+            "Outputs.",
+            "Exceptions.",
+            "Escalation."
+          ]
+        },
+        {
+          "number": "5.12",
+          "lesson_number": 12,
+          "title": "SOP Documentation",
+          "lesson_title": "SOP Documentation",
+          "what_is_taught": "Written instructions.; Screenshots.; Screen recordings.; Checklists.; Templates.; Versioning.; Review ownership.",
+          "topics": [
+            "Written instructions.",
+            "Screenshots.",
+            "Screen recordings.",
+            "Checklists.",
+            "Templates.",
+            "Versioning.",
+            "Review ownership."
+          ]
+        },
+        {
+          "number": "5.13",
+          "lesson_number": 13,
+          "title": "Five Core Agency SOPs",
+          "lesson_title": "Five Core Agency SOPs",
+          "what_is_taught": "Students must create FIVE complete SOPs:; *SOP 01 — Lead Qualification & CRM Handoff**; *SOP 02 — Client Onboarding & Secure Access**; *SOP 03 — Project Execution & Quality Assurance**; *SOP 04 — Feedback, Revisions & Scope Changes**; *SOP 05 — Reporting, Final Delivery & Offboarding**; These must be usable with minimal ambiguity.",
+          "topics": [
+            "Students must create FIVE complete SOPs:",
+            "*SOP 01 — Lead Qualification & CRM Handoff**",
+            "*SOP 02 — Client Onboarding & Secure Access**",
+            "*SOP 03 — Project Execution & Quality Assurance**",
+            "*SOP 04 — Feedback, Revisions & Scope Changes**",
+            "*SOP 05 — Reporting, Final Delivery & Offboarding**",
+            "These must be usable with minimal ambiguity."
+          ]
+        },
+        {
+          "number": "5.14",
+          "lesson_number": 14,
+          "title": "SOP Testing",
+          "lesson_title": "SOP Testing",
+          "what_is_taught": "Simulated use.; Missing steps.; Unclear responsibilities.; Exceptions.; Quality failures.; Revision.",
+          "topics": [
+            "Simulated use.",
+            "Missing steps.",
+            "Unclear responsibilities.",
+            "Exceptions.",
+            "Quality failures.",
+            "Revision."
+          ]
+        },
+        {
+          "number": "5.15",
+          "lesson_number": 15,
+          "title": "Responsible AI Operations",
+          "lesson_title": "Responsible AI Operations",
+          "what_is_taught": "SOP drafting.; Meeting summary drafts.; Project brief organization.; Task description drafts.; Quality-check suggestions.; Reporting summaries.",
+          "topics": [
+            "SOP drafting.",
+            "Meeting summary drafts.",
+            "Project brief organization.",
+            "Task description drafts.",
+            "Quality-check suggestions.",
+            "Reporting summaries."
+          ]
+        },
+        {
+          "number": "5.16",
+          "lesson_number": 16,
+          "title": "AI Human Review",
+          "lesson_title": "AI Human Review",
+          "what_is_taught": "Factual accuracy.; Confidentiality.; Commercial commitments.; Client approvals.; Bias.; Hallucinations.; Version consistency.",
+          "topics": [
+            "Factual accuracy.",
+            "Confidentiality.",
+            "Commercial commitments.",
+            "Client approvals.",
+            "Bias.",
+            "Hallucinations.",
+            "Version consistency."
+          ]
+        },
+        {
+          "number": "5.17",
+          "lesson_number": 17,
+          "title": "AI Workflow Risk",
+          "lesson_title": "AI Workflow Risk",
+          "what_is_taught": "Over-automation.; Wrong client data.; Incorrect actions.; Unauthorized sending.; Access leakage.; Lost human accountability.",
+          "topics": [
+            "Over-automation.",
+            "Wrong client data.",
+            "Incorrect actions.",
+            "Unauthorized sending.",
+            "Access leakage.",
+            "Lost human accountability."
+          ]
+        },
+        {
+          "number": "5.18",
+          "lesson_number": 18,
+          "title": "Contractor Performance Review",
+          "lesson_title": "Contractor Performance Review",
+          "what_is_taught": "Quality.; Delivery reliability.; Responsiveness.; Rework.; Improvement.; Fair feedback.; Continuing suitability.",
+          "topics": [
+            "Quality.",
+            "Delivery reliability.",
+            "Responsiveness.",
+            "Rework.",
+            "Improvement.",
+            "Fair feedback.",
+            "Continuing suitability."
+          ]
+        }
+      ],
+      "hands_on_lab": "Simulate contractor evaluation using fictional or authorized work samples.\r\n\r\nWrite and test one SOP as an instructor-led exercise, then complete the full five-SOP library.",
+      "practical_assignment": "Submit:\r\n\r\n1. Contractor role specification.\r\n2. Paid sample task brief.\r\n3. Evaluation rubric.\r\n4. Sample candidate comparison.\r\n5. Contractor onboarding checklist.\r\n6. Access-control checklist.\r\n7. Five operational SOPs.\r\n8. SOP verification results.\r\n9. AI-assisted review checklist.",
+      "expected_deliverable": "**Contractor Evaluation Kit & Five-SOP Agency Operations Library**",
+      "commercial_application": "Managing specialist contributors and maintaining reliable service quality.",
+      "special_rule": {
+        "rule_type": "Important Rule",
+        "content": "No live contractor hiring or paid contractor engagement is mandatory.\r\n\r\nThe evaluation is simulated."
+      }
+    },
+    {
+      "module_number": 6,
+      "moduleNumber": 6,
+      "title": "Governance, Retention & Risk",
+      "module_title": "Governance, Retention & Risk",
+      "name": "Governance, Retention & Risk",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
+      "module_purpose": "Develop awareness of agency governance, customer retention, invoicing, confidentiality and India-specific business risks.",
+      "objective": "Develop awareness of agency governance, customer retention, invoicing, confidentiality and India-specific business risks.",
+      "lessons_count": 19,
+      "lessons": [
+        {
+          "number": "6.1",
+          "lesson_number": 1,
+          "title": "Agency Governance Fundamentals",
+          "lesson_title": "Agency Governance Fundamentals",
+          "what_is_taught": "Ownership.; Decision-making.; Responsibilities.; Written approvals.; Financial oversight.; Access authority.; Documentation.",
+          "topics": [
+            "Ownership.",
+            "Decision-making.",
+            "Responsibilities.",
+            "Written approvals.",
+            "Financial oversight.",
+            "Access authority.",
+            "Documentation."
+          ]
+        },
+        {
+          "number": "6.2",
+          "lesson_number": 2,
+          "title": "Basic Business Structures",
+          "lesson_title": "Basic Business Structures",
+          "what_is_taught": "Sole proprietorship awareness.; Partnership.; LLP.; Private limited company.; Business structure differences.; Professional advice.",
+          "topics": [
+            "Sole proprietorship awareness.",
+            "Partnership.",
+            "LLP.",
+            "Private limited company.",
+            "Business structure differences.",
+            "Professional advice."
+          ]
+        },
+        {
+          "number": "6.3",
+          "lesson_number": 3,
+          "title": "India Business Registration Awareness",
+          "lesson_title": "India Business Registration Awareness",
+          "what_is_taught": "Legal entity considerations.; PAN.; GST registration applicability.; Udyam/MSME registration.; Relevant local registration requirements.; Industry-specific obligations.",
+          "topics": [
+            "Legal entity considerations.",
+            "PAN.",
+            "GST registration applicability.",
+            "Udyam/MSME registration.",
+            "Relevant local registration requirements.",
+            "Industry-specific obligations."
+          ]
+        },
+        {
+          "number": "6.4",
+          "lesson_number": 4,
+          "title": "India-Specific Tax Awareness",
+          "lesson_title": "India-Specific Tax Awareness",
+          "what_is_taught": "GST fundamentals.; Registration applicability.; Service invoicing.; Tax-inclusive vs tax-exclusive amounts.; Input tax credit awareness.; Filing responsibility.; Professional tax advice.; Do not hardcode a universal GST registration threshold for every business situation.",
+          "topics": [
+            "GST fundamentals.",
+            "Registration applicability.",
+            "Service invoicing.",
+            "Tax-inclusive vs tax-exclusive amounts.",
+            "Input tax credit awareness.",
+            "Filing responsibility.",
+            "Professional tax advice.",
+            "Do not hardcode a universal GST registration threshold for every business situation."
+          ]
+        },
+        {
+          "number": "6.5",
+          "lesson_number": 5,
+          "title": "Invoicing",
+          "lesson_title": "Invoicing",
+          "what_is_taught": "Invoice number.; Invoice date.; Client details.; Service description.; Tax details where applicable.; Payment due date.; Currency.; Outstanding balances.",
+          "topics": [
+            "Invoice number.",
+            "Invoice date.",
+            "Client details.",
+            "Service description.",
+            "Tax details where applicable.",
+            "Payment due date.",
+            "Currency.",
+            "Outstanding balances."
+          ]
+        },
+        {
+          "number": "6.6",
+          "lesson_number": 6,
+          "title": "Receivables & Cash Collection",
+          "lesson_title": "Receivables & Cash Collection",
+          "what_is_taught": "Invoiced amount.; Paid amount.; Overdue invoices.; Payment follow-up.; Cash-flow implications.; Avoiding aggressive collection tactics.",
+          "topics": [
+            "Invoiced amount.",
+            "Paid amount.",
+            "Overdue invoices.",
+            "Payment follow-up.",
+            "Cash-flow implications.",
+            "Avoiding aggressive collection tactics."
+          ]
+        },
+        {
+          "number": "6.7",
+          "lesson_number": 7,
+          "title": "Client Agreements",
+          "lesson_title": "Client Agreements",
+          "what_is_taught": "Scope.; Deliverables.; Milestones.; Payment terms.; Revisions.; Intellectual property.; Confidentiality.; Termination.; Liability awareness.; Teach the concepts, not legal contract drafting.",
+          "topics": [
+            "Scope.",
+            "Deliverables.",
+            "Milestones.",
+            "Payment terms.",
+            "Revisions.",
+            "Intellectual property.",
+            "Confidentiality.",
+            "Termination.",
+            "Liability awareness.",
+            "Teach the concepts, not legal contract drafting."
+          ]
+        },
+        {
+          "number": "6.8",
+          "lesson_number": 8,
+          "title": "Contractor Agreements",
+          "lesson_title": "Contractor Agreements",
+          "what_is_taught": "Deliverables.; Payment terms.; Confidentiality.; IP rights.; Access.; Termination.; Relevant worker classification.; Legal review may be necessary.",
+          "topics": [
+            "Deliverables.",
+            "Payment terms.",
+            "Confidentiality.",
+            "IP rights.",
+            "Access.",
+            "Termination.",
+            "Relevant worker classification.",
+            "Legal review may be necessary."
+          ]
+        },
+        {
+          "number": "6.9",
+          "lesson_number": 9,
+          "title": "Intellectual Property",
+          "lesson_title": "Intellectual Property",
+          "what_is_taught": "Client-provided assets.; Original content.; Third-party fonts.; Stock photos.; Software licensing.; AI-generated content rights.; Contractor-created assets.; Usage permissions.",
+          "topics": [
+            "Client-provided assets.",
+            "Original content.",
+            "Third-party fonts.",
+            "Stock photos.",
+            "Software licensing.",
+            "AI-generated content rights.",
+            "Contractor-created assets.",
+            "Usage permissions."
+          ]
+        },
+        {
+          "number": "6.10",
+          "lesson_number": 10,
+          "title": "Data Protection",
+          "lesson_title": "Data Protection",
+          "what_is_taught": "Client data.; Lead information.; Personal data.; Data minimization.; Purpose limitation.; Access restrictions.; Security.; Deletion/retention awareness.; Incident response.",
+          "topics": [
+            "Client data.",
+            "Lead information.",
+            "Personal data.",
+            "Data minimization.",
+            "Purpose limitation.",
+            "Access restrictions.",
+            "Security.",
+            "Deletion/retention awareness.",
+            "Incident response."
+          ]
+        },
+        {
+          "number": "6.11",
+          "lesson_number": 11,
+          "title": "DPDP Act & Rules Awareness",
+          "lesson_title": "DPDP Act & Rules Awareness",
+          "what_is_taught": "India's Digital Personal Data Protection Act, 2023.; Digital Personal Data Protection Rules, 2025.; Phased commencement.; Data fiduciary responsibilities.; Appropriate compliance planning.; Professional review.; Do not claim all provisions became enforceable on one date.; Verify the operative provisions and commencement schedule before publishing.",
+          "topics": [
+            "India's Digital Personal Data Protection Act, 2023.",
+            "Digital Personal Data Protection Rules, 2025.",
+            "Phased commencement.",
+            "Data fiduciary responsibilities.",
+            "Appropriate compliance planning.",
+            "Professional review.",
+            "Do not claim all provisions became enforceable on one date.",
+            "Verify the operative provisions and commencement schedule before publishing."
+          ]
+        },
+        {
+          "number": "6.12",
+          "lesson_number": 12,
+          "title": "International Payments",
+          "lesson_title": "International Payments",
+          "what_is_taught": "Foreign clients.; Invoicing currency.; Authorized payment channels.; Exchange-rate conversion.; Bank/payment-provider fees.; Foreign exchange documentation.; Export-of-services awareness.; Applicable GST/FEMA/RBI requirements.; Do not guarantee that any particular payment provider supports all countries, currencies or transaction types.",
+          "topics": [
+            "Foreign clients.",
+            "Invoicing currency.",
+            "Authorized payment channels.",
+            "Exchange-rate conversion.",
+            "Bank/payment-provider fees.",
+            "Foreign exchange documentation.",
+            "Export-of-services awareness.",
+            "Applicable GST/FEMA/RBI requirements.",
+            "Do not guarantee that any particular payment provider supports all countries, currencies or transaction types."
+          ]
+        },
+        {
+          "number": "6.13",
+          "lesson_number": 13,
+          "title": "Client Retention",
+          "lesson_title": "Client Retention",
+          "what_is_taught": "Service reliability.; Communication.; Quality.; Relevant reporting.; Client satisfaction.; Renewal discussions.; Feedback.; Scope fit.",
+          "topics": [
+            "Service reliability.",
+            "Communication.",
+            "Quality.",
+            "Relevant reporting.",
+            "Client satisfaction.",
+            "Renewal discussions.",
+            "Feedback.",
+            "Scope fit."
+          ]
+        },
+        {
+          "number": "6.14",
+          "lesson_number": 14,
+          "title": "Client Reporting",
+          "lesson_title": "Client Reporting",
+          "what_is_taught": "Agreed objectives.; Work completed.; Output metrics.; Performance indicators.; Issues.; Next actions.; Evidence.; Avoid fabricated ROI, leads or revenue attribution.",
+          "topics": [
+            "Agreed objectives.",
+            "Work completed.",
+            "Output metrics.",
+            "Performance indicators.",
+            "Issues.",
+            "Next actions.",
+            "Evidence.",
+            "Avoid fabricated ROI, leads or revenue attribution."
+          ]
+        },
+        {
+          "number": "6.15",
+          "lesson_number": 15,
+          "title": "Retention Metrics",
+          "lesson_title": "Retention Metrics",
+          "what_is_taught": "Active clients.; Renewals.; Churn.; Delivery quality.; Repeat engagements.; Over-servicing.; Client concentration.; Define metrics and observation periods accurately.",
+          "topics": [
+            "Active clients.",
+            "Renewals.",
+            "Churn.",
+            "Delivery quality.",
+            "Repeat engagements.",
+            "Over-servicing.",
+            "Client concentration.",
+            "Define metrics and observation periods accurately."
+          ]
+        },
+        {
+          "number": "6.16",
+          "lesson_number": 16,
+          "title": "Client Concentration Risk",
+          "lesson_title": "Client Concentration Risk",
+          "what_is_taught": "Dependence on one client.; Revenue exposure.; Cash-flow consequences.; Diversification planning.; Capacity trade-offs.",
+          "topics": [
+            "Dependence on one client.",
+            "Revenue exposure.",
+            "Cash-flow consequences.",
+            "Diversification planning.",
+            "Capacity trade-offs."
+          ]
+        },
+        {
+          "number": "6.17",
+          "lesson_number": 17,
+          "title": "Vendor & Contractor Risks",
+          "lesson_title": "Vendor & Contractor Risks",
+          "what_is_taught": "Missed delivery.; Access misuse.; Confidentiality breach.; Licensing issues.; Quality failures.; Availability risks.",
+          "topics": [
+            "Missed delivery.",
+            "Access misuse.",
+            "Confidentiality breach.",
+            "Licensing issues.",
+            "Quality failures.",
+            "Availability risks."
+          ]
+        },
+        {
+          "number": "6.18",
+          "lesson_number": 18,
+          "title": "Agency Risk Register",
+          "lesson_title": "Agency Risk Register",
+          "what_is_taught": "Risk.; Probability.; Impact.; Owner.; Mitigation.; Contingency.; Review date.",
+          "topics": [
+            "Risk.",
+            "Probability.",
+            "Impact.",
+            "Owner.",
+            "Mitigation.",
+            "Contingency.",
+            "Review date."
+          ]
+        },
+        {
+          "number": "6.19",
+          "lesson_number": 19,
+          "title": "Business Continuity",
+          "lesson_title": "Business Continuity",
+          "what_is_taught": "Backups.; Documentation.; Alternate delivery resources.; Client communication during incidents.; Critical account access.; Recovery awareness.",
+          "topics": [
+            "Backups.",
+            "Documentation.",
+            "Alternate delivery resources.",
+            "Client communication during incidents.",
+            "Critical account access.",
+            "Recovery awareness."
+          ]
+        }
+      ],
+      "hands_on_lab": "Create a simulated agency risk register and review sample invoicing, contracts, data-access and international-payment scenarios.",
+      "practical_assignment": "Submit:\r\n\r\n- Basic governance checklist.\r\n- Invoice template.\r\n- Receivables tracker.\r\n- Contract review checklist.\r\n- IP and confidentiality checklist.\r\n- India compliance awareness checklist.\r\n- Client retention/reporting plan.\r\n- Agency risk register.",
+      "expected_deliverable": "**Agency Governance, Retention & Risk Toolkit**",
+      "commercial_application": "Responsible management of a small service business.",
+      "special_rule": {
+        "rule_type": "Mandatory Legal Boundary",
+        "content": "This module is business-compliance awareness, not legal, tax, accounting or regulatory qualification.\r\n\r\nStudents must verify their actual obligations with qualified legal, tax and financial professionals before operating."
+      }
+    },
+    {
+      "module_number": 7,
+      "moduleNumber": 7,
+      "title": "Agency Launch Capstone",
+      "module_title": "Agency Launch Capstone",
+      "name": "Agency Launch Capstone",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
+      "module_purpose": "Integrate positioning, services, finances, CRM, delivery, SOPs, governance and risk into one credible agency launch plan.",
+      "objective": "Integrate positioning, services, finances, CRM, delivery, SOPs, governance and risk into one credible agency launch plan.",
+      "lessons_count": 12,
+      "lessons": [
+        {
+          "number": "7.1",
+          "lesson_number": 1,
+          "title": "Agency Blueprint Review",
+          "lesson_title": "Agency Blueprint Review",
+          "what_is_taught": "Niche.; Buyer segment.; Core services.; Positioning.; Differentiation.; Feasibility.",
+          "topics": [
+            "Niche.",
+            "Buyer segment.",
+            "Core services.",
+            "Positioning.",
+            "Differentiation.",
+            "Feasibility."
+          ]
+        },
+        {
+          "number": "7.2",
+          "lesson_number": 2,
+          "title": "Three Service Packages",
+          "lesson_title": "Three Service Packages",
+          "what_is_taught": "Target buyer.; Deliverables.; Pricing.; Cost assumptions.; Capacity.; Revision limits.; Exclusions.",
+          "topics": [
+            "Target buyer.",
+            "Deliverables.",
+            "Pricing.",
+            "Cost assumptions.",
+            "Capacity.",
+            "Revision limits.",
+            "Exclusions."
+          ]
+        },
+        {
+          "number": "7.3",
+          "lesson_number": 3,
+          "title": "Agency Financial Model",
+          "lesson_title": "Agency Financial Model",
+          "what_is_taught": "Delivery cost.; Gross margin.; Overhead.; Operating profit.; Capacity.; Revenue scenarios.; Cash-flow forecast.",
+          "topics": [
+            "Delivery cost.",
+            "Gross margin.",
+            "Overhead.",
+            "Operating profit.",
+            "Capacity.",
+            "Revenue scenarios.",
+            "Cash-flow forecast."
+          ]
+        },
+        {
+          "number": "7.4",
+          "lesson_number": 4,
+          "title": "CRM & Sales Workflow",
+          "lesson_title": "CRM & Sales Workflow",
+          "what_is_taught": "Lead stages.; Qualification.; Pipeline status.; Discovery.; Proposal.; Won/lost outcomes.; Handoff.",
+          "topics": [
+            "Lead stages.",
+            "Qualification.",
+            "Pipeline status.",
+            "Discovery.",
+            "Proposal.",
+            "Won/lost outcomes.",
+            "Handoff."
+          ]
+        },
+        {
+          "number": "7.5",
+          "lesson_number": 5,
+          "title": "Delivery Operations",
+          "lesson_title": "Delivery Operations",
+          "what_is_taught": "Client onboarding.; Task management.; Milestones.; QA.; Reporting.; Revisions.; Handover.",
+          "topics": [
+            "Client onboarding.",
+            "Task management.",
+            "Milestones.",
+            "QA.",
+            "Reporting.",
+            "Revisions.",
+            "Handover."
+          ]
+        },
+        {
+          "number": "7.6",
+          "lesson_number": 6,
+          "title": "SOP Review",
+          "lesson_title": "SOP Review",
+          "what_is_taught": "Five required SOPs.; Owners.; Triggers.; Steps.; Outputs.; Exceptions.; QA.; Reusability.",
+          "topics": [
+            "Five required SOPs.",
+            "Owners.",
+            "Triggers.",
+            "Steps.",
+            "Outputs.",
+            "Exceptions.",
+            "QA.",
+            "Reusability."
+          ]
+        },
+        {
+          "number": "7.7",
+          "lesson_number": 7,
+          "title": "Contractor Evaluation",
+          "lesson_title": "Contractor Evaluation",
+          "what_is_taught": "Role brief.; Paid sample task.; Assessment rubric.; Sample evaluation.; Access awareness.; Onboarding.",
+          "topics": [
+            "Role brief.",
+            "Paid sample task.",
+            "Assessment rubric.",
+            "Sample evaluation.",
+            "Access awareness.",
+            "Onboarding."
+          ]
+        },
+        {
+          "number": "7.8",
+          "lesson_number": 8,
+          "title": "Governance",
+          "lesson_title": "Governance",
+          "what_is_taught": "Agreement checklist.; Invoice awareness.; Tax/registration checklist.; Confidentiality.; IP.; Data protection.; International payments awareness.",
+          "topics": [
+            "Agreement checklist.",
+            "Invoice awareness.",
+            "Tax/registration checklist.",
+            "Confidentiality.",
+            "IP.",
+            "Data protection.",
+            "International payments awareness."
+          ]
+        },
+        {
+          "number": "7.9",
+          "lesson_number": 9,
+          "title": "Simulated Agency Service Delivery",
+          "lesson_title": "Simulated Agency Service Delivery",
+          "what_is_taught": "Fictional client.; CRM opportunity.; Qualified lead.; Approved service package.; Client onboarding.; Project board.; Contractor allocation simulation.; Deliverable review.; QA.; Client handover.",
+          "topics": [
+            "Fictional client.",
+            "CRM opportunity.",
+            "Qualified lead.",
+            "Approved service package.",
+            "Client onboarding.",
+            "Project board.",
+            "Contractor allocation simulation.",
+            "Deliverable review.",
+            "QA.",
+            "Client handover."
+          ]
+        },
+        {
+          "number": "7.10",
+          "lesson_number": 10,
+          "title": "Risk Review",
+          "lesson_title": "Risk Review",
+          "what_is_taught": "Financial risk.; Sales risk.; Delivery risk.; Contractor risk.; Security risk.; Compliance risk.; Client concentration risk.",
+          "topics": [
+            "Financial risk.",
+            "Sales risk.",
+            "Delivery risk.",
+            "Contractor risk.",
+            "Security risk.",
+            "Compliance risk.",
+            "Client concentration risk."
+          ]
+        },
+        {
+          "number": "7.11",
+          "lesson_number": 11,
+          "title": "90-Day Agency Action Plan",
+          "lesson_title": "90-Day Agency Action Plan",
+          "what_is_taught": "First 30 days.; Days 31–60.; Days 61–90.; Priorities.; Owners.; Costs.; Dependencies.; Decision checkpoints.; Risks.",
+          "topics": [
+            "First 30 days.",
+            "Days 31–60.",
+            "Days 61–90.",
+            "Priorities.",
+            "Owners.",
+            "Costs.",
+            "Dependencies.",
+            "Decision checkpoints.",
+            "Risks."
+          ]
+        },
+        {
+          "number": "7.12",
+          "lesson_number": 12,
+          "title": "Presentation & Defense",
+          "lesson_title": "Presentation & Defense",
+          "what_is_taught": "Business model.; Niche evidence.; Offer suitability.; Pricing logic.; CRM workflow.; Delivery process.; SOP completeness.; Risk management.; 90-day feasibility.",
+          "topics": [
+            "Business model.",
+            "Niche evidence.",
+            "Offer suitability.",
+            "Pricing logic.",
+            "CRM workflow.",
+            "Delivery process.",
+            "SOP completeness.",
+            "Risk management.",
+            "90-day feasibility."
+          ]
+        }
+      ],
+      "hands_on_lab": "Run an end-to-end simulated agency project from CRM opportunity to final handover.",
+      "practical_assignment": "Submit the complete Agency Operations Blueprint and defend its assumptions in a structured review.",
+      "expected_deliverable": "**Agency Operations Blueprint + 90-Day Action Plan + Simulated Delivery Evidence**",
+      "commercial_application": "Agency launch planning and business operations readiness.",
+      "special_rule": {
+        "rule_type": "Important Rule",
+        "content": "A completed blueprint demonstrates preparation.\r\n\r\nIt does not establish that the student has launched, legally registered, funded or profitably operated an agency."
+      }
+    }
+  ],
+  "what_you_will_build": [],
+  "final_deliverables": [],
+  "student_deliverables_and_evidence": [],
+  "assessment": null,
+  "certification": null,
+  "career_paths": [
+    {
+      "role": "Boutique Digital Agency Founder / Owner",
+      "description": "Establish and operate a specialized creative, technical, or marketing service agency with structured packages, defined margins, and documented delivery workflows."
+    },
+    {
+      "role": "Agency Operations Director / COO",
+      "description": "Manage internal delivery systems, contractor rosters, project management boards, SOP libraries, and quality control processes across multiple client accounts."
+    },
+    {
+      "role": "Agency Account Director / Client Success Lead",
+      "description": "Oversee client onboarding, CRM deal tracking, discovery sessions, communication cadences, and quarterly business reviews to drive account retention."
+    },
+    {
+      "role": "Productized Service Entrepreneur",
+      "description": "Package specialized skills (design, development, automation, SEO) into standardized, predictable service offerings with fixed turnaround times and transparent pricing."
+    }
+  ],
+  "freelance_applications": [],
+  "business_use_cases": [],
+  "industry_workflow": [],
+  "best_practices": [],
+  "common_mistakes": [],
+  "not_covered": [],
+  "next_learning_path": [],
+  "faq": [
+    {
+      "question": "What is this course about?",
+      "answer": "It teaches the practical business, financial, sales, delivery and management systems used to plan and operate a small digital or creative service agency."
+    },
+    {
+      "question": "Who should join?",
+      "answer": "Skilled freelancers, consultants, digital service professionals and small business operators who want more structured service delivery."
+    },
+    {
+      "question": "Do I need an existing agency?",
+      "answer": "No. You may complete the course through a simulated agency model."
+    },
+    {
+      "question": "Do I need a fixed monthly freelance income?",
+      "answer": "No. Demonstrable service skills or relevant project experience are sufficient for the stated prerequisite."
+    },
+    {
+      "question": "What is the course duration?",
+      "answer": "Eight weeks with 64 guided training hours."
+    },
+    {
+      "question": "What is the course fee?",
+      "answer": "The approved regular tuition fee for Digital Agency Building & Operations is ₹12,900. Under our current introductory launch offer, an approved launch fee of ₹9,900 is available. The final payable amount, including any applicable taxes, will be clearly displayed before payment. All instructional hours, mentor reviews, and certification are included."
+    },
+    {
+      "question": "Will I learn niche and service selection?",
+      "answer": "Yes. You will evaluate markets, buyers, competition and agency positioning."
+    },
+    {
+      "question": "Will I create service packages?",
+      "answer": "Yes. You will design three packages with deliverables, pricing, scope and delivery assumptions."
+    },
+    {
+      "question": "Will I learn agency pricing and finances?",
+      "answer": "Yes. The course includes delivery cost, utilization, overhead, margins, revenue scenarios and cash-flow fundamentals."
+    },
+    {
+      "question": "Does the course teach HubSpot CRM?",
+      "answer": "It introduces an agency sales pipeline using HubSpot or a suitable CRM."
+    },
+    {
+      "question": "Will I learn ClickUp or Notion?",
+      "answer": "Yes. One accessible project-management platform is used for the core classroom workflow."
+    },
+    {
+      "question": "What is an SOP?",
+      "answer": "A Standard Operating Procedure documents how a recurring task should be performed, checked and escalated."
+    },
+    {
+      "question": "How many SOPs will I create?",
+      "answer": "Five core SOPs covering sales handoff, onboarding, delivery QA, changes and final reporting/handover."
+    },
+    {
+      "question": "Will I learn contractor management?",
+      "answer": "Yes. You will prepare a role brief, paid sample assessment, evaluation rubric and onboarding/access checklist."
+    },
+    {
+      "question": "Will I learn to acquire clients?",
+      "answer": "You will learn ethical acquisition channels, qualification and CRM management. The course does not guarantee clients or require live outreach."
+    },
+    {
+      "question": "Will I learn AI agency automation?",
+      "answer": "You will learn responsible AI-assisted planning, documentation and operational review. Advanced autonomous systems are not mandatory."
+    },
+    {
+      "question": "Will I learn GST and agency registration?",
+      "answer": "Applicable Goods and Services Tax (GST) is calculated in accordance with statutory Indian tax regulations at checkout. A valid GST tax invoice with Input Tax Credit (ITC) eligibility is provided for all registered business and corporate-sponsored enrollments. The final payable amount, including any applicable taxes, will be clearly displayed before payment."
+    },
+    {
+      "question": "Is Udyam registration mandatory for every student?",
+      "answer": "No. Students learn what the official process is and when it may be relevant. They are not required to register a business to pass the course."
+    },
+    {
+      "question": "Can agencies work with international clients?",
+      "answer": "Yes, subject to service capability, contracts, banking, applicable tax and foreign-exchange requirements. The course introduces relevant considerations."
+    },
+    {
+      "question": "Will this course guarantee a profitable agency?",
+      "answer": "No. The program teaches planning and operations; profitability depends on real demand, pricing, quality, cash flow, capacity and business decisions."
+    },
+    {
+      "question": "What portfolio will I complete?",
+      "answer": "An Agency Operations Blueprint containing niche positioning, three packages, financial model, CRM pipeline, onboarding, five SOPs, contractor evaluation and a 90-day action plan."
+    },
+    {
+      "question": "Are paid tools required?",
+      "answer": "Core exercises should use accessible tools or simulations. Paid CRM, project-management, automation or AI subscriptions are not mandatory."
+    },
+    {
+      "question": "Is this different from Freelancing Mastery?",
+      "answer": "Yes. Freelancing Mastery focuses on independent professional service work, while this course concentrates on structured agency business and operational systems."
+    },
+    {
+      "question": "Can I study without hiring contractors?",
+      "answer": "Yes. Contractor evaluation and team workflows are simulated."
+    },
+    {
+      "question": "Is this an MBA or legal certification?",
+      "answer": "No. It is a focused practical agency operations certification."
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}

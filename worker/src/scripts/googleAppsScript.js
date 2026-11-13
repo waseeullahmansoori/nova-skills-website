@@ -1,9 +1,22 @@
 /**
  * Nova Skills AI Career Advisor — Google Apps Script CRM Web App Template
- * 
+ *
  * Paste this code into Google Sheets (Extensions > Apps Script)
  * Sheet Name: "Leads"
+ *
+ * Version: 2.1.0 (P1-3 Admissions CRM Integration)
+ * - 21-column schema alignment
+ * - Formula injection sanitization (=, +, -, @)
+ * - Deduplication via Lead ID, Session ID, Phone, or Email
+ * - Minor Safeguard guardian consent tagging
  */
+
+function sanitizeFormula(val) {
+  if (typeof val === 'string' && /^[=+\-@\t\r]/.test(val)) {
+    return "'" + val;
+  }
+  return val;
+}
 
 function doPost(e) {
   try {
@@ -21,9 +34,9 @@ function doPost(e) {
     }
 
     var payload = JSON.parse(e.postData.contents);
-    var leadId = payload.leadId || "";
-    var sessionId = payload.sessionId || "";
-    var phone = payload.phone || "";
+    var leadId = payload.leadId || payload.lead_id || "";
+    var sessionId = payload.sessionId || payload.session_id || "";
+    var phone = payload.phone || payload.mobile || "";
     var email = payload.email || "";
 
     var data = sheet.getDataRange().getValues();
@@ -49,28 +62,33 @@ function doPost(e) {
       }
     }
 
+    var rawNotes = payload.notes || payload.message || "";
+    if (payload.guardianConsentRequired && rawNotes.indexOf("Minor Safeguard") === -1) {
+      rawNotes = (rawNotes ? rawNotes + " | " : "") + "[Minor Safeguard: Guardian/Parental Consent Required]";
+    }
+
     var rowValues = [
-      payload.leadId || "",
-      payload.createdAt || new Date().toISOString(),
+      sanitizeFormula(leadId),
+      sanitizeFormula(payload.createdAt || new Date().toISOString()),
       new Date().toISOString(),
-      payload.sessionId || "",
-      payload.name || "",
-      payload.phone || "",
-      payload.email || "",
-      payload.city || "",
-      payload.state || "",
-      payload.qualification || "",
-      payload.currentStatus || "",
-      payload.careerGoal || "",
-      payload.interest || "",
-      payload.budget || "",
-      payload.preferredLearningMode || payload.preferredMode || "",
-      payload.recommendedCourse || "",
+      sanitizeFormula(sessionId),
+      sanitizeFormula(payload.name || payload.fullName || ""),
+      sanitizeFormula(phone),
+      sanitizeFormula(email),
+      sanitizeFormula(payload.city || ""),
+      sanitizeFormula(payload.state || ""),
+      sanitizeFormula(payload.qualification || ""),
+      sanitizeFormula(payload.currentStatus || ""),
+      sanitizeFormula(payload.careerGoal || ""),
+      sanitizeFormula(payload.interest || payload.academy || payload.academy_id || ""),
+      sanitizeFormula(payload.budget || ""),
+      sanitizeFormula(payload.preferredLearningMode || payload.preferredMode || payload.learning_mode || ""),
+      sanitizeFormula(payload.recommendedCourse || payload.course || payload.courseTitle || ""),
       payload.leadScore || 0,
-      payload.qualificationStatus || payload.status || "NEW",
-      payload.conversationSummary || "",
-      payload.leadSource || "Nova AI Widget",
-      payload.notes || ""
+      sanitizeFormula(payload.qualificationStatus || payload.status || "NEW"),
+      sanitizeFormula(payload.conversationSummary || ""),
+      sanitizeFormula(payload.leadSource || payload.sourceComponent || payload.formType || payload.source || "Website Form"),
+      sanitizeFormula(rawNotes)
     ];
 
     var actionTaken = "";

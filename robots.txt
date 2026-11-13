@@ -11,8 +11,16 @@ Allow: /
 Disallow: /admin.html
 Disallow: /admin-activity.html
 Disallow: /admin-settings.html
+Disallow: /admin/
 Disallow: /login.html
 Disallow: /student.html
+Disallow: /portal.html
+Disallow: /register.html
+Disallow: /ai-chat.html
+
+# Excluded Conversion Confirmation Routes
+Disallow: /thank-you/
+Disallow: /lead-success/
 
 # Internal Code & Build System Directories
 Disallow: /scripts/

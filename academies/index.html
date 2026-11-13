@@ -552,9 +552,16 @@
   <div id="ns-footer"></div>
 
   <!-- JavaScript Bundles -->
-  <script src="/js/data.min.js?v=2.7.3" defer></script>
-  <script src="/js/components.min.js?v=2.8.0" defer></script>
-  <script src="/nova-ai-widget.js?v=3.0" defer></script>
+  <script src="/js/data.min.js?v=3.1.0" defer></script>
+  <script src="/js/components.min.js?v=3.1.0" defer></script>
+  <script src="/nova-ai-widget.js?v=3.1.0" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.NovaCourseData && typeof window.NovaCourseData.hydrateDOM === 'function') {
+        window.NovaCourseData.hydrateDOM();
+      }
+    });
+  </script>
 
 </body>
 </html>

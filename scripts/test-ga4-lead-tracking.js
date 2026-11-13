@@ -30,6 +30,8 @@ class MockElement {
     this.disabled = false;
   }
 
+  insertAdjacentHTML(position, html) {}
+
   setAttribute(name, val) {
     this.attributes[name] = String(val);
     if (name === 'id') this.id = val;

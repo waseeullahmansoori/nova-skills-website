@@ -50,10 +50,10 @@ const P1_CONFIGS = [
         id: 'tab-dev',
         label: '1. Web & Software Development',
         title: 'AI-Assisted Full Stack Web Development',
-        desc: 'Focus on building interactive web applications, scalable client architectures, and server APIs using modern JavaScript, React, Node.js, and generative AI coding assistants.',
+        desc: 'Focus on building interactive web applications, scalable client architectures, and server APIs using modern JavaScript, React, Node.js, and generative AI coding assistants (300 hours core curriculum + 20 hours selected commercial specialization).',
         focus: 'Frontend & Backend Engineering',
         tools: 'React, Node.js, MongoDB, GitHub, AI Assistants',
-        duration: '8 Months (160+ Guided Hours)',
+        duration: '8 Months (320 Guided Hours)',
         outcome: '3 Live Enterprise Web Applications',
         courseId: 'ai-assisted-full-stack-web-development'
       },

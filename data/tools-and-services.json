@@ -1,0 +1,342 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-11-13",
+  "description": "Canonical registry of software tools, platforms, APIs, and cloud services across Nova Skills curricula, defining access models, free-tier limits, student cost responsibilities, and zero-cost alternatives.",
+  "principles": [
+    "Zero mandatory software expenses beyond the approved course tuition fee.",
+    "Every required assignment and portfolio capstone must be 100% completable using free tiers, open-source software, student licenses, or institute-provided environments.",
+    "Optional premium tools must be clearly identified as non-mandatory with zero-cost alternatives provided in class.",
+    "Usage-based APIs must include cost minimization techniques (local mock testing, token caching, free tiers)."
+  ],
+  "accessModels": {
+    "Free Tier": {
+      "code": "FREE_TIER",
+      "description": "Vendor offers a permanent or generous free tier sufficient for all student learning, assignments, and portfolio deliverables.",
+      "studentCost": "₹0",
+      "mandatoryPurchase": false
+    },
+    "No Additional Cost": {
+      "code": "NO_ADDITIONAL_COST",
+      "description": "Open-source software or community edition software freely downloadable and usable without commercial licensing constraints.",
+      "studentCost": "₹0",
+      "mandatoryPurchase": false
+    },
+    "Institute Provided": {
+      "code": "INSTITUTE_PROVIDED",
+      "description": "Hardware, specialized lab equipment, or shared software environments provided directly by Nova Skills during supervised classroom or lab hours.",
+      "studentCost": "₹0 (Included in Tuition)",
+      "mandatoryPurchase": false
+    },
+    "Included Licensed Access": {
+      "code": "INCLUDED_LICENSED",
+      "description": "Software licenses or premium seats provisioned directly by Nova Skills for the duration of the course.",
+      "studentCost": "₹0 (Included in Tuition)",
+      "mandatoryPurchase": false
+    },
+    "Trial Access": {
+      "code": "TRIAL_ACCESS",
+      "description": "Vendor provides an official free trial (7 to 30 days) or student sandbox utilized during the active module. Open-source or free-tier alternatives are provided for ongoing practice.",
+      "studentCost": "₹0 during trial; zero-cost alternatives provided thereafter",
+      "mandatoryPurchase": false
+    },
+    "Optional Premium": {
+      "code": "OPTIONAL_PREMIUM",
+      "description": "Premium or commercial subscription tier that offers convenience or higher speed, but is NOT required to complete assignments or graduate.",
+      "studentCost": "Optional / Student Discretion",
+      "mandatoryPurchase": false
+    },
+    "Usage-Based API": {
+      "code": "USAGE_BASED_API",
+      "description": "Cloud API services billed per token or call (e.g., OpenAI, Anthropic). Free alternatives (Google AI Studio, Ollama) are taught as the primary foundation; minimal spend applies only if student opts for commercial model volume.",
+      "studentCost": "₹0 (Free tier primary); optional ₹200–₹1,500 if deploying commercial frontier models",
+      "mandatoryPurchase": false
+    },
+    "Student Subscription Required": {
+      "code": "STUDENT_SUBSCRIPTION_REQUIRED",
+      "description": "Software requiring a personal student license. Nova Skills policy requires providing a verified zero-cost alternative for every curriculum requirement.",
+      "studentCost": "Disclosed with verified zero-cost alternative",
+      "mandatoryPurchase": false
+    },
+    "Shared Classroom Access": {
+      "code": "SHARED_CLASSROOM",
+      "description": "Shared workstation licenses, test benches, or physical devices provided on-campus or during supervised lab sessions.",
+      "studentCost": "₹0 (Included in Tuition)",
+      "mandatoryPurchase": false
+    },
+    "Pending Verification": {
+      "code": "PENDING_VERIFICATION",
+      "description": "Commercial licensing status pending institutional vendor agreement verification. Must NOT be advertised as included in tuition.",
+      "studentCost": "Pending Verification",
+      "mandatoryPurchase": false
+    }
+  },
+  "fourPillarFramework": {
+    "pillar1_tuitionInclusions": {
+      "title": "Included in Tuition",
+      "description": "Core institutional provisions covered 100% by your course fee.",
+      "items": [
+        "Live interactive instructor-led classes and hands-on lab sessions",
+        "Personal code reviews, portfolio evaluations, and capstone grading",
+        "Verified Nova Skills Certificate of Completion with secure QR verification",
+        "LMS archive access to all class recordings, slide decks, and code repos",
+        "Dedicated 1-on-1 career counselling, resume audits, and mock interviews",
+        "Lifetime access to the Nova Skills alumni network and community Discord"
+      ]
+    },
+    "pillar2_freeTools": {
+      "title": "Free Tools & Student Accounts (₹0 Additional Cost)",
+      "description": "All mandatory portfolio projects can be completed entirely using robust free tiers, open-source software, and student accounts.",
+      "guarantee": "Zero hidden tool fees required to graduate or build your production portfolio."
+    },
+    "pillar3_optionalPremium": {
+      "title": "Optional Premium Services",
+      "description": "Advanced productivity tools that students may choose to explore. Never mandatory; full zero-cost equivalents are demonstrated in every module."
+    },
+    "pillar4_usageBasedExpenses": {
+      "title": "Usage-Based & External Expenses",
+      "description": "External third-party costs (such as custom domain names or commercial API volume) that arise only if a student chooses to deploy live personal commercial projects."
+    }
+  },
+  "toolsRegistry": {
+    "Python": {
+      "category": "Programming Language",
+      "accessModel": "No Additional Cost",
+      "freeTierDetails": "Open-source, 100% free under Python Software Foundation License.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "N/A (Standard free language)",
+      "notes": "Standard primary language for AI, data science, and backend development."
+    },
+    "Visual Studio Code": {
+      "category": "Code Editor / IDE",
+      "accessModel": "No Additional Cost",
+      "freeTierDetails": "Open-source editor by Microsoft, 100% free for all personal and commercial use.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "N/A (Industry-standard free IDE)",
+      "notes": "Includes full ecosystem of free extensions (Python, Pylance, Ruff, GitLens)."
+    },
+    "Git and GitHub": {
+      "category": "Version Control & Collaboration",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "Git is open-source (₹0). GitHub Free provides unlimited public and private repositories, GitHub Pages hosting, and 2,000 CI/CD Action minutes/month.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "GitLab Free, Bitbucket Free",
+      "notes": "GitHub Student Developer Pack offers additional developer tools at zero cost."
+    },
+    "Google AI Studio": {
+      "category": "AI Model / API",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "Generous free tier offering Gemini 2.0 Flash and 1.5 Pro API keys with high rate limits for prototyping and development.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "Ollama local models (Llama 3.3, Qwen 2.5)",
+      "notes": "Primary AI API used across AI engineering and prompt engineering courses."
+    },
+    "Ollama": {
+      "category": "Local AI Runtime",
+      "accessModel": "No Additional Cost",
+      "freeTierDetails": "100% open-source local inference engine for running open-weights models offline.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "N/A",
+      "notes": "Enables 100% offline, zero-cost development with Llama 3.3, Mistral, and Qwen models."
+    },
+    "Docker": {
+      "category": "DevOps & Containerization",
+      "accessModel": "No Additional Cost",
+      "freeTierDetails": "Docker Community Edition (Docker CE) and Docker Desktop for personal/educational use is 100% free.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "Podman, Colima",
+      "notes": "Used for containerizing FastAPI backends, n8n, PostgreSQL, and vector stores."
+    },
+    "PostgreSQL & pgvector": {
+      "category": "Database & Vector Search",
+      "accessModel": "No Additional Cost",
+      "freeTierDetails": "PostgreSQL and pgvector extension are 100% open-source. Free local installation via Docker or native binary.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "SQLite, Chroma, Qdrant Open-Source",
+      "notes": "Production vector search and relational database foundation."
+    },
+    "Supabase": {
+      "category": "Backend as a Service",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "Free plan includes 500MB database, 1GB storage, 50,000 monthly active users, and built-in pgvector.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "Local PostgreSQL with Docker",
+      "notes": "Used for rapid full-stack prototyping."
+    },
+    "n8n": {
+      "category": "Workflow Automation",
+      "accessModel": "No Additional Cost",
+      "freeTierDetails": "n8n Community Edition is self-hosted via Docker at ₹0 with unlimited workflow executions.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "Make.com free plan (1,000 ops/mo)",
+      "notes": "Primary enterprise automation platform taught across AI automation courses."
+    },
+    "FastAPI": {
+      "category": "Web Framework",
+      "accessModel": "No Additional Cost",
+      "freeTierDetails": "Open-source async web framework under MIT License.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "N/A",
+      "notes": "High-performance API foundation."
+    },
+    "Vercel": {
+      "category": "Cloud Deployment",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "Hobby plan provides free hosting for frontend and serverless applications with automatic SSL and preview URLs.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "Netlify Free, GitHub Pages, Render Free Tier",
+      "notes": "Free *.vercel.app staging URLs cover 100% of student deployment needs."
+    },
+    "Render": {
+      "category": "Cloud Deployment",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "Free tier for web services and static sites with automatic HTTPS and Git deploys.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "Railway Free Trial, Hugging Face Spaces, Fly.io",
+      "notes": "Used for hosting FastAPI backend services."
+    },
+    "Figma": {
+      "category": "UI/UX Design",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "Free Starter plan covers 3 Figma and 3 FigJam files. Free Figma Education plan provides full professional features to students upon verification.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "Penpot (Open-Source), Lunacy",
+      "notes": "Standard UI design and wireframing tool."
+    },
+    "Canva": {
+      "category": "Graphic Design",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "Canva Free provides 250,000+ templates, 1M+ free photos/graphics, and basic AI Magic Studio features.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "Photopea, Adobe Express Free Tier",
+      "notes": "Used for social media creatives and marketing collaterals."
+    },
+    "Blender": {
+      "category": "3D Computer Graphics",
+      "accessModel": "No Additional Cost",
+      "freeTierDetails": "100% free and open-source under GNU GPL. Complete 3D creation suite (modeling, rigging, animation, rendering).",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "N/A",
+      "notes": "Industry-standard open-source 3D production pipeline."
+    },
+    "DaVinci Resolve": {
+      "category": "Video Editing & Color Grading",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "DaVinci Resolve standard edition by Blackmagic Design is 100% free forever for Mac and Windows.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "N/A (Full professional NLE for free)",
+      "notes": "No watermark, exports up to 4K Ultra HD. Resolve Studio (paid) is NOT required for coursework."
+    },
+    "Adobe Creative Cloud (Photoshop, Premiere Pro, Illustrator, After Effects)": {
+      "category": "Design & Video Suite",
+      "accessModel": "Trial Access",
+      "freeTierDetails": "Adobe provides official 7-day free trials. Students also qualify for Adobe Creative Cloud Student discounts (~₹1,500/mo).",
+      "estimatedStudentCost": "₹0 during trial; educational discount optional; zero-cost alternatives provided in class",
+      "zeroCostAlternative": "Photopea (Photoshop alternative, ₹0), DaVinci Resolve (Premiere Pro alternative, ₹0), Inkscape (Illustrator alternative, ₹0), Blender / Natron (After Effects alternative, ₹0)",
+      "notes": "Nova Skills does not bundle paid Adobe CC commercial licenses into tuition. Every assignment accepts work produced on verified zero-cost alternatives."
+    },
+    "OpenAI API (GPT-4o, Responses API)": {
+      "category": "AI Model / API",
+      "accessModel": "Usage-Based API",
+      "freeTierDetails": "Free usage via Google AI Studio Gemini API covers core principles. OpenAI API is pay-as-you-go with credit tier.",
+      "estimatedStudentCost": "₹0 using Google AI Studio; optional ₹200–₹500 for OpenAI developer credits if desired",
+      "zeroCostAlternative": "Google AI Studio (Gemini 2.0 Flash, ₹0), Ollama local models (₹0)",
+      "notes": "Labs use structured output schemas compatible across both Gemini and OpenAI."
+    },
+    "Anthropic Claude API": {
+      "category": "AI Model / API",
+      "accessModel": "Usage-Based API",
+      "freeTierDetails": "Claude 3.5 Sonnet free on claude.ai for prompt testing. API usage is pay-as-you-go.",
+      "estimatedStudentCost": "₹0 using Claude.ai free web tier; optional ₹200–₹500 for API testing",
+      "zeroCostAlternative": "Google Gemini 1.5 Pro / 2.0 Flash via AI Studio (₹0)",
+      "notes": "Used for frontier code analysis and long-context synthesis."
+    },
+    "Cursor": {
+      "category": "AI Code Editor",
+      "accessModel": "Optional Premium",
+      "freeTierDetails": "Free plan includes 2,000 completions and 50 slow premium requests/month. 14-day free trial of Cursor Pro.",
+      "estimatedStudentCost": "₹0 (Free tier); Cursor Pro is /month optional",
+      "zeroCostAlternative": "VS Code + GitHub Copilot Student Pack (Free) or VS Code + Continue / Cline extension with free Gemini API",
+      "notes": "Cursor Pro is completely optional. All coding exercises are 100% executable in standard VS Code."
+    },
+    "ChatGPT Plus / Claude Pro": {
+      "category": "AI Assistant",
+      "accessModel": "Optional Premium",
+      "freeTierDetails": "ChatGPT Free (GPT-4o mini + limited GPT-4o) and Claude.ai Free tier cover all required classroom exercises.",
+      "estimatedStudentCost": "₹0 (Free tier); Plus/Pro (/month) is optional",
+      "zeroCostAlternative": "ChatGPT Free, Claude.ai Free, Google Gemini Free",
+      "notes": "Subscriptions are never required. Syllabus is designed for cross-platform free model access."
+    },
+    "Midjourney": {
+      "category": "Generative AI Image",
+      "accessModel": "Optional Premium",
+      "freeTierDetails": "No permanent free tier on Midjourney Discord.",
+      "estimatedStudentCost": "Optional (/month); zero-cost alternatives provided for all assignments",
+      "zeroCostAlternative": "Leonardo.ai (150 free tokens/day), Adobe Firefly (25 free generative credits/month), Canva Magic Studio (50 free credits), Stable Diffusion / ComfyUI local (₹0)",
+      "notes": "Course assignments explicitly accept deliverables from Leonardo.ai, Firefly, or local Stable Diffusion."
+    },
+    "Google Search Console & Google Analytics 4": {
+      "category": "Analytics & SEO",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "100% free by Google with no time limit or volume cap for student/business sites.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "Microsoft Clarity (100% Free heatmaps & recordings)",
+      "notes": "Core tools for SEO and digital marketing courses."
+    },
+    "Looker Studio": {
+      "category": "Business Intelligence & Reporting",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "100% free by Google for creating interactive dashboards and client reporting.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "Google Sheets (Free)",
+      "notes": "Used across Digital Marketing and Performance Marketing academies."
+    },
+    "WordPress": {
+      "category": "CMS & Web Development",
+      "accessModel": "No Additional Cost",
+      "freeTierDetails": "WordPress open-source CMS is 100% free. Practiced locally via LocalWP (₹0) or free staging environments.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "LocalWP (100% free local development tool)",
+      "notes": "No live hosting purchase required to learn and build production WordPress sites."
+    },
+    "Shopify": {
+      "category": "E-Commerce Platform",
+      "accessModel": "Trial Access",
+      "freeTierDetails": "Shopify Partners Program provides 100% free, unlimited development stores for learning and client staging.",
+      "estimatedStudentCost": "₹0 (via Shopify Partners development store)",
+      "zeroCostAlternative": "WooCommerce on WordPress (100% free open-source e-commerce)",
+      "notes": "Students build complete e-commerce stores on Shopify Partners at ₹0."
+    },
+    "Webflow": {
+      "category": "Visual Web Development",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "Webflow Starter plan provides 2 unhosted staging sites on webflow.io subdomain with full design capabilities.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "Framer Free plan, Carrd Free plan",
+      "notes": "Staging sites on *.webflow.io subdomain are 100% free for portfolio builds."
+    },
+    "Framer": {
+      "category": "Visual Web Development",
+      "accessModel": "Free Tier",
+      "freeTierDetails": "Free plan includes unlimited free staging sites on *.framer.media subdomain with 1,000 visitors/month.",
+      "estimatedStudentCost": "₹0",
+      "zeroCostAlternative": "GitHub Pages (Free)",
+      "notes": "Tuition covers hosting on free *.framer.media subdomains. Custom domain (~₹800/yr) is optional."
+    },
+    "BBC micro:bit & Sensor Hardware": {
+      "category": "Physical Computing & Robotics",
+      "accessModel": "Institute Provided",
+      "freeTierDetails": "Classroom hardware kits provided during supervised offline training. Online students utilize official Microsoft MakeCode micro:bit simulator (100% free).",
+      "estimatedStudentCost": "₹0 (Classroom kits included; simulator 100% free)",
+      "zeroCostAlternative": "Microsoft MakeCode micro:bit simulator (₹0)",
+      "notes": "Hardware access is fully provided in classroom labs."
+    },
+    "Custom Domain Name": {
+      "category": "Web Infrastructure",
+      "accessModel": "Optional Premium",
+      "freeTierDetails": "Free subdomains provided via Vercel (*.vercel.app), Netlify (*.netlify.app), GitHub Pages (*.github.io), Framer (*.framer.media).",
+      "estimatedStudentCost": "Optional ₹700–₹1,000/year if student wishes to purchase personal custom domain (.com/.in)",
+      "zeroCostAlternative": "Free staging subdomains on Vercel, Netlify, GitHub Pages, Framer",
+      "notes": "Never mandatory for portfolio grading. Custom domain purchase is at student discretion."
+    }
+  }
+}

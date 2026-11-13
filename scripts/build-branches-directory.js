@@ -865,8 +865,8 @@ ${JSON.stringify(schemaJsonLd, null, 2)}
   <div id="ns-footer"></div>
 
   <!-- Scripts -->
-  <script src="/js/data.min.js?v=2.7.4" defer></script>
-  <script src="/js/components.min.js?v=2.8.0" defer></script>
+  <script src="/js/data.min.js?v=3.1.0" defer></script>
+  <script src="/js/components.min.js?v=3.1.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
   <script src="/js/locations-directory.js" defer></script>
 </body>

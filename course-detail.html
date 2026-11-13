@@ -16,7 +16,7 @@
   <!-- Default robots: indexable with rich previews -->
   <meta name="robots" id="page-robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <!-- Canonical Link -->
-  <link rel="canonical" id="page-canonical" href="https://novaskills.in/course-detail.html" />
+  <link rel="canonical" id="page-canonical" href="https://novaskills.in/courses" />
   <script>
     (function() {
       try {
@@ -30,7 +30,7 @@
           }
         } else {
           if (canLink) {
-            canLink.setAttribute('href', 'https://novaskills.in/courses.html');
+            canLink.setAttribute('href', 'https://novaskills.in/courses');
           }
         }
       } catch(e) {}
@@ -133,7 +133,7 @@
               <span class="enroll-discount" id="detail-discount" style="display:none;"></span>
             </div>
 
-            <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options available · 18% GST included</p>
+            <p class="enroll-emi" id="detail-emi">💳 Flexible monthly installment options available · The final payable amount, including any applicable taxes, will be clearly displayed before payment.</p>
             <!-- Compact Demo & 1:1 Benefits Area -->
             <div class="detail-demo-benefit-box" id="detail-demo-box">
               <div class="demo-benefit-item" id="detail-demo-item">
@@ -169,6 +169,11 @@
               📞 Request Callback / Syllabus
             </button>
 
+            <div class="enroll-refund-notice" id="detail-refund-notice">
+              <span class="refund-notice-icon">📄</span>
+              <span>Review our <a href="/refund-policy/" target="_blank" rel="noopener">Refund &amp; Cancellation Policy</a> before payment.</span>
+            </div>
+
             <div class="course-card-includes">
               <h4>This Course Includes:</h4>
               <ul id="detail-includes-list">
@@ -176,7 +181,7 @@
                 <li><span class="include-icon">💻</span> Hands-on Live Projects</li>
                 <li><span class="include-icon">👤</span> 1-on-1 Mentor Guidance</li>
                 <li><span class="include-icon">📜</span> Industry Recognized Certificate</li>
-                <li><span class="include-icon">🎯</span> Placement Support & Interviews</li>
+                <li><span class="include-icon">🎯</span> Placement Assistance (Eligible Programs)</li>
                 <li><span class="include-icon">♾️</span> Lifetime Community Access</li>
               </ul>
             </div>
@@ -437,63 +442,14 @@
       </div>
 
       <div class="mentors-grid" id="mentors-container">
-        <div class="mentor-card">
-          <div class="mentor-avatar" style="background:var(--grad-hero);"><span class="mentor-initials">DM</span></div>
-          <h3 class="mentor-name">Lead Domain Mentor</h3>
-          <div class="mentor-role">Curriculum & Technical Lead</div>
-          <span class="mentor-exp">Industry-Focused Training</span>
-          <p class="mentor-bio">Specialist in practical project execution, workflow automation, and real-world domain toolchains.</p>
-        </div>
-
-        <div class="mentor-card">
-          <div class="mentor-avatar" style="background:var(--grad-teal-green);"><span class="mentor-initials">AK</span></div>
-          <h3 class="mentor-name">Senior Project Trainer</h3>
-          <div class="mentor-role">Hands-On Lab Mentor</div>
-          <span class="mentor-exp">Live Project Mentorship</span>
-          <p class="mentor-bio">Dedicated to portfolio building, code reviews, design critiques, and interview readiness preparation.</p>
-        </div>
+        <!-- Mentors populated dynamically from credibility registry -->
       </div>
     </section>
 
     <!-- REVIEWS / TESTIMONIALS -->
-    <section class="container course-body-section" id="testimonials-section">
-      <div class="section-header" style="text-align:left; margin-bottom:32px;">
-        <span class="section-tag">STUDENT EXPERIENCE</span>
-        <h2 class="section-title">What Our Learners <span class="gradient-text">Say</span></h2>
-      </div>
-
-      <div class="testimonials-grid" style="grid-template-columns: repeat(2,1fr);">
-        <div class="testimonial-card">
-          <div class="testimonial-quote">“</div>
-          <p class="testimonial-text">
-            "The practical hands-on approach and live projects gave me real confidence. Building real-world briefs helped me create a solid portfolio for my job search."
-          </p>
-          <div class="testimonial-footer">
-            <div class="testimonial-avatar" style="background:var(--teal);">RM</div>
-            <div>
-              <div class="testimonial-name">Rohit M.</div>
-              <div class="testimonial-role">Nova Skills Alumnus</div>
-            </div>
-            <div class="testimonial-stars">★★★★★</div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div class="testimonial-quote">“</div>
-          <p class="testimonial-text">
-            "The 1-on-1 mentor feedback and resume guidance were exceptional. It really bridged the gap between basic theory and actual industry tools."
-          </p>
-          <div class="testimonial-footer">
-            <div class="testimonial-avatar" style="background:var(--green);">PS</div>
-            <div>
-              <div class="testimonial-name">Pooja S.</div>
-              <div class="testimonial-role">Program Graduate</div>
-            </div>
-            <div class="testimonial-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div id="testimonials-slot">
+      <!-- Testimonials populated dynamically from credibility registry -->
+    </div>
 
     <!-- COURSE BOUNDARIES SECTION -->
     <section class="container course-body-section" id="boundaries-section">
@@ -504,6 +460,68 @@
 
       <div id="boundaries-container" style="max-width:860px;">
         <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- COURSE COST & FINANCING TRANSPARENCY SECTION (P1-6) -->
+    <section class="container course-body-section" id="cost-transparency-section">
+      <div class="section-header" style="text-align:left; margin-bottom:32px;">
+        <span class="section-tag" style="background:rgba(16, 185, 129, 0.12); color:#10b981; border-color:rgba(16, 185, 129, 0.25);">COMMERCIAL TRANSPARENCY</span>
+        <h2 class="section-title">Tuition, Tool-Cost <span class="gradient-text">& Financing Details</span></h2>
+        <p class="section-subtitle" style="text-align:left; margin:0;" id="cost-transparency-subtitle">Complete clarity on what your course tuition covers, verified zero-cost software options for every project, optional tool upgrades, and flexible payment plans.</p>
+      </div>
+
+      <div class="cost-transparency-grid" id="cost-transparency-container">
+        <!-- Dynamically rendered via renderCostTransparencySection() -->
+      </div>
+
+      <div class="financing-policy-banner" id="financing-policy-banner">
+        <!-- Financing tier banner rendered dynamically -->
+      </div>
+
+      <!-- Pre-Enrolment Refund & Cancellation Disclosure (P1-7) -->
+      <div class="refund-transparency-card" id="refund-transparency-card">
+        <div class="refund-card-header">
+          <span class="refund-badge">PRE-ENROLMENT LEGAL TRANSPARENCY</span>
+          <h3 class="refund-card-title">Refund &amp; Cancellation Policy</h3>
+          <p class="refund-card-desc">Review our course cancellation, refund eligibility, cooling-off conditions, and non-refundable situations before proceeding with enrolment.</p>
+        </div>
+        <div class="refund-rules-grid">
+          <div class="refund-rule-box">
+            <div class="rule-icon-title">
+              <span class="rule-icon">🕒</span>
+              <h4>Standard Cancellation (≥ 7 Days)</h4>
+            </div>
+            <p>Written cancellation received 7+ calendar days before batch start qualifies for <strong>100% Tuition Fee refund</strong> (minus nominal administrative registration deduction, capped at ₹1,000 or 10%, whichever is lower).</p>
+          </div>
+          <div class="refund-rule-box">
+            <div class="rule-icon-title">
+              <span class="rule-icon">🛡️</span>
+              <h4>48-Hour Cooling-Off Window</h4>
+            </div>
+            <p>For enrolments completed within 7 days of batch start, students receive a <strong>48-hour cooling-off period</strong> (90% refund of fees paid), provided the first live class or classroom session has not yet commenced.</p>
+          </div>
+          <div class="refund-rule-box">
+            <div class="rule-icon-title">
+              <span class="rule-icon">⚠️</span>
+              <h4>Non-Refundable Situations</h4>
+            </div>
+            <p>Under Section 4 of our policy, fees are strictly non-refundable once classes commence, LMS credentials / study materials are accessed, or for promotional / discounted / scholarship enrolments.</p>
+          </div>
+          <div class="refund-rule-box">
+            <div class="rule-icon-title">
+              <span class="rule-icon">🏛️</span>
+              <h4>Institute Cancellation Guarantee</h4>
+            </div>
+            <p>If Nova Skills cancels or reschedules a batch by &gt; 14 days without mutual agreement, students are entitled to a <strong>100% full refund</strong> with zero deductions, or free priority batch transfer.</p>
+          </div>
+        </div>
+        <div class="refund-card-action">
+          <div class="refund-action-text">
+            <span>Formal refund requests must be emailed to <a href="mailto:novaskills.official@gmail.com" class="refund-mail-link">novaskills.official@gmail.com</a>. Processing timeline: 7–10 business days upon approval.</span>
+          </div>
+          <a href="/refund-policy/" target="_blank" rel="noopener" class="btn btn-outline btn-sm refund-cta-btn">Read Full Refund Policy →</a>
+        </div>
       </div>
     </section>
 
@@ -558,10 +576,11 @@
   <div id="ns-footer"></div>
 
   <!-- JavaScript -->
-  <script src="/js/data.min.js?v=2.7.0" defer></script>
-  <script src="/js/components.min.js?v=2.8.0" defer></script>
+  <script src="/js/data.min.js?v=3.1.0" defer></script>
+  <script src="/js/credibility-data.min.js?v=3.1.0" defer></script>
+  <script src="/js/components.min.js?v=3.1.0" defer></script>
   <script src="/js/icon-system.js?v=2.2.0" defer></script>
-  <script src="/js/course-detail.min.js?v=2.9.0" defer></script>
+  <script src="/js/course-detail.min.js?v=3.1.0" defer></script>
   <!-- PROJECT LIGHTBOX MODAL -->
   <div class="project-lightbox" id="project-lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Project Preview">
     <div class="project-lightbox-dialog" id="project-lightbox-dialog">

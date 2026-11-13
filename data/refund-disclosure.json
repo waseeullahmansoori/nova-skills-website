@@ -1,0 +1,78 @@
+{
+  "version": "1.0",
+  "effectiveDate": "July 29, 2026",
+  "lastAuditedDate": "2026-11-13",
+  "canonicalUrl": "https://novaskills.in/refund-policy/",
+  "supportEmail": "novaskills.official@gmail.com",
+  "approvalStatus": "PUBLISHED_OFFICIAL",
+  "principles": [
+    "Transparent pre-enrolment disclosure across all course pricing and admissions entry points.",
+    "Zero hidden cancellation terms; all exclusions and timing cut-offs clearly published.",
+    "Promotional, discounted and scholarship restrictions explicitly disclosed.",
+    "Non-binding information requests (demos, counselling) kept free of legal agreement friction.",
+    "Strict alignment between frontend disclosures and official published legal policy text."
+  ],
+  "summary": {
+    "short": "Review our Refund & Cancellation Policy before enrolment. Cancellations 7+ days prior to batch start qualify for 100% tuition refund (minus nominal administrative fee capped at ₹1,000 or 10%). A 48-hour cooling-off period applies if enrolling within 7 days. Fees are non-refundable once classes commence, LMS is accessed, or for promotional enrollments.",
+    "noticeText": "Please review our course cancellation, refund eligibility, cooling-off conditions and non-refundable situations before proceeding with enrolment.",
+    "modalAdvisory": "Important: Prior to fee payment or seat confirmation, please review our official Refund & Cancellation Policy. Special promotional offers, batch commencement, or LMS activation affect refund eligibility."
+  },
+  "clauses": {
+    "section2_registrationDeposit": {
+      "title": "Registration & Seat Booking Fee",
+      "statement": "Non-refundable initial deposit (typically 10% to 15% or up to ₹1,000) collected to secure batch allocation and provision LMS access."
+    },
+    "section3A_earlyCancellation": {
+      "title": "Requests ≥ 7 Days Prior to Batch Start",
+      "eligibility": "100% Tuition Fee Refund",
+      "deduction": "Nominal administrative registration fee, capped at ₹1,000 or 10% of total fee, whichever is lower.",
+      "condition": "Written email submitted 7 calendar days or more before official batch launch date."
+    },
+    "section3B_coolingOff": {
+      "title": "Requests Within 7 Days of Batch Start (Cooling-Off Period)",
+      "eligibility": "90% Total Fees Refund",
+      "window": "48 Hours from enrolment timestamp",
+      "condition": "First live class or classroom session must not have commenced."
+    },
+    "section3C_emergencyTransfer": {
+      "title": "Personal Emergencies / Rescheduling",
+      "option": "Free One-Time Batch Transfer",
+      "validity": "Transferable to any upcoming batch within 6 months prior to batch launch."
+    },
+    "section4_nonRefundable": {
+      "title": "Non-Refundable Situations",
+      "conditions": [
+        "Once batch commences or student attends 1 or more live/classroom lectures",
+        "Once LMS credentials or proprietary study materials have been activated/accessed",
+        "Absence from scheduled classes or voluntary withdrawal after batch launch",
+        "Suspension or termination due to student code of conduct violations",
+        "Discounted, promotional, or scholarship enrolments under Section 4",
+        "Personal change of mind or scheduling conflicts arising post-registration"
+      ]
+    },
+    "section5_instituteCancellation": {
+      "title": "Institute Cancellation or Delay (> 14 Calendar Days)",
+      "guarantee": "100% Full Refund of all fees paid (including registration deposit) without deductions, or free priority transfer to next cohort."
+    },
+    "section6_requestProtocol": {
+      "method": "Formal written email to novaskills.official@gmail.com",
+      "requiredDetails": ["Full Name", "Contact Number", "Course Name", "Payment Transaction Receipt", "Reason", "Bank Account Details for Direct Credit"],
+      "acknowledgementWindow": "24 to 48 business hours",
+      "verificationWindow": "3 to 5 business days",
+      "disbursementWindow": "7 to 10 working days upon approval"
+    }
+  },
+  "acknowledgementSchema": {
+    "description": "Schema for future live payment gateway / paid checkout integration",
+    "requiredFields": [
+      "enrollmentId",
+      "courseId",
+      "policyAcknowledgement.refundPolicyUrl",
+      "policyAcknowledgement.refundPolicyVersion",
+      "policyAcknowledgement.refundPolicyEffectiveDate",
+      "policyAcknowledgement.accepted",
+      "policyAcknowledgement.acceptedAt",
+      "policyAcknowledgement.enrollmentOfferType"
+    ]
+  }
+}

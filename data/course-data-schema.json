@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://novaskills.in/schemas/course-data-schema.json",
+  "title": "Nova Skills Canonical Course Record Schema",
+  "description": "Single authoritative course metadata schema consumed by Homepage, Catalog, Academies, Course Detail, Location Pages, AI Career Advisor, Forms, and SEO builders.",
+  "type": "object",
+  "required": [
+    "id",
+    "slug",
+    "status",
+    "courseNumber",
+    "academyId",
+    "title",
+    "shortTitle",
+    "description",
+    "classification",
+    "duration",
+    "guidedHours",
+    "delivery",
+    "pricing",
+    "projects",
+    "tools",
+    "eligibility",
+    "learningOutcomes",
+    "certificate",
+    "images",
+    "curriculumRef",
+    "seo",
+    "dataQuality"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "id": { "type": "string", "minLength": 2, "pattern": "^[a-z0-9-]+$" },
+    "slug": { "type": "string", "minLength": 2, "pattern": "^[a-z0-9-]+$" },
+    "status": { "type": "string", "enum": ["published", "draft", "archived"] },
+    "courseNumber": { "type": "integer", "minimum": 1, "maximum": 999 },
+    "academyId": { "type": "string", "minLength": 2 },
+    "title": { "type": "string", "minLength": 3 },
+    "shortTitle": { "type": "string", "minLength": 3 },
+    "description": {
+      "type": "object",
+      "required": ["card", "overview"],
+      "properties": {
+        "card": { "type": "string", "minLength": 10 },
+        "overview": { "type": "string", "minLength": 10 },
+        "full": { "type": "string" }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "required": ["programType", "programLevel", "level", "category"],
+      "properties": {
+        "programType": { "type": "string", "enum": ["career", "professional", "certification"] },
+        "programLevel": { "type": "string", "enum": ["Career Program", "Professional Program", "Certification Course"] },
+        "level": { "type": "string", "minLength": 2 },
+        "category": { "type": "string", "minLength": 2 },
+        "courseRole": { "type": "string" }
+      }
+    },
+    "duration": {
+      "type": "object",
+      "required": ["value", "unit", "displayLabel"],
+      "properties": {
+        "value": { "type": "number", "exclusiveMinimum": 0 },
+        "unit": { "type": "string", "enum": ["days", "weeks", "months"] },
+        "displayLabel": { "type": "string", "minLength": 2 },
+        "weeksEquivalent": { "type": "number", "minimum": 0 },
+        "monthsEquivalent": { "type": "number", "minimum": 0 }
+      }
+    },
+    "guidedHours": { "type": ["number", "null"], "minimum": 1 },
+    "delivery": {
+      "type": "object",
+      "required": ["modes", "displayMode", "placementSupport", "freeDemo"],
+      "properties": {
+        "modes": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "enum": ["online-live", "classroom", "hybrid"] }
+        },
+        "displayMode": { "type": "string", "minLength": 2 },
+        "placementSupport": { "type": "boolean" },
+        "freeDemo": { "type": "boolean" }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "required": ["currency", "currentPrice", "originalPrice", "offerActive", "discountPercent", "gst"],
+      "properties": {
+        "currency": { "type": "string", "const": "INR" },
+        "currentPrice": { "type": "number", "minimum": 0 },
+        "originalPrice": { "type": "number", "minimum": 0 },
+        "launchPrice": { "type": ["number", "null"], "minimum": 0 },
+        "offerActive": { "type": "boolean" },
+        "discountPercent": { "type": "number", "minimum": 0, "maximum": 100 },
+        "gst": {
+          "type": "object",
+          "required": ["rate", "treatment"],
+          "properties": {
+            "rate": { "type": "number" },
+            "treatment": {
+              "type": "string",
+              "enum": ["included", "extra", "requires-admin-confirmation"]
+            },
+            "uiDisplayLabel": { "type": "string" },
+            "faqProseNote": { "type": "string" },
+            "totalWithExtraGst": { "type": ["number", "null"] }
+          }
+        },
+        "installment": {
+          "type": "object",
+          "properties": {
+            "available": { "type": "boolean" },
+            "note": { "type": "string" }
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "object",
+      "required": ["metrics", "displayLabel", "reviewRequired"],
+      "properties": {
+        "metrics": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["type", "count", "displayLabel"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["core-production", "live-practical", "portfolio", "capstone", "specialization", "blueprint-total", "graduation-deliverables"]
+              },
+              "count": { "type": "integer", "minimum": 0 },
+              "displayLabel": { "type": "string", "minLength": 2 }
+            }
+          }
+        },
+        "primaryCount": { "type": ["integer", "null"], "minimum": 0 },
+        "displayLabel": { "type": "string", "minLength": 2 },
+        "suppressNumericBadge": { "type": "boolean" },
+        "reviewRequired": { "type": "boolean" },
+        "reviewNotes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "tools": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "eligibility": {
+      "type": "object",
+      "required": ["prerequisites", "recommendedBackground"],
+      "properties": {
+        "minimumAge": { "type": ["integer", "null"] },
+        "maximumAge": { "type": ["integer", "null"] },
+        "prerequisites": { "type": "array", "items": { "type": "string" } },
+        "recommendedBackground": { "type": "array", "items": { "type": "string" } },
+        "bestFor": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "learningOutcomes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "certificate": {
+      "type": "object",
+      "required": ["type", "description"],
+      "properties": {
+        "type": { "type": "string", "minLength": 2 },
+        "description": { "type": "string", "minLength": 2 }
+      }
+    },
+    "images": {
+      "type": "object",
+      "required": ["card"],
+      "properties": {
+        "card": {
+          "type": "object",
+          "required": ["desktop", "mobile", "alt", "width", "height"],
+          "properties": {
+            "desktop": { "type": "string", "minLength": 5 },
+            "mobile": { "type": "string", "minLength": 5 },
+            "mimeType": { "type": "string" },
+            "alt": { "type": "string", "minLength": 10 },
+            "width": { "type": "integer", "minimum": 1 },
+            "height": { "type": "integer", "minimum": 1 },
+            "mobileWidth": { "type": "integer", "minimum": 1 },
+            "mobileHeight": { "type": "integer", "minimum": 1 },
+            "imageId": { "type": "string" },
+            "imageSource": { "type": "string" }
+          }
+        },
+        "hero": { "type": "string" },
+        "gallery": { "type": "array", "items": { "type": "object" } }
+      }
+    },
+    "curriculumRef": { "type": "string", "pattern": "^curricula/[a-z0-9-]+\\.json$" },
+    "seo": {
+      "type": "object",
+      "required": ["title", "description", "canonicalUrl"],
+      "properties": {
+        "title": { "type": "string", "minLength": 5 },
+        "description": { "type": "string", "minLength": 10 },
+        "canonicalUrl": { "type": "string", "pattern": "^https://novaskills\\.in/" },
+        "ogImage": { "type": "string" }
+      }
+    },
+    "dataQuality": {
+      "type": "object",
+      "required": ["status", "reviewRequired", "reviewNotes"],
+      "properties": {
+        "status": { "type": "string", "enum": ["verified", "review-required"] },
+        "reviewRequired": { "type": "boolean" },
+        "reviewNotes": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

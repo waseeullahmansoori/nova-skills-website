@@ -50,535 +50,14 @@
     { id: 'office', name: 'Office Productivity Academy', slug: 'office-productivity', icon: '📋' }
   ];
 
-  const FALLBACK_COURSES = [
-    {
-      id: 'dm-mastery',
-      slug: 'ai-digital-marketing-master',
-      name: 'AI Digital Marketing Master',
-      academy: 'Digital Marketing Academy',
-      academyId: 'digital-marketing',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 31499,
-      originalPrice: 89999,
-      rating: 4.9,
-      reviews: 198,
-      liveProjects: 20,
-      mode: 'Hybrid',
-      level: 'Advanced',
-      placementSupport: true,
-      salary: '₹4.5 – ₹9 LPA',
-      shortDesc: 'Complete 6-month mastery: SEO, GEO, Google Ads, Meta Ads, AI Automation and Agency Skills.',
-      tools: ['Google Ads', 'Meta Ads', 'SEMrush', 'GA4', 'n8n', 'ChatGPT', 'Claude']
-    },
-    {
-      id: 'dm-professional',
-      slug: 'ai-digital-marketing-professional',
-      name: 'AI Digital Marketing Professional',
-      academy: 'Digital Marketing Academy',
-      academyId: 'digital-marketing',
-      programLevel: 'Professional Program',
-      duration: '4 Months',
-      durationMonths: 4,
-      price: 17499,
-      originalPrice: 49999,
-      rating: 4.8,
-      reviews: 312,
-      liveProjects: 10,
-      mode: 'Hybrid',
-      level: 'Beginner',
-      placementSupport: true,
-      salary: '₹3.5 – ₹6.5 LPA',
-      shortDesc: 'Master Google Ads, SEO & GEO, Meta Ads, Social Media, Content & AI-powered marketing from scratch.',
-      tools: ['Google Ads', 'Meta Ads', 'SEMrush', 'GA4', 'ChatGPT', 'Canva']
-    },
-    {
-      id: 'ai-mastery',
-      slug: 'ai-mastery',
-      name: 'AI Solutions Engineering & Agentic AI Mastery',
-      academy: 'AI Academy',
-      academyId: 'ai',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 39999,
-      originalPrice: 79999,
-      rating: 4.9,
-      reviews: 245,
-      liveProjects: 7,
-      mode: 'Hybrid',
-      level: 'Beginner to Professional',
-      placementSupport: true,
-      salary: '₹6 – ₹15 LPA',
-      shortDesc: 'Flagship career program in AI Solutions Engineering, Agentic AI, RAG, n8n Automation, MCP and production deployment.',
-      tools: ['Python', 'OpenAI API', 'Claude API', 'n8n', 'LangGraph', 'MCP', 'Supabase pgvector', 'Docker']
-    },
-    {
-      id: 'ai-productivity',
-      slug: 'ai-productivity',
-      name: 'AI Productivity Professional',
-      academy: 'AI Academy',
-      academyId: 'ai',
-      programLevel: 'Professional Program',
-      duration: '3 Months',
-      durationMonths: 3,
-      price: 13999,
-      originalPrice: 39999,
-      rating: 4.8,
-      reviews: 180,
-      liveProjects: 8,
-      mode: 'Online',
-      level: 'Beginner',
-      placementSupport: true,
-      salary: '₹4.0 – ₹7.5 LPA',
-      shortDesc: 'Supercharge productivity, automation, research and creative workflows using top AI tools.',
-      tools: ['ChatGPT Plus', 'Claude 3.5', 'Midjourney', 'Zapier', 'Notion AI', 'Copilot']
-    },
-    {
-      id: 'ai-for-business-pro',
-      slug: 'ai-for-business-pro',
-      name: 'AI for Business Professional',
-      academy: 'AI Academy',
-      academyId: 'ai',
-      programLevel: 'Professional Program',
-      duration: '3 Months',
-      durationMonths: 3,
-      price: 14999,
-      originalPrice: 42999,
-      rating: 4.8,
-      reviews: 110,
-      liveProjects: 8,
-      mode: 'Online',
-      level: 'Intermediate',
-      placementSupport: true,
-      salary: '₹5.0 – ₹9 LPA',
-      shortDesc: 'Implement AI solutions for enterprise efficiency, customer service, marketing and data analytics.',
-      tools: ['ChatGPT Enterprise', 'Make.com', 'Custom GPTs', 'Claude', 'Power BI']
-    },
-    {
-      id: 'prompt-engineering',
-      slug: 'prompt-engineering',
-      name: 'Prompt Engineering',
-      academy: 'AI Academy',
-      academyId: 'ai',
-      programLevel: 'Certification Course',
-      duration: '1 Month',
-      durationMonths: 1,
-      price: 4999,
-      originalPrice: 14999,
-      rating: 4.9,
-      reviews: 420,
-      liveProjects: 5,
-      mode: 'Online',
-      level: 'Beginner',
-      placementSupport: false,
-      salary: 'Skill Upgrade',
-      shortDesc: 'Master advanced prompting frameworks for ChatGPT, Claude, Gemini & generative models.',
-      tools: ['ChatGPT', 'Claude', 'Midjourney']
-    },
-    {
-      id: 'creative-design',
-      slug: 'creative-design',
-      name: 'Creative Design Master',
-      academy: 'Design Academy',
-      academyId: 'design',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 24999,
-      originalPrice: 69999,
-      rating: 4.9,
-      reviews: 175,
-      liveProjects: 18,
-      mode: 'Hybrid',
-      level: 'Advanced',
-      placementSupport: true,
-      salary: '₹4.0 – ₹8.5 LPA',
-      shortDesc: 'Complete 6-month visual & brand design master program with live agency portfolio.',
-      tools: ['Adobe Photoshop', 'Illustrator', 'Figma', 'Canva Pro', 'After Effects']
-    },
-    {
-      id: 'graphic-design-pro',
-      slug: 'graphic-design-pro',
-      name: 'Graphic Design Professional',
-      academy: 'Design Academy',
-      academyId: 'design',
-      programLevel: 'Professional Program',
-      duration: '3 Months',
-      durationMonths: 3,
-      price: 13999,
-      originalPrice: 39999,
-      rating: 4.8,
-      reviews: 290,
-      liveProjects: 10,
-      mode: 'Hybrid',
-      level: 'Beginner',
-      placementSupport: true,
-      salary: '₹3.2 – ₹6.0 LPA',
-      shortDesc: 'Master branding, advertising visuals, social media creatives, typography and composition.',
-      tools: ['Photoshop', 'Illustrator', 'Canva', 'Figma']
-    },
-    {
-      id: 'uiux-design-pro',
-      slug: 'uiux-design-pro',
-      name: 'UI/UX Design Professional',
-      academy: 'Design Academy',
-      academyId: 'design',
-      programLevel: 'Professional Program',
-      duration: '3 Months',
-      durationMonths: 3,
-      price: 14999,
-      originalPrice: 44999,
-      rating: 4.9,
-      reviews: 160,
-      liveProjects: 8,
-      mode: 'Hybrid',
-      level: 'Intermediate',
-      placementSupport: true,
-      salary: '₹4.5 – ₹9.0 LPA',
-      shortDesc: 'Wireframing, prototyping, user research, design systems & Figma app interfaces.',
-      tools: ['Figma', 'Miro', 'Adobe XD', 'FigJam']
-    },
-    {
-      id: 'fullstack-foundation',
-      slug: 'fullstack-foundation',
-      name: 'Full Stack Programming Foundation',
-      academy: 'Programming Academy',
-      academyId: 'programming',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 39999,
-      originalPrice: 39999,
-      rating: 4.9,
-      reviews: 210,
-      liveProjects: 20,
-      mode: 'Hybrid',
-      level: 'Advanced',
-      placementSupport: true,
-      salary: '₹4.5 – ₹10 LPA',
-      shortDesc: 'End-to-end full stack development: HTML/CSS, JavaScript, React, Node.js, REST APIs and SQL.',
-      tools: ['JavaScript', 'React.js', 'Node.js', 'Express', 'SQL', 'Git', 'Vercel']
-    },
-    {
-      id: 'python-developer',
-      slug: 'python-developer',
-      name: 'Python Developer Professional',
-      academy: 'Programming Academy',
-      academyId: 'programming',
-      programLevel: 'Professional Program',
-      duration: '3 Months',
-      durationMonths: 3,
-      price: 19999,
-      originalPrice: 19999,
-      rating: 4.8,
-      reviews: 140,
-      liveProjects: 8,
-      mode: 'Online',
-      level: 'Beginner',
-      placementSupport: true,
-      salary: '₹4.0 – ₹8.0 LPA',
-      shortDesc: 'Core Python, OOPs, Data Structures, Automation scripts and Backend API development.',
-      tools: ['Python 3', 'Django/FastAPI', 'SQLite', 'Git']
-    },
-    {
-      id: 'ecommerce-mastery',
-      slug: 'ecommerce-mastery',
-      name: 'E-Commerce Website Mastery',
-      academy: 'No-Code Web Academy',
-      academyId: 'nocode',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 22999,
-      originalPrice: 64999,
-      rating: 4.8,
-      reviews: 130,
-      liveProjects: 14,
-      mode: 'Hybrid',
-      level: 'Beginner',
-      placementSupport: true,
-      salary: '₹3.8 – ₹7.5 LPA',
-      shortDesc: 'Build high-converting online stores using Shopify, WooCommerce, WordPress and payment gateways without code.',
-      tools: ['Shopify', 'WordPress', 'WooCommerce', 'Elementor', 'Stripe', 'Razorpay']
-    },
-    {
-      id: 'motion-mastery',
-      slug: 'motion-mastery',
-      name: 'Motion Graphics Master',
-      academy: 'Video & Motion Academy',
-      academyId: 'video',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 26999,
-      originalPrice: 74999,
-      rating: 4.9,
-      reviews: 115,
-      liveProjects: 16,
-      mode: 'Hybrid',
-      level: 'Advanced',
-      placementSupport: true,
-      salary: '₹4.0 – ₹8.5 LPA',
-      shortDesc: 'Advanced 2D/3D motion design, Premiere Pro, After Effects, VFX compositing and generative AI video.',
-      tools: ['Premiere Pro', 'After Effects', 'Cinema 4D Lite', 'DaVinci Resolve', 'Midjourney Video']
-    },
-    {
-      id: 'video-pro',
-      slug: 'video-pro',
-      name: 'Professional Video Editing',
-      academy: 'Video & Motion Academy',
-      academyId: 'video',
-      programLevel: 'Professional Program',
-      duration: '3 Months',
-      durationMonths: 3,
-      price: 13999,
-      originalPrice: 39999,
-      rating: 4.8,
-      reviews: 230,
-      liveProjects: 10,
-      mode: 'Hybrid',
-      level: 'Beginner',
-      placementSupport: true,
-      salary: '₹3.5 – ₹6.5 LPA',
-      shortDesc: 'Storyboarding, cinematic cuts, color grading, sound design and viral YouTube/Reels editing.',
-      tools: ['Adobe Premiere Pro', 'CapCut Pro', 'DaVinci Resolve', 'Photoshop']
-    },
-    {
-      id: 'archviz-mastery',
-      slug: 'archviz-mastery',
-      name: 'Architectural Visualisation Master',
-      academy: '3D Academy',
-      academyId: '3d',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 28999,
-      originalPrice: 79999,
-      rating: 4.9,
-      reviews: 85,
-      liveProjects: 12,
-      mode: 'Classroom',
-      level: 'Advanced',
-      placementSupport: true,
-      salary: '₹4.5 – ₹9.5 LPA',
-      shortDesc: 'Photorealistic architectural rendering, interior/exterior 3D modeling, lighting and walkthroughs.',
-      tools: ['3ds Max', 'V-Ray', 'Blender', 'Corona Renderer', 'Unreal Engine']
-    },
-    {
-      id: 'freelancing-mastery',
-      slug: 'freelancing-mastery',
-      name: 'Freelancing Mastery Program',
-      academy: 'Career & Freelancing Academy',
-      academyId: 'career',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 18999,
-      originalPrice: 54999,
-      rating: 4.9,
-      reviews: 310,
-      liveProjects: 12,
-      mode: 'Hybrid',
-      level: 'All Levels',
-      placementSupport: true,
-      salary: '₹50k – ₹2 Lakhs/mo Freelance',
-      shortDesc: 'End-to-end blueprint to launch a 6-figure global freelancing business on Upwork, Fiverr & LinkedIn.',
-      tools: ['Upwork', 'Fiverr', 'LinkedIn Sales Navigator', 'Stripe', 'PayPal', 'Notion CRM']
-    },
-    {
-      id: 'career-launch',
-      slug: 'career-launch',
-      name: 'Career Launch Program',
-      academy: 'Career & Freelancing Academy',
-      academyId: 'career',
-      programLevel: 'Professional Program',
-      duration: '3 Months',
-      durationMonths: 3,
-      price: 9099,
-      originalPrice: 24999,
-      rating: 4.8,
-      reviews: 145,
-      liveProjects: 6,
-      mode: 'Online',
-      level: 'Beginner',
-      placementSupport: true,
-      salary: 'Placement Ready',
-      shortDesc: 'Resume crafting, ATS optimization, LinkedIn personal branding, mock interviews and job search mastery.',
-      tools: ['LinkedIn', 'Canva', 'ChatGPT for Resume', 'Job Portals']
-    },
-    {
-      id: 'business-english',
-      slug: 'business-english',
-      name: 'Business English & Personality Development',
-      academy: 'Communication Academy',
-      academyId: 'communication',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 14999,
-      originalPrice: 39999,
-      rating: 4.9,
-      reviews: 190,
-      liveProjects: 10,
-      mode: 'Live Online',
-      level: 'All Levels',
-      placementSupport: true,
-      salary: 'Corporate Ready',
-      shortDesc: 'Master fluent spoken English, executive business presentations, public speaking and corporate etiquette.',
-      tools: ['Live Speech Labs', 'Presentation Deck Tools', 'Vocabulary Trainers']
-    },
-    {
-      id: 'spoken-english-pro',
-      slug: 'spoken-english-pro',
-      name: 'Professional Spoken English',
-      academy: 'Communication Academy',
-      academyId: 'communication',
-      programLevel: 'Professional Program',
-      duration: '3 Months',
-      durationMonths: 3,
-      price: 8999,
-      originalPrice: 24999,
-      rating: 4.8,
-      reviews: 280,
-      liveProjects: 6,
-      mode: 'Live Online',
-      level: 'Beginner',
-      placementSupport: false,
-      salary: 'Confidence Upgrade',
-      shortDesc: 'Daily conversation practice, accent neutralization, grammar clarity and hesitation removal.',
-      tools: ['Interactive Speaking Sessions']
-    },
-    {
-      id: 'kids-mastery',
-      slug: 'kids-mastery',
-      name: 'Future Tech Kids Mastery',
-      academy: 'Kids Tech Academy',
-      academyId: 'kids',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 19999,
-      originalPrice: 59999,
-      rating: 4.9,
-      reviews: 95,
-      liveProjects: 14,
-      mode: 'Live Online',
-      level: 'Ages 8–16',
-      placementSupport: false,
-      salary: 'STEM & Tech Foundation',
-      shortDesc: 'Hands-on coding, Scratch game creation, Python for kids, robotics logic and AI foundations.',
-      tools: ['Scratch 3.0', 'Python IDLE', 'Robotics Simulator', 'Tinkercad']
-    },
-    {
-      id: 'young-coders',
-      slug: 'young-coders',
-      name: 'Young Coders Program',
-      academy: 'Kids Tech Academy',
-      academyId: 'kids',
-      programLevel: 'Professional Program',
-      duration: '3 Months',
-      durationMonths: 3,
-      price: 11999,
-      originalPrice: 34999,
-      rating: 4.8,
-      reviews: 70,
-      liveProjects: 8,
-      mode: 'Live Online',
-      level: 'Ages 8–14',
-      placementSupport: false,
-      salary: 'Logic & Creativity',
-      shortDesc: 'Fun block coding, interactive stories, basic web creation and puzzle solving for young students.',
-      tools: ['Scratch', 'Blockly', 'HTML Basics']
-    },
-    {
-      id: 'youtube-mastery',
-      slug: 'youtube-mastery',
-      name: 'YouTube Growth Mastery',
-      academy: 'Creator Academy',
-      academyId: 'creator',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 19999,
-      originalPrice: 59999,
-      rating: 4.9,
-      reviews: 120,
-      liveProjects: 12,
-      mode: 'Hybrid',
-      level: 'Beginner to Pro',
-      placementSupport: true,
-      salary: 'Creator Monetization',
-      shortDesc: 'Channel setup, scripting, viral hooks, YouTube SEO, thumbnail design, and brand sponsorship monetization.',
-      tools: ['YouTube Studio', 'VidIQ', 'TubeBuddy', 'Premiere Pro', 'Photoshop']
-    },
-    {
-      id: 'biz-productivity',
-      slug: 'biz-productivity',
-      name: 'Business Productivity Mastery',
-      academy: 'Office Productivity Academy',
-      academyId: 'office',
-      programLevel: 'Career Program',
-      duration: '6 Months',
-      durationMonths: 6,
-      price: 16999,
-      originalPrice: 49999,
-      rating: 4.8,
-      reviews: 140,
-      liveProjects: 12,
-      mode: 'Hybrid',
-      level: 'All Levels',
-      placementSupport: true,
-      salary: '₹3.5 – ₹6.5 LPA',
-      shortDesc: 'Advanced Excel, Word, PowerPoint, Google Workspace, Notion, Copilot and Tally with GST.',
-      tools: ['Microsoft Excel (Advanced)', 'Notion', 'Microsoft Copilot', 'Tally Prime', 'Google Sheets']
-    },
-    {
-      id: 'office-pro',
-      slug: 'office-pro',
-      name: 'Office Productivity Professional',
-      academy: 'Office Productivity Academy',
-      academyId: 'office',
-      programLevel: 'Professional Program',
-      duration: '3 Months',
-      durationMonths: 3,
-      price: 9999,
-      originalPrice: 29999,
-      rating: 4.7,
-      reviews: 210,
-      liveProjects: 8,
-      mode: 'Hybrid',
-      level: 'Beginner',
-      placementSupport: true,
-      salary: '₹2.8 – ₹5.0 LPA',
-      shortDesc: 'Excel formulas, VLOOKUP/XLOOKUP, Pivot Tables, PowerPoint pitch decks and business documentation.',
-      tools: ['MS Excel', 'MS Word', 'MS PowerPoint', 'Google Docs']
-    },
-    {
-      id: 'tally-gst',
-      slug: 'tally-gst',
-      name: 'Tally with GST',
-      academy: 'Office Productivity Academy',
-      academyId: 'office',
-      programLevel: 'Certification Course',
-      duration: '2 Months',
-      durationMonths: 2,
-      price: 5999,
-      originalPrice: 17999,
-      rating: 4.8,
-      reviews: 340,
-      liveProjects: 6,
-      mode: 'Hybrid',
-      level: 'Beginner',
-      placementSupport: true,
-      salary: '₹2.5 – ₹4.5 LPA',
-      shortDesc: 'Accounting fundamentals, GST filing, inventory management, e-way bills and taxation in Tally Prime.',
-      tools: ['Tally Prime', 'Excel Accounting']
-    }
-  ];
+  // Canonical course catalog supplied at runtime by window.NovaCourseData (js/course-data.js)
+  const FALLBACK_COURSES = [];
 
   function getAllCourses() {
+    if (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function') {
+      const list = window.NovaCourseData.getPublishedCourses();
+      if (Array.isArray(list) && list.length > 0) return list;
+    }
     if (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) && window.NS_COURSES.length > 0) {
       return window.NS_COURSES;
     }
@@ -586,6 +65,10 @@
   }
 
   function getAllAcademies() {
+    if (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getAllAcademies === 'function') {
+      const list = window.NovaCourseData.getAllAcademies();
+      if (Array.isArray(list) && list.length > 0) return list;
+    }
     if (typeof window !== 'undefined' && Array.isArray(window.NS_ACADEMIES) && window.NS_ACADEMIES.length > 0) {
       return window.NS_ACADEMIES;
     }
@@ -594,7 +77,11 @@
 
   function findCourse(queryStr) {
     if (!queryStr) return null;
-    const lower = queryStr.toLowerCase().trim();
+    if (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseById === 'function') {
+      const byCanonical = window.NovaCourseData.getCourseById(queryStr);
+      if (byCanonical) return byCanonical;
+    }
+    const lower = String(queryStr).toLowerCase().trim();
     const courses = getAllCourses();
 
     // 1. Exact ID or slug match
@@ -617,14 +104,33 @@
   }
 
   function formatFee(amount) {
+    if (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.formatPriceINR === 'function' && typeof amount === 'number') {
+      return window.NovaCourseData.formatPriceINR(amount);
+    }
     if (typeof amount === 'number') {
       return `₹${amount.toLocaleString('en-IN')}`;
     }
-    return amount || '₹19,999';
+    return amount || 'Enquire for Fee';
+  }
+
+  function formatProjectInfo(c) {
+    if (!c) return 'Hands-On Projects';
+    if (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseProjectLabel === 'function') {
+      return window.NovaCourseData.getCourseProjectLabel(c);
+    }
+    return c.projectDisplayLabel || `${c.liveProjects || 2} Projects`;
+  }
+
+  function getTrackFeeRange(trackLabel) {
+    const courses = getAllCourses().filter(c => (c.programLevel || '').toLowerCase().includes(trackLabel.toLowerCase()) && typeof c.price === 'number');
+    if (courses.length === 0) return null;
+    const min = Math.min(...courses.map(c => c.price));
+    const max = Math.max(...courses.map(c => c.price));
+    return `${formatFee(min)} – ${formatFee(max)}`;
   }
 
   function calculateEMI(priceNum, months = 6) {
-    if (!priceNum || isNaN(priceNum)) return '₹2,499';
+    if (!priceNum || isNaN(priceNum)) return 'Installments Available';
     const emi = Math.round(priceNum / (months || 6));
     return `₹${emi.toLocaleString('en-IN')}`;
   }
@@ -981,7 +487,7 @@
     // 2. HUMAN ESCALATION INTENT
     if (intent === 'HUMAN_ESCALATION') {
       return {
-        text: `Bilkul! Main aapko hamari Senior Academic Counselling Team se directly connect kar deta hoon:\n\n📞 **Official Admissions Helpline**: [+91 9695904440](tel:+919695904440)\n💬 **WhatsApp Direct Chat**: [+91 9695904440](https://wa.me/919695904440?text=Hi%20Nova%20Skills,%20I%20want%20to%20talk%20to%20an%20academic%20counsellor)\n✉️ **Admissions Email**: novaskills.official@gmail.com\n\nAap neeche button par click karke direct **Free 1-on-1 Career Counselling Session** bhi schedule kar sakte hain — hamare expert counsellor aapko 15 minutes ke andar call back karenge!`,
+        text: `Bilkul! Main aapko hamari Senior Academic Counselling Team se directly connect kar deta hoon:\n\n📞 **Official Admissions Helpline**: [+91 9695904440](tel:+919695904440)\n💬 **WhatsApp Direct Chat**: [+91 9695904440](https://wa.me/919695904440?text=Hi%20Nova%20Skills%2C%20I%20would%20like%20free%20career%20counselling%20to%20help%20me%20choose%20the%20right%20course.)\n✉️ **Admissions Email**: novaskills.official@gmail.com\n\nAap neeche button par click karke direct **Free 1-on-1 Career Counselling Session** bhi schedule kar sakte hain — hamare expert counsellor aapko 15 minutes ke andar call back karenge!`,
         recommendedCourse: null
       };
     }
@@ -990,31 +496,31 @@
     if (intent === 'COURSE_COMPARISON') {
       // Comparison: AI Mastery vs AI Productivity
       if (/ai/i.test(lower) && (/mastery/i.test(lower) || /productivity/i.test(lower) || /difference/i.test(lower))) {
-        const c1 = findCourse('ai-mastery') || FALLBACK_COURSES[2];
-        const c2 = findCourse('ai-productivity') || FALLBACK_COURSES[3];
+        const c1 = findCourse('ai-mastery') || getAllCourses()[0];
+        const c2 = findCourse('ai-productivity') || findCourse('ai-for-business-pro');
         sessionMemory.lastDiscussedCourse = c1;
 
         return {
-          text: `Nova Skills ke dono flagship AI programs ka direct comparison:\n\n| Feature | **AI Mastery Program** | **AI Productivity Professional** |\n| :--- | :--- | :--- |\n| **Program Level** | Career Program (Comprehensive) | Professional Program (Fast-Track) |\n| **Duration** | **6 Months** | **3 Months** |\n| **Core Focus** | AI Models, AI Agents, n8n Automation, APIs, End-to-End Career | ChatGPT, Claude, Prompting, Daily Office & Work Automation |\n| **Live Projects** | **15+ Live AI Projects** | **8+ Practical Workflows** |\n| **Placement Support** | **Dedicated Placement Support** | Career & Freelance Guidance |\n| **Fee** | **${formatFee(c1.price)}** (No-Cost EMI: ${calculateEMI(c1.price)}/mo) | **${formatFee(c2.price)}** (No-Cost EMI: ${calculateEMI(c2.price, 3)}/mo) |\n| **Best Suited For** | High-growth tech jobs, AI engineers & specialists | Working professionals, marketers, founders wanting 10x speed |\n\n💡 **Counsellor Verdict**: Agar aap complete career switch ya dedicated AI specialist banna chahte hain toh **AI Mastery Program** best hai. Agar aap apne current work me AI se superfast hona chahte hain toh **AI Productivity Professional** ideal hai.`,
+          text: c1 && c2 ? `Nova Skills ke dono flagship AI programs ka direct comparison:\n\n| Feature | **${c1.name}** | **${c2.name}** |\n| :--- | :--- | :--- |\n| **Program Level** | ${c1.programLevel} | ${c2.programLevel} |\n| **Duration** | **${c1.duration}** | **${c2.duration}** |\n| **Core Focus** | ${c1.shortDesc} | ${c2.shortDesc} |\n| **Projects** | **${formatProjectInfo(c1)}** | **${formatProjectInfo(c2)}** |\n| **Placement Support** | ${c1.placementSupport ? '**Dedicated Placement Support**' : 'Portfolio Support'} | ${c2.placementSupport ? '**Dedicated Placement Support**' : 'Career & Freelance Guidance'} |\n| **Fee** | **${formatFee(c1.price)}** (Est. ${calculateEMI(c1.price)}/mo) | **${formatFee(c2.price)}** (Est. ${calculateEMI(c2.price, 3)}/mo) |\n\n💡 **Counsellor Verdict**: Complete career mastery ke liye **${c1.name}** aur fast-track work automation ke liye **${c2.name}** best hai.` : 'Detailed course catalog abhi load ho raha hai — kripya kuch second baad try karein.',
           recommendedCourse: c1
         };
       }
 
       // Comparison: Digital Marketing Master vs Professional
       if (/digital marketing/i.test(lower) || /dm/i.test(lower) || /marketing/i.test(lower)) {
-        const c1 = findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0];
-        const c2 = findCourse('ai-digital-marketing-professional') || FALLBACK_COURSES[1];
+        const c1 = findCourse('dm-mastery') || getAllCourses()[0];
+        const c2 = findCourse('dm-professional');
         sessionMemory.lastDiscussedCourse = c1;
 
         return {
-          text: `Nova Skills Digital Marketing programs ka comparison:\n\n| Feature | **AI Digital Marketing Master** | **AI Digital Marketing Professional** |\n| :--- | :--- | :--- |\n| **Level** | Career Program (Flagship) | Professional Program |\n| **Duration** | **6 Months** | **4 Months** |\n| **Scope** | SEO + GEO, Google Ads, Meta Ads, Funnels, n8n AI Automation & Agency Scaling | SEO, Google Ads, Meta Ads, SMM & Content Marketing |\n| **Projects** | **20 Live Projects** on real budgets | **10 Practical Projects** |\n| **Placement Support** | **Dedicated Placement Support** | Dedicated Placement Support |\n| **Fee** | **${formatFee(c1.price)}** (No-Cost EMI: ${calculateEMI(c1.price)}/mo) | **${formatFee(c2.price)}** (No-Cost EMI: ${calculateEMI(c2.price, 4)}/mo) |\n\n💡 **Counsellor Verdict**: Complete agency-grade skills aur high-package career ke liye **AI Digital Marketing Master (6 Months)** best choice hai!`,
+          text: c1 && c2 ? `Nova Skills Digital Marketing programs ka comparison:\n\n| Feature | **${c1.name}** | **${c2.name}** |\n| :--- | :--- | :--- |\n| **Level** | ${c1.programLevel} | ${c2.programLevel} |\n| **Duration** | **${c1.duration}** (${c1.learningHours} Hours) | **${c2.duration}** (${c2.learningHours} Hours) |\n| **Scope** | ${c1.shortDesc} | ${c2.shortDesc} |\n| **Projects** | **${formatProjectInfo(c1)}** | **${formatProjectInfo(c2)}** |\n| **Placement Support** | ${c1.placementSupport ? '**Dedicated Placement Support**' : 'Portfolio Guidance'} | ${c2.placementSupport ? 'Dedicated Placement Support' : 'Portfolio Guidance'} |\n| **Fee** | **${formatFee(c1.price)}** (Est. ${calculateEMI(c1.price)}/mo) | **${formatFee(c2.price)}** (Est. ${calculateEMI(c2.price, 3)}/mo) |\n\n💡 **Counsellor Verdict**: Complete agency-grade skills aur career track ke liye **${c1.name} (${c1.duration})** best choice hai!` : 'Detailed course catalog load ho raha hai.',
           recommendedCourse: c1
         };
       }
 
       // General fallback comparison
       return {
-        text: `Nova Skills me **Career Programs (6 Months)** comprehensive dedicated placement support aur 15–20 live projects ke saath aate hain, jabki **Professional Programs (3–4 Months)** fast-track practical skills aur portfolio development ke liye hote hain.\n\nAap kin do specific courses ko compare karna chahte hain? Main unka duration, projects, tools aur fees ka side-by-side comparison bata deta hoon!`,
+        text: `Nova Skills me **Career Programs** comprehensive placement assistance aur portfolio projects ke saath aate hain, jabki **Professional Programs** fast-track practical skills ke liye hote hain.\n\nAap kin do specific courses ko compare karna chahte hain? Main unka exact canonical duration, projects, tools aur fees ka side-by-side comparison bata deta hoon!`,
         recommendedCourse: null
       };
     }
@@ -1037,24 +543,24 @@
 
       // Case A: Graduate + Freelancing
       if (sessionMemory.careerGoal === 'freelancing' || /freelanc/i.test(lower)) {
-        const c = findCourse('freelancing-mastery') || FALLBACK_COURSES[15];
+        const c = findCourse('freelancing-client-acquisition-professional') || getAllCourses()[0];
         sessionMemory.lastDiscussedCourse = c;
         return {
-          text: `Awesome! Graduate / Career seeker hone ke saath **Freelancing** target karna bahut rewarding decision hai.\n\n⭐ **Recommended for You: ${c.name}**\n\n**Why it matches your profile:**\n• **Zero to 6-Figure Freelance Blueprint**: Upwork, Fiverr, LinkedIn outreach & direct international client closing.\n• **High-Income Skills**: Digital Marketing, Content, Automation aur Design client workflows.\n• **Live Client Acquisition**: Proposal writing, rate negotiation & global payment setup (Stripe/PayPal).\n\n• **Duration:** ${c.duration}\n• **Live Projects:** ${c.liveProjects} Client Projects\n• **Fee:** ${formatFee(c.price)} *(No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n• **Mode:** ${c.mode}\n\nKya aap iska detailed curriculum dekhna chahenge ya 1-on-1 free counselling book karein?`,
+          text: c ? `Awesome! **Freelancing** target karna bahut rewarding decision hai.\n\n⭐ **Recommended for You: ${c.name}**\n\n• **Duration:** ${c.duration} (${c.learningHours} Hours)\n• **Projects:** ${formatProjectInfo(c)}\n• **Fee:** ${formatFee(c.price)} *(Est. ${calculateEMI(c.price)}/mo)*\n• **Mode:** ${c.mode}\n\nKya aap iska detailed curriculum dekhna chahenge ya 1-on-1 free counselling book karein?` : 'Catalog load ho raha hai.',
           recommendedCourse: c
         };
       }
 
       // Case B: Job seeker + Digital Marketing / Tech
       if (sessionMemory.careerGoal === 'job' || /job|placement/i.test(lower)) {
-        const c = (sessionMemory.targetField === 'ai') ? (findCourse('ai-mastery') || FALLBACK_COURSES[2]) :
-                  (sessionMemory.targetField === 'programming') ? (findCourse('fullstack-foundation') || FALLBACK_COURSES[9]) :
-                  (sessionMemory.targetField === 'design') ? (findCourse('creative-design') || FALLBACK_COURSES[6]) :
-                  (findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0]);
+        const c = (sessionMemory.targetField === 'ai') ? findCourse('ai-mastery') :
+                  (sessionMemory.targetField === 'programming') ? findCourse('fullstack-foundation') :
+                  (sessionMemory.targetField === 'design') ? findCourse('creative-design') :
+                  (findCourse('dm-mastery') || getAllCourses()[0]);
         sessionMemory.lastDiscussedCourse = c;
 
         return {
-          text: `Perfect! Job aur placement ke liye Nova Skills ke **Career Programs (6 Months)** placement assistance aur real company live projects ke saath designed hain.\n\n⭐ **Recommended for You: ${c.name}**\n\n**Why it matches your profile:**\n• **Dedicated Placement Support**: Hiring partner network me direct interview opportunities.\n• **Practical Proof of Work**: ${c.liveProjects} Live Projects portfolio jo recruiters ko impress karta hai.\n• **Structured Mentorship**: Resume review, ATS optimization aur 1-on-1 mock interviews.\n\n• **Duration:** ${c.duration}\n• **Fee:** ${formatFee(c.price)} *(Flexible 0% No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n• **Mode:** ${c.mode}\n\nKya aap iska phase-wise curriculum dekhna chahte hain?`,
+          text: c ? `Perfect! Job aur placement ke liye Nova Skills ke **Career Programs** placement assistance aur live portfolio projects ke saath designed hain.\n\n⭐ **Recommended for You: ${c.name}**\n\n**Why it matches your profile:**\n• **Placement Support**: ${c.placementSupport ? 'Hiring partner network & interview prep' : 'Portfolio guidance'}\n• **Practical Proof of Work**: ${formatProjectInfo(c)}\n• **Duration:** ${c.duration}\n• **Fee:** ${formatFee(c.price)} *(Est. ${calculateEMI(c.price)}/mo)*\n• **Mode:** ${c.mode}\n\nKya aap iska phase-wise curriculum dekhna chahte hain?` : 'Catalog load ho raha hai.',
           recommendedCourse: c
         };
       }
@@ -1064,108 +570,120 @@
     if (intent === 'BUDGET_QUERY') {
       const budget = sessionMemory.budget;
 
-      if (budget && budget <= 6000) {
+      if (budget && budget <= 7000) {
+        const certSamples = ['prompt-engineering', 'canva-pro', 'html-css', 'fiverr-success', 'microsoft-excel', 'tally-gst']
+          .map(id => findCourse(id)).filter(Boolean);
+        const listLines = certSamples.map(sc => `• **${sc.name}** (${formatFee(sc.price)} • ${sc.duration})`).join('\n');
+        const certRange = getTrackFeeRange('Certification') || '₹2,900 onwards';
+
         return {
-          text: `Agar aapka one-time budget **₹${budget.toLocaleString('en-IN')}** hai, Nova Skills me high-impact 1-month **Certification Courses (₹3,999 – ₹4,999)** available hain:\n\n• **Prompt Engineering** (₹4,999 • 1 Month)\n• **Canva Professional / Graphic Design** (₹4,999 • 1 Month)\n• **HTML & CSS Web Fundamentals** (₹4,999 • 1 Month)\n• **Fiverr / Upwork Success** (₹3,999 • 1 Month)\n• **Advanced Excel & Office Productivity** (₹3,999 • 1 Month)\n• **Tally with GST** (₹5,999 • 2 Months)\n\n💡 **Smart Counsellor Advice**: Agar aap hamare 6-Month Career Programs (jaise *AI Digital Marketing Master* ya *AI Mastery*) karna chahte hain, toh aap unhe **0% Interest No-Cost EMI (approx ₹2,499 – ₹4,999/month)** me easily afford kar sakte hain!`,
-          recommendedCourse: null
+          text: `Agar aapka one-time budget **₹${budget.toLocaleString('en-IN')}** hai, Nova Skills me practical **Certification Courses (${certRange})** available hain:\n\n${listLines}\n\n💡 **Smart Counsellor Advice**: Aap hamare Career Programs ko flexible monthly installment plans ke saath bhi explore kar sakte hain!`,
+          recommendedCourse: certSamples[0] || null
         };
       }
 
-      if (budget && budget <= 15000) {
-        const c1 = findCourse('career-launch') || FALLBACK_COURSES[16];
-        const c2 = findCourse('office-pro') || FALLBACK_COURSES[23];
-        const c3 = findCourse('spoken-english-pro') || FALLBACK_COURSES[18];
+      if (budget && budget <= 20000) {
+        const c1 = findCourse('career-launch-placement-readiness-professional');
+        const c2 = findCourse('office-pro');
+        const c3 = findCourse('spoken-english-pro');
+        const c4 = findCourse('ai-productivity');
+        const c5 = findCourse('dm-professional');
+        const budgetItems = [c1, c2, c3, c4, c5].filter(Boolean)
+          .map(item => `• **${item.name}** (${item.duration} • **${formatFee(item.price)}**)`).join('\n');
 
         return {
-          text: `**₹${budget.toLocaleString('en-IN')}** ke budget me Nova Skills ke best professional programs:\n\n• **${c1.name}** (${c1.duration} • **${formatFee(c1.price)}**)\n• **${c2.name}** (${c2.duration} • **${formatFee(c2.price)}**)\n• **${c3.name}** (${c3.duration} • **${formatFee(c3.price)}**)\n• **AI Productivity Professional** (3 Months • **₹13,999**)\n• **Graphic Design Professional** (3 Months • **₹13,999**)\n\nAur agar aap 6-Month Career Programs join karna chahein toh **₹2,499 – ₹4,500/month** ke easy EMI options bhi available hain!`,
-          recommendedCourse: c1
+          text: `**₹${budget.toLocaleString('en-IN')}** ke budget me Nova Skills ke top practical programs:\n\n${budgetItems}\n\nAap inme se kisi bhi course par click karke poora syllabus dekh sakte hain!`,
+          recommendedCourse: c1 || c5 || null
         };
       }
+
+      const certRange = getTrackFeeRange('Certification') || '₹2,900 onwards';
+      const proRange = getTrackFeeRange('Professional') || '₹9,900 – ₹34,900';
+      const careerRange = getTrackFeeRange('Career') || '₹24,900 – ₹64,900';
 
       return {
-        text: `Nova Skills ke fee plans har student aur professional ke budget ke mutabik designed hain:\n\n• **Certification Courses**: ₹3,999 – ₹6,999 (1–2 Months)\n• **Professional Programs**: ₹9,999 – ₹17,499 (3–4 Months)\n• **Career Programs**: ₹18,999 – ₹31,499 (6 Months with Placement Assistance)\n• **0% Interest No-Cost EMI**: Starting at just **₹1,499 – ₹2,499/month**.\n\nAap apna specific budget bata dijiye, main best possible options shortlist kar dunga!`,
+        text: `Nova Skills ke fee plans transparent aur har learner ke goal ke mutabik structured hain:\n\n• **Certification Courses**: ${certRange}\n• **Professional Programs**: ${proRange}\n• **Career Programs**: ${careerRange} *(Dedicated Placement Assistance Included)*\n• **Flexible Monthly Installments**: All Career & Professional tracks par available.\n\nAap apna specific budget ya target skill bata dijiye, main best matching courses shortlist kar dunga!`,
         recommendedCourse: null
       };
     }
 
     // 7. FIELD SPECIFIC DISCOVERY
     if (intent === 'COURSE_DISCOVERY_FIELD') {
-      // AI Academy
       if (sessionMemory.targetField === 'ai') {
-        const cMastery = findCourse('ai-mastery') || FALLBACK_COURSES[2];
+        const cMastery = findCourse('ai-mastery');
+        const cProd = findCourse('ai-productivity');
         sessionMemory.lastDiscussedCourse = cMastery;
         return {
-          text: `Bilkul! AI me aapka goal kya hai?\n\n• **AI Tools + Workplace Productivity** (ChatGPT, Claude, Gemini, Copilot)\n• **AI Automation & Workflows** (n8n, Make, CRM Automation)\n• **AI Agents & LLM Development** (Building autonomous agents & API integrations)\n• **AI for Business & Founders** (Marketing, sales & operations automation)\n• **AI-based Career / Full-Time Job**\n\n⭐ **Flagship Recommendation: ${cMastery.name}**\n\nAgar aap career-level end-to-end training chahte hain, Nova Skills ka **AI Mastery Program (6 Months, ${formatFee(cMastery.price)})** sabse comprehensive option hai. Aur fast-track productivity ke liye **AI Productivity Professional (3 Months, ₹13,999)** available hai.\n\nAap inme se kis direction me focus karna chahte hain?`,
+          text: cMastery ? `Bilkul! AI me aapka goal kya hai?\n\n⭐ **Flagship Recommendation: ${cMastery.name}** (${cMastery.duration}, ${formatFee(cMastery.price)})\n${cProd ? `⚡ **Fast-Track Alternative**: ${cProd.name} (${cProd.duration}, ${formatFee(cProd.price)})\n` : ''}\nAap inme se kis direction me focus karna chahte hain?` : 'AI courses catalog me available hain.',
           recommendedCourse: cMastery
         };
       }
 
-      // Digital Marketing
       if (sessionMemory.targetField === 'digital-marketing') {
-        const cDM = findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0];
+        const cDM = findCourse('dm-mastery');
+        const cPro = findCourse('dm-professional');
         sessionMemory.lastDiscussedCourse = cDM;
         return {
-          text: `Great choice! Digital Marketing aaj ke time ka sabse high-demand career skill hai. Nova Skills me training live ad budgets aur 100% practical tools par hoti hai.\n\n⭐ **Recommended: ${cDM.name}**\n\n**Why it matches:**\n• **Complete Industry Coverage**: SEO, Generative Engine Optimisation (GEO), Google Search/Shopping Ads, Meta Ads (FB & Insta) aur Performance Marketing.\n• **AI Marketing Automation**: ChatGPT, Claude, Gemini & n8n workflows for 10x marketing output.\n• **Dedicated Placement Support**: 20 Live Projects, ISO certificate, aur hiring partner network.\n\n• **Duration:** 6 Months *(Fast-track option: AI Digital Marketing Professional • 4 Months, ₹17,499)*\n• **Fee:** ${formatFee(cDM.price)} *(No-Cost EMI: ${calculateEMI(cDM.price)}/mo)*\n• **Mode:** Hybrid / Live Online\n\nKya aap iska phase-wise syllabus dekhna chahenge ya batch timings pata karein?`,
+          text: cDM ? `Great choice! Digital Marketing aaj ke time ka high-demand skill hai.\n\n⭐ **Recommended: ${cDM.name}**\n• **Duration:** ${cDM.duration} (${cDM.learningHours} Hours)${cPro ? ` *(Fast-track option: ${cPro.name} • ${cPro.duration}, ${formatFee(cPro.price)})*` : ''}\n• **Projects:** ${formatProjectInfo(cDM)}\n• **Fee:** ${formatFee(cDM.price)}\n• **Mode:** ${cDM.mode}\n\nKya aap iska phase-wise syllabus dekhna chahenge?` : 'Digital Marketing courses load ho rahe hain.',
           recommendedCourse: cDM
         };
       }
 
-      // Graphic & UI/UX Design
       if (sessionMemory.targetField === 'design') {
-        const cDesign = findCourse('creative-design') || FALLBACK_COURSES[6];
+        const cDesign = findCourse('creative-design');
+        const cGD = findCourse('graphic-design-pro');
         sessionMemory.lastDiscussedCourse = cDesign;
         return {
-          text: `Design ek aisa creative field hai jisme freelance aur agency dono me bohot scope hai!\n\n⭐ **Recommended: ${cDesign.name}**\n\n**What you will master:**\n• Adobe Photoshop, Illustrator, Figma, Canva Pro aur Midjourney AI.\n• Brand Identity, Advertising Creatives, Social Media Posters, Packaging aur UI/UX Wireframing.\n• 18 Live Client Projects + High-converting Behance/Dribbble Portfolio.\n\n• **Duration:** 6 Months *(Fast-track option: Graphic Design Professional • 3 Months, ₹13,999)*\n• **Fee:** ${formatFee(cDesign.price)} *(No-Cost EMI: ${calculateEMI(cDesign.price)}/mo)*\n• **Placement:** Dedicated Placement Support\n\nKya aap creative design me job chahte hain ya freelancing?`,
+          text: cDesign ? `Design me freelance aur agency dono me great scope hai!\n\n⭐ **Recommended: ${cDesign.name}**\n• **Tools:** ${(cDesign.tools || []).join(', ')}\n• **Projects:** ${formatProjectInfo(cDesign)}\n• **Duration:** ${cDesign.duration}${cGD ? ` *(Fast-track option: ${cGD.name} • ${cGD.duration}, ${formatFee(cGD.price)})*` : ''}\n• **Fee:** ${formatFee(cDesign.price)}\n\nKya aap creative design me job chahte hain ya freelancing?` : 'Design courses load ho rahe hain.',
           recommendedCourse: cDesign
         };
       }
 
-      // Programming & Web Development
       if (sessionMemory.targetField === 'programming') {
-        const cProg = findCourse('fullstack-foundation') || FALLBACK_COURSES[9];
+        const cProg = findCourse('fullstack-foundation');
+        const cPy = findCourse('python-developer');
         sessionMemory.lastDiscussedCourse = cProg;
         return {
-          text: `Software Development aur Full-Stack me high packages aur global tech hiring demand hamesha rehti hai!\n\n⭐ **Recommended: ${cProg.name}**\n\n**What you will master:**\n• HTML5, CSS3, Modern JavaScript (ES6+), React.js, Node.js, Express, SQL/NoSQL Databases, REST APIs aur Git/GitHub.\n• 20 Live Real-World Projects (E-commerce app, SaaS portal, Live Chat, etc.).\n• Dedicated Placement Support with technical mock interviews.\n\n• **Duration:** 6 Months *(Fast-track: Python Developer Professional • 3 Months, ₹19,999)*\n• **Fee:** ${formatFee(cProg.price)} *(No-Cost EMI: ${calculateEMI(cProg.price)}/mo)*\n\nKya aap zero coding background se start kar rahe hain ya basic knowledge hai?`,
+          text: cProg ? `Software Development aur Full-Stack me strong hiring demand hamesha rehti hai!\n\n⭐ **Recommended: ${cProg.name}**\n• **Tools:** ${(cProg.tools || []).join(', ')}\n• **Projects:** ${formatProjectInfo(cProg)}\n• **Duration:** ${cProg.duration}${cPy ? ` *(Fast-track: ${cPy.name} • ${cPy.duration}, ${formatFee(cPy.price)})*` : ''}\n• **Fee:** ${formatFee(cProg.price)}\n\nKya aap zero coding background se start kar rahe hain ya basic knowledge hai?` : 'Programming courses load ho rahe hain.',
           recommendedCourse: cProg
         };
       }
 
-      // Video & Motion
       if (sessionMemory.targetField === 'video') {
-        const cVid = findCourse('motion-mastery') || FALLBACK_COURSES[12];
+        const cVid = findCourse('ai-integrated-video-editing-motion-graphics-professional');
+        const cVP = findCourse('video-pro');
         sessionMemory.lastDiscussedCourse = cVid;
         return {
-          text: `Content creation aur advertising ke boom ke chalte video editors aur motion designers ki bhari demand hai!\n\n⭐ **Recommended: ${cVid.name}**\n\n• **Tools**: Premiere Pro, After Effects, DaVinci Resolve, Cinema 4D Lite & AI Video Tools.\n• **Projects**: 16 Live Projects (Reels editing, TV commercials, kinetic typography, 3D titles, color grading).\n• **Duration:** 6 Months *(Fast-track: Professional Video Editing • 3 Months, ₹13,999)*\n• **Fee:** ${formatFee(cVid.price)} *(No-Cost EMI: ${calculateEMI(cVid.price)}/mo)*\n\nKya aap iska live practical syllabus dekhna chahte hain?`,
+          text: cVid ? `Content creation aur advertising me video editors aur motion designers ki bhari demand hai!\n\n⭐ **Recommended: ${cVid.name}**\n• **Tools:** ${(cVid.tools || []).join(', ')}\n• **Projects:** ${formatProjectInfo(cVid)}\n• **Duration:** ${cVid.duration}${cVP ? ` *(Fast-track: ${cVP.name} • ${cVP.duration}, ${formatFee(cVP.price)})*` : ''}\n• **Fee:** ${formatFee(cVid.price)}\n\nKya aap iska live practical syllabus dekhna chahte hain?` : 'Video courses load ho rahe hain.',
           recommendedCourse: cVid
         };
       }
 
-      // Kids Tech
       if (sessionMemory.targetField === 'kids') {
-        const cKids = findCourse('kids-mastery') || FALLBACK_COURSES[20];
+        const cKids = findCourse('kids-mastery');
+        const cYC = findCourse('young-coders');
         sessionMemory.lastDiscussedCourse = cKids;
         return {
-          text: `Nova Skills ki dedicated **Kids Tech Academy** young learners (ages 8–16) ke liye STEM & future tech skills sikhata hai!\n\n⭐ **Recommended: ${cKids.name}**\n\n• **Curriculum**: Scratch visual coding, Python for Kids, Robotics logic, AI basics aur game design.\n• **Benefits**: Creative problem solving, mathematical thinking aur screen time ko productive skill me badalna.\n• **Duration:** 6 Months *(Fast-track: Young Coders Program • 3 Months, ₹11,999)*\n• **Fee:** ${formatFee(cKids.price)} *(No-Cost EMI available)*\n\nBachhe ki age aur current class kya hai?`,
+          text: cKids ? `Nova Skills ki dedicated **Kids Tech Academy** young learners ke liye STEM & future tech skills sikhata hai!\n\n⭐ **Recommended: ${cKids.name}**\n• **Duration:** ${cKids.duration}${cYC ? ` *(Fast-track: ${cYC.name} • ${cYC.duration}, ${formatFee(cYC.price)})*` : ''}\n• **Fee:** ${formatFee(cKids.price)}\n\nBachhe ki age aur current class kya hai?` : 'Kids Tech courses load ho rahe hain.',
           recommendedCourse: cKids
         };
       }
 
-      // 3D Visualisation
       if (sessionMemory.targetField === '3d') {
-        const c3D = findCourse('archviz-mastery') || FALLBACK_COURSES[14];
+        const c3D = findCourse('archviz-mastery');
         sessionMemory.lastDiscussedCourse = c3D;
         return {
-          text: `3D Animation aur Architectural Visualisation me real estate aur gaming industry me top packages milte hain!\n\n⭐ **Recommended: ${c3D.name}**\n\n• **Tools**: 3ds Max, Blender, V-Ray, Corona Renderer & Unreal Engine.\n• **Projects**: 12 Photorealistic interior/exterior walk-through projects.\n• **Duration:** 6 Months | **Fee:** ${formatFee(c3D.price)} *(No-Cost EMI: ${calculateEMI(c3D.price)}/mo)*\n\nKya aap architecture, interior ya gaming 3D me interested hain?`,
+          text: c3D ? `3D Animation aur Architectural Visualisation me top packages milte hain!\n\n⭐ **Recommended: ${c3D.name}**\n• **Tools:** ${(c3D.tools || []).join(', ')}\n• **Projects:** ${formatProjectInfo(c3D)}\n• **Duration:** ${c3D.duration} | **Fee:** ${formatFee(c3D.price)}\n\nKya aap architecture, interior ya gaming 3D me interested hain?` : '3D courses load ho rahe hain.',
           recommendedCourse: c3D
         };
       }
 
-      // No-Code Web & E-Commerce
       if (sessionMemory.targetField === 'nocode') {
-        const cNC = findCourse('ecommerce-mastery') || FALLBACK_COURSES[11];
+        const cNC = findCourse('ecommerce-mastery');
+        const cNoCode = findCourse('nocode-web-pro');
         sessionMemory.lastDiscussedCourse = cNC;
         return {
-          text: `Bina code likhe professional websites aur e-commerce stores banana aaj ki sabse profitable freelancing skill hai!\n\n⭐ **Recommended: ${cNC.name}**\n\n• **Tools**: Shopify, WordPress, WooCommerce, Elementor, Webflow & Stripe.\n• **Projects**: 14 Live E-commerce and corporate client stores.\n• **Duration:** 6 Months *(Fast-track: No-Code Website Professional • 3 Months, ₹12,999)*\n• **Fee:** ${formatFee(cNC.price)} *(No-Cost EMI: ${calculateEMI(cNC.price)}/mo)*\n\nKya aap freelancing clients ke liye websites banana chahte hain ya apne business ke liye?`,
+          text: cNC ? `Bina code likhe professional websites aur e-commerce stores banana profitable freelancing skill hai!\n\n⭐ **Recommended: ${cNC.name}**\n• **Tools:** ${(cNC.tools || []).join(', ')}\n• **Projects:** ${formatProjectInfo(cNC)}\n• **Duration:** ${cNC.duration}${cNoCode ? ` *(Fast-track: ${cNoCode.name} • ${cNoCode.duration}, ${formatFee(cNoCode.price)})*` : ''}\n• **Fee:** ${formatFee(cNC.price)}\n\nKya aap freelancing clients ke liye websites banana chahte hain ya apne business ke liye?` : 'No-Code courses load ho rahe hain.',
           recommendedCourse: cNC
         };
       }
@@ -1173,13 +691,13 @@
 
     // 8. SPECIFIC COURSE INFO QUERY ("AI Digital Marketing Master kya hai?")
     if (intent === 'COURSE_INFO') {
-      const detectedCourse = findCourse(userText) || sessionMemory.lastDiscussedCourse || FALLBACK_COURSES[0];
+      const detectedCourse = findCourse(userText) || sessionMemory.lastDiscussedCourse || findCourse('dm-mastery') || getAllCourses()[0];
       sessionMemory.lastDiscussedCourse = detectedCourse;
 
-      const toolsList = (detectedCourse.tools && detectedCourse.tools.length > 0) ? detectedCourse.tools.join(', ') : 'Industry Standard Tools';
+      const toolsList = (detectedCourse && detectedCourse.tools && detectedCourse.tools.length > 0) ? detectedCourse.tools.join(', ') : 'Industry Standard Tools';
 
       return {
-        text: `**${detectedCourse.name}** (${detectedCourse.programLevel || 'Career Program'})\n\n${detectedCourse.fullDesc || detectedCourse.shortDesc || 'Comprehensive industry-aligned training with real live projects and dedicated mentorship.'}\n\n📋 **Program Highlights:**\n• **Duration**: ${detectedCourse.duration || '6 Months'}\n• **Level**: ${detectedCourse.level || 'Beginner to Advanced'}\n• **Live Projects**: ${detectedCourse.liveProjects || 10} Hands-on Capstone Projects\n• **Tools Covered**: ${toolsList}\n• **Learning Mode**: ${detectedCourse.mode || 'Hybrid / Live Online'}\n• **Placement Support**: ${detectedCourse.placementSupport ? '✅ Dedicated Placement Assistance' : 'Skill Upgrade & Freelance Guidance'}\n• **Certification**: ISO 9001:2015 Accredited Certificate + Industry Badges\n• **Fee**: ${formatFee(detectedCourse.price)} *(Flexible No-Cost EMI: ${calculateEMI(detectedCourse.price)}/mo)*\n\nKya aap iska detailed phase-wise curriculum download karna chahte hain ya counselling call book karein?`,
+        text: detectedCourse ? `**${detectedCourse.name}** (${detectedCourse.programLevel || 'Program'})\n\n${detectedCourse.fullDesc || detectedCourse.shortDesc || ''}\n\n📋 **Program Highlights:**\n• **Duration**: ${detectedCourse.duration}${detectedCourse.learningHours ? ` (${detectedCourse.learningHours} Hours)` : ''}\n• **Level**: ${detectedCourse.level}\n• **Projects**: ${formatProjectInfo(detectedCourse)}\n• **Tools Covered**: ${toolsList}\n• **Learning Mode**: ${detectedCourse.mode}\n• **Placement Support**: ${detectedCourse.placementSupport ? '✅ Dedicated Placement Assistance' : 'Skill Upgrade & Freelance Guidance'}\n• **Certification**: ISO 9001:2015 Accredited Certificate + Industry Badges\n• **Fee**: ${formatFee(detectedCourse.price)} *(Est. ${calculateEMI(detectedCourse.price)}/mo)*\n\nKya aap iska detailed curriculum dekhna chahte hain ya counselling call book karein?` : 'Course information load ho rahi hai.',
         recommendedCourse: detectedCourse
       };
     }
@@ -1189,13 +707,17 @@
       if (sessionMemory.lastDiscussedCourse) {
         const c = sessionMemory.lastDiscussedCourse;
         return {
-          text: `**${c.name}** ki fee structure:\n\n• **Program Fee**: ${formatFee(c.price)} *(Original: ₹${(c.originalPrice || c.price * 2.5).toLocaleString('en-IN')})*\n• **0% Interest No-Cost EMI**: **${calculateEMI(c.price)} / month** (6 Months)\n• **Fast-Track EMI (3 Months)**: **${calculateEMI(c.price, 3)} / month**\n• **Scholarship / Discount**: Early-bird merit discounts available on upfront enrollment.\n• **GST**: Transparent pricing, no hidden charges.\n\nKya aap EMI schedule calculate karwana chahte hain ya admission process janna chahte hain?`,
+          text: `**${c.name}** ki fee structure:\n\n• **Program Fee**: ${formatFee(c.price)}${c.originalPrice > c.price ? ` *(Regular: ${formatFee(c.originalPrice)})*` : ''}\n• **Flexible Monthly Installments**: Approx ${calculateEMI(c.price)} / month (6 Months)\n• **Fast-Track Installments**: Approx ${calculateEMI(c.price, 3)} / month (3 Months)\n\nKya aap admission process janna chahte hain?`,
           recommendedCourse: c
         };
       }
 
+      const certRange = getTrackFeeRange('Certification') || '₹2,900 onwards';
+      const proRange = getTrackFeeRange('Professional') || '₹9,900 – ₹34,900';
+      const careerRange = getTrackFeeRange('Career') || '₹24,900 – ₹64,900';
+
       return {
-        text: `Nova Skills me course fees transparent aur flexible EMI options ke saath structured hain:\n\n• **Certification Courses (1–2 Months)**: **₹3,999 – ₹6,999**\n• **Professional Programs (3–4 Months)**: **₹9,999 – ₹17,499**\n• **Career Programs (6 Months)**: **₹18,999 – ₹31,499** *(Dedicated Career Support Included)*\n\n💳 **Payment & EMI Benefits:**\n• **0% Interest No-Cost EMI** available on all major bank cards (3, 6, 9 & 12 months).\n• Simple installment plans available.\n• Special merit scholarships for students.\n\nAap kis specific course ki exact fee aur monthly installment dekhna chahte hain?`,
+        text: `Nova Skills me course fees transparent aur flexible installment options ke saath structured hain:\n\n• **Certification Courses**: **${certRange}**\n• **Professional Programs**: **${proRange}**\n• **Career Programs**: **${careerRange}** *(Dedicated Career Support Included)*\n\nAap kis specific course ki exact fee dekhna chahte hain?`,
         recommendedCourse: null
       };
     }
@@ -1203,18 +725,18 @@
     // 10. PLACEMENT & JOBS INTENT
     if (intent === 'PLACEMENT') {
       return {
-        text: `Haan, bilkul! Nova Skills apne sabhi **Career Programs aur Professional Programs** me **Dedicated Placement Support** offer karta hai:\n\n🏢 **Industry Hiring Network**: Digital agencies, tech startups, MNCs aur e-commerce brands me direct job interviews.\n💼 **Dedicated Placement Cell**: Exclusive vacancy alerts, campus drives aur interview scheduling.\n🛠️ **Live Client Portfolio**: Aap 10–20 real-world projects banate hain jo recruiters ke saamne aapka hands-on experience prove karte hain.\n📄 **ATS Resume & LinkedIn Optimization**: Industry experts aapka resume aur LinkedIn profile optimize karte hain.\n🎤 **1-on-1 Mock Interviews**: Technical aur HR rounds ki comprehensive preparation.\n\nPractical skills aur portfolio ke base par career growth opportunities unlock hoti hain.\n\nKya aap career programs ka curriculum dekhna chahte hain?`,
-        recommendedCourse: findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0]
+        text: `Haan, bilkul! Nova Skills apne sabhi **Career Programs aur Professional Programs** me **Dedicated Placement Support** offer karta hai:\n\n🏢 **Industry Hiring Network**: Digital agencies, tech startups aur brands me interview prep & referrals.\n🛠️ **Live Portfolio**: Real-world assessed capstone projects jo recruiters ko aapka hands-on experience prove karte hain.\n📄 **ATS Resume & LinkedIn Optimization**\n🎤 **1-on-1 Mock Interviews**\n\nKya aap career programs ka curriculum dekhna chahte hain?`,
+        recommendedCourse: findCourse('dm-mastery') || getAllCourses()[0]
       };
     }
 
     // 11. FREELANCING INTENT
     if (intent === 'FREELANCING') {
-      const c = findCourse('freelancing-mastery') || FALLBACK_COURSES[15];
+      const c = findCourse('freelancing-client-acquisition-professional') || getAllCourses()[0];
       sessionMemory.lastDiscussedCourse = c;
 
       return {
-        text: `Freelancing start karne ke liye 3 main pillars hote hain:\n1. **High-Demand Practical Skill** (AI Automation, Digital Marketing, Graphic Design, Web Development)\n2. **Live Proof-of-Work Portfolio** (Real client case studies)\n3. **Client Acquisition Strategy** (Fiverr Gig ranking, Upwork proposals, LinkedIn outreach & international contract closing)\n\n⭐ **Recommended Program: ${c.name}**\n\nNova Skills ke is 6-month program me hum international freelancing zero se sikhate hain — profile setup, high-converting proposal templates, rate negotiation aur direct client contracts.\n\n• **Duration:** 6 Months | **Fee:** ${formatFee(c.price)} *(No-Cost EMI: ${calculateEMI(c.price)}/mo)*\n\nKya aap freelancing kisi specific skill me shuru karna chahte hain?`,
+        text: c ? `Freelancing start karne ke liye 3 main pillars hote hain:\n1. **High-Demand Practical Skill**\n2. **Verified Proof-of-Work Portfolio**\n3. **Client Acquisition Strategy** (Fiverr, Upwork, LinkedIn outreach & direct client closing)\n\n⭐ **Recommended Program: ${c.name}**\n• **Duration:** ${c.duration} | **Fee:** ${formatFee(c.price)}\n\nKya aap freelancing kisi specific skill me shuru karna chahte hain?` : 'Freelancing courses load ho rahe hain.',
         recommendedCourse: c
       };
     }
@@ -1222,7 +744,7 @@
     // 12. LEARNING MODE & BATCHES INTENT
     if (intent === 'LEARNING_MODE') {
       return {
-        text: `Nova Skills me aap apne schedule ke mutabik flexible learning mode select kar sakte hain:\n\n• 🌐 **Live Online Classes**: Interactive live sessions with senior mentors, screen sharing, real-time doubt clearing aur lifetime recording access on LMS.\n• 🏫 **Classroom Training**: Modern lab infrastructure, direct 1-on-1 mentor guidance on campus.\n• 🔄 **Hybrid Learning**: Online flexibility + on-campus mentorship and doubt sessions.\n\n⏰ **Flexible Batch Slots:**\n• **Morning Batches**: 9:00 AM – 11:00 AM & 11:30 AM – 1:30 PM\n• **Evening Batches**: 4:00 PM – 6:00 PM & 6:30 PM – 8:30 PM\n• **Weekend Batches**: Special Saturday & Sunday slots designed for college students & working professionals.\n\nAap Online seekhna pasand karenge ya Offline Classroom?`,
+        text: `Nova Skills me aap apne schedule ke mutabik flexible learning mode select kar sakte hain:\n\n• 🌐 **Live Online Classes**: Interactive live sessions with senior mentors, screen sharing, real-time doubt clearing aur LMS recording access.\n• 🏫 **Classroom Training**: Modern lab infrastructure at our Siddharth Nagar campus.\n• 🔄 **Hybrid Learning**: Online flexibility + mentor doubt sessions.\n\nAap Online seekhna pasand karenge ya Classroom?`,
         recommendedCourse: null
       };
     }
@@ -1230,15 +752,18 @@
     // 13. ADMISSION & ENROLLMENT INTENT
     if (intent === 'ADMISSION') {
       return {
-        text: `Nova Skills me admission process simple, fast aur transparent hai:\n\n1. **Step 1: Free Career Counselling** — Senior counsellor ke saath apna goal, course aur batch timing finalize karein.\n2. **Step 2: Batch & Mode Selection** — Morning/Evening/Weekend slot aur Online ya Classroom mode choose karein.\n3. **Step 3: Registration & Enrollment** — One-time payment ya 0% Interest No-Cost EMI ke through seat confirm karein.\n4. **Step 4: Instant LMS Access** — Student portal credentials, study materials aur live class links turant mil jate hain.\n\nAap neeche diye gaye button se direct **Apply Now** kar sakte hain ya **Free 1-on-1 Counselling Call** book kar sakte hain!`,
+        text: `Nova Skills me admission process simple, fast aur transparent hai:\n\n1. **Step 1: Free Career Counselling** — Counsellor ke saath goal, course aur batch timing finalize karein.\n2. **Step 2: Mode Selection** — Live Online ya Siddharth Nagar Classroom mode choose karein.\n3. **Step 3: Registration & Enrollment** — Upfront ya monthly installment plans ke through seat confirm karein.\n\nAap neeche diye gaye button se direct **Apply Now** kar sakte hain ya **Free Consultation** book kar sakte hain!`,
         recommendedCourse: sessionMemory.lastDiscussedCourse || null
       };
     }
 
     // 14. ACADEMY DISCOVERY INTENT
     if (intent === 'ACADEMY_DISCOVERY') {
+      const academies = getAllAcademies();
+      const totalC = getAllCourses().length;
+      const lines = academies.map((a, idx) => `${idx + 1}. ${a.icon || ''} **${a.name}** (${a.courseCount || (a.courses && a.courses.length) || 0} Courses)`).join('\n');
       return {
-        text: `Nova Skills me total **12 Specialized Academies** hain jo practical, high-income skills cover karti hain:\n\n1. 📊 **Digital Marketing Academy** (SEO, GEO, Ads, Performance, AI Automation)\n2. 🤖 **AI Academy** (ChatGPT, Claude, Prompting, AI Agents, n8n)\n3. 🎨 **Design Academy** (Photoshop, Illustrator, Figma, UI/UX)\n4. 💻 **Programming Academy** (Full-Stack Web Dev, Python, React, APIs)\n5. 🌐 **No-Code Web Academy** (Shopify, WordPress, WooCommerce, Webflow)\n6. 🎬 **Video & Motion Academy** (Premiere Pro, After Effects, Reels, DaVinci)\n7. 🏗️ **3D Academy** (Blender, 3ds Max, V-Ray, Unreal Engine)\n8. 💼 **Career & Freelancing Academy** (Fiverr, Upwork, Agency Building, Resumes)\n9. 💬 **Communication Academy** (Spoken English, Business Communication)\n10. 👨‍💻 **Kids Tech Academy** (Scratch, Python for Kids, Robotics, AI)\n11. 🎥 **Creator Academy** (YouTube Growth, Short Videos, Personal Branding)\n12. 📋 **Office Productivity Academy** (Advanced Excel, Notion, Copilot, Tally GST)\n\nAap kis Academy ke courses ki details dekhna chahenge?`,
+        text: `Nova Skills me total **${academies.length} Specialized Academies** aur **${totalC}+ Practical Programs** hain:\n\n${lines}\n\nAap kis Academy ke courses ki details dekhna chahenge?`,
         recommendedCourse: null
       };
     }
@@ -1246,17 +771,17 @@
     // 15. GENERAL DEFINITION INTENT ("Digital Marketing kya hota hai?")
     if (intent === 'GENERAL_DEFINITION') {
       if (/digital marketing/i.test(lower)) {
-        const c = findCourse('ai-digital-marketing-master') || FALLBACK_COURSES[0];
+        const c = findCourse('dm-mastery') || getAllCourses()[0];
         return {
-          text: `**Digital Marketing** internet aur digital platforms (Google, Facebook, Instagram, YouTube, Email) ke through products aur services ko promote karne aur sales generate karne ka modern tareeka hai.\n\nIske main components:\n• **SEO & GEO**: Google aur AI search engines me bina ads ke top rank karna.\n• **Paid Advertising**: Google Search/Shopping Ads aur Meta Ads se instant targeted customers lana.\n• **Content & Social Media**: Brand building aur audience engagement.\n• **AI Automation**: ChatGPT, Claude aur n8n se marketing workflows ko 10x fast banana.\n\nNova Skills me hum ise dummy theory ke bajaye **live ad budgets aur real business projects** par 100% practical sikhate hain.\n\n⭐ **Flagship Program: ${c.name} (6 Months)**\nKya aap iska syllabus dekhna chahte hain?`,
+          text: c ? `**Digital Marketing** search engines (SEO & GEO), paid ads (Google & Meta), social media aur AI automation ke through business growth drive karne ki modern skill hai.\n\n⭐ **Flagship Program: ${c.name} (${c.duration} • ${formatFee(c.price)})**\nKya aap iska syllabus dekhna chahte hain?` : 'Digital Marketing details load rahi hain.',
           recommendedCourse: c
         };
       }
 
       if (/ai|artificial intelligence/i.test(lower)) {
-        const c = findCourse('ai-mastery') || FALLBACK_COURSES[2];
+        const c = findCourse('ai-mastery') || getAllCourses()[0];
         return {
-          text: `**Artificial Intelligence (AI)** aisi technology hai jo machines ko human intelligence ki tarah analyze karne, content create karne, decisions lene aur tasks automate karne ki capability deti hai.\n\nAaj AI ka practical use prompt engineering, automated workflows (n8n), AI agents aur workplace productivity tools me sabse zyada ho raha hai.\n\nNova Skills ka **${c.name}** aapko AI tools se lekar autonomous AI agents build karne tak 100% practical sikhata hai.\n\nKya aap AI seekhne ke options explore karna chahte hain?`,
+          text: c ? `**Artificial Intelligence (AI)** prompt engineering, automated workflows (n8n), AI agents aur workplace productivity tools ke through 10x output unlock karta hai.\n\n⭐ **Flagship Program: ${c.name} (${c.duration} • ${formatFee(c.price)})**\nKya aap AI seekhne ke options explore karna chahte hain?` : 'AI course details load ho rahi hain.',
           recommendedCourse: c
         };
       }
@@ -1264,16 +789,20 @@
 
     // 16. CAREER GUIDANCE & SCOPE INTENT
     if (intent === 'CAREER_GUIDANCE') {
+      const cAI = findCourse('ai-mastery');
+      const cDM = findCourse('dm-mastery');
+      const cFS = findCourse('fullstack-foundation');
+      const cDS = findCourse('creative-design');
       return {
-        text: `Aaj ke market me top 4 highest-paying aur future-proof skill tracks:\n\n1. 🤖 **AI & Automation Specialist**: AI agents, workflow automation aur LLM deployment (₹5.5 – ₹12 LPA)\n2. 📊 **AI Digital Marketing & Performance Lead**: Paid ad scaling, SEO & GEO (₹4.5 – ₹9 LPA)\n3. 💻 **Full-Stack Developer**: Modern web applications, React, Node.js & APIs (₹4.5 – ₹10 LPA)\n4. 🎨 **UI/UX & Creative Brand Designer**: High-converting app interfaces & branding (₹4.0 – ₹8.5 LPA)\n\nNova Skills ke sabhi **Career Programs** me live client projects, portfolio development aur **Dedicated Placement Support** included hai.\n\nAapko creative side (Design/Marketing) zyada suit karti hai ya analytical/tech (AI/Coding)?`,
-        recommendedCourse: findCourse('ai-mastery') || FALLBACK_COURSES[2]
+        text: `Aaj ke market me top career-oriented skill tracks:\n\n1. 🤖 **${cAI ? cAI.name : 'AI Solutions Engineering & Agentic AI Mastery'}** (${cAI ? `${cAI.duration} • ${formatFee(cAI.price)}` : ''})\n2. 📊 **${cDM ? cDM.name : 'AI Digital Marketing Strategist'}** (${cDM ? `${cDM.duration} • ${formatFee(cDM.price)}` : ''})\n3. 💻 **${cFS ? cFS.name : 'Full Stack Programming Foundation'}** (${cFS ? `${cFS.duration} • ${formatFee(cFS.price)}` : ''})\n4. 🎨 **${cDS ? cDS.name : 'Creative Design Master'}** (${cDS ? `${cDS.duration} • ${formatFee(cDS.price)}` : ''})\n\nAapko creative side (Design/Marketing) zyada suit karti hai ya tech (AI/Coding)?`,
+        recommendedCourse: cAI || getAllCourses()[0]
       };
     }
 
     // 17. SERVICES / B2B OFFERINGS INTENT
     if (intent === 'SERVICES') {
       return {
-        text: `Nova Skills education ke saath-saath corporate aur business growth solutions bhi offer karta hai:\n\n• 🚀 **Corporate Upskilling**: Companies aur teams ke liye customized AI, Advanced Excel aur Digital Marketing corporate workshops.\n• 🌐 **Digital & Web Solutions**: High-converting business websites, Shopify stores aur performance marketing strategy.\n• 🎯 **Talent Hiring & Placement Partnership**: Verified skilled students aur interns hire karne ke liye enterprise recruitment partnerships.\n\nBusiness aur corporate requirements ke liye aap hamari enterprise team se directly connect kar sakte hain: **+91 9695904440** ya novaskills.official@gmail.com.`,
+        text: `Nova Skills education ke saath-saath corporate aur business growth solutions bhi offer karta hai:\n\n• 🚀 **Corporate Upskilling**: Companies aur teams ke liye customized AI, Advanced Excel aur Digital Marketing corporate workshops.\n• 🌐 **Digital & Web Solutions**: High-converting business websites, Shopify stores aur performance marketing strategy.\n• 🎯 **Talent Hiring & Placement Partnership**: Verified skilled students aur interns hire karne ke liye enterprise recruitment partnerships.\n\nBusiness aur corporate requirements ke liye aap hamari enterprise team se directly connect kar sakte hain: [+91 9695904440](tel:+919695904440) ya [novaskills.official@gmail.com](mailto:novaskills.official@gmail.com).`,
         recommendedCourse: null
       };
     }
@@ -1370,12 +899,14 @@
         overflow: hidden;
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
         transform: translateX(100%);
-        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
         pointer-events: none;
+        visibility: hidden;
       }
       .nova-ai-panel.open {
         transform: translateX(0);
         pointer-events: auto;
+        visibility: visible;
       }
 
       /* Header Bar */
@@ -1993,7 +1524,7 @@
           <div class="nova-ai-welcome-help-title">I can help you with:</div>
           <ul class="nova-ai-check-list">
             <li><span class="check-icon">✓</span> Course recommendation for your goals</li>
-            <li><span class="check-icon">✓</span> Fees, No-Cost EMI & Scholarship details</li>
+            <li><span class="check-icon">✓</span> Course Fees, Installment Plans & Scholarships</li>
             <li><span class="check-icon">✓</span> Dedicated Placement Support</li>
             <li><span class="check-icon">✓</span> Freelancing roadmap (Fiverr & Upwork)</li>
             <li><span class="check-icon">✓</span> Live Online & Classroom batch schedules</li>
@@ -2112,8 +1643,10 @@
     const projects = courseData.liveProjects ? `${courseData.liveProjects} Live Projects` : (courseData.projects || '10+ Projects');
     const feeStr = formatFee(courseData.price);
     const emiStr = calculateEMI(courseData.price, courseData.durationMonths || 6);
-    const salary = courseData.salary || '₹4.5 – ₹9.0 LPA';
-    const placementBadge = courseData.placementSupport ? '100% Dedicated Placement' : 'Career Mentorship';
+    const salary = courseData.salary || (courseData.placementSupport ? 'Career Track Portfolio Ready' : 'Skill & Portfolio Ready');
+    const placementBadge = courseData.academyId === 'kids-tech'
+      ? 'Junior Tech Showcase'
+      : (courseData.placementSupport ? 'Dedicated Placement Assistance' : 'Practical Portfolio Support');
     const courseUrl = courseData.slug ? `/course-detail.html?id=${courseData.slug}` : (courseData.id ? `/course-detail.html?id=${courseData.id}` : '/courses.html');
 
     return `
@@ -2129,7 +1662,7 @@
           <div class="nova-ai-rec-spec">💻 <strong>Projects:</strong> ${projects}</div>
           <div class="nova-ai-rec-spec">💰 <strong>Fee:</strong> ${feeStr} <span style="font-size:0.7rem;color:#38bdf8;">(${emiStr}/mo EMI)</span></div>
           <div class="nova-ai-rec-spec">🎓 <strong>Placement:</strong> ${placementBadge}</div>
-          <div class="nova-ai-rec-spec nova-ai-rec-salary">💼 <strong>Career Outcome:</strong> ${salary}</div>
+          <div class="nova-ai-rec-spec nova-ai-rec-salary">💼 <strong>Outcome Focus:</strong> ${salary}</div>
         </div>
 
         <div class="nova-ai-rec-actions">
@@ -2309,7 +1842,7 @@
     // 2. Append user message & track
     appendMessage(userText, 'user');
     saveHistory();
-    trackEvent('user_ai_query', { query: userText });
+    trackEvent('ai_query_received', { query_length: (userText || '').length, query_intent: intent });
 
     // 3. Show typing animation
     showTypingIndicator();
@@ -2399,6 +1932,13 @@
 
     // Attach verified recommendation card if a specific course was recommended
     if (role === 'assistant' && recommendedCourse) {
+      if (typeof NovaAnalytics !== 'undefined' && typeof NovaAnalytics.trackCareerAdvisorComplete === 'function') {
+        NovaAnalytics.trackCareerAdvisorComplete({
+          recommended_course_id: recommendedCourse.id,
+          recommended_academy_id: recommendedCourse.academyId || recommendedCourse.academy || '',
+          assessment_type: 'ai_interactive_chat'
+        });
+      }
       msgEl.insertAdjacentHTML('beforeend', renderRecommendationCardHTML(recommendedCourse));
     }
 
@@ -2438,8 +1978,46 @@
 
   function triggerCTA(action) {
     trackEvent('cta_clicked', { action });
-    if (typeof window.openConsultationPopup === 'function') {
+    const c = sessionMemory.lastDiscussedCourse;
+    if (action === 'demo') {
+      if (typeof window.openDemoModal === 'function') {
+        window.openDemoModal(c ? {
+          courseId: c.id,
+          courseName: c.name,
+          academyName: c.academy,
+          academyId: c.academyId,
+          sourceCta: 'ai_career_advisor'
+        } : { sourceCta: 'ai_career_advisor' });
+        closePanel();
+        return;
+      }
+    }
+    if (action === 'counselling') {
+      if (typeof window.openCounsellingModal === 'function') {
+        window.openCounsellingModal(c ? {
+          courseId: c.id,
+          courseName: c.name,
+          academyName: c.academy,
+          academyId: c.academyId,
+          sourceCta: 'ai_career_advisor'
+        } : { sourceCta: 'ai_career_advisor' });
+        closePanel();
+        return;
+      }
+    }
+    if (action === 'enroll') {
+      if (typeof window.openEnrollmentModal === 'function') {
+        window.openEnrollmentModal(c ? c.name : '', c ? c.academy : '', c ? c.duration : '', c ? '₹' + (c.price ? c.price.toLocaleString('en-IN') : '') : '', c ? c.id : '');
+        closePanel();
+        return;
+      }
+    }
+    if (typeof window.openCounsellingModal === 'function') {
+      window.openCounsellingModal(c ? { courseId: c.id, courseName: c.name, sourceCta: 'ai_career_advisor' } : { sourceCta: 'ai_career_advisor' });
+      closePanel();
+    } else if (typeof window.openConsultationPopup === 'function') {
       window.openConsultationPopup();
+      closePanel();
     } else {
       window.location.href = '/contact/';
     }

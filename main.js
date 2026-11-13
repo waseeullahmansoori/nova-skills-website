@@ -22,41 +22,71 @@ if ('requestIdleCallback' in window) {
   setTimeout(initInteractiveModules, 300);
 }
 
-// ===== DYNAMIC CANONICAL COUNTS HYDRATION =====
+// ===== DYNAMIC CANONICAL COUNTS & HOMEPAGE COURSE HYDRATION =====
 function initCanonicalCounts() {
-  if (typeof window.NovaSkillsData === 'undefined') return;
+  const api = window.NovaCourseData || window.NovaSkillsData;
+  if (!api) return;
 
-  window.NovaSkillsData.hydrateDOM();
+  api.hydrateDOM();
 
-  const academiesCount = window.NovaSkillsData.getTotalAcademiesCount();
-  const coursesCount = window.NovaSkillsData.getTotalCoursesCount();
+  const academiesCount = api.getTotalAcademiesCount();
+  const coursesCount = api.getTotalCoursesCount();
 
-  const academiesCard = document.querySelector('.stat-card #stat-academies')?.closest('.stat-card') || 
+  const academiesCard = document.querySelector('.stat-card #stat-academies')?.closest('.stat-card') ||
                         document.querySelector('.stat-card[data-count="12"]');
   if (academiesCard) {
     academiesCard.setAttribute('data-count', academiesCount);
   }
 
-  const coursesCard = document.querySelector('.stat-card #stat-courses')?.closest('.stat-card') || 
-                      document.querySelector('.stat-card[data-count="100"]') || 
+  const coursesCard = document.querySelector('.stat-card #stat-courses')?.closest('.stat-card') ||
+                      document.querySelector('.stat-card[data-stat="courses"]') ||
                       document.querySelector('.stat-card[data-count="109"]');
   if (coursesCard) {
     coursesCard.setAttribute('data-count', coursesCount);
   }
 
-  // Hydrate academy cards badges
+  // Hydrate academy cards counts & starting prices from canonical records
   document.querySelectorAll('[data-academy-course-badge]').forEach(el => {
     const acadId = el.getAttribute('data-academy-course-badge');
     if (acadId) {
-      const count = window.NovaSkillsData.getAcademyCourseCount(acadId);
-      el.textContent = `${count} Courses`;
+      el.textContent = `${api.getAcademyCourseCount(acadId)} Courses`;
+    }
+  });
+
+  document.querySelectorAll('[data-academy-price-badge]').forEach(el => {
+    const acadId = el.getAttribute('data-academy-price-badge');
+    if (acadId) {
+      const startFee = api.getAcademyStartingPrice(acadId);
+      if (startFee) {
+        el.textContent = `From ${api.formatPriceINR(startFee)}`;
+      }
+    }
+  });
+
+  // Hydrate homepage featured course cards by stable course ID
+  document.querySelectorAll('#courses-grid .course-card[data-course-id]').forEach(card => {
+    const cid = card.getAttribute('data-course-id');
+    const c = api.getCourseById(cid);
+    if (!c) return;
+    const durBadge = card.querySelector('.course-duration-badge');
+    if (durBadge) durBadge.textContent = c.duration;
+    const titleLink = card.querySelector('.course-title a');
+    if (titleLink) {
+      titleLink.textContent = c.name;
+      titleLink.setAttribute('href', api.getCourseDetailUrl(c.id));
+    }
+    const priceCur = card.querySelector('.price-current');
+    if (priceCur) priceCur.textContent = api.formatPriceINR(c.price);
+    const priceOrig = card.querySelector('.price-original');
+    if (priceOrig && c.offer_active && c.originalPrice > c.price) {
+      priceOrig.textContent = api.formatPriceINR(c.originalPrice);
     }
   });
 
   // Update view all courses button if present
   const viewAllBtn = document.getElementById('view-all-courses');
   if (viewAllBtn) {
-    viewAllBtn.textContent = `View All ${coursesCount}+ Courses`;
+    viewAllBtn.innerHTML = `View All <span class="canonical-courses-count">${coursesCount}+</span> Courses`;
   }
 }
 
@@ -154,33 +184,51 @@ function initFormSubmission() {
     const emailEl = document.getElementById('email');
     const courseEl = document.getElementById('course-interest');
 
-    const name = nameEl ? nameEl.value.trim() : '';
-    const phone = phoneEl ? phoneEl.value.trim() : '';
+    const name = nameEl ? nameEl.value : '';
+    const phone = phoneEl ? phoneEl.value : '';
+    const email = emailEl ? emailEl.value : '';
 
-    if (!name) {
-      showFormError('full-name', 'Please enter your full name');
+    const validator = (typeof window !== 'undefined' && window.NovaFormValidator) ? window.NovaFormValidator : null;
+
+    const vName = validator ? validator.validateFullName(name) : { valid: name.trim().length >= 2, message: 'Please enter your full name.', value: name.trim() };
+    if (!vName.valid) {
+      showFormError('full-name', vName.message);
       return;
     }
 
-    if (!phone || phone.replace(/\D/g, '').length < 10) {
-      showFormError('phone', 'Please enter a valid 10-digit phone number');
+    const vPhone = validator ? validator.validateMobile(phone) : { valid: phone.replace(/\D/g, '').length >= 10, message: 'Please enter a valid 10-digit Indian mobile number.', value: phone.replace(/\D/g, '') };
+    if (!vPhone.valid) {
+      showFormError('phone', vPhone.message);
       return;
     }
 
-    const course = courseEl ? (courseEl.options[courseEl.selectedIndex]?.text || courseEl.value) : '';
+    const vEmail = validator ? validator.validateEmail(email, false) : { valid: true, value: email.trim() };
+    if (!vEmail.valid) {
+      showFormError('email', vEmail.message);
+      return;
+    }
+
+    const rawCourse = courseEl ? (courseEl.options[courseEl.selectedIndex]?.text || courseEl.value) : '';
+    const course = (!rawCourse || rawCourse.includes('Not Sure'))
+      ? '[CAREER COUNSELLING] Not Sure — Help Me Choose'
+      : `[CAREER COUNSELLING] ${rawCourse}`;
 
     if (typeof submitNovaForm === 'function') {
       await submitNovaForm({
         form,
         submitBtn,
-        loadingText: 'Booking...',
-        formName: 'counselling_form',
+        loadingText: 'Booking Session...',
+        formName: 'career_counselling',
         submissionMethod: 'inline_counselling_form',
         data: {
-          name,
-          mobile: phone,
-          email: emailEl ? emailEl.value.trim() : '',
-          course
+          name: vName.value,
+          mobile: vPhone.value,
+          phone: vPhone.value,
+          email: vEmail.value,
+          course: course,
+          formType: 'career_counselling',
+          lead_type: 'free_consultation',
+          message: `LEAD TYPE: free_consultation | Course Interest: ${rawCourse} | Source: Homepage inline counselling section`
         }
       });
     }

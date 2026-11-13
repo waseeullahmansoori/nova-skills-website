@@ -25,12 +25,13 @@ function showSpecializationRequired() {
 function updateWhatsAppCourseLink(courseName, pathTitle) {
   const waBtn = document.getElementById('whatsapp-btn') || document.querySelector('.whatsapp-float');
   if (waBtn) {
-    let msg = `Hi, I'm interested in ${courseName || 'AI-Assisted Full Stack Web Development'}`;
-    if (pathTitle) {
-      msg += ` (Specialization: ${pathTitle})`;
-    }
-    msg += '. Please share details and admission schedule.';
+    const cName = courseName || (typeof currentCourse !== 'undefined' && currentCourse && currentCourse.name) || 'AI-Assisted Full Stack Web Development';
+    const spec = pathTitle ? ` (Specialization: ${pathTitle})` : '';
+    const msg = `Hi Nova Skills, I am interested in the ${cName}${spec} course. Please share the syllabus, fees and upcoming batch information.`;
     waBtn.href = `https://wa.me/919695904440?text=${encodeURIComponent(msg)}`;
+    waBtn.setAttribute('data-course-id', (typeof currentCourse !== 'undefined' && currentCourse && currentCourse.id) || '');
+    waBtn.setAttribute('data-academy-id', (typeof currentCourse !== 'undefined' && currentCourse && currentCourse.academyId) || '');
+    waBtn.setAttribute('data-source-component', 'floating_whatsapp_btn');
   }
 }
 
@@ -117,9 +118,11 @@ function getAcademySlug(id) {
 }
 
 function getTargetCourse() {
-  const courses = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
-    ? NS_COURSES
-    : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []);
+  const courses = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+    ? window.NovaCourseData.getPublishedCourses()
+    : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+      ? NS_COURSES
+      : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []));
 
   // 1. Check meta tag (pre-rendered course pages)
   const metaCourseEl = document.querySelector('meta[name="course-id"]');
@@ -172,7 +175,7 @@ function renderCourseNotFound() {
           <div style="font-size:3.5rem; margin-bottom:16px;">🔍</div>
           <h2>Course Not Found</h2>
           <p>
-            The program you are looking for may have been modernized, renamed, or relocated. 
+            The program you are looking for may have been modernized, renamed, or relocated.
             Explore our catalog of 109+ industry-standard career courses across 12 academies.
           </p>
           <div class="course-error-actions">
@@ -195,7 +198,7 @@ function renderCourseNotFound() {
 function getCourseSeoTitle(course) {
   const type = (course.courseType || course.course_type || course.type || '').toUpperCase();
   const name = course.name || course.course_name;
-  
+
   if (type === 'MASTER') {
     return `${name} — Flagship Career Program | Nova Skills`;
   } else if (type === 'PROFESSIONAL') {
@@ -309,25 +312,51 @@ function populateCourseDetail(course) {
   const meta = document.getElementById('detail-meta');
   if (meta) {
     const hours = course.learningHours ? `${course.learningHours} Hours` : (course.duration || 'Flexible');
-    const projectLabel = course.courseType === 'MASTER' ? '3 Major Portfolio Projects' : '2 Production Projects';
+    const projectLabel = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseProjectLabel === 'function')
+      ? window.NovaCourseData.getCourseProjectLabel(course)
+      : (course.projectDisplayLabel || `${course.liveProjects || 2} Projects`);
     meta.innerHTML = `
       <div class="course-meta-item"><span class="meta-icon">⏱️</span> Duration: ${course.duration || 'Flexible'} (${hours})</div>
       <div class="course-meta-item"><span class="meta-icon">📶</span> Level: ${course.level || 'All Levels'}</div>
       <div class="course-meta-item"><span class="meta-icon">💻</span> Mode: ${course.mode || 'Hybrid'}</div>
       <div class="course-meta-item"><span class="meta-icon">🚀</span> ${projectLabel}</div>
-      ${course.placementSupport ? '<div class="course-meta-item" style="color:var(--green-light); font-weight:700;"><span class="meta-icon">🎯</span> Placement Support Included</div>' : ''}
+      ${course.academyId === 'kids-tech'
+        ? '<div class="course-meta-item"><span class="meta-icon">🌟</span> Junior Project Showcase & Certificate</div>'
+        : (course.placementSupport
+            ? '<div class="course-meta-item" style="color:var(--green-light); font-weight:700;"><span class="meta-icon">🎯</span> Placement Assistance Included</div>'
+            : '<div class="course-meta-item"><span class="meta-icon">💼</span> Practical Portfolio & Capstone Support</div>')}
     `;
   }
 
-  // Rating Row
+  // Rating Row (Authentic Credibility / Verified Standards)
   const ratingRow = document.getElementById('detail-rating-row');
   if (ratingRow) {
-    ratingRow.innerHTML = `
-      <span class="rating-stars">★★★★★</span>
-      <span class="rating-num">${course.rating || 4.8}</span>
-      <span class="rating-count">(${course.reviews || 120} student reviews)</span>
-      <span class="student-count">• ${(course.students || 500).toLocaleString('en-IN')}+ learners enrolled</span>
-    `;
+    let hasVerified = false;
+    let verifiedRating = '5.0';
+    if (typeof NovaCredibility !== 'undefined' && typeof NovaCredibility.getCourseTestimonials === 'function') {
+      const cTestimonials = NovaCredibility.getCourseTestimonials(course.id);
+      if (cTestimonials && cTestimonials.length > 0) {
+        hasVerified = true;
+        if (cTestimonials[0].testimonial && cTestimonials[0].testimonial.rating) {
+          verifiedRating = cTestimonials[0].testimonial.rating.toFixed(1);
+        }
+      }
+    }
+    if (hasVerified) {
+      ratingRow.innerHTML = `
+        <span class="rating-stars">★★★★★</span>
+        <span class="rating-num">${verifiedRating}</span>
+        <span class="rating-count">(Verified Course Review)</span>
+        <span class="student-count">• Portfolio Capstone Verified</span>
+      `;
+    } else {
+      ratingRow.innerHTML = `
+        <span class="rating-stars" style="color:var(--teal);">🛡️</span>
+        <span class="rating-num" style="color:var(--teal);">Verified Quality</span>
+        <span class="rating-count">• Industry-Standard Curriculum</span>
+        <span class="student-count">• Practical Mentorship Capstone</span>
+      `;
+    }
   }
 
   // Enroll Card
@@ -358,17 +387,27 @@ function populateCourseDetail(course) {
     if (discount) discount.style.display = 'none';
   }
 
-  // Dynamic EMI with 18% GST
+  // Dynamic EMI & Tax Disclosure (P1-6 & P1-7 Duration-Tiered)
+  const durLower = (course.duration || '').toLowerCase();
   const durationMonths = (typeof course.durationMonths === 'number' && course.durationMonths > 0)
     ? course.durationMonths
     : (parseInt(course.duration, 10) || 1);
-  const gstAmount = (course.price || 0) * 0.18;
-  const totalWithGST = (course.price || 0) + gstAmount;
-  const monthlyInstallment = Math.round(totalWithGST / durationMonths);
+  const taxDisclosure = (typeof NovaCourseData !== 'undefined' && typeof NovaCourseData.getGstDisclosure === 'function')
+    ? NovaCourseData.getGstDisclosure(course)
+    : 'The final payable amount, including any applicable taxes, will be clearly displayed before payment.';
+
+  const isTier1 = durLower.includes('week') || durationMonths <= 1.5;
+  const isTier3 = durationMonths >= 5;
+  let emiPrefix = '💳 Flexible 2-part milestone & card EMI options available';
+  if (isTier1) {
+    emiPrefix = '💳 One-time course enrollment fee';
+  } else if (isTier3) {
+    emiPrefix = '💳 Structured milestone & partner EMI options available';
+  }
 
   const emiEl = document.getElementById('detail-emi');
   if (emiEl) {
-    emiEl.innerHTML = `💳 Flexible monthly installment options available · 18% GST included`;
+    emiEl.innerHTML = `${emiPrefix} · ${taxDisclosure}`;
   }
 
   // Mobile sticky price
@@ -440,6 +479,7 @@ function populateCourseDetail(course) {
 
   // Tailor Mentors and Testimonials based on Academy
   populateDomainMentors(course);
+  populateTestimonials(course);
 
   // Inject Base Schema.org
   injectCourseSchema(course, courseImg, canonicalUrl);
@@ -465,6 +505,16 @@ function hydratePrerenderedCourse(course) {
 
 /* Bind High-Conversion CTAs to pre-fill enrollment modal with course & academy */
 function bindCourseCtas(course) {
+  if (typeof NovaAnalytics !== 'undefined' && typeof NovaAnalytics.trackCourseView === 'function') {
+    NovaAnalytics.trackCourseView(course);
+  } else if (typeof sendGA4Event === 'function') {
+    sendGA4Event('view_course', {
+      course_id: course.id,
+      course_name: course.name,
+      academy_id: course.academyId || course.academy || '',
+      page_type: 'course_detail'
+    });
+  }
   window.currentCourse = course;
   const safeFee = '₹' + (course.price ? course.price.toLocaleString('en-IN') : '');
   const enrollBtn = document.querySelector('.btn-enroll-full');
@@ -504,7 +554,15 @@ function bindCourseCtas(course) {
   const consultBtn = document.querySelector('.btn-consult-full');
   if (consultBtn) {
     consultBtn.onclick = () => {
-      if (typeof openConsultationPopup === 'function') {
+      if (typeof openCounsellingModal === 'function') {
+        openCounsellingModal({
+          courseId: course.id,
+          courseName: course.name,
+          academyName: course.academy,
+          academyId: course.academyId,
+          sourceCta: 'course_detail_sidebar'
+        });
+      } else if (typeof openConsultationPopup === 'function') {
         openConsultationPopup(course.name);
       }
     };
@@ -542,7 +600,7 @@ function populateEnrollIncludes(course) {
       <li><span class="include-icon">💻</span> Real Commercial Client Projects</li>
       <li><span class="include-icon">👤</span> 1-on-1 Senior Mentor Reviews</li>
       <li><span class="include-icon">📜</span> ISO 9001:2015 Verified Certificate</li>
-      <li><span class="include-icon">🎯</span> Placement Support & Interviews</li>
+      <li><span class="include-icon">🎯</span> Placement Assistance & Interview Prep</li>
       <li><span class="include-icon">♾️</span> Lifetime Practitioner Community Access</li>
     `;
   } else {
@@ -562,26 +620,48 @@ function populateDomainMentors(course) {
   const mentorsContainer = document.getElementById('mentors-container');
   if (!mentorsContainer) return;
 
+  if (typeof NovaCredibility !== 'undefined' && typeof NovaCredibility.renderMentorCardsForCourse === 'function') {
+    mentorsContainer.innerHTML = NovaCredibility.renderMentorCardsForCourse(course.academyId);
+    return;
+  }
+
+  // Self-contained fallback covering canonical academy IDs and aliases
   const academyMentors = {
-    'digital-marketing': { lead: 'Growth & Ads Lead Mentor', role: 'Head of Performance & GEO Strategy', bio: 'Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture.' },
-    'ai-academy': { lead: 'Principal AI Architect', role: 'Applied Generative AI & Agents Lead', bio: 'Specialist in multi-agent orchestration, LLM application pipelines, workflow automation, and enterprise deployment.' },
-    'design-academy': { lead: 'Design Director & UI Lead', role: 'Product Design & Brand Architect', bio: 'Specialist in design systems, micro-interactions, commercial packaging, and user experience psychology.' },
-    'programming-academy': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.' },
-    'nocode-academy': { lead: 'Lead No-Code Architect', role: 'Enterprise Webflow & Shopify Lead', bio: 'Specialist in scalable headless web systems, e-commerce conversion pipelines, and workflow automation.' },
-    'video-academy': { lead: 'Post-Production Director', role: 'Senior Video Editor & Motion Lead', bio: 'Specialist in high-retention commercial storytelling, color grading, dynamic motion graphics, and audio mastering.' },
-    '3d-academy': { lead: 'Senior 3D & Technical Artist', role: 'Real-Time Pipeline & ArchViz Lead', bio: 'Specialist in Blender, Unreal Engine 5 Lumen/Nanite workflows, architectural visualization, and photorealistic asset creation.' },
-    'career-academy': { lead: 'Agency Strategist & Founder', role: 'Freelance & Retainer Monetization Mentor', bio: 'Specialist in international client acquisition, proposal engineering, high-ticket packaging, and business operations.' },
-    'comm-academy': { lead: 'Executive Voice Coach', role: 'Leadership Communication & Pitch Specialist', bio: 'Specialist in executive presence, persuasive presentations, high-stakes stakeholder meetings, and corporate dialogue.' },
-    'kids-tech': { lead: 'Certified STEM Educator', role: 'Creative Computing & Logic Mentor', bio: 'Dedicated educator specializing in gamified algorithmic thinking, beginner Python, and interactive digital creation.' },
-    'creator-academy': { lead: 'Creator Economy Strategist', role: 'YouTube Production & Distribution Lead', bio: 'Specialist in audience analytics, algorithmic retention optimization, content monetization, and personal branding.' },
-    'office-academy': { lead: 'Business Intelligence Lead', role: 'Data Analytics & Copilot Specialist', bio: 'Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.' }
+    'digital-marketing': { lead: 'Growth & Ads Lead Mentor', role: 'Head of Performance & GEO Strategy', bio: 'Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture.', initials: 'DM' },
+    'marketing': { lead: 'Growth & Ads Lead Mentor', role: 'Head of Performance & GEO Strategy', bio: 'Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture.', initials: 'DM' },
+    'ai': { lead: 'Principal AI Architect', role: 'Applied Generative AI & Agents Lead', bio: 'Specialist in multi-agent orchestration, LLM application pipelines, workflow automation, and enterprise deployment.', initials: 'AI' },
+    'ai-academy': { lead: 'Principal AI Architect', role: 'Applied Generative AI & Agents Lead', bio: 'Specialist in multi-agent orchestration, LLM application pipelines, workflow automation, and enterprise deployment.', initials: 'AI' },
+    'design': { lead: 'Design Director & UI Lead', role: 'Product Design & Brand Architect', bio: 'Specialist in design systems, micro-interactions, commercial packaging, and user experience psychology.', initials: 'DS' },
+    'design-academy': { lead: 'Design Director & UI Lead', role: 'Product Design & Brand Architect', bio: 'Specialist in design systems, micro-interactions, commercial packaging, and user experience psychology.', initials: 'DS' },
+    'programming': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.', initials: 'FS' },
+    'programming-academy': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.', initials: 'FS' },
+    'nocode': { lead: 'Lead No-Code Architect', role: 'Enterprise Webflow & Shopify Lead', bio: 'Specialist in scalable headless web systems, e-commerce conversion pipelines, and workflow automation.', initials: 'NC' },
+    'no-code-web': { lead: 'Lead No-Code Architect', role: 'Enterprise Webflow & Shopify Lead', bio: 'Specialist in scalable headless web systems, e-commerce conversion pipelines, and workflow automation.', initials: 'NC' },
+    'nocode-academy': { lead: 'Lead No-Code Architect', role: 'Enterprise Webflow & Shopify Lead', bio: 'Specialist in scalable headless web systems, e-commerce conversion pipelines, and workflow automation.', initials: 'NC' },
+    'video': { lead: 'Post-Production Director', role: 'Senior Video Editor & Motion Lead', bio: 'Specialist in high-retention commercial storytelling, color grading, dynamic motion graphics, and audio mastering.', initials: 'VM' },
+    'video-motion': { lead: 'Post-Production Director', role: 'Senior Video Editor & Motion Lead', bio: 'Specialist in high-retention commercial storytelling, color grading, dynamic motion graphics, and audio mastering.', initials: 'VM' },
+    'video-academy': { lead: 'Post-Production Director', role: 'Senior Video Editor & Motion Lead', bio: 'Specialist in high-retention commercial storytelling, color grading, dynamic motion graphics, and audio mastering.', initials: 'VM' },
+    '3d': { lead: 'Senior 3D & Technical Artist', role: 'Real-Time Pipeline & ArchViz Lead', bio: 'Specialist in Blender, Unreal Engine 5 Lumen/Nanite workflows, architectural visualization, and photorealistic asset creation.', initials: '3D' },
+    '3d-academy': { lead: 'Senior 3D & Technical Artist', role: 'Real-Time Pipeline & ArchViz Lead', bio: 'Specialist in Blender, Unreal Engine 5 Lumen/Nanite workflows, architectural visualization, and photorealistic asset creation.', initials: '3D' },
+    'career': { lead: 'Agency Strategist & Founder', role: 'Freelance & Retainer Monetization Mentor', bio: 'Specialist in international client acquisition, proposal engineering, high-ticket packaging, and business operations.', initials: 'CF' },
+    'career-freelancing': { lead: 'Agency Strategist & Founder', role: 'Freelance & Retainer Monetization Mentor', bio: 'Specialist in international client acquisition, proposal engineering, high-ticket packaging, and business operations.', initials: 'CF' },
+    'career-academy': { lead: 'Agency Strategist & Founder', role: 'Freelance & Retainer Monetization Mentor', bio: 'Specialist in international client acquisition, proposal engineering, high-ticket packaging, and business operations.', initials: 'CF' },
+    'communication': { lead: 'Executive Voice Coach', role: 'Leadership Communication & Pitch Specialist', bio: 'Specialist in executive presence, persuasive presentations, high-stakes stakeholder meetings, and corporate dialogue.', initials: 'EC' },
+    'comm-academy': { lead: 'Executive Voice Coach', role: 'Leadership Communication & Pitch Specialist', bio: 'Specialist in executive presence, persuasive presentations, high-stakes stakeholder meetings, and corporate dialogue.', initials: 'EC' },
+    'kids': { lead: 'Certified STEM Educator', role: 'Creative Computing & Logic Mentor', bio: 'Dedicated educator specializing in gamified algorithmic thinking, beginner Python, and interactive digital creation.', initials: 'KT' },
+    'kids-tech': { lead: 'Certified STEM Educator', role: 'Creative Computing & Logic Mentor', bio: 'Dedicated educator specializing in gamified algorithmic thinking, beginner Python, and interactive digital creation.', initials: 'KT' },
+    'creator': { lead: 'Creator Economy Strategist', role: 'YouTube Production & Distribution Lead', bio: 'Specialist in audience analytics, algorithmic retention optimization, content monetization, and personal branding.', initials: 'CR' },
+    'creator-academy': { lead: 'Creator Economy Strategist', role: 'YouTube Production & Distribution Lead', bio: 'Specialist in audience analytics, algorithmic retention optimization, content monetization, and personal branding.', initials: 'CR' },
+    'office': { lead: 'Business Intelligence Lead', role: 'Data Analytics & Copilot Specialist', bio: 'Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.', initials: 'OP' },
+    'office-productivity': { lead: 'Business Intelligence Lead', role: 'Data Analytics & Copilot Specialist', bio: 'Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.', initials: 'OP' },
+    'office-academy': { lead: 'Business Intelligence Lead', role: 'Data Analytics & Copilot Specialist', bio: 'Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.', initials: 'OP' }
   };
 
   const domain = academyMentors[course.academyId] || academyMentors['digital-marketing'];
 
   mentorsContainer.innerHTML = `
     <div class="mentor-card">
-      <div class="mentor-avatar" style="background:var(--grad-hero);"><span class="mentor-initials">${domain.lead.slice(0, 2).toUpperCase()}</span></div>
+      <div class="mentor-avatar" style="background:var(--grad-hero);"><span class="mentor-initials">${domain.initials || domain.lead.slice(0, 2).toUpperCase()}</span></div>
       <h3 class="mentor-name">${escapeHTML(domain.lead)}</h3>
       <div class="mentor-role">${escapeHTML(domain.role)}</div>
       <span class="mentor-exp">Industry Practitioner Mentorship</span>
@@ -589,13 +669,29 @@ function populateDomainMentors(course) {
     </div>
 
     <div class="mentor-card">
-      <div class="mentor-avatar" style="background:var(--grad-teal-green);"><span class="mentor-initials">PT</span></div>
-      <h3 class="mentor-name">Senior Project Trainer</h3>
-      <div class="mentor-role">Hands-On Lab & Critique Mentor</div>
+      <div class="mentor-avatar" style="background:var(--grad-teal-green);"><span class="mentor-initials">PR</span></div>
+      <h3 class="mentor-name">Lab &amp; Portfolio Review Mentor</h3>
+      <div class="mentor-role">Hands-On Lab &amp; Critique Mentor</div>
       <span class="mentor-exp">Live Project Mentorship</span>
       <p class="mentor-bio">Dedicated to portfolio asset building, iterative project critiques, industry toolchains, and commercial quality assurance.</p>
     </div>
   `;
+}
+
+/* Dynamically tailor Student Testimonials / Social Proof based on Course */
+function populateTestimonials(course) {
+  const testimonialsSlot = document.getElementById('testimonials-slot');
+  const existingSection = document.getElementById('testimonials-section');
+  if (!testimonialsSlot && !existingSection) return;
+
+  if (typeof NovaCredibility !== 'undefined' && typeof NovaCredibility.renderTestimonialsSectionForCourse === 'function') {
+    const rendered = NovaCredibility.renderTestimonialsSectionForCourse(course.id, course.name);
+    if (testimonialsSlot) {
+      testimonialsSlot.outerHTML = rendered;
+    } else if (existingSection) {
+      existingSection.outerHTML = rendered;
+    }
+  }
 }
 
 /* ============================================================
@@ -605,7 +701,11 @@ async function loadDetailedCourseData(baseCourse) {
   let detailData = null;
 
   try {
-    const res = await fetch(`/data/courses/${encodeURIComponent(baseCourse.id)}.json`);
+    const curriculumRef = baseCourse.curriculumRef ? `/data/${baseCourse.curriculumRef}` : `/data/curricula/${encodeURIComponent(baseCourse.id)}.json`;
+    let res = await fetch(curriculumRef);
+    if (!res.ok) {
+      res = await fetch(`/data/courses/${encodeURIComponent(baseCourse.id)}.json`);
+    }
     if (res.ok) {
       detailData = await res.json();
     }
@@ -2469,6 +2569,297 @@ if (typeof document !== 'undefined') {
   });
 }
 
+
+function renderClientCostTransparency(baseCourse, detailData) {
+  const container = document.getElementById('cost-transparency-container');
+  const banner = document.getElementById('financing-policy-banner');
+  if (!container && !banner) return;
+
+  const duration = baseCourse.duration || (detailData && detailData.duration) || '3 Months';
+  const durationMonths = baseCourse.durationMonths || (parseInt(baseCourse.duration, 10) || 1);
+  const durLower = duration.toLowerCase();
+  const isTier1 = durLower.includes('week') || durationMonths <= 1.5;
+  const isTier3 = durationMonths >= 5;
+  const tier = isTier1 ? 'tier1' : (isTier3 ? 'tier3' : 'tier2');
+
+  const guidedHours = baseCourse.learningHours || (detailData && (detailData.guidedHours || detailData.learning_hours)) || 64;
+  const launchFee = baseCourse.price || 9900;
+
+  const ht = (detailData && detailData.hands_on_tech) || {};
+  const allTools = [
+    ...(ht.core_tools || []),
+    ...(ht.supporting_tools || []),
+    ...(baseCourse.tools || [])
+  ];
+
+  const toolNames = allTools.map(t => typeof t === 'string' ? t : (t.tool || t.name)).filter(Boolean);
+  const uniqueTools = Array.from(new Set(toolNames)).slice(0, 6);
+
+  let p2ToolsHtml = '';
+  if (uniqueTools.length > 0) {
+    p2ToolsHtml = uniqueTools.map(t => `
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-free">✓</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">${escapeHTML(t)}</span>
+          <span class="cost-tool-badge badge-free">₹0 Free Tier</span>
+        </div>
+      </li>
+    `).join('');
+  } else {
+    p2ToolsHtml = `
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-free">✓</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">Standard Industry Tools</span>
+          <span class="cost-tool-badge badge-free">₹0 Free / Open Source</span>
+        </div>
+      </li>
+    `;
+  }
+
+  const courseStr = (baseCourse.name + ' ' + (baseCourse.academy || '')).toLowerCase();
+  const isDesignOrVideo = /design|video|motion|3d|graphics|animation|editing|vfx/.test(courseStr);
+  const isAIOrTech = /ai|artificial|developer|stack|python|coding|software|prompt|automation/.test(courseStr);
+  const isMarketing = /marketing|seo|ads|growth|social/.test(courseStr);
+
+  let p3OptionalHtml = '';
+  if (isDesignOrVideo) {
+    p3OptionalHtml = `
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-opt">◈</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">Commercial Design Licenses</span>
+          <span class="cost-subtext">Optional. Full ₹0 equivalents (Photopea, DaVinci Resolve, Inkscape) taught in class.</span>
+        </div>
+      </li>
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-opt">◈</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">Stock Media Subscriptions</span>
+          <span class="cost-subtext">Optional. Unsplash, Pexels &amp; free classroom media libraries provided.</span>
+        </div>
+      </li>
+    `;
+  } else if (isAIOrTech) {
+    p3OptionalHtml = `
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-opt">◈</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">Cursor Pro / Copilot Pro</span>
+          <span class="cost-subtext">Optional. Free VS Code + Gemini API / GitHub Student Pack is 100% sufficient.</span>
+        </div>
+      </li>
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-opt">◈</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">ChatGPT Plus / Claude Pro</span>
+          <span class="cost-subtext">Optional ($20/mo). Free web tiers &amp; Google AI Studio cover all syllabus needs.</span>
+        </div>
+      </li>
+    `;
+  } else if (isMarketing) {
+    p3OptionalHtml = `
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-opt">◈</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">SEMrush / Ahrefs Paid Plans</span>
+          <span class="cost-subtext">Optional. Google Search Console &amp; free keyword tools cover all assignments.</span>
+        </div>
+      </li>
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-opt">◈</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">Canva Pro / Paid Templates</span>
+          <span class="cost-subtext">Optional. Canva Free plan &amp; free asset libraries are 100% sufficient.</span>
+        </div>
+      </li>
+    `;
+  } else {
+    p3OptionalHtml = `
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-opt">◈</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">Paid SaaS Tool Tiers</span>
+          <span class="cost-subtext">Optional. Every assignment is 100% completable on free educational plans.</span>
+        </div>
+      </li>
+    `;
+  }
+
+  let p4ExternalHtml = '';
+  if (isAIOrTech) {
+    p4ExternalHtml = `
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-ext">⚙</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">Cloud API Credits</span>
+          <span class="cost-subtext">₹0 using Google AI Studio &amp; local Ollama. Optional commercial API spend: ₹200–₹500.</span>
+        </div>
+      </li>
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-ext">⚙</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">Cloud Hosting &amp; Staging</span>
+          <span class="cost-subtext">₹0 via Vercel / Netlify / Render free tiers. Custom domain (~₹800/yr) is optional.</span>
+        </div>
+      </li>
+    `;
+  } else if (isMarketing) {
+    p4ExternalHtml = `
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-ext">⚙</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">Live Ad Spend Budget</span>
+          <span class="cost-subtext">₹0 mandatory. All ad setups are practiced in mock environments / sandbox ad accounts.</span>
+        </div>
+      </li>
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-ext">⚙</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">Domain &amp; Web Staging</span>
+          <span class="cost-subtext">₹0 via free staging environments (LocalWP / free subdomains).</span>
+        </div>
+      </li>
+    `;
+  } else {
+    p4ExternalHtml = `
+      <li class="cost-pillar-item">
+        <span class="cost-item-bullet bullet-ext">⚙</span>
+        <div class="cost-item-text">
+          <span class="cost-tool-name">External Infrastructure Costs</span>
+          <span class="cost-subtext">₹0. No external hosting, domain or third-party API spend required.</span>
+        </div>
+      </li>
+    `;
+  }
+
+  let financingBadge = '';
+  let financingTitle = '';
+  let financingDesc = '';
+
+  if (tier === 'tier1') {
+    financingBadge = 'Single-Payment Enrollment';
+    financingTitle = 'Transparent Payment Policy: Intensive Certification Course';
+    financingDesc = `As an intensive short-format course (${duration}), tuition is payable as a one-time enrollment fee of ₹${launchFee.toLocaleString('en-IN')}. The final payable amount, including any applicable taxes, will be clearly displayed before payment. Standard credit card and debit card installment options are available directly at checkout through our payment gateway partners, subject to card-issuing bank policies.`;
+  } else if (tier === 'tier2') {
+    financingBadge = 'Flexible 2-Part Milestone / Card EMI';
+    financingTitle = 'Flexible Payment Options: Mid-Length Professional Program';
+    financingDesc = `For this ${duration} program (launch fee ₹${launchFee.toLocaleString('en-IN')}), Nova Skills offers a 2-part milestone installment plan upon admissions approval, as well as 3 to 6-month card EMI options through participating banks at payment checkout. The final payable amount, including any applicable taxes, will be clearly displayed before payment. Call admissions at +91 9695904440 to confirm milestone eligibility.`;
+  } else {
+    financingBadge = 'Structured 3-Stage Milestone / Partner EMI';
+    financingTitle = 'Financing &amp; Installment Plans: Comprehensive Career Mastery';
+    financingDesc = `For this comprehensive ${duration} career mastery program (launch fee ₹${launchFee.toLocaleString('en-IN')}), students can access a structured 3-stage milestone payment schedule upon admissions approval, as well as institutional 6 to 9-month EMI plans through our partner payment gateways. The final payable amount, including any applicable taxes, will be clearly displayed before payment. All financing terms are subject to standard verification and lender approval.`;
+  }
+
+  if (container) {
+    container.innerHTML = `
+      <!-- Pillar 1: Included in Tuition -->
+      <div class="cost-pillar-card pillar-tuition">
+        <div class="cost-pillar-header">
+          <div class="pillar-number">1</div>
+          <h3 class="pillar-title">Included in Tuition</h3>
+          <p class="pillar-desc">100% covered by your course fee</p>
+        </div>
+        <div class="pillar-fee-box">
+          <div class="fee-row fee-main">
+            <span class="fee-label">Launch Tuition:</span>
+            <span class="fee-val">₹${launchFee.toLocaleString('en-IN')}</span>
+          </div>
+          <div class="fee-row fee-tax">
+            <span class="fee-label">Taxes:</span>
+            <span class="fee-val">Disclosed before payment</span>
+          </div>
+        </div>
+        <ul class="cost-pillar-list">
+          <li class="cost-pillar-item">
+            <span class="cost-item-bullet bullet-included">✓</span>
+            <div class="cost-item-text">${guidedHours} guided training hours of live mentor instruction</div>
+          </li>
+          <li class="cost-pillar-item">
+            <span class="cost-item-bullet bullet-included">✓</span>
+            <div class="cost-item-text">Individual portfolio reviews, code evaluations &amp; capstone grading</div>
+          </li>
+          <li class="cost-pillar-item">
+            <span class="cost-item-bullet bullet-included">✓</span>
+            <div class="cost-item-text">Official Nova Skills Certificate of Completion with secure QR verification</div>
+          </li>
+          <li class="cost-pillar-item">
+            <span class="cost-item-bullet bullet-included">✓</span>
+            <div class="cost-item-text">Full LMS archive access to all class recordings, templates &amp; slides</div>
+          </li>
+          <li class="cost-pillar-item">
+            <span class="cost-item-bullet bullet-included">✓</span>
+            <div class="cost-item-text">1-on-1 career counselling, portfolio guidance &amp; mock interviews</div>
+          </li>
+        </ul>
+        <div class="pillar-footer text-emerald">
+          <span class="footer-icon">✓</span> Valid GST invoice with Input Tax Credit (ITC) provided
+        </div>
+      </div>
+
+      <!-- Pillar 2: Free Tools & Accounts -->
+      <div class="cost-pillar-card pillar-free">
+        <div class="pillar-tag-top">₹0 Mandatory Spend</div>
+        <div class="cost-pillar-header">
+          <div class="pillar-number pillar-number-emerald">2</div>
+          <h3 class="pillar-title">Free Tools &amp; Accounts</h3>
+          <p class="pillar-desc">100% coursework completable with ₹0 software cost</p>
+        </div>
+        <ul class="cost-pillar-list">
+          ${p2ToolsHtml}
+        </ul>
+        <div class="pillar-guarantee-box">
+          <strong>Zero Hidden Tool Expenses:</strong> Every required assignment and portfolio capstone is verified to run on permanent free tiers, open-source software, or educational accounts.
+        </div>
+      </div>
+
+      <!-- Pillar 3: Optional Premium Services -->
+      <div class="cost-pillar-card pillar-optional">
+        <div class="cost-pillar-header">
+          <div class="pillar-number pillar-number-purple">3</div>
+          <h3 class="pillar-title">Optional Premium Upgrades</h3>
+          <p class="pillar-desc">Explored in class · Never mandatory to graduate</p>
+        </div>
+        <ul class="cost-pillar-list">
+          ${p3OptionalHtml}
+        </ul>
+        <div class="pillar-footer text-purple">
+          <span class="footer-icon">◈</span> Full zero-cost alternatives demonstrated in class
+        </div>
+      </div>
+
+      <!-- Pillar 4: External / API Expenses -->
+      <div class="cost-pillar-card pillar-external">
+        <div class="cost-pillar-header">
+          <div class="pillar-number pillar-number-amber">4</div>
+          <h3 class="pillar-title">External / Usage Costs</h3>
+          <p class="pillar-desc">Applicable only if student deploys live commercial apps</p>
+        </div>
+        <ul class="cost-pillar-list">
+          ${p4ExternalHtml}
+        </ul>
+        <div class="pillar-footer text-amber">
+          <span class="footer-icon">⚙</span> Free sandbox tiers cover 100% of coursework
+        </div>
+      </div>
+    `;
+  }
+
+  if (banner) {
+    banner.innerHTML = `
+      <div class="financing-banner-content">
+        <div class="financing-badge">${financingBadge}</div>
+        <h4 class="financing-banner-title">${financingTitle}</h4>
+        <p class="financing-banner-desc">${financingDesc}</p>
+      </div>
+      <div class="financing-banner-cta">
+        <a href="/contact/" class="btn btn-secondary btn-sm">Speak with Admissions</a>
+      </div>
+    `;
+  }
+}
+
 function renderEnrichedCourseDetail(baseCourse, data) {
   const courseType = (data.course_type || baseCourse.courseType || '').toUpperCase();
   const isMaster = courseType === 'MASTER';
@@ -2486,7 +2877,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
           <div class="advisory-content">
             <h4>Curriculum Integration Pathway Notice</h4>
             <p>
-              This program is an integrated specialization module. If you are seeking complete career mastery, 
+              This program is an integrated specialization module. If you are seeking complete career mastery,
               this entire curriculum is also included in our flagship career track:
               <a href="/course-detail.html?id=${parentId}" class="advisory-link">Explore Parent Career Program →</a>
             </p>
@@ -2500,7 +2891,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
           <div class="advisory-content">
             <h4>Modernization & Successor Notice</h4>
             <p>
-              This curriculum is scheduled for modernization to reflect 2026/27 workplace standards. 
+              This curriculum is scheduled for modernization to reflect 2026/27 workplace standards.
               We recommend reviewing our modernized flagship alternatives for maximum job market impact.
             </p>
           </div>
@@ -2514,15 +2905,17 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   // --- Overview & Positioning ---
   const overviewEl = document.getElementById('overview-content');
   if (overviewEl && data.overview) {
-    const projectCount = data.what_you_will_build ? data.what_you_will_build.length : (baseCourse.liveProjects || 2);
+    const overviewProjLabel = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getCourseProjectLabel === 'function')
+      ? window.NovaCourseData.getCourseProjectLabel(baseCourse)
+      : `${data.what_you_will_build ? data.what_you_will_build.length : (baseCourse.liveProjects || 2)} Portfolio Projects`;
     overviewEl.innerHTML = `
       <p style="font-size:1.15rem; font-weight:700; color:var(--navy); margin-bottom:14px; line-height:1.5;">
         ${escapeHTML(data.overview.positioning || '')}
       </p>
       <p style="margin-bottom:16px;">${escapeHTML(data.overview.short_description || '')}</p>
       <p style="margin-bottom:0;">
-        Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through 
-        <strong>${projectCount} major production portfolio projects</strong>, live interactive labs, 
+        Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through
+        <strong>${escapeHTML(overviewProjLabel)}</strong>, live interactive labs,
         code/design critiques, and commercial delivery standards.
       </p>
     `;
@@ -3142,29 +3535,93 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   if (projectsContainer) {
     const builds = data.what_you_will_build || [];
     const deliverables = data.final_deliverables || [];
+    const isStructured = (baseCourse && baseCourse.id === 'ai-assisted-full-stack-web-development') ||
+      (data && (data.portfolioStructure || data.course_id === 'ai-assisted-full-stack-web-development'));
 
-    projectsContainer.innerHTML = `
-      <div class="projects-suite-grid">
-        ${builds.map((b, bIdx) => {
-          const title = typeof b === 'object' ? (b.title || b.project_title || b.name || '') : b;
-          const isCapstone = (typeof b === 'object' ? (b.badge || b.title || '') : String(b)).toLowerCase().includes('capstone');
-          const desc = typeof b === 'object' ? (b.client_brief || b.business_problem || '') : (data.modules?.[bIdx]?.assignment || data.modules?.[bIdx]?.hands_on_practice || 'Built to professional standards, verified through peer critique and mentor review.');
-          const deliverable = typeof b === 'object' ? (Array.isArray(b.deliverables) ? b.deliverables[0] : (b.deliverables || '')) : (deliverables[bIdx] || 'Production ready asset in student portfolio');
-          return `
-            <div class="portfolio-project-card ${isCapstone ? 'capstone' : ''}">
-              <span class="project-tag-badge">${isCapstone ? 'Enterprise Capstone Project' : (typeof b === 'object' && b.badge ? escapeHTML(b.badge) : `Production Project ${bIdx + 1}`)}</span>
-              <div class="project-card-title">${escapeHTML(title)}</div>
-              <p class="project-card-desc">
-                ${escapeHTML(desc)}
-              </p>
-              <div class="project-deliverable-badge">
-                <span>📁</span> Deliverable: ${escapeHTML(deliverable)}
-              </div>
+    if (isStructured && builds.length === 8) {
+      const commonBuilds = builds.slice(0, 4);
+      const specBuilds = builds.slice(4, 7);
+      const capstoneBuild = builds[7];
+
+      const renderCard = (b, defaultBadge, extraClass = '') => {
+        const title = typeof b === 'object' ? (b.title || b.project_title || b.name || '') : b;
+        const isCap = title.toLowerCase().includes('capstone') || (typeof b === 'object' && b.type === 'capstone');
+        const badge = (typeof b === 'object' && b !== null && b.badge) ? b.badge : defaultBadge;
+        const desc = typeof b === 'object' ? (b.client_brief || b.description || b.business_problem || '') : '';
+        const deliverable = typeof b === 'object' ? (Array.isArray(b.deliverables) ? b.deliverables[0] : (b.deliverables || '')) : (deliverables[0] || 'Production ready asset in student portfolio');
+
+        return `
+          <div class="portfolio-project-card ${isCap ? 'capstone' : ''} ${extraClass}">
+            <span class="project-tag-badge">${escapeHTML(badge)}</span>
+            <div class="project-card-title">${escapeHTML(title)}</div>
+            <p class="project-card-desc">
+              ${escapeHTML(desc)}
+            </p>
+            <div class="project-deliverable-badge">
+              <span>📁</span> Deliverable: ${escapeHTML(deliverable)}
             </div>
-          `;
-        }).join('')}
-      </div>
-    `;
+          </div>
+        `;
+      };
+
+      projectsContainer.innerHTML = `
+        <div class="project-group-block">
+          <div class="project-group-heading" style="margin-bottom:18px;">
+            <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:var(--teal); margin-bottom:4px;">COMMON CORE — REQUIRED FOR EVERY STUDENT</div>
+            <h3 style="font-size:1.25rem; font-weight:800; color:var(--navy); margin:0 0 6px;">Common Projects (Modules 01–12)</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin:0;">Four foundational production applications completed by every student in the program.</p>
+          </div>
+          <div class="projects-suite-grid">
+            ${commonBuilds.map((b, idx) => renderCard(b, `Production Project ${idx + 1}`)).join('')}
+          </div>
+        </div>
+
+        <div class="project-group-block" style="margin-top:36px;">
+          <div class="project-group-heading" style="margin-bottom:18px;">
+            <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:var(--teal); margin-bottom:4px;">CAREER SPECIALIZATION — SELECT ONE</div>
+            <h3 style="font-size:1.25rem; font-weight:800; color:var(--navy); margin:0 0 6px;">Specialization Project (Module 10)</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin:0;">Each student completes exactly ONE 20-hour commercial track project aligned with their chosen career pathway. Tracks are mutually exclusive; all three options are presented below for comparison.</p>
+          </div>
+          <div class="projects-suite-grid">
+            ${specBuilds.map((b, idx) => renderCard(b, `Specialization Project — Option ${String.fromCharCode(65 + idx)}`)).join('')}
+          </div>
+        </div>
+
+        <div class="project-group-block" style="margin-top:36px;">
+          <div class="project-group-heading" style="margin-bottom:18px;">
+            <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:var(--green); margin-bottom:4px;">FINAL CAPSTONE & DEFENSE — REQUIRED FOR EVERY STUDENT</div>
+            <h3 style="font-size:1.25rem; font-weight:800; color:var(--navy); margin:0 0 6px;">Final Project: Enterprise Commercial Capstone & Viva Voce (Modules 13–14)</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin:0;">Culminating enterprise commercial engagement synthesized with your chosen specialization stack, featuring automated tests, CI/CD, documentation, and oral technical defense.</p>
+          </div>
+          <div class="projects-suite-grid">
+            ${renderCard(capstoneBuild, 'Portfolio Project 6 — Enterprise Capstone')}
+          </div>
+        </div>
+      `.trim();
+    } else {
+      projectsContainer.innerHTML = `
+        <div class="projects-suite-grid">
+          ${builds.map((b, bIdx) => {
+            const title = typeof b === 'object' ? (b.title || b.project_title || b.name || '') : b;
+            const isCapstone = (typeof b === 'object' ? (b.badge || b.title || '') : String(b)).toLowerCase().includes('capstone');
+            const desc = typeof b === 'object' ? (b.client_brief || b.business_problem || '') : (data.modules?.[bIdx]?.assignment || data.modules?.[bIdx]?.hands_on_practice || 'Built to professional standards, verified through peer critique and mentor review.');
+            const deliverable = typeof b === 'object' ? (Array.isArray(b.deliverables) ? b.deliverables[0] : (b.deliverables || '')) : (deliverables[bIdx] || 'Production ready asset in student portfolio');
+            return `
+              <div class="portfolio-project-card ${isCapstone ? 'capstone' : ''}">
+                <span class="project-tag-badge">${isCapstone ? 'Enterprise Capstone Project' : (typeof b === 'object' && b.badge ? escapeHTML(b.badge) : `Production Project ${bIdx + 1}`)}</span>
+                <div class="project-card-title">${escapeHTML(title)}</div>
+                <p class="project-card-desc">
+                  ${escapeHTML(desc)}
+                </p>
+                <div class="project-deliverable-badge">
+                  <span>📁</span> Deliverable: ${escapeHTML(deliverable)}
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }
   }
 
   // --- AI Integration Matrix (Templates B & C) ---
@@ -3237,6 +3694,9 @@ function renderEnrichedCourseDetail(baseCourse, data) {
             </div>
           </div>
         </div>
+        <div class="career-disclaimer-note" style="margin-top:16px; padding:12px 16px; background:#f1f5f9; border-left:3px solid #0599a8; border-radius:6px; font-size:0.8125rem; color:#475569; line-height:1.5;">
+          ⚖️ <strong>Career &amp; Placement Transparency:</strong> Roles and freelance services listed represent typical target career paths based on curriculum skills. Enrolment does not guarantee a job offer, interview, specific salary, or client contract. Placement assistance is provided for eligible career and professional programs subject to academic performance and employer criteria.
+        </div>
       `;
     } else {
       careerSection.style.display = 'none';
@@ -3252,7 +3712,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
       const typical = data.course_comparison.typical_course;
       const nova = data.course_comparison.novaskills_mastery;
       const rowCount = Math.max(typical.length, nova.length);
-      
+
       let rowsHtml = '';
       for (let r = 0; r < rowCount; r++) {
         rowsHtml += `
@@ -3382,8 +3842,8 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   const certDesc = document.getElementById('cert-desc');
   if (certDesc && data.certification) {
     certDesc.innerHTML = `
-      Upon completing this program and defending your portfolio projects, you earn the 
-      <strong>${escapeHTML(data.certification.title || baseCourse.name)}</strong> credential from Nova Skills — 
+      Upon completing this program and defending your portfolio projects, you earn the
+      <strong>${escapeHTML(data.certification.title || baseCourse.name)}</strong> credential from Nova Skills —
       ISO 9001:2015 verified with permanent online QR-code validation.
     `;
   }
@@ -3428,18 +3888,22 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   const nextPathContainer = document.getElementById('next-path-container');
   if (nextPathContainer && data.next_learning_path) {
     const nextText = data.next_learning_path.recommended_next || '';
-    
+
     // Find potential course ID
     const words = nextText.match(/[a-z0-9]+-[a-z0-9-]+/gi) || [];
     let nextCourseId = null;
-    const courses = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
-      ? NS_COURSES
-      : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []);
+    const courses = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+      ? window.NovaCourseData.getPublishedCourses()
+      : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+        ? NS_COURSES
+        : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []));
     const validIds = new Set(courses.map(c => c.id));
 
     for (const w of words) {
       const clean = w.toLowerCase().replace(/[^a-z0-9-]/g, '');
-      const resolved = COURSE_ALIASES[clean] || clean;
+      const resolved = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.resolveCanonicalCourseId === 'function')
+        ? window.NovaCourseData.resolveCanonicalCourseId(clean)
+        : (COURSE_ALIASES[clean] || clean);
       if (validIds.has(resolved) && resolved !== baseCourse.id) {
         nextCourseId = resolved;
         break;
@@ -3510,6 +3974,7 @@ function renderEnrichedCourseDetail(baseCourse, data) {
   }
 
   // Update Dynamic JSON-LD with Schema.org @graph
+  renderClientCostTransparency(baseCourse, data);
   injectCourseSchema(baseCourse, 'https://novaskills.in/public/images/seo/og-banner.png?v=2026', `https://novaskills.in/course-detail.html?id=${encodeURIComponent(baseCourse.id)}`, data);
 }
 
@@ -3628,9 +4093,11 @@ function renderRelatedCourses(currentCourse) {
   const container = document.getElementById('related-courses-grid');
   if (!container) return;
 
-  const courses = (typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
-    ? NS_COURSES
-    : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []);
+  const courses = (typeof window !== 'undefined' && window.NovaCourseData && typeof window.NovaCourseData.getPublishedCourses === 'function')
+    ? window.NovaCourseData.getPublishedCourses()
+    : ((typeof NS_COURSES !== 'undefined' && Array.isArray(NS_COURSES))
+      ? NS_COURSES
+      : (typeof window !== 'undefined' && Array.isArray(window.NS_COURSES) ? window.NS_COURSES : []));
 
   const sameAcademyCourses = courses.filter(c => c.id !== currentCourse.id && c.academyId === currentCourse.academyId);
   const otherAcademyCourses = courses.filter(c => c.id !== currentCourse.id && c.academyId !== currentCourse.academyId);
@@ -3678,7 +4145,7 @@ function renderRelatedCourses(currentCourse) {
         <div class="course-footer course-footer-stack">
           ${(typeof isCourseDemoEligible === 'function' ? isCourseDemoEligible(c) : true) ? `
           <div class="course-demo-indicator">
-            <button type="button" class="course-demo-chip" onclick="if(typeof openDemoModal==='function'){openDemoModal({courseId:'${c.id}', courseName:'${relSafeName}', academyName:'${relSafeAcademy}'});}">
+            <button type="button" class="course-demo-chip" onclick="if(typeof NovaAnalytics!=='undefined')NovaAnalytics.trackCourseSelect('${c.id}','related_course_card');if(typeof openDemoModal==='function'){openDemoModal({courseId:'${c.id}', courseName:'${relSafeName}', academyName:'${relSafeAcademy}'});}">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="m9 16 2 2 4-4"></path></svg>
               <span class="demo-chip-text">2-Day Free Demo Available</span>
             </button>

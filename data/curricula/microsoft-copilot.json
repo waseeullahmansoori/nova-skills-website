@@ -1,0 +1,1277 @@
+{
+  "courseId": "microsoft-copilot",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/microsoft-copilot.json",
+  "guidedHours": 32,
+  "learning_hours": 32,
+  "course_type": "Certification Course",
+  "seo_title": "Microsoft 365 Copilot AI Productivity Course | Nova Skills",
+  "seo_description": "Learn Copilot for Word, Excel, PowerPoint, Outlook and Teams in 4 weeks (32h). Build verified AI workplace projects. Course fee ₹5,900.",
+  "overview": "This course represents a premium AI upskilling opportunity within Office Productivity Academy. It teaches existing Microsoft 365 users to work more effectively with AI while understanding its limitations, licensing requirements, source permissions, business-data safety, and the essential requirement of human verification. Over 4 weeks and 32 learning hours across 6 structured modules, learners progress through Copilot foundations, document drafting and summarization in Word, spreadsheet assistance and formula auditing in Excel, presentation outline-to-deck creation in PowerPoint, communication management in Outlook and Teams, and an integrated multi-application capstone creating the AI-Assisted Office Productivity Toolkit.",
+  "why_now": null,
+  "learning_journey": null,
+  "prerequisites": [
+    "Basic proficiency in Microsoft Word (creating documents, applying heading styles, formatting text)",
+    "Basic proficiency in Microsoft Excel (basic formulas, cell references, tables, simple charts)",
+    "Basic proficiency in Microsoft PowerPoint (slide creation, text formatting, basic layouts)",
+    "General office file management and digital communication awareness",
+    "Readiness recommendation: Learners lacking core office fundamentals should first complete Course 30 — Office Productivity Professional"
+  ],
+  "target_audience": [
+    "Existing Microsoft 365 users seeking practical, safe AI workplace skills",
+    "Office professionals, administrative executives, and team coordinators",
+    "Business managers, department leads, and operations specialists",
+    "Educators, consultants, and independent small business owners adopting AI",
+    "Professionals transitioning from manual office tasks to AI-assisted workflows"
+  ],
+  "learning_outcomes": [
+    "Explain Microsoft 365 Copilot workplace productivity concepts, generative AI principles, and the boundary between AI assistance and human accountability.",
+    "Distinguish between Microsoft Copilot Chat and full licensed Microsoft 365 Copilot in terms of capability, interface, and tenant requirements.",
+    "Identify eligible Microsoft 365 subscription plans, prerequisite licenses, and administrative feature enablement criteria.",
+    "Understand work-data grounding principles and how Copilot utilizes authorized enterprise context versus web-grounded search.",
+    "Explain Microsoft Graph and Work IQ permission boundaries, tenant policies, and the risks associated with organizational data oversharing.",
+    "Write structured, professional workplace prompts incorporating task, context, source material, intended audience, constraints, and format.",
+    "Specify precise business context, objective parameters, and required deliverables in conversational AI interactions.",
+    "Reference authorized source documents, tables, and notes accurately within Copilot prompts across desktop and web applications.",
+    "Set explicit negative constraints, confidentiality limits, and formatting boundaries in Copilot instructions to minimize hallucinations.",
+    "Identify weak, vague, or unsupported AI outputs and systematically refine prompts through iterative engineering.",
+    "Draft structured business reports, proposals, memos, and executive summaries with Microsoft Word Copilot assistance.",
+    "Rewrite, rephrase, and edit draft business documentation for clarity, professional conciseness, and audience suitability in Word.",
+    "Summarize multi-page business reports, extract key operational findings, and identify unresolved strategic questions using Copilot in Word.",
+    "Validate AI-extracted information against original source notes, identifying omissions, exaggerations, and unsupported claims.",
+    "Correct factual errors, misattributed dates, and unsubstantiated conclusions in AI-assisted business documentation.",
+    "Use Copilot in Excel for formula assistance, dataset preparation, and structured table analysis across everyday business scenarios.",
+    "Interpret and explain AI-suggested Excel formulas including SUMIFS, COUNTIFS, IF, and XLOOKUP logic before applying them to workbooks.",
+    "Independently recalculate totals, sample rows, and boundary conditions to verify that Copilot-generated spreadsheet formulas are accurate.",
+    "Verify AI-generated spreadsheet insights, trends, and summary metrics against underlying raw records before reporting.",
+    "Create and refine structured presentation outlines in PowerPoint from meeting notes, project briefs, and Word source documents.",
+    "Review AI-generated slides for visual hierarchy, readability, data consistency, and alignment with source reference materials.",
+    "Check and maintain cross-application consistency in dates, metrics, and business recommendations across Word, Excel, and PowerPoint deliverables.",
+    "Draft professional, context-appropriate email replies and client communications using Copilot in Outlook.",
+    "Summarize lengthy email threads in Outlook to extract key stakeholder points, decisions, and required next steps.",
+    "Review and validate Microsoft Teams meeting recaps, automated notes, and AI-generated discussion summaries.",
+    "Verify action-item ownership, explicit participant commitments, and delivery deadlines extracted from meeting records.",
+    "Identify and eliminate hallucinated meeting decisions, false agreements, and unassigned task allocations in follow-up communications.",
+    "Explain Copilot licensing limitations, app client variations, and features requiring transcription versus no-transcription modes in Teams.",
+    "Protect confidential business data, employee privacy, and intellectual property by adhering to responsible AI and least-privilege sharing rules.",
+    "Maintain a structured prompt and verification log recording prompts, raw AI outputs, detected discrepancies, human corrections, and approvals.",
+    "Plan and execute an integrated, multi-application AI office workflow connecting Word, Excel, PowerPoint, Outlook, and Teams.",
+    "Assemble, format, and present a professional AI-Assisted Office Productivity Toolkit with full human verification evidence."
+  ],
+  "hands_on_tech": [
+    "Microsoft 365 Copilot",
+    "Microsoft Copilot Chat",
+    "Microsoft Word",
+    "Microsoft Excel",
+    "Microsoft PowerPoint",
+    "Microsoft Outlook",
+    "Microsoft Teams",
+    "Microsoft OneDrive"
+  ],
+  "modules": [
+    {
+      "module_number": 1,
+      "title": "Copilot Foundations & Licensing",
+      "hours": 4,
+      "learning_hours": 4,
+      "objective": "Understand Microsoft's AI workplace ecosystem, licensing, prompting, grounding, and data governance.",
+      "lessons": [
+        {
+          "number": "1.1",
+          "title": "Introduction to Microsoft 365 Copilot",
+          "topics": [
+            "Workplace productivity use cases",
+            "Microsoft ecosystem",
+            "Generative AI fundamentals",
+            "AI-assisted vs fully automated work"
+          ]
+        },
+        {
+          "number": "1.2",
+          "title": "Copilot Chat",
+          "topics": [
+            "Eligible accounts",
+            "Web-grounded conversations",
+            "Supported file interactions",
+            "Interface limitations"
+          ]
+        },
+        {
+          "number": "1.3",
+          "title": "Full Licensed Copilot",
+          "topics": [
+            "Work grounding",
+            "Microsoft 365 integration",
+            "Extended capabilities",
+            "License-dependent features"
+          ]
+        },
+        {
+          "number": "1.4",
+          "title": "Microsoft 365 Accounts",
+          "topics": [
+            "Personal accounts",
+            "Work/school accounts",
+            "Organizational tenants",
+            "License assignment"
+          ]
+        },
+        {
+          "number": "1.5",
+          "title": "Licensing and Features",
+          "topics": [
+            "Eligible prerequisite plans",
+            "Copilot add-ons",
+            "Subscription conditions",
+            "Organization policies"
+          ]
+        },
+        {
+          "number": "1.6",
+          "title": "Work IQ and Microsoft Graph",
+          "topics": [
+            "Organizational context",
+            "Files, email, meetings, chats",
+            "Permissions",
+            "Grounding limitations"
+          ]
+        },
+        {
+          "number": "1.7",
+          "title": "Web vs Work Data",
+          "topics": [
+            "Public information",
+            "Authorized uploaded files",
+            "Accessible organizational content",
+            "Restricted content"
+          ]
+        },
+        {
+          "number": "1.8",
+          "title": "Grounding Concepts",
+          "topics": [
+            "Relevant sources",
+            "Source selection",
+            "Context retrieval",
+            "Evidence evaluation"
+          ]
+        },
+        {
+          "number": "1.9",
+          "title": "AI Limitations",
+          "topics": [
+            "Hallucinations",
+            "Outdated information",
+            "Wrong assumptions",
+            "Incomplete context"
+          ]
+        },
+        {
+          "number": "1.10",
+          "title": "Responsible AI",
+          "topics": [
+            "Human accountability",
+            "Confidentiality",
+            "Accuracy",
+            "Fairness",
+            "Appropriate workplace use"
+          ]
+        },
+        {
+          "number": "1.11",
+          "title": "Prompt Fundamentals",
+          "topics": [
+            "Goal",
+            "Context",
+            "Source",
+            "Constraints",
+            "Audience",
+            "Output format"
+          ]
+        },
+        {
+          "number": "1.12",
+          "title": "Prompt Quality",
+          "topics": [
+            "Specificity",
+            "Clear instructions",
+            "Source references",
+            "Explicit uncertainty handling"
+          ]
+        },
+        {
+          "number": "1.13",
+          "title": "Iterative Prompting",
+          "topics": [
+            "First attempt analysis",
+            "Output inspection",
+            "Discrepancy correction",
+            "Refined prompt drafting"
+          ]
+        },
+        {
+          "number": "1.14",
+          "title": "Prompt Injection Awareness",
+          "topics": [
+            "Untrusted document instructions",
+            "Suspicious content handling",
+            "Ignoring malicious requests in source material"
+          ]
+        },
+        {
+          "number": "1.15",
+          "title": "Data Governance",
+          "topics": [
+            "User permissions",
+            "Organizational policies",
+            "Sensitive data protection",
+            "Retention awareness"
+          ]
+        },
+        {
+          "number": "1.16",
+          "title": "AI Verification Checklist",
+          "topics": [
+            "Source tracking",
+            "Factual cross-check",
+            "Calculation recalculation",
+            "Ownership verification",
+            "Human approval sign-off"
+          ]
+        }
+      ],
+      "hands_on_lab": "Formulate weak, improved, and source-grounded prompts based on a fictional business case. Compare raw outputs and construct an initial AI verification checklist.",
+      "practical_assignment": "Prepare a Microsoft 365 Copilot Use-Case and Licensing Matrix distinguishing Copilot Chat capabilities from full licensed Copilot features.",
+      "deliverable": "Copilot Foundations, Licensing & Prompt Quality Pack"
+    },
+    {
+      "module_number": 2,
+      "title": "Copilot in Word & Documents",
+      "hours": 6,
+      "learning_hours": 6,
+      "objective": "Draft, summarize, revise and validate professional documents using appropriate Copilot capabilities with strict factual verification.",
+      "lessons": [
+        {
+          "number": "2.1",
+          "title": "Copilot in Word Overview",
+          "topics": [
+            "Feature access",
+            "Account requirements",
+            "Supported document scenarios",
+            "Canvas interface"
+          ]
+        },
+        {
+          "number": "2.2",
+          "title": "Document Drafting",
+          "topics": [
+            "Business letters",
+            "Operational reports",
+            "Proposals",
+            "Meeting briefs"
+          ]
+        },
+        {
+          "number": "2.3",
+          "title": "Prompting for Documents",
+          "topics": [
+            "Document goal",
+            "Intended reader",
+            "Tone calibration",
+            "Context specification",
+            "Required sections",
+            "Negative constraints"
+          ]
+        },
+        {
+          "number": "2.4",
+          "title": "Structured Drafting",
+          "topics": [
+            "Executive summaries",
+            "Body sections",
+            "Analytical summaries",
+            "Actionable recommendations",
+            "Supporting evidence"
+          ]
+        },
+        {
+          "number": "2.5",
+          "title": "Drafts From Authorized Sources",
+          "topics": [
+            "Supplied meeting notes",
+            "Authorized background documents",
+            "Referenced files where supported",
+            "Source limitations"
+          ]
+        },
+        {
+          "number": "2.6",
+          "title": "Document Summarization",
+          "topics": [
+            "Main findings extraction",
+            "Important decisions",
+            "Unresolved questions",
+            "Key operational facts"
+          ]
+        },
+        {
+          "number": "2.7",
+          "title": "Source Checking",
+          "topics": [
+            "Comparing summary with source",
+            "Identifying omitted details",
+            "Locating supporting statements in notes"
+          ]
+        },
+        {
+          "number": "2.8",
+          "title": "Rewriting & Style Adaptation",
+          "topics": [
+            "Clarity improvement",
+            "Conciseness",
+            "Professional corporate tone",
+            "Audience suitability"
+          ]
+        },
+        {
+          "number": "2.9",
+          "title": "Business Editing",
+          "topics": [
+            "Consistent terminology",
+            "Structural hierarchy",
+            "Heading styles",
+            "Accurate formatting"
+          ]
+        },
+        {
+          "number": "2.10",
+          "title": "Document Comparison",
+          "topics": [
+            "Comparing original notes with revised draft",
+            "Identifying discrepancies",
+            "Reviewing changes with Word built-in tools"
+          ]
+        },
+        {
+          "number": "2.11",
+          "title": "Copilot Limitations in Word",
+          "topics": [
+            "Incomplete summaries",
+            "Fabricated citations",
+            "Unsupported claims",
+            "Missing contextual nuances"
+          ]
+        },
+        {
+          "number": "2.12",
+          "title": "Human Review Standard",
+          "topics": [
+            "Verifying dates",
+            "Verifying names",
+            "Auditing figures",
+            "Checking commitments",
+            "Validating citations"
+          ]
+        },
+        {
+          "number": "2.13",
+          "title": "Word Feature Boundaries",
+          "topics": [
+            "When to use Word native tools",
+            "Manual formatting vs AI generation",
+            "Unsupported layout operations"
+          ]
+        },
+        {
+          "number": "2.14",
+          "title": "Confidentiality & Privacy",
+          "topics": [
+            "Authorized source files",
+            "Approved document sharing",
+            "Protecting sensitive organizational data"
+          ]
+        },
+        {
+          "number": "2.15",
+          "title": "Document Quality Assurance",
+          "topics": [
+            "Clear heading structure (H1/H2/H3)",
+            "Consistent styling",
+            "Logical progression",
+            "Document readability"
+          ]
+        },
+        {
+          "number": "2.16",
+          "title": "Revision Log Maintenance",
+          "topics": [
+            "Initial AI output capture",
+            "Documented errors found",
+            "Human edits applied",
+            "Approved final version"
+          ]
+        }
+      ],
+      "hands_on_lab": "Draft a fictional Monthly Business Operations Report from unstructured meeting notes. Systematically detect, log, and correct AI hallucinations and missing caveats.",
+      "practical_assignment": "Produce a fully formatted, human-verified, corrected AI-assisted business document with an accompanying error audit log.",
+      "deliverable": "Corrected AI-Assisted Business Document (Monthly Operations Report)"
+    },
+    {
+      "module_number": 3,
+      "title": "Copilot in Excel",
+      "hours": 6,
+      "learning_hours": 6,
+      "objective": "Use AI-assisted spreadsheet workflows while independently verifying calculations, formulas, and business insights.",
+      "lessons": [
+        {
+          "number": "3.1",
+          "title": "Copilot in Excel Overview",
+          "topics": [
+            "Current features",
+            "Subscription eligibility",
+            "Workbook context requirements",
+            "Native limitations"
+          ]
+        },
+        {
+          "number": "3.2",
+          "title": "Data Preparation Standards",
+          "topics": [
+            "Structured Excel tables",
+            "Clear column headers",
+            "Data type consistency",
+            "Blank row/column handling"
+          ]
+        },
+        {
+          "number": "3.3",
+          "title": "Business Spreadsheet Context",
+          "topics": [
+            "Sales performance data",
+            "Departmental expenses",
+            "Attendance registers",
+            "Inventory summaries"
+          ]
+        },
+        {
+          "number": "3.4",
+          "title": "Formula Assistance",
+          "topics": [
+            "Prompting for formula ideas",
+            "Interpreting suggested syntax",
+            "Cell and range references",
+            "Formula explanations"
+          ]
+        },
+        {
+          "number": "3.5",
+          "title": "Common Business Functions",
+          "topics": [
+            "SUMIFS calculations",
+            "COUNTIFS breakdowns",
+            "Logical IF structures",
+            "XLOOKUP awareness"
+          ]
+        },
+        {
+          "number": "3.6",
+          "title": "Workbook Explanations",
+          "topics": [
+            "Interpreting legacy formulas",
+            "Auditing calculation logic",
+            "Tracing source cells",
+            "Output validation"
+          ]
+        },
+        {
+          "number": "3.7",
+          "title": "AI-Generated Insights",
+          "topics": [
+            "Trend detection",
+            "Category summaries",
+            "Outlier identification",
+            "Period-over-period comparisons"
+          ]
+        },
+        {
+          "number": "3.8",
+          "title": "Business Data Summaries",
+          "topics": [
+            "Sales by region/product",
+            "Expense distribution",
+            "Operational KPI summaries",
+            "Margin analysis"
+          ]
+        },
+        {
+          "number": "3.9",
+          "title": "Visualizations & Chart Suggestions",
+          "topics": [
+            "Suggested charts",
+            "Data label accuracy",
+            "Axis units & scales",
+            "Avoiding misleading visuals"
+          ]
+        },
+        {
+          "number": "3.10",
+          "title": "PivotTable Awareness",
+          "topics": [
+            "AI-assisted pivot summaries",
+            "Manual layout verification",
+            "Row/column field mapping",
+            "Grand total checks"
+          ]
+        },
+        {
+          "number": "3.11",
+          "title": "Prompt Specificity for Data",
+          "topics": [
+            "Referencing named columns",
+            "Date boundary specification",
+            "Explicit business criteria",
+            "Avoiding ambiguous queries"
+          ]
+        },
+        {
+          "number": "3.12",
+          "title": "Independent Formula Testing",
+          "topics": [
+            "Manual recalculations",
+            "Sample row checks",
+            "Boundary test cases",
+            "Zero and missing value handling"
+          ]
+        },
+        {
+          "number": "3.13",
+          "title": "Common AI Spreadsheet Errors",
+          "topics": [
+            "Wrong range bounds",
+            "Flawed formula logic",
+            "Invented summary figures",
+            "Mismatched grouping",
+            "Date format misreads"
+          ]
+        },
+        {
+          "number": "3.14",
+          "title": "Workbook Revision & Direct Edits",
+          "topics": [
+            "Reviewing direct workbook changes",
+            "Undo and version history",
+            "Multi-user collaboration impact"
+          ]
+        },
+        {
+          "number": "3.15",
+          "title": "Data Reconciliation",
+          "topics": [
+            "Reconciling raw source sums with formula outputs",
+            "Summary total parity",
+            "Cross-checking chart values"
+          ]
+        },
+        {
+          "number": "3.16",
+          "title": "Business Interpretation",
+          "topics": [
+            "Fact-based observations",
+            "Evidence-backed commentary",
+            "Highlighting analytical limitations",
+            "Actionable recommendations"
+          ]
+        },
+        {
+          "number": "3.17",
+          "title": "Calculation Settings & Reliability",
+          "topics": [
+            "Automatic vs manual calculation",
+            "Workbook dependencies",
+            "Microsoft official reliability guidance"
+          ]
+        },
+        {
+          "number": "3.18",
+          "title": "Data Safety & Synthetic Datasets",
+          "topics": [
+            "Synthetic data principles",
+            "Preventing confidential financial leaks",
+            "Safe spreadsheet modeling"
+          ]
+        }
+      ],
+      "hands_on_lab": "Analyze a fictional 12-month sales and expense dataset using Copilot suggestions. Perform 100% independent manual formula recalculation and reconcile all category totals.",
+      "practical_assignment": "Deliver a validated spreadsheet analysis workbook with manual formula audit notes, corrected charts, and an analytical summary.",
+      "deliverable": "Validated AI-Assisted Spreadsheet Analysis (Monthly Sales & Expenses Analysis)"
+    },
+    {
+      "module_number": 4,
+      "title": "Copilot in PowerPoint",
+      "hours": 6,
+      "learning_hours": 6,
+      "objective": "Use Copilot to assist presentation preparation while ensuring slide content is accurate, readable, accessible, and consistent with source documents.",
+      "lessons": [
+        {
+          "number": "4.1",
+          "title": "Copilot in PowerPoint Overview",
+          "topics": [
+            "Supported presentation scenarios",
+            "Licensing requirements",
+            "App version dependencies",
+            "Sidebar interface"
+          ]
+        },
+        {
+          "number": "4.2",
+          "title": "Presentation Planning",
+          "topics": [
+            "Target audience analysis",
+            "Presentation objective",
+            "Core executive message",
+            "Narrative arc and slide count"
+          ]
+        },
+        {
+          "number": "4.3",
+          "title": "Outline Generation",
+          "topics": [
+            "Converting source notes into outlines",
+            "Structuring topic flow",
+            "Grouping related points",
+            "Drafting slide headers"
+          ]
+        },
+        {
+          "number": "4.4",
+          "title": "Outline-to-Deck Workflows",
+          "topics": [
+            "Prompting for presentation generation",
+            "Generating decks where supported",
+            "Human review of initial layout"
+          ]
+        },
+        {
+          "number": "4.5",
+          "title": "Reference Files Integration",
+          "topics": [
+            "Referencing Word source reports",
+            "PDF references where eligible",
+            "File picker usage",
+            "Permission requirements"
+          ]
+        },
+        {
+          "number": "4.6",
+          "title": "Source-to-Deck Consistency",
+          "topics": [
+            "Verifying metric consistency",
+            "Confirming factual alignment",
+            "Preserving dates and names",
+            "Standardizing business terms"
+          ]
+        },
+        {
+          "number": "4.7",
+          "title": "Slide Generation & Layout Selection",
+          "topics": [
+            "Title slides",
+            "Executive summary slides",
+            "Data comparison slides",
+            "Recommendation & next step slides"
+          ]
+        },
+        {
+          "number": "4.8",
+          "title": "AI Design Suggestions",
+          "topics": [
+            "Evaluating Designer suggestions",
+            "Visual hierarchy",
+            "Whitespace and margins",
+            "Typography consistency"
+          ]
+        },
+        {
+          "number": "4.9",
+          "title": "Human Slide Editing",
+          "topics": [
+            "Refining slide text",
+            "Eliminating excessive bullet points",
+            "Repositioning placeholders",
+            "Custom shape formatting"
+          ]
+        },
+        {
+          "number": "4.10",
+          "title": "Slide Factual Accuracy",
+          "topics": [
+            "Auditing percentage labels",
+            "Checking financial metrics",
+            "Verifying dates and milestones",
+            "Correcting unsupported claims"
+          ]
+        },
+        {
+          "number": "4.11",
+          "title": "Image & Visual Asset Review",
+          "topics": [
+            "Relevance of suggested images",
+            "Stock photo licensing",
+            "Avoiding decorative clutter",
+            "Professional visual standards"
+          ]
+        },
+        {
+          "number": "4.12",
+          "title": "Charts & Visual Information",
+          "topics": [
+            "Validating AI chart values",
+            "Rebuilding complex charts with native Excel links",
+            "Preventing misleading scale distortions"
+          ]
+        },
+        {
+          "number": "4.13",
+          "title": "Speaker Notes Drafting",
+          "topics": [
+            "Drafting speaker talking points",
+            "Contextual explanations",
+            "Verifying speaker notes against slide bullets"
+          ]
+        },
+        {
+          "number": "4.14",
+          "title": "Copilot Presentation Limitations",
+          "topics": [
+            "Source length constraints",
+            "Unsupported animations and transitions",
+            "When manual slide authoring is required"
+          ]
+        },
+        {
+          "number": "4.15",
+          "title": "Accessibility Standards",
+          "topics": [
+            "Slide reading order",
+            "High-contrast text",
+            "Alt text for images",
+            "Clear non-generic slide titles"
+          ]
+        },
+        {
+          "number": "4.16",
+          "title": "Final Presentation QA",
+          "topics": [
+            "Slide transition pacing",
+            "Factual consistency check",
+            "Spelling and grammar audit",
+            "File size and export integrity"
+          ]
+        }
+      ],
+      "hands_on_lab": "Transform the verified Word operations report into an executive-ready 8-slide PowerPoint presentation. Audit every figure against the source and manually polish layouts.",
+      "practical_assignment": "Submit a complete, visually clean, human-audited executive presentation accompanied by a slide-by-slide verification checklist.",
+      "deliverable": "Validated AI-Assisted Business Presentation (Performance & Recommendations Deck)"
+    },
+    {
+      "module_number": 5,
+      "title": "Outlook, Teams & AI Collaboration",
+      "hours": 6,
+      "learning_hours": 6,
+      "objective": "Use AI assistance appropriately for professional email communication, meeting follow-ups, and action-item governance with zero unauthorized disclosure.",
+      "lessons": [
+        {
+          "number": "5.1",
+          "title": "Workplace Communication Ecosystem",
+          "topics": [
+            "Email workflows",
+            "Meeting coordination",
+            "Internal collaboration",
+            "Action item tracking"
+          ]
+        },
+        {
+          "number": "5.2",
+          "title": "Copilot in Outlook",
+          "topics": [
+            "Feature availability",
+            "Supported account types",
+            "New Outlook vs Classic Outlook differences"
+          ]
+        },
+        {
+          "number": "5.3",
+          "title": "Email Summarization",
+          "topics": [
+            "Summarizing lengthy threads",
+            "Extracting key stakeholder points",
+            "Identifying pending decisions",
+            "Isolating outstanding questions"
+          ]
+        },
+        {
+          "number": "5.4",
+          "title": "Email Drafting & Prompting",
+          "topics": [
+            "Drafting executive replies",
+            "Tone adjustment (formal/direct)",
+            "Audience awareness",
+            "Clear call-to-actions"
+          ]
+        },
+        {
+          "number": "5.5",
+          "title": "Email Quality & Dispatch Review",
+          "topics": [
+            "Recipient verification",
+            "Attachment checks",
+            "Date and commitment accuracy",
+            "Eliminating ambiguous promises"
+          ]
+        },
+        {
+          "number": "5.6",
+          "title": "Coaching by Copilot",
+          "topics": [
+            "Draft critique",
+            "Tone and clarity suggestions",
+            "Improving conciseness",
+            "Refining professional posture"
+          ]
+        },
+        {
+          "number": "5.7",
+          "title": "Outlook Context Boundaries",
+          "topics": [
+            "Supported mailbox permissions",
+            "Shared mailbox limitations",
+            "Feature availability by client"
+          ]
+        },
+        {
+          "number": "5.8",
+          "title": "Copilot in Teams",
+          "topics": [
+            "In-meeting assistance",
+            "Real-time query prompts",
+            "Meeting notes extraction",
+            "Action item isolation"
+          ]
+        },
+        {
+          "number": "5.9",
+          "title": "Meeting Settings & Governance",
+          "topics": [
+            "Organizer controls",
+            "Admin tenant policies",
+            "Transcription enablement",
+            "Recording consent requirements"
+          ]
+        },
+        {
+          "number": "5.10",
+          "title": "During-Meeting AI Capabilities",
+          "topics": [
+            "Live query assistance",
+            "No-transcription mode differences",
+            "Organizational policy boundaries"
+          ]
+        },
+        {
+          "number": "5.11",
+          "title": "After-Meeting AI & Recaps",
+          "topics": [
+            "Transcript-dependent recaps",
+            "Meeting Recap features",
+            "Intelligent Recap eligibility",
+            "Meeting memory constraints"
+          ]
+        },
+        {
+          "number": "5.12",
+          "title": "Meeting Summary Validation",
+          "topics": [
+            "Verifying actual decisions made",
+            "Cross-checking attendees",
+            "Confirming agreed deadlines",
+            "Unresolved discussions"
+          ]
+        },
+        {
+          "number": "5.13",
+          "title": "Action-Item Register Construction",
+          "topics": [
+            "Task description",
+            "Owner assignment",
+            "Target deadline",
+            "Status definition",
+            "Source citation"
+          ]
+        },
+        {
+          "number": "5.14",
+          "title": "Detecting False AI Decisions",
+          "topics": [
+            "Invented agreements",
+            "Misattributed task owners",
+            "Fabricated deadlines",
+            "Omitted stakeholder dissent"
+          ]
+        },
+        {
+          "number": "5.15",
+          "title": "Meeting Follow-Up Communication",
+          "topics": [
+            "Structuring follow-up emails",
+            "Listing verified action items",
+            "Communicating next review checkpoints"
+          ]
+        },
+        {
+          "number": "5.16",
+          "title": "Source Permissions in Teams",
+          "topics": [
+            "Private chat vs channel meetings",
+            "Shared file access",
+            "Restricted participant views"
+          ]
+        },
+        {
+          "number": "5.17",
+          "title": "Data Protection & Privacy",
+          "topics": [
+            "Handling sensitive discussions",
+            "Client confidentiality",
+            "Explicit recording consent standards"
+          ]
+        },
+        {
+          "number": "5.18",
+          "title": "Teams Feature Limitations",
+          "topics": [
+            "Host tenant restrictions",
+            "External guest limitations",
+            "Mobile client capabilities"
+          ]
+        },
+        {
+          "number": "5.19",
+          "title": "Human Approval Gate",
+          "topics": [
+            "Pre-send review checklist",
+            "Commitment sign-off",
+            "Preventing inadvertent data leaks"
+          ]
+        },
+        {
+          "number": "5.20",
+          "title": "Communication Pack QA",
+          "topics": [
+            "Clarity check",
+            "Professional etiquette",
+            "Data privacy audit",
+            "Actionability verification"
+          ]
+        }
+      ],
+      "hands_on_lab": "Analyze a simulated stakeholder email thread and fictional meeting transcript. Uncover 3 deliberate AI recap errors, extract verified action items, and draft an approved follow-up email.",
+      "practical_assignment": "Assemble an AI-Assisted Email & Meeting Communication Pack featuring staged email drafts, verified meeting summaries, and an action-item register.",
+      "deliverable": "AI-Assisted Email & Meeting Communication Pack"
+    },
+    {
+      "module_number": 6,
+      "title": "Integrated AI Office Capstone",
+      "hours": 4,
+      "learning_hours": 4,
+      "objective": "Combine Word, Excel, PowerPoint, Outlook, and Teams skills into a verified, multi-application office productivity portfolio anchored in human accountability.",
+      "lessons": [
+        {
+          "number": "6.1",
+          "title": "Capstone Business Scenario",
+          "topics": [
+            "Fictional company background",
+            "Business challenge",
+            "Cross-functional stakeholders",
+            "Required multi-app outputs"
+          ]
+        },
+        {
+          "number": "6.2",
+          "title": "Source Material Inventory",
+          "topics": [
+            "Executive raw notes",
+            "Unprocessed transaction spreadsheet",
+            "Multi-party email thread",
+            "Meeting transcript"
+          ]
+        },
+        {
+          "number": "6.3",
+          "title": "Integrated Prompt Plan",
+          "topics": [
+            "Task formulation per app",
+            "Source referencing",
+            "Negative constraints",
+            "Verification method per deliverable"
+          ]
+        },
+        {
+          "number": "6.4",
+          "title": "Word Deliverable Production",
+          "topics": [
+            "Drafting operations report",
+            "Rigorous human editing",
+            "Fact-checking numbers",
+            "Executive sign-off"
+          ]
+        },
+        {
+          "number": "6.5",
+          "title": "Excel Deliverable Production",
+          "topics": [
+            "Formula assistance",
+            "Independent manual recalculation",
+            "Trend summaries",
+            "Chart validation"
+          ]
+        },
+        {
+          "number": "6.6",
+          "title": "PowerPoint Deliverable Production",
+          "topics": [
+            "Outline creation",
+            "Slide drafting",
+            "Source parity check",
+            "Layout refinement and accessibility"
+          ]
+        },
+        {
+          "number": "6.7",
+          "title": "Outlook Communication Deliverable",
+          "topics": [
+            "Drafting executive update",
+            "Confirming recipients and commitments",
+            "Pre-send human review"
+          ]
+        },
+        {
+          "number": "6.8",
+          "title": "Teams Follow-Up Deliverable",
+          "topics": [
+            "Verified decisions",
+            "Action-item register",
+            "Task owners and deadlines",
+            "Meeting recap notes"
+          ]
+        },
+        {
+          "number": "6.9",
+          "title": "Comprehensive AI Output Verification",
+          "topics": [
+            "Fact checking",
+            "Figure auditing",
+            "Date reconciliation",
+            "Source citation review",
+            "Omission check"
+          ]
+        },
+        {
+          "number": "6.10",
+          "title": "Master Prompt & Discrepancy Log",
+          "topics": [
+            "Prompt ID",
+            "Tool/app",
+            "Initial output",
+            "Discrepancies caught",
+            "Correction applied",
+            "Approval status"
+          ]
+        },
+        {
+          "number": "6.11",
+          "title": "Workplace Data Safety Sign-Off",
+          "topics": [
+            "Least privilege verification",
+            "Confidential information audit",
+            "Synthetic data confirmation"
+          ]
+        },
+        {
+          "number": "6.12",
+          "title": "Professional Portfolio Assembly",
+          "topics": [
+            "Folder structuring",
+            "Standardized file naming",
+            "Version control conventions",
+            "Handover documentation"
+          ]
+        },
+        {
+          "number": "6.13",
+          "title": "Toolkit Presentation & Defense",
+          "topics": [
+            "Demonstrating portfolio artifacts",
+            "Explaining corrected AI errors",
+            "Disclosing simulated vs live features"
+          ]
+        },
+        {
+          "number": "6.14",
+          "title": "Instructor Assessment & Credentialing",
+          "topics": [
+            "Rubric evaluation",
+            "Verification thoroughness audit",
+            "Prompt engineering maturity",
+            "Nova Skills certification"
+          ]
+        }
+      ],
+      "hands_on_lab": "Execute the complete end-to-end workflow: take messy raw inputs, generate AI drafts across 5 apps, catch errors using verification protocols, and package approved final assets.",
+      "practical_assignment": "Submit the complete AI-Assisted Office Productivity Toolkit with all 6 core deliverables, master verification checklist, and signed approval record.",
+      "deliverable": "Complete AI-Assisted Office Productivity Toolkit"
+    }
+  ],
+  "what_you_will_build": [],
+  "final_deliverables": [],
+  "student_deliverables_and_evidence": [],
+  "assessment": null,
+  "certification": null,
+  "career_paths": [],
+  "freelance_applications": [],
+  "business_use_cases": [],
+  "industry_workflow": [],
+  "best_practices": [],
+  "common_mistakes": [],
+  "not_covered": [],
+  "next_learning_path": [],
+  "faq": [
+    {
+      "q": "What is Microsoft 365 Copilot — AI Workplace Productivity?",
+      "a": "It is a practical 4-week, 32-hour applied specialization covering AI-assisted workplace tasks across Microsoft Word, Excel, PowerPoint, Outlook, and Teams, with a strong, non-negotiable emphasis on factual verification, prompt engineering, and responsible business data governance."
+    },
+    {
+      "q": "What is the course duration and total learning hours?",
+      "a": "The course spans exactly 4 weeks with 32 structured learning hours across 6 comprehensive modules (4h + 6h + 6h + 6h + 6h + 4h = 32 hours), requiring approximately 8 hours of dedicated weekly learning."
+    },
+    {
+      "q": "What is the course fee?",
+      "a": "The course fee is a flat, transparent ₹5,900 with zero hidden charges, artificial discounts, or deceptive compare-at pricing. This fee covers all instruction, course materials, guided simulations, and certification assessment."
+    },
+    {
+      "q": "Who should take this course?",
+      "a": "Existing Microsoft 365 users, office administrators, executives, department managers, business analysts, educators, consultants, and small business owners who want to adopt AI-assisted productivity tools while maintaining complete accountability for final workplace outputs."
+    },
+    {
+      "q": "Is this course suitable for complete computer beginners?",
+      "a": "No. This is an applied AI workplace upskilling program that requires basic proficiency in Microsoft Word, Excel, and PowerPoint (document formatting, simple formulas, basic slide creation). Complete beginners lacking core office fundamentals should first complete Course 30 — Office Productivity Professional."
+    },
+    {
+      "q": "What is Microsoft 365 Copilot?",
+      "a": "Microsoft 365 Copilot is Microsoft's enterprise AI workplace experience that combines advanced Large Language Models (LLMs) with authorized organizational context via Microsoft Graph and Work IQ, integrated directly into Microsoft 365 desktop and web applications."
+    },
+    {
+      "q": "What is Microsoft Copilot Chat?",
+      "a": "Microsoft Copilot Chat is a conversational AI interface available to eligible Microsoft 365 work and school accounts that offers web-grounded search, document drafting, text summarization, and file interaction with commercial data protection."
+    },
+    {
+      "q": "Is Copilot Chat the same as full licensed Microsoft 365 Copilot?",
+      "a": "No. While Copilot Chat provides valuable conversational AI assistance, full Microsoft 365 Copilot requires an eligible paid add-on license that unlocks deep Microsoft Graph work-data grounding, in-app canvas sidebars across Word, Excel, PowerPoint, and Outlook, and advanced Teams meeting recaps.",
+      "answer": "No. While Copilot Chat provides valuable conversational AI assistance, full Microsoft 365 Copilot requires an eligible paid add-on license that unlocks deep Microsoft Graph work-data grounding, in-app canvas sidebars across Word, Excel, PowerPoint, and Outlook, and advanced Teams meeting recaps."
+    },
+    {
+      "q": "Does every Microsoft 365 subscription include full Copilot?",
+      "a": "No. Full Copilot features require specific eligible base licenses (such as Microsoft 365 Business Standard/Premium or E3/E5) plus an active Microsoft 365 Copilot add-on subscription, subject to organizational tenant enablement.",
+      "answer": "No. Full Copilot features require specific eligible base licenses (such as Microsoft 365 Business Standard/Premium or E3/E5) plus an active Microsoft 365 Copilot add-on subscription, subject to organizational tenant enablement."
+    },
+    {
+      "q": "Will I learn how to use Copilot in Microsoft Word?",
+      "a": "Yes. You will learn to draft executive reports, proposals, and briefs from notes, summarize lengthy documents, adapt tone and writing style, and systematically verify AI drafts against source materials."
+    },
+    {
+      "q": "Will I learn how to use Copilot in Microsoft Excel?",
+      "a": "Yes. You will learn structured data preparation, AI formula suggestions, spreadsheet insights, automated data summaries, and chart suggestions, combined with mandatory manual recalculation techniques."
+    },
+    {
+      "q": "Can Copilot make spreadsheet and calculation mistakes?",
+      "a": "Yes. Microsoft explicitly documents that AI-generated spreadsheet formulas and insights can misread ranges, hallucinate figures, or apply flawed calculation logic. The course teaches strict independent formula auditing so you never approve unverified numbers."
+    },
+    {
+      "q": "Will I learn how to use Copilot in Microsoft PowerPoint?",
+      "a": "Yes. You will learn to convert Word source reports and outlines into draft slide decks, evaluate AI design suggestions, refine layouts, and audit visual claims for accuracy and consistency."
+    },
+    {
+      "q": "Does Copilot create finished, perfect presentations automatically?",
+      "a": "No. Copilot generates a helpful starting outline and draft slides, but human design refinement, brand alignment, visual hierarchy adjustment, and factual data checking remain strictly necessary."
+    },
+    {
+      "q": "Will I learn how to use Copilot in Microsoft Outlook?",
+      "a": "Yes. You will practice summarizing complex email threads, drafting professional replies with calibrated tone, extracting follow-up tasks, and using Copilot's coaching features to refine communications."
+    },
+    {
+      "q": "Will I learn how to use Copilot in Microsoft Teams?",
+      "a": "Yes. You will learn to navigate meeting recaps, extract stated decisions and action items, verify task ownership, and draft professional post-meeting stakeholder summaries."
+    },
+    {
+      "q": "Can Teams Copilot work in meetings without transcription?",
+      "a": "Yes, certain live during-meeting Copilot questions can function without recording or transcription if enabled by the meeting organizer. However, post-meeting summaries, recaps, and action-item tracking require meeting transcription or recording."
+    },
+    {
+      "q": "Can Copilot access all confidential company files across an organization?",
+      "a": "No. Copilot strictly respects existing user permissions configured in Microsoft 365 and Microsoft Graph. It only accesses content that the signed-in user already has explicit permission to read, though users must be vigilant regarding organizational oversharing."
+    },
+    {
+      "q": "What is Microsoft Graph and Work IQ grounding?",
+      "a": "Microsoft Graph and Work IQ provide the technology foundation that grounds Copilot in authorized enterprise context—safely retrieving relevant emails, calendar events, documents, and chats to make responses contextually relevant to your workplace."
+    },
+    {
+      "q": "Will I learn prompt engineering for office tasks?",
+      "a": "Yes. You will master Nova Skills' 7-part Prompt Quality Framework: Task, Context, Source, Audience, Constraints, Format, and Verification, moving beyond vague questions to professional, highly structured instructions."
+    },
+    {
+      "q": "Is Copilot Studio or custom AI agent development included in this course?",
+      "a": "No. This course focuses on practical end-user AI productivity across core office applications. Advanced Copilot Studio agent building, Azure AI, and Power Automate development belong to specialized technical certifications."
+    },
+    {
+      "q": "Is Azure AI development part of this course?",
+      "a": "No. Azure AI engineering, SDK development, and model fine-tuning are enterprise software engineering topics and are outside the scope of this office productivity certification."
+    },
+    {
+      "q": "Do I need to buy a paid Microsoft Copilot license to take this course?",
+      "a": "No personal license purchase is required. Training combines live licensed instructor demonstrations with guided simulations and synthetic lab environments so all students can master workflows regardless of their individual corporate subscription status.",
+      "answer": "No personal license purchase is required. Training combines live licensed instructor demonstrations with guided simulations and synthetic lab environments so all students can master workflows regardless of their individual corporate subscription status."
+    },
+    {
+      "q": "Does the course fee include a Microsoft 365 Copilot subscription?",
+      "a": "No. The course fee covers all training, instructional materials, simulated lab exercises, and certification. It does not include ongoing Microsoft enterprise software licenses or personal Copilot subscriptions.",
+      "answer": "No. The course fee covers all training, instructional materials, simulated lab exercises, and certification. It does not include ongoing Microsoft enterprise software licenses or personal Copilot subscriptions."
+    },
+    {
+      "q": "Will I practice with real company confidential data?",
+      "a": "No. All classroom exercises and portfolio deliverables utilize realistic fictional business scenarios and synthetic data to ensure student privacy, data protection, and zero compliance risks."
+    },
+    {
+      "q": "What portfolio project will I build during the course?",
+      "a": "You will build the comprehensive AI-Assisted Office Productivity Toolkit, featuring 6 core deliverables centered on a single fictional business scenario: an edited operations report, a validated spreadsheet, a presentation deck, a communication pack, an AI verification checklist, and a prompt log."
+    },
+    {
+      "q": "What deliverables are contained in the AI-Assisted Office Productivity Toolkit?",
+      "a": "It includes: (1) Corrected Business Document, (2) Validated Spreadsheet Analysis, (3) Professional Presentation, (4) Email & Meeting Communication Pack, (5) AI Output Verification Checklist, and (6) Master Prompt Log & Human Approval Record.",
+      "answer": "It includes: (1) Corrected Business Document, (2) Validated Spreadsheet Analysis, (3) Professional Presentation, (4) Email & Meeting Communication Pack, (5) AI Output Verification Checklist, and (6) Master Prompt Log & Human Approval Record."
+    },
+    {
+      "q": "Will I learn responsible AI and data governance?",
+      "a": "Yes. Responsible AI is integrated into every module, covering data privacy, enterprise permission models, preventing prompt injection in documents, avoiding oversharing, and enforcing human sign-off on all AI drafts."
+    },
+    {
+      "q": "Can AI replace foundational Microsoft Office skills?",
+      "a": "No. AI acts as a capable productivity assistant, but human competence in spreadsheet logic, document hierarchy, presentation design, and professional judgment is essential to guide the AI and detect errors."
+    },
+    {
+      "q": "What should I take first if I lack basic Microsoft Office skills?",
+      "a": "If you are new to office productivity applications, we strongly recommend enrolling in Course 30 — Office Productivity Professional or our standalone certifications in Excel (Course 102), Word (Course 103), or PowerPoint (Course 104) before taking this AI specialization."
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}

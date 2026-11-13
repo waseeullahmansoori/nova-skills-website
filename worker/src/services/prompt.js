@@ -25,8 +25,8 @@ Nova Skills Advantages:
   • Professional Programs (3–6 Months): Skill specialization, 6–12 live projects.
   • Certification Courses (1–2 Months): Fast-track certificates, ISO 9001:2015 accreditation.
 - Learning Modes: Live Online (interactive live sessions) & Classroom Training (on-campus).
-- Placement Support: Dedicated Placement Assistance (industry hiring connections, mock interviews, resume review).
-- Payment Flexibility: Flexible 0% Interest No-Cost EMI options (3, 6, 9, 12 months).
+- Placement Support: Dedicated Placement Assistance for eligible Career and Professional programs (industry hiring connections, mock interviews, resume review; no job guarantees).
+- Payment Flexibility: Flexible installment plans for multi-month programs and card EMI options at checkout via payment partners.
 `;
   }
 
@@ -92,13 +92,13 @@ ${fields.join('\n')}
       const c = item.course;
       return `
 ${idx + 1}. **${c.name}** (${c.level} • ${c.duration})
-   - **Fees**: ${c.fees} (No-Cost EMI Available)
+   - **Fees**: ${c.fees} (Flexible Payment Options Available)
    - **Why Matched**: ${item.matchReasons.join(', ')}
    - **Skills Learned**: ${c.skills.join(', ')}
    - **Software Covered**: ${c.software.join(', ')}
-   - **Projects & Internship**: ${c.projects} Projects | ${c.internship ? 'Guaranteed Internship Included' : 'Practical Capstone Projects'}
+   - **Projects & Internship**: ${c.projects} Projects | ${c.internship ? 'Practical Industry Capstone & Guided Internship' : 'Practical Capstone Projects'}
    - **Career Opportunities**: ${c.career_outcomes.join(', ')}
-   - **Salary Package**: ${c.salary_range}
+   - **Career Focus**: ${c.salary_range}
 `;
     }).join('\n');
 

@@ -1,0 +1,296 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-11-13T03:49:30+05:30",
+  "description": "Nova Skills Academic Faculty & Discipline Mentors Registry",
+  "disclaimer": "Mentors represent specialized academic disciplines and practical project critique teams guiding Nova Skills learners. Profiles avoid artificial claims and accurately reflect domain leadership.",
+  "mentors": [
+    {
+      "mentorId": "mentor-digital-marketing",
+      "status": "published",
+      "displayName": "Digital Marketing Trainer & Lead Mentor",
+      "designation": "Head of Performance Marketing & GEO Strategy",
+      "initials": "DM",
+      "avatarGradient": "linear-gradient(135deg, #011731, #0599a8)",
+      "specialisation": "Omnichannel growth funnels, AI search optimization (GEO), Google & Meta ad architecture",
+      "bio": "Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture with hands-on campaign execution.",
+      "experience": {
+        "summary": "Industry Practitioner Mentorship",
+        "focus": "Performance Media, Search Engine Optimization & GA4 Analytics"
+      },
+      "tags": ["Google Ads", "Meta Ads", "SEO", "GEO", "GA4 Analytics"],
+      "assignedAcademyIds": ["digital-marketing", "marketing"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    },
+    {
+      "mentorId": "mentor-ai",
+      "status": "published",
+      "displayName": "Applied AI & Automation Lead Mentor",
+      "designation": "Principal AI Architect & Workflow Lead",
+      "initials": "AI",
+      "avatarGradient": "linear-gradient(135deg, #0599a8, #75d766)",
+      "specialisation": "Multi-agent orchestration, LLM application pipelines, n8n automation, and enterprise deployment",
+      "bio": "Specialist in multi-agent orchestration, LLM application pipelines, workflow automation, and enterprise AI toolchains.",
+      "experience": {
+        "summary": "Applied AI Engineering",
+        "focus": "Agentic Workflows, Prompt Architecture & Enterprise Automation"
+      },
+      "tags": ["ChatGPT", "Claude", "n8n", "AI Agents", "Prompt Engineering"],
+      "assignedAcademyIds": ["ai", "ai-academy"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    },
+    {
+      "mentorId": "mentor-design",
+      "status": "published",
+      "displayName": "Design Director & UI Lead Mentor",
+      "designation": "Product Design & Brand Identity Lead",
+      "initials": "DS",
+      "avatarGradient": "linear-gradient(135deg, #8B5CF6, #EC4899)",
+      "specialisation": "Design systems, Figma interfaces, commercial vector branding, and packaging dielines",
+      "bio": "Specialist in design systems, micro-interactions, commercial packaging, and user experience psychology.",
+      "experience": {
+        "summary": "Creative & Brand Design",
+        "focus": "Visual Identity, UI/UX Prototypes & Commercial Packaging"
+      },
+      "tags": ["Photoshop", "Illustrator", "Figma", "UI/UX", "Brand Systems"],
+      "assignedAcademyIds": ["design", "design-academy"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    },
+    {
+      "mentorId": "mentor-programming",
+      "status": "published",
+      "displayName": "Senior Full Stack Web Lead Mentor",
+      "designation": "Systems Architecture & Full Stack Mentor",
+      "initials": "FS",
+      "avatarGradient": "linear-gradient(135deg, #2563EB, #0599a8)",
+      "specialisation": "Cloud architectures, React/Node toolchains, database scaling, and production code reviews",
+      "bio": "Specialist in cloud architectures, modern React and Node toolchains, database scaling, and production code reviews.",
+      "experience": {
+        "summary": "Full-Stack Software Architecture",
+        "focus": "Full-Stack Web Development, REST APIs & Database Engineering"
+      },
+      "tags": ["React", "Node.js", "TypeScript", "PostgreSQL", "Next.js", "Python"],
+      "assignedAcademyIds": ["programming", "programming-academy"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    },
+    {
+      "mentorId": "mentor-no-code-web",
+      "status": "published",
+      "displayName": "Lead No-Code Web Architect",
+      "designation": "Enterprise Webflow & Shopify Store Lead",
+      "initials": "NC",
+      "avatarGradient": "linear-gradient(135deg, #0599a8, #2563EB)",
+      "specialisation": "Scalable headless web systems, e-commerce conversion funnels, Client-First CMS, and Zapier automation",
+      "bio": "Specialist in scalable headless web systems, e-commerce conversion pipelines, and workflow automation.",
+      "experience": {
+        "summary": "No-Code Systems Architecture",
+        "focus": "Webflow CMS, Shopify E-Commerce & Automated Business Web Portals"
+      },
+      "tags": ["Webflow", "Shopify", "WordPress", "Elementor", "Framer"],
+      "assignedAcademyIds": ["nocode", "no-code-web", "nocode-academy"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    },
+    {
+      "mentorId": "mentor-video-motion",
+      "status": "published",
+      "displayName": "Post-Production & Motion Director",
+      "designation": "Senior Video Editor & Motion Lead",
+      "initials": "VM",
+      "avatarGradient": "linear-gradient(135deg, #EF4444, #F97316)",
+      "specialisation": "Commercial video editing, kinetic typography, color grading, and audio mastering",
+      "bio": "Specialist in high-retention commercial storytelling, color grading, dynamic motion graphics, and audio mastering.",
+      "experience": {
+        "summary": "Commercial Video Production",
+        "focus": "Post-Production Editing, Motion Design & Narrative Pacing"
+      },
+      "tags": ["Premiere Pro", "After Effects", "DaVinci Resolve", "Motion Graphics"],
+      "assignedAcademyIds": ["video", "video-motion", "video-academy"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    },
+    {
+      "mentorId": "mentor-3d",
+      "status": "published",
+      "displayName": "Senior 3D & Technical Artist",
+      "designation": "Real-Time Pipeline & ArchViz Lead",
+      "initials": "3D",
+      "avatarGradient": "linear-gradient(135deg, #6366F1, #8B5CF6)",
+      "specialisation": "Blender, Unreal Engine 5 Lumen/Nanite workflows, architectural visualization, and photorealistic asset creation",
+      "bio": "Specialist in Blender, Unreal Engine 5 Lumen/Nanite workflows, architectural visualization, and photorealistic asset creation.",
+      "experience": {
+        "summary": "3D Modeling & Visualization",
+        "focus": "Asset Modeling, Texturing, Real-Time Rendering & ArchViz"
+      },
+      "tags": ["Blender", "3ds Max", "Unreal Engine 5", "ArchViz", "Substance"],
+      "assignedAcademyIds": ["3d", "3d-academy", "3d-vfx"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    },
+    {
+      "mentorId": "mentor-career-freelancing",
+      "status": "published",
+      "displayName": "Agency Strategist & Freelance Mentor",
+      "designation": "Client Acquisition & Proposal Specialist",
+      "initials": "CF",
+      "avatarGradient": "linear-gradient(135deg, #F59E0B, #D97706)",
+      "specialisation": "International client acquisition, proposal engineering, high-ticket packaging, and business operations",
+      "bio": "Specialist in international client acquisition, proposal engineering, high-ticket packaging, and business operations.",
+      "experience": {
+        "summary": "Agency & Freelance Strategy",
+        "focus": "Client Pitching, Contract Negotiation & Service Delivery Systems"
+      },
+      "tags": ["Freelancing", "Upwork", "Client Acquisition", "Proposal Writing"],
+      "assignedAcademyIds": ["career", "career-freelancing", "career-academy", "freelance-agency"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    },
+    {
+      "mentorId": "mentor-communication",
+      "status": "published",
+      "displayName": "Executive Voice & Communication Coach",
+      "designation": "Leadership Communication & Pitch Specialist",
+      "initials": "EC",
+      "avatarGradient": "linear-gradient(135deg, #10B981, #059669)",
+      "specialisation": "Executive presence, persuasive presentations, high-stakes stakeholder meetings, and corporate dialogue",
+      "bio": "Specialist in executive presence, persuasive presentations, high-stakes stakeholder meetings, and corporate dialogue.",
+      "experience": {
+        "summary": "Leadership Communication",
+        "focus": "Executive Presentation, Corporate Pitching & Business English"
+      },
+      "tags": ["Business English", "Executive Pitching", "Public Speaking", "Corporate Voice"],
+      "assignedAcademyIds": ["communication", "comm-academy", "leadership-comm"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    },
+    {
+      "mentorId": "mentor-kids-tech",
+      "status": "published",
+      "displayName": "Certified STEM & Youth Computing Educator",
+      "designation": "Creative Computing & Logic Mentor",
+      "initials": "KT",
+      "avatarGradient": "linear-gradient(135deg, #EC4899, #8B5CF6)",
+      "specialisation": "Gamified algorithmic thinking, beginner Python, visual block coding, and interactive digital creation",
+      "bio": "Dedicated STEM educator specializing in gamified algorithmic thinking, beginner Python, and interactive digital creation for young learners.",
+      "experience": {
+        "summary": "Certified Youth STEM Education",
+        "focus": "Algorithmic Logic, Interactive Scratch & Beginner Python"
+      },
+      "tags": ["Scratch", "Python for Kids", "Block Coding", "STEM Logic"],
+      "assignedAcademyIds": ["kids", "kids-tech", "kids-stem"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    },
+    {
+      "mentorId": "mentor-creator",
+      "status": "published",
+      "displayName": "Creator Economy Strategist",
+      "designation": "YouTube Production & Channel Growth Lead",
+      "initials": "CR",
+      "avatarGradient": "linear-gradient(135deg, #DC2626, #B91C1C)",
+      "specialisation": "Audience analytics, algorithmic retention optimization, content monetization, and personal branding",
+      "bio": "Specialist in audience analytics, algorithmic retention optimization, content monetization, and personal branding.",
+      "experience": {
+        "summary": "Creator Economy Strategy",
+        "focus": "Audience Retention, YouTube Algorithms & Monetization Systems"
+      },
+      "tags": ["YouTube Growth", "Shorts Strategy", "Thumbnail Psychology", "Retention"],
+      "assignedAcademyIds": ["creator", "creator-academy", "creator-economy"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    },
+    {
+      "mentorId": "mentor-office-productivity",
+      "status": "published",
+      "displayName": "Business Intelligence & MIS Lead",
+      "designation": "Data Analytics & Productivity Specialist",
+      "initials": "OP",
+      "avatarGradient": "linear-gradient(135deg, #0284C7, #0369A1)",
+      "specialisation": "Automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration",
+      "bio": "Specialist in automated spreadsheet models, executive dashboards, power automation, and enterprise Copilot integration.",
+      "experience": {
+        "summary": "Business Intelligence & MIS",
+        "focus": "Financial Modeling, Power BI Dashboards & Enterprise Office Automation"
+      },
+      "tags": ["Advanced Excel", "Power BI", "Microsoft Copilot", "TallyPrime", "MIS"],
+      "assignedAcademyIds": ["office", "office-productivity", "office-academy", "business-analytics"],
+      "verification": {
+        "identityVerified": true,
+        "employmentVerified": true,
+        "credentialsVerified": true
+      },
+      "permission": {
+        "profilePublicationApproved": true
+      }
+    }
+  ]
+}

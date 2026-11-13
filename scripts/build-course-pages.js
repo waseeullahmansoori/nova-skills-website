@@ -1,43 +1,19 @@
 
-function isCourseDemoEligible(course) {
-  if (!course) return false;
-  if (typeof course.demo_available === 'boolean') return course.demo_available;
-  const type = (course.course_type || course.type || course.programLevel || '').toUpperCase();
-  if (['MASTER', 'PROFESSIONAL', 'SPECIALIZATION', 'FOUNDATION', 'CAREER'].some(t => type.includes(t))) {
-    return true;
-  }
-  const price = Math.max(
-    typeof course.originalPrice === 'number' ? course.originalPrice : 0,
-    typeof course.price === 'number' ? course.price : parseInt(String(course.price || '').replace(/\D/g, ''), 10) || 0
-  );
-  if (price >= 12000) return true;
-  return false;
-}
-
-/**
- * Build Static Pre-rendered Course Pages for Cloudflare Edge & Local Serving
- * Controlled Expansion: 4 Target Representative Courses
- * 
- * 1. digital-marketing-pro (Advanced Digital Marketing Professional)
- * 2. dm-professional (AI Digital Marketing Professional)
- * 3. dm-mastery (AI Digital Marketing Master)
- * 4. python-developer (Python Developer Professional)
- * 
- * Preserves existing canonical public URLs: /course-detail.html?id=COURSE_ID
- * Outputs:
- * - functions/_rendered_courses.js (in-memory bundle for Cloudflare Pages Functions)
- * - functions/_middleware.js (Cloudflare Pages edge middleware)
- * - _rendered_courses/<id>.html (static audit files)
- */
-
-'use strict';
-
 const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(ROOT_DIR, 'js', 'icon-system.js'));
+const NovaCourseData = require(path.join(ROOT_DIR, 'js', 'course-data.js'));
+const NovaCredibility = require(path.join(ROOT_DIR, 'js', 'credibility-data.js'));
+
+const NS_COURSES = NovaCourseData.getPublishedCourses();
+const NS_ACADEMIES = NovaCourseData.getAllAcademies();
+const COURSE_ALIASES = NovaCourseData.COURSE_ID_ALIASES;
+
+function isCourseDemoEligible(course) {
+  return NovaCourseData.isCourseDemoEligible(course);
+}
 
 const COURSE_VISUALS_DATA = JSON.parse(
   fs.readFileSync(path.join(ROOT_DIR, 'data', 'visual-assets', 'course-visuals.json'), 'utf8')
@@ -138,46 +114,12 @@ function buildStaticProjectShowcaseHtml(courseId) {
     </section>`;
 }
 
-// 1. Load data.js (NS_COURSES, NS_ACADEMIES)
-const dataJs = fs.readFileSync(path.join(ROOT_DIR, 'data.js'), 'utf8');
-vm.runInThisContext(dataJs);
-
-const BATCHES = [
-  { batchNum: 1, academyId: 'digital-marketing', name: 'Digital Marketing Academy' },
-  { batchNum: 2, academyId: 'ai', name: 'AI & Automation Academy' },
-  { batchNum: 3, academyId: 'design', name: 'Graphic Design & UI/UX Academy' },
-  { batchNum: 4, academyId: 'programming', name: 'Programming & Web Dev Academy' },
-  { batchNum: 5, academyId: 'nocode', name: 'No-Code Web Academy' },
-  { batchNum: 6, academyId: 'video', name: 'Video & Motion Academy' },
-  { batchNum: 7, academyId: '3d', name: '3D Animation & VFX Academy' },
-  { batchNum: 8, academyId: 'career', name: 'Career & Freelancing Academy' },
-  { batchNum: 9, academyId: 'communication', name: 'Communication Academy' },
-  { batchNum: 10, academyId: 'kids', name: 'Kids Tech Academy' },
-  { batchNum: 11, academyId: 'creator', name: 'Creator Academy' },
-  { batchNum: 12, academyId: 'office', name: 'Office Productivity Academy' }
-];
-
-const COURSE_ALIASES = {
-  'digital-marketing-pro': 'ecommerce-growth-marketing-specialist',
-  'perf-marketing-pro': 'performance-marketing-specialist',
-  'dm-master': 'dm-mastery',
-  'full-stack': 'fullstack-foundation',
-  'design-mastery': 'creative-design',
-  'video-editing': 'video-pro',
-  'digital-marketing': 'dm-mastery',
-  'ai-master': 'ai-mastery',
-  'python-dev': 'python-developer',
-  'ai-web-dev-pro': 'ai-assisted-full-stack-web-development',
-  'prompt-engineering-mastery': 'prompt-engineering',
-  'freelance-agency-master': 'agency-building',
-  'freelance-agency-mastery': 'agency-building',
-  'freelance-mastery': 'freelancing-client-acquisition-professional',
-  'freelancing-mastery': 'freelancing-client-acquisition-professional',
-  'career-launch': 'career-launch-placement-readiness-professional',
-  'career-launch-program': 'career-launch-placement-readiness-professional',
-  'motion-mastery': 'ai-integrated-video-editing-motion-graphics-professional',
-  'ai-video-pro': 'generative-ai-video-production-professional'
-};
+// Canonical data loaded via NovaCourseData (js/course-data.js)
+const BATCHES = NS_ACADEMIES.map((a, idx) => ({
+  batchNum: idx + 1,
+  academyId: a.id,
+  name: a.name
+}));
 
 const ACADEMY_SLUG_MAP = {
   'digital-marketing': 'digital-marketing',
@@ -226,7 +168,7 @@ function escapeHTML(str) {
 function getCourseSeoTitle(course) {
   const type = (course.courseType || course.course_type || course.type || '').toUpperCase();
   const name = course.name || course.course_name;
-  
+
   if (type === 'MASTER') {
     return `${name} — Flagship Career Program | Nova Skills`;
   } else if (type === 'PROFESSIONAL' || type === 'MERGE') {
@@ -405,9 +347,14 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
 
   let detailData = null;
-  const detailPath = path.join(ROOT_DIR, 'data', 'courses', `${courseId}.json`);
-  if (fs.existsSync(detailPath)) {
-    detailData = JSON.parse(fs.readFileSync(detailPath, 'utf8'));
+  const canonicalCurPath = baseCourse.curriculumRef
+    ? path.join(ROOT_DIR, 'data', baseCourse.curriculumRef)
+    : path.join(ROOT_DIR, 'data', 'curricula', `${courseId}.json`);
+  const legacyDetailPath = path.join(ROOT_DIR, 'data', 'courses', `${courseId}.json`);
+  if (fs.existsSync(canonicalCurPath)) {
+    detailData = JSON.parse(fs.readFileSync(canonicalCurPath, 'utf8'));
+  } else if (fs.existsSync(legacyDetailPath)) {
+    detailData = JSON.parse(fs.readFileSync(legacyDetailPath, 'utf8'));
   }
 
   // Preserve existing canonical public URL
@@ -426,18 +373,27 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   const durationMonths = (typeof baseCourse.durationMonths === 'number' && baseCourse.durationMonths > 0)
     ? baseCourse.durationMonths
     : (parseInt(baseCourse.duration, 10) || 1);
-  const gstAmount = (baseCourse.price || 0) * 0.18;
-  const totalWithGST = (baseCourse.price || 0) + gstAmount;
-  const monthlyInstallment = Math.round(totalWithGST / durationMonths);
-  const emiText = `💳 Flexible monthly installment options available · 18% GST included`;
+  const taxDisclosure = (typeof NovaCourseData !== 'undefined' && typeof NovaCourseData.getGstDisclosure === 'function')
+    ? NovaCourseData.getGstDisclosure(baseCourse)
+    : 'The final payable amount, including any applicable taxes, will be clearly displayed before payment.';
+
+  const durLower = (baseCourse.duration || '').toLowerCase();
+  const isTier1 = durLower.includes('week') || durationMonths <= 1.5;
+  const isTier3 = durationMonths >= 5;
+  let emiPrefix = '💳 Flexible 2-part milestone & card EMI options available';
+  if (isTier1) {
+    emiPrefix = '💳 One-time course enrollment fee';
+  } else if (isTier3) {
+    emiPrefix = '💳 Structured milestone & partner EMI options available';
+  }
+  const emiText = `${emiPrefix} · ${taxDisclosure}`;
 
   const acadSlug = getAcademySlug(baseCourse.academyId);
   const acadUrl = acadSlug ? `/academies/${acadSlug}/` : '/academies/';
 
-  // Hours and project count
-  const hours = baseCourse.learningHours || (detailData && detailData.learning_hours) || 40;
-  const projectCount = (detailData && detailData.what_you_will_build) ? detailData.what_you_will_build.length : (baseCourse.projects || baseCourse.liveProjects || 2);
-  const projectLabel = `${projectCount} Core Production Projects`;
+  // Hours and project label (canonical NovaCourseData)
+  const hours = baseCourse.learningHours || (detailData && (detailData.guidedHours || detailData.learning_hours)) || 40;
+  const projectLabel = NovaCourseData.getCourseProjectLabel(baseCourse);
 
   // Render Meta Badges
   const metaBadgesHtml = `
@@ -445,16 +401,33 @@ function generateStaticCourseHtml(courseId, templateHtml) {
     <div class="course-meta-item"><span class="meta-icon">📶</span> Level: ${baseCourse.level || 'Beginner'}</div>
     <div class="course-meta-item"><span class="meta-icon">💻</span> Mode: ${baseCourse.mode || 'Online'}</div>
     <div class="course-meta-item"><span class="meta-icon">🚀</span> ${projectLabel}</div>
-    ${baseCourse.placementSupport ? '<div class="course-meta-item" style="color:var(--green-light); font-weight:700;"><span class="meta-icon">🎯</span> Placement Support Included</div>' : ''}
+    ${baseCourse.academyId === 'kids-tech'
+      ? '<div class="course-meta-item"><span class="meta-icon">🌟</span> Junior Project Showcase & Certificate</div>'
+      : (baseCourse.placementSupport
+          ? '<div class="course-meta-item" style="color:var(--green-light); font-weight:700;"><span class="meta-icon">🎯</span> Placement Assistance Included</div>'
+          : '<div class="course-meta-item"><span class="meta-icon">💼</span> Practical Portfolio & Capstone Support</div>')}
   `.trim();
 
-  // Render Rating Row
-  const ratingRowHtml = `
+  // Render Rating Row (Authentic Credibility / Verified Standards)
+  const courseTestimonials = NovaCredibility.getCourseTestimonials(baseCourse.id);
+  let ratingRowHtml;
+  if (courseTestimonials && courseTestimonials.length > 0) {
+    const t = courseTestimonials[0];
+    const score = (t.testimonial && t.testimonial.rating ? t.testimonial.rating.toFixed(1) : '5.0');
+    ratingRowHtml = `
     <span class="rating-stars">★★★★★</span>
-    <span class="rating-num">${baseCourse.rating || 4.7}</span>
-    <span class="rating-count">(${baseCourse.reviews || 165} student reviews)</span>
-    <span class="student-count">• ${(baseCourse.students || 710).toLocaleString('en-IN')}+ learners enrolled</span>
+    <span class="rating-num">${score}</span>
+    <span class="rating-count">(Verified Course Review)</span>
+    <span class="student-count">• Portfolio Capstone Verified</span>
   `.trim();
+  } else {
+    ratingRowHtml = `
+    <span class="rating-stars" style="color:var(--teal);">🛡️</span>
+    <span class="rating-num" style="color:var(--teal);">Verified Quality</span>
+    <span class="rating-count">• Industry-Standard Curriculum</span>
+    <span class="student-count">• Practical Mentorship Capstone</span>
+  `.trim();
+  }
 
   // Render Thumb
   const thumbHtml = renderCourseIcon(baseCourse.icon || baseCourse, { fontSize: '4rem', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.3))' });
@@ -468,7 +441,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
         <div class="advisory-content">
           <h4>Curriculum Integration Pathway Notice</h4>
           <p>
-            This program is an integrated specialization module. If you are seeking complete career mastery, 
+            This program is an integrated specialization module. If you are seeking complete career mastery,
             this entire curriculum is also included in our flagship career track:
             <a href="/course-detail.html?id=dm-mastery" class="advisory-link">Explore Parent Career Program →</a>
           </p>
@@ -486,8 +459,8 @@ function generateStaticCourseHtml(courseId, templateHtml) {
       </p>
       <p style="margin-bottom:16px;">${escapeHTML(detailData.overview.short_description || baseCourse.shortDesc || '')}</p>
       <p style="margin-bottom:0;">
-        Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through 
-        <strong>${projectCount} major production portfolio projects</strong>, live interactive labs, 
+        Designed and delivered by senior practitioners, this curriculum delivers deep practical execution through
+        <strong>${escapeHTML(projectLabel)}</strong>, live interactive labs,
         code/design critiques, and commercial delivery standards.
       </p>
     `.trim();
@@ -577,7 +550,7 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
 
   // Curriculum Accordion
-  
+
   // Specialization Tracks Pre-rendering
   let specTracksHtml = '';
   let showSpecSection = false;
@@ -772,7 +745,73 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
   if (builds.length > 0) {
     const deliverables = (detailData && detailData.final_deliverables) || [];
-    projectsHtml = `
+    const isStructured = (baseCourse && baseCourse.id === 'ai-assisted-full-stack-web-development') ||
+      (detailData && (detailData.portfolioStructure || (detailData.course_id === 'ai-assisted-full-stack-web-development')));
+
+    if (isStructured && builds.length === 8) {
+      const commonBuilds = builds.slice(0, 4);
+      const specBuilds = builds.slice(4, 7);
+      const capstoneBuild = builds[7];
+
+      const renderCard = (b, defaultBadge, extraClass = '') => {
+        const bTitle = (typeof b === 'object' && b !== null) ? (b.title || b.project_title || b.name || '') : String(b);
+        const isCap = bTitle.toLowerCase().includes('capstone') || (typeof b === 'object' && b.type === 'capstone');
+        const bBadge = (typeof b === 'object' && b !== null && b.badge) ? b.badge : defaultBadge;
+        const bDesc = (typeof b === 'object' && b !== null) ? (b.client_brief || b.description || b.business_brief || '') : '';
+        const bDeliverable = (typeof b === 'object' && b !== null && Array.isArray(b.deliverables))
+          ? b.deliverables[0]
+          : ((typeof b === 'object' && b !== null && b.deliverables) ? b.deliverables : (deliverables[0] || 'Production ready asset in student portfolio'));
+
+        return `
+          <div class="portfolio-project-card ${isCap ? 'capstone' : ''} ${extraClass}">
+            <span class="project-tag-badge">${escapeHTML(bBadge)}</span>
+            <div class="project-card-title">${escapeHTML(bTitle)}</div>
+            <p class="project-card-desc">
+              ${escapeHTML(bDesc)}
+            </p>
+            <div class="project-deliverable-badge">
+              <span>📁</span> Deliverable: ${escapeHTML(bDeliverable)}
+            </div>
+          </div>
+        `;
+      };
+
+      projectsHtml = `
+        <div class="project-group-block">
+          <div class="project-group-heading" style="margin-bottom:18px;">
+            <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:var(--teal); margin-bottom:4px;">COMMON CORE — REQUIRED FOR EVERY STUDENT</div>
+            <h3 style="font-size:1.25rem; font-weight:800; color:var(--navy); margin:0 0 6px;">Common Projects (Modules 01–12)</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin:0;">Four foundational production applications completed by every student in the program.</p>
+          </div>
+          <div class="projects-suite-grid">
+            ${commonBuilds.map((b, idx) => renderCard(b, `Production Project ${idx + 1}`)).join('')}
+          </div>
+        </div>
+
+        <div class="project-group-block" style="margin-top:36px;">
+          <div class="project-group-heading" style="margin-bottom:18px;">
+            <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:var(--teal); margin-bottom:4px;">CAREER SPECIALIZATION — SELECT ONE</div>
+            <h3 style="font-size:1.25rem; font-weight:800; color:var(--navy); margin:0 0 6px;">Specialization Project (Module 10)</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin:0;">Each student completes exactly ONE 20-hour commercial track project aligned with their chosen career pathway. Tracks are mutually exclusive; all three options are presented below for comparison.</p>
+          </div>
+          <div class="projects-suite-grid">
+            ${specBuilds.map((b, idx) => renderCard(b, `Specialization Project — Option ${String.fromCharCode(65 + idx)}`)).join('')}
+          </div>
+        </div>
+
+        <div class="project-group-block" style="margin-top:36px;">
+          <div class="project-group-heading" style="margin-bottom:18px;">
+            <div style="font-size:0.75rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; color:var(--green); margin-bottom:4px;">FINAL CAPSTONE & DEFENSE — REQUIRED FOR EVERY STUDENT</div>
+            <h3 style="font-size:1.25rem; font-weight:800; color:var(--navy); margin:0 0 6px;">Final Project: Enterprise Commercial Capstone & Viva Voce (Modules 13–14)</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); margin:0;">Culminating enterprise commercial engagement synthesized with your chosen specialization stack, featuring automated tests, CI/CD, documentation, and oral technical defense.</p>
+          </div>
+          <div class="projects-suite-grid">
+            ${renderCard(capstoneBuild, 'Portfolio Project 6 — Enterprise Capstone')}
+          </div>
+        </div>
+      `.trim();
+    } else {
+      projectsHtml = `
       <div class="projects-suite-grid">
         ${builds.map((b, bIdx) => {
           const bTitle = (typeof b === 'object' && b !== null) ? (b.title || b.name || '') : String(b);
@@ -794,32 +833,14 @@ function generateStaticCourseHtml(courseId, templateHtml) {
         }).join('')}
       </div>
     `.trim();
+    }
   }
 
   // Domain Mentors
-  const academyMentors = {
-    'digital-marketing': { lead: 'Growth & Ads Lead Mentor', role: 'Head of Performance & GEO Strategy', bio: 'Specialist in omnichannel growth funnels, AI search optimization (GEO), and programmatic ad architecture.', initials: 'GA' },
-    'programming': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.', initials: 'FS' },
-    'programming-academy': { lead: 'Senior Full Stack Lead', role: 'Systems Architecture & Backend Mentor', bio: 'Specialist in cloud architectures, modern React/Node toolchains, database scaling, and production code reviews.', initials: 'FS' }
-  };
-  const mentorData = academyMentors[baseCourse.academyId] || academyMentors['digital-marketing'];
-  const mentorsHtml = `
-    <div class="mentor-card">
-      <div class="mentor-avatar" style="background:var(--grad-hero);"><span class="mentor-initials">${mentorData.initials}</span></div>
-      <h3 class="mentor-name">${escapeHTML(mentorData.lead)}</h3>
-      <div class="mentor-role">${escapeHTML(mentorData.role)}</div>
-      <span class="mentor-exp">Industry Practitioner Mentorship</span>
-      <p class="mentor-bio">${escapeHTML(mentorData.bio)}</p>
-    </div>
+  const mentorsHtml = NovaCredibility.renderMentorCardsForCourse(baseCourse.academyId);
 
-    <div class="mentor-card">
-      <div class="mentor-avatar" style="background:var(--grad-teal-green);"><span class="mentor-initials">PT</span></div>
-      <h3 class="mentor-name">Senior Project Trainer</h3>
-      <div class="mentor-role">Hands-On Lab &amp; Critique Mentor</div>
-      <span class="mentor-exp">Live Project Mentorship</span>
-      <p class="mentor-bio">Dedicated to portfolio asset building, iterative project critiques, industry toolchains, and commercial quality assurance.</p>
-    </div>
-  `.trim();
+  // Testimonials
+  const testimonialsHtml = NovaCredibility.renderTestimonialsSectionForCourse(baseCourse.id, baseCourse.name);
 
   // Boundaries
   let boundariesHtml = '';
@@ -1070,6 +1091,18 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   // Mentors
   html = html.replace(/<div\s+class="mentors-grid"\s+id="mentors-container">[\s\S]*?<\/section>/i, `<div class="mentors-grid" id="mentors-container">\n        ${mentorsHtml}\n      </div>\n    </section>`);
 
+  // Testimonials
+  if (testimonialsHtml) {
+    if (html.includes('id="testimonials-slot"')) {
+      html = html.replace(/<div\s+id="testimonials-slot">[\s\S]*?<\/div>/i, testimonialsHtml);
+    } else {
+      html = html.replace(/<!-- REVIEWS \/ TESTIMONIALS -->[\s\S]*?<section\s+class="container\s+course-body-section"\s+id="testimonials-section">[\s\S]*?<\/section>/i, `<!-- REVIEWS / TESTIMONIALS -->\n    ${testimonialsHtml}`);
+    }
+  } else {
+    html = html.replace(/<div\s+id="testimonials-slot">[\s\S]*?<\/div>/i, '');
+    html = html.replace(/<!-- REVIEWS \/ TESTIMONIALS -->[\s\S]*?<section\s+class="container\s+course-body-section"\s+id="testimonials-section">[\s\S]*?<\/section>/i, '');
+  }
+
   // Boundaries
   if (boundariesHtml) {
     html = html.replace(/<div\s+id="boundaries-container"[\s\S]*?<\/div>/i, `<div id="boundaries-container" style="max-width:860px;">\n        ${boundariesHtml}\n      </div>`);
@@ -1086,9 +1119,14 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   }
 
   // Dynamic Includes List
-  const placementIncludeItem = baseCourse.placementSupport
-    ? `<li><span class="include-icon">🎯</span> Placement Support & Interviews</li>`
-    : `<li><span class="include-icon">💼</span> Practical Portfolio & Capstone Support</li>`;
+  let placementIncludeItem;
+  if (baseCourse.academyId === 'kids-tech') {
+    placementIncludeItem = `<li><span class="include-icon">🌟</span> Junior Project Showcase & Certificate</li>`;
+  } else if (baseCourse.placementSupport) {
+    placementIncludeItem = `<li><span class="include-icon">🎯</span> Placement Assistance & Interview Prep</li>`;
+  } else {
+    placementIncludeItem = `<li><span class="include-icon">💼</span> Practical Portfolio & Capstone Support</li>`;
+  }
 
   const includesHtml = `
               <ul id="detail-includes-list">
@@ -1146,13 +1184,17 @@ function generateStaticCourseHtml(courseId, templateHtml) {
   // Cert Course Display Name
   html = html.replace(/<div\s+class="cert-course-name"\s+id="cert-course-display"[\s\S]*?<\/div>/i, `<div class="cert-course-name" id="cert-course-display" style="font-size:0.8rem; padding:4px 12px;">${escapeHTML(baseCourse.name)}</div>`);
 
-  return html;
+  return html.replace(/[ \t]+$/gm, '');
 }
 
 function generateNotFoundHtml(templateHtml) {
   let html = templateHtml;
   html = html.replace(/<title id="page-title">[\s\S]*?<\/title>/i, '<title id="page-title">Course Not Found — Nova Skills</title>');
   html = html.replace(/<meta\s+name="robots"[\s\S]*?\/>/i, '<meta name="robots" id="page-robots" content="noindex, follow" />');
+  // Remove canonical link tag on 404 error page
+  html = html.replace(/<link\s+rel="canonical"[\s\S]*?\/>/i, '');
+  // Remove dynamic client canonical script on 404 error page
+  html = html.replace(/<script>\s*\(function\(\)\s*\{\s*try\s*\{\s*var params = new URLSearchParams[\s\S]*?<\/script>/i, '');
   html = html.replace(/<main id="course-detail-main">[\s\S]*?<\/main>/i, `
     <main id="course-detail-main">
       <div class="container" style="padding-top:40px; padding-bottom:80px;">
@@ -1160,11 +1202,11 @@ function generateNotFoundHtml(templateHtml) {
           <div style="font-size:3.5rem; margin-bottom:16px;">🔍</div>
           <h1 style="font-size:2rem; font-weight:800; color:var(--navy); margin-bottom:12px;">Course Not Found</h1>
           <p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:24px; line-height:1.6;">
-            The program you are looking for may have been modernized, renamed, or relocated. 
+            The program you are looking for may have been modernized, renamed, or relocated.
             Explore our catalog of 109+ industry-standard career courses across 12 academies.
           </p>
           <div class="course-error-actions" style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-            <a href="/courses.html" class="btn btn-primary">Browse All Courses →</a>
+            <a href="/courses" class="btn btn-primary">Browse All Courses →</a>
             <a href="/" class="btn btn-outline">Back to Home</a>
           </div>
         </div>
@@ -1172,7 +1214,7 @@ function generateNotFoundHtml(templateHtml) {
     </main>
   `);
   html = html.replace(/<div\s+class="sticky-enroll-bar"[\s\S]*?<\/button>\s*<\/div>/i, '');
-  return html;
+  return html.replace(/[ \t]+$/gm, '');
 }
 
 function validateCourseHtml(baseCourse, html) {
@@ -1326,47 +1368,58 @@ export async function onRequest(context) {
   if (pathname === '/course-detail' || pathname === '/course-detail.html') {
     const rawId = (url.searchParams.get('id') || url.searchParams.get('course') || '').trim();
 
-    if (rawId) {
-      const id = COURSE_ALIASES[rawId] || rawId;
-
-      // 1. If pre-rendered, return course-specific HTML with status 200 OK
-      if (RENDERED_COURSES[id]) {
-        return new Response(RENDERED_COURSES[id], {
-          status: 200,
-          headers: {
-            'Content-Type': 'text/html; charset=utf-8',
-            'Cache-Control': 'public, max-age=0, must-revalidate',
-            'X-Robots-Tag': 'index, follow'
-          }
-        });
-      }
-
-      // 2. If unknown/invalid course ID, return 404 Not Found response
-      if (!ALL_VALID_COURSE_IDS.has(id)) {
-        return new Response(COURSE_NOT_FOUND_HTML, {
-          status: 404,
-          headers: {
-            'Content-Type': 'text/html; charset=utf-8',
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
-            'X-Robots-Tag': 'noindex, follow'
-          }
-        });
-      }
-    } else {
-      // If no ID is specified, default flagship course: dm-mastery
-      if (RENDERED_COURSES['dm-mastery']) {
-        return new Response(RENDERED_COURSES['dm-mastery'], {
-          status: 200,
-          headers: {
-            'Content-Type': 'text/html; charset=utf-8',
-            'Cache-Control': 'public, max-age=0, must-revalidate',
-            'X-Robots-Tag': 'index, follow'
-          }
-        });
-      }
+    // 1. If no course ID is specified, redirect permanently to course catalog
+    if (!rawId) {
+      return Response.redirect('https://novaskills.in/courses', 301);
     }
 
-    // 3. For any other course ID, pass through to shared client template
+    // 2. Resolve alias or legacy parameter
+    const id = COURSE_ALIASES[rawId] || rawId;
+    const hasLegacyCourseParam = url.searchParams.has('course');
+    const isAliased = Boolean(COURSE_ALIASES[rawId] && COURSE_ALIASES[rawId] !== rawId);
+    const isCleanPath = pathname === '/course-detail.html';
+
+    // 3. Permanent 301 redirect if using legacy parameter, alias ID, or path without .html
+    if (hasLegacyCourseParam || isAliased || !isCleanPath) {
+      const redirectUrl = new URL('https://novaskills.in/course-detail.html');
+      redirectUrl.searchParams.set('id', id);
+      for (const [key, value] of url.searchParams.entries()) {
+        if (key !== 'id' && key !== 'course') {
+          redirectUrl.searchParams.set(key, value);
+        }
+      }
+      return Response.redirect(redirectUrl.toString(), 301);
+    }
+
+    // 4. Environment-specific robots tag (production index vs preview noindex)
+    const isProduction = url.hostname === 'novaskills.in';
+    const robotsTag = isProduction ? 'index, follow' : 'noindex, nofollow';
+
+    // 5. If pre-rendered, return course-specific HTML with status 200 OK
+    if (RENDERED_COURSES[id]) {
+      return new Response(RENDERED_COURSES[id], {
+        status: 200,
+        headers: {
+          'Content-Type': 'text/html; charset=utf-8',
+          'Cache-Control': 'public, max-age=0, must-revalidate',
+          'X-Robots-Tag': robotsTag
+        }
+      });
+    }
+
+    // 6. If unknown/invalid course ID, return 404 Not Found response
+    if (!ALL_VALID_COURSE_IDS.has(id)) {
+      return new Response(COURSE_NOT_FOUND_HTML, {
+        status: 404,
+        headers: {
+          'Content-Type': 'text/html; charset=utf-8',
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'X-Robots-Tag': 'noindex, follow'
+        }
+      });
+    }
+
+    // 7. For any other course ID, pass through to shared client template
     return context.next();
   }
 

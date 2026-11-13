@@ -1,17 +1,16 @@
 
+const fs = require('fs');
+const path = require('path');
+
+const rootDir = path.resolve(__dirname, '..');
+const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(rootDir, 'js', 'icon-system.js'));
+const NovaCourseData = require(path.join(rootDir, 'js', 'course-data.js'));
+
+const ACADEMIES_LIST = NovaCourseData.getAllAcademies();
+const COURSES_LIST = NovaCourseData.getPublishedCourses();
+
 function isCourseDemoEligible(course) {
-  if (!course) return false;
-  if (typeof course.demo_available === 'boolean') return course.demo_available;
-  const type = (course.course_type || course.type || course.programLevel || '').toUpperCase();
-  if (['MASTER', 'PROFESSIONAL', 'SPECIALIZATION', 'FOUNDATION', 'CAREER'].some(t => type.includes(t))) {
-    return true;
-  }
-  const price = Math.max(
-    typeof course.originalPrice === 'number' ? course.originalPrice : 0,
-    typeof course.price === 'number' ? course.price : parseInt(String(course.price || '').replace(/\D/g, ''), 10) || 0
-  );
-  if (price >= 12000) return true;
-  return false;
+  return NovaCourseData.isCourseDemoEligible(course);
 }
 
 function escapeHTML(str) {
@@ -26,19 +25,9 @@ function escapeHTML(str) {
 
 /**
  * Enhanced Static HTML Generator for All 12 Nova Skills Academies
- * Pre-renders full course cards, links, accurate counts, and SEO schemas.
- * Nova Skills V1.2 Technical SEO Remediation
+ * Pre-renders full course cards, links, accurate counts, and SEO schemas
+ * directly from the canonical course data layer (NovaCourseData).
  */
-
-const fs = require('fs');
-const path = require('path');
-const vm = require('vm');
-
-const rootDir = path.resolve(__dirname, '..');
-const { renderCourseIcon, renderAcademyTagHtml } = require(path.join(rootDir, 'js', 'icon-system.js'));
-const COURSE_IMAGE_MAP = require(path.join(rootDir, 'course-image-map.json')).byId;
-const dataJs = fs.readFileSync(path.join(rootDir, 'data.js'), 'utf8');
-vm.runInThisContext(dataJs);
 
 // Final Consolidated 93-ID Package Academy Hero Visual Registry (All 12 Academies)
 const ACADEMY_HERO_VISUALS = {
@@ -347,7 +336,7 @@ function normalizeProgramLevel(level) {
 }
 
 function renderAcademyCourseMediaHtml(course, bannerIconHtml) {
-  const rec = course && COURSE_IMAGE_MAP[course.id];
+  const rec = course && course.images && course.images.card ? course.images.card : null;
   if (!rec) {
     return {
       wrapperClass: '',
@@ -358,7 +347,7 @@ function renderAcademyCourseMediaHtml(course, bannerIconHtml) {
   return {
     wrapperClass: ' has-course-visual',
     bgClass: ' has-course-visual',
-    innerHtml: `<picture class="course-thumb-picture"><source media="(min-width: 768px)" srcset="${escapeHTML(rec.image.desktop)}" type="${escapeHTML(rec.image.mimeType)}" width="${rec.image.width}" height="${rec.image.height}" /><img src="${escapeHTML(rec.image.mobile)}" alt="${escapeHTML(rec.image.alt)}" class="course-thumb-img" width="${rec.image.mobileWidth}" height="${rec.image.mobileHeight}" loading="lazy" decoding="async" /></picture>`
+    innerHtml: `<picture class="course-thumb-picture"><source media="(min-width: 768px)" srcset="${escapeHTML(rec.desktop)}" type="${escapeHTML(rec.mimeType || 'image/webp')}" width="${rec.width || 800}" height="${rec.height || 600}" /><img src="${escapeHTML(rec.mobile)}" alt="${escapeHTML(rec.alt || course.name)}" class="course-thumb-img" width="${rec.mobileWidth || 600}" height="${rec.mobileHeight || 450}" loading="lazy" decoding="async" /></picture>`
   };
 }
 
@@ -369,11 +358,11 @@ function buildCourseCardHTML(course, extraClass = '') {
   const safePrice = `₹${(course.price || 0).toLocaleString('en-IN')}`;
   const safeId = course.id;
   const isFeatured = course.featured || (course.tags && course.tags.includes('popular'));
-  const liveProj = course.liveProjects || 2;
+  const projectLabel = NovaCourseData.getCourseProjectLabel(course);
   const rating = course.rating || 4.8;
   const reviews = course.reviews || 120;
   const normLevel = normalizeProgramLevel(course.programLevel || course.level);
-  const courseUrl = `/course-detail.html?id=${course.id}`;
+  const courseUrl = NovaCourseData.getCourseDetailUrl(course);
 
   let trackClass = 'track-cert';
   const progLevel = course.programLevel || normLevel || 'Certification Course';
@@ -407,7 +396,7 @@ function buildCourseCardHTML(course, extraClass = '') {
         <p class="course-desc">${course.shortDesc || course.description || ''}</p>
         ${toolsHTML}
         <div class="course-features">
-          <span class="feature-item">💻 ${liveProj}+ Live Projects</span>
+          <span class="feature-item">💻 ${projectLabel}</span>
           <span class="feature-item">📜 Verified Certificate</span>
           ${course.placementSupport ? '<span class="feature-item" style="color:var(--green); font-weight:700;">🎯 Placement Support</span>' : '<span class="feature-item">💼 Capstone Portfolio</span>'}
           <span class="feature-item">⭐ ${rating} (${reviews})</span>
@@ -454,12 +443,13 @@ function getSmartRelatedAcademies(currentSlug) {
 
   const targetSlugs = smartMap[currentSlug] || ['ai', 'digital-marketing', 'design', 'programming'];
   return targetSlugs
-    .map(slug => NS_ACADEMIES.find(a => a.slug === slug || a.id === slug))
+    .map(slug => ACADEMIES_LIST.find(a => a.slug === slug || a.id === slug))
     .filter(Boolean)
     .slice(0, 4);
 }
 
 function generateAcademySectionsHTML(academy, academyCourses, seoData) {
+  const slug = academy.id || academy.slug || '';
   const careerCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Career Program');
   const proCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Professional Program');
   const certCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Certification Course');
@@ -496,7 +486,9 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
               <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#0599a8; font-weight:800;">✓</span> <span>100% Practical Training on Real Projects</span></li>
               <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#0599a8; font-weight:800;">✓</span> <span>Live Mentor Guidance & Code/Design Reviews</span></li>
               <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#0599a8; font-weight:800;">✓</span> <span>Industry-Recognized Professional Certification</span></li>
-              <li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#0599a8; font-weight:800;">✓</span> <span>Dedicated Placement Support & Interview Prep</span></li>
+              ${slug === 'kids-tech'
+                ? '<li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#0599a8; font-weight:800;">✓</span> <span>Young Creator Showcase & Safe Mentorship</span></li>'
+                : '<li style="display:flex; gap:10px; font-size:0.95rem; color:#334155; align-items:flex-start;"><span style="color:#0599a8; font-weight:800;">✓</span> <span>Dedicated Placement Support & Interview Prep (Career Tracks)</span></li>'}
             </ul>
           </div>
 
@@ -563,8 +555,9 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
           <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 20px; border-radius: 14px; text-align: center;">
             <div style="font-size: 1.5rem; margin-bottom: 8px;">🎯</div>
             <span style="font-size: 0.75rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 2px 8px; border-radius: 50px; font-weight: 700; display: inline-block; margin-bottom: 8px;">STEP 6</span>
-            <h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Placement</h4>
-            <p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Job Referrals & Freelance</p>
+            ${slug === 'kids-tech'
+              ? '<h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Showcase</h4><p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Junior Portfolio & Certificate</p>'
+              : '<h4 style="font-size: 0.95rem; font-weight: 700; color: white; margin: 0 0 6px;">Career Support</h4><p style="font-size: 0.8rem; color: #94a3b8; margin: 0;">Job Referrals & Freelance</p>'}
           </div>
           <div style="background: linear-gradient(135deg, rgba(5,153,168,0.3), rgba(117,215,102,0.3)); border: 1px solid #75d766; padding: 20px; border-radius: 14px; text-align: center;">
             <div style="font-size: 1.5rem; margin-bottom: 8px;">🚀</div>
@@ -593,7 +586,7 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
               </span>
             </div>
           </div>
-          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 24px;">
             ${careerCourses.map(c => buildCourseCardHTML(c)).join('')}
           </div>
         </div>
@@ -617,7 +610,7 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
               </span>
             </div>
           </div>
-          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 24px;">
             ${proCourses.map(c => buildCourseCardHTML(c)).join('')}
           </div>
         </div>
@@ -641,7 +634,7 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
               </span>
             </div>
           </div>
-          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 24px;">
             ${certCourses.map(c => buildCourseCardHTML(c)).join('')}
           </div>
         </div>
@@ -671,7 +664,7 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
           </div>
         </div>
 
-        <div id="explorer-courses-grid" class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+        <div id="explorer-courses-grid" class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 24px;">
           ${academyCourses.map(c => buildCourseCardHTML(c, 'explorer-course-item')).join('')}
         </div>
       </div>
@@ -738,7 +731,8 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
   }
 
   // 9. Final CTA
-  const waMsg = encodeURIComponent(`Hi Nova Skills, I want to know more about admission & fees for ${academy.name}.`);
+  const acadNameText = academy.name.includes('Academy') ? academy.name : `${academy.name} Academy`;
+  const waMsg = encodeURIComponent(`Hi Nova Skills, I am interested in your ${acadNameText}. Please help me explore the available courses and learning options.`);
   html += `
     <section class="section-final-cta" style="padding: 80px 0; background: linear-gradient(135deg, #0599a8 0%, #011731 100%); color: white; text-align: center;">
       <div class="container" style="max-width: 860px;">
@@ -751,8 +745,8 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
         <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: center; margin-bottom: 24px;">
           <button type="button" class="btn btn-primary btn-lg" style="background: #75d766; color: #011731; font-weight: 800;" onclick="openEnrollmentModal('', '${(academy.name || '').replace(/'/g, "\\'")}')">Enroll Now →</button>
           <button type="button" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);" onclick="openConsultationPopup()">Free Career Counselling</button>
-          <a href="tel:+919695904440" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.5);">📞 Call Now</a>
-          <a href="https://wa.me/919695904440?text=${waMsg}" target="_blank" rel="noopener" class="btn btn-outline btn-lg" style="color: #75d766; border-color: #75d766;">💬 WhatsApp Us</a>
+          <a href="https://wa.me/919695904440?text=${waMsg}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="background: #25D366; color: #ffffff; font-weight: 700; border: none;" data-academy-id="${academy.id}" data-source-component="academy_final_cta_whatsapp">💬 Chat on WhatsApp</a>
+          <a href="tel:+919695904440" class="btn btn-outline btn-lg" style="color: white; border-color: rgba(255,255,255,0.7);" data-academy-id="${academy.id}" data-source-component="academy_final_cta_call">📞 Call Admissions</a>
         </div>
 
         <div style="display: flex; gap: 20px; justify-content: center; font-size: 0.92rem; opacity: 0.9; flex-wrap: wrap;">
@@ -769,7 +763,7 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
 
 console.log('Generating pre-rendered SEO HTML files for all 12 academies...');
 
-NS_ACADEMIES.forEach(acad => {
+ACADEMIES_LIST.forEach(acad => {
   const slug = acad.slug;
   const canonicalUrl = `https://novaskills.in/academies/${slug}/`;
   const seoConfig = ACADEMIES_DATA[slug] || {};
@@ -778,7 +772,7 @@ NS_ACADEMIES.forEach(acad => {
   const heroH1 = seoConfig.h1 || `${acad.name}: Job-Ready Practical Training & Certification`;
   const ogImage = `https://novaskills.in/public/images/seo/og-banner.png?v=2026`;
 
-  const academyCourses = NS_COURSES.filter(c => c.academyId === acad.id || c.academyId === acad.slug);
+  const academyCourses = NovaCourseData.getCoursesByAcademy(acad.id);
   const careerCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Career Program');
   const proCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Professional Program');
   const certCourses = academyCourses.filter(c => normalizeProgramLevel(c.programLevel || c.level) === 'Certification Course');
@@ -1964,11 +1958,11 @@ ${sectionsContent}
   <div id="ns-footer"></div>
 
   <!-- JavaScript Bundles -->
-  <script src="/js/data.min.js?v=2.7.4" defer></script>
-  <script src="/js/components.min.js?v=2.8.0" defer></script>
-  <script src="/nova-ai-widget.js?v=3.0" defer></script>
+  <script src="/js/data.min.js?v=3.1.0" defer></script>
+  <script src="/js/components.min.js?v=3.1.0" defer></script>
+  <script src="/nova-ai-widget.js?v=3.1.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
-  <script src="/js/academy-detail.min.js?v=2.8.0" defer></script>${heroVisual && heroVisual.enabled ? `\n  <script src="/js/academy-hero-experiment.js?v=1.0" defer></script>` : ''}
+  <script src="/js/academy-detail.min.js?v=3.1.0" defer></script>${heroVisual && heroVisual.enabled ? `\n  <script src="/js/academy-hero-experiment.js?v=1.0" defer></script>` : ''}
 </body>
 </html>
 `;

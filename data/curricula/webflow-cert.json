@@ -1,0 +1,923 @@
+{
+  "courseId": "webflow-cert",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/webflow-cert.json",
+  "guidedHours": 64,
+  "learning_hours": 64,
+  "course_type": "Certification Course",
+  "seo_title": "Webflow Website Design & CMS Course | Nova Skills",
+  "seo_description": "Learn Webflow Designer, CMS, responsive layouts, interactions and SEO in 8 weeks (64 hours). Build a dynamic marketing website. Fee ₹10,900.",
+  "overview": {
+    "section_heading": "What You Will Master",
+    "positioning": "Structured Visual Web Development & CMS Architecture",
+    "short_description": "Learn to build responsive marketing websites using Webflow's visual development environment, modern CSS layout concepts, reusable components, structured CMS content, visual interactions and professional publishing workflows.",
+    "why_it_matters": "Professional web design requires visual control rooted in real CSS principles, organized CMS collections, accessible animations, and clean client handoffs rather than fragile one-off pages.",
+    "sales_differentiation": "Design Systems + CMS Architecture + Client-Ready Delivery. The course emphasizes structured visual development rather than only modifying templates. Students learn how to translate design references into reusable Webflow layouts and maintainable, CMS-driven websites."
+  },
+  "why_now": {
+    "industry_shift": "Top creative agencies and modern marketing teams use Webflow for production marketing websites due to its visual development precision and structured CMS.",
+    "ai_impact": "AI helps draft wireframes and generate content, but building scalable visual design systems, combo class hierarchies, and CMS data schemas demands disciplined human engineering.",
+    "business_demand": "B2B SaaS companies, design studios, and agencies require marketing sites that marketing teams can independently update via CMS without developer bottlenecks.",
+    "career_opportunity": "Webflow visual developers build high-value marketing sites, command strong agency roles, and deliver high-margin freelance website projects."
+  },
+  "learning_journey": null,
+  "prerequisites": {
+    "required": "Basic website layout and design knowledge. Understanding HTML/CSS concepts is highly recommended, though professional coding experience is not mandatory.",
+    "not_required": "Professional programming experience or JavaScript coding.",
+    "hardware_software": "Computer with high-speed internet and modern desktop browser (Chrome/Edge/Firefox/Safari) capable of running Webflow Designer smoothly; free Webflow Starter account."
+  },
+  "target_audience": {
+    "ideal_for": [
+      "Web designers transitioning from Figma to production-ready responsive websites",
+      "UI/UX designers wanting to deliver live interactive client prototypes",
+      "Freelance website creators building premium marketing websites",
+      "Marketing website developers seeking rapid, maintainable publishing workflows",
+      "Creative professionals and visual artists seeking full aesthetic control",
+      "Agency designers needing to build scalable, component-based websites",
+      "Content-driven business website builders managing blogs and case studies"
+    ],
+    "who_should_take": "Visual designers, frontend builders, and creative freelancers who want to master Webflow Designer, Flexbox, CSS Grid, CMS collections, and interactions.",
+    "not_designed_for": "Developers seeking full-stack JavaScript frameworks (React, Node.js), complex transactional e-commerce, custom user membership architectures, or backend database engineering."
+  },
+  "learning_outcomes": [
+    "Interpret a website brief.",
+    "Explain relevant HTML/CSS concepts.",
+    "Build semantic layouts visually in Webflow.",
+    "Manage classes and reusable styles.",
+    "Use Flexbox and Grid.",
+    "Create responsive layouts across breakpoints.",
+    "Define and use Webflow variables and components.",
+    "Design CMS collections and fields.",
+    "Configure basic reference relationships.",
+    "Build collection lists and dynamic templates.",
+    "Design suitable visual interactions.",
+    "Apply reduced-motion and accessibility considerations.",
+    "Configure page and CMS SEO.",
+    "Implement and test contact forms.",
+    "Review performance and responsive behavior.",
+    "Understand Webflow plan and publishing restrictions.",
+    "Prepare client editor documentation.",
+    "Deliver a maintainable CMS-driven marketing website."
+  ],
+  "hands_on_tech": {
+    "core_tools": [
+      "Webflow Designer",
+      "Webflow CMS",
+      "Visual CSS (Flexbox & Grid)",
+      "Webflow Components"
+    ],
+    "supporting_tools": [
+      "Figma",
+      "Webflow Variables",
+      "Webflow Interactions",
+      "Google Lighthouse"
+    ],
+    "emerging_tools": [
+      "Google Search Console",
+      "Google Analytics 4",
+      "Webflow AI (overview)"
+    ]
+  },
+  "modules": [
+    {
+      "module_number": "Module 01",
+      "module_title": "Web Design & Webflow Foundations",
+      "module_purpose": "Develop an understanding of web layout architecture and the Webflow Designer environment.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
+      "lessons": [
+        {
+          "lesson_number": "1.1",
+          "lesson_title": "Client Website Planning",
+          "what_is_taught": "Business brief interpretation, target audience analysis, website goals and KPIs, information architecture, visual sitemap creation, content requirements, and technical constraints.",
+          "subtopics": [
+            "Deconstructing a client design brief and business objectives",
+            "Target audience user personas and browsing behavior",
+            "Establishing measurable website goals and user conversion funnels",
+            "Information architecture: creating an organized sitemap",
+            "Auditing content assets: copy, photography, icons, and branding",
+            "Technical and plan-dependent constraints of visual development"
+          ],
+          "what_learner_does": "Analyzes a commercial website brief and creates a sitemap and content inventory.",
+          "why_it_matters": "A structured site architecture prevents layout refactoring and aligns stakeholders early.",
+          "expected_outcome": "Approved website blueprint, sitemap, and asset preparation plan."
+        },
+        {
+          "lesson_number": "1.2",
+          "lesson_title": "Webflow Designer",
+          "what_is_taught": "Webflow Designer interface walkthrough, Navigator panel, visual Canvas, Style panel, Elements panel, page structure controls, and publishing overview.",
+          "subtopics": [
+            "Touring the Webflow Designer environment and shortcut keys",
+            "Using the Navigator to understand and manipulate DOM tree structure",
+            "The Canvas: managing zoom, previews, and responsive viewpoints",
+            "The Style Panel: layout, spacing, size, typography, backgrounds, effects",
+            "The Add Elements panel: basic tags, layout blocks, and components",
+            "Publishing to the Webflow staging subdomain (.webflow.io)"
+          ],
+          "what_learner_does": "Navigates the Webflow Designer, uses the Navigator to construct DOM elements, and publishes a staging test.",
+          "why_it_matters": "Efficiency in the Webflow Designer enables visual developers to build at the speed of thought.",
+          "expected_outcome": "Fluent navigation of Webflow Designer panels and staging publishing."
+        },
+        {
+          "lesson_number": "1.3",
+          "lesson_title": "Web Structure",
+          "what_is_taught": "HTML structural principles: semantic tags (section, nav, header, footer, main, article), document heading hierarchy (H1-H6), containers, div blocks, and semantic nesting.",
+          "subtopics": [
+            "Translating HTML semantics into Webflow elements",
+            "Using Semantic HTML tags (section, main, header, footer, nav)",
+            "Heading hierarchy: strict single H1 rule and logical H2-H4 flow",
+            "Containers vs full-width sections vs Div Blocks",
+            "Clean nesting principles for accessible and maintainable DOMs"
+          ],
+          "what_learner_does": "Builds a semantic page structure in Webflow using appropriate semantic tags and heading levels.",
+          "why_it_matters": "Semantic HTML is essential for SEO rankings, screen readers, and code maintainability.",
+          "expected_outcome": "Semantically structured Webflow page backbone."
+        },
+        {
+          "lesson_number": "1.4",
+          "lesson_title": "CSS Fundamentals",
+          "what_is_taught": "Visual CSS fundamentals: the CSS box model (margin, border, padding, content), width and height sizing (px, %, em, rem, vh, vw), positioning (static, relative, absolute, fixed, sticky), cascade concepts, classes, and combo classes.",
+          "subtopics": [
+            "Mastering the CSS Box Model in Webflow's visual interface",
+            "Margin vs padding: spacing inside vs outside element boundaries",
+            "Sizing units: pixels, percentages, viewport units (vw/vh), and relative rems",
+            "CSS Positioning: Relative, Absolute, Fixed, and Sticky behaviors",
+            "Understanding the CSS cascade and inheritance in Webflow",
+            "Introduction to reusable classes and combo class modifiers"
+          ],
+          "what_learner_does": "Styles elements visually while observing real-time CSS properties generated in Webflow.",
+          "why_it_matters": "Webflow is visual CSS; understanding core CSS rules prevents unexpected layout bugs.",
+          "expected_outcome": "Clear mastery of the CSS box model, positioning modes, and sizing units."
+        },
+        {
+          "lesson_number": "1.5",
+          "lesson_title": "Visual Design Basics",
+          "what_is_taught": "Visual design principles in web development: typography selection, modular type scales, color palettes and contrast, alignment, spacing rhythms, visual hierarchy, and responsive planning.",
+          "subtopics": [
+            "Font pairing and setting modular typography scales",
+            "Color palettes: brand primary, dark text, light neutrals, and accents",
+            "WCAG AA contrast checking for accessible text readability",
+            "Horizontal and vertical alignment across page sections",
+            "Establishing consistent 8pt/4pt spatial layout rhythm",
+            "Planning layout adaptations for smaller screen viewports"
+          ],
+          "what_learner_does": "Sets up visual typography styles and a color palette adhering to WCAG contrast standards.",
+          "why_it_matters": "Disciplined visual styling elevates website quality to high-end design agency standards.",
+          "expected_outcome": "Branded visual design foundation with accessible typography and color harmony."
+        },
+        {
+          "lesson_number": "1.6",
+          "lesson_title": "Webflow Site Structure",
+          "what_is_taught": "Structuring a multi-page Webflow project: static pages, global navigation symbols, shared footer, asset manager organization, and content folders.",
+          "subtopics": [
+            "Creating and organizing static pages (Home, About, Services, Contact)",
+            "Building global symbols/components for navigation and footers",
+            "Organizing the Webflow Asset Manager (folders, naming, WebP/SVG)",
+            "Setting page settings: titles, meta descriptions, and Open Graph defaults",
+            "Setting up the project style guide page"
+          ],
+          "what_learner_does": "Establishes the multi-page project skeleton and links the global navigation structure.",
+          "why_it_matters": "A well-architected project structure scales smoothly as pages and CMS collections grow.",
+          "expected_outcome": "Organized Webflow project structure with global symbols and style guide page."
+        }
+      ],
+      "key_concepts": [
+        "Client Brief & Information Architecture",
+        "Webflow Designer Navigation",
+        "Semantic HTML Structure",
+        "Visual CSS Box Model",
+        "Multi-Page Architecture"
+      ],
+      "tools": [
+        "Webflow Designer",
+        "Figma",
+        "Staging Domain (.webflow.io)"
+      ],
+      "hands_on_practice": "Build a structured marketing landing-page foundation.",
+      "assignment": "Create the sitemap, initial style guide and semantic page structure.",
+      "deliverable": "Webflow project foundation with organized structure."
+    },
+    {
+      "module_number": "Module 02",
+      "module_title": "Professional Layout Systems",
+      "module_purpose": "Create reusable responsive designs using structured CSS concepts.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
+      "lessons": [
+        {
+          "lesson_number": "2.1",
+          "lesson_title": "Flexbox Layout",
+          "what_is_taught": "Flexbox in Webflow: direction (horizontal/vertical), alignment (cross-axis), distribution (main-axis), wrapping, flex child properties (grow, shrink, basis), and layout composition.",
+          "subtopics": [
+            "Flexbox container settings: Row horizontal vs Column vertical",
+            "Main axis distribution: flex-start, center, flex-end, space-between, space-around",
+            "Cross axis alignment: stretch, flex-start, center, flex-end, baseline",
+            "Flex wrap settings for fluid multi-element cards",
+            "Child flex item overrides: align-self, sizing (grow, shrink, don't shrink)",
+            "Complex layout composition using nested flex containers"
+          ],
+          "what_learner_does": "Builds advanced navigation bars, split hero sections, and card rows using Flexbox.",
+          "why_it_matters": "Flexbox is the modern industry standard for one-dimensional component alignment.",
+          "expected_outcome": "Fluent creation of responsive Flexbox layouts in Webflow."
+        },
+        {
+          "lesson_number": "2.2",
+          "lesson_title": "CSS Grid",
+          "what_is_taught": "CSS Grid in Webflow: grid columns and rows, fractional units (fr), minmax sizing, column/row gap, grid alignment, manual vs autoflow placement, and responsive grid patterns.",
+          "subtopics": [
+            "Creating two-dimensional layouts using Webflow CSS Grid",
+            "Defining column tracks using fractional units (fr) and minmax()",
+            "Managing grid gaps without margin hacks",
+            "Manual element placement across named grid areas and spans",
+            "Responsive grid reconfiguration across device breakpoints",
+            "Building asymmetrical editorial grids and feature matrices"
+          ],
+          "what_learner_does": "Constructs a responsive multi-column feature grid and masonry-style layout using CSS Grid.",
+          "why_it_matters": "CSS Grid provides complete two-dimensional layout power that simplifies complex layouts.",
+          "expected_outcome": "Mastery of two-dimensional CSS Grid layouts in Webflow."
+        },
+        {
+          "lesson_number": "2.3",
+          "lesson_title": "Responsive Breakpoints",
+          "what_is_taught": "Webflow breakpoint cascade: Desktop default, Tablet, Mobile Landscape, Mobile Portrait, cascade inheritance rules, responsive overrides, and eliminating horizontal overflow.",
+          "subtopics": [
+            "The Webflow breakpoint cascade: changes flow down to mobile",
+            "Adapting layouts for Tablet (768px-991px)",
+            "Refining layouts for Mobile Landscape (480px-767px) and Portrait (<479px)",
+            "Identifying and troubleshooting horizontal overflow bugs",
+            "Testing responsive typography scaling across screen widths"
+          ],
+          "what_learner_does": "Audits and customizes page layouts across all four default Webflow responsive breakpoints.",
+          "why_it_matters": "A seamless responsive experience across all screen sizes is non-negotiable for modern websites.",
+          "expected_outcome": "Flawlessly responsive layouts across all four Webflow breakpoints."
+        },
+        {
+          "lesson_number": "2.4",
+          "lesson_title": "CSS Class Management",
+          "what_is_taught": "Professional CSS class naming systems (Client-First / BEM methodology principles), reusable global classes, combo classes, class inheritance, and avoiding redundant class bloat.",
+          "subtopics": [
+            "Understanding class naming methodologies (Client-First principles)",
+            "Core utility classes: padding, margin, container, text sizes",
+            "Combo classes: when to stack modifier classes vs creating new classes",
+            "Managing class inheritance and style overrides cleanly",
+            "Cleaning unused classes using Webflow Style Manager"
+          ],
+          "what_learner_does": "Applies a structured class naming system across project elements and purges unused styles.",
+          "why_it_matters": "Structured class architecture prevents messy CSS spaghetti and allows anyone to maintain the site.",
+          "expected_outcome": "Clean, organized, maintainable class architecture across the project."
+        },
+        {
+          "lesson_number": "2.5",
+          "lesson_title": "Webflow Variables",
+          "what_is_taught": "Webflow Variables: creating color variables, typography values, spacing tokens, size variables, global updates, and design token integration.",
+          "subtopics": [
+            "Creating and binding color variables in Webflow",
+            "Configuring typography size and family variables",
+            "Setting spacing variables for uniform section padding and gaps",
+            "Updating global variables and witnessing instant site-wide propagation",
+            "Aligning Webflow Variables with modern design token standards"
+          ],
+          "what_learner_does": "Defines and binds Webflow variables for colors, typography, and spacing tokens.",
+          "why_it_matters": "Variables allow instant theme-wide branding adjustments and maintain visual consistency.",
+          "expected_outcome": "Complete Webflow Variables design token system bound to project styles."
+        },
+        {
+          "lesson_number": "2.6",
+          "lesson_title": "Reusable Components",
+          "what_is_taught": "Building Webflow components: navigation bars, footer systems, feature cards, testimonial modules, CTA callouts, and component properties (override text, visibility, links).",
+          "subtopics": [
+            "Creating Webflow components from complex element hierarchies",
+            "Configuring component properties: text overrides, image swaps, link bindings",
+            "Managing conditional visibility on component elements",
+            "Deploying and modifying components across multiple project pages",
+            "Updating master component definitions safely"
+          ],
+          "what_learner_does": "Builds a modular component library with customized component properties for client reuse.",
+          "why_it_matters": "Components allow rapid page building while protecting core layout integrity.",
+          "expected_outcome": "Production component library with configurable properties."
+        },
+        {
+          "lesson_number": "2.7",
+          "lesson_title": "Responsive Design Quality",
+          "what_is_taught": "Evaluating responsive design quality: typography legibility, image responsiveness (srcset), content ordering on mobile, flexible container behavior, and baseline accessibility.",
+          "subtopics": [
+            "Testing typography legibility on physical mobile viewports",
+            "Automated responsive images in Webflow (srcset attributes)",
+            "Adjusting Flexbox order to prioritize important content on mobile",
+            "Preventing text collisions and truncated headings",
+            "Ensuring 44px+ touch targets for mobile interactive elements"
+          ],
+          "what_learner_does": "Conducts responsive quality review, adjusts mobile ordering, and verifies touch target sizes.",
+          "why_it_matters": "High responsive quality directly impacts mobile user engagement and conversion rates.",
+          "expected_outcome": "Polished, accessible responsive design system validated on real devices."
+        }
+      ],
+      "key_concepts": [
+        "Flexbox Deep-Dive",
+        "CSS Grid Architecture",
+        "Breakpoint Cascade",
+        "Class Management & Client-First",
+        "Webflow Variables & Components"
+      ],
+      "tools": [
+        "Webflow Designer",
+        "Webflow Variables",
+        "Webflow Components"
+      ],
+      "hands_on_practice": "Build a responsive landing page and reusable component library.",
+      "assignment": "Demonstrate consistent styling across multiple breakpoints.",
+      "deliverable": "Structured responsive design system."
+    },
+    {
+      "module_number": "Module 03",
+      "module_title": "CMS & Dynamic Websites",
+      "module_purpose": "Design and manage structured CMS-driven content.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
+      "lessons": [
+        {
+          "lesson_number": "3.1",
+          "lesson_title": "CMS Fundamentals",
+          "what_is_taught": "CMS architecture, static vs dynamic web content, collections, collection items, field types, slug generation, and database schema thinking.",
+          "subtopics": [
+            "Understanding the difference between static pages and dynamic CMS pages",
+            "What is a CMS Collection: database tables in a visual format",
+            "Collection items: individual data records and URL slugs",
+            "Overview of Webflow CMS field types: plain text, rich text, images, dates, references",
+            "Automatic URL slug generation and permalink structures"
+          ],
+          "what_learner_does": "Analyzes content requirements and distinguishes static elements from dynamic CMS data.",
+          "why_it_matters": "CMS thinking turns static website mockups into dynamic, content-driven business portals.",
+          "expected_outcome": "Clear conceptual model of Webflow CMS collections and data fields."
+        },
+        {
+          "lesson_number": "3.2",
+          "lesson_title": "Content Modelling",
+          "what_is_taught": "Content modeling methodology: identifying business entities, planning fields, designing relational structures (one-to-one, one-to-many), field naming conventions, and maintenance.",
+          "subtopics": [
+            "Identifying core business entities (e.g. Case Studies, Team, Services, Articles)",
+            "Drafting content field matrices with validation constraints",
+            "Designing relationship architectures between entities",
+            "Naming conventions for fields to ensure clarity for client editors",
+            "Planning for scalable long-term content maintenance"
+          ],
+          "what_learner_does": "Designs a content model matrix for at least two related business collections.",
+          "why_it_matters": "Good content models prevent data redundancy and make content editing effortless.",
+          "expected_outcome": "Documented CMS schema and content model matrix."
+        },
+        {
+          "lesson_number": "3.3",
+          "lesson_title": "CMS Collections",
+          "what_is_taught": "Creating and configuring Webflow CMS Collections: plain text, formatted rich text, image galleries, switch toggles, single Reference fields, and multi-reference concepts.",
+          "subtopics": [
+            "Creating primary and secondary collections in Webflow CMS",
+            "Configuring rich text fields and styling internal HTML elements",
+            "Adding image and file upload fields with size guidance",
+            "Implementing single Reference fields to link collections (e.g. Article to Author)",
+            "Understanding Multi-Reference fields and their query considerations"
+          ],
+          "what_learner_does": "Builds two related collections (e.g. Projects + Categories, or Blog Posts + Authors) in Webflow CMS.",
+          "why_it_matters": "Relational fields allow dynamic cross-referencing without data duplication.",
+          "expected_outcome": "Two fully configured and interrelated Webflow CMS collections."
+        },
+        {
+          "lesson_number": "3.4",
+          "lesson_title": "Collection Templates",
+          "what_is_taught": "Building Collection Page Templates: dynamic binding of headings, rich text, images, author references, conditional visibility, and template consistency.",
+          "subtopics": [
+            "Understanding Webflow dynamic Collection Page Templates",
+            "Binding text and heading elements to CMS collection fields",
+            "Styling and binding dynamic Rich Text blocks with embed support",
+            "Connecting reference fields (displaying author bio and avatar on post)",
+            "Applying Conditional Visibility based on switch toggles or empty fields",
+            "Testing template layout consistency across diverse sample items"
+          ],
+          "what_learner_does": "Designs and styles a dynamic collection page template bound to CMS item data.",
+          "why_it_matters": "A single collection template dynamically renders hundreds of unique, branded URLs.",
+          "expected_outcome": "Fully styled dynamic Collection Page Template."
+        },
+        {
+          "lesson_number": "3.5",
+          "lesson_title": "Collection Lists",
+          "what_is_taught": "Deploying Collection Lists on static and dynamic pages: grid layouts, filtering rules, sorting options, pagination controls, and related item displays.",
+          "subtopics": [
+            "Adding Collection List elements to landing and archive pages",
+            "Connecting collection lists to Flexbox and CSS Grid parent layouts",
+            "Setting up filtering rules (e.g. Show only Featured, Filter by Category)",
+            "Applying sort orders (e.g. Published Date newest to oldest, Alphabetical)",
+            "Configuring Collection List pagination controls",
+            "Displaying related items on collection detail pages"
+          ],
+          "what_learner_does": "Integrates filtered and sorted collection lists on the homepage and index pages.",
+          "why_it_matters": "Collection lists bring dynamic database content into marketing layouts seamlessly.",
+          "expected_outcome": "Filtered, sorted, and paginated dynamic collection lists across the site."
+        },
+        {
+          "lesson_number": "3.6",
+          "lesson_title": "Client Editing",
+          "what_is_taught": "Webflow Editor workflow: on-page editing, drafting vs publishing, managing collection items, invite permissions, and content governance.",
+          "subtopics": [
+            "Touring the Webflow Editor interface from a client's perspective",
+            "Editing live page text and swapping imagery directly on canvas",
+            "Adding, editing, and staging CMS collection items in the Editor",
+            "Draft vs Scheduled vs Live publishing permissions",
+            "Content governance: safeguarding layout integrity while giving editing freedom"
+          ],
+          "what_learner_does": "Simulates client content creation in the Webflow Editor and stages new CMS items.",
+          "why_it_matters": "Clients want to update their own blogs and case studies without touching layout code.",
+          "expected_outcome": "Validated client content editing workflow and editor permission setup."
+        },
+        {
+          "lesson_number": "3.7",
+          "lesson_title": "CMS Plan Restrictions",
+          "what_is_taught": "Transparent understanding of Webflow CMS plan tiers: item limits (Starter vs CMS vs Business), collection counts, publishing requirements, and Workspace vs Site plans.",
+          "subtopics": [
+            "Collection item limits across Webflow plans (50 items on Starter, 2k on CMS)",
+            "Collection count restrictions per project",
+            "Custom domain publishing requiring paid Site Plans",
+            "Distinguishing Workspace plans (seat collaboration) from Site plans (hosting)",
+            "Realistic client pricing consultation and budgeting"
+          ],
+          "what_learner_does": "Audits project against Webflow plan limits and documents client hosting recommendations.",
+          "why_it_matters": "Transparent communication about subscription costs protects client trust and agency credibility.",
+          "expected_outcome": "Documented Webflow plan analysis and commercial hosting recommendation."
+        }
+      ],
+      "key_concepts": [
+        "CMS Architecture & Schemas",
+        "Content Modelling Matrix",
+        "Two Related Collections",
+        "Dynamic Collection Templates",
+        "Webflow Plan Limits Transparency"
+      ],
+      "tools": [
+        "Webflow Designer",
+        "Webflow CMS",
+        "Webflow Editor"
+      ],
+      "hands_on_practice": "Create at least two meaningful related CMS content structures (e.g. Blog Posts + Authors, or Projects + Categories).",
+      "assignment": "Create a CMS template and populate realistic example content.",
+      "deliverable": "Functional CMS-driven content architecture, subject to the authorized plan's capabilities.",
+      "important_notice": "Do not claim Webflow CMS functionality is fully available without plan limits. Clear disclosures of Workspace vs Site hosting plans are mandatory."
+    },
+    {
+      "module_number": "Module 04",
+      "module_title": "Interactions & Visual Experience",
+      "module_purpose": "Build useful, performant and accessible website interactions.",
+      "hours": 8,
+      "guided_hours": 8,
+      "learning_hours": 8,
+      "lessons": [
+        {
+          "lesson_number": "4.1",
+          "lesson_title": "Interaction Fundamentals",
+          "what_is_taught": "Interaction design fundamentals: state-based styling (hover, pressed, focused, current), CSS transitions, easing curves, timing, and user feedback.",
+          "subtopics": [
+            "The role of micro-interactions in modern interface design",
+            "Styling interactive states: Hover, Pressed, Focused, and Current navigation",
+            "Configuring CSS transitions: duration, property targeting, and easing",
+            "Selecting appropriate easing functions (ease, ease-in-out, custom cubic-bezier)",
+            "Providing instant, tangible user feedback on clicks and inputs"
+          ],
+          "what_learner_does": "Configures smooth CSS hover transitions and active states on buttons, cards, and links.",
+          "why_it_matters": "Subtle transitions transform static layouts into responsive, tactile web applications.",
+          "expected_outcome": "Consistent, polished interactive state transitions across all clickable elements."
+        },
+        {
+          "lesson_number": "4.2",
+          "lesson_title": "Webflow Interactions",
+          "what_is_taught": "Webflow Interactions panel: element triggers vs page triggers, animation timelines, scroll into view, page load animations, and reusable animation presets.",
+          "subtopics": [
+            "Understanding Element Triggers: Mouse Click, Hover, Scroll into View",
+            "Understanding Page Triggers: Page Load, Page Scrolled, While Scrolling",
+            "Building multi-step animation timelines with delays and offsets",
+            "Transform properties: translate, scale, rotate, and opacity",
+            "Reusing interaction classes across multiple components"
+          ],
+          "what_learner_does": "Creates a scroll-into-view reveal animation timeline and an interactive card hover effect.",
+          "why_it_matters": "Visual motion guides user attention and brings visual polish to marketing stories.",
+          "expected_outcome": "Configured Webflow interaction timelines operating smoothly."
+        },
+        {
+          "lesson_number": "4.3",
+          "lesson_title": "Motion Principles",
+          "what_is_taught": "Motion design principles: timing, easing, choreography, purpose-driven animation, visual hierarchy reinforcement, and avoiding unnecessary distraction.",
+          "subtopics": [
+            "The 12 principles of animation adapted for modern web interfaces",
+            "Purposeful motion: guiding the eye vs gratuitous decoration",
+            "Animation duration guidelines (150ms-400ms for micro-interactions)",
+            "Staggered entrance animations for card grids and lists",
+            "Knowing when NOT to animate: preserving speed and cognitive clarity"
+          ],
+          "what_learner_does": "Refines interaction durations and delays to produce subtle, professional animations.",
+          "why_it_matters": "Overly theatrical animations frustrate users; subtle motion conveys premium craft.",
+          "expected_outcome": "Subtle, professional motion choreography across page sections."
+        },
+        {
+          "lesson_number": "4.4",
+          "lesson_title": "Interactive Components",
+          "what_is_taught": "Building interactive components in Webflow: responsive accordion FAQ patterns, dropdown navigation menus, modal dialogs, and interactive tabbed content.",
+          "subtopics": [
+            "Building accessible accordion FAQ components with smooth collapse/expand",
+            "Customizing dropdown navigation menus and mobile drawers",
+            "Constructing popup modal dialogs with backdrop blur and close triggers",
+            "Styling Webflow Tabs elements for product feature walk-throughs",
+            "Testing touch interactions on mobile devices"
+          ],
+          "what_learner_does": "Builds a functional FAQ accordion and tabbed content section using Webflow interactions.",
+          "why_it_matters": "Accordions and tabs condense heavy information into compact, user-friendly layouts.",
+          "expected_outcome": "Working interactive FAQ accordion and tabbed navigation components."
+        },
+        {
+          "lesson_number": "4.5",
+          "lesson_title": "Accessibility & Reduced Motion",
+          "what_is_taught": "Motion accessibility: CSS prefers-reduced-motion media query, keyboard focus visibility, avoiding scroll-jacking, avoiding excessive parallax, and preserving content access.",
+          "subtopics": [
+            "The prefers-reduced-motion media query and vestibular motion disorders",
+            "Implementing reduced-motion fallbacks for intense animations",
+            "Why scroll-jacking damages user experience and accessibility",
+            "Restricting parallax to gentle background shifts",
+            "Ensuring focus indicators remain visible when tab-navigating through animations"
+          ],
+          "what_learner_does": "Audits site interactions against reduced-motion standards and verifies keyboard navigation.",
+          "why_it_matters": "Motion accessibility is required by WCAG guidelines to protect users with vestibular conditions.",
+          "expected_outcome": "Accessible interaction architecture adhering to prefers-reduced-motion standards."
+        },
+        {
+          "lesson_number": "4.6",
+          "lesson_title": "Performance Considerations",
+          "what_is_taught": "Animation performance: GPU-accelerated CSS transforms (translate, scale, opacity) vs layout thrashing properties (width, height, top, left), and mobile performance testing.",
+          "subtopics": [
+            "Understanding the browser rendering pipeline: layout, paint, composite",
+            "GPU-accelerated properties: translate3d, scale, and opacity",
+            "Avoiding expensive layout-triggering properties (width, margin, padding)",
+            "Testing frame rates (60fps) using browser DevTools Performance panel",
+            "Disabling heavy interactions on mobile viewports for battery and speed"
+          ],
+          "what_learner_does": "Profiles animation performance and refactors any layout-triggering properties to GPU transforms.",
+          "why_it_matters": "Laggy animations degrade user perception of brand quality and spike bounce rates.",
+          "expected_outcome": "Performant 60fps interaction performance across devices."
+        }
+      ],
+      "key_concepts": [
+        "Micro-Interactions & States",
+        "Webflow Interaction Timelines",
+        "Motion Choreography",
+        "Interactive Components (Accordions/Tabs)",
+        "Reduced-Motion Accessibility"
+      ],
+      "tools": [
+        "Webflow Designer",
+        "Webflow Interactions",
+        "DevTools Performance Profiler"
+      ],
+      "hands_on_practice": "Add suitable visual interactions to the marketing website.",
+      "assignment": "Document interaction behavior and reduced-motion considerations.",
+      "deliverable": "Polished website interactions that do not compromise usability."
+    },
+    {
+      "module_number": "Module 05",
+      "module_title": "SEO, Forms & Performance",
+      "module_purpose": "Prepare Webflow websites for discoverability, lead collection and reliable use.",
+      "hours": 10,
+      "guided_hours": 10,
+      "learning_hours": 10,
+      "lessons": [
+        {
+          "lesson_number": "5.1",
+          "lesson_title": "On-Page SEO",
+          "what_is_taught": "On-page SEO in Webflow: title tags, meta descriptions, semantic heading hierarchy (H1-H6), image alt attributes, internal linking structure, and clean URL permalinks.",
+          "subtopics": [
+            "Optimizing title tags and meta descriptions in Webflow Page Settings",
+            "Auditing single H1 presence and logical heading order",
+            "Adding descriptive alt text to all informative images",
+            "Establishing internal keyword links to distribute page authority",
+            "Configuring clean, descriptive static page URL slugs"
+          ],
+          "what_learner_does": "Configures complete on-page SEO settings for all static pages.",
+          "why_it_matters": "Search engines evaluate on-page tags to index and rank marketing websites accurately.",
+          "expected_outcome": "Fully configured on-page SEO metadata across all static pages."
+        },
+        {
+          "lesson_number": "5.2",
+          "lesson_title": "CMS SEO",
+          "what_is_taught": "Dynamic CMS SEO in Webflow: dynamic title tag patterns, dynamic meta descriptions, dynamic Open Graph imagery, duplicate content prevention, and content quality.",
+          "subtopics": [
+            "Creating dynamic title tag formulas (e.g. [Title] | [Category] | [Brand])",
+            "Pulling dynamic meta descriptions from summary or excerpt fields",
+            "Setting dynamic Open Graph titles, descriptions, and featured images",
+            "Preventing duplicate content through standardized URL slugs",
+            "Ensuring high-value editorial content in CMS templates"
+          ],
+          "what_learner_does": "Configures dynamic SEO and Open Graph formulas on the CMS Collection Page Template.",
+          "why_it_matters": "Dynamic SEO scales automatically as new collection items are published by clients.",
+          "expected_outcome": "Automated, scalable dynamic SEO and social sharing configuration for CMS items."
+        },
+        {
+          "lesson_number": "5.3",
+          "lesson_title": "Technical SEO",
+          "what_is_taught": "Technical SEO in Webflow: automatic vs custom XML sitemaps, canonical URL settings, 301 redirect management, robots.txt configuration, and Google Search Console integration.",
+          "subtopics": [
+            "Webflow automatic XML sitemap generation and indexing controls",
+            "Setting the global canonical domain to avoid split indexation",
+            "Managing 301 URL redirects in Webflow Site Settings",
+            "Configuring robots.txt rules to block staging or private folders",
+            "Verifying site ownership and submitting sitemaps to Google Search Console"
+          ],
+          "what_learner_does": "Configures canonical domain, verifies XML sitemap, and tests 301 redirect rules.",
+          "why_it_matters": "Technical SEO ensures Google crawlers index the correct canonical URLs without indexing errors.",
+          "expected_outcome": "Robust technical SEO configuration with validated sitemap and redirects."
+        },
+        {
+          "lesson_number": "5.4",
+          "lesson_title": "Forms",
+          "what_is_taught": "Webflow native form handling: contact forms, lead capture, field validation, custom success and error states, notification routing, reCAPTCHA integration, privacy compliance, and plan limits.",
+          "subtopics": [
+            "Designing contact and lead capture forms in Webflow",
+            "Configuring required fields, email formatting, and field constraints",
+            "Customizing form Success State and Error State design",
+            "Setting email notification recipients and custom subject lines",
+            "Integrating Google reCAPTCHA v2/v3 to prevent form spam",
+            "Privacy policy consent checkboxes and data handling compliance",
+            "Plan transparency: monthly form submission limits on Webflow hosting"
+          ],
+          "what_learner_does": "Builds and tests a working lead form with custom states, validation, and notification routing.",
+          "why_it_matters": "Contact forms are the primary lead generation mechanism for marketing websites.",
+          "expected_outcome": "Functional, tested lead capture form with customized feedback states."
+        },
+        {
+          "lesson_number": "5.5",
+          "lesson_title": "Analytics",
+          "what_is_taught": "Web measurement basics: Google Analytics 4 (GA4) property setup, tracking ID integration in Webflow, event tracking, conversion action definition, and cookie consent.",
+          "subtopics": [
+            "Creating a Google Analytics 4 (GA4) measurement property",
+            "Embedding GA4 measurement ID in Webflow Site Settings",
+            "Tracking button clicks and form submission events in GA4",
+            "Defining conversion actions for marketing reporting",
+            "Cookie consent banner considerations for regional compliance"
+          ],
+          "what_learner_does": "Integrates GA4 tracking script and documents core event triggers.",
+          "why_it_matters": "Analytics prove marketing ROI and provide insights for conversion rate optimization.",
+          "expected_outcome": "Configured GA4 analytics measurement plan."
+        },
+        {
+          "lesson_number": "5.6",
+          "lesson_title": "Accessibility",
+          "what_is_taught": "Webflow accessibility auditing: semantic structure verification, WCAG AA color contrast, non-text content alt descriptions, keyboard focus order, focus rings, and screen-reader form labels.",
+          "subtopics": [
+            "Using Webflow Audit Panel to detect missing alt text and contrast failures",
+            "Verifying WCAG AA color contrast across text, buttons, and backgrounds",
+            "Keyboard tab navigation order and visible focus states",
+            "Ensuring all form fields have descriptive text labels (not just placeholders)",
+            "ARIA label integration on icon-only buttons"
+          ],
+          "what_learner_does": "Runs Webflow's built-in Audit Panel and resolves all accessibility flags.",
+          "why_it_matters": "Accessibility ensures inclusivity and compliance with international digital standards.",
+          "expected_outcome": "Clean accessibility audit with zero WCAG AA contrast or label violations."
+        },
+        {
+          "lesson_number": "5.7",
+          "lesson_title": "Performance",
+          "what_is_taught": "Website performance optimization: image compression (WebP), asset weight auditing, font loading optimization (display swap), interaction efficiency, and Google Lighthouse auditing.",
+          "subtopics": [
+            "Compressing images and converting assets to WebP in Webflow",
+            "Auditing total page weight and asset transfer sizes",
+            "Optimizing Google Fonts loading using 'swap' display settings",
+            "Eliminating heavy or render-blocking scripts in custom code areas",
+            "Running Google Lighthouse audits and optimizing Core Web Vitals"
+          ],
+          "what_learner_does": "Audits page speed with Google Lighthouse and optimizes media and font delivery.",
+          "why_it_matters": "Fast performance is a direct ranking factor for Google and reduces visitor bounce rates.",
+          "expected_outcome": "Google Lighthouse audit report scoring 90+ in Performance and Best Practices."
+        },
+        {
+          "lesson_number": "5.8",
+          "lesson_title": "Publishing & Reliability",
+          "what_is_taught": "Staging domain preview, form submission verification, broken link checking, redirect validation, and production launch readiness checklist.",
+          "subtopics": [
+            "Conducting pre-flight review on the .webflow.io staging domain",
+            "Submitting real test forms and verifying notification delivery",
+            "Scanning the site for 404 broken links or missing images",
+            "Testing 301 redirects to ensure proper path routing",
+            "Final launch readiness sign-off across all deliverables"
+          ],
+          "what_learner_does": "Executes pre-launch checks and documents form verification and link integrity.",
+          "why_it_matters": "Rigorous pre-publish verification guarantees zero embarrassing defects upon launch.",
+          "expected_outcome": "Signed-off production publishing checklist and test evidence."
+        }
+      ],
+      "key_concepts": [
+        "On-Page & CMS SEO",
+        "Technical SEO & 301 Redirects",
+        "Webflow Form Handling & Notifications",
+        "Accessibility & Webflow Audit Panel",
+        "Lighthouse Performance Audits"
+      ],
+      "tools": [
+        "Webflow Designer",
+        "Webflow CMS",
+        "Google Lighthouse",
+        "Google Search Console",
+        "GA4"
+      ],
+      "hands_on_practice": "Audit the CMS website for SEO, accessibility, form functionality and performance.",
+      "assignment": "Prepare a technical quality checklist and test evidence.",
+      "deliverable": "Audited Webflow project with appropriate metadata and working lead-form evidence.",
+      "important_notice": "Webflow form submissions and CMS publishing have plan-dependent limitations. External hosting of exported code does NOT preserve native Webflow form processing."
+    },
+    {
+      "module_number": "Module 06",
+      "module_title": "Client Website Capstone",
+      "module_purpose": "Deliver a maintainable CMS-driven marketing website and professional client handover.",
+      "hours": 12,
+      "guided_hours": 12,
+      "learning_hours": 12,
+      "lessons": [
+        {
+          "lesson_number": "6.1",
+          "lesson_title": "Final Website Assembly",
+          "what_is_taught": "Assembling the multi-page marketing website: responsive Homepage, About page, Services page, CMS listing page, dynamic CMS item template, and Contact page.",
+          "subtopics": [
+            "Reviewing the end-to-end multi-page site structure",
+            "Validating homepage conversion architecture and CTA paths",
+            "Finalizing About and Services layout structures",
+            "Verifying the CMS dynamic listing index page",
+            "Polishing the dynamic CMS item template page",
+            "Connecting the contact page with business credentials and working form"
+          ],
+          "what_learner_does": "Assembles and reviews the complete multi-page Webflow marketing website.",
+          "why_it_matters": "Brings all structural, styling, and CMS elements into one coherent commercial product.",
+          "expected_outcome": "Fully assembled multi-page Webflow marketing website."
+        },
+        {
+          "lesson_number": "6.2",
+          "lesson_title": "CMS Validation",
+          "what_is_taught": "CMS data validation: verifying relational fields, checking template data bindings, publishing test CMS items, testing draft vs live states, and editor workflow validation.",
+          "subtopics": [
+            "Verifying relational integrity between the two CMS collections",
+            "Auditing dynamic template bindings with various content lengths",
+            "Testing edge cases: missing images, short titles, long headlines",
+            "Validating draft and staging states before public release",
+            "Testing client editor content addition and preview workflows"
+          ],
+          "what_learner_does": "Validates CMS content rendering across multiple items and tests edge-case data.",
+          "why_it_matters": "Dynamic layouts must look clean whether content is long, short, or partially populated.",
+          "expected_outcome": "Robust CMS template rendering validated against diverse content items."
+        },
+        {
+          "lesson_number": "6.3",
+          "lesson_title": "Interaction Review",
+          "what_is_taught": "Comprehensive interaction testing: hover micro-interactions, scroll triggers, mobile touch responsiveness, keyboard accessibility, and reduced-motion compliance.",
+          "subtopics": [
+            "Testing all hover states across desktop browsers",
+            "Verifying scroll-triggered animations on varying screen sizes",
+            "Checking mobile touch feedback and eliminating laggy interactions",
+            "Auditing keyboard navigation across interactive elements",
+            "Confirming reduced-motion compliance in system settings"
+          ],
+          "what_learner_does": "Conducts systematic interaction QA and refines animation timings.",
+          "why_it_matters": "Ensures interactions enhance the user experience without hindering navigation or accessibility.",
+          "expected_outcome": "Defect-free interaction review across desktop and mobile devices."
+        },
+        {
+          "lesson_number": "6.4",
+          "lesson_title": "Forms & Analytics",
+          "what_is_taught": "Form and analytics verification: live submission testing, notification routing to client email, success/error state validation, spam protection confirmation, and basic measurement hooks.",
+          "subtopics": [
+            "Executing live form submissions from desktop and mobile viewports",
+            "Confirming email notification delivery to client inbox",
+            "Verifying on-screen success confirmation and error prompts",
+            "Testing reCAPTCHA spam filtering under simulated bot behavior",
+            "Confirming GA4 event recording for form submissions"
+          ],
+          "what_learner_does": "Performs live form submission tests, confirms notifications, and logs test results.",
+          "why_it_matters": "A flawless contact form is the ultimate business deliverable of any marketing site.",
+          "expected_outcome": "Validated form submission logs and notification delivery verification."
+        },
+        {
+          "lesson_number": "6.5",
+          "lesson_title": "Publishing Workflow",
+          "what_is_taught": "Publishing procedures: Webflow staging domain publication, Site plan requirements for custom domains, DNS setup (A records / CNAME), SSL verification, and post-publish checks.",
+          "subtopics": [
+            "Publishing to the Webflow staging domain (.webflow.io)",
+            "Understanding custom domain hosting requirements on Webflow Site plans",
+            "DNS record configuration: A records and CNAME records",
+            "SSL certificate provisioning and automated renewal in Webflow",
+            "Post-publish smoke tests: testing links, forms, and images live"
+          ],
+          "what_learner_does": "Publishes the project to staging and documents custom domain DNS setup procedures.",
+          "why_it_matters": "Understanding DNS and hosting allows developers to launch client sites without downtime.",
+          "expected_outcome": "Published staging website and documented domain launch guide."
+        },
+        {
+          "lesson_number": "6.6",
+          "lesson_title": "Client Handover",
+          "what_is_taught": "Professional client handover: Webflow Editor onboarding guide, content entry instructions, component usage rules, publishing protocols, permission settings, and site maintenance documentation.",
+          "subtopics": [
+            "Creating a video or written Webflow Editor onboarding guide",
+            "Documenting step-by-step instructions for adding new CMS items",
+            "Explaining component usage and guidelines to protect layout styles",
+            "Setting up client user permissions (Collaborator vs Workspace member)",
+            "Compiling a comprehensive Client Handover Handbook"
+          ],
+          "what_learner_does": "Drafts a detailed Client Handover & Editor Handbook for the capstone project.",
+          "why_it_matters": "A thorough handover creates thrilled clients, fewer support requests, and repeat referrals.",
+          "expected_outcome": "Comprehensive Client Handover & Webflow Editor Handbook."
+        },
+        {
+          "lesson_number": "6.7",
+          "lesson_title": "Final Presentation",
+          "what_is_taught": "Capstone presentation: project walkthrough, CMS architecture demonstration, responsive cross-device review, interaction showcase, QA summary, and client documentation delivery.",
+          "subtopics": [
+            "Structuring the capstone case study narrative and presentation",
+            "Demonstrating responsive design across desktop, tablet, and mobile",
+            "Showcasing the two related CMS collections and dynamic template",
+            "Walkthrough of visual interactions and accessible reduced-motion support",
+            "Presenting Lighthouse audit scores, SEO checklist, and QA evidence",
+            "Submitting client handover documentation and project links"
+          ],
+          "what_learner_does": "Compiles and presents the complete Webflow CMS marketing website portfolio and case study.",
+          "why_it_matters": "Demonstrates true commercial mastery of visual web development and client-ready execution.",
+          "expected_outcome": "Portfolio-ready Webflow CMS website and handover package."
+        }
+      ],
+      "key_concepts": [
+        "Multi-Page Site Assembly",
+        "CMS Relational Validation",
+        "Form & Analytics Verification",
+        "Publishing & DNS Procedures",
+        "Client Handover Handbook"
+      ],
+      "tools": [
+        "Webflow Designer",
+        "Webflow CMS",
+        "Webflow Editor",
+        "Google Lighthouse"
+      ],
+      "hands_on_practice": "Complete a client-style website acceptance review.",
+      "assignment": "Submit the complete CMS-driven marketing website and project documentation.",
+      "deliverable": "Portfolio-ready Webflow CMS website and handover package."
+    }
+  ],
+  "what_you_will_build": [],
+  "final_deliverables": [],
+  "student_deliverables_and_evidence": [],
+  "assessment": null,
+  "certification": null,
+  "career_paths": [],
+  "freelance_applications": [],
+  "business_use_cases": [],
+  "industry_workflow": [],
+  "best_practices": [],
+  "common_mistakes": [],
+  "not_covered": [],
+  "next_learning_path": [],
+  "faq": [
+    {
+      "question": "What will I learn in this Webflow course?",
+      "answer": "You will learn Webflow Designer, visual CSS, responsive layouts, reusable components, CMS collections, dynamic templates, interactions, SEO and publishing workflows."
+    },
+    {
+      "question": "Do I need coding knowledge?",
+      "answer": "Basic HTML/CSS concepts are recommended, but professional programming experience is not required."
+    },
+    {
+      "question": "Will I build a CMS website?",
+      "answer": "Yes. The capstone focuses on a multi-page marketing website with structured CMS content, dynamic templates and a client editor workflow, using an appropriately authorized environment."
+    },
+    {
+      "question": "Is Webflow free to use?",
+      "answer": "Webflow provides limited introductory options. Publishing to custom domains and accessing certain CMS, collaboration or other features may require paid plans."
+    },
+    {
+      "question": "Can I export Webflow CMS websites and host them anywhere?",
+      "answer": "Webflow supports static code export with an eligible paid Workspace plan, but native CMS functionality and other hosted features are not fully included in that export."
+    },
+    {
+      "question": "Will I learn animations?",
+      "answer": "Yes. You will learn useful hover, scroll and transition interactions while considering performance and accessibility."
+    },
+    {
+      "question": "Will I learn SEO?",
+      "answer": "Yes. The course covers metadata, CMS SEO, redirects, accessibility and basic technical SEO concepts."
+    },
+    {
+      "question": "What portfolio project will I complete?",
+      "answer": "A responsive multi-page Webflow CMS marketing website with reusable components, CMS content, forms, suitable interactions and handover documentation."
+    },
+    {
+      "question": "Is this different from Elementor?",
+      "answer": "Yes. Elementor is a visual design tool used with WordPress. Webflow is a visual website development and hosting platform with its own CMS and design system."
+    },
+    {
+      "question": "What is the duration and fee?",
+      "answer": "The course spans 8 Weeks (64 guided training hours). The approved regular tuition fee for Webflow Website Design & CMS Development is ₹10,900. Under our current introductory launch offer, an approved launch fee of ₹8,900 is available. The final payable amount, including any applicable taxes, will be clearly displayed before payment. All live instructional sessions, portfolio reviews, and certification are included."
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}

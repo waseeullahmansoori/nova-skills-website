@@ -818,16 +818,19 @@
   }
 
   .city-hero-cta-row {
-    flex-direction: row;
-    width: 100%;
-    gap: 8px;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
   }
 
   .city-hero-cta-row .city-btn {
-    flex: 1 1 50%;
-    padding: 12px 10px;
-    font-size: 0.8125rem;
+    width: 100% !important;
+    flex: 1 1 auto !important;
+    padding: 12px 14px;
+    font-size: 0.875rem;
     min-height: 44px;
+    text-align: center;
+    white-space: normal;
   }
 
   .city-decision-panel {

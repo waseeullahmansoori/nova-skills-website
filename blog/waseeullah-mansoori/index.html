@@ -301,18 +301,19 @@
     }
     .article-grid {
       display: grid;
-      grid-template-columns: 280px 1fr 340px;
+      grid-template-columns: 280px minmax(0, 1fr) 340px;
       gap: 40px;
+      min-width: 0;
     }
     @media (max-width: 1200px) {
       .article-grid {
-        grid-template-columns: 1fr 340px;
+        grid-template-columns: minmax(0, 1fr) 340px;
       }
       .toc-column { display: none; }
     }
     @media (max-width: 900px) {
       .article-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
       }
     }
 
@@ -361,6 +362,10 @@
       font-size: 1.1rem;
       line-height: 1.8;
       color: #1e293b;
+      min-width: 0;
+      max-width: 100%;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     .article-body h2 {
       font-size: 1.85rem;
@@ -389,6 +394,10 @@
       padding: 24px 28px;
       border-radius: 0 16px 16px 0;
       margin-bottom: 36px;
+      min-width: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-wrap: break-word;
     }
 
     /* Stats Grid Cards */
@@ -578,6 +587,35 @@
       justify-content: center;
       gap: 16px;
       flex-wrap: wrap;
+    }
+    @media (max-width: 640px) {
+      .founder-hero-card {
+        padding: 24px 16px !important;
+      }
+      .founder-intro-lead {
+        padding: 18px 14px !important;
+        font-size: 1.05rem !important;
+      }
+      .chapter-quote-box {
+        padding: 24px 16px !important;
+      }
+      .founder-cta-banner {
+        padding: 32px 14px !important;
+      }
+      .founder-cta-btns .btn {
+        white-space: normal !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding: 14px 16px !important;
+      }
+      .share-bar {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+      }
+      .share-btn {
+        flex: 1 1 calc(50% - 8px);
+        justify-content: center;
+      }
     }
   </style>
 </head>

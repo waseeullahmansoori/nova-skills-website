@@ -1,0 +1,948 @@
+{
+  "courseId": "react-cert",
+  "schemaVersion": "1.0.0",
+  "curriculumRef": "curricula/react-cert.json",
+  "guidedHours": 64,
+  "learning_hours": 64,
+  "course_type": "Certification Course",
+  "seo_title": "React.js Course | TypeScript, 8 Weeks, ₹10,900 | Nova Skills",
+  "seo_description": "Learn React, TypeScript, Hooks, routing, APIs and testing. Build a deployed frontend application in 8 weeks, 64 hours, for ₹10,900 at Nova Skills.",
+  "overview": "React.js Frontend Development is an intensive 8-week, 64-hour intermediate programming certification designed to transform JavaScript programmers into confident, industry-ready React frontend engineers. Built around modern 2027 frontend standards, this course bypasses outdated patterns (such as Create React App and legacy class components) and focuses directly on modern functional components, standard React Hooks, TypeScript prop contracts, Vite development velocity, Vitest automated testing, and predictable architectural patterns. Students master state ownership, custom Hook engineering, asynchronous REST API orchestration, client-side routing, and accessible UI interactions while developing a polished, commercial-grade portfolio capstone project published on GitHub Pages.",
+  "why_now": "React continues to be the dominant frontend library powering modern web applications worldwide. In 2027, modern frontend development demands not just knowing basic JSX, but writing type-safe React with TypeScript, structuring clean component hierarchies, managing state predictably without bloated state libraries, testing components rigorously with React Testing Library, and deploying responsive, accessible web applications. This course bridges the gap between basic JavaScript knowledge and production-ready React frontend craftsmanship.",
+  "learning_journey": [
+    {
+      "step": "01",
+      "title": "Mental Model & Tooling",
+      "description": "Understand React declarative rendering, Vite tooling, JSX expressions, component composition, and atomic UI component design."
+    },
+    {
+      "step": "02",
+      "title": "State & Hooks Mastery",
+      "description": "Master useState, synthetic events, controlled forms, useEffect synchronization rules, and useRef DOM interactions."
+    },
+    {
+      "step": "03",
+      "title": "Architecture & Routing",
+      "description": "Lift state up, implement React Context for global state, extract custom Hooks, and configure multi-page React Router navigation."
+    },
+    {
+      "step": "04",
+      "title": "APIs & TypeScript Integration",
+      "description": "Connect REST APIs, handle loading/error/empty state transitions, prevent memory leaks with AbortController, and apply TypeScript type safety."
+    },
+    {
+      "step": "05",
+      "title": "Testing, Profiling & Accessibility",
+      "description": "Write automated tests with Vitest and React Testing Library, profile component re-renders with React DevTools, and implement accessible UI."
+    },
+    {
+      "step": "06",
+      "title": "Capstone Engineering & Deployment",
+      "description": "Build, test, document, and deploy a complete commercial-style React application capstone to GitHub Pages."
+    }
+  ],
+  "prerequisites": [
+    "Proficiency in modern JavaScript (ES6+): let/const, arrow functions, destructuring, spread/rest syntax, array methods (map, filter, reduce), and ES modules (import/export).",
+    "Solid understanding of asynchronous JavaScript: Promises, async/await, and working with the Fetch API.",
+    "Experience with DOM manipulation and browser event handling.",
+    "Basic knowledge of HTML5 semantic structure and modern CSS layout techniques (Flexbox and CSS Grid).",
+    "Completion of Course 56 (Modern JavaScript & TypeScript Foundations) or an equivalent technical evaluation."
+  ],
+  "target_audience": [
+    "Frontend developers and web designers who know HTML, CSS, and modern JavaScript and want to transition into component-driven React application development.",
+    "Graduates of Nova Skills Modern JavaScript & TypeScript Foundations looking to advance their frontend programming capabilities with industry-standard React.",
+    "Junior software developers seeking practical, hands-on experience building, testing, and deploying commercial-grade React web applications with TypeScript.",
+    "Backend developers wanting to gain solid frontend competence in React to build clean, maintainable administrative portals and client interfaces."
+  ],
+  "learning_outcomes": [
+    "Design and organize scalable React application architectures using functional components, JSX composition, and strict TypeScript prop interfaces.",
+    "Manage component state predictably using useState, custom updater functions, and controlled form inputs with client-side validation.",
+    "Architect clean component hierarchies by lifting state up to common ancestors and orchestrating global UI state using the React Context API.",
+    "Build custom Hooks that encapsulate reusable business logic, browser storage synchronization, and asynchronous REST API workflows.",
+    "Implement client-side multi-page routing with React Router, nested layouts, dynamic URL parameters, and resilient 404 error boundaries.",
+    "Integrate public REST APIs with robust handling for loading indicators, empty search results, HTTP errors, and user-triggered retries.",
+    "Write reliable automated unit and integration tests using Vitest and React Testing Library following user-centric testing best practices.",
+    "Inspect component rendering behavior with React DevTools, optimize performance with memoization and code splitting, and deploy static SPAs to GitHub Pages."
+  ],
+  "hands_on_tech": [
+    "React (Functional Components & Hooks)",
+    "TypeScript",
+    "Vite",
+    "React Router",
+    "React Testing Library",
+    "Vitest",
+    "React DevTools",
+    "CSS Modules",
+    "Tailwind CSS (Supporting)",
+    "Git & GitHub",
+    "GitHub Pages"
+  ],
+  "modules": [
+    {
+      "module_number": 1,
+      "number": 1,
+      "module": "Module 01",
+      "title": "React & Component Architecture",
+      "module_title": "React & Component Architecture",
+      "duration": "Week 1",
+      "hours": 8,
+      "lessons_count": 5,
+      "objective": "Master the React mental model, modern Vite and TypeScript development tooling, JSX declarative rendering, component composition, and atomic UI component architecture.",
+      "module_purpose": "Establish solid foundations in modern React development by understanding declarative UI rendering, component encapsulation, props contracts, and reusable UI primitive design.",
+      "what_you_will_learn": [
+        "React declarative paradigm, Virtual DOM, and React 18/19 concurrent rendering behavior.",
+        "Vite development setup with React, TypeScript, and ESLint configuration.",
+        "JSX expressions, conditional rendering patterns, and list rendering with stable unique keys.",
+        "Functional component composition, props contracts, children prop, and container-presentational patterns.",
+        "Modern component styling approaches including CSS Modules, scoped styles, and utility classes."
+      ],
+      "key_concepts": [
+        "Declarative UI vs Imperative DOM",
+        "Vite + TypeScript Setup",
+        "JSX Syntax & Expressions",
+        "List Rendering & Unique Keys",
+        "Props & Children Composition",
+        "CSS Modules & Scoped Styles",
+        "Atomic UI Component Primitives"
+      ],
+      "tools": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "VS Code",
+        "Chrome DevTools"
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "React Mental Model & Modern Tooling",
+          "hours": 1.5,
+          "subtopics": [
+            "Why React: Declarative UI, component reusability, and unidirectional data flow",
+            "Virtual DOM mechanics and how React optimizes DOM updates",
+            "Setting up modern React projects using Vite with TypeScript template",
+            "Project folder structure: src, components, assets, types, and build scripts",
+            "Understanding React StrictMode and modern browser development workflow"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "JSX & Declarative Rendering",
+          "hours": 1.5,
+          "subtopics": [
+            "JSX syntax fundamentals: JavaScript expressions within curly braces",
+            "JSX differences from standard HTML: className, htmlFor, camelCase attributes",
+            "Conditional rendering techniques: ternary operators, logical AND (&&), and early returns",
+            "Rendering dynamic arrays with .map() and the critical importance of unique keys",
+            "Why array indices make fragile keys and how to use stable data IDs"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Component Architecture & Props",
+          "hours": 1.5,
+          "subtopics": [
+            "Functional components as pure functions of props",
+            "Defining TypeScript interfaces for component props",
+            "Destructuring props with default values",
+            "The special 'children' prop and component composition patterns",
+            "Composition over inheritance: building flexible, slot-based UI containers"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Modern Component Styling",
+          "hours": 1.5,
+          "subtopics": [
+            "Styling strategies in React: standard CSS, CSS Modules, and utility styling",
+            "Configuring and using CSS Modules for scoped, clash-free component styles",
+            "Dynamic class assignment using template literals and class utility helpers",
+            "Using CSS Custom Properties (CSS variables) for component theming",
+            "Introduction to utility styling with Tailwind CSS in React projects"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Reusable UI Component System",
+          "hours": 2,
+          "subtopics": [
+            "Atomic design principles for React component libraries",
+            "Building flexible UI primitives: Button, Card, Badge, Avatar, and Alert",
+            "Implementing component variants (primary, secondary, danger) via TypeScript unions",
+            "Accessible markup patterns for UI primitives (aria-label, disabled states)",
+            "Creating an interactive component sandbox showcase page in Vite"
+          ]
+        }
+      ],
+      "hands_on_practice": "Scaffold a modern Vite + React + TypeScript project and build a reusable atomic component library with Button, Card, Badge, and Alert components complete with TypeScript props and an interactive showcase preview.",
+      "assignment": "Construct a modular UI Component Showcase displaying multiple variants, disabled states, and interactive slots for all atomic primitives, ensuring clean TypeScript typing and zero console warnings.",
+      "business_application": "Component-driven design systems allow enterprise engineering teams to maintain brand consistency, speed up feature delivery, and eliminate duplicate styling across large web applications.",
+      "expected_outcome": "Students can scaffold professional React projects using Vite and TypeScript, author clean JSX, and design reusable, well-typed UI components.",
+      "portfolio_contribution": "Provides the reusable component foundation and styling architecture utilized throughout the entire course capstone."
+    },
+    {
+      "module_number": 2,
+      "number": 2,
+      "module": "Module 02",
+      "title": "State, Events & Hooks",
+      "module_title": "State, Events & Hooks",
+      "duration": "Weeks 2-3",
+      "hours": 12,
+      "lessons_count": 5,
+      "objective": "Master interactive UI programming with useState, React synthetic event handling, controlled form inputs, side effects management with useEffect, and essential React Hooks.",
+      "module_purpose": "Understand how React tracks dynamic data, triggers re-renders, synchronizes with browser APIs, and handles user interactions safely and predictably.",
+      "what_you_will_learn": [
+        "Managing component state immutably with useState and state updater functions.",
+        "React synthetic event system, event delegation, and event handler patterns.",
+        "Controlled component architecture for forms, inputs, select elements, and validation.",
+        "Managing side effects, timers, subscriptions, and DOM synchronization with useEffect.",
+        "Recognizing common useEffect anti-patterns and applying useRef for DOM access and mutable values."
+      ],
+      "key_concepts": [
+        "State Immutability & Re-renders",
+        "Updater Functions (prev => ...)",
+        "Synthetic Events",
+        "Controlled Form Components",
+        "useEffect Synchronization Lifecycle",
+        "Effect Dependency Array Rules",
+        "useRef for DOM & Mutable Values"
+      ],
+      "tools": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Chrome DevTools"
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "Managing UI State with useState",
+          "hours": 2.5,
+          "subtopics": [
+            "Understanding state: private, dynamic component memory that triggers re-renders",
+            "The useState Hook: syntax, initial state, and setter functions",
+            "State immutability: updating objects and arrays using the spread operator (...)",
+            "Asynchronous state updates and using updater functions: setVal(prev => prev + 1)",
+            "Avoiding common state bugs: multiple rapid updates and stale closures"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "Event Handling & Synthetic Events",
+          "hours": 2,
+          "subtopics": [
+            "React SyntheticEvent wrapper and cross-browser consistency",
+            "Handling click, change, submit, and keyboard events",
+            "Passing parameters to event handlers with arrow functions",
+            "Preventing default browser actions (e.preventDefault()) and event propagation",
+            "Typing event handlers in TypeScript: React.MouseEvent, React.ChangeEvent"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Controlled Components & Form Management",
+          "hours": 2.5,
+          "subtopics": [
+            "Controlled vs uncontrolled form inputs: single source of truth in React state",
+            "Handling text inputs, textareas, checkboxes, radio buttons, and select dropdowns",
+            "Managing complex multi-field form state with a single state object",
+            "Real-time client-side input validation and dynamic error message rendering",
+            "Accessible form submission: disabled submit buttons, aria-invalid, and focus handling"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Side Effects with useEffect",
+          "hours": 2.5,
+          "subtopics": [
+            "What constitutes a side effect in React (DOM manipulation, timers, subscriptions, storage)",
+            "The useEffect Hook lifecycle: render -> effect execution -> cleanup",
+            "The dependency array: empty array vs specific dependencies vs omitted array",
+            "Writing cleanup functions for intervals, event listeners, and subscriptions",
+            "Strict mode double-invocation in development and why cleanup matters"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Avoiding Effect Pitfalls & Fundamental Hooks",
+          "hours": 2.5,
+          "subtopics": [
+            "When NOT to use useEffect: calculating derived state during render",
+            "When NOT to use useEffect: handling user actions directly in event handlers",
+            "Introduction to useRef: accessing DOM nodes directly (focus, scrolling)",
+            "Using useRef to store mutable values that persist without triggering re-renders",
+            "High-level overview of memoization hooks: useMemo and useCallback purpose"
+          ]
+        }
+      ],
+      "hands_on_practice": "Build an Interactive Task & Filter Application featuring controlled inputs, multi-criteria status filtering (all, active, completed), real-time search, item reordering, and automatic synchronization to browser localStorage.",
+      "assignment": "Implement a validated multi-field feedback and task tracker application with controlled inputs, error summaries, item completion toggles, and localStorage persistence with proper useEffect cleanup.",
+      "business_application": "Modern web applications depend on fast, glitch-free interactive forms and dynamic state filters for lead capture, workflow tracking, and responsive user settings.",
+      "expected_outcome": "Students can manage complex component state, handle browser events cleanly, implement controlled forms with validation, and synchronize side effects without creating infinite loops.",
+      "portfolio_contribution": "Develops the core state management, event handling, and form validation mechanics required for the portfolio capstone application."
+    },
+    {
+      "module_number": 3,
+      "number": 3,
+      "module": "Module 03",
+      "title": "Application Architecture",
+      "module_title": "Application Architecture",
+      "duration": "Weeks 4-5",
+      "hours": 12,
+      "lessons_count": 5,
+      "objective": "Architect scalable multi-component applications using state lifting, React Context API, custom Hook abstraction, and client-side routing with React Router.",
+      "module_purpose": "Transition from isolated components to interconnected multi-page applications with clean component hierarchies, shared global state, and navigable URL routing.",
+      "what_you_will_learn": [
+        "State ownership principles, single source of truth, and lifting state up.",
+        "Creating and consuming shared state using the React Context API.",
+        "Designing custom Hooks to isolate, encapsulate, and reuse business logic.",
+        "Configuring client-side routing with React Router v6/v7 (Routes, Route, Link, NavLink).",
+        "Implementing dynamic route parameters, query search params, nested layouts, and 404 error boundaries."
+      ],
+      "key_concepts": [
+        "State Ownership & Lifting State Up",
+        "React Context API & Provider Pattern",
+        "Custom Hook Engineering",
+        "Client-Side Routing with React Router",
+        "Nested Routes & Layout Outlets",
+        "Dynamic Route Parameters (useParams)",
+        "Search Query Parameters (useSearchParams)"
+      ],
+      "tools": [
+        "React",
+        "TypeScript",
+        "React Router",
+        "Vite",
+        "Chrome DevTools"
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "State Ownership & Lifting State Up",
+          "hours": 2,
+          "subtopics": [
+            "Deciding where state should live: single source of truth and state co-location",
+            "Lifting state up: moving state to the lowest common ancestor component",
+            "Passing callback functions down the tree to update parent state",
+            "Understanding prop drilling and recognizing when component composition solves it",
+            "Component composition patterns to avoid unnecessary intermediate prop passing"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "Global State with React Context",
+          "hours": 2.5,
+          "subtopics": [
+            "The purpose of React Context: broadcasting data without manual prop drilling",
+            "createContext, Provider component, and the useContext Hook",
+            "Structuring modular Context providers with custom provider wrappers",
+            "Creating custom consumer hooks (e.g. useTheme, useCart) with boundary validation",
+            "Best practices: keeping Context focused to avoid excessive re-renders across the tree"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Custom Hooks Engineering",
+          "hours": 2.5,
+          "subtopics": [
+            "The power of custom Hooks: sharing stateful logic across multiple components",
+            "Custom Hook naming conventions and the Rules of Hooks",
+            "Building practical custom Hooks: useLocalStorage for persistent state",
+            "Building utility Hooks: useDebounce for search inputs and useWindowSize for responsive UI",
+            "Building state toggling Hooks: useToggle and useModal with TypeScript return types"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Client-Side Routing with React Router",
+          "hours": 2.5,
+          "subtopics": [
+            "Single Page Application (SPA) routing vs multi-page server requests",
+            "Setting up React Router: BrowserRouter, Routes, and Route definitions",
+            "Navigation without page refresh: Link, NavLink, and active route styling",
+            "Programmatic navigation using the useNavigate Hook",
+            "Catch-all routes and designing friendly 404 Not Found error pages"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Dynamic Routes & Layout Hierarchies",
+          "hours": 2.5,
+          "subtopics": [
+            "Nested routes and persistent application layouts using the Outlet component",
+            "Dynamic URL path parameters: defining /products/:id and reading with useParams",
+            "Reading and updating query search parameters with the useSearchParams Hook",
+            "Handling navigation history, replace options, and scroll restoration",
+            "Route-level error boundaries and fallback UI patterns"
+          ]
+        }
+      ],
+      "hands_on_practice": "Build a Multi-Page Catalog & Details Application with React Router, nested layout navigation, search query parameter filtering, dynamic detail pages (/items/:id), and a custom useLocalStorage hook for favorites tracking.",
+      "assignment": "Develop a structured multi-page application with navigation header, persistent sidebar layout, dynamic item details route, category query filters, and a Cart or Favorites Context provider with custom hook.",
+      "business_application": "Multi-page routing and modular state architecture form the structural backbone of every commercial SaaS web application, customer portal, and e-commerce platform.",
+      "expected_outcome": "Students can architect clean component hierarchies, broadcast shared state cleanly using Context, extract custom Hooks, and configure multi-page client-side routing.",
+      "portfolio_contribution": "Establishes the routing infrastructure, navigation architecture, and custom Hook foundation for the portfolio capstone."
+    },
+    {
+      "module_number": 4,
+      "number": 4,
+      "module": "Module 04",
+      "title": "APIs & TypeScript Integration",
+      "module_title": "APIs & TypeScript Integration",
+      "duration": "Weeks 5-6",
+      "hours": 12,
+      "lessons_count": 5,
+      "objective": "Master asynchronous REST API integration in React, resilient handling of loading, empty, and error UI states, and strict TypeScript integration across components, hooks, and data models.",
+      "module_purpose": "Equip students to connect React frontend interfaces to real-world backend APIs reliably with robust state handling and complete TypeScript compile-time safety.",
+      "what_you_will_learn": [
+        "Asynchronous data fetching in React using the Fetch API and Axios inside custom hooks.",
+        "Handling network lifecycles: loading skeletons, empty search results, error banners, and retries.",
+        "Preventing memory leaks and race conditions using AbortController cleanup.",
+        "Strict TypeScript in React: typing props, children, DOM events, and API response schemas.",
+        "Implementing client-side search filtering, debouncing, and pagination over remote datasets."
+      ],
+      "key_concepts": [
+        "Asynchronous Data Fetching",
+        "Loading, Empty, Error & Success States",
+        "AbortController & Cleanup",
+        "TypeScript Interfaces for API Schemas",
+        "Discriminated Unions for UI States",
+        "Debounced Search & Client Filtering",
+        "Client-Side Pagination"
+      ],
+      "tools": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Chrome DevTools",
+        "REST APIs"
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "Asynchronous Data Fetching in React",
+          "hours": 2.5,
+          "subtopics": [
+            "Fetching data inside React components: lifecycle of an HTTP request",
+            "Using async/await and Fetch API within useEffect hooks",
+            "Creating a reusable useFetch custom Hook for automated data requests",
+            "Preventing race conditions and memory leaks using AbortController and signal cleanup",
+            "Understanding the boundary between server data and client UI state"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "Comprehensive UI State Handling",
+          "hours": 2.5,
+          "subtopics": [
+            "The four mandatory states of asynchronous UI: idle, loading, success, and error",
+            "Designing loading indicators: spinner animations vs modern skeleton placeholders",
+            "Handling empty datasets: helpful empty-state messages and clear call-to-action buttons",
+            "Handling network failures: user-friendly error banners and retry action triggers",
+            "Managing transient alerts with toast notifications and auto-dismiss timers"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Strict TypeScript in React",
+          "hours": 2.5,
+          "subtopics": [
+            "Configuring tsconfig.json for strict React development (strict: true)",
+            "Typing component props: optional props, callback functions, and React.ReactNode",
+            "Typing DOM event handlers: React.ChangeEvent<HTMLInputElement>, React.FormEvent",
+            "Defining TypeScript interfaces and types for API response data schemas",
+            "Eliminating the 'any' type: using unknown, type narrowing, and strict null checks"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Advanced Type Patterns in UI",
+          "hours": 2,
+          "subtopics": [
+            "Using discriminated union types to model mutually exclusive async states",
+            "Typing custom Hook return values with TypeScript tuples and object contracts",
+            "Generic components: building flexible typed components (e.g. List<T> or Select<T>)",
+            "Type guards and assertions for validating external JSON data",
+            "Catching runtime vs compile-time data mismatch issues"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Client-Side Search, Filter & Pagination",
+          "hours": 2.5,
+          "subtopics": [
+            "Implementing instantaneous client-side text filtering over fetched datasets",
+            "Integrating useDebounce to prevent excessive re-renders during user typing",
+            "Multi-criteria filtering: combining category selection, price range, and sort order",
+            "Client-side pagination: calculating page slices, page counts, and page navigation",
+            "Synchronizing search and filter state with URL search query parameters"
+          ]
+        }
+      ],
+      "hands_on_practice": "Build an API-Driven Data Explorer Application connecting to a public REST API (e.g., FakeStore API or OpenLibrary), featuring strict TypeScript interfaces, loading skeleton screens, empty search handling, error retry buttons, and debounced text search.",
+      "assignment": "Implement an end-to-end API Explorer application with AbortController request cancellation, typed data schemas, multi-filter controls, pagination, and robust error state recovery.",
+      "business_application": "Modern web applications live on API communication; resilient error recovery and type-safe data handling prevent production crashes and protect customer trust.",
+      "expected_outcome": "Students can connect React applications to REST APIs, manage loading and error states gracefully, and use TypeScript to ensure type safety across props, events, and API schemas.",
+      "portfolio_contribution": "Provides the complete API integration, data modeling, search/filtering, and TypeScript architecture used in the capstone application."
+    },
+    {
+      "module_number": 5,
+      "number": 5,
+      "module": "Module 05",
+      "title": "Testing, Performance & Accessibility",
+      "module_title": "Testing, Performance & Accessibility",
+      "duration": "Weeks 6-7",
+      "hours": 10,
+      "lessons_count": 5,
+      "objective": "Master automated component testing with Vitest and React Testing Library, component inspection and performance profiling with React DevTools, and accessible React UI engineering.",
+      "module_purpose": "Ensure web applications meet professional engineering standards for test reliability, smooth rendering performance, and full web accessibility.",
+      "what_you_will_learn": [
+        "Setting up automated unit and integration testing with Vitest and React Testing Library (RTL).",
+        "Writing user-centric component tests: querying by accessible roles and simulating user events.",
+        "Mocking asynchronous API network calls in tests to verify loading and error states.",
+        "Inspecting component hierarchies and profiling re-renders with React DevTools.",
+        "Optimizing performance with React.memo, useMemo, useCallback, and React.lazy code splitting.",
+        "Building accessible React interfaces with semantic HTML, keyboard focus, and ARIA roles."
+      ],
+      "key_concepts": [
+        "Vitest & React Testing Library (RTL)",
+        "User-Centric Testing Philosophy",
+        "Querying by Role (getByRole)",
+        "User Event Simulation (@testing-library/user-event)",
+        "Mocking Network Requests in Tests",
+        "React DevTools Profiler",
+        "Memoization (memo, useMemo, useCallback)",
+        "Code Splitting with React.lazy & Suspense",
+        "Accessible React Components (a11y)"
+      ],
+      "tools": [
+        "React",
+        "TypeScript",
+        "Vitest",
+        "React Testing Library",
+        "React DevTools",
+        "Vite"
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "Automated Component Testing Fundamentals",
+          "hours": 2,
+          "subtopics": [
+            "Why automated frontend testing matters: catching regressions and building confidence",
+            "Configuring Vitest and React Testing Library in a Vite + TypeScript project",
+            "The React Testing Library philosophy: test components the way users use them",
+            "Understanding the test environment: jsdom, render(), and screen queries",
+            "Writing your first component test: rendering and assertion with expect()"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "Writing RTL Unit & Integration Tests",
+          "hours": 2,
+          "subtopics": [
+            "Query priority in RTL: why getByRole and getByLabelText are preferred",
+            "Simulating real user interactions using @testing-library/user-event",
+            "Testing form submission, input typing, and button clicks",
+            "Testing conditional rendering and dynamic UI state changes",
+            "Testing custom Hooks using renderHook from React Testing Library"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "Mocking Asynchronous API Requests",
+          "hours": 2,
+          "subtopics": [
+            "Why tests must never make real network requests to external APIs",
+            "Mocking global fetch with vi.fn() and mock resolved responses",
+            "Using waitFor() and findBy queries for asynchronous DOM updates",
+            "Testing loading skeleton transitions and successful data rendering",
+            "Testing API error state handling and user retry button behavior in tests"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "React DevTools & Performance Optimization",
+          "hours": 2,
+          "subtopics": [
+            "Using React DevTools: inspecting component tree, props, hooks, and rendered elements",
+            "Using the React Profiler to identify slow components and unnecessary re-renders",
+            "When to optimize: avoiding premature optimization traps",
+            "Preventing re-renders: React.memo, useMemo for expensive math, and useCallback for callbacks",
+            "Code splitting and lazy loading routes with React.lazy and Suspense"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Accessible React Interfaces",
+          "hours": 2,
+          "subtopics": [
+            "Web accessibility (WCAG 2.1) principles applied to React interfaces",
+            "Using semantic HTML elements instead of clickable div containers",
+            "Keyboard accessibility: tab order, Enter/Space activation, and Escape key listeners",
+            "Focus management: trapping focus inside modal dialogs and restoring focus on close",
+            "ARIA attributes: aria-expanded, aria-controls, aria-live regions for dynamic alerts"
+          ]
+        }
+      ],
+      "hands_on_practice": "Construct an Automated Test Suite and Performance Audit for your component library and API explorer, writing 6+ unit and integration tests with Vitest and RTL, profiling render cycles in DevTools, and verifying keyboard navigation accessibility.",
+      "assignment": "Write a comprehensive Vitest + RTL test suite covering component rendering, user interactions, form validation, and mocked API error states, achieving clean test passes and zero accessibility violations.",
+      "business_application": "Automated test suites prevent costly production bugs, while accessibility compliance ensures software is usable by everyone and complies with global legal regulations.",
+      "expected_outcome": "Students can write reliable automated tests with Vitest and React Testing Library, profile component performance in DevTools, and build accessible interfaces.",
+      "portfolio_contribution": "Supplies the automated test suite and accessibility audit required to validate the portfolio capstone application."
+    },
+    {
+      "module_number": 6,
+      "number": 6,
+      "module": "Module 06",
+      "title": "React Portfolio Capstone",
+      "module_title": "React Portfolio Capstone",
+      "duration": "Weeks 7-8",
+      "hours": 10,
+      "lessons_count": 5,
+      "objective": "Architect, build, test, document, and deploy exactly ONE complete, commercial-style React application capstone (Option A: E-commerce Storefront or Option B: Business Dashboard) to GitHub Pages.",
+      "module_purpose": "Synthesize all course skills—component architecture, state management, custom Hooks, React Context, React Router, TypeScript, REST API integration, Vitest testing, and accessibility—into a production-grade portfolio application.",
+      "what_you_will_learn": [
+        "Scaffolding and architecting a commercial React SPA with TypeScript and Vite.",
+        "Implementing reusable UI components, client-side routing, and global Context state.",
+        "Connecting REST APIs with explicit handling for loading, empty, and error states.",
+        "Writing a minimum of 6 automated tests with Vitest and React Testing Library.",
+        "Deploying the static application to GitHub Pages and authoring professional documentation."
+      ],
+      "key_concepts": [
+        "Commercial Capstone Architecture",
+        "Component Hierarchy & State Flow",
+        "React Router Multi-Page Navigation",
+        "TypeScript Data Schemas",
+        "REST API Orchestration",
+        "Vitest Automated Test Suite",
+        "Production Vite Build Optimization",
+        "GitHub Pages Static Deployment",
+        "Technical README Documentation"
+      ],
+      "tools": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "React Router",
+        "Vitest",
+        "React Testing Library",
+        "Git",
+        "GitHub Pages"
+      ],
+      "lessons": [
+        {
+          "lesson_number": 1,
+          "title": "Capstone Architecture & Specifications",
+          "hours": 2,
+          "subtopics": [
+            "Reviewing Capstone specifications: selecting Option A (E-Commerce) or Option B (Dashboard)",
+            "Drafting component hierarchy trees, state ownership models, and route maps",
+            "Defining TypeScript interfaces for application state and API entities",
+            "Setting up repository structure, Git workflow, and branch strategy",
+            "Establishing coding conventions, ESLint rules, and style tokens"
+          ]
+        },
+        {
+          "lesson_number": 2,
+          "title": "Core UI & State Implementation",
+          "hours": 2,
+          "subtopics": [
+            "Building reusable UI components (Button, Modal, Input, Badge, Card)",
+            "Configuring multi-page routing with React Router and nested layout Outlets",
+            "Implementing global application Context (Cart Context or Dashboard Preferences)",
+            "Creating custom Hooks for local storage synchronization and responsive breakpoints",
+            "Implementing accessible navigation bars, drawers, and breadcrumbs"
+          ]
+        },
+        {
+          "lesson_number": 3,
+          "title": "API Data Flow & Interaction Logic",
+          "hours": 2,
+          "subtopics": [
+            "Wiring real REST API endpoints with the custom useFetch hook and AbortController",
+            "Building loading skeletons, empty search results, and network failure error banners",
+            "Implementing debounced text search, category filters, and sorting controls",
+            "Building client-validated checkout form (Option A) or user preference settings (Option B)",
+            "Validating state updates, shopping cart math, and persistent storage across page reloads"
+          ]
+        },
+        {
+          "lesson_number": 4,
+          "title": "Test Suite & Quality Verification",
+          "hours": 2,
+          "subtopics": [
+            "Writing 6+ automated unit and integration tests with Vitest and React Testing Library",
+            "Testing navigation, component rendering, form validation, and user actions",
+            "Testing mocked API network requests, loading states, and error recovery",
+            "Running TypeScript compiler check (tsc --noEmit) and fixing all typing issues",
+            "Conducting DevTools Profiler audit to verify smooth rendering and no memory leaks"
+          ]
+        },
+        {
+          "lesson_number": 5,
+          "title": "Production Build, Deployment & Documentation",
+          "hours": 2,
+          "subtopics": [
+            "Configuring Vite base path for GitHub Pages static hosting",
+            "Executing production build (npm run build) and inspecting generated bundle assets",
+            "Deploying the SPA to GitHub Pages with 404 fallback routing handling",
+            "Authoring a comprehensive README.md: architecture diagram, features, setup, and test instructions",
+            "Conducting peer review and final assessment against the 6-factor rubric"
+          ]
+        }
+      ],
+      "hands_on_practice": "Complete, test, and deploy your chosen commercial React capstone application (E-commerce Storefront or Business Dashboard) with 6+ automated RTL tests, TypeScript safety, responsive styling, and GitHub Pages live URL.",
+      "assignment": "Submit your live GitHub Pages URL and public GitHub repository containing clean source code, passing automated test suite, TypeScript types, and comprehensive architecture documentation.",
+      "business_application": "A fully tested, type-safe, deployed React web application with clean architecture is the most compelling evidence of hiring readiness for frontend engineering roles.",
+      "expected_outcome": "Students possess a polished, production-grade React application deployed on GitHub Pages with clean code, automated tests, and professional documentation.",
+      "portfolio_contribution": "Serves as the primary commercial React portfolio artifact demonstrating frontend engineering competence to prospective employers and clients."
+    }
+  ],
+  "what_you_will_build": {
+    "overview": "During the course, students build hands-on modular components, interactive state applications, multi-page routed catalogs, and REST API explorers, culminating in exactly ONE comprehensive commercial-style React capstone application.",
+    "capstone_options": [
+      {
+        "option": "Option A",
+        "title": "Responsive E-commerce Storefront",
+        "description": "A complete commercial-style online shopping web application featuring categorized product browsing, multi-criteria filtering, live search with debouncing, dynamic product detail routing, persistent shopping cart management, and client-validated checkout form.",
+        "key_features": [
+          "Dynamic product catalog fetching real data from REST API (e.g., FakeStore API)",
+          "Client-side routing with React Router for catalog, category filter, product details (/product/:id), and checkout",
+          "Persistent shopping cart state using React Context and localStorage with quantity adjustments and tax/total calculations",
+          "Interactive filter controls (price range, category pills, rating sort) with URL query parameter synchronization",
+          "Complete checkout form with controlled inputs, client-side validation, error messaging, and order confirmation modal",
+          "6+ automated unit and integration tests with Vitest and React Testing Library",
+          "Responsive mobile-first layout with accessible navigation drawer and keyboard-friendly controls",
+          "Live static deployment on GitHub Pages with complete documentation"
+        ]
+      },
+      {
+        "option": "Option B",
+        "title": "Business Dashboard & Analytics Portal",
+        "description": "A multi-page enterprise dashboard application featuring KPI summary cards, interactive tabular data with multi-column sorting, search and pagination, detail drilldown views, localized settings preferences, and resilient API data handling.",
+        "key_features": [
+          "Interactive dashboard overview with metric cards, status charts, and recent activity feeds",
+          "Multi-page navigation with React Router (/dashboard, /analytics, /users, /settings) and active route highlighting",
+          "High-density data table supporting debounced text search, column sorting, category filtering, and client-side pagination",
+          "Dynamic detail route (/users/:id or /records/:id) displaying deep entity analytics and editable status toggles",
+          "User preferences panel (theme selection, notifications toggle, display density) persisted to localStorage",
+          "Resilient API data fetching with skeleton loaders, empty state illustrations, and network retry buttons",
+          "6+ automated unit and integration tests with Vitest and React Testing Library",
+          "Fully responsive desktop and tablet layouts with accessible data table semantics and keyboard navigation",
+          "Live static deployment on GitHub Pages with complete documentation"
+        ]
+      }
+    ],
+    "mandatory_specifications": [
+      "Modular Component Hierarchy: Clean atomic component structure (Button, Card, Modal, Input, Badge, Table/List).",
+      "Client-Side Routing: Configured with React Router including nested routes, dynamic parameters, and 404 page.",
+      "TypeScript Integration: Fully typed props, events, state, and API response models with zero 'any' escapes.",
+      "API Integration: Real network requests with explicit loading, error, empty, and success state handling.",
+      "Automated Test Suite: Minimum of 6 automated tests written with Vitest and React Testing Library.",
+      "Responsive Layout: Flawless display across mobile (375px), tablet (768px), and desktop (1280px) viewports.",
+      "Deployment: Live preview on GitHub Pages with clean Git commit history and comprehensive README.md."
+    ]
+  },
+  "final_deliverables": [
+    "Exactly ONE complete, commercial-style React portfolio capstone (Option A: E-Commerce Storefront OR Option B: Business Dashboard).",
+    "Production-ready GitHub repository containing clean modular source code, tsconfig.json, vite.config.ts, and automated test suite.",
+    "Comprehensive README.md documenting project architecture, component hierarchy, state flow diagram, setup commands, and test execution.",
+    "Live, publicly accessible static web application deployed on GitHub Pages with zero console errors or broken asset paths."
+  ],
+  "student_deliverables_and_evidence": [],
+  "assessment": {
+    "structure": "Continuous Practical Labs (40%) + Final Portfolio Capstone Evaluation (60%)",
+    "passing_grade": "70% overall score with successful completion of all core capstone gates",
+    "review_model": "One-on-one code review, live demonstration, and architectural defense"
+  },
+  "certification": {
+    "title": "Nova Skills Certified React.js Frontend Developer",
+    "credential_type": "Professional Industry Certification",
+    "issuing_authority": "Nova Skills Academy",
+    "validation": "Permanent digital credential with verifiable online URL and QR code",
+    "prerequisites_met": "Completion of all 6 modules, 64 guided learning hours, 6 practical labs, and verified completion of the Capstone project with ≥70% score."
+  },
+  "career_paths": [
+    "React Frontend Developer",
+    "Junior Frontend Engineer",
+    "UI Web Developer",
+    "TypeScript & React Application Developer",
+    "Frontend Software Associate"
+  ],
+  "freelance_applications": [
+    "Building modern Single Page Applications (SPAs) for small and medium businesses.",
+    "Creating interactive e-commerce product catalogs with instant filtering and search.",
+    "Developing custom administrative dashboards and CRM interfaces for startups.",
+    "Refactoring legacy jQuery or static HTML websites into responsive React component architectures."
+  ],
+  "business_use_cases": [
+    "E-Commerce Storefronts: Interactive product catalogs, filtering systems, persistent shopping carts, and multi-step checkout forms.",
+    "Business Analytics Dashboards: High-density data tables, metric cards, dynamic date filtering, and status drilldowns.",
+    "SaaS Customer Portals: Account management interfaces, subscription tier selectors, and activity logs.",
+    "Internal Operations Tools: Inventory trackers, staff directory lookup, and order management consoles."
+  ],
+  "industry_workflow": [
+    "Specification & Component Decomposition: Break down UI mockups into atomic components with defined TypeScript prop contracts.",
+    "Isolated Component Development: Develop reusable UI primitives with CSS Modules or Tailwind CSS.",
+    "State Flow Modeling: Determine state ownership, isolate local state, and share application state via Context or custom Hooks.",
+    "API Orchestration: Implement custom data-fetching hooks with loading, error, and empty state management.",
+    "Automated RTL Testing: Write automated unit and integration tests testing user interactions and accessibility roles.",
+    "Build Optimization & Deployment: Profile rendering in DevTools, execute production Vite build, and deploy static SPA to GitHub Pages."
+  ],
+  "best_practices": [
+    "Single Source of Truth: Keep state as low as possible in the component tree; lift state up only when siblings require shared access.",
+    "Avoid Derived State in useState or useEffect: Compute derived values on-the-fly during rendering rather than syncing them through state.",
+    "Strict Unique Keys: Always use stable, unique data IDs as keys when rendering lists; never use array indices for dynamic collections.",
+    "Resilient API States: Always provide distinct UI feedback for loading spinners, empty result lists, and network error recovery.",
+    "User-Centric Testing: Test components by querying accessible roles (getByRole) and simulating real user events rather than inspecting internal state.",
+    "Component Separation of Concerns: Keep presentation components pure and encapsulate complex data-fetching or persistence in custom Hooks.",
+    "Accessible HTML Semantics: Build on native buttons, form labels, and semantic landmarks rather than div elements with click handlers.",
+    "Predictable Effect Dependencies: Explicitly specify all reactive values inside useEffect dependency arrays and clean up subscriptions."
+  ],
+  "common_mistakes": [
+    "Using useEffect to sync state that can easily be calculated as derived state during render.",
+    "Mutating state directly (e.g. state.push()) instead of creating new object/array copies with the spread operator.",
+    "Using array indexes as React keys, causing layout glitches and input focus bugs during reordering or deletion.",
+    "Over-engineering simple state by reaching for heavy external state management libraries when native state and Context suffice.",
+    "Ignoring error and loading boundaries, leaving users with frozen screens or blank pages during network failures.",
+    "Failing to clean up event listeners, timers, or fetch requests inside useEffect, resulting in memory leaks.",
+    "Prop drilling through 5+ levels of components instead of leveraging component composition or React Context.",
+    "Testing component implementation details (e.g. internal hook values) rather than user-visible behaviors and accessibility roles."
+  ],
+  "not_covered": [],
+  "next_learning_path": [],
+  "faq": [
+    {
+      "question": "What is React.js and why should I learn it?",
+      "answer": "React.js is the world's most widely used JavaScript library for building modern, interactive user interfaces. Created and maintained by Meta alongside a vast open-source community, React enables developers to build scalable single-page web applications using reusable, declarative components that manage their own state. Learning React is essential for frontend engineers because it dominates the web development job market, powers major tech platforms worldwide, and provides a structured foundation for building modern web applications."
+    },
+    {
+      "question": "Is React beginner-friendly if I only know basic JavaScript?",
+      "answer": "React requires a solid foundation in core JavaScript concepts before you start. If you only know basic HTML and CSS, we strongly recommend completing Nova Skills Course 56 (Modern JavaScript & TypeScript Foundations) first. React relies heavily on modern JavaScript (ES6+), including arrow functions, object and array destructuring, spread/rest operators, array transformation methods (map, filter), and asynchronous programming with Promises and async/await. With those prerequisites in place, our structured curriculum makes React approachable and intuitive."
+    },
+    {
+      "question": "What prerequisites are required for this course?",
+      "answer": "To succeed in this intermediate course, you should have working proficiency in modern JavaScript (ES6+ syntax, let/const, arrow functions, modules), experience with asynchronous programming (Promises, async/await, Fetch API), familiarity with DOM manipulation and browser events, and basic knowledge of HTML5 semantic markup and CSS layout (Flexbox/Grid). Prior experience with TypeScript is helpful but not mandatory, as we teach introductory TypeScript integration within React during the course."
+    },
+    {
+      "question": "Do I need to know TypeScript before joining?",
+      "answer": "Prior TypeScript experience is beneficial, but not strictly required. We introduce TypeScript concepts progressively within the context of React development. You will learn how to write TypeScript interfaces for component props, type React hooks, type DOM event handlers, and define schemas for API response payloads. By the end of the course, you will be building fully typed, error-resilient React applications with confidence."
+    },
+    {
+      "question": "How is this course different from full-stack or Next.js courses?",
+      "answer": "This course is laser-focused on frontend React engineering craftsmanship. Rather than diluting your learning across backend databases, server frameworks, and cloud infrastructure, this course goes deep into component architecture, state ownership, custom Hooks, client-side routing, automated testing with React Testing Library, and TypeScript integration. This deep mastery of core React provides the necessary prerequisite foundation for mastering full-stack frameworks like Next.js later."
+    },
+    {
+      "question": "Does this course cover Next.js or Server-Side Rendering (SSR)?",
+      "answer": "No, Next.js and Server-Side Rendering (SSR) are intentionally excluded from this course. Modern frontend development requires a thorough, instinctive understanding of client-side React fundamentals—rendering lifecycles, state ownership, Hooks, and client routing—before tackling the complexities of Server Components, SSR, and edge rendering. Nova Skills offers specialized advanced courses covering Next.js and full-stack architectures once React fundamentals are mastered."
+    },
+    {
+      "question": "Why is Vite used instead of Create React App?",
+      "answer": "Create React App (CRA) is deprecated, slow, and no longer recommended by the official React team. We build all projects with Vite, the modern industry-standard frontend build tool. Vite leverages native ES modules in the browser to deliver instant local server startup, lightning-fast Hot Module Replacement (HMR), optimized production rollups, and seamless TypeScript support out of the box."
+    },
+    {
+      "question": "Will we learn class components or functional components with Hooks?",
+      "answer": "We focus 100% on modern functional components with React Hooks. Class components represent legacy React patterns that have been superseded by functional components since React 16.8. All modern React codebases, documentation, and commercial projects utilize functional components, standard Hooks (useState, useEffect, useRef, useContext), and custom Hooks."
+    },
+    {
+      "question": "Which React version is taught?",
+      "answer": "The course is taught using the latest stable React releases (React 18 and React 19). You will learn modern concurrent rendering principles, automatic batching, modern root rendering APIs (createRoot), and standard Hooks, ensuring your skills reflect contemporary industry standards."
+    },
+    {
+      "question": "Does this course teach Redux or Zustand?",
+      "answer": "This course deliberately focuses on React's built-in state management solutions: useState, lifting state up, custom Hooks, and the React Context API. For 90% of web applications, native React state and Context provide clean, predictable, and maintainable state flow without the boilerplate, bundle size overhead, or architectural complexity of external state libraries like Redux. Mastering native state ownership prepares you to adopt Redux Toolkit or Zustand effortlessly when project scale truly warrants it."
+    },
+    {
+      "question": "How much TypeScript is included in this course?",
+      "answer": "TypeScript is integrated throughout the course. You will learn how to configure Vite with TypeScript, create strongly-typed component props and children, type DOM events (such as form submits and input changes), type custom Hook return values, create discriminated unions for UI loading/error states, and define strict types for REST API responses, ensuring zero 'any' escapes in your capstone."
+    },
+    {
+      "question": "What kind of projects will I build?",
+      "answer": "You will build multiple focused lab projects—including a Reusable UI Component Library, an Interactive Task & Filter Application, a Multi-Page Catalog with React Router, and an API Data Explorer with loading skeletons. For your final capstone, you will choose between two commercial-style projects: a complete Responsive E-commerce Storefront or an Enterprise Business Dashboard & Analytics Portal."
+    },
+    {
+      "question": "Is Tailwind CSS mandatory in this course?",
+      "answer": "No, Tailwind CSS is not mandatory. We teach modern component styling using CSS Modules and scoped styles as our primary standard because it reinforces CSS fundamentals and avoids vendor lock-in. However, we provide complete support and examples for students who prefer using Tailwind CSS for their capstone UI styling."
+    },
+    {
+      "question": "Will I learn how to connect React to a backend database?",
+      "answer": "In this frontend course, React applications connect to real backend services via REST APIs using the Fetch API and Axios, rather than connecting directly to databases. In modern software architecture, client-side applications never communicate directly with databases for security reasons; instead, they interact with secure HTTP endpoints that return structured JSON data."
+    },
+    {
+      "question": "How are APIs integrated into React applications?",
+      "answer": "You will learn how to integrate APIs cleanly using custom Hooks (such as useFetch) combined with the useEffect hook and AbortController to cancel in-flight requests and prevent memory leaks. We emphasize managing all four UI states: initial loading, success data rendering, empty search states, and error recovery banners with user-triggered retry actions."
+    },
+    {
+      "question": "What testing tools are taught in this course?",
+      "answer": "We teach automated component testing using Vitest (a fast, Vite-native unit test runner) and React Testing Library (RTL). You will also use @testing-library/user-event to simulate real user interactions such as clicking buttons, filling out forms, and verifying keyboard navigation."
+    },
+    {
+      "question": "How does React testing with React Testing Library work?",
+      "answer": "React Testing Library adheres to a core philosophy: 'The more your tests resemble the way your software is used, the more confidence they can give you.' Instead of testing internal component state or implementation details, RTL renders components into a virtual DOM, queries elements using accessible roles (such as getByRole('button')), simulates user actions, and asserts that visible text and UI elements update as expected."
+    },
+    {
+      "question": "Will I learn React DevTools and performance profiling?",
+      "answer": "Yes. You will learn how to use the official React DevTools browser extension to inspect component hierarchies, review passed props and active Hooks, and use the React Profiler to measure render durations and identify unnecessary component re-renders. You will also learn how to apply React.memo, useMemo, and useCallback strategically to optimize performance."
+    },
+    {
+      "question": "Does this course teach web accessibility (a11y) in React?",
+      "answer": "Yes. Web accessibility is treated as an essential engineering standard, not an afterthought. You will learn how to use semantic HTML elements, manage keyboard focus in modals and drawers, provide proper ARIA attributes (such as aria-expanded and aria-live), ensure color contrast compliance, and test interfaces for full keyboard navigability."
+    },
+    {
+      "question": "How are applications deployed to GitHub Pages?",
+      "answer": "You will learn how to configure Vite's build settings (including the base path), run production bundling to produce optimized static HTML, CSS, and JavaScript assets, and deploy your Single Page Application to GitHub Pages using automated deployment workflows or git branch hosting, complete with 404 fallback routing for client-side navigation."
+    },
+    {
+      "question": "What happens if I encounter bugs or errors in my code?",
+      "answer": "Debugging is a core engineering competency taught throughout the course. You will learn how to read React error boundaries, interpret console stack traces, inspect component state in React DevTools, and use VS Code and Chrome DevTools breakpoints. In addition, our instructors and mentors provide guidance during lab sessions and code reviews."
+    },
+    {
+      "question": "How are assignments and the capstone project evaluated?",
+      "answer": "Assignments and the capstone project are evaluated using a strict 6-factor assessment rubric: Component Architecture (20%), State & Hooks (20%), Routing & APIs with TypeScript (25%), Testing & Debugging (15%), Responsive UI & Accessibility (10%), and Deployment & Documentation (10%). Passing requires a minimum overall score of 70% and meeting all core competency gates."
+    },
+    {
+      "question": "Will I receive a certificate upon completion?",
+      "answer": "Yes. Upon successfully completing all 6 modules, submitting all lab assignments, and passing the final Capstone evaluation with at least 70%, you will receive the official Nova Skills Certified React.js Frontend Developer credential, featuring a permanent online verification link and QR code."
+    },
+    {
+      "question": "Is the certificate recognized by employers?",
+      "answer": "Yes. Nova Skills certificates are valued by hiring managers because they represent verified practical competency. Employers can inspect your live deployed application on GitHub Pages and review your public GitHub repository containing clean, tested, type-safe source code, demonstrating real-world development capability."
+    },
+    {
+      "question": "Can I get a job as a React developer after this course?",
+      "answer": "This course prepares you for junior frontend developer, React developer, and UI engineer roles by giving you practical experience with the exact technology stack used in the industry: React, TypeScript, Vite, React Router, Vitest, and GitHub. Combined with a polished capstone project and verifiable code repository, you will stand out in technical interviews."
+    },
+    {
+      "question": "How does this course prepare me for frontend interviews?",
+      "answer": "The course covers key conceptual and practical topics frequently tested in frontend technical interviews: React rendering lifecycles, Virtual DOM mechanics, state immutability, effect dependency management, custom Hook design, client-side routing, automated testing, and live coding problem-solving."
+    },
+    {
+      "question": "What hardware or software do I need to take this course?",
+      "answer": "You need a computer (Windows, macOS, or Linux) with at least 4GB of RAM (8GB recommended) and a stable internet connection. All required software is free and open-source: Node.js (LTS version), VS Code, modern web browsers (Chrome, Firefox, or Edge), and a free GitHub account."
+    },
+    {
+      "question": "Is this course self-paced or instructor-led?",
+      "answer": "The course combines structured instructor-led interactive software labs and guided workplace simulations with self-directed hands-on coding assignments. You receive direct feedback on your code and architecture from experienced frontend engineers."
+    },
+    {
+      "question": "What is the batch schedule and time commitment?",
+      "answer": "The course spans 8 weeks with a recommended commitment of 8 hours per week (total 64 learning hours). This includes 4 hours of interactive lectures and code-alongs plus 4 hours of hands-on lab and capstone implementation. Flexible weekday evening and weekend batches are available."
+    },
+    {
+      "question": "What is the total course fee and are there hidden charges?",
+      "answer": "The total course fee is a transparent, flat ₹10,900. There are no registration fees, examination charges, software license costs, or hidden costs. Everything—including course materials, lab assignments, code reviews, and certificate verification—is fully covered."
+    },
+    {
+      "question": "What is Nova Skills' refund or transfer policy?",
+      "answer": "Nova Skills offers a transparent satisfaction policy. If you find the course does not meet your expectations, you may request a batch transfer or refund within the first 7 days of your batch start date, subject to Nova Skills standard academic terms."
+    },
+    {
+      "question": "What is the recommended next step after completing this course?",
+      "answer": "After graduating with your React certification, you can continue expanding your skills with full-stack frameworks like Next.js, backend development with Node.js and Express, or dive deeper into advanced state management and mobile app development with React Native."
+    }
+  ],
+  "specialization_selector_config": null,
+  "visualShowcase": null,
+  "visualStrips": null
+}
