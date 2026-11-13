@@ -2851,6 +2851,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-social {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
@@ -3055,6 +3056,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0 !important;
     visibility: hidden !important;
     pointer-events: none !important;
+    display: none !important;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s ease !important;
     z-index: calc(var(--z-modal) + 10) !important;
     overflow-y: auto !important;
@@ -3065,6 +3067,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .nav-links.open,
   .nav-links.active {
+    display: flex !important;
     transform: translateX(0) !important;
     opacity: 1 !important;
     visibility: visible !important;
@@ -4078,6 +4081,7 @@ input[type="range"] { width: 100%; accent-color: var(--teal); cursor: pointer; }
 }
 .view-btn.active, .view-btn:hover { border-color: var(--teal); color: var(--teal); background: rgba(5,153,168,0.05); }
 .courses-grid-page { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.courses-grid-page.testimonials-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)) !important; }
 .courses-grid-page.list-view { grid-template-columns: 1fr; }
 .courses-grid-page.list-view .course-card { display: grid; grid-template-columns: 200px 1fr; }
 .courses-grid-page.list-view .course-thumbnail { height: 100%; min-height: 160px; }
@@ -8626,4 +8630,46 @@ body.filter-sheet-open #nova-ai-widget-container {
   .academy-demo-microcopy {
     font-size: 0.7rem;
   }
+}
+
+/* Desktop Navbar Responsive Layout & Overflow Guard (>= 1025px) */
+@media (min-width: 1025px) {
+  .header .container {
+    max-width: min(1360px, 96vw) !important;
+    padding: 0 clamp(16px, 2vw, 32px) !important;
+  }
+  .navbar {
+    gap: clamp(10px, 1.2vw, 20px) !important;
+  }
+  .nav-logo .logo-light {
+    height: clamp(36px, 3.2vw, 44px) !important;
+  }
+  .nav-links {
+    gap: clamp(2px, 0.6vw, 8px) !important;
+  }
+  .nav-link {
+    padding: 0 clamp(6px, 0.8vw, 12px) !important;
+    font-size: clamp(0.8125rem, 0.85vw, 0.875rem) !important;
+    white-space: nowrap;
+  }
+  .nav-actions {
+    gap: clamp(8px, 1vw, 12px) !important;
+    flex-shrink: 0;
+  }
+  .nav-phone {
+    padding: 8px clamp(8px, 1vw, 14px) !important;
+    font-size: clamp(0.8125rem, 0.85vw, 0.875rem) !important;
+    white-space: nowrap;
+  }
+  .nav-auth-btn {
+    padding: 8px clamp(10px, 1vw, 16px) !important;
+    font-size: clamp(0.8125rem, 0.85vw, 0.875rem) !important;
+    white-space: nowrap;
+  }
+}
+
+/* AI Career Advisor Closed State Overflow Containment */
+.nova-ai-panel:not(.open) {
+  visibility: hidden !important;
+  pointer-events: none !important;
 }

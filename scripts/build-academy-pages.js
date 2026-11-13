@@ -586,7 +586,7 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
               </span>
             </div>
           </div>
-          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 24px;">
             ${careerCourses.map(c => buildCourseCardHTML(c)).join('')}
           </div>
         </div>
@@ -610,7 +610,7 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
               </span>
             </div>
           </div>
-          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 24px;">
             ${proCourses.map(c => buildCourseCardHTML(c)).join('')}
           </div>
         </div>
@@ -634,7 +634,7 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
               </span>
             </div>
           </div>
-          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+          <div class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 24px;">
             ${certCourses.map(c => buildCourseCardHTML(c)).join('')}
           </div>
         </div>
@@ -664,7 +664,7 @@ function generateAcademySectionsHTML(academy, academyCourses, seoData) {
           </div>
         </div>
 
-        <div id="explorer-courses-grid" class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+        <div id="explorer-courses-grid" class="courses-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 24px;">
           ${academyCourses.map(c => buildCourseCardHTML(c, 'explorer-course-item')).join('')}
         </div>
       </div>

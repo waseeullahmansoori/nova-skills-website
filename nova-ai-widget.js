@@ -899,12 +899,14 @@
         overflow: hidden;
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
         transform: translateX(100%);
-        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
         pointer-events: none;
+        visibility: hidden;
       }
       .nova-ai-panel.open {
         transform: translateX(0);
         pointer-events: auto;
+        visibility: visible;
       }
 
       /* Header Bar */

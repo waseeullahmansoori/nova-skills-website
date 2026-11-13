@@ -230,9 +230,10 @@
 /* --- Learning Outcomes --- */
 .outcomes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 16px;
   margin-bottom: 32px;
+  min-width: 0;
 }
 .outcome-item {
   background: white;
@@ -243,6 +244,16 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+@media (max-width: 480px) {
+  .outcome-item {
+    padding: 12px 14px;
+  }
 }
 .outcome-verb-badge {
   background: var(--grad-navy-teal);
