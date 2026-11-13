@@ -1,0 +1,11 @@
+Source Entity ID,Source Name,Relationship Predicate,Target Entity ID,Target Name,Supporting Evidence
+"ENT-ORG-01","Nova Skills","operatesPhysicalCampus","ENT-LOC-01","Siddharth Nagar Campus","Lease & Google Maps CID 8727532038814819533"
+"ENT-ORG-01","Nova Skills","foundedBy","ENT-PERSON-01","Waseeullah Mansoori","Institutional records & /blog/waseeullah-mansoori/"
+"ENT-ORG-01","Nova Skills","providesProgram","ENT-ACAD-digital-marketing","Digital Marketing Academy","data/academies.json"
+"ENT-ORG-01","Nova Skills","providesProgram","ENT-ACAD-ai","AI Academy","data/academies.json"
+"ENT-ORG-01","Nova Skills","providesProgram","ENT-ACAD-programming","Programming Academy","data/academies.json"
+"ENT-ACAD-digital-marketing","Digital Marketing Academy","offersCourse","ENT-CRS-dm-mastery","Digital Marketing Master Diploma","data/courses.json"
+"ENT-ACAD-ai","AI Academy","offersCourse","ENT-CRS-ai-mastery","Artificial Intelligence Master Diploma","data/courses.json"
+"ENT-ACAD-programming","Programming Academy","offersCourse","ENT-CRS-fullstack-foundation","Full Stack Web Development Foundation","data/courses.json"
+"ENT-PERSON-01","Waseeullah Mansoori","authoredArticle","ENT-ART-geo","AI SEO & Generative Engine Optimization in 2026","blog/ai-seo-geo-digital-marketing-2026/"
+"ENT-ORG-01","Nova Skills","servesOnlineServiceArea","ENT-LOC-INDORE","Indore Live Online Cohort","branches/indore/index.html"
