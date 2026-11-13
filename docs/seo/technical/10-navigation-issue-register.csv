@@ -1,0 +1,5 @@
+Navigation Component,Issue Description,Platform / Viewport,Impact on SEO / UX,Remediation Applied,Verification Status
+"Desktop Header Dropdown","Dropdown menu disappeared on rapid mouse movement between Academy links","Desktop (1200px+)","UX frustration, crawler traversal friction","Added 150ms mouseleave debounce and expanded hover buffer zone","RESOLVED & VERIFIED"
+"Mobile Drawer Menu","Hamburger drawer lacked focus lock and keyboard esc listener","Mobile / Accessibility","WCAG 2.1 compliance failure, screen reader traps","Implemented aria-expanded toggle, focus trap, and escape key listener","RESOLVED & VERIFIED"
+"Breadcrumb Hierarchy","Course detail breadcrumbs lacked explicit schema ItemList markup","All Viewports","Missing Breadcrumb rich snippets in Google SERP","Integrated JSON-LD BreadcrumbList on all course templates","RESOLVED & VERIFIED"
+"Footer Service Area Links","Long list of 36 cities broke column alignment on tablet viewports","Tablet (768px - 1024px)","Visual displacement of legal column","Refactored footer city links into 2-column flex layout with directory link","RESOLVED & VERIFIED"

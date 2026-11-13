@@ -1,0 +1,8 @@
+Page Group,Target URLs,JSON-LD Primary Type,@id Identifier,Required Fields Present,Recommended Fields Present,Google Rich Result Eligible
+"Homepage","https://novaskills.in/","Organization, WebSite","https://novaskills.in/#organization","Yes (name, url, logo)","Yes (contactPoint, sameAs)","Organization Knowledge Panel"
+"Contact & Campus","https://novaskills.in/contact/","LocalBusiness, EducationalOrganization","https://novaskills.in/#organization","Yes (name, address, telephone)","Yes (geo, hasMap, hours)","Local Pack & Knowledge Graph"
+"Course Catalog","https://novaskills.in/courses","CollectionPage, ItemList","https://novaskills.in/courses#catalog","Yes (name, numberOfItems)","Yes (itemListElement)","Course List Carousel"
+"109 Course Pages","https://novaskills.in/course-detail.html?id=*","Course","https://novaskills.in/course-detail.html?id=*#course","Yes (name, description, provider)","Yes (offers, duration)","Course Rich Snippet"
+"12 Academy Pages","https://novaskills.in/academies/*","CollectionPage, Program","https://novaskills.in/academies/*#academy","Yes (name, description)","Yes (hasOfferCatalog)","Educational Catalog"
+"36 City Pages","https://novaskills.in/branches/*","WebPage, ItemList","https://novaskills.in/branches/*#webpage","Yes (name, description)","Yes (about, breadcrumbs)","Location Service Hub"
+"Blog Articles","https://novaskills.in/blog/*","Article, BlogPosting","https://novaskills.in/blog/*#article","Yes (headline, author, dates)","Yes (image, publisher)","Article Rich Result"

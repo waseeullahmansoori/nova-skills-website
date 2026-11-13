@@ -1,0 +1,6 @@
+URL / Pattern,Error Type,Detection Method,HTTP Status Code,Remediation Applied,Current Status
+"/course-detail.html","Missing Parameter","Edge Middleware Check",301,"Permanently redirected to /courses catalogue","Resolved"
+"/courses.html","Legacy Extension","Cloudflare Pages _redirects",301,"Clean 1-hop 301 redirect to canonical /courses","Resolved"
+"/placements.html","Legacy Extension","Cloudflare Pages _redirects",301,"Clean 1-hop 301 redirect to canonical /placements","Resolved"
+"/academies/nocode","Legacy Slug","Cloudflare Pages _redirects",301,"Clean 1-hop 301 redirect to /academies/no-code-web/","Resolved"
+"/robot.txt","Typo Variant","Cloudflare Pages _redirects",301,"Direct 301 redirect to /robots.txt","Resolved"

@@ -1,0 +1,5 @@
+URL / Path,Observed HTTP Status,Encountered User-Agent,Issue Classification,Root Cause Analysis,Remediation Implemented,Current Status
+"/courses.html",301,"Googlebot Smartphone","Legacy URL Access","Historical link with .html extension","Mapped 1-hop 301 redirect to /courses in _redirects","RESOLVED (Zero Error)"
+"/about.html",301,"Bingbot","Legacy URL Access","Historical link with .html extension","Mapped 1-hop 301 redirect to /about in _redirects","RESOLVED (Zero Error)"
+"/thank-you",200,"Googlebot Mobile","Non-Indexable Conversion URL","Form submission redirect route","Injected X-Robots-Tag: noindex, follow in _headers","RESOLVED (Protected)"
+"/favicon.ico",200,"Googlebot Desktop","Asset Request","Asset discovery check","Favicon declared and cached at root with 30-day header","RESOLVED (Zero Error)"

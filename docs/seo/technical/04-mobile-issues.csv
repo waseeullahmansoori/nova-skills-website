@@ -1,0 +1,4 @@
+Template,Issue Description,Device Viewport,Root Cause,Remediation Applied,Verification Status
+"Course Detail Tables","Curriculum tables previously caused horizontal page stretch","320px – 375px","Static table layout width","Wrapped all tabular data in .table-responsive overflow wrappers","VERIFIED (Resolved)"
+"Navigation Header","Desktop navigation links overlapped on intermediate tablet widths","1025px – 1140px","Fixed flex gap spacing","Added scoped CSS clamp spacing and adjusted navbar font sizes","VERIFIED (Resolved)"
+"Code Blocks on Blog","JSON workflow snippets overflowed viewport","360px – 430px","Preformatted <pre> tag overflow","Added overflow-x: auto and border-radius wrappers","VERIFIED (Resolved)"

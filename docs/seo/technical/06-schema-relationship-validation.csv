@@ -1,0 +1,6 @@
+Source Entity,Relationship Predicate,Target Entity,Schema Property,Cross-Page Consistency,Validation Result
+"Nova Skills","operatesLocation","Siddharth Nagar Campus","location","Consistent across Homepage, Contact & Footers","PASS"
+"Nova Skills","hasAcademicOffer","109 Canonical Courses","hasOfferCatalog.itemListElement","Matches courses.json canonical master","PASS"
+"Digital Marketing Academy","offersCurriculum","dm-mastery","offers","Matches academyId linkage in data","PASS"
+"Waseeullah Mansoori","authorship","ai-seo-geo-digital-marketing-2026","author","Matches article metadata and byline","PASS"
+"Siddharth Nagar Campus","geoCoordinates","27.2713°N, 83.0722°E","geo","Matches official Google Maps CID coordinates","PASS"

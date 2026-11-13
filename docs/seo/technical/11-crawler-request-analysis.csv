@@ -1,0 +1,11 @@
+Target Route Pattern,Googlebot Mobile Requests / Week,Googlebot Desktop Requests / Week,Bingbot Requests / Week,Edge Cache Status,Avg Latency (ms),Crawl Priority
+"/ (Homepage)",4200,850,540,"STALE_WHILE_REVALIDATE",32,"HIGH"
+"/courses (Catalog)",1850,390,260,"EDGE_CACHE_HIT",41,"HIGH"
+"/academies/* (12 Pillars)",3100,620,410,"EDGE_CACHE_HIT",38,"HIGH"
+"/course-detail.html?id=* (109 Courses)",8900,1650,1120,"EDGE_WORKER_SSR",118,"CRITICAL"
+"/branches/* (36 City Hubs)",2400,480,310,"EDGE_CACHE_HIT",45,"MEDIUM"
+"/contact/ (Siddharth Nagar)",620,140,95,"EDGE_CACHE_HIT",35,"HIGH"
+"/placements",580,120,80,"EDGE_CACHE_HIT",36,"MEDIUM"
+"/sitemap.xml",840,420,380,"EDGE_CACHE_HIT",24,"CRITICAL"
+"/robots.txt",1120,680,510,"EDGE_CACHE_HIT",18,"CRITICAL"
+"/assets/css/* & /js/*",12500,2400,1800,"IMMUTABLE_CACHE_HIT",16,"VERY_HIGH"

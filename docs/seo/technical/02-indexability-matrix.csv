@@ -1,0 +1,12 @@
+Page Group / Route Pattern,Expected Indexing State,Meta Robots Directive,X-Robots-Tag,Sitemap Inclusion,Canonical Behavior
+"Homepage (/)","Indexable","index, follow","None","Yes","Self-referential (https://novaskills.in/)"
+"Course Catalog (/courses)","Indexable","index, follow","None","Yes","Self-referential (https://novaskills.in/courses)"
+"Academies Directory (/academies/)","Indexable","index, follow","None","Yes","Self-referential (https://novaskills.in/academies/)"
+"Academy Pillar Pages (/academies/*/)","Indexable","index, follow","None","Yes (12 Academies)","Self-referential per slug"
+"Course Detail (/course-detail.html?id=*)","Indexable","index, follow","None (Prod) / noindex (Preview)","Yes (109 Courses)","Self-referential with canonical id parameter"
+"Learning Locations Directory (/branches/)","Indexable","index, follow","None","Yes","Self-referential (https://novaskills.in/branches/)"
+"36 Online City Pages (/branches/*/)","Indexable","index, follow","None","Yes (36 Cities)","Self-referential per city slug"
+"Blog Articles (/blog/*/)","Indexable","index, follow","None","Yes (5 Articles)","Self-referential per article slug"
+"Contact & Physical Campus (/contact/)","Indexable","index, follow","None","Yes","Self-referential (https://novaskills.in/contact/)"
+"Conversion Routes (/thank-you, /lead-success)","Non-Indexable","noindex, nofollow","noindex, follow","No (Excluded)","Self-referential"
+"Admin & Student Portals (/admin/*, /portal.html)","Non-Indexable","noindex, nofollow","noindex, nofollow","No (Excluded)","Excluded from Search"

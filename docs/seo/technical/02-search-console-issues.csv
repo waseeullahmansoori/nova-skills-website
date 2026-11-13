@@ -1,0 +1,5 @@
+GSC Categorization Status,Affected Route Types,Root Cause Analysis,Remediation Strategy,Status in Nova Skills Architecture
+"Alternate page with proper canonical tag","Trailing slash vs non-trailing slash, .html variants","Search bots requesting legacy or parameter variants","301 redirect rules in _redirects and canonical tags pointing to preferred standard URL","VERIFIED (Expected Behavior)"
+"Excluded by noindex tag","/thank-you/, /lead-success/, /admin/","Intentional protection of non-public conversion and portal pages","Preserve X-Robots-Tag: noindex, follow in _headers","VERIFIED (Policy Invariant)"
+"Page with redirect","/courses.html, /placements.html, /robot.txt","Historical or shorthand URLs requested by crawlers","1-hop 301 direct permanent redirects to clean URLs","VERIFIED (Zero Redirect Chains)"
+"Not found (404)","Discontinued legacy test routes","Old URLs crawled from historical third-party scrapers","Legitimate HTTP 404 response served with custom branded error template","VERIFIED (Clean Error Response)"
