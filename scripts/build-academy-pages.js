@@ -1959,7 +1959,7 @@ ${sectionsContent}
 
   <!-- JavaScript Bundles -->
   <script src="/js/data.min.js?v=3.1.0" defer></script>
-  <script src="/js/components.min.js?v=3.1.0" defer></script>
+  <script src="/js/components.min.js?v=3.2.0" defer></script>
   <script src="/nova-ai-widget.js?v=3.1.0" defer></script>
   <script src="/js/icon-system.js" defer></script>
   <script src="/js/academy-detail.min.js?v=3.1.0" defer></script>${heroVisual && heroVisual.enabled ? `\n  <script src="/js/academy-hero-experiment.js?v=1.0" defer></script>` : ''}

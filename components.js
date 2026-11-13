@@ -3411,6 +3411,7 @@ function openEnrollmentModal(arg1, arg2, arg3, arg4, arg5) {
 
   if (modal) {
     modal.hidden = false;
+    modal.removeAttribute('hidden');
     requestAnimationFrame(() => modal.classList.add('open'));
     document.body.style.overflow = 'hidden';
     setTimeout(() => {
@@ -3426,7 +3427,7 @@ window.openCourseEnrollment = openEnrollmentModal;
 if (typeof document !== 'undefined') {
   document.addEventListener('click', (e) => {
     const trigger = e.target && typeof e.target.closest === 'function'
-      ? e.target.closest('[data-action="enroll"], [data-action="open-enrollment"], .btn-open-enroll, .btn-enroll, [data-enroll-course]')
+      ? e.target.closest('[data-action="enroll"], [data-action="open-enrollment"], .btn-open-enroll, .btn-enroll, .btn-enroll-full, .btn-showcase-enroll, [data-enroll-course]')
       : null;
     if (!trigger) return;
     const inlineOnclick = trigger.getAttribute('onclick') || '';
@@ -3454,6 +3455,7 @@ function closeEnrollmentModal() {
     modal.classList.remove('open');
     setTimeout(() => {
       modal.hidden = true;
+      modal.setAttribute('hidden', '');
       setEnrollModalState('idle');
       document.body.style.overflow = '';
       if (window._lastActiveEnrollTrigger && typeof window._lastActiveEnrollTrigger.focus === 'function') {

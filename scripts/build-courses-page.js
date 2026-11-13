@@ -244,7 +244,7 @@ function updateCoursesPage() {
   }
   html = html.replace(/styles\.min\.css\?v=[0-9.]+/g, 'styles.min.css?v=2.9.0');
   html = html.replace(/data\.min\.js\?v=[0-9.]+/g, 'data.min.js?v=3.1.0');
-  html = html.replace(/components\.min\.js\?v=[0-9.]+/g, 'components.min.js?v=3.1.0');
+  html = html.replace(/components\.min\.js\?v=[0-9.]+/g, 'components.min.js?v=3.2.0');
   html = html.replace(/courses\.min\.js\?v=[0-9.]+/g, 'courses.min.js?v=3.1.0');
   html = html.replace(/courses\.js\?v=[0-9.]+/g, 'courses.js?v=3.1.0');
 

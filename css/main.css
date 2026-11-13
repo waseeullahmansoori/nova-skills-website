@@ -6644,8 +6644,10 @@ body.modal-open-hide-widgets #sticky-mobile-bar {
 }
 
 .enroll-modal-backdrop.open {
-  opacity: 1;
-  visibility: visible;
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 /* Modal Dialog */
