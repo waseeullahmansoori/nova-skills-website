@@ -3,23 +3,22 @@
  * Compliant with sitemaps.org 0.9 protocol and Google Technical SEO standards.
  * 
  * Generates 100% 200 OK canonical URLs without 308 redirects:
- * - Clean URLs for root static pages (/courses, /blog, /assessment, etc.)
+ * - Clean URLs for root static pages (/courses, /blog, /assessment, /placements, etc.)
  * - Pre-rendered Edge Course URLs (/course-detail.html?id=...)
  * - Pre-rendered Academy Directory URLs (/academies/.../)
  * - Canonical Static Blog Article URLs (/blog/.../)
- * - Legal & Contact Directory URLs (/privacy-policy/, etc.)
+ * - Legal & Contact Directory URLs (/privacy-policy/, /refund-policy/, /terms-and-conditions/, /contact/)
  * - Branches & 36 Online Learning Locations (/branches/, /branches/.../)
  */
 
 const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
 
 const DOMAIN = 'https://novaskills.in';
 const ROOT_DIR = path.resolve(__dirname, '..');
 const SITEMAP_PATH = path.join(ROOT_DIR, 'sitemap.xml');
 
-// Excluded HTML routes (non-indexable, templates, private, or error pages)
+// Excluded HTML routes (non-indexable, templates, private, conversion confirmation, or error pages)
 const EXCLUDED_FILES = new Set([
   '404.html',
   'admin.html',
@@ -27,12 +26,12 @@ const EXCLUDED_FILES = new Set([
   'admin-settings.html',
   'login.html',
   'student.html',
+  'portal.html',
+  'register.html',
   'ai-chat.html',
   'course-detail.html',
   'academy-detail.html',
-  'blog-detail.html',
-  'portal.html',
-  'register.html'
+  'blog-detail.html'
 ]);
 
 function getFormattedDate(filePath) {
@@ -44,8 +43,16 @@ function getFormattedDate(filePath) {
   }
 }
 
+function escapeXml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 function generateSitemap() {
-  const today = new Date().toISOString().split('T')[0];
   const urlEntries = [];
 
   // 1. Root Homepage
@@ -55,7 +62,7 @@ function generateSitemap() {
     lastmod: getFormattedDate(indexPath)
   });
 
-  // 2. Standard Public Pages (Clean URLs without .html to prevent Cloudflare 308 redirects)
+  // 2. Standard Public Pages (Clean URLs without .html to match Cloudflare Pages 308 redirects)
   const files = fs.readdirSync(ROOT_DIR);
   files.forEach((file) => {
     if (file.endsWith('.html') && file !== 'index.html' && !EXCLUDED_FILES.has(file)) {
@@ -68,45 +75,42 @@ function generateSitemap() {
     }
   });
 
-  // 3. Dedicated Legal Policy & Contact directory URLs
-  urlEntries.push({
-    loc: `${DOMAIN}/privacy-policy/`,
-    lastmod: today
-  });
-  urlEntries.push({
-    loc: `${DOMAIN}/refund-policy/`,
-    lastmod: today
-  });
-  urlEntries.push({
-    loc: `${DOMAIN}/terms-and-conditions/`,
-    lastmod: today
-  });
-  urlEntries.push({
-    loc: `${DOMAIN}/contact/`,
-    lastmod: today
+  // 3. Dedicated Legal Policy & Contact Directory URLs (Accurate filesystem modification dates)
+  const legalDirs = ['privacy-policy', 'refund-policy', 'terms-and-conditions', 'contact'];
+  legalDirs.forEach((dir) => {
+    const dirIndexPath = path.join(ROOT_DIR, dir, 'index.html');
+    if (fs.existsSync(dirIndexPath)) {
+      urlEntries.push({
+        loc: `${DOMAIN}/${dir}/`,
+        lastmod: getFormattedDate(dirIndexPath)
+      });
+    }
   });
 
-  // 4. Canonical Static Blog Article URLs (200 OK directories)
-  const blogArticles = [
-    'waseeullah-mansoori',
-    'ai-skills-future-careers-2027-2030',
-    'ai-seo-geo-digital-marketing-2026',
-    'high-demand-courses-2027-ai-skills-careers',
-    'n8n-ai-automation-beginners'
-  ];
-  blogArticles.forEach((slug) => {
-    const articlePath = path.join(ROOT_DIR, 'blog', slug, 'index.html');
-    urlEntries.push({
-      loc: `${DOMAIN}/blog/${slug}/`,
-      lastmod: getFormattedDate(articlePath)
+  // 4. Canonical Static Blog Article URLs (Dynamically discovered directory endpoints)
+  const blogDir = path.join(ROOT_DIR, 'blog');
+  if (fs.existsSync(blogDir)) {
+    const blogEntries = fs.readdirSync(blogDir).filter((f) => {
+      const full = path.join(blogDir, f);
+      return fs.statSync(full).isDirectory() && fs.existsSync(path.join(full, 'index.html'));
     });
-  });
+    blogEntries.forEach((slug) => {
+      const articlePath = path.join(blogDir, slug, 'index.html');
+      urlEntries.push({
+        loc: `${DOMAIN}/blog/${slug}/`,
+        lastmod: getFormattedDate(articlePath)
+      });
+    });
+  }
 
   // 5. Clean Academy Directory URLs
-  urlEntries.push({
-    loc: `${DOMAIN}/academies/`,
-    lastmod: today
-  });
+  const acadIndexPath = path.join(ROOT_DIR, 'academies', 'index.html');
+  if (fs.existsSync(acadIndexPath)) {
+    urlEntries.push({
+      loc: `${DOMAIN}/academies/`,
+      lastmod: getFormattedDate(acadIndexPath)
+    });
+  }
 
   const academySlugs = [
     'digital-marketing',
@@ -124,29 +128,33 @@ function generateSitemap() {
   ];
   academySlugs.forEach((slug) => {
     const acadPath = path.join(ROOT_DIR, 'academies', slug, 'index.html');
-    urlEntries.push({
-      loc: `${DOMAIN}/academies/${slug}/`,
-      lastmod: getFormattedDate(acadPath)
-    });
+    if (fs.existsSync(acadPath)) {
+      urlEntries.push({
+        loc: `${DOMAIN}/academies/${slug}/`,
+        lastmod: getFormattedDate(acadPath)
+      });
+    }
   });
 
-  // 6. Dynamic Course URLs (All 109 Restructured Courses)
-  let courseIds = [];
+  // 6. Dynamic Course URLs (All 109 Restructured Courses with course JSON modification dates)
+  let courses = [];
   try {
-    const dataJs = fs.readFileSync(path.join(ROOT_DIR, 'data.js'), 'utf8');
-    vm.runInThisContext(dataJs);
-    if (Array.isArray(NS_COURSES)) {
-      courseIds = NS_COURSES.map(c => c.id);
-    }
+    const NovaCourseData = require('../js/course-data.js');
+    courses = NovaCourseData.getPublishedCourses();
   } catch (err) {
-    console.error('Error loading NS_COURSES from data.js:', err);
+    console.error('Error loading published courses for sitemap:', err);
   }
 
-  const coursePageDate = getFormattedDate(path.join(ROOT_DIR, 'course-detail.html'));
-  courseIds.forEach((cId) => {
+  const courseTemplateDate = getFormattedDate(path.join(ROOT_DIR, 'course-detail.html'));
+  courses.forEach((course) => {
+    const courseJsonPath = path.join(ROOT_DIR, 'data', 'courses', `${course.id}.json`);
+    const courseLastMod = fs.existsSync(courseJsonPath)
+      ? getFormattedDate(courseJsonPath)
+      : courseTemplateDate;
+
     urlEntries.push({
-      loc: `${DOMAIN}/course-detail.html?id=${cId}`,
-      lastmod: coursePageDate
+      loc: `${DOMAIN}/course-detail.html?id=${course.id}`,
+      lastmod: courseLastMod
     });
   });
 
@@ -188,15 +196,31 @@ function generateSitemap() {
 
   for (const [loc, lastmod] of uniqueMap.entries()) {
     xml += `  <url>\n`;
-    xml += `    <loc>${loc}</loc>\n`;
-    xml += `    <lastmod>${lastmod}</lastmod>\n`;
+    xml += `    <loc>${escapeXml(loc)}</loc>\n`;
+    xml += `    <lastmod>${escapeXml(lastmod)}</lastmod>\n`;
     xml += `  </url>\n`;
   }
 
   xml += `</urlset>\n`;
 
-  fs.writeFileSync(SITEMAP_PATH, xml, 'utf8');
+  const tmpPath = `${SITEMAP_PATH}.tmp`;
+  try {
+    fs.writeFileSync(tmpPath, xml, 'utf8');
+    try {
+      if (fs.existsSync(SITEMAP_PATH)) {
+        fs.unlinkSync(SITEMAP_PATH);
+      }
+    } catch (_) {}
+    fs.renameSync(tmpPath, SITEMAP_PATH);
+  } catch (err) {
+    fs.writeFileSync(SITEMAP_PATH, xml, 'utf8');
+  }
   console.log(`✅ Successfully generated sitemap.xml with ${uniqueMap.size} URLs at ${SITEMAP_PATH}`);
+  return uniqueMap.size;
 }
 
-generateSitemap();
+if (require.main === module) {
+  generateSitemap();
+}
+
+module.exports = { generateSitemap, SITEMAP_PATH, DOMAIN };

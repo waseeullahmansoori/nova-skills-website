@@ -16,26 +16,8 @@
   <!-- Default robots: indexable with rich previews -->
   <meta name="robots" id="page-robots" content="noindex, follow" />
   <!-- Canonical Link -->
-  <link rel="canonical" id="page-canonical" href="https://novaskills.in/course-detail.html" />
-  <script>
-    (function() {
-      try {
-        var params = new URLSearchParams(window.location.search);
-        var cId = (params.get('id') || params.get('course') || '').trim();
-        var canLink = document.getElementById('page-canonical');
-        if (cId) {
-          var canUrl = 'https://novaskills.in/course-detail.html?id=' + encodeURIComponent(cId);
-          if (canLink) {
-            canLink.setAttribute('href', canUrl);
-          }
-        } else {
-          if (canLink) {
-            canLink.setAttribute('href', 'https://novaskills.in/courses.html');
-          }
-        }
-      } catch(e) {}
-    })();
-  </script>
+
+
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:type" content="website" />
@@ -96,7 +78,7 @@
             Explore our catalog of 109+ industry-standard career courses across 12 academies.
           </p>
           <div class="course-error-actions" style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
-            <a href="/courses.html" class="btn btn-primary">Browse All Courses →</a>
+            <a href="/courses" class="btn btn-primary">Browse All Courses →</a>
             <a href="/" class="btn btn-outline">Back to Home</a>
           </div>
         </div>
