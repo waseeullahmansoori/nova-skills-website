@@ -62,60 +62,97 @@
   <link rel="preload" href="/css/styles.min.css?v=2.9.0" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="/css/styles.min.css?v=2.9.0" /></noscript>
 
-  <!-- Structured Data: ContactPoint Schema -->
+  <!-- Structured Data: EducationalOrganization, LocalBusiness, WebPage & Breadcrumbs -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ContactPoint",
-    "telephone": "+91-9695904440",
-    "contactType": "admissions",
-    "email": "novaskills.official@gmail.com",
-    "areaServed": "IN",
-    "availableLanguage": ["en", "hi"],
-    "hoursAvailable": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "09:00",
-      "closes": "19:00"
-    }
-  }
-  </script>
-
-  <!-- Structured Data: WebPage Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Contact Us",
-    "url": "https://novaskills.in/contact/",
-    "description": "Official contact and admissions enquiry page for Nova Skills Education Institute in Siddharth Nagar, Uttar Pradesh.",
-    "publisher": {
-      "@type": "EducationalOrganization",
-      "name": "Nova Skills Education Institute",
-      "url": "https://novaskills.in/",
-      "logo": "https://novaskills.in/public/images/seo/og-banner.png?v=2026"
-    },
-    "inLanguage": "en-IN"
-  }
-  </script>
-
-  <!-- Structured Data: BreadcrumbList Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://novaskills.in/"
+        "@type": ["EducationalOrganization", "LocalBusiness"],
+        "@id": "https://novaskills.in/#organization",
+        "name": "Nova Skills",
+        "alternateName": "Nova Skills Education Institute",
+        "url": "https://novaskills.in/",
+        "logo": "https://novaskills.in/public/images/seo/og-banner.png?v=2026",
+        "image": "https://novaskills.in/public/images/seo/og-banner.png?v=2026",
+        "description": "Nova Skills is an edtech and vocational training institute with a physical classroom campus in Siddharth Nagar, Uttar Pradesh, offering live interactive professional training across India.",
+        "telephone": "+91-9695904440",
+        "email": "novaskills.official@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Nova Skills Institute Campus",
+          "addressLocality": "Siddharth Nagar",
+          "addressRegion": "Uttar Pradesh",
+          "postalCode": "272153",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 27.2713,
+          "longitude": 83.0722
+        },
+        "hasMap": "https://maps.google.com/?cid=8727532038814819533",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:00",
+            "closes": "19:00"
+          }
+        ],
+        "priceRange": "₹₹",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-9695904440",
+          "contactType": "admissions",
+          "email": "novaskills.official@gmail.com",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi"],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:00",
+            "closes": "19:00"
+          }
+        },
+        "sameAs": [
+          "https://twitter.com/novaskills_in"
+        ]
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Contact Us",
-        "item": "https://novaskills.in/contact/"
+        "@type": "WebPage",
+        "@id": "https://novaskills.in/contact/#webpage",
+        "url": "https://novaskills.in/contact/",
+        "name": "Contact Us — Nova Skills Education Institute | Admissions & Enquiries",
+        "description": "Official contact and admissions enquiry page for Nova Skills Education Institute in Siddharth Nagar, Uttar Pradesh.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://novaskills.in/#website",
+          "name": "Nova Skills",
+          "url": "https://novaskills.in/"
+        },
+        "about": {
+          "@id": "https://novaskills.in/#organization"
+        },
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://novaskills.in/contact/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://novaskills.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact Us",
+            "item": "https://novaskills.in/contact/"
+          }
+        ]
       }
     ]
   }
